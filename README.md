@@ -4,6 +4,12 @@ Sitio de estudio en español para preparar el ENARM mediante diagnóstico difere
 
 La dirección visual elegida es Cobalto. La aplicación se desarrollará con React y TypeScript.
 
+## Diseño de aprendizaje por contraste
+
+La [propuesta de aprendizaje por contraste](docs/superpowers/specs/2026-10-29-aprendizaje-clinico-por-contraste-design.md) organiza los temas por ejes clínicos. La capa 1 enseña con casos comparables, datos discriminadores resaltados y una relación entre la función alterada y el manejo inicial. Las variantes muestran qué factor cambia la decisión antes de ampliar cada enfermedad.
+
+La propuesta está pendiente de revisión del usuario. El piloto actual todavía no implementa este flujo.
+
 ## Piloto de tarjetas
 
 Diez tarjetas originales de coledocolitiasis y colangitis, basadas en las páginas 135 y 138 del extracto proporcionado. Cada concepto tiene cinco tipos: ancla, contraste, microvariación, discriminador y primera decisión.
