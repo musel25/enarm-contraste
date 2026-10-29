@@ -1,6 +1,61 @@
 import { test, expect } from "@playwright/test";
 import { readFile } from "node:fs/promises";
 
+test("uses a symptom contrast map and connects mechanism to the initial decision", async ({
+  page,
+}) => {
+  await page.setViewportSize({ width: 1440, height: 1000 });
+  await page.goto("./");
+  const map = page.getByRole("complementary", { name: "Mapa de contraste" });
+  await expect(map).toBeVisible();
+  await map
+    .getByRole("button", { name: "Ver caso de Insuficiencia ovárica primaria" })
+    .click();
+  await expect(
+    page.getByRole("dialog", { name: "Insuficiencia ovárica primaria" }),
+  ).toBeVisible();
+  await page.keyboard.press("Escape");
+  const card = page
+    .getByRole("article")
+    .filter({
+      has: page.getByRole("heading", {
+        name: "Amenorrea hipotalámica funcional",
+        exact: true,
+      }),
+    });
+  await expect(
+    card.getByText(/Excluir otras causas y corregir/),
+  ).not.toBeVisible();
+  await card
+    .locator("summary")
+    .filter({ hasText: "Conectar mecanismo y manejo" })
+    .click();
+  await expect(card.getByText(/Excluir otras causas y corregir/)).toBeVisible();
+  await page.getByRole("button", { name: /Practicar/ }).click();
+  await expect(
+    page.getByRole("complementary", { name: "Mapa de contraste" }),
+  ).toHaveCount(0);
+});
+
+test("explains the learning method using the supplied Anki references", async ({
+  page,
+}) => {
+  await page.goto("./");
+  await page.getByRole("button", { name: "El método", exact: true }).click();
+  await expect(page.getByRole("dialog")).toContainText("Patrones Madre");
+  await expect(page.getByRole("dialog")).toContainText("Eje Clínico");
+  await page.keyboard.press("Escape");
+  await page.setViewportSize({ width: 320, height: 780 });
+  for (const name of [/Comparar casos/, /Cambiar el caso/, /Practicar/]) {
+    await page.getByRole("button", { name }).click();
+    expect(
+      await page.evaluate(
+        () => document.documentElement.scrollWidth <= innerWidth,
+      ),
+    ).toBe(true);
+  }
+});
+
 test("teaches four alternatives together and can remove the discriminator highlight", async ({
   page,
 }) => {

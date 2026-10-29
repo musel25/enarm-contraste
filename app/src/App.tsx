@@ -2,6 +2,7 @@ import { useState } from "react";
 import { axes } from "./content";
 import type { ClinicalCase } from "./types";
 import { Icon, MarkedText, Modal, SourceList } from "./ui";
+import Comparison from "./Comparison";
 import Variants from "./Variants";
 import Practice from "./Practice";
 import Review from "./Review";
@@ -18,16 +19,116 @@ const modes = {
   practice: "Practicar",
 } as const;
 
+function ContrastArtwork() {
+  return (
+    <svg
+      className="contrast-artwork"
+      viewBox="0 0 360 220"
+      fill="none"
+      aria-hidden="true"
+    >
+      <circle
+        cx="194"
+        cy="112"
+        r="96"
+        stroke="currentColor"
+        strokeOpacity=".13"
+      />
+      <circle
+        cx="194"
+        cy="112"
+        r="66"
+        stroke="currentColor"
+        strokeOpacity=".1"
+      />
+      <g transform="translate(35 22) rotate(-9 80 90)">
+        <rect width="144" height="170" rx="14" fill="#BFB4F2" />
+        <rect
+          x="1"
+          y="1"
+          width="142"
+          height="168"
+          rx="13"
+          stroke="white"
+          strokeOpacity=".5"
+        />
+        <rect x="18" y="19" width="30" height="22" rx="6" fill="#6A55AE" />
+        <text x="27" y="35" fill="white" fontSize="12" fontFamily="sans-serif">
+          A
+        </text>
+        <path
+          d="M18 60H125M18 71H113M18 82H123"
+          stroke="#695A99"
+          strokeWidth="4"
+          strokeLinecap="round"
+          opacity=".45"
+        />
+        <rect x="16" y="98" width="112" height="17" rx="4" fill="#FFE6B7" />
+        <path
+          d="M23 106H119"
+          stroke="#B7823C"
+          strokeWidth="3"
+          strokeLinecap="round"
+        />
+        <path
+          d="M18 133H123M18 144H90"
+          stroke="#695A99"
+          strokeWidth="4"
+          strokeLinecap="round"
+          opacity=".45"
+        />
+      </g>
+      <g transform="translate(155 42) rotate(9 75 85)">
+        <rect width="144" height="170" rx="14" fill="#FAF9FF" />
+        <rect x="18" y="19" width="30" height="22" rx="6" fill="#EEE8FF" />
+        <text
+          x="27"
+          y="35"
+          fill="#6550AE"
+          fontSize="12"
+          fontFamily="sans-serif"
+        >
+          B
+        </text>
+        <path
+          d="M18 60H125M18 71H113M18 82H123"
+          stroke="#B7ACD2"
+          strokeWidth="4"
+          strokeLinecap="round"
+        />
+        <rect x="16" y="98" width="112" height="17" rx="4" fill="#FFE6B7" />
+        <path
+          d="M23 106H90"
+          stroke="#B7823C"
+          strokeWidth="3"
+          strokeLinecap="round"
+        />
+        <path
+          d="M18 133H123M18 144H90"
+          stroke="#B7ACD2"
+          strokeWidth="4"
+          strokeLinecap="round"
+        />
+      </g>
+      <circle cx="307" cy="48" r="15" fill="#F0CB8B" />
+      <path d="M301 48h12m-6-6v12" stroke="#725329" strokeWidth="1.5" />
+      <circle cx="33" cy="184" r="4" fill="#BFB4F2" />
+      <path d="m329 157 3 8 8 3-8 3-3 8-3-8-8-3 8-3 3-8Z" fill="#BFB4F2" />
+    </svg>
+  );
+}
+
 export default function App() {
   const [axisId, setAxisId] = useState(() =>
-    axes.some((axis) => axis.id === window.location.hash.slice(1))
-      ? window.location.hash.slice(1)
+    axes.some((axis) => axis.id === location.hash.slice(1))
+      ? location.hash.slice(1)
       : "amenorrea",
   );
   const [highlight, setHighlight] = useState(true);
   const [detail, setDetail] = useState<ClinicalCase | null>(null);
   const [mode, setMode] = useState<keyof typeof modes>("compare");
   const [review, setReview] = useState<ReviewContext | null>(null);
+  const [method, setMethod] = useState(false);
   const [notes, setNotes, persisted] = useLocalData(
     REVIEW_KEY,
     validReviews,
@@ -36,7 +137,7 @@ export default function App() {
   const axis = axes.find((item) => item.id === axisId)!;
   const changeAxis = (id: string) => {
     setAxisId(id);
-    window.history.replaceState(null, "", `#${id}`);
+    history.replaceState(null, "", `#${id}`);
     setDetail(null);
   };
   const openReview = (label?: string, caseId?: string) =>
@@ -46,95 +147,89 @@ export default function App() {
       label: `${axis.title} · ${label || modes[mode]}`,
       ...(caseId ? { caseId } : {}),
     });
-
   return (
     <div className="app-shell">
       <a className="skip-link" href="#study">
         Ir al contenido
       </a>
-      <aside className="sidebar">
-        <a
-          className="brand"
-          href={import.meta.env.BASE_URL}
-          aria-label="ENARM Contraste, inicio"
-        >
-          <span className="brand-symbol" aria-hidden="true">
-            <i />
-            <i />
-          </span>
-          <span>
-            ENARM
-            <strong>
-              Contraste<span>.</span>
-            </strong>
-          </span>
-        </a>
-        <div className="sidebar-intro">
-          <span className="sample-dot" />
-          Muestra para explorar
-        </div>
-        <nav className="axis-nav" aria-label="Ejes clínicos">
-          <p>¿Por dónde empezamos?</p>
-          {axes.map((item) => (
-            <button
-              key={item.id}
-              className={
-                item.id === axisId ? "axis-button selected" : "axis-button"
-              }
-              onClick={() => changeAxis(item.id)}
-              aria-current={item.id === axisId ? "page" : undefined}
-            >
-              <Icon name={item.id === "amenorrea" ? "spark" : "branch"} />
-              <span>
-                <strong>{item.title}</strong>
-                <small>{item.cases.length} diagnósticos para comparar</small>
-              </span>
-              <span className="axis-caret" aria-hidden="true">
-                ›
-              </span>
+      <header className="masthead">
+        <div className="masthead-inner">
+          <a
+            className="brand"
+            href={import.meta.env.BASE_URL}
+            aria-label="ENARM Contraste, inicio"
+          >
+            <span className="brand-symbol" aria-hidden="true">
+              <i />
+              <i />
+            </span>
+            <span>
+              contraste<span className="brand-dot">.</span>
+              <small>Medicina que se entiende</small>
+            </span>
+          </a>
+          <nav className="header-links" aria-label="Ayuda de estudio">
+            <span className="header-edition">ENARM · Muestra de estudio</span>
+            <button className="method-trigger" onClick={() => setMethod(true)}>
+              El método
             </button>
-          ))}
-        </nav>
-        <div className="sidebar-note">
-          <span className="key-sample">Un dato cambia la lectura.</span>
-          <p>Encuentra lo que distingue a dos casos parecidos.</p>
-          <div className="small-rule" />
-          <span>Aprende. Contrasta. Decide.</span>
-        </div>
-        <div className="sidebar-footer">
-          <Icon name="book" size={17} />
-          <span>
-            ENARM · Capa 1<br />
-            <small>Contenido de muestra</small>
-          </span>
-        </div>
-      </aside>
-      <div className="workspace">
-        <header className="topbar">
-          <span>Tu espacio de estudio</span>
-          <div className="topbar-actions">
-            <span className="edition">Versión para revisión</span>
             <button className="review-trigger" onClick={() => openReview()}>
               <Icon name="comment" size={17} />
               Tu revisión{notes.length > 0 && <span>{notes.length}</span>}
             </button>
+          </nav>
+        </div>
+      </header>
+      <div className="workspace">
+        <nav className="axis-nav" aria-label="Ejes clínicos">
+          <span className="axis-nav-label">Elige un eje clínico</span>
+          <div>
+            {axes.map((item) => (
+              <button
+                key={item.id}
+                className={`axis-button ${item.id === axisId ? "selected" : ""}`}
+                aria-current={item.id === axisId ? "page" : undefined}
+                onClick={() => changeAxis(item.id)}
+              >
+                <span className="axis-icon">
+                  <Icon
+                    name={item.id === "amenorrea" ? "spark" : "branch"}
+                    size={19}
+                  />
+                </span>
+                <span>
+                  <strong>{item.title}</strong>
+                  <small>{item.cases.length} diagnósticos</small>
+                </span>
+                <span className="axis-caret" aria-hidden="true">
+                  ›
+                </span>
+              </button>
+            ))}
           </div>
-        </header>
+          <span className="sample-label">
+            <span />
+            Contenido para explorar
+          </span>
+        </nav>
         <main id="study" tabIndex={-1}>
-          <div className="page-heading">
-            <div>
-              <p className="area">{axis.area}</p>
-              <h1>{axis.title}</h1>
-              <p className="lead">{axis.question}</p>
-            </div>
-            <div className="case-count">
-              <strong>{String(axis.cases.length).padStart(2, "0")}</strong>
-              <span>
-                formas de explicar
-                <br />
-                el mismo síntoma
+          <div className="lesson-hero">
+            <div className="lesson-heading">
+              <span className="hero-badge">
+                <Icon name="book" size={14} />
+                {axis.area}
               </span>
+              <h1>{axis.title}</h1>
+              <p>{axis.question}</p>
+              <div className="hero-route">
+                <span>Reconocer</span>
+                <i>·</i>
+                <span>Distinguir</span>
+                <i>·</i>
+                <span>Decidir</span>
+              </div>
             </div>
+            <ContrastArtwork />
           </div>
           <nav className="study-tabs" aria-label="Modo de estudio">
             {(Object.keys(modes) as (keyof typeof modes)[]).map((key, i) => (
@@ -144,127 +239,74 @@ export default function App() {
                 aria-current={mode === key ? "page" : undefined}
                 onClick={() => setMode(key)}
               >
-                <span>0{i + 1}</span>
+                <span className="tab-step">{i + 1}</span>
                 {modes[key]}
+                <Icon
+                  name={
+                    key === "compare"
+                      ? "book"
+                      : key === "variants"
+                        ? "branch"
+                        : "check"
+                  }
+                  size={17}
+                />
               </button>
             ))}
           </nav>
-          {mode === "compare" && (
-            <section className="comparison" aria-label="Comparación de casos">
-              <div className="comparison-intro">
-                <div className="shared-case">
-                  <span className="shared-icon">
-                    <Icon name="book" />
-                  </span>
-                  <div>
-                    <strong>El punto de partida es el mismo</strong>
-                    <p>{axis.shared}</p>
-                  </div>
-                </div>
-                <label className="highlight-toggle">
-                  <input
-                    type="checkbox"
-                    checked={highlight}
-                    onChange={(event) => setHighlight(event.target.checked)}
-                  />
-                  <span>Resaltar el dato que distingue</span>
-                </label>
-              </div>
-              <div className="case-grid">
-                {axis.cases.map((item, index) => (
-                  <article className="clinical-card" key={item.id}>
-                    <div className="card-heading">
-                      <span className="case-number">
-                        {String(index + 1).padStart(2, "0")}
-                      </span>
-                      <span className="case-category">{item.category}</span>
-                    </div>
-                    <h2>{item.diagnosis}</h2>
-                    <p className="vignette">
-                      <MarkedText text={item.vignette} highlight={highlight} />
-                    </p>
-                    <div className="discriminator">
-                      <span className="key-dot" />
-                      <p>{item.discriminator}</p>
-                    </div>
-                    <div className="cause-decision">
-                      <div>
-                        <h3>Qué ocurre</h3>
-                        <p>{item.mechanism}</p>
-                      </div>
-                      <span className="cause-arrow" aria-hidden="true">
-                        ↓
-                      </span>
-                      <div>
-                        <h3>Primera decisión</h3>
-                        <p>{item.decision}</p>
-                      </div>
-                    </div>
-                    <div className="case-contrast">
-                      <strong>Para distinguirlo</strong>
-                      <p>{item.contrast}</p>
-                    </div>
-                    <div className="card-actions">
-                      <button
-                        className="text-button"
-                        onClick={() => setDetail(item)}
-                      >
-                        Profundizar <Icon name="arrow" size={16} />
-                      </button>
-                      <span className="source-count">
-                        {item.sources.length} fuentes
-                      </span>
-                      <button
-                        className="comment-case"
-                        aria-label="Comentar este caso"
-                        title="Comentar este caso"
-                        onClick={() => openReview(item.diagnosis, item.id)}
-                      >
-                        <Icon name="comment" size={17} />
-                      </button>
-                    </div>
-                  </article>
-                ))}
-              </div>
-              <div className="takeaway">
-                <Icon name="branch" />
-                <p>{axis.takeaway}</p>
-              </div>
-            </section>
-          )}
-          {mode === "variants" && (
-            <Variants
-              key={axis.id}
-              axis={axis}
-              onReview={(label) => openReview(label)}
-            />
-          )}
-          {mode === "practice" && (
-            <Practice
-              key={axis.id}
-              axis={axis}
-              onReview={(label) => openReview(label)}
-            />
-          )}
-          <footer className="study-footer">
-            <p>{axis.glossary}</p>
-            {mode !== "practice" && (
-              <details>
-                <summary>Fuentes y alcance de esta muestra</summary>
-                <p>{axis.coverage}</p>
-                <p>
-                  Casos construidos para enseñanza. Las cifras son ilustrativas.
-                  Revisión clínica pendiente.
-                </p>
-                <SourceList ids={axis.sources} />
-              </details>
+          <div className="study-content">
+            {mode === "compare" && (
+              <Comparison
+                key={axis.id}
+                axis={axis}
+                highlight={highlight}
+                onHighlight={setHighlight}
+                onDetail={setDetail}
+                onReview={(item) => openReview(item.diagnosis, item.id)}
+              />
             )}
-            <p className="quiet">
-              Basado en ENARM_Capa1_Completo.pdf y fuentes clínicas indicadas.
-              Muestra parcial para evaluar el método. Revisión clínica
-              pendiente.
-            </p>
-          </footer>
+            {mode === "variants" && (
+              <Variants
+                key={axis.id}
+                axis={axis}
+                onReview={(label) => openReview(label)}
+              />
+            )}
+            {mode === "practice" && (
+              <Practice
+                key={axis.id}
+                axis={axis}
+                onReview={(label) => openReview(label)}
+              />
+            )}
+            <footer className="study-footer">
+              <div className="footer-glossary">
+                <Icon name="book" size={17} />
+                <p>{axis.glossary}</p>
+              </div>
+              {mode !== "practice" && (
+                <details>
+                  <summary>Fuentes y alcance de esta muestra</summary>
+                  <p>{axis.coverage}</p>
+                  <p>
+                    Casos construidos para enseñanza. Las cifras son
+                    ilustrativas. Revisión clínica pendiente.
+                  </p>
+                  <SourceList ids={axis.sources} />
+                </details>
+              )}
+              <div className="footer-bottom">
+                <span>contraste.</span>
+                <p>
+                  Basado en ENARM_Capa1_Completo.pdf y fuentes indicadas.
+                  Muestra parcial. Revisión clínica pendiente.
+                </p>
+                <button className="text-button" onClick={() => openReview()}>
+                  Sugerir un cambio
+                </button>
+              </div>
+            </footer>
+          </div>
         </main>
       </div>
       {detail && (
@@ -306,6 +348,60 @@ export default function App() {
           }
           onClose={() => setReview(null)}
         />
+      )}
+      {method && (
+        <Modal title="Aprender por contraste" onClose={() => setMethod(false)}>
+          <p className="method-lead">
+            Primero compara. Después entiende el mecanismo. Por último, decide
+            qué hacer.
+          </p>
+          <ol className="method-steps">
+            <li>
+              <strong>Parte del síntoma.</strong>
+              <p>
+                Reúne los diagnósticos que se pueden confundir. El mapa te
+                permite ver sus patrones juntos.
+              </p>
+            </li>
+            <li>
+              <strong>Busca el dato que distingue.</strong>
+              <p>
+                Lee casos parecidos y encuentra la pista clínica,
+                epidemiológica, de laboratorio o de imagen.
+              </p>
+            </li>
+            <li>
+              <strong>Conecta mecanismo y manejo.</strong>
+              <p>
+                Explica qué ocurre, cómo produce los hallazgos y por qué orienta
+                la primera decisión.
+              </p>
+            </li>
+            <li>
+              <strong>Cambia el caso.</strong>
+              <p>
+                Observa qué factor modifica el diagnóstico, la urgencia o el
+                tratamiento. Después practica sin ver la respuesta.
+              </p>
+            </li>
+          </ol>
+          <div className="method-references">
+            <h3>La estructura toma tus mazos como referencia</h3>
+            <p>
+              <strong>Eje Clínico, Gineco Obstetricia Capa6:</strong> comparar
+              patrones dentro del mismo motivo de consulta.
+            </p>
+            <p>
+              <strong>Patrones Madre, Shock:</strong> seguir la relación entre
+              función, hallazgo y acción.
+            </p>
+            <p>
+              Los mazos de amenorrea y Ejes Diagnósticos aportan los
+              fundamentos. Las asociaciones breves se amplían con casos,
+              contexto y fuentes.
+            </p>
+          </div>
+        </Modal>
       )}
     </div>
   );

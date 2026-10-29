@@ -1,7 +1,7 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
-import "@fontsource-variable/outfit";
-import "@fontsource-variable/source-sans-3";
+import "@fontsource-variable/manrope";
+import "@fontsource-variable/lora";
 import App from "./App";
 import "./styles.css";
 

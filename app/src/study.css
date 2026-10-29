@@ -15,8 +15,8 @@
   font-size: 14px;
 }
 .review-trigger > span {
-  background: #edf1ff;
-  color: #304fc5;
+  background: #eee7fb;
+  color: var(--blue);
   min-width: 19px;
   height: 19px;
   display: grid;
@@ -32,8 +32,8 @@
   display: flex;
 }
 .comment-case:hover {
-  background: #edf1ff;
-  color: #304fc5;
+  background: #eee7fb;
+  color: var(--blue);
 }
 .card-actions > .source-count {
   margin-left: auto;
@@ -42,7 +42,7 @@
   margin-bottom: 23px;
 }
 .mode-intro h2 {
-  font-family: "Outfit Variable", sans-serif;
+  font-family: "Manrope Variable", sans-serif;
   font-size: 26px;
   font-weight: 500;
   letter-spacing: -0.5px;
@@ -74,12 +74,12 @@
   color: #8a98ba;
 }
 .scenario-picker button[aria-pressed="true"] {
-  color: #304fc5;
-  background: #e8eeff;
+  color: var(--blue);
+  background: #eee7fb;
   border-color: #adbeeb;
 }
 .scenario-picker button[aria-pressed="true"] > span {
-  color: #304fc5;
+  color: var(--blue);
 }
 .decision-workbench {
   background: #fff;
@@ -96,8 +96,8 @@
   margin-bottom: 25px;
 }
 .mode-badge {
-  background: #edf2ff;
-  color: #304fc5;
+  background: #f0ebfb;
+  color: var(--blue);
   border-radius: 5px;
   font-size: 13px;
   padding: 5px 9px;
@@ -194,7 +194,7 @@
   color: #6b7891;
 }
 .diagnosis-line h3 {
-  font-family: "Outfit Variable", sans-serif;
+  font-family: "Manrope Variable", sans-serif;
   font-size: 23px;
   margin-top: 5px;
   font-weight: 500;
@@ -214,7 +214,7 @@
   background: #f5f7fb;
 }
 .decision-pair .new-decision {
-  background: #edf2ff;
+  background: #f0ebfb;
   border: 1px solid #dee6fe;
 }
 .decision-pair h3 {
@@ -223,7 +223,7 @@
   margin-bottom: 7px;
 }
 .decision-pair .new-decision h3 {
-  color: #304fc5;
+  color: var(--blue);
 }
 .decision-pair p {
   font-size: 17px;
@@ -236,13 +236,13 @@
   margin-bottom: 23px;
 }
 .why-decision > svg {
-  color: #304fc5;
+  color: var(--blue);
   flex-shrink: 0;
   margin-top: 3px;
 }
 .why-decision h3 {
   font-size: 14px;
-  color: #304fc5;
+  color: var(--blue);
   margin-bottom: 5px;
 }
 .why-decision p {
@@ -274,15 +274,15 @@
   justify-content: center;
   gap: 12px;
   color: #fff;
-  background: #304fc5;
-  border: 1px solid #304fc5;
+  background: var(--blue);
+  border: 1px solid var(--blue);
   border-radius: 7px;
   padding: 11px 18px;
   font-weight: 550;
   font-size: 15px;
 }
 .primary-button:hover {
-  background: #263fa2;
+  background: #4e3ba3;
 }
 .secondary-button {
   display: inline-flex;
@@ -322,7 +322,7 @@
 }
 .practice-track > span {
   height: 100%;
-  background: #304fc5;
+  background: var(--blue);
   display: block;
 }
 .practice-card {
@@ -339,7 +339,7 @@
   margin-bottom: 25px;
 }
 .practice-meta > span:first-child {
-  color: #304fc5;
+  color: var(--blue);
 }
 .practice-vignette {
   font-size: 23px;
@@ -373,9 +373,9 @@
   color: #7c88a0;
 }
 .practice-answer h2 {
-  font-family: "Outfit Variable", sans-serif;
+  font-family: "Manrope Variable", sans-serif;
   font-size: 28px;
-  color: #304fc5;
+  color: var(--blue);
   margin: 7px 0 12px;
 }
 .practice-answer > p {
@@ -390,7 +390,7 @@
 }
 .answer-decision h3 {
   font-size: 13px;
-  color: #304fc5;
+  color: var(--blue);
   margin-bottom: 5px;
 }
 .answer-decision p {
@@ -425,8 +425,8 @@
   color: #526a99;
 }
 .self-grade button[aria-pressed="true"] {
-  background: #e8eeff;
-  color: #304fc5;
+  background: #eee7fb;
+  color: var(--blue);
   border-color: #9fb3ed;
 }
 .practice-navigation {
