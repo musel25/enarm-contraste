@@ -2,11 +2,11 @@
 
 Sitio de estudio en español para preparar el ENARM mediante diagnóstico diferencial, casos comparables y decisiones de manejo.
 
-La muestra web usa React, TypeScript y Vite. Conserva la dirección visual Cobalto.
+La muestra web usa React, TypeScript y Vite. El diseño usa Manrope y Lora, una paleta violeta y un mapa de contraste junto a los casos.
 
 ## Muestra web
 
-[Abrir ENARM Contraste](https://timer.musel.dev/grind/enarm/).
+[Abrir ENARM Contraste](https://enarm.musel.dev/).
 
 - Dos ejes: amenorrea secundaria e ictericia obstructiva.
 - Seis casos comparables con discriminadores resaltados, mecanismo y primera decisión.
@@ -14,6 +14,7 @@ La muestra web usa React, TypeScript y Vite. Conserva la dirección visual Cobal
 - Ampliación de cada enfermedad con confirmación, tratamiento, modificadores y fuentes.
 - Dieciséis tarjetas de práctica con respuesta oculta y progreso local.
 - Comentarios por caso o sección, con descarga JSON y copia de texto para compartir.
+- Mapa breve por patrón y razonamiento desplegable, con la estructura de los mazos Eje Clínico y Patrones Madre compartidos por el usuario.
 
 El usuario añadió `ENARM_Capa1_Completo.pdf`. Se usaron sus bloques 05.03, 10.10, 14.01 y 14.02. La [nota de fuentes](content/source-notes.md) distingue las páginas de este PDF de las páginas del libro que cita. El contenido es una muestra parcial pendiente de revisión clínica.
 
@@ -26,7 +27,7 @@ npm test
 npm run build
 ```
 
-Abre `http://127.0.0.1:4178/grind/enarm/`. Las pruebas requieren Google Chrome en `/usr/bin/google-chrome`; `CHROME_PATH` permite indicar otra ruta.
+Abre `http://127.0.0.1:4178/`. Las pruebas requieren Google Chrome en `/usr/bin/google-chrome`; `CHROME_PATH` permite indicar otra ruta.
 
 Los comentarios y el progreso se guardan solo en el navegador. La muestra no incluye cuentas, sincronización ni un planificador de repetición espaciada. El [runbook de despliegue](docs/deployment.md) describe la publicación en el VPS.
 
