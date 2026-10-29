@@ -14,7 +14,12 @@ export interface ClinicalCase {
   mechanism: string;
   decision: string;
   contrast: string;
-  detail: { confirm: string; treatment: string; modifiers: string; limit: string };
+  detail: {
+    confirm: string;
+    treatment: string;
+    modifiers: string;
+    limit: string;
+  };
   sources: string[];
 }
 

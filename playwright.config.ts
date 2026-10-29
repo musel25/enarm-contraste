@@ -1,22 +1,26 @@
-import { defineConfig } from '@playwright/test';
+import { defineConfig } from "@playwright/test";
 
 const remote = process.env.PLAYWRIGHT_BASE_URL;
 export default defineConfig({
-  testDir: './tests',
+  testDir: "./tests",
   fullyParallel: true,
   workers: 2,
   timeout: 20000,
   expect: { timeout: 5000 },
-  reporter: 'list',
+  reporter: "list",
   use: {
-    baseURL: remote || 'http://127.0.0.1:4178/grind/enarm/',
-    browserName: 'chromium',
-    launchOptions: { executablePath: process.env.CHROME_PATH || '/usr/bin/google-chrome' },
-    trace: 'retain-on-failure',
+    baseURL: remote || "http://127.0.0.1:4178/grind/enarm/",
+    browserName: "chromium",
+    launchOptions: {
+      executablePath: process.env.CHROME_PATH || "/usr/bin/google-chrome",
+    },
+    trace: "retain-on-failure",
   },
-  webServer: remote ? undefined : {
-    command: 'npm run dev',
-    url: 'http://127.0.0.1:4178/grind/enarm/',
-    reuseExistingServer: !process.env.CI,
-  },
+  webServer: remote
+    ? undefined
+    : {
+        command: "npm run dev",
+        url: "http://127.0.0.1:4178/grind/enarm/",
+        reuseExistingServer: !process.env.CI,
+      },
 });

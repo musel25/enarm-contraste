@@ -1,135 +1,297 @@
-import type { ClinicalAxis, Source } from './types';
-import biliaryPilot from '../../content/piloto-biliar.json';
+import type { ClinicalAxis, Source } from "./types";
+import biliaryPilot from "../../content/piloto-biliar.json";
+import {
+  amenorrheaPractice,
+  amenorrheaVariants,
+  biliaryVariants,
+} from "./samples";
 
 export const sources: Source[] = [
-  { id: 'capa-gine', label: 'ENARM_Capa1_Completo.pdf · p. 50', detail: 'Bloques 14.01 y 14.02. El documento remite a las páginas 381–382, 412 y 423–424 del libro. Se consultó este PDF de 143 páginas; no se verificaron aquí los originales de esos capítulos.' },
-  { id: 'capa-prol', label: 'ENARM_Capa1_Completo.pdf · p. 38', detail: 'Bloque 10.10: amenorrea y secreción láctea. Referencia indicada en el documento: libro, pp. 288–289.' },
-  { id: 'capa-biliar', label: 'ENARM_Capa1_Completo.pdf · pp. 17–18', detail: 'Bloque 05.03: fiebre e ictericia con dolor. Se contrasta con las páginas 135 y 138 del extracto original disponible.' },
-  { id: 'book-biliar', label: 'Edwino-1-221.pdf · pp. 135 y 138', detail: 'Extracto original: colangitis y coledocolitiasis. Base del piloto anterior. Las viñetas y las cifras de esta muestra son construidas.' },
-  { id: 'asrm', label: 'ASRM · Evaluación de amenorrea, 2024', detail: 'Fuente externa: evaluación inicial, embarazo y patrón hormonal.', href: 'https://www.asrm.org/practice-guidance/practice-committee-documents/current-evaluation-of-amenorrhea/' },
-  { id: 'fha', label: 'Endocrine Society · Amenorrea hipotalámica, 2017', detail: 'Fuente externa: diagnóstico de exclusión, balance energético y criterios para valorar hospitalización.', href: 'https://www.endocrine.org/clinical-practice-guidelines/hypothalamic-amenorrhea' },
-  { id: 'poi', label: 'Guía de insuficiencia ovárica · ESHRE/ASRM, 2025', detail: 'Fuente externa: confirmación diagnóstica y tratamiento hormonal individualizado.', href: 'https://www.asrm.org/practice-guidance/practice-committee-documents/evidence-based-guideline-premature-ovarian-insufficiency--2024/' },
-  { id: 'prol', label: 'Pituitary Society · Consenso sobre prolactinomas, 2023', detail: 'Fuente externa: evaluación de prolactina y manejo según la causa y los síntomas.', href: 'https://www.nature.com/articles/s41574-023-00886-5' },
-  { id: 'nice', label: 'NICE NG126 · Embarazo temprano', detail: 'Fuente externa: dolor, sangrado e inestabilidad requieren valoración específica; la hCG no localiza la gestación.', href: 'https://www.nice.org.uk/guidance/ng126' },
-  { id: 'tg18', label: 'Tokyo Guidelines 2018 · Colangitis', detail: 'Fuente externa: combinar inflamación, colestasis e imagen. La tríada completa no es obligatoria.', href: 'https://doi.org/10.1002/jhbp.512' },
-  { id: 'tg18_initial', label: 'Tokyo Guidelines 2018 · Manejo inicial', detail: 'Fuente externa: estabilización, tratamiento de la infección y drenaje según gravedad y respuesta.', href: 'https://doi.org/10.1002/jhbp.509' },
-  { id: 'asge2019', label: 'ASGE · Coledocolitiasis, 2019', detail: 'Fuente externa: estudio confirmatorio según riesgo; evitar la CPRE solo diagnóstica de forma automática.', href: 'https://www.asge.org/docs/default-source/guidelines/asge-guideline-on-the-role-of-endoscopy-in-the-evaluation-and-management-of-choledocholithiasis-2019-june-gie.pdf' },
+  {
+    id: "capa-gine",
+    label: "ENARM_Capa1_Completo.pdf · p. 50",
+    detail:
+      "Bloques 14.01 y 14.02. El documento remite a las páginas 381–382, 412 y 423–424 del libro. Se consultó este PDF de 143 páginas; no se verificaron aquí los originales de esos capítulos.",
+  },
+  {
+    id: "capa-prol",
+    label: "ENARM_Capa1_Completo.pdf · p. 38",
+    detail:
+      "Bloque 10.10: amenorrea y secreción láctea. Referencia indicada en el documento: libro, pp. 288–289.",
+  },
+  {
+    id: "capa-biliar",
+    label: "ENARM_Capa1_Completo.pdf · pp. 17–18",
+    detail:
+      "Bloque 05.03: fiebre e ictericia con dolor. Se contrasta con las páginas 135 y 138 del extracto original disponible.",
+  },
+  {
+    id: "book-biliar",
+    label: "Edwino-1-221.pdf · pp. 135 y 138",
+    detail:
+      "Extracto original: colangitis y coledocolitiasis. Base del piloto anterior. Las viñetas y las cifras de esta muestra son construidas.",
+  },
+  {
+    id: "asrm",
+    label: "ASRM · Evaluación de amenorrea, 2024",
+    detail: "Fuente externa: evaluación inicial, embarazo y patrón hormonal.",
+    href: "https://www.asrm.org/practice-guidance/practice-committee-documents/current-evaluation-of-amenorrhea/",
+  },
+  {
+    id: "fha",
+    label: "Endocrine Society · Amenorrea hipotalámica, 2017",
+    detail:
+      "Fuente externa: diagnóstico de exclusión, balance energético y criterios para valorar hospitalización.",
+    href: "https://www.endocrine.org/clinical-practice-guidelines/hypothalamic-amenorrhea",
+  },
+  {
+    id: "poi",
+    label: "Guía de insuficiencia ovárica · ESHRE/ASRM, 2025",
+    detail:
+      "Fuente externa: confirmación diagnóstica y tratamiento hormonal individualizado.",
+    href: "https://www.asrm.org/practice-guidance/practice-committee-documents/evidence-based-guideline-premature-ovarian-insufficiency--2024/",
+  },
+  {
+    id: "prol",
+    label: "Pituitary Society · Consenso sobre prolactinomas, 2023",
+    detail:
+      "Fuente externa: evaluación de prolactina y manejo según la causa y los síntomas.",
+    href: "https://www.nature.com/articles/s41574-023-00886-5",
+  },
+  {
+    id: "nice",
+    label: "NICE NG126 · Embarazo temprano",
+    detail:
+      "Fuente externa: dolor, sangrado e inestabilidad requieren valoración específica; la hCG no localiza la gestación.",
+    href: "https://www.nice.org.uk/guidance/ng126",
+  },
+  {
+    id: "tg18",
+    label: "Tokyo Guidelines 2018 · Colangitis",
+    detail:
+      "Fuente externa: combinar inflamación, colestasis e imagen. La tríada completa no es obligatoria.",
+    href: "https://doi.org/10.1002/jhbp.512",
+  },
+  {
+    id: "tg18_initial",
+    label: "Tokyo Guidelines 2018 · Manejo inicial",
+    detail:
+      "Fuente externa: estabilización, tratamiento de la infección y drenaje según gravedad y respuesta.",
+    href: "https://doi.org/10.1002/jhbp.509",
+  },
+  {
+    id: "asge2019",
+    label: "ASGE · Coledocolitiasis, 2019",
+    detail:
+      "Fuente externa: estudio confirmatorio según riesgo; evitar la CPRE solo diagnóstica de forma automática.",
+    href: "https://www.asge.org/docs/default-source/guidelines/asge-guideline-on-the-role-of-endoscopy-in-the-evaluation-and-management-of-choledocholithiasis-2019-june-gie.pdf",
+  },
 ];
 
 export const axes: ClinicalAxis[] = [
   {
-    id: 'amenorrea', title: 'Amenorrea secundaria', area: 'Ginecología y endocrinología',
-    question: 'La menstruación se detuvo. ¿Qué dato te ayuda a encontrar la causa?',
-    shared: 'Una mujer que antes menstruaba consulta porque dejó de hacerlo. El síntoma se comparte; la explicación cambia.',
-    takeaway: 'Compara la señal hormonal con la respuesta del ovario. Antes, considera el embarazo.',
-    coverage: 'Muestra de cuatro alternativas. Quedan fuera, entre otras, el síndrome de ovario poliquístico, las causas tiroideas y las alteraciones uterinas. No es un algoritmo completo.',
-    glossary: 'FSH: hormona foliculoestimulante. Estradiol: estrógeno. β-hCG: hormona que se detecta en la prueba de embarazo.',
-    sources: ['capa-gine', 'capa-prol', 'asrm', 'fha', 'poi', 'prol', 'nice'],
+    id: "amenorrea",
+    title: "Amenorrea secundaria",
+    area: "Ginecología y endocrinología",
+    question:
+      "La menstruación se detuvo. ¿Qué dato te ayuda a encontrar la causa?",
+    shared:
+      "Una mujer que antes menstruaba consulta porque dejó de hacerlo. El síntoma se comparte; la explicación cambia.",
+    takeaway:
+      "Compara la señal hormonal con la respuesta del ovario. Antes, considera el embarazo.",
+    coverage:
+      "Muestra de cuatro alternativas. Quedan fuera, entre otras, el síndrome de ovario poliquístico, las causas tiroideas y las alteraciones uterinas. No es un algoritmo completo.",
+    glossary:
+      "FSH: hormona foliculoestimulante. Estradiol: estrógeno. β-hCG: hormona que se detecta en la prueba de embarazo.",
+    sources: ["capa-gine", "capa-prol", "asrm", "fha", "poi", "prol", "nice"],
     cases: [
       {
-        id: 'AME-EMB', diagnosis: 'Embarazo', category: 'Estado fisiológico',
-        vignette: 'Una mujer de 26 años, con ciclos antes regulares y retraso menstrual, presenta [[β-hCG positiva]]; está estable y no refiere dolor ni sangrado.',
-        discriminator: 'La prueba positiva cambia la ruta de evaluación. No indica por sí sola dónde está la gestación.',
-        mechanism: 'La gestación modifica el ciclo. En este caso, la ausencia de menstruación no implica una falla hormonal.',
-        decision: 'Iniciar valoración del embarazo según síntomas y tiempo de gestación. Buscar dolor, sangrado o inestabilidad.',
-        contrast: 'Las otras tres viñetas parten de una prueba de embarazo negativa. No se empieza por atribuir el retraso al estrés.',
+        id: "AME-EMB",
+        diagnosis: "Embarazo",
+        category: "Estado fisiológico",
+        vignette:
+          "Una mujer de 26 años, con ciclos antes regulares y retraso menstrual, presenta [[β-hCG positiva]]; está estable y no refiere dolor ni sangrado.",
+        discriminator:
+          "La prueba positiva cambia la ruta de evaluación. No indica por sí sola dónde está la gestación.",
+        mechanism:
+          "La gestación modifica el ciclo. En este caso, la ausencia de menstruación no implica una falla hormonal.",
+        decision:
+          "Iniciar valoración del embarazo según síntomas y tiempo de gestación. Buscar dolor, sangrado o inestabilidad.",
+        contrast:
+          "Las otras tres viñetas parten de una prueba de embarazo negativa. No se empieza por atribuir el retraso al estrés.",
         detail: {
-          confirm: 'Integrar la prueba de embarazo con la historia clínica. La localización y la evolución se valoran con los estudios indicados para el contexto.',
-          treatment: 'Si la valoración es compatible con un embarazo estable, iniciar la atención prenatal correspondiente. El tratamiento cambia si aparece una complicación.',
-          modifiers: 'El dolor importante, el sangrado o la inestabilidad cambian la prioridad. Una prueba positiva no permite afirmar que el embarazo es intrauterino.',
-          limit: 'La viñeta enseña la primera bifurcación del diagnóstico diferencial; no evalúa viabilidad ni localización.',
-        }, sources: ['capa-gine', 'asrm', 'nice'],
+          confirm:
+            "Integrar la prueba de embarazo con la historia clínica. La localización y la evolución se valoran con los estudios indicados para el contexto.",
+          treatment:
+            "Si la valoración es compatible con un embarazo estable, iniciar la atención prenatal correspondiente. El tratamiento cambia si aparece una complicación.",
+          modifiers:
+            "El dolor importante, el sangrado o la inestabilidad cambian la prioridad. Una prueba positiva no permite afirmar que el embarazo es intrauterino.",
+          limit:
+            "La viñeta enseña la primera bifurcación del diagnóstico diferencial; no evalúa viabilidad ni localización.",
+        },
+        sources: ["capa-gine", "asrm", "nice"],
       },
       {
-        id: 'AME-HIP', diagnosis: 'Amenorrea hipotalámica funcional', category: 'Señal central reducida',
-        vignette: 'Una mujer de 23 años deja de menstruar tras restringir su alimentación y aumentar el ejercicio; con embarazo excluido, tiene [[estradiol bajo y FSH baja o normal]].',
-        discriminator: 'Falta estrógeno, pero la FSH no aumenta como se esperaría ante una falla ovárica.',
-        mechanism: 'La supresión funcional de la señal central reduce la estimulación del ovario.',
-        decision: 'Excluir otras causas y corregir el déficit energético con apoyo nutricional y psicológico, según la evaluación.',
-        contrast: 'La insuficiencia ovárica también puede bajar el estradiol. Allí la FSH está elevada.',
+        id: "AME-HIP",
+        diagnosis: "Amenorrea hipotalámica funcional",
+        category: "Señal central reducida",
+        vignette:
+          "Una mujer de 23 años deja de menstruar tras restringir su alimentación y aumentar el ejercicio; con embarazo excluido, tiene [[estradiol bajo y FSH baja o normal]].",
+        discriminator:
+          "Falta estrógeno, pero la FSH no aumenta como se esperaría ante una falla ovárica.",
+        mechanism:
+          "La supresión funcional de la señal central reduce la estimulación del ovario.",
+        decision:
+          "Excluir otras causas y corregir el déficit energético con apoyo nutricional y psicológico, según la evaluación.",
+        contrast:
+          "La insuficiencia ovárica también puede bajar el estradiol. Allí la FSH está elevada.",
         detail: {
-          confirm: 'Es un diagnóstico de exclusión. Valorar alimentación, ejercicio, estrés y otras causas endocrinas u orgánicas.',
-          treatment: 'Recuperar el equilibrio energético. Adaptar alimentación y ejercicio. Añadir apoyo psicológico cuando corresponda.',
-          modifiers: 'Bradicardia grave, hipotensión, ortostasis o alteraciones de electrolitos obligan a valorar hospitalización. El deseo de embarazo requiere una evaluación reproductiva específica.',
-          limit: 'El ejercicio o el peso bajo aislados no confirman este diagnóstico. Los anticonceptivos no corrigen por sí solos el déficit energético.',
-        }, sources: ['capa-gine', 'asrm', 'fha'],
+          confirm:
+            "Es un diagnóstico de exclusión. Valorar alimentación, ejercicio, estrés y otras causas endocrinas u orgánicas.",
+          treatment:
+            "Recuperar el equilibrio energético. Adaptar alimentación y ejercicio. Añadir apoyo psicológico cuando corresponda.",
+          modifiers:
+            "Bradicardia grave, hipotensión, ortostasis o alteraciones de electrolitos obligan a valorar hospitalización. El deseo de embarazo requiere una evaluación reproductiva específica.",
+          limit:
+            "El ejercicio o el peso bajo aislados no confirman este diagnóstico. Los anticonceptivos no corrigen por sí solos el déficit energético.",
+        },
+        sources: ["capa-gine", "asrm", "fha"],
       },
       {
-        id: 'AME-OVA', diagnosis: 'Insuficiencia ovárica primaria', category: 'Respuesta ovárica reducida',
-        vignette: 'Una mujer de 32 años tiene cinco meses de amenorrea, sofocos y prueba de embarazo negativa; sus estudios muestran [[FSH elevada con estradiol bajo]].',
-        discriminator: 'La señal de FSH aumenta, pero la producción estrogénica del ovario es insuficiente.',
-        mechanism: 'La función ovárica disminuye antes de los 40 años. Se pierde parte de la retroalimentación hormonal.',
-        decision: 'Confirmar el patrón diagnóstico y valorar la causa, el tratamiento hormonal y los objetivos reproductivos.',
-        contrast: 'En la supresión hipotalámica, el estradiol también es bajo, pero la FSH es baja o normal.',
+        id: "AME-OVA",
+        diagnosis: "Insuficiencia ovárica primaria",
+        category: "Respuesta ovárica reducida",
+        vignette:
+          "Una mujer de 32 años tiene cinco meses de amenorrea, sofocos y prueba de embarazo negativa; sus estudios muestran [[FSH elevada con estradiol bajo]].",
+        discriminator:
+          "La señal de FSH aumenta, pero la producción estrogénica del ovario es insuficiente.",
+        mechanism:
+          "La función ovárica disminuye antes de los 40 años. Se pierde parte de la retroalimentación hormonal.",
+        decision:
+          "Confirmar el patrón diagnóstico y valorar la causa, el tratamiento hormonal y los objetivos reproductivos.",
+        contrast:
+          "En la supresión hipotalámica, el estradiol también es bajo, pero la FSH es baja o normal.",
         detail: {
-          confirm: 'La guía conjunta usa ciclos alterados durante al menos cuatro meses y FSH >25 UI/L. Repetir FSH a las 4–6 semanas si existe incertidumbre. Considerar el efecto de tratamientos hormonales.',
-          treatment: 'El tratamiento hormonal se recomienda, salvo contraindicaciones, hasta la edad habitual de menopausia. Con útero, se requiere protección endometrial con progestágeno.',
-          modifiers: 'Individualizar por antecedentes, contraindicaciones y deseo reproductivo. El tratamiento hormonal sustitutivo no es anticonceptivo.',
-          limit: 'El estradiol bajo apoya el patrón, pero no establece por sí solo el diagnóstico. Puede persistir función ovárica intermitente.',
-        }, sources: ['capa-gine', 'poi'],
+          confirm:
+            "La guía conjunta usa ciclos alterados durante al menos cuatro meses y FSH >25 UI/L. Repetir FSH a las 4–6 semanas si existe incertidumbre. Considerar el efecto de tratamientos hormonales.",
+          treatment:
+            "El tratamiento hormonal se recomienda, salvo contraindicaciones, hasta la edad habitual de menopausia. Con útero, se requiere protección endometrial con progestágeno.",
+          modifiers:
+            "Individualizar por antecedentes, contraindicaciones y deseo reproductivo. El tratamiento hormonal sustitutivo no es anticonceptivo.",
+          limit:
+            "El estradiol bajo apoya el patrón, pero no establece por sí solo el diagnóstico. Puede persistir función ovárica intermitente.",
+        },
+        sources: ["capa-gine", "poi"],
       },
       {
-        id: 'AME-PRO', diagnosis: 'Hiperprolactinemia', category: 'Inhibición del eje hormonal',
-        vignette: 'Una mujer de 29 años tiene amenorrea, embarazo excluido y secreción láctea; se encuentra [[prolactina persistentemente elevada]], tras revisar las condiciones de la toma.',
-        discriminator: 'La prolactina elevada orienta hacia este mecanismo. Tener galactorrea no es un requisito.',
-        mechanism: 'El exceso de prolactina puede inhibir la señal reproductiva y alterar la ovulación.',
-        decision: 'Revisar embarazo, fármacos, función tiroidea y otras causas antes de decidir el tratamiento o la imagen.',
-        contrast: 'Hiperprolactinemia no equivale a prolactinoma. La causa determina la conducta.',
+        id: "AME-PRO",
+        diagnosis: "Hiperprolactinemia",
+        category: "Inhibición del eje hormonal",
+        vignette:
+          "Una mujer de 29 años tiene amenorrea, embarazo excluido y secreción láctea; se encuentra [[prolactina persistentemente elevada]], tras revisar las condiciones de la toma.",
+        discriminator:
+          "La prolactina elevada orienta hacia este mecanismo. Tener galactorrea no es un requisito.",
+        mechanism:
+          "El exceso de prolactina puede inhibir la señal reproductiva y alterar la ovulación.",
+        decision:
+          "Revisar embarazo, fármacos, función tiroidea y otras causas antes de decidir el tratamiento o la imagen.",
+        contrast:
+          "Hiperprolactinemia no equivale a prolactinoma. La causa determina la conducta.",
         detail: {
-          confirm: 'Confirmar elevaciones leves y valorar macroprolactina cuando corresponda. Revisar fármacos y causas secundarias; investigar una elevación persistente sin explicación.',
-          treatment: 'El tratamiento depende de la causa. Un prolactinoma sintomático puede requerir un agonista dopaminérgico, con valoración especializada.',
-          modifiers: 'Los síntomas visuales, las características de una lesión hipofisaria, el embarazo y los fármacos cambian el manejo. Los cambios de medicación requieren coordinación con quien la prescribe.',
-          limit: 'La ausencia de secreción láctea no excluye hiperprolactinemia. Un valor aislado no basta para atribuirlo a un tumor.',
-        }, sources: ['capa-prol', 'asrm', 'prol'],
+          confirm:
+            "Confirmar elevaciones leves y valorar macroprolactina cuando corresponda. Revisar fármacos y causas secundarias; investigar una elevación persistente sin explicación.",
+          treatment:
+            "El tratamiento depende de la causa. Un prolactinoma sintomático puede requerir un agonista dopaminérgico, con valoración especializada.",
+          modifiers:
+            "Los síntomas visuales, las características de una lesión hipofisaria, el embarazo y los fármacos cambian el manejo. Los cambios de medicación requieren coordinación con quien la prescribe.",
+          limit:
+            "La ausencia de secreción láctea no excluye hiperprolactinemia. Un valor aislado no basta para atribuirlo a un tumor.",
+        },
+        sources: ["capa-prol", "asrm", "prol"],
       },
     ],
-    variants: [],
-    practice: [],
+    variants: amenorrheaVariants,
+    practice: amenorrheaPractice,
   },
   {
-    id: 'ictericia', title: 'Ictericia obstructiva', area: 'Cirugía y gastroenterología',
-    question: 'Hay obstrucción biliar. ¿Qué cambia si también aparece infección?',
-    shared: 'Una persona presenta ictericia y un cálculo en el colédoco. Compara el drenaje alterado con la infección sobre esa obstrucción.',
-    takeaway: 'La obstrucción y la infección pueden coexistir. Reconocer la segunda cambia la prioridad.',
-    coverage: 'Muestra de dos alternativas relacionadas. No incluye todas las causas de ictericia ni todas las causas de obstrucción biliar.',
-    glossary: 'Colédoco: conducto que lleva bilis al intestino. Colestasis: drenaje biliar alterado. CPRE: procedimiento endoscópico que permite intervenir en la vía biliar.',
-    sources: ['capa-biliar', 'book-biliar', 'tg18', 'tg18_initial', 'asge2019'],
+    id: "ictericia",
+    title: "Ictericia obstructiva",
+    area: "Cirugía y gastroenterología",
+    question:
+      "Hay obstrucción biliar. ¿Qué cambia si también aparece infección?",
+    shared:
+      "Una persona presenta ictericia y un cálculo en el colédoco. Compara el drenaje alterado con la infección sobre esa obstrucción.",
+    takeaway:
+      "La obstrucción y la infección pueden coexistir. Reconocer la segunda cambia la prioridad.",
+    coverage:
+      "Muestra de dos alternativas relacionadas. No incluye todas las causas de ictericia ni todas las causas de obstrucción biliar.",
+    glossary:
+      "Colédoco: conducto que lleva bilis al intestino. Colestasis: drenaje biliar alterado. CPRE: procedimiento endoscópico que permite intervenir en la vía biliar.",
+    sources: ["capa-biliar", "book-biliar", "tg18", "tg18_initial", "asge2019"],
     cases: [
       {
-        id: 'BIL-COLE', diagnosis: 'Coledocolitiasis', category: 'Obstrucción del conducto',
-        vignette: 'Una persona con ictericia y fosfatasa alcalina elevada tiene [[un cálculo demostrado dentro del colédoco]]; está estable y esta evaluación no aporta datos suficientes de infección.',
-        discriminator: 'La imagen identifica la causa y la localización de la obstrucción.',
-        mechanism: 'Un cálculo dificulta el paso de la bilis por el colédoco.',
-        decision: 'Buscar infección e inestabilidad y valorar la resolución de la obstrucción.',
-        contrast: 'La colangitis agrega infección. La presencia del cálculo por sí sola no la demuestra.',
+        id: "BIL-COLE",
+        diagnosis: "Coledocolitiasis",
+        category: "Obstrucción del conducto",
+        vignette:
+          "Una persona con ictericia y fosfatasa alcalina elevada tiene [[un cálculo demostrado dentro del colédoco]]; está estable y esta evaluación no aporta datos suficientes de infección.",
+        discriminator:
+          "La imagen identifica la causa y la localización de la obstrucción.",
+        mechanism: "Un cálculo dificulta el paso de la bilis por el colédoco.",
+        decision:
+          "Buscar infección e inestabilidad y valorar la resolución de la obstrucción.",
+        contrast:
+          "La colangitis agrega infección. La presencia del cálculo por sí sola no la demuestra.",
         detail: {
-          confirm: 'La imagen del cálculo confirma su localización. Si solo hay sospecha, integrar el riesgo para elegir estudios como colangio-RM o ultrasonido endoscópico.',
-          treatment: 'Un cálculo confirmado requiere valorar su extracción según el contexto. La CPRE puede permitir tratamiento; no se indica como estudio diagnóstico automático en todos los casos.',
-          modifiers: 'La infección, la inestabilidad y la probabilidad de cálculo cambian la urgencia y la ruta de estudio o intervención.',
-          limit: 'No tener fiebre en un momento concreto no excluye infección. La dilatación de la vía biliar sola no demuestra un cálculo.',
-        }, sources: ['capa-biliar', 'book-biliar', 'asge2019', 'tg18'],
+          confirm:
+            "La imagen del cálculo confirma su localización. Si solo hay sospecha, integrar el riesgo para elegir estudios como colangio-RM o ultrasonido endoscópico.",
+          treatment:
+            "Un cálculo confirmado requiere valorar su extracción según el contexto. La CPRE puede permitir tratamiento; no se indica como estudio diagnóstico automático en todos los casos.",
+          modifiers:
+            "La infección, la inestabilidad y la probabilidad de cálculo cambian la urgencia y la ruta de estudio o intervención.",
+          limit:
+            "No tener fiebre en un momento concreto no excluye infección. La dilatación de la vía biliar sola no demuestra un cálculo.",
+        },
+        sources: ["capa-biliar", "book-biliar", "asge2019", "tg18"],
       },
       {
-        id: 'BIL-COLAN', diagnosis: 'Colangitis aguda', category: 'Infección sobre la obstrucción',
-        vignette: 'Una persona con ictericia y cálculo obstructivo presenta [[fiebre con escalofríos y leucocitosis]], además de alteraciones de colestasis e imagen biliar compatible.',
-        discriminator: 'La inflamación sistémica se integra con la colestasis y la imagen; no se interpreta la fiebre de forma aislada.',
-        mechanism: 'A la alteración del drenaje se suma una infección de la vía biliar.',
-        decision: 'Valorar estabilidad y disfunción orgánica. Iniciar atención de la infección y valorar el drenaje según el cuadro.',
-        contrast: 'El cálculo puede seguir siendo la causa. El nuevo diagnóstico describe una complicación que modifica la conducta.',
+        id: "BIL-COLAN",
+        diagnosis: "Colangitis aguda",
+        category: "Infección sobre la obstrucción",
+        vignette:
+          "Una persona con ictericia y cálculo obstructivo presenta [[fiebre con escalofríos y leucocitosis]], además de alteraciones de colestasis e imagen biliar compatible.",
+        discriminator:
+          "La inflamación sistémica se integra con la colestasis y la imagen; no se interpreta la fiebre de forma aislada.",
+        mechanism:
+          "A la alteración del drenaje se suma una infección de la vía biliar.",
+        decision:
+          "Valorar estabilidad y disfunción orgánica. Iniciar atención de la infección y valorar el drenaje según el cuadro.",
+        contrast:
+          "El cálculo puede seguir siendo la causa. El nuevo diagnóstico describe una complicación que modifica la conducta.",
         detail: {
-          confirm: 'Integrar inflamación sistémica, colestasis e imagen. La tríada clásica de dolor, fiebre e ictericia no debe estar completa para considerar el diagnóstico.',
-          treatment: 'El manejo incluye soporte, antibióticos y drenaje según gravedad y respuesta. La inestabilidad requiere atención inmediata.',
-          modifiers: 'La disfunción orgánica y la respuesta al tratamiento modifican la urgencia. Para asignar gravedad se usan los criterios completos de la guía.',
-          limit: 'Esta muestra enseña prioridades. No fija un antibiótico, una dosis ni una técnica de drenaje para todos los pacientes.',
-        }, sources: ['capa-biliar', 'book-biliar', 'tg18', 'tg18_initial'],
+          confirm:
+            "Integrar inflamación sistémica, colestasis e imagen. La tríada clásica de dolor, fiebre e ictericia no debe estar completa para considerar el diagnóstico.",
+          treatment:
+            "El manejo incluye soporte, antibióticos y drenaje según gravedad y respuesta. La inestabilidad requiere atención inmediata.",
+          modifiers:
+            "La disfunción orgánica y la respuesta al tratamiento modifican la urgencia. Para asignar gravedad se usan los criterios completos de la guía.",
+          limit:
+            "Esta muestra enseña prioridades. No fija un antibiótico, una dosis ni una técnica de drenaje para todos los pacientes.",
+        },
+        sources: ["capa-biliar", "book-biliar", "tg18", "tg18_initial"],
       },
     ],
-    variants: [],
-    practice: biliaryPilot.cards.map(card => ({
-      id: card.id, type: card.type, vignette: card.case, question: card.question,
-      answer: card.answer, explanation: card.mechanism + ' ' + card.contrast,
-      decision: card.first_decision, limit: card.limit,
-      sources: ['book-biliar', ...card.guidelines],
+    variants: biliaryVariants,
+    practice: biliaryPilot.cards.map((card) => ({
+      id: card.id,
+      type: card.type,
+      vignette: card.case,
+      question: card.question,
+      answer: card.answer,
+      explanation: card.mechanism + " " + card.contrast,
+      decision: card.first_decision,
+      limit: card.limit,
+      sources: ["book-biliar", ...card.guidelines],
     })),
   },
 ];
