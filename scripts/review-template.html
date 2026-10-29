@@ -1,0 +1,190 @@
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600&family=Source+Sans+3:wght@400;500;600&display=swap">
+<div id="enarm-pilot" lang="es" aria-label="Revisión de tarjetas ENARM Contraste">
+  <header class="ep-header"><strong>ENARM Contraste<span aria-hidden="true">.</span></strong><span class="ep-draft">Piloto · Borrador</span><button type="button" data-export>Exportar revisión</button></header>
+  <div class="ep-intro"><div><p class="ep-eyebrow">Capa 1 · Vía biliar</p><h1>Obstrucción e infección.</h1><p>Diez tarjetas para evaluar el método antes de ampliar el mazo.</p></div><div class="ep-review-count"><strong data-reviewed>0 de 10</strong><span>tarjetas evaluadas por ti</span></div></div>
+  <div class="ep-review-track" role="progressbar" aria-label="Tarjetas evaluadas" aria-valuenow="0" aria-valuemin="0" aria-valuemax="10"><div></div></div>
+  <section class="ep-map"><button type="button" class="ep-map-toggle" aria-expanded="true" data-map-toggle>Mapa horizontal <span aria-hidden="true">−</span></button><div data-map-body><p class="ep-main-question"></p><div class="ep-table-wrap"><table><thead><tr><th>Categoría</th><th>Función o problema</th><th>Patrón característico</th><th>Alternativa cercana</th></tr></thead><tbody data-map-rows></tbody></table></div><p class="ep-map-limit"></p></div></section>
+  <div class="ep-workspace"><aside class="ep-sidebar"><label for="ep-filter">Tipo de tarjeta</label><select id="ep-filter"><option value="all">Todos los tipos</option><option value="ancla">Ancla</option><option value="contraste">Contraste</option><option value="microvariacion">Microvariación</option><option value="discriminador">Discriminador</option><option value="primera_decision">Primera decisión</option></select><nav class="ep-card-list" aria-label="Seleccionar tarjeta"></nav><p>Las pistas se resaltan con el mismo color para los dos diagnósticos.</p></aside>
+  <section class="ep-card-area" aria-label="Tarjeta de muestra"><div class="ep-card"><div class="ep-card-meta"><span data-kind>Ancla</span><span data-card-id>BIL-001</span><span data-position>1 de 10</span></div><div data-front><p class="ep-case"></p><h2 class="ep-question"></h2></div><button type="button" class="ep-primary" data-reveal aria-expanded="false">Mostrar respuesta</button><div class="ep-back" hidden><h2 class="ep-answer"></h2><div class="ep-explanation"><h3>Función mínima</h3><p data-mechanism></p><h3>Contraste</h3><p data-contrast></p></div><details class="ep-more"><summary>Primera decisión, límites y fuentes</summary><h3>Primera decisión</h3><p data-first-decision></p><h3>Límite del patrón</h3><p data-limit></p><div data-change></div><h3>Fuentes</h3><div data-sources></div><p class="ep-case-note">Viñeta didáctica construida; cifras ilustrativas. Revisión médica profesional pendiente.</p></details><div class="ep-links"><span>Conecta con</span><div data-related></div></div></div></div>
+  <div class="ep-rating" hidden><h3>¿Esta tarjeta ayuda a distinguir?</h3><div class="ep-rating-options" role="group" aria-label="Evaluación de la tarjeta"><button type="button" data-rating="conservar" aria-pressed="false">Conservar</button><button type="button" data-rating="ajustar" aria-pressed="false">Ajustar</button><button type="button" data-rating="descartar" aria-pressed="false">Descartar</button></div><label for="ep-comment">¿Qué cambiarías? <span>Opcional</span></label><textarea id="ep-comment" rows="2" placeholder="Por ejemplo: la pista revela demasiado, falta un dato o la respuesta es ambigua."></textarea><p class="ep-save-state" aria-live="polite"></p></div>
+  <div class="ep-navigation"><button type="button" data-previous>Anterior</button><span data-nav-position>Tarjeta 1 de 10</span><button type="button" data-next>Siguiente</button></div></section></div>
+  <section class="ep-export" hidden aria-label="Copia de la revisión"><h3>Tu revisión</h3><label for="ep-export-text">Copia este texto para conservar la revisión y sus comentarios.</label><textarea id="ep-export-text" readonly rows="8"></textarea><div><button type="button" data-export-select>Seleccionar texto</button><button type="button" data-export-close>Cerrar</button></div></section>
+  <details class="ep-notes"><summary>Alcance y notas sobre las fuentes</summary><p>El libro completo tiene 1,150 páginas. Este piloto usa únicamente las páginas 135 y 138 del extracto local.</p><p>Los casos se construyeron para esta muestra. La revisión de contenido no mide aprendizaje ni programa repasos.</p><ul data-source-notes></ul><p data-clinical-review></p></details>
+  <div class="ep-announcement" role="status" aria-live="polite"></div>
+</div>
+<style>
+#enarm-pilot{--ep-bg:#F3F6FC;--ep-paper:#FFFFFF;--ep-ink:#253047;--ep-muted:#606B80;--ep-blue:#304FC5;--ep-pale:#DFE8FF;--ep-line:#DCE3EF;--ep-key:#92500A;--ep-key-bg:#FFF0D9;font-family:'Source Sans 3',Arial,sans-serif;color:var(--ep-ink);background:var(--ep-bg);max-width:1060px;margin:auto;padding:24px;border-radius:14px;line-height:1.55;color-scheme:light}
+#enarm-pilot *{box-sizing:border-box}
+#enarm-pilot button,#enarm-pilot select,#enarm-pilot textarea{font:inherit}
+#enarm-pilot button{cursor:pointer;border:1px solid var(--ep-line);background:var(--ep-paper);color:var(--ep-ink);border-radius:7px;padding:9px 14px;min-height:42px;font-size:14px}
+#enarm-pilot button:hover{border-color:var(--ep-blue)}
+#enarm-pilot button:focus-visible,#enarm-pilot select:focus-visible,#enarm-pilot textarea:focus-visible,#enarm-pilot summary:focus-visible{outline:3px solid #7998F1;outline-offset:3px}
+#enarm-pilot button:disabled{opacity:.45;cursor:default}
+#enarm-pilot .ep-header{display:flex;gap:16px;align-items:center;border-bottom:1px solid var(--ep-line);padding-bottom:20px;flex-wrap:wrap}
+#enarm-pilot .ep-header>strong{font-family:Outfit,Arial,sans-serif;font-weight:600;font-size:20px;margin-right:auto}
+#enarm-pilot .ep-header>strong>span{color:var(--ep-blue)}
+#enarm-pilot .ep-draft{background:var(--ep-pale);color:var(--ep-blue);border-radius:5px;padding:5px 9px;font-size:12px}
+#enarm-pilot .ep-intro{display:flex;justify-content:space-between;gap:22px;align-items:center;margin:26px 0 20px}
+#enarm-pilot .ep-eyebrow{font-size:13px;color:var(--ep-blue);margin:0 0 5px}
+#enarm-pilot h1{font:500 32px/1.2 Outfit,Arial,sans-serif;letter-spacing:-.5px;margin:0 0 10px}
+#enarm-pilot .ep-intro>div>p:last-child{font-size:15px;color:var(--ep-muted);margin:0}
+#enarm-pilot .ep-review-count{display:flex;flex-direction:column;flex-shrink:0;text-align:right}
+#enarm-pilot .ep-review-count strong{font:500 27px/1.3 Outfit,Arial,sans-serif;color:var(--ep-blue);font-variant-numeric:tabular-nums}
+#enarm-pilot .ep-review-count span{font-size:12px;color:var(--ep-muted)}
+#enarm-pilot .ep-review-track{height:6px;background:var(--ep-pale);border-radius:3px;margin-bottom:24px;overflow:hidden}
+#enarm-pilot .ep-review-track>div{height:100%;width:0;background:var(--ep-blue);transition:width .18s ease-out}
+#enarm-pilot .ep-map{border-top:1px solid var(--ep-line);border-bottom:1px solid var(--ep-line);padding:14px 0 18px;margin-bottom:26px}
+#enarm-pilot .ep-map-toggle{width:100%;padding:0;border:0;background:transparent;text-align:left;font-weight:600;font-size:16px;display:flex;justify-content:space-between;align-items:center}
+#enarm-pilot .ep-main-question{font-size:16px;max-width:78ch;margin:12px 0 18px}
+#enarm-pilot .ep-table-wrap{overflow-x:auto}
+#enarm-pilot table{border-collapse:collapse;width:100%;min-width:570px;text-align:left;font-size:13px}
+#enarm-pilot th{color:var(--ep-muted);font-weight:500;border-bottom:1px solid var(--ep-line);padding:9px 12px 9px 0}
+#enarm-pilot td{padding:13px 14px 13px 0;border-bottom:1px solid var(--ep-line);vertical-align:top;max-width:230px}
+#enarm-pilot td:first-child{font-weight:600;color:var(--ep-blue)}
+#enarm-pilot .ep-map-limit{font-size:13px;color:var(--ep-muted);margin:14px 0 0;max-width:100ch}
+#enarm-pilot .ep-workspace{display:grid;grid-template-columns:175px minmax(0,1fr);gap:28px;align-items:start}
+#enarm-pilot .ep-sidebar{padding-top:3px}
+#enarm-pilot .ep-sidebar label{font-size:13px;display:block;margin-bottom:7px;font-weight:500}
+#enarm-pilot select{padding:9px 10px;border:1px solid var(--ep-line);background:var(--ep-paper);color:var(--ep-ink);border-radius:6px;width:100%;font-size:14px}
+#enarm-pilot .ep-card-list{display:flex;flex-direction:column;gap:4px;margin-top:16px}
+#enarm-pilot .ep-card-list button{display:flex;justify-content:space-between;gap:5px;border:0;background:transparent;text-align:left;font-size:13px;padding:8px 10px}
+#enarm-pilot .ep-card-list button[aria-current=true]{background:var(--ep-pale);color:var(--ep-blue);font-weight:600}
+#enarm-pilot .ep-card-list button span{font-size:12px}
+#enarm-pilot .ep-sidebar>p{font-size:12px;color:var(--ep-muted);margin:18px 0}
+#enarm-pilot .ep-card{background:var(--ep-paper);padding:28px 32px;border-radius:12px;min-width:0}
+#enarm-pilot .ep-card-meta{display:flex;gap:13px;flex-wrap:wrap;align-items:center;font-size:12px;color:var(--ep-muted);margin-bottom:25px}
+#enarm-pilot .ep-card-meta span:first-child{color:var(--ep-blue);background:var(--ep-pale);padding:4px 8px;border-radius:4px}
+#enarm-pilot .ep-card-meta span:last-child{margin-left:auto}
+#enarm-pilot .ep-case{font-size:20px;line-height:1.7;margin:0 0 22px;max-width:64ch}
+#enarm-pilot .ep-key{color:var(--ep-key);background:var(--ep-key-bg);font-weight:600;border-radius:3px;padding:1px 3px}
+#enarm-pilot.ep-hide-hints .ep-key{color:inherit;background:transparent;font-weight:400;padding:0}
+#enarm-pilot .ep-question{font-size:18px;font-weight:600;line-height:1.5;margin:0 0 24px}
+#enarm-pilot .ep-primary{background:var(--ep-blue);color:#FFFFFF;border:0;padding:12px 20px;font-size:15px;min-height:46px}
+#enarm-pilot .ep-back{border-top:1px solid var(--ep-line);margin-top:26px;padding-top:26px}
+#enarm-pilot .ep-answer{font:500 25px/1.35 Outfit,Arial,sans-serif;color:var(--ep-blue);margin:0 0 22px}
+#enarm-pilot h3{font-size:14px;font-weight:600;margin:18px 0 5px;color:var(--ep-blue)}
+#enarm-pilot .ep-back p{font-size:16px;line-height:1.65;margin:0 0 14px}
+#enarm-pilot .ep-more{margin-top:20px}
+#enarm-pilot summary{cursor:pointer;font-size:14px;color:var(--ep-blue);padding:8px 0}
+#enarm-pilot .ep-case-note,#enarm-pilot [data-sources],#enarm-pilot [data-change]{font-size:13px!important;line-height:1.65;color:var(--ep-muted);overflow-wrap:anywhere}
+#enarm-pilot a{color:var(--ep-blue)}
+#enarm-pilot .ep-links{border-top:1px solid var(--ep-line);margin-top:20px;padding-top:14px;font-size:12px;color:var(--ep-muted);display:flex;gap:12px;align-items:center;flex-wrap:wrap}
+#enarm-pilot [data-related]{display:flex;gap:7px;flex-wrap:wrap}
+#enarm-pilot [data-related] button{font-size:12px;padding:4px 8px;min-height:34px}
+#enarm-pilot .ep-rating{margin-top:22px;padding:0 6px}
+#enarm-pilot .ep-rating h3{font-size:16px;margin:0 0 12px;color:var(--ep-ink)}
+#enarm-pilot .ep-rating-options{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:14px}
+#enarm-pilot .ep-rating-options button[aria-pressed=true]{background:var(--ep-blue);color:#FFFFFF;border-color:var(--ep-blue)}
+#enarm-pilot .ep-rating label{font-size:14px;display:block;margin-bottom:6px}
+#enarm-pilot .ep-rating label>span{color:var(--ep-muted);font-size:12px;margin-left:6px}
+#enarm-pilot textarea{width:100%;resize:vertical;min-height:78px;border:1px solid var(--ep-line);border-radius:7px;background:var(--ep-paper);color:var(--ep-ink);padding:12px;font-size:16px;line-height:1.5}
+#enarm-pilot textarea::placeholder{color:var(--ep-muted)}
+#enarm-pilot .ep-save-state{font-size:12px;color:var(--ep-muted);min-height:19px;margin:6px 0 0}
+#enarm-pilot .ep-navigation{display:flex;gap:15px;align-items:center;justify-content:space-between;margin-top:20px;font-size:13px;color:var(--ep-muted)}
+#enarm-pilot .ep-notes{margin-top:30px;padding-top:15px;border-top:1px solid var(--ep-line);font-size:13px;color:var(--ep-muted)}
+#enarm-pilot .ep-notes p,#enarm-pilot .ep-notes li{max-width:105ch}
+#enarm-pilot .ep-export{margin-top:24px;padding-top:16px;border-top:1px solid var(--ep-line)}
+#enarm-pilot .ep-export label{display:block;font-size:14px;margin-bottom:10px}
+#enarm-pilot .ep-export>div{display:flex;gap:10px;flex-wrap:wrap;margin-top:10px}
+#enarm-pilot .ep-announcement{font-size:13px;margin-top:10px;color:var(--ep-muted)}
+#enarm-pilot [hidden]{display:none!important}
+@media(max-width:760px){#enarm-pilot{padding:20px}#enarm-pilot .ep-workspace{grid-template-columns:minmax(0,1fr);gap:16px}#enarm-pilot .ep-sidebar{display:flex;align-items:center;gap:12px;flex-wrap:wrap}#enarm-pilot .ep-sidebar label{margin:0}#enarm-pilot select{width:auto;flex:1;min-width:170px}#enarm-pilot .ep-card-list{flex-direction:row;flex-wrap:wrap;width:100%;margin:0;gap:4px}#enarm-pilot .ep-card-list button{min-height:38px}#enarm-pilot .ep-card-list button .ep-list-kind{display:none}#enarm-pilot .ep-sidebar>p{margin:0;width:100%}#enarm-pilot .ep-card{padding:25px}#enarm-pilot .ep-case{font-size:19px}}
+@media(max-width:460px){#enarm-pilot{padding:16px}#enarm-pilot .ep-header{gap:10px}#enarm-pilot .ep-header>strong{font-size:18px}#enarm-pilot .ep-header>button{font-size:12px;padding:8px 10px}#enarm-pilot .ep-draft{font-size:11px}#enarm-pilot .ep-intro{align-items:start;flex-wrap:wrap;gap:14px}#enarm-pilot h1{font-size:28px}#enarm-pilot .ep-review-count{text-align:left;flex-direction:row;gap:10px;align-items:center}#enarm-pilot .ep-review-count strong{font-size:22px}#enarm-pilot .ep-card{padding:21px 18px}#enarm-pilot .ep-case{font-size:18px}#enarm-pilot .ep-question{font-size:17px}#enarm-pilot .ep-answer{font-size:23px}#enarm-pilot .ep-card-meta{gap:10px}#enarm-pilot .ep-primary{width:100%}#enarm-pilot .ep-navigation{gap:7px}#enarm-pilot .ep-navigation button{font-size:13px;padding:8px 10px}#enarm-pilot .ep-navigation>span{font-size:12px}#enarm-pilot .ep-rating-options button{padding:9px 11px}}
+@media(prefers-reduced-motion:reduce){#enarm-pilot .ep-review-track>div{transition:none}}
+</style>
+<script>
+(() => {
+  const data = __PILOT_DATA__;
+  const root = document.getElementById('enarm-pilot');
+  const labels = {ancla:'Ancla',contraste:'Contraste',microvariacion:'Microvariación',discriminador:'Discriminador',primera_decision:'Primera decisión'};
+  const key = 'enarm-contraste-review:' + data.content_sha256;
+  const state = {index:0,revealed:false,filter:'all',hints:true};
+  let reviews = {};
+  let storageAvailable = true;
+  const validIds = new Set(data.cards.map(card=>card.id));
+  const validRatings = new Set(['conservar','ajustar','descartar']);
+  const escape = text => String(text).replace(/[&<>"']/g, char=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[char]));
+  const mark = text => escape(text).replace(/\[\[(.*?)\]\]/g,'<span class="ep-key">$1</span>');
+  const select = selector => root.querySelector(selector);
+  try {
+    const saved=JSON.parse(localStorage.getItem(key) || '{}');
+    if(saved && typeof saved==='object' && !Array.isArray(saved)) for(const [id,value] of Object.entries(saved)) {
+      if(validIds.has(id) && value && typeof value==='object') reviews[id] = {rating:validRatings.has(value.rating)?value.rating:null,comment:typeof value.comment==='string'?value.comment.slice(0,12000):'',updated:typeof value.updated==='string'?value.updated:''};
+    }
+  } catch { storageAvailable=false; }
+  select('.ep-main-question').textContent=data.main_question;
+  select('.ep-map-limit').textContent=data.map_limit;
+  select('[data-map-rows]').innerHTML=data.map.map(row=>'<tr>'+[row.category,row.function,row.pattern,row.confused_with].map(value=>'<td>'+escape(value)+'</td>').join('')+'</tr>').join('');
+  select('[data-source-notes]').innerHTML=data.source_notes.map(note=>'<li>'+escape(note)+'</li>').join('');
+  select('[data-clinical-review]').textContent=data.clinical_review;
+  function visibleCards(){return data.cards.map((card,index)=>({card,index})).filter(({card})=>state.filter==='all'||card.type===state.filter);}
+  function save(){
+    try {localStorage.setItem(key,JSON.stringify(reviews));storageAvailable=true;} catch {storageAvailable=false;}
+    select('.ep-save-state').textContent=storageAvailable?'Revisión guardada en este navegador. Exporta una copia antes de cerrar.':'La revisión está solo en esta sesión. Exporta una copia antes de cerrar.';
+  }
+  function updateProgress(){
+    const count=data.cards.filter(card=>validRatings.has(reviews[card.id]?.rating)).length;
+    select('[data-reviewed]').textContent=count+' de '+data.cards.length;
+    select('.ep-review-track').setAttribute('aria-valuenow',String(count));
+    select('.ep-review-track>div').style.width=(count/data.cards.length*100)+'%';
+    select('.ep-announcement').textContent=count===data.cards.length?'Evaluaste las diez tarjetas. Exporta tu revisión para conservar tus comentarios.':'';
+  }
+  function render(){
+    const card=data.cards[state.index];
+    const list=visibleCards();
+    const position=list.findIndex(item=>item.index===state.index);
+    root.classList.toggle('ep-hide-hints',!state.hints);
+    select('[data-kind]').textContent=labels[card.type];
+    select('[data-card-id]').textContent=card.id;
+    select('[data-position]').textContent=(position+1)+' de '+list.length;
+    select('[data-nav-position]').textContent='Tarjeta '+(position+1)+' de '+list.length;
+    select('.ep-case').innerHTML=mark(card.case);
+    select('.ep-question').textContent=card.question;
+    select('.ep-answer').textContent=card.answer;
+    select('[data-mechanism]').textContent=card.mechanism;
+    select('[data-contrast]').textContent=card.contrast;
+    select('[data-first-decision]').textContent=card.first_decision;
+    select('[data-limit]').textContent=card.limit;
+    select('[data-change]').textContent=card.change?'Único cambio: '+card.change.field+'; '+card.change.before+' → '+card.change.after+'. Se conserva: '+card.change.unchanged.join(', ')+'.':'';
+    select('[data-sources]').innerHTML='<p>'+escape(data.book.filename)+' · páginas '+card.book_pages.join(', ')+'.</p>'+card.guidelines.map(id=>'<div><a href="'+escape(data.references[id].url)+'" target="_blank" rel="noopener noreferrer">'+escape(data.references[id].label)+'</a></div>').join('');
+    select('[data-related]').innerHTML=card.links.map(id=>'<button type="button" data-linked-id="'+id+'">'+id+'</button>').join('');
+    select('.ep-back').hidden=!state.revealed;
+    select('.ep-rating').hidden=!state.revealed;
+    select('[data-reveal]').textContent=state.revealed?'Ocultar respuesta':'Mostrar respuesta';
+    select('[data-reveal]').setAttribute('aria-expanded',String(state.revealed));
+    select('.ep-more').open=false;
+    select('#ep-comment').value=reviews[card.id]?.comment||'';
+    select('.ep-save-state').textContent=reviews[card.id]?(storageAvailable?'Revisión guardada en este navegador.':'Revisión solo en esta sesión; exporta antes de cerrar.'):'Evalúa la tarjeta después de leer la respuesta.';
+    root.querySelectorAll('[data-rating]').forEach(button=>button.setAttribute('aria-pressed',String(reviews[card.id]?.rating===button.dataset.rating)));
+    select('.ep-card-list').innerHTML=list.map(({card:entry,index})=>'<button type="button" data-card-index="'+index+'" aria-current="'+String(index===state.index)+'"><span>'+entry.id+(reviews[entry.id]?.rating?' ✓':'')+'</span><span class="ep-list-kind">'+labels[entry.type]+'</span></button>').join('');
+    select('[data-previous]').disabled=position<=0;
+    select('[data-next]').disabled=position>=list.length-1;
+    updateProgress();
+  }
+  root.addEventListener('click',event=>{
+    const button=event.target.closest('button'); if(!button||!root.contains(button))return;
+    if(button.hasAttribute('data-reveal')){state.revealed=!state.revealed;render();}
+    if(button.hasAttribute('data-card-index')){state.index=Number(button.dataset.cardIndex);state.revealed=false;render();}
+    if(button.hasAttribute('data-linked-id')){state.filter='all';select('#ep-filter').value='all';state.index=data.cards.findIndex(card=>card.id===button.dataset.linkedId);state.revealed=false;render();}
+    if(button.hasAttribute('data-previous')||button.hasAttribute('data-next')){const list=visibleCards();const pos=list.findIndex(item=>item.index===state.index);const target=pos+(button.hasAttribute('data-next')?1:-1);if(list[target]){state.index=list[target].index;state.revealed=false;render();}}
+    if(button.hasAttribute('data-rating')){const card=data.cards[state.index];reviews[card.id]={...reviews[card.id],rating:button.dataset.rating,comment:select('#ep-comment').value,updated:new Date().toISOString()};save();const message=select('.ep-save-state').textContent;render();select('.ep-save-state').textContent=message;}
+    if(button.hasAttribute('data-map-toggle')){const body=select('[data-map-body]');body.hidden=!body.hidden;button.setAttribute('aria-expanded',String(!body.hidden));button.querySelector('span').textContent=body.hidden?'+':'−';}
+    if(button.hasAttribute('data-export')){
+      const payload={pilot_id:data.id,content_sha256:data.content_sha256,exported_at:new Date().toISOString(),purpose:'evaluacion_de_contenido',reviews:data.cards.map(card=>({id:card.id,type:card.type,rating:reviews[card.id]?.rating||null,comment:reviews[card.id]?.comment||''}))};
+      if(window.parent!==window){
+        select('#ep-export-text').value=JSON.stringify(payload,null,2);select('.ep-export').hidden=false;select('#ep-export-text').focus();select('#ep-export-text').select();
+        select('.ep-announcement').textContent='Copia tu revisión antes de cerrar.';return;
+      }
+      const url=URL.createObjectURL(new Blob([JSON.stringify(payload,null,2)],{type:'application/json'}));
+      const anchor=document.createElement('a');anchor.href=url;anchor.download='revision-enarm-contraste.json';root.append(anchor);anchor.click();anchor.remove();setTimeout(()=>URL.revokeObjectURL(url),3000);
+      select('.ep-announcement').textContent='Se solicitó la descarga de tu revisión. Comprueba que el archivo se guardó.';
+    }
+    if(button.hasAttribute('data-export-select')){select('#ep-export-text').focus();select('#ep-export-text').select();}
+    if(button.hasAttribute('data-export-close')){select('.ep-export').hidden=true;select('[data-export]').focus();}
+  });
+  select('#ep-filter').addEventListener('change',event=>{state.filter=event.target.value;state.index=visibleCards()[0].index;state.revealed=false;render();});
+  select('#ep-comment').addEventListener('input',event=>{const card=data.cards[state.index];reviews[card.id]={...reviews[card.id],comment:event.target.value.slice(0,12000),updated:new Date().toISOString()};save();});
+  render();
+  if(globalThis.Tweak){const tweak=new Tweak({container:root,onChange:render});tweak.addToggle(state,'hints',{label:'Resaltar discriminador'});}
+})();
+</script>

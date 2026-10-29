@@ -1,0 +1,140 @@
+{
+  "id": "enarm-contraste-biliar-piloto-v1",
+  "title": "Obstrucción biliar: reconocer cuándo se agrega infección",
+  "status": "Borrador para evaluación",
+  "created": "2026-10-29",
+  "book": {"filename": "Edwino-1-221.pdf", "sha256": "ecb191bf1013b31ac4350e4ecd237cce68d4045790410bd4a4a32dbfaf98488d", "complete_book_pages": 1150, "excerpt_pages": 221, "pilot_pages": [135, 138], "edition": "No confirmada"},
+  "scope": "Solo dos páginas del extracto. Diez tarjetas de muestra. No representa la cobertura del libro completo.",
+  "main_question": "Ante una obstrucción biliar por un cálculo, ¿qué datos permiten reconocer que se agrega infección y cambia la prioridad de atención?",
+  "clinical_review": "Pendiente de revisión por un profesional de medicina. Se verificaron visualmente las dos páginas y se contrastaron puntos seleccionados con guías.",
+  "cases_notice": "Las viñetas son construidas para enseñanza. Las cifras clínicas son ilustrativas y no son casos ni cifras transcritas del libro.",
+  "map": [
+    {"category": "Coledocolitiasis", "function": "Reconocer un cálculo en el conducto que lleva la bilis al duodeno.", "pattern": "Puede producir ictericia y patrón de colestasis; el cálculo puede demostrarse por imagen.", "confused_with": "Colangitis sobre la obstrucción: buscar datos de infección, no solo ictericia."},
+    {"category": "Colangitis aguda", "function": "Reconocer infección de la vía biliar, a menudo con obstrucción.", "pattern": "Datos de inflamación sistémica junto con colestasis y evidencia de alteración biliar.", "confused_with": "Obstrucción por cálculo sin datos suficientes de infección."}
+  ],
+  "map_limit": "Las categorías pueden coexistir: una colangitis puede complicar una coledocolitiasis. La ausencia de fiebre no excluye infección. La tríada completa no es obligatoria.",
+  "references": {
+    "tg18": {"label": "Tokyo Guidelines 2018: criterios de colangitis", "url": "https://doi.org/10.1002/jhbp.512", "use": "Comprobar la integración de inflamación sistémica, colestasis e imagen; la tríada completa no es requisito."},
+    "tg18_initial": {"label": "Tokyo Guidelines 2018: evaluación inicial", "url": "https://doi.org/10.1002/jhbp.509", "use": "Comprobar que la inestabilidad requiere evaluación y atención inmediata."},
+    "asge2019": {"label": "ASGE 2019: evaluación de coledocolitiasis", "url": "https://www.asge.org/docs/default-source/guidelines/asge-guideline-on-the-role-of-endoscopy-in-the-evaluation-and-management-of-choledocholithiasis-2019-june-gie.pdf", "use": "Precisar el papel de colangio-RM o ultrasonido endoscópico antes de una CPRE diagnóstica en riesgo intermedio."}
+  },
+  "source_notes": [
+    "Página 138: el texto extraído dice 70–75 %, pero la imagen dice 10–15 %. Esa cifra no se usa en las tarjetas.",
+    "Página 138: el libro llama estándar de oro a la CPRE. En la tarjeta BIL-005 se añade de forma explícita el enfoque de riesgo de ASGE; no se presenta como una transcripción del libro.",
+    "No se exportan dosis, regímenes de antibióticos ni cifras de mortalidad en este piloto. La primera decisión se limita a evaluación, confirmación e identificación de urgencia."
+  ],
+  "cards": [
+    {
+      "id": "BIL-001", "concept": "coledocolitiasis", "type": "ancla",
+      "case": "Una persona con ictericia y fosfatasa alcalina elevada, sin fiebre ni leucocitosis en esta evaluación, tiene en la imagen [[un cálculo dentro del colédoco que obstruye el drenaje biliar]].",
+      "question": "¿Qué diagnóstico anatómico explica el patrón?",
+      "answer": "Coledocolitiasis.",
+      "mechanism": "El cálculo está en el colédoco y dificulta el paso de la bilis; esto explica la colestasis.",
+      "contrast": "La colangitis agrega infección de la vía biliar. En esta viñeta no se aportan datos suficientes para afirmarla.",
+      "first_decision": "Después de reconocer el cálculo, buscar datos de infección y de inestabilidad.",
+      "limit": "No tener fiebre en un momento concreto no descarta infección. Coledocolitiasis describe la localización del cálculo, no garantiza un cuadro sin complicaciones.",
+      "book_pages": [138, 135], "guidelines": ["tg18"], "links": ["BIL-002", "BIL-006"]
+    },
+    {
+      "id": "BIL-002", "concept": "coledocolitiasis", "type": "contraste",
+      "case": "Una persona con ictericia y un cálculo demostrado en el colédoco presenta [[fiebre de 39 °C, escalofríos y leucocitos de 16,000/µL]].",
+      "question": "¿Qué complicación debes reconocer además del cálculo?",
+      "answer": "Colangitis aguda sobre una obstrucción biliar por cálculo.",
+      "mechanism": "Al problema de drenaje se agrega un cuadro compatible con infección de la vía biliar.",
+      "contrast": "La ictericia y el cálculo explican la obstrucción. La fiebre, los escalofríos y la leucocitosis hacen insuficiente describir solo la presencia del cálculo.",
+      "first_decision": "Evaluar la estabilidad y buscar disfunción orgánica para establecer la urgencia.",
+      "limit": "La fiebre aislada no localiza una infección. Aquí se interpreta junto con la colestasis y la imagen biliar.",
+      "book_pages": [135, 138], "guidelines": ["tg18"], "links": ["BIL-001", "BIL-010"]
+    },
+    {
+      "id": "BIL-003", "concept": "coledocolitiasis", "type": "microvariacion",
+      "case": "Caso base: persona con ictericia, cálculo demostrado en colédoco, presión de 115/75 mmHg y temperatura de 37 °C; cambia únicamente [[la temperatura de 37 °C a 39 °C]].",
+      "question": "¿Qué complicación debes valorar ahora?",
+      "answer": "Colangitis aguda: aparece un dato de inflamación sistémica en un cuadro obstructivo.",
+      "mechanism": "El cálculo sigue presente; el cambio añade sospecha de infección sobre la obstrucción.",
+      "contrast": "Antes no se había aportado fiebre. Ahora existe fiebre, además de la ictericia y de la causa obstructiva demostrada.",
+      "first_decision": "Reevaluar la estabilidad y completar la valoración de infección biliar.",
+      "limit": "No se cambian la presión, la imagen ni la ictericia. La fiebre requiere interpretación clínica y evaluación de otras fuentes posibles.",
+      "change": {"field": "temperatura", "before": "37 °C", "after": "39 °C", "unchanged": ["ictericia", "cálculo en colédoco", "presión de 115/75 mmHg"]},
+      "book_pages": [135, 138], "guidelines": ["tg18"], "links": ["BIL-006", "BIL-009"]
+    },
+    {
+      "id": "BIL-004", "concept": "coledocolitiasis", "type": "discriminador",
+      "case": "Una persona estable tiene ictericia y pruebas hepáticas con patrón de colestasis; el ultrasonido informa [[vía biliar dilatada, sin cálculo visible]].",
+      "question": "¿La dilatación por sí sola demuestra un cálculo en el colédoco?",
+      "answer": "No. Sugiere obstrucción, pero no demuestra su causa.",
+      "mechanism": "La dilatación es un efecto posible del drenaje alterado; un cálculo es una de sus causas.",
+      "contrast": "Ver el cálculo identifica la causa. Ver solo dilatación mantiene la sospecha y deja otras causas de obstrucción abiertas.",
+      "first_decision": "Integrar el riesgo clínico y elegir cómo confirmar la causa.",
+      "limit": "Un ultrasonido sin cálculo visible tampoco lo descarta. Esta precisión se apoya en ASGE y evita convertir un signo indirecto en diagnóstico definitivo.",
+      "book_pages": [138], "guidelines": ["asge2019"], "links": ["BIL-001", "BIL-005"]
+    },
+    {
+      "id": "BIL-005", "concept": "coledocolitiasis", "type": "primera_decision",
+      "case": "Una persona estable, afebril y sin leucocitosis tiene bilirrubina total de 2.1 mg/dL y fosfatasa alcalina elevada; el ultrasonido [[no demuestra cálculo ni dilatación del colédoco]].",
+      "question": "Si persiste la sospecha de un cálculo, ¿qué estudio adicional permite confirmarlo antes de una CPRE solo diagnóstica?",
+      "answer": "Colangio-RM o ultrasonido endoscópico, según disponibilidad y experiencia local.",
+      "mechanism": "Permiten buscar el cálculo cuando la evaluación inicial no lo demuestra.",
+      "contrast": "La CPRE permite tratamiento, pero no es la prueba inicial automática en una persona estable con riesgo intermedio.",
+      "first_decision": "Elegir una prueba confirmatoria para este escenario de riesgo intermedio.",
+      "limit": "La precisión sobre el riesgo intermedio procede de ASGE 2019. Esta respuesta no se aplica automáticamente a colangitis o a un cálculo ya demostrado.",
+      "book_pages": [138], "guidelines": ["asge2019"], "links": ["BIL-004", "BIL-010"]
+    },
+    {
+      "id": "BIL-006", "concept": "colangitis", "type": "ancla",
+      "case": "Una persona con dolor en hipocondrio derecho e ictericia presenta [[fiebre con escalofríos y leucocitosis]], y la imagen muestra un cálculo que obstruye la vía biliar.",
+      "question": "¿Qué síndrome debes reconocer sobre la obstrucción?",
+      "answer": "Colangitis aguda.",
+      "mechanism": "La vía biliar obstruida presenta infección; la respuesta inflamatoria se integra con los datos de colestasis y de imagen.",
+      "contrast": "Un cálculo en el colédoco puede existir sin datos suficientes de infección. Aquí sí se aportan datos de inflamación sistémica en el contexto biliar.",
+      "first_decision": "Valorar estabilidad y signos de disfunción orgánica.",
+      "limit": "La tríada de dolor, ictericia y fiebre es un patrón clásico. No se exige que esté completa para considerar colangitis.",
+      "book_pages": [135, 138], "guidelines": ["tg18"], "links": ["BIL-001", "BIL-008"]
+    },
+    {
+      "id": "BIL-007", "concept": "colangitis", "type": "contraste",
+      "case": "Una persona con ictericia y cálculo confirmado en el colédoco está [[afebril, con leucocitos normales y presión de 115/75 mmHg]].",
+      "question": "¿Estos datos bastan para afirmar que la vía biliar está infectada?",
+      "answer": "No. El cálculo está demostrado, pero la infección no queda establecida con los datos aportados.",
+      "mechanism": "La obstrucción explica la ictericia; la presencia de un cálculo no equivale por sí misma a infección.",
+      "contrast": "En el patrón de colangitis se integran datos de inflamación sistémica con la alteración biliar.",
+      "first_decision": "Completar la evaluación de infección si la sospecha clínica persiste.",
+      "limit": "No equivale a descartar colangitis. Algunas personas pueden no presentar fiebre; importa la evaluación completa y la evolución.",
+      "book_pages": [135, 138], "guidelines": ["tg18"], "links": ["BIL-006", "BIL-009"]
+    },
+    {
+      "id": "BIL-008", "concept": "colangitis", "type": "microvariacion",
+      "case": "Caso base: persona con fiebre, ictericia, cálculo obstructivo y estado de alerta conservado; cambia únicamente [[la presión arterial de 110/70 mmHg a 80/50 mmHg]].",
+      "question": "¿Qué cambia en la prioridad de atención?",
+      "answer": "El cuadro ahora tiene inestabilidad hemodinámica y requiere evaluación y atención inmediata.",
+      "mechanism": "La presión baja indica compromiso circulatorio posible; no cambia la localización del cálculo.",
+      "contrast": "El diagnóstico biliar sigue siendo compatible con colangitis. Lo que cambia es la urgencia por la alteración circulatoria.",
+      "first_decision": "Evaluar y estabilizar la circulación, con valoración urgente de infección biliar y disfunción orgánica.",
+      "limit": "No se añade confusión ni se modifica otro dato. Una lectura de presión por sí sola no permite asignar una categoría completa de gravedad.",
+      "change": {"field": "presión arterial", "before": "110/70 mmHg", "after": "80/50 mmHg", "unchanged": ["fiebre", "ictericia", "cálculo obstructivo", "estado de alerta"]},
+      "book_pages": [135], "guidelines": ["tg18_initial"], "links": ["BIL-006", "BIL-010"]
+    },
+    {
+      "id": "BIL-009", "concept": "colangitis", "type": "discriminador",
+      "case": "A y B tienen ictericia y cálculo en el colédoco: A tiene 37 °C y leucocitos de 7,500/µL, mientras B presenta [[39 °C y leucocitos de 16,000/µL]].",
+      "question": "¿Qué dimensión del cuadro añade B y obliga a valorar infección biliar?",
+      "answer": "Inflamación sistémica, expresada aquí por fiebre y leucocitosis.",
+      "mechanism": "La inflamación sistémica se suma al patrón obstructivo; el problema ya no se describe solo por la localización del cálculo.",
+      "contrast": "La ictericia y el cálculo son compartidos. La respuesta inflamatoria diferencia los datos aportados por B.",
+      "first_decision": "Integrar la respuesta inflamatoria con la clínica y la imagen; buscar inestabilidad.",
+      "limit": "Es una comparación entre dos casos y cambia dos datos. No es una microvariación. La inflamación sistémica no demuestra por sí sola el origen biliar.",
+      "book_pages": [135, 138], "guidelines": ["tg18"], "links": ["BIL-003", "BIL-007"]
+    },
+    {
+      "id": "BIL-010", "concept": "colangitis", "type": "primera_decision",
+      "case": "Una persona con dolor en hipocondrio derecho, ictericia y fiebre presenta [[hipotensión y confusión]].",
+      "question": "Antes de completar el estudio de la obstrucción, ¿qué debes priorizar?",
+      "answer": "La evaluación y estabilización inmediata de funciones vitales y disfunción orgánica, con atención urgente.",
+      "mechanism": "La alteración circulatoria y del estado mental indica un cuadro potencialmente grave.",
+      "contrast": "Una persona estable con sospecha de un cálculo puede completar una evaluación confirmatoria. La inestabilidad cambia la prioridad.",
+      "first_decision": "No retrasar la atención inmediata para completar estudios diagnósticos.",
+      "limit": "La viñeta exige reconocer urgencia. No prescribe un régimen de antibióticos ni una técnica de drenaje para todos los casos.",
+      "book_pages": [135], "guidelines": ["tg18_initial"], "links": ["BIL-005", "BIL-008"]
+    }
+  ]
+}
