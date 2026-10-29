@@ -1,7 +1,7 @@
 # Aprendizaje clínico por contraste
 
 Fecha: 2026-10-29.
-Estado: propuesta para revisión del usuario. No es una implementación.
+Estado: diseño aprobado por el usuario. Se autorizó implementar una muestra y desplegarla en el VPS.
 
 ## Propósito
 
@@ -17,7 +17,7 @@ El repositorio contiene un piloto de diez tarjetas sobre coledocolitiasis y cola
 
 La dirección visual existente es Cobalto. La aplicación prevista usa React y TypeScript. Los scripts de exportación usan Python con `uv`. Estas decisiones se mantienen como base técnica propuesta.
 
-El archivo local `Edwino-1-221.pdf` contiene 221 páginas. La búsqueda en su texto no encontró amenorrea, hiperprolactinemia ni insuficiencia ovárica. Esto no verifica las páginas que solo contienen imagen. El archivo es un extracto. No permite declarar cubierto el libro completo de 1,150 páginas.
+Al redactar este diseño, el archivo local `Edwino-1-221.pdf` contenía 221 páginas. Después, el usuario añadió `ENARM_Capa1_Completo.pdf`, una guía de 143 páginas con bloques de contraste y referencias al libro. La muestra usa sus páginas 17–18, 38 y 50. Este documento no sustituye la consulta de los capítulos originales del libro de 1,150 páginas.
 
 ## Requisitos indicados por el usuario
 
@@ -98,7 +98,7 @@ La evaluación del contenido con Conservar, Ajustar o Descartar permanece separa
 
 ## Ejemplo de estructura: amenorrea secundaria
 
-Estos ejemplos son viñetas didácticas propuestas. Las expresiones en negrita representan el resaltado que tendrá la interfaz. No proceden del PDF local. No sustituyen criterios diagnósticos completos.
+Estos ejemplos son viñetas didácticas propuestas. Las expresiones en negrita representan el resaltado de la interfaz. La muestra enlaza los bloques pertinentes de `ENARM_Capa1_Completo.pdf` con guías externas. No sustituye criterios diagnósticos completos.
 
 | Presentación compartida | Dato que distingue dentro del caso | Alternativa que se debe valorar |
 | --- | --- | --- |
@@ -153,7 +153,7 @@ La falta del libro completo no impide revisar el método con el extracto. Sí im
 
 - Conservar la dirección visual Cobalto y el resaltado ámbar existente.
 - Añadir la vista de aprendizaje por contraste antes del repaso individual.
-- Usar amenorrea como ejemplo de diseño sustentado con guías externas; no atribuirla al extracto disponible.
+- Usar los bloques de amenorrea del nuevo PDF y guías externas. Distinguirlos del extracto original disponible.
 - Elegir el primer eje de implementación entre los temas que tengan fuentes suficientes. El piloto biliar permite reutilizar trabajo existente, pero sus dos diagnósticos actuales no representan un eje completo.
 - Revisar un eje completo antes de ampliar de forma masiva el contenido.
-- Mantener esta propuesta separada del contenido aprobado y de las tarjetas actuales hasta la revisión del usuario.
+- Conservar el piloto de diez tarjetas biliares y sus identificadores. La revisión clínica del contenido permanece pendiente.

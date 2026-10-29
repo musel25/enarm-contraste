@@ -1,14 +1,40 @@
 # ENARM Contraste
 
-Sitio de estudio en español para preparar el ENARM mediante diagnóstico diferencial, tarjetas conectadas, repetición espaciada y progreso visible.
+Sitio de estudio en español para preparar el ENARM mediante diagnóstico diferencial, casos comparables y decisiones de manejo.
 
-La dirección visual elegida es Cobalto. La aplicación se desarrollará con React y TypeScript.
+La muestra web usa React, TypeScript y Vite. Conserva la dirección visual Cobalto.
+
+## Muestra web
+
+[Abrir ENARM Contraste](https://timer.musel.dev/grind/enarm/).
+
+- Dos ejes: amenorrea secundaria e ictericia obstructiva.
+- Seis casos comparables con discriminadores resaltados, mecanismo y primera decisión.
+- Seis situaciones para ver qué cambia en el diagnóstico o en el manejo.
+- Ampliación de cada enfermedad con confirmación, tratamiento, modificadores y fuentes.
+- Dieciséis tarjetas de práctica con respuesta oculta y progreso local.
+- Comentarios por caso o sección, con descarga JSON y copia de texto para compartir.
+
+El usuario añadió `ENARM_Capa1_Completo.pdf`. Se usaron sus bloques 05.03, 10.10, 14.01 y 14.02. La [nota de fuentes](content/source-notes.md) distingue las páginas de este PDF de las páginas del libro que cita. El contenido es una muestra parcial pendiente de revisión clínica.
+
+### Desarrollo
+
+```sh
+npm ci
+npm run dev
+npm test
+npm run build
+```
+
+Abre `http://127.0.0.1:4178/grind/enarm/`. Las pruebas requieren Google Chrome en `/usr/bin/google-chrome`; `CHROME_PATH` permite indicar otra ruta.
+
+Los comentarios y el progreso se guardan solo en el navegador. La muestra no incluye cuentas, sincronización ni un planificador de repetición espaciada. El [runbook de despliegue](docs/deployment.md) describe la publicación en el VPS.
 
 ## Diseño de aprendizaje por contraste
 
 La [propuesta de aprendizaje por contraste](docs/superpowers/specs/2026-10-29-aprendizaje-clinico-por-contraste-design.md) organiza los temas por ejes clínicos. La capa 1 enseña con casos comparables, datos discriminadores resaltados y una relación entre la función alterada y el manejo inicial. Las variantes muestran qué factor cambia la decisión antes de ampliar cada enfermedad.
 
-La propuesta está pendiente de revisión del usuario. El piloto actual todavía no implementa este flujo.
+El usuario aprobó este diseño. La muestra web implementa el flujo para evaluar el método antes de ampliar el contenido.
 
 ## Piloto de tarjetas
 
@@ -44,9 +70,11 @@ El libro completo tiene 1,150 páginas. El PDF local es un extracto. No se publi
 
 ## Estructura
 
-- `app/`: futura aplicación web.
+- `app/`: aplicación web de la muestra.
 - `content/`: contenido estructurado y referencias de las tarjetas.
 - `scripts/`: preparación y exportación de la muestra.
 - `output/`: archivos generados para revisión.
+- `tests/`: pruebas de navegador de los flujos de estudio y revisión.
+- `docs/`: diseño, plan y despliegue.
 
 Las tarjetas médicas permanecen como borradores hasta su revisión profesional.
