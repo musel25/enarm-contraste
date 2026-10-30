@@ -14,7 +14,7 @@ def normalized(value: str) -> str:
     return re.sub(r'\s+', ' ', unicodedata.normalize('NFKC', value)).strip().casefold()
 
 
-def validate(catalog: dict, directory: Path, pages: Path, selected: list[str] | None = None, allow_partial: bool = False) -> dict:
+def validate(catalog: dict, directory: Path, pages: Path | None, selected: list[str] | None = None, allow_partial: bool = False) -> dict:
     report = {'verified_sections': 0, 'verified_blocks': 0, 'verified_topics': 0, 'verified_evidence': 0, 'visual_evidence': 0, 'external_sources': 0, 'missing_sections': [], 'errors': []}
     book_pages = catalog.get('book', {}).get('pages', 1150)
     visual_pages = set(catalog.get('book', {}).get('visual_review_pages', []))
@@ -138,6 +138,8 @@ def validate(catalog: dict, directory: Path, pages: Path, selected: list[str] | 
                             error('unexpected_visual_evidence', tid, str(page))
                         else:
                             report['visual_evidence'] += 1
+                        continue
+                    if pages is None:
                         continue
                     if page not in page_cache:
                         source = pages / f'{page:04}.txt'
