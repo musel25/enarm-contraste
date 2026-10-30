@@ -5,7 +5,8 @@ export default defineConfig({
   testDir: "./tests",
   testIgnore: ["**/unit/**"],
   fullyParallel: true,
-  workers: 2,
+  // Browser suites share the real progress API and its request limits.
+  workers: 1,
   timeout: 20000,
   expect: { timeout: 5000 },
   reporter: "list",
