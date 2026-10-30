@@ -1,0 +1,2949 @@
+{
+  "id": "18",
+  "title": "Infectología",
+  "blocks": [
+    {
+      "id": "18.01",
+      "title": "Paciente con fiebre sistémica",
+      "topics": [
+        {
+          "id": "18.01-01",
+          "name": "Fiebre de origen desconocido",
+          "source_pages": [
+            563
+          ],
+          "pattern": "Un niño tiene fiebre persistente durante más de una semana sin causa tras historia, exploración y pruebas iniciales. Conserva estabilidad y necesita un estudio escalonado, sin antibiótico empírico indiscriminado.",
+          "key_discriminator": "más de una semana",
+          "mechanism": "La fiebre prolongada puede reflejar infección, inflamación o neoplasia; la reevaluación clínica y las exposiciones permiten dirigir pruebas cuando el estudio inicial no identifica causa.",
+          "findings": [
+            {
+              "mechanism": "Respuesta febril sostenida",
+              "finding": "Fiebre sin diagnóstico tras evaluación"
+            }
+          ],
+          "initial_action": "Repetir historia y exploración y dirigir estudios a exposición y hallazgos; valorar orina y causas no infecciosas.",
+          "action_reason": "El estudio debe buscar una causa concreta.",
+          "modifiers": [
+            {
+              "factor": "Signos de enfermedad que amenaza la vida",
+              "action": "Referir de inmediato.",
+              "reason": "La estabilidad modifica la urgencia."
+            }
+          ],
+          "limits": "La página trata población pediátrica; el test de naproxeno no confirma por sí solo neoplasia.",
+          "evidence": [
+            {
+              "page": 563,
+              "quote": "Presencia de > 38ºC durante > 7 días"
+            },
+            {
+              "page": 563,
+              "quote": "deben ser referidos inmediatamente"
+            }
+          ],
+          "source_gaps": [],
+          "verified_source_pages": [
+            563
+          ]
+        },
+        {
+          "id": "18.01-02",
+          "name": "Sepsis y choque séptico",
+          "source_pages": [
+            594
+          ],
+          "pattern": "Una persona con infección probable presenta confusión, respiración rápida y presión baja. Tiene lactato elevado y oliguria; se sospecha disfunción orgánica y se inicia atención inmediata.",
+          "key_discriminator": "confusión, respiración rápida y presión baja",
+          "mechanism": "La respuesta desregulada a infección causa daño orgánico y alteración circulatoria; la hipoperfusión puede persistir pese a reposición de volumen y requerir vasopresores.",
+          "findings": [
+            {
+              "mechanism": "Respuesta desregulada a infección",
+              "finding": "Disfunción orgánica e hipoperfusión"
+            }
+          ],
+          "initial_action": "Activar atención urgente, obtener cultivos sin retrasar antimicrobianos, reanimar y buscar control de foco.",
+          "action_reason": "La demora mantiene infección e hipoperfusión.",
+          "modifiers": [
+            {
+              "factor": "Hipotensión persistente tras líquidos adecuados",
+              "action": "Valorar vasopresor.",
+              "reason": "Puede existir choque circulatorio persistente."
+            }
+          ],
+          "limits": "qSOFA no debe usarse solo para excluir sepsis.",
+          "evidence": [
+            {
+              "page": 594,
+              "quote": "respuesta desregulada"
+            },
+            {
+              "page": 594,
+              "quote": "requieren vasopresores"
+            }
+          ],
+          "source_gaps": [],
+          "verified_source_pages": [
+            594
+          ],
+          "external_sources": [
+            {
+              "label": "Surviving Sepsis Campaign 2021",
+              "url": "https://sccm.org/clinical-resources/guidelines/guidelines/surviving-sepsis-guidelines-2021",
+              "quote": "we recommend using norepinephrine as the first-line agent",
+              "checked_at": "2026-10-29"
+            }
+          ],
+          "source_corrections": [
+            "Se añade manejo inicial porque la página solo define sepsis. Cultivos sin demorar antibiótico, control de foco, reanimación y vasopresor según respuesta; qSOFA no es tamiz único."
+          ]
+        },
+        {
+          "id": "18.01-03",
+          "name": "Medios de cultivo",
+          "source_pages": [
+            579
+          ],
+          "pattern": "El laboratorio recibe una muestra para investigar una bacteria respiratoria exigente. Se debe elegir un medio enriquecido apropiado y distinguirlo de medios selectivos para enterobacterias o micobacterias.",
+          "key_discriminator": "bacteria respiratoria exigente",
+          "mechanism": "Los nutrientes y condiciones de un medio favorecen crecimiento de microorganismos específicos; elegirlo según sospecha aumenta la posibilidad de recuperar el agente.",
+          "findings": [
+            {
+              "mechanism": "Necesidad de factores de crecimiento",
+              "finding": "Crecimiento en medio enriquecido"
+            }
+          ],
+          "initial_action": "Identificar el medio según organismo sospechado; para H. influenzae, seleccionar agar chocolate.",
+          "action_reason": "El medio aporta condiciones de crecimiento.",
+          "modifiers": [
+            {
+              "factor": "Sospecha de Vibrio cholerae",
+              "action": "Seleccionar agar TCBS.",
+              "reason": "Es el medio representado para este agente."
+            }
+          ],
+          "limits": "La página muestra asociaciones de laboratorio; no sustituye técnicas de muestreo.",
+          "evidence": [
+            {
+              "page": 579,
+              "quote": "Medios de cultivos para ENARM"
+            },
+            {
+              "page": 579,
+              "quote": "Agar chocolate: H. Influenzae",
+              "visual": true
+            }
+          ],
+          "source_gaps": [],
+          "verified_source_pages": [
+            579
+          ],
+          "source_corrections": [
+            "El diagrama de la página 579 se comprobó en el PDF; sus asociaciones no son recuperables por extracción de texto."
+          ]
+        }
+      ],
+      "common_problem": "Una persona tiene fiebre sistémica o persistente.",
+      "mother": {
+        "cue": "La gravedad y la identificación del foco organizan el estudio de una infección.",
+        "answer": "Evaluación etiológica y de gravedad de fiebre",
+        "explanation": "Se separan urgencia, foco y técnica de laboratorio."
+      }
+    },
+    {
+      "id": "18.02",
+      "title": "Diarrea aguda",
+      "topics": [
+        {
+          "id": "18.02-01",
+          "name": "Diarrea aguda en adultos",
+          "source_pages": [
+            545,
+            546
+          ],
+          "pattern": "Una persona presenta evacuaciones acuosas desde ayer, sin sangre y con sed. Está alerta y tolera líquidos; se revisan medicamentos, viajes y signos de deshidratación para decidir el manejo.",
+          "key_discriminator": "evacuaciones acuosas desde ayer, sin sangre",
+          "mechanism": "La secreción o menor absorción intestinal aumenta pérdida de agua y electrolitos; la gravedad depende de hidratación y de la presencia de inflamación o invasión.",
+          "findings": [
+            {
+              "mechanism": "Pérdida intestinal de líquidos",
+              "finding": "Sed y deshidratación"
+            }
+          ],
+          "initial_action": "Iniciar solución de rehidratación oral y evaluar gravedad y datos que requieran estudio etiológico.",
+          "action_reason": "La reposición de pérdidas es la primera prioridad.",
+          "modifiers": [
+            {
+              "factor": "Disentería o cuadro prolongado y grave",
+              "action": "Solicitar estudios dirigidos y seleccionar tratamiento.",
+              "reason": "Puede existir un agente invasivo."
+            }
+          ],
+          "limits": "La sangre en heces no implica antibiótico universal; se debe considerar STEC.",
+          "evidence": [
+            {
+              "page": 545,
+              "quote": "duración menor de 14 días"
+            },
+            {
+              "page": 546,
+              "quote": "terapia de primera línea"
+            }
+          ],
+          "source_gaps": [],
+          "verified_source_pages": [
+            545,
+            546
+          ]
+        },
+        {
+          "id": "18.02-02",
+          "name": "Diarrea en niños",
+          "source_pages": [
+            547,
+            548,
+            549,
+            550
+          ],
+          "pattern": "Un niño presenta diarrea acuosa y vómito, ojos hundidos y sed intensa. Está despierto y puede beber; se evalúa hidratación antes de decidir vía y cantidad de reposición.",
+          "key_discriminator": "ojos hundidos y sed intensa",
+          "mechanism": "La pérdida intestinal de líquidos reduce volumen extracelular; la capacidad de beber y los signos circulatorios distinguen deshidratación tratable por vía oral de choque.",
+          "findings": [
+            {
+              "mechanism": "Pérdida hidroelectrolítica",
+              "finding": "Sed, ojos hundidos y mucosa seca"
+            }
+          ],
+          "initial_action": "Administrar SRO, mantener alimentación y lactancia y reevaluar hidratación de forma frecuente.",
+          "action_reason": "La vía oral corrige pérdidas cuando no existe choque.",
+          "modifiers": [
+            {
+              "factor": "Incapacidad para beber o pulso débil",
+              "action": "Iniciar reposición intravenosa y derivar.",
+              "reason": "Sugiere deshidratación grave."
+            }
+          ],
+          "limits": "No extrapolar cifras con errores de OCR de las tablas.",
+          "evidence": [
+            {
+              "page": 549,
+              "quote": "Terapia de hidratación oral."
+            },
+            {
+              "page": 550,
+              "quote": "No suspender lactancia materna."
+            }
+          ],
+          "source_gaps": [],
+          "verified_source_pages": [
+            547,
+            548,
+            549,
+            550
+          ]
+        },
+        {
+          "id": "18.02-03",
+          "name": "Cólera",
+          "source_pages": [
+            541
+          ],
+          "pattern": "Una persona de una zona con agua contaminada presenta diarrea profusa en agua de arroz. No tiene fiebre importante y se deshidrata rápidamente; se requiere reponer pérdidas sin demora.",
+          "key_discriminator": "diarrea profusa en agua de arroz",
+          "mechanism": "La toxina bacteriana induce secreción intestinal intensa de agua y electrolitos, causando deshidratación rápida sin requerir invasión inflamatoria de la mucosa.",
+          "findings": [
+            {
+              "mechanism": "Hipersecreción intestinal",
+              "finding": "Diarrea acuosa profusa"
+            }
+          ],
+          "initial_action": "Iniciar rehidratación inmediata por vía oral o intravenosa según perfusión y obtener muestra cuando sea posible.",
+          "action_reason": "La pérdida de volumen determina el riesgo inmediato.",
+          "modifiers": [
+            {
+              "factor": "Enfermedad grave o contexto epidemiológico",
+              "action": "Valorar antibiótico dirigido y notificación.",
+              "reason": "Puede reducir duración y transmisión."
+            }
+          ],
+          "limits": "No retrasar líquidos por confirmación de cultivo.",
+          "evidence": [
+            {
+              "page": 541,
+              "quote": "Diarrea en agua de arroz"
+            },
+            {
+              "page": 541,
+              "quote": "rehidratación con SRO es la base"
+            }
+          ],
+          "source_gaps": [],
+          "verified_source_pages": [
+            541
+          ]
+        },
+        {
+          "id": "18.02-04",
+          "name": "Salmonella Fiebre tifoidea",
+          "source_pages": [
+            591,
+            592
+          ],
+          "pattern": "Una persona presenta fiebre alta persistente, cefalea y dolor abdominal después de viajar a una región endémica. Puede tener diarrea o estreñimiento; se buscan datos de complicación intestinal.",
+          "key_discriminator": "fiebre alta persistente",
+          "mechanism": "La infección entérica por Salmonella invasiva se disemina y produce enfermedad sistémica febril, con posible sangrado o perforación intestinal durante su evolución.",
+          "findings": [
+            {
+              "mechanism": "Diseminación de Salmonella entérica",
+              "finding": "Fiebre prolongada y síntomas abdominales"
+            }
+          ],
+          "initial_action": "Obtener hemocultivos y valorar tratamiento antibiótico según gravedad, viaje y susceptibilidad local.",
+          "action_reason": "La resistencia y el contexto cambian la elección.",
+          "modifiers": [
+            {
+              "factor": "Dolor abdominal progresivo o distensión",
+              "action": "Descartar perforación y hospitalizar.",
+              "reason": "Puede existir una complicación quirúrgica."
+            }
+          ],
+          "limits": "Widal aislado no confirma el diagnóstico; evitar selección automática de quinolonas.",
+          "evidence": [
+            {
+              "page": 591,
+              "quote": "enfermedad sistémica, febril, aguda"
+            },
+            {
+              "page": 592,
+              "quote": "Realizar hemocultivo."
+            }
+          ],
+          "source_gaps": [],
+          "verified_source_pages": [
+            591,
+            592
+          ],
+          "external_sources": [
+            {
+              "label": "CDC: fiebre tifoidea",
+              "url": "https://www.cdc.gov/typhoid-fever/hcp/clinical-guidance/",
+              "quote": "Serologic tests, such as the Widal test, are not recommended",
+              "checked_at": "2026-10-29"
+            }
+          ],
+          "source_corrections": [
+            "Se prioriza cultivo y susceptibilidad. Widal tiene falsos positivos y la resistencia limita uso empírico de fluoroquinolonas."
+          ]
+        }
+      ],
+      "common_problem": "Una persona presenta diarrea aguda con o sin fiebre.",
+      "mother": {
+        "cue": "La pérdida de agua y el patrón intestinal determinan la primera decisión.",
+        "answer": "Diarrea con evaluación de hidratación",
+        "explanation": "La rehidratación precede a la selección etiológica de fármacos."
+      }
+    },
+    {
+      "id": "18.03",
+      "title": "Diarrea tras antibióticos",
+      "topics": [
+        {
+          "id": "18.03-01",
+          "name": "Clostridium",
+          "source_pages": [
+            538,
+            539
+          ],
+          "pattern": "Una persona hospitalizada desarrolla diarrea inexplicable después de recibir clindamicina. Tiene dolor abdominal y fiebre; se evalúa colitis por toxinas y se solicita una prueba en heces diarreicas.",
+          "key_discriminator": "después de recibir clindamicina",
+          "mechanism": "La alteración de microbiota por antibióticos permite proliferación de un clostridio toxigénico que lesiona mucosa colónica y puede producir colitis grave.",
+          "findings": [
+            {
+              "mechanism": "Toxinas tras disbiosis",
+              "finding": "Diarrea asociada a antibióticos"
+            }
+          ],
+          "initial_action": "Evaluar gravedad, retirar antibióticos innecesarios y confirmar toxina o agente; tratar con fidaxomicina o vancomicina oral según guía actual.",
+          "action_reason": "El esquema del libro está desactualizado.",
+          "modifiers": [
+            {
+              "factor": "Íleo o enfermedad fulminante",
+              "action": "Hospitalizar y adaptar tratamiento especializado.",
+              "reason": "Cambia vía y estrategia terapéutica."
+            }
+          ],
+          "limits": "Las otras especies de estas páginas producen tétanos, botulismo o mionecrosis; no comparten este tratamiento.",
+          "evidence": [
+            {
+              "page": 539,
+              "quote": "diarrea inexplicable"
+            },
+            {
+              "page": 539,
+              "quote": "pseudomembranas"
+            }
+          ],
+          "source_gaps": [],
+          "verified_source_pages": [
+            538,
+            539
+          ],
+          "external_sources": [
+            {
+              "label": "SHEA/IDSA 2021: C. difficile",
+              "url": "https://www.idsociety.org/practice-guideline/clostridioides-difficile-2021-focused-update/",
+              "quote": "Vancomycin remains an acceptable alternative.",
+              "checked_at": "2026-10-29"
+            }
+          ],
+          "source_corrections": [
+            "No se adopta metronidazol IV por tres días del libro. En infección inicial no fulminante de adultos, fidaxomicina es preferida y vancomicina oral es alternativa aceptable."
+          ]
+        }
+      ],
+      "common_problem": "Una persona presenta diarrea tras antibióticos.",
+      "mother": {
+        "cue": "Las toxinas bacterianas pueden producir síndromes intestinales o neurológicos distintos.",
+        "answer": "Enfermedad mediada por toxinas clostridiales",
+        "explanation": "El sitio de acción de la toxina define el cuadro."
+      }
+    },
+    {
+      "id": "18.04",
+      "title": "Diarrea/parásitos intestinales",
+      "topics": [
+        {
+          "id": "18.04-01",
+          "name": "Amebiasis intestinal",
+          "source_pages": [
+            530
+          ],
+          "pattern": "Una persona con exposición fecal a agua contaminada presenta diarrea con sangre y moco. El estudio identifica un protozoo invasor; se debe tratar tanto la invasión tisular como la luz intestinal.",
+          "key_discriminator": "diarrea con sangre y moco",
+          "mechanism": "El protozoo invade mucosa del colon y puede diseminarse por vía hematógena; las formas luminales persistentes requieren tratamiento distinto del componente tisular.",
+          "findings": [
+            {
+              "mechanism": "Invasión colónica",
+              "finding": "Disentería y posible absceso hepático"
+            }
+          ],
+          "initial_action": "Tratar enfermedad invasiva con metronidazol seguido de un amebicida luminal.",
+          "action_reason": "El fármaco tisular solo no elimina todas las formas intestinales.",
+          "modifiers": [
+            {
+              "factor": "Dolor hepático o fiebre persistente",
+              "action": "Buscar absceso hepático.",
+              "reason": "Puede haber diseminación extraintestinal."
+            }
+          ],
+          "limits": "Distinguir E. histolytica de especies no invasoras cuando sea posible.",
+          "evidence": [
+            {
+              "page": 530,
+              "quote": "disentería amebiana"
+            },
+            {
+              "page": 530,
+              "quote": "posteriormente un fármaco intraluminal"
+            }
+          ],
+          "source_gaps": [],
+          "verified_source_pages": [
+            530
+          ]
+        },
+        {
+          "id": "18.04-02",
+          "name": "Giardiasis",
+          "source_pages": [
+            566
+          ],
+          "pattern": "Un niño presenta diarrea persistente, distensión y heces grasosas tras consumir agua de un río. Tiene pérdida de peso y flatulencia fétida, sin un síndrome disentérico predominante.",
+          "key_discriminator": "heces grasosas",
+          "mechanism": "La colonización del intestino delgado por un protozoo altera absorción y produce diarrea y esteatorrea, con pérdida ponderal y déficits nutricionales.",
+          "findings": [
+            {
+              "mechanism": "Malabsorción intestinal",
+              "finding": "Esteatorrea, meteorismo y pérdida de peso"
+            }
+          ],
+          "initial_action": "Buscar quistes o antígeno en heces e indicar tratamiento antiparasitario según el caso.",
+          "action_reason": "Permite tratar una causa de malabsorción.",
+          "modifiers": [
+            {
+              "factor": "Coproparasitoscópicos negativos con sospecha persistente",
+              "action": "Solicitar antígeno fecal.",
+              "reason": "La eliminación puede ser intermitente."
+            }
+          ],
+          "limits": "La biopsia no es necesaria como primera prueba rutinaria.",
+          "evidence": [
+            {
+              "page": 566,
+              "quote": "Flatulencia fétida, borborigmos, meteorismo y"
+            },
+            {
+              "page": 566,
+              "quote": "Detección de antígeno fecales"
+            }
+          ],
+          "source_gaps": [],
+          "verified_source_pages": [
+            566
+          ]
+        },
+        {
+          "id": "18.04-03",
+          "name": "Estrongiloidiasis",
+          "source_pages": [
+            559
+          ],
+          "pattern": "Una persona con exposición a suelo contaminado tiene diarrea, eosinofilia y una lesión serpiginosa de migración rápida. Va a recibir inmunosupresión y requiere evaluar un parásito capaz de persistir.",
+          "key_discriminator": "lesión serpiginosa de migración rápida",
+          "mechanism": "Las larvas penetran piel y completan un ciclo con autoinfección, permitiendo persistencia y diseminación potencialmente grave cuando disminuye la respuesta inmunitaria.",
+          "findings": [
+            {
+              "mechanism": "Autoinfección larvaria",
+              "finding": "Infección persistente e hiperinfección con inmunosupresión"
+            }
+          ],
+          "initial_action": "Estudiar infección y tratar con ivermectina según presentación, especialmente antes de inmunosupresión.",
+          "action_reason": "La persistencia permite una hiperinfección grave.",
+          "modifiers": [
+            {
+              "factor": "Diseminación en inmunocomprometido",
+              "action": "Hospitalizar y prolongar tratamiento hasta aclaramiento.",
+              "reason": "Requiere confirmar erradicación y controlar complicaciones."
+            }
+          ],
+          "limits": "El esquema corto no se aplica a toda infección diseminada.",
+          "evidence": [
+            {
+              "page": 559,
+              "quote": "rápida migración."
+            },
+            {
+              "page": 559,
+              "quote": "Es importante tratar a los pacientes asintomáticos"
+            }
+          ],
+          "source_gaps": [],
+          "verified_source_pages": [
+            559
+          ]
+        }
+      ],
+      "common_problem": "Una persona presenta diarrea con exposición fecal o ambiental.",
+      "mother": {
+        "cue": "Los parásitos producen invasión, malabsorción o autoinfección según su ciclo.",
+        "answer": "Parasitosis intestinal por mecanismo",
+        "explanation": "El ciclo y el huésped cambian el estudio."
+      }
+    },
+    {
+      "id": "18.05",
+      "title": "Helmintiasis comunes",
+      "topics": [
+        {
+          "id": "18.05-01",
+          "name": "Ascariasis",
+          "source_pages": [
+            532,
+            533
+          ],
+          "pattern": "Un niño con exposición a alimentos contaminados presenta dolor abdominal y pérdida de apetito. Expulsa un gusano por heces; si aparece vómito y distensión, debe descartarse obstrucción intestinal.",
+          "key_discriminator": "Expulsa un gusano por heces",
+          "mechanism": "La ingestión de huevos origina migración larvaria pulmonar y maduración intestinal; una carga alta de adultos puede obstruir intestino o migrar a vías biliares.",
+          "findings": [
+            {
+              "mechanism": "Carga intestinal de helmintos",
+              "finding": "Dolor y posible obstrucción"
+            }
+          ],
+          "initial_action": "Confirmar con estudio de heces e indicar antihelmíntico; evaluar antes complicaciones mecánicas.",
+          "action_reason": "La obstrucción o migración cambia la prioridad.",
+          "modifiers": [
+            {
+              "factor": "Datos de obstrucción o sitio ectópico",
+              "action": "Valorar intervención especializada antes de antiparasitario.",
+              "reason": "Puede requerir manejo mecánico."
+            }
+          ],
+          "limits": "El síndrome pulmonar eosinofílico no es exclusivo de este parásito.",
+          "evidence": [
+            {
+              "page": 532,
+              "quote": "Signos de obstrucción:"
+            },
+            {
+              "page": 533,
+              "quote": "Primera línea: Albendazol"
+            }
+          ],
+          "source_gaps": [],
+          "verified_source_pages": [
+            532,
+            533
+          ]
+        },
+        {
+          "id": "18.05-02",
+          "name": "Anquilostomiasis",
+          "source_pages": [
+            531
+          ],
+          "pattern": "Una persona que camina descalza en suelo húmedo presenta anemia microcítica e hipoproteinemia progresivas. Tiene debilidad y disnea, y se investiga un helminto que se alimenta de sangre intestinal.",
+          "key_discriminator": "camina descalza",
+          "mechanism": "Las larvas penetran piel y migran al intestino, donde los adultos se adhieren y consumen sangre, produciendo pérdida crónica de hierro y proteínas.",
+          "findings": [
+            {
+              "mechanism": "Pérdida sanguínea intestinal",
+              "finding": "Anemia ferropénica e hipoproteinemia"
+            }
+          ],
+          "initial_action": "Realizar estudio parasitológico e indicar albendazol; corregir déficit nutricional y prevenir nueva exposición.",
+          "action_reason": "Elimina la causa de pérdida y repone lo perdido.",
+          "modifiers": [
+            {
+              "factor": "Anemia importante",
+              "action": "Valorar repercusión y soporte.",
+              "reason": "La carga parasitaria modifica gravedad."
+            }
+          ],
+          "limits": "La eosinofilia o el síndrome pulmonar no son obligatorios.",
+          "evidence": [
+            {
+              "page": 531,
+              "quote": "personas descalzas."
+            },
+            {
+              "page": 531,
+              "quote": "Elección: Albendazol"
+            }
+          ],
+          "source_gaps": [],
+          "verified_source_pages": [
+            531
+          ]
+        },
+        {
+          "id": "18.05-03",
+          "name": "Tricuriasis",
+          "source_pages": [
+            599
+          ],
+          "pattern": "Un niño con mala higiene presenta diarrea crónica con moco y sangre y episodios de prolapso rectal. Tiene anemia y el examen de heces muestra huevos con forma de barril.",
+          "key_discriminator": "huevos con forma de barril",
+          "mechanism": "Los helmintos del colon se adhieren a mucosa y en infecciones intensas producen inflamación y pérdida nutricional, con diarrea y prolapso especialmente en niños.",
+          "findings": [
+            {
+              "mechanism": "Carga parasitaria colónica",
+              "finding": "Diarrea y prolapso rectal"
+            }
+          ],
+          "initial_action": "Confirmar en heces y tratar con antihelmíntico, además de evaluar anemia y nutrición.",
+          "action_reason": "La carga intensa afecta mucosa y crecimiento.",
+          "modifiers": [
+            {
+              "factor": "Prolapso o desnutrición",
+              "action": "Agregar manejo de complicaciones.",
+              "reason": "No basta identificar el parásito."
+            }
+          ],
+          "limits": "Las infecciones leves pueden ser asintomáticas.",
+          "evidence": [
+            {
+              "page": 599,
+              "quote": "El prolapso ocurre particularmente en niños."
+            },
+            {
+              "page": 599,
+              "quote": "Mebendazol 500 mg"
+            }
+          ],
+          "source_gaps": [],
+          "verified_source_pages": [
+            599
+          ]
+        },
+        {
+          "id": "18.05-04",
+          "name": "Oxiuriasis o enterobiasis",
+          "source_pages": [
+            582
+          ],
+          "pattern": "Un escolar tiene prurito anal que empeora por la noche y sueño fragmentado. Otros familiares presentan síntomas; se debe tomar una muestra perianal y prevenir reinfección en el hogar.",
+          "key_discriminator": "prurito anal que empeora por la noche",
+          "mechanism": "La hembra deposita huevos en pliegues perianales y causa irritación nocturna; la autoinoculación y transmisión doméstica mantienen la infección y las recurrencias.",
+          "findings": [
+            {
+              "mechanism": "Depósito perianal de huevos",
+              "finding": "Prurito nocturno e insomnio"
+            }
+          ],
+          "initial_action": "Realizar prueba de Graham y tratar al paciente y convivientes con medidas de higiene y repetición del esquema indicado.",
+          "action_reason": "La segunda intervención evita reinfección por reservorios domésticos.",
+          "modifiers": [
+            {
+              "factor": "Contacto familiar sintomático",
+              "action": "Tratar en conjunto.",
+              "reason": "Compartir el hogar facilita transmisión."
+            }
+          ],
+          "limits": "El estudio habitual de heces tiene rendimiento distinto de la muestra perianal.",
+          "evidence": [
+            {
+              "page": 582,
+              "quote": "Prurito anal nocturno"
+            },
+            {
+              "page": 582,
+              "quote": "tratamiento a los demás miembros"
+            }
+          ],
+          "source_gaps": [],
+          "verified_source_pages": [
+            582
+          ]
+        }
+      ],
+      "common_problem": "Una persona tiene síntomas intestinales y exposición a suelo o contacto familiar.",
+      "mother": {
+        "cue": "Los helmintos producen pérdida nutricional, migración o irritación local.",
+        "answer": "Helmintiasis intestinal",
+        "explanation": "La forma de entrada y el órgano afectado distinguen entidades."
+      }
+    },
+    {
+      "id": "18.06",
+      "title": "Parasitosis muscular/SNC",
+      "topics": [
+        {
+          "id": "18.06-01",
+          "name": "Teniasis intestinal",
+          "source_pages": [
+            597
+          ],
+          "pattern": "Una persona nota segmentos móviles en sus heces después de consumir carne poco cocida. Tiene molestias epigástricas leves, sin síntomas neurológicos; se estudia una infección por un cestodo adulto.",
+          "key_discriminator": "segmentos móviles en sus heces",
+          "mechanism": "La ingestión de cisticercos en carne permite desarrollar una tenia adulta en intestino, que libera proglótides y huevos sin implicar necesariamente invasión tisular.",
+          "findings": [
+            {
+              "mechanism": "Cestodo adulto intestinal",
+              "finding": "Excreción de proglótides"
+            }
+          ],
+          "initial_action": "Identificar huevos o proglótides y tratar la infección intestinal con un antihelmíntico apropiado.",
+          "action_reason": "El cuadro intestinal requiere distinguir especie y exposición.",
+          "modifiers": [
+            {
+              "factor": "Síntomas neurológicos",
+              "action": "Evaluar enfermedad tisular antes de tratamiento indiscriminado.",
+              "reason": "Puede coexistir otra forma de infección."
+            }
+          ],
+          "limits": "No equivale a cisticercosis por ingestión de huevos.",
+          "evidence": [
+            {
+              "page": 597,
+              "quote": "tenías adultas"
+            },
+            {
+              "page": 597,
+              "quote": "Coproparasitoscópico seriado"
+            }
+          ],
+          "source_gaps": [],
+          "verified_source_pages": [
+            597
+          ]
+        },
+        {
+          "id": "18.06-02",
+          "name": "Cisticercosis",
+          "source_pages": [
+            537
+          ],
+          "pattern": "Una persona joven presenta convulsiones de inicio reciente y lesiones quísticas cerebrales. Tiene exposición fecal en una zona endémica; la imagen debe definir viabilidad, calcificación y posible hidrocefalia.",
+          "key_discriminator": "lesiones quísticas cerebrales",
+          "mechanism": "La ingestión de huevos de Taenia solium permite desarrollo larvario en tejidos; la localización y respuesta inflamatoria producen crisis, edema u obstrucción del LCR.",
+          "findings": [
+            {
+              "mechanism": "Larvas en sistema nervioso central",
+              "finding": "Convulsiones o hidrocefalia"
+            }
+          ],
+          "initial_action": "Caracterizar con neuroimagen y tratar crisis y complicaciones antes de decidir antiparasitarios.",
+          "action_reason": "La viabilidad y localización cambian beneficio y riesgo.",
+          "modifiers": [
+            {
+              "factor": "Lesiones solo calcificadas",
+              "action": "No indicar antiparasitario para esas lesiones.",
+              "reason": "No representan quistes viables."
+            }
+          ],
+          "limits": "Se corrige la forma infectante descrita erróneamente en el libro.",
+          "evidence": [
+            {
+              "page": 537,
+              "quote": "Quistes calcificados: No requiere antiparasitario."
+            },
+            {
+              "page": 537,
+              "quote": "Hidrocefalia sin quistes"
+            }
+          ],
+          "source_gaps": [],
+          "verified_source_pages": [
+            537
+          ],
+          "external_sources": [
+            {
+              "label": "CDC: cisticercosis",
+              "url": "https://www.cdc.gov/cysticercosis/about/index.html",
+              "quote": "You develop cysticercosis after swallowing tapeworm eggs.",
+              "checked_at": "2026-10-29"
+            }
+          ],
+          "source_corrections": [
+            "La cisticercosis se adquiere al ingerir huevos de T. solium; los cisticercos en carne causan teniasis intestinal."
+          ]
+        },
+        {
+          "id": "18.06-03",
+          "name": "Triquinosis",
+          "source_pages": [
+            600
+          ],
+          "pattern": "Una persona presenta fiebre, dolor muscular y edema alrededor de los ojos después de comer carne de jabalí poco cocida. Tiene eosinofilia y elevación de enzimas musculares.",
+          "key_discriminator": "carne de jabalí poco cocida",
+          "mechanism": "Las larvas ingeridas migran desde el intestino al músculo estriado y generan inflamación, mialgias y eosinofilia, con posible afectación cardíaca o neurológica.",
+          "findings": [
+            {
+              "mechanism": "Invasión larvaria muscular",
+              "finding": "Mialgias y edema periorbitario"
+            }
+          ],
+          "initial_action": "Confirmar con serología según tiempo e iniciar albendazol o mebendazol bajo evaluación clínica.",
+          "action_reason": "El tratamiento actúa mejor antes del enquistamiento completo.",
+          "modifiers": [
+            {
+              "factor": "Compromiso cardíaco o del sistema nervioso",
+              "action": "Valorar esteroide y atención hospitalaria.",
+              "reason": "La inflamación puede causar enfermedad grave."
+            }
+          ],
+          "limits": "El tratamiento puede no erradicar larvas ya enquistadas.",
+          "evidence": [
+            {
+              "page": 600,
+              "quote": "edema periorbitario"
+            },
+            {
+              "page": 600,
+              "quote": "Mebendazol o albendazol."
+            }
+          ],
+          "source_gaps": [],
+          "verified_source_pages": [
+            600
+          ]
+        }
+      ],
+      "common_problem": "Una persona tiene exposición alimentaria y síntomas intestinales, musculares o neurológicos.",
+      "mother": {
+        "cue": "La ingestión de distintas formas parasitarias cambia la localización del daño.",
+        "answer": "Parasitosis según forma infectante y tejido",
+        "explanation": "No se equiparan infección intestinal y enfermedad larvaria."
+      }
+    },
+    {
+      "id": "18.07",
+      "title": "Úlcera genital",
+      "topics": [
+        {
+          "id": "18.07-01",
+          "name": "Chancroide",
+          "source_pages": [
+            536
+          ],
+          "pattern": "Un hombre presenta una úlcera genital dolorosa, de bordes poco definidos y fondo purulento. Tiene un ganglio inguinal doloroso que fluctúa y antecedentes de relaciones sin protección.",
+          "key_discriminator": "úlcera genital dolorosa",
+          "mechanism": "La infección local por Haemophilus ducreyi ulcera tejido genital y puede extender inflamación a ganglios, formando bubones dolorosos con supuración.",
+          "findings": [
+            {
+              "mechanism": "Infección ulcerativa y ganglionar",
+              "finding": "Úlcera dolorosa y bubón"
+            }
+          ],
+          "initial_action": "Evaluar otras causas de úlcera y VIH e indicar azitromicina u opción dirigida; valorar aspiración del bubón fluctuante.",
+          "action_reason": "Debe tratarse agente y posible colección.",
+          "modifiers": [
+            {
+              "factor": "Ganglio fluctuante",
+              "action": "Valorar aspiración.",
+              "reason": "La resolución ganglionar puede ser más lenta."
+            }
+          ],
+          "limits": "La clínica no descarta coinfección con sífilis o herpes.",
+          "evidence": [
+            {
+              "page": 536,
+              "quote": "úlceras dolorosas."
+            },
+            {
+              "page": 536,
+              "quote": "Azitromicina l gramo vía oral"
+            }
+          ],
+          "source_gaps": [],
+          "verified_source_pages": [
+            536
+          ]
+        },
+        {
+          "id": "18.07-02",
+          "name": "Sífilis",
+          "source_pages": [
+            595,
+            596
+          ],
+          "pattern": "Una persona presenta una úlcera genital única, indurada e indolora, con fondo limpio. Tiene adenopatías inguinales bilaterales no dolorosas; se solicitan pruebas serológicas y se determina la etapa clínica.",
+          "key_discriminator": "indurada e indolora",
+          "mechanism": "La espiroqueta entra por mucosas y se disemina desde el sitio de inoculación; la etapa define manifestaciones y duración del tratamiento necesario.",
+          "findings": [
+            {
+              "mechanism": "Infección espiroquetal diseminable",
+              "finding": "Chancro indoloro y adenopatías"
+            }
+          ],
+          "initial_action": "Realizar pruebas treponémicas y no treponémicas e indicar penicilina según etapa y compromiso neurológico.",
+          "action_reason": "El esquema cambia con duración y localización.",
+          "modifiers": [
+            {
+              "factor": "Embarazo con alergia a penicilina",
+              "action": "Valorar desensibilización y penicilina.",
+              "reason": "La prevención fetal requiere tratamiento eficaz."
+            }
+          ],
+          "limits": "Un título VDRL aislado no establece ni excluye toda infección.",
+          "evidence": [
+            {
+              "page": 595,
+              "quote": "Chancro duro"
+            },
+            {
+              "page": 596,
+              "quote": "Penicilina G benzatínica"
+            }
+          ],
+          "source_gaps": [],
+          "verified_source_pages": [
+            595,
+            596
+          ]
+        },
+        {
+          "id": "18.07-03",
+          "name": "Herpes genital",
+          "source_pages": [
+            569
+          ],
+          "pattern": "Una persona presenta vesículas genitales agrupadas que evolucionan a úlceras dolorosas. Refiere episodios similares más breves en meses previos y ahora solicita confirmar el agente y controlar síntomas.",
+          "key_discriminator": "vesículas genitales agrupadas",
+          "mechanism": "El virus permanece latente en ganglios sensitivos tras infección inicial y se reactiva, causando brotes recurrentes de lesiones vesiculares y ulceración dolorosa.",
+          "findings": [
+            {
+              "mechanism": "Reactivación viral sensitiva",
+              "finding": "Vesículas dolorosas recurrentes"
+            }
+          ],
+          "initial_action": "Tomar muestra de lesión para prueba virológica e iniciar antiviral según primer episodio o recurrencia.",
+          "action_reason": "El tipo de episodio cambia duración y estrategia.",
+          "modifiers": [
+            {
+              "factor": "Embarazo al parto",
+              "action": "Valorar lesiones y pródromos para decidir vía.",
+              "reason": "No todo antecedente exige cesárea."
+            }
+          ],
+          "limits": "No se añade gentamicina de rutina por infección por VIH.",
+          "evidence": [
+            {
+              "page": 569,
+              "quote": "vesículas dolorosas y recidivantes."
+            },
+            {
+              "page": 569,
+              "quote": "Aciclovir vía oral"
+            }
+          ],
+          "source_gaps": [],
+          "verified_source_pages": [
+            569
+          ],
+          "external_sources": [
+            {
+              "label": "CDC: herpes genital",
+              "url": "https://www.cdc.gov/std/treatment-guidelines/herpes.htm",
+              "quote": "women with recurrent genital herpetic lesions at the onset of labor should have a cesarean delivery",
+              "checked_at": "2026-10-29"
+            }
+          ],
+          "source_corrections": [
+            "La cesárea depende de lesiones o pródromos al parto, no de todo antecedente. El régimen de HSV en VIH es antiviral; no se agrega aminoglucósido rutinario."
+          ]
+        },
+        {
+          "id": "18.07-04",
+          "name": "Linfogranuloma",
+          "source_pages": [
+            578
+          ],
+          "pattern": "Una persona refiere una pequeña úlcera genital que desapareció. Semanas después presenta un ganglio inguinal doloroso y grande, con riesgo de fistulizar; se investiga infección sexual invasora.",
+          "key_discriminator": "úlcera genital que desapareció",
+          "mechanism": "Los serotipos invasores de Chlamydia se propagan a vasos y ganglios linfáticos, causando bubones y, si persisten, fibrosis y daño genital o rectal.",
+          "findings": [
+            {
+              "mechanism": "Invasión linfática",
+              "finding": "Adenopatía dolorosa tras lesión transitoria"
+            }
+          ],
+          "initial_action": "Obtener pruebas para clamidia según sitio e iniciar doxiciclina con esquema de enfermedad invasora.",
+          "action_reason": "La duración debe cubrir afectación linfática.",
+          "modifiers": [
+            {
+              "factor": "Proctocolitis o enfermedad crónica",
+              "action": "Evaluar extensión y secuelas.",
+              "reason": "Puede existir lesión rectal importante."
+            }
+          ],
+          "limits": "Los errores de cifras extraídas de la página no se usan para dosificar.",
+          "evidence": [
+            {
+              "page": 578,
+              "quote": "pápula o úlcera genital indolora"
+            },
+            {
+              "page": 578,
+              "quote": "Primera elección : Doxiciclina"
+            }
+          ],
+          "source_gaps": [],
+          "verified_source_pages": [
+            578
+          ],
+          "external_sources": [
+            {
+              "label": "CDC: linfogranuloma venéreo",
+              "url": "https://www.cdc.gov/std/treatment-guidelines/lgv.htm",
+              "quote": "Doxycycline 100 mg orally 2 times/day for 21 days",
+              "checked_at": "2026-10-29"
+            }
+          ],
+          "source_corrections": [
+            "Se comprueba duración de 21 días y se corrigen cifras mal extraídas de la página 578."
+          ]
+        },
+        {
+          "id": "18.07-05",
+          "name": "Granuloma inguinal",
+          "source_pages": [
+            568
+          ],
+          "pattern": "Una persona de una región tropical tiene una úlcera genital progresiva indolora que sangra al roce. La biopsia muestra inclusiones bacterianas intracelulares en macrófagos, sin bubones dolorosos típicos.",
+          "key_discriminator": "sangra al roce",
+          "mechanism": "La infección intracelular por Klebsiella granulomatis produce tejido ulcerado friable y destrucción progresiva; el daño crónico puede causar fibrosis y estenosis.",
+          "findings": [
+            {
+              "mechanism": "Infección ulcerativa crónica",
+              "finding": "Úlcera indolora friable"
+            }
+          ],
+          "initial_action": "Confirmar con tejido e indicar azitromicina durante un curso suficiente y hasta cicatrización.",
+          "action_reason": "La persistencia de lesiones exige seguimiento y tratamiento adecuado.",
+          "modifiers": [
+            {
+              "factor": "Lesión extensa o sin cicatrización",
+              "action": "Reevaluar diagnóstico y complicaciones.",
+              "reason": "Puede coexistir otra causa o daño avanzado."
+            }
+          ],
+          "limits": "No limitar tratamiento a un número fijo de dosis si persiste lesión.",
+          "evidence": [
+            {
+              "page": 568,
+              "quote": "úlceras genitales progresivas, indoloras"
+            },
+            {
+              "page": 568,
+              "quote": "Alternativa: Doxiciclina."
+            }
+          ],
+          "source_gaps": [],
+          "verified_source_pages": [
+            568
+          ],
+          "external_sources": [
+            {
+              "label": "CDC: granuloma inguinal",
+              "url": "https://www.cdc.gov/std/treatment-guidelines/donovanosis.htm",
+              "quote": "until all lesions have completely healed",
+              "checked_at": "2026-10-29"
+            }
+          ],
+          "source_corrections": [
+            "El tratamiento debe continuar al menos tres semanas y hasta cicatrización; no finalizar automáticamente después de tres tomas si persiste lesión."
+          ]
+        }
+      ],
+      "common_problem": "Una persona presenta una úlcera genital.",
+      "mother": {
+        "cue": "El dolor, el número y los ganglios orientan entre agentes sexuales.",
+        "answer": "Síndrome de úlcera genital",
+        "explanation": "La clínica orienta, pero requiere evaluación de coinfecciones."
+      }
+    },
+    {
+      "id": "18.08",
+      "title": "Uretritis/verrugas",
+      "topics": [
+        {
+          "id": "18.08-01",
+          "name": "ETS Generalidades",
+          "source_pages": [
+            560,
+            561
+          ],
+          "pattern": "Una persona sexualmente activa presenta una lesión genital nueva y secreción. Se describen dolor, número de lesiones y ganglios, y se obtiene historia de exposición para dirigir pruebas y evaluar coinfecciones.",
+          "key_discriminator": "dolor, número de lesiones y ganglios",
+          "mechanism": "Los agentes sexuales tienen tropismos diferentes por mucosa, epitelio o linfáticos; el síndrome orienta pruebas, pero la superposición clínica exige considerar coinfecciones.",
+          "findings": [
+            {
+              "mechanism": "Tropismo y agente variables",
+              "finding": "Úlcera, verruga o secreción genital"
+            }
+          ],
+          "initial_action": "Evaluar el síndrome, obtener pruebas específicas y ofrecer detección de VIH y sífilis según exposición.",
+          "action_reason": "Una infección no excluye otra.",
+          "modifiers": [
+            {
+              "factor": "Agente que requiere manejo de pareja",
+              "action": "Coordinar evaluación y tratamiento.",
+              "reason": "Reduce reinfección y transmisión."
+            }
+          ],
+          "limits": "Los esquemas de estas tablas no deben aplicarse sin etapa, embarazo y guía vigente.",
+          "evidence": [
+            {
+              "page": 560,
+              "quote": "Tratamiento a pareja."
+            },
+            {
+              "page": 561,
+              "quote": "VIH e investigar herpes virus"
+            }
+          ],
+          "source_gaps": [],
+          "verified_source_pages": [
+            560,
+            561
+          ]
+        },
+        {
+          "id": "18.08-02",
+          "name": "Gonorrea",
+          "source_pages": [
+            567
+          ],
+          "pattern": "Un hombre presenta disuria y secreción uretral purulenta pocos días después de una relación sin protección. Se obtiene muestra para amplificación molecular y se evalúa coinfección con clamidia.",
+          "key_discriminator": "secreción uretral purulenta",
+          "mechanism": "El gonococo infecta mucosa uretral o endocervical y produce inflamación; la diseminación y coinfección requieren buscar otros sitios y agentes según exposición.",
+          "findings": [
+            {
+              "mechanism": "Inflamación de mucosa uretral",
+              "finding": "Disuria y secreción"
+            }
+          ],
+          "initial_action": "Confirmar con prueba molecular y tratar con ceftriaxona; cubrir clamidia si no se ha excluido.",
+          "action_reason": "La coinfección cambia cobertura adicional.",
+          "modifiers": [
+            {
+              "factor": "Persistencia tras tratamiento",
+              "action": "Obtener cultivo y susceptibilidad.",
+              "reason": "Puede existir resistencia o reinfección."
+            }
+          ],
+          "limits": "La azitromicina sistemática del libro se corrige con CDC.",
+          "evidence": [
+            {
+              "page": 567,
+              "quote": "Prueba de ampliación de ácidos nucleicos"
+            },
+            {
+              "page": 567,
+              "quote": "Cultivo (de secreción): Ideal para determinar"
+            }
+          ],
+          "source_gaps": [],
+          "verified_source_pages": [
+            567
+          ],
+          "external_sources": [
+            {
+              "label": "CDC: gonorrea",
+              "url": "https://www.cdc.gov/std/treatment-guidelines/gonorrhea-adults.htm",
+              "quote": "If chlamydial infection has not been excluded, treat for chlamydia",
+              "checked_at": "2026-10-29"
+            }
+          ],
+          "source_corrections": [
+            "La ceftriaxona se acompaña de tratamiento de clamidia solo si no se ha excluido; no se mantiene azitromicina universal del libro."
+          ]
+        },
+        {
+          "id": "18.08-03",
+          "name": "VPH",
+          "source_pages": [
+            621
+          ],
+          "pattern": "Una persona presenta lesiones exofíticas verrugosas en el área anogenital. No tiene úlcera dolorosa; se debe distinguir un condiloma benigno de una lesión atípica que requiere biopsia.",
+          "key_discriminator": "lesiones exofíticas verrugosas",
+          "mechanism": "El virus infecta epitelio y produce proliferación; los tipos asociados a verrugas difieren de los de mayor riesgo oncogénico y el tratamiento elimina lesiones visibles.",
+          "findings": [
+            {
+              "mechanism": "Proliferación epitelial viral",
+              "finding": "Verrugas anogenitales"
+            }
+          ],
+          "initial_action": "Diagnosticar clínicamente la lesión típica y ofrecer tratamiento local según sitio, tamaño y preferencias.",
+          "action_reason": "El manejo controla lesiones sin garantizar eliminación viral.",
+          "modifiers": [
+            {
+              "factor": "Lesión atípica o resistente",
+              "action": "Valorar biopsia.",
+              "reason": "Debe excluirse otra patología."
+            }
+          ],
+          "limits": "La prueba de VPH no se usa como confirmación rutinaria de toda verruga.",
+          "evidence": [
+            {
+              "page": 621,
+              "quote": "Verrugas genitales o condilomas acuminados."
+            },
+            {
+              "page": 621,
+              "quote": "crioterapia o escisión"
+            }
+          ],
+          "source_gaps": [],
+          "verified_source_pages": [
+            621
+          ]
+        }
+      ],
+      "common_problem": "Una persona presenta secreción genital o lesiones verrugosas.",
+      "mother": {
+        "cue": "La infección afecta mucosa o epitelio y requiere manejo según agente y localización.",
+        "answer": "Infección sexual de mucosa o epitelio",
+        "explanation": "La selección de pruebas y tratamiento depende del síndrome."
+      }
+    },
+    {
+      "id": "18.09",
+      "title": "Exantema vesicular",
+      "topics": [
+        {
+          "id": "18.09-01",
+          "name": "Herpes zóster",
+          "source_pages": [
+            570
+          ],
+          "pattern": "Una persona mayor tiene dolor urente en una banda torácica seguido de vesículas agrupadas del mismo lado. La erupción sigue un dermatoma y no cruza de forma difusa el tronco.",
+          "key_discriminator": "sigue un dermatoma",
+          "mechanism": "La reactivación de VZV latente en ganglios sensitivos causa inflamación neural y lesiones en el territorio cutáneo correspondiente, con dolor radicular.",
+          "findings": [
+            {
+              "mechanism": "Reactivación en ganglio sensitivo",
+              "finding": "Vesículas dolorosas en dermatoma"
+            }
+          ],
+          "initial_action": "Iniciar antiviral temprano según riesgo y evolución y tratar dolor.",
+          "action_reason": "Disminuye síntomas cutáneos y dolor agudo.",
+          "modifiers": [
+            {
+              "factor": "Afectación ocular, facial o diseminada",
+              "action": "Solicitar evaluación urgente.",
+              "reason": "Puede comprometer visión o nervios craneales."
+            }
+          ],
+          "limits": "El beneficio y la vía dependen del huésped y extensión.",
+          "evidence": [
+            {
+              "page": 570,
+              "quote": "se localiza sobre un dermatoma"
+            },
+            {
+              "page": 570,
+              "quote": "administración sistémica de aciclovir"
+            }
+          ],
+          "source_gaps": [],
+          "verified_source_pages": [
+            570
+          ]
+        },
+        {
+          "id": "18.09-02",
+          "name": "Viruela símica",
+          "source_pages": [
+            618,
+            619,
+            620
+          ],
+          "pattern": "Una persona presenta lesiones vesiculopustulosas profundas y adenopatías después de contacto estrecho con un caso. Algunas lesiones afectan genitales; se requiere confirmar el virus y aliviar dolor.",
+          "key_discriminator": "lesiones vesiculopustulosas profundas y adenopatías",
+          "mechanism": "La infección por orthopoxvirus se transmite por contacto y produce lesiones mucocutáneas; la localización y condición inmunitaria determinan dolor, complicaciones y necesidad de atención especializada.",
+          "findings": [
+            {
+              "mechanism": "Lesión viral mucocutánea",
+              "finding": "Pústulas y adenopatías"
+            }
+          ],
+          "initial_action": "Reducir exposición de contactos, tomar muestra de lesión para PCR y dar analgesia y cuidados locales.",
+          "action_reason": "La confirmación orienta control y manejo.",
+          "modifiers": [
+            {
+              "factor": "Afectación ocular o inmunosupresión importante",
+              "action": "Referir para tratamiento especializado.",
+              "reason": "Aumenta riesgo de enfermedad grave."
+            }
+          ],
+          "limits": "La presentación genital aislada también puede ocurrir.",
+          "evidence": [
+            {
+              "page": 619,
+              "quote": "limitarse a las áreas genitales"
+            },
+            {
+              "page": 620,
+              "quote": "PCR en tiempo real."
+            }
+          ],
+          "source_gaps": [],
+          "verified_source_pages": [
+            618,
+            619,
+            620
+          ]
+        },
+        {
+          "id": "18.09-03",
+          "name": "Adenovirus",
+          "source_pages": [
+            529
+          ],
+          "pattern": "Un niño de guardería presenta fiebre, faringitis y conjuntivitis. Otros niños tienen síntomas respiratorios o diarrea; la mayoría conserva buen estado general y no requiere un estudio invasivo.",
+          "key_discriminator": "faringitis y conjuntivitis",
+          "mechanism": "Los adenovirus infectan distintos epitelios y producen síndromes respiratorios, oculares o digestivos; el estado inmune modifica la posibilidad de enfermedad grave.",
+          "findings": [
+            {
+              "mechanism": "Tropismo epitelial variable",
+              "finding": "Síndrome faringoconjuntival o gastroenteritis"
+            }
+          ],
+          "initial_action": "Dar soporte en cuadro leve y reservar pruebas virológicas para enfermedad grave o inmunosupresión.",
+          "action_reason": "La mayoría de infecciones leves se autolimita.",
+          "modifiers": [
+            {
+              "factor": "Inmunodeprimido con enfermedad grave",
+              "action": "Confirmar con prueba molecular y valorar especialidad.",
+              "reason": "El riesgo y el manejo son distintos."
+            }
+          ],
+          "limits": "El síndrome no identifica por sí solo serotipo.",
+          "evidence": [
+            {
+              "page": 529,
+              "quote": "faringoconjuntival."
+            },
+            {
+              "page": 529,
+              "quote": "manejo síntomatico."
+            }
+          ],
+          "source_gaps": [],
+          "verified_source_pages": [
+            529
+          ]
+        }
+      ],
+      "common_problem": "Una persona presenta lesiones vesiculares o síntomas virales.",
+      "mother": {
+        "cue": "La distribución, la exposición y el estado inmune distinguen infecciones virales.",
+        "answer": "Patrón viral cutáneo o sistémico",
+        "explanation": "El contexto evita atribuir todas las vesículas al mismo agente."
+      }
+    },
+    {
+      "id": "18.10",
+      "title": "VIH: fase y profilaxis",
+      "topics": [
+        {
+          "id": "18.10-01",
+          "name": "VIH Adultos",
+          "source_pages": [
+            608,
+            609,
+            610,
+            611,
+            612,
+            613
+          ],
+          "pattern": "Una persona tiene prueba reactiva para VIH tras un síndrome febril reciente. Se confirma la infección y se solicitan carga viral y CD4 para planear tratamiento y prevención de oportunistas.",
+          "key_discriminator": "carga viral y CD4",
+          "mechanism": "La infección de células CD4 reduce inmunidad progresivamente; la supresión de replicación viral conserva función inmune y disminuye enfermedad y transmisión.",
+          "findings": [
+            {
+              "mechanism": "Replicación viral y pérdida de CD4",
+              "finding": "Inmunodeficiencia y oportunistas"
+            }
+          ],
+          "initial_action": "Confirmar con algoritmo vigente e iniciar evaluación para TAR en toda persona con infección confirmada.",
+          "action_reason": "El beneficio no depende de esperar CD4 bajos.",
+          "modifiers": [
+            {
+              "factor": "Síntomas de infección oportunista del SNC",
+              "action": "Definir momento de TAR según agente.",
+              "reason": "Algunas infecciones requieren ajustar el inicio."
+            }
+          ],
+          "limits": "No se usa Western blot como paso universal ni profilaxis por CD4 sin contexto.",
+          "evidence": [
+            {
+              "page": 611,
+              "quote": "independienteme nte de conteo de CD4."
+            },
+            {
+              "page": 611,
+              "quote": "Conteo de Linfocitos T CD4"
+            }
+          ],
+          "source_gaps": [],
+          "verified_source_pages": [
+            608,
+            609,
+            610,
+            611,
+            612,
+            613
+          ],
+          "external_sources": [
+            {
+              "label": "OMS: selección de pruebas de VIH",
+              "url": "https://www.ncbi.nlm.nih.gov/books/NBK624909/",
+              "quote": "recommended against the use of western blotting in HIV testing strategies and algorithms",
+              "checked_at": "2026-10-29"
+            }
+          ],
+          "source_corrections": [
+            "Western blot no es confirmación universal actual. Se sigue algoritmo validado de pruebas y evaluación de infección aguda."
+          ]
+        },
+        {
+          "id": "18.10-02",
+          "name": "VIH Madre e hijo",
+          "source_pages": [
+            614,
+            615,
+            616,
+            617
+          ],
+          "pattern": "Una embarazada tiene infección por VIH y recibe tratamiento. La carga viral cercana al nacimiento y la adherencia deben revisarse para decidir prevención intraparto y el esquema del recién nacido expuesto.",
+          "key_discriminator": "carga viral cercana al nacimiento",
+          "mechanism": "La exposición fetal y neonatal depende sobre todo de replicación materna; la supresión viral y profilaxis neonatal ajustada al riesgo reducen transmisión perinatal.",
+          "findings": [
+            {
+              "mechanism": "Exposición perinatal a virus",
+              "finding": "Riesgo dependiente de carga materna"
+            }
+          ],
+          "initial_action": "Optimizar TAR materno y planear parto y profilaxis neonatal con equipo perinatal según carga viral y riesgo.",
+          "action_reason": "Las medidas se ajustan a control virológico.",
+          "modifiers": [
+            {
+              "factor": "Recién nacido expuesto",
+              "action": "Iniciar ARV lo antes posible y pruebas virológicas.",
+              "reason": "Los anticuerpos maternos dificultan diagnóstico serológico temprano."
+            }
+          ],
+          "limits": "VIH no equivale a cesárea obligatoria; la lactancia requiere consejería según política y contexto.",
+          "evidence": [
+            {
+              "page": 614,
+              "quote": "carga viral (RNA viral)."
+            },
+            {
+              "page": 617,
+              "quote": "idealmente a las 6 horas de vida"
+            }
+          ],
+          "source_gaps": [],
+          "verified_source_pages": [
+            614,
+            615,
+            616,
+            617
+          ],
+          "external_sources": [
+            {
+              "label": "NIH: atención intraparto de VIH",
+              "url": "https://clinicalinfo.hiv.gov/en/guidelines/perinatal/intrapartum-care?view=brief",
+              "quote": "recommendations about intrapartum care to prevent HIV transmission are based on maternal HIV RNA levels",
+              "checked_at": "2026-10-29"
+            }
+          ],
+          "source_corrections": [
+            "Se corrige la regla embarazo más VIH igual a cesárea. La vía y zidovudina intraparto dependen de carga viral y condiciones obstétricas; profilaxis neonatal depende del riesgo."
+          ]
+        }
+      ],
+      "common_problem": "Una persona tiene infección o exposición al VIH.",
+      "mother": {
+        "cue": "La replicación viral y la pérdida de inmunidad determinan tratamiento y prevención de transmisión.",
+        "answer": "Infección por VIH y control virológico",
+        "explanation": "La carga viral guía respuesta y riesgo de transmisión."
+      }
+    },
+    {
+      "id": "18.11",
+      "title": "Infección oportunista del SNC",
+      "topics": [
+        {
+          "id": "18.11-01",
+          "name": "Criptococosis VIH",
+          "source_pages": [
+            542
+          ],
+          "pattern": "Una persona con VIH avanzado presenta cefalea subaguda, fiebre y alteración mental. Se sospecha meningitis fúngica y se requiere analizar LCR y presión de apertura cuando sea seguro.",
+          "key_discriminator": "cefalea subaguda",
+          "mechanism": "La levadura invade meninges en inmunidad celular reducida y puede aumentar presión intracraneal; la carga fúngica y la inflamación modifican evolución y riesgo de reconstitución inmune.",
+          "findings": [
+            {
+              "mechanism": "Infección meníngea oportunista",
+              "finding": "Cefalea y alteración mental"
+            }
+          ],
+          "initial_action": "Estudiar antígeno y cultivo de LCR, medir presión y comenzar inducción antifúngica según protocolo.",
+          "action_reason": "Debe tratarse infección y presión intracraneal.",
+          "modifiers": [
+            {
+              "factor": "Inicio de TAR pendiente",
+              "action": "Ajustar el momento tras iniciar antifúngicos.",
+              "reason": "El inicio inmediato puede aumentar mortalidad por inflamación."
+            }
+          ],
+          "limits": "La profilaxis primaria con fluconazol no es universal.",
+          "evidence": [
+            {
+              "page": 542,
+              "quote": "meningitis subaguda"
+            },
+            {
+              "page": 542,
+              "quote": "Anfotericina B + Flucitosina"
+            }
+          ],
+          "source_gaps": [],
+          "verified_source_pages": [
+            542
+          ],
+          "external_sources": [
+            {
+              "label": "OMS: criptococosis y TAR",
+              "url": "https://www.ncbi.nlm.nih.gov/books/NBK581839/",
+              "quote": "should be deferred 4–6 weeks from the initiation of antifungal treatment",
+              "checked_at": "2026-10-29"
+            }
+          ],
+          "source_corrections": [
+            "En meningitis criptocócica se difiere generalmente TAR cuatro a seis semanas; no aplicar sin contexto el intervalo amplio del libro."
+          ]
+        },
+        {
+          "id": "18.11-02",
+          "name": "Toxoplasmosis VIH",
+          "source_pages": [
+            598
+          ],
+          "pattern": "Una persona con VIH y CD4 muy bajos presenta cefalea, fiebre y debilidad de un lado. La resonancia muestra varias lesiones con realce en anillo y serología IgG positiva.",
+          "key_discriminator": "varias lesiones con realce en anillo",
+          "mechanism": "La reactivación del parásito en inmunidad celular deficiente causa focos de encefalitis necrosante, produciendo lesiones expansivas y déficit neurológico focal.",
+          "findings": [
+            {
+              "mechanism": "Reactivación parasitaria cerebral",
+              "finding": "Lesiones en anillo y focalidad"
+            }
+          ],
+          "initial_action": "Iniciar tratamiento específico y valorar respuesta clínica e imagen bajo atención especializada.",
+          "action_reason": "El cuadro focal requiere controlar infección y complicaciones.",
+          "modifiers": [
+            {
+              "factor": "Esquema con pirimetamina",
+              "action": "Añadir rescate con ácido folínico.",
+              "reason": "Previene toxicidad hematológica."
+            }
+          ],
+          "limits": "Considerar linfoma y otros diagnósticos si la evolución es atípica.",
+          "evidence": [
+            {
+              "page": 598,
+              "quote": "focal con cefalea, confusión, debilidad motora y"
+            },
+            {
+              "page": 598,
+              "quote": "Pirimetamina y Sulfadiazina."
+            }
+          ],
+          "source_gaps": [],
+          "verified_source_pages": [
+            598
+          ],
+          "external_sources": [
+            {
+              "label": "NIH: toxoplasmosis cerebral",
+              "url": "https://clinicalinfo.hiv.gov/en/guidelines/hiv-clinical-guidelines-adult-and-adolescent-opportunistic-infections/toxoplasmosis",
+              "quote": "pyrimethamine plus sulfadiazine plus leucovorin",
+              "checked_at": "2026-10-29"
+            }
+          ],
+          "source_corrections": [
+            "Se añade leucovorina al esquema con pirimetamina para reducir toxicidad hematológica; la página del libro la omite."
+          ]
+        }
+      ],
+      "common_problem": "Una persona con inmunosupresión presenta síntomas del sistema nervioso central.",
+      "mother": {
+        "cue": "Los oportunistas causan meningitis o lesiones focales según su distribución.",
+        "answer": "Infección oportunista del sistema nervioso central",
+        "explanation": "La imagen y el LCR se eligen según presentación y seguridad."
+      }
+    },
+    {
+      "id": "18.12",
+      "title": "Oportunistas pulmonares y diseminadas",
+      "topics": [
+        {
+          "id": "18.12-01",
+          "name": "Pneumocystis jiroveci",
+          "source_pages": [
+            585
+          ],
+          "pattern": "Una persona con inmunosupresión celular presenta disnea progresiva, fiebre y tos seca durante semanas. Tiene hipoxemia y requiere evaluar una neumonía oportunista con una muestra respiratoria apropiada.",
+          "key_discriminator": "disnea progresiva, fiebre y tos seca",
+          "mechanism": "El hongo oportunista produce enfermedad alveolar difusa cuando falla inmunidad celular, reduciendo intercambio gaseoso y causando disnea e hipoxemia de evolución subaguda.",
+          "findings": [
+            {
+              "mechanism": "Infección alveolar difusa",
+              "finding": "Tos seca y disnea con hipoxemia"
+            }
+          ],
+          "initial_action": "Obtener muestra respiratoria y tratar con TMP-SMX a dosis terapéutica según peso y función renal.",
+          "action_reason": "La dosis de profilaxis no trata neumonía establecida.",
+          "modifiers": [
+            {
+              "factor": "Hipoxemia moderada o grave",
+              "action": "Valorar corticoide adyuvante.",
+              "reason": "La gravedad respiratoria modifica manejo."
+            }
+          ],
+          "limits": "Se corrige la equiparación de dosis profiláctica y terapéutica del libro.",
+          "evidence": [
+            {
+              "page": 585,
+              "quote": "tos seca no productiva"
+            },
+            {
+              "page": 585,
+              "quote": "lavado broncoalveolar."
+            }
+          ],
+          "source_gaps": [],
+          "verified_source_pages": [
+            585
+          ],
+          "external_sources": [
+            {
+              "label": "NIH: neumonía por Pneumocystis",
+              "url": "https://clinicalinfo.hiv.gov/en/guidelines/hiv-clinical-guidelines-adult-and-adolescent-opportunistic-infections/pneumocystis",
+              "quote": "TMP 15–20 mg/kg/day and SMX 75–100 mg/kg/day",
+              "checked_at": "2026-10-29"
+            }
+          ],
+          "source_corrections": [
+            "La dosis diaria única citada en el libro corresponde a profilaxis; el tratamiento requiere dosis por peso y valoración de gravedad respiratoria."
+          ]
+        },
+        {
+          "id": "18.12-02",
+          "name": "Aspergilosis",
+          "source_pages": [
+            534
+          ],
+          "pattern": "Una persona con neutropenia profunda presenta fiebre persistente, dolor pleurítico y hemoptisis. La tomografía muestra nódulos con halo; se busca evidencia micológica de una infección fúngica invasora.",
+          "key_discriminator": "nódulos con halo",
+          "mechanism": "La invasión fúngica en un huésped neutropénico puede dañar vasos y parénquima pulmonar, produciendo nódulos, hemorragia y posible diseminación a otros órganos.",
+          "findings": [
+            {
+              "mechanism": "Angioinvasión pulmonar",
+              "finding": "Halo nodular y hemoptisis"
+            }
+          ],
+          "initial_action": "Obtener muestras y galactomanano según contexto e iniciar antifúngico activo frente a Aspergillus bajo manejo especializado.",
+          "action_reason": "La progresión puede ser rápida en neutropenia.",
+          "modifiers": [
+            {
+              "factor": "Enfermedad probable o comprobada",
+              "action": "Valorar voriconazol o alternativa apropiada.",
+              "reason": "El agente requiere cobertura específica."
+            }
+          ],
+          "limits": "Fluconazol no es un tratamiento activo de aspergilosis invasora.",
+          "evidence": [
+            {
+              "page": 534,
+              "quote": "nódulos con halo"
+            },
+            {
+              "page": 534,
+              "quote": "detección de galactomanano"
+            }
+          ],
+          "source_gaps": [],
+          "verified_source_pages": [
+            534
+          ],
+          "external_sources": [
+            {
+              "label": "IDSA: aspergilosis",
+              "url": "https://www.idsociety.org/practice-guideline/aspergillosis/",
+              "quote": "We recommend primary treatment with voriconazole",
+              "checked_at": "2026-10-29"
+            }
+          ],
+          "source_corrections": [
+            "No se incluye fluconazol entre opciones de aspergilosis invasora; se requiere un antifúngico activo frente a mohos como voriconazol."
+          ]
+        },
+        {
+          "id": "18.12-03",
+          "name": "Mucormicosis",
+          "source_pages": [
+            580
+          ],
+          "pattern": "Una persona con diabetes descompensada presenta fiebre, dolor facial y una lesión nasal necrótica. Tiene edema orbitario y visión borrosa; se sospecha infección invasora con destrucción tisular rápida.",
+          "key_discriminator": "lesión nasal necrótica",
+          "mechanism": "El hongo invade tejidos y vasos en un huésped predispuesto, causando isquemia y necrosis que puede extenderse desde senos paranasales hacia órbita y cerebro.",
+          "findings": [
+            {
+              "mechanism": "Invasión vascular y tisular",
+              "finding": "Necrosis nasal y compromiso orbitario"
+            }
+          ],
+          "initial_action": "Activar evaluación quirúrgica urgente, obtener tejido, iniciar antifúngico y corregir factores predisponentes.",
+          "action_reason": "El control requiere desbridamiento y tratamiento inmediato.",
+          "modifiers": [
+            {
+              "factor": "Cetoacidosis o inmunosupresión reversible",
+              "action": "Corregirla en paralelo.",
+              "reason": "Sostiene la susceptibilidad a invasión."
+            }
+          ],
+          "limits": "No esperar cultivo para tratar un cuadro invasor altamente probable.",
+          "evidence": [
+            {
+              "page": 580,
+              "quote": "destrucción ósea"
+            },
+            {
+              "page": 580,
+              "quote": "tratamiento antimicótico inmediato."
+            }
+          ],
+          "source_gaps": [],
+          "verified_source_pages": [
+            580
+          ]
+        }
+      ],
+      "common_problem": "Una persona inmunocomprometida presenta síntomas respiratorios o invasión tisular.",
+      "mother": {
+        "cue": "Los hongos oportunistas comprometen pulmón, vasos o tejidos según huésped y especie.",
+        "answer": "Infección fúngica oportunista",
+        "explanation": "El patrón de invasión cambia pruebas y urgencia."
+      }
+    },
+    {
+      "id": "18.13",
+      "title": "Infecciones granulomatosas pulmonares",
+      "topics": [
+        {
+          "id": "18.13-01",
+          "name": "Tuberculosis pulmonar",
+          "source_pages": [
+            603,
+            604,
+            605,
+            606,
+            607
+          ],
+          "pattern": "Una persona tiene tos productiva prolongada, sudoración nocturna y pérdida de peso. Vive con un caso de infección respiratoria transmisible; se obtiene muestra para estudio molecular y cultivo.",
+          "key_discriminator": "tos productiva prolongada",
+          "mechanism": "Los bacilos inhalados sobreviven y forman focos granulomatosos; la enfermedad activa puede producir cavitación y transmisión aérea, especialmente con afectación pulmonar bacilífera.",
+          "findings": [
+            {
+              "mechanism": "Infección pulmonar granulomatosa",
+              "finding": "Tos crónica, pérdida de peso y cavitación"
+            }
+          ],
+          "initial_action": "Aplicar precauciones aéreas y obtener diagnóstico microbiológico con prueba molecular y susceptibilidad; iniciar esquema multidrogas apropiado.",
+          "action_reason": "La resistencia modifica el régimen y el control.",
+          "modifiers": [
+            {
+              "factor": "Tratamiento previo o sospecha de resistencia",
+              "action": "Priorizar susceptibilidad y equipo especializado.",
+              "reason": "No se usa retratamiento empírico fijo."
+            }
+          ],
+          "limits": "No confundir infección latente con enfermedad activa.",
+          "evidence": [
+            {
+              "page": 603,
+              "quote": "partícu las en aerosol"
+            },
+            {
+              "page": 605,
+              "quote": "Detecta genes relacionados a"
+            }
+          ],
+          "source_gaps": [],
+          "verified_source_pages": [
+            603,
+            604,
+            605,
+            606,
+            607
+          ]
+        },
+        {
+          "id": "18.13-02",
+          "name": "Tuberculosis extrapulmonar",
+          "source_pages": [
+            601,
+            602
+          ],
+          "pattern": "Una persona presenta adenopatía cervical persistente con fístula y pérdida de peso. Tiene antecedente de exposición a tuberculosis; se obtiene tejido para estudiar una forma fuera del pulmón.",
+          "key_discriminator": "adenopatía cervical persistente con fístula",
+          "mechanism": "La diseminación desde el foco inicial lleva bacilos a ganglios u otros órganos; la localización determina síntomas y muestras necesarias para confirmación microbiológica.",
+          "findings": [
+            {
+              "mechanism": "Infección extrapulmonar granulomatosa",
+              "finding": "Ganglios, lesión ósea o síntomas orgánicos"
+            }
+          ],
+          "initial_action": "Obtener muestra del sitio afectado para pruebas microbiológicas y susceptibilidad y evaluar también compromiso pulmonar.",
+          "action_reason": "La muestra local aumenta rendimiento diagnóstico.",
+          "modifiers": [
+            {
+              "factor": "Afectación meníngea u ósea",
+              "action": "Ajustar duración y manejo especializado.",
+              "reason": "Estos sitios requieren estrategias específicas."
+            }
+          ],
+          "limits": "Una prueba inmunológica negativa no excluye enfermedad extrapulmonar.",
+          "evidence": [
+            {
+              "page": 601,
+              "quote": "diseminación hematógena"
+            },
+            {
+              "page": 601,
+              "quote": "prueba de farmacosensibilidad."
+            }
+          ],
+          "source_gaps": [],
+          "verified_source_pages": [
+            601,
+            602
+          ]
+        },
+        {
+          "id": "18.13-03",
+          "name": "Coccidioidomicosis",
+          "source_pages": [
+            540
+          ],
+          "pattern": "Una persona desarrolla fiebre, tos y dolor pleurítico después de trabajar entre polvo en una región árida endémica. Está estable y no tiene inmunosupresión; se evalúa extensión de la infección.",
+          "key_discriminator": "polvo en una región árida endémica",
+          "mechanism": "La inhalación de artroconidios causa infección pulmonar que suele limitarse, pero puede diseminarse según respuesta inmune y factores de riesgo del huésped.",
+          "findings": [
+            {
+              "mechanism": "Inhalación de hongo ambiental",
+              "finding": "Síndrome pulmonar tras exposición a polvo"
+            }
+          ],
+          "initial_action": "Solicitar estudio serológico y valorar necesidad de antifúngico según extensión y factores de riesgo.",
+          "action_reason": "No toda infección leve en huésped sano necesita tratamiento.",
+          "modifiers": [
+            {
+              "factor": "Enfermedad extensa o grave",
+              "action": "Valorar antifúngico y atención especializada.",
+              "reason": "El riesgo supera el de un cuadro autolimitado."
+            }
+          ],
+          "limits": "Las dosis altas de anfotericina de la página son dudosas y no se reproducen.",
+          "evidence": [
+            {
+              "page": 540,
+              "quote": "tormentas de polvo"
+            },
+            {
+              "page": 540,
+              "quote": "terapia antimicótica no es necesaria"
+            }
+          ],
+          "source_gaps": [],
+          "verified_source_pages": [
+            540
+          ]
+        }
+      ],
+      "common_problem": "Una persona presenta síntomas pulmonares prolongados o diseminación.",
+      "mother": {
+        "cue": "Los agentes granulomatosos requieren correlación de exposición, sitio y pruebas microbiológicas.",
+        "answer": "Infección granulomatosa",
+        "explanation": "La localización y susceptibilidad definen manejo."
+      }
+    },
+    {
+      "id": "18.14",
+      "title": "Fiebre aguda por vectores",
+      "topics": [
+        {
+          "id": "18.14-01",
+          "name": "Enfermedades por vectores",
+          "source_pages": [
+            556,
+            557
+          ],
+          "pattern": "Una persona presenta fiebre después de una estancia en zona de mosquitos. Se comparan dolor retroocular, artralgias incapacitantes, conjuntivitis, anemia y patrón de fiebre para seleccionar pruebas oportunas.",
+          "key_discriminator": "artralgias incapacitantes",
+          "mechanism": "Los vectores transmiten agentes que afectan vasos, articulaciones o eritrocitos; la combinación de exposición y órgano predominante orienta el estudio y la vigilancia.",
+          "findings": [
+            {
+              "mechanism": "Agente y tropismo distintos",
+              "finding": "Síndrome febril con perfiles clínicos diferentes"
+            }
+          ],
+          "initial_action": "Precisar exposición y gravedad y elegir pruebas según días de evolución y agente probable.",
+          "action_reason": "La fase modifica rendimiento de pruebas.",
+          "modifiers": [
+            {
+              "factor": "Sospecha de dengue",
+              "action": "Evitar AINE hasta aclarar riesgo de sangrado.",
+              "reason": "Puede existir trombocitopenia o fuga capilar."
+            }
+          ],
+          "limits": "Un vector compartido no implica el mismo tratamiento.",
+          "evidence": [
+            {
+              "page": 556,
+              "quote": "Dolor retro-ocular"
+            },
+            {
+              "page": 557,
+              "quote": "Poliartralgias"
+            }
+          ],
+          "source_gaps": [],
+          "verified_source_pages": [
+            556,
+            557
+          ]
+        },
+        {
+          "id": "18.14-02",
+          "name": "Dengue",
+          "source_pages": [
+            543,
+            544
+          ],
+          "pattern": "Una persona con fiebre y dolor retroocular desarrolla dolor abdominal intenso y vómitos al disminuir la temperatura. El hematocrito aumenta y las plaquetas descienden; se sospecha fuga de plasma.",
+          "key_discriminator": "hematocrito aumenta y las plaquetas descienden",
+          "mechanism": "La alteración de permeabilidad vascular permite salida de plasma y hemoconcentración; la fase crítica puede comenzar al ceder fiebre y evolucionar a choque.",
+          "findings": [
+            {
+              "mechanism": "Fuga plasmática",
+              "finding": "Hemoconcentración y signos de alarma"
+            }
+          ],
+          "initial_action": "Referir para observación y líquidos ajustados a perfusión; monitorizar sangrado, diuresis y evolución del hematocrito.",
+          "action_reason": "Los signos de alarma indican riesgo de deterioro.",
+          "modifiers": [
+            {
+              "factor": "Sin alarma y buena tolerancia oral",
+              "action": "Dar soporte e instruir retorno por alarma.",
+              "reason": "El manejo depende de fase y riesgo."
+            }
+          ],
+          "limits": "No transfundir plaquetas ni usar AINE de forma rutinaria solo por recuento.",
+          "evidence": [
+            {
+              "page": 543,
+              "quote": "Dolor abdominal intenso."
+            },
+            {
+              "page": 544,
+              "quote": "iniciar soluciones IV."
+            }
+          ],
+          "source_gaps": [],
+          "verified_source_pages": [
+            543,
+            544
+          ]
+        },
+        {
+          "id": "18.14-03",
+          "name": "Paludismo",
+          "source_pages": [
+            583,
+            584
+          ],
+          "pattern": "Una persona presenta accesos de fiebre con escalofríos, anemia y esplenomegalia después de visitar una zona endémica. Se solicita una gota gruesa urgente y se determina la especie y gravedad.",
+          "key_discriminator": "fiebre con escalofríos, anemia y esplenomegalia",
+          "mechanism": "El parásito invade y destruye eritrocitos, causando hemólisis y fiebre; algunas especies mantienen formas hepáticas latentes o producen secuestro vascular y daño cerebral.",
+          "findings": [
+            {
+              "mechanism": "Ciclo eritrocitario parasitario",
+              "finding": "Fiebre y anemia hemolítica"
+            }
+          ],
+          "initial_action": "Confirmar con gota gruesa o prueba rápida y tratar de inmediato según especie, gravedad y resistencia geográfica.",
+          "action_reason": "La selección de fármacos no es universal.",
+          "modifiers": [
+            {
+              "factor": "Forma grave o compromiso neurológico",
+              "action": "Hospitalizar y tratar por vía parenteral.",
+              "reason": "Puede progresar rápidamente."
+            }
+          ],
+          "limits": "Primaquina requiere evaluar G6PD y no se usa durante embarazo.",
+          "evidence": [
+            {
+              "page": 584,
+              "quote": "Parasitoscópico con gota gruesa y tinción"
+            },
+            {
+              "page": 584,
+              "quote": "primaquina NO."
+            }
+          ],
+          "source_gaps": [],
+          "verified_source_pages": [
+            583,
+            584
+          ],
+          "external_sources": [
+            {
+              "label": "CDC: tratamiento de malaria",
+              "url": "https://www.cdc.gov/malaria/php/surveillance/diagnosis-treatment-quick-reference.html",
+              "quote": "Start primaquine or tafenoquine as soon as quantitative G6PD result is available, not before.",
+              "checked_at": "2026-10-29"
+            }
+          ],
+          "source_corrections": [
+            "Se requiere G6PD cuantitativa antes de 8-aminoquinolinas. La especie, gravedad y resistencia geográfica definen el régimen; cloroquina no es elección universal."
+          ]
+        },
+        {
+          "id": "18.14-04",
+          "name": "Rickettsiosis Fiebre manchada",
+          "source_pages": [
+            589,
+            590
+          ],
+          "pattern": "Una persona de zona endémica tiene fiebre alta, cefalea y exposición a perros con garrapatas. Presenta plaquetas bajas e hiponatremia, aunque todavía no tiene exantema definido.",
+          "key_discriminator": "perros con garrapatas",
+          "mechanism": "La infección endotelial causa vasculitis sistémica y aumento de permeabilidad, con lesión orgánica progresiva; el exantema puede faltar al inicio o durante el cuadro.",
+          "findings": [
+            {
+              "mechanism": "Daño endotelial por rickettsias",
+              "finding": "Trombocitopenia e hipoperfusión orgánica"
+            }
+          ],
+          "initial_action": "Iniciar doxiciclina ante sospecha clínica sin esperar pruebas confirmatorias.",
+          "action_reason": "El retraso aumenta riesgo de enfermedad fatal.",
+          "modifiers": [
+            {
+              "factor": "Ausencia de exantema",
+              "action": "Mantener sospecha si el contexto concuerda.",
+              "reason": "No todos los pacientes lo presentan."
+            }
+          ],
+          "limits": "Las dosis se calculan según peso y protocolo; no se copia el error de dosis diaria de la página.",
+          "evidence": [
+            {
+              "page": 590,
+              "quote": "No todos presentan exantema"
+            },
+            {
+              "page": 589,
+              "quote": "no esperar resultados de laboratorio"
+            }
+          ],
+          "source_gaps": [],
+          "verified_source_pages": [
+            589,
+            590
+          ]
+        }
+      ],
+      "common_problem": "Una persona tiene fiebre después de exposición a vectores.",
+      "mother": {
+        "cue": "El vector y el patrón clínico orientan el estudio sin sustituir evaluación de gravedad.",
+        "answer": "Síndrome febril transmitido por vector",
+        "explanation": "Las complicaciones definen urgencia."
+      }
+    },
+    {
+      "id": "18.15",
+      "title": "Fiebre con exposición animal/agua",
+      "topics": [
+        {
+          "id": "18.15-01",
+          "name": "Leptospirosis",
+          "source_pages": [
+            577
+          ],
+          "pattern": "Una persona trabaja en agua de inundación y desarrolla fiebre, dolor intenso de pantorrillas y sufusión conjuntival. Después aparecen ictericia y deterioro renal, con riesgo de compromiso sistémico.",
+          "key_discriminator": "dolor intenso de pantorrillas y sufusión conjuntival",
+          "mechanism": "La espiroqueta entra por piel o mucosas expuestas a orina animal y produce infección sistémica que puede dañar riñón, hígado y otros órganos.",
+          "findings": [
+            {
+              "mechanism": "Infección zoonótica sistémica",
+              "finding": "Mialgia, ictericia y lesión renal"
+            }
+          ],
+          "initial_action": "Obtener pruebas según fase e iniciar antibiótico y soporte; hospitalizar si hay lesión orgánica.",
+          "action_reason": "La forma grave necesita vigilancia y tratamiento parenteral.",
+          "modifiers": [
+            {
+              "factor": "Ictericia y lesión renal",
+              "action": "Valorar síndrome de Weil.",
+              "reason": "Indica afectación sistémica grave."
+            }
+          ],
+          "limits": "La presentación puede simular dengue o influenza.",
+          "evidence": [
+            {
+              "page": 577,
+              "quote": "en pantorrilla y sufusión"
+            },
+            {
+              "page": 577,
+              "quote": "Grave: Penicilina G o ceftriaxona."
+            }
+          ],
+          "source_gaps": [],
+          "verified_source_pages": [
+            577
+          ]
+        },
+        {
+          "id": "18.15-02",
+          "name": "Brucelosis",
+          "source_pages": [
+            535
+          ],
+          "pattern": "Una persona consume queso no pasteurizado y presenta fiebre persistente, sudoración y dolor sacroilíaco. Tiene hepatoesplenomegalia y se solicitan cultivos y pruebas serológicas orientadas por la exposición.",
+          "key_discriminator": "queso no pasteurizado",
+          "mechanism": "La bacteria intracelular adquirida por alimentos o contacto animal persiste en sistema reticuloendotelial y puede producir fiebre prolongada y focos osteoarticulares.",
+          "findings": [
+            {
+              "mechanism": "Persistencia intracelular zoonótica",
+              "finding": "Fiebre y sacroilitis"
+            }
+          ],
+          "initial_action": "Tomar muestras y seleccionar tratamiento combinado según edad, embarazo y foco.",
+          "action_reason": "La terapia debe reducir recaída y tratar localización.",
+          "modifiers": [
+            {
+              "factor": "Afectación focal cardíaca o neurológica",
+              "action": "Referir y ampliar esquema y duración.",
+              "reason": "La infección focal requiere manejo distinto."
+            }
+          ],
+          "limits": "No se usan regímenes breves del libro como norma universal.",
+          "evidence": [
+            {
+              "page": 535,
+              "quote": "leche no pasteurizada"
+            },
+            {
+              "page": 535,
+              "quote": "Doxiciclina + Rifampicina por 6 semanas."
+            }
+          ],
+          "source_gaps": [],
+          "verified_source_pages": [
+            535
+          ],
+          "external_sources": [
+            {
+              "label": "CDC: brucelosis",
+              "url": "https://www.cdc.gov/brucellosis/hcp/clinical-overview/",
+              "quote": "doxycycline and rifampin for at least 6 weeks",
+              "checked_at": "2026-10-29"
+            }
+          ],
+          "source_corrections": [
+            "No usar tres semanas como duración universal de tratamiento; CDC describe combinación por al menos seis semanas y ajustes por huésped y foco."
+          ]
+        },
+        {
+          "id": "18.15-03",
+          "name": "Enfermedad de Lyme",
+          "source_pages": [
+            554,
+            555
+          ],
+          "pattern": "Una persona presenta una placa eritematosa que se expande desde una picadura tras acampar en zona endémica. Días después desarrolla parálisis facial; se valora infección por una espiroqueta transmitida por garrapata.",
+          "key_discriminator": "placa eritematosa que se expande",
+          "mechanism": "La espiroqueta inoculada por garrapata se extiende desde piel y puede diseminarse a nervios, corazón y articulaciones, produciendo manifestaciones que dependen de etapa.",
+          "findings": [
+            {
+              "mechanism": "Diseminación desde inoculación cutánea",
+              "finding": "Eritema migratorio y neuropatía"
+            }
+          ],
+          "initial_action": "Evaluar etapa y manifestaciones; tratar el eritema migratorio típico sin esperar serología temprana.",
+          "action_reason": "La serología puede ser negativa al inicio.",
+          "modifiers": [
+            {
+              "factor": "Carditis o compromiso neurológico",
+              "action": "Referir y ajustar vía y esquema.",
+              "reason": "La diseminación modifica manejo."
+            }
+          ],
+          "limits": "La página no aporta tratamiento antibiótico completo; se precisa con guía oficial.",
+          "evidence": [
+            {
+              "page": 554,
+              "quote": "eritema migratorio"
+            },
+            {
+              "page": 555,
+              "quote": "depende del estadio clínico"
+            }
+          ],
+          "source_gaps": [],
+          "verified_source_pages": [
+            554,
+            555
+          ],
+          "external_sources": [
+            {
+              "label": "CDC: eritema migratorio",
+              "url": "https://www.cdc.gov/lyme/hcp/clinical-care/erythema-migrans-rash.html",
+              "quote": "Serologic tests may be falsely negative during the first few weeks of infection",
+              "checked_at": "2026-10-29"
+            }
+          ],
+          "source_corrections": [
+            "El eritema migratorio típico requiere tratamiento antibiótico oportuno sin esperar serología temprana; se añade porque el libro no describe esquema."
+          ]
+        },
+        {
+          "id": "18.15-04",
+          "name": "Enfermedad de Chagas",
+          "source_pages": [
+            552,
+            553
+          ],
+          "pattern": "Una persona de zona con triatominos tiene antecedente de edema palpebral unilateral durante una fiebre. Años después desarrolla cardiomegalia y arritmia; se investiga infección crónica mediante pruebas serológicas concordantes.",
+          "key_discriminator": "cardiomegalia y arritmia",
+          "mechanism": "El protozoo transmitido por triatominos persiste y puede dañar miocardio o plexos digestivos, causando arritmias, cardiomiopatía y dilatación de vísceras en la fase crónica.",
+          "findings": [
+            {
+              "mechanism": "Daño miocárdico crónico",
+              "finding": "Cardiomegalia y arritmias"
+            }
+          ],
+          "initial_action": "Confirmar con pruebas apropiadas a la fase y evaluar corazón y tubo digestivo; referir para tratamiento individualizado.",
+          "action_reason": "El daño orgánico y la fase cambian beneficio y manejo.",
+          "modifiers": [
+            {
+              "factor": "Infección aguda o congénita",
+              "action": "Valorar benznidazol o nifurtimox.",
+              "reason": "La fuente los indica en fase aguda."
+            }
+          ],
+          "limits": "La fase crónica no equivale a ausencia absoluta de opción antiparasitaria.",
+          "evidence": [
+            {
+              "page": 553,
+              "quote": "Miocardiopatía dilatada"
+            },
+            {
+              "page": 553,
+              "quote": "Benznidazol o nifurtimox"
+            }
+          ],
+          "source_gaps": [],
+          "verified_source_pages": [
+            552,
+            553
+          ]
+        }
+      ],
+      "common_problem": "Una persona tiene fiebre tras contacto con animales o agua.",
+      "mother": {
+        "cue": "La vía de exposición orienta zoonosis con afectación sistémica variable.",
+        "answer": "Síndrome febril por exposición zoonótica",
+        "explanation": "La historia ambiental guía pruebas y tratamiento."
+      }
+    },
+    {
+      "id": "18.16",
+      "title": "Dermatosis por vectores",
+      "topics": [
+        {
+          "id": "18.16-01",
+          "name": "Leishmaniasis",
+          "source_pages": [
+            572,
+            573
+          ],
+          "pattern": "Un trabajador de zona selvática presenta una úlcera indolora de bordes elevados en el pabellón auricular. La lesión avanza lentamente y se obtiene tejido para identificar un parásito intracelular.",
+          "key_discriminator": "úlcera indolora de bordes elevados",
+          "mechanism": "El protozoo inoculado por flebótomos invade macrófagos y produce lesiones cutáneas, mucosas o viscerales según especie y respuesta inmunitaria del huésped.",
+          "findings": [
+            {
+              "mechanism": "Infección de macrófagos",
+              "finding": "Úlcera crónica o enfermedad sistémica"
+            }
+          ],
+          "initial_action": "Identificar forma clínica y parásito en muestra y seleccionar tratamiento según especie, extensión y riesgo mucoso.",
+          "action_reason": "La conducta no es igual en todas las formas.",
+          "modifiers": [
+            {
+              "factor": "Afectación mucosa o visceral",
+              "action": "Referir para tratamiento sistémico.",
+              "reason": "Puede causar daño importante."
+            }
+          ],
+          "limits": "No se recomienda calor doméstico ni observación universal de toda lesión cutánea.",
+          "evidence": [
+            {
+              "page": 572,
+              "quote": "Úlcera indolora"
+            },
+            {
+              "page": 573,
+              "quote": "Identificación de amastigotes"
+            }
+          ],
+          "source_gaps": [],
+          "verified_source_pages": [
+            572,
+            573
+          ]
+        },
+        {
+          "id": "18.16-02",
+          "name": "Oncocercosis",
+          "source_pages": [
+            581
+          ],
+          "pattern": "Una persona que vivió en zona endémica tiene prurito crónico, nódulos subcutáneos y alteración visual progresiva. Se buscan microfilarias en piel y se requiere evaluar compromiso ocular.",
+          "key_discriminator": "nódulos subcutáneos y alteración visual",
+          "mechanism": "Las microfilarias en piel y ojo desencadenan inflamación al morir, causando prurito, despigmentación y daño corneal que puede progresar a ceguera.",
+          "findings": [
+            {
+              "mechanism": "Inflamación por microfilarias",
+              "finding": "Prurito y enfermedad ocular"
+            }
+          ],
+          "initial_action": "Confirmar con muestra cutánea y valorar tratamiento con ivermectina y evaluación oftalmológica.",
+          "action_reason": "El manejo busca reducir carga microfilarial y daño.",
+          "modifiers": [
+            {
+              "factor": "Exposición en zonas con Loa loa",
+              "action": "Evaluar coinfección antes de tratar.",
+              "reason": "La carga de Loa puede aumentar riesgo neurológico."
+            }
+          ],
+          "limits": "El contexto geográfico importa para tratamiento seguro.",
+          "evidence": [
+            {
+              "page": 581,
+              "quote": "progresar a ceguera."
+            },
+            {
+              "page": 581,
+              "quote": "tratamiento con ivermectina"
+            }
+          ],
+          "source_gaps": [],
+          "verified_source_pages": [
+            581
+          ],
+          "external_sources": [
+            {
+              "label": "CDC: tratamiento de oncocercosis",
+              "url": "https://www.cdc.gov/filarial-worms/treatment/onchocerciasis.html",
+              "quote": "ensure you aren’t also infected with Loa loa",
+              "checked_at": "2026-10-29"
+            }
+          ],
+          "source_corrections": [
+            "Antes de ivermectina se evalúa loiasis cuando la exposición geográfica lo hace posible por riesgo de reacciones graves."
+          ]
+        },
+        {
+          "id": "18.16-03",
+          "name": "Filariasis linfática",
+          "source_pages": [
+            564
+          ],
+          "pattern": "Una persona de zona endémica presenta episodios de linfangitis y después edema crónico de una pierna e hidrocele. Se investiga una filaria que afecta el drenaje linfático.",
+          "key_discriminator": "edema crónico de una pierna e hidrocele",
+          "mechanism": "La infección por filarias en vasos linfáticos altera drenaje y desencadena inflamación recurrente, produciendo linfedema, engrosamiento tisular e hidrocele con discapacidad persistente.",
+          "findings": [
+            {
+              "mechanism": "Daño del drenaje linfático",
+              "finding": "Elefantiasis e hidrocele"
+            }
+          ],
+          "initial_action": "Confirmar infección activa y valorar antiparasitario según exposición y coinfecciones; cuidar piel y edema.",
+          "action_reason": "La infección y el daño crónico requieren intervenciones distintas.",
+          "modifiers": [
+            {
+              "factor": "Exposición a oncocercosis o loiasis",
+              "action": "Estudiar antes de dietilcarbamazina.",
+              "reason": "Puede modificar seguridad del fármaco."
+            }
+          ],
+          "limits": "El daño linfático establecido puede persistir tras eliminar el parásito.",
+          "evidence": [
+            {
+              "page": 564,
+              "quote": "Linfedema/elefantiasis."
+            },
+            {
+              "page": 564,
+              "quote": "Dietilcarbamazina por 12 días."
+            }
+          ],
+          "source_gaps": [],
+          "verified_source_pages": [
+            564
+          ],
+          "external_sources": [
+            {
+              "label": "OMS: filariasis linfática",
+              "url": "https://www.who.int/news-room/fact-sheets/detail/lymphatic-filariasis",
+              "quote": "in countries without onchocerciasis",
+              "checked_at": "2026-10-29"
+            }
+          ],
+          "source_corrections": [
+            "Se condiciona elección de dietilcarbamazina a coinfecciones y contexto geográfico; no se prescribe universalmente."
+          ]
+        },
+        {
+          "id": "18.16-04",
+          "name": "Filariasis ocular Loasis",
+          "source_pages": [
+            565
+          ],
+          "pattern": "Una persona que visitó África central presenta edema transitorio y observa un gusano bajo la conjuntiva. Tiene eosinofilia; se debe medir la carga de microfilarias antes de elegir tratamiento.",
+          "key_discriminator": "gusano bajo la conjuntiva",
+          "mechanism": "El nematodo migra por tejidos subcutáneos y puede cruzar conjuntiva; la microfilaremia elevada aumenta riesgo de reacciones graves al administrar fármacos microfilaricidas.",
+          "findings": [
+            {
+              "mechanism": "Migración tisular de filaria",
+              "finding": "Edema transitorio y gusano subconjuntival"
+            }
+          ],
+          "initial_action": "Confirmar y cuantificar microfilaremia y referir para tratamiento experto antes de dietilcarbamazina.",
+          "action_reason": "La carga parasitaria cambia el riesgo terapéutico.",
+          "modifiers": [
+            {
+              "factor": "Microfilaremia elevada",
+              "action": "Reducir carga con estrategia especializada.",
+              "reason": "El tratamiento directo puede causar complicaciones neurológicas."
+            }
+          ],
+          "limits": "La página omite estratificación de seguridad por carga; se añade fuente oficial.",
+          "evidence": [
+            {
+              "page": 565,
+              "quote": "nemátodo subconjuntival"
+            },
+            {
+              "page": 565,
+              "quote": "Dietilcarbamazina"
+            }
+          ],
+          "source_gaps": [],
+          "verified_source_pages": [
+            565
+          ],
+          "external_sources": [
+            {
+              "label": "CDC: tratamiento de loiasis",
+              "url": "https://www.cdc.gov/filarial-worms/hcp/clinical-care/loiasis.html",
+              "quote": "risk of fatal encephalopathy",
+              "checked_at": "2026-10-29"
+            }
+          ],
+          "source_corrections": [
+            "Se añade cuantificación de microfilaremia y tratamiento experto por riesgo de encefalopatía con carga alta; la página omite esta condición."
+          ]
+        }
+      ],
+      "common_problem": "Una persona tiene lesiones cutáneas, edema o síntomas oculares tras exposición a vectores.",
+      "mother": {
+        "cue": "Los parásitos invaden piel, linfa u ojo según su ciclo y vector.",
+        "answer": "Parasitosis tisular transmitida por vector",
+        "explanation": "El órgano y la carga parasitaria cambian manejo."
+      }
+    },
+    {
+      "id": "18.17",
+      "title": "Enfermedad cutánea crónica",
+      "topics": [
+        {
+          "id": "18.17-01",
+          "name": "Lepra",
+          "source_pages": [
+            574,
+            575,
+            576
+          ],
+          "pattern": "Una persona tiene placas hipopigmentadas con pérdida de sensibilidad y un nervio periférico engrosado. Los cambios progresan lentamente; se obtiene muestra para clasificar carga bacilar y prevenir discapacidad.",
+          "key_discriminator": "placas hipopigmentadas con pérdida de sensibilidad",
+          "mechanism": "El bacilo afecta piel y nervios periféricos; la respuesta inmunitaria determina carga y distribución, mientras el daño neural produce pérdida sensitiva y discapacidad.",
+          "findings": [
+            {
+              "mechanism": "Lesión neural periférica",
+              "finding": "Placas anestésicas y déficit funcional"
+            }
+          ],
+          "initial_action": "Evaluar sensibilidad y discapacidad, confirmar y clasificar e iniciar poliquimioterapia bajo programa especializado.",
+          "action_reason": "El tratamiento temprano limita progresión y secuelas.",
+          "modifiers": [
+            {
+              "factor": "Neuritis aguda o reacción",
+              "action": "Atender con urgencia.",
+              "reason": "Puede causar daño neurológico irreversible."
+            }
+          ],
+          "limits": "La pauta y duración actuales dependen de clasificación y programa.",
+          "evidence": [
+            {
+              "page": 574,
+              "quote": "Pérdida de sensibilidad"
+            },
+            {
+              "page": 576,
+              "quote": "evaluación de discapacidad"
+            }
+          ],
+          "source_gaps": [],
+          "verified_source_pages": [
+            574,
+            575,
+            576
+          ]
+        },
+        {
+          "id": "18.17-02",
+          "name": "Esporotricosis",
+          "source_pages": [
+            558
+          ],
+          "pattern": "Un jardinero desarrolla un nódulo ulcerado en la mano después de un pinchazo con una espina. Luego aparecen nódulos en línea hacia el antebrazo, siguiendo el drenaje linfático.",
+          "key_discriminator": "nódulos en línea hacia el antebrazo",
+          "mechanism": "La inoculación traumática de un hongo subcutáneo causa lesión local y extensión por vasos linfáticos, formando nódulos sucesivos que pueden ulcerarse.",
+          "findings": [
+            {
+              "mechanism": "Diseminación linfocutánea",
+              "finding": "Cadena de nódulos tras traumatismo vegetal"
+            }
+          ],
+          "initial_action": "Tomar muestra para cultivo e indicar itraconazol según forma y extensión.",
+          "action_reason": "La forma linfocutánea requiere tratamiento antifúngico.",
+          "modifiers": [
+            {
+              "factor": "Enfermedad diseminada o pulmonar grave",
+              "action": "Valorar anfotericina y atención especializada.",
+              "reason": "El huésped y extensión cambian tratamiento."
+            }
+          ],
+          "limits": "El patrón esporotricoide también puede tener otras causas.",
+          "evidence": [
+            {
+              "page": 558,
+              "quote": "siguen el trayecto linfático"
+            },
+            {
+              "page": 558,
+              "quote": "se tratan con itraconazol"
+            }
+          ],
+          "source_gaps": [],
+          "verified_source_pages": [
+            558
+          ]
+        },
+        {
+          "id": "18.17-03",
+          "name": "Actinomicosis",
+          "source_pages": [
+            528
+          ],
+          "pattern": "Una persona con mala salud oral presenta una masa cervicofacial dura, crónica, con supuración y fístulas. La lesión simula neoplasia y se obtiene tejido y cultivo para aclarar su causa.",
+          "key_discriminator": "masa cervicofacial dura",
+          "mechanism": "La ruptura de barrera mucosa permite infección por bacterias filamentosas anaerobias, con fibrosis, abscesos y fístulas que forman masas de evolución crónica.",
+          "findings": [
+            {
+              "mechanism": "Infección anaerobia fibrosante",
+              "finding": "Masa dura con fístulas"
+            }
+          ],
+          "initial_action": "Obtener tejido y cultivo y tratar con betalactámico y drenaje según localización y extensión.",
+          "action_reason": "Se necesita controlar bacteria y colecciones.",
+          "modifiers": [
+            {
+              "factor": "Enfermedad pélvica con DIU",
+              "action": "Evaluar infección y retiro si corresponde.",
+              "reason": "Un dispositivo puede relacionarse con foco pélvico."
+            }
+          ],
+          "limits": "Colonización citológica aislada no equivale a enfermedad invasora.",
+          "evidence": [
+            {
+              "page": 528,
+              "quote": "fibrosis abscesos y fístulas"
+            },
+            {
+              "page": 528,
+              "quote": "Betalactámicos"
+            }
+          ],
+          "source_gaps": [],
+          "verified_source_pages": [
+            528
+          ]
+        }
+      ],
+      "common_problem": "Una persona presenta una lesión cutánea crónica.",
+      "mother": {
+        "cue": "La infección persistente puede afectar nervios, linfáticos o tejidos profundos.",
+        "answer": "Infección cutánea crónica",
+        "explanation": "La sensibilidad, la distribución y la histología orientan el agente."
+      }
+    },
+    {
+      "id": "18.18",
+      "title": "Urgencia infecciosa localizada",
+      "topics": [
+        {
+          "id": "18.18-01",
+          "name": "Fascitis necrosante",
+          "source_pages": [
+            562
+          ],
+          "pattern": "Una persona con diabetes presenta dolor desproporcionado en una extremidad, edema y cambios violáceos que progresan en horas. Está hipotensa y la piel empieza a perder sensibilidad.",
+          "key_discriminator": "dolor desproporcionado",
+          "mechanism": "La infección profunda se disemina por fascia y vasos, produce necrosis y toxicidad sistémica, y puede avanzar más allá de los cambios cutáneos visibles.",
+          "findings": [
+            {
+              "mechanism": "Infección fascial necrosante",
+              "finding": "Dolor intenso y deterioro sistémico"
+            }
+          ],
+          "initial_action": "Activar cirugía urgente, iniciar antibióticos amplios y reanimar en paralelo.",
+          "action_reason": "El desbridamiento temprano controla el foco.",
+          "modifiers": [
+            {
+              "factor": "Gas, necrosis o choque",
+              "action": "No retrasar cirugía por imagen.",
+              "reason": "La amenaza es inmediata."
+            }
+          ],
+          "limits": "La ausencia de gas no excluye el diagnóstico.",
+          "evidence": [
+            {
+              "page": 562,
+              "quote": "Dolor intenso"
+            },
+            {
+              "page": 562,
+              "quote": "desbridamiento agresivo"
+            }
+          ],
+          "source_gaps": [],
+          "verified_source_pages": [
+            562
+          ]
+        },
+        {
+          "id": "18.18-02",
+          "name": "Infecciones odontogénicas",
+          "source_pages": [
+            571
+          ],
+          "pattern": "Una persona tiene dolor dental y aumento de volumen facial. La exploración muestra un foco odontogénico; se buscan trismus, extensión cervical y dificultad respiratoria antes de decidir manejo ambulatorio.",
+          "key_discriminator": "foco odontogénico",
+          "mechanism": "La infección desde diente o periodonto se propaga a espacios vecinos con flora mixta; el control mecánico del foco es central y el antibiótico puede ser adyuvante.",
+          "findings": [
+            {
+              "mechanism": "Extensión desde foco dental",
+              "finding": "Absceso o celulitis facial"
+            }
+          ],
+          "initial_action": "Evaluar vía aérea y extensión y solicitar control odontológico del foco, con antibiótico según gravedad.",
+          "action_reason": "La eliminación del foco es el tratamiento principal.",
+          "modifiers": [
+            {
+              "factor": "Trismus, disfagia o extensión profunda",
+              "action": "Referir con urgencia.",
+              "reason": "Puede comprometer espacios cervicales y vía aérea."
+            }
+          ],
+          "limits": "No toda caries o dolor dental requiere antibiótico.",
+          "evidence": [
+            {
+              "page": 571,
+              "quote": "quirúrgico constituyendo el uso de antibióticos"
+            },
+            {
+              "page": 571,
+              "quote": "Tomografía computarizada con contraste"
+            }
+          ],
+          "source_gaps": [],
+          "verified_source_pages": [
+            571
+          ]
+        },
+        {
+          "id": "18.18-03",
+          "name": "Difteria",
+          "source_pages": [
+            551
+          ],
+          "pattern": "Un niño no vacunado presenta fiebre, faringitis y una membrana gris adherida. Tiene adenopatías cervicales importantes y dificultad respiratoria; se sospecha una infección toxigénica que puede afectar el corazón.",
+          "key_discriminator": "membrana gris adherida",
+          "mechanism": "La exotoxina inhibe síntesis proteica y causa lesión local y sistémica; el edema y pseudomembrana pueden obstruir vía aérea y la toxina dañar miocardio.",
+          "findings": [
+            {
+              "mechanism": "Producción de exotoxina",
+              "finding": "Pseudomembrana y riesgo de miocarditis"
+            }
+          ],
+          "initial_action": "Asegurar vía aérea, aislar y coordinar antitoxina y antibiótico sin esperar cultivo cuando la sospecha es alta.",
+          "action_reason": "La antitoxina neutraliza toxina no fijada.",
+          "modifiers": [
+            {
+              "factor": "Compromiso cardíaco o neurológico",
+              "action": "Vigilar en hospital.",
+              "reason": "La toxina puede causar daño sistémico."
+            }
+          ],
+          "limits": "La prevención de contactos y vacunación se coordinan con salud pública.",
+          "evidence": [
+            {
+              "page": 551,
+              "quote": "pseudomembranas"
+            },
+            {
+              "page": 551,
+              "quote": "Antitoxina diftérica"
+            }
+          ],
+          "source_gaps": [],
+          "verified_source_pages": [
+            551
+          ]
+        }
+      ],
+      "common_problem": "Una persona presenta un foco infeccioso con progresión rápida.",
+      "mother": {
+        "cue": "La invasión local o la toxina amenazan tejido, vía aérea o circulación.",
+        "answer": "Urgencia infecciosa con control de foco",
+        "explanation": "La atención no debe esperar confirmación cuando hay amenaza vital."
+      }
+    },
+    {
+      "id": "18.19",
+      "title": "Parálisis tras exposición",
+      "topics": [
+        {
+          "id": "18.19-01",
+          "name": "Rabia",
+          "source_pages": [
+            587,
+            588
+          ],
+          "pattern": "Una persona sufre una mordedura profunda por un animal sospechoso y no tiene vacunación previa. La herida necesita lavado inmediato y valoración de profilaxis antes de que aparezcan síntomas neurológicos.",
+          "key_discriminator": "mordedura profunda por un animal sospechoso",
+          "mechanism": "El virus puede avanzar desde el sitio de inoculación hacia el sistema nervioso; la profilaxis temprana neutraliza exposición antes de establecer enfermedad neurológica casi siempre fatal.",
+          "findings": [
+            {
+              "mechanism": "Inoculación por saliva",
+              "finding": "Riesgo de infección neurotrópica"
+            }
+          ],
+          "initial_action": "Lavar de inmediato y evaluar vacuna e inmunoglobulina según exposición, especie y vacunación previa.",
+          "action_reason": "La prevención debe ocurrir antes de síntomas.",
+          "modifiers": [
+            {
+              "factor": "Vacunación antirrábica previa completa",
+              "action": "Usar esquema posexposición ajustado sin inmunoglobulina.",
+              "reason": "La respuesta inmune previa cambia profilaxis."
+            }
+          ],
+          "limits": "La inmunoglobulina se infiltra en la herida; no se divide automáticamente mitad y mitad.",
+          "evidence": [
+            {
+              "page": 588,
+              "quote": "Lavar la región con jabón y agua"
+            },
+            {
+              "page": 588,
+              "quote": "Si tenía esquema pre-exposición no"
+            }
+          ],
+          "source_gaps": [],
+          "verified_source_pages": [
+            587,
+            588
+          ],
+          "external_sources": [
+            {
+              "label": "CDC: profilaxis posexposición de rabia",
+              "url": "https://www.cdc.gov/rabies/hcp/clinical-care/post-exposure-prophylaxis.html",
+              "quote": "If possible, infiltrate the full dose around any wound(s).",
+              "checked_at": "2026-10-29"
+            }
+          ],
+          "source_corrections": [
+            "Se prioriza infiltración de inmunoglobulina en heridas y remanente IM lejos de vacuna; no dividir mitad en herida y mitad glútea de forma automática."
+          ]
+        },
+        {
+          "id": "18.19-02",
+          "name": "Poliomielitis",
+          "source_pages": [
+            586
+          ],
+          "pattern": "Un niño sin vacunación presenta fiebre y dolor muscular seguidos de parálisis flácida de una extremidad. Se conservan datos de lesión de motoneurona inferior y se inicia vigilancia etiológica urgente.",
+          "key_discriminator": "parálisis flácida de una extremidad",
+          "mechanism": "El poliovirus puede invadir y destruir motoneuronas inferiores tras replicación inicial, produciendo parálisis flácida; la vacunación previene enfermedad y reduce riesgo poblacional.",
+          "findings": [
+            {
+              "mechanism": "Daño de motoneurona inferior",
+              "finding": "Parálisis flácida aguda"
+            }
+          ],
+          "initial_action": "Activar evaluación urgente de parálisis flácida, obtener muestras indicadas y dar soporte respiratorio y funcional según afectación.",
+          "action_reason": "El síndrome requiere investigación y atención de complicaciones.",
+          "modifiers": [
+            {
+              "factor": "No vacunado",
+              "action": "Revisar esquema y contactos con salud pública.",
+              "reason": "La susceptibilidad modifica la respuesta preventiva."
+            }
+          ],
+          "limits": "La parálisis flácida tiene varias causas; no confirma polio por sí sola.",
+          "evidence": [
+            {
+              "page": 586,
+              "quote": "Afecta motoneurona inferior"
+            },
+            {
+              "page": 586,
+              "quote": "Diagnóstico PCR"
+            }
+          ],
+          "source_gaps": [],
+          "verified_source_pages": [
+            586
+          ]
+        }
+      ],
+      "common_problem": "Una persona presenta exposición de riesgo o parálisis.",
+      "mother": {
+        "cue": "La prevención poscontacto y el sitio de lesión nerviosa definen la intervención.",
+        "answer": "Infección neurotrópica o prevención de exposición",
+        "explanation": "El momento de atención cambia el pronóstico."
+      }
+    },
+    {
+      "id": "18.20",
+      "title": "Tumores asociados a inmunodeficiencia",
+      "topics": [
+        {
+          "id": "18.20-01",
+          "name": "Sarcoma de Kaposi",
+          "source_pages": [
+            593
+          ],
+          "pattern": "Una persona con VIH presenta pápulas y placas violáceas en pies y paladar. Algunas lesiones producen edema; se necesita confirmar histología y buscar afectación pulmonar o digestiva según síntomas.",
+          "key_discriminator": "pápulas y placas violáceas",
+          "mechanism": "La proliferación vascular asociada a HHV-8 aumenta con inmunodeficiencia y puede afectar piel, mucosas y vísceras; recuperar inmunidad modifica evolución y pronóstico.",
+          "findings": [
+            {
+              "mechanism": "Proliferación vascular viral",
+              "finding": "Lesiones violáceas y edema"
+            }
+          ],
+          "initial_action": "Realizar biopsia y evaluar extensión; optimizar TAR y valorar terapia oncológica según enfermedad.",
+          "action_reason": "El control inmunitario y la carga tumoral guían manejo.",
+          "modifiers": [
+            {
+              "factor": "Afectación visceral o progresiva",
+              "action": "Valorar quimioterapia especializada.",
+              "reason": "El tratamiento local o vigilancia puede ser insuficiente."
+            }
+          ],
+          "limits": "Las lesiones no se atribuyen solo a la orientación sexual.",
+          "evidence": [
+            {
+              "page": 593,
+              "quote": "máculas y pápulas violáceas"
+            },
+            {
+              "page": 593,
+              "quote": "biopsia de las lesiones"
+            }
+          ],
+          "source_gaps": [],
+          "verified_source_pages": [
+            593
+          ]
+        }
+      ],
+      "common_problem": "Una persona inmunocomprometida presenta lesiones violáceas.",
+      "mother": {
+        "cue": "La proliferación vascular asociada a virus requiere confirmar extensión y recuperar inmunidad.",
+        "answer": "Neoplasia vascular asociada a inmunodeficiencia",
+        "explanation": "La extensión y los síntomas guían tratamiento."
+      }
+    }
+  ]
+}
