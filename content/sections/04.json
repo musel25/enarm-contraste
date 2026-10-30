@@ -241,7 +241,7 @@
               "finding": "Ortopnea y edema"
             }
           ],
-          "initial_action": "Confirmar fenotipo por ecocardiograma, valorar causa y clase funcional, y ajustar tratamiento de la fracción de eyección reducida con control de función renal, potasio y congestión.",
+          "initial_action": "Valorar congestión, presión, función renal y potasio. En fracción de eyección reducida estable, iniciar u optimizar ARNI o IECA/ARA, betabloqueador con evidencia, antagonista mineralocorticoide e inhibidor SGLT2 según elegibilidad y tolerancia; añadir diurético por congestión.",
           "action_reason": "La función ventricular y tolerancia determinan los fármacos y el seguimiento.",
           "modifiers": [
             {
@@ -255,7 +255,7 @@
               "reason": "Puede requerir manejo de insuficiencia aguda."
             }
           ],
-          "limits": "La cardiomegalia aislada no indica anticoagulación. El régimen de 2015 no representa todo el tratamiento actual.",
+          "limits": "No anticoagular por cardiomegalia aislada. El esquema de 2015 omite pilares actuales; cada fármaco exige revisar contraindicaciones y vigilancia.",
           "evidence": [
             {
               "page": 122,
@@ -266,7 +266,20 @@
               "quote": "Uso de diuréticos sólo en caso de edema."
             }
           ],
-          "source_gaps": []
+          "source_gaps": [],
+          "external_sources": [
+            {
+              "label": "AHA/ACC/HFSA 2022: insuficiencia cardíaca",
+              "url": "https://www.jacc.org/doi/10.1016/j.jacc.2021.12.011",
+              "quote": "now includes 4 medication classes",
+              "checked_at": "2026-10-29"
+            }
+          ],
+          "source_corrections": [
+            {
+              "reason": "Se sustituye la acción genérica por los cuatro grupos actuales para FE reducida estable. La guía incluye inhibición renina-angiotensina/ARNI, betabloqueador, antagonista mineralocorticoide y SGLT2; ajustar por elegibilidad y tolerancia."
+            }
+          ]
         },
         {
           "id": "04.03-02",
@@ -565,7 +578,7 @@
               "finding": "Soplo que aumenta al inspirar"
             }
           ],
-          "initial_action": "Solicitar ecocardiograma Doppler para identificar válvula, mecanismo y gravedad. Valorar diuréticos por congestión y referencia según repercusión.",
+          "initial_action": "Reconocer probable insuficiencia tricuspídea y solicitar ecocardiograma Doppler para definir mecanismo y gravedad. Valorar diuréticos por congestión y referencia según repercusión.",
           "action_reason": "El soplo orienta, pero la imagen define lesión y necesidad de intervención.",
           "modifiers": [
             {
@@ -590,7 +603,12 @@
               "quote": "Tratamiento médico con diuréticos y vasodilatadores."
             }
           ],
-          "source_gaps": []
+          "source_gaps": [],
+          "source_corrections": [
+            {
+              "reason": "El soplo holosistólico que aumenta con inspiración y la congestión sistémica del caso orientan a insuficiencia tricuspídea en página 125; se nombra explícitamente para resolver el caso."
+            }
+          ]
         }
       ],
       "common_problem": "Soplo sistólico con síntomas cardiovasculares.",
