@@ -124,6 +124,10 @@ class PracticeTests(unittest.TestCase):
         self.topic['reference_page_mode']='replace'
         self.assertEqual(self.module.sources(self.topic)[0]['pages'],[3,4])
 
+    def test_decision_labels_use_the_corrected_clinical_name(self):
+        self.topic['answer_name']='Nombre clínico corregido'
+        self.assertTrue(all(q['path_label']=='Nombre clínico corregido' for q in self.module.decision_steps(self.source)))
+
 
 if __name__ == '__main__':
     unittest.main()

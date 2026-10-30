@@ -84,7 +84,7 @@ def decision_steps(section):
     result = []
     for block in section['blocks']:
         for topic in block['topics']:
-            common = dict(section_id=section['id'], block_id=block['id'], topic_id=topic['id'], path_id=topic['id'], path_label=topic['name'], sources=sources(topic), corrections=correction_notes(topic))
+            common = dict(section_id=section['id'], block_id=block['id'], topic_id=topic['id'], path_id=topic['id'], path_label=topic.get('answer_name',topic['name']), sources=sources(topic), corrections=correction_notes(topic))
             steps = [
                 ('discriminator', '¿Qué dato cambia la dirección del diagnóstico?', topic['pattern'], topic['key_discriminator'], topic['limits']),
                 ('mechanism', '¿Dónde falla el sistema y qué produce ese fallo?', topic['pattern'], topic['mechanism'], ' '.join(f'{f["mechanism"]}: {f["finding"]}.' for f in topic['findings'])),
