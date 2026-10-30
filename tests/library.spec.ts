@@ -104,3 +104,12 @@ test("follows the chosen differential into management and keeps the case between
   await expect(page.getByRole("region", { name: "Frente de la tarjeta" })).toContainText("Mecanismo causal beta");
   await expect(page.getByRole("region", { name: "Respuesta de la tarjeta" })).toHaveCount(0);
 });
+
+test("opens a section at the top after choosing it from a long page", async ({ page }) => {
+  await mockLibrary(page);
+  await page.setViewportSize({ width: 375, height: 500 });
+  await page.goto("./#biblioteca");
+  await page.getByRole("button", { name: /Sección de prueba/ }).click();
+  await expect(page.getByRole("region", { name: "Frente de la tarjeta" })).toBeVisible();
+  await expect.poll(() => page.evaluate(() => scrollY)).toBe(0);
+});

@@ -64,6 +64,10 @@ export default function Library({ onReview }: { onReview: (context: ReviewContex
   const recognized = Object.values(progress).filter(v => v === "known").length;
   const selectSection = (id: string | null) => {
     setSectionId(id); setSection(null); setBlock("all"); setIndex(0);
+    requestAnimationFrame(() => {
+      document.getElementById("study")?.focus({ preventScroll: true });
+      window.scrollTo({ top: 0 });
+    });
   };
   const changeFamily = (value: "eje" | "madre") => { setFamily(value); setIndex(0); };
   const changeLevel = (value: string) => {
