@@ -42,7 +42,7 @@
               "reason": "Sugiere enfermedad complicada."
             }
           ],
-          "limits": "Una puntuación baja de Alvarado no excluye por sí sola. La fuente antigua presenta cirugía como universal y contraindicaciones de laparoscopia que requieren actualización.",
+          "limits": "Alvarado bajo no excluye por sí solo. Antibióticos sin operación son opción para casos no complicados seleccionados; la laparoscopia no se contraindica solo por edad.",
           "evidence": [
             {
               "page": 130,
@@ -57,7 +57,20 @@
               "quote": "La profilax is antibiótica preoperatoria es efectiva"
             }
           ],
-          "source_gaps": []
+          "source_gaps": [],
+          "external_sources": [
+            {
+              "label": "WSES 2025, publicada en 2026: apendicitis",
+              "url": "https://pubmed.ncbi.nlm.nih.gov/41604201/",
+              "quote": "nonoperative management with antibiotics is safe and effective in selected patients with uncomplicated appendicitis",
+              "checked_at": "2026-10-29"
+            }
+          ],
+          "source_corrections": [
+            {
+              "reason": "La guía actual permite tratamiento no operatorio seleccionado y mantiene laparoscopia como abordaje quirúrgico estándar; se evita la cirugía universal y contraindicaciones por edad del resumen."
+            }
+          ]
         },
         {
           "id": "05.01-02",
@@ -828,7 +841,7 @@
               "finding": "Acidosis y peritonitis"
             }
           ],
-          "initial_action": "Iniciar estabilización, solicitar angio-TAC urgente y activar evaluación vascular y quirúrgica. Valorar antibióticos y restauración de flujo según causa, sin retrasar cirugía si hay peritonitis.",
+          "initial_action": "Iniciar estabilización, antibióticos de amplio espectro y angio-TAC urgente; activar evaluación vascular y quirúrgica. Restaurar flujo según causa, sin retrasar cirugía si hay peritonitis.",
           "action_reason": "La viabilidad intestinal depende del tiempo hasta reperfusión y control del tejido necrótico.",
           "modifiers": [
             {
@@ -853,7 +866,20 @@
               "quote": "Estabilización hemodinámica es esencial"
             }
           ],
-          "source_gaps": []
+          "source_gaps": [],
+          "external_sources": [
+            {
+              "label": "WSES 2022: isquemia mesentérica aguda",
+              "url": "https://link.springer.com/article/10.1186/s13017-022-00443-x",
+              "quote": "Peritonitis secondary to bowel necrosis mandates surgery without delay.",
+              "checked_at": "2026-10-29"
+            }
+          ],
+          "source_corrections": [
+            {
+              "reason": "Se comprueba la corrección del reposo ante gangrena: la necrosis con peritonitis exige cirugía sin demora. La guía indica CTA sin retraso y antibióticos tempranos; ningún biomarcador aislado excluye isquemia."
+            }
+          ]
         }
       ],
       "common_problem": "Dolor abdominal intenso con riesgo vascular.",
