@@ -86,6 +86,15 @@ class PracticeTests(unittest.TestCase):
             manifest = json.loads((root / 'app/public/study/manifest.json').read_text())
             self.assertEqual(manifest['practice']['sha256'],self.module.raw_hash(root / 'app/public/study/practice/index.json'))
 
+    def test_curated_amenorrhea_paths_are_in_the_published_bank(self):
+        source = json.loads((ROOT / 'content/sections/14.json').read_text())
+        steps = self.module.compiled_decisions(source)
+        self.assertTrue(any(q['id'] == 'decision/14.01/mrkh/anatomy' for q in steps))
+        self.assertTrue(any(q['id'] == 'decision/14.01/secondary-functional-hypothalamic/hormones' for q in steps))
+        self.assertEqual(len(steps),len({q['id'] for q in steps}))
+        generic = self.module.decision_steps(source)
+        self.assertGreater(len(steps),len(generic))
+
 
 if __name__ == '__main__':
     unittest.main()

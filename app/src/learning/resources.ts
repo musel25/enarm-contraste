@@ -1,5 +1,5 @@
 import type { CardSource, StudyManifest } from '../library-types';
-import { amenorrheaDecisions, type DecisionQuestion } from './decisions';
+import { type DecisionQuestion } from './decisions';
 import type { Difficulty } from './cases';
 export type PracticeVariant = { vignette:string; discriminator:string; explanation:string; confusable_with:string; why_not:string };
 export type PracticeGroup = { id:string;parent_topic_id:string;block_id:string;name:string;answer_kind:'diagnosis'|'decision';variants:Record<Difficulty,PracticeVariant>;sources:CardSource[];corrections?:string[] };
@@ -37,5 +37,5 @@ export function loadPractice(id:string,manifest:StudyManifest):Promise<PracticeS
 }
 export function decisionQuestions(bank:PracticeSection|null):DecisionQuestion[] {
   if(!bank) return [];
-  return bank.section_id==='14' ? [...amenorrheaDecisions(),...bank.decisions] : bank.decisions;
+  return bank.decisions;
 }

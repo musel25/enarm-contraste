@@ -3,6 +3,7 @@ from __future__ import annotations
 import hashlib
 import json
 import re
+import subprocess
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -70,6 +71,19 @@ def decision_steps(section):
                 result.append({**common,'id':f'decision/{block["id"]}/{topic["id"]}/{node}', 'node_id':node,'step':position+1,'steps':len(steps),'prompt':prompt,'context':context,'answer':answer,'explanation':explanation,'discriminator':topic['key_discriminator'],'options':[]})
     return result
 
+def compiled_decisions(section):
+    generic = decision_steps(section)
+    if section['id'] != '14':
+        return generic
+    module = (ROOT / 'app/src/learning/decisions.ts').as_uri()
+    code = 'const mod = await import(process.argv[1]); process.stdout.write(JSON.stringify(mod.amenorrheaDecisions()));'
+    result = subprocess.run(['node','--import','tsx','--input-type=module','-e',code,module], cwd=ROOT, check=True, capture_output=True, text=True)
+    curated = json.loads(result.stdout)
+    all_steps = curated + generic
+    require(len({step['id'] for step in all_steps}) == len(all_steps), 'Duplicate decision identity')
+    return all_steps
+
+
 def write_json(path, data):
     path.parent.mkdir(parents=True, exist_ok=True)
     path.write_text(json.dumps(data, ensure_ascii=False, indent=2) + '\n')
@@ -87,7 +101,7 @@ def build(root=ROOT):
         validate_bank(source, bank, json.loads(review_path.read_text()), raw_hash(path), raw_hash(bank_path))
         topic_map = {t['id']:t for b in source['blocks'] for t in b['topics']}
         groups = [{**{key:g[key] for key in ('id','parent_topic_id','block_id','name','answer_kind')}, 'variants':{difficulty:{key:value[key] for key in ('vignette','discriminator','explanation','confusable_with','why_not')} for difficulty,value in g['variants'].items()}, 'sources':g.get('sources', sources(topic_map[g['parent_topic_id']])), 'corrections':topic_map[g['parent_topic_id']].get('source_corrections', [])} for g in bank['groups']]
-        data = dict(schema_version=1,section_id=source['id'],groups=groups,decisions=decision_steps(source),professional_review='pending')
+        data = dict(schema_version=1,section_id=source['id'],groups=groups,decisions=compiled_decisions(source),professional_review='pending')
         target = output / f'{source["id"]}.json'
         write_json(target, data)
         section_index.append(dict(id=source['id'],sha256=raw_hash(target),groups=len(groups),cases=len(groups)*3,decisions=len(data['decisions'])))
