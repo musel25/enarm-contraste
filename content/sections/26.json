@@ -1,0 +1,366 @@
+{
+  "id": "26",
+  "title": "Oncología",
+  "blocks": [
+    {
+      "id": "26.01",
+      "title": "Prevención de cáncer cervicouterino",
+      "topics": [
+        {
+          "id": "26.01-01",
+          "name": "Cáncer cérvicouterino",
+          "source_pages": [
+            883,
+            884,
+            885,
+            886
+          ],
+          "pattern": "Una mujer presenta sangrado después de las relaciones y leucorrea persistente. La exploración identifica una lesión en el cuello uterino. Se requiere evaluar tejido y extensión, sin limitarse al tamizaje.",
+          "key_discriminator": "lesión en el cuello uterino",
+          "mechanism": "La infección persistente por VPH de alto riesgo altera control del ciclo celular, favorece lesiones intraepiteliales y puede progresar a invasión desde la zona de transformación.",
+          "findings": [
+            {
+              "mechanism": "Transformación epitelial cervical",
+              "finding": "Sangrado y lesión cervical"
+            }
+          ],
+          "initial_action": "Referir para colposcopia y biopsia de la lesión sospechosa; diferenciar estudio diagnóstico de pruebas de tamizaje.",
+          "action_reason": "La histología confirma la naturaleza de la lesión.",
+          "modifiers": [
+            {
+              "factor": "Embarazo con lesión precursora",
+              "action": "Valorar seguimiento especializado y diferir tratamiento cuando corresponde",
+              "reason": "La conducta difiere del cáncer invasivo"
+            }
+          ],
+          "limits": "El libro no desarrolla tratamiento del carcinoma invasivo.",
+          "evidence": [
+            {
+              "page": 884,
+              "quote": "Colposcopía y biopsia"
+            },
+            {
+              "page": 886,
+              "quote": "diferir el tratamiento de lesiones precursoras"
+            }
+          ],
+          "source_gaps": []
+        }
+      ],
+      "common_problem": "Mujer con tamizaje cervical anormal o sangrado de origen cervical.",
+      "mother": {
+        "cue": "Persistencia viral oncogénica puede producir lesión precursora e invasión cervical.",
+        "answer": "Neoplasia cervical.",
+        "explanation": "El tamizaje identifica riesgo y la histología confirma lesión."
+      }
+    },
+    {
+      "id": "26.02",
+      "title": "Masa mamaria/tamiz",
+      "topics": [
+        {
+          "id": "26.02-01",
+          "name": "Cáncer de mama",
+          "source_pages": [
+            889,
+            890,
+            891,
+            892,
+            893,
+            894,
+            895
+          ],
+          "pattern": "Una mujer detecta un nódulo mamario firme e indoloro con retracción cutánea. También se palpa un ganglio axilar persistente. Se necesita confirmar la causa de la lesión.",
+          "key_discriminator": "retracción cutánea",
+          "mechanism": "La proliferación epitelial maligna invade tejidos mamarios y puede retraer piel o pezón; la diseminación linfática produce ganglios regionales y modifica estadificación y manejo.",
+          "findings": [
+            {
+              "mechanism": "Invasión y fibrosis local",
+              "finding": "Retracción cutánea"
+            }
+          ],
+          "initial_action": "Referir pronto para evaluación mamaria, imagen apropiada y biopsia con aguja de corte de lesión sospechosa.",
+          "action_reason": "El diagnóstico requiere tejido.",
+          "modifiers": [
+            {
+              "factor": "Menor de 30 años o embarazo",
+              "action": "Priorizar ultrasonido inicial",
+              "reason": "Adapta imagen al contexto y tejido mamario"
+            }
+          ],
+          "limits": "El tratamiento depende de estadio y receptores, no de una secuencia universal.",
+          "evidence": [
+            {
+              "page": 890,
+              "quote": "nódulo firme, indoloro"
+            },
+            {
+              "page": 893,
+              "quote": "biopsia con aguja de corte"
+            }
+          ],
+          "source_gaps": []
+        },
+        {
+          "id": "26.02-02",
+          "name": "Tamizaje cáncer de mama",
+          "source_pages": [
+            899,
+            900,
+            901
+          ],
+          "pattern": "Una mujer asintomática solicita prevención de cáncer de mama. Tiene una hermana con diagnóstico antes de la menopausia. Se deben revisar edad, antecedentes y estudios previos para planificar detección.",
+          "key_discriminator": "Una mujer asintomática",
+          "mechanism": "El tamizaje busca lesiones antes de síntomas y permite diagnóstico temprano; edad, mutaciones y exposición previa a radiación modifican riesgo y selección de imagen.",
+          "findings": [
+            {
+              "mechanism": "Detección antes de síntomas",
+              "finding": "Lesión mamográfica no palpable"
+            }
+          ],
+          "initial_action": "Estimar riesgo y acordar mastografía según programa vigente; derivar a evaluación de alto riesgo si los antecedentes lo justifican.",
+          "action_reason": "La estrategia debe corresponder al riesgo individual.",
+          "modifiers": [
+            {
+              "factor": "Mutación BRCA confirmada",
+              "action": "Valorar resonancia complementaria y asesoría especializada",
+              "reason": "El riesgo hereditario cambia vigilancia"
+            }
+          ],
+          "limits": "Distinguir tamizaje de estudio diagnóstico. En México, el programa citado usa periodicidad bienal de 40–69 años para riesgo promedio; el caso familiar requiere evaluación individual.",
+          "evidence": [
+            {
+              "page": 899,
+              "quote": "paciente asintomática"
+            },
+            {
+              "page": 899,
+              "quote": "La resonancia magnética de mama"
+            }
+          ],
+          "source_gaps": [],
+          "external_sources": [
+            {
+              "label": "Secretaría de Salud: mastografía de detección",
+              "url": "https://www.gob.mx/salud/acciones-y-programas/cancer-de-mama-mastografia",
+              "quote": "cada dos años a las mujeres de 40 a 69 años",
+              "checked_at": "2026-10-29"
+            }
+          ],
+          "source_corrections": [
+            {
+              "reason": "El programa mexicano de riesgo promedio citado por Secretaría de Salud usa mastografía bienal de 40–69 años. El alto riesgo requiere estrategia individual, no extrapolar intervalo general."
+            }
+          ]
+        }
+      ],
+      "common_problem": "Persona con masa mamaria o necesidad de detección sin síntomas.",
+      "mother": {
+        "cue": "Detección y confirmación de proliferación epitelial maligna en mama.",
+        "answer": "Evaluación de cáncer mamario.",
+        "explanation": "La presencia de síntomas separa estudio diagnóstico de tamizaje."
+      }
+    },
+    {
+      "id": "26.03",
+      "title": "Sangrado posmenopáusico",
+      "topics": [
+        {
+          "id": "26.03-01",
+          "name": "Cáncer de endometrio",
+          "source_pages": [
+            887,
+            888
+          ],
+          "pattern": "Una mujer posmenopáusica con obesidad consulta por sangrado uterino nuevo. No utiliza terapia hormonal. Se requiere estudiar el endometrio aunque el sangrado haya sido escaso.",
+          "key_discriminator": "sangrado uterino nuevo",
+          "mechanism": "La exposición estrogénica no contrarrestada favorece proliferación e hiperplasia endometrial en tumores endometrioides; otras estirpes surgen por mecanismos distintos y pueden ser más agresivas.",
+          "findings": [
+            {
+              "mechanism": "Lesión endometrial",
+              "finding": "Sangrado posmenopáusico"
+            }
+          ],
+          "initial_action": "Realizar evaluación ginecológica pronta con ultrasonido transvaginal y muestra endometrial en la mayoría de pacientes con sangrado posmenopáusico, ajustada al contexto clínico.",
+          "action_reason": "La histología establece diagnóstico.",
+          "modifiers": [
+            {
+              "factor": "Sangrado persistente tras evaluación negativa",
+              "action": "Reevaluar y obtener estudio adicional",
+              "reason": "Una prueba inicial no excluye toda lesión"
+            }
+          ],
+          "limits": "El grosor aislado no excluye enfermedad; el sangrado persistente o recurrente exige reevaluación aun tras resultados tranquilizadores.",
+          "evidence": [
+            {
+              "page": 887,
+              "quote": "sangrado posmenopáusico"
+            },
+            {
+              "page": 888,
+              "quote": "Biopsia endometrial ambulatoria"
+            }
+          ],
+          "source_gaps": [],
+          "external_sources": [
+            {
+              "label": "ACOG: updated postmenopausal bleeding guidance, April 2026",
+              "url": "https://www.acog.org/news/news-releases/2026/04/acog-publishes-updated-guidance-evaluation-postmenopausal-bleeding",
+              "quote": "a combination of transvaginal ultrasonography and endometrial tissue sampling",
+              "checked_at": "2026-10-29"
+            }
+          ],
+          "source_corrections": [
+            {
+              "reason": "La actualización ACOG 2026 recomienda ecografía y muestra endometrial inicial en la mayoría de pacientes con sangrado posmenopáusico. No basar exclusión solo en grosor."
+            }
+          ]
+        }
+      ],
+      "common_problem": "Mujer con sangrado después de la menopausia.",
+      "mother": {
+        "cue": "Proliferación glandular endometrial que puede producir sangrado temprano.",
+        "answer": "Sospecha de neoplasia endometrial.",
+        "explanation": "El sangrado exige evaluación y posible muestra histológica."
+      }
+    },
+    {
+      "id": "26.04",
+      "title": "Masa anexial o distensión",
+      "topics": [
+        {
+          "id": "26.04-01",
+          "name": "Tumores anexiales",
+          "source_pages": [
+            902,
+            903,
+            904
+          ],
+          "pattern": "Una mujer presenta masa pélvica detectada en exploración. La ecografía muestra una lesión anexial mixta con componente sólido y líquido libre. Se necesita estimar riesgo de malignidad.",
+          "key_discriminator": "componente sólido y líquido libre",
+          "mechanism": "Las masas anexiales incluyen quistes funcionales y neoplasias; composición, vascularización y signos de diseminación, junto con edad y antecedentes, modifican probabilidad de malignidad.",
+          "findings": [
+            {
+              "mechanism": "Crecimiento anexial complejo",
+              "finding": "Masa mixta y ascitis"
+            }
+          ],
+          "initial_action": "Caracterizar con ultrasonido transvaginal, revisar riesgo y marcadores indicados; referir a ginecología oncológica si hay signos sospechosos.",
+          "action_reason": "La cirugía inicial debe planificarse según riesgo.",
+          "modifiers": [
+            {
+              "factor": "Dolor agudo o sospecha de torsión",
+              "action": "Atender como urgencia",
+              "reason": "Existe riesgo de isquemia anexial"
+            }
+          ],
+          "limits": "Los marcadores aislados no confirman malignidad.",
+          "evidence": [
+            {
+              "page": 903,
+              "quote": "Ultrasonido transvaginal"
+            },
+            {
+              "page": 904,
+              "quote": "Referencia a servicio de"
+            }
+          ],
+          "source_gaps": []
+        },
+        {
+          "id": "26.04-02",
+          "name": "Cáncer de ovario",
+          "source_pages": [
+            896,
+            897
+          ],
+          "pattern": "Una mujer mayor presenta distensión abdominal progresiva, saciedad y masa anexial compleja. La exploración encuentra ascitis. Se requiere investigar una neoplasia y no atribuir síntomas a intestino irritable.",
+          "key_discriminator": "masa anexial compleja",
+          "mechanism": "La proliferación maligna ovárica o relacionada puede extenderse por peritoneo, producir ascitis y síntomas abdominales inespecíficos; el tipo histológico modifica marcadores, pronóstico y tratamiento.",
+          "findings": [
+            {
+              "mechanism": "Diseminación peritoneal",
+              "finding": "Ascitis y distensión"
+            }
+          ],
+          "initial_action": "Referir a ginecología oncológica para estudio de extensión y planificación de obtención de tejido y tratamiento.",
+          "action_reason": "La estrategia depende de extensión y posibilidad quirúrgica.",
+          "modifiers": [
+            {
+              "factor": "Enfermedad avanzada seleccionada",
+              "action": "Valorar quimioterapia neoadyuvante",
+              "reason": "Puede cambiar la secuencia terapéutica"
+            }
+          ],
+          "limits": "El CA-125 no confirma por sí solo cáncer ni sirve como tamizaje poblacional.",
+          "evidence": [
+            {
+              "page": 897,
+              "quote": "Ascitis, tumor pélvico o abdominal."
+            },
+            {
+              "page": 897,
+              "quote": "quimioterapia neoadyuvante"
+            }
+          ],
+          "source_gaps": []
+        }
+      ],
+      "common_problem": "Mujer con masa anexial o distensión persistente.",
+      "mother": {
+        "cue": "Caracterización de lesión anexial para estimar riesgo de malignidad.",
+        "answer": "Tumor anexial.",
+        "explanation": "La ecografía y el contexto determinan referencia."
+      }
+    },
+    {
+      "id": "26.05",
+      "title": "Sangrado vaginal no cervical",
+      "topics": [
+        {
+          "id": "26.05-01",
+          "name": "Cáncer de vagina",
+          "source_pages": [
+            898
+          ],
+          "pattern": "Una mujer mayor consulta por sangrado vaginal y leucorrea sanguinolenta. La especuloscopia muestra una lesión ulcerada en la pared vaginal. Se examinan también cuello uterino y vulva.",
+          "key_discriminator": "lesión ulcerada en la pared vaginal",
+          "mechanism": "La proliferación maligna vaginal puede ser primaria o secundaria; la invasión mucosa produce ulceración y sangrado, y el origen condiciona estadificación y tratamiento especializado.",
+          "findings": [
+            {
+              "mechanism": "Ulceración tumoral mucosa",
+              "finding": "Sangrado y masa vaginal"
+            }
+          ],
+          "initial_action": "Referir para biopsia y evaluación completa de cérvix, vagina y vulva.",
+          "action_reason": "Confirma histología y descarta extensión de otra neoplasia.",
+          "modifiers": [
+            {
+              "factor": "Antecedente de cáncer cervical",
+              "action": "Investigar recurrencia o extensión",
+              "reason": "No toda lesión es un nuevo primario"
+            }
+          ],
+          "limits": "El tratamiento se individualiza por etapa y localización; no asumir cirugía universal.",
+          "evidence": [
+            {
+              "page": 898,
+              "quote": "masas exofíticas o ulceraciones"
+            },
+            {
+              "page": 898,
+              "quote": "estudio histopatológico (biopsia)."
+            }
+          ],
+          "source_gaps": []
+        }
+      ],
+      "common_problem": "Mujer con sangrado y lesión de pared vaginal.",
+      "mother": {
+        "cue": "Lesión vaginal que requiere distinguir tumor primario de extensión desde otros órganos.",
+        "answer": "Sospecha de neoplasia vaginal.",
+        "explanation": "La biopsia y evaluación del tracto genital establecen origen."
+      }
+    }
+  ]
+}
