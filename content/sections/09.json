@@ -21,7 +21,7 @@
               "finding": "Placa roja de borde definido"
             }
           ],
-          "initial_action": "Valorar gravedad y puerta de entrada e iniciar antibiótico con cobertura estreptocócica según contexto y alergias.",
+          "initial_action": "Valorar gravedad, alergias y puerta de entrada e iniciar penicilina con cobertura estreptocócica si es apropiada para el contexto.",
           "action_reason": "La infección requiere tratamiento y búsqueda de factores locales.",
           "modifiers": [
             {
@@ -41,7 +41,13 @@
               "quote": "Primera línea: Penicilinas."
             }
           ],
-          "source_gaps": []
+          "source_gaps": [],
+          "answer_name": "Erisipela",
+          "source_corrections": [
+            {
+              "reason": "Se corrige el rótulo mal escrito «Erispela» del inventario. La entidad en p231 es erisipela."
+            }
+          ]
         },
         {
           "id": "09.01-02",
@@ -63,7 +69,7 @@
               "finding": "Nódulo fluctuante"
             }
           ],
-          "initial_action": "Valorar profundidad y extensión. Tratar lesiones superficiales localizadas con medidas y terapia tópica apropiadas; drenar una colección fluctuante y seleccionar antibiótico según gravedad.",
+          "initial_action": "Reconocer foliculitis con un forúnculo fluctuante. Drenar la colección y valorar antibiótico por extensión, fiebre o factores de riesgo; para lesiones foliculares superficiales localizadas, usar medidas locales y mupirocina tópica.",
           "action_reason": "El pus requiere control del foco y no solo tratamiento superficial.",
           "modifiers": [
             {
@@ -76,7 +82,7 @@
           "evidence": [
             {
               "page": 235,
-              "quote": "Pústula centrada por un"
+              "quote": "Pústula centrada por un pelo (dato clave)"
             },
             {
               "page": 235,
@@ -104,7 +110,7 @@
               "finding": "Ampollas flácidas"
             }
           ],
-          "initial_action": "Limpiar suavemente y usar tratamiento tópico apropiado en un caso limitado. Valorar antibiótico oral si es extenso o tiene repercusión sistémica.",
+          "initial_action": "Limpiar suavemente y aplicar mupirocina tópica en este caso limitado. Valorar antibiótico oral si es extenso o tiene repercusión sistémica.",
           "action_reason": "La extensión determina si basta tratamiento local.",
           "modifiers": [
             {
@@ -157,7 +163,7 @@
               "finding": "Pápulas o pústulas satélite"
             }
           ],
-          "initial_action": "Reducir humedad y fricción y aplicar antifúngico tópico apropiado; corregir factores predisponentes y confirmar con examen directo si hay duda.",
+          "initial_action": "Reducir humedad y fricción y aplicar un azol tópico; corregir factores predisponentes y confirmar con examen directo si hay duda.",
           "action_reason": "Trata levadura y condiciones que sostienen maceración.",
           "modifiers": [
             {
@@ -220,7 +226,20 @@
               "quote": "terbinafina crema, aplicación"
             }
           ],
-          "source_gaps": []
+          "source_gaps": [],
+          "external_sources": [
+            {
+              "label": "Ketoconazol oral: ficha oficial DailyMed",
+              "url": "https://dailymed.nlm.nih.gov/dailymed/fda/fdaDrugXsl.cfm?setid=aae6c08a-8610-b833-e053-2a95a90a3e6b&type=display",
+              "quote": "Serious hepatotoxicity, including cases with a fatal outcome or requiring liver transplantation",
+              "checked_at": "2026-10-29"
+            }
+          ],
+          "source_corrections": [
+            {
+              "reason": "Se verifica la corrección del ketoconazol oral de las páginas 230/247: no es opción rutinaria para micosis cutánea superficial por riesgo hepático grave."
+            }
+          ]
         },
         {
           "id": "09.02-03",
@@ -261,7 +280,20 @@
               "quote": "debiera ser tópico"
             }
           ],
-          "source_gaps": []
+          "source_gaps": [],
+          "external_sources": [
+            {
+              "label": "Ketoconazol oral: ficha oficial DailyMed",
+              "url": "https://dailymed.nlm.nih.gov/dailymed/fda/fdaDrugXsl.cfm?setid=aae6c08a-8610-b833-e053-2a95a90a3e6b&type=display",
+              "quote": "Serious hepatotoxicity, including cases with a fatal outcome or requiring liver transplantation",
+              "checked_at": "2026-10-29"
+            }
+          ],
+          "source_corrections": [
+            {
+              "reason": "Se verifica la corrección del ketoconazol oral de las páginas 230/247: no es opción rutinaria para micosis cutánea superficial por riesgo hepático grave."
+            }
+          ]
         }
       ],
       "common_problem": "Lesiones en pliegues o manchas descamativas.",
@@ -294,7 +326,7 @@
               "finding": "Prurito nocturno"
             }
           ],
-          "initial_action": "Tratar al paciente y contactos cercanos de forma simultánea con un escabicida apropiado, e indicar manejo de ropa y ropa de cama.",
+          "initial_action": "Aplicar permetrina al 5% según técnica corporal indicada, retirar después de 8–14 horas y repetir aproximadamente a la semana. Tratar contactos cercanos simultáneamente e indicar manejo de ropa y ropa de cama.",
           "action_reason": "Evita reinfestación por contactos que aún no tienen síntomas.",
           "modifiers": [
             {
@@ -314,7 +346,20 @@
               "quote": "cercanos al mismo tiempo"
             }
           ],
-          "source_gaps": []
+          "source_gaps": [],
+          "external_sources": [
+            {
+              "label": "CDC: atención clínica de escabiosis",
+              "url": "https://www.cdc.gov/scabies/hcp/clinical-care/",
+              "quote": "two (or more) applications, each about a week apart, may be necessary",
+              "checked_at": "2026-10-29"
+            }
+          ],
+          "source_corrections": [
+            {
+              "reason": "Se corrige la aplicación diaria de p233 para sarna clásica; el caso escolar requiere pauta intermitente y manejo simultáneo de contactos."
+            }
+          ]
         },
         {
           "id": "09.03-02",
@@ -335,7 +380,7 @@
               "finding": "Liendres"
             }
           ],
-          "initial_action": "Confirmar infestación activa e iniciar pediculicida apropiado con eliminación mecánica y repetición según producto. Revisar contactos y posible resistencia si persiste.",
+          "initial_action": "Confirmar infestación activa e iniciar permetrina al 1% según instrucciones del producto, con eliminación mecánica y repetición indicada. Revisar contactos y posible resistencia si persiste.",
           "action_reason": "El tratamiento debe alcanzar piojos y nuevas eclosiones.",
           "modifiers": [
             {
@@ -397,7 +442,7 @@
               "reason": "El patrón puede cambiar con déficit inmune."
             }
           ],
-          "limits": "No usar imiquimod como indicación automática por la mención del libro; elegir opciones con evidencia y tolerancia adecuadas.",
+          "limits": "En niños no se recomienda imiquimod por falta de eficacia demostrada y posibles efectos adversos. La observación es razonable en enfermedad limitada sin complicaciones.",
           "evidence": [
             {
               "page": 242,
@@ -408,7 +453,20 @@
               "quote": "Infección autolimitada"
             }
           ],
-          "source_gaps": []
+          "source_gaps": [],
+          "external_sources": [
+            {
+              "label": "CDC: molusco contagioso",
+              "url": "https://www.cdc.gov/molluscum-contagiosum/hcp/clinical-overview/",
+              "quote": "It has not been proven effective in children and is not recommended for children",
+              "checked_at": "2026-10-29"
+            }
+          ],
+          "source_corrections": [
+            {
+              "reason": "Se corrige la indicación automática de imiquimod del resumen de p242 para el caso escolar."
+            }
+          ]
         }
       ],
       "common_problem": "Pápulas pequeñas con depresión central.",
@@ -630,7 +688,7 @@
               "finding": "Sangrado de Auspitz"
             }
           ],
-          "initial_action": "Valorar extensión, impacto y articulaciones. Iniciar tratamiento tópico apropiado en enfermedad limitada y referir si es extensa, grave o con sospecha articular.",
+          "initial_action": "Valorar extensión, impacto y articulaciones. En placas limitadas de codos y rodillas, usar corticoide tópico de potencia apropiada con análogo de vitamina D; referir para evaluación reumatológica por el dolor articular.",
           "action_reason": "La severidad y comorbilidades determinan necesidad de tratamiento sistémico.",
           "modifiers": [
             {
@@ -644,7 +702,7 @@
               "reason": "Puede comprometer homeostasis y estado general."
             }
           ],
-          "limits": "Clobetasol es de alta potencia, no mediana. El orden rígido de sistémicos del resumen no sustituye selección actual individual.",
+          "limits": "Clobetasol al 0.05% es de potencia muy alta, no mediana. Ajustar sitio y duración. El caso no desarrolla la selección de fármacos sistémicos.",
           "evidence": [
             {
               "page": 248,
@@ -655,7 +713,20 @@
               "quote": "La terapia combinada con vitamina D3 y esteroides"
             }
           ],
-          "source_gaps": []
+          "source_gaps": [],
+          "external_sources": [
+            {
+              "label": "Clobetasol: ficha oficial DailyMed",
+              "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=69794e0b-2a79-419e-844f-ed051be62249",
+              "quote": "Clobetasol propionate cream is a super-high potency",
+              "checked_at": "2026-10-29"
+            }
+          ],
+          "source_corrections": [
+            {
+              "reason": "Se corrige la potencia errónea del clobetasol en p250; se conserva terapia tópica de placas limitadas sin imponer un orden rígido de sistémicos."
+            }
+          ]
         },
         {
           "id": "09.07-02",
@@ -836,7 +907,20 @@
               "quote": "Metronidazol tópico o Ácido Azelaico."
             }
           ],
-          "source_gaps": []
+          "source_gaps": [],
+          "external_sources": [
+            {
+              "label": "BAD: rosácea",
+              "url": "https://www.bad.org.uk/pils/rosacea",
+              "quote": "Do not use creams and ointments containing corticosteroids",
+              "checked_at": "2026-10-29"
+            }
+          ],
+          "source_corrections": [
+            {
+              "reason": "Se verifica la corrección de corticoide facial crónico de p251 por riesgo de empeoramiento; mantener tratamiento por fenotipo."
+            }
+          ]
         }
       ],
       "common_problem": "Lesiones inflamatorias faciales.",
@@ -943,7 +1027,7 @@
               "finding": "Riesgo visual"
             }
           ],
-          "initial_action": "Aplicar criterios diagnósticos actuales y referir a genética y evaluación pediátrica; establecer vigilancia de visión, desarrollo y signos de tumor o hipertensión.",
+          "initial_action": "Valorar probable neurofibromatosis tipo 1 con criterios clínicos actuales y estudio genético según contexto. Referir a genética y pediatría y establecer vigilancia de visión, desarrollo, presión y signos de tumor.",
           "action_reason": "La detección de complicaciones precede al tratamiento de problemas específicos.",
           "modifiers": [
             {
@@ -963,7 +1047,29 @@
               "quote": "Glioma óptico y neurofibromas."
             }
           ],
-          "source_gaps": []
+          "source_gaps": [],
+          "external_sources": [
+            {
+              "label": "Consenso internacional 2021: criterios NF1 y Legius",
+              "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8354850/",
+              "quote": "A heterozygous pathogenic NF1 variant",
+              "checked_at": "2026-10-29"
+            },
+            {
+              "label": "Consenso internacional 2022: NF2 y schwannomatosis",
+              "url": "https://pubmed.ncbi.nlm.nih.gov/35674741/",
+              "quote": "The updated criteria for NF2 and SWN incorporate clinical features and genetic testing",
+              "checked_at": "2026-10-29"
+            }
+          ],
+          "source_corrections": [
+            {
+              "reason": "Se corrige la imposibilidad de diagnóstico molecular afirmada en p243. Las pruebas genéticas integran los criterios actuales y ayudan a distinguir Legius."
+            },
+            {
+              "reason": "Se verifica nomenclatura y evaluación actuales para el modificador de schwannomas vestibulares bilaterales; no se atribuye este fenotipo a NF1."
+            }
+          ]
         }
       ],
       "common_problem": "Cambios de pigmento con distribución variable.",
@@ -1052,7 +1158,7 @@
               "reason": "La extensión orienta severidad y denominación."
             }
           ],
-          "limits": "Inmunoglobulina y enoxaparina no constituyen un tratamiento universal. La terapia inmunomoduladora requiere guía actual y equipo experto.",
+          "limits": "La selección de inmunomodulador requiere valoración experta; IVIG no tiene beneficio universal demostrado. La enoxaparina corresponde a prevención trombótica cuando esté indicada, no a tratamiento específico de la necrosis.",
           "evidence": [
             {
               "page": 253,
@@ -1060,10 +1166,23 @@
             },
             {
               "page": 254,
-              "quote": "suspensión temprana de"
+              "quote": "Iniciar analgesia y soluciones pareterales con control de líquidos y electrolitos"
             }
           ],
-          "source_gaps": []
+          "source_gaps": [],
+          "external_sources": [
+            {
+              "label": "Guía S3 2024: necrólisis epidérmica, parte 1",
+              "url": "https://onlinelibrary.wiley.com/doi/full/10.1111/ddg.15515",
+              "quote": "A systemic monotherapy with intravenous immunoglobulins (off-label) for the treatment of EN cannot be conclusively evaluated.",
+              "checked_at": "2026-10-29"
+            }
+          ],
+          "source_corrections": [
+            {
+              "reason": "Se corrige el paquete universal de inmunoglobulina/enoxaparina de p254. Se priorizan retirada del fármaco, soporte y evaluación ocular urgente."
+            }
+          ]
         },
         {
           "id": "09.10-03",
@@ -1266,7 +1385,7 @@
               "finding": "Sangrado"
             }
           ],
-          "initial_action": "Referir de forma prioritaria para biopsia adecuada que permita medir profundidad. Tras confirmación, definir márgenes y estudio ganglionar según riesgo.",
+          "initial_action": "Referir de forma prioritaria para biopsia excisional diagnóstica apropiada que permita medir profundidad. Tras confirmación, definir resección con márgenes y estudio ganglionar según riesgo.",
           "action_reason": "La extirpación diagnóstica debe preservar información para estadificar.",
           "modifiers": [
             {
@@ -1286,7 +1405,20 @@
               "quote": "Biopsia excisional de lesión"
             }
           ],
-          "source_gaps": []
+          "source_gaps": [],
+          "external_sources": [
+            {
+              "label": "AAD: guía clínica de melanoma",
+              "url": "https://www.aad.org/member/clinical-quality/guidelines/melanoma",
+              "quote": "Mohs micrographic surgery and other staged excision techniques",
+              "checked_at": "2026-10-29"
+            }
+          ],
+          "source_corrections": [
+            {
+              "reason": "Se verifica corrección de p240: Mohs es una opción seleccionada, especialmente melanoma in situ lentigo maligno, y no técnica universal del melanoma invasivo."
+            }
+          ]
         }
       ],
       "common_problem": "Lesión cutánea persistente, cambiante o sangrante.",
