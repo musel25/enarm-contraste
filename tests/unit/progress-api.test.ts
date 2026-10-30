@@ -5,6 +5,7 @@ import { tmpdir } from "node:os";
 import { join } from "node:path";
 import test from "node:test";
 import { createProgressServer } from "../../server/api";
+import { backupDatabase } from "../../server/backup";
 import { emptyState } from "../../app/src/coach/engine";
 
 const code = () => randomBytes(32).toString("base64url");
@@ -16,6 +17,7 @@ async function fixture() {
   async function stop() { app.server.closeAllConnections(); await new Promise<void>(resolve => app.server.close(() => resolve())); app.database.close(); }
   await start();
   return {
+    path,
     async request(token: string, method = "GET", body?: unknown, suffix = "", origin?: string) {
       const address = app.server.address();
       assert.ok(address && typeof address === "object");
@@ -43,6 +45,19 @@ test("progress is private, durable and migrates the complete local snapshot", as
     await api.restart();
     assert.deepEqual((await (await api.request(token)).json()).state, state);
     assert.equal((await api.request(code())).status, 404);
+  } finally { await api.close(); }
+});
+
+test("an online backup contains committed progress while the service database stays open", async () => {
+  const api = await fixture();
+  try {
+    const token = code();
+    const initial = await (await api.request(token, "PUT", { expected_revision: 0, state: emptyState(), preserve: false })).json();
+    const path = await backupDatabase(api.path, join(api.path, "..", "backups"));
+    assert.ok(path);
+    const copy = createProgressServer({ database: path, origin: "https://enarm.musel.dev" });
+    try { assert.equal(copy.database.prepare("SELECT state FROM profiles").get()!.state, JSON.stringify(initial.state)); }
+    finally { copy.database.close(); }
   } finally { await api.close(); }
 });
 
