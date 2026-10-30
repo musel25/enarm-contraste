@@ -49,20 +49,16 @@ export function useStudyDay(timezone: string) {
 }
 
 export function useForecast(state: CoachState, index: CoachIndex, day: string) {
-  const [result, setResult] = useState<Forecast | null>(null);
-  const [pending, setPending] = useState(true);
-  const [error, setError] = useState("");
+  const [calculation, setCalculation] = useState<{ state: CoachState; index: CoachIndex; day: string; result: Forecast | null; error: string } | null>(null);
   useEffect(() => {
-    setPending(true); setError("");
     const worker = new Worker(new URL("./forecast.worker.ts", import.meta.url), { type: "module" });
     const timer = setTimeout(() => worker.postMessage({ state, index, day }), 120);
     worker.onmessage = event => {
-      if (event.data.result) { setResult(event.data.result); setError(""); }
-      else { setResult(null); setError(event.data.error || "No se pudo calcular el plan."); }
-      setPending(false);
+      setCalculation({ state, index, day, result: event.data.result || null, error: event.data.result ? "" : event.data.error || "No se pudo calcular el plan." });
     };
-    worker.onerror = () => { setResult(null); setError("No se pudo calcular el plan. Recarga la página."); setPending(false); };
+    worker.onerror = () => setCalculation({ state, index, day, result: null, error: "No se pudo calcular el plan. Recarga la página." });
     return () => { clearTimeout(timer); worker.terminate(); };
   }, [state, index, day]);
-  return { result, pending, error };
+  const current = calculation?.state === state && calculation.index === index && calculation.day === day;
+  return { result: current ? calculation.result : null, pending: !current, error: current ? calculation.error : "" };
 }

@@ -213,6 +213,19 @@ test("prepares a new assignment at midnight and does not reuse the old answer", 
   expect(Object.keys((await savedState(page)).days)).toEqual(["2026-11-10", "2026-11-11"]);
 });
 
+test("a new deadline day uses its own forecast before freezing the target", async ({ page }) => {
+  await page.clock.install({ time: new Date("2026-11-10T12:00:00Z") });
+  await page.goto("./");
+  await page.getByRole("textbox", { name: "Fecha objetivo", exact: true }).fill("2026-11-11");
+  await page.getByRole("button", { name: "Empezar mi plan", exact: true }).click();
+  await expect(page.getByRole("progressbar", { name: "Meta diaria" })).toHaveAttribute("aria-valuemax", "3");
+  await expect(page.locator(".coach-course-forecast")).toContainText("5 min al día");
+  await page.clock.fastForward(24 * 60 * 60 * 1000);
+  await page.evaluate(() => window.dispatchEvent(new Event("focus")));
+  await expect(page.getByRole("progressbar", { name: "Meta diaria" })).toHaveAttribute("aria-valuemax", "5");
+  const state = await savedState(page);
+  expect(state.days["2026-11-11"].budget_seconds).toBe(600);
+});
 
 test("plan edits retain saved practice and incomplete inputs stay safe", async ({ page }) => {
   const errors: string[] = [];
