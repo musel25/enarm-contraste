@@ -57,7 +57,7 @@ export function selectedCards(index: CoachIndex, plan: StudyPlan): CoachCard[] {
   return index.cards.filter(c => sections.has(c.section_id) && families.has(c.family))
     .sort((a, b) => a.order - b.order || a.id.localeCompare(b.id));
 }
-function planKey(plan: StudyPlan): string { return `${plan.id}:${plan.revision}`; }
+export function planKey(plan: StudyPlan): string { return `${plan.id}:${plan.revision}`; }
 function validBudget(minutes: number): boolean {
   return Number.isFinite(minutes) && minutes >= 5 && minutes <= 720;
 }
@@ -219,7 +219,7 @@ export function recordPractice(state: CoachState, card: CoachCard, rating: Grade
   const existing = state.days[day];
   const cost = previous ? card.review_seconds : card.new_seconds;
   if (!finite(cost, Number.MIN_VALUE, 216_000)) throw new Error('Invalid practice cost');
-  const assignment: Assignment = existing || { day, plan_key: state.plan ? planKey(state.plan) : `practice/${day}`,
+  const assignment: Assignment = existing || { day, plan_key: `practice/${day}`,
     ids: [], new_ids: [], extra_ids: [], costs: {}, budget_seconds: 300 };
   const assigned = [...assignment.ids, ...assignment.extra_ids].includes(card.id);
   return { ...state,

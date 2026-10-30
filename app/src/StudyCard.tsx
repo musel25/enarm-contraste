@@ -17,7 +17,7 @@ function Corrections({ notes }: { notes?: string[] }) {
   return <details className="source-corrections"><summary>Precisiones de las fuentes</summary><ul>{notes.map((note, i) => <li key={i}>{note}</li>)}</ul></details>;
 }
 
-export default function StudyCard({ card, status, onRate, onReview, onFollow, ratingArea, onReveal, initialHighlight = true }: {
+export default function StudyCard({ card, status, onRate, onReview, onFollow, ratingArea, onReveal, initialHighlight = true, ratingDisabled = false }: {
   card: StudyCardData;
   status?: "known" | "again";
   onRate: (value: "known" | "again") => void;
@@ -26,6 +26,7 @@ export default function StudyCard({ card, status, onRate, onReview, onFollow, ra
   ratingArea?: ReactNode;
   onReveal?: () => void;
   initialHighlight?: boolean;
+  ratingDisabled?: boolean;
 }) {
   const [revealed, setRevealed] = useState(false);
   const [highlight, setHighlight] = useState(initialHighlight);
@@ -58,7 +59,7 @@ export default function StudyCard({ card, status, onRate, onReview, onFollow, ra
           </div>
         </li>)}</ol>
         <Corrections notes={card.corrections} />
-        {ratingArea ?? <div className="library-rating"><p>¿Lo reconociste?</p><div><button aria-pressed={status === "again"} onClick={() => onRate("again")}>Quiero repetirlo</button><button aria-pressed={status === "known"} onClick={() => onRate("known")}><Icon name="check" size={16} />Lo reconocí</button></div></div>}
+        {ratingArea ?? <div className="library-rating"><p>¿Lo reconociste?</p><div><button disabled={ratingDisabled} aria-pressed={status === "again"} onClick={() => onRate("again")}>Quiero repetirlo</button><button disabled={ratingDisabled} aria-pressed={status === "known"} onClick={() => onRate("known")}><Icon name="check" size={16} />Lo reconocí</button></div></div>}
         <details className="library-reference-details"><summary>Fuentes de la tarjeta</summary><References sources={card.sources} /></details>
       </section>}
     <div className="library-card-footer"><span>Bloque {card.block_id}</span><button className="text-button" onClick={onReview}><Icon name="comment" size={16} />Comentar esta tarjeta</button></div>

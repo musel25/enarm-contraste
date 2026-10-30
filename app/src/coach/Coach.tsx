@@ -4,7 +4,7 @@ import type { ReviewContext } from "../storage";
 import "../library.css";
 import "./coach.css";
 import BackupPanel from "./BackupPanel";
-import { createAssignment } from "./engine";
+import { createAssignment, planKey } from "./engine";
 import { timezone } from "./format";
 import { useCoachStore, useForecast, useStudyDay } from "./hooks";
 import PlanSetup from "./PlanSetup";
@@ -20,7 +20,7 @@ function ReadyCoach({ manifest, index, suspended, onReview }: { manifest: StudyM
   const forecast = useForecast(state, index, day);
   const [editing, setEditing] = useState(false), [backup, setBackup] = useState(false);
   useEffect(() => {
-    if (loading || !state.plan || state.days[day] || saving || error || forecast.pending || !forecast.result) return;
+    if (loading || !state.plan || state.days[day]?.plan_key === planKey(state.plan) || saving || error || forecast.pending || !forecast.result) return;
     void commit(previous => ({ ...previous, days: { ...previous.days, [day]: createAssignment(previous, index, day, forecast.result!.feasible ? forecast.result!.daily_minutes : previous.plan!.minutes_per_day) } }));
   }, [state, loading, saving, day, error, forecast.pending, forecast.result, index, commit]);
   async function savePlan(draft: CoachState, estimate: Forecast) {
@@ -36,7 +36,7 @@ function ReadyCoach({ manifest, index, suspended, onReview }: { manifest: StudyM
   if (loading) return <main className="coach-main coach-loading" id="study" role="status">Abriendo tu progreso…</main>;
   return <>
     {error && <div className="coach-save-error" role="alert"><strong>{latest ? "Otra pestaña guardó progreso nuevo." : "Tu progreso no se pudo guardar."}</strong><p>{error} No avances hasta resolverlo.</p><div>{latest ? <button onClick={() => void reload()}>Cargar progreso más reciente</button> : <button onClick={() => void store.retry()}>Reintentar guardado</button>}<button onClick={() => downloadBackup(pending || state)}>Exportar copia de este intento</button></div></div>}
-    {!state.plan || editing ? <PlanSetup state={state} manifest={manifest} index={index} saving={saving} disabled={!!error || backup} onSave={savePlan} onBackup={() => setBackup(true)} onCancel={state.plan ? () => setEditing(false) : undefined} /> : !state.days[day] ? <main id="study" className="coach-main coach-loading" role="status">Preparando la meta de hoy…</main> : <Today state={state} index={index} day={day} saving={saving} paused={suspended || backup || !!error} forecast={forecast.result} calculating={forecast.pending} commit={commit} onEdit={() => setEditing(true)} onBackup={() => setBackup(true)} onReview={onReview} />}
+    {!state.plan || editing ? <PlanSetup state={state} manifest={manifest} index={index} saving={saving} disabled={!!error || backup} onSave={savePlan} onBackup={() => setBackup(true)} onCancel={state.plan ? () => setEditing(false) : undefined} /> : state.days[day]?.plan_key !== planKey(state.plan) ? <main id="study" className="coach-main coach-loading" role="status">Preparando la meta de hoy…</main> : <Today state={state} index={index} day={day} saving={saving} paused={suspended || backup || !!error} forecast={forecast.result} calculating={forecast.pending} commit={commit} onEdit={() => setEditing(true)} onBackup={() => setBackup(true)} onReview={onReview} />}
     {backup && <BackupPanel state={pending || state} index={index} saving={saving || !!error} onClose={() => setBackup(false)} onImport={async candidate => { const saved = await commit(() => candidate, true); return !!saved; }} />}
   </>;
 }

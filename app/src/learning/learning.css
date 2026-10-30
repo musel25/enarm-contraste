@@ -1,0 +1,77 @@
+.learning-main { max-width: 1280px; margin: auto; padding: 40px 32px 80px; }
+.learning-heading { display: flex; justify-content: space-between; gap: 24px; align-items: center; margin-bottom: 30px; }
+.learning-heading h1 { font-family: 'Lora Variable', Georgia, serif; font-size: clamp(30px, 4vw, 44px); margin-bottom: 10px; }
+.learning-heading p { color: var(--muted); max-width: 44ch; }
+.learning-heading > p strong { color: var(--blue); font-size: 24px; }
+.learning-layout { display: grid; grid-template-columns: 310px minmax(0, 1fr); gap: 32px; align-items: start; }
+.learning-sections { max-height: 85vh; overflow: auto; padding: 0 10px 10px 0; }
+.learning-sections h2 { margin-bottom: 16px; }
+.learning-sections button, .learning-blocks button { width: 100%; text-align: left; display: grid; gap: 6px; background: transparent; border-bottom: 1px solid var(--line); padding: 18px 14px; }
+.learning-sections button[aria-pressed=true] { background: #ede9fb; box-shadow: inset 3px 0 var(--blue); border-radius: 6px; }
+.learning-sections button > strong { font-size: 15px; }
+.learning-main small { color: var(--muted); font-size: 12px; }
+.learning-main progress { width: 100%; accent-color: var(--blue); height: 7px; display: block; margin: 6px 0; }
+.learning-main .learning-due { color: #925215; }
+.learning-workspace { min-width: 0; display: grid; gap: 24px; }
+.learning-block-summary { border-bottom: 1px solid var(--line); padding-bottom: 24px; display: grid; gap: 8px; }
+.learning-block-summary h2 { margin-bottom: 6px; }
+.learning-block-summary > p, .learning-errors > p, .learning-builder > p { color: var(--muted); font-size: 13px; }
+.learning-block-summary summary { cursor: pointer; color: var(--blue); margin-top: 8px; }
+.learning-builder { background: white; border: 1px solid var(--line); border-radius: 16px; padding: 26px; }
+.learning-builder > h2, .learning-results h2 { margin-bottom: 10px; }
+.learning-builder > p { margin-bottom: 20px; }
+.learning-builder .library-field { margin: 18px 0; }
+.learning-kind { display: flex; gap: 8px; flex-wrap: wrap; margin: 18px 0; }
+.learning-kind button { border: 1px solid var(--line); border-radius: 8px; background: #f7f8fc; padding: 10px 16px; }
+.learning-kind button[aria-pressed=true] { background: #6550ce; color: white; border-color: #6550ce; }
+.learning-scope { color: var(--muted); font-size: 13px; margin: 12px 0; }
+.learning-selection-actions, .learning-actions { display: flex; flex-wrap: wrap; gap: 8px; margin: 18px 0; }
+.learning-selection-actions button, .learning-actions > button:not(.coach-primary), .learning-test-bar button { background: #f0edf9; border-radius: 7px; padding: 8px 12px; color: #514181; }
+.learning-question-list { max-height: 420px; overflow: auto; border-top: 1px solid var(--line); }
+.learning-question-list label { display: flex; align-items: start; gap: 12px; border-bottom: 1px solid var(--line); padding: 14px 4px; cursor: pointer; }
+.learning-question-list input, .learning-answer-result input { accent-color: var(--blue); width: 18px; height: 18px; flex-shrink: 0; }
+.learning-question-list label > span { display: grid; gap: 5px; min-width: 0; }
+.learning-question-list strong { font-size: 13px; font-weight: 600; overflow-wrap: anywhere; }
+.learning-start { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-top: 22px; flex-wrap: wrap; }
+.learning-start > span { color: var(--muted); font-size: 13px; }
+.learning-errors { padding: 4px 0; }
+.learning-errors h2 { font-size: 19px; margin-bottom: 12px; }
+.learning-errors ol { padding-left: 22px; }
+.learning-errors li { padding: 8px 0; border-bottom: 1px solid var(--line); }
+.learning-errors li > strong { float: right; padding-left: 16px; color: #8f3e46; }
+.learning-errors > p { margin-top: 10px; }
+.learning-test, .learning-results { max-width: 850px; margin: auto; }
+.learning-test-bar { display: flex; justify-content: space-between; gap: 16px; align-items: center; margin-bottom: 16px; }
+.learning-test > progress { margin-bottom: 24px; }
+.learning-self-grade { display: flex; flex-wrap: wrap; gap: 10px; }
+.learning-self-grade p { width: 100%; margin-bottom: 4px; }
+.learning-self-grade button { padding: 12px 16px; border-radius: 8px; background: #efeafc; border: 1px solid #d5caef; }
+.learning-self-grade button:first-of-type { background: #fff0ed; border-color: #efc4bc; }
+.learning-self-grade button:last-child { background: #e8f4ef; border-color: #b6d9c9; }
+.learning-vignette { font-size: 18px; line-height: 1.8; margin: 24px 0; max-width: 70ch; }
+.learning-hint { background: #fff3d8; padding: 14px; border-radius: 8px; margin: 18px 0; color: #6c481c; }
+.learning-hint strong { display: block; margin-bottom: 4px; }
+.learning-diagnoses { display: grid; gap: 10px; margin-top: 24px; }
+.learning-diagnoses button { text-align: left; padding: 14px 18px; background: #f5f2fc; border: 1px solid #ded6ee; border-radius: 9px; }
+.learning-diagnoses button:hover { background: #eae4fa; }
+.learning-recall { display: grid; gap: 10px; margin-bottom: 18px; }
+.learning-recall textarea { width: 100%; padding: 12px; border-radius: 9px; border: 1px solid #c5b8df; resize: vertical; }
+.learning-case .library-answer > p { margin: 14px 0; }
+.learning-case details { margin: 20px 0; }
+.learning-answer-result { display: grid; gap: 12px; background: #eaf5ef; border: 1px solid #c4dfd0; padding: 24px; border-radius: 12px; margin-top: 20px; }
+.learning-answer-result .coach-primary { justify-self: start; }
+.learning-answer-result label { display: flex; align-items: center; gap: 10px; }
+.learning-milestone { background: #eee8fc; border-left: 4px solid #7861ba; padding: 16px; margin-top: 14px; }
+.learning-results { background: white; padding: 30px; border-radius: 16px; border: 1px solid var(--line); }
+.learning-results > p { margin: 12px 0; }
+.library-practice-links { display: flex; flex-wrap: wrap; gap: 16px; margin: 14px 0; }
+@media (max-width: 800px) {
+  .learning-main { padding: 26px 18px 60px; }
+  .learning-heading { display: block; }
+  .learning-heading > p { margin-top: 16px; }
+  .learning-layout { grid-template-columns: minmax(0, 1fr); gap: 24px; }
+  .learning-sections { max-height: 240px; border-bottom: 1px solid var(--line); }
+  .learning-builder, .learning-results { padding: 20px 16px; }
+  .learning-start .coach-primary { width: 100%; }
+  .learning-test-bar { font-size: 13px; }
+}

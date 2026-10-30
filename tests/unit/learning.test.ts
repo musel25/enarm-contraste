@@ -2,7 +2,7 @@ import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { emptyState, undoReview, validateState } from '../../app/src/coach/engine';
 import { recordPractice } from '../../app/src/coach/engine';
-import { completionNotices, progressRows, topicErrors } from '../../app/src/learning/model';
+import { caseMeta, completionNotices, progressRows, topicErrors } from '../../app/src/learning/model';
 import type { CoachIndex } from '../../app/src/coach/types';
 
 const day = '2026-10-29';
@@ -62,4 +62,37 @@ test('practice rejects future-dated reviews and invalid elapsed time', () => {
   const state = recordPractice(emptyState(), index.cards[0], 3, 20, day, 'first');
   assert.throws(() => recordPractice(state, index.cards[0], 3, 1, '2026-10-28', 'old'));
   assert.throws(() => recordPractice(state, index.cards[0], 3, NaN, day, 'bad'));
+});
+
+import { clinicalCases } from '../../app/src/learning/cases';
+import type { StudySection } from '../../app/src/library-types';
+const clinicalSection: StudySection = { id: '14', title: 'Ginecología', blocks: [{ id: '14.01', title: 'Amenorreas', topics: 1 }], cards: [
+  { id: 'eje/14.01', family: 'eje', level: 0, section_id: '14', block_id: '14.01', prompt: 'Diagnóstico', context: 'Amenorrea',
+    front: [{ text: 'Nunca ha menstruado.', highlight: 'Nunca' }], back: [{ title: 'Amenorrea primaria', text: 'Mecanismo.', topic_id: '14.01-01', discriminator: 'Nunca' }], sources: [{ label: 'Libro' }] },
+] };
+test('primary amenorrhea adds eight diagnoses with three distinct source-linked cases each', () => {
+  const cases = clinicalCases(clinicalSection);
+  const expanded = cases.filter(c => c.expanded);
+  assert.equal(expanded.length, 24);
+  assert.equal(new Set(expanded.map(c => c.id)).size, 24);
+  const diagnoses = new Set(expanded.map(c => c.topic_id));
+  assert.equal(diagnoses.size, 8);
+  for (const diagnosis of diagnoses) {
+    const variants = expanded.filter(c => c.topic_id === diagnosis);
+    assert.deepEqual(variants.map(c => c.difficulty), ['easy', 'medium', 'contrast']);
+    assert.equal(new Set(variants.map(c => c.vignette)).size, 3);
+    for (const item of variants) {
+      assert.ok(item.sources.some(source => source.url?.startsWith('https://')));
+      assert.ok(item.discriminator && item.explanation);
+      assert.ok(item.options.includes(item.diagnosis));
+      assert.ok(caseMeta(item.id));
+    }
+  }
+});
+test('every Eje case supports three difficulty modes without losing original facts', () => {
+  const section = { ...clinicalSection, id: '01', cards: clinicalSection.cards.map(c => ({ ...c, section_id: '01', block_id: '01.01' })) };
+  const cases = clinicalCases(section);
+  assert.equal(cases.length, 3);
+  assert.ok(cases.every(c => c.vignette === section.cards[0].front[0].text));
+  assert.ok(cases.every(c => !c.expanded));
 });

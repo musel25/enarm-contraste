@@ -5,6 +5,7 @@ import { addDays, addExtra, dayKey, recordReview, summary, undoReview } from "./
 import { CardFeedback, Confetti, playReward } from "./Feedback";
 import { dateLabel, duration } from "./format";
 import Session from "./Session";
+import { completionNotices } from "../learning/model";
 import type { CoachIndex, CoachState, Forecast, Grade } from "./types";
 
 type Commit = (change: (previous: CoachState) => CoachState) => Promise<CoachState | null>;
@@ -20,7 +21,8 @@ export default function Today({ state, index, day, saving, paused, forecast, cal
 }) {
   const stats = useMemo(() => summary(state, index, day), [state, index, day]);
   const done = new Set(state.history.filter(a => a.day === day).map(a => a.card_id));
-  const pending = [...stats.pending_ids, ...(state.days[day]?.extra_ids || []).filter(id => !done.has(id))];
+  const eligible = new Set(index.cards.filter(card => state.plan!.section_ids.includes(card.section_id) && state.plan!.families.includes(card.family)).map(card => card.id));
+  const pending = [...stats.pending_ids, ...(state.days[day]?.extra_ids || []).filter(id => eligible.has(id) && !done.has(id))];
   const [feedback, setFeedback] = useState<{ id: string; grade: Grade; daily: boolean; course: boolean } | null>(null);
   const [celebrate, setCelebrate] = useState(false);
   const [notice, setNotice] = useState("");
@@ -39,6 +41,8 @@ export default function Today({ state, index, day, saving, paused, forecast, cal
     action.current = true;
     const saved = await commit(previous => recordReview(previous, index, currentId, grade, seconds, day, crypto.randomUUID()));
     if (!saved) { action.current = false; return; }
+    const milestones = completionNotices(state, saved, { ...index, cards: index.cards.filter(card => plan.section_ids.includes(card.section_id) && plan.families.includes(card.family)) });
+    if (milestones.length) setNotice(milestones.map(item => `${item.kind === "block" ? "Bloque completo" : "Sección completa"}: ${item.id}. Primera vuelta de los formatos de tu plan terminada.`).join(" "));
     const daily = !state.celebrated_days.includes(day) && saved.celebrated_days.includes(day);
     const course = !state.celebrated_plans.includes(plan.id) && saved.celebrated_plans.includes(plan.id);
     setFeedback({ id: currentId, grade, daily, course });
@@ -51,7 +55,9 @@ export default function Today({ state, index, day, saving, paused, forecast, cal
   async function undo() {
     if (action.current) return;
     action.current = true;
-    await commit(undoReview); setCelebrate(false); action.current = false;
+    const saved = await commit(undoReview);
+    if (saved) { setCelebrate(false); setNotice(""); }
+    action.current = false;
   }
   const activity = Array.from({ length: 14 }, (_, i) => {
     const date = addDays(day, i - 13);

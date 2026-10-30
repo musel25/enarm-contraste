@@ -1,9 +1,14 @@
 import { useEffect, useMemo, useState } from "react";
 import { isManifest, isSection, type StudyManifest, type StudySection } from "./library-types";
-import { useLocalData, validPractice, type ReviewContext } from "./storage";
+import { readState, validPractice, type ReviewContext } from "./storage";
 import StudyCard from "./StudyCard";
 import { Icon } from "./ui";
 import "./library.css";
+import { useCoachStore, useStudyDay } from "./coach/hooks";
+import { recordPractice } from "./coach/engine";
+import { dateLabel, timezone } from "./coach/format";
+import { completionNotices } from "./learning/model";
+import type { CoachIndex } from "./coach/types";
 
 const root = `${import.meta.env.BASE_URL}study/`;
 const levels = [
@@ -30,7 +35,11 @@ export default function Library({ onReview }: { onReview: (context: ReviewContex
   const [level, setLevel] = useState("1");
   const [block, setBlock] = useState("all");
   const [index, setIndex] = useState(0);
-  const [progress, setProgress, persisted] = useLocalData<Record<string, "known" | "again">>("enarm-full-library-progress-v1", validPractice, {});
+  const [progress] = useState(() => readState("enarm-full-library-progress-v1", validPractice, {}));
+  const store = useCoachStore();
+  const day = useStudyDay(store.state.plan?.timezone || timezone());
+  const [notice, setNotice] = useState("");
+  const [pendingNotice, setPendingNotice] = useState("");
 
   useEffect(() => {
     const abort = new AbortController();
@@ -62,9 +71,29 @@ export default function Library({ onReview }: { onReview: (context: ReviewContex
 
   const cards = useMemo(() => section?.cards.filter(c => c.family === family && (family === "eje" || c.level === Number(level)) && (block === "all" || c.block_id === block)) || [], [section, family, level, block]);
   const card = cards[index];
-  const recognized = Object.values(progress).filter(v => v === "known").length;
+  const combined = { ...progress };
+  for (const [id, memory] of Object.entries(store.state.progress)) if (!id.startsWith("clinical/") && memory.last_rating) combined[id] = memory.last_rating >= 3 ? "known" : "again";
+  const recognized = Object.values(combined).filter(v => v === "known").length;
+  const practiceIndex: CoachIndex = { schema_version: 1, content_sha256: manifest?.content_sha256 || "", cards: section?.cards.map((item, order) => ({ id: item.id, section_id: item.section_id, block_id: item.block_id, family: item.family, level: item.level, order, new_seconds: 90, review_seconds: 35 })) || [] };
+  async function rate(value: "known" | "again") {
+    if (!card || store.loading || store.saving || store.error) return;
+    const meta = practiceIndex.cards.find(item => item.id === card.id)!;
+    let completed: ReturnType<typeof completionNotices> = [];
+    const saved = await store.commit(previous => {
+      const next = recordPractice(previous, meta, value === "again" ? 1 : 3, 0, day, crypto.randomUUID());
+      completed = completionNotices(previous, next, practiceIndex);
+      return next;
+    });
+    const message = completed.map(item => `${item.kind === "block" ? "Bloque completo" : "Sección completa"}: ${item.id}. Primera vuelta terminada.`).join(" ");
+    if (saved) { setNotice(message); setPendingNotice(""); }
+    else setPendingNotice(message);
+  }
+  async function retrySave() {
+    const saved = await store.retry();
+    if (saved) { setNotice(pendingNotice); setPendingNotice(""); }
+  }
   const selectSection = (id: string | null, blockId = "all") => {
-    setSectionId(id); setSection(null); setBlock(blockId); setIndex(0);
+    setSectionId(id); setSection(null); setBlock(blockId); setIndex(0); setNotice("");
     if (blockId !== "all") setFamily("eje");
     requestAnimationFrame(() => {
       document.getElementById("study")?.focus({ preventScroll: true });
@@ -91,7 +120,9 @@ export default function Library({ onReview }: { onReview: (context: ReviewContex
   const matchingSections = manifest.sections.filter(s => searchText(s.title).includes(term));
   const matchingGroups = term ? (manifest.groups || []).filter(g => searchText(`${g.title} ${g.problem}`).includes(term)) : [];
   return <main className="library-main" id="study" tabIndex={-1}>
-    <p className="library-free-practice">Práctica libre. Estas marcas son independientes de tu plan diario en «Hoy».</p>
+    <p className="library-free-practice">Tus respuestas nuevas se registran en «Mi avance». Cada respuesta programa tu próximo repaso.</p>
+    {store.error && <div role="alert"><p>No se pudo guardar tu respuesta. {store.error}</p><button onClick={() => void retrySave()}>Reintentar guardado</button><button onClick={() => void store.reload().then(() => setPendingNotice(""))}>Cargar progreso guardado</button></div>}
+    {notice && <p role="status" className="learning-milestone">{notice}</p>}
     {sectionId ? <>
       <div className="library-breadcrumb"><button onClick={() => selectSection(null)}>‹ Todas las secciones</button><span>{manifest.sections.find(s => s.id === sectionId)?.title}</span></div>
       <div className="library-reader-heading"><div><h1>Una pista cambia la decisión.</h1><p>Lee, compara y explica tu respuesta.</p></div><span className="library-progress"><Icon name="check" size={15} />{recognized} {recognized === 1 ? "tarjeta reconocida" : "tarjetas reconocidas"}</span></div>
@@ -102,12 +133,13 @@ export default function Library({ onReview }: { onReview: (context: ReviewContex
           {family === "madre" && <label className="library-field">Nivel de Patrones Madre<select value={level} onChange={e => changeLevel(e.target.value)}>{levels.map(([value, label]) => <option value={value} key={value}>{label}</option>)}</select></label>}
           {section && <details className="library-block-picker"><summary>Elegir un bloque</summary><label className="library-field">Bloque<select value={block} onChange={e => { setBlock(e.target.value); setIndex(0); }}><option value="all">Todos los bloques</option>{section.blocks.map(b => <option key={b.id} value={b.id}>{b.id} · {b.title}</option>)}</select></label></details>}
           <div className="library-route-note"><span className="route-node" /><p>Primero distingue la pista.<br />Después explica por qué cambia la decisión.</p></div>
-          {!persisted && <p role="status" className="library-storage-note">El progreso dura hasta que cierres esta página.</p>}
         </aside>
         <div className="library-study-column">
           {sectionError ? <LoadError onRetry={() => setSectionAttempt(a => a + 1)} /> : !section ? <p role="status" className="library-loading">Cargando tarjetas…</p> : card ? <>
             <div className="library-card-pagination"><span>Tarjeta {index + 1} de {cards.length}</span><div><button aria-label="Tarjeta anterior" disabled={index === 0} onClick={() => setIndex(i => i - 1)}>‹</button><button aria-label="Tarjeta siguiente" disabled={index >= cards.length - 1} onClick={() => setIndex(i => i + 1)}>›</button></div></div>
-            <StudyCard key={card.id} card={card} status={progress[card.id]} onFollow={followCase} onRate={value => setProgress(current => ({ ...current, [card.id]: value }))} onReview={() => onReview({ axisId: `libro-${sectionId}`, section: "library", caseId: card.id, label: `${section.title} · ${card.id}` })} />
+            <StudyCard key={card.id} card={card} status={combined[card.id]} ratingDisabled={store.loading || store.saving || !!store.error} onFollow={followCase} onRate={value => void rate(value)} onReview={() => onReview({ axisId: `libro-${sectionId}`, section: "library", caseId: card.id, label: `${section.title} · ${card.id}` })} />
+            {store.state.progress[card.id] && <p role="status">Próximo repaso: {dateLabel(store.state.progress[card.id].due_day)}</p>}
+            <div className="library-practice-links"><a href={`#avance?section=${sectionId}&block=${card.block_id}`}>Crear subtest de este bloque</a><a href={`#avance?section=${sectionId}&block=${card.block_id}&mode=cases`}>Ampliar casos diagnósticos</a></div>
             <div className="library-bottom-next"><button disabled={index === 0} onClick={() => { setIndex(i => i - 1); document.getElementById("study")?.scrollIntoView(); }}>Anterior</button><button disabled={index >= cards.length - 1} onClick={() => { setIndex(i => i + 1); document.getElementById("study")?.scrollIntoView(); }}>Siguiente tarjeta <Icon name="arrow" size={16} /></button></div>
           </> : <p role="status">No hay tarjetas para esta selección. Elige otro bloque o nivel.</p>}
         </div>
