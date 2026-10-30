@@ -11,8 +11,9 @@ if [[ "$commit" != "$(git rev-parse '@{upstream}')" ]]; then
   echo 'Push the current commit before deploying.' >&2
   exit 1
 fi
-npm test
 npm run build
+uv run python -m unittest discover -s tests -p 'test_*.py'
+npm test
 printf '%s\n' "$commit" > dist/version.txt
 asset=$(basename "$(rg --files dist/assets -g 'index-*.js')")
 release="/var/www/enarm-contraste/releases/${commit:0:12}-$(date -u +%Y%m%dT%H%M%S)-standalone"
@@ -68,6 +69,9 @@ curl -fsS --retry 5 --retry-all-errors --retry-delay 1 --max-time 10 \
   https://enarm.musel.dev/version.txt | grep -Fxq "$commit"
 curl -fsS --max-time 15 https://enarm.musel.dev/ | grep -Fq '<title>ENARM Contraste'
 curl -fsS --max-time 15 "https://enarm.musel.dev/assets/$asset" > /dev/null
+curl -fsS --max-time 15 https://enarm.musel.dev/study/manifest.json | grep -Fq '"cross-reviewed"'
+curl -fsS --max-time 30 https://enarm.musel.dev/study/enarm-eje.apkg > /dev/null
+curl -fsS --max-time 30 https://enarm.musel.dev/study/enarm-madre.apkg > /dev/null
 curl -fsS --max-time 15 https://timer.musel.dev/grind/enarm/ | grep -Fq '<title>ENARM Contraste'
 curl -fsS --max-time 15 https://timer.musel.dev/api/health | grep -Fq '"ok":true'
 trap - ERR

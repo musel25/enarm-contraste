@@ -2,6 +2,7 @@
 from __future__ import annotations
 
 import argparse
+import hashlib
 import json
 import re
 import unicodedata
@@ -15,7 +16,7 @@ def normalized(value: str) -> str:
 
 
 def validate(catalog: dict, directory: Path, pages: Path | None, selected: list[str] | None = None, allow_partial: bool = False) -> dict:
-    report = {'verified_sections': 0, 'verified_blocks': 0, 'verified_topics': 0, 'verified_evidence': 0, 'visual_evidence': 0, 'external_sources': 0, 'missing_sections': [], 'errors': []}
+    report = {'source_text_checked': pages is not None, 'source_book_sha256': catalog.get('book', {}).get('sha256'), 'section_hashes': {}, 'verified_sections': 0, 'verified_blocks': 0, 'verified_topics': 0, 'verified_evidence': 0, 'visual_evidence': 0, 'external_sources': 0, 'missing_sections': [], 'errors': []}
     book_pages = catalog.get('book', {}).get('pages', 1150)
     visual_pages = set(catalog.get('book', {}).get('visual_review_pages', []))
     page_cache = {}
@@ -47,6 +48,7 @@ def validate(catalog: dict, directory: Path, pages: Path | None, selected: list[
             continue
         if section.get('id') != sid:
             error('section_identity', sid, str(section.get('id')))
+        report['section_hashes'][sid] = hashlib.sha256(json.dumps(section, ensure_ascii=False, sort_keys=True, separators=(',', ':')).encode()).hexdigest()
         blocks = section.get('blocks', [])
         if not isinstance(blocks, list):
             error('invalid_blocks', sid, 'Expected an array')
@@ -178,7 +180,7 @@ def main() -> None:
     report = validate(json.loads(args.catalog.read_text()), args.sections, args.pages, args.section, args.allow_partial)
     args.report.parent.mkdir(parents=True, exist_ok=True)
     args.report.write_text(json.dumps(report, ensure_ascii=False, indent=2) + '\n')
-    print(json.dumps({key: value if key != 'errors' else len(value) for key, value in report.items()}, ensure_ascii=False))
+    print(json.dumps({key: (len(value) if key in ('errors', 'section_hashes') else value) for key, value in report.items()}, ensure_ascii=False))
     if report['errors']:
         for item in report['errors'][:30]:
             print(f'{item["code"]}: {item["id"]}: {item["detail"]}')

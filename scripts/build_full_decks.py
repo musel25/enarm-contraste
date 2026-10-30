@@ -159,10 +159,16 @@ def check_coverage(section: dict, expected: dict) -> None:
                 raise ValueError(f'Incomplete coverage: {topic["id"]} discriminator/findings')
 
 
-def build(catalog: dict, sections: Path, reviews: Path, output: Path, preview: bool = False) -> dict:
+def build(catalog: dict, sections: Path, reviews: Path, output: Path, preview: bool = False, source_validation: dict | None = None) -> dict:
     structural = validate(catalog, sections, None, allow_partial=preview)
     if structural['errors']:
         raise ValueError('Invalid section coverage: ' + json.dumps(structural['errors'][:5], ensure_ascii=False))
+    if not preview and (not source_validation or source_validation.get('source_text_checked') is not True
+            or source_validation.get('source_book_sha256') != catalog['book']['sha256']
+            or source_validation.get('errors') != [] or source_validation.get('missing_sections') != []
+            or source_validation.get('section_hashes') != structural['section_hashes']
+            or source_validation.get('verified_sections') != len(catalog['sections'])):
+        raise ValueError('Missing or stale source validation for this content')
     compiled = []
     hashes = {}
     for expected in catalog['sections']:
@@ -231,10 +237,12 @@ def main() -> None:
     parser.add_argument('--catalog', type=Path, default=Path('content/curriculum.json'))
     parser.add_argument('--sections', type=Path, default=Path('content/sections'))
     parser.add_argument('--reviews', type=Path, default=Path('content/reviews'))
+    parser.add_argument('--source-validation', type=Path, default=Path('content/source-validation.json'))
     parser.add_argument('--output', type=Path, default=Path('app/public/study'))
     parser.add_argument('--preview', action='store_true', help='Local draft export; never use for release')
     args = parser.parse_args()
-    manifest = build(json.loads(args.catalog.read_text()), args.sections, args.reviews, args.output, args.preview)
+    proof = json.loads(args.source_validation.read_text()) if not args.preview and args.source_validation.exists() else None
+    manifest = build(json.loads(args.catalog.read_text()), args.sections, args.reviews, args.output, args.preview, proof)
     print(json.dumps({'counts': manifest['counts'], 'review_status': manifest['review_status']}, ensure_ascii=False))
 
 

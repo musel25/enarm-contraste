@@ -26,6 +26,8 @@ class FullDeckTests(unittest.TestCase):
         self.reviews = self.root / 'reviews'
         self.sections.mkdir()
         self.reviews.mkdir()
+        (self.root / 'pages').mkdir()
+        (self.root / 'pages/0001.txt').write_text('Una frase original del libro.')
         topics = []
         for index, name in enumerate(['Diagnóstico alfa', 'Diagnóstico beta'], 1):
             topics.append({'id': f'01.01-0{index}', 'name': name, 'source_pages': [1], 'pattern': f'Una persona consulta por fiebre con hallazgo {index} después de varios días de evolución clínica sin otro dato que permita establecer la causa.', 'key_discriminator': f'hallazgo {index}', 'mechanism': 'Una función alterada produce un cambio identificable durante el estudio y permite relacionar la causa con el hallazgo observado.', 'findings': [{'mechanism': f'Mecanismo {index}', 'finding': f'Consecuencia {index}'}], 'initial_action': f'Acción {index}', 'action_reason': 'La acción corrige el problema.', 'modifiers': [{'factor': 'Inestabilidad', 'action': 'Escalar atención', 'reason': 'Cambia la prioridad.'}], 'limits': 'El patrón requiere contexto.', 'evidence': [{'page': 1, 'quote': 'Una frase original del libro.'}], 'source_gaps': []})
@@ -39,7 +41,15 @@ class FullDeckTests(unittest.TestCase):
         (self.reviews / '01.json').write_text(json.dumps(review))
 
     def build(self, name='build'):
-        return self.module.build(self.catalog, self.sections, self.reviews, self.root / name)
+        proof = self.module.validate(self.catalog, self.sections, self.root / 'pages')
+        return self.module.build(self.catalog, self.sections, self.reviews, self.root / name, source_validation=proof)
+
+    def test_rejects_stale_source_validation(self):
+        proof = self.module.validate(self.catalog, self.sections, self.root / 'pages')
+        self.section['blocks'][0]['topics'][0]['initial_action'] = 'Cambiar la acción.'
+        self.write_section()
+        with self.assertRaisesRegex(ValueError, 'source validation'):
+            self.module.build(self.catalog, self.sections, self.reviews, self.root / 'stale', source_validation=proof)
 
     def test_two_formats_keep_corresponding_rows_and_real_anki_notes(self):
         manifest = self.build()
@@ -106,6 +116,32 @@ class FullDeckTests(unittest.TestCase):
         path.write_text(json.dumps(review))
         with self.assertRaisesRegex(ValueError, 'review'):
             self.build()
+
+    def test_rejects_missing_source_validation(self):
+        with self.assertRaisesRegex(ValueError, 'source validation'):
+            self.module.build(self.catalog, self.sections, self.reviews, self.root / 'unverified')
+
+    def audit(self):
+        spec = importlib.util.spec_from_file_location('verify_full_library', ROOT / 'scripts/verify_full_library.py')
+        module = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(module)
+        return module.audit(self.catalog, self.sections, self.root / 'build')
+
+    def test_audit_checks_real_packages_and_all_row_correspondences(self):
+        self.build()
+        report = self.audit()
+        self.assertEqual(report['cards'], 8)
+        self.assertEqual(report['anki_notes'], 8)
+        self.assertEqual(report['topic_occurrences'], 2)
+
+    def test_audit_rejects_swapped_answers(self):
+        self.build()
+        path = self.root / 'build/sections/01.json'
+        data = json.loads(path.read_text())
+        data['cards'][0]['back'].reverse()
+        path.write_text(json.dumps(data))
+        with self.assertRaisesRegex(ValueError, 'correspondence'):
+            self.audit()
 
 
 if __name__ == '__main__':
