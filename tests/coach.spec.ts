@@ -53,6 +53,7 @@ test("offers deadline mode, clear estimates and a mobile layout", async ({ page 
   expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true);
   await page.getByRole("button", { name: "Empezar mi plan", exact: true }).click();
   await expect(page.getByRole("region", { name: "Frente de la tarjeta" })).toBeVisible();
+  await expect(page.getByRole("region", { name: "Tu meta de hoy", exact: true })).toBeInViewport();
   expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true);
 });
 

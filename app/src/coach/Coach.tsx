@@ -28,7 +28,10 @@ function ReadyCoach({ manifest, index, suspended, onReview }: { manifest: StudyM
       const next = { ...draft, revision: previous.revision, plan: { ...draft.plan!, minutes_per_day: estimate.daily_minutes } };
       return { ...next, days: { ...next.days, [day]: createAssignment(next, index, day, estimate.daily_minutes) } };
     });
-    if (saved) setEditing(false);
+    if (saved) {
+      setEditing(false);
+      requestAnimationFrame(() => { document.getElementById("coach-today-title")?.focus({ preventScroll: true }); window.scrollTo({ top: 0, behavior: "instant" }); });
+    }
   }
   if (loading) return <main className="coach-main coach-loading" id="study" role="status">Abriendo tu progreso…</main>;
   return <>

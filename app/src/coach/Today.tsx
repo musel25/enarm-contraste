@@ -45,7 +45,7 @@ export default function Today({ state, index, day, saving, paused, forecast, cal
     if (saved.preferences.sound) playReward();
     delay.current = setTimeout(() => {
       setCelebrate(daily || course); setFeedback(null); action.current = false;
-      requestAnimationFrame(() => { document.getElementById("library-card-question")?.focus({ preventScroll: true }); document.querySelector(".coach-session")?.scrollIntoView({ behavior: reduced ? "instant" : "smooth", block: "start" }); });
+      requestAnimationFrame(() => { document.getElementById("library-card-question")?.focus({ preventScroll: true }); document.querySelector(".coach-daily-banner")?.scrollIntoView({ behavior: reduced ? "instant" : "smooth", block: "start" }); });
     }, reduced ? 90 : 650);
   }
   async function undo() {
@@ -58,7 +58,7 @@ export default function Today({ state, index, day, saving, paused, forecast, cal
     return { date, count: new Set(state.history.filter(a => a.day === date).map(a => a.card_id)).size };
   });
   return <main className={`coach-main coach-today ${state.preferences.low_motion ? "coach-low-motion" : ""}`} id="study" tabIndex={-1}>
-    <div className="coach-today-heading"><div><span className="coach-kicker"><span className="coach-live-dot" />{dateLabel(day)}</span><h1>Un poco más cerca<span>.</span></h1><p>Tu siguiente paso ya está listo.</p></div><button className="coach-edit-button" onClick={onEdit}><Icon name="branch" size={16} />Ajustar mi plan</button></div>
+    <div className="coach-today-heading"><div><span className="coach-kicker"><span className="coach-live-dot" />{dateLabel(day)}</span><h1 id="coach-today-title" tabIndex={-1}>Un poco más cerca<span>.</span></h1><p>Tu siguiente paso ya está listo.</p></div><button className="coach-edit-button" onClick={onEdit}><Icon name="branch" size={16} />Ajustar mi plan</button></div>
     <section className="coach-daily-banner" aria-label="Tu meta de hoy"><div className="coach-daily-count"><span className="coach-orbit" aria-hidden="true">{complete ? "✓" : "↗"}</span><div><span className="coach-overline">META DE HOY</span><strong>{stats.today_done}<span> / {stats.today_goal}</span><small> tarjetas</small></strong></div></div><div className="coach-daily-meter"><div><span>{complete ? "Tu esfuerzo de hoy ya cuenta." : stats.today_done ? "Una tarjeta a la vez. Ya avanzaste." : "Empieza con una. El resto viene después."}</span><strong>{stats.today_goal ? Math.round(stats.today_done / stats.today_goal * 100) : 0}%</strong></div><Progress label="Meta diaria" done={stats.today_done} goal={stats.today_goal} /><div className="coach-daily-detail"><span>{stats.remaining_seconds ? `≈ ${duration(stats.remaining_seconds)} pendientes` : complete ? "Objetivo cumplido" : "Sin tarjetas asignadas"}</span><span>{state.days[day]?.new_ids.length || 0} nuevas · {Math.max(0, stats.today_goal - (state.days[day]?.new_ids.length || 0))} repasos</span></div></div></section>
     <div className="coach-mobile-course" aria-hidden="true"><span>Primera vuelta <strong>{stats.covered.toLocaleString("es-MX")} / {stats.total.toLocaleString("es-MX")}</strong></span><div><i style={{ width: `${stats.coverage_percent}%` }} /></div></div>
     <div className="coach-today-layout"><div className="coach-focus-column">
