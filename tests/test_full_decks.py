@@ -219,6 +219,24 @@ class FullDeckTests(unittest.TestCase):
             self.assertIn(notes[0], self.module.render_back(card))
             self.assertNotIn(notes[0], self.module.render_front(card))
 
+    def test_audit_preserves_inline_punctuation_after_highlights(self):
+        self.section['blocks'][0]['topics'][0]['pattern'] = 'Una persona consulta por fiebre después de varios días de evolución clínica y en el estudio inicial aparece un hallazgo 1.'
+        self.write_section()
+        self.build()
+        self.assertEqual(self.audit()['cards'], 8)
+
+    def test_rejects_answer_in_another_comparison_case(self):
+        self.section['blocks'][0]['topics'][1]['pattern'] += ' Se sospecha diagnostico-alfa.'
+        self.write_section()
+        with self.assertRaisesRegex(ValueError, 'comparison front'):
+            self.build()
+
+    def test_rejects_answer_in_shared_comparison_context(self):
+        self.section['blocks'][0]['common_problem'] = 'El grupo estudia el diagnostico alfa.'
+        self.write_section()
+        with self.assertRaisesRegex(ValueError, 'comparison front'):
+            self.build()
+
 
 if __name__ == '__main__':
     unittest.main()

@@ -26,6 +26,8 @@ def require(condition: bool, message: str) -> None:
 
 
 class PlainText(HTMLParser):
+    blocks = {'p', 'h1', 'h2', 'h3', 'h4', 'ol', 'ul', 'li', 'div', 'section', 'details', 'summary', 'br', 'hr'}
+
     def __init__(self):
         super().__init__()
         self.parts = []
@@ -33,11 +35,19 @@ class PlainText(HTMLParser):
     def handle_data(self, data):
         self.parts.append(data)
 
+    def handle_starttag(self, tag, attrs):
+        if tag in self.blocks:
+            self.parts.append(' ')
+
+    def handle_endtag(self, tag):
+        if tag in self.blocks:
+            self.parts.append(' ')
+
 
 def text(html: str) -> str:
     parser = PlainText()
     parser.feed(html)
-    return re.sub(r'\s+', ' ', ' '.join(parser.parts)).strip()
+    return re.sub(r'\s+', ' ', ''.join(parser.parts)).strip()
 
 
 def ordered(values: list[str], rendered: str, identity: str) -> None:

@@ -105,6 +105,7 @@ def validate(catalog: dict, directory: Path, pages: Path | None, selected: list[
                 if topic.get('id') not in expected_topic_ids:
                     error('unexpected_topic', str(topic.get('id')), bid)
             indexed_topics = {topic.get('id'): topic for topic in topics}
+            comparison_front = ' '.join([block.get('common_problem', '')] + [topic.get('pattern', '') for topic in topics])
             for expected_topic in expected_block['topics']:
                 tid = expected_topic['id']
                 topic = indexed_topics.get(tid)
@@ -136,6 +137,8 @@ def validate(catalog: dict, directory: Path, pages: Path | None, selected: list[
                     text_field(topic, field, tid)
                 if answer_in_text(topic.get('answer_name', topic.get('name', '')), topic.get('pattern', '')):
                     error('answer_leak', tid, 'Answer leaked on recognition front')
+                if answer_in_text(topic.get('answer_name', topic.get('name', '')), comparison_front):
+                    error('answer_leak', tid, 'Answer leaked on comparison front')
                 for field, minimum, maximum in [('pattern', 20, 45), ('mechanism', 15, 35), ('initial_action', 1, 45)]:
                     words = len(topic.get(field, '').split())
                     if not minimum <= words <= maximum:
