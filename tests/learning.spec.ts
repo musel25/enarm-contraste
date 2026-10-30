@@ -173,9 +173,10 @@ test('library practice on a new day does not replace the real daily assignment',
   await page.getByRole('button', { name: 'Empezar mi plan', exact: true }).click();
   await expect(page.getByRole('progressbar', { name: 'Meta diaria' })).toHaveAttribute('aria-valuemax', '2');
   await page.getByRole('button', { name: 'Biblioteca', exact: true }).click();
-  await page.clock.fastForward(24 * 60 * 60 * 1000);
   await page.getByRole('button', { name: /Sección de prueba/ }).click();
   await page.getByRole('button', { name: 'Mostrar respuesta', exact: true }).click();
+  await expect(page.getByRole('button', { name: 'Lo reconocí', exact: true })).toBeEnabled();
+  await page.clock.fastForward(24 * 60 * 60 * 1000);
   await page.getByRole('button', { name: 'Lo reconocí', exact: true }).click();
   await expect(page.getByText('1 tarjeta reconocida', { exact: true })).toBeVisible();
   await page.getByRole('button', { name: 'Hoy', exact: true }).click();
