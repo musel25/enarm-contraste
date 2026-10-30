@@ -1,0 +1,1247 @@
+{
+  "id": "15",
+  "title": "Hematología",
+  "blocks": [
+    {
+      "id": "15.01",
+      "title": "Interpretar una anemia",
+      "topics": [
+        {
+          "id": "15.01-01",
+          "name": "Anemia generalidades",
+          "source_pages": [
+            443,
+            444
+          ],
+          "pattern": "Una persona con fatiga y palidez tiene hemoglobina baja. Antes de atribuirla a una deficiencia nutricional, se revisan volumen corpuscular medio, reticulocitos y frotis de sangre periférica.",
+          "key_discriminator": "volumen corpuscular medio, reticulocitos",
+          "mechanism": "El tamaño eritrocitario orienta el defecto de síntesis y los reticulocitos indican si la médula responde adecuadamente a la anemia.",
+          "findings": [
+            {
+              "mechanism": "Producción medular reducida",
+              "finding": "Reticulocitos bajos o inadecuados"
+            }
+          ],
+          "initial_action": "Clasificar por VCM y respuesta reticulocitaria antes de pedir estudios etiológicos dirigidos.",
+          "action_reason": "Separa producción insuficiente de pérdida o destrucción.",
+          "modifiers": [
+            {
+              "factor": "Reticulocitos elevados",
+              "action": "Investigar hemólisis o sangrado.",
+              "reason": "Sugieren respuesta regenerativa."
+            }
+          ],
+          "limits": "Los umbrales de hemoglobina dependen de edad, sexo y embarazo.",
+          "evidence": [
+            {
+              "page": 443,
+              "quote": "Clasificación por volumen corpuscular medio"
+            },
+            {
+              "page": 443,
+              "quote": "Reticulocitos > 2% regenerativa:"
+            }
+          ],
+          "source_gaps": [],
+          "verified_source_pages": [
+            443,
+            444
+          ]
+        }
+      ],
+      "common_problem": "Una persona tiene hemoglobina baja.",
+      "mother": {
+        "cue": "El tamaño eritrocitario y la respuesta reticulocitaria ordenan el estudio.",
+        "answer": "Clasificación de anemia",
+        "explanation": "La morfología y la producción medular orientan la causa."
+      }
+    },
+    {
+      "id": "15.02",
+      "title": "Anemia microcítica",
+      "topics": [
+        {
+          "id": "15.02-01",
+          "name": "Anemia ferropénica Adultos",
+          "source_pages": [
+            439,
+            440
+          ],
+          "pattern": "Una mujer con menstruaciones abundantes tiene cansancio, pica y uñas cóncavas. La biometría muestra microcitosis con distribución eritrocitaria amplia y el estudio confirma depósitos de hierro reducidos.",
+          "key_discriminator": "pica y uñas cóncavas",
+          "mechanism": "La pérdida de hierro agota depósitos y limita la síntesis de hemoglobina, generando eritrocitos pequeños e hipocrómicos y menor transporte de oxígeno.",
+          "findings": [
+            {
+              "mechanism": "Déficit de hierro",
+              "finding": "Microcitosis e hipocromía"
+            }
+          ],
+          "initial_action": "Medir ferritina, buscar la causa de pérdida e iniciar hierro oral cuando se confirme deficiencia.",
+          "action_reason": "La reposición sin corregir la causa puede ser insuficiente.",
+          "modifiers": [
+            {
+              "factor": "Intolerancia o falla del hierro oral",
+              "action": "Valorar hierro parenteral.",
+              "reason": "La fuente lo reserva para estos casos."
+            }
+          ],
+          "limits": "La inflamación puede modificar ferritina; no se usa una cifra aislada para toda situación.",
+          "evidence": [
+            {
+              "page": 440,
+              "quote": "disfagia, pica, síndrome de piernas inquietas, glositis,"
+            },
+            {
+              "page": 439,
+              "quote": "La primera línea de tratamiento es hierro oral"
+            }
+          ],
+          "source_gaps": [],
+          "verified_source_pages": [
+            439,
+            440
+          ]
+        },
+        {
+          "id": "15.02-02",
+          "name": "Anemia ferropénica Niños",
+          "source_pages": [
+            441,
+            442
+          ],
+          "pattern": "Un lactante con alimentación pobre en hierro presenta palidez y menor actividad. Tiene anemia microcítica con amplitud eritrocitaria elevada y no hay datos de otras citopenias.",
+          "key_discriminator": "alimentación pobre en hierro",
+          "mechanism": "Las necesidades del crecimiento superan el hierro disponible y agotan depósitos, limitando eritropoyesis y pudiendo afectar desarrollo incluso antes de anemia intensa.",
+          "findings": [
+            {
+              "mechanism": "Aporte insuficiente durante crecimiento",
+              "finding": "Microcitosis y palidez"
+            }
+          ],
+          "initial_action": "Evaluar biometría, reticulocitos y ferritina; corregir alimentación e indicar hierro oral según diagnóstico y peso.",
+          "action_reason": "Repone depósitos y aborda riesgo del desarrollo.",
+          "modifiers": [
+            {
+              "factor": "Sin respuesta pese a adherencia",
+              "action": "Referir para buscar otra causa.",
+              "reason": "La falta de corrección exige reevaluación."
+            }
+          ],
+          "limits": "No se aplica un umbral de adulto al lactante.",
+          "evidence": [
+            {
+              "page": 441,
+              "quote": "los requerimientos."
+            },
+            {
+              "page": 442,
+              "quote": "Ferritina sérica."
+            }
+          ],
+          "source_gaps": [],
+          "verified_source_pages": [
+            441,
+            442
+          ]
+        },
+        {
+          "id": "15.02-03",
+          "name": "Talasemias",
+          "source_pages": [
+            474
+          ],
+          "pattern": "Una persona con antecedentes familiares tiene microcitosis marcada persistente sin déficit de hierro demostrado. El frotis presenta células diana y la electroforesis muestra una distribución anormal de hemoglobinas.",
+          "key_discriminator": "microcitosis marcada persistente",
+          "mechanism": "La síntesis reducida de cadenas de globina causa desequilibrio entre ellas, eritropoyesis ineficaz y hemólisis de gravedad variable según el defecto heredado.",
+          "findings": [
+            {
+              "mechanism": "Síntesis reducida de globina",
+              "finding": "Microcitosis y células diana"
+            }
+          ],
+          "initial_action": "Estudiar hemoglobinas y clasificar gravedad; vigilar formas menores y referir formas sintomáticas.",
+          "action_reason": "Evita atribuir toda microcitosis a ferropenia.",
+          "modifiers": [
+            {
+              "factor": "Dependencia transfusional",
+              "action": "Vigilar sobrecarga de hierro y valorar quelación.",
+              "reason": "El hierro acumulado causa daño orgánico."
+            }
+          ],
+          "limits": "Algunas formas alfa requieren estudio adicional a la electroforesis.",
+          "evidence": [
+            {
+              "page": 474,
+              "quote": "deficiencia en la síntesis"
+            },
+            {
+              "page": 474,
+              "quote": "Talasemias menores (Alfa y Beta): Solo vigilancia."
+            }
+          ],
+          "source_gaps": [],
+          "verified_source_pages": [
+            474
+          ]
+        }
+      ],
+      "common_problem": "Una persona tiene anemia con eritrocitos pequeños.",
+      "mother": {
+        "cue": "La síntesis de hemoglobina disminuye por falta de hierro o de cadenas de globina.",
+        "answer": "Anemia microcítica",
+        "explanation": "El perfil de hierro y los antecedentes separan las causas."
+      }
+    },
+    {
+      "id": "15.03",
+      "title": "Anemia macrocítica",
+      "topics": [
+        {
+          "id": "15.03-01",
+          "name": "Anemias megaloblásticas",
+          "source_pages": [
+            449
+          ],
+          "pattern": "Una persona con dieta deficiente y fatiga tiene anemia macrocítica, neutrófilos hipersegmentados y DHL elevada. Presenta además parestesias y dificultad para reconocer la posición de los pies.",
+          "key_discriminator": "neutrófilos hipersegmentados",
+          "mechanism": "La deficiencia de B12 o folato altera síntesis de ADN y produce eritropoyesis ineficaz; el déficit de B12 también lesiona vías neurológicas.",
+          "findings": [
+            {
+              "mechanism": "Síntesis de ADN defectuosa",
+              "finding": "Macrocitosis e hipersegmentación"
+            }
+          ],
+          "initial_action": "Medir B12 y folato e iniciar reposición dirigida; considerar B12 cuando hay síntomas neurológicos.",
+          "action_reason": "La vitamina deficiente determina el tratamiento.",
+          "modifiers": [
+            {
+              "factor": "Ataxia o pérdida de propiocepción",
+              "action": "Priorizar evaluación de déficit de B12.",
+              "reason": "Es el componente neurológico descrito."
+            }
+          ],
+          "limits": "No atribuir la macrocitosis a folato sin considerar B12.",
+          "evidence": [
+            {
+              "page": 449,
+              "quote": "alteración en la síntesis de ADN."
+            },
+            {
+              "page": 449,
+              "quote": "Vitamina B12 parenteral"
+            }
+          ],
+          "source_gaps": [],
+          "verified_source_pages": [
+            449
+          ]
+        },
+        {
+          "id": "15.03-02",
+          "name": "Anemia perniciosa",
+          "source_pages": [
+            447
+          ],
+          "pattern": "Una persona mayor presenta anemia macrocítica, lengua dolorosa y alteración de la propiocepción. Tiene vitamina B12 baja y anticuerpos contra factor intrínseco, sin una causa dietética suficiente.",
+          "key_discriminator": "anticuerpos contra factor intrínseco",
+          "mechanism": "La autoinmunidad gástrica reduce factor intrínseco e impide absorción ileal de B12, causando anemia y daño neurológico por deficiencia persistente.",
+          "findings": [
+            {
+              "mechanism": "Malabsorción de B12",
+              "finding": "Macrocitosis y alteración neurológica"
+            }
+          ],
+          "initial_action": "Reponer B12 por vía parenteral y establecer seguimiento por gastritis autoinmune.",
+          "action_reason": "La causa de malabsorción persiste.",
+          "modifiers": [
+            {
+              "factor": "Síntomas neurológicos",
+              "action": "No retrasar la reposición mientras se completa estudio.",
+              "reason": "El déficit afecta vías sensitivas y motoras."
+            }
+          ],
+          "limits": "La prueba de Schilling del libro no es una prueba rutinaria actual.",
+          "evidence": [
+            {
+              "page": 447,
+              "quote": "déficit de factor"
+            },
+            {
+              "page": 447,
+              "quote": "Vitamina B12 parenteral"
+            }
+          ],
+          "source_gaps": [],
+          "verified_source_pages": [
+            447
+          ]
+        }
+      ],
+      "common_problem": "Una persona tiene anemia con eritrocitos grandes.",
+      "mother": {
+        "cue": "La síntesis de ADN falla por deficiencias nutricionales o de absorción.",
+        "answer": "Anemia megaloblástica",
+        "explanation": "La vitamina deficiente y el mecanismo de absorción cambian el manejo."
+      }
+    },
+    {
+      "id": "15.04",
+      "title": "Anemia hemolítica",
+      "topics": [
+        {
+          "id": "15.04-01",
+          "name": "Anemia hemolítica autoinmune",
+          "source_pages": [
+            445,
+            446
+          ],
+          "pattern": "Una mujer con palidez e ictericia tiene reticulocitos altos, bilirrubina indirecta elevada y Coombs directo positivo. El estudio identifica anticuerpos que reaccionan a temperatura corporal.",
+          "key_discriminator": "Coombs directo positivo",
+          "mechanism": "Los anticuerpos contra eritrocitos aceleran su eliminación; el tipo y la temperatura de reacción orientan mecanismo, causas asociadas y respuesta terapéutica.",
+          "findings": [
+            {
+              "mechanism": "Anticuerpos eritrocitarios calientes",
+              "finding": "Hemólisis con Coombs positivo"
+            }
+          ],
+          "initial_action": "Evaluar gravedad y causa; iniciar corticoide en hemólisis por anticuerpos calientes según valoración especializada.",
+          "action_reason": "Disminuye la destrucción inmunitaria en este subtipo.",
+          "modifiers": [
+            {
+              "factor": "Anticuerpos fríos",
+              "action": "Investigar causa y manejo específico.",
+              "reason": "No se extrapola el esquema de anticuerpos calientes."
+            }
+          ],
+          "limits": "La anemia rápidamente progresiva puede requerir atención urgente.",
+          "evidence": [
+            {
+              "page": 445,
+              "quote": "coombs directo positivo."
+            },
+            {
+              "page": 446,
+              "quote": "tratamiento inicial de la AHAI por anticuerpos"
+            }
+          ],
+          "source_gaps": [],
+          "verified_source_pages": [
+            445,
+            446
+          ]
+        },
+        {
+          "id": "15.04-02",
+          "name": "Anemia por deficiencia de G6PD",
+          "source_pages": [
+            448
+          ],
+          "pattern": "Un hombre presenta ictericia y orina oscura después de consumir habas durante una infección. Tiene anemia hemolítica con Coombs negativo y antecedente de episodios similares tras ciertos fármacos.",
+          "key_discriminator": "después de consumir habas",
+          "mechanism": "La deficiencia enzimática reduce defensa antioxidante del eritrocito, por lo que infecciones o sustancias oxidantes desencadenan daño y hemólisis intravascular aguda.",
+          "findings": [
+            {
+              "mechanism": "Vulnerabilidad oxidativa eritrocitaria",
+              "finding": "Hemólisis tras habas o fármacos"
+            }
+          ],
+          "initial_action": "Suspender el desencadenante, evaluar gravedad y estudiar actividad de G6PD.",
+          "action_reason": "El retiro de exposición previene mayor lesión.",
+          "modifiers": [
+            {
+              "factor": "Anemia grave o hemólisis persistente",
+              "action": "Valorar soporte y transfusión.",
+              "reason": "Puede comprometer oxigenación."
+            }
+          ],
+          "limits": "La actividad enzimática puede requerir repetición según el momento clínico.",
+          "evidence": [
+            {
+              "page": 448,
+              "quote": "Consumo de habas."
+            },
+            {
+              "page": 448,
+              "quote": "ingesta de alimentos y fármacos oxidantes."
+            }
+          ],
+          "source_gaps": [],
+          "verified_source_pages": [
+            448
+          ]
+        },
+        {
+          "id": "15.04-03",
+          "name": "Esferocitosis",
+          "source_pages": [
+            452
+          ],
+          "pattern": "Un niño con familiares de ictericia tiene esplenomegalia y anemia crónica. El frotis muestra eritrocitos esféricos, la concentración corpuscular de hemoglobina está elevada y el Coombs es negativo.",
+          "key_discriminator": "eritrocitos esféricos",
+          "mechanism": "Un defecto de proteínas de membrana disminuye deformabilidad eritrocitaria; las células quedan atrapadas en el bazo y se destruyen de forma extravascular.",
+          "findings": [
+            {
+              "mechanism": "Defecto de membrana",
+              "finding": "Esferocitos y esplenomegalia"
+            }
+          ],
+          "initial_action": "Confirmar hemólisis hereditaria con estudios de membrana según disponibilidad y valorar gravedad y litiasis.",
+          "action_reason": "La intensidad clínica guía soporte y posible esplenectomía.",
+          "modifiers": [
+            {
+              "factor": "Candidato a esplenectomía",
+              "action": "Preparar inmunización contra encapsulados.",
+              "reason": "La ausencia de bazo aumenta susceptibilidad infecciosa."
+            }
+          ],
+          "limits": "La esplenectomía no se indica de forma automática en enfermedad leve.",
+          "evidence": [
+            {
+              "page": 452,
+              "quote": "los eritrocitos quedan atrapados y lisados."
+            },
+            {
+              "page": 452,
+              "quote": "requieren inmunizaciones"
+            }
+          ],
+          "source_gaps": [],
+          "verified_source_pages": [
+            452
+          ]
+        },
+        {
+          "id": "15.04-04",
+          "name": "Drepanocitosis",
+          "source_pages": [
+            450
+          ],
+          "pattern": "Un niño tiene episodios de dolor intenso en manos y pies y anemia hemolítica. El frotis muestra eritrocitos en forma de hoz y la electroforesis identifica una hemoglobina anormal.",
+          "key_discriminator": "eritrocitos en forma de hoz",
+          "mechanism": "La hemoglobina S deforma eritrocitos y aumenta fragilidad y obstrucción microvascular, lo que produce hemólisis y episodios de isquemia dolorosa.",
+          "findings": [
+            {
+              "mechanism": "Eritrocitos rígidos y vasooclusión",
+              "finding": "Dolor e isquemia tisular"
+            }
+          ],
+          "initial_action": "Evaluar desencadenantes y gravedad; tratar dolor y corregir deshidratación con vigilancia clínica.",
+          "action_reason": "La deshidratación puede agravar la crisis.",
+          "modifiers": [
+            {
+              "factor": "Hipoxemia o complicación aguda",
+              "action": "Escalar soporte y valorar transfusión.",
+              "reason": "La crisis puede comprometer órganos."
+            }
+          ],
+          "limits": "No se prescribe oxígeno sistemático sin valorar oxigenación.",
+          "evidence": [
+            {
+              "page": 450,
+              "quote": "crisis vasooclusivas"
+            },
+            {
+              "page": 450,
+              "quote": "rehidratación"
+            }
+          ],
+          "source_gaps": [],
+          "verified_source_pages": [
+            450
+          ]
+        }
+      ],
+      "common_problem": "Una persona tiene anemia e ictericia.",
+      "mother": {
+        "cue": "La destrucción eritrocitaria supera la producción por causas inmunes o hereditarias.",
+        "answer": "Anemia hemolítica",
+        "explanation": "Coombs y los antecedentes orientan el mecanismo."
+      }
+    },
+    {
+      "id": "15.05",
+      "title": "Hemólisis intravascular especial",
+      "topics": [
+        {
+          "id": "15.05-01",
+          "name": "Hemoglobinuria paroxística nocturna",
+          "source_pages": [
+            454
+          ],
+          "pattern": "Una persona tiene hemólisis con Coombs negativo, orina oscura y trombosis de una vena abdominal. Además presenta citopenias; se solicita una prueba que evalúe proteínas reguladoras del complemento.",
+          "key_discriminator": "trombosis de una vena abdominal",
+          "mechanism": "Una mutación adquirida de la célula madre elimina proteínas ancladas protectoras del complemento, volviendo vulnerables los eritrocitos y favoreciendo hemólisis y trombosis.",
+          "findings": [
+            {
+              "mechanism": "Falta de protección frente a complemento",
+              "finding": "Hemólisis intravascular y trombosis inusual"
+            }
+          ],
+          "initial_action": "Solicitar citometría de flujo para detectar el clon y referir a hematología.",
+          "action_reason": "La demostración del defecto clonal orienta tratamiento específico.",
+          "modifiers": [
+            {
+              "factor": "Hemólisis clínica significativa",
+              "action": "Valorar inhibición del complemento.",
+              "reason": "Eculizumab bloquea C5 según la fuente."
+            }
+          ],
+          "limits": "Las pruebas de Ham y sacarosa no se recomiendan.",
+          "evidence": [
+            {
+              "page": 454,
+              "quote": "Citometría de flujo"
+            },
+            {
+              "page": 454,
+              "quote": "Tratamiento de elección: Eculizumab,"
+            }
+          ],
+          "source_gaps": [],
+          "verified_source_pages": [
+            454
+          ]
+        }
+      ],
+      "common_problem": "Una persona tiene hemólisis y trombosis inusual.",
+      "mother": {
+        "cue": "Un defecto adquirido vuelve al eritrocito susceptible al complemento.",
+        "answer": "Hemólisis clonal por complemento",
+        "explanation": "La trombosis y la citometría orientan el diagnóstico."
+      }
+    },
+    {
+      "id": "15.06",
+      "title": "Pancitopenia o hiperviscosidad",
+      "topics": [
+        {
+          "id": "15.06-01",
+          "name": "Anemia aplásica",
+          "source_pages": [
+            438
+          ],
+          "pattern": "Una persona presenta cansancio, infecciones repetidas y petequias. La biometría muestra pancitopenia con reticulocitos bajos; es necesario distinguir falla de producción medular de infiltración por una neoplasia.",
+          "key_discriminator": "pancitopenia con reticulocitos bajos",
+          "mechanism": "La reducción del tejido hematopoyético impide producir suficientes eritrocitos, neutrófilos y plaquetas, causando anemia, infecciones y sangrado por falla de varias series.",
+          "findings": [
+            {
+              "mechanism": "Hipoplasia hematopoyética",
+              "finding": "Citopenias de tres series"
+            }
+          ],
+          "initial_action": "Solicitar estudio de médula ósea y descartar causas adquiridas y congénitas; dar soporte según citopenias.",
+          "action_reason": "La biopsia distingue hipoplasia de infiltración u otros trastornos.",
+          "modifiers": [
+            {
+              "factor": "Paciente joven con donante compatible",
+              "action": "Valorar trasplante alogénico.",
+              "reason": "Puede ofrecer tratamiento definitivo."
+            }
+          ],
+          "limits": "No toda pancitopenia es aplasia.",
+          "evidence": [
+            {
+              "page": 438,
+              "quote": "disminución de células sanguíneas"
+            },
+            {
+              "page": 438,
+              "quote": "Aspirado de médula ósea"
+            }
+          ],
+          "source_gaps": [],
+          "verified_source_pages": [
+            438
+          ]
+        },
+        {
+          "id": "15.06-02",
+          "name": "Policitemia vera",
+          "source_pages": [
+            469
+          ],
+          "pattern": "Un hombre presenta cefalea, plétora facial y prurito después del baño. Tiene hematocrito elevado, leucocitosis y plaquetas altas; se estudia una causa clonal frente a eritrocitosis por hipoxia.",
+          "key_discriminator": "prurito después del baño",
+          "mechanism": "La expansión mieloproliferativa asociada a JAK2 aumenta masa eritrocitaria y puede elevar otras series, aumentando viscosidad y riesgo de trombosis.",
+          "findings": [
+            {
+              "mechanism": "Producción clonal excesiva",
+              "finding": "Plétora, prurito y eritrocitosis"
+            }
+          ],
+          "initial_action": "Descartar causas secundarias, estudiar JAK2 y referir para control del hematocrito y riesgo trombótico.",
+          "action_reason": "Distingue una neoplasia de respuesta a hipoxia.",
+          "modifiers": [
+            {
+              "factor": "Riesgo trombótico o síntomas",
+              "action": "Valorar flebotomía y tratamiento individualizado.",
+              "reason": "Reducir masa eritrocitaria disminuye complicaciones."
+            }
+          ],
+          "limits": "La eritrocitosis secundaria no es policitemia vera.",
+          "evidence": [
+            {
+              "page": 469,
+              "quote": "Plétora facial"
+            },
+            {
+              "page": 469,
+              "quote": "La flebotomía es el pilar de la terapia"
+            }
+          ],
+          "source_gaps": [],
+          "verified_source_pages": [
+            469
+          ]
+        }
+      ],
+      "common_problem": "Una persona presenta alteración de varias series sanguíneas.",
+      "mother": {
+        "cue": "La producción medular puede estar reducida o aumentada de forma clonal.",
+        "answer": "Trastorno de producción medular",
+        "explanation": "Las series afectadas y la médula distinguen el proceso."
+      }
+    },
+    {
+      "id": "15.07",
+      "title": "Púrpura o sangrado",
+      "topics": [
+        {
+          "id": "15.07-01",
+          "name": "Trombocitopenia inmune",
+          "source_pages": [
+            475
+          ],
+          "pattern": "Un niño presenta petequias y epistaxis después de una infección viral. La biometría muestra plaquetas bajas aisladas, sin anemia ni prolongación de tiempos de coagulación y sin otros hallazgos sistémicos.",
+          "key_discriminator": "plaquetas bajas aisladas",
+          "mechanism": "La destrucción inmunitaria de plaquetas reduce hemostasia primaria y produce sangrado mucocutáneo sin requerir alteración de factores ni de otras series sanguíneas.",
+          "findings": [
+            {
+              "mechanism": "Destrucción plaquetaria inmune",
+              "finding": "Petequias y epistaxis"
+            }
+          ],
+          "initial_action": "Excluir otras causas con historia, examen y frotis; decidir observación o tratamiento según sangrado y contexto.",
+          "action_reason": "La intensidad del sangrado importa además del recuento.",
+          "modifiers": [
+            {
+              "factor": "Niño sin sangrado significativo",
+              "action": "Considerar vigilancia.",
+              "reason": "La fuente permite observar sin depender solo del número."
+            }
+          ],
+          "limits": "La presentación atípica exige buscar otra etiología.",
+          "evidence": [
+            {
+              "page": 475,
+              "quote": "no tendrán anemia, ni prolongación de tiempos."
+            },
+            {
+              "page": 475,
+              "quote": "Sin datos de sangrado"
+            }
+          ],
+          "source_gaps": [],
+          "verified_source_pages": [
+            475
+          ]
+        },
+        {
+          "id": "15.07-02",
+          "name": "Hemofilias",
+          "source_pages": [
+            453
+          ],
+          "pattern": "Un niño presenta hemartrosis recurrente y hematomas profundos. Tiene TTPa prolongado, TP normal y plaquetas normales; varios varones maternos han tenido sangrado parecido desde la infancia.",
+          "key_discriminator": "hemartrosis recurrente",
+          "mechanism": "La deficiencia hereditaria de factores de la vía intrínseca impide formar un coágulo estable, causando hemorragia profunda y articular con patrón ligado al cromosoma X.",
+          "findings": [
+            {
+              "mechanism": "Déficit de factor VIII o IX",
+              "finding": "Hemartrosis y TTPa prolongado"
+            }
+          ],
+          "initial_action": "Medir actividad de factores y tratar sangrado con reposición específica según el tipo.",
+          "action_reason": "La reposición corrige el factor deficiente.",
+          "modifiers": [
+            {
+              "factor": "Traumatismo craneal",
+              "action": "Atender como urgencia hemorrágica.",
+              "reason": "Puede provocar sangrado intracraneal grave."
+            }
+          ],
+          "limits": "La desmopresina solo corresponde a determinados pacientes con hemofilia A.",
+          "evidence": [
+            {
+              "page": 453,
+              "quote": "Hemartros (predomina en rodilla)."
+            },
+            {
+              "page": 453,
+              "quote": "Concentrado factor IX."
+            }
+          ],
+          "source_gaps": [],
+          "verified_source_pages": [
+            453
+          ]
+        },
+        {
+          "id": "15.07-03",
+          "name": "Enfermedad de Von Willebrand",
+          "source_pages": [
+            451
+          ],
+          "pattern": "Una adolescente presenta epistaxis frecuente, menstruaciones abundantes y sangrado gingival. Tiene antecedentes familiares similares y un TTPa normal; se necesita evaluar adhesión plaquetaria y actividad de un factor transportador.",
+          "key_discriminator": "epistaxis frecuente, menstruaciones abundantes",
+          "mechanism": "El defecto cuantitativo o funcional del factor von Willebrand reduce adhesión plaquetaria y puede disminuir estabilidad del factor VIII, con sangrado mucocutáneo.",
+          "findings": [
+            {
+              "mechanism": "Adhesión plaquetaria defectuosa",
+              "finding": "Epistaxis y menorragia"
+            }
+          ],
+          "initial_action": "Solicitar antígeno y actividad de FvW y factor VIII; planear hemostasia según subtipo y respuesta.",
+          "action_reason": "Un TTPa normal no excluye el trastorno.",
+          "modifiers": [
+            {
+              "factor": "Tipo 3 o 2B",
+              "action": "Valorar concentrado de FvW/FVIII.",
+              "reason": "No se extrapola desmopresina a todos los tipos."
+            }
+          ],
+          "limits": "La respuesta y las contraindicaciones deben valorarse antes de desmopresina.",
+          "evidence": [
+            {
+              "page": 451,
+              "quote": "El TTP normal no excluye"
+            },
+            {
+              "page": 451,
+              "quote": "concentrados de"
+            }
+          ],
+          "source_gaps": [],
+          "verified_source_pages": [
+            451
+          ]
+        }
+      ],
+      "common_problem": "Una persona presenta sangrado o púrpura.",
+      "mother": {
+        "cue": "La falla de plaquetas o de factores produce distintos tipos de hemorragia.",
+        "answer": "Trastorno de hemostasia",
+        "explanation": "El sitio de sangrado y los estudios orientan la causa."
+      }
+    },
+    {
+      "id": "15.08",
+      "title": "Trombocitopenia con daño orgánico",
+      "topics": [
+        {
+          "id": "15.08-01",
+          "name": "Púrpura trombocitopénica trombótica",
+          "source_pages": [
+            470
+          ],
+          "pattern": "Una mujer presenta trombocitopenia, anemia con esquistocitos y confusión reciente. No es necesario esperar que aparezcan fiebre y lesión renal para sospechar una microangiopatía que requiere tratamiento urgente.",
+          "key_discriminator": "anemia con esquistocitos y confusión",
+          "mechanism": "La deficiencia grave de ADAMTS13 permite persistencia de multímeros de FvW que forman microtrombos, consumen plaquetas y fragmentan eritrocitos en la microcirculación.",
+          "findings": [
+            {
+              "mechanism": "Microtrombos plaquetarios",
+              "finding": "Trombocitopenia y hemólisis microangiopática"
+            }
+          ],
+          "initial_action": "Obtener muestra para ADAMTS13 y activar atención hematológica urgente con intercambio plasmático ante alta sospecha.",
+          "action_reason": "La demora aumenta riesgo de daño orgánico.",
+          "modifiers": [
+            {
+              "factor": "Pentada incompleta",
+              "action": "No retrasar tratamiento por ese motivo.",
+              "reason": "La fuente reconoce que no siempre está completa."
+            }
+          ],
+          "limits": "La finalidad del intercambio descrita al final de la página es errónea y se corrige con fuente oficial.",
+          "evidence": [
+            {
+              "page": 470,
+              "quote": "esquistocitosis en sangre periférica."
+            },
+            {
+              "page": 470,
+              "quote": "Plasmaférisis"
+            }
+          ],
+          "source_gaps": [],
+          "external_sources": [
+            {
+              "label": "ISTH: diagnóstico de PTT",
+              "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8146131/",
+              "quote": "Start TPE and corticosteroids without waiting for the results of ADAMTS13 testing",
+              "checked_at": "2026-10-29"
+            }
+          ],
+          "source_corrections": [
+            "Se obtiene muestra ADAMTS13 antes de plasma sin retrasar tratamiento. El intercambio repone ADAMTS13 y elimina inhibidores; no elimina la enzima como dice el libro."
+          ],
+          "verified_source_pages": [
+            470
+          ]
+        },
+        {
+          "id": "15.08-02",
+          "name": "Síndrome hemolítico urémico",
+          "source_pages": [
+            472,
+            473
+          ],
+          "pattern": "Un niño desarrolla palidez y oliguria varios días después de diarrea sanguinolenta. Presenta trombocitopenia, anemia hemolítica con esquistocitos y elevación de creatinina, con predominio de lesión renal.",
+          "key_discriminator": "después de diarrea sanguinolenta",
+          "mechanism": "La lesión endotelial relacionada con toxina Shiga favorece microangiopatía y hemólisis, con consumo plaquetario y daño renal predominante en el cuadro típico.",
+          "findings": [
+            {
+              "mechanism": "Microangiopatía renal",
+              "finding": "Oliguria, hemólisis y trombocitopenia"
+            }
+          ],
+          "initial_action": "Evaluar función renal y electrolitos, buscar toxina Shiga y dar soporte de complicaciones con nefrología.",
+          "action_reason": "La gravedad renal determina vigilancia y necesidad de diálisis.",
+          "modifiers": [
+            {
+              "factor": "Sin pródromo típico o recurrencia",
+              "action": "Investigar forma mediada por complemento.",
+              "reason": "Tiene mecanismo y tratamiento distintos."
+            }
+          ],
+          "limits": "El manejo de la forma atípica no se limita al soporte.",
+          "evidence": [
+            {
+              "page": 473,
+              "quote": "anemia hemolítica microangiopátíca"
+            },
+            {
+              "page": 473,
+              "quote": "soporte y resolución de"
+            }
+          ],
+          "source_gaps": [],
+          "external_sources": [
+            {
+              "label": "FDA: eculizumab en SHU atípico",
+              "url": "https://www.accessdata.fda.gov/scripts/opdlisting/oopd/detailedIndex.cfm?cfgridkey=279509",
+              "quote": "Treatment of atypical hemolytic uremic syndrome",
+              "checked_at": "2026-10-29"
+            }
+          ],
+          "source_corrections": [
+            "La afirmación general de que no hay tratamiento para SHU no aplica a la forma mediada por complemento; existe inhibición de C5."
+          ],
+          "verified_source_pages": [
+            472,
+            473
+          ]
+        }
+      ],
+      "common_problem": "Una persona tiene plaquetas bajas y daño orgánico.",
+      "mother": {
+        "cue": "Los microtrombos consumen plaquetas y fragmentan eritrocitos.",
+        "answer": "Microangiopatía trombótica",
+        "explanation": "El órgano predominante y la causa cambian el tratamiento."
+      }
+    },
+    {
+      "id": "15.09",
+      "title": "Blastos y leucemia aguda",
+      "topics": [
+        {
+          "id": "15.09-01",
+          "name": "Leucemia linfoblástica aguda",
+          "source_pages": [
+            455,
+            456,
+            457,
+            458
+          ],
+          "pattern": "Un niño tiene dolor óseo, palidez, fiebre persistente y petequias. La biometría muestra citopenias y blastos; el inmunofenotipo identifica precursores linfoides que ocupan la médula ósea.",
+          "key_discriminator": "inmunofenotipo identifica precursores linfoides",
+          "mechanism": "La expansión de linfoblastos desplaza hematopoyesis normal e infiltra tejidos, causando citopenias, dolor óseo y posible compromiso ganglionar o del sistema nervioso central.",
+          "findings": [
+            {
+              "mechanism": "Infiltración medular por blastos",
+              "finding": "Anemia, infecciones y sangrado"
+            }
+          ],
+          "initial_action": "Referir de forma urgente para estudio medular, inmunofenotipo, citogenética y evaluación de complicaciones.",
+          "action_reason": "La clasificación guía tratamiento y estratificación.",
+          "modifiers": [
+            {
+              "factor": "Síntomas neurológicos o masa mediastinal",
+              "action": "Ampliar evaluación urgente.",
+              "reason": "Puede existir infiltración o compresión."
+            }
+          ],
+          "limits": "No iniciar esteroides sin coordinación diagnóstica; los umbrales del libro requieren clasificación vigente.",
+          "evidence": [
+            {
+              "page": 456,
+              "quote": "el dolor óseo es lo más común"
+            },
+            {
+              "page": 457,
+              "quote": "lnmunofenotipo utilizando anticuerpos monoclonales"
+            }
+          ],
+          "source_gaps": [],
+          "verified_source_pages": [
+            455,
+            456,
+            457,
+            458
+          ]
+        },
+        {
+          "id": "15.09-02",
+          "name": "Leucemia mieloblástica aguda",
+          "source_pages": [
+            460,
+            461,
+            462,
+            463
+          ],
+          "pattern": "Una persona con palidez y sangrado tiene blastos con gránulos y bastones de Auer. Además presenta coagulopatía, por lo que una variante promielocítica debe reconocerse con rapidez.",
+          "key_discriminator": "bastones de Auer",
+          "mechanism": "La proliferación de precursores mieloides inmaduros desplaza hematopoyesis; la variante promielocítica tiene riesgo hemorrágico grave y requiere tratamiento específico inmediato.",
+          "findings": [
+            {
+              "mechanism": "Blastos mieloides y coagulopatía",
+              "finding": "Citopenias y hemorragia"
+            }
+          ],
+          "initial_action": "Solicitar atención hematológica urgente y estudio medular; ante sospecha promielocítica, iniciar ATRA y soporte bajo protocolo sin esperar citogenética.",
+          "action_reason": "El retraso puede causar hemorragia fatal.",
+          "modifiers": [
+            {
+              "factor": "Sospecha PML-RARA",
+              "action": "Priorizar confirmación molecular y soporte de coagulación.",
+              "reason": "Define una urgencia tratable."
+            }
+          ],
+          "limits": "Los esquemas de inducción requieren especialidad.",
+          "evidence": [
+            {
+              "page": 462,
+              "quote": "Promielocítica (bastones de Auer)."
+            },
+            {
+              "page": 463,
+              "quote": "aún cuando no se tenga confirmado"
+            }
+          ],
+          "source_gaps": [],
+          "verified_source_pages": [
+            460,
+            461,
+            462,
+            463
+          ]
+        },
+        {
+          "id": "15.09-03",
+          "name": "Síndrome de lisis tumoral",
+          "source_pages": [
+            471
+          ],
+          "pattern": "Una persona con neoplasia de alta carga tumoral desarrolla hiperpotasemia, hiperfosfatemia y ácido úrico elevado tras iniciar tratamiento. La creatinina aumenta y necesita vigilancia de arritmias y función renal.",
+          "key_discriminator": "hiperpotasemia, hiperfosfatemia y ácido úrico elevado",
+          "mechanism": "La destrucción celular rápida libera potasio, fósforo y ácidos nucleicos; la carga metabólica produce alteraciones electrolíticas y lesión renal aguda.",
+          "findings": [
+            {
+              "mechanism": "Liberación masiva intracelular",
+              "finding": "Alteraciones metabólicas y deterioro renal"
+            }
+          ],
+          "initial_action": "Monitorizar ECG, electrolitos y función renal; iniciar hidratación ajustada y reducción de ácido úrico según riesgo.",
+          "action_reason": "Previene o trata arritmia y lesión renal.",
+          "modifiers": [
+            {
+              "factor": "Deficiencia de G6PD",
+              "action": "Evitar rasburicasa.",
+              "reason": "La fuente señala esta excepción."
+            }
+          ],
+          "limits": "Los umbrales de fósforo del libro tienen discrepancias; no se usan como criterio único.",
+          "evidence": [
+            {
+              "page": 471,
+              "quote": "liberación súbita y masiva"
+            },
+            {
+              "page": 471,
+              "quote": "excepto en DG6PD"
+            }
+          ],
+          "source_gaps": [],
+          "verified_source_pages": [
+            471
+          ]
+        }
+      ],
+      "common_problem": "Una persona tiene citopenias, blastos o alteraciones metabólicas.",
+      "mother": {
+        "cue": "La proliferación tumoral desplaza hematopoyesis y puede liberar contenido celular de forma brusca.",
+        "answer": "Neoplasia hematológica aguda y sus urgencias",
+        "explanation": "El linaje y las complicaciones definen la prioridad."
+      }
+    },
+    {
+      "id": "15.10",
+      "title": "Leucocitosis crónica",
+      "topics": [
+        {
+          "id": "15.10-01",
+          "name": "Leucemia linfocítica crónica",
+          "source_pages": [
+            459
+          ],
+          "pattern": "Un hombre mayor asintomático tiene linfocitosis persistente y ganglios no dolorosos. El estudio identifica un clon de linfocitos B maduros; no presenta anemia ni trombocitopenia por falla medular.",
+          "key_discriminator": "clon de linfocitos B maduros",
+          "mechanism": "Los linfocitos B clonales de vida prolongada se acumulan en sangre, médula y tejidos linfoides, pudiendo alterar inmunidad y producción sanguínea.",
+          "findings": [
+            {
+              "mechanism": "Acumulación linfoide clonal",
+              "finding": "Linfocitosis y adenopatías"
+            }
+          ],
+          "initial_action": "Confirmar clon por inmunofenotipo y estadificar; considerar vigilancia si no hay criterios de enfermedad activa.",
+          "action_reason": "No toda linfocitosis clonal requiere tratamiento inmediato.",
+          "modifiers": [
+            {
+              "factor": "Anemia o trombocitopenia",
+              "action": "Investigar mecanismo y criterios terapéuticos.",
+              "reason": "Puede deberse a infiltración o autoinmunidad."
+            }
+          ],
+          "limits": "La selección farmacológica actual depende de genética y condición clínica.",
+          "evidence": [
+            {
+              "page": 459,
+              "quote": "linfocitos B monoclonales"
+            },
+            {
+              "page": 459,
+              "quote": "Solo vigilancia"
+            }
+          ],
+          "source_gaps": [],
+          "verified_source_pages": [
+            459
+          ]
+        },
+        {
+          "id": "15.10-02",
+          "name": "Leucemia mieloide crónica",
+          "source_pages": [
+            464
+          ],
+          "pattern": "Una persona tiene leucocitosis mieloide persistente, esplenomegalia y pocos blastos. El análisis molecular detecta BCR-ABL1; se requiere clasificar la fase antes de elegir tratamiento dirigido.",
+          "key_discriminator": "detecta BCR-ABL1",
+          "mechanism": "La fusión BCR-ABL genera una tirosina cinasa activa que impulsa proliferación mieloide; la acumulación de blastos marca progresión hacia fase avanzada.",
+          "findings": [
+            {
+              "mechanism": "Cinasa BCR-ABL activa",
+              "finding": "Leucocitosis mieloide y esplenomegalia"
+            }
+          ],
+          "initial_action": "Confirmar BCR-ABL1 y fase; referir para inhibidor de tirosina cinasa y seguimiento molecular.",
+          "action_reason": "El blanco molecular define tratamiento y respuesta.",
+          "modifiers": [
+            {
+              "factor": "Fase blástica o resistencia",
+              "action": "Reevaluar estrategia especializada.",
+              "reason": "Implica enfermedad de mayor riesgo."
+            }
+          ],
+          "limits": "No se adopta la recomendación del libro sobre hidroxiurea en embarazo.",
+          "evidence": [
+            {
+              "page": 464,
+              "quote": "o PCR para detectar el gen de fusión BCR/ABLl."
+            },
+            {
+              "page": 464,
+              "quote": "lnhibidor de Tirosin Quinasa"
+            }
+          ],
+          "source_gaps": [],
+          "external_sources": [
+            {
+              "label": "European LeukemiaNet 2025",
+              "url": "https://pmc.ncbi.nlm.nih.gov/articles/12310532/",
+              "quote": "It is infrequently given during pregnancy",
+              "checked_at": "2026-10-29"
+            }
+          ],
+          "source_corrections": [
+            "El embarazo necesita estrategia especializada; no se adopta hidroxiurea como sustitución automática del inhibidor de cinasa."
+          ],
+          "verified_source_pages": [
+            464
+          ]
+        }
+      ],
+      "common_problem": "Una persona tiene leucocitosis persistente.",
+      "mother": {
+        "cue": "La expansión clonal de linfocitos o células mieloides produce un patrón crónico.",
+        "answer": "Leucemia crónica",
+        "explanation": "El linaje y la genética distinguen las entidades."
+      }
+    },
+    {
+      "id": "15.11",
+      "title": "Adenopatía persistente",
+      "topics": [
+        {
+          "id": "15.11-01",
+          "name": "Linfoma de Hodgking",
+          "source_pages": [
+            465,
+            466
+          ],
+          "pattern": "Una persona joven presenta una adenopatía cervical firme no dolorosa que persiste varias semanas. Tiene sudoración nocturna y pérdida de peso; la biopsia identifica células grandes binucleadas características.",
+          "key_discriminator": "adenopatía cervical firme no dolorosa",
+          "mechanism": "La neoplasia linfoide con células de Reed-Sternberg altera arquitectura ganglionar y puede producir síntomas sistémicos; su extensión anatómica determina estadificación y manejo.",
+          "findings": [
+            {
+              "mechanism": "Proliferación linfoide ganglionar",
+              "finding": "Adenopatía persistente y síntomas B"
+            }
+          ],
+          "initial_action": "Realizar biopsia escisional y estadificación con imagen antes de elegir tratamiento.",
+          "action_reason": "El tejido clasifica la neoplasia y la extensión orienta terapia.",
+          "modifiers": [
+            {
+              "factor": "Síntomas B o enfermedad voluminosa",
+              "action": "Incorporarlos a estratificación.",
+              "reason": "Modifican riesgo y estrategia."
+            }
+          ],
+          "limits": "Los síntomas B solos no confirman linfoma.",
+          "evidence": [
+            {
+              "page": 465,
+              "quote": "Linfadenopatía firme indolora"
+            },
+            {
+              "page": 466,
+              "quote": "Biopsia escisional"
+            }
+          ],
+          "source_gaps": [],
+          "verified_source_pages": [
+            465,
+            466
+          ]
+        },
+        {
+          "id": "15.11-02",
+          "name": "Linfoma no Hodgkin",
+          "source_pages": [
+            467
+          ],
+          "pattern": "Una persona con inmunosupresión presenta adenopatías generalizadas no contiguas y una masa abdominal. La sospecha es una neoplasia linfoide; es necesario conservar tejido suficiente para conocer el subtipo.",
+          "key_discriminator": "adenopatías generalizadas no contiguas",
+          "mechanism": "La transformación maligna de células B o T produce tumores de comportamiento variable; el subtipo y la extensión condicionan tratamiento y pronóstico.",
+          "findings": [
+            {
+              "mechanism": "Proliferación linfoide diversa",
+              "finding": "Ganglios y afectación extranodal"
+            }
+          ],
+          "initial_action": "Obtener biopsia escisional con histología e inmunofenotipo y estadificar.",
+          "action_reason": "El tratamiento depende del subtipo y marcadores.",
+          "modifiers": [
+            {
+              "factor": "Expresión de CD20",
+              "action": "Valorar terapia anti-CD20 dentro del esquema indicado.",
+              "reason": "Aporta un blanco terapéutico."
+            }
+          ],
+          "limits": "R-CHOP no es un esquema universal para todos los linfomas.",
+          "evidence": [
+            {
+              "page": 467,
+              "quote": "manifestaciones extra nodales"
+            },
+            {
+              "page": 467,
+              "quote": "biopsia excisional"
+            }
+          ],
+          "source_gaps": [],
+          "verified_source_pages": [
+            467
+          ]
+        }
+      ],
+      "common_problem": "Una persona tiene ganglios aumentados persistentes.",
+      "mother": {
+        "cue": "La proliferación linfoide requiere tejido para clasificar tipo y extensión.",
+        "answer": "Neoplasia linfoide ganglionar",
+        "explanation": "La biopsia conserva la arquitectura necesaria para clasificación."
+      }
+    },
+    {
+      "id": "15.12",
+      "title": "Dolor óseo y anemia",
+      "topics": [
+        {
+          "id": "15.12-01",
+          "name": "Mieloma múltiple",
+          "source_pages": [
+            468
+          ],
+          "pattern": "Un hombre mayor presenta dolor vertebral, anemia y deterioro renal. La electroforesis detecta un pico monoclonal y el estudio medular muestra proliferación de células plasmáticas; se evalúa daño óseo.",
+          "key_discriminator": "pico monoclonal",
+          "mechanism": "Las células plasmáticas clonales producen inmunoglobulina monoclonal y dañan médula, hueso y riñón; la carga clonal debe relacionarse con criterios de enfermedad activa.",
+          "findings": [
+            {
+              "mechanism": "Infiltración plasmática y proteína monoclonal",
+              "finding": "Anemia, lesión ósea y daño renal"
+            }
+          ],
+          "initial_action": "Completar estudio de proteína monoclonal, médula y daño orgánico; referir a hematología.",
+          "action_reason": "Distingue enfermedad activa de otras gammapatías.",
+          "modifiers": [
+            {
+              "factor": "Lesiones osteolíticas",
+              "action": "Valorar tratamiento óseo y prevención de fracturas.",
+              "reason": "La destrucción ósea causa complicaciones."
+            }
+          ],
+          "limits": "Los criterios y esquemas de la página no sustituyen clasificación vigente.",
+          "evidence": [
+            {
+              "page": 468,
+              "quote": "proteína monoclonal"
+            },
+            {
+              "page": 468,
+              "quote": "Si hay lesiones osteolíticas"
+            }
+          ],
+          "source_gaps": [],
+          "verified_source_pages": [
+            468
+          ]
+        }
+      ],
+      "common_problem": "Una persona tiene dolor óseo y anemia.",
+      "mother": {
+        "cue": "La proliferación plasmática produce proteína monoclonal y daño de órganos.",
+        "answer": "Neoplasia de células plasmáticas",
+        "explanation": "La relación entre clon y daño orgánico define el problema."
+      }
+    }
+  ]
+}
