@@ -883,7 +883,7 @@
               "finding": "Vómitos"
             }
           ],
-          "initial_action": "Estabilizar ABCDE y valorar Glasgow adaptado a edad. Aplicar una regla pediátrica validada para decidir TAC u observación y solicitar apoyo especializado si hay deterioro.",
+          "initial_action": "Estabilizar ABCDE, valorar Glasgow adaptado y solicitar TAC urgente por alteración del estado mental; pedir valoración especializada. Reservar observación sin imagen inicial para niños sin signos de alto riesgo.",
           "action_reason": "La decisión combina riesgo clínico, edad y evolución.",
           "modifiers": [
             {
@@ -908,7 +908,12 @@
               "quote": "Cualquier alteración en el comportamiento habitual del paciente"
             }
           ],
-          "source_gaps": []
+          "source_gaps": [],
+          "source_corrections": [
+            {
+              "reason": "La somnolencia y menor respuesta del caso representan alteración mental. La regla de la página 72 la sitúa en alto riesgo e indica TAC; se precisa esa acción en lugar de dejar observación como alternativa equivalente."
+            }
+          ]
         },
         {
           "id": "03.08-03",
