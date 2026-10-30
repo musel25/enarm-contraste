@@ -12,7 +12,19 @@ Hoy abre la primera tarjeta asignada. Revelar la respuesta no suma progreso. Cal
 
 La **primera vuelta** cuenta tarjetas practicadas al menos una vez. No indica dominio. Los repasos continúan después. Las animaciones respetan la preferencia de movimiento reducido. El sonido está apagado al inicio.
 
-El plan se guarda en IndexedDB en este dispositivo. **Copia de mi progreso** permite exportar o importar el plan y las respuestas. Una importación conserva una copia del estado anterior. No hay sincronización de cuentas. La biblioteca permite práctica libre con marcas separadas. Anki conserva su propio progreso.
+El plan se guarda en IndexedDB en este dispositivo. **Copia de mi progreso** permite exportar o importar el plan y las respuestas. Una importación conserva una copia del estado anterior. No hay sincronización de cuentas. Las respuestas nuevas de Biblioteca y Mi avance usan el mismo registro que Hoy. Anki conserva su propio progreso.
+
+## Avance y subtests
+
+**Mi avance** muestra la primera vuelta por sección y bloque. Indica flashcards practicadas y pendientes, fecha de inicio, respuestas, errores, dificultades y próximo repaso. Una respuesta «Difícil» se cuenta por separado de un error. Los avisos de bloque y sección completos aparecen después de guardar la respuesta. Deshacer restaura el avance.
+
+Elige una sección y un bloque para preparar un subtest. Selecciona preguntas concretas, todos los errores registrados o los repasos de hoy. Puedes combinar Eje Clínico y Patrones Madre. Después de responder, elige las preguntas que quieres repetir en la misma sesión. El resultado muestra la fecha del próximo repaso. Repetir una pregunta aumenta las respuestas, pero no el número de tarjetas únicas.
+
+**Casos diagnósticos** separa los casos de Eje Clínico. Fácil muestra una pista y opciones. Medio conserva las opciones sin la pista. Se puede confundir pide escribir el diagnóstico y el dato que distingue antes de comparar y calificar. Puedes combinar los tres niveles. Los casos de la biblioteca conservan su viñeta original en estos modos.
+
+El bloque de amenorreas de Ginecología añade **24 viñetas distintas**, tres por diagnóstico: Turner, Mayer-Rokitansky-Küster-Hauser, insensibilidad completa a andrógenos, himen imperforado, tabique vaginal transverso, Kallmann, amenorrea hipotalámica funcional y disgenesia gonadal completa 46,XY. Cada diagnóstico tiene un caso fácil, uno medio y uno de contraste. Esta ampliación enlaza fuentes primarias y tiene revisión clínica profesional pendiente. No modifica los mazos Anki revisados.
+
+Los casos diagnósticos tienen memoria de repaso propia. Se cuentan aparte de las 2,900 flashcards. Una respuesta conjunta de Eje Clínico se atribuye al bloque; un caso individual permite identificar el tema del error. Las marcas antiguas de Biblioteca se conservan, pero no inventan respuestas históricas ni fechas de estudio.
 
 ## Dos formatos
 
@@ -46,7 +58,7 @@ npm run prepare:study
 npm run dev
 ```
 
-Abre `http://127.0.0.1:4178/`. `/#hoy` abre el plan. `/#biblioteca` abre la biblioteca. `/#amenorrea` y `/#ictericia` abren la muestra anterior.
+Abre `http://127.0.0.1:4178/`. `/#hoy` abre el plan. `/#biblioteca` abre la biblioteca. `/#avance` abre los avances y subtests. `/#avance?section=14&block=14.01&mode=cases` abre los casos de amenorrea. `/#amenorrea` y `/#ictericia` abren la muestra anterior.
 
 ```sh
 uv run python -m unittest discover -s tests -p 'test_*.py'
