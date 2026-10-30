@@ -1,0 +1,2102 @@
+{
+  "schema_version": 1,
+  "section_id": "28",
+  "author": "practice_24_34",
+  "source_sha256": "34ffedfb940f9387c17d75813d1eb99711bca0b4c0c6301a4fe8fcec545935ce",
+  "groups": [
+    {
+      "id": "28.01-01",
+      "parent_topic_id": "28.01-01",
+      "block_id": "28.01",
+      "name": "Vigilar crecimiento, desarrollo y prevención de forma longitudinal",
+      "answer_kind": "decision",
+      "variants": {
+        "easy": {
+          "vignette": "Un lactante acude sin síntomas a control. Se dispone de medidas previas y cartilla de vacunas. La consulta requiere evaluar alimentación, crecimiento, desarrollo, audición, visión y prevención de accidentes.",
+          "discriminator": "Se dispone de medidas previas",
+          "explanation": "El dato decisivo es Se dispone de medidas previas. Medir y registrar peso, longitud y perímetro cefálico; revisar desarrollo, alimentación, tamices y vacunación. La vigilancia compara medidas seriadas e integra desarrollo y prevención. Una visita normal no sustituye las posteriores.",
+          "confusable_with": "Consulta limitada a enfermedad aguda o a una sola medida",
+          "why_not": "La vigilancia compara medidas seriadas e integra desarrollo y prevención. Una visita normal no sustituye las posteriores.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Un lactante acude sin síntomas a control. Se dispone de medidas previas y cartilla de vacunas. La consulta requiere evaluar alimentación, crecimiento, desarrollo, audición, visión y prevención de accidentes."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "Se dispone de medidas previas"
+            },
+            {
+              "field": "mechanism",
+              "text": "La vigilancia seriada compara crecimiento y desarrollo con edad y trayectoria individual, identifica desviaciones y permite prevención, tamizaje y orientación oportuna a la familia."
+            },
+            {
+              "field": "initial_action",
+              "text": "Medir y registrar peso, longitud y perímetro cefálico; revisar desarrollo, alimentación, tamices y vacunación."
+            },
+            {
+              "field": "action_reason",
+              "text": "La evaluación integra salud y prevención."
+            },
+            {
+              "field": "limits",
+              "text": "Una visita normal no sustituye seguimiento longitudinal."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Desviación de trayectoria"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Riesgo detectado antes de síntomas"
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Crecimiento anormal o signos neurológicos"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Reevaluar y referir según hallazgos"
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "Puede existir enfermedad subyacente"
+            }
+          ]
+        },
+        "medium": {
+          "vignette": "En una visita sin síntomas se detecta que la trayectoria de crecimiento de un lactante cambió. ¿Qué evaluación y posible referencia corresponden?",
+          "discriminator": "desviación de la trayectoria de crecimiento",
+          "explanation": "El dato decisivo es desviación de la trayectoria de crecimiento. Reevaluar la trayectoria y referir según hallazgos por posible enfermedad subyacente. La vigilancia compara medidas seriadas e integra desarrollo y prevención. Una visita normal no sustituye las posteriores.",
+          "confusable_with": "Consulta limitada a enfermedad aguda o a una sola medida",
+          "why_not": "La vigilancia compara medidas seriadas e integra desarrollo y prevención. Una visita normal no sustituye las posteriores.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Un lactante acude sin síntomas a control. Se dispone de medidas previas y cartilla de vacunas. La consulta requiere evaluar alimentación, crecimiento, desarrollo, audición, visión y prevención de accidentes."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "Se dispone de medidas previas"
+            },
+            {
+              "field": "mechanism",
+              "text": "La vigilancia seriada compara crecimiento y desarrollo con edad y trayectoria individual, identifica desviaciones y permite prevención, tamizaje y orientación oportuna a la familia."
+            },
+            {
+              "field": "initial_action",
+              "text": "Medir y registrar peso, longitud y perímetro cefálico; revisar desarrollo, alimentación, tamices y vacunación."
+            },
+            {
+              "field": "action_reason",
+              "text": "La evaluación integra salud y prevención."
+            },
+            {
+              "field": "limits",
+              "text": "Una visita normal no sustituye seguimiento longitudinal."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Desviación de trayectoria"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Riesgo detectado antes de síntomas"
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Crecimiento anormal o signos neurológicos"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Reevaluar y referir según hallazgos"
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "Puede existir enfermedad subyacente"
+            }
+          ]
+        },
+        "contrast": {
+          "vignette": "Una familia solicita revisar solo las vacunas porque la consulta previa fue normal. ¿Qué evaluación integral del niño debe mantenerse en esta visita?",
+          "discriminator": "necesidad de seguimiento longitudinal pese a visita normal",
+          "explanation": "El dato decisivo es necesidad de seguimiento longitudinal pese a visita normal. Mantener evaluación de crecimiento, desarrollo, alimentación, tamices y vacunas, con seguimiento longitudinal. La vigilancia compara medidas seriadas e integra desarrollo y prevención. Una visita normal no sustituye las posteriores.",
+          "confusable_with": "Consulta limitada a enfermedad aguda o a una sola medida",
+          "why_not": "La vigilancia compara medidas seriadas e integra desarrollo y prevención. Una visita normal no sustituye las posteriores.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Un lactante acude sin síntomas a control. Se dispone de medidas previas y cartilla de vacunas. La consulta requiere evaluar alimentación, crecimiento, desarrollo, audición, visión y prevención de accidentes."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "Se dispone de medidas previas"
+            },
+            {
+              "field": "mechanism",
+              "text": "La vigilancia seriada compara crecimiento y desarrollo con edad y trayectoria individual, identifica desviaciones y permite prevención, tamizaje y orientación oportuna a la familia."
+            },
+            {
+              "field": "initial_action",
+              "text": "Medir y registrar peso, longitud y perímetro cefálico; revisar desarrollo, alimentación, tamices y vacunación."
+            },
+            {
+              "field": "action_reason",
+              "text": "La evaluación integra salud y prevención."
+            },
+            {
+              "field": "limits",
+              "text": "Una visita normal no sustituye seguimiento longitudinal."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Desviación de trayectoria"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Riesgo detectado antes de síntomas"
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Crecimiento anormal o signos neurológicos"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Reevaluar y referir según hallazgos"
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "Puede existir enfermedad subyacente"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "28.01-02",
+      "parent_topic_id": "28.01-02",
+      "block_id": "28.01",
+      "name": "Evaluar el desarrollo por dominios y detectar señales de alarma",
+      "answer_kind": "decision",
+      "variants": {
+        "easy": {
+          "vignette": "Una familia pregunta si el desarrollo de su hijo es adecuado. El niño adquiere nuevas habilidades y pierde reflejos primitivos conforme crece. Se revisan áreas motora, lenguaje y socialización.",
+          "discriminator": "pierde reflejos primitivos",
+          "explanation": "El dato decisivo es pierde reflejos primitivos. Evaluar desarrollo por dominios y comparar progresión con edad; usar instrumento validado si hay sospecha de retraso. Los hitos tienen rangos y requieren contexto. La pérdida de habilidades o la asimetría exige evaluación especializada.",
+          "confusable_with": "Usar una fecha rígida de un hito como diagnóstico aislado",
+          "why_not": "Los hitos tienen rangos y requieren contexto. La pérdida de habilidades o la asimetría exige evaluación especializada.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Una familia pregunta si el desarrollo de su hijo es adecuado. El niño adquiere nuevas habilidades y pierde reflejos primitivos conforme crece. Se revisan áreas motora, lenguaje y socialización."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "pierde reflejos primitivos"
+            },
+            {
+              "field": "mechanism",
+              "text": "La maduración cortical modifica reflejos y permite habilidades motoras, comunicativas y sociales en secuencia; la edad, simetría y progresión orientan detección de alteraciones del desarrollo."
+            },
+            {
+              "field": "initial_action",
+              "text": "Evaluar desarrollo por dominios y comparar progresión con edad; usar instrumento validado si hay sospecha de retraso."
+            },
+            {
+              "field": "action_reason",
+              "text": "Una habilidad aislada no define desarrollo global."
+            },
+            {
+              "field": "limits",
+              "text": "Los hitos son rangos y requieren contexto; no todos ocurren el mismo día."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Maduración cortical progresiva"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Supresión de reflejos primitivos"
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Asimetría o pérdida de habilidades"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Referir para evaluación"
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "No corresponde a simple variación esperada"
+            }
+          ]
+        },
+        "medium": {
+          "vignette": "Un niño deja de realizar habilidades que ya había adquirido. ¿Qué conducta corresponde al evaluar su desarrollo?",
+          "discriminator": "pérdida de habilidades adquiridas",
+          "explanation": "El dato decisivo es pérdida de habilidades adquiridas. Referir por pérdida de habilidades, que no es una variación esperada. Los hitos tienen rangos y requieren contexto. La pérdida de habilidades o la asimetría exige evaluación especializada.",
+          "confusable_with": "Usar una fecha rígida de un hito como diagnóstico aislado",
+          "why_not": "Los hitos tienen rangos y requieren contexto. La pérdida de habilidades o la asimetría exige evaluación especializada.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Una familia pregunta si el desarrollo de su hijo es adecuado. El niño adquiere nuevas habilidades y pierde reflejos primitivos conforme crece. Se revisan áreas motora, lenguaje y socialización."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "pierde reflejos primitivos"
+            },
+            {
+              "field": "mechanism",
+              "text": "La maduración cortical modifica reflejos y permite habilidades motoras, comunicativas y sociales en secuencia; la edad, simetría y progresión orientan detección de alteraciones del desarrollo."
+            },
+            {
+              "field": "initial_action",
+              "text": "Evaluar desarrollo por dominios y comparar progresión con edad; usar instrumento validado si hay sospecha de retraso."
+            },
+            {
+              "field": "action_reason",
+              "text": "Una habilidad aislada no define desarrollo global."
+            },
+            {
+              "field": "limits",
+              "text": "Los hitos son rangos y requieren contexto; no todos ocurren el mismo día."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Maduración cortical progresiva"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Supresión de reflejos primitivos"
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Asimetría o pérdida de habilidades"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Referir para evaluación"
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "No corresponde a simple variación esperada"
+            }
+          ]
+        },
+        "contrast": {
+          "vignette": "La familia compara a su hijo con otro niño y pregunta por un hito que aún no aparece. Se deben revisar edad, progresión y áreas motora, de lenguaje y social. ¿Qué evaluación corresponde?",
+          "discriminator": "progresión por dominios y rangos de adquisición",
+          "explanation": "El dato decisivo es progresión por dominios y rangos de adquisición. Evaluar dominios y progresión por edad; usar instrumento validado si se sospecha retraso. Los hitos tienen rangos y requieren contexto. La pérdida de habilidades o la asimetría exige evaluación especializada.",
+          "confusable_with": "Usar una fecha rígida de un hito como diagnóstico aislado",
+          "why_not": "Los hitos tienen rangos y requieren contexto. La pérdida de habilidades o la asimetría exige evaluación especializada.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Una familia pregunta si el desarrollo de su hijo es adecuado. El niño adquiere nuevas habilidades y pierde reflejos primitivos conforme crece. Se revisan áreas motora, lenguaje y socialización."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "pierde reflejos primitivos"
+            },
+            {
+              "field": "mechanism",
+              "text": "La maduración cortical modifica reflejos y permite habilidades motoras, comunicativas y sociales en secuencia; la edad, simetría y progresión orientan detección de alteraciones del desarrollo."
+            },
+            {
+              "field": "initial_action",
+              "text": "Evaluar desarrollo por dominios y comparar progresión con edad; usar instrumento validado si hay sospecha de retraso."
+            },
+            {
+              "field": "action_reason",
+              "text": "Una habilidad aislada no define desarrollo global."
+            },
+            {
+              "field": "limits",
+              "text": "Los hitos son rangos y requieren contexto; no todos ocurren el mismo día."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Maduración cortical progresiva"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Supresión de reflejos primitivos"
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Asimetría o pérdida de habilidades"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Referir para evaluación"
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "No corresponde a simple variación esperada"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "28.02-01",
+      "parent_topic_id": "28.02-01",
+      "block_id": "28.02",
+      "name": "Clasificar la talla con velocidad, contexto familiar y edad ósea",
+      "answer_kind": "decision",
+      "variants": {
+        "easy": {
+          "vignette": "Un escolar tiene estatura baja, pero sus padres también son bajos. Su velocidad de crecimiento es conservada y la edad ósea corresponde a la cronológica. No presenta síntomas sistémicos.",
+          "discriminator": "velocidad de crecimiento es conservada",
+          "explanation": "El dato decisivo es velocidad de crecimiento es conservada. Confirmar mediciones, graficar talla y velocidad, calcular talla familiar y valorar edad ósea y pubertad. La velocidad y la trayectoria permiten distinguir una variante familiar de hipocrecimiento patológico.",
+          "confusable_with": "Concluir talla baja familiar con una sola medición",
+          "why_not": "La velocidad y la trayectoria permiten distinguir una variante familiar de hipocrecimiento patológico.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Un escolar tiene estatura baja, pero sus padres también son bajos. Su velocidad de crecimiento es conservada y la edad ósea corresponde a la cronológica. No presenta síntomas sistémicos."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "velocidad de crecimiento es conservada"
+            },
+            {
+              "field": "mechanism",
+              "text": "La talla refleja potencial genético y velocidad de crecimiento; maduración ósea y puberal ayudan a distinguir variante familiar, retraso constitucional y enfermedad que limita crecimiento."
+            },
+            {
+              "field": "initial_action",
+              "text": "Confirmar mediciones, graficar talla y velocidad, calcular talla familiar y valorar edad ósea y pubertad."
+            },
+            {
+              "field": "action_reason",
+              "text": "Define patrón y necesidad de estudio."
+            },
+            {
+              "field": "limits",
+              "text": "No concluir variante normal con una sola medición."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Potencial familiar bajo"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Talla baja con velocidad conservada"
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Velocidad reducida o síntomas sistémicos"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Buscar causa y referir"
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "Sugiere hipocrecimiento patológico"
+            }
+          ]
+        },
+        "medium": {
+          "vignette": "Un escolar de talla baja empieza a reducir su velocidad de crecimiento y presenta síntomas sistémicos. ¿Qué evaluación debe hacerse antes de atribuirlo a herencia?",
+          "discriminator": "velocidad reducida y síntomas sistémicos",
+          "explanation": "El dato decisivo es velocidad reducida y síntomas sistémicos. Buscar causa de hipocrecimiento patológico y referir por velocidad reducida o síntomas sistémicos. La velocidad y la trayectoria permiten distinguir una variante familiar de hipocrecimiento patológico.",
+          "confusable_with": "Concluir talla baja familiar con una sola medición",
+          "why_not": "La velocidad y la trayectoria permiten distinguir una variante familiar de hipocrecimiento patológico.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Un escolar tiene estatura baja, pero sus padres también son bajos. Su velocidad de crecimiento es conservada y la edad ósea corresponde a la cronológica. No presenta síntomas sistémicos."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "velocidad de crecimiento es conservada"
+            },
+            {
+              "field": "mechanism",
+              "text": "La talla refleja potencial genético y velocidad de crecimiento; maduración ósea y puberal ayudan a distinguir variante familiar, retraso constitucional y enfermedad que limita crecimiento."
+            },
+            {
+              "field": "initial_action",
+              "text": "Confirmar mediciones, graficar talla y velocidad, calcular talla familiar y valorar edad ósea y pubertad."
+            },
+            {
+              "field": "action_reason",
+              "text": "Define patrón y necesidad de estudio."
+            },
+            {
+              "field": "limits",
+              "text": "No concluir variante normal con una sola medición."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Potencial familiar bajo"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Talla baja con velocidad conservada"
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Velocidad reducida o síntomas sistémicos"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Buscar causa y referir"
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "Sugiere hipocrecimiento patológico"
+            }
+          ]
+        },
+        "contrast": {
+          "vignette": "Un niño con padres de estatura baja mantiene velocidad de crecimiento y edad ósea acordes. Solo se cuenta con una medición actual. ¿Qué información longitudinal se necesita para clasificar su talla?",
+          "discriminator": "potencial familiar y necesidad de mediciones seriadas",
+          "explanation": "El dato decisivo es potencial familiar y necesidad de mediciones seriadas. Confirmar mediciones y graficar talla y velocidad junto con talla familiar, edad ósea y pubertad. La velocidad y la trayectoria permiten distinguir una variante familiar de hipocrecimiento patológico.",
+          "confusable_with": "Concluir talla baja familiar con una sola medición",
+          "why_not": "La velocidad y la trayectoria permiten distinguir una variante familiar de hipocrecimiento patológico.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Un escolar tiene estatura baja, pero sus padres también son bajos. Su velocidad de crecimiento es conservada y la edad ósea corresponde a la cronológica. No presenta síntomas sistémicos."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "velocidad de crecimiento es conservada"
+            },
+            {
+              "field": "mechanism",
+              "text": "La talla refleja potencial genético y velocidad de crecimiento; maduración ósea y puberal ayudan a distinguir variante familiar, retraso constitucional y enfermedad que limita crecimiento."
+            },
+            {
+              "field": "initial_action",
+              "text": "Confirmar mediciones, graficar talla y velocidad, calcular talla familiar y valorar edad ósea y pubertad."
+            },
+            {
+              "field": "action_reason",
+              "text": "Define patrón y necesidad de estudio."
+            },
+            {
+              "field": "limits",
+              "text": "No concluir variante normal con una sola medición."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Potencial familiar bajo"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Talla baja con velocidad conservada"
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Velocidad reducida o síntomas sistémicos"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Buscar causa y referir"
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "Sugiere hipocrecimiento patológico"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "28.03-01",
+      "parent_topic_id": "28.03-01",
+      "block_id": "28.03",
+      "name": "Reflujo gastroesofágico del lactante",
+      "answer_kind": "diagnosis",
+      "variants": {
+        "easy": {
+          "vignette": "Un lactante regurgita pequeñas cantidades después de comer sin esfuerzo. Se alimenta bien, gana peso y no tiene síntomas respiratorios ni dolor. Su exploración es normal. ¿Cuál es el diagnóstico más probable?",
+          "discriminator": "gana peso",
+          "explanation": "El dato decisivo es gana peso. El paso transitorio de contenido gástrico al esófago puede ser fisiológico en lactantes; se considera enfermedad cuando provoca síntomas relevantes, lesión o complicaciones nutricionales y respiratorias. La regurgitación sin esfuerzo con crecimiento adecuado favorece un fenómeno gastroesofágico sin daño. Si hay repercusión ponderal, se deben investigar enfermedad y otras causas antes de atribuirla a una forma fisiológica.",
+          "confusable_with": "Vómito por otra causa digestiva",
+          "why_not": "La regurgitación sin esfuerzo con crecimiento adecuado favorece un fenómeno gastroesofágico sin daño. Si hay repercusión ponderal, se deben investigar enfermedad y otras causas antes de atribuirla a una forma fisiológica.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Un lactante regurgita pequeñas cantidades después de comer sin esfuerzo. Se alimenta bien, gana peso y no tiene síntomas respiratorios ni dolor. Su exploración es normal."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "gana peso"
+            },
+            {
+              "field": "mechanism",
+              "text": "El paso transitorio de contenido gástrico al esófago puede ser fisiológico en lactantes; se considera enfermedad cuando provoca síntomas relevantes, lesión o complicaciones nutricionales y respiratorias."
+            },
+            {
+              "field": "initial_action",
+              "text": "Explicar evolución y revisar técnica y volumen de alimentación; mantener sueño en decúbito supino."
+            },
+            {
+              "field": "action_reason",
+              "text": "Evita sobretratamiento y protege seguridad del sueño."
+            },
+            {
+              "field": "limits",
+              "text": "No usar supresión ácida de rutina por regurgitación aislada."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Reflujo sin daño funcional"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Regurgitación con crecimiento adecuado"
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Mala ganancia ponderal"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Investigar enfermedad y otras causas"
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "No es el patrón fisiológico"
+            }
+          ]
+        },
+        "medium": {
+          "vignette": "Un lactante presenta regurgitación después de comer y ahora gana poco peso. ¿Cuál es el diagnóstico más probable en este contexto?",
+          "discriminator": "regurgitación con repercusión ponderal",
+          "explanation": "El dato decisivo es regurgitación con repercusión ponderal. El paso transitorio de contenido gástrico al esófago puede ser fisiológico en lactantes; se considera enfermedad cuando provoca síntomas relevantes, lesión o complicaciones nutricionales y respiratorias. La regurgitación sin esfuerzo con crecimiento adecuado favorece un fenómeno gastroesofágico sin daño. Si hay repercusión ponderal, se deben investigar enfermedad y otras causas antes de atribuirla a una forma fisiológica.",
+          "confusable_with": "Vómito por otra causa digestiva",
+          "why_not": "La regurgitación sin esfuerzo con crecimiento adecuado favorece un fenómeno gastroesofágico sin daño. Si hay repercusión ponderal, se deben investigar enfermedad y otras causas antes de atribuirla a una forma fisiológica.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Un lactante regurgita pequeñas cantidades después de comer sin esfuerzo. Se alimenta bien, gana peso y no tiene síntomas respiratorios ni dolor. Su exploración es normal."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "gana peso"
+            },
+            {
+              "field": "mechanism",
+              "text": "El paso transitorio de contenido gástrico al esófago puede ser fisiológico en lactantes; se considera enfermedad cuando provoca síntomas relevantes, lesión o complicaciones nutricionales y respiratorias."
+            },
+            {
+              "field": "initial_action",
+              "text": "Explicar evolución y revisar técnica y volumen de alimentación; mantener sueño en decúbito supino."
+            },
+            {
+              "field": "action_reason",
+              "text": "Evita sobretratamiento y protege seguridad del sueño."
+            },
+            {
+              "field": "limits",
+              "text": "No usar supresión ácida de rutina por regurgitación aislada."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Reflujo sin daño funcional"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Regurgitación con crecimiento adecuado"
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Mala ganancia ponderal"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Investigar enfermedad y otras causas"
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "No es el patrón fisiológico"
+            }
+          ]
+        },
+        "contrast": {
+          "vignette": "Tras revisar técnica y volumen, un lactante conserva buen crecimiento y regurgita sin esfuerzo. ¿Cuál es el diagnóstico más probable en este contexto?",
+          "discriminator": "regurgitación persistente con crecimiento conservado",
+          "explanation": "El dato decisivo es regurgitación persistente con crecimiento conservado. El paso transitorio de contenido gástrico al esófago puede ser fisiológico en lactantes; se considera enfermedad cuando provoca síntomas relevantes, lesión o complicaciones nutricionales y respiratorias. La regurgitación sin esfuerzo con crecimiento adecuado favorece un fenómeno gastroesofágico sin daño. Si hay repercusión ponderal, se deben investigar enfermedad y otras causas antes de atribuirla a una forma fisiológica.",
+          "confusable_with": "Vómito por otra causa digestiva",
+          "why_not": "La regurgitación sin esfuerzo con crecimiento adecuado favorece un fenómeno gastroesofágico sin daño. Si hay repercusión ponderal, se deben investigar enfermedad y otras causas antes de atribuirla a una forma fisiológica.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Un lactante regurgita pequeñas cantidades después de comer sin esfuerzo. Se alimenta bien, gana peso y no tiene síntomas respiratorios ni dolor. Su exploración es normal."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "gana peso"
+            },
+            {
+              "field": "mechanism",
+              "text": "El paso transitorio de contenido gástrico al esófago puede ser fisiológico en lactantes; se considera enfermedad cuando provoca síntomas relevantes, lesión o complicaciones nutricionales y respiratorias."
+            },
+            {
+              "field": "initial_action",
+              "text": "Explicar evolución y revisar técnica y volumen de alimentación; mantener sueño en decúbito supino."
+            },
+            {
+              "field": "action_reason",
+              "text": "Evita sobretratamiento y protege seguridad del sueño."
+            },
+            {
+              "field": "limits",
+              "text": "No usar supresión ácida de rutina por regurgitación aislada."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Reflujo sin daño funcional"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Regurgitación con crecimiento adecuado"
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Mala ganancia ponderal"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Investigar enfermedad y otras causas"
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "No es el patrón fisiológico"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "28.03-02",
+      "parent_topic_id": "28.03-02",
+      "block_id": "28.03",
+      "name": "Alergia alimentaria",
+      "answer_kind": "diagnosis",
+      "variants": {
+        "easy": {
+          "vignette": "Un niño presenta urticaria y vómitos poco después de comer un alimento. Los episodios se repiten con la misma exposición. Se requiere confirmar relación y evaluar riesgo de reacción sistémica. ¿Cuál es el diagnóstico más probable?",
+          "discriminator": "se repiten con la misma exposición",
+          "explanation": "El dato decisivo es se repiten con la misma exposición. La respuesta inmunológica frente a proteínas alimentarias puede activar IgE y mastocitos o vías no mediadas por IgE, causando síntomas cutáneos, digestivos o respiratorios. La urticaria y la reacción sistémica orientan a alergia. La valoración aguda no debe retrasarse para confirmar el alimento.",
+          "confusable_with": "Intolerancia alimentaria sin mecanismo alérgico",
+          "why_not": "La urticaria y la reacción sistémica orientan a alergia. La valoración aguda no debe retrasarse para confirmar el alimento.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Un niño presenta urticaria y vómitos poco después de comer un alimento. Los episodios se repiten con la misma exposición. Se requiere confirmar relación y evaluar riesgo de reacción sistémica."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "se repiten con la misma exposición"
+            },
+            {
+              "field": "mechanism",
+              "text": "La respuesta inmunológica frente a proteínas alimentarias puede activar IgE y mastocitos o vías no mediadas por IgE, causando síntomas cutáneos, digestivos o respiratorios."
+            },
+            {
+              "field": "initial_action",
+              "text": "Evaluar anafilaxia de inmediato; si hay reacción sistémica, administrar adrenalina intramuscular y atención urgente. Tras estabilizar, retirar el alimento sospechoso y referir para diagnóstico dirigido, nutrición y plan de emergencias."
+            },
+            {
+              "field": "action_reason",
+              "text": "Evita nueva exposición sin restricciones innecesarias."
+            },
+            {
+              "field": "limits",
+              "text": "Distinguir prevención en lactante no alérgico de reexposición en niño con reacción. No hacer pruebas o retos en casa tras una reacción sistémica."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Activación alérgica alimentaria"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Urticaria y síntomas tras ingesta"
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Anafilaxia"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Administrar adrenalina intramuscular y atención urgente"
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "La reacción puede comprometer respiración y circulación"
+            },
+            {
+              "field": "source_corrections.0.reason",
+              "text": "No retrasar alérgenos de forma preventiva hasta dos años. La introducción temprana de cacahuate puede prevenir alergia en lactantes seleccionados con evaluación de riesgo."
+            },
+            {
+              "field": "source_corrections.1.reason",
+              "text": "Una reacción grave previa eleva riesgo y puede hacer innecesario un reto diagnóstico, pero la decisión se individualiza en un entorno equipado; no es una prohibición vitalicia universal."
+            }
+          ]
+        },
+        "medium": {
+          "vignette": "Después de un alimento aparecen síntomas sistémicos con compromiso respiratorio o circulatorio. ¿Cuál es el diagnóstico más probable en este contexto?",
+          "discriminator": "reacción sistémica relacionada con ingesta",
+          "explanation": "El dato decisivo es reacción sistémica relacionada con ingesta. La respuesta inmunológica frente a proteínas alimentarias puede activar IgE y mastocitos o vías no mediadas por IgE, causando síntomas cutáneos, digestivos o respiratorios. La urticaria y la reacción sistémica orientan a alergia. La valoración aguda no debe retrasarse para confirmar el alimento.",
+          "confusable_with": "Intolerancia alimentaria sin mecanismo alérgico",
+          "why_not": "La urticaria y la reacción sistémica orientan a alergia. La valoración aguda no debe retrasarse para confirmar el alimento.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Un niño presenta urticaria y vómitos poco después de comer un alimento. Los episodios se repiten con la misma exposición. Se requiere confirmar relación y evaluar riesgo de reacción sistémica."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "se repiten con la misma exposición"
+            },
+            {
+              "field": "mechanism",
+              "text": "La respuesta inmunológica frente a proteínas alimentarias puede activar IgE y mastocitos o vías no mediadas por IgE, causando síntomas cutáneos, digestivos o respiratorios."
+            },
+            {
+              "field": "initial_action",
+              "text": "Evaluar anafilaxia de inmediato; si hay reacción sistémica, administrar adrenalina intramuscular y atención urgente. Tras estabilizar, retirar el alimento sospechoso y referir para diagnóstico dirigido, nutrición y plan de emergencias."
+            },
+            {
+              "field": "action_reason",
+              "text": "Evita nueva exposición sin restricciones innecesarias."
+            },
+            {
+              "field": "limits",
+              "text": "Distinguir prevención en lactante no alérgico de reexposición en niño con reacción. No hacer pruebas o retos en casa tras una reacción sistémica."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Activación alérgica alimentaria"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Urticaria y síntomas tras ingesta"
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Anafilaxia"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Administrar adrenalina intramuscular y atención urgente"
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "La reacción puede comprometer respiración y circulación"
+            },
+            {
+              "field": "source_corrections.0.reason",
+              "text": "No retrasar alérgenos de forma preventiva hasta dos años. La introducción temprana de cacahuate puede prevenir alergia en lactantes seleccionados con evaluación de riesgo."
+            },
+            {
+              "field": "source_corrections.1.reason",
+              "text": "Una reacción grave previa eleva riesgo y puede hacer innecesario un reto diagnóstico, pero la decisión se individualiza en un entorno equipado; no es una prohibición vitalicia universal."
+            }
+          ]
+        },
+        "contrast": {
+          "vignette": "Un niño con alergia a pólenes presenta prurito orofaríngeo agudo y a veces edema labial minutos después de comer frutas o vegetales crudos. ¿Qué categoría de alergia relacionada con la ingesta explica este síndrome oral?",
+          "discriminator": "síndrome alimentario oral asociado a pólenes",
+          "explanation": "El dato decisivo es síndrome alimentario oral asociado a pólenes. La respuesta inmunológica frente a proteínas alimentarias puede activar IgE y mastocitos o vías no mediadas por IgE, causando síntomas cutáneos, digestivos o respiratorios. El prurito orofaríngeo agudo por alimentos crudos y la relación con pólenes apoyan un mecanismo alérgico oral, distinto de una intolerancia digestiva aislada. La presentación adicional se apoya en la página 941 del libro.",
+          "confusable_with": "Intolerancia alimentaria no inmunológica",
+          "why_not": "El prurito orofaríngeo agudo por alimentos crudos y la relación con pólenes apoyan un mecanismo alérgico oral, distinto de una intolerancia digestiva aislada.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Un niño presenta urticaria y vómitos poco después de comer un alimento. Los episodios se repiten con la misma exposición. Se requiere confirmar relación y evaluar riesgo de reacción sistémica."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "se repiten con la misma exposición"
+            },
+            {
+              "field": "mechanism",
+              "text": "La respuesta inmunológica frente a proteínas alimentarias puede activar IgE y mastocitos o vías no mediadas por IgE, causando síntomas cutáneos, digestivos o respiratorios."
+            },
+            {
+              "field": "initial_action",
+              "text": "Evaluar anafilaxia de inmediato; si hay reacción sistémica, administrar adrenalina intramuscular y atención urgente. Tras estabilizar, retirar el alimento sospechoso y referir para diagnóstico dirigido, nutrición y plan de emergencias."
+            },
+            {
+              "field": "action_reason",
+              "text": "Evita nueva exposición sin restricciones innecesarias."
+            },
+            {
+              "field": "limits",
+              "text": "Distinguir prevención en lactante no alérgico de reexposición en niño con reacción. No hacer pruebas o retos en casa tras una reacción sistémica."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Activación alérgica alimentaria"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Urticaria y síntomas tras ingesta"
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Anafilaxia"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Administrar adrenalina intramuscular y atención urgente"
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "La reacción puede comprometer respiración y circulación"
+            },
+            {
+              "field": "source_corrections.0.reason",
+              "text": "No retrasar alérgenos de forma preventiva hasta dos años. La introducción temprana de cacahuate puede prevenir alergia en lactantes seleccionados con evaluación de riesgo."
+            },
+            {
+              "field": "source_corrections.1.reason",
+              "text": "Una reacción grave previa eleva riesgo y puede hacer innecesario un reto diagnóstico, pero la decisión se individualiza en un entorno equipado; no es una prohibición vitalicia universal."
+            }
+          ],
+          "source_evidence": [
+            {
+              "page": 941,
+              "quote": "presenta unos minutos después del contacto bucal                         síntomas gastrointestinales como náuseas, vómitos y\n                   con frutas y vegetales crudos                                            dolor abdominal"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "28.04-01",
+      "parent_topic_id": "28.04-01",
+      "block_id": "28.04",
+      "name": "Estreñimiento funcional",
+      "answer_kind": "diagnosis",
+      "variants": {
+        "easy": {
+          "vignette": "Un escolar evacúa heces duras y dolorosas, retiene voluntariamente y mancha la ropa interior. En la exploración hay una masa fecal. No presenta signos de alarma de causa orgánica. ¿Cuál es el diagnóstico más probable?",
+          "discriminator": "hay una masa fecal",
+          "explanation": "El dato decisivo es hay una masa fecal. La retención prolongada endurece heces y distiende recto, aumenta dolor y favorece nueva retención e incontinencia por rebosamiento, perpetuando un ciclo de estreñimiento funcional. El patrón de retención con exploración compatible permite diagnóstico funcional si no hay señales de alarma. Si aparecen, debe investigarse una causa orgánica.",
+          "confusable_with": "Estreñimiento por causa orgánica",
+          "why_not": "El patrón de retención con exploración compatible permite diagnóstico funcional si no hay señales de alarma. Si aparecen, debe investigarse una causa orgánica.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Un escolar evacúa heces duras y dolorosas, retiene voluntariamente y mancha la ropa interior. En la exploración hay una masa fecal. No presenta signos de alarma de causa orgánica."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "hay una masa fecal"
+            },
+            {
+              "field": "mechanism",
+              "text": "La retención prolongada endurece heces y distiende recto, aumenta dolor y favorece nueva retención e incontinencia por rebosamiento, perpetuando un ciclo de estreñimiento funcional."
+            },
+            {
+              "field": "initial_action",
+              "text": "Identificar y tratar la impactación con polietilenglicol oral según valoración; después establecer mantenimiento, hábitos y seguimiento."
+            },
+            {
+              "field": "action_reason",
+              "text": "El mantenimiento solo puede fallar si persiste impactación."
+            },
+            {
+              "field": "limits",
+              "text": "El diagnóstico es clínico si no hay datos de enfermedad orgánica."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Retención e impactación"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Dolor y manchado fecal"
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Signos de alarma"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Referir e investigar causa orgánica"
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "No debe asumirse estreñimiento funcional"
+            }
+          ]
+        },
+        "medium": {
+          "vignette": "Tras desimpactación un niño necesita mantenimiento porque retenía voluntariamente heces duras y presentaba manchado. No hay signos de causa orgánica. ¿Cuál es el diagnóstico más probable en este contexto?",
+          "discriminator": "retención voluntaria con impactación y escape fecal",
+          "explanation": "El dato decisivo es retención voluntaria con impactación y escape fecal. La retención prolongada endurece heces y distiende recto, aumenta dolor y favorece nueva retención e incontinencia por rebosamiento, perpetuando un ciclo de estreñimiento funcional. El patrón de retención con exploración compatible permite diagnóstico funcional si no hay señales de alarma. Si aparecen, debe investigarse una causa orgánica.",
+          "confusable_with": "Estreñimiento por causa orgánica",
+          "why_not": "El patrón de retención con exploración compatible permite diagnóstico funcional si no hay señales de alarma. Si aparecen, debe investigarse una causa orgánica.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Un escolar evacúa heces duras y dolorosas, retiene voluntariamente y mancha la ropa interior. En la exploración hay una masa fecal. No presenta signos de alarma de causa orgánica."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "hay una masa fecal"
+            },
+            {
+              "field": "mechanism",
+              "text": "La retención prolongada endurece heces y distiende recto, aumenta dolor y favorece nueva retención e incontinencia por rebosamiento, perpetuando un ciclo de estreñimiento funcional."
+            },
+            {
+              "field": "initial_action",
+              "text": "Identificar y tratar la impactación con polietilenglicol oral según valoración; después establecer mantenimiento, hábitos y seguimiento."
+            },
+            {
+              "field": "action_reason",
+              "text": "El mantenimiento solo puede fallar si persiste impactación."
+            },
+            {
+              "field": "limits",
+              "text": "El diagnóstico es clínico si no hay datos de enfermedad orgánica."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Retención e impactación"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Dolor y manchado fecal"
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Signos de alarma"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Referir e investigar causa orgánica"
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "No debe asumirse estreñimiento funcional"
+            }
+          ]
+        },
+        "contrast": {
+          "vignette": "El dolor de evacuar hace que un escolar retrase las deposiciones y acumule una masa fecal. La evaluación no encuentra alarma orgánica. ¿Cuál es el diagnóstico más probable en este contexto?",
+          "discriminator": "círculo de dolor, retención y masa fecal",
+          "explanation": "El dato decisivo es círculo de dolor, retención y masa fecal. La retención prolongada endurece heces y distiende recto, aumenta dolor y favorece nueva retención e incontinencia por rebosamiento, perpetuando un ciclo de estreñimiento funcional. El patrón de retención con exploración compatible permite diagnóstico funcional si no hay señales de alarma. Si aparecen, debe investigarse una causa orgánica.",
+          "confusable_with": "Estreñimiento por causa orgánica",
+          "why_not": "El patrón de retención con exploración compatible permite diagnóstico funcional si no hay señales de alarma. Si aparecen, debe investigarse una causa orgánica.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Un escolar evacúa heces duras y dolorosas, retiene voluntariamente y mancha la ropa interior. En la exploración hay una masa fecal. No presenta signos de alarma de causa orgánica."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "hay una masa fecal"
+            },
+            {
+              "field": "mechanism",
+              "text": "La retención prolongada endurece heces y distiende recto, aumenta dolor y favorece nueva retención e incontinencia por rebosamiento, perpetuando un ciclo de estreñimiento funcional."
+            },
+            {
+              "field": "initial_action",
+              "text": "Identificar y tratar la impactación con polietilenglicol oral según valoración; después establecer mantenimiento, hábitos y seguimiento."
+            },
+            {
+              "field": "action_reason",
+              "text": "El mantenimiento solo puede fallar si persiste impactación."
+            },
+            {
+              "field": "limits",
+              "text": "El diagnóstico es clínico si no hay datos de enfermedad orgánica."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Retención e impactación"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Dolor y manchado fecal"
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Signos de alarma"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Referir e investigar causa orgánica"
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "No debe asumirse estreñimiento funcional"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "28.05-01",
+      "parent_topic_id": "28.05-01",
+      "block_id": "28.05",
+      "name": "Hiperplasia adrenal congénita",
+      "answer_kind": "diagnosis",
+      "variants": {
+        "easy": {
+          "vignette": "Un recién nacido presenta vómitos, deshidratación e hipotensión. Tiene hiponatremia e hiperpotasemia; la exploración muestra genitales virilizados. Se sospecha un defecto de producción hormonal suprarrenal. ¿Cuál es el diagnóstico más probable?",
+          "discriminator": "hiponatremia e hiperpotasemia",
+          "explanation": "El dato decisivo es hiponatremia e hiperpotasemia. El déficit de 21-hidroxilasa reduce síntesis de cortisol y, en formas perdedoras de sal, aldosterona; eleva ACTH y desvía precursores hacia andrógenos con virilización. La pérdida de sal con hiperpotasemia y virilización indica un defecto hormonal. No se explica solo por pérdidas gastrointestinales.",
+          "confusable_with": "Deshidratación digestiva aislada",
+          "why_not": "La pérdida de sal con hiperpotasemia y virilización indica un defecto hormonal. No se explica solo por pérdidas gastrointestinales.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Un recién nacido presenta vómitos, deshidratación e hipotensión. Tiene hiponatremia e hiperpotasemia; la exploración muestra genitales virilizados. Se sospecha un defecto de producción hormonal suprarrenal."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "hiponatremia e hiperpotasemia"
+            },
+            {
+              "field": "mechanism",
+              "text": "El déficit de 21-hidroxilasa reduce síntesis de cortisol y, en formas perdedoras de sal, aldosterona; eleva ACTH y desvía precursores hacia andrógenos con virilización."
+            },
+            {
+              "field": "initial_action",
+              "text": "Tratar como posible crisis suprarrenal y referir de urgencia; medir electrolitos y 17-hidroxiprogesterona sin retrasar estabilización y glucocorticoide."
+            },
+            {
+              "field": "action_reason",
+              "text": "El déficit hormonal amenaza perfusión y equilibrio electrolítico."
+            },
+            {
+              "field": "limits",
+              "text": "Las decisiones sobre genitales requieren equipo especializado y decisión informada."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Déficit mineralocorticoide"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Pérdida de sal y deshidratación"
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Forma perdedora de sal"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Valorar mineralocorticoide y suplemento de sal"
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "Existe déficit de aldosterona"
+            }
+          ]
+        },
+        "medium": {
+          "vignette": "Después de una crisis neonatal se confirma pérdida de sal con déficit mineralocorticoide y elevación de 17-hidroxiprogesterona. ¿Cuál es el diagnóstico más probable en este contexto?",
+          "discriminator": "pérdida de sal con marcador de defecto esteroideo",
+          "explanation": "El dato decisivo es pérdida de sal con marcador de defecto esteroideo. El déficit de 21-hidroxilasa reduce síntesis de cortisol y, en formas perdedoras de sal, aldosterona; eleva ACTH y desvía precursores hacia andrógenos con virilización. La pérdida de sal con hiperpotasemia y virilización indica un defecto hormonal. No se explica solo por pérdidas gastrointestinales.",
+          "confusable_with": "Deshidratación digestiva aislada",
+          "why_not": "La pérdida de sal con hiperpotasemia y virilización indica un defecto hormonal. No se explica solo por pérdidas gastrointestinales.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Un recién nacido presenta vómitos, deshidratación e hipotensión. Tiene hiponatremia e hiperpotasemia; la exploración muestra genitales virilizados. Se sospecha un defecto de producción hormonal suprarrenal."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "hiponatremia e hiperpotasemia"
+            },
+            {
+              "field": "mechanism",
+              "text": "El déficit de 21-hidroxilasa reduce síntesis de cortisol y, en formas perdedoras de sal, aldosterona; eleva ACTH y desvía precursores hacia andrógenos con virilización."
+            },
+            {
+              "field": "initial_action",
+              "text": "Tratar como posible crisis suprarrenal y referir de urgencia; medir electrolitos y 17-hidroxiprogesterona sin retrasar estabilización y glucocorticoide."
+            },
+            {
+              "field": "action_reason",
+              "text": "El déficit hormonal amenaza perfusión y equilibrio electrolítico."
+            },
+            {
+              "field": "limits",
+              "text": "Las decisiones sobre genitales requieren equipo especializado y decisión informada."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Déficit mineralocorticoide"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Pérdida de sal y deshidratación"
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Forma perdedora de sal"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Valorar mineralocorticoide y suplemento de sal"
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "Existe déficit de aldosterona"
+            }
+          ]
+        },
+        "contrast": {
+          "vignette": "Una niña en edad preescolar presenta virilización y posteriormente hirsutismo. El estudio muestra elevación de 17-hidroxiprogesterona en un defecto parcial de esteroidogénesis, sin el debut neonatal perdedor de sal. ¿Qué enfermedad suprarrenal congénita es compatible?",
+          "discriminator": "forma no clásica con virilización y 17-hidroxiprogesterona elevada",
+          "explanation": "El dato decisivo es forma no clásica con virilización y 17-hidroxiprogesterona elevada. El déficit de 21-hidroxilasa reduce síntesis de cortisol y, en formas perdedoras de sal, aldosterona; eleva ACTH y desvía precursores hacia andrógenos con virilización. La elevación de 17-hidroxiprogesterona con virilización apoya un defecto de esteroidogénesis, aunque una forma parcial no debute con pérdida de sal. La presentación adicional se apoya en la página 951 del libro.",
+          "confusable_with": "Virilización sin defecto de esteroidogénesis",
+          "why_not": "La elevación de 17-hidroxiprogesterona con virilización apoya un defecto de esteroidogénesis, aunque una forma parcial no debute con pérdida de sal.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Un recién nacido presenta vómitos, deshidratación e hipotensión. Tiene hiponatremia e hiperpotasemia; la exploración muestra genitales virilizados. Se sospecha un defecto de producción hormonal suprarrenal."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "hiponatremia e hiperpotasemia"
+            },
+            {
+              "field": "mechanism",
+              "text": "El déficit de 21-hidroxilasa reduce síntesis de cortisol y, en formas perdedoras de sal, aldosterona; eleva ACTH y desvía precursores hacia andrógenos con virilización."
+            },
+            {
+              "field": "initial_action",
+              "text": "Tratar como posible crisis suprarrenal y referir de urgencia; medir electrolitos y 17-hidroxiprogesterona sin retrasar estabilización y glucocorticoide."
+            },
+            {
+              "field": "action_reason",
+              "text": "El déficit hormonal amenaza perfusión y equilibrio electrolítico."
+            },
+            {
+              "field": "limits",
+              "text": "Las decisiones sobre genitales requieren equipo especializado y decisión informada."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Déficit mineralocorticoide"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Pérdida de sal y deshidratación"
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Forma perdedora de sal"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Valorar mineralocorticoide y suplemento de sal"
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "Existe déficit de aldosterona"
+            }
+          ],
+          "source_evidence": [
+            {
+              "page": 951,
+              "quote": "Presentación clínica clásica:                                          Presentación clínica no clásica:"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "28.06-01",
+      "parent_topic_id": "28.06-01",
+      "block_id": "28.06",
+      "name": "Hipotiroidismo congénito",
+      "answer_kind": "diagnosis",
+      "variants": {
+        "easy": {
+          "vignette": "Un recién nacido tiene tamiz con TSH elevada. Aunque se alimenta aceptablemente, presenta ictericia prolongada y fontanela amplia. Se requiere confirmar déficit hormonal y comenzar tratamiento oportuno. ¿Cuál es el diagnóstico más probable?",
+          "discriminator": "tamiz con TSH elevada",
+          "explanation": "El dato decisivo es tamiz con TSH elevada. La disgenesia o falla de síntesis tiroidea reduce disponibilidad hormonal desde el nacimiento y compromete crecimiento y maduración cerebral, aunque al inicio los síntomas pueden ser discretos. La elevación de TSH y la confirmación del perfil indican déficit hormonal; el buen aspecto o la alimentación aceptable no permiten omitirlo.",
+          "confusable_with": "Ictericia neonatal sin déficit tiroideo",
+          "why_not": "La elevación de TSH y la confirmación del perfil indican déficit hormonal; el buen aspecto o la alimentación aceptable no permiten omitirlo.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Un recién nacido tiene tamiz con TSH elevada. Aunque se alimenta aceptablemente, presenta ictericia prolongada y fontanela amplia. Se requiere confirmar déficit hormonal y comenzar tratamiento oportuno."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "tamiz con TSH elevada"
+            },
+            {
+              "field": "mechanism",
+              "text": "La disgenesia o falla de síntesis tiroidea reduce disponibilidad hormonal desde el nacimiento y compromete crecimiento y maduración cerebral, aunque al inicio los síntomas pueden ser discretos."
+            },
+            {
+              "field": "initial_action",
+              "text": "Obtener confirmación con perfil tiroideo y coordinar inicio temprano de levotiroxina según resultado y sospecha."
+            },
+            {
+              "field": "action_reason",
+              "text": "La demora puede causar secuelas neurológicas."
+            },
+            {
+              "field": "limits",
+              "text": "Interpretar resultados con edad, técnica y protocolo neonatal."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Déficit de hormona tiroidea"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Ictericia y alteración del desarrollo"
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Tamiz muy alterado"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "No retrasar tratamiento por imagen"
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "La localización tiroidea no precede la protección neurológica"
+            }
+          ]
+        },
+        "medium": {
+          "vignette": "El tamiz neonatal está muy alterado con TSH elevada y se obtiene perfil confirmatorio sin esperar imagen tiroidea. ¿Cuál es el diagnóstico más probable en este contexto?",
+          "discriminator": "tamiz tiroideo grave que exige confirmación temprana",
+          "explanation": "El dato decisivo es tamiz tiroideo grave que exige confirmación temprana. La disgenesia o falla de síntesis tiroidea reduce disponibilidad hormonal desde el nacimiento y compromete crecimiento y maduración cerebral, aunque al inicio los síntomas pueden ser discretos. La elevación de TSH y la confirmación del perfil indican déficit hormonal; el buen aspecto o la alimentación aceptable no permiten omitirlo.",
+          "confusable_with": "Ictericia neonatal sin déficit tiroideo",
+          "why_not": "La elevación de TSH y la confirmación del perfil indican déficit hormonal; el buen aspecto o la alimentación aceptable no permiten omitirlo.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Un recién nacido tiene tamiz con TSH elevada. Aunque se alimenta aceptablemente, presenta ictericia prolongada y fontanela amplia. Se requiere confirmar déficit hormonal y comenzar tratamiento oportuno."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "tamiz con TSH elevada"
+            },
+            {
+              "field": "mechanism",
+              "text": "La disgenesia o falla de síntesis tiroidea reduce disponibilidad hormonal desde el nacimiento y compromete crecimiento y maduración cerebral, aunque al inicio los síntomas pueden ser discretos."
+            },
+            {
+              "field": "initial_action",
+              "text": "Obtener confirmación con perfil tiroideo y coordinar inicio temprano de levotiroxina según resultado y sospecha."
+            },
+            {
+              "field": "action_reason",
+              "text": "La demora puede causar secuelas neurológicas."
+            },
+            {
+              "field": "limits",
+              "text": "Interpretar resultados con edad, técnica y protocolo neonatal."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Déficit de hormona tiroidea"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Ictericia y alteración del desarrollo"
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Tamiz muy alterado"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "No retrasar tratamiento por imagen"
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "La localización tiroidea no precede la protección neurológica"
+            }
+          ]
+        },
+        "contrast": {
+          "vignette": "La alimentación de un neonato parece aceptable, pero el tamiz y el perfil tiroideo muestran déficit hormonal. La ictericia prolongada y fontanela amplia apoyan el cuadro. ¿Cuál es el diagnóstico más probable en este contexto?",
+          "discriminator": "déficit tiroideo neonatal pese a buen aspecto alimentario",
+          "explanation": "El dato decisivo es déficit tiroideo neonatal pese a buen aspecto alimentario. La disgenesia o falla de síntesis tiroidea reduce disponibilidad hormonal desde el nacimiento y compromete crecimiento y maduración cerebral, aunque al inicio los síntomas pueden ser discretos. La elevación de TSH y la confirmación del perfil indican déficit hormonal; el buen aspecto o la alimentación aceptable no permiten omitirlo.",
+          "confusable_with": "Ictericia neonatal sin déficit tiroideo",
+          "why_not": "La elevación de TSH y la confirmación del perfil indican déficit hormonal; el buen aspecto o la alimentación aceptable no permiten omitirlo.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Un recién nacido tiene tamiz con TSH elevada. Aunque se alimenta aceptablemente, presenta ictericia prolongada y fontanela amplia. Se requiere confirmar déficit hormonal y comenzar tratamiento oportuno."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "tamiz con TSH elevada"
+            },
+            {
+              "field": "mechanism",
+              "text": "La disgenesia o falla de síntesis tiroidea reduce disponibilidad hormonal desde el nacimiento y compromete crecimiento y maduración cerebral, aunque al inicio los síntomas pueden ser discretos."
+            },
+            {
+              "field": "initial_action",
+              "text": "Obtener confirmación con perfil tiroideo y coordinar inicio temprano de levotiroxina según resultado y sospecha."
+            },
+            {
+              "field": "action_reason",
+              "text": "La demora puede causar secuelas neurológicas."
+            },
+            {
+              "field": "limits",
+              "text": "Interpretar resultados con edad, técnica y protocolo neonatal."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Déficit de hormona tiroidea"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Ictericia y alteración del desarrollo"
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Tamiz muy alterado"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "No retrasar tratamiento por imagen"
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "La localización tiroidea no precede la protección neurológica"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "28.07-01",
+      "parent_topic_id": "28.07-01",
+      "block_id": "28.07",
+      "name": "Cuerpo extraño",
+      "answer_kind": "diagnosis",
+      "variants": {
+        "easy": {
+          "vignette": "Un preescolar comienza con tos intensa y dificultad respiratoria mientras come. Después persisten sibilancias y menor entrada de aire de un lado. No tenía síntomas previos. ¿Cuál es el diagnóstico más probable?",
+          "discriminator": "mientras come",
+          "explanation": "El dato decisivo es mientras come. El material aspirado obstruye la vía aérea y puede actuar como válvula, producir atrapamiento aéreo o atelectasia y favorecer infección si persiste sin extracción. La relación inmediata con la ingesta y la asimetría mantienen la sospecha. Una radiografía normal no excluye material radiolúcido.",
+          "confusable_with": "Enfermedad respiratoria sin aspiración",
+          "why_not": "La relación inmediata con la ingesta y la asimetría mantienen la sospecha. Una radiografía normal no excluye material radiolúcido.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Un preescolar comienza con tos intensa y dificultad respiratoria mientras come. Después persisten sibilancias y menor entrada de aire de un lado. No tenía síntomas previos."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "mientras come"
+            },
+            {
+              "field": "mechanism",
+              "text": "El material aspirado obstruye la vía aérea y puede actuar como válvula, producir atrapamiento aéreo o atelectasia y favorecer infección si persiste sin extracción."
+            },
+            {
+              "field": "initial_action",
+              "text": "Evaluar permeabilidad y estabilidad respiratoria; atender obstrucción completa según reanimación y referir para extracción broncoscópica si se sospecha aspiración."
+            },
+            {
+              "field": "action_reason",
+              "text": "La retención puede causar daño y asfixia."
+            },
+            {
+              "field": "limits",
+              "text": "La radiografía normal no excluye material radiolúcido."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Obstrucción bronquial"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Sibilancia y ventilación asimétrica"
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Exploración o radiografía poco llamativas"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Mantener sospecha si historia compatible"
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "La tríada clásica no siempre aparece"
+            }
+          ]
+        },
+        "medium": {
+          "vignette": "Una tos súbita al comer mantiene sospecha de aspiración aunque la radiografía sea poco llamativa. ¿Cuál es el diagnóstico más probable en este contexto?",
+          "discriminator": "aspiración compatible pese a imagen inicial poco llamativa",
+          "explanation": "El dato decisivo es aspiración compatible pese a imagen inicial poco llamativa. El material aspirado obstruye la vía aérea y puede actuar como válvula, producir atrapamiento aéreo o atelectasia y favorecer infección si persiste sin extracción. La relación inmediata con la ingesta y la asimetría mantienen la sospecha. Una radiografía normal no excluye material radiolúcido.",
+          "confusable_with": "Enfermedad respiratoria sin aspiración",
+          "why_not": "La relación inmediata con la ingesta y la asimetría mantienen la sospecha. Una radiografía normal no excluye material radiolúcido.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Un preescolar comienza con tos intensa y dificultad respiratoria mientras come. Después persisten sibilancias y menor entrada de aire de un lado. No tenía síntomas previos."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "mientras come"
+            },
+            {
+              "field": "mechanism",
+              "text": "El material aspirado obstruye la vía aérea y puede actuar como válvula, producir atrapamiento aéreo o atelectasia y favorecer infección si persiste sin extracción."
+            },
+            {
+              "field": "initial_action",
+              "text": "Evaluar permeabilidad y estabilidad respiratoria; atender obstrucción completa según reanimación y referir para extracción broncoscópica si se sospecha aspiración."
+            },
+            {
+              "field": "action_reason",
+              "text": "La retención puede causar daño y asfixia."
+            },
+            {
+              "field": "limits",
+              "text": "La radiografía normal no excluye material radiolúcido."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Obstrucción bronquial"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Sibilancia y ventilación asimétrica"
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Exploración o radiografía poco llamativas"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Mantener sospecha si historia compatible"
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "La tríada clásica no siempre aparece"
+            }
+          ]
+        },
+        "contrast": {
+          "vignette": "Durante una comida un niño presenta obstrucción respiratoria completa. ¿Cuál es el diagnóstico más probable en este contexto?",
+          "discriminator": "obstrucción mecánica abrupta durante ingesta",
+          "explanation": "El dato decisivo es obstrucción mecánica abrupta durante ingesta. El material aspirado obstruye la vía aérea y puede actuar como válvula, producir atrapamiento aéreo o atelectasia y favorecer infección si persiste sin extracción. La relación inmediata con la ingesta y la asimetría mantienen la sospecha. Una radiografía normal no excluye material radiolúcido.",
+          "confusable_with": "Enfermedad respiratoria sin aspiración",
+          "why_not": "La relación inmediata con la ingesta y la asimetría mantienen la sospecha. Una radiografía normal no excluye material radiolúcido.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Un preescolar comienza con tos intensa y dificultad respiratoria mientras come. Después persisten sibilancias y menor entrada de aire de un lado. No tenía síntomas previos."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "mientras come"
+            },
+            {
+              "field": "mechanism",
+              "text": "El material aspirado obstruye la vía aérea y puede actuar como válvula, producir atrapamiento aéreo o atelectasia y favorecer infección si persiste sin extracción."
+            },
+            {
+              "field": "initial_action",
+              "text": "Evaluar permeabilidad y estabilidad respiratoria; atender obstrucción completa según reanimación y referir para extracción broncoscópica si se sospecha aspiración."
+            },
+            {
+              "field": "action_reason",
+              "text": "La retención puede causar daño y asfixia."
+            },
+            {
+              "field": "limits",
+              "text": "La radiografía normal no excluye material radiolúcido."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Obstrucción bronquial"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Sibilancia y ventilación asimétrica"
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Exploración o radiografía poco llamativas"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Mantener sospecha si historia compatible"
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "La tríada clásica no siempre aparece"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "28.08-01",
+      "parent_topic_id": "28.08-01",
+      "block_id": "28.08",
+      "name": "Dermatitis del pañal",
+      "answer_kind": "diagnosis",
+      "variants": {
+        "easy": {
+          "vignette": "Un lactante presenta eritema en superficies convexas cubiertas por el pañal tras varios días de diarrea. Los pliegues están relativamente conservados. No hay pústulas ni lesiones satélite. ¿Cuál es el diagnóstico más probable?",
+          "discriminator": "Los pliegues están relativamente conservados",
+          "explanation": "El dato decisivo es Los pliegues están relativamente conservados. La humedad, fricción y contacto prolongado con orina y heces alteran barrera cutánea del área cubierta, causando inflamación irritativa y favoreciendo sobreinfección por Candida. La distribución orienta a irritación o candidiasis. La candidiasis localizada requiere una opción tópica apropiada según evaluación.",
+          "confusable_with": "Usar nistatina oral universal en toda lesión del pañal",
+          "why_not": "La distribución orienta a irritación o candidiasis. La candidiasis localizada requiere una opción tópica apropiada según evaluación.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Un lactante presenta eritema en superficies convexas cubiertas por el pañal tras varios días de diarrea. Los pliegues están relativamente conservados. No hay pústulas ni lesiones satélite."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "Los pliegues están relativamente conservados"
+            },
+            {
+              "field": "mechanism",
+              "text": "La humedad, fricción y contacto prolongado con orina y heces alteran barrera cutánea del área cubierta, causando inflamación irritativa y favoreciendo sobreinfección por Candida."
+            },
+            {
+              "field": "initial_action",
+              "text": "Cambiar pañales oportunamente, limpiar con suavidad y aplicar barrera cutánea con petrolato u óxido de zinc."
+            },
+            {
+              "field": "action_reason",
+              "text": "Reduce exposición y protege piel lesionada."
+            },
+            {
+              "field": "limits",
+              "text": "Tratar candidiasis localizada con opción tópica apropiada. Evaluar candidiasis oral aparte; evitar corticoides potentes y combinaciones innecesarias."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Daño de barrera por humedad"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Eritema en áreas de contacto"
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Pliegues con pústulas satélite"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Valorar candidiasis y antifúngico tópico"
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "Sugiere sobreinfección"
+            },
+            {
+              "field": "source_corrections.0.reason",
+              "text": "La candidiasis localizada se trata con antifúngico tópico según evaluación. No se necesita nistatina oral universal para todo cuadro del pañal."
+            }
+          ]
+        },
+        "medium": {
+          "vignette": "La erupción cubierta por pañal ahora afecta pliegues y tiene pústulas satélite. ¿Cuál es el diagnóstico más probable en este contexto?",
+          "discriminator": "lesión del área del pañal con patrón candidiásico",
+          "explanation": "El dato decisivo es lesión del área del pañal con patrón candidiásico. La humedad, fricción y contacto prolongado con orina y heces alteran barrera cutánea del área cubierta, causando inflamación irritativa y favoreciendo sobreinfección por Candida. La distribución orienta a irritación o candidiasis. La candidiasis localizada requiere una opción tópica apropiada según evaluación.",
+          "confusable_with": "Usar nistatina oral universal en toda lesión del pañal",
+          "why_not": "La distribución orienta a irritación o candidiasis. La candidiasis localizada requiere una opción tópica apropiada según evaluación.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Un lactante presenta eritema en superficies convexas cubiertas por el pañal tras varios días de diarrea. Los pliegues están relativamente conservados. No hay pústulas ni lesiones satélite."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "Los pliegues están relativamente conservados"
+            },
+            {
+              "field": "mechanism",
+              "text": "La humedad, fricción y contacto prolongado con orina y heces alteran barrera cutánea del área cubierta, causando inflamación irritativa y favoreciendo sobreinfección por Candida."
+            },
+            {
+              "field": "initial_action",
+              "text": "Cambiar pañales oportunamente, limpiar con suavidad y aplicar barrera cutánea con petrolato u óxido de zinc."
+            },
+            {
+              "field": "action_reason",
+              "text": "Reduce exposición y protege piel lesionada."
+            },
+            {
+              "field": "limits",
+              "text": "Tratar candidiasis localizada con opción tópica apropiada. Evaluar candidiasis oral aparte; evitar corticoides potentes y combinaciones innecesarias."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Daño de barrera por humedad"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Eritema en áreas de contacto"
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Pliegues con pústulas satélite"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Valorar candidiasis y antifúngico tópico"
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "Sugiere sobreinfección"
+            },
+            {
+              "field": "source_corrections.0.reason",
+              "text": "La candidiasis localizada se trata con antifúngico tópico según evaluación. No se necesita nistatina oral universal para todo cuadro del pañal."
+            }
+          ]
+        },
+        "contrast": {
+          "vignette": "Después de diarrea, la piel en contacto con humedad muestra eritema y daño de barrera. Se conserva relativamente la piel de pliegues. ¿Cuál es el diagnóstico más probable en este contexto?",
+          "discriminator": "daño de barrera por humedad en área de contacto",
+          "explanation": "El dato decisivo es daño de barrera por humedad en área de contacto. La humedad, fricción y contacto prolongado con orina y heces alteran barrera cutánea del área cubierta, causando inflamación irritativa y favoreciendo sobreinfección por Candida. La distribución orienta a irritación o candidiasis. La candidiasis localizada requiere una opción tópica apropiada según evaluación.",
+          "confusable_with": "Usar nistatina oral universal en toda lesión del pañal",
+          "why_not": "La distribución orienta a irritación o candidiasis. La candidiasis localizada requiere una opción tópica apropiada según evaluación.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Un lactante presenta eritema en superficies convexas cubiertas por el pañal tras varios días de diarrea. Los pliegues están relativamente conservados. No hay pústulas ni lesiones satélite."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "Los pliegues están relativamente conservados"
+            },
+            {
+              "field": "mechanism",
+              "text": "La humedad, fricción y contacto prolongado con orina y heces alteran barrera cutánea del área cubierta, causando inflamación irritativa y favoreciendo sobreinfección por Candida."
+            },
+            {
+              "field": "initial_action",
+              "text": "Cambiar pañales oportunamente, limpiar con suavidad y aplicar barrera cutánea con petrolato u óxido de zinc."
+            },
+            {
+              "field": "action_reason",
+              "text": "Reduce exposición y protege piel lesionada."
+            },
+            {
+              "field": "limits",
+              "text": "Tratar candidiasis localizada con opción tópica apropiada. Evaluar candidiasis oral aparte; evitar corticoides potentes y combinaciones innecesarias."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Daño de barrera por humedad"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Eritema en áreas de contacto"
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Pliegues con pústulas satélite"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Valorar candidiasis y antifúngico tópico"
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "Sugiere sobreinfección"
+            },
+            {
+              "field": "source_corrections.0.reason",
+              "text": "La candidiasis localizada se trata con antifúngico tópico según evaluación. No se necesita nistatina oral universal para todo cuadro del pañal."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "28.08-02",
+      "parent_topic_id": "28.08-02",
+      "block_id": "28.08",
+      "name": "Evaluar lesiones y activar protección infantil",
+      "answer_kind": "decision",
+      "variants": {
+        "easy": {
+          "vignette": "Un bebé sin movilidad independiente presenta hematomas en orejas y tronco. El relato del mecanismo cambia entre cuidadores. Se requiere evaluar lesiones ocultas y asegurar su protección.",
+          "discriminator": "sin movilidad independiente",
+          "explanation": "El dato decisivo es sin movilidad independiente. Atender lesiones, documentar hallazgos y activar evaluación y protección infantil según protocolo local. La incompatibilidad clínica requiere evaluación y protección. Ningún hallazgo aislado establece por sí solo autor o mecanismo.",
+          "confusable_with": "Identificar autor o mecanismo solo por una lesión o tríada",
+          "why_not": "La incompatibilidad clínica requiere evaluación y protección. Ningún hallazgo aislado establece por sí solo autor o mecanismo.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Un bebé sin movilidad independiente presenta hematomas en orejas y tronco. El relato del mecanismo cambia entre cuidadores. Se requiere evaluar lesiones ocultas y asegurar su protección."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "sin movilidad independiente"
+            },
+            {
+              "field": "mechanism",
+              "text": "El daño físico no accidental puede producir lesiones incompatibles con desarrollo o mecanismo relatado; la distribución y lesiones asociadas orientan evaluación integral y medidas de protección."
+            },
+            {
+              "field": "initial_action",
+              "text": "Atender lesiones, documentar hallazgos y activar evaluación y protección infantil según protocolo local."
+            },
+            {
+              "field": "action_reason",
+              "text": "Evita daño repetido y detecta lesiones ocultas."
+            },
+            {
+              "field": "limits",
+              "text": "Una lesión o tríada no identifica por sí sola mecanismo ni autor."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Trauma incompatible con desarrollo"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Hematomas en bebé inmóvil"
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Signos neurológicos o apnea"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Evaluar trauma craneal urgente"
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "Puede existir lesión intracraneal"
+            }
+          ]
+        },
+        "medium": {
+          "vignette": "Un bebé inmóvil con hematomas presenta apnea o signos neurológicos. ¿Qué evaluación urgente debe añadirse a la protección infantil?",
+          "discriminator": "signos neurológicos en un bebé con trauma sospechoso",
+          "explanation": "El dato decisivo es signos neurológicos en un bebé con trauma sospechoso. Evaluar trauma craneal urgente, atender lesiones y activar protección infantil. La incompatibilidad clínica requiere evaluación y protección. Ningún hallazgo aislado establece por sí solo autor o mecanismo.",
+          "confusable_with": "Identificar autor o mecanismo solo por una lesión o tríada",
+          "why_not": "La incompatibilidad clínica requiere evaluación y protección. Ningún hallazgo aislado establece por sí solo autor o mecanismo.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Un bebé sin movilidad independiente presenta hematomas en orejas y tronco. El relato del mecanismo cambia entre cuidadores. Se requiere evaluar lesiones ocultas y asegurar su protección."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "sin movilidad independiente"
+            },
+            {
+              "field": "mechanism",
+              "text": "El daño físico no accidental puede producir lesiones incompatibles con desarrollo o mecanismo relatado; la distribución y lesiones asociadas orientan evaluación integral y medidas de protección."
+            },
+            {
+              "field": "initial_action",
+              "text": "Atender lesiones, documentar hallazgos y activar evaluación y protección infantil según protocolo local."
+            },
+            {
+              "field": "action_reason",
+              "text": "Evita daño repetido y detecta lesiones ocultas."
+            },
+            {
+              "field": "limits",
+              "text": "Una lesión o tríada no identifica por sí sola mecanismo ni autor."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Trauma incompatible con desarrollo"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Hematomas en bebé inmóvil"
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Signos neurológicos o apnea"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Evaluar trauma craneal urgente"
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "Puede existir lesión intracraneal"
+            }
+          ]
+        },
+        "contrast": {
+          "vignette": "Tras atender y documentar lesiones sospechosas se propone identificar al autor solo por una lesión o tríada. ¿Qué límite de interpretación debe mantenerse?",
+          "discriminator": "atribución causal por un hallazgo aislado",
+          "explanation": "El dato decisivo es atribución causal por un hallazgo aislado. Una lesión o tríada no identifica por sí sola mecanismo ni autor. Continuar evaluación integral y protección conforme al protocolo.",
+          "confusable_with": "Identificar autor o mecanismo solo por una lesión o tríada",
+          "why_not": "La incompatibilidad clínica requiere evaluación y protección. Ningún hallazgo aislado establece por sí solo autor o mecanismo.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Un bebé sin movilidad independiente presenta hematomas en orejas y tronco. El relato del mecanismo cambia entre cuidadores. Se requiere evaluar lesiones ocultas y asegurar su protección."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "sin movilidad independiente"
+            },
+            {
+              "field": "mechanism",
+              "text": "El daño físico no accidental puede producir lesiones incompatibles con desarrollo o mecanismo relatado; la distribución y lesiones asociadas orientan evaluación integral y medidas de protección."
+            },
+            {
+              "field": "initial_action",
+              "text": "Atender lesiones, documentar hallazgos y activar evaluación y protección infantil según protocolo local."
+            },
+            {
+              "field": "action_reason",
+              "text": "Evita daño repetido y detecta lesiones ocultas."
+            },
+            {
+              "field": "limits",
+              "text": "Una lesión o tríada no identifica por sí sola mecanismo ni autor."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Trauma incompatible con desarrollo"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Hematomas en bebé inmóvil"
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Signos neurológicos o apnea"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Evaluar trauma craneal urgente"
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "Puede existir lesión intracraneal"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "28.09-01",
+      "parent_topic_id": "28.09-01",
+      "block_id": "28.09",
+      "name": "Mucopolisacaridosis 1",
+      "answer_kind": "diagnosis",
+      "variants": {
+        "easy": {
+          "vignette": "Un niño tiene facies tosca, opacidad corneal, hernia umbilical y rigidez articular. La talla y el desarrollo se afectan de forma progresiva. Se sospecha depósito metabólico multisistémico. ¿Cuál es el diagnóstico más probable?",
+          "discriminator": "facies tosca, opacidad corneal",
+          "explanation": "El dato decisivo es facies tosca, opacidad corneal. El déficit lisosomal de alfa-L-iduronidasa impide degradar dermatán y heparán sulfato; su acumulación causa daño progresivo en esqueleto, córnea, órganos y, en formas graves, sistema nervioso. La talla afectada junto con opacidad corneal, facies tosca y compromiso multisistémico indica enfermedad metabólica, no una variante familiar aislada.",
+          "confusable_with": "Talla baja familiar",
+          "why_not": "La talla afectada junto con opacidad corneal, facies tosca y compromiso multisistémico indica enfermedad metabólica, no una variante familiar aislada.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Un niño tiene facies tosca, opacidad corneal, hernia umbilical y rigidez articular. La talla y el desarrollo se afectan de forma progresiva. Se sospecha depósito metabólico multisistémico."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "facies tosca, opacidad corneal"
+            },
+            {
+              "field": "mechanism",
+              "text": "El déficit lisosomal de alfa-L-iduronidasa impide degradar dermatán y heparán sulfato; su acumulación causa daño progresivo en esqueleto, córnea, órganos y, en formas graves, sistema nervioso."
+            },
+            {
+              "field": "initial_action",
+              "text": "Referir a equipo metabólico para actividad enzimática y confirmación molecular, evaluación orgánica y tratamiento específico temprano."
+            },
+            {
+              "field": "action_reason",
+              "text": "La gravedad y edad influyen en opciones terapéuticas."
+            },
+            {
+              "field": "limits",
+              "text": "El tratamiento depende de fenotipo y edad. La laronidasa trata manifestaciones somáticas; el trasplante temprano se valora en formas graves."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Depósito de glucosaminoglucanos"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Facies tosca y rigidez"
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Forma grave de inicio temprano"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Valorar tratamiento especializado oportuno"
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "Puede haber daño neurológico progresivo"
+            },
+            {
+              "field": "source_corrections.0.reason",
+              "text": "Laronidasa es terapia específica autorizada para MPS I seleccionada y mejora manifestaciones somáticas; no debe presentarse como tratamiento sin evidencia."
+            },
+            {
+              "field": "source_corrections.1.reason",
+              "text": "El trasplante de progenitores hematopoyéticos es atención establecida para niños seleccionados con MPS I grave; el beneficio depende de la edad y carga de enfermedad."
+            }
+          ]
+        },
+        "medium": {
+          "vignette": "Un niño con rigidez, facies tosca y opacidad corneal muestra forma grave temprana con afectación del desarrollo. ¿Cuál es el diagnóstico más probable en este contexto?",
+          "discriminator": "fenotipo multisistémico de depósito con inicio temprano",
+          "explanation": "El dato decisivo es fenotipo multisistémico de depósito con inicio temprano. El déficit lisosomal de alfa-L-iduronidasa impide degradar dermatán y heparán sulfato; su acumulación causa daño progresivo en esqueleto, córnea, órganos y, en formas graves, sistema nervioso. La talla afectada junto con opacidad corneal, facies tosca y compromiso multisistémico indica enfermedad metabólica, no una variante familiar aislada.",
+          "confusable_with": "Talla baja familiar",
+          "why_not": "La talla afectada junto con opacidad corneal, facies tosca y compromiso multisistémico indica enfermedad metabólica, no una variante familiar aislada.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Un niño tiene facies tosca, opacidad corneal, hernia umbilical y rigidez articular. La talla y el desarrollo se afectan de forma progresiva. Se sospecha depósito metabólico multisistémico."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "facies tosca, opacidad corneal"
+            },
+            {
+              "field": "mechanism",
+              "text": "El déficit lisosomal de alfa-L-iduronidasa impide degradar dermatán y heparán sulfato; su acumulación causa daño progresivo en esqueleto, córnea, órganos y, en formas graves, sistema nervioso."
+            },
+            {
+              "field": "initial_action",
+              "text": "Referir a equipo metabólico para actividad enzimática y confirmación molecular, evaluación orgánica y tratamiento específico temprano."
+            },
+            {
+              "field": "action_reason",
+              "text": "La gravedad y edad influyen en opciones terapéuticas."
+            },
+            {
+              "field": "limits",
+              "text": "El tratamiento depende de fenotipo y edad. La laronidasa trata manifestaciones somáticas; el trasplante temprano se valora en formas graves."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Depósito de glucosaminoglucanos"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Facies tosca y rigidez"
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Forma grave de inicio temprano"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Valorar tratamiento especializado oportuno"
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "Puede haber daño neurológico progresivo"
+            },
+            {
+              "field": "source_corrections.0.reason",
+              "text": "Laronidasa es terapia específica autorizada para MPS I seleccionada y mejora manifestaciones somáticas; no debe presentarse como tratamiento sin evidencia."
+            },
+            {
+              "field": "source_corrections.1.reason",
+              "text": "El trasplante de progenitores hematopoyéticos es atención establecida para niños seleccionados con MPS I grave; el beneficio depende de la edad y carga de enfermedad."
+            }
+          ]
+        },
+        "contrast": {
+          "vignette": "Un niño con rigidez, hernia y opacidad corneal tiene actividad de alfa-L-iduronidasa muy reducida en leucocitos. ¿Qué enfermedad lisosomal por depósito confirma ese resultado?",
+          "discriminator": "deficiencia de alfa-L-iduronidasa con fenotipo de depósito",
+          "explanation": "El dato decisivo es deficiencia de alfa-L-iduronidasa con fenotipo de depósito. El déficit lisosomal de alfa-L-iduronidasa impide degradar dermatán y heparán sulfato; su acumulación causa daño progresivo en esqueleto, córnea, órganos y, en formas graves, sistema nervioso. La talla afectada junto con opacidad corneal, facies tosca y compromiso multisistémico indica enfermedad metabólica, no una variante familiar aislada. La presentación adicional se apoya en la página 955 del libro.",
+          "confusable_with": "Talla baja familiar",
+          "why_not": "La talla afectada junto con opacidad corneal, facies tosca y compromiso multisistémico indica enfermedad metabólica, no una variante familiar aislada.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Un niño tiene facies tosca, opacidad corneal, hernia umbilical y rigidez articular. La talla y el desarrollo se afectan de forma progresiva. Se sospecha depósito metabólico multisistémico."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "facies tosca, opacidad corneal"
+            },
+            {
+              "field": "mechanism",
+              "text": "El déficit lisosomal de alfa-L-iduronidasa impide degradar dermatán y heparán sulfato; su acumulación causa daño progresivo en esqueleto, córnea, órganos y, en formas graves, sistema nervioso."
+            },
+            {
+              "field": "initial_action",
+              "text": "Referir a equipo metabólico para actividad enzimática y confirmación molecular, evaluación orgánica y tratamiento específico temprano."
+            },
+            {
+              "field": "action_reason",
+              "text": "La gravedad y edad influyen en opciones terapéuticas."
+            },
+            {
+              "field": "limits",
+              "text": "El tratamiento depende de fenotipo y edad. La laronidasa trata manifestaciones somáticas; el trasplante temprano se valora en formas graves."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Depósito de glucosaminoglucanos"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Facies tosca y rigidez"
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Forma grave de inicio temprano"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Valorar tratamiento especializado oportuno"
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "Puede haber daño neurológico progresivo"
+            },
+            {
+              "field": "source_corrections.0.reason",
+              "text": "Laronidasa es terapia específica autorizada para MPS I seleccionada y mejora manifestaciones somáticas; no debe presentarse como tratamiento sin evidencia."
+            },
+            {
+              "field": "source_corrections.1.reason",
+              "text": "El trasplante de progenitores hematopoyéticos es atención establecida para niños seleccionados con MPS I grave; el beneficio depende de la edad y carga de enfermedad."
+            }
+          ],
+          "source_evidence": [
+            {
+              "page": 955,
+              "quote": "La Mucopolisacaridosis tipo 1(MSP)es una enfermedad autosómica recesiva de depósito lisosomal, que se produce por el déficit de\n     la enzima a-L-iduronidasa. Se ha clasificado de acuerdo con el fenotipo y al grado de afectación de los diferentes órganos y sistemas\n            en: Síndrome de Hurler - Grave, Síndrome de Hurler-scheie - Intermedia o moderada y Síndrome de Schei - atenuada."
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

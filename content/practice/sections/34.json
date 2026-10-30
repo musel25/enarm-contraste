@@ -1,0 +1,3746 @@
+{
+  "schema_version": 1,
+  "section_id": "34",
+  "author": "practice_24_34",
+  "source_sha256": "54b1f1fb68f800a9bb6ce6dad85d564b9286bd964cbbab551abdc5d29d528b74",
+  "groups": [
+    {
+      "id": "34.01-01",
+      "parent_topic_id": "34.01-01",
+      "block_id": "34.01",
+      "name": "Completar vacunas con registro y vigilancia según el programa vigente",
+      "answer_kind": "decision",
+      "variants": {
+        "easy": {
+          "vignette": "Un centro de salud encuentra niños con vacunas pendientes al revisar cartillas. Algunas familias tienen dificultades para regresar a consulta; también existen reportes de fiebre y otros eventos posteriores a inmunización.",
+          "discriminator": "vacunas pendientes",
+          "explanation": "El dato decisivo es vacunas pendientes. Identificar dosis faltantes y completar según lineamiento vigente, con registro, cadena de frío y vigilancia de eventos. La edad cronológica guía al prematuro estable, con condiciones específicas como hepatitis B. La cobertura exige acceso, registro y conservación adecuados.",
+          "confusable_with": "Retrasar todas las vacunas del prematuro por edad corregida",
+          "why_not": "La edad cronológica guía al prematuro estable, con condiciones específicas como hepatitis B. La cobertura exige acceso, registro y conservación adecuados.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Un centro de salud encuentra niños con vacunas pendientes al revisar cartillas. Algunas familias tienen dificultades para regresar a consulta; también existen reportes de fiebre y otros eventos posteriores a inmunización."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "vacunas pendientes"
+            },
+            {
+              "field": "mechanism",
+              "text": "La inmunización poblacional reduce susceptibilidad y circulación de enfermedades prevenibles; la cobertura oportuna, conservación y vigilancia de eventos sostienen protección individual y control comunitario."
+            },
+            {
+              "field": "initial_action",
+              "text": "Identificar dosis faltantes y completar según lineamiento vigente, con registro, cadena de frío y vigilancia de eventos."
+            },
+            {
+              "field": "action_reason",
+              "text": "La protección requiere acceso y aplicación segura."
+            },
+            {
+              "field": "limits",
+              "text": "Los porcentajes del libro son metas de 2024, no una medida de cobertura actual."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Cobertura insuficiente"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Personas susceptibles y riesgo de brote"
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Prematuridad"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Revisar indicaciones por edad cronológica y condiciones específicas"
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "No se ajustan todas las vacunas por edad corregida"
+            },
+            {
+              "field": "source_corrections.0.reason",
+              "text": "El prematuro estable recibe vacunas por edad cronológica. Hepatitis B tiene consideraciones por peso y HBsAg materno; no retrasar todas las vacunas seis a ocho semanas."
+            }
+          ]
+        },
+        "medium": {
+          "vignette": "Un prematuro clínicamente estable tiene vacunas pendientes. ¿Qué edad y condiciones específicas deben guiar la recuperación?",
+          "discriminator": "prematuridad estable con uso de edad cronológica",
+          "explanation": "El dato decisivo es prematuridad estable con uso de edad cronológica. Vacunar al prematuro estable por edad cronológica, con condiciones específicas como peso y HBsAg materno para hepatitis B. La edad cronológica guía al prematuro estable, con condiciones específicas como hepatitis B. La cobertura exige acceso, registro y conservación adecuados.",
+          "confusable_with": "Retrasar todas las vacunas del prematuro por edad corregida",
+          "why_not": "La edad cronológica guía al prematuro estable, con condiciones específicas como hepatitis B. La cobertura exige acceso, registro y conservación adecuados.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Un centro de salud encuentra niños con vacunas pendientes al revisar cartillas. Algunas familias tienen dificultades para regresar a consulta; también existen reportes de fiebre y otros eventos posteriores a inmunización."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "vacunas pendientes"
+            },
+            {
+              "field": "mechanism",
+              "text": "La inmunización poblacional reduce susceptibilidad y circulación de enfermedades prevenibles; la cobertura oportuna, conservación y vigilancia de eventos sostienen protección individual y control comunitario."
+            },
+            {
+              "field": "initial_action",
+              "text": "Identificar dosis faltantes y completar según lineamiento vigente, con registro, cadena de frío y vigilancia de eventos."
+            },
+            {
+              "field": "action_reason",
+              "text": "La protección requiere acceso y aplicación segura."
+            },
+            {
+              "field": "limits",
+              "text": "Los porcentajes del libro son metas de 2024, no una medida de cobertura actual."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Cobertura insuficiente"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Personas susceptibles y riesgo de brote"
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Prematuridad"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Revisar indicaciones por edad cronológica y condiciones específicas"
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "No se ajustan todas las vacunas por edad corregida"
+            },
+            {
+              "field": "source_corrections.0.reason",
+              "text": "El prematuro estable recibe vacunas por edad cronológica. Hepatitis B tiene consideraciones por peso y HBsAg materno; no retrasar todas las vacunas seis a ocho semanas."
+            }
+          ]
+        },
+        "contrast": {
+          "vignette": "Después de una jornada de vacunación el centro recibe reportes de fiebre y otros eventos. ¿Qué vigilancia y registro debe organizar junto con la revisión de cobertura?",
+          "discriminator": "vigilancia de eventos después de aplicación",
+          "explanation": "Mantener registro y vigilancia de eventos según protocolo, junto con cadena de frío y seguimiento de dosis faltantes. La inmunización segura necesita evaluar los eventos, sin asumir causalidad solo por temporalidad.",
+          "confusable_with": "Retrasar todas las vacunas del prematuro por edad corregida",
+          "why_not": "La edad cronológica guía al prematuro estable, con condiciones específicas como hepatitis B. La cobertura exige acceso, registro y conservación adecuados.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Un centro de salud encuentra niños con vacunas pendientes al revisar cartillas. Algunas familias tienen dificultades para regresar a consulta; también existen reportes de fiebre y otros eventos posteriores a inmunización."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "vacunas pendientes"
+            },
+            {
+              "field": "mechanism",
+              "text": "La inmunización poblacional reduce susceptibilidad y circulación de enfermedades prevenibles; la cobertura oportuna, conservación y vigilancia de eventos sostienen protección individual y control comunitario."
+            },
+            {
+              "field": "initial_action",
+              "text": "Identificar dosis faltantes y completar según lineamiento vigente, con registro, cadena de frío y vigilancia de eventos."
+            },
+            {
+              "field": "action_reason",
+              "text": "La protección requiere acceso y aplicación segura."
+            },
+            {
+              "field": "limits",
+              "text": "Los porcentajes del libro son metas de 2024, no una medida de cobertura actual."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Cobertura insuficiente"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Personas susceptibles y riesgo de brote"
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Prematuridad"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Revisar indicaciones por edad cronológica y condiciones específicas"
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "No se ajustan todas las vacunas por edad corregida"
+            },
+            {
+              "field": "source_corrections.0.reason",
+              "text": "El prematuro estable recibe vacunas por edad cronológica. Hepatitis B tiene consideraciones por peso y HBsAg materno; no retrasar todas las vacunas seis a ocho semanas."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "34.01-02",
+      "parent_topic_id": "34.01-02",
+      "block_id": "34.01",
+      "name": "Distinguir inmunización activa y pasiva y evaluar eventos por gravedad",
+      "answer_kind": "decision",
+      "variants": {
+        "easy": {
+          "vignette": "Una persona pregunta por qué una vacuna no actúa igual que una inmunoglobulina. Presenta fiebre al día siguiente de vacunarse, sin dificultad respiratoria, hipotensión ni alteración del estado de conciencia.",
+          "discriminator": "fiebre al día siguiente de vacunarse",
+          "explanation": "El dato decisivo es fiebre al día siguiente de vacunarse. Identificar tipo de inmunización y evaluar cualquier evento por gravedad, temporalidad y causas alternativas; notificar según protocolo. La temporalidad no prueba por sí sola causalidad. La gravedad determina atención inmediata y notificación.",
+          "confusable_with": "Atribuir causalidad a toda fiebre posterior sin evaluar alternativas",
+          "why_not": "La temporalidad no prueba por sí sola causalidad. La gravedad determina atención inmediata y notificación.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Una persona pregunta por qué una vacuna no actúa igual que una inmunoglobulina. Presenta fiebre al día siguiente de vacunarse, sin dificultad respiratoria, hipotensión ni alteración del estado de conciencia."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "fiebre al día siguiente de vacunarse"
+            },
+            {
+              "field": "mechanism",
+              "text": "La inmunización activa estimula respuesta y memoria propias; la pasiva transfiere anticuerpos y protección transitoria, mientras un evento posterior a vacuna requiere evaluación antes de atribuir causa."
+            },
+            {
+              "field": "initial_action",
+              "text": "Identificar tipo de inmunización y evaluar cualquier evento por gravedad, temporalidad y causas alternativas; notificar según protocolo."
+            },
+            {
+              "field": "action_reason",
+              "text": "La asociación temporal no demuestra causalidad."
+            },
+            {
+              "field": "limits",
+              "text": "El periodo de vigilancia depende del evento y vacuna."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Estimulación de memoria propia"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Protección activa diferida"
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Anafilaxia o evento grave"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Tratar de inmediato y notificar"
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "La atención clínica precede investigación causal"
+            }
+          ]
+        },
+        "medium": {
+          "vignette": "Después de una vacuna aparece una reacción grave o anafilaxia. ¿Qué prioridad de tratamiento y notificación corresponde?",
+          "discriminator": "evento grave tras inmunización",
+          "explanation": "El dato decisivo es evento grave tras inmunización. Tratar de inmediato el evento grave y notificar según protocolo; la atención precede a investigar causalidad. La temporalidad no prueba por sí sola causalidad. La gravedad determina atención inmediata y notificación.",
+          "confusable_with": "Atribuir causalidad a toda fiebre posterior sin evaluar alternativas",
+          "why_not": "La temporalidad no prueba por sí sola causalidad. La gravedad determina atención inmediata y notificación.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Una persona pregunta por qué una vacuna no actúa igual que una inmunoglobulina. Presenta fiebre al día siguiente de vacunarse, sin dificultad respiratoria, hipotensión ni alteración del estado de conciencia."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "fiebre al día siguiente de vacunarse"
+            },
+            {
+              "field": "mechanism",
+              "text": "La inmunización activa estimula respuesta y memoria propias; la pasiva transfiere anticuerpos y protección transitoria, mientras un evento posterior a vacuna requiere evaluación antes de atribuir causa."
+            },
+            {
+              "field": "initial_action",
+              "text": "Identificar tipo de inmunización y evaluar cualquier evento por gravedad, temporalidad y causas alternativas; notificar según protocolo."
+            },
+            {
+              "field": "action_reason",
+              "text": "La asociación temporal no demuestra causalidad."
+            },
+            {
+              "field": "limits",
+              "text": "El periodo de vigilancia depende del evento y vacuna."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Estimulación de memoria propia"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Protección activa diferida"
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Anafilaxia o evento grave"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Tratar de inmediato y notificar"
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "La atención clínica precede investigación causal"
+            }
+          ]
+        },
+        "contrast": {
+          "vignette": "Una persona compara la vacuna con inmunoglobulina y pregunta por qué la protección no aparece de la misma forma. ¿Qué tipo de respuesta y memoria debe explicarse?",
+          "discriminator": "memoria propia frente a anticuerpos administrados",
+          "explanation": "El dato decisivo es memoria propia frente a anticuerpos administrados. Explicar que la vacuna estimula memoria propia, mientras la inmunoglobulina aporta anticuerpos; revisar tipo de inmunización. La temporalidad no prueba por sí sola causalidad. La gravedad determina atención inmediata y notificación.",
+          "confusable_with": "Atribuir causalidad a toda fiebre posterior sin evaluar alternativas",
+          "why_not": "La temporalidad no prueba por sí sola causalidad. La gravedad determina atención inmediata y notificación.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Una persona pregunta por qué una vacuna no actúa igual que una inmunoglobulina. Presenta fiebre al día siguiente de vacunarse, sin dificultad respiratoria, hipotensión ni alteración del estado de conciencia."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "fiebre al día siguiente de vacunarse"
+            },
+            {
+              "field": "mechanism",
+              "text": "La inmunización activa estimula respuesta y memoria propias; la pasiva transfiere anticuerpos y protección transitoria, mientras un evento posterior a vacuna requiere evaluación antes de atribuir causa."
+            },
+            {
+              "field": "initial_action",
+              "text": "Identificar tipo de inmunización y evaluar cualquier evento por gravedad, temporalidad y causas alternativas; notificar según protocolo."
+            },
+            {
+              "field": "action_reason",
+              "text": "La asociación temporal no demuestra causalidad."
+            },
+            {
+              "field": "limits",
+              "text": "El periodo de vigilancia depende del evento y vacuna."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Estimulación de memoria propia"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Protección activa diferida"
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Anafilaxia o evento grave"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Tratar de inmediato y notificar"
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "La atención clínica precede investigación causal"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "34.01-03",
+      "parent_topic_id": "34.01-03",
+      "block_id": "34.01",
+      "name": "Clasificar la plataforma y revisar contraindicaciones del producto",
+      "answer_kind": "decision",
+      "variants": {
+        "easy": {
+          "vignette": "Un estudiante compara tres productos: uno contiene microorganismos vivos atenuados, otro antígenos purificados y otro una toxina modificada. Un paciente que recibe inmunosupresores pregunta si todos tienen las mismas precauciones.",
+          "discriminator": "microorganismos vivos atenuados",
+          "explanation": "El dato decisivo es microorganismos vivos atenuados. Clasificar plataforma y revisar indicaciones y contraindicaciones del producto antes de aplicarlo. La plataforma y el contexto cambian el riesgo. Las vacunas vivas requieren revisión específica y no toda inmunodeficiencia tiene la misma restricción.",
+          "confusable_with": "Aplicar la misma precaución a todos los productos",
+          "why_not": "La plataforma y el contexto cambian el riesgo. Las vacunas vivas requieren revisión específica y no toda inmunodeficiencia tiene la misma restricción.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Un estudiante compara tres productos: uno contiene microorganismos vivos atenuados, otro antígenos purificados y otro una toxina modificada. Un paciente que recibe inmunosupresores pregunta si todos tienen las mismas precauciones."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "microorganismos vivos atenuados"
+            },
+            {
+              "field": "mechanism",
+              "text": "Las plataformas presentan antígenos por microorganismos replicativos, inactivados, subunidades, toxoides o ácidos nucleicos; su capacidad replicativa y componentes modifican respuesta, precauciones y uso en condiciones especiales."
+            },
+            {
+              "field": "initial_action",
+              "text": "Clasificar plataforma y revisar indicaciones y contraindicaciones del producto antes de aplicarlo."
+            },
+            {
+              "field": "action_reason",
+              "text": "La seguridad no depende solo del nombre de la enfermedad."
+            },
+            {
+              "field": "limits",
+              "text": "No toda vacuna viva tiene la misma indicación en cada inmunodeficiencia."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Capacidad replicativa del producto"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Precauciones en inmunodeficiencia"
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Vacuna viva y embarazo"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Evitar y valorar alternativa o diferir"
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "Existe riesgo teórico de replicación fetal"
+            }
+          ]
+        },
+        "medium": {
+          "vignette": "Una embarazada pregunta por una vacuna viva atenuada. ¿Qué precaución y alternativa o diferimiento deben valorarse?",
+          "discriminator": "producto vivo durante embarazo",
+          "explanation": "El dato decisivo es producto vivo durante embarazo. Evitar la vacuna viva durante embarazo y valorar alternativa o diferimiento. La plataforma y el contexto cambian el riesgo. Las vacunas vivas requieren revisión específica y no toda inmunodeficiencia tiene la misma restricción.",
+          "confusable_with": "Aplicar la misma precaución a todos los productos",
+          "why_not": "La plataforma y el contexto cambian el riesgo. Las vacunas vivas requieren revisión específica y no toda inmunodeficiencia tiene la misma restricción.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Un estudiante compara tres productos: uno contiene microorganismos vivos atenuados, otro antígenos purificados y otro una toxina modificada. Un paciente que recibe inmunosupresores pregunta si todos tienen las mismas precauciones."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "microorganismos vivos atenuados"
+            },
+            {
+              "field": "mechanism",
+              "text": "Las plataformas presentan antígenos por microorganismos replicativos, inactivados, subunidades, toxoides o ácidos nucleicos; su capacidad replicativa y componentes modifican respuesta, precauciones y uso en condiciones especiales."
+            },
+            {
+              "field": "initial_action",
+              "text": "Clasificar plataforma y revisar indicaciones y contraindicaciones del producto antes de aplicarlo."
+            },
+            {
+              "field": "action_reason",
+              "text": "La seguridad no depende solo del nombre de la enfermedad."
+            },
+            {
+              "field": "limits",
+              "text": "No toda vacuna viva tiene la misma indicación en cada inmunodeficiencia."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Capacidad replicativa del producto"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Precauciones en inmunodeficiencia"
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Vacuna viva y embarazo"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Evitar y valorar alternativa o diferir"
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "Existe riesgo teórico de replicación fetal"
+            }
+          ]
+        },
+        "contrast": {
+          "vignette": "Un paciente con inmunodeficiencia pregunta si un toxoide y una vacuna replicativa tienen igual riesgo. ¿Qué clasificación debe guiar la elegibilidad?",
+          "discriminator": "capacidad replicativa y grado de inmunodeficiencia",
+          "explanation": "El dato decisivo es capacidad replicativa y grado de inmunodeficiencia. Clasificar plataforma y revisar el grado de inmunodeficiencia y las indicaciones del producto. La plataforma y el contexto cambian el riesgo. Las vacunas vivas requieren revisión específica y no toda inmunodeficiencia tiene la misma restricción.",
+          "confusable_with": "Aplicar la misma precaución a todos los productos",
+          "why_not": "La plataforma y el contexto cambian el riesgo. Las vacunas vivas requieren revisión específica y no toda inmunodeficiencia tiene la misma restricción.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Un estudiante compara tres productos: uno contiene microorganismos vivos atenuados, otro antígenos purificados y otro una toxina modificada. Un paciente que recibe inmunosupresores pregunta si todos tienen las mismas precauciones."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "microorganismos vivos atenuados"
+            },
+            {
+              "field": "mechanism",
+              "text": "Las plataformas presentan antígenos por microorganismos replicativos, inactivados, subunidades, toxoides o ácidos nucleicos; su capacidad replicativa y componentes modifican respuesta, precauciones y uso en condiciones especiales."
+            },
+            {
+              "field": "initial_action",
+              "text": "Clasificar plataforma y revisar indicaciones y contraindicaciones del producto antes de aplicarlo."
+            },
+            {
+              "field": "action_reason",
+              "text": "La seguridad no depende solo del nombre de la enfermedad."
+            },
+            {
+              "field": "limits",
+              "text": "No toda vacuna viva tiene la misma indicación en cada inmunodeficiencia."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Capacidad replicativa del producto"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Precauciones en inmunodeficiencia"
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Vacuna viva y embarazo"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Evitar y valorar alternativa o diferir"
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "Existe riesgo teórico de replicación fetal"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "34.01-04",
+      "parent_topic_id": "34.01-04",
+      "block_id": "34.01",
+      "name": "Actualizar esquema según edad, riesgo y dosis válidas",
+      "answer_kind": "decision",
+      "variants": {
+        "easy": {
+          "vignette": "Una familia lleva una cartilla incompleta a consulta. El niño recibió algunas vacunas, pero varias fechas no están registradas; sus padres creen que debe volver a recibir todas las dosis desde el inicio.",
+          "discriminator": "cartilla incompleta",
+          "explanation": "El dato decisivo es cartilla incompleta. Revisar documentación y edad, identificar dosis válidas y completar según programa actual sin reiniciar series de forma automática. Se deben conservar las dosis válidas y aplicar recuperación actual. La edad, riesgo y campaña pueden cambiar las indicaciones.",
+          "confusable_with": "Copiar el calendario de 2024 o reiniciar sin evaluación",
+          "why_not": "Se deben conservar las dosis válidas y aplicar recuperación actual. La edad, riesgo y campaña pueden cambiar las indicaciones.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Una familia lleva una cartilla incompleta a consulta. El niño recibió algunas vacunas, pero varias fechas no están registradas; sus padres creen que debe volver a recibir todas las dosis desde el inicio."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "cartilla incompleta"
+            },
+            {
+              "field": "mechanism",
+              "text": "Las series y refuerzos establecen y mantienen memoria protectora en momentos de vulnerabilidad; documentar dosis, intervalos y edad evita oportunidades perdidas y aplicaciones incompatibles con el producto."
+            },
+            {
+              "field": "initial_action",
+              "text": "Revisar documentación y edad, identificar dosis válidas y completar según programa actual sin reiniciar series de forma automática."
+            },
+            {
+              "field": "action_reason",
+              "text": "La recuperación depende de las dosis recibidas."
+            },
+            {
+              "field": "limits",
+              "text": "El calendario 2024 del libro debe distinguirse del programa mexicano 2026."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Vacunas faltantes"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Protección incompleta"
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Grupo de riesgo o campaña vigente"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Aplicar indicaciones específicas"
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "La estrategia puede diferir del esquema habitual"
+            },
+            {
+              "field": "source_corrections.0.reason",
+              "text": "El esquema del libro es de 2024. El programa 2026 incluye nuevas indicaciones por edad y riesgo; revisar cartilla y aplicar recuperación vigente sin copiar tablas antiguas."
+            }
+          ]
+        },
+        "medium": {
+          "vignette": "Una persona pertenece a un grupo de riesgo o a una campaña actual y tiene cartilla incompleta. ¿Qué indicación debe añadirse a la recuperación habitual?",
+          "discriminator": "riesgo o campaña con estrategia específica",
+          "explanation": "El dato decisivo es riesgo o campaña con estrategia específica. Aplicar indicaciones del grupo de riesgo o campaña además de recuperar dosis válidas. Se deben conservar las dosis válidas y aplicar recuperación actual. La edad, riesgo y campaña pueden cambiar las indicaciones.",
+          "confusable_with": "Copiar el calendario de 2024 o reiniciar sin evaluación",
+          "why_not": "Se deben conservar las dosis válidas y aplicar recuperación actual. La edad, riesgo y campaña pueden cambiar las indicaciones.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Una familia lleva una cartilla incompleta a consulta. El niño recibió algunas vacunas, pero varias fechas no están registradas; sus padres creen que debe volver a recibir todas las dosis desde el inicio."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "cartilla incompleta"
+            },
+            {
+              "field": "mechanism",
+              "text": "Las series y refuerzos establecen y mantienen memoria protectora en momentos de vulnerabilidad; documentar dosis, intervalos y edad evita oportunidades perdidas y aplicaciones incompatibles con el producto."
+            },
+            {
+              "field": "initial_action",
+              "text": "Revisar documentación y edad, identificar dosis válidas y completar según programa actual sin reiniciar series de forma automática."
+            },
+            {
+              "field": "action_reason",
+              "text": "La recuperación depende de las dosis recibidas."
+            },
+            {
+              "field": "limits",
+              "text": "El calendario 2024 del libro debe distinguirse del programa mexicano 2026."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Vacunas faltantes"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Protección incompleta"
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Grupo de riesgo o campaña vigente"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Aplicar indicaciones específicas"
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "La estrategia puede diferir del esquema habitual"
+            },
+            {
+              "field": "source_corrections.0.reason",
+              "text": "El esquema del libro es de 2024. El programa 2026 incluye nuevas indicaciones por edad y riesgo; revisar cartilla y aplicar recuperación vigente sin copiar tablas antiguas."
+            }
+          ]
+        },
+        "contrast": {
+          "vignette": "Una persona tenía su esquema documentado completo para el programa de 2024, pero ahora pertenece a un grupo con nuevas indicaciones del programa vigente. ¿Qué revisión corresponde?",
+          "discriminator": "nuevas indicaciones por edad y riesgo después de un esquema previo completo",
+          "explanation": "Revisar el programa mexicano actual y añadir lo indicado por edad o riesgo. No copiar una tabla de 2024 ni reiniciar automáticamente las series válidas.",
+          "confusable_with": "Copiar el calendario de 2024 o reiniciar sin evaluación",
+          "why_not": "Se deben conservar las dosis válidas y aplicar recuperación actual. La edad, riesgo y campaña pueden cambiar las indicaciones.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Una familia lleva una cartilla incompleta a consulta. El niño recibió algunas vacunas, pero varias fechas no están registradas; sus padres creen que debe volver a recibir todas las dosis desde el inicio."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "cartilla incompleta"
+            },
+            {
+              "field": "mechanism",
+              "text": "Las series y refuerzos establecen y mantienen memoria protectora en momentos de vulnerabilidad; documentar dosis, intervalos y edad evita oportunidades perdidas y aplicaciones incompatibles con el producto."
+            },
+            {
+              "field": "initial_action",
+              "text": "Revisar documentación y edad, identificar dosis válidas y completar según programa actual sin reiniciar series de forma automática."
+            },
+            {
+              "field": "action_reason",
+              "text": "La recuperación depende de las dosis recibidas."
+            },
+            {
+              "field": "limits",
+              "text": "El calendario 2024 del libro debe distinguirse del programa mexicano 2026."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Vacunas faltantes"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Protección incompleta"
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Grupo de riesgo o campaña vigente"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Aplicar indicaciones específicas"
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "La estrategia puede diferir del esquema habitual"
+            },
+            {
+              "field": "source_corrections.0.reason",
+              "text": "El esquema del libro es de 2024. El programa 2026 incluye nuevas indicaciones por edad y riesgo; revisar cartilla y aplicar recuperación vigente sin copiar tablas antiguas."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "34.01-05",
+      "parent_topic_id": "34.01-05",
+      "block_id": "34.01",
+      "name": "Verificar producto, vía, sitio y registro de cada vacuna",
+      "answer_kind": "decision",
+      "variants": {
+        "easy": {
+          "vignette": "Un lactante recibirá varios biológicos en una visita. Hay presentaciones con distintas vías y volúmenes; su masa muscular es pequeña y la familia pregunta si todos pueden aplicarse en el mismo sitio.",
+          "discriminator": "presentaciones con distintas vías y volúmenes",
+          "explanation": "El dato decisivo es presentaciones con distintas vías y volúmenes. Verificar paciente, producto, caducidad, dosis, vía y sitio; documentar y observar según protocolo. Cada biológico exige verificar dosis, vía y tejido. Los sitios separados y registros individuales permiten técnica segura y trazabilidad.",
+          "confusable_with": "Usar el mismo volumen, vía o sitio para cualquier producto",
+          "why_not": "Cada biológico exige verificar dosis, vía y tejido. Los sitios separados y registros individuales permiten técnica segura y trazabilidad.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Un lactante recibirá varios biológicos en una visita. Hay presentaciones con distintas vías y volúmenes; su masa muscular es pequeña y la familia pregunta si todos pueden aplicarse en el mismo sitio."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "presentaciones con distintas vías y volúmenes"
+            },
+            {
+              "field": "mechanism",
+              "text": "La técnica deposita antígeno en el tejido indicado y preserva seguridad y respuesta; vía, volumen, aguja y sitio dependen de producto, edad y anatomía del paciente."
+            },
+            {
+              "field": "initial_action",
+              "text": "Verificar paciente, producto, caducidad, dosis, vía y sitio; documentar y observar según protocolo."
+            },
+            {
+              "field": "action_reason",
+              "text": "Evita errores de administración."
+            },
+            {
+              "field": "limits",
+              "text": "Los volúmenes y lado corporal no son universales para toda marca."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Depósito en tejido apropiado"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Administración segura del biológico"
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Aplicación simultánea"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Usar sitios separados y registro individual"
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "Permite técnica segura y trazabilidad"
+            },
+            {
+              "field": "modifiers.1.factor",
+              "text": "Vacuna intramuscular en lactante pequeño"
+            },
+            {
+              "field": "modifiers.1.action",
+              "text": "Preferir cara anterolateral del muslo; verificar vía específica de cada producto"
+            },
+            {
+              "field": "modifiers.1.reason",
+              "text": "El sitio depende de masa muscular y tejido indicado"
+            }
+          ]
+        },
+        "medium": {
+          "vignette": "Un lactante pequeño recibirá un producto intramuscular. ¿Qué sitio debe preferirse según su masa muscular y vía específica?",
+          "discriminator": "vacuna intramuscular en lactante pequeño",
+          "explanation": "El dato decisivo es vacuna intramuscular en lactante pequeño. Preferir la cara anterolateral del muslo para una vacuna intramuscular en lactante pequeño y verificar el producto. Cada biológico exige verificar dosis, vía y tejido. Los sitios separados y registros individuales permiten técnica segura y trazabilidad.",
+          "confusable_with": "Usar el mismo volumen, vía o sitio para cualquier producto",
+          "why_not": "Cada biológico exige verificar dosis, vía y tejido. Los sitios separados y registros individuales permiten técnica segura y trazabilidad.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Un lactante recibirá varios biológicos en una visita. Hay presentaciones con distintas vías y volúmenes; su masa muscular es pequeña y la familia pregunta si todos pueden aplicarse en el mismo sitio."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "presentaciones con distintas vías y volúmenes"
+            },
+            {
+              "field": "mechanism",
+              "text": "La técnica deposita antígeno en el tejido indicado y preserva seguridad y respuesta; vía, volumen, aguja y sitio dependen de producto, edad y anatomía del paciente."
+            },
+            {
+              "field": "initial_action",
+              "text": "Verificar paciente, producto, caducidad, dosis, vía y sitio; documentar y observar según protocolo."
+            },
+            {
+              "field": "action_reason",
+              "text": "Evita errores de administración."
+            },
+            {
+              "field": "limits",
+              "text": "Los volúmenes y lado corporal no son universales para toda marca."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Depósito en tejido apropiado"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Administración segura del biológico"
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Aplicación simultánea"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Usar sitios separados y registro individual"
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "Permite técnica segura y trazabilidad"
+            },
+            {
+              "field": "modifiers.1.factor",
+              "text": "Vacuna intramuscular en lactante pequeño"
+            },
+            {
+              "field": "modifiers.1.action",
+              "text": "Preferir cara anterolateral del muslo; verificar vía específica de cada producto"
+            },
+            {
+              "field": "modifiers.1.reason",
+              "text": "El sitio depende de masa muscular y tejido indicado"
+            }
+          ]
+        },
+        "contrast": {
+          "vignette": "En una visita se aplicarán varios biológicos de forma simultánea. ¿Cómo deben elegirse sitios y documentarse las aplicaciones?",
+          "discriminator": "aplicación simultánea que requiere sitios separados",
+          "explanation": "El dato decisivo es aplicación simultánea que requiere sitios separados. Usar sitios separados y registro individual para los productos simultáneos. Cada biológico exige verificar dosis, vía y tejido. Los sitios separados y registros individuales permiten técnica segura y trazabilidad.",
+          "confusable_with": "Usar el mismo volumen, vía o sitio para cualquier producto",
+          "why_not": "Cada biológico exige verificar dosis, vía y tejido. Los sitios separados y registros individuales permiten técnica segura y trazabilidad.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Un lactante recibirá varios biológicos en una visita. Hay presentaciones con distintas vías y volúmenes; su masa muscular es pequeña y la familia pregunta si todos pueden aplicarse en el mismo sitio."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "presentaciones con distintas vías y volúmenes"
+            },
+            {
+              "field": "mechanism",
+              "text": "La técnica deposita antígeno en el tejido indicado y preserva seguridad y respuesta; vía, volumen, aguja y sitio dependen de producto, edad y anatomía del paciente."
+            },
+            {
+              "field": "initial_action",
+              "text": "Verificar paciente, producto, caducidad, dosis, vía y sitio; documentar y observar según protocolo."
+            },
+            {
+              "field": "action_reason",
+              "text": "Evita errores de administración."
+            },
+            {
+              "field": "limits",
+              "text": "Los volúmenes y lado corporal no son universales para toda marca."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Depósito en tejido apropiado"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Administración segura del biológico"
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Aplicación simultánea"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Usar sitios separados y registro individual"
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "Permite técnica segura y trazabilidad"
+            },
+            {
+              "field": "modifiers.1.factor",
+              "text": "Vacuna intramuscular en lactante pequeño"
+            },
+            {
+              "field": "modifiers.1.action",
+              "text": "Preferir cara anterolateral del muslo; verificar vía específica de cada producto"
+            },
+            {
+              "field": "modifiers.1.reason",
+              "text": "El sitio depende de masa muscular y tejido indicado"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "34.02-01",
+      "parent_topic_id": "34.02-01",
+      "block_id": "34.02",
+      "name": "Evaluar elegibilidad y aplicar BCG cuando corresponde",
+      "answer_kind": "decision",
+      "variants": {
+        "easy": {
+          "vignette": "Un recién nacido estable acude para prevención de formas graves de tuberculosis. Tiene peso adecuado y no presenta datos de inmunodeficiencia; su familia pregunta por la vacuna intradérmica y la lesión local posterior.",
+          "discriminator": "formas graves de tuberculosis",
+          "explanation": "El dato decisivo es formas graves de tuberculosis. Revisar elegibilidad neonatal y aplicar BCG según programa y producto; explicar cuidado local y evolución esperada. La elegibilidad requiere revisar riesgo de diseminación. La cicatriz aislada no determina la respuesta inmunitaria.",
+          "confusable_with": "Repetir o negar protección solo por falta de cicatriz",
+          "why_not": "La elegibilidad requiere revisar riesgo de diseminación. La cicatriz aislada no determina la respuesta inmunitaria.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Un recién nacido estable acude para prevención de formas graves de tuberculosis. Tiene peso adecuado y no presenta datos de inmunodeficiencia; su familia pregunta por la vacuna intradérmica y la lesión local posterior."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "formas graves de tuberculosis"
+            },
+            {
+              "field": "mechanism",
+              "text": "El bacilo vivo atenuado de Mycobacterium bovis induce respuesta inmune que protege principalmente frente a tuberculosis meníngea y miliar infantil, con precauciones especiales si hay inmunodeficiencia."
+            },
+            {
+              "field": "initial_action",
+              "text": "Revisar elegibilidad neonatal y aplicar BCG según programa y producto; explicar cuidado local y evolución esperada."
+            },
+            {
+              "field": "action_reason",
+              "text": "Previene formas graves y evita aplicación en contraindicaciones reales."
+            },
+            {
+              "field": "limits",
+              "text": "La ausencia de cicatriz no demuestra por sí sola falta de inmunidad."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Inmunidad celular frente a micobacteria"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Menor riesgo de enfermedad grave"
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Sospecha de inmunodeficiencia"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Evaluar antes de aplicar"
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "El microorganismo vivo puede diseminarse"
+            }
+          ]
+        },
+        "medium": {
+          "vignette": "Antes de BCG un recién nacido presenta sospecha de inmunodeficiencia. ¿Qué debe evaluarse antes de aplicar el microorganismo vivo?",
+          "discriminator": "posible inmunodeficiencia",
+          "explanation": "El dato decisivo es posible inmunodeficiencia. Evaluar sospecha de inmunodeficiencia antes de aplicar el producto vivo. La elegibilidad requiere revisar riesgo de diseminación. La cicatriz aislada no determina la respuesta inmunitaria.",
+          "confusable_with": "Repetir o negar protección solo por falta de cicatriz",
+          "why_not": "La elegibilidad requiere revisar riesgo de diseminación. La cicatriz aislada no determina la respuesta inmunitaria.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Un recién nacido estable acude para prevención de formas graves de tuberculosis. Tiene peso adecuado y no presenta datos de inmunodeficiencia; su familia pregunta por la vacuna intradérmica y la lesión local posterior."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "formas graves de tuberculosis"
+            },
+            {
+              "field": "mechanism",
+              "text": "El bacilo vivo atenuado de Mycobacterium bovis induce respuesta inmune que protege principalmente frente a tuberculosis meníngea y miliar infantil, con precauciones especiales si hay inmunodeficiencia."
+            },
+            {
+              "field": "initial_action",
+              "text": "Revisar elegibilidad neonatal y aplicar BCG según programa y producto; explicar cuidado local y evolución esperada."
+            },
+            {
+              "field": "action_reason",
+              "text": "Previene formas graves y evita aplicación en contraindicaciones reales."
+            },
+            {
+              "field": "limits",
+              "text": "La ausencia de cicatriz no demuestra por sí sola falta de inmunidad."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Inmunidad celular frente a micobacteria"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Menor riesgo de enfermedad grave"
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Sospecha de inmunodeficiencia"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Evaluar antes de aplicar"
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "El microorganismo vivo puede diseminarse"
+            }
+          ]
+        },
+        "contrast": {
+          "vignette": "La familia de un niño vacunado no encuentra cicatriz de BCG y cree que no tiene inmunidad. ¿Qué interpretación y revisión corresponden?",
+          "discriminator": "ausencia de cicatriz que no demuestra falta de inmunidad",
+          "explanation": "El dato decisivo es ausencia de cicatriz que no demuestra falta de inmunidad. Revisar antecedentes sin tomar la ausencia de cicatriz como prueba de falta de inmunidad. La elegibilidad requiere revisar riesgo de diseminación. La cicatriz aislada no determina la respuesta inmunitaria.",
+          "confusable_with": "Repetir o negar protección solo por falta de cicatriz",
+          "why_not": "La elegibilidad requiere revisar riesgo de diseminación. La cicatriz aislada no determina la respuesta inmunitaria.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Un recién nacido estable acude para prevención de formas graves de tuberculosis. Tiene peso adecuado y no presenta datos de inmunodeficiencia; su familia pregunta por la vacuna intradérmica y la lesión local posterior."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "formas graves de tuberculosis"
+            },
+            {
+              "field": "mechanism",
+              "text": "El bacilo vivo atenuado de Mycobacterium bovis induce respuesta inmune que protege principalmente frente a tuberculosis meníngea y miliar infantil, con precauciones especiales si hay inmunodeficiencia."
+            },
+            {
+              "field": "initial_action",
+              "text": "Revisar elegibilidad neonatal y aplicar BCG según programa y producto; explicar cuidado local y evolución esperada."
+            },
+            {
+              "field": "action_reason",
+              "text": "Previene formas graves y evita aplicación en contraindicaciones reales."
+            },
+            {
+              "field": "limits",
+              "text": "La ausencia de cicatriz no demuestra por sí sola falta de inmunidad."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Inmunidad celular frente a micobacteria"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Menor riesgo de enfermedad grave"
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Sospecha de inmunodeficiencia"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Evaluar antes de aplicar"
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "El microorganismo vivo puede diseminarse"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "34.02-02",
+      "parent_topic_id": "34.02-02",
+      "block_id": "34.02",
+      "name": "Prevenir transmisión perinatal de VHB con vacuna e inmunoglobulina",
+      "answer_kind": "decision",
+      "variants": {
+        "easy": {
+          "vignette": "Un bebé de dos horas de vida está estable. El control prenatal materno documentó antígeno de superficie positivo para un virus de transmisión sanguínea; no tiene constancia de profilaxis después del parto.",
+          "discriminator": "antígeno de superficie positivo",
+          "explanation": "El dato decisivo es antígeno de superficie positivo. Administrar vacuna monovalente e inmunoglobulina contra VHB en sitios distintos dentro de 12 horas del nacimiento. Completar serie y realizar HBsAg y anti-HBs a los 9–12 meses. La exposición materna necesita profilaxis dentro de 12 horas. El peso cambia el conteo de la dosis y el control usa HBsAg y anti-HBs a los 9–12 meses.",
+          "confusable_with": "Esperar el calendario general para una exposición perinatal",
+          "why_not": "La exposición materna necesita profilaxis dentro de 12 horas. El peso cambia el conteo de la dosis y el control usa HBsAg y anti-HBs a los 9–12 meses.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Un bebé de dos horas de vida está estable. El control prenatal materno documentó antígeno de superficie positivo para un virus de transmisión sanguínea; no tiene constancia de profilaxis después del parto."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "antígeno de superficie positivo"
+            },
+            {
+              "field": "mechanism",
+              "text": "El antígeno de superficie recombinante induce anticuerpos protectores frente a hepatitis B; la prevención neonatal reduce transmisión perinatal y riesgo de infección crónica, con inmunoglobulina cuando corresponde."
+            },
+            {
+              "field": "initial_action",
+              "text": "Administrar vacuna monovalente e inmunoglobulina contra VHB en sitios distintos dentro de 12 horas del nacimiento. Completar serie y realizar HBsAg y anti-HBs a los 9–12 meses."
+            },
+            {
+              "field": "action_reason",
+              "text": "La oportunidad protege frente a exposición del nacimiento."
+            },
+            {
+              "field": "limits",
+              "text": "No posponer una exposición perinatal por el esquema general."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Respuesta anti-HBs"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Prevención de infección perinatal"
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Peso al nacer menor de 2000 g y madre HBsAg positiva"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "No contar la dosis natal para completar serie; añadir tres dosis desde el mes de edad"
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "La respuesta a la dosis natal puede ser menor"
+            },
+            {
+              "field": "source_corrections.0.reason",
+              "text": "Ante HBsAg materno positivo, vacuna monovalente e inmunoglobulina son urgentes dentro de 12 horas; no esperar el límite general de 24 horas. El control posterior usa HBsAg y anti-HBs a los 9–12 meses."
+            }
+          ]
+        },
+        "medium": {
+          "vignette": "Un recién nacido de menos de 2000 g tiene madre HBsAg positiva. ¿Qué profilaxis inmediata y ajuste del conteo de dosis corresponden?",
+          "discriminator": "bajo peso y exposición perinatal a VHB",
+          "explanation": "El dato decisivo es bajo peso y exposición perinatal a VHB. Dar vacuna monovalente e inmunoglobulina dentro de 12 horas; con peso menor de 2000 g no contar la dosis natal y añadir tres desde el mes. La exposición materna necesita profilaxis dentro de 12 horas. El peso cambia el conteo de la dosis y el control usa HBsAg y anti-HBs a los 9–12 meses.",
+          "confusable_with": "Esperar el calendario general para una exposición perinatal",
+          "why_not": "La exposición materna necesita profilaxis dentro de 12 horas. El peso cambia el conteo de la dosis y el control usa HBsAg y anti-HBs a los 9–12 meses.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Un bebé de dos horas de vida está estable. El control prenatal materno documentó antígeno de superficie positivo para un virus de transmisión sanguínea; no tiene constancia de profilaxis después del parto."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "antígeno de superficie positivo"
+            },
+            {
+              "field": "mechanism",
+              "text": "El antígeno de superficie recombinante induce anticuerpos protectores frente a hepatitis B; la prevención neonatal reduce transmisión perinatal y riesgo de infección crónica, con inmunoglobulina cuando corresponde."
+            },
+            {
+              "field": "initial_action",
+              "text": "Administrar vacuna monovalente e inmunoglobulina contra VHB en sitios distintos dentro de 12 horas del nacimiento. Completar serie y realizar HBsAg y anti-HBs a los 9–12 meses."
+            },
+            {
+              "field": "action_reason",
+              "text": "La oportunidad protege frente a exposición del nacimiento."
+            },
+            {
+              "field": "limits",
+              "text": "No posponer una exposición perinatal por el esquema general."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Respuesta anti-HBs"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Prevención de infección perinatal"
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Peso al nacer menor de 2000 g y madre HBsAg positiva"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "No contar la dosis natal para completar serie; añadir tres dosis desde el mes de edad"
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "La respuesta a la dosis natal puede ser menor"
+            },
+            {
+              "field": "source_corrections.0.reason",
+              "text": "Ante HBsAg materno positivo, vacuna monovalente e inmunoglobulina son urgentes dentro de 12 horas; no esperar el límite general de 24 horas. El control posterior usa HBsAg y anti-HBs a los 9–12 meses."
+            }
+          ]
+        },
+        "contrast": {
+          "vignette": "Un lactante que recibió vacuna e inmunoglobulina por HBsAg materno positivo requiere seguimiento. ¿Qué pruebas y momento de control deben programarse?",
+          "discriminator": "seguimiento después de profilaxis perinatal",
+          "explanation": "El dato decisivo es seguimiento después de profilaxis perinatal. Programar HBsAg y anti-HBs a los 9–12 meses y asegurar la serie completa. La exposición materna necesita profilaxis dentro de 12 horas. El peso cambia el conteo de la dosis y el control usa HBsAg y anti-HBs a los 9–12 meses.",
+          "confusable_with": "Esperar el calendario general para una exposición perinatal",
+          "why_not": "La exposición materna necesita profilaxis dentro de 12 horas. El peso cambia el conteo de la dosis y el control usa HBsAg y anti-HBs a los 9–12 meses.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Un bebé de dos horas de vida está estable. El control prenatal materno documentó antígeno de superficie positivo para un virus de transmisión sanguínea; no tiene constancia de profilaxis después del parto."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "antígeno de superficie positivo"
+            },
+            {
+              "field": "mechanism",
+              "text": "El antígeno de superficie recombinante induce anticuerpos protectores frente a hepatitis B; la prevención neonatal reduce transmisión perinatal y riesgo de infección crónica, con inmunoglobulina cuando corresponde."
+            },
+            {
+              "field": "initial_action",
+              "text": "Administrar vacuna monovalente e inmunoglobulina contra VHB en sitios distintos dentro de 12 horas del nacimiento. Completar serie y realizar HBsAg y anti-HBs a los 9–12 meses."
+            },
+            {
+              "field": "action_reason",
+              "text": "La oportunidad protege frente a exposición del nacimiento."
+            },
+            {
+              "field": "limits",
+              "text": "No posponer una exposición perinatal por el esquema general."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Respuesta anti-HBs"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Prevención de infección perinatal"
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Peso al nacer menor de 2000 g y madre HBsAg positiva"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "No contar la dosis natal para completar serie; añadir tres dosis desde el mes de edad"
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "La respuesta a la dosis natal puede ser menor"
+            },
+            {
+              "field": "source_corrections.0.reason",
+              "text": "Ante HBsAg materno positivo, vacuna monovalente e inmunoglobulina son urgentes dentro de 12 horas; no esperar el límite general de 24 horas. El control posterior usa HBsAg y anti-HBs a los 9–12 meses."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "34.03-01",
+      "parent_topic_id": "34.03-01",
+      "block_id": "34.03",
+      "name": "Aplicar hexavalente según dosis válidas y recuperación",
+      "answer_kind": "decision",
+      "variants": {
+        "easy": {
+          "vignette": "Un lactante sano acude a una visita programada y tiene pendiente una vacuna combinada. El personal identifica protección contra difteria, tétanos, tos ferina, poliomielitis, Hib y hepatitis B.",
+          "discriminator": "vacuna combinada",
+          "explanation": "El dato decisivo es vacuna combinada. Revisar dosis previas y aplicar hexavalente intramuscular a los 2, 4 y 6 meses, con refuerzo a los 18 meses; usar recuperación válida si hay retraso. Las dosis previas válidas se cuentan. La enfermedad leve por sí sola no contraindica universalmente esta vacuna.",
+          "confusable_with": "Reiniciar la serie o diferir toda infección leve",
+          "why_not": "Las dosis previas válidas se cuentan. La enfermedad leve por sí sola no contraindica universalmente esta vacuna.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Un lactante sano acude a una visita programada y tiene pendiente una vacuna combinada. El personal identifica protección contra difteria, tétanos, tos ferina, poliomielitis, Hib y hepatitis B."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "vacuna combinada"
+            },
+            {
+              "field": "mechanism",
+              "text": "La combinación de toxoides, antígenos acelulares, poliovirus inactivados y antígenos de Hib y hepatitis B permite inducir protección frente a seis enfermedades mediante una serie y refuerzo."
+            },
+            {
+              "field": "initial_action",
+              "text": "Revisar dosis previas y aplicar hexavalente intramuscular a los 2, 4 y 6 meses, con refuerzo a los 18 meses; usar recuperación válida si hay retraso."
+            },
+            {
+              "field": "action_reason",
+              "text": "Completa protección sin omitir componentes."
+            },
+            {
+              "field": "limits",
+              "text": "Una infección leve no es por sí sola contraindicación universal."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Múltiples antígenos en una vacuna"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Protección combinada infantil"
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Esquema atrasado"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Usar recuperación con intervalos mínimos válidos"
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "Las dosis previas deben contarse"
+            }
+          ]
+        },
+        "medium": {
+          "vignette": "Un lactante lleva atraso en hexavalente, pero tiene aplicaciones válidas documentadas. ¿Cómo debe recuperarse la serie?",
+          "discriminator": "atraso con dosis previas válidas",
+          "explanation": "El dato decisivo es atraso con dosis previas válidas. Recuperar con intervalos mínimos válidos y contar dosis previas documentadas. Las dosis previas válidas se cuentan. La enfermedad leve por sí sola no contraindica universalmente esta vacuna.",
+          "confusable_with": "Reiniciar la serie o diferir toda infección leve",
+          "why_not": "Las dosis previas válidas se cuentan. La enfermedad leve por sí sola no contraindica universalmente esta vacuna.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Un lactante sano acude a una visita programada y tiene pendiente una vacuna combinada. El personal identifica protección contra difteria, tétanos, tos ferina, poliomielitis, Hib y hepatitis B."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "vacuna combinada"
+            },
+            {
+              "field": "mechanism",
+              "text": "La combinación de toxoides, antígenos acelulares, poliovirus inactivados y antígenos de Hib y hepatitis B permite inducir protección frente a seis enfermedades mediante una serie y refuerzo."
+            },
+            {
+              "field": "initial_action",
+              "text": "Revisar dosis previas y aplicar hexavalente intramuscular a los 2, 4 y 6 meses, con refuerzo a los 18 meses; usar recuperación válida si hay retraso."
+            },
+            {
+              "field": "action_reason",
+              "text": "Completa protección sin omitir componentes."
+            },
+            {
+              "field": "limits",
+              "text": "Una infección leve no es por sí sola contraindicación universal."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Múltiples antígenos en una vacuna"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Protección combinada infantil"
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Esquema atrasado"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Usar recuperación con intervalos mínimos válidos"
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "Las dosis previas deben contarse"
+            }
+          ]
+        },
+        "contrast": {
+          "vignette": "Un lactante con infección leve acude para su vacuna combinada pendiente. ¿Qué revisión de elegibilidad y calendario corresponde sin considerarla contraindicación universal?",
+          "discriminator": "infección leve durante una visita programada",
+          "explanation": "El dato decisivo es infección leve durante una visita programada. Revisar elegibilidad y continuar calendario; la infección leve no es contraindicación universal. Las dosis previas válidas se cuentan. La enfermedad leve por sí sola no contraindica universalmente esta vacuna.",
+          "confusable_with": "Reiniciar la serie o diferir toda infección leve",
+          "why_not": "Las dosis previas válidas se cuentan. La enfermedad leve por sí sola no contraindica universalmente esta vacuna.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Un lactante sano acude a una visita programada y tiene pendiente una vacuna combinada. El personal identifica protección contra difteria, tétanos, tos ferina, poliomielitis, Hib y hepatitis B."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "vacuna combinada"
+            },
+            {
+              "field": "mechanism",
+              "text": "La combinación de toxoides, antígenos acelulares, poliovirus inactivados y antígenos de Hib y hepatitis B permite inducir protección frente a seis enfermedades mediante una serie y refuerzo."
+            },
+            {
+              "field": "initial_action",
+              "text": "Revisar dosis previas y aplicar hexavalente intramuscular a los 2, 4 y 6 meses, con refuerzo a los 18 meses; usar recuperación válida si hay retraso."
+            },
+            {
+              "field": "action_reason",
+              "text": "Completa protección sin omitir componentes."
+            },
+            {
+              "field": "limits",
+              "text": "Una infección leve no es por sí sola contraindicación universal."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Múltiples antígenos en una vacuna"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Protección combinada infantil"
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Esquema atrasado"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Usar recuperación con intervalos mínimos válidos"
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "Las dosis previas deben contarse"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "34.03-02",
+      "parent_topic_id": "34.03-02",
+      "block_id": "34.03",
+      "name": "Verificar elegibilidad y administrar rotavirus por vía oral",
+      "answer_kind": "decision",
+      "variants": {
+        "easy": {
+          "vignette": "Un lactante acude para vacuna oral que previene gastroenteritis grave. Se verifica edad y antecedente de invaginación e inmunodeficiencia. La familia pregunta qué hacer si regurgita la dosis.",
+          "discriminator": "antecedente de invaginación",
+          "explanation": "El dato decisivo es antecedente de invaginación. Revisar producto, edad y dosis previas y aplicar por vía oral si es elegible; no repetir automáticamente por regurgitación. La regurgitación no exige repetición automática. La invaginación previa y la inmunodeficiencia combinada grave son situaciones distintas y relevantes.",
+          "confusable_with": "Repetir automáticamente o contraindicar toda enfermedad digestiva de por vida",
+          "why_not": "La regurgitación no exige repetición automática. La invaginación previa y la inmunodeficiencia combinada grave son situaciones distintas y relevantes.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Un lactante acude para vacuna oral que previene gastroenteritis grave. Se verifica edad y antecedente de invaginación e inmunodeficiencia. La familia pregunta qué hacer si regurgita la dosis."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "antecedente de invaginación"
+            },
+            {
+              "field": "mechanism",
+              "text": "La vacuna viva oral induce respuesta frente a rotavirus y reduce gastroenteritis grave; la edad y ciertos antecedentes modifican elegibilidad por riesgos y límites de seguridad del producto."
+            },
+            {
+              "field": "initial_action",
+              "text": "Revisar producto, edad y dosis previas y aplicar por vía oral si es elegible; no repetir automáticamente por regurgitación."
+            },
+            {
+              "field": "action_reason",
+              "text": "Respeta seguridad y esquema del producto."
+            },
+            {
+              "field": "limits",
+              "text": "No considerar toda enfermedad gastrointestinal una contraindicación permanente."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Inmunidad intestinal"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Menor gastroenteritis grave"
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Invaginación previa o inmunodeficiencia combinada grave"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "No aplicar y consultar"
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "Son contraindicaciones relevantes"
+            }
+          ]
+        },
+        "medium": {
+          "vignette": "Un lactante tiene antecedente de invaginación o inmunodeficiencia combinada grave. ¿Qué decisión corresponde sobre la vacuna de rotavirus?",
+          "discriminator": "contraindicación relevante del producto",
+          "explanation": "El dato decisivo es contraindicación relevante del producto. No aplicar y consultar por invaginación previa o inmunodeficiencia combinada grave. La regurgitación no exige repetición automática. La invaginación previa y la inmunodeficiencia combinada grave son situaciones distintas y relevantes.",
+          "confusable_with": "Repetir automáticamente o contraindicar toda enfermedad digestiva de por vida",
+          "why_not": "La regurgitación no exige repetición automática. La invaginación previa y la inmunodeficiencia combinada grave son situaciones distintas y relevantes.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Un lactante acude para vacuna oral que previene gastroenteritis grave. Se verifica edad y antecedente de invaginación e inmunodeficiencia. La familia pregunta qué hacer si regurgita la dosis."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "antecedente de invaginación"
+            },
+            {
+              "field": "mechanism",
+              "text": "La vacuna viva oral induce respuesta frente a rotavirus y reduce gastroenteritis grave; la edad y ciertos antecedentes modifican elegibilidad por riesgos y límites de seguridad del producto."
+            },
+            {
+              "field": "initial_action",
+              "text": "Revisar producto, edad y dosis previas y aplicar por vía oral si es elegible; no repetir automáticamente por regurgitación."
+            },
+            {
+              "field": "action_reason",
+              "text": "Respeta seguridad y esquema del producto."
+            },
+            {
+              "field": "limits",
+              "text": "No considerar toda enfermedad gastrointestinal una contraindicación permanente."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Inmunidad intestinal"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Menor gastroenteritis grave"
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Invaginación previa o inmunodeficiencia combinada grave"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "No aplicar y consultar"
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "Son contraindicaciones relevantes"
+            }
+          ]
+        },
+        "contrast": {
+          "vignette": "Después de recibir una dosis oral el lactante regurgita. ¿Qué decisión debe tomarse sobre repetir la dosis?",
+          "discriminator": "regurgitación posterior a administración oral",
+          "explanation": "El dato decisivo es regurgitación posterior a administración oral. No repetir automáticamente la dosis regurgitada; seguir producto y programa. La regurgitación no exige repetición automática. La invaginación previa y la inmunodeficiencia combinada grave son situaciones distintas y relevantes.",
+          "confusable_with": "Repetir automáticamente o contraindicar toda enfermedad digestiva de por vida",
+          "why_not": "La regurgitación no exige repetición automática. La invaginación previa y la inmunodeficiencia combinada grave son situaciones distintas y relevantes.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Un lactante acude para vacuna oral que previene gastroenteritis grave. Se verifica edad y antecedente de invaginación e inmunodeficiencia. La familia pregunta qué hacer si regurgita la dosis."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "antecedente de invaginación"
+            },
+            {
+              "field": "mechanism",
+              "text": "La vacuna viva oral induce respuesta frente a rotavirus y reduce gastroenteritis grave; la edad y ciertos antecedentes modifican elegibilidad por riesgos y límites de seguridad del producto."
+            },
+            {
+              "field": "initial_action",
+              "text": "Revisar producto, edad y dosis previas y aplicar por vía oral si es elegible; no repetir automáticamente por regurgitación."
+            },
+            {
+              "field": "action_reason",
+              "text": "Respeta seguridad y esquema del producto."
+            },
+            {
+              "field": "limits",
+              "text": "No considerar toda enfermedad gastrointestinal una contraindicación permanente."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Inmunidad intestinal"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Menor gastroenteritis grave"
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Invaginación previa o inmunodeficiencia combinada grave"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "No aplicar y consultar"
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "Son contraindicaciones relevantes"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "34.03-03",
+      "parent_topic_id": "34.03-03",
+      "block_id": "34.03",
+      "name": "Seleccionar formulación y secuencia neumocócica por edad y riesgo",
+      "answer_kind": "decision",
+      "variants": {
+        "easy": {
+          "vignette": "Un lactante con asplenia funcional tiene registros incompletos. Su familia pregunta por protección contra una bacteria encapsulada que puede causar meningitis y bacteriemia; desconoce qué formulación recibió y cuántas dosis tiene.",
+          "discriminator": "asplenia funcional",
+          "explanation": "El dato decisivo es asplenia funcional. Identificar edad y riesgo, revisar antecedentes y aplicar la formulación y secuencia del programa vigente. La edad, el riesgo, el producto y las dosis previas determinan la secuencia actual.",
+          "confusable_with": "Usar una única secuencia de 2024 para toda edad y riesgo",
+          "why_not": "La edad, el riesgo, el producto y las dosis previas determinan la secuencia actual.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Un lactante con asplenia funcional tiene registros incompletos. Su familia pregunta por protección contra una bacteria encapsulada que puede causar meningitis y bacteriemia; desconoce qué formulación recibió y cuántas dosis tiene."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "asplenia funcional"
+            },
+            {
+              "field": "mechanism",
+              "text": "Los antígenos capsulares generan protección serotipo-específica; la conjugación mejora respuesta inmunitaria, mientras edad, inmunodeficiencia y vacunación previa determinan qué formulación y secuencia corresponde al riesgo."
+            },
+            {
+              "field": "initial_action",
+              "text": "Identificar edad y riesgo, revisar antecedentes y aplicar la formulación y secuencia del programa vigente."
+            },
+            {
+              "field": "action_reason",
+              "text": "Las presentaciones no son intercambiables sin criterio."
+            },
+            {
+              "field": "limits",
+              "text": "El libro describe presentaciones y programa de 2024; verificar disponibilidad y calendario actual."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Respuesta contra cápsula bacteriana"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Prevención de enfermedad invasiva"
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Asplenia"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Planificar vacunación específica"
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "Aumenta riesgo de infección invasiva"
+            }
+          ]
+        },
+        "medium": {
+          "vignette": "Un adulto mayor con enfermedad crónica solicita prevención neumocócica. ¿Qué diferencia de edad, formulación y antecedentes debe revisarse respecto al lactante?",
+          "discriminator": "contexto adulto que modifica formulación y secuencia",
+          "explanation": "La página 1138 incluye indicaciones en adultos y grupos de riesgo. Seleccionar formulación y secuencia del programa vigente según edad, riesgo y dosis previas, sin copiar el calendario infantil.",
+          "confusable_with": "Usar una única secuencia de 2024 para toda edad y riesgo",
+          "why_not": "La edad, el riesgo, el producto y las dosis previas determinan la secuencia actual.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Un lactante con asplenia funcional tiene registros incompletos. Su familia pregunta por protección contra una bacteria encapsulada que puede causar meningitis y bacteriemia; desconoce qué formulación recibió y cuántas dosis tiene."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "asplenia funcional"
+            },
+            {
+              "field": "mechanism",
+              "text": "Los antígenos capsulares generan protección serotipo-específica; la conjugación mejora respuesta inmunitaria, mientras edad, inmunodeficiencia y vacunación previa determinan qué formulación y secuencia corresponde al riesgo."
+            },
+            {
+              "field": "initial_action",
+              "text": "Identificar edad y riesgo, revisar antecedentes y aplicar la formulación y secuencia del programa vigente."
+            },
+            {
+              "field": "action_reason",
+              "text": "Las presentaciones no son intercambiables sin criterio."
+            },
+            {
+              "field": "limits",
+              "text": "El libro describe presentaciones y programa de 2024; verificar disponibilidad y calendario actual."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Respuesta contra cápsula bacteriana"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Prevención de enfermedad invasiva"
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Asplenia"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Planificar vacunación específica"
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "Aumenta riesgo de infección invasiva"
+            }
+          ],
+          "source_evidence": [
+            {
+              "page": 1138,
+              "quote": "de 37 -89%, para OMA de 65% y neumonía invasiva de 77%.                               • Intramuscular 0 .5 mi (< 78 meses) en muslo\n     • Vacuna 23 serotipos (polisacárida): Eficacia de enfermedad                              derecho y(> 78 meses o adultos) en deltoides.\n       invasiva de 56- 87% y en grupos de riesgo de 65% a 84%."
+            }
+          ]
+        },
+        "contrast": {
+          "vignette": "La formulación neumocócica de la tabla de 2024 no está disponible en la unidad. Antes de programar una dosis, ¿qué información debe consultarse?",
+          "discriminator": "disponibilidad de producto que exige revisar programa vigente",
+          "explanation": "Verificar disponibilidad y calendario actual y revisar formulaciones previas. No sustituir una marca o secuencia solo por una tabla antigua.",
+          "confusable_with": "Usar una única secuencia de 2024 para toda edad y riesgo",
+          "why_not": "La edad, el riesgo, el producto y las dosis previas determinan la secuencia actual.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Un lactante con asplenia funcional tiene registros incompletos. Su familia pregunta por protección contra una bacteria encapsulada que puede causar meningitis y bacteriemia; desconoce qué formulación recibió y cuántas dosis tiene."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "asplenia funcional"
+            },
+            {
+              "field": "mechanism",
+              "text": "Los antígenos capsulares generan protección serotipo-específica; la conjugación mejora respuesta inmunitaria, mientras edad, inmunodeficiencia y vacunación previa determinan qué formulación y secuencia corresponde al riesgo."
+            },
+            {
+              "field": "initial_action",
+              "text": "Identificar edad y riesgo, revisar antecedentes y aplicar la formulación y secuencia del programa vigente."
+            },
+            {
+              "field": "action_reason",
+              "text": "Las presentaciones no son intercambiables sin criterio."
+            },
+            {
+              "field": "limits",
+              "text": "El libro describe presentaciones y programa de 2024; verificar disponibilidad y calendario actual."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Respuesta contra cápsula bacteriana"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Prevención de enfermedad invasiva"
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Asplenia"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Planificar vacunación específica"
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "Aumenta riesgo de infección invasiva"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "34.03-04",
+      "parent_topic_id": "34.03-04",
+      "block_id": "34.03",
+      "name": "Completar protección antipoliomielítica según indicación actual",
+      "answer_kind": "decision",
+      "variants": {
+        "easy": {
+          "vignette": "Un familiar pide gotas de poliomielitis para un niño con esquema incompleto. El registro muestra vacuna inactivada dentro de la combinada y la familia recuerda campañas antiguas con administración oral.",
+          "discriminator": "vacuna inactivada dentro de la combinada",
+          "explanation": "El dato decisivo es vacuna inactivada dentro de la combinada. Revisar esquema vigente y completar protección antipoliomielítica con el biológico indicado, sin agregar Sabin por costumbre. La rutina y la respuesta a brote tienen estrategias distintas. Debe seguirse el programa vigente y contar la protección documentada.",
+          "confusable_with": "Agregar Sabin por costumbre a todo esquema",
+          "why_not": "La rutina y la respuesta a brote tienen estrategias distintas. Debe seguirse el programa vigente y contar la protección documentada.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Un familiar pide gotas de poliomielitis para un niño con esquema incompleto. El registro muestra vacuna inactivada dentro de la combinada y la familia recuerda campañas antiguas con administración oral."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "vacuna inactivada dentro de la combinada"
+            },
+            {
+              "field": "mechanism",
+              "text": "La vacuna oral viva genera inmunidad intestinal pero puede excretarse y originar virus derivados en baja cobertura; la vacuna inactivada evita replicación y forma parte de esquemas actuales."
+            },
+            {
+              "field": "initial_action",
+              "text": "Revisar esquema vigente y completar protección antipoliomielítica con el biológico indicado, sin agregar Sabin por costumbre."
+            },
+            {
+              "field": "action_reason",
+              "text": "La estrategia depende del programa y contexto epidemiológico."
+            },
+            {
+              "field": "limits",
+              "text": "La página describe suspensión de uso rutinario en México; no extrapolar a todos los países."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Virus vacunal replicativo oral"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Excreción de poliovirus vacunal"
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Respuesta a brote"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Seguir indicación de autoridad sanitaria"
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "Puede requerir estrategia diferente de rutina"
+            }
+          ]
+        },
+        "medium": {
+          "vignette": "La autoridad sanitaria indica una estrategia antipoliomielítica por brote. ¿Qué instrucción debe guiar el producto y la aplicación?",
+          "discriminator": "respuesta de salud pública ante brote",
+          "explanation": "El dato decisivo es respuesta de salud pública ante brote. Seguir la indicación de la autoridad sanitaria para respuesta a brote. La rutina y la respuesta a brote tienen estrategias distintas. Debe seguirse el programa vigente y contar la protección documentada.",
+          "confusable_with": "Agregar Sabin por costumbre a todo esquema",
+          "why_not": "La rutina y la respuesta a brote tienen estrategias distintas. Debe seguirse el programa vigente y contar la protección documentada.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Un familiar pide gotas de poliomielitis para un niño con esquema incompleto. El registro muestra vacuna inactivada dentro de la combinada y la familia recuerda campañas antiguas con administración oral."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "vacuna inactivada dentro de la combinada"
+            },
+            {
+              "field": "mechanism",
+              "text": "La vacuna oral viva genera inmunidad intestinal pero puede excretarse y originar virus derivados en baja cobertura; la vacuna inactivada evita replicación y forma parte de esquemas actuales."
+            },
+            {
+              "field": "initial_action",
+              "text": "Revisar esquema vigente y completar protección antipoliomielítica con el biológico indicado, sin agregar Sabin por costumbre."
+            },
+            {
+              "field": "action_reason",
+              "text": "La estrategia depende del programa y contexto epidemiológico."
+            },
+            {
+              "field": "limits",
+              "text": "La página describe suspensión de uso rutinario en México; no extrapolar a todos los países."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Virus vacunal replicativo oral"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Excreción de poliovirus vacunal"
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Respuesta a brote"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Seguir indicación de autoridad sanitaria"
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "Puede requerir estrategia diferente de rutina"
+            }
+          ]
+        },
+        "contrast": {
+          "vignette": "Un niño ya completó la protección antipoliomielítica documentada con vacuna inactivada y su familia solicita gotas adicionales por recuerdo de campañas. ¿Qué decisión corresponde en la rutina mexicana?",
+          "discriminator": "serie inactivada completa y solicitud de Sabin adicional",
+          "explanation": "No añadir Sabin por costumbre. Revisar que la serie esté completa y seguir indicación sanitaria si existe una estrategia especial o respuesta a brote.",
+          "confusable_with": "Agregar Sabin por costumbre a todo esquema",
+          "why_not": "La rutina y la respuesta a brote tienen estrategias distintas. Debe seguirse el programa vigente y contar la protección documentada.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Un familiar pide gotas de poliomielitis para un niño con esquema incompleto. El registro muestra vacuna inactivada dentro de la combinada y la familia recuerda campañas antiguas con administración oral."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "vacuna inactivada dentro de la combinada"
+            },
+            {
+              "field": "mechanism",
+              "text": "La vacuna oral viva genera inmunidad intestinal pero puede excretarse y originar virus derivados en baja cobertura; la vacuna inactivada evita replicación y forma parte de esquemas actuales."
+            },
+            {
+              "field": "initial_action",
+              "text": "Revisar esquema vigente y completar protección antipoliomielítica con el biológico indicado, sin agregar Sabin por costumbre."
+            },
+            {
+              "field": "action_reason",
+              "text": "La estrategia depende del programa y contexto epidemiológico."
+            },
+            {
+              "field": "limits",
+              "text": "La página describe suspensión de uso rutinario en México; no extrapolar a todos los países."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Virus vacunal replicativo oral"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Excreción de poliovirus vacunal"
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Respuesta a brote"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Seguir indicación de autoridad sanitaria"
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "Puede requerir estrategia diferente de rutina"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "34.04-01",
+      "parent_topic_id": "34.04-01",
+      "block_id": "34.04",
+      "name": "Evaluar elegibilidad e intervalo para SRP",
+      "answer_kind": "decision",
+      "variants": {
+        "easy": {
+          "vignette": "Un niño acude a completar protección contra sarampión, rubéola y parotiditis. Tiene dosis documentadas y recepción reciente de sangre o inmunoglobulinas; sus padres preguntan si este antecedente cambia la oportunidad de vacunación.",
+          "discriminator": "recepción reciente de sangre o inmunoglobulinas",
+          "explanation": "El dato decisivo es recepción reciente de sangre o inmunoglobulinas. Revisar dosis y elegibilidad y aplicar SRP conforme al calendario o recuperación vigente. La alergia al huevo no contraindica SRP. La relevancia del corticoide depende del régimen y la inmunosupresión real.",
+          "confusable_with": "Diferir por cualquier alergia al huevo o exposición a corticoide",
+          "why_not": "La alergia al huevo no contraindica SRP. La relevancia del corticoide depende del régimen y la inmunosupresión real.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Un niño acude a completar protección contra sarampión, rubéola y parotiditis. Tiene dosis documentadas y recepción reciente de sangre o inmunoglobulinas; sus padres preguntan si este antecedente cambia la oportunidad de vacunación."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "recepción reciente de sangre o inmunoglobulinas"
+            },
+            {
+              "field": "mechanism",
+              "text": "Los virus atenuados inducen respuesta y memoria frente a tres infecciones; inmunosupresión relevante, embarazo y anticuerpos pasivos pueden modificar seguridad o eficacia y oportunidad de aplicación."
+            },
+            {
+              "field": "initial_action",
+              "text": "Revisar dosis y elegibilidad y aplicar SRP conforme al calendario o recuperación vigente."
+            },
+            {
+              "field": "action_reason",
+              "text": "Cierra susceptibilidad y reduce transmisión."
+            },
+            {
+              "field": "limits",
+              "text": "La alergia al huevo no contraindica SRP. La inmunosupresión por corticoide depende de dosis, duración y vía; no toda exposición exige diferir."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Inmunidad frente a virus atenuados"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Prevención de sarampión, rubéola y parotiditis"
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Inmunoglobulina o transfusión reciente"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Verificar intervalo según producto"
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "Los anticuerpos pueden reducir respuesta"
+            },
+            {
+              "field": "source_corrections.0.reason",
+              "text": "La alergia al huevo no contraindica SRP; evaluar reacción a dosis o componentes reales."
+            },
+            {
+              "field": "source_corrections.1.reason",
+              "text": "El riesgo depende de dosis, duración y vía de corticoide. Tratamiento breve, dosis bajas, tópicas o inhaladas no contraindican universalmente vacunas vivas."
+            }
+          ]
+        },
+        "medium": {
+          "vignette": "Un niño con alergia al huevo solicita SRP. ¿Qué revisión de componentes y reacciones reales corresponde sin usar el huevo como contraindicación?",
+          "discriminator": "alergia alimentaria que no contraindica SRP",
+          "explanation": "El dato decisivo es alergia alimentaria que no contraindica SRP. Revisar reacciones a dosis o componentes reales; la alergia al huevo no contraindica SRP. La alergia al huevo no contraindica SRP. La relevancia del corticoide depende del régimen y la inmunosupresión real.",
+          "confusable_with": "Diferir por cualquier alergia al huevo o exposición a corticoide",
+          "why_not": "La alergia al huevo no contraindica SRP. La relevancia del corticoide depende del régimen y la inmunosupresión real.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Un niño acude a completar protección contra sarampión, rubéola y parotiditis. Tiene dosis documentadas y recepción reciente de sangre o inmunoglobulinas; sus padres preguntan si este antecedente cambia la oportunidad de vacunación."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "recepción reciente de sangre o inmunoglobulinas"
+            },
+            {
+              "field": "mechanism",
+              "text": "Los virus atenuados inducen respuesta y memoria frente a tres infecciones; inmunosupresión relevante, embarazo y anticuerpos pasivos pueden modificar seguridad o eficacia y oportunidad de aplicación."
+            },
+            {
+              "field": "initial_action",
+              "text": "Revisar dosis y elegibilidad y aplicar SRP conforme al calendario o recuperación vigente."
+            },
+            {
+              "field": "action_reason",
+              "text": "Cierra susceptibilidad y reduce transmisión."
+            },
+            {
+              "field": "limits",
+              "text": "La alergia al huevo no contraindica SRP. La inmunosupresión por corticoide depende de dosis, duración y vía; no toda exposición exige diferir."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Inmunidad frente a virus atenuados"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Prevención de sarampión, rubéola y parotiditis"
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Inmunoglobulina o transfusión reciente"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Verificar intervalo según producto"
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "Los anticuerpos pueden reducir respuesta"
+            },
+            {
+              "field": "source_corrections.0.reason",
+              "text": "La alergia al huevo no contraindica SRP; evaluar reacción a dosis o componentes reales."
+            },
+            {
+              "field": "source_corrections.1.reason",
+              "text": "El riesgo depende de dosis, duración y vía de corticoide. Tratamiento breve, dosis bajas, tópicas o inhaladas no contraindican universalmente vacunas vivas."
+            }
+          ]
+        },
+        "contrast": {
+          "vignette": "Un niño recibe corticoide inhalado o un curso breve y tiene SRP pendiente. ¿Qué características del tratamiento deben revisarse antes de diferir?",
+          "discriminator": "inmunosupresión dependiente de dosis, vía y duración",
+          "explanation": "El dato decisivo es inmunosupresión dependiente de dosis, vía y duración. Valorar dosis, duración y vía del corticoide; dosis bajas, cursos breves e inhalados no contraindican universalmente. La alergia al huevo no contraindica SRP. La relevancia del corticoide depende del régimen y la inmunosupresión real.",
+          "confusable_with": "Diferir por cualquier alergia al huevo o exposición a corticoide",
+          "why_not": "La alergia al huevo no contraindica SRP. La relevancia del corticoide depende del régimen y la inmunosupresión real.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Un niño acude a completar protección contra sarampión, rubéola y parotiditis. Tiene dosis documentadas y recepción reciente de sangre o inmunoglobulinas; sus padres preguntan si este antecedente cambia la oportunidad de vacunación."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "recepción reciente de sangre o inmunoglobulinas"
+            },
+            {
+              "field": "mechanism",
+              "text": "Los virus atenuados inducen respuesta y memoria frente a tres infecciones; inmunosupresión relevante, embarazo y anticuerpos pasivos pueden modificar seguridad o eficacia y oportunidad de aplicación."
+            },
+            {
+              "field": "initial_action",
+              "text": "Revisar dosis y elegibilidad y aplicar SRP conforme al calendario o recuperación vigente."
+            },
+            {
+              "field": "action_reason",
+              "text": "Cierra susceptibilidad y reduce transmisión."
+            },
+            {
+              "field": "limits",
+              "text": "La alergia al huevo no contraindica SRP. La inmunosupresión por corticoide depende de dosis, duración y vía; no toda exposición exige diferir."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Inmunidad frente a virus atenuados"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Prevención de sarampión, rubéola y parotiditis"
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Inmunoglobulina o transfusión reciente"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Verificar intervalo según producto"
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "Los anticuerpos pueden reducir respuesta"
+            },
+            {
+              "field": "source_corrections.0.reason",
+              "text": "La alergia al huevo no contraindica SRP; evaluar reacción a dosis o componentes reales."
+            },
+            {
+              "field": "source_corrections.1.reason",
+              "text": "El riesgo depende de dosis, duración y vía de corticoide. Tratamiento breve, dosis bajas, tópicas o inhaladas no contraindican universalmente vacunas vivas."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "34.04-02",
+      "parent_topic_id": "34.04-02",
+      "block_id": "34.04",
+      "name": "Valorar inmunidad y elegibilidad para prevención de varicela",
+      "answer_kind": "decision",
+      "variants": {
+        "easy": {
+          "vignette": "Una persona susceptible sin antecedente de exantema vesicular pruriginoso pregunta por vacunación. No está embarazada ni recibe inmunosupresores; una conviviente acaba de presentar una erupción contagiosa similar a la de otros niños de su escuela.",
+          "discriminator": "exantema vesicular pruriginoso",
+          "explanation": "El dato decisivo es exantema vesicular pruriginoso. Revisar evidencia de inmunidad y elegibilidad y aplicar esquema según edad, producto y programa. La lactancia no impide vacunación posparto. La inmunodeficiencia requiere valorar grado y parámetros para elegir vacuna o inmunoprofilaxis.",
+          "confusable_with": "Considerar toda lactancia o todo VIH una contraindicación universal",
+          "why_not": "La lactancia no impide vacunación posparto. La inmunodeficiencia requiere valorar grado y parámetros para elegir vacuna o inmunoprofilaxis.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Una persona susceptible sin antecedente de exantema vesicular pruriginoso pregunta por vacunación. No está embarazada ni recibe inmunosupresores; una conviviente acaba de presentar una erupción contagiosa similar a la de otros niños de su escuela."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "exantema vesicular pruriginoso"
+            },
+            {
+              "field": "mechanism",
+              "text": "El virus atenuado de varicela induce inmunidad protectora y reduce enfermedad grave; por replicación del producto la seguridad depende de embarazo y grado y tipo de inmunodeficiencia."
+            },
+            {
+              "field": "initial_action",
+              "text": "Revisar evidencia de inmunidad y elegibilidad y aplicar esquema según edad, producto y programa."
+            },
+            {
+              "field": "action_reason",
+              "text": "Previene enfermedad en personas susceptibles."
+            },
+            {
+              "field": "limits",
+              "text": "Lactancia no contraindica. Embarazo e inmunodeficiencia grave sí modifican elegibilidad; VIH requiere criterios inmunológicos y valoración específica."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Respuesta frente a virus atenuado"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Prevención de varicela y complicaciones"
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Exposición reciente"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Valorar vacunación o inmunoprofilaxis según riesgo y elegibilidad"
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "La estrategia poscontacto cambia con inmunidad"
+            },
+            {
+              "field": "source_corrections.0.reason",
+              "text": "La lactancia no impide vacunación posparto. En VIH o inmunodeficiencia la elegibilidad depende del grado y parámetros inmunológicos; no es indicación ni contraindicación universal."
+            }
+          ]
+        },
+        "medium": {
+          "vignette": "Una mujer susceptible en posparto está lactando y pregunta por vacuna de varicela. ¿Qué revisión y decisión corresponden?",
+          "discriminator": "lactancia sin contraindicación por sí sola",
+          "explanation": "El dato decisivo es lactancia sin contraindicación por sí sola. Revisar inmunidad y aplicar en posparto si es elegible; la lactancia no contraindica. La lactancia no impide vacunación posparto. La inmunodeficiencia requiere valorar grado y parámetros para elegir vacuna o inmunoprofilaxis.",
+          "confusable_with": "Considerar toda lactancia o todo VIH una contraindicación universal",
+          "why_not": "La lactancia no impide vacunación posparto. La inmunodeficiencia requiere valorar grado y parámetros para elegir vacuna o inmunoprofilaxis.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Una persona susceptible sin antecedente de exantema vesicular pruriginoso pregunta por vacunación. No está embarazada ni recibe inmunosupresores; una conviviente acaba de presentar una erupción contagiosa similar a la de otros niños de su escuela."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "exantema vesicular pruriginoso"
+            },
+            {
+              "field": "mechanism",
+              "text": "El virus atenuado de varicela induce inmunidad protectora y reduce enfermedad grave; por replicación del producto la seguridad depende de embarazo y grado y tipo de inmunodeficiencia."
+            },
+            {
+              "field": "initial_action",
+              "text": "Revisar evidencia de inmunidad y elegibilidad y aplicar esquema según edad, producto y programa."
+            },
+            {
+              "field": "action_reason",
+              "text": "Previene enfermedad en personas susceptibles."
+            },
+            {
+              "field": "limits",
+              "text": "Lactancia no contraindica. Embarazo e inmunodeficiencia grave sí modifican elegibilidad; VIH requiere criterios inmunológicos y valoración específica."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Respuesta frente a virus atenuado"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Prevención de varicela y complicaciones"
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Exposición reciente"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Valorar vacunación o inmunoprofilaxis según riesgo y elegibilidad"
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "La estrategia poscontacto cambia con inmunidad"
+            },
+            {
+              "field": "source_corrections.0.reason",
+              "text": "La lactancia no impide vacunación posparto. En VIH o inmunodeficiencia la elegibilidad depende del grado y parámetros inmunológicos; no es indicación ni contraindicación universal."
+            }
+          ]
+        },
+        "contrast": {
+          "vignette": "Una persona susceptible con exposición reciente tiene VIH o inmunodeficiencia. ¿Qué parámetros y alternativas deben revisarse antes de profilaxis?",
+          "discriminator": "exposición reciente con elegibilidad inmunológica específica",
+          "explanation": "El dato decisivo es exposición reciente con elegibilidad inmunológica específica. Valorar grado y parámetros inmunológicos y seleccionar vacuna o inmunoprofilaxis según riesgo y elegibilidad. La lactancia no impide vacunación posparto. La inmunodeficiencia requiere valorar grado y parámetros para elegir vacuna o inmunoprofilaxis.",
+          "confusable_with": "Considerar toda lactancia o todo VIH una contraindicación universal",
+          "why_not": "La lactancia no impide vacunación posparto. La inmunodeficiencia requiere valorar grado y parámetros para elegir vacuna o inmunoprofilaxis.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Una persona susceptible sin antecedente de exantema vesicular pruriginoso pregunta por vacunación. No está embarazada ni recibe inmunosupresores; una conviviente acaba de presentar una erupción contagiosa similar a la de otros niños de su escuela."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "exantema vesicular pruriginoso"
+            },
+            {
+              "field": "mechanism",
+              "text": "El virus atenuado de varicela induce inmunidad protectora y reduce enfermedad grave; por replicación del producto la seguridad depende de embarazo y grado y tipo de inmunodeficiencia."
+            },
+            {
+              "field": "initial_action",
+              "text": "Revisar evidencia de inmunidad y elegibilidad y aplicar esquema según edad, producto y programa."
+            },
+            {
+              "field": "action_reason",
+              "text": "Previene enfermedad en personas susceptibles."
+            },
+            {
+              "field": "limits",
+              "text": "Lactancia no contraindica. Embarazo e inmunodeficiencia grave sí modifican elegibilidad; VIH requiere criterios inmunológicos y valoración específica."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Respuesta frente a virus atenuado"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Prevención de varicela y complicaciones"
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Exposición reciente"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Valorar vacunación o inmunoprofilaxis según riesgo y elegibilidad"
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "La estrategia poscontacto cambia con inmunidad"
+            },
+            {
+              "field": "source_corrections.0.reason",
+              "text": "La lactancia no impide vacunación posparto. En VIH o inmunodeficiencia la elegibilidad depende del grado y parámetros inmunológicos; no es indicación ni contraindicación universal."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "34.04-03",
+      "parent_topic_id": "34.04-03",
+      "block_id": "34.04",
+      "name": "Ofrecer VPH según programa y verificar esquemas de riesgo",
+      "answer_kind": "decision",
+      "variants": {
+        "easy": {
+          "vignette": "Un escolar acude a vacunación para prevenir cáncer anogenital y verrugas por infección viral. La familia pregunta si se necesita prueba de infección previa y si la vacuna trata lesiones existentes.",
+          "discriminator": "prevenir cáncer anogenital y verrugas",
+          "explanation": "El dato decisivo es prevenir cáncer anogenital y verrugas. Ofrecer vacunación a niñas y niños de quinto de primaria o de 11 años no escolarizados; revisar dosis e indicaciones de otros grupos de riesgo según programa mexicano vigente. El programa incluye niñas y niños. Los grupos de riesgo necesitan revisar su esquema y la vacuna previene infección futura.",
+          "confusable_with": "Excluir varones o usar la misma pauta en todos los grupos",
+          "why_not": "El programa incluye niñas y niños. Los grupos de riesgo necesitan revisar su esquema y la vacuna previene infección futura.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Un escolar acude a vacunación para prevenir cáncer anogenital y verrugas por infección viral. La familia pregunta si se necesita prueba de infección previa y si la vacuna trata lesiones existentes."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "prevenir cáncer anogenital y verrugas"
+            },
+            {
+              "field": "mechanism",
+              "text": "Las partículas de cápside recombinantes inducen anticuerpos contra tipos de VPH incluidos, previenen nuevas infecciones y lesiones relacionadas, pero no eliminan una infección ni tratan lesiones ya establecidas."
+            },
+            {
+              "field": "initial_action",
+              "text": "Ofrecer vacunación a niñas y niños de quinto de primaria o de 11 años no escolarizados; revisar dosis e indicaciones de otros grupos de riesgo según programa mexicano vigente."
+            },
+            {
+              "field": "action_reason",
+              "text": "La mayor utilidad es prevenir exposición futura."
+            },
+            {
+              "field": "limits",
+              "text": "El programa mexicano actual incluye niños; el texto de 2024 quedó desactualizado."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Inmunidad frente a cápside viral"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Prevención de infección futura"
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "VIH u otra inmunodeficiencia"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Verificar esquema específico"
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "Puede requerir más dosis que inmunocompetente"
+            },
+            {
+              "field": "source_corrections.0.reason",
+              "text": "México incluye niñas y niños de quinto de primaria o de 11 años no escolarizados, además de grupos especiales; no excluir varones como indica el texto antiguo."
+            },
+            {
+              "field": "source_corrections.1.reason",
+              "text": "La página 1150 del inventario describe el producto. La página 1133, comprobada en el libro, complementa la indicación y la ausencia de prueba de VPH previa."
+            }
+          ]
+        },
+        "medium": {
+          "vignette": "Un niño de quinto de primaria o de 11 años no escolarizado solicita prevención de VPH. ¿Qué indicación del programa mexicano corresponde?",
+          "discriminator": "varón incluido en el programa vigente",
+          "explanation": "El dato decisivo es varón incluido en el programa vigente. Ofrecer a niñas y niños de quinto de primaria o de 11 años no escolarizados según programa mexicano vigente. El programa incluye niñas y niños. Los grupos de riesgo necesitan revisar su esquema y la vacuna previene infección futura.",
+          "confusable_with": "Excluir varones o usar la misma pauta en todos los grupos",
+          "why_not": "El programa incluye niñas y niños. Los grupos de riesgo necesitan revisar su esquema y la vacuna previene infección futura.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Un escolar acude a vacunación para prevenir cáncer anogenital y verrugas por infección viral. La familia pregunta si se necesita prueba de infección previa y si la vacuna trata lesiones existentes."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "prevenir cáncer anogenital y verrugas"
+            },
+            {
+              "field": "mechanism",
+              "text": "Las partículas de cápside recombinantes inducen anticuerpos contra tipos de VPH incluidos, previenen nuevas infecciones y lesiones relacionadas, pero no eliminan una infección ni tratan lesiones ya establecidas."
+            },
+            {
+              "field": "initial_action",
+              "text": "Ofrecer vacunación a niñas y niños de quinto de primaria o de 11 años no escolarizados; revisar dosis e indicaciones de otros grupos de riesgo según programa mexicano vigente."
+            },
+            {
+              "field": "action_reason",
+              "text": "La mayor utilidad es prevenir exposición futura."
+            },
+            {
+              "field": "limits",
+              "text": "El programa mexicano actual incluye niños; el texto de 2024 quedó desactualizado."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Inmunidad frente a cápside viral"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Prevención de infección futura"
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "VIH u otra inmunodeficiencia"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Verificar esquema específico"
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "Puede requerir más dosis que inmunocompetente"
+            },
+            {
+              "field": "source_corrections.0.reason",
+              "text": "México incluye niñas y niños de quinto de primaria o de 11 años no escolarizados, además de grupos especiales; no excluir varones como indica el texto antiguo."
+            },
+            {
+              "field": "source_corrections.1.reason",
+              "text": "La página 1150 del inventario describe el producto. La página 1133, comprobada en el libro, complementa la indicación y la ausencia de prueba de VPH previa."
+            }
+          ]
+        },
+        "contrast": {
+          "vignette": "Una persona con VIH u otra inmunodeficiencia solicita vacuna de VPH. ¿Qué esquema específico debe revisarse antes de usar la pauta inmunocompetente?",
+          "discriminator": "inmunodeficiencia que puede requerir más dosis",
+          "explanation": "El dato decisivo es inmunodeficiencia que puede requerir más dosis. Verificar esquema específico de VIH u otra inmunodeficiencia, que puede requerir más dosis. El programa incluye niñas y niños. Los grupos de riesgo necesitan revisar su esquema y la vacuna previene infección futura.",
+          "confusable_with": "Excluir varones o usar la misma pauta en todos los grupos",
+          "why_not": "El programa incluye niñas y niños. Los grupos de riesgo necesitan revisar su esquema y la vacuna previene infección futura.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Un escolar acude a vacunación para prevenir cáncer anogenital y verrugas por infección viral. La familia pregunta si se necesita prueba de infección previa y si la vacuna trata lesiones existentes."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "prevenir cáncer anogenital y verrugas"
+            },
+            {
+              "field": "mechanism",
+              "text": "Las partículas de cápside recombinantes inducen anticuerpos contra tipos de VPH incluidos, previenen nuevas infecciones y lesiones relacionadas, pero no eliminan una infección ni tratan lesiones ya establecidas."
+            },
+            {
+              "field": "initial_action",
+              "text": "Ofrecer vacunación a niñas y niños de quinto de primaria o de 11 años no escolarizados; revisar dosis e indicaciones de otros grupos de riesgo según programa mexicano vigente."
+            },
+            {
+              "field": "action_reason",
+              "text": "La mayor utilidad es prevenir exposición futura."
+            },
+            {
+              "field": "limits",
+              "text": "El programa mexicano actual incluye niños; el texto de 2024 quedó desactualizado."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Inmunidad frente a cápside viral"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Prevención de infección futura"
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "VIH u otra inmunodeficiencia"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Verificar esquema específico"
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "Puede requerir más dosis que inmunocompetente"
+            },
+            {
+              "field": "source_corrections.0.reason",
+              "text": "México incluye niñas y niños de quinto de primaria o de 11 años no escolarizados, además de grupos especiales; no excluir varones como indica el texto antiguo."
+            },
+            {
+              "field": "source_corrections.1.reason",
+              "text": "La página 1150 del inventario describe el producto. La página 1133, comprobada en el libro, complementa la indicación y la ausencia de prueba de VPH previa."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "34.05-01",
+      "parent_topic_id": "34.05-01",
+      "block_id": "34.05",
+      "name": "Seleccionar vacuna inactivada de influenza según elegibilidad",
+      "answer_kind": "decision",
+      "variants": {
+        "easy": {
+          "vignette": "Una embarazada acude durante campaña estacional para prevenir enfermedad respiratoria por un ortomixovirus. Tiene alergia al huevo, pero nunca ha presentado una reacción a vacunas; pregunta por la protección de su bebé.",
+          "discriminator": "nunca ha presentado una reacción a vacunas",
+          "explanation": "El dato decisivo es nunca ha presentado una reacción a vacunas. Ofrecer vacuna inactivada estacional según programa y elegibilidad, incluido embarazo. La alergia alimentaria no excluye una vacuna apropiada. La reacción a una dosis previa requiere evaluación específica.",
+          "confusable_with": "Tratar alergia al huevo como equivalente a anafilaxia por vacuna",
+          "why_not": "La alergia alimentaria no excluye una vacuna apropiada. La reacción a una dosis previa requiere evaluación específica.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Una embarazada acude durante campaña estacional para prevenir enfermedad respiratoria por un ortomixovirus. Tiene alergia al huevo, pero nunca ha presentado una reacción a vacunas; pregunta por la protección de su bebé."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "nunca ha presentado una reacción a vacunas"
+            },
+            {
+              "field": "mechanism",
+              "text": "La vacuna inactivada induce anticuerpos frente a cepas seleccionadas y reduce riesgo de enfermedad y complicaciones; los cambios virales y caída de protección justifican vacunación estacional."
+            },
+            {
+              "field": "initial_action",
+              "text": "Ofrecer vacuna inactivada estacional según programa y elegibilidad, incluido embarazo."
+            },
+            {
+              "field": "action_reason",
+              "text": "La gestación aumenta importancia de prevención."
+            },
+            {
+              "field": "limits",
+              "text": "Alergia al huevo no excluye vacunación. El volumen depende de producto y edad; una reacción a vacuna previa exige evaluación específica."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Respuesta a antígenos estacionales"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Menor enfermedad grave"
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Reacción anafiláctica a una dosis previa"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Evaluar producto y alergia antes de aplicar"
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "No es lo mismo que alergia alimentaria aislada"
+            },
+            {
+              "field": "source_corrections.0.reason",
+              "text": "La alergia al huevo no excluye vacuna apropiada por edad y salud. Dosis y volumen se verifican por producto; no extrapolar el volumen pediátrico del libro."
+            }
+          ]
+        },
+        "medium": {
+          "vignette": "Una persona tuvo anafilaxia después de una dosis previa de vacuna de influenza. ¿Qué evaluación de producto y alergia debe realizarse?",
+          "discriminator": "reacción a una vacuna previa",
+          "explanation": "El dato decisivo es reacción a una vacuna previa. Evaluar producto y alergia por anafilaxia a dosis previa antes de aplicar. La alergia alimentaria no excluye una vacuna apropiada. La reacción a una dosis previa requiere evaluación específica.",
+          "confusable_with": "Tratar alergia al huevo como equivalente a anafilaxia por vacuna",
+          "why_not": "La alergia alimentaria no excluye una vacuna apropiada. La reacción a una dosis previa requiere evaluación específica.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Una embarazada acude durante campaña estacional para prevenir enfermedad respiratoria por un ortomixovirus. Tiene alergia al huevo, pero nunca ha presentado una reacción a vacunas; pregunta por la protección de su bebé."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "nunca ha presentado una reacción a vacunas"
+            },
+            {
+              "field": "mechanism",
+              "text": "La vacuna inactivada induce anticuerpos frente a cepas seleccionadas y reduce riesgo de enfermedad y complicaciones; los cambios virales y caída de protección justifican vacunación estacional."
+            },
+            {
+              "field": "initial_action",
+              "text": "Ofrecer vacuna inactivada estacional según programa y elegibilidad, incluido embarazo."
+            },
+            {
+              "field": "action_reason",
+              "text": "La gestación aumenta importancia de prevención."
+            },
+            {
+              "field": "limits",
+              "text": "Alergia al huevo no excluye vacunación. El volumen depende de producto y edad; una reacción a vacuna previa exige evaluación específica."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Respuesta a antígenos estacionales"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Menor enfermedad grave"
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Reacción anafiláctica a una dosis previa"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Evaluar producto y alergia antes de aplicar"
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "No es lo mismo que alergia alimentaria aislada"
+            },
+            {
+              "field": "source_corrections.0.reason",
+              "text": "La alergia al huevo no excluye vacuna apropiada por edad y salud. Dosis y volumen se verifican por producto; no extrapolar el volumen pediátrico del libro."
+            }
+          ]
+        },
+        "contrast": {
+          "vignette": "Un niño recibirá vacuna inactivada estacional y el personal intenta copiar el volumen pediátrico de una tabla antigua. ¿Qué debe verificarse antes de aplicar?",
+          "discriminator": "dosis y volumen dependientes del producto y edad",
+          "explanation": "Verificar producto y edad en el programa vigente. No extrapolar el volumen pediátrico del libro a todas las formulaciones.",
+          "confusable_with": "Tratar alergia al huevo como equivalente a anafilaxia por vacuna",
+          "why_not": "La alergia alimentaria no excluye una vacuna apropiada. La reacción a una dosis previa requiere evaluación específica.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Una embarazada acude durante campaña estacional para prevenir enfermedad respiratoria por un ortomixovirus. Tiene alergia al huevo, pero nunca ha presentado una reacción a vacunas; pregunta por la protección de su bebé."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "nunca ha presentado una reacción a vacunas"
+            },
+            {
+              "field": "mechanism",
+              "text": "La vacuna inactivada induce anticuerpos frente a cepas seleccionadas y reduce riesgo de enfermedad y complicaciones; los cambios virales y caída de protección justifican vacunación estacional."
+            },
+            {
+              "field": "initial_action",
+              "text": "Ofrecer vacuna inactivada estacional según programa y elegibilidad, incluido embarazo."
+            },
+            {
+              "field": "action_reason",
+              "text": "La gestación aumenta importancia de prevención."
+            },
+            {
+              "field": "limits",
+              "text": "Alergia al huevo no excluye vacunación. El volumen depende de producto y edad; una reacción a vacuna previa exige evaluación específica."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Respuesta a antígenos estacionales"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Menor enfermedad grave"
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Reacción anafiláctica a una dosis previa"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Evaluar producto y alergia antes de aplicar"
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "No es lo mismo que alergia alimentaria aislada"
+            },
+            {
+              "field": "source_corrections.0.reason",
+              "text": "La alergia al huevo no excluye vacuna apropiada por edad y salud. Dosis y volumen se verifican por producto; no extrapolar el volumen pediátrico del libro."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "34.05-02",
+      "parent_topic_id": "34.05-02",
+      "block_id": "34.05",
+      "name": "Verificar refuerzo DPT y contraindicaciones específicas",
+      "answer_kind": "decision",
+      "variants": {
+        "easy": {
+          "vignette": "Un niño de cuatro años acude a refuerzo después de completar cuatro dosis de la vacuna infantil combinada que protege contra seis infecciones. Sus padres no recuerdan reacciones neurológicas ni alérgicas después de esas aplicaciones.",
+          "discriminator": "acude a refuerzo",
+          "explanation": "El dato decisivo es acude a refuerzo. Confirmar serie infantil y aplicar refuerzo DPT a los 4 años; en recuperación respetar edad máxima de 6 años, 11 meses y 29 días. La edad limita la formulación. La contraindicación de pertussis es específica y no equivale a todo síntoma neurológico.",
+          "confusable_with": "Usar la misma formulación en cualquier edad o contraindicar por cualquier síntoma neurológico",
+          "why_not": "La edad limita la formulación. La contraindicación de pertussis es específica y no equivale a todo síntoma neurológico.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Un niño de cuatro años acude a refuerzo después de completar cuatro dosis de la vacuna infantil combinada que protege contra seis infecciones. Sus padres no recuerdan reacciones neurológicas ni alérgicas después de esas aplicaciones."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "acude a refuerzo"
+            },
+            {
+              "field": "mechanism",
+              "text": "Los toxoides diftérico y tetánico y el componente pertussis refuerzan inmunidad de la serie primaria; las formulaciones y límites de edad difieren de productos para adolescentes y adultos."
+            },
+            {
+              "field": "initial_action",
+              "text": "Confirmar serie infantil y aplicar refuerzo DPT a los 4 años; en recuperación respetar edad máxima de 6 años, 11 meses y 29 días."
+            },
+            {
+              "field": "action_reason",
+              "text": "Mantiene protección infantil con formulación adecuada."
+            },
+            {
+              "field": "limits",
+              "text": "No sustituir indistintamente por formulaciones de otras edades."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Refuerzo de memoria inmunitaria"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Protección mantenida frente a tres enfermedades"
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Encefalopatía inexplicada dentro de siete días de vacuna con pertussis"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "No administrar el componente pertussis; valorar producto alternativo apropiado"
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "Es una contraindicación específica, no cualquier síntoma neurológico"
+            }
+          ]
+        },
+        "medium": {
+          "vignette": "Un niño tuvo encefalopatía inexplicada dentro de los siete días de una vacuna con pertussis. ¿Qué componente debe evitarse y qué alternativa debe valorarse?",
+          "discriminator": "encefalopatía inexplicada temporalmente asociada",
+          "explanation": "El dato decisivo es encefalopatía inexplicada temporalmente asociada. No administrar componente pertussis y valorar formulación alternativa apropiada. La edad limita la formulación. La contraindicación de pertussis es específica y no equivale a todo síntoma neurológico.",
+          "confusable_with": "Usar la misma formulación en cualquier edad o contraindicar por cualquier síntoma neurológico",
+          "why_not": "La edad limita la formulación. La contraindicación de pertussis es específica y no equivale a todo síntoma neurológico.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Un niño de cuatro años acude a refuerzo después de completar cuatro dosis de la vacuna infantil combinada que protege contra seis infecciones. Sus padres no recuerdan reacciones neurológicas ni alérgicas después de esas aplicaciones."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "acude a refuerzo"
+            },
+            {
+              "field": "mechanism",
+              "text": "Los toxoides diftérico y tetánico y el componente pertussis refuerzan inmunidad de la serie primaria; las formulaciones y límites de edad difieren de productos para adolescentes y adultos."
+            },
+            {
+              "field": "initial_action",
+              "text": "Confirmar serie infantil y aplicar refuerzo DPT a los 4 años; en recuperación respetar edad máxima de 6 años, 11 meses y 29 días."
+            },
+            {
+              "field": "action_reason",
+              "text": "Mantiene protección infantil con formulación adecuada."
+            },
+            {
+              "field": "limits",
+              "text": "No sustituir indistintamente por formulaciones de otras edades."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Refuerzo de memoria inmunitaria"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Protección mantenida frente a tres enfermedades"
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Encefalopatía inexplicada dentro de siete días de vacuna con pertussis"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "No administrar el componente pertussis; valorar producto alternativo apropiado"
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "Es una contraindicación específica, no cualquier síntoma neurológico"
+            }
+          ]
+        },
+        "contrast": {
+          "vignette": "Un niño solicita recuperar DPT después de atraso. ¿Qué serie previa y edad máxima deben comprobarse?",
+          "discriminator": "recuperación dentro de la edad autorizada",
+          "explanation": "El dato decisivo es recuperación dentro de la edad autorizada. Confirmar serie y recuperar sin superar 6 años, 11 meses y 29 días para DPT. La edad limita la formulación. La contraindicación de pertussis es específica y no equivale a todo síntoma neurológico.",
+          "confusable_with": "Usar la misma formulación en cualquier edad o contraindicar por cualquier síntoma neurológico",
+          "why_not": "La edad limita la formulación. La contraindicación de pertussis es específica y no equivale a todo síntoma neurológico.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Un niño de cuatro años acude a refuerzo después de completar cuatro dosis de la vacuna infantil combinada que protege contra seis infecciones. Sus padres no recuerdan reacciones neurológicas ni alérgicas después de esas aplicaciones."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "acude a refuerzo"
+            },
+            {
+              "field": "mechanism",
+              "text": "Los toxoides diftérico y tetánico y el componente pertussis refuerzan inmunidad de la serie primaria; las formulaciones y límites de edad difieren de productos para adolescentes y adultos."
+            },
+            {
+              "field": "initial_action",
+              "text": "Confirmar serie infantil y aplicar refuerzo DPT a los 4 años; en recuperación respetar edad máxima de 6 años, 11 meses y 29 días."
+            },
+            {
+              "field": "action_reason",
+              "text": "Mantiene protección infantil con formulación adecuada."
+            },
+            {
+              "field": "limits",
+              "text": "No sustituir indistintamente por formulaciones de otras edades."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Refuerzo de memoria inmunitaria"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Protección mantenida frente a tres enfermedades"
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Encefalopatía inexplicada dentro de siete días de vacuna con pertussis"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "No administrar el componente pertussis; valorar producto alternativo apropiado"
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "Es una contraindicación específica, no cualquier síntoma neurológico"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "34.05-03",
+      "parent_topic_id": "34.05-03",
+      "block_id": "34.05",
+      "name": "Seleccionar profilaxis antitetánica por herida y antecedente",
+      "answer_kind": "decision",
+      "variants": {
+        "easy": {
+          "vignette": "Un adulto consulta por herida contaminada tras pisar un clavo en un terreno con tierra. No recuerda su vacunación previa y no dispone de cartilla; permanece estable y tiene material extraño visible en la lesión.",
+          "discriminator": "herida contaminada",
+          "explanation": "El dato decisivo es herida contaminada. Limpiar y retirar material extraño; administrar vacuna antitetánica e inmunoglobulina antitetánica de 250 UI intramuscular por herida sucia e historia desconocida. Iniciar o completar serie después de la atención inmediata. El riesgo de la herida cambia el intervalo: cinco años para sucia o mayor y diez para limpia o menor con serie completa.",
+          "confusable_with": "Aplicar un intervalo universal de diez años a toda herida",
+          "why_not": "El riesgo de la herida cambia el intervalo: cinco años para sucia o mayor y diez para limpia o menor con serie completa.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Un adulto consulta por herida contaminada tras pisar un clavo en un terreno con tierra. No recuerda su vacunación previa y no dispone de cartilla; permanece estable y tiene material extraño visible en la lesión."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "herida contaminada"
+            },
+            {
+              "field": "mechanism",
+              "text": "El toxoide induce inmunidad activa frente a toxina tetánica, mientras inmunoglobulina aporta protección pasiva inmediata; la necesidad de ambas depende de herida y vacunación previa."
+            },
+            {
+              "field": "initial_action",
+              "text": "Limpiar y retirar material extraño; administrar vacuna antitetánica e inmunoglobulina antitetánica de 250 UI intramuscular por herida sucia e historia desconocida. Iniciar o completar serie después de la atención inmediata."
+            },
+            {
+              "field": "action_reason",
+              "text": "La vacuna sola no aporta protección inmediata completa en no inmunizado."
+            },
+            {
+              "field": "limits",
+              "text": "Herida sucia con historia desconocida requiere vacuna e inmunoglobulina; también valorar inmunoglobulina en VIH o inmunodeficiencia grave. No usar diez años universalmente."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Anticuerpos contra toxina"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Prevención de tétanos"
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Serie completa y última dosis conocida"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Reforzar desde cinco años en herida sucia/mayor o diez años en limpia/menor"
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "El riesgo de la herida cambia el intervalo"
+            },
+            {
+              "field": "source_corrections.0.reason",
+              "text": "Con serie completa, refuerzo a partir de cinco años en herida sucia/mayor y diez años en limpia/menor. Inmunoglobulina depende de herida e inmunidad; no usar diez años universal."
+            }
+          ]
+        },
+        "medium": {
+          "vignette": "Un adulto con serie completa documentada presenta herida sucia. ¿Qué intervalo desde la última dosis debe guiar el refuerzo?",
+          "discriminator": "herida sucia con serie completa y fecha conocida",
+          "explanation": "El dato decisivo es herida sucia con serie completa y fecha conocida. Con serie completa, reforzar desde cinco años para herida sucia o mayor. El riesgo de la herida cambia el intervalo: cinco años para sucia o mayor y diez para limpia o menor con serie completa.",
+          "confusable_with": "Aplicar un intervalo universal de diez años a toda herida",
+          "why_not": "El riesgo de la herida cambia el intervalo: cinco años para sucia o mayor y diez para limpia o menor con serie completa.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Un adulto consulta por herida contaminada tras pisar un clavo en un terreno con tierra. No recuerda su vacunación previa y no dispone de cartilla; permanece estable y tiene material extraño visible en la lesión."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "herida contaminada"
+            },
+            {
+              "field": "mechanism",
+              "text": "El toxoide induce inmunidad activa frente a toxina tetánica, mientras inmunoglobulina aporta protección pasiva inmediata; la necesidad de ambas depende de herida y vacunación previa."
+            },
+            {
+              "field": "initial_action",
+              "text": "Limpiar y retirar material extraño; administrar vacuna antitetánica e inmunoglobulina antitetánica de 250 UI intramuscular por herida sucia e historia desconocida. Iniciar o completar serie después de la atención inmediata."
+            },
+            {
+              "field": "action_reason",
+              "text": "La vacuna sola no aporta protección inmediata completa en no inmunizado."
+            },
+            {
+              "field": "limits",
+              "text": "Herida sucia con historia desconocida requiere vacuna e inmunoglobulina; también valorar inmunoglobulina en VIH o inmunodeficiencia grave. No usar diez años universalmente."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Anticuerpos contra toxina"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Prevención de tétanos"
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Serie completa y última dosis conocida"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Reforzar desde cinco años en herida sucia/mayor o diez años en limpia/menor"
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "El riesgo de la herida cambia el intervalo"
+            },
+            {
+              "field": "source_corrections.0.reason",
+              "text": "Con serie completa, refuerzo a partir de cinco años en herida sucia/mayor y diez años en limpia/menor. Inmunoglobulina depende de herida e inmunidad; no usar diez años universal."
+            }
+          ]
+        },
+        "contrast": {
+          "vignette": "Una persona con serie completa tiene una herida limpia y menor. ¿Qué intervalo corresponde antes de indicar refuerzo?",
+          "discriminator": "herida limpia con inmunización documentada",
+          "explanation": "El dato decisivo es herida limpia con inmunización documentada. Con serie completa, reforzar desde diez años para herida limpia y menor. El riesgo de la herida cambia el intervalo: cinco años para sucia o mayor y diez para limpia o menor con serie completa.",
+          "confusable_with": "Aplicar un intervalo universal de diez años a toda herida",
+          "why_not": "El riesgo de la herida cambia el intervalo: cinco años para sucia o mayor y diez para limpia o menor con serie completa.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Un adulto consulta por herida contaminada tras pisar un clavo en un terreno con tierra. No recuerda su vacunación previa y no dispone de cartilla; permanece estable y tiene material extraño visible en la lesión."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "herida contaminada"
+            },
+            {
+              "field": "mechanism",
+              "text": "El toxoide induce inmunidad activa frente a toxina tetánica, mientras inmunoglobulina aporta protección pasiva inmediata; la necesidad de ambas depende de herida y vacunación previa."
+            },
+            {
+              "field": "initial_action",
+              "text": "Limpiar y retirar material extraño; administrar vacuna antitetánica e inmunoglobulina antitetánica de 250 UI intramuscular por herida sucia e historia desconocida. Iniciar o completar serie después de la atención inmediata."
+            },
+            {
+              "field": "action_reason",
+              "text": "La vacuna sola no aporta protección inmediata completa en no inmunizado."
+            },
+            {
+              "field": "limits",
+              "text": "Herida sucia con historia desconocida requiere vacuna e inmunoglobulina; también valorar inmunoglobulina en VIH o inmunodeficiencia grave. No usar diez años universalmente."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Anticuerpos contra toxina"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Prevención de tétanos"
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Serie completa y última dosis conocida"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Reforzar desde cinco años en herida sucia/mayor o diez años en limpia/menor"
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "El riesgo de la herida cambia el intervalo"
+            },
+            {
+              "field": "source_corrections.0.reason",
+              "text": "Con serie completa, refuerzo a partir de cinco años en herida sucia/mayor y diez años en limpia/menor. Inmunoglobulina depende de herida e inmunidad; no usar diez años universal."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "34.06-01",
+      "parent_topic_id": "34.06-01",
+      "block_id": "34.06",
+      "name": "Verificar indicación e inmunidad y seleccionar vacuna de hepatitis A",
+      "answer_kind": "decision",
+      "variants": {
+        "easy": {
+          "vignette": "Una persona sin inmunidad conocida trabajará en una guardería y solicita prevención de hepatitis de transmisión fecal y oral. No tiene hepatopatía ni antecedente documentado de infección o vacunación contra este virus.",
+          "discriminator": "transmisión fecal y oral",
+          "explanation": "El dato decisivo es transmisión fecal y oral. Verificar indicación e inmunidad previa y aplicar esquema del producto y programa; mantener higiene de manos y alimentos. La indicación, inmunidad y producto guían la pauta. La higiene sigue siendo necesaria.",
+          "confusable_with": "Usar una pauta de una sola dosis como regla para cualquier marca",
+          "why_not": "La indicación, inmunidad y producto guían la pauta. La higiene sigue siendo necesaria.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Una persona sin inmunidad conocida trabajará en una guardería y solicita prevención de hepatitis de transmisión fecal y oral. No tiene hepatopatía ni antecedente documentado de infección o vacunación contra este virus."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "transmisión fecal y oral"
+            },
+            {
+              "field": "mechanism",
+              "text": "El virus inactivado induce inmunidad activa contra hepatitis A, reduce infección y complicaciones; la indicación programática o por exposición depende de edad y contexto epidemiológico y laboral."
+            },
+            {
+              "field": "initial_action",
+              "text": "Verificar indicación e inmunidad previa y aplicar esquema del producto y programa; mantener higiene de manos y alimentos."
+            },
+            {
+              "field": "action_reason",
+              "text": "La vacuna complementa medidas de prevención."
+            },
+            {
+              "field": "limits",
+              "text": "No convertir la dosis única del programa en un esquema universal de toda marca."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Inmunización frente a virus inactivado"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Prevención de hepatitis A"
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Enfermedad hepática o exposición de riesgo"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Valorar prioridad y profilaxis específica"
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "La consecuencia clínica o urgencia puede ser mayor"
+            }
+          ]
+        },
+        "medium": {
+          "vignette": "Una persona con hepatopatía o exposición de riesgo necesita prevención de hepatitis A. ¿Qué prioridad y profilaxis específica deben valorarse?",
+          "discriminator": "mayor riesgo o exposición relevante",
+          "explanation": "El dato decisivo es mayor riesgo o exposición relevante. Valorar prioridad y profilaxis específica por hepatopatía o exposición de riesgo. La indicación, inmunidad y producto guían la pauta. La higiene sigue siendo necesaria.",
+          "confusable_with": "Usar una pauta de una sola dosis como regla para cualquier marca",
+          "why_not": "La indicación, inmunidad y producto guían la pauta. La higiene sigue siendo necesaria.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Una persona sin inmunidad conocida trabajará en una guardería y solicita prevención de hepatitis de transmisión fecal y oral. No tiene hepatopatía ni antecedente documentado de infección o vacunación contra este virus."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "transmisión fecal y oral"
+            },
+            {
+              "field": "mechanism",
+              "text": "El virus inactivado induce inmunidad activa contra hepatitis A, reduce infección y complicaciones; la indicación programática o por exposición depende de edad y contexto epidemiológico y laboral."
+            },
+            {
+              "field": "initial_action",
+              "text": "Verificar indicación e inmunidad previa y aplicar esquema del producto y programa; mantener higiene de manos y alimentos."
+            },
+            {
+              "field": "action_reason",
+              "text": "La vacuna complementa medidas de prevención."
+            },
+            {
+              "field": "limits",
+              "text": "No convertir la dosis única del programa en un esquema universal de toda marca."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Inmunización frente a virus inactivado"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Prevención de hepatitis A"
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Enfermedad hepática o exposición de riesgo"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Valorar prioridad y profilaxis específica"
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "La consecuencia clínica o urgencia puede ser mayor"
+            }
+          ]
+        },
+        "contrast": {
+          "vignette": "Antes de vacunar contra hepatitis A se encuentra información de infección o vacunación previa. ¿Qué debe revisarse junto con el producto y programa?",
+          "discriminator": "posible inmunidad previa",
+          "explanation": "El dato decisivo es posible inmunidad previa. Verificar inmunidad previa, indicación y producto antes de seleccionar pauta; mantener higiene. La indicación, inmunidad y producto guían la pauta. La higiene sigue siendo necesaria.",
+          "confusable_with": "Usar una pauta de una sola dosis como regla para cualquier marca",
+          "why_not": "La indicación, inmunidad y producto guían la pauta. La higiene sigue siendo necesaria.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Una persona sin inmunidad conocida trabajará en una guardería y solicita prevención de hepatitis de transmisión fecal y oral. No tiene hepatopatía ni antecedente documentado de infección o vacunación contra este virus."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "transmisión fecal y oral"
+            },
+            {
+              "field": "mechanism",
+              "text": "El virus inactivado induce inmunidad activa contra hepatitis A, reduce infección y complicaciones; la indicación programática o por exposición depende de edad y contexto epidemiológico y laboral."
+            },
+            {
+              "field": "initial_action",
+              "text": "Verificar indicación e inmunidad previa y aplicar esquema del producto y programa; mantener higiene de manos y alimentos."
+            },
+            {
+              "field": "action_reason",
+              "text": "La vacuna complementa medidas de prevención."
+            },
+            {
+              "field": "limits",
+              "text": "No convertir la dosis única del programa en un esquema universal de toda marca."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Inmunización frente a virus inactivado"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Prevención de hepatitis A"
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Enfermedad hepática o exposición de riesgo"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Valorar prioridad y profilaxis específica"
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "La consecuencia clínica o urgencia puede ser mayor"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "34.06-02",
+      "parent_topic_id": "34.06-02",
+      "block_id": "34.06",
+      "name": "Seleccionar vacuna antitifoidea y mantener agua y alimentos seguros",
+      "answer_kind": "decision",
+      "variants": {
+        "easy": {
+          "vignette": "Una persona viajará a una región con riesgo de fiebre tifoidea. Pregunta por la vacuna oral y la inyectable, y cree que cualquiera le permitirá consumir agua y alimentos sin precauciones durante el viaje.",
+          "discriminator": "riesgo de fiebre tifoidea",
+          "explanation": "El dato decisivo es riesgo de fiebre tifoidea. Valorar vacunación por destino y producto, con tiempo suficiente y consejo sobre agua y alimentos seguros. La vacuna reduce riesgo, pero no sustituye agua y alimentos seguros. El producto cambia edades, intervalos y precauciones.",
+          "confusable_with": "Considerar que la vacuna elimina todo riesgo alimentario",
+          "why_not": "La vacuna reduce riesgo, pero no sustituye agua y alimentos seguros. El producto cambia edades, intervalos y precauciones.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Una persona viajará a una región con riesgo de fiebre tifoidea. Pregunta por la vacuna oral y la inyectable, y cree que cualquiera le permitirá consumir agua y alimentos sin precauciones durante el viaje."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "riesgo de fiebre tifoidea"
+            },
+            {
+              "field": "mechanism",
+              "text": "Las vacunas contra Salmonella Typhi inducen protección específica con formulaciones vivas orales o antígenos capsulares; no previenen todas las salmonelosis ni eliminan riesgo por exposición alimentaria."
+            },
+            {
+              "field": "initial_action",
+              "text": "Valorar vacunación por destino y producto, con tiempo suficiente y consejo sobre agua y alimentos seguros."
+            },
+            {
+              "field": "action_reason",
+              "text": "La protección es incompleta y específica."
+            },
+            {
+              "field": "limits",
+              "text": "Los intervalos y edades dependen del producto y guía de viaje."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Inmunidad contra Salmonella Typhi"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Reducción de fiebre tifoidea"
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Inmunodeficiencia o embarazo"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Evitar formulación viva y consultar alternativa"
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "La seguridad depende de plataforma"
+            }
+          ]
+        },
+        "medium": {
+          "vignette": "Una viajera embarazada o inmunodeficiente consulta por vacuna oral viva contra fiebre tifoidea. ¿Qué formulación debe evitarse y qué alternativa debe valorarse?",
+          "discriminator": "embarazo o inmunodeficiencia ante producto vivo",
+          "explanation": "El dato decisivo es embarazo o inmunodeficiencia ante producto vivo. Evitar formulación viva durante embarazo o inmunodeficiencia y consultar alternativa. La vacuna reduce riesgo, pero no sustituye agua y alimentos seguros. El producto cambia edades, intervalos y precauciones.",
+          "confusable_with": "Considerar que la vacuna elimina todo riesgo alimentario",
+          "why_not": "La vacuna reduce riesgo, pero no sustituye agua y alimentos seguros. El producto cambia edades, intervalos y precauciones.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Una persona viajará a una región con riesgo de fiebre tifoidea. Pregunta por la vacuna oral y la inyectable, y cree que cualquiera le permitirá consumir agua y alimentos sin precauciones durante el viaje."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "riesgo de fiebre tifoidea"
+            },
+            {
+              "field": "mechanism",
+              "text": "Las vacunas contra Salmonella Typhi inducen protección específica con formulaciones vivas orales o antígenos capsulares; no previenen todas las salmonelosis ni eliminan riesgo por exposición alimentaria."
+            },
+            {
+              "field": "initial_action",
+              "text": "Valorar vacunación por destino y producto, con tiempo suficiente y consejo sobre agua y alimentos seguros."
+            },
+            {
+              "field": "action_reason",
+              "text": "La protección es incompleta y específica."
+            },
+            {
+              "field": "limits",
+              "text": "Los intervalos y edades dependen del producto y guía de viaje."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Inmunidad contra Salmonella Typhi"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Reducción de fiebre tifoidea"
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Inmunodeficiencia o embarazo"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Evitar formulación viva y consultar alternativa"
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "La seguridad depende de plataforma"
+            }
+          ]
+        },
+        "contrast": {
+          "vignette": "Una persona vacunada viajará a región con riesgo de fiebre tifoidea y pregunta si puede dejar precauciones de agua y alimentos. ¿Qué consejo corresponde?",
+          "discriminator": "vacunación que no reemplaza medidas de exposición",
+          "explanation": "El dato decisivo es vacunación que no reemplaza medidas de exposición. Mantener agua y alimentos seguros aun después de vacunarse. La vacuna reduce riesgo, pero no sustituye agua y alimentos seguros. El producto cambia edades, intervalos y precauciones.",
+          "confusable_with": "Considerar que la vacuna elimina todo riesgo alimentario",
+          "why_not": "La vacuna reduce riesgo, pero no sustituye agua y alimentos seguros. El producto cambia edades, intervalos y precauciones.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Una persona viajará a una región con riesgo de fiebre tifoidea. Pregunta por la vacuna oral y la inyectable, y cree que cualquiera le permitirá consumir agua y alimentos sin precauciones durante el viaje."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "riesgo de fiebre tifoidea"
+            },
+            {
+              "field": "mechanism",
+              "text": "Las vacunas contra Salmonella Typhi inducen protección específica con formulaciones vivas orales o antígenos capsulares; no previenen todas las salmonelosis ni eliminan riesgo por exposición alimentaria."
+            },
+            {
+              "field": "initial_action",
+              "text": "Valorar vacunación por destino y producto, con tiempo suficiente y consejo sobre agua y alimentos seguros."
+            },
+            {
+              "field": "action_reason",
+              "text": "La protección es incompleta y específica."
+            },
+            {
+              "field": "limits",
+              "text": "Los intervalos y edades dependen del producto y guía de viaje."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Inmunidad contra Salmonella Typhi"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Reducción de fiebre tifoidea"
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Inmunodeficiencia o embarazo"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Evitar formulación viva y consultar alternativa"
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "La seguridad depende de plataforma"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "34.07-01",
+      "parent_topic_id": "34.07-01",
+      "block_id": "34.07",
+      "name": "Planificar vacunas gestacionales según el programa mexicano vigente",
+      "answer_kind": "decision",
+      "variants": {
+        "easy": {
+          "vignette": "Una gestante de 22 semanas acude con cartilla incompleta y pregunta cómo proteger a su bebé durante los primeros meses. Recibió un refuerzo antitetánico antes del embarazo y no tiene vacunación estacional documentada.",
+          "discriminator": "proteger a su bebé",
+          "explanation": "El dato decisivo es proteger a su bebé. Ofrecer Tdpa desde semana 20 en cada embarazo, influenza estacional, COVID-19 desde segundo trimestre y vacuna contra VSR entre semanas 32 y 36, según programa mexicano vigente y antecedentes. BCG no debe aplicarse en embarazo y VPH se difiere. La selección gestacional actual incluye productos y ventanas específicos para México.",
+          "confusable_with": "Aplicar durante embarazo toda vacuna de una lista antigua",
+          "why_not": "BCG no debe aplicarse en embarazo y VPH se difiere. La selección gestacional actual incluye productos y ventanas específicos para México.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Una gestante de 22 semanas acude con cartilla incompleta y pregunta cómo proteger a su bebé durante los primeros meses. Recibió un refuerzo antitetánico antes del embarazo y no tiene vacunación estacional documentada."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "proteger a su bebé"
+            },
+            {
+              "field": "mechanism",
+              "text": "La vacunación materna genera anticuerpos y su transferencia placentaria aporta protección pasiva neonatal; plataforma, edad gestacional y riesgo determinan qué vacunas pueden aplicarse con seguridad durante embarazo."
+            },
+            {
+              "field": "initial_action",
+              "text": "Ofrecer Tdpa desde semana 20 en cada embarazo, influenza estacional, COVID-19 desde segundo trimestre y vacuna contra VSR entre semanas 32 y 36, según programa mexicano vigente y antecedentes."
+            },
+            {
+              "field": "action_reason",
+              "text": "Protege a madre y recién nacido."
+            },
+            {
+              "field": "limits",
+              "text": "No aplicar BCG durante embarazo. Diferir VPH hasta después; evaluar otras vacunas vivas por contraindicación específica."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Transferencia placentaria de anticuerpos"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Protección neonatal temprana"
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Vacuna viva o VPH pendiente"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Diferir según recomendación específica"
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "No todas las vacunas tienen la misma indicación gestacional"
+            },
+            {
+              "field": "source_corrections.0.reason",
+              "text": "La BCG no debe aplicarse durante embarazo; la lista del libro no es una lista universal de vacunas gestacionales seguras."
+            },
+            {
+              "field": "source_corrections.1.reason",
+              "text": "VPH se difiere hasta después del embarazo. Una dosis inadvertida no exige intervención; no se considera vacuna gestacional de rutina."
+            },
+            {
+              "field": "source_corrections.2.reason",
+              "text": "El programa mexicano 2026 incorpora vacuna contra VSR entre semanas 32 y 36. Tdpa se ofrece desde semana 20 y la vacuna estacional según programa."
+            },
+            {
+              "field": "source_corrections.3.reason",
+              "text": "El programa mexicano 2026 también indica COVID-19 desde el segundo trimestre. Las recomendaciones gestacionales se explicitan para México y no se sustituyen por el calendario estadounidense."
+            }
+          ]
+        },
+        "medium": {
+          "vignette": "Una gestante llega entre las semanas 32 y 36. ¿Qué protección contra VSR debe revisarse junto con las demás vacunas indicadas?",
+          "discriminator": "ventana gestacional de VSR del programa mexicano",
+          "explanation": "El dato decisivo es ventana gestacional de VSR del programa mexicano. Ofrecer vacuna contra VSR entre semanas 32 y 36 según programa mexicano, junto con revisión de las demás indicaciones. BCG no debe aplicarse en embarazo y VPH se difiere. La selección gestacional actual incluye productos y ventanas específicos para México.",
+          "confusable_with": "Aplicar durante embarazo toda vacuna de una lista antigua",
+          "why_not": "BCG no debe aplicarse en embarazo y VPH se difiere. La selección gestacional actual incluye productos y ventanas específicos para México.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Una gestante de 22 semanas acude con cartilla incompleta y pregunta cómo proteger a su bebé durante los primeros meses. Recibió un refuerzo antitetánico antes del embarazo y no tiene vacunación estacional documentada."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "proteger a su bebé"
+            },
+            {
+              "field": "mechanism",
+              "text": "La vacunación materna genera anticuerpos y su transferencia placentaria aporta protección pasiva neonatal; plataforma, edad gestacional y riesgo determinan qué vacunas pueden aplicarse con seguridad durante embarazo."
+            },
+            {
+              "field": "initial_action",
+              "text": "Ofrecer Tdpa desde semana 20 en cada embarazo, influenza estacional, COVID-19 desde segundo trimestre y vacuna contra VSR entre semanas 32 y 36, según programa mexicano vigente y antecedentes."
+            },
+            {
+              "field": "action_reason",
+              "text": "Protege a madre y recién nacido."
+            },
+            {
+              "field": "limits",
+              "text": "No aplicar BCG durante embarazo. Diferir VPH hasta después; evaluar otras vacunas vivas por contraindicación específica."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Transferencia placentaria de anticuerpos"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Protección neonatal temprana"
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Vacuna viva o VPH pendiente"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Diferir según recomendación específica"
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "No todas las vacunas tienen la misma indicación gestacional"
+            },
+            {
+              "field": "source_corrections.0.reason",
+              "text": "La BCG no debe aplicarse durante embarazo; la lista del libro no es una lista universal de vacunas gestacionales seguras."
+            },
+            {
+              "field": "source_corrections.1.reason",
+              "text": "VPH se difiere hasta después del embarazo. Una dosis inadvertida no exige intervención; no se considera vacuna gestacional de rutina."
+            },
+            {
+              "field": "source_corrections.2.reason",
+              "text": "El programa mexicano 2026 incorpora vacuna contra VSR entre semanas 32 y 36. Tdpa se ofrece desde semana 20 y la vacuna estacional según programa."
+            },
+            {
+              "field": "source_corrections.3.reason",
+              "text": "El programa mexicano 2026 también indica COVID-19 desde el segundo trimestre. Las recomendaciones gestacionales se explicitan para México y no se sustituyen por el calendario estadounidense."
+            }
+          ]
+        },
+        "contrast": {
+          "vignette": "Una embarazada tiene VPH pendiente o solicita BCG. ¿Qué diferimiento o contraindicación específica corresponde?",
+          "discriminator": "productos sin indicación gestacional de rutina",
+          "explanation": "El dato decisivo es productos sin indicación gestacional de rutina. No aplicar BCG durante embarazo y diferir VPH hasta después; revisar cada recomendación específica. BCG no debe aplicarse en embarazo y VPH se difiere. La selección gestacional actual incluye productos y ventanas específicos para México.",
+          "confusable_with": "Aplicar durante embarazo toda vacuna de una lista antigua",
+          "why_not": "BCG no debe aplicarse en embarazo y VPH se difiere. La selección gestacional actual incluye productos y ventanas específicos para México.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Una gestante de 22 semanas acude con cartilla incompleta y pregunta cómo proteger a su bebé durante los primeros meses. Recibió un refuerzo antitetánico antes del embarazo y no tiene vacunación estacional documentada."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "proteger a su bebé"
+            },
+            {
+              "field": "mechanism",
+              "text": "La vacunación materna genera anticuerpos y su transferencia placentaria aporta protección pasiva neonatal; plataforma, edad gestacional y riesgo determinan qué vacunas pueden aplicarse con seguridad durante embarazo."
+            },
+            {
+              "field": "initial_action",
+              "text": "Ofrecer Tdpa desde semana 20 en cada embarazo, influenza estacional, COVID-19 desde segundo trimestre y vacuna contra VSR entre semanas 32 y 36, según programa mexicano vigente y antecedentes."
+            },
+            {
+              "field": "action_reason",
+              "text": "Protege a madre y recién nacido."
+            },
+            {
+              "field": "limits",
+              "text": "No aplicar BCG durante embarazo. Diferir VPH hasta después; evaluar otras vacunas vivas por contraindicación específica."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Transferencia placentaria de anticuerpos"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Protección neonatal temprana"
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Vacuna viva o VPH pendiente"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Diferir según recomendación específica"
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "No todas las vacunas tienen la misma indicación gestacional"
+            },
+            {
+              "field": "source_corrections.0.reason",
+              "text": "La BCG no debe aplicarse durante embarazo; la lista del libro no es una lista universal de vacunas gestacionales seguras."
+            },
+            {
+              "field": "source_corrections.1.reason",
+              "text": "VPH se difiere hasta después del embarazo. Una dosis inadvertida no exige intervención; no se considera vacuna gestacional de rutina."
+            },
+            {
+              "field": "source_corrections.2.reason",
+              "text": "El programa mexicano 2026 incorpora vacuna contra VSR entre semanas 32 y 36. Tdpa se ofrece desde semana 20 y la vacuna estacional según programa."
+            },
+            {
+              "field": "source_corrections.3.reason",
+              "text": "El programa mexicano 2026 también indica COVID-19 desde el segundo trimestre. Las recomendaciones gestacionales se explicitan para México y no se sustituyen por el calendario estadounidense."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "34.07-02",
+      "parent_topic_id": "34.07-02",
+      "block_id": "34.07",
+      "name": "Revisar protección ocupacional y completar vacunas por riesgo laboral",
+      "answer_kind": "decision",
+      "variants": {
+        "easy": {
+          "vignette": "Una trabajadora de salud inicia actividades con exposición a sangre y pacientes respiratorios. No tiene registros completos de vacunación ni resultados de anticuerpos; pregunta si su edad basta para asumir protección frente a infecciones ocupacionales.",
+          "discriminator": "exposición a sangre",
+          "explanation": "El dato decisivo es exposición a sangre. Revisar registros y riesgo del puesto; completar vacunas indicadas y evaluar respuesta a hepatitis B cuando corresponda. El puesto y los registros determinan necesidades. La protección frente a hepatitis B puede requerir evaluar respuesta y el trabajo con rabia exige revisión específica.",
+          "confusable_with": "Asumir inmunidad laboral solo por la edad",
+          "why_not": "El puesto y los registros determinan necesidades. La protección frente a hepatitis B puede requerir evaluar respuesta y el trabajo con rabia exige revisión específica.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Una trabajadora de salud inicia actividades con exposición a sangre y pacientes respiratorios. No tiene registros completos de vacunación ni resultados de anticuerpos; pregunta si su edad basta para asumir protección frente a infecciones ocupacionales."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "exposición a sangre"
+            },
+            {
+              "field": "mechanism",
+              "text": "La vacunación ocupacional reduce susceptibilidad frente a agentes transmitidos por sangre, respiración o contacto; el riesgo del puesto y evidencia de inmunidad determinan dosis y evaluación posterior."
+            },
+            {
+              "field": "initial_action",
+              "text": "Revisar registros y riesgo del puesto; completar vacunas indicadas y evaluar respuesta a hepatitis B cuando corresponda."
+            },
+            {
+              "field": "action_reason",
+              "text": "Documenta protección antes de exposiciones."
+            },
+            {
+              "field": "limits",
+              "text": "El volumen y refuerzos dependen de producto y respuesta, no de una receta universal."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Protección frente a exposición laboral"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Menor riesgo de infección ocupacional"
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Trabajo con virus rábico"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Evaluar profilaxis preexposición específica"
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "El riesgo depende de actividad"
+            }
+          ]
+        },
+        "medium": {
+          "vignette": "Una trabajadora manipula virus rábico. ¿Qué prevención de exposición específica debe añadirse a la revisión general?",
+          "discriminator": "trabajo con virus rábico",
+          "explanation": "El dato decisivo es trabajo con virus rábico. Evaluar profilaxis preexposición específica por trabajo con virus rábico. El puesto y los registros determinan necesidades. La protección frente a hepatitis B puede requerir evaluar respuesta y el trabajo con rabia exige revisión específica.",
+          "confusable_with": "Asumir inmunidad laboral solo por la edad",
+          "why_not": "El puesto y los registros determinan necesidades. La protección frente a hepatitis B puede requerir evaluar respuesta y el trabajo con rabia exige revisión específica.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Una trabajadora de salud inicia actividades con exposición a sangre y pacientes respiratorios. No tiene registros completos de vacunación ni resultados de anticuerpos; pregunta si su edad basta para asumir protección frente a infecciones ocupacionales."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "exposición a sangre"
+            },
+            {
+              "field": "mechanism",
+              "text": "La vacunación ocupacional reduce susceptibilidad frente a agentes transmitidos por sangre, respiración o contacto; el riesgo del puesto y evidencia de inmunidad determinan dosis y evaluación posterior."
+            },
+            {
+              "field": "initial_action",
+              "text": "Revisar registros y riesgo del puesto; completar vacunas indicadas y evaluar respuesta a hepatitis B cuando corresponda."
+            },
+            {
+              "field": "action_reason",
+              "text": "Documenta protección antes de exposiciones."
+            },
+            {
+              "field": "limits",
+              "text": "El volumen y refuerzos dependen de producto y respuesta, no de una receta universal."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Protección frente a exposición laboral"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Menor riesgo de infección ocupacional"
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Trabajo con virus rábico"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Evaluar profilaxis preexposición específica"
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "El riesgo depende de actividad"
+            }
+          ]
+        },
+        "contrast": {
+          "vignette": "Una trabajadora expuesta a sangre tiene serie o respuesta frente a hepatitis B sin documentar. ¿Qué registros y evaluación deben revisarse?",
+          "discriminator": "riesgo sanguíneo con protección no documentada",
+          "explanation": "El dato decisivo es riesgo sanguíneo con protección no documentada. Revisar serie y evaluar respuesta a hepatitis B cuando corresponde, junto con riesgo y registros ocupacionales. El puesto y los registros determinan necesidades. La protección frente a hepatitis B puede requerir evaluar respuesta y el trabajo con rabia exige revisión específica.",
+          "confusable_with": "Asumir inmunidad laboral solo por la edad",
+          "why_not": "El puesto y los registros determinan necesidades. La protección frente a hepatitis B puede requerir evaluar respuesta y el trabajo con rabia exige revisión específica.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Una trabajadora de salud inicia actividades con exposición a sangre y pacientes respiratorios. No tiene registros completos de vacunación ni resultados de anticuerpos; pregunta si su edad basta para asumir protección frente a infecciones ocupacionales."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "exposición a sangre"
+            },
+            {
+              "field": "mechanism",
+              "text": "La vacunación ocupacional reduce susceptibilidad frente a agentes transmitidos por sangre, respiración o contacto; el riesgo del puesto y evidencia de inmunidad determinan dosis y evaluación posterior."
+            },
+            {
+              "field": "initial_action",
+              "text": "Revisar registros y riesgo del puesto; completar vacunas indicadas y evaluar respuesta a hepatitis B cuando corresponda."
+            },
+            {
+              "field": "action_reason",
+              "text": "Documenta protección antes de exposiciones."
+            },
+            {
+              "field": "limits",
+              "text": "El volumen y refuerzos dependen de producto y respuesta, no de una receta universal."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Protección frente a exposición laboral"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Menor riesgo de infección ocupacional"
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Trabajo con virus rábico"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Evaluar profilaxis preexposición específica"
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "El riesgo depende de actividad"
+            }
+          ]
+        }
+      }
+    }
+  ]
+}
