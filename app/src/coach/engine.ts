@@ -205,6 +205,32 @@ export function undoReview(state: CoachState): CoachState {
   else delete progress[last.card_id];
   return { ...state, progress, history: state.history.slice(0, -1), undo: null };
 }
+
+// Free practice shares the same memory and save format as the daily coach.
+// It can repeat an already answered card without changing the daily target.
+export function recordPractice(state: CoachState, card: CoachCard, rating: Grade,
+  elapsedSeconds: number, day: string, attemptId: string): CoachState {
+  if (state.history.some(attempt => attempt.id === attemptId)) return state;
+  requireDay(day);
+  if (!textId(card.id) || !textId(attemptId) || !isGrade(rating) ||
+      !finite(elapsedSeconds, 0, 86_400)) throw new Error('Invalid practice review');
+  const previous = state.progress[card.id];
+  if (previous?.card?.last_review && previous.card.last_review.slice(0, 10) > day) throw new Error('Review predates saved progress');
+  const existing = state.days[day];
+  const cost = previous ? card.review_seconds : card.new_seconds;
+  if (!finite(cost, Number.MIN_VALUE, 216_000)) throw new Error('Invalid practice cost');
+  const assignment: Assignment = existing || { day, plan_key: state.plan ? planKey(state.plan) : `practice/${day}`,
+    ids: [], new_ids: [], extra_ids: [], costs: {}, budget_seconds: 300 };
+  const assigned = [...assignment.ids, ...assignment.extra_ids].includes(card.id);
+  return { ...state,
+    days: { ...state.days, [day]: assigned ? assignment : { ...assignment,
+      extra_ids: [...assignment.extra_ids, card.id], costs: { ...assignment.costs, [card.id]: cost } } },
+    progress: { ...state.progress, [card.id]: nextMemory(previous, rating, day) },
+    history: [...state.history, { id: attemptId, card_id: card.id, day, rating,
+      elapsed_seconds: elapsedSeconds, was_new: !previous, estimated_seconds: cost }],
+    undo: { attempt_id: attemptId, previous: previous ?? null },
+  };
+}
 export function addExtra(state: CoachState, index: CoachIndex, day: string): CoachState {
   requireDay(day);
   if (!state.plan || day < state.plan.start_day) return state;
