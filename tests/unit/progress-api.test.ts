@@ -61,6 +61,18 @@ test("an online backup contains committed progress while the service database st
   } finally { await api.close(); }
 });
 
+test("a later same-day backup does not overwrite the pre-deployment snapshot", async () => {
+  const api = await fixture();
+  try {
+    const token = code();
+    await api.request(token, "PUT", { expected_revision: 0, state: emptyState(), preserve: false });
+    const directory = join(api.path, "..", "backups");
+    const before = await backupDatabase(api.path, directory, new Date("2026-10-29T12:00:00Z"));
+    const after = await backupDatabase(api.path, directory, new Date("2026-10-29T13:00:00Z"));
+    assert.notEqual(before, after);
+  } finally { await api.close(); }
+});
+
 test("CAS protects concurrent devices and identical retries are idempotent", async () => {
   const api = await fixture();
   try {
