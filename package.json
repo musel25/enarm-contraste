@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "node scripts/dev.mjs",
-    "prepare:study": "uv run python scripts/build_full_decks.py && uv run python scripts/verify_full_library.py",
+    "prepare:study": "uv run python scripts/build_full_decks.py && uv run python scripts/build_practice.py && uv run python scripts/verify_full_library.py",
     "prebuild": "npm run prepare:study",
     "build": "tsc --noEmit && vite build --config app/vite.config.ts && npm run build:server",
     "build:server": "vite build --config server/vite.config.ts",

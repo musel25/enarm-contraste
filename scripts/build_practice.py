@@ -86,7 +86,7 @@ def build(root=ROOT):
         bank = json.loads(bank_path.read_text())
         validate_bank(source, bank, json.loads(review_path.read_text()), raw_hash(path), raw_hash(bank_path))
         topic_map = {t['id']:t for b in source['blocks'] for t in b['topics']}
-        groups = [{**g, 'sources':g.get('sources', sources(topic_map[g['parent_topic_id']])), 'corrections':topic_map[g['parent_topic_id']].get('source_corrections', [])} for g in bank['groups']]
+        groups = [{**{key:g[key] for key in ('id','parent_topic_id','block_id','name','answer_kind')}, 'variants':{difficulty:{key:value[key] for key in ('vignette','discriminator','explanation','confusable_with','why_not')} for difficulty,value in g['variants'].items()}, 'sources':g.get('sources', sources(topic_map[g['parent_topic_id']])), 'corrections':topic_map[g['parent_topic_id']].get('source_corrections', [])} for g in bank['groups']]
         data = dict(schema_version=1,section_id=source['id'],groups=groups,decisions=decision_steps(source),professional_review='pending')
         target = output / f'{source["id"]}.json'
         write_json(target, data)

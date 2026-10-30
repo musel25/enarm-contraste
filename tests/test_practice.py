@@ -4,6 +4,7 @@ import importlib.util
 import json
 from pathlib import Path
 import unittest
+import tempfile
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -58,6 +59,31 @@ class PracticeTests(unittest.TestCase):
         self.assertNotIn(self.topic['modifiers'][0]['factor'], initial['context'])
         self.assertEqual(modifier['answer'], self.topic['modifiers'][0]['action'])
         self.assertIn(self.topic['modifiers'][0]['factor'], modifier['context'])
+
+    def test_publishes_hash_checked_sections_without_private_evidence(self):
+        with tempfile.TemporaryDirectory() as temporary:
+            root = Path(temporary)
+            def write(path, data):
+                path.parent.mkdir(parents=True, exist_ok=True)
+                path.write_text(json.dumps(data))
+            source_path = root / 'content/sections/01.json'
+            write(source_path, self.source)
+            self.bank['source_sha256'] = self.module.raw_hash(source_path)
+            bank_path = root / 'content/practice/sections/01.json'
+            write(bank_path,self.bank)
+            self.review['source_sha256'] = self.bank['source_sha256']
+            self.review['content_sha256'] = self.module.raw_hash(bank_path)
+            write(root / 'content/practice/reviews/01.json',self.review)
+            write(root / 'app/public/study/manifest.json',{})
+            index = self.module.build(root)
+            self.assertEqual(index['cases'],3)
+            public = root / 'app/public/study/practice/01.json'
+            self.assertEqual(index['sections'][0]['sha256'],self.module.raw_hash(public))
+            generated = json.loads(public.read_text())
+            self.assertNotIn('facts',generated['groups'][0]['variants']['easy'])
+            self.assertTrue(all(q['id'].startswith('decision/01.01/') for q in generated['decisions']))
+            manifest = json.loads((root / 'app/public/study/manifest.json').read_text())
+            self.assertEqual(manifest['practice']['sha256'],self.module.raw_hash(root / 'app/public/study/practice/index.json'))
 
 
 if __name__ == '__main__':

@@ -24,11 +24,15 @@ El plan, las respuestas, los repasos y las metas se guardan en una base SQLite p
 
 Elige una sección y un bloque para preparar un subtest. Selecciona preguntas concretas, todos los errores registrados o los repasos de hoy. Puedes combinar Eje Clínico y Patrones Madre. Después de responder, elige las preguntas que quieres repetir en la misma sesión. El resultado muestra la fecha del próximo repaso. Repetir una pregunta aumenta las respuestas, pero no el número de tarjetas únicas.
 
-**Casos diagnósticos** separa los casos de Eje Clínico. Fácil muestra una pista y opciones. Medio conserva las opciones sin la pista. Se puede confundir pide escribir el diagnóstico y el dato que distingue antes de comparar y calificar. Puedes combinar los tres niveles. Los casos de la biblioteca conservan su viñeta original en estos modos.
+**Casos diagnósticos** separa los casos de Eje Clínico. Fácil muestra una pista y opciones. Medio conserva las opciones sin la pista. Se puede confundir pide escribir el diagnóstico y el dato que distingue antes de comparar y calificar. Puedes combinar los tres niveles. Cada tema del PDF tiene tres viñetas distintas, basadas en los datos revisados de la fuente. Los temas de procedimientos preguntan por una acción o clasificación.
 
-El bloque de amenorreas de Ginecología añade **24 viñetas distintas**, tres por diagnóstico: Turner, Mayer-Rokitansky-Küster-Hauser, insensibilidad completa a andrógenos, himen imperforado, tabique vaginal transverso, Kallmann, amenorrea hipotalámica funcional y disgenesia gonadal completa 46,XY. Cada diagnóstico tiene un caso fácil, uno medio y uno de contraste. Esta ampliación enlaza fuentes primarias y tiene revisión clínica profesional pendiente. No modifica los mazos Anki revisados.
+El bloque de amenorreas de Ginecología amplía las causas primarias y secundarias. Entre las causas primarias incluye: Turner, Mayer-Rokitansky-Küster-Hauser, insensibilidad completa a andrógenos, himen imperforado, tabique vaginal transverso, Kallmann, amenorrea hipotalámica funcional y disgenesia gonadal completa 46,XY. Cada diagnóstico tiene un caso fácil, uno medio y uno de contraste. Esta ampliación enlaza fuentes primarias y tiene revisión clínica profesional pendiente. No modifica los mazos Anki revisados.
 
-Los casos diagnósticos tienen memoria de repaso propia. Se cuentan aparte de las 2,900 flashcards. Una respuesta conjunta de Eje Clínico se atribuye al bloque; un caso individual permite identificar el tema del error. Las marcas antiguas de Biblioteca se conservan, pero no inventan respuestas históricas ni fechas de estudio.
+**Decisiones paso a paso** pregunta cada bifurcación por separado. Todos los temas tienen preguntas del dato decisivo, fallo del sistema, acción inicial y factores que cambian el manejo. Amenorrea añade rutas específicas: primaria o secundaria, embarazo, útero, desarrollo mamario, perfil hormonal y causas concretas. Las rutas son material didáctico basado en fuentes. Los datos de pasos posteriores permanecen ocultos. Una respuesta incorrecta registra el nodo del error y muestra la decisión correcta antes de continuar.
+
+**Omitir por ahora** no concede calificación ni avance. Al terminar puedes volver a las preguntas omitidas o repetir las respuestas seleccionadas. Los casos y decisiones tienen contadores y avisos de bloque y sección propios. El plan muestra recordatorios de sus repasos pendientes como práctica adicional.
+
+Los casos diagnósticos y las decisiones tienen memoria de repaso propia. Se cuentan aparte de las 2,900 flashcards. Una respuesta conjunta de Eje Clínico se atribuye al bloque; un caso individual permite identificar el tema del error. Las marcas antiguas de Biblioteca se conservan, pero no inventan respuestas históricas ni fechas de estudio.
 
 ## Dos formatos
 
@@ -62,7 +66,7 @@ npm run prepare:study
 npm run dev
 ```
 
-Abre `http://127.0.0.1:4178/`. `/#hoy` abre el plan. `/#biblioteca` abre la biblioteca. `/#avance` abre los avances y subtests. `/#avance?section=14&block=14.01&mode=cases` abre los casos de amenorrea. `/#amenorrea` y `/#ictericia` abren la muestra anterior.
+Abre `http://127.0.0.1:4178/`. `/#hoy` abre el plan. `/#biblioteca` abre la biblioteca. `/#avance` abre los avances y subtests. `/#avance?section=14&block=14.01&mode=cases` abre los casos de amenorrea. `/#avance?section=14&block=14.01&mode=decisions` abre las decisiones de amenorrea. `/#amenorrea` y `/#ictericia` abren la muestra anterior.
 
 ```sh
 uv run python -m unittest discover -s tests -p 'test_*.py'
@@ -70,7 +74,7 @@ npm test
 npm run build
 ```
 
-`npm run build` genera los mazos y audita sus bases SQLite antes de compilar la web. Requiere todas las secciones, la validación de fuentes y las revisiones vigentes. Los archivos generados quedan en `app/public/study/` y se copian a `dist/study/`. Se excluyen de Git.
+`npm run build` genera los mazos, audita sus bases SQLite y valida el banco ampliado antes de compilar la web. Requiere todas las secciones, la validación de fuentes y las revisiones vigentes. Los archivos generados quedan en `app/public/study/` y se copian a `dist/study/`. Se excluyen de Git.
 
 Chrome debe estar en `/usr/bin/google-chrome`. Usa `CHROME_PATH` para indicar otra ruta.
 
@@ -90,6 +94,8 @@ npm run prepare:study
 
 El compilador conserva identificadores estables de Anki. La auditoría comprueba todas las correspondencias entre casos, diagnósticos, mecanismos, hallazgos y acciones. También abre ambos paquetes y comprueba sus notas, tarjetas y bases de datos.
 
-Los comentarios y las marcas de práctica libre se guardan en el navegador. El progreso del plan diario se guarda en el VPS. Los comentarios se comparten con **Descargar comentarios** o **Copiar texto**. La web no los envía automáticamente. Anki mantiene su propio progreso.
+El progreso y las respuestas del plan, Biblioteca, casos y decisiones se guardan en el VPS. Los comentarios y la muestra anterior se guardan en el navegador. El banco ampliado se edita en `content/practice/sections/NN.json`. Cada variante enlaza datos exactos del tema fuente. Su revisión independiente queda ligada al hash en `content/practice/reviews/NN.json`. Una revisión ausente o antigua impide publicar.
+
+Los comentarios se comparten con **Descargar comentarios** o **Copiar texto**. La web no los envía automáticamente. Anki mantiene su propio progreso.
 
 El [runbook de despliegue](docs/deployment.md) explica cómo publicar y recuperar una versión en el VPS. El [piloto biliar](content/piloto-biliar.json) y su generador anterior siguen disponibles para referencia.
