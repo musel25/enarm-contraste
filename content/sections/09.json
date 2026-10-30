@@ -1,0 +1,1300 @@
+{
+  "id": "09",
+  "title": "Dermatología",
+  "blocks": [
+    {
+      "id": "09.01",
+      "title": "Lesión eritematosa caliente",
+      "topics": [
+        {
+          "id": "09.01-01",
+          "name": "Erispela",
+          "source_pages": [
+            231
+          ],
+          "pattern": "Una adulta tiene fiebre y una placa roja, caliente y dolorosa en la pierna de inicio rápido. El borde está elevado y bien delimitado respecto a piel sana.",
+          "key_discriminator": "bien delimitado",
+          "mechanism": "La infección de dermis superficial y linfáticos produce inflamación aguda; su distribución más superficial favorece un borde definido frente a la extensión subcutánea de celulitis.",
+          "findings": [
+            {
+              "mechanism": "Inflamación superficial",
+              "finding": "Placa roja de borde definido"
+            }
+          ],
+          "initial_action": "Valorar gravedad y puerta de entrada e iniciar antibiótico con cobertura estreptocócica según contexto y alergias.",
+          "action_reason": "La infección requiere tratamiento y búsqueda de factores locales.",
+          "modifiers": [
+            {
+              "factor": "Sepsis o progresión rápida",
+              "action": "Solicitar atención hospitalaria y descartar infección profunda.",
+              "reason": "La gravedad cambia vía y alcance del tratamiento."
+            }
+          ],
+          "limits": "El borde orienta, pero no sustituye evaluación de toxicidad ni descarta infección necrosante.",
+          "evidence": [
+            {
+              "page": 231,
+              "quote": "Tiene bordes delimitados"
+            },
+            {
+              "page": 231,
+              "quote": "Primera línea: Penicilinas."
+            }
+          ],
+          "source_gaps": []
+        },
+        {
+          "id": "09.01-02",
+          "name": "Infecciones de piel",
+          "source_pages": [
+            235,
+            236
+          ],
+          "pattern": "Un adulto presenta varias pústulas centradas por pelos después del rasurado. Una lesión evolucionó a nódulo doloroso fluctuante con pus; se busca extensión y síntomas sistémicos.",
+          "key_discriminator": "pústulas centradas por pelos",
+          "mechanism": "La infección del folículo puede extenderse a la unidad pilosebácea y formar una colección; la profundidad y presencia de pus distinguen cuidado tópico de necesidad de drenaje.",
+          "findings": [
+            {
+              "mechanism": "Infección folicular",
+              "finding": "Pústula con pelo central"
+            },
+            {
+              "mechanism": "Colección profunda",
+              "finding": "Nódulo fluctuante"
+            }
+          ],
+          "initial_action": "Valorar profundidad y extensión. Tratar lesiones superficiales localizadas con medidas y terapia tópica apropiadas; drenar una colección fluctuante y seleccionar antibiótico según gravedad.",
+          "action_reason": "El pus requiere control del foco y no solo tratamiento superficial.",
+          "modifiers": [
+            {
+              "factor": "Fiebre, inmunocompromiso o celulitis extensa",
+              "action": "Ampliar tratamiento y valorar hospitalización.",
+              "reason": "Existe mayor riesgo de diseminación."
+            }
+          ],
+          "limits": "El carbunco estafilocócico de la página no equivale al ántrax por Bacillus anthracis.",
+          "evidence": [
+            {
+              "page": 235,
+              "quote": "Pústula centrada por un"
+            },
+            {
+              "page": 235,
+              "quote": "Drenaje: En lesiones extensas o fluctuantes."
+            }
+          ],
+          "source_gaps": []
+        },
+        {
+          "id": "09.01-03",
+          "name": "Impétigo",
+          "source_pages": [
+            234
+          ],
+          "pattern": "Un preescolar tiene lesiones superficiales alrededor de la boca con costras de color miel. No presenta fiebre ni compromiso general y hay pocas lesiones en zonas expuestas.",
+          "key_discriminator": "costras de color miel",
+          "mechanism": "La infección bacteriana superficial de epidermis produce vesículas o pústulas que se rompen y forman costras; toxinas estafilocócicas pueden generar una variante ampollosa.",
+          "findings": [
+            {
+              "mechanism": "Exudado superficial seco",
+              "finding": "Costras melicéricas"
+            },
+            {
+              "mechanism": "Toxina exfoliativa",
+              "finding": "Ampollas flácidas"
+            }
+          ],
+          "initial_action": "Limpiar suavemente y usar tratamiento tópico apropiado en un caso limitado. Valorar antibiótico oral si es extenso o tiene repercusión sistémica.",
+          "action_reason": "La extensión determina si basta tratamiento local.",
+          "modifiers": [
+            {
+              "factor": "Ampollas extensas o deterioro",
+              "action": "Reevaluar gravedad y posible enfermedad por toxinas.",
+              "reason": "No corresponde al mismo cuadro limitado."
+            }
+          ],
+          "limits": "Las costras no identifican por sí solas el agente; seleccionar cobertura por contexto y resistencia local.",
+          "evidence": [
+            {
+              "page": 234,
+              "quote": "costras color miel"
+            },
+            {
+              "page": 234,
+              "quote": "Elección en casos leves: Mupirocina tópica."
+            }
+          ],
+          "source_gaps": []
+        }
+      ],
+      "common_problem": "Piel roja, caliente o con costras y pústulas.",
+      "mother": {
+        "cue": "La profundidad y el foco permiten distinguir infección superficial, folicular o difusa.",
+        "answer": "Infección bacteriana cutánea",
+        "explanation": "La colección y la gravedad cambian necesidad de drenaje y antibiótico."
+      }
+    },
+    {
+      "id": "09.02",
+      "title": "Lesión de pliegues",
+      "topics": [
+        {
+          "id": "09.02-01",
+          "name": "Intertrigo candidiásico",
+          "source_pages": [
+            237
+          ],
+          "pattern": "Una adulta con diabetes presenta placa roja húmeda en un pliegue submamario. Tiene ardor y pequeñas pústulas separadas en la periferia de la placa principal.",
+          "key_discriminator": "pústulas separadas en la periferia",
+          "mechanism": "La humedad y fricción dañan barrera en pliegues y favorecen sobrecrecimiento de Candida; la inflamación con lesiones satélite orienta infección por levadura sobre intertrigo.",
+          "findings": [
+            {
+              "mechanism": "Maceración",
+              "finding": "Placa roja de pliegue"
+            },
+            {
+              "mechanism": "Sobreinfección por Candida",
+              "finding": "Pápulas o pústulas satélite"
+            }
+          ],
+          "initial_action": "Reducir humedad y fricción y aplicar antifúngico tópico apropiado; corregir factores predisponentes y confirmar con examen directo si hay duda.",
+          "action_reason": "Trata levadura y condiciones que sostienen maceración.",
+          "modifiers": [
+            {
+              "factor": "Sin respuesta o lesiones atípicas",
+              "action": "Revisar diagnóstico y considerar KOH o cultivo.",
+              "reason": "Psoriasis y dermatofitos pueden parecerse."
+            }
+          ],
+          "limits": "No usar automáticamente el régimen de candidiasis vaginal o esofágica que aparece en el mismo recuadro.",
+          "evidence": [
+            {
+              "page": 237,
+              "quote": "lesiones satélite periféricas"
+            },
+            {
+              "page": 237,
+              "quote": "Las aplicaciones tópicas son apropiadas"
+            }
+          ],
+          "source_gaps": []
+        },
+        {
+          "id": "09.02-02",
+          "name": "Dermatofitosis",
+          "source_pages": [
+            229,
+            230
+          ],
+          "pattern": "Un adulto tiene una placa pruriginosa que se expande con borde elevado y escamoso y centro menos inflamado. Empeoró después de aplicar una crema con esteroide.",
+          "key_discriminator": "borde elevado y escamoso",
+          "mechanism": "Los dermatofitos colonizan queratina de piel y anexos; la expansión periférica activa produce un borde escamoso, mientras el tratamiento esteroideo puede modificar y extender la infección.",
+          "findings": [
+            {
+              "mechanism": "Crecimiento periférico del hongo",
+              "finding": "Borde activo escamoso"
+            }
+          ],
+          "initial_action": "Confirmar morfología y usar KOH si se necesita. En tiña corporal localizada, iniciar antifúngico tópico como terbinafina y evitar esteroide aislado.",
+          "action_reason": "Actúa sobre el hongo en piel superficial.",
+          "modifiers": [
+            {
+              "factor": "Cuero cabelludo, barba o uñas",
+              "action": "Valorar antifúngico sistémico según sitio y agente.",
+              "reason": "La terapia tópica puede no alcanzar la estructura afectada."
+            },
+            {
+              "factor": "Querion",
+              "action": "Solicitar atención especializada.",
+              "reason": "La inflamación intensa puede dejar alopecia cicatricial."
+            }
+          ],
+          "limits": "No usar ketoconazol oral como opción rutinaria para micosis superficial; la página contiene ese esquema antiguo.",
+          "evidence": [
+            {
+              "page": 229,
+              "quote": "bordes eritematosos elevados"
+            },
+            {
+              "page": 230,
+              "quote": "terbinafina crema, aplicación"
+            }
+          ],
+          "source_gaps": []
+        },
+        {
+          "id": "09.02-03",
+          "name": "Pitiriasis versicolor",
+          "source_pages": [
+            247
+          ],
+          "pattern": "Un joven presenta manchas claras y marrones en la espalda que destacan después del verano. Al raspar aparece escama muy fina y la sensibilidad se conserva.",
+          "key_discriminator": "escama muy fina",
+          "mechanism": "El sobrecrecimiento de Malassezia en zonas sebáceas altera pigmentación y produce descamación superficial; el calor y humedad favorecen recurrencia sin pérdida sensitiva.",
+          "findings": [
+            {
+              "mechanism": "Colonización superficial",
+              "finding": "Escama fina"
+            },
+            {
+              "mechanism": "Alteración de pigmento",
+              "finding": "Máculas claras u oscuras"
+            }
+          ],
+          "initial_action": "Valorar clínicamente y confirmar con KOH si hay duda. Usar antifúngico tópico en lesiones localizadas y explicar que la pigmentación puede tardar en recuperarse.",
+          "action_reason": "El tratamiento elimina actividad micótica antes de normalizar el color.",
+          "modifiers": [
+            {
+              "factor": "Lesiones extensas o recurrentes",
+              "action": "Valorar terapia sistémica segura por un clínico.",
+              "reason": "Puede necesitar manejo más amplio."
+            }
+          ],
+          "limits": "No usar ketoconazol oral de rutina por el esquema del resumen. Pérdida de sensibilidad obliga a otro diferencial.",
+          "evidence": [
+            {
+              "page": 247,
+              "quote": "escama fina que se desprende al rascado"
+            },
+            {
+              "page": 247,
+              "quote": "debiera ser tópico"
+            }
+          ],
+          "source_gaps": []
+        }
+      ],
+      "common_problem": "Lesiones en pliegues o manchas descamativas.",
+      "mother": {
+        "cue": "El sitio, borde y lesiones satélite orientan el tipo de micosis.",
+        "answer": "Hongos superficiales y levaduras",
+        "explanation": "La estructura afectada define confirmación y vía de tratamiento."
+      }
+    },
+    {
+      "id": "09.03",
+      "title": "Prurito nocturno o brote familiar",
+      "topics": [
+        {
+          "id": "09.03-01",
+          "name": "Escabiosis - Sarna",
+          "source_pages": [
+            233
+          ],
+          "pattern": "Un escolar tiene prurito intenso por la noche y pápulas excoriadas entre los dedos. Otros familiares comenzaron a rascarse y se observa un pequeño surco en la muñeca.",
+          "key_discriminator": "prurito intenso por la noche",
+          "mechanism": "El ácaro excava túneles en estrato córneo y desencadena hipersensibilidad; el contacto estrecho facilita infestación familiar y explica el prurito y los surcos característicos.",
+          "findings": [
+            {
+              "mechanism": "Túnel epidérmico",
+              "finding": "Surco acarino"
+            },
+            {
+              "mechanism": "Respuesta inflamatoria",
+              "finding": "Prurito nocturno"
+            }
+          ],
+          "initial_action": "Tratar al paciente y contactos cercanos de forma simultánea con un escabicida apropiado, e indicar manejo de ropa y ropa de cama.",
+          "action_reason": "Evita reinfestación por contactos que aún no tienen síntomas.",
+          "modifiers": [
+            {
+              "factor": "Costras extensas o inmunocompromiso",
+              "action": "Valorar sarna costrosa y manejo intensivo especializado.",
+              "reason": "Tiene mayor carga parasitaria y contagiosidad."
+            }
+          ],
+          "limits": "El prurito puede persistir después de tratamiento; no confundir automáticamente con fracaso. El esquema de permetrina no es una aplicación diaria indefinida.",
+          "evidence": [
+            {
+              "page": 233,
+              "quote": "Prurito de predominio nocturno"
+            },
+            {
+              "page": 233,
+              "quote": "cercanos al mismo tiempo"
+            }
+          ],
+          "source_gaps": []
+        },
+        {
+          "id": "09.03-02",
+          "name": "Pediculosis capitis",
+          "source_pages": [
+            244
+          ],
+          "pattern": "Una niña tiene picazón persistente en la nuca y detrás de las orejas. Se observan huevos firmemente adheridos al cabello y un insecto vivo que se mueve entre los pelos.",
+          "key_discriminator": "un insecto vivo",
+          "mechanism": "La infestación por piojos del cuero cabelludo produce irritación y prurito; los huevos se fijan al tallo y la identificación del parásito vivo demuestra infestación activa.",
+          "findings": [
+            {
+              "mechanism": "Parásitos en cuero cabelludo",
+              "finding": "Prurito y excoriaciones"
+            },
+            {
+              "mechanism": "Huevos adheridos",
+              "finding": "Liendres"
+            }
+          ],
+          "initial_action": "Confirmar infestación activa e iniciar pediculicida apropiado con eliminación mecánica y repetición según producto. Revisar contactos y posible resistencia si persiste.",
+          "action_reason": "El tratamiento debe alcanzar piojos y nuevas eclosiones.",
+          "modifiers": [
+            {
+              "factor": "Fracaso con técnica correcta",
+              "action": "Valorar resistencia y alternativa.",
+              "reason": "No todos los productos conservan eficacia local."
+            }
+          ],
+          "limits": "Las liendres vacías aisladas no prueban actividad. La infestación no indica falta de higiene ni nivel social.",
+          "evidence": [
+            {
+              "page": 244,
+              "quote": "La observación directa de los piojos vivos"
+            },
+            {
+              "page": 244,
+              "quote": "La segunda aplicación es a las 7 a 10 días."
+            }
+          ],
+          "source_gaps": []
+        }
+      ],
+      "common_problem": "Prurito intenso en varios contactos.",
+      "mother": {
+        "cue": "La localización y el hallazgo del parásito separan infestaciones.",
+        "answer": "Ectoparasitosis",
+        "explanation": "El tratamiento correcto y la evaluación de contactos previenen persistencia."
+      }
+    },
+    {
+      "id": "09.04",
+      "title": "Pápulas umbilicadas",
+      "topics": [
+        {
+          "id": "09.04-01",
+          "name": "Molusco contagioso",
+          "source_pages": [
+            242
+          ],
+          "pattern": "Un escolar tiene pequeñas pápulas del color de la piel, brillantes y con depresión central en el tronco. No tiene dolor ni síntomas generales y algunas lesiones se multiplicaron al rascarse.",
+          "key_discriminator": "con depresión central",
+          "mechanism": "La infección por poxvirus induce pápulas epidérmicas y puede propagarse por autoinoculación; la umbilicación central y el curso generalmente autolimitado permiten reconocer el patrón.",
+          "findings": [
+            {
+              "mechanism": "Proliferación epidérmica viral",
+              "finding": "Pápulas umbilicadas"
+            },
+            {
+              "mechanism": "Autoinoculación",
+              "finding": "Nuevas lesiones cercanas"
+            }
+          ],
+          "initial_action": "Explicar el curso y evitar rascado y compartir objetos. Valorar observación o tratamiento físico según molestias, extensión, localización y preferencia.",
+          "action_reason": "Muchos casos remiten solos y el tratamiento depende de repercusión.",
+          "modifiers": [
+            {
+              "factor": "Lesiones extensas o atípicas en adulto",
+              "action": "Valorar inmunosupresión y diagnóstico diferencial.",
+              "reason": "El patrón puede cambiar con déficit inmune."
+            }
+          ],
+          "limits": "No usar imiquimod como indicación automática por la mención del libro; elegir opciones con evidencia y tolerancia adecuadas.",
+          "evidence": [
+            {
+              "page": 242,
+              "quote": "umbilicación central."
+            },
+            {
+              "page": 242,
+              "quote": "Infección autolimitada"
+            }
+          ],
+          "source_gaps": []
+        }
+      ],
+      "common_problem": "Pápulas pequeñas con depresión central.",
+      "mother": {
+        "cue": "Una infección epidérmica viral puede multiplicarse por rascado.",
+        "answer": "Pápulas umbilicadas virales",
+        "explanation": "La morfología y estado inmune orientan manejo."
+      }
+    },
+    {
+      "id": "09.05",
+      "title": "Eczema crónico",
+      "topics": [
+        {
+          "id": "09.05-01",
+          "name": "Dermatitis atópica",
+          "source_pages": [
+            225,
+            226
+          ],
+          "pattern": "Un niño con antecedentes de asma presenta piel seca y placas que pican en pliegues de codos y rodillas. Los brotes reaparecen y el rascado altera su sueño.",
+          "key_discriminator": "piel seca y placas que pican",
+          "mechanism": "La alteración de barrera cutánea y respuesta inmune favorece pérdida de agua, inflamación y prurito; el rascado añade daño y mantiene el ciclo de eccema.",
+          "findings": [
+            {
+              "mechanism": "Barrera alterada",
+              "finding": "Xerosis"
+            },
+            {
+              "mechanism": "Inflamación y rascado",
+              "finding": "Eccema y excoriaciones"
+            }
+          ],
+          "initial_action": "Usar emolientes de forma regular y tratar el brote con antiinflamatorio tópico de potencia apropiada a edad, sitio y gravedad. Revisar hábitos e infección.",
+          "action_reason": "Restaurar barrera y reducir inflamación previene exacerbaciones.",
+          "modifiers": [
+            {
+              "factor": "Costras purulentas o deterioro",
+              "action": "Valorar sobreinfección.",
+              "reason": "Puede requerir antimicrobiano."
+            },
+            {
+              "factor": "Cara o pliegues",
+              "action": "Ajustar potencia y duración.",
+              "reason": "La piel es más vulnerable a atrofia."
+            }
+          ],
+          "limits": "IgE elevada no es necesaria para diagnóstico y no identifica por sí sola una alergia alimentaria causal.",
+          "evidence": [
+            {
+              "page": 225,
+              "quote": "prurito intenso, piel seca"
+            },
+            {
+              "page": 226,
+              "quote": "Los emolientes son la piedra angular"
+            }
+          ],
+          "source_gaps": []
+        },
+        {
+          "id": "09.05-02",
+          "name": "Dermatitis por contacto",
+          "source_pages": [
+            227
+          ],
+          "pattern": "Una trabajadora desarrolla eccema pruriginoso en la zona donde un accesorio metálico toca la piel. Mejora al retirarlo y reaparece después de nuevas exposiciones.",
+          "key_discriminator": "reaparece después de nuevas exposiciones",
+          "mechanism": "La sensibilización a un hapteno activa linfocitos en una reacción retardada de tipo IV; el contacto repetido desencadena eccema en el área expuesta.",
+          "findings": [
+            {
+              "mechanism": "Respuesta retardada al alérgeno",
+              "finding": "Eccema de zona de contacto"
+            }
+          ],
+          "initial_action": "Identificar y evitar la exposición, reparar barrera y usar corticoide tópico apropiado si hay inflamación. Valorar prueba de parche si persiste duda o recurrencia.",
+          "action_reason": "Eliminar el agente impide nuevos episodios.",
+          "modifiers": [
+            {
+              "factor": "Exposición repetida a detergentes sin sensibilización",
+              "action": "Valorar dermatitis irritativa.",
+              "reason": "El daño puede ser directo y no inmunológico."
+            }
+          ],
+          "limits": "No toda dermatitis por contacto es alérgica. Una prueba de parche requiere interpretación clínica.",
+          "evidence": [
+            {
+              "page": 227,
+              "quote": "hipersensibilidad tipo IV"
+            },
+            {
+              "page": 227,
+              "quote": "Corticoides tópicos y evitar alérgeno."
+            }
+          ],
+          "source_gaps": []
+        },
+        {
+          "id": "09.05-03",
+          "name": "Dermatitis seborreica",
+          "source_pages": [
+            228
+          ],
+          "pattern": "Un lactante tiene placas con escama grasosa amarillenta en cuero cabelludo y detrás de las orejas. Tiene poco prurito y buen estado general, sin exudado purulento.",
+          "key_discriminator": "escama grasosa amarillenta",
+          "mechanism": "La inflamación de áreas sebáceas se relaciona con sebo y colonización por Malassezia; produce eritema y escama grasa con menor prurito que otros eccemas.",
+          "findings": [
+            {
+              "mechanism": "Inflamación seborreica",
+              "finding": "Escama oleosa y eritema"
+            }
+          ],
+          "initial_action": "Realizar cuidados suaves y emolientes, y valorar antifúngico tópico apropiado según edad y localización. Reevaluar si no mejora.",
+          "action_reason": "Reduce escama e inflamación en las áreas afectadas.",
+          "modifiers": [
+            {
+              "factor": "Forma extensa, persistente o con falla de medro",
+              "action": "Ampliar diagnóstico y referir.",
+              "reason": "Puede simular inmunodeficiencia u otra dermatosis."
+            }
+          ],
+          "limits": "No aplicar queratolíticos o corticoides potentes indiscriminadamente en un lactante.",
+          "evidence": [
+            {
+              "page": 228,
+              "quote": "eritema y escama grasa"
+            },
+            {
+              "page": 228,
+              "quote": "Ketoconazol al 2% en champú"
+            }
+          ],
+          "source_gaps": []
+        }
+      ],
+      "common_problem": "Eccema crónico o recurrente.",
+      "mother": {
+        "cue": "La barrera, exposición y áreas sebáceas producen patrones diferentes.",
+        "answer": "Dermatitis por mecanismo y distribución",
+        "explanation": "Restaurar barrera y retirar desencadenantes complementa control de inflamación."
+      }
+    },
+    {
+      "id": "09.06",
+      "title": "Ronchas y edema rápido",
+      "topics": [
+        {
+          "id": "09.06-01",
+          "name": "Urticaria",
+          "source_pages": [
+            255
+          ],
+          "pattern": "Una adulta presenta ronchas elevadas muy pruriginosas que cambian de lugar y desaparecen sin marca en menos de un día. No tiene dificultad respiratoria ni hipotensión.",
+          "key_discriminator": "desaparecen sin marca",
+          "mechanism": "La activación de mastocitos libera mediadores que aumentan permeabilidad vascular dérmica; el edema transitorio forma habones pruriginosos que suelen desaparecer sin lesión residual.",
+          "findings": [
+            {
+              "mechanism": "Edema dérmico transitorio",
+              "finding": "Habón evanescente"
+            }
+          ],
+          "initial_action": "Valorar signos de anafilaxia y desencadenantes. Si es urticaria aislada, iniciar antihistamínico no sedante de segunda generación y seguimiento.",
+          "action_reason": "Controla mediadores histamínicos sin la sedación de opciones antiguas.",
+          "modifiers": [
+            {
+              "factor": "Dificultad respiratoria, hipotensión o compromiso sistémico",
+              "action": "Tratar como posible anafilaxia urgente.",
+              "reason": "La roncha puede acompañar una reacción vital."
+            },
+            {
+              "factor": "Lesión dura más de veinticuatro horas y deja marca o dolor",
+              "action": "Investigar vasculitis u otro diagnóstico.",
+              "reason": "No sigue el patrón evanescente típico."
+            }
+          ],
+          "limits": "La prueba del hielo solo corresponde a sospecha de urticaria por frío; no es necesaria en todos los casos.",
+          "evidence": [
+            {
+              "page": 255,
+              "quote": "desaparece en 1-24 horas"
+            },
+            {
+              "page": 255,
+              "quote": "antihistamínicos de segunda generac1on"
+            }
+          ],
+          "source_gaps": []
+        }
+      ],
+      "common_problem": "Ronchas y posible edema de aparición rápida.",
+      "mother": {
+        "cue": "El edema dérmico transitorio exige revisar compromiso sistémico.",
+        "answer": "Urticaria y evaluación de anafilaxia",
+        "explanation": "La duración de cada lesión y síntomas respiratorios cambian la decisión."
+      }
+    },
+    {
+      "id": "09.07",
+      "title": "Placas escamosas",
+      "topics": [
+        {
+          "id": "09.07-01",
+          "name": "Psoriasis",
+          "source_pages": [
+            248,
+            249,
+            250
+          ],
+          "pattern": "Un adulto presenta placas simétricas bien delimitadas en codos y rodillas con escama plateada. Al desprender una escama aparecen pequeños puntos de sangre; refiere dolor articular matutino.",
+          "key_discriminator": "escama plateada",
+          "mechanism": "La activación inmune acelera proliferación y recambio de queratinocitos; el engrosamiento y los vasos superficiales explican placas descamativas y sangrado puntiforme al retirar escama.",
+          "findings": [
+            {
+              "mechanism": "Recambio epidérmico acelerado",
+              "finding": "Escama plateada"
+            },
+            {
+              "mechanism": "Vasos superficiales",
+              "finding": "Sangrado de Auspitz"
+            }
+          ],
+          "initial_action": "Valorar extensión, impacto y articulaciones. Iniciar tratamiento tópico apropiado en enfermedad limitada y referir si es extensa, grave o con sospecha articular.",
+          "action_reason": "La severidad y comorbilidades determinan necesidad de tratamiento sistémico.",
+          "modifiers": [
+            {
+              "factor": "Dolor e inflamación articular",
+              "action": "Solicitar evaluación reumatológica.",
+              "reason": "Puede existir artritis asociada."
+            },
+            {
+              "factor": "Eritrodermia o forma pustular sistémica",
+              "action": "Valorar hospitalización.",
+              "reason": "Puede comprometer homeostasis y estado general."
+            }
+          ],
+          "limits": "Clobetasol es de alta potencia, no mediana. El orden rígido de sistémicos del resumen no sustituye selección actual individual.",
+          "evidence": [
+            {
+              "page": 248,
+              "quote": "descamación plateada"
+            },
+            {
+              "page": 250,
+              "quote": "La terapia combinada con vitamina D3 y esteroides"
+            }
+          ],
+          "source_gaps": []
+        },
+        {
+          "id": "09.07-02",
+          "name": "Liquen plano",
+          "source_pages": [
+            238
+          ],
+          "pattern": "Un adulto presenta pápulas violáceas, planas y pruriginosas en muñecas. Sobre algunas hay un reticulado blanco fino y refiere lesiones semejantes en la mucosa de la boca.",
+          "key_discriminator": "reticulado blanco fino",
+          "mechanism": "Una respuesta inflamatoria celular contra queratinocitos basales produce pápulas de interfase; el engrosamiento focal genera estrías blanquecinas y puede afectar mucosa, piel o anexos.",
+          "findings": [
+            {
+              "mechanism": "Inflamación de interfase",
+              "finding": "Pápulas planas violáceas"
+            },
+            {
+              "mechanism": "Cambio epidérmico",
+              "finding": "Estrías de Wickham"
+            }
+          ],
+          "initial_action": "Valorar distribución, mucosas y medicamentos. Confirmar por biopsia si es necesario y tratar lesiones localizadas con corticoide tópico de potencia adecuada.",
+          "action_reason": "El sitio y la extensión modifican tratamiento y vigilancia.",
+          "modifiers": [
+            {
+              "factor": "Lesión oral o genital erosiva persistente",
+              "action": "Referir y mantener seguimiento.",
+              "reason": "Puede cicatrizar o requerir descartar transformación maligna."
+            }
+          ],
+          "limits": "No toda erupción liquenoide es idiopática; revisar fármacos y asociaciones según contexto.",
+          "evidence": [
+            {
+              "page": 238,
+              "quote": "Estrías de Wickham"
+            },
+            {
+              "page": 238,
+              "quote": "Corticoides tópicos de alta potencia"
+            }
+          ],
+          "source_gaps": []
+        },
+        {
+          "id": "09.07-03",
+          "name": "Pitiriasis rosada de Gibert",
+          "source_pages": [
+            246
+          ],
+          "pattern": "Una joven nota una placa ovalada asalmonada en el tronco. Días después aparecen lesiones más pequeñas con escama siguiendo líneas de la espalda, en disposición de árbol.",
+          "key_discriminator": "una placa ovalada asalmonada",
+          "mechanism": "Una erupción inflamatoria autolimitada suele iniciar con una placa mayor y luego diseminarse por líneas cutáneas; la secuencia y distribución permiten reconocerla clínicamente.",
+          "findings": [
+            {
+              "mechanism": "Placa inicial mayor",
+              "finding": "Medallón heráldico"
+            },
+            {
+              "mechanism": "Erupción secundaria",
+              "finding": "Distribución en árbol"
+            }
+          ],
+          "initial_action": "Confirmar patrón clínico y tratar prurito si lo hay; explicar evolución autolimitada y reevaluar si el aspecto o curso es atípico.",
+          "action_reason": "La mayoría se resuelve sin tratamiento causal.",
+          "modifiers": [
+            {
+              "factor": "Distribución atípica o riesgo de otra infección",
+              "action": "Ampliar diferencial y pruebas dirigidas.",
+              "reason": "Tiña, fármacos y otras erupciones pueden parecerse."
+            }
+          ],
+          "limits": "No interpretar la asociación a herpesvirus como indicación universal de antiviral.",
+          "evidence": [
+            {
+              "page": 246,
+              "quote": "Medallón heráldico"
+            },
+            {
+              "page": 246,
+              "quote": "se resuelve en forma espontánea"
+            }
+          ],
+          "source_gaps": []
+        }
+      ],
+      "common_problem": "Placas o pápulas con escama.",
+      "mother": {
+        "cue": "Morfología, distribución y secuencia separan dermatosis inflamatorias.",
+        "answer": "Patrones papuloescamosos",
+        "explanation": "La extensión, mucosas y articulaciones modifican manejo."
+      }
+    },
+    {
+      "id": "09.08",
+      "title": "Lesiones faciales inflamatorias",
+      "topics": [
+        {
+          "id": "09.08-01",
+          "name": "Acné vulgar",
+          "source_pages": [
+            222
+          ],
+          "pattern": "Un adolescente presenta comedones abiertos y cerrados junto con pápulas y pústulas en cara y espalda. Tiene algunas cicatrices y pregunta por tratamiento para evitar nuevas lesiones.",
+          "key_discriminator": "comedones abiertos y cerrados",
+          "mechanism": "La hiperqueratinización obstruye la unidad pilosebácea, el sebo favorece Cutibacterium y la inflamación produce lesiones; los comedones distinguen el patrón de otras erupciones faciales.",
+          "findings": [
+            {
+              "mechanism": "Folículo obstruido",
+              "finding": "Comedón"
+            },
+            {
+              "mechanism": "Inflamación folicular",
+              "finding": "Pápulas y pústulas"
+            }
+          ],
+          "initial_action": "Clasificar gravedad y riesgo de cicatriz; iniciar tratamiento tópico apropiado, con retinoide y peróxido de benzoilo según tolerancia y contexto.",
+          "action_reason": "Actúa sobre obstrucción e inflamación y reduce lesiones nuevas.",
+          "modifiers": [
+            {
+              "factor": "Nódulos, cicatrices o fracaso terapéutico",
+              "action": "Referir para posible tratamiento sistémico.",
+              "reason": "Existe mayor riesgo de secuela."
+            },
+            {
+              "factor": "Embarazo posible",
+              "action": "Revisar contraindicaciones antes de retinoides.",
+              "reason": "Los sistémicos son teratógenos."
+            }
+          ],
+          "limits": "Peróxido de benzoilo no es un antibiótico. Evitar monoterapia antibiótica prolongada.",
+          "evidence": [
+            {
+              "page": 222,
+              "quote": "Hiperqueratosis"
+            },
+            {
+              "page": 222,
+              "quote": "considerar isotretinoína oral por un dermatólogo."
+            }
+          ],
+          "source_gaps": []
+        },
+        {
+          "id": "09.08-02",
+          "name": "Rosácea",
+          "source_pages": [
+            251
+          ],
+          "pattern": "Una adulta tiene rubor recurrente que empeora con calor y bebidas calientes. Ahora hay eritema centrofacial, telangiectasias y pápulas, pero no se observan comedones.",
+          "key_discriminator": "no se observan comedones",
+          "mechanism": "La inflamación y desregulación vascular centrofacial favorecen rubor y eritema persistente; las lesiones inflamatorias se superponen sin la obstrucción comedónica típica del acné.",
+          "findings": [
+            {
+              "mechanism": "Respuesta vascular exagerada",
+              "finding": "Rubor y telangiectasias"
+            },
+            {
+              "mechanism": "Inflamación",
+              "finding": "Pápulas sin comedones"
+            }
+          ],
+          "initial_action": "Identificar desencadenantes, indicar fotoprotección y valorar metronidazol o ácido azelaico tópicos según fenotipo. Explorar síntomas oculares.",
+          "action_reason": "Reduce exacerbaciones e inflamación y detecta compromiso ocular.",
+          "modifiers": [
+            {
+              "factor": "Blefaritis, dolor ocular o visión alterada",
+              "action": "Solicitar evaluación ocular.",
+              "reason": "Puede existir enfermedad ocular relevante."
+            }
+          ],
+          "limits": "No usar corticoide facial crónico por la mención del resumen; puede empeorar el cuadro.",
+          "evidence": [
+            {
+              "page": 251,
+              "quote": "sin comedones."
+            },
+            {
+              "page": 251,
+              "quote": "Metronidazol tópico o Ácido Azelaico."
+            }
+          ],
+          "source_gaps": []
+        }
+      ],
+      "common_problem": "Lesiones inflamatorias faciales.",
+      "mother": {
+        "cue": "La presencia de comedones y rubor separa mecanismos foliculares y vasculares.",
+        "answer": "Acné y rosácea",
+        "explanation": "El fenotipo y las secuelas determinan tratamiento."
+      }
+    },
+    {
+      "id": "09.09",
+      "title": "Trastorno pigmentario",
+      "topics": [
+        {
+          "id": "09.09-01",
+          "name": "Vitíligo",
+          "source_pages": [
+            256
+          ],
+          "pattern": "Una joven presenta manchas blancas bien delimitadas alrededor de la boca y en las manos. No hay escama ni alteración de sensibilidad; algunas zonas aumentaron lentamente de tamaño.",
+          "key_discriminator": "No hay escama",
+          "mechanism": "La pérdida de melanocitos elimina pigmento de áreas cutáneas delimitadas; la asociación autoinmune orienta a buscar síntomas de otras enfermedades sin asumir que todas están presentes.",
+          "findings": [
+            {
+              "mechanism": "Pérdida de melanocitos",
+              "finding": "Máculas acrómicas"
+            }
+          ],
+          "initial_action": "Confirmar el patrón, valorar extensión e impacto y buscar asociaciones por historia clínica. Ofrecer fotoprotección y tratamiento tópico o referencia según localización y progresión.",
+          "action_reason": "El manejo depende del área afectada y de actividad.",
+          "modifiers": [
+            {
+              "factor": "Cara o pliegues",
+              "action": "Valorar inhibidor de calcineurina o pauta tópica apropiada.",
+              "reason": "Evita efectos adversos de esteroides potentes continuos."
+            }
+          ],
+          "limits": "La despigmentación terapéutica es una decisión especializada, no una primera acción automática por extensión.",
+          "evidence": [
+            {
+              "page": 256,
+              "quote": "pérdida de melanocitos"
+            },
+            {
+              "page": 256,
+              "quote": "inhibidores de calcineurina"
+            }
+          ],
+          "source_gaps": []
+        },
+        {
+          "id": "09.09-02",
+          "name": "Melasma",
+          "source_pages": [
+            241
+          ],
+          "pattern": "Una adulta nota manchas marrones simétricas en mejillas y frente durante el embarazo. No hay inflamación ni escama; el pigmento se intensifica con exposición al sol.",
+          "key_discriminator": "manchas marrones simétricas",
+          "mechanism": "La estimulación de melanocitos por radiación y factores hormonales aumenta producción y depósito de melanina; la distribución facial simétrica orienta hiperpigmentación adquirida benigna.",
+          "findings": [
+            {
+              "mechanism": "Melanina aumentada",
+              "finding": "Manchas faciales marrones"
+            }
+          ],
+          "initial_action": "Iniciar fotoprotección y revisar factores hormonales y productos. Valorar despigmentante apropiado según embarazo, tolerancia y profundidad del pigmento.",
+          "action_reason": "La exposición solar mantiene y reactiva el pigmento.",
+          "modifiers": [
+            {
+              "factor": "Embarazo",
+              "action": "Seleccionar opciones compatibles y evitar retinoides.",
+              "reason": "La seguridad modifica el tratamiento."
+            }
+          ],
+          "limits": "No garantizar desaparición al año del parto; puede persistir o recurrir. El estudio tiroideo se decide por contexto.",
+          "evidence": [
+            {
+              "page": 241,
+              "quote": "de manera simétrica"
+            },
+            {
+              "page": 241,
+              "quote": "Minimizar exposición al sol"
+            }
+          ],
+          "source_gaps": []
+        },
+        {
+          "id": "09.09-03",
+          "name": "Neurofibromatosis",
+          "source_pages": [
+            243
+          ],
+          "pattern": "Un escolar tiene múltiples manchas café con leche y pecas axilares. Su padre presenta nódulos cutáneos semejantes; se evalúan visión, crecimiento, presión y desarrollo.",
+          "key_discriminator": "manchas café con leche y pecas axilares",
+          "mechanism": "Una alteración genética de supresión tumoral favorece proliferación de tejidos neurales y signos pigmentarios; el fenotipo permite orientar vigilancia de complicaciones neurológicas, visuales y tumorales.",
+          "findings": [
+            {
+              "mechanism": "Predisposición genética",
+              "finding": "Manchas café con leche y neurofibromas"
+            },
+            {
+              "mechanism": "Afectación de vía óptica",
+              "finding": "Riesgo visual"
+            }
+          ],
+          "initial_action": "Aplicar criterios diagnósticos actuales y referir a genética y evaluación pediátrica; establecer vigilancia de visión, desarrollo y signos de tumor o hipertensión.",
+          "action_reason": "La detección de complicaciones precede al tratamiento de problemas específicos.",
+          "modifiers": [
+            {
+              "factor": "Hipoacusia con tumores vestibulares bilaterales",
+              "action": "Valorar otro síndrome de schwannomatosis.",
+              "reason": "No corresponde al mismo patrón de NF1."
+            }
+          ],
+          "limits": "El diagnóstico molecular sí es posible. La clasificación y criterios de la página son antiguos y no deben reducirse a contar manchas.",
+          "evidence": [
+            {
+              "page": 243,
+              "quote": "Efélides axilares"
+            },
+            {
+              "page": 243,
+              "quote": "Glioma óptico y neurofibromas."
+            }
+          ],
+          "source_gaps": []
+        }
+      ],
+      "common_problem": "Cambios de pigmento con distribución variable.",
+      "mother": {
+        "cue": "Distinguir pérdida de melanocitos, exceso de melanina y signos de predisposición genética.",
+        "answer": "Trastornos pigmentarios",
+        "explanation": "No toda mancha tiene el mismo mecanismo ni necesita el mismo estudio."
+      }
+    },
+    {
+      "id": "09.10",
+      "title": "Ampollas y desprendimiento",
+      "topics": [
+        {
+          "id": "09.10-01",
+          "name": "Pénfigo vulgar",
+          "source_pages": [
+            245
+          ],
+          "pattern": "Un adulto tiene erosiones dolorosas en la boca y ampollas flácidas en el tronco. La piel se desprende con roce leve en zonas cercanas; se solicita biopsia e inmunofluorescencia.",
+          "key_discriminator": "ampollas flácidas",
+          "mechanism": "Los autoanticuerpos contra proteínas desmosómicas alteran unión entre queratinocitos; la acantólisis suprabasal produce ampollas frágiles y erosiones de piel y mucosas.",
+          "findings": [
+            {
+              "mechanism": "Pérdida de adhesión celular",
+              "finding": "Ampolla flácida"
+            },
+            {
+              "mechanism": "Afectación mucosa",
+              "finding": "Erosiones orales"
+            }
+          ],
+          "initial_action": "Valorar extensión, hidratación e infección y referir a dermatología. Confirmar con histología e inmunofluorescencia para iniciar tratamiento inmunomodulador especializado.",
+          "action_reason": "La enfermedad puede causar pérdidas y requiere terapia sistémica dirigida.",
+          "modifiers": [
+            {
+              "factor": "Lesiones extensas o dificultad para comer",
+              "action": "Valorar hospitalización y soporte.",
+              "reason": "La barrera y nutrición están comprometidas."
+            }
+          ],
+          "limits": "Nikolsky no es específico. La página no cubre todo el tratamiento actual; no elegir inmunosupresión solo por el diagrama.",
+          "evidence": [
+            {
+              "page": 245,
+              "quote": "desmogleína 3"
+            },
+            {
+              "page": 245,
+              "quote": "lnmunofluorescencia directa"
+            }
+          ],
+          "source_gaps": []
+        },
+        {
+          "id": "09.10-02",
+          "name": "SSJ y NET",
+          "source_pages": [
+            253,
+            254
+          ],
+          "pattern": "Una adulta inició un fármaco semanas antes y presenta fiebre, piel dolorosa, ampollas y erosiones en boca y ojos. Varias áreas se desprenden con facilidad durante la evaluación.",
+          "key_discriminator": "piel dolorosa",
+          "mechanism": "Una reacción grave produce muerte de queratinocitos y pérdida de epidermis; la barrera cutánea y mucosas fallan, con pérdidas de líquido, dolor y riesgo sistémico.",
+          "findings": [
+            {
+              "mechanism": "Necrosis epidérmica",
+              "finding": "Desprendimiento y ampollas"
+            },
+            {
+              "mechanism": "Daño mucoso",
+              "finding": "Erosiones orales y oculares"
+            }
+          ],
+          "initial_action": "Suspender el fármaco sospechoso y referir de inmediato a atención hospitalaria especializada. Iniciar soporte de líquidos, temperatura y dolor y evaluación oftalmológica temprana.",
+          "action_reason": "Retirar el desencadenante y sostener barrera y órganos reduce daño.",
+          "modifiers": [
+            {
+              "factor": "Desprendimiento extenso o inestabilidad",
+              "action": "Valorar cuidados intensivos o unidad especializada.",
+              "reason": "Aumenta necesidad de soporte."
+            },
+            {
+              "factor": "Menos de diez, diez a treinta o más de treinta por ciento",
+              "action": "Clasificar espectro por epidermis desprendida.",
+              "reason": "La extensión orienta severidad y denominación."
+            }
+          ],
+          "limits": "Inmunoglobulina y enoxaparina no constituyen un tratamiento universal. La terapia inmunomoduladora requiere guía actual y equipo experto.",
+          "evidence": [
+            {
+              "page": 253,
+              "quote": "Desprendimiento epidérmico"
+            },
+            {
+              "page": 254,
+              "quote": "suspensión temprana de"
+            }
+          ],
+          "source_gaps": []
+        },
+        {
+          "id": "09.10-03",
+          "name": "Síndrome de Ritter",
+          "source_pages": [
+            252
+          ],
+          "pattern": "Un niño pequeño tiene fiebre, irritabilidad y piel roja muy dolorosa que forma ampollas superficiales y se desprende. Hay costras periorales, pero las mucosas están respetadas.",
+          "key_discriminator": "las mucosas están respetadas",
+          "mechanism": "Las toxinas exfoliativas estafilocócicas se difunden y separan epidermis superficial; la lesión mediada por toxina explica desprendimiento amplio sin infección directa de todas las ampollas.",
+          "findings": [
+            {
+              "mechanism": "Toxina exfoliativa",
+              "finding": "Ampollas y descamación superficial"
+            },
+            {
+              "mechanism": "Plano superficial",
+              "finding": "Respeto mucoso habitual"
+            }
+          ],
+          "initial_action": "Valorar hospitalización, pérdidas y foco infeccioso; iniciar tratamiento antiestafilocócico y soporte según gravedad con pediatría.",
+          "action_reason": "La producción de toxina requiere control del foco y la barrera dañada necesita soporte.",
+          "modifiers": [
+            {
+              "factor": "Adulto o enfermedad extensa",
+              "action": "Buscar factores predisponentes y mayor gravedad.",
+              "reason": "El pronóstico puede ser peor."
+            }
+          ],
+          "limits": "No confundir Nikolsky positivo con diagnóstico único. La muestra microbiológica puede requerir búsqueda del foco y no solo la piel desprendida.",
+          "evidence": [
+            {
+              "page": 252,
+              "quote": "toxinas exfoliativas"
+            },
+            {
+              "page": 252,
+              "quote": "No afecta las palmas, las plantas ni las mucosas"
+            }
+          ],
+          "source_gaps": []
+        },
+        {
+          "id": "09.10-04",
+          "name": "Eritema multiforme",
+          "source_pages": [
+            232
+          ],
+          "pattern": "Un joven presenta lesiones simétricas en diana en manos y pies después de herpes labial. Tiene pocas molestias generales y no hay desprendimiento extenso de la epidermis.",
+          "key_discriminator": "lesiones simétricas en diana",
+          "mechanism": "La respuesta inflamatoria posterior a infección, con frecuencia herpética, produce lesiones acrales en diana; la afectación mucosa variable modifica gravedad sin equivaler automáticamente a necrólisis.",
+          "findings": [
+            {
+              "mechanism": "Inflamación cutánea",
+              "finding": "Dianas acrales"
+            },
+            {
+              "mechanism": "Afectación mucosa posible",
+              "finding": "Úlceras orales"
+            }
+          ],
+          "initial_action": "Buscar el desencadenante y dar tratamiento sintomático en enfermedad limitada. Valorar hidratación y atención especializada si existe compromiso mucoso importante.",
+          "action_reason": "La mayoría necesita soporte y control de la causa, según repercusión.",
+          "modifiers": [
+            {
+              "factor": "Fármaco sospechoso",
+              "action": "Retirarlo y reevaluar diagnóstico.",
+              "reason": "Puede corresponder a otra reacción."
+            },
+            {
+              "factor": "Dolor intenso o desprendimiento",
+              "action": "Descartar espectro SSJ/NET.",
+              "reason": "Tiene gravedad y manejo diferentes."
+            }
+          ],
+          "limits": "Eritema multiforme y SSJ/NET son entidades distintas; una lesión en diana aislada no define todas.",
+          "evidence": [
+            {
+              "page": 232,
+              "quote": "distribución acral"
+            },
+            {
+              "page": 232,
+              "quote": "Debe buscarse el agente causante y eliminarlo"
+            }
+          ],
+          "source_gaps": []
+        }
+      ],
+      "common_problem": "Ampollas, erosiones o desprendimiento cutáneo.",
+      "mother": {
+        "cue": "El plano de lesión y la afectación mucosa orientan inmunidad, toxina o reacción grave.",
+        "answer": "Enfermedad ampollosa y daño de barrera",
+        "explanation": "La extensión y estado sistémico definen urgencia y soporte."
+      }
+    },
+    {
+      "id": "09.11",
+      "title": "Lesión neoplásica",
+      "topics": [
+        {
+          "id": "09.11-01",
+          "name": "Carcinoma basocelular",
+          "source_pages": [
+            223
+          ],
+          "pattern": "Un adulto mayor tiene una pápula perlada en la nariz que crece lentamente, sangra con roce y muestra pequeños vasos superficiales y depresión central.",
+          "key_discriminator": "pápula perlada",
+          "mechanism": "La proliferación maligna de células basales favorecida por radiación ultravioleta crece localmente; el borde perlado, vasos y ulceración reflejan el patrón clínico de la lesión.",
+          "findings": [
+            {
+              "mechanism": "Crecimiento local",
+              "finding": "Pápula persistente"
+            },
+            {
+              "mechanism": "Vasos y ulceración",
+              "finding": "Telangiectasias y sangrado"
+            }
+          ],
+          "initial_action": "Referir a dermatología y confirmar histológicamente. Planear extirpación según localización, subtipo y riesgo de recurrencia.",
+          "action_reason": "La nariz y áreas periorificiales requieren preservar tejido sin perder control tumoral.",
+          "modifiers": [
+            {
+              "factor": "Localización o subtipo de alto riesgo",
+              "action": "Valorar cirugía de Mohs.",
+              "reason": "Permite control de márgenes en sitios críticos."
+            }
+          ],
+          "limits": "Crecimiento lento no equivale a benignidad; la biopsia confirma y la técnica no es idéntica en todos los casos.",
+          "evidence": [
+            {
+              "page": 223,
+              "quote": "brillo perlado"
+            },
+            {
+              "page": 223,
+              "quote": "El tratamiento de primera línea es quirúrgico"
+            }
+          ],
+          "source_gaps": []
+        },
+        {
+          "id": "09.11-02",
+          "name": "Carcinoma espinocelular",
+          "source_pages": [
+            224
+          ],
+          "pattern": "Un adulto con daño solar presenta un nódulo queratósico de crecimiento reciente en el labio inferior. Se ulcera y sangra; la lesión no tiene borde perlado evidente.",
+          "key_discriminator": "nódulo queratósico",
+          "mechanism": "La transformación de queratinocitos epidérmicos puede surgir sobre daño actínico; la queratinización, invasión y ulceración producen una lesión con riesgo de extensión regional o distante.",
+          "findings": [
+            {
+              "mechanism": "Proliferación queratinocítica",
+              "finding": "Nódulo o cuerno queratósico"
+            },
+            {
+              "mechanism": "Invasión y ulceración",
+              "finding": "Sangrado"
+            }
+          ],
+          "initial_action": "Solicitar evaluación dermatológica y biopsia para confirmar y estratificar riesgo. Planear resección y estudio de extensión cuando corresponda.",
+          "action_reason": "El sitio y las características histológicas modifican riesgo y tratamiento.",
+          "modifiers": [
+            {
+              "factor": "Labio, lesión gruesa o invasión profunda",
+              "action": "Valorar tratamiento y estadificación de alto riesgo.",
+              "reason": "Aumenta posibilidad de recurrencia o diseminación."
+            }
+          ],
+          "limits": "Un cuerno cutáneo requiere estudiar su base; no todos representan el mismo diagnóstico.",
+          "evidence": [
+            {
+              "page": 224,
+              "quote": "queratinocitos epidérmicos"
+            },
+            {
+              "page": 224,
+              "quote": "referir paciente a dermatología"
+            }
+          ],
+          "source_gaps": []
+        },
+        {
+          "id": "09.11-03",
+          "name": "Melanoma",
+          "source_pages": [
+            239,
+            240
+          ],
+          "pattern": "Una adulta observa un lunar que cambió de tamaño y color, con bordes irregulares y asimetría. Una zona sangra y la lesión difiere de sus otros lunares.",
+          "key_discriminator": "cambió de tamaño y color",
+          "mechanism": "La proliferación maligna de melanocitos puede invadir dermis y diseminar; el cambio clínico orienta sospecha y la profundidad histológica condiciona pronóstico y estadificación.",
+          "findings": [
+            {
+              "mechanism": "Crecimiento tumoral",
+              "finding": "Evolución y asimetría"
+            },
+            {
+              "mechanism": "Invasión o ulceración",
+              "finding": "Sangrado"
+            }
+          ],
+          "initial_action": "Referir de forma prioritaria para biopsia adecuada que permita medir profundidad. Tras confirmación, definir márgenes y estudio ganglionar según riesgo.",
+          "action_reason": "La extirpación diagnóstica debe preservar información para estadificar.",
+          "modifiers": [
+            {
+              "factor": "Lesión ungueal o acral",
+              "action": "Mantener sospecha aunque no cumpla todo ABCDE.",
+              "reason": "Puede tener presentación distinta."
+            }
+          ],
+          "limits": "Mohs no es la técnica universal del melanoma invasivo. Una lesión menor de seis milímetros también puede ser maligna.",
+          "evidence": [
+            {
+              "page": 239,
+              "quote": "Asimetría, Bordes irregulares"
+            },
+            {
+              "page": 240,
+              "quote": "Biopsia excisional de lesión"
+            }
+          ],
+          "source_gaps": []
+        }
+      ],
+      "common_problem": "Lesión cutánea persistente, cambiante o sangrante.",
+      "mother": {
+        "cue": "La morfología orienta linaje tumoral, pero la histología confirma.",
+        "answer": "Neoplasia cutánea",
+        "explanation": "La localización, invasión y profundidad determinan tratamiento."
+      }
+    }
+  ]
+}
