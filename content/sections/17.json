@@ -63,7 +63,7 @@
               "finding": "Pródromo catarral y exantema descendente"
             }
           ],
-          "initial_action": "Aplicar aislamiento respiratorio apropiado, coordinar confirmación y dar soporte y vitamina A bajo indicación pediátrica.",
+          "initial_action": "Aplicar aislamiento por vía aérea, coordinar confirmación y dar soporte y vitamina A bajo indicación pediátrica.",
           "action_reason": "Reduce transmisión y atiende riesgo de complicaciones.",
           "modifiers": [
             {
@@ -292,8 +292,13 @@
           "modifiers": [
             {
               "factor": "Inmunosupresión o signos neurológicos",
-              "action": "Referir con urgencia.",
+              "action": "Referir con urgencia y administrar aciclovir intravenoso en enfermedad grave o inmunosupresión según valoración especializada.",
               "reason": "Aumenta riesgo de enfermedad grave."
+            },
+            {
+              "factor": "Exposición significativa, sin inmunidad, alto riesgo y vacuna contraindicada",
+              "action": "Valorar inmunoglobulina específica cuanto antes; puede darse hasta diez días después de la exposición.",
+              "reason": "La profilaxis depende del huésped y no se limita a 96 horas."
             }
           ],
           "limits": "No aplicar de forma universal las reglas de inmunoglobulina y vacunación del libro.",
@@ -391,7 +396,7 @@
               "finding": "Tos perruna y estridor"
             }
           ],
-          "initial_action": "Evaluar vía aérea y gravedad; administrar glucocorticoide y valorar epinefrina nebulizada y observación si la obstrucción es importante.",
+          "initial_action": "Evaluar vía aérea; administrar dexametasona y epinefrina nebulizada por estridor en reposo con tiraje. Mantener observación y escalar atención si persiste obstrucción.",
           "action_reason": "Reduce edema y obstrucción.",
           "modifiers": [
             {
@@ -408,12 +413,23 @@
             },
             {
               "page": 518,
-              "quote": "los glucocorticoides"
+              "quote": "piedra angular en el manejo de la LTA, leve,"
             }
           ],
           "source_gaps": [],
           "verified_source_pages": [
             518
+          ],
+          "external_sources": [
+            {
+              "label": "Canadian Paediatric Society: crup",
+              "url": "https://cps.ca/en/documents/position/acute-management-of-croup",
+              "quote": "Nebulized epinephrine is recommended for moderate to severe croup.",
+              "checked_at": "2026-10-29"
+            }
+          ],
+          "source_corrections": [
+            "Se concreta epinefrina nebulizada en el patrón moderado con estridor en reposo, según CPS."
           ]
         },
         {
@@ -484,7 +500,7 @@
           "evidence": [
             {
               "page": 525,
-              "quote": "vómitos (tos"
+              "quote": "cianosis con estridor inspiratorio"
             },
             {
               "page": 525,
@@ -649,7 +665,7 @@
             },
             {
               "page": 520,
-              "quote": "Tratamiento IV y"
+              "quote": "Área menor de 5 mm con datos sistémicos:"
             }
           ],
           "source_gaps": [],
