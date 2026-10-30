@@ -294,7 +294,20 @@
               "quote": "Corrección hidroelectrolítica"
             }
           ],
-          "source_gaps": []
+          "source_gaps": [],
+          "external_sources": [
+            {
+              "label": "Hall et al.: ensayo aleatorizado de piloromiotomía",
+              "url": "https://pubmed.ncbi.nlm.nih.gov/19155060/",
+              "quote": "Both open and laparoscopic pyloromyotomy are safe procedures for the management of pyloric stenosis.",
+              "checked_at": "2026-10-29"
+            }
+          ],
+          "source_corrections": [
+            {
+              "reason": "La obligación de cirugía abierta de p170 no se sostiene: ambas vías son opciones según experiencia; se mantiene corrección electrolítica previa."
+            }
+          ]
         }
       ],
       "common_problem": "Lactante con vómito posprandial sin bilis.",
@@ -467,7 +480,7 @@
               "finding": "Pérdida térmica y de líquido"
             }
           ],
-          "initial_action": "Proteger vísceras con cobertura estéril apropiada, evitar torsión y pérdida de calor, mantener ayuno y descompresión, e iniciar referencia a cirugía neonatal.",
+          "initial_action": "Reconocer gastrosquisis, proteger vísceras con cobertura estéril apropiada y evitar torsión y pérdida de calor. Mantener ayuno y descompresión e iniciar estabilización y referencia a cirugía neonatal.",
           "action_reason": "La protección y estabilización preceden al cierre seguro.",
           "modifiers": [
             {
@@ -492,7 +505,12 @@
               "quote": "Gasa y colocación de silo"
             }
           ],
-          "source_gaps": []
+          "source_gaps": [],
+          "source_corrections": [
+            {
+              "reason": "El caso de p179 corresponde a gastrosquisis; se explicita el subtipo dentro del tema general."
+            }
+          ]
         }
       ],
       "common_problem": "Abertura perineal o pared umbilical anormal al nacimiento.",
@@ -525,7 +543,7 @@
               "finding": "Insuficiencia respiratoria"
             }
           ],
-          "initial_action": "Asegurar ventilación con equipo neonatal, descomprimir estómago con sonda orogástrica y estabilizar antes de reparar el diafragma.",
+          "initial_action": "Solicitar intubación endotraqueal y ventilación cuidadosa por el equipo neonatal; evitar ventilación con bolsa y mascarilla. Descomprimir estómago con sonda orogástrica y estabilizar antes de reparar el diafragma.",
           "action_reason": "La insuficiencia pulmonar requiere control antes del tratamiento anatómico.",
           "modifiers": [
             {
@@ -545,7 +563,20 @@
               "quote": "Intubación temprana"
             }
           ],
-          "source_gaps": []
+          "source_gaps": [],
+          "external_sources": [
+            {
+              "label": "ANZCOR: reanimación neonatal en circunstancias especiales",
+              "url": "https://www.anzcor.org/home/neonatal-resuscitation/guideline-13-8-the-resuscitation-of-the-newborn-in-special-circumstances",
+              "quote": "should not receive bag and mask ventilation",
+              "checked_at": "2026-10-29"
+            }
+          ],
+          "source_corrections": [
+            {
+              "reason": "Se precisa el soporte respiratorio de p172 para evitar distensión de vísceras herniadas con bolsa y mascarilla."
+            }
+          ]
         }
       ],
       "common_problem": "Neonato con insuficiencia respiratoria y abdomen excavado.",
@@ -587,7 +618,7 @@
               "reason": "No toda ictericia prolongada es fisiológica."
             }
           ],
-          "limits": "La fuente da un umbral antiguo de bilirrubina; la acolia y coluria requieren estudio aunque el niño parezca sano.",
+          "limits": "A las 2–4 semanas, bilirrubina directa o conjugada ≥1 mg/dL requiere consulta urgente. No usar el umbral antiguo de >2 mg/dL o >20% del total para retrasar evaluación.",
           "evidence": [
             {
               "page": 162,
@@ -598,7 +629,20 @@
               "quote": "menos de 60 días de vida"
             }
           ],
-          "source_gaps": []
+          "source_gaps": [],
+          "external_sources": [
+            {
+              "label": "AAP 2025: identificación temprana de atresia biliar",
+              "url": "https://publications.aap.org/pediatrics/article-pdf/155/3/e2024070077/1774919/pediatrics.2024070077.pdf",
+              "quote": "a value ≥1 mg/dL warrants urgent consultation with a pediatric gastroenterologist",
+              "checked_at": "2026-10-29"
+            }
+          ],
+          "source_corrections": [
+            {
+              "reason": "Se corrige el umbral antiguo de p162; se conserva la referencia urgente del caso con acolia y coluria."
+            }
+          ]
         }
       ],
       "common_problem": "Ictericia prolongada con heces pálidas en lactante.",
@@ -618,8 +662,8 @@
           "source_pages": [
             167
           ],
-          "pattern": "En la exploración de un lactante no se palpa un testículo dentro del escroto y no permanece allí al movilizarlo. Se registra el hallazgo para seguimiento y referencia oportuna.",
-          "key_discriminator": "no permanece allí al movilizarlo",
+          "pattern": "En la exploración de un lactante de seis meses de edad corregida no se palpa un testículo dentro del escroto. No permanece allí al movilizarlo y el hallazgo persiste desde el nacimiento.",
+          "key_discriminator": "seis meses de edad corregida",
           "mechanism": "El descenso testicular incompleto deja el testículo fuera de la bolsa escrotal; distinguir ausencia, localización ectópica y retracción evita retrasar evaluación de un testículo no descendido.",
           "findings": [
             {
@@ -627,7 +671,7 @@
               "finding": "Escroto vacío unilateral o bilateral"
             }
           ],
-          "initial_action": "Realizar exploración cuidadosa en ambiente cálido, documentar palpabilidad y descartar testículo retráctil. Referir de forma oportuna a valoración pediátrica y quirúrgica si persiste.",
+          "initial_action": "Documentar palpabilidad con exploración cuidadosa y descartar testículo retráctil. Referir ahora a urología o cirugía pediátrica para orquidopexia, idealmente antes de 12 meses y como máximo a los 18 meses.",
           "action_reason": "La exploración orienta localización y necesidad de corrección.",
           "modifiers": [
             {
@@ -636,7 +680,7 @@
               "reason": "Puede requerir estudio endocrino y genético."
             }
           ],
-          "limits": "La fuente no desarrolla el momento actual de orquidopexia; no prolongar vigilancia hasta un año por sus cifras de descenso espontáneo.",
+          "limits": "No esperar un año para referir. El ultrasonido rutinario antes de referencia no localiza de manera fiable un testículo no palpable y puede retrasar su atención.",
           "evidence": [
             {
               "page": 167,
@@ -647,7 +691,20 @@
               "quote": "en una posición supina, ambiente cálido y manos tibias."
             }
           ],
-          "source_gaps": []
+          "source_gaps": [],
+          "external_sources": [
+            {
+              "label": "EAU: testículo no descendido",
+              "url": "https://uroweb.org/guidelines/paediatric-urology/chapter/management-of-undescended-testes",
+              "quote": "Perform surgical orchidofunicolysis and orchidopexy before the age of 12 months, and by 18 months at the latest.",
+              "checked_at": "2026-10-29"
+            }
+          ],
+          "source_corrections": [
+            {
+              "reason": "Se reemplaza la vigilancia imprecisa de p167 por referencia a los seis meses corregidos y plazo quirúrgico actual; se evita imagen rutinaria."
+            }
+          ]
         },
         {
           "id": "06.08-02",
