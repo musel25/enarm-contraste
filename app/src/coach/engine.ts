@@ -249,7 +249,7 @@ export function summary(state: CoachState, index: CoachIndex, day: string): Stud
 
 type Projection = { finish_day: string | null; total_seconds: number };
 function simulate(state: CoachState, cards: CoachCard[], day: string, minutes: number, limit: number,
-  factors: Costs): Projection {
+  factors: Costs, index: CoachIndex): Projection {
   const plan = state.plan!;
   const progress = { ...state.progress };
   const start = day < plan.start_day ? plan.start_day : day;
@@ -259,7 +259,8 @@ function simulate(state: CoachState, cards: CoachCard[], day: string, minutes: n
   const todayDone = new Set(state.history.filter(a => a.day === day && selected.has(a.card_id)).map(a => a.card_id));
   for (let n = 0; n < limit; n++) {
     const date = addDays(start, n);
-    const saved = date === day && state.days[date]?.plan_key === planKey(plan) ? state.days[date] : undefined;
+    // Rebuilding an edited plan must reserve the same completed work as real study.
+    const saved = date === day ? createAssignment(state, index, date, minutes) : undefined;
     const queue = saved ? { ids: [...saved.ids, ...saved.extra_ids].filter(id => selected.has(id) && !todayDone.has(id)), costs: saved.costs }
       : selectQueue(cards, progress, date, minutes * 60, factors, date === day ? todayDone : undefined);
     if (!queue.ids.length && !saved) return { finish_day: null, total_seconds };
@@ -292,7 +293,7 @@ export function estimatePlan(state: CoachState, index: CoachIndex, day: string):
   }
   const factors = calibration(state, index);
   if (plan.mode === 'time') {
-    const result = simulate(state, cards, day, plan.minutes_per_day, HORIZON, factors);
+    const result = simulate(state, cards, day, plan.minutes_per_day, HORIZON, factors, index);
     return { ...result, feasible: !!result.finish_day, daily_minutes: plan.minutes_per_day, remaining_new,
       ...(!result.finish_day ? { reason: 'Este ritmo no completa la primera vuelta en 730 días.' } : {}) };
   }
@@ -301,15 +302,15 @@ export function estimatePlan(state: CoachState, index: CoachIndex, day: string):
   const limit = Math.min(HORIZON, Math.max(0, dayDiff(start, plan.deadline_day) + 1));
   if (!limit) return failure('La fecha objetivo ya pasó.', remaining_new);
   let low = 5, high = 720;
-  let result = simulate(state, cards, day, high, limit, factors);
+  let result = simulate(state, cards, day, high, limit, factors, index);
   if (!result.finish_day) return failure('No se puede completar la primera vuelta antes de esa fecha con hasta 720 minutos diarios.', remaining_new, high, result.total_seconds);
   while (low < high) {
     const middle = Math.floor((low + high) / 2);
-    const trial = simulate(state, cards, day, middle, limit, factors);
+    const trial = simulate(state, cards, day, middle, limit, factors, index);
     if (trial.finish_day) high = middle;
     else low = middle + 1;
   }
-  result = simulate(state, cards, day, low, limit, factors);
+  result = simulate(state, cards, day, low, limit, factors, index);
   return { ...result, feasible: !!result.finish_day, daily_minutes: low, remaining_new };
 }
 

@@ -21,6 +21,20 @@ function assigned(s: CoachState, i: CoachIndex, date = day): CoachState {
   return { ...s, days: { ...s.days, [date]: createAssignment(s, i, date) } };
 }
 
+test('a plan-edit forecast includes completed work in the daily budget', () => {
+  const i = index([card('a', 1, 300), card('b', 2, 300)]);
+  let s = assigned(state(), i);
+  s = recordReview(s, i, 'a', 3, 20, day, 'first-a');
+  s = { ...s, plan: { ...s.plan!, revision: 1, mode: 'deadline', deadline_day: day } };
+  const estimate = estimatePlan(s, i, day);
+  assert.equal(estimate.feasible, true);
+  assert.equal(estimate.daily_minutes, 10);
+  s = { ...s, plan: { ...s.plan!, minutes_per_day: estimate.daily_minutes } };
+  s = { ...s, days: { ...s.days, [day]: createAssignment(s, i, day) } };
+  assert.deepEqual(summary(s, i, day).pending_ids, ['b']);
+  assert.equal(estimatePlan(s, i, day).feasible, true);
+});
+
 test('calendar arithmetic respects leap days, DST and saved timezone', () => {
   assert.equal(addDays('2024-02-28', 1), '2024-02-29');
   assert.equal(addDays('2024-03-10', 1), '2024-03-11');
