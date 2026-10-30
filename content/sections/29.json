@@ -1,0 +1,864 @@
+{
+  "id": "29",
+  "title": "Psiquiatría",
+  "blocks": [
+    {
+      "id": "29.01",
+      "title": "Tristeza persistente",
+      "topics": [
+        {
+          "id": "29.01-01",
+          "name": "Depresión mayor",
+          "source_pages": [
+            964,
+            965
+          ],
+          "pattern": "Una persona tiene ánimo deprimido y pérdida de interés desde hace varias semanas. Duerme mal y ya no cumple sus tareas. Se requiere evaluar síntomas, funcionamiento y riesgo suicida.",
+          "key_discriminator": "pérdida de interés",
+          "mechanism": "La depresión resulta de factores biológicos, psicológicos y sociales que alteran ánimo, motivación y función; el diagnóstico requiere duración y deterioro, no solo tristeza transitoria.",
+          "findings": [
+            {
+              "mechanism": "Alteración de ánimo y motivación",
+              "finding": "Anhedonia y deterioro funcional"
+            }
+          ],
+          "initial_action": "Hacer entrevista clínica, valorar suicidio y bipolaridad y acordar psicoterapia o tratamiento según gravedad.",
+          "action_reason": "La seguridad y el diagnóstico guían manejo.",
+          "modifiers": [
+            {
+              "factor": "Riesgo suicida o episodio grave",
+              "action": "Solicitar evaluación urgente y posible hospitalización",
+              "reason": "Puede existir peligro inmediato"
+            }
+          ],
+          "limits": "Un tamizaje positivo necesita confirmación clínica.",
+          "evidence": [
+            {
+              "page": 964,
+              "quote": "al menos 2 semanas"
+            },
+            {
+              "page": 965,
+              "quote": "Terapia cognitivo-conductual"
+            }
+          ],
+          "source_gaps": []
+        },
+        {
+          "id": "29.01-02",
+          "name": "Intento de suicidio",
+          "source_pages": [
+            972,
+            973
+          ],
+          "pattern": "Una persona acude después de una autolesión con intención de morir. Expresa que mantiene un plan y tiene acceso al medio que pensó usar. Se necesita protección inmediata.",
+          "key_discriminator": "mantiene un plan",
+          "mechanism": "La conducta suicida combina sufrimiento, intención y acceso a medios en un contexto clínico y social; un intento previo y plan actual aumentan necesidad de intervención inmediata.",
+          "findings": [
+            {
+              "mechanism": "Intención con acceso a medios",
+              "finding": "Peligro inmediato de autolesión"
+            }
+          ],
+          "initial_action": "Atender lesiones, mantener supervisión y reducir acceso a medios; obtener evaluación urgente de salud mental y plan de seguridad.",
+          "action_reason": "La prioridad es prevenir daño inmediato.",
+          "modifiers": [
+            {
+              "factor": "Tras alta",
+              "action": "Asegurar seguimiento estrecho y apoyo",
+              "reason": "El riesgo puede aumentar al salir del hospital"
+            }
+          ],
+          "limits": "No basar el alta solo en una escala o negación aislada de ideación.",
+          "evidence": [
+            {
+              "page": 973,
+              "quote": "impedir el acceso a armas"
+            },
+            {
+              "page": 973,
+              "quote": "dentro de las 72 horas"
+            }
+          ],
+          "source_gaps": []
+        }
+      ],
+      "common_problem": "Persona con tristeza, deterioro funcional o conducta autolesiva.",
+      "mother": {
+        "cue": "Síntomas afectivos con evaluación prioritaria de seguridad.",
+        "answer": "Depresión y riesgo suicida.",
+        "explanation": "La intención, el plan y el acceso a medios cambian la urgencia."
+      }
+    },
+    {
+      "id": "29.02",
+      "title": "Miedo/angustia excesiva",
+      "topics": [
+        {
+          "id": "29.02-01",
+          "name": "Trastornos de ansiedad",
+          "source_pages": [
+            981,
+            982,
+            983
+          ],
+          "pattern": "Una persona presenta preocupación excesiva persistente, insomnio, tensión y palpitaciones. Los síntomas afectan trabajo y relaciones. Se revisan sustancias, fármacos y enfermedad médica antes de atribuirlos a un trastorno mental.",
+          "key_discriminator": "preocupación excesiva persistente",
+          "mechanism": "La respuesta de alarma se vuelve desproporcionada o sostenida por factores neurobiológicos y psicosociales, genera síntomas autonómicos y cognitivos y supera la adaptación cotidiana.",
+          "findings": [
+            {
+              "mechanism": "Activación de alarma sostenida",
+              "finding": "Preocupación, tensión y palpitaciones"
+            }
+          ],
+          "initial_action": "Realizar entrevista y descartar causas secundarias; ofrecer terapia cognitivo-conductual y valorar ISRS según diagnóstico y gravedad.",
+          "action_reason": "El tratamiento depende del tipo de ansiedad.",
+          "modifiers": [
+            {
+              "factor": "Fobia específica",
+              "action": "Valorar exposición terapéutica",
+              "reason": "La evitación mantiene el miedo"
+            }
+          ],
+          "limits": "No tratar toda palpitación como ansiedad. No usar benzodiacepinas prolongadas ni propranolol como elección universal.",
+          "evidence": [
+            {
+              "page": 981,
+              "quote": "descartar una ansiedad secundaria"
+            },
+            {
+              "page": 983,
+              "quote": "Terapia de exposición"
+            }
+          ],
+          "source_gaps": [],
+          "external_sources": [
+            {
+              "label": "NICE CG113: ansiedad generalizada y pánico",
+              "url": "https://www.nice.org.uk/guidance/cg113/chapter/recommendations",
+              "quote": "except as a short-term measure during crises",
+              "checked_at": "2026-10-29"
+            }
+          ],
+          "source_corrections": [
+            {
+              "reason": "La benzodiacepina no es tratamiento rutinario de 8–12 semanas para ansiedad generalizada. NICE la limita a crisis breves; la tarjeta selecciona TCC e ISRS según evaluación."
+            }
+          ]
+        }
+      ],
+      "common_problem": "Persona con preocupación y síntomas autonómicos.",
+      "mother": {
+        "cue": "Respuesta de alarma que supera capacidad adaptativa y afecta funcionamiento.",
+        "answer": "Ansiedad patológica.",
+        "explanation": "La clínica y exclusión de causas secundarias preceden al tratamiento."
+      }
+    },
+    {
+      "id": "29.03",
+      "title": "Pensamientos intrusivos o recuerdo traumático",
+      "topics": [
+        {
+          "id": "29.03-01",
+          "name": "TOC",
+          "source_pages": [
+            977
+          ],
+          "pattern": "Una persona dedica horas a revisar cerraduras por pensamientos intrusivos de daño. Reconoce que la repetición es excesiva, pero se angustia al intentar detenerla. Su vida cotidiana está limitada.",
+          "key_discriminator": "pensamientos intrusivos",
+          "mechanism": "Las obsesiones generan ansiedad y las compulsiones la alivian transitoriamente, reforzando un circuito de repetición que consume tiempo y afecta funcionamiento pese al reconocimiento variable del problema.",
+          "findings": [
+            {
+              "mechanism": "Ritual que reduce ansiedad momentánea",
+              "finding": "Repetición persistente de comprobaciones"
+            }
+          ],
+          "initial_action": "Referir para terapia cognitivo-conductual específica y valorar ISRS según gravedad y preferencias.",
+          "action_reason": "Actúa sobre rituales y síntomas obsesivos.",
+          "modifiers": [
+            {
+              "factor": "Comorbilidad depresiva o riesgo suicida",
+              "action": "Evaluar seguridad y tratar conjuntamente",
+              "reason": "Puede agravar deterioro"
+            }
+          ],
+          "limits": "El pensamiento intrusivo no equivale por sí mismo a intención de actuar.",
+          "evidence": [
+            {
+              "page": 977,
+              "quote": "compulsiones consumen mucho tiempo"
+            },
+            {
+              "page": 977,
+              "quote": "Terapia cognitivo-"
+            }
+          ],
+          "source_gaps": []
+        },
+        {
+          "id": "29.03-02",
+          "name": "Estrés post traumático",
+          "source_pages": [
+            969
+          ],
+          "pattern": "Una persona que sufrió una agresión presenta recuerdos involuntarios, pesadillas y evita lugares relacionados con el hecho. Mantiene hipervigilancia y deterioro funcional desde hace varios meses.",
+          "key_discriminator": "recuerdos involuntarios",
+          "mechanism": "La respuesta persistente al trauma altera procesamiento de amenaza y memoria, causa intrusión, evitación y activación elevada, y mantiene síntomas más allá de la respuesta aguda.",
+          "findings": [
+            {
+              "mechanism": "Procesamiento traumático persistente",
+              "finding": "Pesadillas y evitación"
+            }
+          ],
+          "initial_action": "Evaluar seguridad y comorbilidades; ofrecer psicoterapia centrada en trauma y valorar medicación apropiada.",
+          "action_reason": "El tratamiento debe abordar síntomas y funcionamiento.",
+          "modifiers": [
+            {
+              "factor": "Consumo de sustancias o riesgo de daño",
+              "action": "Integrar atención de seguridad y comorbilidad",
+              "reason": "Puede interferir con recuperación"
+            }
+          ],
+          "limits": "No añadir benzodiacepinas de rutina para este trastorno.",
+          "evidence": [
+            {
+              "page": 969,
+              "quote": "Hipervigilancia."
+            },
+            {
+              "page": 969,
+              "quote": "estrategias psicoterapéuticas"
+            }
+          ],
+          "source_gaps": [],
+          "external_sources": [
+            {
+              "label": "VA/DoD 2023: benzodiacepinas en TEPT",
+              "url": "https://www.ptsd.va.gov/professional/treat/txessentials/benzos_va.asp",
+              "quote": "recommends against the use of benzodiazepines",
+              "checked_at": "2026-10-29"
+            }
+          ],
+          "source_corrections": [
+            {
+              "reason": "La guía recomienda contra benzodiacepinas para TEPT; se conserva psicoterapia centrada en trauma y evaluación de seguridad."
+            }
+          ]
+        }
+      ],
+      "common_problem": "Persona con pensamientos intrusivos, conductas repetitivas o recuerdos traumáticos.",
+      "mother": {
+        "cue": "Circuitos de amenaza y control mantienen síntomas que generan evitación y deterioro.",
+        "answer": "Síntomas obsesivos o relacionados con trauma.",
+        "explanation": "El contenido, función y relación con trauma distinguen patrones."
+      }
+    },
+    {
+      "id": "29.04",
+      "title": "Psicosis",
+      "topics": [
+        {
+          "id": "29.04-01",
+          "name": "Esquizofrenia",
+          "source_pages": [
+            966,
+            967,
+            968
+          ],
+          "pattern": "Un joven presenta aislamiento progresivo, deterioro escolar y voces que comentan sus actos. Cree que otras personas lo persiguen. Los síntomas llevan meses y no hay consumo conocido.",
+          "key_discriminator": "voces que comentan sus actos",
+          "mechanism": "La alteración de circuitos neurales que integran percepción y pensamiento produce síntomas positivos y negativos; la evolución y exclusión de causas médicas y sustancias determinan diagnóstico psicótico.",
+          "findings": [
+            {
+              "mechanism": "Alteración de percepción y pensamiento",
+              "finding": "Alucinaciones y delirios"
+            }
+          ],
+          "initial_action": "Referir pronto a salud mental para evaluación de primera psicosis, seguridad y tratamiento antipsicótico y psicosocial.",
+          "action_reason": "El retraso se relaciona con peor evolución.",
+          "modifiers": [
+            {
+              "factor": "Falta de respuesta a dos ensayos adecuados",
+              "action": "Valorar clozapina por especialista",
+              "reason": "Puede tratarse de resistencia al tratamiento"
+            }
+          ],
+          "limits": "Los subtipos históricos del libro no sustituyen la clasificación clínica actual.",
+          "evidence": [
+            {
+              "page": 966,
+              "quote": "tratamiento debe empezar"
+            },
+            {
+              "page": 968,
+              "quote": "dos antipsicóticos"
+            }
+          ],
+          "source_gaps": []
+        }
+      ],
+      "common_problem": "Persona con pérdida de juicio de realidad y deterioro social.",
+      "mother": {
+        "cue": "Psicosis con alteraciones del pensamiento, percepción y funcionamiento.",
+        "answer": "Trastorno del espectro esquizofrénico.",
+        "explanation": "La duración y exclusión de causas secundarias orientan diagnóstico."
+      }
+    },
+    {
+      "id": "29.05",
+      "title": "Euforia con psicosis",
+      "topics": [
+        {
+          "id": "29.05-01",
+          "name": "Trastorno bipolar",
+          "source_pages": [
+            978,
+            979
+          ],
+          "pattern": "Una persona duerme muy poco sin cansancio, habla rápidamente y gasta dinero de forma riesgosa. Su ánimo es expansivo y la familia nota cambio marcado respecto a su funcionamiento habitual.",
+          "key_discriminator": "sin cansancio",
+          "mechanism": "La desregulación episódica del ánimo y actividad produce manía o hipomanía, a menudo alternada con depresión; identificarla cambia tratamiento y evita tratar el cuadro como depresión unipolar.",
+          "findings": [
+            {
+              "mechanism": "Aumento patológico de actividad",
+              "finding": "Menor necesidad de sueño y conducta riesgosa"
+            }
+          ],
+          "initial_action": "Valorar seguridad y referir a psiquiatría para estabilización del ánimo y tratamiento según gravedad.",
+          "action_reason": "La manía puede comprometer juicio y seguridad.",
+          "modifiers": [
+            {
+              "factor": "Psicosis o deterioro grave",
+              "action": "Considerar atención hospitalaria y antipsicótico",
+              "reason": "Aumenta necesidad de contención terapéutica"
+            }
+          ],
+          "limits": "La elección farmacológica requiere revisar embarazo, función orgánica y riesgos.",
+          "evidence": [
+            {
+              "page": 978,
+              "quote": "Incremento de energía"
+            },
+            {
+              "page": 979,
+              "quote": "síntomas maniacos, hipomaniacos o mixtos"
+            }
+          ],
+          "source_gaps": []
+        }
+      ],
+      "common_problem": "Persona con episodios de energía excesiva o ánimo deprimido.",
+      "mother": {
+        "cue": "Oscilaciones episódicas del ánimo y actividad que cambian el tratamiento afectivo.",
+        "answer": "Trastorno bipolar.",
+        "explanation": "La historia de manía o hipomanía es decisiva."
+      }
+    },
+    {
+      "id": "29.06",
+      "title": "Desatención escolar",
+      "topics": [
+        {
+          "id": "29.06-01",
+          "name": "TDAH",
+          "source_pages": [
+            975,
+            976
+          ],
+          "pattern": "Un escolar muestra inatención, inquietud e impulsividad persistentes tanto en casa como en la escuela. Tiene dificultades para completar tareas. Se revisan sueño, aprendizaje y contexto familiar.",
+          "key_discriminator": "tanto en casa como en la escuela",
+          "mechanism": "La alteración del control inhibitorio y memoria de trabajo dificulta regular atención y conducta; la persistencia en distintos contextos y repercusión distinguen el trastorno de variación habitual.",
+          "findings": [
+            {
+              "mechanism": "Disfunción ejecutiva",
+              "finding": "Inatención e impulsividad"
+            }
+          ],
+          "initial_action": "Recabar información de familia y escuela, evaluar causas alternativas y referir para diagnóstico y plan conductual y farmacológico si procede.",
+          "action_reason": "El diagnóstico es clínico e integral.",
+          "modifiers": [
+            {
+              "factor": "Trastorno de aprendizaje o ansiedad asociado",
+              "action": "Evaluar y tratar comorbilidad",
+              "reason": "Puede explicar o agravar síntomas"
+            }
+          ],
+          "limits": "Un cuestionario no confirma diagnóstico por sí solo.",
+          "evidence": [
+            {
+              "page": 975,
+              "quote": "memoria de trabajo"
+            },
+            {
+              "page": 976,
+              "quote": "Conners para padres"
+            }
+          ],
+          "source_gaps": []
+        }
+      ],
+      "common_problem": "Niño con inatención, hiperactividad o impulsividad.",
+      "mother": {
+        "cue": "Disfunción ejecutiva del neurodesarrollo con repercusión en varios ámbitos.",
+        "answer": "Trastorno por déficit de atención e hiperactividad.",
+        "explanation": "La evaluación debe integrar escuela, familia y causas alternativas."
+      }
+    },
+    {
+      "id": "29.07",
+      "title": "Problema del sueño",
+      "topics": [
+        {
+          "id": "29.07-01",
+          "name": "Insomnio en adultos",
+          "source_pages": [
+            970,
+            971
+          ],
+          "pattern": "Una persona tarda mucho en dormirse pese a tener tiempo y ambiente adecuados. El problema se repite durante meses y provoca fatiga e irritabilidad diurna. Ha aumentado su tiempo en cama.",
+          "key_discriminator": "pese a tener tiempo y ambiente adecuados",
+          "mechanism": "Factores predisponentes y desencadenantes inician dificultad para dormir; conductas y preocupación perpetúan hiperactivación, deterioran sueño y generan consecuencias diurnas pese a oportunidad suficiente de descanso.",
+          "findings": [
+            {
+              "mechanism": "Preocupación y conductas perpetuantes",
+              "finding": "Dificultad de sueño y fatiga"
+            }
+          ],
+          "initial_action": "Investigar causas y ofrecer terapia cognitivo-conductual para insomnio; revisar hábitos, sustancias y comorbilidades.",
+          "action_reason": "Aborda mecanismos que mantienen el problema.",
+          "modifiers": [
+            {
+              "factor": "Sospecha de apnea o piernas inquietas",
+              "action": "Evaluar trastorno asociado",
+              "reason": "El tratamiento requiere atender la causa"
+            }
+          ],
+          "limits": "La higiene de sueño sola puede ser insuficiente. No añadir hipnótico automáticamente a TCC; valorar beneficio, riesgo y preferencias.",
+          "evidence": [
+            {
+              "page": 970,
+              "quote": "Factores Perpetuantes"
+            },
+            {
+              "page": 971,
+              "quote": "La TCC-i se debe indicar"
+            }
+          ],
+          "source_gaps": [],
+          "external_sources": [
+            {
+              "label": "AASM 2026: tratamiento combinado del insomnio",
+              "url": "https://pubmed.ncbi.nlm.nih.gov/41975142/",
+              "quote": "suggests against the use of combination treatment",
+              "checked_at": "2026-10-29"
+            }
+          ],
+          "source_corrections": [
+            {
+              "reason": "No se añade fármaco de forma universal a TCC para insomnio. La guía favorece TCC sola frente a combinación como decisión general, con preferencias individuales."
+            }
+          ]
+        },
+        {
+          "id": "29.07-02",
+          "name": "Trastornos del sueño",
+          "source_pages": [
+            986,
+            987,
+            988,
+            989
+          ],
+          "pattern": "Una persona consulta por somnolencia diurna incapacitante. A veces pierde el tono muscular al reír sin perder conciencia. Se requiere distinguir enfermedad del sueño, fármacos y privación de descanso.",
+          "key_discriminator": "pierde el tono muscular al reír",
+          "mechanism": "Los trastornos del sueño alteran cantidad, regulación circadiana, respiración o fenómenos de sueño MOR; la causa determina estudio y manejo de somnolencia, insomnio o conductas nocturnas.",
+          "findings": [
+            {
+              "mechanism": "Disociación de sueño MOR",
+              "finding": "Cataplejía con somnolencia"
+            }
+          ],
+          "initial_action": "Realizar historia de sueño, fármacos y repercusión; referir para polisomnografía y prueba de latencias si se sospecha narcolepsia.",
+          "action_reason": "La cataplejía orienta estudio específico.",
+          "modifiers": [
+            {
+              "factor": "Urgencia de mover piernas al reposo nocturno",
+              "action": "Evaluar reservas de hierro y criterios clínicos",
+              "reason": "Sugiere piernas inquietas"
+            },
+            {
+              "factor": "Sueño fuera del horario deseado",
+              "action": "Revisar patrón circadiano",
+              "reason": "Puede existir desajuste del ritmo"
+            }
+          ],
+          "limits": "No confundir somnolencia con fatiga. Los agonistas dopaminérgicos no son primera elección rutinaria para piernas inquietas por riesgo de aumento de síntomas.",
+          "evidence": [
+            {
+              "page": 988,
+              "quote": "Cataplejía: Episodios breves"
+            },
+            {
+              "page": 988,
+              "quote": "ELSM con polisomnografía"
+            }
+          ],
+          "source_gaps": [],
+          "external_sources": [
+            {
+              "label": "AASM 2025: piernas inquietas",
+              "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11701286/",
+              "quote": "recommends the use of gabapentin",
+              "checked_at": "2026-10-29"
+            }
+          ],
+          "source_corrections": [
+            {
+              "reason": "La guía ya no favorece uso estándar de agonistas dopaminérgicos por aumento de síntomas. Evaluar hierro y factores agravantes antes de seleccionar tratamiento."
+            }
+          ]
+        }
+      ],
+      "common_problem": "Persona con sueño insuficiente, somnolencia o movimientos nocturnos.",
+      "mother": {
+        "cue": "Alteración de inicio, mantenimiento, regulación o función del sueño.",
+        "answer": "Trastorno del sueño.",
+        "explanation": "El síntoma principal dirige estudio y tratamiento."
+      }
+    },
+    {
+      "id": "29.08",
+      "title": "Peso y alimentación",
+      "topics": [
+        {
+          "id": "29.08-01",
+          "name": "Trastornos de conducta alimentaria",
+          "source_pages": [
+            984,
+            985
+          ],
+          "pattern": "Una adolescente restringe la alimentación por temor a ganar peso. Ha perdido peso y también presenta vómitos provocados. Tiene mareo y debilidad. Se debe evaluar estabilidad médica y seguridad.",
+          "key_discriminator": "temor a ganar peso",
+          "mechanism": "La alteración de conducta alimentaria y valoración corporal produce restricción, atracones o compensación; desnutrición y purgas alteran electrolitos y función cardiovascular, con riesgo médico y psiquiátrico.",
+          "findings": [
+            {
+              "mechanism": "Restricción y pérdidas por purga",
+              "finding": "Desnutrición y alteraciones electrolíticas"
+            }
+          ],
+          "initial_action": "Evaluar signos vitales, pérdida de peso, electrolitos y ECG; referir a equipo especializado y hospitalizar si hay inestabilidad.",
+          "action_reason": "La seguridad médica precede al manejo ambulatorio.",
+          "modifiers": [
+            {
+              "factor": "Arritmia, deshidratación o alteración de conciencia",
+              "action": "Hospitalizar urgentemente",
+              "reason": "Indica complicación potencialmente mortal"
+            }
+          ],
+          "limits": "El peso aislado no determina gravedad; considerar ritmo de pérdida y estado clínico.",
+          "evidence": [
+            {
+              "page": 985,
+              "quote": "ECG y perfil tiroideo."
+            },
+            {
+              "page": 985,
+              "quote": "Arritmia grave"
+            }
+          ],
+          "source_gaps": []
+        }
+      ],
+      "common_problem": "Persona con restricción, atracones o purgas.",
+      "mother": {
+        "cue": "Conductas alimentarias alteradas que comprometen nutrición y estabilidad médica.",
+        "answer": "Trastorno de la conducta alimentaria.",
+        "explanation": "El riesgo somático y suicida precede a la atención ambulatoria."
+      }
+    },
+    {
+      "id": "29.09",
+      "title": "Consumo y dependencia",
+      "topics": [
+        {
+          "id": "29.09-01",
+          "name": "Abuso de sustancias",
+          "source_pages": [
+            960,
+            961,
+            962
+          ],
+          "pattern": "Una persona aumenta el consumo de sustancias y ya no controla la cantidad. Continúa pese a conflictos familiares y daño laboral. Se evalúan dependencia, intoxicación, abstinencia y comorbilidad.",
+          "key_discriminator": "ya no controla la cantidad",
+          "mechanism": "Los efectos de sustancias y factores personales y sociales refuerzan consumo, reducen control y priorizan uso pese a consecuencias, con posible tolerancia y síntomas al suspender.",
+          "findings": [
+            {
+              "mechanism": "Pérdida de control y refuerzo",
+              "finding": "Uso persistente pese a daño"
+            }
+          ],
+          "initial_action": "Realizar tamizaje y entrevista diagnóstica, evaluar seguridad e iniciar intervención breve o referencia según gravedad.",
+          "action_reason": "Adecua intensidad de atención al problema.",
+          "modifiers": [
+            {
+              "factor": "Intoxicación, abstinencia o riesgo suicida",
+              "action": "Priorizar atención aguda",
+              "reason": "Puede requerir estabilización urgente"
+            }
+          ],
+          "limits": "El tamizaje no reemplaza diagnóstico ni debe aplicarse con juicio moral.",
+          "evidence": [
+            {
+              "page": 961,
+              "quote": "incapacidad de controlar el consumo"
+            },
+            {
+              "page": 961,
+              "quote": "Establecimiento de una meta"
+            }
+          ],
+          "source_gaps": []
+        },
+        {
+          "id": "29.09-02",
+          "name": "Trastorno por alcohol",
+          "source_pages": [
+            980
+          ],
+          "pattern": "Una persona bebe repetidamente pese a problemas de salud y ausencias laborales. Necesita más alcohol para lograr el mismo efecto. Se requiere evaluar patrón, consecuencias y riesgo al suspender.",
+          "key_discriminator": "Necesita más alcohol",
+          "mechanism": "El consumo patológico de alcohol causa deterioro funcional y puede generar tolerancia y dependencia; la reducción brusca en personas adaptadas provoca hiperexcitabilidad y riesgo de abstinencia complicada.",
+          "findings": [
+            {
+              "mechanism": "Adaptación al consumo",
+              "finding": "Tolerancia y deterioro funcional"
+            }
+          ],
+          "initial_action": "Aplicar tamizaje, confirmar diagnóstico y gravedad y acordar tratamiento y prevención de recaídas; evaluar riesgo de abstinencia antes de suspender.",
+          "action_reason": "La retirada puede requerir atención médica.",
+          "modifiers": [
+            {
+              "factor": "Dependencia o enfermedad concomitante",
+              "action": "Referir para manejo integral y valorar fármacos",
+              "reason": "El apoyo aislado puede ser insuficiente"
+            }
+          ],
+          "limits": "El diagnóstico requiere clínica; una puntuación no equivale por sí sola a dependencia.",
+          "evidence": [
+            {
+              "page": 980,
+              "quote": "deterioro del funcionamiento diario."
+            },
+            {
+              "page": 980,
+              "quote": "desintoxicación y rehabilitación. l. Naltrexona. • Prevención de recaídas: apoyo social,"
+            }
+          ],
+          "source_gaps": []
+        },
+        {
+          "id": "29.09-03",
+          "name": "Consumo de mariguana",
+          "source_pages": [
+            963
+          ],
+          "pattern": "Un joven usa cannabis de forma frecuente y ha reducido actividades por el consumo. Al dejarlo presenta irritabilidad y mal sueño. Quiere evaluar sus síntomas y recibir ayuda.",
+          "key_discriminator": "irritabilidad y mal sueño",
+          "mechanism": "El THC modifica función cerebral y refuerzo del consumo; el uso repetido puede causar dependencia y al suspenderlo aparecen síntomas afectivos, apetito reducido y alteración del sueño.",
+          "findings": [
+            {
+              "mechanism": "Adaptación a cannabis",
+              "finding": "Irritabilidad tras suspensión"
+            }
+          ],
+          "initial_action": "Evaluar consumo, comorbilidad y otras sustancias; ofrecer intervención cognitivo-conductual y seguimiento.",
+          "action_reason": "Favorece reducción de daño y abstinencia según objetivos.",
+          "modifiers": [
+            {
+              "factor": "Psicosis o agitación importante",
+              "action": "Solicitar evaluación urgente",
+              "reason": "Puede requerir atención especializada"
+            }
+          ],
+          "limits": "No enseñar la cifra de riesgo pulmonar del libro sin evidencia específica.",
+          "evidence": [
+            {
+              "page": 963,
+              "quote": "irritabilidad,"
+            },
+            {
+              "page": 963,
+              "quote": "tratamientos cognitivo conductuales"
+            }
+          ],
+          "source_gaps": []
+        }
+      ],
+      "common_problem": "Persona cuyo consumo afecta salud y funcionamiento.",
+      "mother": {
+        "cue": "Uso persistente de sustancias pese a daño con posible dependencia.",
+        "answer": "Trastorno por consumo de sustancias.",
+        "explanation": "El tamizaje lleva a evaluación clínica y tratamiento individual."
+      }
+    },
+    {
+      "id": "29.10",
+      "title": "Temblor tras dejar alcohol",
+      "topics": [
+        {
+          "id": "29.10-01",
+          "name": "Abstinencia alcohólica",
+          "source_pages": [
+            959
+          ],
+          "pattern": "Una persona que consume alcohol diariamente suspende la ingesta. Horas después presenta temblor, sudoración, ansiedad y taquicardia. Se busca antecedente de convulsiones y se evalúa gravedad.",
+          "key_discriminator": "suspende la ingesta",
+          "mechanism": "La adaptación al efecto depresor del alcohol deja hiperexcitabilidad neuronal tras retirada, con activación autonómica y riesgo de convulsiones y delirium en cuadros graves.",
+          "findings": [
+            {
+              "mechanism": "Hiperexcitabilidad tras retirada",
+              "finding": "Temblor y taquicardia"
+            }
+          ],
+          "initial_action": "Evaluar gravedad y riesgo, administrar tiamina y tratar con benzodiacepina bajo vigilancia según protocolo; hospitalizar si hay complicaciones.",
+          "action_reason": "Previene progresión y daño por déficit nutricional.",
+          "modifiers": [
+            {
+              "factor": "Convulsión, delirium o comorbilidad importante",
+              "action": "Hospitalizar",
+              "reason": "Aumenta riesgo de desenlace grave"
+            }
+          ],
+          "limits": "La escala no reemplaza valoración clínica. Ajustar benzodiacepina con vigilancia; no usar magnesio profiláctico sin indicación.",
+          "evidence": [
+            {
+              "page": 959,
+              "quote": "Temblor en manos, diaforesis, taquicardia,"
+            },
+            {
+              "page": 959,
+              "quote": "Criterios de hospitalización"
+            }
+          ],
+          "source_gaps": [],
+          "external_sources": [
+            {
+              "label": "ASAM 2020: abstinencia alcohólica",
+              "url": "https://www.asam.org/docs/default-source/quality-science/the_asam_clinical_practice_guideline_on_alcohol-1.pdf",
+              "quote": "Benzodiazepines are first-line agents",
+              "checked_at": "2026-10-29"
+            }
+          ],
+          "source_corrections": [
+            {
+              "reason": "Las benzodiacepinas se ajustan a gravedad y vigilancia, sin mezcla fija de diazepam en líquidos. No hay apoyo para magnesio profiláctico universal; corregir déficit cuando exista."
+            }
+          ]
+        }
+      ],
+      "common_problem": "Persona con síntomas después de suspender alcohol habitual.",
+      "mother": {
+        "cue": "Hiperexcitabilidad tras retirada de alcohol en una persona adaptada a su efecto.",
+        "answer": "Abstinencia alcohólica.",
+        "explanation": "Convulsiones o delirium indican gravedad y necesidad de hospital."
+      }
+    },
+    {
+      "id": "29.11",
+      "title": "Síntomas fabricados",
+      "topics": [
+        {
+          "id": "29.11-01",
+          "name": "Síndrome de Munchausen",
+          "source_pages": [
+            974
+          ],
+          "pattern": "Una persona presenta historias clínicas contradictorias y evidencia de inducción de síntomas. Busca atención repetida, sin ganancia externa evidente. Se requieren evaluación médica cuidadosa y reducción de intervenciones innecesarias.",
+          "key_discriminator": "sin ganancia externa evidente",
+          "mechanism": "La falsificación o inducción engañosa de enfermedad ocurre sin recompensa externa obvia, expone a autolesión y procedimientos iatrogénicos y necesita evaluación de comorbilidades y atención coordinada.",
+          "findings": [
+            {
+              "mechanism": "Inducción o falsificación de síntomas",
+              "finding": "Discordancia y procedimientos repetidos"
+            }
+          ],
+          "initial_action": "Revisar evidencia con cuidado, atender riesgos reales y coordinar seguimiento y psicoterapia.",
+          "action_reason": "Reduce daño y fragmentación de atención.",
+          "modifiers": [
+            {
+              "factor": "Recompensa externa clara",
+              "action": "Considerar simulación en diferencial",
+              "reason": "El motivo externo modifica clasificación"
+            }
+          ],
+          "limits": "No atribuir síntomas inexplicados a engaño sin evidencia.",
+          "evidence": [
+            {
+              "page": 974,
+              "quote": "ausencia de recompensas externas"
+            },
+            {
+              "page": 974,
+              "quote": "La psicoterapia"
+            }
+          ],
+          "source_gaps": []
+        }
+      ],
+      "common_problem": "Persona con síntomas falsificados y estudios repetidos.",
+      "mother": {
+        "cue": "Producción engañosa de enfermedad sin recompensa externa evidente.",
+        "answer": "Trastorno facticio.",
+        "explanation": "Se protege al paciente y se evita iatrogenia."
+      }
+    },
+    {
+      "id": "29.12",
+      "title": "Violencia familiar",
+      "topics": [
+        {
+          "id": "29.12-01",
+          "name": "Violencia contra la mujer",
+          "source_pages": [
+            990
+          ],
+          "pattern": "Una mujer consulta varias veces por lesiones y síntomas de ansiedad. Su pareja responde por ella y controla la entrevista. Se necesita un espacio privado para explorar seguridad y necesidades.",
+          "key_discriminator": "Su pareja responde por ella",
+          "mechanism": "La violencia física, sexual, psicológica o económica puede causar lesiones y síntomas persistentes, deteriorar autonomía y aumentar riesgo de daño repetido sin apoyo y protección adecuados.",
+          "findings": [
+            {
+              "mechanism": "Violencia y control interpersonal",
+              "finding": "Lesiones y ansiedad"
+            }
+          ],
+          "initial_action": "Entrevistar en privado, escuchar sin juicio, validar y evaluar seguridad; ofrecer redes de apoyo y plan según necesidades.",
+          "action_reason": "Facilita atención y protección sin aumentar riesgo.",
+          "modifiers": [
+            {
+              "factor": "Peligro inmediato o violencia sexual",
+              "action": "Activar atención y protección urgentes conforme a protocolo",
+              "reason": "Puede haber necesidades médicas y de seguridad inmediatas"
+            }
+          ],
+          "limits": "Explicar límites de confidencialidad según obligaciones locales.",
+          "evidence": [
+            {
+              "page": 990,
+              "quote": "actitud libre de prejuicios"
+            },
+            {
+              "page": 990,
+              "quote": "Plan de seguridad"
+            }
+          ],
+          "source_gaps": []
+        }
+      ],
+      "common_problem": "Mujer con lesiones, síntomas emocionales o control por la pareja.",
+      "mother": {
+        "cue": "Violencia que amenaza seguridad y salud física, sexual o mental.",
+        "answer": "Atención a violencia de género.",
+        "explanation": "La entrevista privada y apoyo inicial permiten evaluar riesgo y necesidades."
+      }
+    }
+  ]
+}
