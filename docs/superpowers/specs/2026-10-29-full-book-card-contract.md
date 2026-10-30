@@ -49,6 +49,8 @@ Ruta: `content/sections/NN.json`. Cada autor solo escribe sus secciones. No modi
 
 ## Reglas de contenido
 
+Campos opcionales: `source_corrections` explica una referencia errónea de la guía; `verified_source_pages` registra las páginas corregidas del libro; `external_sources` contiene objetos `{label, url, quote, checked_at}` de fuentes primarias actuales. Cada cita externa tiene hasta 20 palabras. La precisión externa se distingue del contenido del libro. `evidence.visual: true` solo se admite para páginas sin texto extraíble y exige inspección de la página.
+
 1. Conservar todos los bloques e identificadores de `/tmp/enarm-authoring/section-NN-input.json` y todos sus temas. Un tema repetido en otro contexto conserva su aparición.
 2. Leer las páginas completas del tema en `/tmp/enarm-authoring/pages/NNNN.txt`. Abrir el PDF si falta texto o si la cifra o tabla es ambigua. No usar solo la guía automática.
 3. El patrón debe ser una viñeta de 20–45 palabras. El discriminador debe ser una frase breve y literal de la viñeta. Puede ser clínico, epidemiológico, de laboratorio o de imagen.
