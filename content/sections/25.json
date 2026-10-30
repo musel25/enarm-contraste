@@ -1,0 +1,1444 @@
+{
+  "id": "25",
+  "title": "Oftalmología",
+  "blocks": [
+    {
+      "id": "25.01",
+      "title": "Ojo rojo: primer filtro",
+      "topics": [
+        {
+          "id": "25.01-01",
+          "name": "Ojo rojo",
+          "source_pages": [
+            872
+          ],
+          "pattern": "Un paciente consulta por enrojecimiento ocular reciente. Tiene dolor y reducción de la visión. Se requiere distinguir afección superficial de enfermedad corneal, intraocular o del ángulo.",
+          "key_discriminator": "dolor y reducción de la visión",
+          "mechanism": "El enrojecimiento expresa vasodilatación ocular; cuando se combina con dolor y baja visual puede indicar lesión corneal o inflamación y presión intraocular anormales.",
+          "findings": [
+            {
+              "mechanism": "Afección profunda o corneal",
+              "finding": "Dolor y baja visual"
+            }
+          ],
+          "initial_action": "Evaluar agudeza visual, pupila, córnea y patrón de inyección; orientar referencia urgente según hallazgos.",
+          "action_reason": "Localiza enfermedades que amenazan visión.",
+          "modifiers": [
+            {
+              "factor": "Midriasis",
+              "action": "Sospechar cierre angular",
+              "reason": "La presión puede subir rápidamente"
+            }
+          ],
+          "limits": "El diagrama es orientador y no excluye otras causas.",
+          "evidence": [
+            {
+              "page": 872,
+              "quote": "dolor y disminución de agudeza visual."
+            },
+            {
+              "page": 872,
+              "quote": "¿Pupila en midriasis?"
+            }
+          ],
+          "source_gaps": []
+        },
+        {
+          "id": "25.01-02",
+          "name": "Conjuntivitis 1",
+          "source_pages": [
+            852
+          ],
+          "pattern": "Un adulto presenta ojo rojo, lagrimeo y sensación de cuerpo extraño. No hay dolor intenso ni pérdida visual. Se interroga sobre secreción, contacto enfermo, irritantes y atopia.",
+          "key_discriminator": "No hay dolor intenso ni pérdida visual",
+          "mechanism": "La conjuntiva se inflama por infección, irritantes o mecanismos inmunes; el tipo de secreción y los síntomas asociados orientan etiología y necesidad de referencia.",
+          "findings": [
+            {
+              "mechanism": "Inflamación conjuntival",
+              "finding": "Hiperemia y secreción"
+            }
+          ],
+          "initial_action": "Explorar visión, córnea, secreción y ganglios; recomendar higiene y seleccionar tratamiento según etiología.",
+          "action_reason": "Evita transmisión y tratamiento indiscriminado.",
+          "modifiers": [
+            {
+              "factor": "Baja visual o dolor importante",
+              "action": "Reevaluar causa y referir",
+              "reason": "No es el patrón superficial habitual"
+            }
+          ],
+          "limits": "La lateralidad por sí sola no establece etiología.",
+          "evidence": [
+            {
+              "page": 852,
+              "quote": "prurito, secreción, dolor,"
+            },
+            {
+              "page": 852,
+              "quote": "lavarse frecuentemente las manos"
+            }
+          ],
+          "source_gaps": []
+        },
+        {
+          "id": "25.01-03",
+          "name": "Conjuntivitis Diferencial",
+          "source_pages": [
+            859
+          ],
+          "pattern": "Una persona con ojos rojos presenta síntomas bilaterales. El síntoma predominante es prurito y la secreción es transparente. Otra persona conviviente presenta secreción espesa que pega los párpados.",
+          "key_discriminator": "síntoma predominante es prurito",
+          "mechanism": "Los mediadores alérgicos producen picazón y lagrimeo, mientras infección bacteriana genera exudado purulento; la infección viral suele acompañarse de folículos y ganglios preauriculares.",
+          "findings": [
+            {
+              "mechanism": "Hipersensibilidad conjuntival",
+              "finding": "Prurito y secreción hialina"
+            }
+          ],
+          "initial_action": "Comparar prurito, secreción, folículos y adenopatías para orientar tratamiento y medidas de higiene.",
+          "action_reason": "Los signos ayudan a separar causas.",
+          "modifiers": [
+            {
+              "factor": "Purulencia persistente o grave",
+              "action": "Obtener cultivo y valorar referencia",
+              "reason": "Puede requerir tratamiento dirigido"
+            }
+          ],
+          "limits": "Los hallazgos se superponen; no son pruebas definitivas aisladas.",
+          "evidence": [
+            {
+              "page": 859,
+              "quote": "adenopatías preauriculares."
+            },
+            {
+              "page": 859,
+              "quote": "El cultivo está indicado"
+            }
+          ],
+          "source_gaps": []
+        }
+      ],
+      "common_problem": "Paciente con hiperemia ocular y causa no definida.",
+      "mother": {
+        "cue": "El dolor, la visión y la secreción separan irritación superficial de enfermedad ocular grave.",
+        "answer": "Evaluación del ojo rojo.",
+        "explanation": "La primera clasificación identifica signos que requieren atención urgente."
+      }
+    },
+    {
+      "id": "25.02",
+      "title": "Secreción o prurito ocular",
+      "topics": [
+        {
+          "id": "25.02-01",
+          "name": "Conjuntivitis bacteriana",
+          "source_pages": [
+            856,
+            857,
+            858
+          ],
+          "pattern": "Una persona tiene hiperemia bilateral y secreción mucopurulenta. Al despertar le cuesta separar los párpados por las lagañas. No refiere baja visual ni dolor intenso.",
+          "key_discriminator": "secreción mucopurulenta",
+          "mechanism": "La infección bacteriana de la superficie conjuntival desencadena respuesta inflamatoria con exudado y adherencia palpebral; algunos agentes requieren tratamiento sistémico además del ocular.",
+          "findings": [
+            {
+              "mechanism": "Exudado bacteriano",
+              "finding": "Párpados pegados al despertar"
+            }
+          ],
+          "initial_action": "Valorar antibiótico tópico y medidas de higiene según gravedad y contexto; cultivar si el cuadro es grave o persistente.",
+          "action_reason": "Puede acortar enfermedad y orientar casos difíciles.",
+          "modifiers": [
+            {
+              "factor": "Sospecha de gonococo o clamidia",
+              "action": "Añadir tratamiento sistémico y evaluación especializada",
+              "reason": "El tópico solo es insuficiente"
+            }
+          ],
+          "limits": "Dolor o baja visual obliga a descartar daño corneal.",
+          "evidence": [
+            {
+              "page": 857,
+              "quote": "dificultad para despegar párpados."
+            },
+            {
+              "page": 857,
+              "quote": "requieren tratamiento sistémico"
+            }
+          ],
+          "source_gaps": []
+        },
+        {
+          "id": "25.02-02",
+          "name": "Conjuntivitis Viral 1",
+          "source_pages": [
+            861
+          ],
+          "pattern": "Un adulto con infección respiratoria reciente desarrolla ojo rojo inicialmente unilateral, lagrimeo y sensación de cuerpo extraño. Se observan folículos y un ganglio preauricular palpable.",
+          "key_discriminator": "ganglio preauricular palpable",
+          "mechanism": "La infección viral conjuntival provoca inflamación folicular y respuesta ganglionar regional; el adenovirus se transmite fácilmente y suele causar enfermedad autolimitada de superficie ocular.",
+          "findings": [
+            {
+              "mechanism": "Inflamación viral folicular",
+              "finding": "Folículos y adenopatía preauricular"
+            }
+          ],
+          "initial_action": "Dar tratamiento sintomático con lágrimas artificiales y medidas estrictas de higiene.",
+          "action_reason": "Alivia síntomas y limita transmisión.",
+          "modifiers": [
+            {
+              "factor": "Sospecha de herpes",
+              "action": "Referir para tratamiento antiviral",
+              "reason": "Puede afectar córnea y requiere manejo específico"
+            }
+          ],
+          "limits": "No indicar antibióticos de rutina en infección viral no complicada.",
+          "evidence": [
+            {
+              "page": 861,
+              "quote": "adenopatías preauriculares y secreción hialina."
+            },
+            {
+              "page": 861,
+              "quote": "se trata sintomáticamente"
+            }
+          ],
+          "source_gaps": []
+        },
+        {
+          "id": "25.02-03",
+          "name": "Conjuntivitis alérgica",
+          "source_pages": [
+            853,
+            854,
+            855
+          ],
+          "pattern": "Una persona con atopia presenta prurito intenso en ambos ojos durante la temporada de polen. Hay lagrimeo, edema palpebral y mucosa conjuntival con aspecto adoquinado.",
+          "key_discriminator": "prurito intenso en ambos ojos",
+          "mechanism": "La hipersensibilidad inmediata mediada por IgE activa mastocitos en conjuntiva, libera mediadores y produce prurito, lagrimeo e inflamación recurrente frente a alérgenos.",
+          "findings": [
+            {
+              "mechanism": "Liberación de mediadores alérgicos",
+              "finding": "Prurito y lagrimeo bilateral"
+            }
+          ],
+          "initial_action": "Reducir exposición al alérgeno y usar antihistamínico tópico, lubricación y compresas frías.",
+          "action_reason": "Controla respuesta alérgica y molestias.",
+          "modifiers": [
+            {
+              "factor": "Dolor ocular o falta de respuesta",
+              "action": "Descartar otra enfermedad y referir",
+              "reason": "El dolor no es típico"
+            }
+          ],
+          "limits": "Los corticoides oculares requieren supervisión especializada.",
+          "evidence": [
+            {
+              "page": 854,
+              "quote": "hipersensibilidad de tipo 1"
+            },
+            {
+              "page": 854,
+              "quote": "Gotas antihistamínicas"
+            }
+          ],
+          "source_gaps": []
+        }
+      ],
+      "common_problem": "Paciente con ojo rojo y secreción o prurito.",
+      "mother": {
+        "cue": "Inflamación de la conjuntiva por infección o hipersensibilidad.",
+        "answer": "Etiología de conjuntivitis.",
+        "explanation": "La secreción, los folículos y el prurito orientan la causa."
+      }
+    },
+    {
+      "id": "25.03",
+      "title": "Conjuntivitis de alto riesgo",
+      "topics": [
+        {
+          "id": "25.03-01",
+          "name": "Conjuntivitis neonatal",
+          "source_pages": [
+            860
+          ],
+          "pattern": "Un recién nacido presenta edema palpebral y abundante secreción purulenta. Su madre tuvo infección genital sin tratar. Se requiere evaluación rápida para prevenir daño corneal y enfermedad sistémica.",
+          "key_discriminator": "recién nacido",
+          "mechanism": "El contacto con microorganismos del tracto genital materno puede infectar la conjuntiva neonatal; gonococo y clamidia requieren búsqueda dirigida y tratamiento distinto de la profilaxis.",
+          "findings": [
+            {
+              "mechanism": "Infección adquirida al nacimiento",
+              "finding": "Exudado y edema palpebral"
+            }
+          ],
+          "initial_action": "Referir con urgencia, obtener muestras conjuntivales y valorar infección sistémica; iniciar tratamiento específico según sospecha.",
+          "action_reason": "La infección puede causar ulceración y ceguera.",
+          "modifiers": [
+            {
+              "factor": "Neumonía asociada",
+              "action": "Investigar clamidia",
+              "reason": "Puede afectar ojo y aparato respiratorio"
+            }
+          ],
+          "limits": "La edad orienta pero no excluye agentes. Gonococo y clamidia requieren tratamiento sistémico, no solo profilaxis tópica.",
+          "evidence": [
+            {
+              "page": 860,
+              "quote": "abundante exudado purulento"
+            },
+            {
+              "page": 860,
+              "quote": "muestras conjuntivales"
+            }
+          ],
+          "source_gaps": [],
+          "external_sources": [
+            {
+              "label": "CDC: Pink eye in newborns",
+              "url": "https://www.cdc.gov/conjunctivitis/newborns/index.html",
+              "quote": "First 2-5 days of life.",
+              "checked_at": "2026-10-29"
+            },
+            {
+              "label": "CDC STI: neonatal gonococcal ophthalmia",
+              "url": "https://www.cdc.gov/mmwr/volumes/70/rr/rr7004a1.htm",
+              "quote": "Topical antibiotic therapy alone is inadequate",
+              "checked_at": "2026-10-29"
+            }
+          ],
+          "source_corrections": [
+            {
+              "reason": "El gonococo suele iniciar a los 2–5 días y clamidia a los 5–12 días; la página del libro invierte estos periodos."
+            },
+            {
+              "reason": "La oftalmía gonocócica necesita tratamiento sistémico y evaluación de diseminación; la profilaxis no equivale a tratamiento."
+            }
+          ]
+        },
+        {
+          "id": "25.03-02",
+          "name": "Tracoma",
+          "source_pages": [
+            880
+          ],
+          "pattern": "Una persona de una comunidad con saneamiento limitado tiene episodios repetidos de ojo rojo. Ahora presenta cicatrices tarsales y pestañas que rozan la córnea, con fotofobia.",
+          "key_discriminator": "pestañas que rozan la córnea",
+          "mechanism": "La infección repetida por ciertos serotipos de clamidia genera inflamación y cicatrización tarsal; la inversión palpebral y triquiasis dañan la córnea y reducen visión.",
+          "findings": [
+            {
+              "mechanism": "Cicatrización conjuntival",
+              "finding": "Triquiasis y daño corneal"
+            }
+          ],
+          "initial_action": "Evaluar daño corneal, referir si hay triquiasis y tratar infección con medidas de limpieza facial y control comunitario.",
+          "action_reason": "Reduce transmisión y daño mecánico.",
+          "modifiers": [
+            {
+              "factor": "Opacidad corneal",
+              "action": "Priorizar atención especializada",
+              "reason": "Puede comprometer visión permanentemente"
+            }
+          ],
+          "limits": "La triquiasis necesita valoración quirúrgica. La eliminación poblacional no excluye casos nuevos ni sustituye vigilancia.",
+          "evidence": [
+            {
+              "page": 880,
+              "quote": "serotipos A, By C"
+            },
+            {
+              "page": 880,
+              "quote": "Educación sobre limpieza facial."
+            }
+          ],
+          "source_gaps": [],
+          "external_sources": [
+            {
+              "label": "WHO: trachoma clinical management",
+              "url": "https://www.who.int/news-room/questions-and-answers/item/trachoma",
+              "quote": "Surgery to treat the blinding stage",
+              "checked_at": "2026-10-29"
+            },
+            {
+              "label": "WHO: Mexico country profile 2024–2025",
+              "url": "https://www.who.int/about/accountability/results/who-results-report-2024-2025-eob/country-profile/2025/mexico",
+              "quote": "sustain the status of elimination",
+              "checked_at": "2026-10-29"
+            }
+          ],
+          "source_corrections": [
+            {
+              "reason": "La estrategia SAFE combina cirugía para triquiasis, antibióticos, higiene facial y saneamiento; el régimen se elige según paciente y programa."
+            },
+            {
+              "reason": "México mantiene vigilancia para sostener la eliminación como problema de salud pública; no enseñar Chiapas como endémico sin esa precisión."
+            }
+          ]
+        }
+      ],
+      "common_problem": "Niño con inflamación conjuntival e historia epidemiológica relevante.",
+      "mother": {
+        "cue": "Infección conjuntival con riesgo de daño corneal o cicatrización.",
+        "answer": "Infección conjuntival de alto riesgo.",
+        "explanation": "La edad y exposición modifican estudio y tratamiento."
+      }
+    },
+    {
+      "id": "25.04",
+      "title": "Bulto palpebral",
+      "topics": [
+        {
+          "id": "25.04-01",
+          "name": "Orzuelo",
+          "source_pages": [
+            873
+          ],
+          "pattern": "Un paciente nota una pústula dolorosa en el borde palpebral desde ayer. Hay edema e hiperemia locales. No presenta disminución de visión ni alteraciones de la movilidad ocular.",
+          "key_discriminator": "pústula dolorosa",
+          "mechanism": "La infección aguda de una glándula palpebral o folículo produce inflamación localizada y acumulación purulenta, con dolor que lo diferencia de una lesión obstructiva crónica.",
+          "findings": [
+            {
+              "mechanism": "Infección glandular aguda",
+              "finding": "Nódulo doloroso e hiperemia"
+            }
+          ],
+          "initial_action": "Aplicar compresas tibias e higiene palpebral; valorar antibiótico local o drenaje si persiste según evaluación.",
+          "action_reason": "Favorece drenaje y control local.",
+          "modifiers": [
+            {
+              "factor": "Baja visual o afección corneal",
+              "action": "Referir con urgencia",
+              "reason": "Sugiere extensión o diagnóstico alternativo"
+            }
+          ],
+          "limits": "No manipular ni intentar drenar sin valoración adecuada.",
+          "evidence": [
+            {
+              "page": 873,
+              "quote": "Nódulo doloroso"
+            },
+            {
+              "page": 873,
+              "quote": "Compresas calientes"
+            }
+          ],
+          "source_gaps": []
+        },
+        {
+          "id": "25.04-02",
+          "name": "Chalazión",
+          "source_pages": [
+            851
+          ],
+          "pattern": "Una persona presenta un nódulo firme e indoloro en el tarso palpebral desde varias semanas. Tiene episodios previos de blefaritis y no hay edema inflamatorio agudo.",
+          "key_discriminator": "nódulo firme e indoloro",
+          "mechanism": "La obstrucción de una glándula de Meibomio retiene secreciones y provoca inflamación granulomatosa crónica, con nódulo tarsal habitualmente indoloro y tendencia a recurrir.",
+          "findings": [
+            {
+              "mechanism": "Retención glandular crónica",
+              "finding": "Nódulo tarsal indoloro"
+            }
+          ],
+          "initial_action": "Indicar higiene y compresas tibias; referir si persiste para valorar tratamiento local o curetaje.",
+          "action_reason": "Aborda obstrucción y lesión persistente.",
+          "modifiers": [
+            {
+              "factor": "Lesión recurrente o atípica",
+              "action": "Solicitar evaluación oftalmológica",
+              "reason": "Debe confirmarse la naturaleza de la lesión"
+            }
+          ],
+          "limits": "No iniciar esteroide tópico sin evaluación oftalmológica.",
+          "evidence": [
+            {
+              "page": 851,
+              "quote": "Inflamación granulomatosa crónica"
+            },
+            {
+              "page": 851,
+              "quote": "Incisión y curetaje"
+            }
+          ],
+          "source_gaps": []
+        },
+        {
+          "id": "25.04-03",
+          "name": "Blefaritis",
+          "source_pages": [
+            848
+          ],
+          "pattern": "Una persona con rosácea presenta ardor ocular crónico y costras en las pestañas. Los párpados se pegan al despertar y tiene molestias con los lentes de contacto.",
+          "key_discriminator": "costras en las pestañas",
+          "mechanism": "La inflamación crónica del borde palpebral y la disfunción de glándulas de Meibomio alteran secreciones y película lagrimal, causando irritación y lesiones recurrentes.",
+          "findings": [
+            {
+              "mechanism": "Disfunción palpebral y lagrimal",
+              "finding": "Costras, ardor y ojo seco"
+            }
+          ],
+          "initial_action": "Iniciar higiene palpebral y compresas tibias; evaluar la superficie ocular y enfermedades asociadas.",
+          "action_reason": "Reduce detritos y mejora secreción glandular.",
+          "modifiers": [
+            {
+              "factor": "Compromiso corneal o síntomas persistentes",
+              "action": "Referir para tratamiento adicional",
+              "reason": "Puede requerir manejo especializado"
+            }
+          ],
+          "limits": "Los antibióticos orales y corticoides se individualizan.",
+          "evidence": [
+            {
+              "page": 848,
+              "quote": "formación de costras"
+            },
+            {
+              "page": 848,
+              "quote": "compresas tibias, higiene"
+            }
+          ],
+          "source_gaps": []
+        }
+      ],
+      "common_problem": "Paciente con lesión en párpado o costras en pestañas.",
+      "mother": {
+        "cue": "Alteración de glándulas palpebrales y borde del párpado.",
+        "answer": "Enfermedad palpebral.",
+        "explanation": "Dolor, tiempo y localización distinguen infección de obstrucción crónica."
+      }
+    },
+    {
+      "id": "25.05",
+      "title": "Enrojecimiento focal no infeccioso",
+      "topics": [
+        {
+          "id": "25.05-01",
+          "name": "Hiposfagma",
+          "source_pages": [
+            870
+          ],
+          "pattern": "Un adulto observa una mancha rojo brillante en un ojo después de toser. No presenta dolor, secreción ni pérdida de visión. No hubo traumatismo ocular.",
+          "key_discriminator": "mancha rojo brillante",
+          "mechanism": "La rotura de pequeños vasos subconjuntivales deposita sangre superficial sin afectar medios ópticos; esfuerzo, trauma o alteraciones de coagulación pueden favorecer el sangrado.",
+          "findings": [
+            {
+              "mechanism": "Rotura vascular subconjuntival",
+              "finding": "Mancha roja indolora"
+            }
+          ],
+          "initial_action": "Confirmar visión conservada, investigar trauma y factores asociados y tranquilizar si el cuadro es aislado.",
+          "action_reason": "Suele reabsorberse espontáneamente.",
+          "modifiers": [
+            {
+              "factor": "Recurrencia sin causa clara",
+              "action": "Investigar enfermedad sistémica o coagulación",
+              "reason": "Puede reflejar un factor persistente"
+            }
+          ],
+          "limits": "Baja visual o trauma exige evaluación oftalmológica.",
+          "evidence": [
+            {
+              "page": 870,
+              "quote": "aparición súbita e indoloro"
+            },
+            {
+              "page": 870,
+              "quote": "El mejor tratamiento es tranquilizar"
+            }
+          ],
+          "source_gaps": []
+        },
+        {
+          "id": "25.05-02",
+          "name": "Pterigión",
+          "source_pages": [
+            874
+          ],
+          "pattern": "Un trabajador expuesto al sol y polvo presenta crecimiento carnoso que avanza desde la conjuntiva hacia la córnea. Tiene sensación de cuerpo extraño y visión algo borrosa.",
+          "key_discriminator": "avanza desde la conjuntiva hacia la córnea",
+          "mechanism": "La exposición crónica a radiación ultravioleta e irritantes favorece crecimiento fibrovascular conjuntival que invade córnea, altera superficie y puede modificar refracción y visión.",
+          "findings": [
+            {
+              "mechanism": "Crecimiento fibrovascular corneal",
+              "finding": "Irritación y visión borrosa"
+            }
+          ],
+          "initial_action": "Recomendar protección frente a sol y polvo, lubricación y valoración de extensión corneal.",
+          "action_reason": "Reduce irritación y permite detectar compromiso visual.",
+          "modifiers": [
+            {
+              "factor": "Invasión corneal significativa",
+              "action": "Valorar resección por oftalmología",
+              "reason": "Puede interferir con visión"
+            }
+          ],
+          "limits": "Una pingüécula suele quedar limitada a conjuntiva.",
+          "evidence": [
+            {
+              "page": 874,
+              "quote": "cubrir parte de la córnea."
+            },
+            {
+              "page": 874,
+              "quote": "Usar lentes de sol"
+            }
+          ],
+          "source_gaps": []
+        }
+      ],
+      "common_problem": "Paciente con mancha roja o crecimiento superficial en el ojo.",
+      "mother": {
+        "cue": "Lesión superficial conjuntival con visión habitualmente preservada.",
+        "answer": "Alteración de superficie ocular.",
+        "explanation": "La invasión corneal, trauma o baja visual cambian la evaluación."
+      }
+    },
+    {
+      "id": "25.06",
+      "title": "Dolor ocular intenso",
+      "topics": [
+        {
+          "id": "25.06-01",
+          "name": "Glaucoma de ángulo cerrado",
+          "source_pages": [
+            868
+          ],
+          "pattern": "Una mujer mayor presenta dolor ocular brusco, ojo rojo y halos alrededor de las luces. Tiene náusea y la pupila está dilatada con poca respuesta a la luz.",
+          "key_discriminator": "dolor ocular brusco",
+          "mechanism": "El cierre súbito del ángulo impide salida de humor acuoso, eleva rápidamente presión intraocular y produce edema corneal y riesgo de daño irreversible del nervio óptico.",
+          "findings": [
+            {
+              "mechanism": "Obstrucción del drenaje acuoso",
+              "finding": "Dolor, halos y edema corneal"
+            }
+          ],
+          "initial_action": "Solicitar atención oftalmológica urgente y reducir presión con tratamiento indicado mientras se prepara solución definitiva.",
+          "action_reason": "La elevación aguda amenaza visión.",
+          "modifiers": [
+            {
+              "factor": "Presión muy elevada",
+              "action": "Valorar tratamiento hiperosmótico",
+              "reason": "Puede requerir descenso adicional de presión"
+            }
+          ],
+          "limits": "La iridotomía se decide después de controlar la crisis.",
+          "evidence": [
+            {
+              "page": 868,
+              "quote": "halos de colores"
+            },
+            {
+              "page": 868,
+              "quote": "lnhibidores de anhidrasa carbónica"
+            }
+          ],
+          "source_gaps": []
+        },
+        {
+          "id": "25.06-02",
+          "name": "Uveítis",
+          "source_pages": [
+            882
+          ],
+          "pattern": "Un adulto joven presenta ojo rojo doloroso, fotofobia y pupila pequeña. La lámpara muestra células suspendidas en cámara anterior. No hay una úlcera corneal visible.",
+          "key_discriminator": "células suspendidas en cámara anterior",
+          "mechanism": "La inflamación de iris y cuerpo ciliar libera células al humor acuoso y produce espasmo y fotofobia; las adherencias pueden ocasionar complicaciones de presión.",
+          "findings": [
+            {
+              "mechanism": "Inflamación de úvea anterior",
+              "finding": "Miosis y fenómeno de Tyndall"
+            }
+          ],
+          "initial_action": "Referir a oftalmología para confirmar localización, excluir infección y seleccionar midriático y tratamiento antiinflamatorio.",
+          "action_reason": "El manejo depende de causa y segmento afectado.",
+          "modifiers": [
+            {
+              "factor": "Hallazgos posteriores",
+              "action": "Investigar etiología y tratamiento sistémico",
+              "reason": "La retina y coroides pueden estar afectadas"
+            }
+          ],
+          "limits": "No usar corticoides de forma empírica sin descartar infección.",
+          "evidence": [
+            {
+              "page": 882,
+              "quote": "fenómeno de Tyndall"
+            },
+            {
+              "page": 882,
+              "quote": "Midriáticos y corticoides tópicos."
+            }
+          ],
+          "source_gaps": []
+        },
+        {
+          "id": "25.06-03",
+          "name": "Celulitis orbitaria",
+          "source_pages": [
+            850
+          ],
+          "pattern": "Un niño con sinusitis presenta fiebre, edema palpebral y dolor al mover el ojo. Se observa proptosis y limitación de los movimientos oculares. Refiere visión borrosa.",
+          "key_discriminator": "proptosis y limitación",
+          "mechanism": "La infección se extiende a tejidos orbitarios, frecuentemente desde senos paranasales, causa inflamación postseptal y puede comprometer nervio óptico o propagarse al seno cavernoso.",
+          "findings": [
+            {
+              "mechanism": "Inflamación postseptal",
+              "finding": "Proptosis y oftalmoplejía"
+            }
+          ],
+          "initial_action": "Hospitalizar, obtener imagen orbitaria y comenzar antibióticos intravenosos con valoración oftalmológica y de drenaje.",
+          "action_reason": "Previene pérdida visual y extensión intracraneal.",
+          "modifiers": [
+            {
+              "factor": "Colección o deterioro",
+              "action": "Valorar drenaje urgente",
+              "reason": "Puede requerir control quirúrgico del foco"
+            }
+          ],
+          "limits": "La forma preseptal no produce los mismos signos orbitarios.",
+          "evidence": [
+            {
+              "page": 850,
+              "quote": "~ I Celulitis preseptal G Proptosis Septum orbitario G Oftalmoplejia G"
+            },
+            {
+              "page": 850,
+              "quote": "En celulitis orbitaria debe hospitalizarse"
+            }
+          ],
+          "source_gaps": []
+        }
+      ],
+      "common_problem": "Paciente con ojo rojo doloroso y posible baja visual.",
+      "mother": {
+        "cue": "Enfermedad intraocular u orbitaria que amenaza la visión.",
+        "answer": "Ojo rojo con signos de alarma.",
+        "explanation": "La pupila, movilidad ocular y segmento anterior orientan la urgencia."
+      }
+    },
+    {
+      "id": "25.07",
+      "title": "Baja visual súbita indolora",
+      "topics": [
+        {
+          "id": "25.07-01",
+          "name": "Desprendimiento de retina",
+          "source_pages": [
+            863
+          ],
+          "pattern": "Una persona con miopía nota destellos y moscas volantes de inicio reciente. Luego aparece una cortina oscura periférica que avanza hacia el centro. No tiene dolor.",
+          "key_discriminator": "cortina oscura periférica",
+          "mechanism": "La retina neurosensorial se separa del epitelio pigmentario por líquido o tracción, interrumpe su soporte funcional y produce pérdida visual progresiva del campo afectado.",
+          "findings": [
+            {
+              "mechanism": "Separación retiniana",
+              "finding": "Sombra periférica que avanza"
+            }
+          ],
+          "initial_action": "Referir con urgencia para exploración de retina; usar ultrasonido si los medios no permiten verla.",
+          "action_reason": "El tratamiento oportuno busca preservar función retiniana.",
+          "modifiers": [
+            {
+              "factor": "Mácula todavía aplicada",
+              "action": "Priorizar resolución por retina",
+              "reason": "La visión central puede conservarse"
+            }
+          ],
+          "limits": "Toda sospecha exige evaluación urgente. La programación quirúrgica depende del estado macular y hallazgos del especialista.",
+          "evidence": [
+            {
+              "page": 863,
+              "quote": "una cortina cerrándose."
+            },
+            {
+              "page": 863,
+              "quote": "Oftalmoscopia indirecta"
+            }
+          ],
+          "source_gaps": [],
+          "external_sources": [
+            {
+              "label": "AAO: retinal detachment before calling retina",
+              "url": "https://www.aao.org/young-ophthalmologists/yo-info/article/yo-need-to-know-retinal-detachment-what-to-know",
+              "quote": "Still urgent",
+              "checked_at": "2026-10-29"
+            }
+          ],
+          "source_corrections": [
+            {
+              "reason": "La referencia retiniana es urgente con mácula aplicada o desprendida; el plazo depende del estado macular y evaluación experta, no de esperar diez días."
+            }
+          ]
+        },
+        {
+          "id": "25.07-02",
+          "name": "Hemorrágia vítrea",
+          "source_pages": [
+            869
+          ],
+          "pattern": "Una persona con diabetes tiene pérdida visual unilateral súbita e indolora, acompañada de miodesopsias. El fondo de ojo no se observa bien por sangre en el vítreo.",
+          "key_discriminator": "sangre en el vítreo",
+          "mechanism": "La rotura de vasos retinianos o neovasos permite sangre en cavidad vítrea, opacifica el medio transparente y puede coexistir con desgarro o desprendimiento retiniano.",
+          "findings": [
+            {
+              "mechanism": "Opacificación por sangre",
+              "finding": "Baja visual y miodesopsias"
+            }
+          ],
+          "initial_action": "Realizar evaluación oftalmológica y ultrasonido si la hemorragia impide valorar retina.",
+          "action_reason": "Debe excluirse desprendimiento asociado.",
+          "modifiers": [
+            {
+              "factor": "Tracción retiniana amenazante o hemorragia seleccionada",
+              "action": "Valorar vitrectomía",
+              "reason": "Puede requerir retirar sangre y tracción"
+            }
+          ],
+          "limits": "El manejo depende de causa y retina; no todo caso requiere cirugía.",
+          "evidence": [
+            {
+              "page": 869,
+              "quote": "baja visual unilateral,"
+            },
+            {
+              "page": 869,
+              "quote": "oftalmológica con agudeza visual, • USG ocular: Se recomienda en casos de hemorragia"
+            }
+          ],
+          "source_gaps": []
+        }
+      ],
+      "common_problem": "Paciente con pérdida visual súbita e indolora.",
+      "mother": {
+        "cue": "Alteración retiniana o del medio vítreo que interrumpe la visión.",
+        "answer": "Urgencia del segmento posterior.",
+        "explanation": "La cortina periférica y la sangre vítrea requieren evaluación retiniana."
+      }
+    },
+    {
+      "id": "25.08",
+      "title": "Baja visual dolorosa/posquirúrgica",
+      "topics": [
+        {
+          "id": "25.08-01",
+          "name": "Neuritis óptica",
+          "source_pages": [
+            871
+          ],
+          "pattern": "Una mujer joven desarrolla pérdida visual unilateral y dolor con los movimientos oculares. Percibe los colores menos intensos y tiene defecto pupilar aferente. El fondo puede ser normal.",
+          "key_discriminator": "dolor con los movimientos oculares",
+          "mechanism": "La inflamación del nervio óptico altera transmisión visual, contraste y percepción cromática; puede ser aislada o asociarse con enfermedad desmielinizante y necesita estudio etiológico.",
+          "findings": [
+            {
+              "mechanism": "Inflamación del nervio óptico",
+              "finding": "Dolor con movimiento y discromatopsia"
+            }
+          ],
+          "initial_action": "Referir a oftalmología y neurología para confirmar cuadro, imagen y evaluación de causas; valorar corticoide según diagnóstico.",
+          "action_reason": "Orienta tratamiento y riesgo de enfermedad asociada.",
+          "modifiers": [
+            {
+              "factor": "Curso atípico o sospecha de neuromielitis",
+              "action": "Investigar etiología específica",
+              "reason": "El pronóstico y tratamiento cambian"
+            }
+          ],
+          "limits": "Los esteroides aceleran recuperación inicial sin garantizar recuperación final.",
+          "evidence": [
+            {
+              "page": 871,
+              "quote": "dolor a la movilidad ocula r,"
+            },
+            {
+              "page": 871,
+              "quote": "RM de encéfalo con gadolinio."
+            }
+          ],
+          "source_gaps": []
+        },
+        {
+          "id": "25.08-02",
+          "name": "Endoftalmitis PostQx",
+          "source_pages": [
+            864
+          ],
+          "pattern": "Un paciente operado recientemente de catarata presenta rápida pérdida de visión, ojo inflamado e hipopión. El reflejo rojo está disminuido y hay células en el vítreo.",
+          "key_discriminator": "operado recientemente de catarata",
+          "mechanism": "La infección intraocular después de cirugía desencadena inflamación intensa en cámaras y vítreo, produce daño ocular rápido y puede requerir tratamiento antimicrobiano intravítreo y cirugía.",
+          "findings": [
+            {
+              "mechanism": "Infección intraocular",
+              "finding": "Hipopión y vitritis"
+            }
+          ],
+          "initial_action": "Enviar de inmediato a oftalmología para toma de muestras y antibióticos intravítreos empíricos.",
+          "action_reason": "La infección puede destruir función visual.",
+          "modifiers": [
+            {
+              "factor": "Visión muy reducida o evolución desfavorable",
+              "action": "Valorar vitrectomía",
+              "reason": "Permite tratamiento y reducción de carga infecciosa"
+            }
+          ],
+          "limits": "El caso exige antibióticos intravítreos urgentes. La indicación y momento de vitrectomía quedan a retina; no se enseña la restricción histórica universal a percepción de luz.",
+          "evidence": [
+            {
+              "page": 864,
+              "quote": "cámara anterior y/o posterior, hipopión y otros signos graves de inflamación,"
+            },
+            {
+              "page": 864,
+              "quote": "reciente. intravítreas con vancomicina combinada con Ceftazidima, • Cultivo"
+            }
+          ],
+          "source_gaps": []
+        },
+        {
+          "id": "25.08-03",
+          "name": "Trauma ocular",
+          "source_pages": [
+            881
+          ],
+          "pattern": "Un trabajador recibe un fragmento en el ojo durante una actividad manual. Tiene dolor y disminución visual. No se conoce la profundidad de la lesión ni si quedó un cuerpo extraño.",
+          "key_discriminator": "No se conoce la profundidad",
+          "mechanism": "La energía mecánica puede dañar superficie o pared ocular y estructuras internas; profundidad, cuerpo extraño y función pupilar condicionan pronóstico y urgencia de reparación.",
+          "findings": [
+            {
+              "mechanism": "Lesión mecánica ocular",
+              "finding": "Dolor y pérdida visual"
+            }
+          ],
+          "initial_action": "Evaluar visión sin presión ni manipulación innecesaria, colocar protector rígido sin contacto si se sospecha herida abierta y solicitar atención oftalmológica urgente.",
+          "action_reason": "Debe evitarse agravar daño ocular.",
+          "modifiers": [
+            {
+              "factor": "Exposición química",
+              "action": "Iniciar irrigación inmediata y valoración urgente",
+              "reason": "El contacto continúa dañando tejidos"
+            }
+          ],
+          "limits": "En exposición química simple, iniciar irrigación inmediata y continuar hasta pH normal; globo abierto requiere protección específica sin presión.",
+          "evidence": [
+            {
+              "page": 881,
+              "quote": "Trauma ocular abierto"
+            },
+            {
+              "page": 881,
+              "quote": "Tomografía computarizada."
+            }
+          ],
+          "source_gaps": [],
+          "external_sources": [
+            {
+              "label": "AAO: recognizing and treating eye injuries",
+              "url": "https://www.aao.org/eye-health/treatments/injuries",
+              "quote": "Do not press the shield against the eye.",
+              "checked_at": "2026-10-29"
+            },
+            {
+              "label": "AAO: chemical burns",
+              "url": "https://www.aao.org/eye-health/diseases/chemical-burns",
+              "quote": "Irrigate until pH is normal",
+              "checked_at": "2026-10-29"
+            }
+          ],
+          "source_corrections": [
+            {
+              "reason": "Una herida abierta requiere protección sin presión y ayuda urgente. Una exposición química simple requiere irrigación inmediata; no se aplica parche compresivo ni manipulación."
+            },
+            {
+              "reason": "La irrigación química se guía por descontaminación y pH, no solo diez minutos. Diferenciar de globo abierto conocido o fuertemente sospechado."
+            }
+          ]
+        }
+      ],
+      "common_problem": "Paciente con pérdida visual aguda tras dolor, cirugía o trauma.",
+      "mother": {
+        "cue": "Daño del nervio óptico o estructuras oculares que amenaza visión.",
+        "answer": "Pérdida visual de causa inflamatoria o traumática.",
+        "explanation": "El antecedente y la exploración determinan manejo urgente."
+      }
+    },
+    {
+      "id": "25.09",
+      "title": "Disminución visual gradual",
+      "topics": [
+        {
+          "id": "25.09-01",
+          "name": "Catarata",
+          "source_pages": [
+            849
+          ],
+          "pattern": "Un adulto mayor presenta disminución visual lenta, deslumbramiento y diplopía monocular. La exploración muestra opacidad del cristalino y alteración del reflejo rojo. Sus actividades diarias están limitadas.",
+          "key_discriminator": "opacidad del cristalino",
+          "mechanism": "La pérdida de transparencia del cristalino dispersa y bloquea luz antes de la retina, reduce agudeza visual y causa deslumbramiento y cambios refractivos progresivos.",
+          "findings": [
+            {
+              "mechanism": "Cristalino opaco",
+              "finding": "Baja visual y deslumbramiento"
+            }
+          ],
+          "initial_action": "Referir a oftalmología para biomicroscopía y valoración de cirugía según limitación funcional.",
+          "action_reason": "La decisión depende del efecto sobre visión y vida diaria.",
+          "modifiers": [
+            {
+              "factor": "No se observa fondo",
+              "action": "Solicitar ultrasonido ocular",
+              "reason": "Debe evaluarse el segmento posterior"
+            }
+          ],
+          "limits": "La opacidad no explica toda pérdida visual; buscar comorbilidad.",
+          "evidence": [
+            {
+              "page": 849,
+              "quote": "opacificación parcial o total del cristalino"
+            },
+            {
+              "page": 849,
+              "quote": "afecte su calidad de vida."
+            }
+          ],
+          "source_gaps": []
+        },
+        {
+          "id": "25.09-02",
+          "name": "Ametropías",
+          "source_pages": [
+            846,
+            847
+          ],
+          "pattern": "Un escolar ve bien de cerca, pero no distingue letras lejanas. La visión mejora con agujero estenopeico. No tiene dolor ni anomalías visibles de la superficie ocular.",
+          "key_discriminator": "mejora con agujero estenopeico",
+          "mechanism": "Un desequilibrio entre longitud ocular y poder óptico impide enfocar luz sobre retina; la posición del foco y los meridianos afectados determinan el defecto refractivo.",
+          "findings": [
+            {
+              "mechanism": "Foco anterior a retina",
+              "finding": "Mala visión lejana"
+            }
+          ],
+          "initial_action": "Medir agudeza visual y realizar evaluación refractiva para corrección óptica.",
+          "action_reason": "Permite cuantificar y compensar el defecto.",
+          "modifiers": [
+            {
+              "factor": "Reflejo rojo anormal o mala fijación",
+              "action": "Referir para descartar enfermedad ocular",
+              "reason": "No corresponde a simple error refractivo"
+            }
+          ],
+          "limits": "No indicar cirugía refractiva por rangos aislados sin evaluación especializada.",
+          "evidence": [
+            {
+              "page": 846,
+              "quote": "agujero estenopeico"
+            },
+            {
+              "page": 847,
+              "quote": "de lejos. • Se recomiendan lentes • Lentes convergentes / • Se recomienda"
+            }
+          ],
+          "source_gaps": []
+        },
+        {
+          "id": "25.09-03",
+          "name": "Queratocono",
+          "source_pages": [
+            875
+          ],
+          "pattern": "Un joven requiere cambios frecuentes de lentes, pero sigue con visión distorsionada y diplopía monocular. La córnea muestra adelgazamiento y aumento de curvatura. Tiene antecedente de frotamiento ocular.",
+          "key_discriminator": "adelgazamiento y aumento de curvatura",
+          "mechanism": "El debilitamiento del estroma corneal produce protrusión progresiva y astigmatismo irregular, de modo que los lentes convencionales pueden no corregir adecuadamente la calidad visual.",
+          "findings": [
+            {
+              "mechanism": "Ectasia corneal",
+              "finding": "Astigmatismo irregular y mala corrección"
+            }
+          ],
+          "initial_action": "Referir para topografía corneal y tratamiento según progresión y capacidad visual.",
+          "action_reason": "Define forma corneal y gravedad.",
+          "modifiers": [
+            {
+              "factor": "Corrección insuficiente con gafas",
+              "action": "Valorar lente rígido por especialista",
+              "reason": "Compensa irregularidad óptica"
+            }
+          ],
+          "limits": "El entrecruzamiento puede tratar progresión en candidatos; la cicatrización o mala tolerancia óptica puede motivar trasplante.",
+          "evidence": [
+            {
+              "page": 875,
+              "quote": "Múltiples intentos fallidos de corrección con lentes."
+            },
+            {
+              "page": 875,
+              "quote": "Topografía corneal"
+            }
+          ],
+          "source_gaps": [],
+          "external_sources": [
+            {
+              "label": "NEI: corneal dystrophies and keratoconus",
+              "url": "https://www.nei.nih.gov/eye-health-information/eye-conditions-and-diseases/corneal-conditions/corneal-dystrophies",
+              "quote": "corneal cross-linking to strengthen your cornea",
+              "checked_at": "2026-10-29"
+            }
+          ],
+          "source_corrections": [
+            {
+              "reason": "El trasplante no es inevitable. Existen corrección óptica y entrecruzamiento corneal; el trasplante se reserva para casos seleccionados."
+            }
+          ]
+        }
+      ],
+      "common_problem": "Paciente con disminución progresiva de visión o mala corrección óptica.",
+      "mother": {
+        "cue": "Alteración de transparencia o refracción del sistema óptico ocular.",
+        "answer": "Defecto óptico progresivo.",
+        "explanation": "La respuesta al lente y el examen corneal o del cristalino localizan la causa."
+      }
+    },
+    {
+      "id": "25.10",
+      "title": "Glaucoma crónico y pediátrico",
+      "topics": [
+        {
+          "id": "25.10-01",
+          "name": "Glaucoma de ángulo abierto",
+          "source_pages": [
+            867
+          ],
+          "pattern": "Una persona mayor no nota síntomas importantes, pero la exploración detecta excavación papilar y el campo visual muestra escotomas periféricos. La gonioscopia revela ángulo abierto.",
+          "key_discriminator": "escotomas periféricos",
+          "mechanism": "La neuropatía óptica progresiva destruye fibras nerviosas y campo periférico con ángulo permeable; la presión y susceptibilidad del nervio determinan velocidad de daño irreversible.",
+          "findings": [
+            {
+              "mechanism": "Pérdida de fibras ópticas",
+              "finding": "Defecto de campo periférico"
+            }
+          ],
+          "initial_action": "Confirmar daño estructural y funcional, medir presión y comenzar reducción de presión por oftalmología.",
+          "action_reason": "Busca frenar daño irreversible.",
+          "modifiers": [
+            {
+              "factor": "Progresión pese al control",
+              "action": "Reevaluar meta y tratamiento",
+              "reason": "La presión objetivo es individual"
+            }
+          ],
+          "limits": "La presión alta no es necesaria en todos los glaucomas.",
+          "evidence": [
+            {
+              "page": 867,
+              "quote": "pérdida irreversible de fibras"
+            },
+            {
+              "page": 867,
+              "quote": "automatizada para valorar campo visual."
+            }
+          ],
+          "source_gaps": []
+        },
+        {
+          "id": "25.10-02",
+          "name": "Sospecha de glaucoma",
+          "source_pages": [
+            879
+          ],
+          "pattern": "Una persona con familiar afectado tiene presión intraocular elevada en una revisión. La papila y el campo visual son normales. No hay antecedente de trauma, uveítis ni uso de esteroides.",
+          "key_discriminator": "papila y el campo visual son normales",
+          "mechanism": "La presión ocular elevada aumenta riesgo de neuropatía, pero sin lesión estructural ni funcional se considera hipertensión ocular y requiere estimación individual del riesgo de progresión.",
+          "findings": [
+            {
+              "mechanism": "Presión sin lesión detectada",
+              "finding": "Exploración óptica normal"
+            }
+          ],
+          "initial_action": "Confirmar presión, gonioscopia, nervio y campo visual; decidir vigilancia o tratamiento según riesgo.",
+          "action_reason": "Distingue hipertensión ocular de glaucoma.",
+          "modifiers": [
+            {
+              "factor": "Factores de riesgo o presión mayor",
+              "action": "Considerar reducción de presión",
+              "reason": "Aumenta probabilidad de daño"
+            }
+          ],
+          "limits": "No usar un solo registro de presión para etiquetar glaucoma.",
+          "evidence": [
+            {
+              "page": 879,
+              "quote": "Ausencia de daño en campo visual."
+            },
+            {
+              "page": 879,
+              "quote": "dejar sin tratamiento con vigilancia. 11 Presión intraocular basal mayor"
+            }
+          ],
+          "source_gaps": []
+        },
+        {
+          "id": "25.10-03",
+          "name": "Glaucoma congénito",
+          "source_pages": [
+            866
+          ],
+          "pattern": "Un lactante presenta lagrimeo, fotofobia y córnea opaca. Un ojo parece más grande que el otro. La familia refiere que evita la luz y mantiene los párpados cerrados.",
+          "key_discriminator": "córnea opaca",
+          "mechanism": "El desarrollo anormal de malla trabecular dificulta drenaje y eleva presión en un ojo elástico, causando crecimiento ocular, edema corneal y lesión del nervio óptico.",
+          "findings": [
+            {
+              "mechanism": "Presión en ojo infantil elástico",
+              "finding": "Buftalmos y edema corneal"
+            }
+          ],
+          "initial_action": "Referir de inmediato para exploración oftalmológica, medición de presión y valoración quirúrgica.",
+          "action_reason": "La corrección del drenaje busca preservar visión.",
+          "modifiers": [
+            {
+              "factor": "Ángulo visible",
+              "action": "Valorar goniotomía",
+              "reason": "Permite acceso directo al tejido del ángulo"
+            }
+          ],
+          "limits": "La medicación puede ser puente al tratamiento especializado.",
+          "evidence": [
+            {
+              "page": 866,
+              "quote": "Epífora, blefaroespasmo, buftalmos y edema corneal."
+            },
+            {
+              "page": 866,
+              "quote": "Gonitomía o trabeculotomía"
+            }
+          ],
+          "source_gaps": []
+        }
+      ],
+      "common_problem": "Paciente con riesgo de daño del nervio óptico.",
+      "mother": {
+        "cue": "Alteración del drenaje acuoso con presión y susceptibilidad que pueden dañar el nervio.",
+        "answer": "Evaluación de glaucoma.",
+        "explanation": "La estructura papilar y el campo visual distinguen enfermedad de hipertensión aislada."
+      }
+    },
+    {
+      "id": "25.11",
+      "title": "Daño retiniano vascular",
+      "topics": [
+        {
+          "id": "25.11-01",
+          "name": "Retinopatía diabética",
+          "source_pages": [
+            877
+          ],
+          "pattern": "Un adulto con diabetes de larga evolución acude sin síntomas visuales. El fondo muestra microaneurismas y hemorragias puntiformes. Se requiere clasificar lesiones y detectar edema o neovascularización.",
+          "key_discriminator": "microaneurismas y hemorragias",
+          "mechanism": "La lesión microvascular diabética causa fuga y oclusión capilar retiniana; la isquemia puede estimular neovasos frágiles y el edema macular compromete visión central.",
+          "findings": [
+            {
+              "mechanism": "Microangiopatía retiniana",
+              "finding": "Microaneurismas y exudados"
+            }
+          ],
+          "initial_action": "Realizar examen retiniano y control metabólico y vascular; referir según edema, severidad o neovasos.",
+          "action_reason": "Previene progresión y pérdida visual.",
+          "modifiers": [
+            {
+              "factor": "Neovascularización",
+              "action": "Valorar tratamiento retiniano específico",
+              "reason": "Indica fase proliferativa"
+            }
+          ],
+          "limits": "La página no cubre todas las opciones actuales para edema macular.",
+          "evidence": [
+            {
+              "page": 877,
+              "quote": "microaneurismas"
+            },
+            {
+              "page": 877,
+              "quote": "Control Metabólico."
+            }
+          ],
+          "source_gaps": []
+        },
+        {
+          "id": "25.11-02",
+          "name": "Retinopatía hipertensiva",
+          "source_pages": [
+            878
+          ],
+          "pattern": "Un paciente con presión arterial muy elevada presenta visión borrosa. El fondo muestra hemorragias en flama, exudados algodonosos y edema bilateral del nervio óptico. Se evalúa daño sistémico.",
+          "key_discriminator": "edema bilateral del nervio óptico",
+          "mechanism": "El aumento agudo o sostenido de presión daña microvasculatura retiniana, causa isquemia y fuga, y en formas graves se acompaña de edema del nervio óptico.",
+          "findings": [
+            {
+              "mechanism": "Daño vascular hipertensivo",
+              "finding": "Hemorragias y edema papilar"
+            }
+          ],
+          "initial_action": "Evaluar como posible emergencia hipertensiva y tratar presión y riesgos sistémicos en el contexto clínico.",
+          "action_reason": "Los cambios avanzados indican daño orgánico.",
+          "modifiers": [
+            {
+              "factor": "Solo estrechamiento leve crónico",
+              "action": "Correlacionar con contexto sistémico",
+              "reason": "Tiene menor especificidad"
+            }
+          ],
+          "limits": "No atribuir edema de papila a hipertensión sin evaluar otras causas.",
+          "evidence": [
+            {
+              "page": 878,
+              "quote": "hemorragias en forma de flama"
+            },
+            {
+              "page": 878,
+              "quote": "antihipertensivos"
+            }
+          ],
+          "source_gaps": []
+        },
+        {
+          "id": "25.11-03",
+          "name": "Retinopatía del prematuro",
+          "source_pages": [
+            876
+          ],
+          "pattern": "Un recién nacido muy prematuro recibió soporte cardiorrespiratorio y oxígeno. Está clínicamente estable. Se debe programar evaluación de la retina antes de que aparezcan síntomas visuales.",
+          "key_discriminator": "muy prematuro",
+          "mechanism": "La vascularización retiniana incompleta del prematuro puede responder de forma anormal al entorno neonatal y generar neovascularización, fibrosis y tracción con riesgo de desprendimiento.",
+          "findings": [
+            {
+              "mechanism": "Desarrollo vascular incompleto",
+              "finding": "Proliferación y tracción retiniana"
+            }
+          ],
+          "initial_action": "Identificar elegibilidad para tamizaje y coordinar examen por oftalmología según edad y riesgo neonatal.",
+          "action_reason": "El daño tratable puede ser asintomático.",
+          "modifiers": [
+            {
+              "factor": "Enfermedad amenazante",
+              "action": "Dar tratamiento especializado oportuno",
+              "reason": "Puede progresar rápidamente"
+            }
+          ],
+          "limits": "El caso enseña identificación y referencia para tamizaje. El calendario y tratamiento se fijan por edad posmenstrual, riesgo, zona, estadio y actividad; no se indica láser a todo prematuro.",
+          "evidence": [
+            {
+              "page": 876,
+              "quote": "vascularización incompleta"
+            },
+            {
+              "page": 876,
+              "quote": "antecedente de preeclampsia severa. Tamizaje con criterios de ROP: • Todos recien"
+            }
+          ],
+          "source_gaps": []
+        }
+      ],
+      "common_problem": "Paciente con enfermedad sistémica o prematuridad que amenaza retina.",
+      "mother": {
+        "cue": "Daño vascular retiniano que requiere detección y seguimiento.",
+        "answer": "Retinopatía vascular.",
+        "explanation": "El contexto determina tamizaje y signos de gravedad."
+      }
+    },
+    {
+      "id": "25.12",
+      "title": "Pérdida visual central / desviación",
+      "topics": [
+        {
+          "id": "25.12-01",
+          "name": "Degeneración macular",
+          "source_pages": [
+            862
+          ],
+          "pattern": "Una persona mayor tiene dificultad para leer y reconocer caras. Las líneas rectas se ven torcidas y aparece una mancha central. La visión periférica está relativamente conservada.",
+          "key_discriminator": "líneas rectas se ven torcidas",
+          "mechanism": "La degeneración de retina central y epitelio pigmentario altera visión fina; en la forma neovascular, vasos coroideos producen fuga y hemorragia subretiniana que aceleran pérdida visual.",
+          "findings": [
+            {
+              "mechanism": "Daño macular",
+              "finding": "Metamorfopsia y escotoma central"
+            }
+          ],
+          "initial_action": "Referir para evaluación macular, imagen y clasificación de forma seca o neovascular.",
+          "action_reason": "La forma determina opciones de tratamiento.",
+          "modifiers": [
+            {
+              "factor": "Neovascularización o líquido",
+              "action": "Valorar anti-VEGF intravítreo",
+              "reason": "Trata actividad exudativa"
+            }
+          ],
+          "limits": "Los antiangiogénicos no son tratamiento universal de toda forma seca.",
+          "evidence": [
+            {
+              "page": 862,
+              "quote": "metamorfopsias"
+            },
+            {
+              "page": 862,
+              "quote": "elección: Anti-angiogénicos (anti-VEGF) • Medidas generales: Dieta balanceada,"
+            }
+          ],
+          "source_gaps": []
+        },
+        {
+          "id": "25.12-02",
+          "name": "Estrabismo",
+          "source_pages": [
+            865
+          ],
+          "pattern": "Un niño mantiene un ojo desviado hacia dentro y se tapa el otro al mirar. La desviación es constante. Se requiere revisar agudeza visual, reflejo rojo y alineación.",
+          "key_discriminator": "desviación es constante",
+          "mechanism": "La falta de alineación visual produce imágenes discordantes; el cerebro puede suprimir la señal del ojo desviado y alterar desarrollo visual, con riesgo de ambliopía.",
+          "findings": [
+            {
+              "mechanism": "Supresión del ojo desviado",
+              "finding": "Ambliopía"
+            }
+          ],
+          "initial_action": "Referir a oftalmología al detectar desviación constante; evaluar fondo ocular y errores refractivos.",
+          "action_reason": "Permite tratar causa y prevenir pérdida funcional.",
+          "modifiers": [
+            {
+              "factor": "Reflejo rojo anormal",
+              "action": "Descartar enfermedad intraocular con urgencia",
+              "reason": "La desviación puede ser secundaria"
+            }
+          ],
+          "limits": "Tratar pronto mejora posibilidades, pero la edad de seis años no implica inutilidad universal del tratamiento. La oclusión se individualiza.",
+          "evidence": [
+            {
+              "page": 865,
+              "quote": "desviación constante"
+            },
+            {
+              "page": 865,
+              "quote": "Se debe revisar fondo de ojo"
+            }
+          ],
+          "source_gaps": [],
+          "external_sources": [
+            {
+              "label": "NEI/PEDIG: trial of amblyopia treatment aged 7–17",
+              "url": "https://www.nei.nih.gov/research-and-training/research-news/older-children-can-benefit-treatment-childhoods-most-common-eye-disorder",
+              "quote": "Treatment improved the vision",
+              "checked_at": "2026-10-29"
+            }
+          ],
+          "source_corrections": [
+            {
+              "reason": "El ensayo PEDIG muestra que niños de 7–17 años pueden beneficiarse; seis años no es un límite absoluto de recuperación."
+            }
+          ]
+        }
+      ],
+      "common_problem": "Paciente con dificultad visual central o desviación ocular.",
+      "mother": {
+        "cue": "La función visual depende de retina central y alineación de ambos ojos.",
+        "answer": "Alteración de visión central o binocular.",
+        "explanation": "La edad, metamorfopsia y alineación guían la referencia."
+      }
+    }
+  ]
+}
