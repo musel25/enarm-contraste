@@ -9,6 +9,7 @@ import sqlite3
 import tempfile
 import zipfile
 from collections import Counter
+from contextlib import closing
 from html.parser import HTMLParser
 from pathlib import Path
 
@@ -71,6 +72,8 @@ def audit(catalog: dict, sources: Path, library: Path) -> dict:
             require([r['text'] for r in eje['front']] == [t['pattern'] for t in block['topics']], f'Case correspondence mismatch: {eje_id}')
             require([r['title'] for r in eje['back']] == [t['name'] for t in block['topics']], f'Diagnosis correspondence mismatch: {eje_id}')
             require([r['action'] for r in eje['back']] == [t['initial_action'] for t in block['topics']], f'Action correspondence mismatch: {eje_id}')
+            for field, source_field in [('text', 'mechanism'), ('discriminator', 'key_discriminator'), ('reason', 'action_reason'), ('limits', 'limits')]:
+                require([r[field] for r in eje['back']] == [t[source_field] for t in block['topics']], f'{field} correspondence mismatch: {eje_id}')
             require(cards[mother_id]['front'][0]['text'] == block['mother']['cue'] and cards[mother_id]['back'][0]['title'] == block['mother']['answer'], f'Mother pattern correspondence mismatch: {mother_id}')
             for topic in block['topics']:
                 tid = topic['id']
@@ -81,9 +84,12 @@ def audit(catalog: dict, sources: Path, library: Path) -> dict:
                 causal = cards[f'madre/3/{tid}']
                 management = cards[f'madre/4/{tid}']
                 require(recognition['front'][0]['text'] == topic['pattern'] and recognition['back'][0]['title'] == topic['name'], f'Recognition correspondence mismatch: {tid}')
+                require(recognition['back'][0]['text'] == topic['mechanism'] and recognition['back'][0]['discriminator'] == topic['key_discriminator'], f'Recognition explanation correspondence mismatch: {tid}')
                 require([r['text'] for r in causal['front']] == [f['mechanism'] for f in topic['findings']] and [r['text'] for r in causal['back']] == [f['finding'] for f in topic['findings']], f'Mechanism correspondence mismatch: {tid}')
                 require([r['text'] for r in management['back']] == [topic['initial_action']] + [m['action'] for m in topic['modifiers']], f'Management correspondence mismatch: {tid}')
                 require([r['text'] for r in management['front'][1:]] == [m['factor'] for m in topic['modifiers']], f'Modifier correspondence mismatch: {tid}')
+                require(management['context'] == topic['pattern'], f'Management case correspondence mismatch: {tid}')
+                require([r['reason'] for r in management['back']] == [topic['action_reason']] + [m['reason'] for m in topic['modifiers']], f'Management reason correspondence mismatch: {tid}')
         require(set(cards) == expected_ids, f'Unexpected card correspondence: {section["id"]}')
         all_cards.update(cards)
     require(manifest['content_sha256'] == digest(source_hashes), 'Exported content hash mismatch')
@@ -100,7 +106,7 @@ def audit(catalog: dict, sources: Path, library: Path) -> dict:
         with tempfile.TemporaryDirectory() as temporary, zipfile.ZipFile(package) as archive:
             dbpath = Path(temporary) / 'collection.anki2'
             dbpath.write_bytes(archive.read('collection.anki2'))
-            with sqlite3.connect(f'file:{dbpath}?mode=ro', uri=True) as db:
+            with closing(sqlite3.connect(f'file:{dbpath}?mode=ro', uri=True)) as db:
                 require(db.execute('pragma integrity_check').fetchone()[0] == 'ok', 'Anki database integrity failed')
                 rows = db.execute('select guid, flds from notes').fetchall()
                 require(len(rows) == len(expected_ids) == download['cards'], 'Anki note count mismatch')
@@ -113,7 +119,7 @@ def audit(catalog: dict, sources: Path, library: Path) -> dict:
                     exported_ids.add(identity)
                     card = all_cards[identity]
                     ordered([r['text'] for r in card['front']], text(front), identity)
-                    ordered([value for r in card['back'] for value in [r['title'], r['text']] if value], text(back), identity)
+                    ordered([value for r in card['back'] for value in [r.get(field, '') for field in ['title', 'text', 'discriminator', 'action', 'reason', 'limits']] if value], text(back), identity)
                     if card['level'] in [0, 2]:
                         for answer in card['back']:
                             require(answer['title'].casefold() not in text(front).casefold(), f'Answer leaked on recognition front: {identity}')

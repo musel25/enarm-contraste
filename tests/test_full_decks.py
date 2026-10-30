@@ -5,6 +5,7 @@ import sqlite3
 import tempfile
 import unittest
 import zipfile
+from contextlib import closing
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -65,7 +66,7 @@ class FullDeckTests(unittest.TestCase):
         for family, count in [('eje', 1), ('madre', 7)]:
             with zipfile.ZipFile(self.root / f'build/enarm-{family}.apkg') as package:
                 package.extract('collection.anki2', self.root / family)
-            with sqlite3.connect(self.root / family / 'collection.anki2') as db:
+            with closing(sqlite3.connect(self.root / family / 'collection.anki2')) as db:
                 self.assertEqual(db.execute('select count(*) from notes').fetchone()[0], count)
                 self.assertEqual(db.execute('select count(*) from cards').fetchone()[0], count)
                 fields = [row[0].split('\x1f') for row in db.execute('select flds from notes')]
@@ -91,7 +92,7 @@ class FullDeckTests(unittest.TestCase):
         for name in ['a', 'b']:
             with zipfile.ZipFile(self.root / name / 'enarm-eje.apkg') as package:
                 package.extract('collection.anki2', self.root / name / 'db')
-            with sqlite3.connect(self.root / name / 'db/collection.anki2') as db:
+            with closing(sqlite3.connect(self.root / name / 'db/collection.anki2')) as db:
                 guid, fields = db.execute('select guid, flds from notes').fetchone()
                 guids.append(guid)
                 self.assertNotIn('<script>', fields)
@@ -149,6 +150,16 @@ class FullDeckTests(unittest.TestCase):
         self.write_section()
         with self.assertRaisesRegex(ValueError, 'Answer leaked'):
             self.build()
+
+    def test_audit_rejects_swapped_action_reasons(self):
+        self.build()
+        path = self.root / 'build/sections/01.json'
+        data = json.loads(path.read_text())
+        card = next(c for c in data['cards'] if c['id'] == 'madre/4/01.01-01')
+        card['back'][0]['reason'], card['back'][1]['reason'] = card['back'][1]['reason'], card['back'][0]['reason']
+        path.write_text(json.dumps(data))
+        with self.assertRaisesRegex(ValueError, 'correspondence'):
+            self.audit()
 
 
 if __name__ == '__main__':
