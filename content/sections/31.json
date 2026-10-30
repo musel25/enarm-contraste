@@ -1,0 +1,1283 @@
+{
+  "id": "31",
+  "title": "Toxicología",
+  "blocks": [
+    {
+      "id": "31.01",
+      "title": "Paciente intoxicado: primera decisión",
+      "topics": [
+        {
+          "id": "31.01-01",
+          "name": "Manejo de intoxicaciones",
+          "source_pages": [
+            1042,
+            1043,
+            1044,
+            1045
+          ],
+          "pattern": "Una persona llega con somnolencia y datos de exposición desconocida. Tiene ventilación lenta y no se conocen la sustancia ni el tiempo. El equipo necesita priorizar medidas antes de descontaminar.",
+          "key_discriminator": "ventilación lenta",
+          "mechanism": "Las sustancias tóxicas alteran funciones vitales por mecanismos diversos; la evaluación sistemática identifica falla de vía aérea, respiración y circulación antes de intervenciones específicas de descontaminación.",
+          "findings": [
+            {
+              "mechanism": "Depresión o lesión de funciones vitales",
+              "finding": "Alteración respiratoria y neurológica"
+            }
+          ],
+          "initial_action": "Estabilizar vía aérea, ventilación y circulación; medir glucosa, retirar fuente y obtener historia y asesoría toxicológica.",
+          "action_reason": "La estabilización precede a identificar el tóxico.",
+          "modifiers": [
+            {
+              "factor": "Sustancia no adsorbible o vía aérea insegura",
+              "action": "Evitar carbón activado",
+              "reason": "Puede ser ineficaz o causar aspiración"
+            }
+          ],
+          "limits": "Lavado y carbón no son automáticos. La selección de carbón depende de agente, formulación, tiempo, absorción y protección de vía aérea.",
+          "evidence": [
+            {
+              "page": 1042,
+              "quote": "Revisión primaria: ABCDE."
+            },
+            {
+              "page": 1044,
+              "quote": "no tiene efectos benéficos"
+            }
+          ],
+          "source_gaps": [],
+          "external_sources": [
+            {
+              "label": "AACT/EAPCCT 2013: lavado gástrico",
+              "url": "https://eapcct.org/wp-content/uploads/2024/09/PS2013_GastricLavage.pdf",
+              "quote": "should not be performed routinely",
+              "checked_at": "2026-10-29"
+            },
+            {
+              "label": "CTRC 2026: carbón activado",
+              "url": "https://pubmed.ncbi.nlm.nih.gov/41906697/",
+              "quote": "differs for each poison and different formulations",
+              "checked_at": "2026-10-29"
+            }
+          ],
+          "source_corrections": [
+            {
+              "reason": "El lavado gástrico no es intervención rutinaria; su beneficio es incierto y sus riesgos exigen selección y personal experto."
+            },
+            {
+              "reason": "La ventana depende del tóxico, formulación, absorción y riesgo. Puede superar una hora en exposiciones seleccionadas; no aplicar ventanas rígidas universales."
+            }
+          ]
+        },
+        {
+          "id": "31.01-02",
+          "name": "Toxíndromes",
+          "source_pages": [
+            1050,
+            1051
+          ],
+          "pattern": "Un paciente expuesto a varios medicamentos tiene agitación, midriasis, piel seca y retención urinaria. Otro cuadro semejante puede producir sudoración o secreciones. Se comparan signos autonómicos para orientar tratamiento.",
+          "key_discriminator": "piel seca y retención urinaria",
+          "mechanism": "Los toxíndromes agrupan efectos por receptores y sistemas; secreciones, temperatura, pupilas, reflejos y estado mental ayudan a distinguir mecanismos aunque no identifiquen siempre una sustancia única.",
+          "findings": [
+            {
+              "mechanism": "Bloqueo muscarínico",
+              "finding": "Sequedad y retención urinaria"
+            }
+          ],
+          "initial_action": "Estabilizar, retirar exposición y clasificar patrón; usar antídoto solo si indicación y contraindicaciones están evaluadas.",
+          "action_reason": "Un antagonista inadecuado puede empeorar cuadro.",
+          "modifiers": [
+            {
+              "factor": "Hiperreflexia y clonus con hipertermia",
+              "action": "Sospechar toxicidad serotoninérgica",
+              "reason": "La excitación neuromuscular cambia manejo"
+            }
+          ],
+          "limits": "Los patrones se superponen. No acidificar orina ni usar fisostigmina sin selección, vigilancia y evaluación toxicológica.",
+          "evidence": [
+            {
+              "page": 1051,
+              "quote": "retención urinaria."
+            },
+            {
+              "page": 1050,
+              "quote": "Hiperreflexia"
+            }
+          ],
+          "source_gaps": [],
+          "external_sources": [
+            {
+              "label": "OMS: manejo inicial de intoxicación química",
+              "url": "https://iris.who.int/bitstream/handle/10665/329503/WHO-FWC-PHE-EPE-13.02-eng.pdf?sequence=1",
+              "quote": "This is not recommended because it can produce metabolic acidosis",
+              "checked_at": "2026-10-29"
+            },
+            {
+              "label": "Queensland Poisons 2023: fisostigmina",
+              "url": "https://www.poisonsinfo.health.qld.gov.au/for-health-professionals/antidote-stocking-recommendations/physostigmine",
+              "quote": "Patients receiving physostigmine should be cardiac monitored.",
+              "checked_at": "2026-10-29"
+            }
+          ],
+          "source_corrections": [
+            {
+              "reason": "La acidificación urinaria no se recomienda: puede provocar acidosis, rabdomiólisis y lesión renal; no es manejo del patrón serotoninérgico."
+            },
+            {
+              "reason": "La fisostigmina se reserva a delirio anticolinérgico seleccionado, con evaluación de contraindicaciones, vigilancia y asesoría toxicológica."
+            }
+          ]
+        }
+      ],
+      "common_problem": "Paciente con posible exposición a un tóxico y deterioro clínico.",
+      "mother": {
+        "cue": "Estabilizar funciones vitales y reconocer patrón antes de descontaminar o usar antídotos.",
+        "answer": "Evaluación inicial de intoxicación.",
+        "explanation": "La vía aérea y ventilación tienen prioridad sobre identificar la sustancia."
+      }
+    },
+    {
+      "id": "31.02",
+      "title": "Somnolencia y bradipnea",
+      "topics": [
+        {
+          "id": "31.02-01",
+          "name": "Intoxicación por opiáceos",
+          "source_pages": [
+            1033
+          ],
+          "pattern": "Una persona es encontrada inconsciente con respiración muy lenta y pupilas pequeñas. Hay exposición posible a analgésicos. Se requiere restaurar ventilación antes de confirmar la sustancia por laboratorio.",
+          "key_discriminator": "respiración muy lenta",
+          "mechanism": "La activación excesiva de receptores opioides deprime impulso respiratorio y estado de conciencia, reduce ventilación y puede causar hipoxia y paro; la miosis apoya pero no es obligatoria.",
+          "findings": [
+            {
+              "mechanism": "Depresión del impulso respiratorio",
+              "finding": "Bradipnea y alteración de conciencia"
+            }
+          ],
+          "initial_action": "Pedir ayuda, abrir vía aérea, ventilar y administrar naloxona si se sospecha opioide; iniciar reanimación si no hay pulso.",
+          "action_reason": "La hipoxia es la amenaza inmediata.",
+          "modifiers": [
+            {
+              "factor": "Recaída tras respuesta",
+              "action": "Repetir antagonista y vigilar",
+              "reason": "El opioide puede durar más que naloxona"
+            }
+          ],
+          "limits": "La respuesta a naloxona no sustituye vigilancia.",
+          "evidence": [
+            {
+              "page": 1033,
+              "quote": "Depresión del SNC y respiratoria"
+            },
+            {
+              "page": 1033,
+              "quote": "Proporcione a la víctima"
+            }
+          ],
+          "source_gaps": [],
+          "external_sources": [
+            {
+              "label": "FDA: naloxona y nalmefeno",
+              "url": "https://www.fda.gov/drugs/postmarket-drug-safety-information-patients-and-providers/information-about-naloxone-and-nalmefene",
+              "quote": "opioid receptor antagonist",
+              "checked_at": "2026-10-29"
+            }
+          ],
+          "source_corrections": [
+            {
+              "reason": "Naloxona y nalmefeno antagonizan receptores opioides; no actúan como antagonistas GABA. Hay productos aprobados, pero no se infiere disponibilidad local ni equivalencia de dosis."
+            }
+          ]
+        },
+        {
+          "id": "31.02-02",
+          "name": "Intoxicación por fentanilo",
+          "source_pages": [
+            1028
+          ],
+          "pattern": "Una persona desarrolla sedación profunda y bradipnea después de consumir una sustancia que creía otra droga. El tamiz de opioides habitual es negativo. Se mantiene sospecha de opioide sintético.",
+          "key_discriminator": "tamiz de opioides habitual es negativo",
+          "mechanism": "El fentanilo es un agonista opioide potente que deprime ventilación y conciencia; su presencia puede pasar inadvertida en inmunoensayos de rutina o mezclas de otras sustancias.",
+          "findings": [
+            {
+              "mechanism": "Agonismo opioide intenso",
+              "finding": "Depresión respiratoria"
+            }
+          ],
+          "initial_action": "Dar soporte ventilatorio y naloxona según respuesta; mantener vigilancia y atención de emergencias.",
+          "action_reason": "Un tamiz negativo no excluye exposición.",
+          "modifiers": [
+            {
+              "factor": "Recurrencia o respuesta insuficiente",
+              "action": "Continuar ventilación y valorar nuevas dosis",
+              "reason": "Puede persistir toxicidad"
+            }
+          ],
+          "limits": "No extrapolar equivalencias intranasales ni dosis sin protocolo.",
+          "evidence": [
+            {
+              "page": 1028,
+              "quote": "No se detecta fentanilo en inmunoensayos"
+            },
+            {
+              "page": 1028,
+              "quote": "sostén (óxigeno). • Elección : Naloxona 0.4 a 2 mg intravenosa, repetir cada"
+            }
+          ],
+          "source_gaps": [],
+          "external_sources": [
+            {
+              "label": "FDA: naloxona y nalmefeno",
+              "url": "https://www.fda.gov/drugs/postmarket-drug-safety-information-patients-and-providers/information-about-naloxone-and-nalmefene",
+              "quote": "opioid receptor antagonist",
+              "checked_at": "2026-10-29"
+            }
+          ],
+          "source_corrections": [
+            {
+              "reason": "Naloxona y nalmefeno antagonizan receptores opioides; no actúan como antagonistas GABA. Hay productos aprobados, pero no se infiere disponibilidad local ni equivalencia de dosis."
+            }
+          ]
+        },
+        {
+          "id": "31.02-03",
+          "name": "Intoxicación por benzodiacepinas",
+          "source_pages": [
+            1025
+          ],
+          "pattern": "Una persona tiene somnolencia, disartria y ataxia después de tomar un sedante. Se desconoce si usa el fármaco crónicamente o tomó otros medicamentos. Se evalúa ventilación y coingestas.",
+          "key_discriminator": "Se desconoce si usa el fármaco crónicamente",
+          "mechanism": "Las benzodiacepinas potencian inhibición mediada por GABA y reducen alerta y coordinación; la depresión respiratoria aumenta con coingestas y el antagonismo puede precipitar abstinencia o convulsiones.",
+          "findings": [
+            {
+              "mechanism": "Potenciación de GABA",
+              "finding": "Somnolencia y ataxia"
+            }
+          ],
+          "initial_action": "Dar soporte y vigilancia respiratoria; investigar coingestas y uso crónico antes de considerar flumazenilo.",
+          "action_reason": "El soporte suele ser prioritario y el antagonista tiene riesgos.",
+          "modifiers": [
+            {
+              "factor": "Uso crónico o coingesta proconvulsiva",
+              "action": "Evitar flumazenilo empírico",
+              "reason": "Puede desencadenar convulsiones o abstinencia"
+            }
+          ],
+          "limits": "Un tamiz positivo aislado no justifica antagonista.",
+          "evidence": [
+            {
+              "page": 1025,
+              "quote": "ataxia, disartria,"
+            },
+            {
+              "page": 1025,
+              "quote": "uso crónico de"
+            }
+          ],
+          "source_gaps": []
+        }
+      ],
+      "common_problem": "Paciente somnoliento con posible depresión respiratoria por fármacos.",
+      "mother": {
+        "cue": "Efecto depresor sobre sistema nervioso y respiración por opioide o sedante.",
+        "answer": "Toxíndrome depresor.",
+        "explanation": "El soporte ventilatorio y la sustancia determinan uso de antagonistas."
+      }
+    },
+    {
+      "id": "31.03",
+      "title": "Alteración de conciencia por alcohol",
+      "topics": [
+        {
+          "id": "31.03-01",
+          "name": "Intoxicación por etanol",
+          "source_pages": [
+            1027
+          ],
+          "pattern": "Un adulto presenta incoordinación, somnolencia y vómitos después de beber. La historia es incompleta. Se requiere revisar glucosa, traumatismo y consumo de otras sustancias antes de atribuir todo al alcohol.",
+          "key_discriminator": "revisar glucosa, traumatismo",
+          "mechanism": "El etanol deprime sistema nervioso y puede reducir ventilación, temperatura y protección de vía aérea; la malnutrición, hipoglucemia o coingesta modifican presentación y riesgo.",
+          "findings": [
+            {
+              "mechanism": "Depresión del sistema nervioso",
+              "finding": "Ataxia y somnolencia"
+            }
+          ],
+          "initial_action": "Evaluar ABCDE y glucosa, proteger vía aérea y descartar trauma; corregir alteraciones y dar tiamina cuando exista riesgo de déficit.",
+          "action_reason": "Evita pasar por alto causas tratables.",
+          "modifiers": [
+            {
+              "factor": "Deterioro desproporcionado o persistente",
+              "action": "Investigar coingesta y enfermedad",
+              "reason": "La alcoholemia no explica toda alteración"
+            }
+          ],
+          "limits": "Los líquidos y vitaminas se individualizan, no se administran por receta fija.",
+          "evidence": [
+            {
+              "page": 1027,
+              "quote": "electrólitos, glucosa,"
+            },
+            {
+              "page": 1027,
+              "quote": "No se recomienda el lavado gástrico"
+            }
+          ],
+          "source_gaps": []
+        },
+        {
+          "id": "31.03-02",
+          "name": "Intoxicación por alcoholes",
+          "source_pages": [
+            1023
+          ],
+          "pattern": "Una persona consume alcohol de origen desconocido y horas después presenta visión borrosa, dolor abdominal y acidosis con anión gap elevado. Se sospecha metabolito tóxico y requiere tratamiento inmediato.",
+          "key_discriminator": "visión borrosa",
+          "mechanism": "La alcohol deshidrogenasa transforma metanol o etilenglicol en metabolitos ácidos que lesionan nervio óptico o riñón; el bloqueo metabólico y eliminación extracorpórea pueden limitar daño.",
+          "findings": [
+            {
+              "mechanism": "Formación de ácidos tóxicos",
+              "finding": "Acidosis y lesión visual o renal"
+            }
+          ],
+          "initial_action": "Estabilizar, consultar toxicología y comenzar bloqueo metabólico cuando la sospecha lo indique; valorar hemodiálisis según gravedad.",
+          "action_reason": "No debe esperarse daño irreversible para intervenir.",
+          "modifiers": [
+            {
+              "factor": "Daño renal, acidosis grave o compromiso neurológico",
+              "action": "Valorar diálisis urgente",
+              "reason": "Necesita eliminar tóxico y metabolitos"
+            }
+          ],
+          "limits": "Un anión gap normal temprano no excluye exposición.",
+          "evidence": [
+            {
+              "page": 1023,
+              "quote": "ácido fórmico."
+            },
+            {
+              "page": 1023,
+              "quote": "de meta bolito tóxico. • Fomepizol: es competidor de la deshidrogenasa"
+            }
+          ],
+          "source_gaps": []
+        }
+      ],
+      "common_problem": "Paciente con alteración neurológica tras ingestión de alcohol.",
+      "mother": {
+        "cue": "Alcoholes distintos producen depresión o metabolitos con daño orgánico y acidosis.",
+        "answer": "Intoxicación por alcoholes.",
+        "explanation": "La acidosis y órganos afectados orientan antídoto y eliminación."
+      }
+    },
+    {
+      "id": "31.04",
+      "title": "Agitación/hipertermia",
+      "topics": [
+        {
+          "id": "31.04-01",
+          "name": "Intoxicación por anfetaminas",
+          "source_pages": [
+            1024
+          ],
+          "pattern": "Una persona tiene agitación, sudoración, taquicardia y presión elevada después de consumir un estimulante. Presenta midriasis y temperatura creciente. Se evalúan arritmia, convulsiones y rabdomiólisis.",
+          "key_discriminator": "temperatura creciente",
+          "mechanism": "El exceso de señal monoaminérgica por liberación y menor recaptura activa sistema simpático y cerebro, causa agitación, hipertensión e hipertermia y puede producir lesión vascular y muscular.",
+          "findings": [
+            {
+              "mechanism": "Estimulación monoaminérgica",
+              "finding": "Agitación e hipertermia"
+            }
+          ],
+          "initial_action": "Dar soporte, reducir estímulos, enfriar si procede y usar benzodiacepinas para agitación y descarga simpática según protocolo.",
+          "action_reason": "Disminuye actividad y complicaciones térmicas.",
+          "modifiers": [
+            {
+              "factor": "Dolor torácico o signos neurológicos",
+              "action": "Evaluar lesión cardiovascular o cerebral",
+              "reason": "Puede haber isquemia o hemorragia"
+            }
+          ],
+          "limits": "Un tamiz negativo no excluye todos los estimulantes sintéticos.",
+          "evidence": [
+            {
+              "page": 1024,
+              "quote": "liberación y bloqueando la recaptura"
+            },
+            {
+              "page": 1024,
+              "quote": "benzodiacepinas."
+            }
+          ],
+          "source_gaps": []
+        },
+        {
+          "id": "31.04-02",
+          "name": "Intoxicación por DMT",
+          "source_pages": [
+            1026
+          ],
+          "pattern": "Una persona tras ingerir una bebida ritual presenta distorsión visual, percepción alterada del tiempo y ansiedad. Está consciente y sus signos vitales son relativamente estables. Se investiga posible coingesta.",
+          "key_discriminator": "distorsión visual",
+          "mechanism": "La interacción de triptaminas con receptores serotoninérgicos y otros sistemas altera percepción y emoción; las coingestas pueden añadir inestabilidad o toxicidad serotoninérgica más allá del efecto alucinógeno.",
+          "findings": [
+            {
+              "mechanism": "Alteración serotoninérgica perceptiva",
+              "finding": "Alucinación y distorsión temporal"
+            }
+          ],
+          "initial_action": "Mantener ambiente tranquilo, observar y dar soporte; valorar benzodiacepina si hay agitación importante.",
+          "action_reason": "La reducción de estímulos limita angustia y riesgo.",
+          "modifiers": [
+            {
+              "factor": "Hipertermia o clonus",
+              "action": "Evaluar toxicidad serotoninérgica o coingesta",
+              "reason": "No es un efecto perceptivo simple"
+            }
+          ],
+          "limits": "La etiqueta de bebida ritual no identifica todas sus sustancias.",
+          "evidence": [
+            {
+              "page": 1026,
+              "quote": "distorsión del tiempo,"
+            },
+            {
+              "page": 1026,
+              "quote": "lugar tranquilo y silencioso"
+            }
+          ],
+          "source_gaps": []
+        }
+      ],
+      "common_problem": "Paciente agitado o con alteraciones perceptivas tras consumo.",
+      "mother": {
+        "cue": "Estimulación monoaminérgica o serotoninérgica que altera conducta y signos vitales.",
+        "answer": "Intoxicación estimulante o alucinógena.",
+        "explanation": "La temperatura y el estado autonómico determinan soporte."
+      }
+    },
+    {
+      "id": "31.05",
+      "title": "Bradicardia con secreciones",
+      "topics": [
+        {
+          "id": "31.05-01",
+          "name": "Intoxicación por organofosforados",
+          "source_pages": [
+            1034,
+            1035
+          ],
+          "pattern": "Un trabajador agrícola presenta salivación, broncorrea, miosis y fasciculaciones después de aplicar insecticida. Tiene dificultad respiratoria. Se requiere descontaminación segura y manejo urgente de la ventilación.",
+          "key_discriminator": "broncorrea, miosis y fasciculaciones",
+          "mechanism": "La inhibición de acetilcolinesterasa acumula acetilcolina en sinapsis muscarínicas, nicotínicas y centrales, produce secreciones, broncoespasmo y debilidad que amenazan ventilación.",
+          "findings": [
+            {
+              "mechanism": "Exceso de acetilcolina",
+              "finding": "Secreciones y fasciculaciones"
+            }
+          ],
+          "initial_action": "Proteger al personal, retirar exposición, descontaminar y sostener ventilación; administrar atropina y valorar oxima según agente y protocolo.",
+          "action_reason": "Controla efectos muscarínicos y aborda inhibición enzimática.",
+          "modifiers": [
+            {
+              "factor": "Debilidad días después",
+              "action": "Vigilar síndrome intermedio y soporte respiratorio",
+              "reason": "La atropina no corrige toda disfunción nicotínica"
+            }
+          ],
+          "limits": "No aplicar lavado gástrico rutinario a toda ingesta.",
+          "evidence": [
+            {
+              "page": 1035,
+              "quote": "(58o/o) ¡-,,\\ F. de riesgo • Broncorrea ( 64 o/o) • Salivación (SSo/o) 0 •"
+            },
+            {
+              "page": 1034,
+              "quote": "Descontaminar (piel y mucosas)"
+            }
+          ],
+          "source_gaps": []
+        }
+      ],
+      "common_problem": "Paciente expuesto a plaguicida con secreciones y debilidad.",
+      "mother": {
+        "cue": "Inhibición de colinesterasa con exceso de acetilcolina en sinapsis.",
+        "answer": "Toxíndrome colinérgico.",
+        "explanation": "Broncorrea y falla respiratoria orientan urgencia de atropina y soporte."
+      }
+    },
+    {
+      "id": "31.06",
+      "title": "Cáustico e inhalación",
+      "topics": [
+        {
+          "id": "31.06-01",
+          "name": "Ingesta de cáusticos",
+          "source_pages": [
+            1021
+          ],
+          "pattern": "Un niño ingiere un líquido de limpieza y presenta dolor bucal, sialorrea y dificultad para deglutir. No se conoce el producto. Se evalúan vía aérea y signos de perforación.",
+          "key_discriminator": "líquido de limpieza",
+          "mechanism": "El contacto con ácido o álcali produce lesión química del tubo digestivo y puede progresar a necrosis, perforación y estenosis; la profundidad no se predice solo por lesiones orales.",
+          "findings": [
+            {
+              "mechanism": "Corrosión de tejidos",
+              "finding": "Disfagia y dolor"
+            }
+          ],
+          "initial_action": "Evaluar vía aérea y estabilidad, mantener ayuno y consultar toxicología y endoscopia o cirugía según cuadro.",
+          "action_reason": "Define lesión y previene procedimientos que empeoren daño.",
+          "modifiers": [
+            {
+              "factor": "Pila de botón",
+              "action": "Solicitar localización y extracción urgente según sitio",
+              "reason": "Puede causar lesión rápida"
+            }
+          ],
+          "limits": "No inducir vómito ni neutralizar. Corticoides y antibióticos no son universales; seleccionar evaluación según gravedad y complicaciones.",
+          "evidence": [
+            {
+              "page": 1021,
+              "quote": "Protección de vía aérea"
+            },
+            {
+              "page": 1021,
+              "quote": "pila de botón"
+            }
+          ],
+          "source_gaps": [],
+          "external_sources": [
+            {
+              "label": "WSES: consenso de lesión cáustica",
+              "url": "https://link.springer.com/article/10.1186/s13017-015-0039-0",
+              "quote": "systematic administration is not recommended",
+              "checked_at": "2026-10-29"
+            }
+          ],
+          "source_corrections": [
+            {
+              "reason": "No se indican corticoides ni antibióticos en toda ingesta. Se seleccionan según lesión y complicaciones; la evaluación endoscópica o tomográfica depende del paciente."
+            }
+          ]
+        },
+        {
+          "id": "31.06-02",
+          "name": "Intoxicación por hidrocarburos",
+          "source_pages": [
+            1029
+          ],
+          "pattern": "Un niño tose y se ahoga después de beber un combustible almacenado en una botella. Más tarde presenta taquipnea e hipoxemia. Se sospecha aspiración con lesión pulmonar química.",
+          "key_discriminator": "después de beber un combustible",
+          "mechanism": "La aspiración de hidrocarburos daña surfactante y tejido pulmonar, provoca inflamación y alteración del intercambio gaseoso; inducir vómito o lavado puede aumentar exposición respiratoria.",
+          "findings": [
+            {
+              "mechanism": "Neumonitis por aspiración",
+              "finding": "Tos, taquipnea e hipoxemia"
+            }
+          ],
+          "initial_action": "Dar soporte respiratorio y observación clínica; evaluar imagen según síntomas y consultar toxicología.",
+          "action_reason": "La lesión principal puede ser pulmonar.",
+          "modifiers": [
+            {
+              "factor": "Depresión de conciencia o falla respiratoria",
+              "action": "Proteger vía aérea",
+              "reason": "Aumenta riesgo de aspiración y ventilación insuficiente"
+            }
+          ],
+          "limits": "No administrar carbón para tratar exposición a hidrocarburos.",
+          "evidence": [
+            {
+              "page": 1029,
+              "quote": "disolver factor surfactante"
+            },
+            {
+              "page": 1029,
+              "quote": "No realizar lavado gástrico"
+            }
+          ],
+          "source_gaps": [],
+          "external_sources": [
+            {
+              "label": "Austin Toxicology 2025: hidrocarburos",
+              "url": "https://www.austin.org.au/Assets/Files/Hydrocarbon%20Ingestion_V3_3_2025.pdf",
+              "quote": "There is no role for activated charcoal.",
+              "checked_at": "2026-10-29"
+            }
+          ],
+          "source_corrections": [
+            {
+              "reason": "Se resuelve la contradicción del libro: el carbón no trata la exposición a hidrocarburos y puede aumentar aspiración."
+            }
+          ]
+        },
+        {
+          "id": "31.06-03",
+          "name": "Intoxicación por monoxido de carbono",
+          "source_pages": [
+            1032
+          ],
+          "pattern": "Varias personas de una habitación con calentador presentan cefalea y náusea. Una está confusa. No hay quemaduras visibles y el pulsioxímetro muestra una lectura aparentemente normal.",
+          "key_discriminator": "habitación con calentador",
+          "mechanism": "El monóxido se une a hemoglobina y altera entrega y uso de oxígeno, genera hipoxia tisular y lesión neurológica o cardiaca aunque una oximetría convencional parezca normal.",
+          "findings": [
+            {
+              "mechanism": "Transporte de oxígeno alterado",
+              "finding": "Cefalea y confusión compartidas"
+            }
+          ],
+          "initial_action": "Retirar a zona segura, administrar oxígeno de alta concentración y evaluar carboxihemoglobina y daño cardiaco o neurológico.",
+          "action_reason": "Reduce exposición y acelera eliminación del monóxido.",
+          "modifiers": [
+            {
+              "factor": "Compromiso neurológico, cardiaco o embarazo",
+              "action": "Consultar indicación de oxígeno hiperbárico",
+              "reason": "El riesgo puede ser mayor"
+            }
+          ],
+          "limits": "El nivel medido depende del tiempo y oxígeno recibido.",
+          "evidence": [
+            {
+              "page": 1032,
+              "quote": "Cefalea, náusea,"
+            },
+            {
+              "page": 1032,
+              "quote": "oxígeno al 100%"
+            }
+          ],
+          "source_gaps": []
+        }
+      ],
+      "common_problem": "Paciente con lesión corrosiva, aspiración o exposición a humo.",
+      "mother": {
+        "cue": "Daño directo de tejidos o hipoxia tóxica tras exposición ambiental.",
+        "answer": "Intoxicación por agentes de uso doméstico.",
+        "explanation": "El soporte y descontaminación dependen del agente."
+      }
+    },
+    {
+      "id": "31.07",
+      "title": "Acidosis y fármacos",
+      "topics": [
+        {
+          "id": "31.07-01",
+          "name": "Intoxicación por paracetamol",
+          "source_pages": [
+            1036,
+            1037
+          ],
+          "pattern": "Una persona tomó una cantidad desconocida de paracetamol hace horas y ahora tiene pocas molestias. No se conoce si fue una sola ingesta. Se requieren nivel sérico y pruebas hepáticas.",
+          "key_discriminator": "pocas molestias",
+          "mechanism": "La sobredosis genera exceso de NAPQI que agota glutatión y daña hepatocitos; los síntomas iniciales pueden ser mínimos mientras avanza riesgo de lesión hepática diferida.",
+          "findings": [
+            {
+              "mechanism": "Acumulación de NAPQI",
+              "finding": "Lesión hepática tardía"
+            }
+          ],
+          "initial_action": "Obtener historia, concentración y pruebas hepáticas; iniciar N-acetilcisteína cuando esté indicada sin demorar por resultados si el riesgo lo exige.",
+          "action_reason": "Repone defensa frente al metabolito tóxico.",
+          "modifiers": [
+            {
+              "factor": "Ingesta repetida o tiempo incierto",
+              "action": "No usar nomograma como única decisión",
+              "reason": "No cumple supuestos de ingesta aguda única"
+            }
+          ],
+          "limits": "El buen aspecto tardío no excluye hepatotoxicidad.",
+          "evidence": [
+            {
+              "page": 1036,
+              "quote": "El glutatión inactiva"
+            },
+            {
+              "page": 1037,
+              "quote": "una dosis única de acetaminofén"
+            }
+          ],
+          "source_gaps": [],
+          "external_sources": [
+            {
+              "label": "Consenso EE. UU./Canadá 2023: paracetamol",
+              "url": "https://jamanetwork.com/journals/jamanetworkopen/fullarticle/2808062",
+              "quote": "The revised nomogram should not be used for assessment of repeated ingestions",
+              "checked_at": "2026-10-29"
+            }
+          ],
+          "source_corrections": [
+            {
+              "reason": "La evaluación requiere tiempo, concentración y pruebas hepáticas, sin exclusión por buen aspecto a 36 horas. Ingestas repetidas o tiempo incierto requieren otro algoritmo; no demorar acetilcisteína cuando está indicada."
+            }
+          ]
+        },
+        {
+          "id": "31.07-02",
+          "name": "Intoxicación por salicílatos",
+          "source_pages": [
+            1039
+          ],
+          "pattern": "Una persona con sobredosis de aspirina presenta respiración rápida, náusea y alteración de conciencia. Los gases muestran alcalosis respiratoria y acidosis metabólica. Se obtiene concentración sérica seriada.",
+          "key_discriminator": "alcalosis respiratoria y acidosis metabólica",
+          "mechanism": "Los salicilatos estimulan respiración y alteran metabolismo energético, producen desequilibrio ácido-base y toxicidad sistémica; la acidemia favorece distribución tisular y empeora daño neurológico.",
+          "findings": [
+            {
+              "mechanism": "Alteración respiratoria y metabólica",
+              "finding": "Trastorno ácido-base mixto"
+            }
+          ],
+          "initial_action": "Consultar toxicología, medir niveles y gases seriados, corregir glucosa y electrolitos y valorar alcalinización o hemodiálisis según gravedad.",
+          "action_reason": "La clínica y evolución guían eliminación.",
+          "modifiers": [
+            {
+              "factor": "Alteración mental, edema pulmonar o falla renal",
+              "action": "Valorar diálisis urgente",
+              "reason": "Puede haber toxicidad grave aun sin cifra extrema"
+            }
+          ],
+          "limits": "El nomograma de Done no sustituye evaluación ni tendencia de concentraciones.",
+          "evidence": [
+            {
+              "page": 1039,
+              "quote": "alcalosis respiratoria."
+            },
+            {
+              "page": 1039,
+              "quote": "Alcalinización urinaria"
+            }
+          ],
+          "source_gaps": [],
+          "external_sources": [
+            {
+              "label": "ACMT 2015: toxicidad por salicilatos",
+              "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4371029/",
+              "quote": "The Done nomogram is not reliable",
+              "checked_at": "2026-10-29"
+            }
+          ],
+          "source_corrections": [
+            {
+              "reason": "Se requieren concentraciones séricas seriadas y estado clínico/ácido-base. No confirmar ni excluir por prueba urinaria o nomograma de Done; diálisis depende también de manifestaciones graves."
+            }
+          ]
+        }
+      ],
+      "common_problem": "Paciente con sobredosis y riesgo de daño metabólico u orgánico diferido.",
+      "mother": {
+        "cue": "Metabolitos tóxicos o desacoplamiento energético pueden producir lesión grave tras síntomas iniciales discretos.",
+        "answer": "Sobredosis de analgésicos.",
+        "explanation": "El tiempo y pruebas seriadas guían antídotos y eliminación."
+      }
+    },
+    {
+      "id": "31.08",
+      "title": "Neuropatía/abdomen con exposición",
+      "topics": [
+        {
+          "id": "31.08-01",
+          "name": "Intoxicación por metales pesados",
+          "source_pages": [
+            1030,
+            1031
+          ],
+          "pattern": "Un trabajador presenta temblor, cambios de conducta y estomatitis tras exposición industrial. Se considera un metal; otros cuadros pueden añadir neuropatía, hiperpigmentación o alopecia. Se revisa fuente y cronología.",
+          "key_discriminator": "temblor, cambios de conducta y estomatitis",
+          "mechanism": "Los metales dañan múltiples sistemas por interacción con proteínas y enzimas; la forma química y vía de exposición determinan órgano blanco, pruebas útiles y necesidad de eliminación específica.",
+          "findings": [
+            {
+              "mechanism": "Toxicidad por metal",
+              "finding": "Síntomas neurológicos y mucosos"
+            }
+          ],
+          "initial_action": "Retirar exposición, identificar metal y forma y consultar toxicología para pruebas y tratamiento específico.",
+          "action_reason": "No hay un quelante universal.",
+          "modifiers": [
+            {
+              "factor": "Alopecia con neuropatía",
+              "action": "Investigar talio",
+              "reason": "La combinación orienta exposición distinta"
+            }
+          ],
+          "limits": "Pruebas y tratamiento dependen del metal. Talio puede requerir azul de Prusia por toxicología; no extrapolar un quelante universal.",
+          "evidence": [
+            {
+              "page": 1030,
+              "quote": "Temblor (neuropatía)."
+            },
+            {
+              "page": 1030,
+              "quote": "Retiro de fuente"
+            }
+          ],
+          "source_gaps": [],
+          "external_sources": [
+            {
+              "label": "FDA: Radiogardase",
+              "url": "https://dailymed.nlm.nih.gov/dailymed/fda/fdaDrugXsl.cfm?setid=baa68c79-5f3d-468a-a510-58b9e978cd50",
+              "quote": "non-radioactive thallium",
+              "checked_at": "2026-10-29"
+            }
+          ],
+          "source_corrections": [
+            {
+              "reason": "Azul de Prusia insoluble está indicado en contaminación por talio radiactivo o no radiactivo; no extrapolar penicilamina como elección universal."
+            }
+          ]
+        },
+        {
+          "id": "31.08-02",
+          "name": "Intoxicación por plomo",
+          "source_pages": [
+            1038
+          ],
+          "pattern": "Un niño con contacto frecuente con pintura antigua presenta dolor abdominal, irritabilidad y anemia. Se requiere investigar exposición ambiental y medir un metal en sangre venosa.",
+          "key_discriminator": "pintura antigua",
+          "mechanism": "El plomo se acumula y afecta sistema nervioso, síntesis de hemo y riñón; los niños son vulnerables a daño del neurodesarrollo incluso sin síntomas evidentes.",
+          "findings": [
+            {
+              "mechanism": "Toxicidad multisistémica por plomo",
+              "finding": "Anemia y alteraciones neurológicas"
+            }
+          ],
+          "initial_action": "Medir plomo en sangre venosa, identificar y retirar fuente y coordinar seguimiento ambiental y clínico.",
+          "action_reason": "La exposición continua mantiene daño.",
+          "modifiers": [
+            {
+              "factor": "Encefalopatía o concentración alta",
+              "action": "Consultar quelación urgente especializada",
+              "reason": "Puede ser intoxicación grave"
+            }
+          ],
+          "limits": "No existe un nivel seguro de exposición infantil.",
+          "evidence": [
+            {
+              "page": 1038,
+              "quote": "anemia microcítica"
+            },
+            {
+              "page": 1031,
+              "quote": "sangre venosa."
+            }
+          ],
+          "source_gaps": [],
+          "external_sources": [
+            {
+              "label": "CDC 2025: acciones por plomo sanguíneo",
+              "url": "https://www.cdc.gov/lead-prevention/hcp/clinical-guidance/index.html",
+              "quote": "consulting with a medical toxicologist",
+              "checked_at": "2026-10-29"
+            }
+          ],
+          "source_corrections": [
+            {
+              "reason": "El valor de referencia pediátrico es 3.5 µg/dl, no un límite seguro. Confirmar en sangre venosa y valorar quelación con especialista en concentraciones altas o síntomas graves."
+            },
+            {
+              "reason": "La página 1038 del inventario aporta clínica. La página 1031, comprobada en el libro, contiene diagnóstico por sangre venosa y complementa esa referencia."
+            }
+          ],
+          "verified_source_pages": [
+            1031
+          ]
+        }
+      ],
+      "common_problem": "Paciente con exposición ocupacional o ambiental y síntomas multisistémicos.",
+      "mother": {
+        "cue": "Acumulación de metal que daña sistema nervioso, sangre, riñón u otros órganos.",
+        "answer": "Toxicidad por metales.",
+        "explanation": "Retirar fuente y seleccionar estudio y tratamiento específicos evita exposición continua."
+      }
+    },
+    {
+      "id": "31.09",
+      "title": "Golpe de calor y alimento",
+      "topics": [
+        {
+          "id": "31.09-01",
+          "name": "Golpe de calor",
+          "source_pages": [
+            1019,
+            1020
+          ],
+          "pattern": "Un corredor se desploma durante ejercicio en ambiente caluroso. Está confuso y tiene temperatura central elevada. Se necesita actuar mientras se evalúan perfusión, electrolitos y posibles diagnósticos alternativos.",
+          "key_discriminator": "Está confuso",
+          "mechanism": "La carga térmica supera disipación y produce hipertermia con disfunción cerebral y daño multiorgánico; el tiempo hasta enfriamiento condiciona lesión y no debe depender de un umbral aislado.",
+          "findings": [
+            {
+              "mechanism": "Falla de termorregulación",
+              "finding": "Hipertermia y alteración mental"
+            }
+          ],
+          "initial_action": "Iniciar enfriamiento inmediato y soporte ABCDE; medir temperatura central y trasladar a unidad adecuada sin retrasar enfriamiento.",
+          "action_reason": "Reduce tiempo de exposición térmica.",
+          "modifiers": [
+            {
+              "factor": "Deterioro neurológico u orgánico",
+              "action": "Requerir atención crítica",
+              "reason": "Indica enfermedad grave"
+            }
+          ],
+          "limits": "No es fiebre infecciosa y no se resuelve con antipiréticos.",
+          "evidence": [
+            {
+              "page": 1020,
+              "quote": "enfriamiento"
+            },
+            {
+              "page": 1020,
+              "quote": "no debe retrasarse"
+            }
+          ],
+          "source_gaps": []
+        },
+        {
+          "id": "31.09-02",
+          "name": "Intoxicación alimentaria",
+          "source_pages": [
+            1022
+          ],
+          "pattern": "Varias personas presentan vómito y diarrea después de una comida compartida. Una tiene signos de deshidratación. Se revisan alimentos, tiempo de inicio, sangre en heces y fiebre.",
+          "key_discriminator": "comida compartida",
+          "mechanism": "La ingestión de microorganismos o toxinas causa inflamación o secreción intestinal y pérdidas de agua y electrolitos; incubación y datos invasivos orientan agente y necesidad de estudio.",
+          "findings": [
+            {
+              "mechanism": "Pérdidas gastrointestinales",
+              "finding": "Deshidratación"
+            }
+          ],
+          "initial_action": "Reponer líquidos y electrolitos y evaluar gravedad; seleccionar estudios y tratamiento según datos clínicos y epidemiológicos.",
+          "action_reason": "La hidratación es la prioridad inicial.",
+          "modifiers": [
+            {
+              "factor": "Diarrea sanguinolenta o paciente vulnerable",
+              "action": "Evaluar agente y complicaciones antes de antibiótico",
+              "reason": "No todos los patógenos se benefician"
+            }
+          ],
+          "limits": "No aplicar un tiempo de incubación universal a todas las causas.",
+          "evidence": [
+            {
+              "page": 1022,
+              "quote": "reposición de líquidos y electrólitos."
+            },
+            {
+              "page": 1022,
+              "quote": "heces sanguinolentas"
+            }
+          ],
+          "source_gaps": []
+        }
+      ],
+      "common_problem": "Paciente con enfermedad aguda tras calor o alimentos.",
+      "mother": {
+        "cue": "Exposición ambiental que causa disfunción térmica o enfermedad digestiva.",
+        "answer": "Enfermedad por exposición ambiental.",
+        "explanation": "La gravedad y perfusión determinan soporte inicial."
+      }
+    },
+    {
+      "id": "31.10",
+      "title": "Envenenamiento aracnídeo",
+      "topics": [
+        {
+          "id": "31.10-01",
+          "name": "Lactrodectus",
+          "source_pages": [
+            1040
+          ],
+          "pattern": "Una persona tras una mordedura de araña desarrolla dolor local intenso, sudoración y espasmos abdominales. No hay necrosis progresiva de piel. Se sospecha un efecto predominantemente neuromuscular.",
+          "key_discriminator": "espasmos abdominales",
+          "mechanism": "La alfa-latrotoxina induce liberación presináptica de neurotransmisores, produce dolor y activación neuromuscular y autonómica que puede extenderse más allá del sitio de mordedura.",
+          "findings": [
+            {
+              "mechanism": "Liberación neuronal de mediadores",
+              "finding": "Espasmos y sudoración"
+            }
+          ],
+          "initial_action": "Evaluar gravedad y funciones vitales, dar analgesia y consultar indicación de faboterápico disponible.",
+          "action_reason": "El tratamiento depende de intensidad y manifestaciones sistémicas.",
+          "modifiers": [
+            {
+              "factor": "Compromiso cardiovascular o respiratorio",
+              "action": "Hospitalizar",
+              "reason": "Sugiere envenenamiento grave"
+            }
+          ],
+          "limits": "No diagnosticar por una lesión inespecífica sin contexto clínico.",
+          "evidence": [
+            {
+              "page": 1040,
+              "quote": "fasciculaciones,"
+            },
+            {
+              "page": 1040,
+              "quote": "profilaxis antitetánica"
+            }
+          ],
+          "source_gaps": []
+        },
+        {
+          "id": "31.10-02",
+          "name": "Loxosceles",
+          "source_pages": [
+            1041
+          ],
+          "pattern": "Una persona nota una lesión poco dolorosa tras posible mordedura. Luego aparece placa violácea con halo rojo y necrosis. Se revisa orina y hemoglobina para buscar compromiso sistémico.",
+          "key_discriminator": "placa violácea con halo rojo",
+          "mechanism": "Los componentes del veneno, incluida esfingomielinasa D, lesionan tejidos y pueden causar hemólisis y daño renal; la expresión cutánea puede evolucionar durante días y simular otras causas.",
+          "findings": [
+            {
+              "mechanism": "Daño dermonecrótico y hemolítico",
+              "finding": "Placa livedoide y posible hemólisis"
+            }
+          ],
+          "initial_action": "Dar cuidados locales, analgesia y vigilancia de hemólisis y función renal; consultar toxicología sobre tratamiento específico.",
+          "action_reason": "La lesión cutánea no predice por sí sola daño sistémico.",
+          "modifiers": [
+            {
+              "factor": "Hematuria o anemia",
+              "action": "Evaluar hemólisis y hospitalizar según gravedad",
+              "reason": "Puede existir loxoscelismo sistémico"
+            }
+          ],
+          "limits": "No indicar dapsona rutinaria con evidencia limitada y riesgo de hemólisis.",
+          "evidence": [
+            {
+              "page": 1041,
+              "quote": "placa livedoide"
+            },
+            {
+              "page": 1041,
+              "quote": "anemia hemolítica"
+            }
+          ],
+          "source_gaps": [],
+          "external_sources": [
+            {
+              "label": "Vanderbilt Poison Center: loxoscelismo",
+              "url": "https://www.vumc.org/poison-control/sites/default/files/Brown%20Recluse%20Final-%20Goes%20with%208-3-220%20QOW.pdf",
+              "quote": "Rapid fall in hematocrit",
+              "checked_at": "2026-10-29"
+            },
+            {
+              "label": "Estudio prospectivo: tratamiento de mordeduras sospechadas",
+              "url": "https://www.jabfm.org/content/jabfp/17/5/347.full.pdf",
+              "quote": "Systemic corticosteroids and dapsone were associated with slower healing.",
+              "checked_at": "2026-10-29"
+            }
+          ],
+          "source_corrections": [
+            {
+              "reason": "El protocolo prioriza vigilancia de hemólisis y escalamiento de cuidados. El diagnóstico es clínico contextual, no depende de ELISA rutinario."
+            },
+            {
+              "reason": "La evidencia humana observacional no demuestra beneficio de dapsona y la asocia con cicatrización más lenta. No se indica de rutina; el tratamiento específico debe decidirse con toxicología."
+            }
+          ]
+        }
+      ],
+      "common_problem": "Paciente con mordedura de araña y síntomas locales o sistémicos.",
+      "mother": {
+        "cue": "Veneno neurotóxico o dermonecrótico con patrones clínicos diferentes.",
+        "answer": "Envenenamiento por araña.",
+        "explanation": "Los espasmos distinguen patrón neurotóxico y la placa livedoide orienta lesión cutánea."
+      }
+    },
+    {
+      "id": "31.11",
+      "title": "Picadura/mordedura",
+      "topics": [
+        {
+          "id": "31.11-01",
+          "name": "Mordedura de serpiente",
+          "source_pages": [
+            1046,
+            1047
+          ],
+          "pattern": "Un trabajador rural tiene mordedura en pierna con edema progresivo y sangrado. Se sospecha serpiente venenosa. No se conoce especie y se requiere traslado y evaluación de coagulación.",
+          "key_discriminator": "edema progresivo y sangrado",
+          "mechanism": "El veneno puede lesionar tejido, alterar coagulación o bloquear transmisión neuromuscular; el tipo y progresión del envenenamiento determinan antiveneno, vigilancia respiratoria y estudio de órganos.",
+          "findings": [
+            {
+              "mechanism": "Toxicidad vascular y tisular",
+              "finding": "Edema y sangrado"
+            }
+          ],
+          "initial_action": "Inmovilizar, retirar objetos constrictivos y trasladar urgentemente; evaluar funciones vitales y antiveneno según síndrome y producto.",
+          "action_reason": "La progresión requiere tratamiento específico.",
+          "modifiers": [
+            {
+              "factor": "Ptosis o debilidad respiratoria",
+              "action": "Vigilar y apoyar ventilación",
+              "reason": "Sugiere componente neurotóxico"
+            }
+          ],
+          "limits": "No aplicar hielo, torniquetes, incisiones ni succión. La técnica de inmovilización depende del protocolo y tipo de veneno.",
+          "evidence": [
+            {
+              "page": 1047,
+              "quote": "Inmovilización y quitar reloj, anillos"
+            },
+            {
+              "page": 1047,
+              "quote": "No usar torniquetes."
+            }
+          ],
+          "source_gaps": [],
+          "external_sources": [
+            {
+              "label": "CDC/NIOSH: primeros auxilios por serpiente",
+              "url": "https://www.cdc.gov/niosh/outdoor-workers/about/venomous-snakes.html",
+              "quote": "Do not apply ice",
+              "checked_at": "2026-10-29"
+            }
+          ],
+          "source_corrections": [
+            {
+              "reason": "No aplicar hielo ni torniquetes. Las técnicas de presión dependen del tipo de serpiente y protocolo; no son una banda constrictiva universal."
+            }
+          ]
+        },
+        {
+          "id": "31.11-02",
+          "name": "Picadura de alacrán",
+          "source_pages": [
+            1048
+          ],
+          "pattern": "Un niño presenta dolor, parestesias, salivación intensa y movimientos anormales de lengua después de una picadura. Se sospecha un arácnido venenoso. Se revisa respiración y riesgo por edad.",
+          "key_discriminator": "salivación intensa",
+          "mechanism": "Las toxinas del alacrán alteran canales iónicos y excitabilidad neural, provocan síntomas autonómicos y neuromusculares; los niños pequeños tienen mayor riesgo de evolución grave.",
+          "findings": [
+            {
+              "mechanism": "Alteración de canales iónicos",
+              "finding": "Sialorrea y fasciculaciones"
+            }
+          ],
+          "initial_action": "Valorar funciones vitales y administrar faboterápico conforme a gravedad y protocolo local; trasladar si es necesario.",
+          "action_reason": "El tratamiento neutraliza veneno y previene progresión.",
+          "modifiers": [
+            {
+              "factor": "Edad extrema o comorbilidad",
+              "action": "Aumentar prioridad y vigilancia",
+              "reason": "Se asocia con mayor riesgo"
+            }
+          ],
+          "limits": "Usar esquema del producto y guía vigente; no inventar número de frascos.",
+          "evidence": [
+            {
+              "page": 1048,
+              "quote": "Fasciculaciones linguales."
+            },
+            {
+              "page": 1048,
+              "quote": "faboterápico"
+            }
+          ],
+          "source_gaps": []
+        },
+        {
+          "id": "31.11-03",
+          "name": "Picadura de himenópteros",
+          "source_pages": [
+            1049
+          ],
+          "pattern": "Una persona recibe picadura de abeja y presenta dolor y edema local. Se encuentra el aguijón. Permanece estable, sin disnea, hipotensión ni síntomas en otros órganos.",
+          "key_discriminator": "sin disnea, hipotensión",
+          "mechanism": "El veneno de himenópteros causa lesión e inflamación local; la sensibilización puede desencadenar anafilaxia y múltiples picaduras pueden producir toxicidad sistémica independiente de alergia.",
+          "findings": [
+            {
+              "mechanism": "Inflamación local por veneno",
+              "finding": "Dolor y edema"
+            }
+          ],
+          "initial_action": "Retirar aguijón si está presente, limpiar y aplicar frío local; vigilar síntomas sistémicos.",
+          "action_reason": "Reduce exposición y molestias locales.",
+          "modifiers": [
+            {
+              "factor": "Reacción sistémica o múltiples picaduras",
+              "action": "Evaluar urgencia, anafilaxia y daño orgánico",
+              "reason": "Puede requerir tratamiento más allá de cuidados locales"
+            }
+          ],
+          "limits": "No usar número fijo de picaduras para excluir toxicidad.",
+          "evidence": [
+            {
+              "page": 1049,
+              "quote": "retiro del aguijón."
+            },
+            {
+              "page": 1049,
+              "quote": "domicilio. Si -----+ R línea: epinefrina; b) segunda línea: antihistamínicos"
+            }
+          ],
+          "source_gaps": []
+        },
+        {
+          "id": "31.11-04",
+          "name": "Anafilaxia",
+          "source_pages": [
+            1018
+          ],
+          "pattern": "Una persona presenta urticaria, dificultad respiratoria y mareo minutos después de una picadura. Tiene sibilancias e hipotensión. Se requiere tratamiento inmediato de una reacción sistémica potencialmente mortal.",
+          "key_discriminator": "sibilancias e hipotensión",
+          "mechanism": "La liberación rápida de mediadores por mastocitos y basófilos causa vasodilatación, fuga vascular y broncoconstricción, compromete perfusión y vía aérea y puede ocurrir sin lesiones cutáneas.",
+          "findings": [
+            {
+              "mechanism": "Liberación sistémica de mediadores",
+              "finding": "Broncoespasmo e hipotensión"
+            }
+          ],
+          "initial_action": "Administrar adrenalina intramuscular de inmediato, activar ayuda y dar soporte de vía aérea, oxígeno y circulación según necesidad.",
+          "action_reason": "Es el tratamiento inicial que aborda compromiso respiratorio y circulatorio.",
+          "modifiers": [
+            {
+              "factor": "Respuesta insuficiente",
+              "action": "Repetir adrenalina y escalar soporte según protocolo",
+              "reason": "La reacción puede persistir"
+            }
+          ],
+          "limits": "Antihistamínicos y corticoides no sustituyen adrenalina. Los corticoides no son profilaxis rutinaria de reacción bifásica.",
+          "evidence": [
+            {
+              "page": 1018,
+              "quote": "potentes mediadores vasoactivos"
+            },
+            {
+              "page": 1018,
+              "quote": "Primer paso: ABC"
+            }
+          ],
+          "source_gaps": [],
+          "external_sources": [
+            {
+              "label": "WAO 2020: anafilaxia",
+              "url": "https://www.worldallergyorganizationjournal.org/article/S1939-4551%2820%2930375-6/fulltext",
+              "quote": "Intramuscular epinephrine (adrenaline) continues to be the first-line treatment",
+              "checked_at": "2026-10-29"
+            },
+            {
+              "label": "Resuscitation Council UK 2021: anafilaxia",
+              "url": "https://www.resus.org.uk/sites/default/files/2021-05/Emergency%20Treatment%20of%20Anaphylaxis%20May%202021_0.pdf",
+              "quote": "The routine administration of corticosteroids to treat anaphylaxis is not recommended",
+              "checked_at": "2026-10-29"
+            }
+          ],
+          "source_corrections": [
+            {
+              "reason": "La primera vía es intramuscular, no subcutánea; no se recomienda torniquete."
+            },
+            {
+              "reason": "Los corticoides no previenen de forma demostrada la reacción bifásica y no son rutinarios. No retrasar adrenalina por tratamientos secundarios."
+            }
+          ]
+        }
+      ],
+      "common_problem": "Paciente con mordedura, picadura o reacción sistémica.",
+      "mother": {
+        "cue": "Veneno o respuesta alérgica que puede comprometer tejidos, respiración y circulación.",
+        "answer": "Urgencias por venenos y anafilaxia.",
+        "explanation": "La evaluación prioriza funciones vitales y tratamiento específico."
+      }
+    }
+  ]
+}
