@@ -98,6 +98,10 @@ def validate(catalog: dict, directory: Path, pages: Path | None, selected: list[
                 declared_pages = set(topic.get('source_pages', []) + verified_pages)
                 for field in ('pattern', 'key_discriminator', 'mechanism', 'initial_action', 'action_reason', 'limits'):
                     text_field(topic, field, tid)
+                for field, minimum, maximum in [('pattern', 20, 45), ('mechanism', 15, 35), ('initial_action', 1, 45)]:
+                    words = len(topic.get(field, '').split())
+                    if not minimum <= words <= maximum:
+                        error('word_count', tid, f'{field}: {words}, expected {minimum}–{maximum}')
                 if normalized(topic.get('key_discriminator', '')) not in normalized(topic.get('pattern', '')):
                     error('discriminator_not_in_pattern', tid, topic.get('key_discriminator', ''))
                 if not isinstance(topic.get('source_gaps'), list):
