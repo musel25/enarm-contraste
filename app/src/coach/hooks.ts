@@ -7,13 +7,14 @@ export function useCoachStore() {
   const [state, setState] = useState<CoachState>(emptyState);
   const ref = useRef(state);
   const lock = useRef(false);
+  const preservePending = useRef(false);
   const [loading, setLoading] = useState(true);
   const [saving, setSaving] = useState(false);
   const [error, setError] = useState("");
   const [pending, setPending] = useState<CoachState | null>(null);
   const [latest, setLatest] = useState<CoachState | null>(null);
   const reload = useCallback(async () => {
-    try { const saved = await readCoach(); ref.current = saved; setState(saved); setError(""); setPending(null); setLatest(null); }
+    try { const saved = await readCoach(); ref.current = saved; setState(saved); setError(""); setPending(null); setLatest(null); preservePending.current = false; }
     catch (failure) { setError((failure as Error).message); }
     finally { setLoading(false); }
   }, []);
@@ -28,11 +29,12 @@ export function useCoachStore() {
       ref.current = saved; setState(saved); setPending(null); setLatest(null); setError(""); return saved;
     } catch (failure) {
       setPending(next); setError((failure as Error).message);
+      preservePending.current = preserve;
       if (failure instanceof SaveConflict) setLatest(failure.latest);
       return null;
     } finally { lock.current = false; setSaving(false); }
   }, []);
-  return { state, loading, saving, error, pending, latest, commit, reload, retry: () => pending ? commit(() => pending) : reload() };
+  return { state, loading, saving, error, pending, latest, commit, reload, retry: () => pending ? commit(() => pending, preservePending.current) : reload() };
 }
 
 export function useStudyDay(timezone: string) {

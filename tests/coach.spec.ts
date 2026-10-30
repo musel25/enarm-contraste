@@ -160,6 +160,30 @@ test("checks backups before replacing progress and preserves the previous state"
   await expect(page.getByRole("button", { name: "Exportar la copia anterior a la última importación" })).toBeVisible();
 });
 
+test("retrying a failed import still preserves the previous progress", async ({ page }) => {
+  await startTimePlan(page);
+  await page.getByRole("button", { name: "Mostrar respuesta", exact: true }).click();
+  await page.getByRole("button", { name: /^Bien/ }).click();
+  await expect(page.getByRole("heading", { name: "¿Qué patrón organiza este problema?", exact: true })).toBeVisible();
+  const backup = await savedState(page);
+  await page.getByRole("button", { name: "Mostrar respuesta", exact: true }).click();
+  await page.getByRole("button", { name: /^Bien/ }).click();
+  await expect(page.getByRole("heading", { name: "Tu meta de hoy está completa.", exact: true })).toBeVisible();
+  await page.getByRole("button", { name: "Copia de mi progreso" }).click();
+  await page.getByLabel("Importar una copia").setInputFiles({ name: "progress.json", mimeType: "application/json", buffer: Buffer.from(JSON.stringify({ format: "enarm-coach", state: backup })) });
+  await page.evaluate(() => {
+    const put = IDBObjectStore.prototype.put;
+    IDBObjectStore.prototype.put = function (value, key) { if (key === "current") { IDBObjectStore.prototype.put = put; throw new DOMException("Test disk failure", "QuotaExceededError"); } return put.call(this, value, key); };
+  });
+  await page.getByRole("button", { name: "Reemplazar con esta copia" }).click();
+  await expect(page.getByRole("alert")).toContainText("no se pudo guardar");
+  await page.getByRole("button", { name: "Cerrar", exact: true }).click();
+  await page.getByRole("button", { name: "Reintentar guardado" }).click();
+  await expect(page.getByRole("progressbar", { name: "Meta diaria" })).toHaveAttribute("aria-valuenow", "1");
+  await page.getByRole("button", { name: "Copia de mi progreso" }).click();
+  await expect(page.getByRole("button", { name: "Exportar la copia anterior a la última importación" })).toBeVisible();
+});
+
 test("active study time excludes a manual pause", async ({ page }) => {
   await page.clock.install({ time: new Date("2026-11-10T12:00:00Z") });
   await startTimePlan(page);
@@ -188,6 +212,7 @@ test("prepares a new assignment at midnight and does not reuse the old answer", 
   await expect(page.getByRole("region", { name: "Respuesta de la tarjeta" })).toHaveCount(0);
   expect(Object.keys((await savedState(page)).days)).toEqual(["2026-11-10", "2026-11-11"]);
 });
+
 
 test("plan edits retain saved practice and incomplete inputs stay safe", async ({ page }) => {
   const errors: string[] = [];
