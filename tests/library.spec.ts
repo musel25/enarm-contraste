@@ -113,3 +113,14 @@ test("opens a section at the top after choosing it from a long page", async ({ p
   await expect(page.getByRole("region", { name: "Frente de la tarjeta" })).toBeVisible();
   await expect.poll(() => page.evaluate(() => scrollY)).toBe(0);
 });
+
+test("finds a clinical group by symptom and opens its differential directly", async ({ page }) => {
+  await mockLibrary(page);
+  await page.route("**/study/manifest.json", route => route.fulfill({ json: { ...manifest, groups: [{ id: "01.01", title: "Fiebre sin foco", section_id: "01", problem: "Una persona consulta por fiebre." }] } }));
+  await page.goto("./#biblioteca");
+  await page.getByRole("searchbox", { name: "Buscar síntoma o sección" }).fill("fiebre");
+  await page.getByRole("button", { name: /Fiebre sin foco/ }).click();
+  await expect(page.getByRole("region", { name: "Frente de la tarjeta" }).locator("li")).toHaveCount(2);
+  await expect(page.getByRole("button", { name: "Eje Clínico", exact: true })).toHaveAttribute("aria-pressed", "true");
+  await expect(page.getByRole("region", { name: "Respuesta de la tarjeta" })).toHaveCount(0);
+});

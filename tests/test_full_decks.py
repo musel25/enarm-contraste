@@ -57,6 +57,7 @@ class FullDeckTests(unittest.TestCase):
         self.assertEqual(manifest['counts']['eje'], 1)
         self.assertEqual(manifest['counts']['madre'], 7)
         self.assertEqual(manifest['counts']['cards'], 8)
+        self.assertEqual(manifest['groups'], [{'id': '01.01', 'title': 'Fiebre', 'section_id': '01', 'problem': 'Dos personas consultan por fiebre.'}])
         data = json.loads((self.root / 'build/sections/01.json').read_text())
         eje = next(c for c in data['cards'] if c['family'] == 'eje')
         self.assertEqual([row['title'] for row in eje['back']], ['Diagnóstico alfa', 'Diagnóstico beta'])

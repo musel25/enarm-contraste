@@ -25,6 +25,7 @@ export interface StudyManifest {
   professional_review: string;
   counts: { sections: number; blocks: number; cards: number; topic_occurrences: number; eje: number; madre: number };
   sections: { id: string; title: string; blocks: number; cards: number; url: string }[];
+  groups?: { id: string; title: string; section_id: string; problem: string }[];
   downloads: { family: string; label: string; url: string; cards: number }[];
 }
 
@@ -48,6 +49,7 @@ export function isManifest(value: unknown): value is StudyManifest {
   return record(value) && value.schema_version === 1 && typeof value.content_sha256 === "string" &&
     record(value.counts) && ["sections", "blocks", "cards", "eje", "madre", "topic_occurrences"].every(key => typeof (value.counts as Record<string, unknown>)[key] === "number") &&
     Array.isArray(value.sections) && value.sections.length > 0 && value.sections.every(s => record(s) && typeof s.id === "string" && typeof s.title === "string" && s.url === `sections/${s.id}.json`) &&
+    (value.groups === undefined || (Array.isArray(value.groups) && value.groups.every(g => record(g) && ["id", "title", "section_id", "problem"].every(key => typeof g[key] === "string")))) &&
     Array.isArray(value.downloads) && value.downloads.every(d => record(d) && typeof d.label === "string" && ["enarm-eje.apkg", "enarm-madre.apkg"].includes(String(d.url)));
 }
 export function isSection(value: unknown): value is StudySection {

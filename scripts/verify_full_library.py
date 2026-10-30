@@ -52,6 +52,7 @@ def audit(catalog: dict, sources: Path, library: Path) -> dict:
     require(manifest['review_status'] == 'cross-reviewed', 'Draft library cannot be released')
     source_hashes = {}
     all_cards = {}
+    groups = []
     topic_occurrences = 0
     blocks = 0
     for expected in catalog['sections']:
@@ -62,6 +63,7 @@ def audit(catalog: dict, sources: Path, library: Path) -> dict:
         require(len(cards) == len(exported['cards']), 'Duplicate card identities')
         expected_ids = set()
         for block in section['blocks']:
+            groups.append({'id': block['id'], 'title': block['title'], 'section_id': section['id'], 'problem': block['common_problem']})
             blocks += 1
             topic_occurrences += len(block['topics'])
             eje_id = f'eje/{block["id"]}'
@@ -93,6 +95,7 @@ def audit(catalog: dict, sources: Path, library: Path) -> dict:
         require(set(cards) == expected_ids, f'Unexpected card correspondence: {section["id"]}')
         all_cards.update(cards)
     require(manifest['content_sha256'] == digest(source_hashes), 'Exported content hash mismatch')
+    require(manifest.get('groups') == groups, 'Clinical group correspondence mismatch')
     counts = Counter(c['family'] for c in all_cards.values())
     require(counts['eje'] == blocks and counts['madre'] == blocks + 3 * topic_occurrences, 'Family count mismatch')
     require(manifest['counts']['cards'] == len(all_cards), 'Manifest card count mismatch')

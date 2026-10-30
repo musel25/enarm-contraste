@@ -11,7 +11,7 @@ Biblioteca de estudio en español. Agrupa los temas por problemas clínicos para
 
 El inventario contiene 34 secciones, 355 grupos y 730 apariciones de temas. Conserva 719 combinaciones únicas de tema y referencia. Los formatos producen 355 tarjetas Eje Clínico y 2,545 Patrones Madre: 2,900 tarjetas en total.
 
-La biblioteca carga una sección a la vez. Permite ocultar las respuestas y las pistas, elegir un bloque y nivel, guardar el progreso y comentar una tarjeta. Los dos mazos completos se descargan como archivos `.apkg` para importar en Anki.
+La biblioteca carga una sección a la vez. Permite buscar por síntoma o sección, abrir un grupo diferencial, ocultar las respuestas y las pistas, elegir un nivel, guardar el progreso y comentar una tarjeta. Cada diagnóstico enlaza con su manejo y variantes. Los dos mazos completos se descargan como archivos `.apkg` para importar en Anki.
 
 **Explorar casos** conserva la muestra de amenorrea secundaria e ictericia obstructiva. Incluye el mapa de contraste, la ampliación de enfermedades y los cambios del caso.
 

@@ -11,6 +11,7 @@ const levels = [
   ["3", "3 · Explicar los hallazgos"], ["4", "4 · Decidir el manejo"],
 ];
 const number = (n: number) => n.toLocaleString("es-MX");
+const searchText = (text: string) => text.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase().trim();
 
 function LoadError({ onRetry }: { onRetry: () => void }) {
   return <div className="library-load-error" role="alert"><h2>No se pudo cargar el contenido.</h2><p>Comprueba tu conexión y vuelve a intentarlo.</p><button className="primary-button" onClick={onRetry}>Reintentar</button></div>;
@@ -62,8 +63,9 @@ export default function Library({ onReview }: { onReview: (context: ReviewContex
   const cards = useMemo(() => section?.cards.filter(c => c.family === family && (family === "eje" || c.level === Number(level)) && (block === "all" || c.block_id === block)) || [], [section, family, level, block]);
   const card = cards[index];
   const recognized = Object.values(progress).filter(v => v === "known").length;
-  const selectSection = (id: string | null) => {
-    setSectionId(id); setSection(null); setBlock("all"); setIndex(0);
+  const selectSection = (id: string | null, blockId = "all") => {
+    setSectionId(id); setSection(null); setBlock(blockId); setIndex(0);
+    if (blockId !== "all") setFamily("eje");
     requestAnimationFrame(() => {
       document.getElementById("study")?.focus({ preventScroll: true });
       window.scrollTo({ top: 0 });
@@ -85,6 +87,9 @@ export default function Library({ onReview }: { onReview: (context: ReviewContex
   };
   if (manifestError) return <main className="library-main" id="study"><LoadError onRetry={() => setAttempt(a => a + 1)} /></main>;
   if (!manifest) return <main className="library-main" id="study"><p role="status" className="library-loading">Cargando el temario…</p></main>;
+  const term = searchText(query);
+  const matchingSections = manifest.sections.filter(s => searchText(s.title).includes(term));
+  const matchingGroups = term ? (manifest.groups || []).filter(g => searchText(`${g.title} ${g.problem}`).includes(term)) : [];
   return <main className="library-main" id="study" tabIndex={-1}>
     {sectionId ? <>
       <div className="library-breadcrumb"><button onClick={() => selectSection(null)}>‹ Todas las secciones</button><span>{manifest.sections.find(s => s.id === sectionId)?.title}</span></div>
@@ -108,9 +113,10 @@ export default function Library({ onReview }: { onReview: (context: ReviewContex
       </div>
     </> : <>
       <div className="library-intro"><div><span className="library-bookmark"><Icon name="book" size={18} />Tu biblioteca ENARM</span><h1>Estudia por contraste</h1><p>Un síntoma. Varios diagnósticos posibles.<br />Aprende a encontrar la pista que cambia el manejo.</p></div><div className="library-method-preview"><div><span className="preview-cases">A <i>o</i> B</span><strong>Compara los casos</strong><p>Encuentra el dato que distingue.</p></div><div><span className="preview-connection" aria-hidden="true">↳</span><strong>Entiende la decisión</strong><p>Conecta mecanismo, hallazgos y manejo.</p></div></div></div>
-      <div className="library-catalog-heading"><div><h2>Elige una sección</h2><p>{number(manifest.counts.sections)} secciones · {number(manifest.counts.blocks)} grupos clínicos · {number(manifest.counts.cards)} tarjetas</p></div><label className="library-search"><span>Buscar sección</span><input type="search" value={query} onChange={e => setQuery(e.target.value)} placeholder="Ginecología, pediatría…" /></label></div>
-      <div className="library-section-index">{manifest.sections.filter(s => s.title.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase().includes(query.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase().trim())).map(s => <button key={s.id} onClick={() => selectSection(s.id)}><span className="section-spine">{s.id}</span><span><strong>{s.title}</strong><small>{s.blocks} grupos · {number(s.cards)} tarjetas</small></span><Icon name="arrow" size={17} /></button>)}</div>
-      {query && !manifest.sections.some(s => s.title.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase().includes(query.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase().trim())) && <p className="library-empty">No hay secciones con ese nombre. Prueba otro término.</p>}
+      <div className="library-catalog-heading"><div><h2>{term ? "Encuentra tu problema clínico" : "Elige dónde empezar"}</h2><p>{number(manifest.counts.sections)} secciones · {number(manifest.counts.blocks)} grupos clínicos · {number(manifest.counts.cards)} tarjetas</p></div><label className="library-search"><span>Buscar síntoma o sección</span><input type="search" value={query} onChange={e => setQuery(e.target.value)} placeholder="Amenorrea, fiebre, ginecología…" /></label></div>
+      {matchingSections.length > 0 && <div className="library-section-index">{matchingSections.map(s => <button key={s.id} onClick={() => selectSection(s.id)}><span className="section-spine">{s.id}</span><span><strong>{s.title}</strong><small>{s.blocks} grupos · {number(s.cards)} tarjetas</small></span><Icon name="arrow" size={17} /></button>)}</div>}
+      {matchingGroups.length > 0 && <section className="library-group-results" aria-label="Grupos clínicos encontrados"><h3>Grupos clínicos ({matchingGroups.length})</h3><div>{matchingGroups.map(g => <button key={g.id} onClick={() => selectSection(g.section_id, g.id)}><span><strong>{g.title}</strong><small>{manifest.sections.find(s => s.id === g.section_id)?.title} · Bloque {g.id}</small></span><Icon name="arrow" size={18} /></button>)}</div></section>}
+      {term && matchingSections.length === 0 && matchingGroups.length === 0 && <p className="library-empty">No hay resultados para ese síntoma o sección. Prueba otro término.</p>}
       <section className="library-downloads" aria-labelledby="downloads-title"><div><Icon name="download" size={24} /><h2 id="downloads-title">Llévalo a Anki</h2><p>Los mismos casos en los dos formatos de tus mazos.</p></div><div>{manifest.downloads.map(d => <a key={d.family} href={`${root}${d.url}`} download><span><strong>{d.label}</strong><small>{number(d.cards)} tarjetas · .apkg</small></span><Icon name="download" size={20} /></a>)}</div></section>
     </>}
     <footer className="library-footer"><span>contraste.</span><p>{manifest.review_status === "cross-reviewed" ? "Contenido cotejado con las fuentes y con revisión cruzada." : "Contenido en preparación."} Material de estudio. Revisión clínica profesional pendiente.</p><a href={`${root}coverage.json`} download>Consultar cobertura</a></footer>

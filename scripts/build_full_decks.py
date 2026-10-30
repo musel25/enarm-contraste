@@ -180,6 +180,7 @@ def build(catalog: dict, sections: Path, reviews: Path, output: Path, preview: b
         raise ValueError('Missing or stale source validation for this content')
     compiled = []
     hashes = {}
+    groups = []
     for expected in catalog['sections']:
         path = sections / f'{expected["id"]}.json'
         if preview and not path.exists():
@@ -194,6 +195,7 @@ def build(catalog: dict, sections: Path, reviews: Path, output: Path, preview: b
                 raise ValueError(f'Missing independent review: {expected["id"]}')
             validate_review(section, json.loads(review_path.read_text()))
         hashes[section['id']] = content_hash(section)
+        groups.extend({'id': b['id'], 'title': b['title'], 'section_id': section['id'], 'problem': b['common_problem']} for b in section['blocks'])
         compiled.append(compile_section(section, catalog['book']['filename']))
     if not compiled:
         raise ValueError('No authored coverage')
@@ -209,6 +211,7 @@ def build(catalog: dict, sections: Path, reviews: Path, output: Path, preview: b
                 'content_sha256': content_hash(hashes), 'counts': {'sections': len(compiled), 'blocks': block_count, 'topic_occurrences': occurrence_count, 'cards': len(all_cards), **dict(counts)},
                 'curriculum_counts': catalog['counts'],
                 'sections': [{'id': s['id'], 'title': s['title'], 'blocks': len(s['blocks']), 'cards': len(s['cards']), 'url': f'sections/{s["id"]}.json'} for s in compiled],
+                'groups': groups,
                 'downloads': []}
     output.parent.mkdir(parents=True, exist_ok=True)
     with tempfile.TemporaryDirectory(prefix='enarm-build-', dir=output.parent) as temporary:
