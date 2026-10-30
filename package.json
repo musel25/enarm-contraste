@@ -4,11 +4,12 @@
   "version": "0.1.0",
   "type": "module",
   "scripts": {
-    "dev": "vite --config app/vite.config.ts",
+    "dev": "node scripts/dev.mjs",
     "prepare:study": "uv run python scripts/build_full_decks.py && uv run python scripts/verify_full_library.py",
     "prebuild": "npm run prepare:study",
-    "build": "tsc --noEmit && vite build --config app/vite.config.ts",
-    "preview": "vite preview --config app/vite.config.ts",
+    "build": "tsc --noEmit && vite build --config app/vite.config.ts && npm run build:server",
+    "build:server": "vite build --config server/vite.config.ts",
+    "preview": "node scripts/dev.mjs --preview",
     "test:unit": "tsx --test tests/unit/*.test.ts",
     "test": "npm run test:unit && playwright test"
   },
