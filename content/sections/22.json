@@ -28,7 +28,7 @@
               "finding": "Déficit focal súbito, como afasia y hemiparesia."
             }
           ],
-          "initial_action": "Activar el código cerebro, establecer la última hora sin síntomas, medir glucosa y obtener neuroimagen urgente. Si reúne criterios, iniciar reperfusión sin retrasos evitables.",
+          "initial_action": "Activar código cerebro, registrar última hora sin síntomas, medir glucosa y obtener neuroimagen urgente. Evaluar trombólisis IV con alteplasa o tenecteplasa en elegibles dentro de 4.5 horas y trombectomía según imagen vascular; existen ventanas extendidas seleccionadas.",
           "action_reason": "La ventana de beneficio depende del tiempo y la hemorragia cambia por completo la decisión.",
           "modifiers": [
             {
@@ -156,7 +156,7 @@
           "modifiers": [
             {
               "factor": "Tomografía negativa con sospecha persistente",
-              "action": "Completar la investigación según el tiempo de evolución y el protocolo, sin dar por excluido el sangrado.",
+              "action": "Si la TC se realizó después de seis horas, considerar punción lumbar si es segura, al menos doce horas tras el inicio; coordinar investigación neurovascular según el contexto.",
               "reason": "La sensibilidad de la tomografía depende del momento y de la técnica."
             }
           ],
@@ -182,6 +182,12 @@
               "label": "AHA/ASA: hemorragia subaracnoidea 2023",
               "url": "https://professional.heart.org/en/science-news/2023-guideline-for-the-management-of-patients-with-aneurysmal-subarachnoid-hemorrhage/top-things-to-know",
               "quote": "preferably within 24 hours",
+              "checked_at": "2026-10-29"
+            },
+            {
+              "label": "NICE NG228: TC negativa en sospecha de HSA",
+              "url": "https://www.nice.org.uk/guidance/ng228/chapter/Recommendations",
+              "quote": "Allow at least 12 hours after symptom onset before doing a lumbar puncture",
               "checked_at": "2026-10-29"
             }
           ],
@@ -456,13 +462,18 @@
               "finding": "Espasmos agrupados y regresión o retraso psicomotor."
             }
           ],
-          "initial_action": "Referir con urgencia a neurología pediátrica para electroencefalograma de sueño, clasificación del síndrome y tratamiento rápido de los espasmos.",
+          "initial_action": "Referir en menos de 24 horas a neurología pediátrica para EEG de sueño y tratamiento. En espasmos sin esclerosis tuberosa, prednisolona en dosis altas más vigabatrina es una opción inicial especializada, tras valorar riesgos.",
           "action_reason": "La duración del síndrome activo puede afectar el desarrollo; no basta tratarlo como cualquier crisis generalizada.",
           "modifiers": [
             {
               "factor": "Niño mayor con caídas, varias crisis y onda lenta",
               "action": "Valorar otro síndrome; en un adolescente con sacudidas matutinas, investigar el patrón mioclónico y sus desencadenantes.",
               "reason": "La edad, el tipo de evento y el electroencefalograma cambian la clasificación y el tratamiento."
+            },
+            {
+              "factor": "Espasmos por esclerosis tuberosa",
+              "action": "Iniciar vigabatrina con neurología pediátrica; añadir prednisolona si resulta ineficaz según respuesta.",
+              "reason": "La etiología cambia la primera elección."
             }
           ],
           "limits": "El valproato no es una elección universal; requiere valorar riesgos reproductivos y el síndrome concreto.",
@@ -568,11 +579,11 @@
               "finding": "Convulsiones persistentes sin recuperación de conciencia."
             }
           ],
-          "initial_action": "Iniciar soporte de vía aérea, respiración y circulación, monitorizar y medir glucosa. Administrar una benzodiacepina inmediata; si persiste, cargar un segundo antiepiléptico y activar atención especializada.",
+          "initial_action": "Dar soporte respiratorio y circulatorio, monitorizar y medir glucosa. Administrar lorazepam IV si hay acceso y reanimación, o midazolam bucal/diazepam rectal. Activar apoyo urgente; si persiste tras dos dosis de benzodiacepina, cargar levetiracetam IV u otra segunda opción protocolizada.",
           "action_reason": "La probabilidad de control disminuye con el tiempo y deben corregirse causas reversibles.",
           "modifiers": [
             {
-              "factor": "Persistencia pese al tratamiento inicial",
+              "factor": "Persistencia pese a benzodiacepinas y segunda línea",
               "action": "Escalar a cuidados intensivos, tratamiento anestésico según protocolo y monitorización electroencefalográfica.",
               "reason": "Puede persistir actividad eléctrica aun después de desaparecer las sacudidas."
             }
@@ -624,7 +635,7 @@
             753,
             754
           ],
-          "pattern": "Un adulto presenta fiebre, cefalea intensa, rigidez cervical y confusión de inicio agudo. No tiene focalidad ni papiledema y se considera seguro obtener líquido cefalorraquídeo.",
+          "pattern": "Un adulto presenta fiebre, cefalea intensa, rigidez cervical y confusión de inicio agudo. Permanece hemodinámicamente estable, sin déficit focal ni papiledema, y no tiene antecedente de inmunosupresión.",
           "key_discriminator": "rigidez cervical y confusión",
           "mechanism": "La infección de las meninges desencadena inflamación y altera la barrera hematoencefálica, causando pleocitosis, irritación meníngea y riesgo de lesión neurológica y sepsis.",
           "findings": [
@@ -633,13 +644,18 @@
               "finding": "Fiebre, cefalea, rigidez cervical y alteración del estado mental."
             }
           ],
-          "initial_action": "Obtener hemocultivos y líquido cefalorraquídeo si es seguro, sin retrasar antibiótico empírico intravenoso. Usar ceftriaxona o cefotaxima y ajustar cobertura a edad, inmunidad y resistencia local.",
+          "initial_action": "Obtener hemocultivos y LCR si es seguro, sin retrasar ceftriaxona o cefotaxima IV. En sospecha bacteriana no epidémica, iniciar dexametasona con la primera dosis; ajustar cobertura a riesgo de Listeria y resistencia neumocócica.",
           "action_reason": "La infección bacteriana exige tratamiento inmediato; el cultivo permite ajustar el esquema.",
           "modifiers": [
             {
               "factor": "Papiledema, déficit focal o alteración importante de conciencia",
               "action": "Diferir la punción, realizar neuroimagen y comenzar tratamiento sin esperar el estudio del líquido.",
               "reason": "La punción puede ser peligrosa y la espera de imagen no debe retrasar antimicrobianos."
+            },
+            {
+              "factor": "Riesgo de Listeria o elevada resistencia neumocócica local",
+              "action": "Añadir ampicilina para Listeria; considerar vancomicina para neumococo resistente.",
+              "reason": "Las cefalosporinas no cubren Listeria y pueden fallar frente a resistencia."
             }
           ],
           "limits": "Añadir cobertura para Listeria o neumococo resistente cuando corresponda; la vancomicina no impide por sí sola usar dexametasona.",
@@ -737,7 +753,7 @@
               "finding": "Cefalea, fiebre, déficit focal y posible papiledema."
             }
           ],
-          "initial_action": "Obtener resonancia con contraste y solicitar valoración neuroquirúrgica urgente. Planear toma de material, drenaje y antimicrobianos intravenosos según gravedad y origen probable. Evitar punción lumbar si hay efecto de masa.",
+          "initial_action": "Solicitar resonancia con contraste y neurocirugía urgente para muestra y drenaje. En absceso comunitario inmunocompetente, iniciar cefalosporina de tercera generación más metronidazol IV según gravedad; ajustar a origen y cultivo. Evitar punción lumbar con efecto de masa.",
           "action_reason": "La imagen localiza la colección y el material permite dirigir el tratamiento sin aumentar el riesgo de herniación.",
           "modifiers": [
             {
@@ -766,6 +782,12 @@
               "label": "OMS 2025: seguridad de la punción lumbar",
               "url": "https://www.ncbi.nlm.nih.gov/books/NBK614844/",
               "quote": "lumbar puncture can increase the risk of cerebral herniation",
+              "checked_at": "2026-10-29"
+            },
+            {
+              "label": "ESCMID 2024: absceso cerebral",
+              "url": "https://doi.org/10.1016/j.cmi.2023.08.016",
+              "quote": "3rd-generation cephalosporin combined with metronidazole",
               "checked_at": "2026-10-29"
             }
           ],
@@ -844,7 +866,7 @@
               "finding": "Ptosis, diplopía o debilidad bulbar que empeoran con esfuerzo y mejoran con reposo."
             }
           ],
-          "initial_action": "Evaluar primero respiración y deglución. En una persona estable, solicitar anticuerpos anti-AChR y valoración especializada; confirmar con estudios apropiados e investigar enfermedad tímica.",
+          "initial_action": "Evaluar respiración y deglución; si está estable, solicitar anti-AChR y valoración especializada. Confirmar con pruebas apropiadas, investigar enfermedad tímica e iniciar piridostigmina para síntomas según evaluación clínica.",
           "action_reason": "La debilidad fluctuante orienta el estudio, pero el compromiso bulbar o respiratorio cambia la prioridad.",
           "modifiers": [
             {
