@@ -48,7 +48,7 @@ const paths: Path[] = [
     ['cause','¿Qué datos apoyan la causa funcional y qué falta resolver?','Los ciclos cesaron tras un déficit energético o estrés.','Investigar el contexto adquirido y excluir causas orgánicas.','La supresión central funcional no se confirma solo por el peso o la actividad física.'],
   ]},
   {id:'poi',name:'Insuficiencia ovárica primaria',primary:false,steps:[
-    hormone('Con embarazo excluido, la FSH está elevada y el estradiol bajo.',gonadal),
+    hormone('Una mujer de 32 años tiene amenorrea prolongada, bochornos y dificultad para concebir. Con embarazo excluido, la FSH está elevada en estudios repetidos y el estradiol bajo.',gonadal),
     ['cause','¿Qué localización explica el patrón?','Había menstruado antes y ahora tiene fallo gonadal.','Insuficiencia ovárica; confirmar y estudiar su causa.','La FSH elevada distingue esta rama de la supresión central.'],
   ]},
   {id:'pcos',name:'Síndrome de ovario poliquístico',primary:false,steps:[
@@ -56,7 +56,7 @@ const paths: Path[] = [
     ['limit','¿Basta el cociente LH/FSH para confirmar el diagnóstico?','La paciente tiene ciclos irregulares e hiperandrogenismo.','No. Integrar criterios y descartar causas alternativas.','El cociente hormonal aislado no establece el diagnóstico.'],
   ]},
   {id:'hyperprolactinemia',name:'Hiperprolactinemia',primary:false,steps:[
-    ['prolactin','¿Qué resultado requiere confirmación y estudio de causas?','La hCG es negativa. La prolactina está elevada.','Confirmar la elevación y revisar causas, fármacos y función tiroidea.','Una elevación aislada no permite atribuir la amenorrea a un tumor.'],
+    ['prolactin','¿Qué resultado requiere confirmación y estudio de causas?','La hCG es negativa. La prolactina está elevada.','Confirmar la elevación y revisar causas, fármacos y función tiroidea. Si es leve y persiste, valorar macroprolactina antes de atribuirla a una lesión.','Una elevación aislada no permite atribuir la amenorrea a un tumor.'],
     ['next','¿Qué cambia si la elevación persiste sin una causa explicativa?','La elevación de prolactina se confirma tras evaluar causas reversibles.','Estudiar la hipófisis; valorar resonancia.','La persistencia dirige el estudio anatómico.'],
   ]},
   {id:'thyroid',name:'Alteración tiroidea',primary:false,steps:[

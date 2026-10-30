@@ -33,3 +33,9 @@ test('decision memory survives snapshots and stays separate from original covera
   assert.equal(row.errors,1);
   assert.equal(topicErrors(state,{schema_version:1,content_sha256:'test',cards:[]})[0].id,`decision:${question.topic_id}:${question.node_id}`);
 });
+
+test('POI decisions establish reproductive age and mild prolactin has a macroprolactin check',()=>{
+ const questions=amenorrheaDecisions();
+ assert.match(questions.find(q=>q.path_id==='poi'&&q.node_id==='hormones')!.context,/32 años/);
+ assert.match(questions.find(q=>q.path_id==='hyperprolactinemia'&&q.node_id==='prolactin')!.answer,/macroprolactina/);
+});
