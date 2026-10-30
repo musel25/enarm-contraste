@@ -12,7 +12,7 @@
           "source_pages": [
             563
           ],
-          "pattern": "Un niño tiene fiebre persistente durante más de una semana sin causa tras historia, exploración y pruebas iniciales. Conserva estabilidad y necesita un estudio escalonado, sin antibiótico empírico indiscriminado.",
+          "pattern": "Un niño tiene fiebre persistente durante más de una semana sin causa tras historia, exploración y pruebas iniciales. Conserva estabilidad, tolera líquidos y no presenta un foco clínico evidente.",
           "key_discriminator": "más de una semana",
           "mechanism": "La fiebre prolongada puede reflejar infección, inflamación o neoplasia; la reevaluación clínica y las exposiciones permiten dirigir pruebas cuando el estudio inicial no identifica causa.",
           "findings": [
@@ -52,7 +52,7 @@
           "source_pages": [
             594
           ],
-          "pattern": "Una persona con infección probable presenta confusión, respiración rápida y presión baja. Tiene lactato elevado y oliguria; se sospecha disfunción orgánica y se inicia atención inmediata.",
+          "pattern": "Una persona con infección probable presenta confusión, respiración rápida y presión baja. Tiene lactato elevado y oliguria, con deterioro reciente de su estado general y perfusión periférica.",
           "key_discriminator": "confusión, respiración rápida y presión baja",
           "mechanism": "La respuesta desregulada a infección causa daño orgánico y alteración circulatoria; la hipoperfusión puede persistir pese a reposición de volumen y requerir vasopresores.",
           "findings": [
@@ -61,12 +61,12 @@
               "finding": "Disfunción orgánica e hipoperfusión"
             }
           ],
-          "initial_action": "Activar atención urgente, obtener cultivos sin retrasar antimicrobianos, reanimar y buscar control de foco.",
+          "initial_action": "Activar atención urgente; obtener cultivos sin retrasar antimicrobianos, reanimar con cristaloides ajustados a perfusión y buscar control de foco.",
           "action_reason": "La demora mantiene infección e hipoperfusión.",
           "modifiers": [
             {
               "factor": "Hipotensión persistente tras líquidos adecuados",
-              "action": "Valorar vasopresor.",
+              "action": "Iniciar noradrenalina para sostener la perfusión, con vigilancia hemodinámica.",
               "reason": "Puede existir choque circulatorio persistente."
             }
           ],
@@ -103,8 +103,8 @@
           "source_pages": [
             579
           ],
-          "pattern": "El laboratorio recibe una muestra para investigar una bacteria respiratoria exigente. Se debe elegir un medio enriquecido apropiado y distinguirlo de medios selectivos para enterobacterias o micobacterias.",
-          "key_discriminator": "bacteria respiratoria exigente",
+          "pattern": "El laboratorio recibe una muestra para investigar H. influenzae, una bacteria respiratoria exigente. Se debe elegir el medio que permita su crecimiento y distinguirlo de medios selectivos para otros agentes.",
+          "key_discriminator": "H. influenzae",
           "mechanism": "Los nutrientes y condiciones de un medio favorecen crecimiento de microorganismos específicos; elegirlo según sospecha aumenta la posibilidad de recuperar el agente.",
           "findings": [
             {
@@ -369,6 +369,21 @@
               "factor": "Íleo o enfermedad fulminante",
               "action": "Hospitalizar y adaptar tratamiento especializado.",
               "reason": "Cambia vía y estrategia terapéutica."
+            },
+            {
+              "factor": "Trismus y espasmos generalizados con conciencia conservada",
+              "action": "Priorizar vía aérea, control de espasmos, inmunoglobulina antitetánica y metronidazol.",
+              "reason": "La tetanoespasmina bloquea neurotransmisión inhibitoria; requiere manejo distinto de colitis."
+            },
+            {
+              "factor": "Disfunción bulbar y parálisis descendente tras exposición alimentaria",
+              "action": "Activar soporte respiratorio y antitoxina apropiada para edad y síndrome.",
+              "reason": "La toxina botulínica impide liberar acetilcolina y puede causar insuficiencia ventilatoria."
+            },
+            {
+              "factor": "Necrosis con gas y toxicidad sistémica",
+              "action": "Activar desbridamiento urgente y antibióticos, incluyendo cobertura anticlostridial.",
+              "reason": "La mionecrosis no se trata con un esquema de colitis."
             }
           ],
           "limits": "Las otras especies de estas páginas producen tétanos, botulismo o mionecrosis; no comparten este tratamiento.",
@@ -380,6 +395,10 @@
             {
               "page": 539,
               "quote": "pseudomembranas"
+            },
+            {
+              "page": 538,
+              "quote": "parálisis descendente."
             }
           ],
           "source_gaps": [],
@@ -417,7 +436,7 @@
           "source_pages": [
             530
           ],
-          "pattern": "Una persona con exposición fecal a agua contaminada presenta diarrea con sangre y moco. El estudio identifica un protozoo invasor; se debe tratar tanto la invasión tisular como la luz intestinal.",
+          "pattern": "Una persona con exposición fecal a agua contaminada presenta diarrea con sangre y moco. Tiene dolor abdominal y fiebre; el estudio de heces identifica trofozoítos de un protozoo invasor.",
           "key_discriminator": "diarrea con sangre y moco",
           "mechanism": "El protozoo invade mucosa del colon y puede diseminarse por vía hematógena; las formas luminales persistentes requieren tratamiento distinto del componente tisular.",
           "findings": [
@@ -466,7 +485,7 @@
               "finding": "Esteatorrea, meteorismo y pérdida de peso"
             }
           ],
-          "initial_action": "Buscar quistes o antígeno en heces e indicar tratamiento antiparasitario según el caso.",
+          "initial_action": "Buscar quistes o antígeno en heces y tratar con metronidazol u otra opción adecuada a edad y condición clínica.",
           "action_reason": "Permite tratar una causa de malabsorción.",
           "modifiers": [
             {
@@ -550,7 +569,7 @@
             532,
             533
           ],
-          "pattern": "Un niño con exposición a alimentos contaminados presenta dolor abdominal y pérdida de apetito. Expulsa un gusano por heces; si aparece vómito y distensión, debe descartarse obstrucción intestinal.",
+          "pattern": "Un niño con exposición a alimentos contaminados presenta dolor abdominal y pérdida de apetito. Expulsa un gusano por heces; está estable y no presenta vómitos, distensión ni alteraciones de la evacuación.",
           "key_discriminator": "Expulsa un gusano por heces",
           "mechanism": "La ingestión de huevos origina migración larvaria pulmonar y maduración intestinal; una carga alta de adultos puede obstruir intestino o migrar a vías biliares.",
           "findings": [
@@ -640,7 +659,7 @@
               "finding": "Diarrea y prolapso rectal"
             }
           ],
-          "initial_action": "Confirmar en heces y tratar con antihelmíntico, además de evaluar anemia y nutrición.",
+          "initial_action": "Confirmar en heces y tratar con albendazol o mebendazol; evaluar anemia, nutrición y complicaciones.",
           "action_reason": "La carga intensa afecta mucosa y crecimiento.",
           "modifiers": [
             {
@@ -671,7 +690,7 @@
           "source_pages": [
             582
           ],
-          "pattern": "Un escolar tiene prurito anal que empeora por la noche y sueño fragmentado. Otros familiares presentan síntomas; se debe tomar una muestra perianal y prevenir reinfección en el hogar.",
+          "pattern": "Un escolar tiene prurito anal que empeora por la noche y sueño fragmentado. Otros familiares presentan síntomas similares; el malestar persiste pese al aseo habitual y altera su descanso.",
           "key_discriminator": "prurito anal que empeora por la noche",
           "mechanism": "La hembra deposita huevos en pliegues perianales y causa irritación nocturna; la autoinoculación y transmisión doméstica mantienen la infección y las recurrencias.",
           "findings": [
@@ -732,7 +751,7 @@
               "finding": "Excreción de proglótides"
             }
           ],
-          "initial_action": "Identificar huevos o proglótides y tratar la infección intestinal con un antihelmíntico apropiado.",
+          "initial_action": "Identificar huevos o proglótides; en el adulto sin datos de enfermedad tisular, tratar la infección intestinal con praziquantel según peso.",
           "action_reason": "El cuadro intestinal requiere distinguir especie y exposición.",
           "modifiers": [
             {
@@ -1008,7 +1027,7 @@
               "finding": "Adenopatía dolorosa tras lesión transitoria"
             }
           ],
-          "initial_action": "Obtener pruebas para clamidia según sitio e iniciar doxiciclina con esquema de enfermedad invasora.",
+          "initial_action": "Obtener pruebas para clamidia según sitio; en el adulto elegible, iniciar doxiciclina 100 mg oral cada 12 horas durante 21 días.",
           "action_reason": "La duración debe cubrir afectación linfática.",
           "modifiers": [
             {
@@ -1059,7 +1078,7 @@
               "finding": "Úlcera indolora friable"
             }
           ],
-          "initial_action": "Confirmar con tejido e indicar azitromicina durante un curso suficiente y hasta cicatrización.",
+          "initial_action": "Confirmar con tejido e indicar azitromicina por al menos tres semanas y hasta cicatrización completa de todas las lesiones.",
           "action_reason": "La persistencia de lesiones exige seguimiento y tratamiento adecuado.",
           "modifiers": [
             {
@@ -1164,7 +1183,7 @@
               "finding": "Disuria y secreción"
             }
           ],
-          "initial_action": "Confirmar con prueba molecular y tratar con ceftriaxona; cubrir clamidia si no se ha excluido.",
+          "initial_action": "Obtener prueba molecular y tratar gonorrea no complicada con ceftriaxona 500 mg IM única si pesa menos de 150 kg, o 1 g si pesa al menos 150 kg; cubrir clamidia si no se ha excluido.",
           "action_reason": "La coinfección cambia cobertura adicional.",
           "modifiers": [
             {
@@ -1440,7 +1459,7 @@
           "external_sources": [
             {
               "label": "OMS: selección de pruebas de VIH",
-              "url": "https://www.ncbi.nlm.nih.gov/books/NBK624909/",
+              "url": "https://www.ncbi.nlm.nih.gov/sites/books/NBK624909/",
               "quote": "recommended against the use of western blotting in HIV testing strategies and algorithms",
               "checked_at": "2026-10-29"
             }
@@ -1533,12 +1552,12 @@
               "finding": "Cefalea y alteración mental"
             }
           ],
-          "initial_action": "Estudiar antígeno y cultivo de LCR, medir presión y comenzar inducción antifúngica según protocolo.",
+          "initial_action": "Estudiar antígeno y cultivo de LCR y medir presión cuando sea seguro; iniciar inducción antifúngica especializada con anfotericina B liposomal, flucitosina y fluconazol, o alternativa según disponibilidad.",
           "action_reason": "Debe tratarse infección y presión intracraneal.",
           "modifiers": [
             {
               "factor": "Inicio de TAR pendiente",
-              "action": "Ajustar el momento tras iniciar antifúngicos.",
+              "action": "Diferir generalmente TAR cuatro a seis semanas desde el inicio antifúngico, según evolución y protocolo.",
               "reason": "El inicio inmediato puede aumentar mortalidad por inflamación."
             }
           ],
@@ -1560,13 +1579,14 @@
           "external_sources": [
             {
               "label": "OMS: criptococosis y TAR",
-              "url": "https://www.ncbi.nlm.nih.gov/books/NBK581839/",
+              "url": "https://www.ncbi.nlm.nih.gov/sites/books/NBK581839/",
               "quote": "should be deferred 4–6 weeks from the initiation of antifungal treatment",
               "checked_at": "2026-10-29"
             }
           ],
           "source_corrections": [
-            "En meningitis criptocócica se difiere generalmente TAR cuatro a seis semanas; no aplicar sin contexto el intervalo amplio del libro."
+            "En meningitis criptocócica se difiere generalmente TAR cuatro a seis semanas; no aplicar sin contexto el intervalo amplio del libro.",
+            "OMS 2022 incluye inducción preferida con anfotericina B liposomal, flucitosina y fluconazol; las alternativas dependen de disponibilidad y vigilancia de toxicidad."
           ]
         },
         {
@@ -1584,7 +1604,7 @@
               "finding": "Lesiones en anillo y focalidad"
             }
           ],
-          "initial_action": "Iniciar tratamiento específico y valorar respuesta clínica e imagen bajo atención especializada.",
+          "initial_action": "Iniciar pirimetamina más sulfadiazina y ácido folínico, o TMP-SMX como alternativa apropiada; valorar respuesta clínica e imagen bajo atención especializada.",
           "action_reason": "El cuadro focal requiere controlar infección y complicaciones.",
           "modifiers": [
             {
@@ -1647,7 +1667,7 @@
               "finding": "Tos seca y disnea con hipoxemia"
             }
           ],
-          "initial_action": "Obtener muestra respiratoria y tratar con TMP-SMX a dosis terapéutica según peso y función renal.",
+          "initial_action": "Obtener muestra respiratoria e iniciar TMP-SMX con TMP 15–20 mg/kg/día en dosis divididas; ajustar a función renal, vía y gravedad con el especialista.",
           "action_reason": "La dosis de profilaxis no trata neumonía establecida.",
           "modifiers": [
             {
@@ -1698,7 +1718,7 @@
               "finding": "Halo nodular y hemoptisis"
             }
           ],
-          "initial_action": "Obtener muestras y galactomanano según contexto e iniciar antifúngico activo frente a Aspergillus bajo manejo especializado.",
+          "initial_action": "Obtener muestras y galactomanano según contexto; iniciar voriconazol u otra opción activa indicada por especialidad sin esperar confirmación en sospecha alta.",
           "action_reason": "La progresión puede ser rápida en neutropenia.",
           "modifiers": [
             {
@@ -1749,7 +1769,7 @@
               "finding": "Necrosis nasal y compromiso orbitario"
             }
           ],
-          "initial_action": "Activar evaluación quirúrgica urgente, obtener tejido, iniciar antifúngico y corregir factores predisponentes.",
+          "initial_action": "Activar evaluación quirúrgica urgente, obtener tejido, iniciar anfotericina B liposomal y corregir factores predisponentes en paralelo.",
           "action_reason": "El control requiere desbridamiento y tratamiento inmediato.",
           "modifiers": [
             {
@@ -2033,7 +2053,7 @@
           "modifiers": [
             {
               "factor": "Forma grave o compromiso neurológico",
-              "action": "Hospitalizar y tratar por vía parenteral.",
+              "action": "Hospitalizar e iniciar artesunato intravenoso, con soporte y seguimiento especializado.",
               "reason": "Puede progresar rápidamente."
             }
           ],
@@ -2134,7 +2154,7 @@
               "finding": "Mialgia, ictericia y lesión renal"
             }
           ],
-          "initial_action": "Obtener pruebas según fase e iniciar antibiótico y soporte; hospitalizar si hay lesión orgánica.",
+          "initial_action": "Obtener pruebas según fase; por lesión renal e ictericia, hospitalizar e iniciar penicilina G o ceftriaxona parenteral y soporte orgánico.",
           "action_reason": "La forma grave necesita vigilancia y tratamiento parenteral.",
           "modifiers": [
             {
@@ -2174,7 +2194,7 @@
               "finding": "Fiebre y sacroilitis"
             }
           ],
-          "initial_action": "Tomar muestras y seleccionar tratamiento combinado según edad, embarazo y foco.",
+          "initial_action": "Tomar muestras; en adulto no embarazado elegible, iniciar doxiciclina más rifampicina por al menos seis semanas. Ajustar esquema y duración a edad, embarazo y foco.",
           "action_reason": "La terapia debe reducir recaída y tratar localización.",
           "modifiers": [
             {
@@ -2402,7 +2422,7 @@
             {
               "label": "CDC: tratamiento de oncocercosis",
               "url": "https://www.cdc.gov/filarial-worms/treatment/onchocerciasis.html",
-              "quote": "ensure you aren’t also infected with Loa loa",
+              "quote": "ensure you aren't also infected with Loa loa",
               "checked_at": "2026-10-29"
             }
           ],
@@ -2467,7 +2487,7 @@
           "source_pages": [
             565
           ],
-          "pattern": "Una persona que visitó África central presenta edema transitorio y observa un gusano bajo la conjuntiva. Tiene eosinofilia; se debe medir la carga de microfilarias antes de elegir tratamiento.",
+          "pattern": "Una persona que visitó África central presenta edema transitorio y observa un gusano bajo la conjuntiva. Tiene eosinofilia y episodios cutáneos recurrentes, sin tratamiento antiparasitario previo.",
           "key_discriminator": "gusano bajo la conjuntiva",
           "mechanism": "El nematodo migra por tejidos subcutáneos y puede cruzar conjuntiva; la microfilaremia elevada aumenta riesgo de reacciones graves al administrar fármacos microfilaricidas.",
           "findings": [
@@ -2799,7 +2819,7 @@
             587,
             588
           ],
-          "pattern": "Una persona sufre una mordedura profunda por un animal sospechoso y no tiene vacunación previa. La herida necesita lavado inmediato y valoración de profilaxis antes de que aparezcan síntomas neurológicos.",
+          "pattern": "Una persona sufre una mordedura profunda por un animal sospechoso y no tiene vacunación previa. La lesión atraviesa la piel; todavía no presenta fiebre, parestesias ni síntomas neurológicos.",
           "key_discriminator": "mordedura profunda por un animal sospechoso",
           "mechanism": "El virus puede avanzar desde el sitio de inoculación hacia el sistema nervioso; la profilaxis temprana neutraliza exposición antes de establecer enfermedad neurológica casi siempre fatal.",
           "findings": [
