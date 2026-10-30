@@ -13,7 +13,7 @@
             668,
             669
           ],
-          "pattern": "Al nacer, un bebé tiene apnea y frecuencia cardíaca baja pese a secado y estimulación. El equipo debe establecer ventilación eficaz y reevaluar el pulso antes de escalar intervenciones.",
+          "pattern": "Al nacer, un bebé presenta apnea y frecuencia cardíaca baja, de 80/min, pese a secado y estimulación. No hay elevación torácica espontánea y el pulso sigue lento.",
           "key_discriminator": "apnea y frecuencia cardíaca baja",
           "mechanism": "La transición falla principalmente por ventilación insuficiente; restaurar entrada de aire mejora oxigenación y frecuencia cardíaca antes de requerir compresiones o fármacos.",
           "findings": [
@@ -22,13 +22,13 @@
               "finding": "Apnea y bradicardia"
             }
           ],
-          "initial_action": "Iniciar ventilación a presión positiva cuando corresponda, comprobar movimiento torácico y reevaluar frecuencia cardíaca.",
+          "initial_action": "Iniciar ventilación a presión positiva por apnea o frecuencia menor de 100/min tras pasos iniciales; comprobar eficacia con aumento del pulso y movimiento torácico.",
           "action_reason": "La ventilación eficaz es la intervención central.",
           "modifiers": [
             {
-              "factor": "Frecuencia muy baja pese a ventilación efectiva",
-              "action": "Escalar a compresiones y protocolo de reanimación.",
-              "reason": "La circulación requiere soporte adicional."
+              "factor": "Frecuencia menor de 60/min tras 30 segundos de ventilación que mueve el tórax",
+              "action": "Iniciar compresiones coordinadas 3:1 con ventilación y vía aérea avanzada.",
+              "reason": "La bradicardia persiste pese a ventilación eficaz."
             }
           ],
           "limits": "No retrasar ventilación para aspiración rutinaria por meconio.",
@@ -308,7 +308,7 @@
             678,
             679
           ],
-          "pattern": "Un prematuro presenta dificultad respiratoria desde nacimiento, requiere oxígeno y tiene baja expansión pulmonar con patrón reticulogranular y broncograma aéreo. Se evalúa necesidad de soporte y reposición de una sustancia alveolar.",
+          "pattern": "Un prematuro presenta dificultad respiratoria desde nacimiento, requiere oxígeno y tiene baja expansión pulmonar con patrón reticulogranular y broncograma aéreo. Hay quejido, retracciones y aumento progresivo del trabajo respiratorio.",
           "key_discriminator": "baja expansión pulmonar",
           "mechanism": "El déficit de surfactante aumenta tensión superficial y favorece colapso alveolar, reduciendo distensibilidad y capacidad de intercambio gaseoso en el pulmón inmaduro.",
           "findings": [
@@ -545,7 +545,7 @@
           "source_pages": [
             653
           ],
-          "pattern": "Un recién nacido de término tras un evento hipóxico presenta letargia, hipotonía y convulsiones en las primeras horas. El equipo valora gravedad neurológica y criterios para enfriamiento controlado.",
+          "pattern": "Un recién nacido de término tras un evento hipóxico presenta letargia, hipotonía y convulsiones en las primeras horas. La succión está disminuida y la respuesta a estímulos es anormal.",
           "key_discriminator": "letargia, hipotonía y convulsiones",
           "mechanism": "La hipoxia e isquemia perinatal desencadenan lesión cerebral primaria y secundaria; la evaluación neurológica precoz identifica pacientes que pueden beneficiarse de hipotermia terapéutica.",
           "findings": [
@@ -554,7 +554,7 @@
               "finding": "Alteración de alerta, tono y crisis"
             }
           ],
-          "initial_action": "Evaluar con examen neurológico y monitorización y activar hipotermia controlada temprana si cumple criterios.",
+          "initial_action": "Estabilizar y evaluar encefalopatía; activar hipotermia controlada dentro de las primeras seis horas si tiene al menos 36 semanas y cumple criterios de lesión moderada o grave.",
           "action_reason": "La ventana terapéutica es limitada.",
           "modifiers": [
             {
@@ -577,6 +577,17 @@
           "source_gaps": [],
           "verified_source_pages": [
             653
+          ],
+          "external_sources": [
+            {
+              "label": "AHA/AAP: reanimación neonatal 2025",
+              "url": "https://cpr.heart.org/en/resuscitation-science/cpr-and-ecc-guidelines/neonatal-resuscitation",
+              "quote": "moderate-to-severe HIE should be offered therapeutic hypothermia",
+              "checked_at": "2026-10-29"
+            }
+          ],
+          "source_corrections": [
+            "Se concreta la ventana de seis horas y la selección por edad gestacional y gravedad; no enfriar de forma universal toda depresión neonatal."
           ]
         }
       ],
@@ -606,7 +617,7 @@
               "finding": "Menor riesgo de déficit de surfactante"
             }
           ],
-          "initial_action": "Valorar un curso de corticoesteroide antenatal según edad y probabilidad de parto próximo.",
+          "initial_action": "Si el parto es probable en los próximos siete días entre 24 y 34 semanas, valorar betametasona 12 mg IM cada 24 horas por dos dosis, según elegibilidad. No retrasar nacimiento urgente.",
           "action_reason": "El beneficio depende de indicación y oportunidad.",
           "modifiers": [
             {
@@ -615,7 +626,7 @@
               "reason": "La seguridad tiene prioridad."
             }
           ],
-          "limits": "El rescate no es universal y requiere criterios vigentes.",
+          "limits": "Entre 34 y 36+6 semanas la indicación es selectiva; no administrar rescates de forma automática ni retrasar una resolución urgente.",
           "evidence": [
             {
               "page": 665,
@@ -705,7 +716,7 @@
           "source_pages": [
             658
           ],
-          "pattern": "Un recién nacido hijo de madre diabética presenta temblores, letargo y mala alimentación. Se obtiene glucosa de inmediato y se inicia atención sin esperar a que el cuadro se resuelva solo.",
+          "pattern": "Un recién nacido hijo de madre diabética presenta temblores, letargo y mala alimentación. Se encuentra poco reactivo y no ha logrado una toma eficaz; aún no se conoce su glucosa.",
           "key_discriminator": "hijo de madre diabética",
           "mechanism": "El cambio de aporte energético tras nacimiento puede superar reservas y regulación metabólica; la glucosa baja sintomática compromete disponibilidad de energía cerebral.",
           "findings": [
@@ -714,7 +725,7 @@
               "finding": "Letargo, temblores o convulsiones"
             }
           ],
-          "initial_action": "Medir glucosa y tratar de inmediato al paciente sintomático con aporte de glucosa y monitorización según protocolo.",
+          "initial_action": "Medir glucosa inmediatamente; ante hipoglucemia sintomática, administrar glucosa intravenosa y monitorizar según protocolo, con infusión posterior ajustada a respuesta.",
           "action_reason": "Previene lesión neurológica por déficit energético.",
           "modifiers": [
             {
@@ -745,7 +756,7 @@
           "source_pages": [
             674
           ],
-          "pattern": "Un neonato presenta mala alimentación, cambio de actividad y temperatura inestable. Tiene antecedente de ruptura prolongada de membranas; se sospecha infección sistémica y se necesitan cultivos y antibióticos oportunos.",
+          "pattern": "Un neonato presenta mala alimentación, cambio de actividad y temperatura inestable durante los primeros días de vida. Tiene antecedente de ruptura prolongada de membranas y ahora respira más rápido.",
           "key_discriminator": "temperatura inestable",
           "mechanism": "La infección neonatal puede diseminarse con pocos signos específicos por inmadurez inmunitaria; la respuesta sistémica produce compromiso respiratorio, circulatorio o neurológico.",
           "findings": [
@@ -836,7 +847,7 @@
             {
               "label": "Gobierno del Reino Unido: fenilcetonuria neonatal",
               "url": "https://www.gov.uk/government/publications/pku-suspected-description-in-brief/phenylketonuria-pku-detailed-information",
-              "quote": "you can continue to breastfeed",
+              "quote": "a limited daily volume of breastmilk feeds or infant formula",
               "checked_at": "2026-10-29"
             }
           ],
