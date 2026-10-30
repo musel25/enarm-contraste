@@ -121,13 +121,18 @@
               "finding": "Albuminuria y reducción de función"
             }
           ],
-          "initial_action": "Confirmar persistencia de albuminuria, valorar filtración y optimizar control metabólico, presión y protección renal.",
+          "initial_action": "Confirmar albuminuria y filtración; optimizar glucemia y presión con IECA o ARA-II si es elegible. Valorar un inhibidor SGLT2 en diabetes tipo 2 con ERC según filtración y contraindicaciones.",
           "action_reason": "Reduce progresión y riesgo cardiovascular.",
           "modifiers": [
             {
               "factor": "Hematuria activa o deterioro rápido",
               "action": "Buscar una causa renal adicional.",
               "reason": "Puede no ser daño diabético típico."
+            },
+            {
+              "factor": "Diabetes tipo 2, ERC y TFG de al menos 20 mL/min/1.73 m²",
+              "action": "Ofrecer inhibidor SGLT2 si es elegible.",
+              "reason": "KDIGO recomienda esta intervención para protección renal y cardiovascular."
             }
           ],
           "limits": "El manejo actual incluye opciones renoprotectoras no descritas en la página.",
@@ -241,7 +246,7 @@
           "modifiers": [
             {
               "factor": "Convulsiones o compromiso neurológico grave",
-              "action": "Atender de urgencia con corrección protocolizada.",
+              "action": "Administrar solución salina hipertónica al 3% de urgencia, con vigilancia estrecha del sodio y límites de corrección.",
               "reason": "El edema cerebral requiere intervención inmediata."
             }
           ],
@@ -259,6 +264,17 @@
           "source_gaps": [],
           "verified_source_pages": [
             637
+          ],
+          "external_sources": [
+            {
+              "label": "Society for Endocrinology: hiponatremia sintomática 2022",
+              "url": "https://www.endocrinology.org/media/xhrhxhxm/emergency-management-of-severe-and-moderately-severely-symptomatic-hyponatraemia-in-adult-patients-2022.pdf",
+              "quote": "receive immediate treatment with intravenous hypertonic sodium chloride",
+              "checked_at": "2026-10-29"
+            }
+          ],
+          "source_corrections": [
+            "Se añade solución hipertónica en síntomas neurológicos graves; el libro omite esta intervención urgente."
           ]
         }
       ],
@@ -292,7 +308,7 @@
               "finding": "Acidosis metabólica con brecha normal"
             }
           ],
-          "initial_action": "Identificar acidemia, componente primario, brecha aniónica y compensación esperada; tratar la causa.",
+          "initial_action": "Identificar trastorno primario y calcular brecha Na−(Cl+HCO3). En acidosis metabólica, comparar PCO2 con 1.5×HCO3+8±2 mmHg; una desviación indica componente respiratorio adicional.",
           "action_reason": "Una gasometría puede contener más de un trastorno.",
           "modifiers": [
             {
@@ -301,7 +317,7 @@
               "reason": "Sugiere un trastorno mixto."
             }
           ],
-          "limits": "El método gráfico del libro no basta para validar compensación.",
+          "limits": "Ajustar la interpretación de la brecha por albúmina y rango del laboratorio; un pH normal no descarta trastorno mixto.",
           "evidence": [
             {
               "page": 643,
@@ -390,8 +406,8 @@
           "source_pages": [
             629
           ],
-          "pattern": "Una persona tiene edema y examen de orina anormal. Se cuantifican proteínas y se revisan hematuria, albúmina, presión y filtración para definir el patrón glomerular predominante.",
-          "key_discriminator": "Se cuantifican proteínas",
+          "pattern": "Una persona tiene edema y examen de orina anormal con proteínas y eritrocitos. La cantidad de proteínas aún no está medida; tampoco se conoce albúmina sérica, presión arterial ni filtración glomerular.",
+          "key_discriminator": "edema y examen de orina anormal",
           "mechanism": "La lesión glomerular puede aumentar pérdida de proteínas o permitir paso de eritrocitos y reducir filtración; los hallazgos combinados definen un síndrome antes de su etiología.",
           "findings": [
             {
@@ -575,7 +591,7 @@
               "finding": "Hemorragia alveolar y glomerulonefritis"
             }
           ],
-          "initial_action": "Activar manejo nefrológico urgente con inmunosupresión e intercambio plasmático según elegibilidad y soporte orgánico.",
+          "initial_action": "Activar nefrología urgente; iniciar glucocorticoide, ciclofosfamida e intercambio plasmático en pacientes elegibles, con soporte orgánico. No retrasar tratamiento por confirmación pendiente ante sospecha alta.",
           "action_reason": "Se necesita reducir producción y retirar anticuerpos.",
           "modifiers": [
             {
@@ -603,7 +619,7 @@
             {
               "label": "KDIGO: enfermedades glomerulares 2021",
               "url": "https://kdigo.org/wp-content/uploads/2017/02/KDIGO-Glomerular-Diseases-Guideline-2021-English.pdf",
-              "quote": "treatment should start without delay",
+              "quote": "should start without delay if this diagnosis is suspected",
               "checked_at": "2026-10-29"
             }
           ],
