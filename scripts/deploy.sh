@@ -64,16 +64,16 @@ sudo -n nginx -t
 sudo -n systemctl reload nginx
 curl -fsS --resolve enarm.musel.dev:443:127.0.0.1 \
   --retry 5 --retry-all-errors --retry-delay 1 --max-time 10 \
-  https://enarm.musel.dev/version.txt | grep -Fxq "$commit"
+  https://enarm.musel.dev/version.txt | grep -Fx "$commit" > /dev/null
 curl -fsS --retry 5 --retry-all-errors --retry-delay 1 --max-time 10 \
-  https://enarm.musel.dev/version.txt | grep -Fxq "$commit"
-curl -fsS --max-time 15 https://enarm.musel.dev/ | grep -Fq '<title>ENARM Contraste'
+  https://enarm.musel.dev/version.txt | grep -Fx "$commit" > /dev/null
+curl -fsS --max-time 15 https://enarm.musel.dev/ | grep -F '<title>ENARM Contraste' > /dev/null
 curl -fsS --max-time 15 "https://enarm.musel.dev/assets/$asset" > /dev/null
-curl -fsS --max-time 15 https://enarm.musel.dev/study/manifest.json | grep -Fq '"cross-reviewed"'
+curl -fsS --max-time 15 https://enarm.musel.dev/study/manifest.json | grep -F '"cross-reviewed"' > /dev/null
 curl -fsS --max-time 30 https://enarm.musel.dev/study/enarm-eje.apkg > /dev/null
 curl -fsS --max-time 30 https://enarm.musel.dev/study/enarm-madre.apkg > /dev/null
-curl -fsS --max-time 15 https://timer.musel.dev/grind/enarm/ | grep -Fq '<title>ENARM Contraste'
-curl -fsS --max-time 15 https://timer.musel.dev/api/health | grep -Fq '"ok":true'
+curl -fsS --max-time 15 https://timer.musel.dev/grind/enarm/ | grep -F '<title>ENARM Contraste' > /dev/null
+curl -fsS --max-time 15 https://timer.musel.dev/api/health | grep -F '"ok":true' > /dev/null
 trap - ERR
 rm -f "$config_upload"
 echo "Published $release"
