@@ -25,7 +25,7 @@
               "finding": "Sibilancias episódicas y tos nocturna"
             }
           ],
-          "initial_action": "Evaluar patrón clínico y espirometría cuando sea factible; iniciar plan con controlador inhalado y técnica adecuada según edad y control.",
+          "initial_action": "Confirmar el patrón clínico con espirometría cuando sea factible; iniciar corticoide inhalado según edad y control, enseñar técnica y entregar plan de rescate.",
           "action_reason": "El control requiere tratar inflamación y uso correcto.",
           "modifiers": [
             {
@@ -72,7 +72,7 @@
               "finding": "Habla limitada y uso de músculos accesorios"
             }
           ],
-          "initial_action": "Administrar broncodilatador inhalado de acción rápida, oxígeno según necesidad y corticoide sistémico; añadir ipratropio en cuadros graves y reevaluar.",
+          "initial_action": "Administrar salbutamol inhalado repetido, oxígeno titulado y corticoide sistémico temprano; añadir ipratropio en crisis grave y reevaluar respuesta y fatiga.",
           "action_reason": "Reduce broncoconstricción e inflamación mientras se vigila respuesta.",
           "modifiers": [
             {
@@ -131,7 +131,7 @@
               "finding": "Disnea y obstrucción persistente"
             }
           ],
-          "initial_action": "Confirmar con espirometría y evaluar síntomas y exacerbaciones; promover cese de exposición y broncodilatación de mantenimiento apropiada.",
+          "initial_action": "Confirmar FEV1/FVC posbroncodilatador <0.7 en contexto compatible; evaluar síntomas y exacerbaciones, suspender exposición e iniciar broncodilatador de mantenimiento según evaluación ABE.",
           "action_reason": "El manejo depende de carga sintomática y riesgo.",
           "modifiers": [
             {
@@ -148,7 +148,7 @@
             },
             {
               "page": 701,
-              "quote": "espirometría"
+              "quote": "espirometría (relación"
             }
           ],
           "source_gaps": [],
@@ -280,7 +280,7 @@
               "finding": "Fiebre, estertores y consolidación"
             }
           ],
-          "initial_action": "Estratificar gravedad e iniciar antibiótico según escenario, comorbilidades y resistencia; dar soporte de oxigenación cuando sea necesario.",
+          "initial_action": "Estratificar gravedad e iniciar antibiótico: amoxicilina en adulto ambulatorio sin comorbilidades relevantes; en hospital, ceftriaxona más azitromicina como opción según alergias, riesgo de resistencia y protocolo local. Corregir hipoxemia.",
           "action_reason": "La gravedad guía vía, cobertura y hospitalización.",
           "modifiers": [
             {
@@ -420,7 +420,7 @@
             709,
             710
           ],
-          "pattern": "Una persona presenta fiebre abrupta, mialgias y tos seca durante circulación estacional. Tiene alto riesgo de complicaciones y requiere decidir tratamiento antiviral sin esperar una prueba tardía.",
+          "pattern": "Una embarazada presenta fiebre abrupta, mialgias y tos seca durante circulación estacional. Lleva tres días enferma, sin vacunación reciente, y comienza con disnea al caminar y decaimiento intenso.",
           "key_discriminator": "fiebre abrupta, mialgias y tos seca",
           "mechanism": "El virus infecta epitelio respiratorio y produce enfermedad sistémica de inicio brusco; edad, embarazo y comorbilidades aumentan riesgo de neumonía y falla respiratoria.",
           "findings": [
@@ -472,7 +472,7 @@
               "finding": "Síntomas respiratorios con riesgo de progresión"
             }
           ],
-          "initial_action": "Valorar antiviral vigente temprano según elegibilidad, interacciones y función renal; dar soporte y alarma.",
+          "initial_action": "En alto riesgo elegible, iniciar nirmatrelvir/ritonavir dentro de cinco días tras revisar interacciones y función renal/hepática; usar remdesivir IV por tres días, iniciado dentro de siete días, si la primera opción no es apropiada.",
           "action_reason": "La selección depende de riesgo y tiempo de evolución.",
           "modifiers": [
             {
@@ -517,7 +517,7 @@
             694,
             695
           ],
-          "pattern": "Una embarazada presenta infección respiratoria confirmada por SARS-CoV-2. Se encuentra estable, sin hipoxemia ni alarma obstétrica; necesita evaluar riesgo, tratamiento temprano y medidas para cuidar al recién nacido.",
+          "pattern": "Una embarazada presenta tos y fiebre desde hace dos días con prueba positiva para SARS-CoV-2. Está estable, sin hipoxemia ni alarma obstétrica, y tiene obesidad y diabetes pregestacional.",
           "key_discriminator": "sin hipoxemia ni alarma obstétrica",
           "mechanism": "La infección respiratoria durante embarazo puede progresar y afectar salud materna y perinatal; el manejo combina gravedad respiratoria, riesgo individual y condiciones obstétricas.",
           "findings": [
@@ -526,7 +526,7 @@
               "finding": "Riesgo de complicación materna y perinatal"
             }
           ],
-          "initial_action": "Valorar elegibilidad para tratamiento temprano y vigilar alarma respiratoria y obstétrica sin suspender atención prenatal.",
+          "initial_action": "Evaluar tratamiento temprano por riesgo materno; considerar nirmatrelvir/ritonavir dentro de cinco días si es elegible, tras revisar interacciones y función renal/hepática. Vigilar alarma respiratoria y obstétrica y mantener atención prenatal.",
           "action_reason": "El embarazo modifica riesgo y coordinación asistencial.",
           "modifiers": [
             {
@@ -550,6 +550,20 @@
           "verified_source_pages": [
             694,
             695
+          ],
+          "external_sources": [
+            {
+              "label": "CDC: COVID-19 durante embarazo y lactancia",
+              "url": "https://www.cdc.gov/covid/hcp/clinical-care/considerations-special-groups.html",
+              "quote": "It is not recommended to withhold COVID-19 treatment from pregnant or lactating women",
+              "checked_at": "2026-10-29"
+            },
+            {
+              "label": "CDC: tratamiento ambulatorio COVID-19",
+              "url": "https://www.cdc.gov/covid/hcp/clinical-care/outpatient-treatment.html",
+              "quote": "second preferred treatment option after ritonavir-boosted nirmatrelvir",
+              "checked_at": "2026-10-29"
+            }
           ]
         }
       ],
@@ -585,9 +599,9 @@
           "action_reason": "La causa y la infección definen tratamiento.",
           "modifiers": [
             {
-              "factor": "Pus, microorganismos o perfil de infección complicada",
-              "action": "Valorar drenaje y antibiótico.",
-              "reason": "El líquido infectado necesita control de foco."
+              "factor": "Pus, microorganismos o derrame paraneumónico con pH ≤7.2",
+              "action": "Iniciar antibióticos y colocar drenaje pleural si existe volumen accesible con seguridad ecográfica.",
+              "reason": "La infección pleural necesita control del foco."
             }
           ],
           "limits": "La tabla de Light tiene un error en la fila de trasudado; se precisa con guía vigente.",
@@ -611,7 +625,7 @@
             {
               "label": "BTS: enfermedad pleural 2023",
               "url": "https://www.brit-thoracic.org.uk/document-library/guidelines/pleural-disease/pleural-disease-full-supplement/",
-              "quote": "Light’s criteria",
+              "quote": "If pleural fluid pH is ≤7.2",
               "checked_at": "2026-10-29"
             }
           ],
@@ -637,7 +651,7 @@
           "source_pages": [
             712
           ],
-          "pattern": "Una persona con VIH avanzado tiene disnea subaguda, tos seca e hipoxemia. El cuadro dura semanas y requiere una muestra respiratoria para investigar un hongo oportunista y empezar tratamiento.",
+          "pattern": "Una persona con VIH avanzado tiene disnea subaguda, tos seca e hipoxemia. El cuadro dura semanas, la radiografía muestra infiltrados intersticiales bilaterales y la auscultación ofrece pocos hallazgos.",
           "key_discriminator": "disnea subaguda, tos seca e hipoxemia",
           "mechanism": "La infección oportunista alveolar ocurre con inmunidad celular reducida y produce compromiso difuso del intercambio gaseoso, con disnea y oxigenación alterada desproporcionadas a veces a auscultación.",
           "findings": [
@@ -646,13 +660,13 @@
               "finding": "Disnea y tos no productiva"
             }
           ],
-          "initial_action": "Obtener muestra respiratoria y tratar con TMP-SMX a dosis terapéutica por peso; valorar gravedad para soporte y corticoide adyuvante.",
+          "initial_action": "Obtener muestra respiratoria sin retrasar TMP-SMX si la sospecha es alta: TMP 15–20 mg/kg/día dividido, con ajuste renal; tratar 21 días. Evaluar oxigenación y necesidad de hospitalización.",
           "action_reason": "La dosis profiláctica del libro no trata neumonía activa.",
           "modifiers": [
             {
-              "factor": "Hipoxemia importante",
-              "action": "Valorar manejo hospitalario.",
-              "reason": "Puede progresar a insuficiencia respiratoria."
+              "factor": "PaO2 <70 mmHg al aire o gradiente alveoloarterial ≥35 mmHg",
+              "action": "Añadir corticoide sistémico, idealmente dentro de 72 horas de iniciar tratamiento.",
+              "reason": "Reduce complicaciones en enfermedad moderada o grave."
             }
           ],
           "limits": "No equiparar tratamiento y profilaxis.",
