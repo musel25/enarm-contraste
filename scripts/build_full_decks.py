@@ -47,7 +47,7 @@ def compile_section(section: dict, book_name: str) -> dict:
         cards.append({**base, 'id': f'eje/{block["id"]}', 'family': 'eje', 'level': 0,
                       'prompt': '¿Qué diagnóstico corresponde a cada caso?', 'context': block['common_problem'],
                       'front': [{'text': t['pattern'], 'highlight': t['key_discriminator']} for t in topics],
-                      'back': [{'title': t['name'], 'text': t['mechanism'], 'discriminator': t['key_discriminator'], 'action': t['initial_action'], 'reason': t['action_reason'], 'limits': t['limits'], 'sources': references([t], book_name)} for t in topics], 'sources': all_sources})
+                      'back': [{'topic_id': t['id'], 'title': t['name'], 'text': t['mechanism'], 'discriminator': t['key_discriminator'], 'action': t['initial_action'], 'reason': t['action_reason'], 'limits': t['limits'], 'sources': references([t], book_name)} for t in topics], 'sources': all_sources})
         mother = block['mother']
         cards.append({**base, 'id': f'madre/1/{block["id"]}', 'family': 'madre', 'level': 1,
                       'prompt': '¿Qué patrón organiza este problema?', 'context': '',
@@ -55,15 +55,16 @@ def compile_section(section: dict, book_name: str) -> dict:
                       'back': [{'title': mother['answer'], 'text': mother['explanation']}], 'sources': all_sources})
         for topic in topics:
             sources = references([topic], book_name)
-            cards.append({**base, 'id': f'madre/2/{topic["id"]}', 'family': 'madre', 'level': 2,
+            topic_base = {**base, 'topic_id': topic['id']}
+            cards.append({**topic_base, 'id': f'madre/2/{topic["id"]}', 'family': 'madre', 'level': 2,
                           'prompt': '¿Qué diagnóstico o concepto explica este caso?', 'context': '',
                           'front': [{'text': topic['pattern'], 'highlight': topic['key_discriminator']}],
                           'back': [{'title': topic['name'], 'text': topic['mechanism'], 'discriminator': topic['key_discriminator'], 'limits': topic['limits']}], 'sources': sources})
-            cards.append({**base, 'id': f'madre/3/{topic["id"]}', 'family': 'madre', 'level': 3,
+            cards.append({**topic_base, 'id': f'madre/3/{topic["id"]}', 'family': 'madre', 'level': 3,
                           'prompt': '¿Qué hallazgo produce cada mecanismo?', 'context': topic['name'],
                           'front': [{'text': finding['mechanism']} for finding in topic['findings']],
                           'back': [{'title': '', 'text': finding['finding']} for finding in topic['findings']], 'sources': sources})
-            cards.append({**base, 'id': f'madre/4/{topic["id"]}', 'family': 'madre', 'level': 4,
+            cards.append({**topic_base, 'id': f'madre/4/{topic["id"]}', 'family': 'madre', 'level': 4,
                           'prompt': '¿Qué haces primero y cómo cambia la decisión?', 'context': topic['pattern'],
                           'front': [{'text': 'Elige la primera acción para el caso.'}] + [{'text': modifier['factor']} for modifier in topic['modifiers']],
                           'back': [{'title': 'Primera decisión', 'text': topic['initial_action'], 'reason': topic['action_reason'], 'limits': topic['limits']}] + [{'title': modifier['factor'], 'text': modifier['action'], 'reason': modifier['reason']} for modifier in topic['modifiers']], 'sources': sources})

@@ -66,6 +66,16 @@ export default function Library({ onReview }: { onReview: (context: ReviewContex
     setSectionId(id); setSection(null); setBlock("all"); setIndex(0);
   };
   const changeFamily = (value: "eje" | "madre") => { setFamily(value); setIndex(0); };
+  const changeLevel = (value: string) => {
+    const next = section?.cards.filter(c => c.family === "madre" && c.level === Number(value) && (block === "all" || c.block_id === block)) || [];
+    const target = next.findIndex(c => card?.topic_id ? c.topic_id === card.topic_id : c.block_id === card?.block_id);
+    setLevel(value); setIndex(Math.max(0, target));
+  };
+  const followCase = (topicId: string) => {
+    const next = section?.cards.filter(c => c.family === "madre" && c.level === 4 && (block === "all" || c.block_id === block)) || [];
+    const target = next.findIndex(c => c.topic_id === topicId);
+    if (target >= 0) { setFamily("madre"); setLevel("4"); setIndex(target); }
+  };
   if (manifestError) return <main className="library-main" id="study"><LoadError onRetry={() => setAttempt(a => a + 1)} /></main>;
   if (!manifest) return <main className="library-main" id="study"><p role="status" className="library-loading">Cargando el temario…</p></main>;
   return <main className="library-main" id="study" tabIndex={-1}>
@@ -76,7 +86,7 @@ export default function Library({ onReview }: { onReview: (context: ReviewContex
         <aside className="library-controls" aria-label="Configurar tarjetas">
           <div className="library-family-switch" aria-label="Formato de tarjetas"><button aria-pressed={family === "eje"} onClick={() => changeFamily("eje")}>Eje Clínico</button><button aria-pressed={family === "madre"} onClick={() => changeFamily("madre")}>Patrones Madre</button></div>
           <p className="family-explanation">{family === "eje" ? "Compara casos del mismo grupo. Relaciona sus pistas con los diagnósticos." : "Conecta el patrón con su nombre, sus hallazgos y su manejo."}</p>
-          {family === "madre" && <label className="library-field">Nivel de Patrones Madre<select value={level} onChange={e => { setLevel(e.target.value); setIndex(0); }}>{levels.map(([value, label]) => <option value={value} key={value}>{label}</option>)}</select></label>}
+          {family === "madre" && <label className="library-field">Nivel de Patrones Madre<select value={level} onChange={e => changeLevel(e.target.value)}>{levels.map(([value, label]) => <option value={value} key={value}>{label}</option>)}</select></label>}
           {section && <details className="library-block-picker"><summary>Elegir un bloque</summary><label className="library-field">Bloque<select value={block} onChange={e => { setBlock(e.target.value); setIndex(0); }}><option value="all">Todos los bloques</option>{section.blocks.map(b => <option key={b.id} value={b.id}>{b.id} · {b.title}</option>)}</select></label></details>}
           <div className="library-route-note"><span className="route-node" /><p>Primero distingue la pista.<br />Después explica por qué cambia la decisión.</p></div>
           {!persisted && <p role="status" className="library-storage-note">El progreso dura hasta que cierres esta página.</p>}
@@ -84,7 +94,7 @@ export default function Library({ onReview }: { onReview: (context: ReviewContex
         <div className="library-study-column">
           {sectionError ? <LoadError onRetry={() => setSectionAttempt(a => a + 1)} /> : !section ? <p role="status" className="library-loading">Cargando tarjetas…</p> : card ? <>
             <div className="library-card-pagination"><span>Tarjeta {index + 1} de {cards.length}</span><div><button aria-label="Tarjeta anterior" disabled={index === 0} onClick={() => setIndex(i => i - 1)}>‹</button><button aria-label="Tarjeta siguiente" disabled={index >= cards.length - 1} onClick={() => setIndex(i => i + 1)}>›</button></div></div>
-            <StudyCard key={card.id} card={card} status={progress[card.id]} onRate={value => setProgress(current => ({ ...current, [card.id]: value }))} onReview={() => onReview({ axisId: `libro-${sectionId}`, section: "library", caseId: card.id, label: `${section.title} · ${card.id}` })} />
+            <StudyCard key={card.id} card={card} status={progress[card.id]} onFollow={followCase} onRate={value => setProgress(current => ({ ...current, [card.id]: value }))} onReview={() => onReview({ axisId: `libro-${sectionId}`, section: "library", caseId: card.id, label: `${section.title} · ${card.id}` })} />
             <div className="library-bottom-next"><button disabled={index === 0} onClick={() => { setIndex(i => i - 1); document.getElementById("study")?.scrollIntoView(); }}>Anterior</button><button disabled={index >= cards.length - 1} onClick={() => { setIndex(i => i + 1); document.getElementById("study")?.scrollIntoView(); }}>Siguiente tarjeta <Icon name="arrow" size={16} /></button></div>
           </> : <p role="status">No hay tarjetas para esta selección. Elige otro bloque o nivel.</p>}
         </div>

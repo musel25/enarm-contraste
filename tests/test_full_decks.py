@@ -60,6 +60,7 @@ class FullDeckTests(unittest.TestCase):
         eje = next(c for c in data['cards'] if c['family'] == 'eje')
         self.assertEqual([row['title'] for row in eje['back']], ['Diagnóstico alfa', 'Diagnóstico beta'])
         self.assertEqual([row['highlight'] for row in eje['front']], ['hallazgo 1', 'hallazgo 2'])
+        self.assertEqual([row['topic_id'] for row in eje['back']], ['01.01-01', '01.01-02'])
         self.assertEqual([c['level'] for c in data['cards'] if c['family'] == 'madre'], [1, 2, 3, 4, 2, 3, 4])
         for family, count in [('eje', 1), ('madre', 7)]:
             with zipfile.ZipFile(self.root / f'build/enarm-{family}.apkg') as package:

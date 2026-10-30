@@ -13,11 +13,12 @@ function References({ sources }: { sources: CardSource[] }) {
   </li>)}</ul>;
 }
 
-export default function StudyCard({ card, status, onRate, onReview }: {
+export default function StudyCard({ card, status, onRate, onReview, onFollow }: {
   card: StudyCardData;
   status?: "known" | "again";
   onRate: (value: "known" | "again") => void;
   onReview: () => void;
+  onFollow: (topicId: string) => void;
 }) {
   const [revealed, setRevealed] = useState(false);
   const [highlight, setHighlight] = useState(true);
@@ -45,6 +46,7 @@ export default function StudyCard({ card, status, onRate, onReview }: {
             {row.reason && <p className="answer-reason"><strong>Por qué</strong>{row.reason}</p>}
             {row.limits && <details className="pattern-limit"><summary>Límite del patrón</summary><p>{row.limits}</p></details>}
             {row.sources && <details className="pattern-limit"><summary>Fuentes de este caso</summary><References sources={row.sources} /></details>}
+            {row.topic_id && <button className="follow-case-button" onClick={() => onFollow(row.topic_id!)}>Ver manejo y variantes <Icon name="arrow" size={15} /></button>}
           </div>
         </li>)}</ol>
         <div className="library-rating"><p>¿Lo reconociste?</p><div><button aria-pressed={status === "again"} onClick={() => onRate("again")}>Quiero repetirlo</button><button aria-pressed={status === "known"} onClick={() => onRate("known")}><Icon name="check" size={16} />Lo reconocí</button></div></div>

@@ -82,3 +82,24 @@ test("rejects malformed answer data before opening a card", async ({ page }) => 
   await expect(page.getByRole("alert")).toContainText("No se pudo cargar");
   await expect(page.getByRole("region", { name: "Frente de la tarjeta" })).toHaveCount(0);
 });
+
+test("follows the chosen differential into management and keeps the case between levels", async ({ page }) => {
+  await mockLibrary(page);
+  const data = structuredClone(section);
+  Object.assign(data.cards[0].back[0], { topic_id: "01.01-01" });
+  Object.assign(data.cards[0].back[1], { topic_id: "01.01-02" });
+  for (const card of data.cards.filter(c => c.level >= 2)) Object.assign(card, { topic_id: "01.01-01" });
+  const second = data.cards.filter(c => c.level >= 2).map(card => ({ ...structuredClone(card), id: card.id.replace("01.01-01", "01.01-02"), topic_id: "01.01-02", context: "Caso con pista beta.", front: card.level === 3 ? [{ text: "Mecanismo causal beta" }] : card.front, back: card.back.map((row, index) => index === 0 ? { ...row, text: card.level === 4 ? "Acción B" : "Hallazgo beta" } : row) }));
+  await page.route("**/study/sections/*.json*", route => route.fulfill({ json: { ...data, cards: [...data.cards, ...second] } }));
+  await page.goto("./#biblioteca");
+  await page.getByRole("button", { name: /Sección de prueba/ }).click();
+  await page.getByRole("button", { name: "Mostrar respuesta", exact: true }).click();
+  await page.getByRole("button", { name: "Ver manejo y variantes", exact: true }).nth(1).click();
+  await expect(page.getByLabel("Nivel de Patrones Madre")).toHaveValue("4");
+  await expect(page.getByRole("region", { name: "Frente de la tarjeta" })).toContainText("pista beta");
+  await page.getByRole("button", { name: "Mostrar respuesta", exact: true }).click();
+  await expect(page.getByRole("region", { name: "Respuesta de la tarjeta" })).toContainText("Acción B");
+  await page.getByLabel("Nivel de Patrones Madre").selectOption("3");
+  await expect(page.getByRole("region", { name: "Frente de la tarjeta" })).toContainText("Mecanismo causal beta");
+  await expect(page.getByRole("region", { name: "Respuesta de la tarjeta" })).toHaveCount(0);
+});

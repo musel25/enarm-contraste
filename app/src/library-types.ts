@@ -5,10 +5,11 @@ export interface StudyCardData {
   level: number;
   section_id: string;
   block_id: string;
+  topic_id?: string;
   prompt: string;
   context: string;
   front: { text: string; highlight?: string }[];
-  back: { title: string; text: string; discriminator?: string; action?: string; reason?: string; limits?: string; sources?: CardSource[] }[];
+  back: { title: string; text: string; topic_id?: string; discriminator?: string; action?: string; reason?: string; limits?: string; sources?: CardSource[] }[];
   sources: CardSource[];
 }
 export interface StudySection {
@@ -40,7 +41,7 @@ function sources(value: unknown): boolean {
 }
 function rows(value: unknown, answer = false): boolean {
   return Array.isArray(value) && value.length > 0 && value.every(row => record(row) && typeof row.text === "string" &&
-    optionalText(row, ["highlight", "discriminator", "action", "reason", "limits"]) &&
+    optionalText(row, ["highlight", "discriminator", "action", "reason", "limits", "topic_id"]) &&
     (row.sources === undefined || sources(row.sources)) && (!answer || typeof row.title === "string"));
 }
 export function isManifest(value: unknown): value is StudyManifest {
