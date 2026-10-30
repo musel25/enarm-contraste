@@ -10,6 +10,7 @@ export function useCoachStore() {
   const lock = useRef(false);
   const preservePending = useRef(false);
   const [loading, setLoading] = useState(true);
+  const [generation, setGeneration] = useState(0);
   const [saving, setSaving] = useState(false);
   const [error, setError] = useState("");
   const [pending, setPending] = useState<CoachState | null>(null);
@@ -17,7 +18,7 @@ export function useCoachStore() {
   const reload = useCallback(async () => {
     try { const saved = await readCoach(); ref.current = saved; setState(saved); setError(""); setPending(null); setLatest(null); preservePending.current = false; }
     catch (failure) { if (failure instanceof CloudUnavailable && failure.cached) { ref.current = failure.cached; setState(failure.cached); } setError((failure as Error).message); }
-    finally { setLoading(false); }
+    finally { setLoading(false); setGeneration(value => value + 1); }
   }, []);
   useEffect(() => { void reload(); }, [reload]);
   const commit = useCallback(async (change: (previous: CoachState) => CoachState, preserve = false): Promise<CoachState | null> => {
@@ -35,7 +36,7 @@ export function useCoachStore() {
       return null;
     } finally { lock.current = false; setSaving(false); }
   }, []);
-  return { state, loading, saving, error, pending, latest, commit, reload, retry: () => pending ? commit(() => pending, preservePending.current) : reload() };
+  return { state, loading, generation, saving, error, pending, latest, commit, reload, retry: () => pending ? commit(() => pending, preservePending.current) : reload() };
 }
 
 export function useStudyDay(timezone: string) {

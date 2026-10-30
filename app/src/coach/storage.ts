@@ -60,12 +60,18 @@ export async function writeCoach(expectedRevision: number, next: CoachState, pre
   });
 }
 
-export async function readBeforeImport(): Promise<CoachState | null> {
+export async function readBeforeImport(code: string): Promise<CoachState | null> {
   const db = await open();
   return new Promise((resolve, reject) => {
-    const request = db.transaction("state", "readonly").objectStore("state").get("before-import");
-    request.onsuccess = () => resolve(validateState(request.result) ? request.result : null);
-    request.onerror = () => reject(new Error("No se pudo leer la copia anterior."));
+    const store = db.transaction("state", "readonly").objectStore("state");
+    const owner = store.get("legacy-recovery-code");
+    owner.onsuccess = () => {
+      if (owner.result !== code) { resolve(null); return; }
+      const request = store.get("before-import");
+      request.onsuccess = () => resolve(validateState(request.result) ? request.result : null);
+      request.onerror = () => reject(new Error("No se pudo leer la copia anterior."));
+    };
+    owner.onerror = () => reject(new Error("No se pudo leer el perfil de la copia anterior."));
   });
 }
 
@@ -80,7 +86,7 @@ export async function getProgressCode(): Promise<string> {
       try {
         if (request.result !== undefined && !validCode(request.result)) throw new Error("Código guardado no válido.");
         code = request.result || btoa(String.fromCharCode(...crypto.getRandomValues(new Uint8Array(32)))).replace(/\+/g, "-").replace(/\//g, "_").replace(/=+$/, "");
-        if (request.result === undefined) store.put(code, "progress-code");
+        if (request.result === undefined) { store.put(code, "progress-code"); store.put(code, "legacy-recovery-code"); }
       } catch { tx.abort(); }
     };
     tx.oncomplete = () => resolve(code);

@@ -36,7 +36,7 @@ export async function writeCoach(expected: number, next: CoachState, preserve = 
 
 export async function readBeforeImport(): Promise<CoachState | null> {
   const code = await getProgressCode();
-  return await cloudRequest(code, "/previous") || await readLocalPrevious();
+  return await cloudRequest(code, "/previous") || await readLocalPrevious(code);
 }
 
 export async function connectProgress(code: string): Promise<void> {

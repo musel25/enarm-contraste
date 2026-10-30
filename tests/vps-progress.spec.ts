@@ -16,6 +16,11 @@ async function grade(page: Page) {
   await page.getByRole("button", { name: "Mostrar respuesta", exact: true }).click();
   await page.getByRole("button", { name: /^Bien/ }).click();
 }
+async function privateCode(page: Page) {
+  const field = page.getByLabel("Tu código de progreso", { exact: true });
+  await expect(field).not.toHaveValue("");
+  return field.inputValue();
+}
 async function seed(page: Page, state: CoachState) {
   await page.goto("./#amenorrea");
   await page.evaluate(state => new Promise<void>((resolve, reject) => {
@@ -42,7 +47,8 @@ test("restores the same server progress on a separate browser with its private c
   await start(page); await grade(page);
   await expect(page.getByRole("progressbar", { name: "Meta diaria" })).toHaveAttribute("aria-valuenow", "1");
   await page.getByRole("button", { name: "Mi progreso en el VPS" }).click();
-  const code = await page.getByLabel("Tu código de progreso", { exact: true }).inputValue();
+  await expect(page.getByLabel("Tu código de progreso", { exact: true })).not.toHaveValue("");
+  const code = await privateCode(page);
   expect(code.length).toBe(43);
   await page.getByRole("button", { name: "Cerrar", exact: true }).click();
   const context = await browser.newContext({ timezoneId: "UTC", reducedMotion: "reduce" });
@@ -50,6 +56,7 @@ test("restores the same server progress on a separate browser with its private c
     const other = await context.newPage(); await mockCoach(other); await other.goto("./");
     await expect(other.getByRole("heading", { name: "Tu plan. Un día a la vez.", exact: true })).toBeVisible();
     await other.getByRole("button", { name: "Mi progreso en el VPS" }).click();
+    await expect(other.getByLabel("Tu código de progreso", { exact: true })).not.toHaveValue("");
     await other.getByLabel("Código de otro dispositivo", { exact: true }).fill(code);
     await other.getByRole("button", { name: "Ver progreso", exact: true }).click();
     await expect(other.getByText("1 respuestas guardadas", { exact: true })).toBeVisible();
@@ -88,6 +95,90 @@ test("a missing private code cannot replace the connected profile", async ({ pag
   await expect(page.getByRole("button", { name: "Conectar este progreso", exact: true })).toHaveCount(0);
   await page.getByRole("button", { name: "Cerrar", exact: true }).click();
   await expect(page.getByRole("progressbar", { name: "Meta diaria" })).toHaveAttribute("aria-valuenow", "1");
+});
+
+test("switching profiles closes the old editor and loads the connected plan fields", async ({ page, browser }) => {
+  await start(page);
+  await page.getByRole("button", { name: "Ajustar mi plan" }).click();
+  await page.getByLabel("Minutos por día", { exact: true }).fill("7");
+  const context = await browser.newContext({ timezoneId: "UTC", reducedMotion: "reduce" });
+  try {
+    const other = await context.newPage(); await mockCoach(other); await start(other);
+    await other.getByRole("button", { name: "Ajustar mi plan" }).click();
+    await other.getByLabel("Minutos por día", { exact: true }).fill("25");
+    await other.getByRole("button", { name: "Guardar mi plan" }).click();
+    await other.getByRole("button", { name: "Mi progreso en el VPS" }).click();
+    const code = await privateCode(other);
+    await page.getByRole("button", { name: "Mi progreso en el VPS" }).click();
+    await page.getByLabel("Código de otro dispositivo", { exact: true }).fill(code);
+    await page.getByRole("button", { name: "Ver progreso", exact: true }).click();
+    await page.getByRole("button", { name: "Conectar este progreso", exact: true }).click();
+    await expect(page.getByRole("heading", { name: /Un poco más cerca/ })).toBeVisible();
+    await page.getByRole("button", { name: "Ajustar mi plan" }).click();
+    await expect(page.getByLabel("Minutos por día", { exact: true })).toHaveValue("25");
+  } finally { await context.close(); }
+});
+
+test("legacy import recovery stays with its original private profile", async ({ page, browser }) => {
+  await start(page);
+  await page.getByRole("button", { name: "Mi progreso en el VPS" }).click();
+  await expect(page.getByLabel("Tu código de progreso", { exact: true })).not.toHaveValue("");
+  const originalCode = await privateCode(page);
+  await page.getByRole("button", { name: "Cerrar", exact: true }).click();
+  await page.evaluate(() => new Promise<void>(resolve => {
+    const open = indexedDB.open("enarm-coach-v1", 1);
+    open.onsuccess = () => { const db = open.result; const tx = db.transaction("state", "readwrite"), store = tx.objectStore("state"); const read = store.get("current"); read.onsuccess = () => store.put(read.result, "before-import"); tx.oncomplete = () => { db.close(); resolve(); }; };
+  }));
+  const context = await browser.newContext({ timezoneId: "UTC", reducedMotion: "reduce" });
+  try {
+    const other = await context.newPage(); await mockCoach(other); await start(other);
+    await other.getByRole("button", { name: "Mi progreso en el VPS" }).click();
+    await expect(other.getByLabel("Tu código de progreso", { exact: true })).not.toHaveValue("");
+    const otherCode = await privateCode(other);
+    async function connect(code: string) {
+      await page.getByRole("button", { name: "Mi progreso en el VPS" }).click();
+      await page.getByLabel("Código de otro dispositivo", { exact: true }).fill(code);
+      await page.getByRole("button", { name: "Ver progreso", exact: true }).click();
+      await page.getByRole("button", { name: "Conectar este progreso", exact: true }).click();
+      await expect(page.getByRole("dialog")).toHaveCount(0);
+    }
+    await connect(otherCode);
+    const checked = page.waitForResponse(r => r.url().endsWith("/api/progress/previous"));
+    await page.getByRole("button", { name: "Copia de mi progreso" }).click();
+    await (await checked).finished();
+    await page.evaluate(() => new Promise<void>(resolve => requestAnimationFrame(() => requestAnimationFrame(() => resolve()))));
+    await expect(page.getByRole("button", { name: "Exportar la copia anterior a la última importación" })).toHaveCount(0);
+    await page.getByRole("button", { name: "Cerrar", exact: true }).click();
+    await connect(originalCode);
+    await page.getByRole("button", { name: "Copia de mi progreso" }).click();
+    await expect(page.getByRole("button", { name: "Exportar la copia anterior a la última importación" })).toBeVisible();
+  } finally { await context.close(); }
+});
+
+test("reloading a profile changed in another tab resets an unsaved editor", async ({ page, context, browser }) => {
+  await start(page);
+  await page.getByRole("button", { name: "Ajustar mi plan" }).click();
+  await page.getByLabel("Minutos por día", { exact: true }).fill("7");
+  const separate = await browser.newContext({ timezoneId: "UTC", reducedMotion: "reduce" });
+  try {
+    const source = await separate.newPage(); await mockCoach(source); await start(source);
+    await source.getByRole("button", { name: "Ajustar mi plan" }).click();
+    await source.getByLabel("Minutos por día", { exact: true }).fill("25");
+    await source.getByRole("button", { name: "Guardar mi plan" }).click();
+    await source.getByRole("button", { name: "Mi progreso en el VPS" }).click();
+    await expect(source.getByLabel("Tu código de progreso", { exact: true })).not.toHaveValue("");
+    const code = await privateCode(source);
+    const other = await context.newPage(); await mockCoach(other); await other.goto("./");
+    await other.getByRole("button", { name: "Mi progreso en el VPS" }).click();
+    await other.getByLabel("Código de otro dispositivo", { exact: true }).fill(code);
+    await other.getByRole("button", { name: "Ver progreso", exact: true }).click();
+    await other.getByRole("button", { name: "Conectar este progreso", exact: true }).click();
+    await expect(other.getByRole("dialog")).toHaveCount(0);
+    await page.getByRole("button", { name: "Guardar mi plan" }).click();
+    await expect(page.getByRole("alert")).toContainText("Otro dispositivo o pestaña");
+    await page.getByRole("button", { name: "Cargar progreso más reciente" }).click();
+    await expect(page.getByLabel("Minutos por día", { exact: true })).toHaveValue("25");
+  } finally { await separate.close(); }
 });
 
 test("a confirmed VPS save survives a failed browser cache", async ({ page }) => {
