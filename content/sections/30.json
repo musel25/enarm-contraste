@@ -1,0 +1,991 @@
+{
+  "id": "30",
+  "title": "Reumatología",
+  "blocks": [
+    {
+      "id": "30.01",
+      "title": "Articulación caliente aguda",
+      "topics": [
+        {
+          "id": "30.01-01",
+          "name": "Artritis séptica",
+          "source_pages": [
+            998
+          ],
+          "pattern": "Un paciente presenta dolor intenso y aumento de volumen de una rodilla con fiebre. Limita por completo el movimiento. Tiene inmunosupresión y se sospecha una infección articular.",
+          "key_discriminator": "con fiebre",
+          "mechanism": "La llegada de microorganismos a la articulación por sangre, continuidad o inoculación induce inflamación purulenta que puede destruir cartílago rápidamente y diseminarse sistémicamente.",
+          "findings": [
+            {
+              "mechanism": "Infección sinovial",
+              "finding": "Dolor intenso e incapacidad funcional"
+            }
+          ],
+          "initial_action": "Obtener líquido sinovial y cultivos sin retrasar antibiótico en sepsis; coordinar drenaje y atención hospitalaria.",
+          "action_reason": "Es una urgencia con riesgo de destrucción articular.",
+          "modifiers": [
+            {
+              "factor": "Inestabilidad o sepsis",
+              "action": "Priorizar estabilización y antibiótico inmediato",
+              "reason": "No debe demorarse por pruebas"
+            }
+          ],
+          "limits": "Un recuento celular aislado no excluye ni confirma toda infección.",
+          "evidence": [
+            {
+              "page": 998,
+              "quote": "Es considerada una emergencia"
+            },
+            {
+              "page": 998,
+              "quote": "Cultivo de líquido sinovial."
+            }
+          ],
+          "source_gaps": []
+        },
+        {
+          "id": "30.01-02",
+          "name": "Gota",
+          "source_pages": [
+            1003,
+            1004,
+            1005
+          ],
+          "pattern": "Un adulto tiene dolor súbito muy intenso, eritema y calor en la primera articulación del dedo gordo. Ha tenido ataques similares. Se considera estudio del líquido para excluir infección.",
+          "key_discriminator": "primera articulación del dedo gordo",
+          "mechanism": "La cristalización de urato monosódico en articulaciones activa inflamación aguda intensa; la carga persistente puede formar tofos, pero el urato sérico aislado no define un ataque.",
+          "findings": [
+            {
+              "mechanism": "Cristales de urato",
+              "finding": "Podagra aguda"
+            }
+          ],
+          "initial_action": "Valorar artrocentesis si hay duda o riesgo infeccioso; tratar inflamación con AINE, colchicina o glucocorticoide según contraindicaciones.",
+          "action_reason": "Controla el ataque tras considerar infección.",
+          "modifiers": [
+            {
+              "factor": "Tofos o ataques recurrentes",
+              "action": "Valorar tratamiento para reducir urato",
+              "reason": "Busca prevenir nueva deposición"
+            }
+          ],
+          "limits": "Cristales de birrefringencia negativa. El objetivo de urato es menor de 6 mg/dl; puede iniciarse hipouricemiante durante un ataque cuando esté indicado.",
+          "evidence": [
+            {
+              "page": 1003,
+              "quote": "presencia de cristales de urato"
+            },
+            {
+              "page": 1004,
+              "quote": "colchicina oral y los AINES"
+            }
+          ],
+          "source_gaps": [],
+          "external_sources": [
+            {
+              "label": "ACR 2020: manejo de gota",
+              "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10563586/",
+              "quote": "an SU target of <6 mg/dl",
+              "checked_at": "2026-10-29"
+            }
+          ],
+          "source_corrections": [
+            {
+              "reason": "El objetivo terapéutico es urato menor de 6 mg/dl. Si está indicado, el hipouricemiante puede iniciarse durante el ataque con manejo antiinflamatorio; no requiere demora universal."
+            }
+          ]
+        }
+      ],
+      "common_problem": "Paciente con articulación dolorosa, caliente e inflamada.",
+      "mother": {
+        "cue": "Inflamación articular aguda por infección o depósito de cristales.",
+        "answer": "Monoartritis aguda.",
+        "explanation": "La infección debe excluirse con urgencia."
+      }
+    },
+    {
+      "id": "30.02",
+      "title": "Poliartritis inflamatoria",
+      "topics": [
+        {
+          "id": "30.02-01",
+          "name": "Artritis reumatoide",
+          "source_pages": [
+            996,
+            997
+          ],
+          "pattern": "Una mujer presenta rigidez matutina prolongada e inflamación simétrica de carpos y articulaciones de los dedos desde hace semanas. La exploración muestra sinovitis y limitación funcional.",
+          "key_discriminator": "inflamación simétrica de carpos",
+          "mechanism": "La autoinmunidad mantiene inflamación sinovial proliferativa, causa dolor y rigidez y puede erosionar articulaciones; el tratamiento modificador temprano busca evitar daño estructural y pérdida funcional.",
+          "findings": [
+            {
+              "mechanism": "Sinovitis autoinmune",
+              "finding": "Poliartritis simétrica y rigidez"
+            }
+          ],
+          "initial_action": "Solicitar evaluación de actividad y estudios basales y referir pronto para iniciar fármaco modificador de enfermedad.",
+          "action_reason": "La analgesia sola no previene daño.",
+          "modifiers": [
+            {
+              "factor": "Actividad persistente pese a tratamiento",
+              "action": "Reevaluar y ajustar por reumatología",
+              "reason": "La meta es controlar inflamación"
+            }
+          ],
+          "limits": "Los criterios de clasificación no sustituyen juicio diagnóstico.",
+          "evidence": [
+            {
+              "page": 996,
+              "quote": "inflamación poliarticular y simétrica"
+            },
+            {
+              "page": 997,
+              "quote": "iniciar su tratamiento específico"
+            }
+          ],
+          "source_gaps": []
+        },
+        {
+          "id": "30.02-02",
+          "name": "Artritis psoriásica",
+          "source_pages": [
+            994
+          ],
+          "pattern": "Una persona con psoriasis ungueal presenta artritis asimétrica y un dedo completamente hinchado. Tiene dolor en inserciones tendinosas y molestias axiales. Se evalúa una enfermedad articular asociada.",
+          "key_discriminator": "un dedo completamente hinchado",
+          "mechanism": "La inflamación inmunomediada afecta articulaciones, entesis y a veces eje axial en personas con psoriasis, produce dactilitis y daño estructural con expresión clínica variable.",
+          "findings": [
+            {
+              "mechanism": "Inflamación de entesis y dedo",
+              "finding": "Dactilitis"
+            }
+          ],
+          "initial_action": "Referir a reumatología para definir dominios afectados y tratamiento; usar alivio sintomático según riesgo.",
+          "action_reason": "El manejo debe cubrir piel y estructuras musculoesqueléticas.",
+          "modifiers": [
+            {
+              "factor": "Compromiso axial o cutáneo importante",
+              "action": "Ajustar terapia especializada",
+              "reason": "No todos los fármacos actúan igual en cada dominio"
+            }
+          ],
+          "limits": "La ausencia de factor reumatoide no confirma diagnóstico.",
+          "evidence": [
+            {
+              "page": 994,
+              "quote": "dedo en salchicha"
+            },
+            {
+              "page": 994,
+              "quote": "Metotrexato."
+            }
+          ],
+          "source_gaps": []
+        },
+        {
+          "id": "30.02-03",
+          "name": "Artritis reactiva",
+          "source_pages": [
+            995
+          ],
+          "pattern": "Un joven presenta oligoartritis de piernas pocas semanas después de diarrea. Tiene conjuntivitis y dolor en el talón. No hay datos de infección purulenta dentro de la articulación.",
+          "key_discriminator": "después de diarrea",
+          "mechanism": "Una respuesta inflamatoria tras infección gastrointestinal o genitourinaria puede afectar articulaciones y entesis sin infección articular purulenta, acompañada de manifestaciones oculares, urinarias o mucocutáneas.",
+          "findings": [
+            {
+              "mechanism": "Inflamación posterior a infección",
+              "finding": "Oligoartritis y entesitis"
+            }
+          ],
+          "initial_action": "Excluir artritis séptica y tratar dolor e inflamación; investigar y tratar infección activa cuando corresponda.",
+          "action_reason": "La inflamación articular y foco activo son decisiones distintas.",
+          "modifiers": [
+            {
+              "factor": "Síntomas oculares dolorosos",
+              "action": "Referir para descartar uveítis",
+              "reason": "Puede amenazar visión"
+            }
+          ],
+          "limits": "No clasificar automáticamente como crónica por cumplir un mes.",
+          "evidence": [
+            {
+              "page": 995,
+              "quote": "infección extraarticular"
+            },
+            {
+              "page": 995,
+              "quote": "inicial y de primera elección: AINEs. recurrencia del síndrome agudo. • Si"
+            }
+          ],
+          "source_gaps": []
+        }
+      ],
+      "common_problem": "Paciente con artritis periférica inflamatoria.",
+      "mother": {
+        "cue": "Inflamación sinovial o de entesis asociada a autoinmunidad, psoriasis o infección previa.",
+        "answer": "Artritis inflamatoria periférica.",
+        "explanation": "La distribución y manifestaciones acompañantes dirigen el diagnóstico."
+      }
+    },
+    {
+      "id": "30.03",
+      "title": "Dolor axial inflamatorio",
+      "topics": [
+        {
+          "id": "30.03-01",
+          "name": "Espondilitis anquilosante",
+          "source_pages": [
+            1001
+          ],
+          "pattern": "Un hombre joven presenta dolor lumbar persistente con rigidez al despertar y mejoría al moverse. Tiene movilidad lumbar reducida y dolor sacroilíaco. No hay déficit neurológico.",
+          "key_discriminator": "mejoría al moverse",
+          "mechanism": "La inflamación de sacroilíacas y entesis del esqueleto axial puede evolucionar a remodelación y fusión ósea, causando dolor inflamatorio y pérdida progresiva de movilidad espinal.",
+          "findings": [
+            {
+              "mechanism": "Sacroilitis y entesitis",
+              "finding": "Rigidez y limitación lumbar"
+            }
+          ],
+          "initial_action": "Evaluar patrón inflamatorio e imagen apropiada y referir; indicar ejercicio y AINE si no está contraindicado.",
+          "action_reason": "Controla síntomas y conserva función.",
+          "modifiers": [
+            {
+              "factor": "Ojo rojo doloroso",
+              "action": "Investigar uveítis urgente",
+              "reason": "Es una manifestación asociada"
+            }
+          ],
+          "limits": "Una radiografía temprana normal no excluye todo el espectro axial.",
+          "evidence": [
+            {
+              "page": 1001,
+              "quote": "articulación sacroiliaca"
+            },
+            {
+              "page": 1001,
+              "quote": "Los AINE son el tratamiento"
+            }
+          ],
+          "source_gaps": []
+        }
+      ],
+      "common_problem": "Paciente joven con dolor axial y rigidez.",
+      "mother": {
+        "cue": "Inflamación sacroilíaca y de entesis que limita movilidad espinal.",
+        "answer": "Espondiloartritis axial.",
+        "explanation": "El patrón inflamatorio y la imagen son centrales."
+      }
+    },
+    {
+      "id": "30.04",
+      "title": "Artritis en niño",
+      "topics": [
+        {
+          "id": "30.04-01",
+          "name": "Artritis idiopática juvenil",
+          "source_pages": [
+            993
+          ],
+          "pattern": "Una niña tiene rodilla inflamada y limitación de movimiento durante más de seis semanas. No hay infección demostrada. Se revisan otras articulaciones, crecimiento y síntomas sistémicos.",
+          "key_discriminator": "más de seis semanas",
+          "mechanism": "La inflamación sinovial crónica de inicio infantil tiene subtipos diversos y puede afectar articulaciones, crecimiento y ojos; la clasificación y actividad determinan tratamiento y seguimiento.",
+          "findings": [
+            {
+              "mechanism": "Sinovitis crónica infantil",
+              "finding": "Inflamación y pérdida de movimiento"
+            }
+          ],
+          "initial_action": "Referir a reumatología pediátrica para excluir causas alternativas y tratar actividad; coordinar evaluación ocular.",
+          "action_reason": "El daño articular y uveítis requieren detección.",
+          "modifiers": [
+            {
+              "factor": "Fiebre o manifestaciones sistémicas",
+              "action": "Evaluar subtipo y gravedad",
+              "reason": "La enfermedad puede exceder la articulación"
+            }
+          ],
+          "limits": "No esperar fracaso prolongado de AINE para toda referencia.",
+          "evidence": [
+            {
+              "page": 993,
+              "quote": "Uveítis, fiebre,"
+            },
+            {
+              "page": 993,
+              "quote": "articulaciones de manos y pies • Metotrexato se debe iniciar a una dosis de 10 a"
+            }
+          ],
+          "source_gaps": []
+        }
+      ],
+      "common_problem": "Niño con inflamación articular persistente.",
+      "mother": {
+        "cue": "Artritis inflamatoria crónica de inicio pediátrico.",
+        "answer": "Artritis idiopática juvenil.",
+        "explanation": "La evaluación incluye crecimiento y complicaciones oculares."
+      }
+    },
+    {
+      "id": "30.05",
+      "title": "Fotosensibilidad y órganos",
+      "topics": [
+        {
+          "id": "30.05-01",
+          "name": "Lupus eritematoso sistémico",
+          "source_pages": [
+            1007,
+            1008
+          ],
+          "pattern": "Una mujer joven presenta fotosensibilidad, úlceras orales y artritis. El examen de orina muestra proteínas y hematuria. Se sospecha enfermedad autoinmune con posible daño renal.",
+          "key_discriminator": "proteínas y hematuria",
+          "mechanism": "La producción de autoanticuerpos y activación inmune ocasionan inflamación y daño multisistémico, incluido depósito y lesión renal; la actividad y órganos amenazados determinan intensidad terapéutica.",
+          "findings": [
+            {
+              "mechanism": "Autoinmunidad sistémica",
+              "finding": "Artritis y afectación renal"
+            }
+          ],
+          "initial_action": "Evaluar función renal, orina, complemento y anticuerpos; referir para actividad y tratamiento según órgano, con hidroxicloroquina si corresponde.",
+          "action_reason": "El compromiso renal modifica urgencia y tratamiento.",
+          "modifiers": [
+            {
+              "factor": "Lesión de órgano amenazante",
+              "action": "Escalar inmunosupresión por especialista",
+              "reason": "El tratamiento sintomático es insuficiente"
+            }
+          ],
+          "limits": "La exposición a glucocorticoides debe limitarse al mínimo necesario.",
+          "evidence": [
+            {
+              "page": 1007,
+              "quote": "Hipocomplementemia"
+            },
+            {
+              "page": 1008,
+              "quote": "Hidroxicloroquina"
+            }
+          ],
+          "source_gaps": []
+        },
+        {
+          "id": "30.05-02",
+          "name": "Síndrome antifosfolípidos",
+          "source_pages": [
+            1014,
+            1015
+          ],
+          "pattern": "Una mujer tiene trombosis venosa y antecedentes de pérdidas gestacionales. Se detectan anticuerpos antifosfolípidos persistentes en muestras separadas. Se requiere clasificar riesgo y planificar prevención de recurrencia.",
+          "key_discriminator": "anticuerpos antifosfolípidos persistentes",
+          "mechanism": "Los anticuerpos antifosfolípidos favorecen un estado protrombótico y complicaciones placentarias; la persistencia junto a eventos clínicos distingue síndrome de positividad aislada y orienta prevención secundaria.",
+          "findings": [
+            {
+              "mechanism": "Estado protrombótico autoinmune",
+              "finding": "Trombosis y morbilidad obstétrica"
+            }
+          ],
+          "initial_action": "Tratar evento trombótico y referir para anticoagulación y valoración del perfil de riesgo.",
+          "action_reason": "Previene recurrencias y adapta manejo obstétrico.",
+          "modifiers": [
+            {
+              "factor": "Embarazo",
+              "action": "Valorar heparina y estrategia obstétrica especializada",
+              "reason": "El anticoagulante y objetivos cambian"
+            }
+          ],
+          "limits": "No toda positividad aislada requiere aspirina de forma universal.",
+          "evidence": [
+            {
+              "page": 1014,
+              "quote": "separados por al menos 12 semanas."
+            },
+            {
+              "page": 1015,
+              "quote": "heparina de bajo"
+            }
+          ],
+          "source_gaps": [],
+          "external_sources": [
+            {
+              "label": "EULAR 2019: síndrome antifosfolípidos",
+              "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11034817/",
+              "quote": "all with high-risk aPL profiles",
+              "checked_at": "2026-10-29"
+            }
+          ],
+          "source_corrections": [
+            {
+              "reason": "La recomendación de aspirina en prevención primaria corresponde a perfiles de anticuerpos de alto riesgo en contextos definidos, no a toda positividad aislada."
+            }
+          ]
+        }
+      ],
+      "common_problem": "Paciente con manifestaciones autoinmunes de varios órganos o trombosis.",
+      "mother": {
+        "cue": "Autoinmunidad sistémica con daño inflamatorio o estado protrombótico.",
+        "answer": "Conectivopatía y síndrome antifosfolípidos.",
+        "explanation": "El órgano afectado y los anticuerpos orientan evaluación y urgencia."
+      }
+    },
+    {
+      "id": "30.06",
+      "title": "Ojo/boca secos y fibrosis",
+      "topics": [
+        {
+          "id": "30.06-01",
+          "name": "Síndome de Sjörgren",
+          "source_pages": [
+            1013
+          ],
+          "pattern": "Una mujer presenta ojos secos, boca seca y necesidad de beber para tragar alimentos. La prueba de Schirmer muestra hiposecreción. Se investigan anticuerpos y causas alternativas de sequedad.",
+          "key_discriminator": "ojos secos, boca seca",
+          "mechanism": "La infiltración autoinmune de glándulas exocrinas reduce producción lagrimal y salival, provoca sequedad y daño de superficies y puede acompañarse de manifestaciones sistémicas y linfoproliferación.",
+          "findings": [
+            {
+              "mechanism": "Hiposecreción exocrina",
+              "finding": "Xeroftalmía y xerostomía"
+            }
+          ],
+          "initial_action": "Confirmar sequedad objetiva, revisar fármacos y etiologías y ofrecer lubricación ocular, cuidado bucal e hidratación.",
+          "action_reason": "Protege córnea y salud oral.",
+          "modifiers": [
+            {
+              "factor": "Aumento glandular persistente o púrpura",
+              "action": "Investigar complicación sistémica",
+              "reason": "Puede indicar actividad o linfoproliferación"
+            }
+          ],
+          "limits": "La serología aislada no reemplaza evaluación clínica y objetiva.",
+          "evidence": [
+            {
+              "page": 1013,
+              "quote": "hiposecreción glandular"
+            },
+            {
+              "page": 1013,
+              "quote": "Lágrimas artificiales"
+            }
+          ],
+          "source_gaps": []
+        },
+        {
+          "id": "30.06-02",
+          "name": "Esclerosis sistémica",
+          "source_pages": [
+            999,
+            1000
+          ],
+          "pattern": "Una persona tiene Raynaud, piel engrosada en dedos y reflujo. Además presenta disnea progresiva y tos seca. Se requiere evaluar una enfermedad fibrosante con posible daño pulmonar.",
+          "key_discriminator": "piel engrosada en dedos",
+          "mechanism": "La microangiopatía y activación inmune favorecen fibrosis y depósito de colágeno en piel y órganos; la extensión cutánea y compromiso visceral condicionan riesgos y pronóstico.",
+          "findings": [
+            {
+              "mechanism": "Fibrosis y vasculopatía",
+              "finding": "Esclerodactilia y Raynaud"
+            }
+          ],
+          "initial_action": "Referir para evaluación pulmonar, renal y cardiaca y tratamiento dirigido a órganos; evitar desencadenantes vasculares.",
+          "action_reason": "La afectación visceral determina gravedad.",
+          "modifiers": [
+            {
+              "factor": "Hipertensión nueva o daño renal",
+              "action": "Evaluar crisis renal con urgencia",
+              "reason": "Puede amenazar función orgánica"
+            }
+          ],
+          "limits": "El tratamiento depende del órgano. Si se requieren glucocorticoides, vigilar presión arterial por riesgo de crisis renal.",
+          "evidence": [
+            {
+              "page": 999,
+              "quote": "excesivo depósito de colágeno"
+            },
+            {
+              "page": 1000,
+              "quote": "disfunción orgánica"
+            }
+          ],
+          "source_gaps": [],
+          "external_sources": [
+            {
+              "label": "EULAR 2023: esclerosis sistémica",
+              "url": "https://ard.bmj.com/content/early/2024/10/17/ard-2024-226430",
+              "quote": "regular monitoring of blood pressure to detect SRC",
+              "checked_at": "2026-10-29"
+            }
+          ],
+          "source_corrections": [
+            {
+              "reason": "El tratamiento se dirige al órgano. Si glucocorticoides son necesarios, vigilar presión por riesgo de crisis renal; no son tratamiento general de fibrosis."
+            }
+          ]
+        }
+      ],
+      "common_problem": "Paciente con sequedad, fenómeno vascular o piel engrosada.",
+      "mother": {
+        "cue": "Autoinmunidad que afecta glándulas exocrinas, microvasculatura o tejido conectivo.",
+        "answer": "Enfermedad glandular o fibrosante sistémica.",
+        "explanation": "El patrón clínico dirige búsqueda de daño visceral."
+      }
+    },
+    {
+      "id": "30.07",
+      "title": "Cefalea en >50 o pulsos asimétricos",
+      "topics": [
+        {
+          "id": "30.07-01",
+          "name": "Arteritis de la temporal",
+          "source_pages": [
+            991
+          ],
+          "pattern": "Una mujer mayor de 50 años tiene cefalea temporal nueva, dolor al peinarse y cansancio mandibular al masticar. Presenta un episodio de visión borrosa. Se sospecha isquemia arterial.",
+          "key_discriminator": "cansancio mandibular al masticar",
+          "mechanism": "La inflamación granulomatosa de grandes arterias y ramas craneales estrecha su luz, reduce perfusión y puede causar isquemia del nervio óptico con pérdida visual irreversible.",
+          "findings": [
+            {
+              "mechanism": "Inflamación arterial craneal",
+              "finding": "Claudicación mandibular y amenaza visual"
+            }
+          ],
+          "initial_action": "Iniciar glucocorticoide urgente ante alta sospecha y coordinar confirmación por especialista sin retrasar protección visual.",
+          "action_reason": "El tratamiento temprano busca evitar ceguera.",
+          "modifiers": [
+            {
+              "factor": "Síntoma visual",
+              "action": "Dar atención inmediata y valorar tratamiento intensivo",
+              "reason": "Puede haber isquemia ocular"
+            }
+          ],
+          "limits": "Tres criterios de clasificación no confirman por sí solos diagnóstico.",
+          "evidence": [
+            {
+              "page": 991,
+              "quote": "hipersensibilidad de"
+            },
+            {
+              "page": 991,
+              "quote": "incluso antes de confirmar"
+            }
+          ],
+          "source_gaps": []
+        },
+        {
+          "id": "30.07-02",
+          "name": "Arteritis de takayasu",
+          "source_pages": [
+            992
+          ],
+          "pattern": "Una mujer joven presenta fatiga al usar un brazo, pulsos braquiales disminuidos y presión diferente entre brazos. Se ausculta soplo subclavio. Se requiere evaluar grandes arterias.",
+          "key_discriminator": "presión diferente entre brazos",
+          "mechanism": "La inflamación granulomatosa de aorta y ramas genera engrosamiento, estenosis u oclusión, produce asimetría de perfusión y claudicación, y puede causar daño de distintos territorios.",
+          "findings": [
+            {
+              "mechanism": "Estenosis de ramas aórticas",
+              "finding": "Pulsos y presión asimétricos"
+            }
+          ],
+          "initial_action": "Referir a medicina interna o reumatología y obtener imagen vascular para actividad y extensión.",
+          "action_reason": "Permite definir inmunosupresión y riesgo isquémico.",
+          "modifiers": [
+            {
+              "factor": "Isquemia grave",
+              "action": "Valorar manejo vascular especializado",
+              "reason": "Puede requerir intervención además de control inflamatorio"
+            }
+          ],
+          "limits": "Los criterios históricos son de clasificación, no una prueba confirmatoria aislada.",
+          "evidence": [
+            {
+              "page": 992,
+              "quote": "Disminución de los pulsos"
+            },
+            {
+              "page": 992,
+              "quote": "Manejo inicial referir"
+            }
+          ],
+          "source_gaps": []
+        }
+      ],
+      "common_problem": "Paciente con cefalea isquémica o pulsos asimétricos.",
+      "mother": {
+        "cue": "Inflamación de grandes arterias que limita perfusión de sus ramas.",
+        "answer": "Vasculitis de grandes vasos.",
+        "explanation": "La edad y el territorio comprometido distinguen patrones."
+      }
+    },
+    {
+      "id": "30.08",
+      "title": "Vasculitis pulmonar-renal",
+      "topics": [
+        {
+          "id": "30.08-01",
+          "name": "Granulomatosis de Wegener",
+          "source_pages": [
+            1006
+          ],
+          "pattern": "Una persona presenta sinusitis persistente, epistaxis e infiltrados pulmonares cavitados. El examen de orina muestra hematuria. Se sospecha inflamación vascular con daño respiratorio y renal.",
+          "key_discriminator": "infiltrados pulmonares cavitados",
+          "mechanism": "La vasculitis granulomatosa de pequeños vasos afecta vía aérea y riñones, produce lesiones destructivas respiratorias y glomerulonefritis; la gravedad orgánica determina urgencia y tratamiento de inducción.",
+          "findings": [
+            {
+              "mechanism": "Granulomatosis y vasculitis",
+              "finding": "Lesión respiratoria y hematuria"
+            }
+          ],
+          "initial_action": "Evaluar función renal y pulmonar, ANCA y tejido cuando sea posible; referir urgentemente si hay órgano amenazado.",
+          "action_reason": "La enfermedad puede progresar a falla orgánica.",
+          "modifiers": [
+            {
+              "factor": "Hemorragia alveolar o deterioro renal",
+              "action": "Hospitalizar y tratar por equipo especializado",
+              "reason": "Indica enfermedad grave"
+            }
+          ],
+          "limits": "La inducción requiere especialista. No añadir plasmaféresis de rutina ni usar TMP-SMX como monoterapia general de enfermedad localizada.",
+          "evidence": [
+            {
+              "page": 1006,
+              "quote": "nódulos y cavitaciones."
+            },
+            {
+              "page": 1006,
+              "quote": "Histología con vasculitis"
+            }
+          ],
+          "source_gaps": [],
+          "external_sources": [
+            {
+              "label": "ACR/VF 2021: vasculitis ANCA",
+              "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12344527/",
+              "quote": "recommend against the routine addition of plasma exchange",
+              "checked_at": "2026-10-29"
+            }
+          ],
+          "source_corrections": [
+            {
+              "reason": "En enfermedad grave se prefiere condicionalmente rituximab sobre ciclofosfamida para inducción. Plasmaféresis no es adición rutinaria por glomerulonefritis o hemorragia alveolar."
+            }
+          ]
+        },
+        {
+          "id": "30.08-02",
+          "name": "Síndrome de Churg-Strauss",
+          "source_pages": [
+            1017
+          ],
+          "pattern": "Una persona con asma de inicio adulto presenta eosinofilia, infiltrados y debilidad dolorosa de un pie por neuropatía. También tiene lesiones cutáneas. Se busca enfermedad inflamatoria sistémica.",
+          "key_discriminator": "asma de inicio adulto",
+          "mechanism": "La inflamación eosinofílica y vasculitis necrosante dañan tejidos y nervios, se asocian con asma y pueden comprometer corazón y otros órganos, con ANCA variable.",
+          "findings": [
+            {
+              "mechanism": "Lesión eosinofílica y vascular",
+              "finding": "Asma, eosinofilia y neuropatía"
+            }
+          ],
+          "initial_action": "Referir para evaluar órganos, confirmar etiología y seleccionar inmunosupresión según gravedad.",
+          "action_reason": "El compromiso cardiaco o neurológico modifica urgencia.",
+          "modifiers": [
+            {
+              "factor": "Dolor torácico o disfunción cardiaca",
+              "action": "Investigar miocarditis y daño coronario",
+              "reason": "El corazón puede determinar pronóstico"
+            }
+          ],
+          "limits": "Un ANCA negativo no excluye la enfermedad.",
+          "evidence": [
+            {
+              "page": 1017,
+              "quote": "asma, a menudo"
+            },
+            {
+              "page": 1017,
+              "quote": "Ciclofosfamida"
+            }
+          ],
+          "source_gaps": []
+        }
+      ],
+      "common_problem": "Paciente con enfermedad respiratoria y daño renal o eosinofilia.",
+      "mother": {
+        "cue": "Vasculitis sistémica de pequeños vasos con fenotipos granulomatosos distintos.",
+        "answer": "Vasculitis granulomatosa.",
+        "explanation": "La eosinofilia, asma y compromiso renal orientan subtipo."
+      }
+    },
+    {
+      "id": "30.09",
+      "title": "Púrpura, neuropatía o aneurismas",
+      "topics": [
+        {
+          "id": "30.09-01",
+          "name": "Purpura de Henoch Shönlein",
+          "source_pages": [
+            1011
+          ],
+          "pattern": "Un niño presenta púrpura palpable en piernas, dolor abdominal y artralgias. Las plaquetas son normales. El examen de orina muestra hematuria. Se evalúa función renal y evolución.",
+          "key_discriminator": "púrpura palpable en piernas",
+          "mechanism": "El depósito inmunológico de IgA inflama pequeños vasos, produce púrpura sin trombocitopenia y puede afectar articulaciones, tubo digestivo y glomérulos, determinando necesidad de vigilancia renal.",
+          "findings": [
+            {
+              "mechanism": "Vasculitis por IgA",
+              "finding": "Púrpura y hematuria"
+            }
+          ],
+          "initial_action": "Evaluar presión arterial, orina y función renal; dar soporte y seguimiento según severidad.",
+          "action_reason": "La afectación renal puede aparecer o persistir.",
+          "modifiers": [
+            {
+              "factor": "Dolor abdominal intenso o daño orgánico",
+              "action": "Valorar hospitalización y terapia especializada",
+              "reason": "Puede existir complicación importante"
+            }
+          ],
+          "limits": "La IgA sérica aislada no confirma diagnóstico.",
+          "evidence": [
+            {
+              "page": 1011,
+              "quote": "púrpura palpable"
+            },
+            {
+              "page": 1011,
+              "quote": "vigilar la función renal."
+            }
+          ],
+          "source_gaps": []
+        },
+        {
+          "id": "30.09-02",
+          "name": "Poliarteritis nodosa",
+          "source_pages": [
+            1010
+          ],
+          "pattern": "Una persona tiene dolor abdominal, hipertensión y neuropatía asimétrica. Presenta nódulos cutáneos dolorosos. Se sospecha inflamación de arterias medianas y se investiga infección por hepatitis B.",
+          "key_discriminator": "neuropatía asimétrica",
+          "mechanism": "La inflamación necrosante de arterias medianas causa isquemia focal en nervios, piel, riñón y tubo digestivo; la asociación infecciosa y gravedad determinan el esquema terapéutico.",
+          "findings": [
+            {
+              "mechanism": "Isquemia de arterias medianas",
+              "finding": "Mononeuritis y dolor abdominal"
+            }
+          ],
+          "initial_action": "Referir para evaluación orgánica y confirmación por tejido o imagen vascular; investigar hepatitis B antes de definir tratamiento.",
+          "action_reason": "La etiología modifica terapia.",
+          "modifiers": [
+            {
+              "factor": "Hepatitis B asociada",
+              "action": "Coordinar antiviral y manejo especializado",
+              "reason": "No debe tratarse como forma idiopática sin contexto"
+            }
+          ],
+          "limits": "La selección del antiviral no debe copiarse de una recomendación antigua.",
+          "evidence": [
+            {
+              "page": 1010,
+              "quote": "mononeuritis múltiple"
+            },
+            {
+              "page": 1010,
+              "quote": "biopsia positiva"
+            }
+          ],
+          "source_gaps": []
+        },
+        {
+          "id": "30.09-03",
+          "name": "Síndrome de Behcet",
+          "source_pages": [
+            1016
+          ],
+          "pattern": "Una persona presenta aftas orales recurrentes, úlceras genitales que dejan cicatriz y episodios de ojo rojo doloroso. Tiene lesiones cutáneas. Se evalúa una enfermedad inflamatoria sistémica.",
+          "key_discriminator": "úlceras genitales que dejan cicatriz",
+          "mechanism": "La inflamación sistémica puede afectar vasos y mucosas, genera ulceración recurrente y compromiso ocular, cutáneo o neurológico; la afectación de órgano define urgencia y tratamiento.",
+          "findings": [
+            {
+              "mechanism": "Inflamación mucosa y vascular",
+              "finding": "Aftas y uveítis recurrentes"
+            }
+          ],
+          "initial_action": "Referir para evaluación sistémica y atención oftalmológica urgente si hay síntomas oculares.",
+          "action_reason": "La lesión ocular puede comprometer visión.",
+          "modifiers": [
+            {
+              "factor": "Síntomas neurológicos o vasculares",
+              "action": "Buscar daño orgánico y escalar manejo",
+              "reason": "Puede requerir inmunosupresión intensiva"
+            }
+          ],
+          "limits": "La patergia apoya pero no confirma por sí sola.",
+          "evidence": [
+            {
+              "page": 1016,
+              "quote": "úlceras genitales recurrentes"
+            },
+            {
+              "page": 1016,
+              "quote": "agentes anti-TNF"
+            }
+          ],
+          "source_gaps": []
+        }
+      ],
+      "common_problem": "Paciente con púrpura, neuropatía, úlceras o dolor abdominal.",
+      "mother": {
+        "cue": "Inflamación vascular sistémica con daño cutáneo, mucoso o visceral.",
+        "answer": "Vasculitis con manifestaciones sistémicas.",
+        "explanation": "Calibre vascular y órganos afectados cambian diagnóstico y tratamiento."
+      }
+    },
+    {
+      "id": "30.10",
+      "title": "Dolor difuso y debilidad",
+      "topics": [
+        {
+          "id": "30.10-01",
+          "name": "Fibromialgia",
+          "source_pages": [
+            1002
+          ],
+          "pattern": "Una mujer tiene dolor generalizado desde hace meses, fatiga y sueño no reparador. No presenta sinovitis ni debilidad objetiva. Se evalúan causas alternativas y repercusión en su vida.",
+          "key_discriminator": "No presenta sinovitis ni debilidad objetiva",
+          "mechanism": "La alteración del procesamiento y modulación central del dolor amplifica señales sin lesión articular inflamatoria que explique el cuadro, con interacción de sueño, fatiga y estado de ánimo.",
+          "findings": [
+            {
+              "mechanism": "Sensibilización del dolor",
+              "finding": "Dolor difuso con fatiga"
+            }
+          ],
+          "initial_action": "Explicar el cuadro y planificar ejercicio gradual, educación, sueño y terapia psicológica según necesidades.",
+          "action_reason": "Mejora función mediante manejo integral.",
+          "modifiers": [
+            {
+              "factor": "Signos inflamatorios o debilidad real",
+              "action": "Investigar otra enfermedad",
+              "reason": "No son propios del patrón aislado"
+            }
+          ],
+          "limits": "Los once puntos dolorosos son un criterio histórico. Evitar opioides fuertes; seleccionar otras medidas según síntomas y respuesta.",
+          "evidence": [
+            {
+              "page": 1002,
+              "quote": "sensibilización central"
+            },
+            {
+              "page": 1002,
+              "quote": "Psicoterapia, ejercicio"
+            }
+          ],
+          "source_gaps": [],
+          "external_sources": [
+            {
+              "label": "EULAR 2017: fibromialgia",
+              "url": "https://ard.bmj.com/content/76/2/318",
+              "quote": "strong against",
+              "checked_at": "2026-10-29"
+            }
+          ],
+          "source_corrections": [
+            {
+              "reason": "La recomendación es contra opioides fuertes; no se convierte el dolor persistente en indicación de escalamiento opioide. Ejercicio y manejo no farmacológico son iniciales; los once puntos son históricos."
+            }
+          ]
+        },
+        {
+          "id": "30.10-02",
+          "name": "Miopatías inflamatorias",
+          "source_pages": [
+            1009
+          ],
+          "pattern": "Una persona presenta dificultad progresiva para levantarse de una silla y peinarse. Tiene debilidad proximal simétrica y enzimas musculares elevadas. Se observan pápulas sobre nudillos y rash palpebral.",
+          "key_discriminator": "pápulas sobre nudillos",
+          "mechanism": "La inflamación inmunomediada y necrosis de fibras musculares reducen fuerza proximal y elevan enzimas; algunas formas presentan lesiones cutáneas y compromiso respiratorio, deglutorio o neoplásico asociado.",
+          "findings": [
+            {
+              "mechanism": "Inflamación muscular",
+              "finding": "Debilidad proximal y CPK alta"
+            }
+          ],
+          "initial_action": "Medir enzimas, evaluar deglución y respiración y referir para confirmación y tratamiento inmunomodulador.",
+          "action_reason": "La debilidad puede acompañarse de compromiso orgánico.",
+          "modifiers": [
+            {
+              "factor": "Disfagia o dificultad respiratoria",
+              "action": "Evaluar con urgencia",
+              "reason": "Aumenta riesgo de aspiración o falla ventilatoria"
+            }
+          ],
+          "limits": "La debilidad distal asimétrica no debe etiquetarse automáticamente como polimiositis.",
+          "evidence": [
+            {
+              "page": 1009,
+              "quote": "debilidad muscular de predominio proximal"
+            },
+            {
+              "page": 1009,
+              "quote": "medir las enzimas musculares"
+            }
+          ],
+          "source_gaps": []
+        }
+      ],
+      "common_problem": "Paciente con dolor o debilidad muscular.",
+      "mother": {
+        "cue": "Disfunción muscular inflamatoria o alteración de procesamiento del dolor.",
+        "answer": "Síndrome musculoesquelético.",
+        "explanation": "La fuerza y enzimas separan miopatía de dolor no inflamatorio."
+      }
+    },
+    {
+      "id": "30.11",
+      "title": "Erupción tras estímulo",
+      "topics": [
+        {
+          "id": "30.11-01",
+          "name": "Reacciones de hipersensibilidad",
+          "source_pages": [
+            1012
+          ],
+          "pattern": "Un estudiante compara una reacción alérgica inmediata con daño por anticuerpos contra células y con inflamación por complejos inmunes. También revisa una lesión tardía mediada por linfocitos T.",
+          "key_discriminator": "lesión tardía mediada por linfocitos T",
+          "mechanism": "La lesión inmune puede proceder de IgE y mastocitos, anticuerpos contra antígenos celulares, depósito de complejos o respuestas celulares; identificar efector y tiempo ayuda a clasificar mecanismos.",
+          "findings": [
+            {
+              "mechanism": "Activación de IgE y mastocitos",
+              "finding": "Respuesta inmediata"
+            }
+          ],
+          "initial_action": "Identificar efector, blanco y tiempo de la reacción para relacionar mecanismo con manifestaciones.",
+          "action_reason": "Evita confundir mecanismos inmunológicos distintos.",
+          "modifiers": [
+            {
+              "factor": "Complejos inmunes",
+              "action": "Clasificar como tipo III",
+              "reason": "El depósito activa inflamación"
+            },
+            {
+              "factor": "Linfocitos T",
+              "action": "Clasificar como tipo IV",
+              "reason": "La lesión depende de respuesta celular"
+            }
+          ],
+          "limits": "La clasificación mecanística no determina por sí sola tratamiento clínico.",
+          "evidence": [
+            {
+              "page": 1012,
+              "quote": "liberación de histamina."
+            },
+            {
+              "page": 1012,
+              "quote": "Linfocitos T activados"
+            }
+          ],
+          "source_gaps": []
+        }
+      ],
+      "common_problem": "Paciente con una respuesta inmune que lesiona tejidos.",
+      "mother": {
+        "cue": "Mecanismos inmunes distintos producen lesión inmediata, citotóxica, por complejos o celular.",
+        "answer": "Reacciones de hipersensibilidad.",
+        "explanation": "Clasificar el mecanismo ayuda a relacionarlo con hallazgos."
+      }
+    }
+  ]
+}
