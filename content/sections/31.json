@@ -15,7 +15,7 @@
             1044,
             1045
           ],
-          "pattern": "Una persona llega con somnolencia y datos de exposición desconocida. Tiene ventilación lenta y no se conocen la sustancia ni el tiempo. El equipo necesita priorizar medidas antes de descontaminar.",
+          "pattern": "Una persona llega somnolienta junto a varios envases abiertos. Tiene ventilación lenta, saturación baja y pulso presente; su acompañante desconoce la sustancia, la dosis y el momento de exposición.",
           "key_discriminator": "ventilación lenta",
           "mechanism": "Las sustancias tóxicas alteran funciones vitales por mecanismos diversos; la evaluación sistemática identifica falla de vía aérea, respiración y circulación antes de intervenciones específicas de descontaminación.",
           "findings": [
@@ -75,7 +75,7 @@
             1050,
             1051
           ],
-          "pattern": "Un paciente expuesto a varios medicamentos tiene agitación, midriasis, piel seca y retención urinaria. Otro cuadro semejante puede producir sudoración o secreciones. Se comparan signos autonómicos para orientar tratamiento.",
+          "pattern": "Un paciente expuesto a varios medicamentos presenta agitación, midriasis, taquicardia, piel seca y retención urinaria. Tiene ruidos intestinales escasos, sin sudoración ni secreciones abundantes, y habla de personas que no están presentes.",
           "key_discriminator": "piel seca y retención urinaria",
           "mechanism": "Los toxíndromes agrupan efectos por receptores y sistemas; secreciones, temperatura, pupilas, reflejos y estado mental ayudan a distinguir mecanismos aunque no identifiquen siempre una sustancia única.",
           "findings": [
@@ -146,7 +146,7 @@
           "source_pages": [
             1033
           ],
-          "pattern": "Una persona es encontrada inconsciente con respiración muy lenta y pupilas pequeñas. Hay exposición posible a analgésicos. Se requiere restaurar ventilación antes de confirmar la sustancia por laboratorio.",
+          "pattern": "Una persona es encontrada inconsciente con respiración muy lenta y pupilas pequeñas. Hay envases de analgésicos a su lado, conserva pulso y presenta cianosis sin lesiones traumáticas evidentes.",
           "key_discriminator": "respiración muy lenta",
           "mechanism": "La activación excesiva de receptores opioides deprime impulso respiratorio y estado de conciencia, reduce ventilación y puede causar hipoxia y paro; la miosis apoya pero no es obligatoria.",
           "findings": [
@@ -196,7 +196,7 @@
           "source_pages": [
             1028
           ],
-          "pattern": "Una persona desarrolla sedación profunda y bradipnea después de consumir una sustancia que creía otra droga. El tamiz de opioides habitual es negativo. Se mantiene sospecha de opioide sintético.",
+          "pattern": "Una persona desarrolla sedación profunda y bradipnea después de consumir una sustancia que creía otra droga. Tiene pupilas pequeñas y el tamiz de opioides habitual es negativo, sin explicación metabólica inmediata.",
           "key_discriminator": "tamiz de opioides habitual es negativo",
           "mechanism": "El fentanilo es un agonista opioide potente que deprime ventilación y conciencia; su presencia puede pasar inadvertida en inmunoensayos de rutina o mezclas de otras sustancias.",
           "findings": [
@@ -246,8 +246,8 @@
           "source_pages": [
             1025
           ],
-          "pattern": "Una persona tiene somnolencia, disartria y ataxia después de tomar un sedante. Se desconoce si usa el fármaco crónicamente o tomó otros medicamentos. Se evalúa ventilación y coingestas.",
-          "key_discriminator": "Se desconoce si usa el fármaco crónicamente",
+          "pattern": "Una persona tiene somnolencia, disartria y ataxia después de tomar un sedante. Su familia desconoce si usa el fármaco crónicamente o tomó otros medicamentos; conserva pulso y responde al dolor.",
+          "key_discriminator": "desconoce si usa el fármaco crónicamente",
           "mechanism": "Las benzodiacepinas potencian inhibición mediada por GABA y reducen alerta y coordinación; la depresión respiratoria aumenta con coingestas y el antagonismo puede precipitar abstinencia o convulsiones.",
           "findings": [
             {
@@ -295,8 +295,8 @@
           "source_pages": [
             1027
           ],
-          "pattern": "Un adulto presenta incoordinación, somnolencia y vómitos después de beber. La historia es incompleta. Se requiere revisar glucosa, traumatismo y consumo de otras sustancias antes de atribuir todo al alcohol.",
-          "key_discriminator": "revisar glucosa, traumatismo",
+          "pattern": "Un adulto presenta incoordinación, somnolencia y vómitos después de beber. Su acompañante desconoce cuánto consumió y refiere una caída; el paciente tiene alimentación escasa y no puede explicar lo sucedido.",
+          "key_discriminator": "refiere una caída",
           "mechanism": "El etanol deprime sistema nervioso y puede reducir ventilación, temperatura y protección de vía aérea; la malnutrición, hipoglucemia o coingesta modifican presentación y riesgo.",
           "findings": [
             {
@@ -332,7 +332,7 @@
           "source_pages": [
             1023
           ],
-          "pattern": "Una persona consume alcohol de origen desconocido y horas después presenta visión borrosa, dolor abdominal y acidosis con anión gap elevado. Se sospecha metabolito tóxico y requiere tratamiento inmediato.",
+          "pattern": "Una persona consume alcohol de origen desconocido y horas después presenta visión borrosa, dolor abdominal y acidosis con anión gap elevado. Su respiración es profunda y la visión empeora progresivamente.",
           "key_discriminator": "visión borrosa",
           "mechanism": "La alcohol deshidrogenasa transforma metanol o etilenglicol en metabolitos ácidos que lesionan nervio óptico o riñón; el bloqueo metabólico y eliminación extracorpórea pueden limitar daño.",
           "findings": [
@@ -341,13 +341,13 @@
               "finding": "Acidosis y lesión visual o renal"
             }
           ],
-          "initial_action": "Estabilizar, consultar toxicología y comenzar bloqueo metabólico cuando la sospecha lo indique; valorar hemodiálisis según gravedad.",
+          "initial_action": "Estabilizar y consultar toxicología; iniciar fomepizol para bloquear metabolismo cuando la sospecha lo indique, sin esperar confirmación. Corregir acidosis y valorar hemodiálisis según toxicidad clínica y bioquímica.",
           "action_reason": "No debe esperarse daño irreversible para intervenir.",
           "modifiers": [
             {
-              "factor": "Daño renal, acidosis grave o compromiso neurológico",
-              "action": "Valorar diálisis urgente",
-              "reason": "Necesita eliminar tóxico y metabolitos"
+              "factor": "Metanol con déficit visual nuevo, acidosis grave, coma o convulsiones",
+              "action": "Activar evaluación para hemodiálisis urgente con toxicología y nefrología.",
+              "reason": "Son manifestaciones de toxicidad grave que requieren eliminación extracorpórea."
             }
           ],
           "limits": "Un anión gap normal temprano no excluye exposición.",
@@ -358,10 +358,18 @@
             },
             {
               "page": 1023,
-              "quote": "de meta bolito tóxico. • Fomepizol: es competidor de la deshidrogenasa"
+              "quote": "Fomepizol: es competidor de la deshidrogenasa alcohólica"
             }
           ],
-          "source_gaps": []
+          "source_gaps": [],
+          "external_sources": [
+            {
+              "label": "EXTRIP: metanol y eliminación extracorpórea",
+              "url": "https://www.extrip-workgroup.org/methanol",
+              "quote": "New vision deficits",
+              "checked_at": "2026-10-29"
+            }
+          ]
         }
       ],
       "common_problem": "Paciente con alteración neurológica tras ingestión de alcohol.",
@@ -381,7 +389,7 @@
           "source_pages": [
             1024
           ],
-          "pattern": "Una persona tiene agitación, sudoración, taquicardia y presión elevada después de consumir un estimulante. Presenta midriasis y temperatura creciente. Se evalúan arritmia, convulsiones y rabdomiólisis.",
+          "pattern": "Una persona tiene agitación, sudoración, taquicardia y presión elevada después de consumir un estimulante. Presenta midriasis y temperatura creciente, con actividad motora continua y dolor muscular generalizado.",
           "key_discriminator": "temperatura creciente",
           "mechanism": "El exceso de señal monoaminérgica por liberación y menor recaptura activa sistema simpático y cerebro, causa agitación, hipertensión e hipertermia y puede producir lesión vascular y muscular.",
           "findings": [
@@ -418,7 +426,7 @@
           "source_pages": [
             1026
           ],
-          "pattern": "Una persona tras ingerir una bebida ritual presenta distorsión visual, percepción alterada del tiempo y ansiedad. Está consciente y sus signos vitales son relativamente estables. Se investiga posible coingesta.",
+          "pattern": "Una persona presenta distorsión visual, percepción alterada del tiempo y ansiedad después de ingerir una bebida ritual. Está consciente y sus signos vitales son relativamente estables, sin clonus ni hipertermia.",
           "key_discriminator": "distorsión visual",
           "mechanism": "La interacción de triptaminas con receptores serotoninérgicos y otros sistemas altera percepción y emoción; las coingestas pueden añadir inestabilidad o toxicidad serotoninérgica más allá del efecto alucinógeno.",
           "findings": [
@@ -468,7 +476,7 @@
             1034,
             1035
           ],
-          "pattern": "Un trabajador agrícola presenta salivación, broncorrea, miosis y fasciculaciones después de aplicar insecticida. Tiene dificultad respiratoria. Se requiere descontaminación segura y manejo urgente de la ventilación.",
+          "pattern": "Un trabajador agrícola presenta salivación, broncorrea, miosis y fasciculaciones después de aplicar insecticida. Tiene dificultad respiratoria, sibilancias, ropa húmeda con olor químico y debilidad que progresa en minutos.",
           "key_discriminator": "broncorrea, miosis y fasciculaciones",
           "mechanism": "La inhibición de acetilcolinesterasa acumula acetilcolina en sinapsis muscarínicas, nicotínicas y centrales, produce secreciones, broncoespasmo y debilidad que amenazan ventilación.",
           "findings": [
@@ -477,7 +485,7 @@
               "finding": "Secreciones y fasciculaciones"
             }
           ],
-          "initial_action": "Proteger al personal, retirar exposición, descontaminar y sostener ventilación; administrar atropina y valorar oxima según agente y protocolo.",
+          "initial_action": "Proteger al personal, retirar ropa contaminada, descontaminar piel y sostener ventilación; administrar atropina titulada a controlar broncorrea y broncoespasmo, y valorar pralidoxima u obidoxima según agente y protocolo.",
           "action_reason": "Controla efectos muscarínicos y aborda inhibición enzimática.",
           "modifiers": [
             {
@@ -490,14 +498,22 @@
           "evidence": [
             {
               "page": 1035,
-              "quote": "(58o/o) ¡-,,\\ F. de riesgo • Broncorrea ( 64 o/o) • Salivación (SSo/o) 0 •"
+              "quote": "la acción prolongada a receptores nicotínicos."
             },
             {
               "page": 1034,
               "quote": "Descontaminar (piel y mucosas)"
             }
           ],
-          "source_gaps": []
+          "source_gaps": [],
+          "external_sources": [
+            {
+              "label": "FDA: atropina en organofosforados",
+              "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=84ba1689-3030-48d5-9cce-70b5a24a4033",
+              "quote": "reduced bronchospasm, improved oxygenation and drying of pulmonary secretions",
+              "checked_at": "2026-10-29"
+            }
+          ]
         }
       ],
       "common_problem": "Paciente expuesto a plaguicida con secreciones y debilidad.",
@@ -517,7 +533,7 @@
           "source_pages": [
             1021
           ],
-          "pattern": "Un niño ingiere un líquido de limpieza y presenta dolor bucal, sialorrea y dificultad para deglutir. No se conoce el producto. Se evalúan vía aérea y signos de perforación.",
+          "pattern": "Un niño ingiere un líquido de limpieza y presenta dolor bucal, sialorrea y dificultad para deglutir. No se conoce el producto; tiene vómito y dolor retroesternal desde la exposición.",
           "key_discriminator": "líquido de limpieza",
           "mechanism": "El contacto con ácido o álcali produce lesión química del tubo digestivo y puede progresar a necrosis, perforación y estenosis; la profundidad no se predice solo por lesiones orales.",
           "findings": [
@@ -567,7 +583,7 @@
           "source_pages": [
             1029
           ],
-          "pattern": "Un niño tose y se ahoga después de beber un combustible almacenado en una botella. Más tarde presenta taquipnea e hipoxemia. Se sospecha aspiración con lesión pulmonar química.",
+          "pattern": "Un niño tose y se ahoga después de beber un combustible almacenado en una botella. Más tarde presenta taquipnea e hipoxemia, con estertores y mayor esfuerzo respiratorio.",
           "key_discriminator": "después de beber un combustible",
           "mechanism": "La aspiración de hidrocarburos daña surfactante y tejido pulmonar, provoca inflamación y alteración del intercambio gaseoso; inducir vómito o lavado puede aumentar exposición respiratoria.",
           "findings": [
@@ -667,7 +683,7 @@
             1036,
             1037
           ],
-          "pattern": "Una persona tomó una cantidad desconocida de paracetamol hace horas y ahora tiene pocas molestias. No se conoce si fue una sola ingesta. Se requieren nivel sérico y pruebas hepáticas.",
+          "pattern": "Una persona tomó una cantidad desconocida de paracetamol hace horas y ahora tiene pocas molestias. Su familia encuentra varios envases vacíos y desconoce si las dosis se acumularon durante más de un día.",
           "key_discriminator": "pocas molestias",
           "mechanism": "La sobredosis genera exceso de NAPQI que agota glutatión y daña hepatocitos; los síntomas iniciales pueden ser mínimos mientras avanza riesgo de lesión hepática diferida.",
           "findings": [
@@ -717,7 +733,7 @@
           "source_pages": [
             1039
           ],
-          "pattern": "Una persona con sobredosis de aspirina presenta respiración rápida, náusea y alteración de conciencia. Los gases muestran alcalosis respiratoria y acidosis metabólica. Se obtiene concentración sérica seriada.",
+          "pattern": "Una persona con consumo excesivo de aspirina presenta respiración rápida, náusea y alteración de conciencia. Los gases muestran alcalosis respiratoria y acidosis metabólica; además refiere zumbido de oídos.",
           "key_discriminator": "alcalosis respiratoria y acidosis metabólica",
           "mechanism": "Los salicilatos estimulan respiración y alteran metabolismo energético, producen desequilibrio ácido-base y toxicidad sistémica; la acidemia favorece distribución tisular y empeora daño neurológico.",
           "findings": [
@@ -726,12 +742,12 @@
               "finding": "Trastorno ácido-base mixto"
             }
           ],
-          "initial_action": "Consultar toxicología, medir niveles y gases seriados, corregir glucosa y electrolitos y valorar alcalinización o hemodiálisis según gravedad.",
+          "initial_action": "Consultar toxicología, medir concentraciones y gases seriados y corregir glucosa, volumen y potasio. Iniciar bicarbonato de sodio para alcalinización cuando corresponda y valorar hemodiálisis urgente según gravedad clínica y ácido-base.",
           "action_reason": "La clínica y evolución guían eliminación.",
           "modifiers": [
             {
               "factor": "Alteración mental, edema pulmonar o falla renal",
-              "action": "Valorar diálisis urgente",
+              "action": "Activar hemodiálisis urgente con toxicología y nefrología.",
               "reason": "Puede haber toxicidad grave aun sin cifra extrema"
             }
           ],
@@ -780,7 +796,7 @@
             1030,
             1031
           ],
-          "pattern": "Un trabajador presenta temblor, cambios de conducta y estomatitis tras exposición industrial. Se considera un metal; otros cuadros pueden añadir neuropatía, hiperpigmentación o alopecia. Se revisa fuente y cronología.",
+          "pattern": "Un trabajador presenta temblor, cambios de conducta y estomatitis tras meses de exposición a vapores industriales. Su familia nota irritabilidad y deterioro de la concentración, sin antecedentes neurológicos previos.",
           "key_discriminator": "temblor, cambios de conducta y estomatitis",
           "mechanism": "Los metales dañan múltiples sistemas por interacción con proteínas y enzimas; la forma química y vía de exposición determinan órgano blanco, pruebas útiles y necesidad de eliminación específica.",
           "findings": [
@@ -830,7 +846,7 @@
           "source_pages": [
             1038
           ],
-          "pattern": "Un niño con contacto frecuente con pintura antigua presenta dolor abdominal, irritabilidad y anemia. Se requiere investigar exposición ambiental y medir un metal en sangre venosa.",
+          "pattern": "Un niño con contacto frecuente con pintura antigua presenta dolor abdominal, irritabilidad y anemia. Vive en una casa en reparación, tiene pica y comienza a mostrar dificultades de aprendizaje.",
           "key_discriminator": "pintura antigua",
           "mechanism": "El plomo se acumula y afecta sistema nervioso, síntesis de hemo y riñón; los niños son vulnerables a daño del neurodesarrollo incluso sin síntomas evidentes.",
           "findings": [
@@ -899,7 +915,7 @@
             1019,
             1020
           ],
-          "pattern": "Un corredor se desploma durante ejercicio en ambiente caluroso. Está confuso y tiene temperatura central elevada. Se necesita actuar mientras se evalúan perfusión, electrolitos y posibles diagnósticos alternativos.",
+          "pattern": "Un corredor se desploma durante ejercicio en ambiente caluroso. Está confuso y tiene temperatura central elevada, taquicardia y piel caliente; antes del colapso presentó debilidad, náusea y dificultad para continuar.",
           "key_discriminator": "Está confuso",
           "mechanism": "La carga térmica supera disipación y produce hipertermia con disfunción cerebral y daño multiorgánico; el tiempo hasta enfriamiento condiciona lesión y no debe depender de un umbral aislado.",
           "findings": [
@@ -936,7 +952,7 @@
           "source_pages": [
             1022
           ],
-          "pattern": "Varias personas presentan vómito y diarrea después de una comida compartida. Una tiene signos de deshidratación. Se revisan alimentos, tiempo de inicio, sangre en heces y fiebre.",
+          "pattern": "Varias personas presentan vómito y diarrea después de una comida compartida. Una tiene sed intensa, mucosas secas y diuresis escasa; no recuerda síntomas antes de acudir al evento.",
           "key_discriminator": "comida compartida",
           "mechanism": "La ingestión de microorganismos o toxinas causa inflamación o secreción intestinal y pérdidas de agua y electrolitos; incubación y datos invasivos orientan agente y necesidad de estudio.",
           "findings": [
@@ -985,7 +1001,7 @@
           "source_pages": [
             1040
           ],
-          "pattern": "Una persona tras una mordedura de araña desarrolla dolor local intenso, sudoración y espasmos abdominales. No hay necrosis progresiva de piel. Se sospecha un efecto predominantemente neuromuscular.",
+          "pattern": "Una persona desarrolla dolor local intenso, sudoración y espasmos abdominales después de una mordedura de araña. Tiene taquicardia y músculos tensos, sin necrosis progresiva en el sitio de la lesión.",
           "key_discriminator": "espasmos abdominales",
           "mechanism": "La alfa-latrotoxina induce liberación presináptica de neurotransmisores, produce dolor y activación neuromuscular y autonómica que puede extenderse más allá del sitio de mordedura.",
           "findings": [
@@ -1007,7 +1023,7 @@
           "evidence": [
             {
               "page": 1040,
-              "quote": "fasciculaciones,"
+              "quote": "Dolor abdominal intenso y fasciculaciones."
             },
             {
               "page": 1040,
@@ -1022,7 +1038,7 @@
           "source_pages": [
             1041
           ],
-          "pattern": "Una persona nota una lesión poco dolorosa tras posible mordedura. Luego aparece placa violácea con halo rojo y necrosis. Se revisa orina y hemoglobina para buscar compromiso sistémico.",
+          "pattern": "Una persona nota una lesión poco dolorosa tras posible mordedura de araña. Luego aparece placa violácea con halo rojo y necrosis; al día siguiente presenta cansancio y orina oscura.",
           "key_discriminator": "placa violácea con halo rojo",
           "mechanism": "Los componentes del veneno, incluida esfingomielinasa D, lesionan tejidos y pueden causar hemólisis y daño renal; la expresión cutánea puede evolucionar durante días y simular otras causas.",
           "findings": [
@@ -1094,7 +1110,7 @@
             1046,
             1047
           ],
-          "pattern": "Un trabajador rural tiene mordedura en pierna con edema progresivo y sangrado. Se sospecha serpiente venenosa. No se conoce especie y se requiere traslado y evaluación de coagulación.",
+          "pattern": "Un trabajador rural tiene mordedura en pierna con edema progresivo y sangrado. La especie no fue identificada; aparecen equimosis, dolor creciente y sangrado de encías durante las primeras horas.",
           "key_discriminator": "edema progresivo y sangrado",
           "mechanism": "El veneno puede lesionar tejido, alterar coagulación o bloquear transmisión neuromuscular; el tipo y progresión del envenenamiento determinan antiveneno, vigilancia respiratoria y estudio de órganos.",
           "findings": [
@@ -1144,7 +1160,7 @@
           "source_pages": [
             1048
           ],
-          "pattern": "Un niño presenta dolor, parestesias, salivación intensa y movimientos anormales de lengua después de una picadura. Se sospecha un arácnido venenoso. Se revisa respiración y riesgo por edad.",
+          "pattern": "Un niño presenta dolor, parestesias, salivación intensa y movimientos anormales de lengua después de una picadura. Su familia encontró un alacrán en la cama y ahora el niño tiene dificultad para deglutir.",
           "key_discriminator": "salivación intensa",
           "mechanism": "Las toxinas del alacrán alteran canales iónicos y excitabilidad neural, provocan síntomas autonómicos y neuromusculares; los niños pequeños tienen mayor riesgo de evolución grave.",
           "findings": [
@@ -1207,7 +1223,7 @@
             },
             {
               "page": 1049,
-              "quote": "domicilio. Si -----+ R línea: epinefrina; b) segunda línea: antihistamínicos"
+              "quote": "antisepsia, frío local y en caso de abeja, retiro del aguijón."
             }
           ],
           "source_gaps": []
@@ -1218,7 +1234,7 @@
           "source_pages": [
             1018
           ],
-          "pattern": "Una persona presenta urticaria, dificultad respiratoria y mareo minutos después de una picadura. Tiene sibilancias e hipotensión. Se requiere tratamiento inmediato de una reacción sistémica potencialmente mortal.",
+          "pattern": "Una persona presenta urticaria, dificultad respiratoria y mareo minutos después de una picadura. Tiene sibilancias e hipotensión, voz ronca y sensación de cierre de garganta, con empeoramiento rápido.",
           "key_discriminator": "sibilancias e hipotensión",
           "mechanism": "La liberación rápida de mediadores por mastocitos y basófilos causa vasodilatación, fuga vascular y broncoconstricción, compromete perfusión y vía aérea y puede ocurrir sin lesiones cutáneas.",
           "findings": [
@@ -1227,13 +1243,13 @@
               "finding": "Broncoespasmo e hipotensión"
             }
           ],
-          "initial_action": "Administrar adrenalina intramuscular de inmediato, activar ayuda y dar soporte de vía aérea, oxígeno y circulación según necesidad.",
+          "initial_action": "Administrar adrenalina IM de inmediato en muslo: en adulto, 0.5 mg de solución 1 mg/mL; activar ayuda, colocar según estado clínico y dar soporte respiratorio y cristaloides si hay hipotensión. Usar dosis pediátrica según edad/peso.",
           "action_reason": "Es el tratamiento inicial que aborda compromiso respiratorio y circulatorio.",
           "modifiers": [
             {
-              "factor": "Respuesta insuficiente",
-              "action": "Repetir adrenalina y escalar soporte según protocolo",
-              "reason": "La reacción puede persistir"
+              "factor": "Sin mejoría tras primera dosis",
+              "action": "Repetir adrenalina IM a los cinco minutos; si persiste tras dos dosis, activar manejo de anafilaxia refractaria con equipo experto.",
+              "reason": "Puede requerir infusión IV monitorizada y reanimación adicional."
             }
           ],
           "limits": "Antihistamínicos y corticoides no sustituyen adrenalina. Los corticoides no son profilaxis rutinaria de reacción bifásica.",
