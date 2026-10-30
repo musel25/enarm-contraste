@@ -1,0 +1,808 @@
+{
+  "id": "02",
+  "title": "Angiología",
+  "blocks": [
+    {
+      "id": "02.01",
+      "title": "Pierna dolorosa al caminar",
+      "topics": [
+        {
+          "id": "02.01-01",
+          "name": "Enfermedad arterial periférica",
+          "source_pages": [
+            23,
+            24
+          ],
+          "pattern": "Un fumador mayor presenta dolor de pantorrilla al caminar una distancia similar cada día. El dolor cede al detenerse. Se observan piel brillante y pulsos pedios débiles.",
+          "key_discriminator": "cede al detenerse",
+          "mechanism": "Las placas ateroscleróticas estrechan las arterias de las piernas; el aumento de demanda durante el ejercicio supera el flujo disponible y causa isquemia muscular.",
+          "findings": [
+            {
+              "mechanism": "Flujo insuficiente con esfuerzo",
+              "finding": "Claudicación"
+            },
+            {
+              "mechanism": "Perfusión distal reducida",
+              "finding": "Pulsos débiles y piel atrófica"
+            }
+          ],
+          "initial_action": "Explorar pulsos y medir el índice tobillo-brazo. Si se confirma enfermedad sintomática, iniciar control vascular, abandono de tabaco, ejercicio y tratamiento preventivo indicado.",
+          "action_reason": "El índice documenta obstrucción; el manejo reduce síntomas y riesgo cardiovascular.",
+          "modifiers": [
+            {
+              "factor": "Dolor en reposo o pérdida de tejido",
+              "action": "Solicitar valoración vascular para revascularización.",
+              "reason": "Sugiere isquemia más avanzada."
+            }
+          ],
+          "limits": "No atribuir toda úlcera a isquemia; valorar neuropatía y enfermedad venosa. No usar fármacos de claudicación sin revisar sus contraindicaciones.",
+          "evidence": [
+            {
+              "page": 23,
+              "quote": "deambulación y se alivia con el reposo."
+            },
+            {
+              "page": 24,
+              "quote": "Punto de corte para considerarse anormal < 0.90 en reposo."
+            }
+          ],
+          "source_gaps": []
+        },
+        {
+          "id": "02.01-02",
+          "name": "Insuficiencia venosa",
+          "source_pages": [
+            25,
+            26
+          ],
+          "pattern": "Una mujer que trabaja de pie presenta pesadez vespertina, edema de tobillos y várices. Tiene pigmentación ocre cerca del maléolo medial; mejora cuando eleva las piernas.",
+          "key_discriminator": "mejora cuando eleva las piernas",
+          "mechanism": "El reflujo o la obstrucción venosa elevan la presión distal; la salida de líquido y el depósito de hemosiderina producen edema y cambios cutáneos crónicos.",
+          "findings": [
+            {
+              "mechanism": "Hipertensión venosa",
+              "finding": "Edema vespertino"
+            },
+            {
+              "mechanism": "Depósito de hemosiderina",
+              "finding": "Pigmentación ocre"
+            }
+          ],
+          "initial_action": "Valorar piel y pulsos. Iniciar medidas posturales, ejercicio y compresión apropiada tras valorar la circulación arterial. Solicitar dúplex si se planea intervención.",
+          "action_reason": "Las medidas mejoran el retorno venoso y el dúplex localiza reflujo u obstrucción.",
+          "modifiers": [
+            {
+              "factor": "Várices complicadas o fracaso conservador",
+              "action": "Enviar a valoración para tratamiento intervencionista.",
+              "reason": "Los síntomas o complicaciones pueden requerir corrección del reflujo."
+            }
+          ],
+          "limits": "Una pierna con edema agudo unilateral requiere descartar trombosis; no asumir que todo edema es venoso crónico.",
+          "evidence": [
+            {
+              "page": 25,
+              "quote": "Los síntomas mejoran con el decúbito, reposo y elevación de piernas."
+            },
+            {
+              "page": 26,
+              "quote": "Conservador: Medias de compresión, medidas físco postura les,"
+            }
+          ],
+          "source_gaps": []
+        }
+      ],
+      "common_problem": "Dolor crónico de piernas que cambia con actividad o postura.",
+      "mother": {
+        "cue": "Relacionar el dolor con demanda arterial o acumulación venosa.",
+        "answer": "Perfusión arterial y retorno venoso",
+        "explanation": "El reposo, la elevación y los pulsos orientan el compartimento vascular afectado."
+      }
+    },
+    {
+      "id": "02.02",
+      "title": "Dolor y edema unilateral",
+      "topics": [
+        {
+          "id": "02.02-01",
+          "name": "Trombosis venosa profunda",
+          "source_pages": [
+            40
+          ],
+          "pattern": "Un adulto operado recientemente presenta aumento de volumen y dolor en una sola pierna. La pantorrilla está caliente y edematosa, sin síntomas respiratorios en la valoración inicial.",
+          "key_discriminator": "una sola pierna",
+          "mechanism": "La estasis, la lesión endotelial y la hipercoagulabilidad favorecen un trombo venoso profundo; la obstrucción dificulta el retorno y puede originar embolia pulmonar.",
+          "findings": [
+            {
+              "mechanism": "Obstrucción venosa",
+              "finding": "Edema unilateral"
+            },
+            {
+              "mechanism": "Inflamación local",
+              "finding": "Dolor y calor"
+            }
+          ],
+          "initial_action": "Estimar probabilidad clínica con Wells. Seleccionar dímero D o ultrasonido por compresión según probabilidad; si se confirma trombosis, iniciar anticoagulación tras valorar riesgo hemorrágico.",
+          "action_reason": "La clínica aislada es insuficiente; la confirmación permite prevenir progresión y embolia.",
+          "modifiers": [
+            {
+              "factor": "Probabilidad clínica alta",
+              "action": "Priorizar ultrasonido sin usar dímero D para excluir.",
+              "reason": "Un resultado negativo de dímero D no basta en este contexto."
+            },
+            {
+              "factor": "Disnea o dolor torácico nuevos",
+              "action": "Evaluar embolia pulmonar.",
+              "reason": "El trombo puede embolizar."
+            }
+          ],
+          "limits": "Los signos de Homans, Ollow o Pratt no confirman ni excluyen por sí solos.",
+          "evidence": [
+            {
+              "page": 40,
+              "quote": "Inicial: Sospecha clínica con escala de Wells."
+            },
+            {
+              "page": 40,
+              "quote": "positivo, iniciar tratamiento anticoagulante."
+            }
+          ],
+          "source_gaps": []
+        },
+        {
+          "id": "02.02-02",
+          "name": "Paget schroetter",
+          "source_pages": [
+            27
+          ],
+          "pattern": "Un deportista joven presenta dolor e hinchazón súbita de un brazo después de ejercicio intenso con movimientos repetidos sobre la cabeza. La mano está algo cianótica.",
+          "key_discriminator": "después de ejercicio intenso",
+          "mechanism": "La compresión subclavioaxilar durante movimientos repetidos lesiona la vena y favorece trombosis; la obstrucción aguda causa congestión del miembro superior afectado.",
+          "findings": [
+            {
+              "mechanism": "Obstrucción del retorno subclavio",
+              "finding": "Edema y cianosis del brazo"
+            }
+          ],
+          "initial_action": "Confirmar con ultrasonido dúplex y valorar anticoagulación. Solicitar evaluación vascular para definir trombólisis y descompresión en casos seleccionados con síntomas importantes.",
+          "action_reason": "Se debe tratar la trombosis y valorar la compresión anatómica que la favorece.",
+          "modifiers": [
+            {
+              "factor": "Síntomas moderados o graves",
+              "action": "Valorar reperfusión y descompresión por un equipo especializado.",
+              "reason": "La anticoagulación sola no corrige el estrechamiento de salida torácica."
+            }
+          ],
+          "limits": "No excluir trombosis del brazo solo por edad joven o buena condición física.",
+          "evidence": [
+            {
+              "page": 27,
+              "quote": "Está asociado a movimientos repetitivos o enérgico del brazo."
+            },
+            {
+              "page": 27,
+              "quote": "Confirmatorio: Ultrasonido dúplex."
+            }
+          ],
+          "source_gaps": []
+        }
+      ],
+      "common_problem": "Dolor y edema agudos en una extremidad.",
+      "mother": {
+        "cue": "La obstrucción venosa puede aparecer por estasis o por esfuerzo repetido.",
+        "answer": "Trombosis venosa de extremidad",
+        "explanation": "El territorio y el desencadenante orientan el estudio, pero requieren confirmación."
+      }
+    },
+    {
+      "id": "02.03",
+      "title": "TVP que emboliza",
+      "topics": [
+        {
+          "id": "02.03-01",
+          "name": "Trombosis venosa profunda",
+          "source_pages": [
+            40
+          ],
+          "pattern": "Un adulto operado recientemente presenta aumento de volumen y dolor en una sola pierna. La pantorrilla está caliente y edematosa, sin síntomas respiratorios en la valoración inicial.",
+          "key_discriminator": "una sola pierna",
+          "mechanism": "La estasis, la lesión endotelial y la hipercoagulabilidad favorecen un trombo venoso profundo; la obstrucción dificulta el retorno y puede originar embolia pulmonar.",
+          "findings": [
+            {
+              "mechanism": "Obstrucción venosa",
+              "finding": "Edema unilateral"
+            },
+            {
+              "mechanism": "Inflamación local",
+              "finding": "Dolor y calor"
+            }
+          ],
+          "initial_action": "Estimar probabilidad clínica con Wells. Seleccionar dímero D o ultrasonido por compresión según probabilidad; si se confirma trombosis, iniciar anticoagulación tras valorar riesgo hemorrágico.",
+          "action_reason": "La clínica aislada es insuficiente; la confirmación permite prevenir progresión y embolia.",
+          "modifiers": [
+            {
+              "factor": "Probabilidad clínica alta",
+              "action": "Priorizar ultrasonido sin usar dímero D para excluir.",
+              "reason": "Un resultado negativo de dímero D no basta en este contexto."
+            },
+            {
+              "factor": "Disnea o dolor torácico nuevos",
+              "action": "Evaluar embolia pulmonar.",
+              "reason": "El trombo puede embolizar."
+            }
+          ],
+          "limits": "Los signos de Homans, Ollow o Pratt no confirman ni excluyen por sí solos.",
+          "evidence": [
+            {
+              "page": 40,
+              "quote": "Inicial: Sospecha clínica con escala de Wells."
+            },
+            {
+              "page": 40,
+              "quote": "positivo, iniciar tratamiento anticoagulante."
+            }
+          ],
+          "source_gaps": []
+        },
+        {
+          "id": "02.03-02",
+          "name": "Tromboembolia pulmonar",
+          "source_pages": [
+            33,
+            34,
+            35,
+            36,
+            37
+          ],
+          "pattern": "Una persona inmovilizada presenta disnea brusca, taquicardia y dolor pleurítico. Tiene una pierna edematosa. La presión arterial es normal al inicio, pero necesita valoración urgente.",
+          "key_discriminator": "disnea brusca",
+          "mechanism": "Un émbolo obstruye arterias pulmonares, eleva la resistencia y genera desequilibrio ventilación-perfusión; la sobrecarga ventricular derecha puede causar choque y muerte.",
+          "findings": [
+            {
+              "mechanism": "Ventilación sin perfusión suficiente",
+              "finding": "Hipoxemia y disnea"
+            },
+            {
+              "mechanism": "Sobrecarga ventricular derecha",
+              "finding": "Hipotensión en cuadros graves"
+            }
+          ],
+          "initial_action": "Valorar estabilidad y probabilidad clínica. En pacientes estables, usar dímero D o imagen según probabilidad; iniciar anticoagulación cuando la sospecha y el riesgo hemorrágico lo justifican.",
+          "action_reason": "La estrategia evita exclusiones erróneas y reduce la progresión trombótica.",
+          "modifiers": [
+            {
+              "factor": "Hipotensión o choque",
+              "action": "Activar atención urgente, valorar ecocardiografía y reperfusión.",
+              "reason": "La disfunción derecha marca alto riesgo."
+            },
+            {
+              "factor": "Contraindicación al contraste",
+              "action": "Valorar gammagrafía según contexto.",
+              "reason": "Permite estudiar perfusión sin contraste yodado."
+            }
+          ],
+          "limits": "La radiografía normal no excluye el diagnóstico. La fibrinólisis no corresponde de rutina a todo caso estable.",
+          "evidence": [
+            {
+              "page": 34,
+              "quote": "disnea de aparición brusca e inexplicable"
+            },
+            {
+              "page": 36,
+              "quote": "Se recomienda utilizar el Modelo clínico de Wells"
+            },
+            {
+              "page": 37,
+              "quote": "Fibrinólisis y anticoagulación"
+            }
+          ],
+          "source_gaps": []
+        }
+      ],
+      "common_problem": "Paciente con datos de obstrucción venosa y posibles síntomas respiratorios.",
+      "mother": {
+        "cue": "Un trombo profundo puede permanecer local o alcanzar la circulación pulmonar.",
+        "answer": "Enfermedad tromboembólica venosa",
+        "explanation": "La disnea o el choque cambian el nivel de urgencia y el estudio."
+      }
+    },
+    {
+      "id": "02.04",
+      "title": "TEP: algoritmo completo",
+      "topics": [
+        {
+          "id": "02.04-01",
+          "name": "Tromboembolia pulmonar",
+          "source_pages": [
+            33,
+            34,
+            35,
+            36,
+            37
+          ],
+          "pattern": "Una persona inmovilizada presenta disnea brusca, taquicardia y dolor pleurítico. Tiene una pierna edematosa. La presión arterial es normal al inicio, pero necesita valoración urgente.",
+          "key_discriminator": "disnea brusca",
+          "mechanism": "Un émbolo obstruye arterias pulmonares, eleva la resistencia y genera desequilibrio ventilación-perfusión; la sobrecarga ventricular derecha puede causar choque y muerte.",
+          "findings": [
+            {
+              "mechanism": "Ventilación sin perfusión suficiente",
+              "finding": "Hipoxemia y disnea"
+            },
+            {
+              "mechanism": "Sobrecarga ventricular derecha",
+              "finding": "Hipotensión en cuadros graves"
+            }
+          ],
+          "initial_action": "Valorar estabilidad y probabilidad clínica. En pacientes estables, usar dímero D o imagen según probabilidad; iniciar anticoagulación cuando la sospecha y el riesgo hemorrágico lo justifican.",
+          "action_reason": "La estrategia evita exclusiones erróneas y reduce la progresión trombótica.",
+          "modifiers": [
+            {
+              "factor": "Hipotensión o choque",
+              "action": "Activar atención urgente, valorar ecocardiografía y reperfusión.",
+              "reason": "La disfunción derecha marca alto riesgo."
+            },
+            {
+              "factor": "Contraindicación al contraste",
+              "action": "Valorar gammagrafía según contexto.",
+              "reason": "Permite estudiar perfusión sin contraste yodado."
+            }
+          ],
+          "limits": "La radiografía normal no excluye el diagnóstico. La fibrinólisis no corresponde de rutina a todo caso estable.",
+          "evidence": [
+            {
+              "page": 34,
+              "quote": "disnea de aparición brusca e inexplicable"
+            },
+            {
+              "page": 36,
+              "quote": "Se recomienda utilizar el Modelo clínico de Wells"
+            },
+            {
+              "page": 37,
+              "quote": "Fibrinólisis y anticoagulación"
+            }
+          ],
+          "source_gaps": []
+        }
+      ],
+      "common_problem": "Disnea brusca y dolor torácico en una persona con riesgo trombótico.",
+      "mother": {
+        "cue": "La obstrucción pulmonar compromete intercambio gaseoso y función ventricular derecha.",
+        "answer": "Obstrucción vascular pulmonar aguda",
+        "explanation": "La estabilidad y la probabilidad clínica determinan el algoritmo inicial."
+      }
+    },
+    {
+      "id": "02.05",
+      "title": "Embarazo con sospecha trombótica",
+      "topics": [
+        {
+          "id": "02.05-01",
+          "name": "Tromboembolia venosa en obstetricia",
+          "source_pages": [
+            38,
+            39
+          ],
+          "pattern": "Una embarazada con inmovilidad reciente presenta dolor y edema de la pierna izquierda. Niega disnea, pero el aumento de volumen unilateral persiste durante la exploración.",
+          "key_discriminator": "edema de la pierna izquierda",
+          "mechanism": "Los cambios gestacionales y la estasis aumentan el riesgo trombótico; el trombo profundo produce edema unilateral y puede embolizar hacia la circulación pulmonar.",
+          "findings": [
+            {
+              "mechanism": "Obstrucción venosa profunda",
+              "finding": "Edema y dolor unilateral"
+            }
+          ],
+          "initial_action": "Solicitar ultrasonido con compresión. En trombosis confirmada, usar heparina de bajo peso molecular salvo contraindicación y coordinar el plan obstétrico.",
+          "action_reason": "Confirma trombosis sin radiación y permite tratar con un anticoagulante apropiado para el embarazo.",
+          "modifiers": [
+            {
+              "factor": "Disnea o colapso cardiovascular",
+              "action": "Evaluar TEP urgente con equipo obstétrico.",
+              "reason": "Puede representar embolia de alto riesgo."
+            },
+            {
+              "factor": "TEP grave",
+              "action": "Valorar heparina no fraccionada intravenosa y reperfusión especializada.",
+              "reason": "La inestabilidad modifica el tratamiento inicial."
+            }
+          ],
+          "limits": "No atribuir edema unilateral persistente a cambios fisiológicos del embarazo. La warfarina no es la elección gestacional.",
+          "evidence": [
+            {
+              "page": 38,
+              "quote": "Se recomienda realizar ultrasonido con compres1on"
+            },
+            {
+              "page": 38,
+              "quote": "Se recomienda usar HBPM"
+            },
+            {
+              "page": 39,
+              "quote": "Sospecha de TEP masivo o grave: Heparina no"
+            }
+          ],
+          "source_gaps": []
+        }
+      ],
+      "common_problem": "Embarazada con edema unilateral o síntomas respiratorios nuevos.",
+      "mother": {
+        "cue": "La gestación modifica el riesgo trombótico y la elección de pruebas y fármacos.",
+        "answer": "Tromboembolia durante embarazo y puerperio",
+        "explanation": "Se debe confirmar con estudios apropiados y coordinar anticoagulación con atención obstétrica."
+      }
+    },
+    {
+      "id": "02.06",
+      "title": "Pie con lesión o dolor",
+      "topics": [
+        {
+          "id": "02.06-01",
+          "name": "Pie diabético",
+          "source_pages": [
+            28,
+            29,
+            30,
+            31,
+            32
+          ],
+          "pattern": "Un adulto con diabetes de larga evolución encuentra una úlcera plantar al quitarse el zapato. Refiere poca sensibilidad. La herida tiene enrojecimiento y secreción, y se deben valorar los pulsos.",
+          "key_discriminator": "úlcera plantar",
+          "mechanism": "La neuropatía reduce la sensibilidad protectora y favorece traumatismos repetidos; la isquemia dificulta reparación y la infección incrementa el riesgo de destrucción tisular.",
+          "findings": [
+            {
+              "mechanism": "Pérdida de sensibilidad protectora",
+              "finding": "Herida poco dolorosa"
+            },
+            {
+              "mechanism": "Infección de tejidos",
+              "finding": "Eritema y secreción"
+            }
+          ],
+          "initial_action": "Valorar profundidad, infección, perfusión y sensibilidad. Limpiar la herida, reducir presión y coordinar manejo multidisciplinario; usar antibióticos solo si existe infección.",
+          "action_reason": "La causa y gravedad determinan curación, necesidad de imagen y urgencia quirúrgica.",
+          "modifiers": [
+            {
+              "factor": "Absceso, gas o fascitis necrotizante",
+              "action": "Solicitar cirugía urgente.",
+              "reason": "Requieren control del foco."
+            },
+            {
+              "factor": "Isquemia",
+              "action": "Priorizar valoración vascular.",
+              "reason": "La herida no cicatriza si el flujo es insuficiente."
+            }
+          ],
+          "limits": "Una úlcera sin signos de infección no necesita antibiótico empírico; la osteomielitis exige evaluación específica.",
+          "evidence": [
+            {
+              "page": 28,
+              "quote": "Neuropatía diabética: Dolor, ardor, insensibilidad,"
+            },
+            {
+              "page": 30,
+              "quote": "Sin antibiótico empírico."
+            },
+            {
+              "page": 32,
+              "quote": "Absceso, gas o fascitis necrotizante."
+            }
+          ],
+          "source_gaps": []
+        }
+      ],
+      "common_problem": "Persona con diabetes y lesión o dolor del pie.",
+      "mother": {
+        "cue": "La lesión puede combinar pérdida de sensibilidad, falta de flujo e infección.",
+        "answer": "Daño neuropático, vascular e infeccioso del pie",
+        "explanation": "Cada componente cambia la urgencia y la posibilidad de cicatrización."
+      }
+    },
+    {
+      "id": "02.07",
+      "title": "Úlcera de extremidad",
+      "topics": [
+        {
+          "id": "02.07-01",
+          "name": "Úlceras por presión",
+          "source_pages": [
+            41
+          ],
+          "pattern": "Un adulto encamado tiene una lesión roja sobre el sacro. La piel sigue íntegra, pero el eritema no palidece con presión. Tiene incontinencia y movilidad muy limitada.",
+          "key_discriminator": "el eritema no palidece",
+          "mechanism": "La presión sostenida y el cizallamiento comprometen el flujo entre la superficie y una prominencia ósea; la hipoxia local puede avanzar a necrosis profunda.",
+          "findings": [
+            {
+              "mechanism": "Compresión tisular sostenida",
+              "finding": "Eritema no blanqueable"
+            },
+            {
+              "mechanism": "Pérdida de perfusión",
+              "finding": "Daño progresivo de piel y tejidos"
+            }
+          ],
+          "initial_action": "Retirar presión sobre la zona, controlar humedad y fricción e iniciar cambios posturales individualizados. Valorar riesgo con Braden y clasificar la profundidad.",
+          "action_reason": "La descarga mecánica atiende el mecanismo causal y evita progresión.",
+          "modifiers": [
+            {
+              "factor": "Tejido necrótico o pérdida profunda",
+              "action": "Valorar desbridamiento y apósito apropiado.",
+              "reason": "Se requiere retirar tejido no viable y proteger el lecho."
+            },
+            {
+              "factor": "Signos de infección",
+              "action": "Valorar tratamiento antimicrobiano.",
+              "reason": "La colonización aislada no equivale a infección clínica."
+            }
+          ],
+          "limits": "Si la base está cubierta y no permite ver profundidad, no asignar un estadio definitivo por tamaño superficial.",
+          "evidence": [
+            {
+              "page": 41,
+              "quote": "Eritema cutáneo que no palidece"
+            },
+            {
+              "page": 41,
+              "quote": "disminuir presión, humedad, fricción y cizallamiento."
+            }
+          ],
+          "source_gaps": []
+        },
+        {
+          "id": "02.07-02",
+          "name": "Insuficiencia venosa",
+          "source_pages": [
+            25,
+            26
+          ],
+          "pattern": "Una mujer que trabaja de pie presenta pesadez vespertina, edema de tobillos y várices. Tiene pigmentación ocre cerca del maléolo medial; mejora cuando eleva las piernas.",
+          "key_discriminator": "mejora cuando eleva las piernas",
+          "mechanism": "El reflujo o la obstrucción venosa elevan la presión distal; la salida de líquido y el depósito de hemosiderina producen edema y cambios cutáneos crónicos.",
+          "findings": [
+            {
+              "mechanism": "Hipertensión venosa",
+              "finding": "Edema vespertino"
+            },
+            {
+              "mechanism": "Depósito de hemosiderina",
+              "finding": "Pigmentación ocre"
+            }
+          ],
+          "initial_action": "Valorar piel y pulsos. Iniciar medidas posturales, ejercicio y compresión apropiada tras valorar la circulación arterial. Solicitar dúplex si se planea intervención.",
+          "action_reason": "Las medidas mejoran el retorno venoso y el dúplex localiza reflujo u obstrucción.",
+          "modifiers": [
+            {
+              "factor": "Várices complicadas o fracaso conservador",
+              "action": "Enviar a valoración para tratamiento intervencionista.",
+              "reason": "Los síntomas o complicaciones pueden requerir corrección del reflujo."
+            }
+          ],
+          "limits": "Una pierna con edema agudo unilateral requiere descartar trombosis; no asumir que todo edema es venoso crónico.",
+          "evidence": [
+            {
+              "page": 25,
+              "quote": "Los síntomas mejoran con el decúbito, reposo y elevación de piernas."
+            },
+            {
+              "page": 26,
+              "quote": "Conservador: Medias de compresión, medidas físco postura les,"
+            }
+          ],
+          "source_gaps": []
+        },
+        {
+          "id": "02.07-03",
+          "name": "Enfermedad arterial periférica",
+          "source_pages": [
+            23,
+            24
+          ],
+          "pattern": "Un fumador mayor presenta dolor de pantorrilla al caminar una distancia similar cada día. El dolor cede al detenerse. Se observan piel brillante y pulsos pedios débiles.",
+          "key_discriminator": "cede al detenerse",
+          "mechanism": "Las placas ateroscleróticas estrechan las arterias de las piernas; el aumento de demanda durante el ejercicio supera el flujo disponible y causa isquemia muscular.",
+          "findings": [
+            {
+              "mechanism": "Flujo insuficiente con esfuerzo",
+              "finding": "Claudicación"
+            },
+            {
+              "mechanism": "Perfusión distal reducida",
+              "finding": "Pulsos débiles y piel atrófica"
+            }
+          ],
+          "initial_action": "Explorar pulsos y medir el índice tobillo-brazo. Si se confirma enfermedad sintomática, iniciar control vascular, abandono de tabaco, ejercicio y tratamiento preventivo indicado.",
+          "action_reason": "El índice documenta obstrucción; el manejo reduce síntomas y riesgo cardiovascular.",
+          "modifiers": [
+            {
+              "factor": "Dolor en reposo o pérdida de tejido",
+              "action": "Solicitar valoración vascular para revascularización.",
+              "reason": "Sugiere isquemia más avanzada."
+            }
+          ],
+          "limits": "No atribuir toda úlcera a isquemia; valorar neuropatía y enfermedad venosa. No usar fármacos de claudicación sin revisar sus contraindicaciones.",
+          "evidence": [
+            {
+              "page": 23,
+              "quote": "deambulación y se alivia con el reposo."
+            },
+            {
+              "page": 24,
+              "quote": "Punto de corte para considerarse anormal < 0.90 en reposo."
+            }
+          ],
+          "source_gaps": []
+        },
+        {
+          "id": "02.07-04",
+          "name": "Pie diabético",
+          "source_pages": [
+            28,
+            29,
+            30,
+            31,
+            32
+          ],
+          "pattern": "Un adulto con diabetes de larga evolución encuentra una úlcera plantar al quitarse el zapato. Refiere poca sensibilidad. La herida tiene enrojecimiento y secreción, y se deben valorar los pulsos.",
+          "key_discriminator": "úlcera plantar",
+          "mechanism": "La neuropatía reduce la sensibilidad protectora y favorece traumatismos repetidos; la isquemia dificulta reparación y la infección incrementa el riesgo de destrucción tisular.",
+          "findings": [
+            {
+              "mechanism": "Pérdida de sensibilidad protectora",
+              "finding": "Herida poco dolorosa"
+            },
+            {
+              "mechanism": "Infección de tejidos",
+              "finding": "Eritema y secreción"
+            }
+          ],
+          "initial_action": "Valorar profundidad, infección, perfusión y sensibilidad. Limpiar la herida, reducir presión y coordinar manejo multidisciplinario; usar antibióticos solo si existe infección.",
+          "action_reason": "La causa y gravedad determinan curación, necesidad de imagen y urgencia quirúrgica.",
+          "modifiers": [
+            {
+              "factor": "Absceso, gas o fascitis necrotizante",
+              "action": "Solicitar cirugía urgente.",
+              "reason": "Requieren control del foco."
+            },
+            {
+              "factor": "Isquemia",
+              "action": "Priorizar valoración vascular.",
+              "reason": "La herida no cicatriza si el flujo es insuficiente."
+            }
+          ],
+          "limits": "Una úlcera sin signos de infección no necesita antibiótico empírico; la osteomielitis exige evaluación específica.",
+          "evidence": [
+            {
+              "page": 28,
+              "quote": "Neuropatía diabética: Dolor, ardor, insensibilidad,"
+            },
+            {
+              "page": 30,
+              "quote": "Sin antibiótico empírico."
+            },
+            {
+              "page": 32,
+              "quote": "Absceso, gas o fascitis necrotizante."
+            }
+          ],
+          "source_gaps": []
+        }
+      ],
+      "common_problem": "Úlcera de extremidad con localización y dolor variables.",
+      "mother": {
+        "cue": "La morfología de una úlcera refleja presión, sensibilidad y circulación.",
+        "answer": "Mecanismos de lesión cutánea de extremidad",
+        "explanation": "Pulsos, edema, sensibilidad y apoyo permiten distinguir causas y decidir manejo."
+      }
+    },
+    {
+      "id": "02.08",
+      "title": "REVISIÓN: úlcera por presión",
+      "topics": [
+        {
+          "id": "02.08-01",
+          "name": "Úlceras por presión",
+          "source_pages": [
+            41
+          ],
+          "pattern": "Un adulto encamado tiene una lesión roja sobre el sacro. La piel sigue íntegra, pero el eritema no palidece con presión. Tiene incontinencia y movilidad muy limitada.",
+          "key_discriminator": "el eritema no palidece",
+          "mechanism": "La presión sostenida y el cizallamiento comprometen el flujo entre la superficie y una prominencia ósea; la hipoxia local puede avanzar a necrosis profunda.",
+          "findings": [
+            {
+              "mechanism": "Compresión tisular sostenida",
+              "finding": "Eritema no blanqueable"
+            },
+            {
+              "mechanism": "Pérdida de perfusión",
+              "finding": "Daño progresivo de piel y tejidos"
+            }
+          ],
+          "initial_action": "Retirar presión sobre la zona, controlar humedad y fricción e iniciar cambios posturales individualizados. Valorar riesgo con Braden y clasificar la profundidad.",
+          "action_reason": "La descarga mecánica atiende el mecanismo causal y evita progresión.",
+          "modifiers": [
+            {
+              "factor": "Tejido necrótico o pérdida profunda",
+              "action": "Valorar desbridamiento y apósito apropiado.",
+              "reason": "Se requiere retirar tejido no viable y proteger el lecho."
+            },
+            {
+              "factor": "Signos de infección",
+              "action": "Valorar tratamiento antimicrobiano.",
+              "reason": "La colonización aislada no equivale a infección clínica."
+            }
+          ],
+          "limits": "Si la base está cubierta y no permite ver profundidad, no asignar un estadio definitivo por tamaño superficial.",
+          "evidence": [
+            {
+              "page": 41,
+              "quote": "Eritema cutáneo que no palidece"
+            },
+            {
+              "page": 41,
+              "quote": "disminuir presión, humedad, fricción y cizallamiento."
+            }
+          ],
+          "source_gaps": []
+        },
+        {
+          "id": "02.08-02",
+          "name": "Pie diabético",
+          "source_pages": [
+            28,
+            29,
+            30,
+            31,
+            32
+          ],
+          "pattern": "Un adulto con diabetes de larga evolución encuentra una úlcera plantar al quitarse el zapato. Refiere poca sensibilidad. La herida tiene enrojecimiento y secreción, y se deben valorar los pulsos.",
+          "key_discriminator": "úlcera plantar",
+          "mechanism": "La neuropatía reduce la sensibilidad protectora y favorece traumatismos repetidos; la isquemia dificulta reparación y la infección incrementa el riesgo de destrucción tisular.",
+          "findings": [
+            {
+              "mechanism": "Pérdida de sensibilidad protectora",
+              "finding": "Herida poco dolorosa"
+            },
+            {
+              "mechanism": "Infección de tejidos",
+              "finding": "Eritema y secreción"
+            }
+          ],
+          "initial_action": "Valorar profundidad, infección, perfusión y sensibilidad. Limpiar la herida, reducir presión y coordinar manejo multidisciplinario; usar antibióticos solo si existe infección.",
+          "action_reason": "La causa y gravedad determinan curación, necesidad de imagen y urgencia quirúrgica.",
+          "modifiers": [
+            {
+              "factor": "Absceso, gas o fascitis necrotizante",
+              "action": "Solicitar cirugía urgente.",
+              "reason": "Requieren control del foco."
+            },
+            {
+              "factor": "Isquemia",
+              "action": "Priorizar valoración vascular.",
+              "reason": "La herida no cicatriza si el flujo es insuficiente."
+            }
+          ],
+          "limits": "Una úlcera sin signos de infección no necesita antibiótico empírico; la osteomielitis exige evaluación específica.",
+          "evidence": [
+            {
+              "page": 28,
+              "quote": "Neuropatía diabética: Dolor, ardor, insensibilidad,"
+            },
+            {
+              "page": 30,
+              "quote": "Sin antibiótico empírico."
+            },
+            {
+              "page": 32,
+              "quote": "Absceso, gas o fascitis necrotizante."
+            }
+          ],
+          "source_gaps": []
+        }
+      ],
+      "common_problem": "Herida en una persona con inmovilidad o diabetes.",
+      "mother": {
+        "cue": "La presión mantenida causa lesión cuando el tejido no puede protegerse.",
+        "answer": "Lesión tisular por carga y vulnerabilidad",
+        "explanation": "La inmovilidad y la neuropatía comparten presión como factor, pero cambian la evaluación."
+      }
+    }
+  ]
+}
