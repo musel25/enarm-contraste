@@ -22,7 +22,7 @@
               "finding": "Pirosis y regurgitación"
             }
           ],
-          "initial_action": "Valorar datos de alarma y síntomas cardíacos. En presentación típica sin alarma, iniciar medidas dirigidas y una prueba de IBP; reevaluar respuesta y necesidad de estudios.",
+          "initial_action": "Valorar datos de alarma y síntomas cardíacos. En síntomas típicos sin alarma, iniciar medidas dirigidas y una prueba de IBP durante ocho semanas; reevaluar respuesta y necesidad de estudios.",
           "action_reason": "La probabilidad clínica permite un inicio terapéutico, pero la persistencia requiere reconsiderar diagnóstico.",
           "modifiers": [
             {
@@ -47,7 +47,20 @@
               "quote": "prueba terapéutica con IBP"
             }
           ],
-          "source_gaps": []
+          "source_gaps": [],
+          "external_sources": [
+            {
+              "label": "ACG, GERD guideline 2022",
+              "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8754510/",
+              "quote": "we recommend an 8-week trial of empiric proton pump inhibitor (PPI) once daily before a meal.",
+              "checked_at": "2026-10-29"
+            }
+          ],
+          "source_corrections": [
+            {
+              "reason": "La respuesta sintomática a IBP no confirma ERGE; ACG 2022 apoya una prueba de ocho semanas en síntomas típicos sin alarmas. La cirugía exige evaluación objetiva y selección, no solo juventud."
+            }
+          ]
         },
         {
           "id": "11.01-02",
@@ -64,7 +77,7 @@
               "finding": "Plenitud y saciedad precoz"
             }
           ],
-          "initial_action": "Revisar signos de alarma, fármacos y H. pylori según contexto. Establecer un plan de tratamiento y seguimiento por síntomas tras excluir causas relevantes.",
+          "initial_action": "Revisar alarmas, fármacos y estado de H. pylori; erradicar si resulta positivo. Si es negativo o persisten síntomas tras erradicación, iniciar prueba con IBP y reevaluar.",
           "action_reason": "Evita estudios innecesarios sin ignorar enfermedad orgánica.",
           "modifiers": [
             {
@@ -73,7 +86,7 @@
               "reason": "Cambia el riesgo de lesión orgánica."
             }
           ],
-          "limits": "Los criterios Roma III y el orden metoclopramida-ranitidina del libro son antiguos; no usar ranitidina como opción automática actual.",
+          "limits": "La evaluación depende de edad, riesgo y alarmas. No adoptar como secuencia universal el orden metoclopramida-ranitidina del libro. Si falla el IBP, seleccionar tratamiento posterior con seguimiento.",
           "evidence": [
             {
               "page": 315,
@@ -84,7 +97,20 @@
               "quote": "cualquier signo y síntoma de alarma"
             }
           ],
-          "source_gaps": []
+          "source_gaps": [],
+          "external_sources": [
+            {
+              "label": "ACG y CAG, Dyspepsia guideline 2017",
+              "url": "https://pubmed.ncbi.nlm.nih.gov/28631728/",
+              "quote": "We recommend PPI, TCA and prokinetic therapy (in that order)",
+              "checked_at": "2026-10-29"
+            }
+          ],
+          "source_corrections": [
+            {
+              "reason": "La secuencia del resumen no corresponde al enfoque ACG/CAG: valorar H. pylori y después IBP, con tratamiento posterior según respuesta. No se enseña una pauta universal de metoclopramida o ranitidina."
+            }
+          ]
         },
         {
           "id": "11.01-03",
@@ -131,7 +157,20 @@
               "quote": "tomar biopsia al momento de endoscopía"
             }
           ],
-          "source_gaps": []
+          "source_gaps": [],
+          "external_sources": [
+            {
+              "label": "ACG, H. pylori treatment guideline 2024",
+              "url": "https://webfiles.gi.org/links/journals/ACG-Hpylori-Guidelines-Highlights-2024-FINAL.pdf",
+              "quote": "Avoid clarithromycin and levofloxacin-containing Rx unless demonstrated susceptibility",
+              "checked_at": "2026-10-29"
+            }
+          ],
+          "source_corrections": [
+            {
+              "reason": "La tabla del libro no debe aplicarse sin considerar susceptibilidad. ACG 2024 desaconseja claritromicina o levofloxacino empíricos sin susceptibilidad demostrada; el caso prioriza IBP, retirada de AINE y diagnóstico de H. pylori."
+            }
+          ]
         }
       ],
       "common_problem": "Ardor retroesternal o dolor y plenitud epigástricos.",
@@ -181,7 +220,7 @@
             },
             {
               "page": 306,
-              "quote": "confirmarse el diagnóstico de acalasia con"
+              "quote": "manometría esofágica, para tener una valoración"
             }
           ],
           "source_gaps": []
@@ -214,7 +253,7 @@
               "reason": "La clasificación cambia intervención."
             }
           ],
-          "limits": "No toda mucosa gástrica o irregularidad mínima constituye Barrett; aplicar criterios diagnósticos vigentes y no asumir disfagia como síntoma obligatorio.",
+          "limits": "El diagnóstico requiere mucosa columnar de al menos 1 cm y metaplasia intestinal en esófago tubular. Una irregularidad mínima de la línea Z no equivale al diagnóstico; la disfagia no es obligatoria.",
           "evidence": [
             {
               "page": 325,
@@ -225,7 +264,21 @@
               "quote": "Vigilancia con EGO acorde resultados de biopsia"
             }
           ],
-          "source_gaps": []
+          "source_gaps": [],
+          "answer_name": "Esófago de Barrett",
+          "external_sources": [
+            {
+              "label": "ACG, Barrett guideline 2022",
+              "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10259184/",
+              "quote": "We suggest that columnar mucosa of at least 1 cm in length be necessary for a diagnosis of BE",
+              "checked_at": "2026-10-29"
+            }
+          ],
+          "source_corrections": [
+            {
+              "reason": "Se conserva el rótulo original del inventario, pero la respuesta corrige Barret a Barrett. ACG 2022 precisa la longitud mínima y metaplasia intestinal, y exige confirmar displasia por un segundo patólogo experto."
+            }
+          ]
         },
         {
           "id": "11.02-03",
@@ -255,7 +308,7 @@
               "reason": "Existe riesgo inmediato de deshidratación o neumonía."
             }
           ],
-          "limits": "La secuencia de disfagia orienta, pero no confirma; los tratamientos actuales no se reducen a cisplatino para todos.",
+          "limits": "La secuencia de disfagia orienta, pero no confirma. Esta tarjeta cubre diagnóstico y estadificación inicial; el tratamiento oncológico depende de histología, extensión y estado clínico.",
           "evidence": [
             {
               "page": 308,
@@ -319,7 +372,20 @@
               "quote": "lnhibidor de bombas de protones a dosis altas"
             }
           ],
-          "source_gaps": []
+          "source_gaps": [],
+          "external_sources": [
+            {
+              "label": "ENETS, Functioning pancreatic NET syndromes 2023",
+              "url": "https://onlinelibrary.wiley.com/doi/10.1111/jne.13318",
+              "quote": "caution should be applied when attempting temporary PPI withdrawal in cases of suspected gastrinoma",
+              "checked_at": "2026-10-29"
+            }
+          ],
+          "source_corrections": [
+            {
+              "reason": "La gastrina debe interpretarse con acidez gástrica y medicamentos. ENETS 2023 advierte que retirar IBP puede causar hipersecreción de rebote, úlcera, sangrado o perforación; la evaluación requiere protocolo experto."
+            }
+          ]
         }
       ],
       "common_problem": "Úlceras repetidas con diarrea o esofagitis.",
@@ -371,7 +437,7 @@
           "evidence": [
             {
               "page": 342,
-              "quote": "Hematemesis."
+              "quote": "Hematemesis: sugiere que la hemorragia es de moderada a grave"
             },
             {
               "page": 343,
@@ -399,7 +465,7 @@
               "finding": "Hematemesis"
             }
           ],
-          "initial_action": "Estabilizar y comenzar vasoactivo ante sospecha, junto con profilaxis antibiótica indicada en cirrosis con sangrado. Organizar endoscopia temprana para ligadura tras reanimación.",
+          "initial_action": "Estabilizar e iniciar un vasoactivo, como octreótide, desde la sospecha, junto con profilaxis antibiótica, habitualmente ceftriaxona según contexto local. Organizar endoscopia temprana con ligadura tras reanimación.",
           "action_reason": "Combina soporte, reducción de presión y control local del sangrado.",
           "modifiers": [
             {
@@ -568,7 +634,7 @@
               "finding": "Cambios de forma o frecuencia fecal"
             }
           ],
-          "initial_action": "Establecer diagnóstico positivo con criterios actuales y revisar alarmas. Iniciar educación, hábitos y dieta individualizada, con tratamiento por subtipo y seguimiento.",
+          "initial_action": "Establecer diagnóstico positivo y revisar alarmas con pruebas básicas dirigidas. Iniciar educación, hábitos y dieta individualizada; considerar fibra soluble como psyllium, con tratamiento por subtipo y seguimiento.",
           "action_reason": "La estrategia dirige el manejo sin convertirlo en un diagnóstico de exclusión ilimitada.",
           "modifiers": [
             {
@@ -582,7 +648,7 @@
               "reason": "El mismo fármaco puede empeorar el extremo contrario."
             }
           ],
-          "limits": "Los criterios Roma III del resumen son antiguos; las dosis de loperamida en la página tienen errores y no deben usarse.",
+          "limits": "El caso cubre un patrón compatible sin alarmas. No usar las dosis erróneas de loperamida impresas en el libro; su elección depende del subtipo y no trata el dolor global.",
           "evidence": [
             {
               "page": 340,
@@ -593,7 +659,26 @@
               "quote": "depende de la presentación clínica."
             }
           ],
-          "source_gaps": []
+          "source_gaps": [],
+          "external_sources": [
+            {
+              "label": "AGA, Diet in IBS 2022",
+              "url": "https://gastro.org/clinical-guidance/the-role-of-diet-in-irritable-bowel-syndrome-ibs/",
+              "quote": "Soluble fiber is efficacious in treating global symptoms of IBS.",
+              "checked_at": "2026-10-29"
+            },
+            {
+              "label": "DailyMed, Loperamide hydrochloride prescribing information",
+              "url": "https://www.dailymed.nlm.nih.gov/dailymed/fda/fdaDrugXsl.cfm?setid=f422ade5-8395-40e4-e053-2a95a90a4044&type=display",
+              "quote": "The maximum daily dose is 16 mg (eight capsules).",
+              "checked_at": "2026-10-29"
+            }
+          ],
+          "source_corrections": [
+            {
+              "reason": "La página 341 imprime dosis de loperamida incorrectas, incluida 70 mg/día; la ficha oficial fija máximo de 16 mg/día bajo prescripción. La acción se centra en dieta y fibra soluble, no en una pauta de loperamida."
+            }
+          ]
         }
       ],
       "common_problem": "Dolor abdominal crónico con cambios de hábito sin alarmas.",
@@ -627,7 +712,7 @@
               "finding": "Fístulas o estenosis"
             }
           ],
-          "initial_action": "Descartar infección y evaluar con endoscopia, biopsias e imagen según localización. Clasificar actividad y complicaciones para iniciar tratamiento especializado.",
+          "initial_action": "Descartar infección y evaluar intestino con endoscopia, biopsias e imagen. Ante la fístula perianal del caso, solicitar valoración coloproctológica e imagen pélvica para buscar un absceso; controlar sepsis antes de seleccionar terapia avanzada.",
           "action_reason": "No existe una prueba única que defina todo el diagnóstico.",
           "modifiers": [
             {
@@ -652,7 +737,20 @@
               "quote": "No se dispone de un estándar de oro"
             }
           ],
-          "source_gaps": []
+          "source_gaps": [],
+          "external_sources": [
+            {
+              "label": "BSG, IBD management guideline 2025",
+              "url": "https://gut.bmj.com/content/74/Suppl_2/s1",
+              "quote": "Infliximab is recommended as first-line advanced therapy for perianal Crohn’s disease.",
+              "checked_at": "2026-10-29"
+            }
+          ],
+          "source_corrections": [
+            {
+              "reason": "La frase del libro que reduce fístulas o perforación a metronidazol es insuficiente. BSG 2025 exige evaluar y drenar sepsis perianal antes de tratamiento avanzado; los corticoides no son mantenimiento."
+            }
+          ]
         },
         {
           "id": "11.07-02",
@@ -674,7 +772,7 @@
               "finding": "Urgencia y tenesmo"
             }
           ],
-          "initial_action": "Descartar infección, valorar gravedad y obtener evaluación endoscópica y biopsia apropiadas. Seleccionar tratamiento según extensión y actividad con gastroenterología.",
+          "initial_action": "Descartar infección, valorar gravedad y obtener endoscopia y biopsias apropiadas. Si la actividad es leve o moderada, iniciar mesalazina según extensión; si es grave, hospitalizar para tratamiento y vigilancia especializados.",
           "action_reason": "El cuadro grave necesita atención más rápida que una forma limitada.",
           "modifiers": [
             {
@@ -688,7 +786,7 @@
               "reason": "Su alcance depende de extensión."
             }
           ],
-          "limits": "Azatioprina no es rescate rápido. Colectomía no es colostomía; no limitar vigilancia oncológica a una endoscopia cada diez años.",
+          "limits": "Azatioprina no es inducción o rescate rápido. Colectomía y colostomía son procedimientos distintos. La vigilancia de cáncer se programa según duración, extensión, inflamación y otros riesgos, no cada diez años de forma universal.",
           "evidence": [
             {
               "page": 313,
@@ -699,7 +797,26 @@
               "quote": "Las formas leves o moderadas: Mesalazina."
             }
           ],
-          "source_gaps": []
+          "source_gaps": [],
+          "external_sources": [
+            {
+              "label": "BSG, IBD management guideline 2025",
+              "url": "https://gut.bmj.com/content/74/Suppl_2/s1",
+              "quote": "Purine analogues (azathioprine/mercaptopurine) are not suggested for induction of remission",
+              "checked_at": "2026-10-29"
+            },
+            {
+              "label": "AGA, IBD colorectal dysplasia surveillance 2021",
+              "url": "https://gastro.org/clinical-guidance/endoscopic-surveillance-and-management-of-colorectal-dysplasia-in-inflammatory-bowel-diseases-ibd/",
+              "quote": "surveillance colonoscopy should be performed every 1-5 years based on risk factors for colorectal cancer",
+              "checked_at": "2026-10-29"
+            }
+          ],
+          "source_corrections": [
+            {
+              "reason": "El libro propone azatioprina en crisis y vigilancia cada diez años. BSG 2025 no recomienda tiopurinas para inducción; AGA 2021 establece vigilancia individualizada por riesgo. La tarjeta selecciona mesalazina solo si es leve o moderada."
+            }
+          ]
         },
         {
           "id": "11.07-03",
@@ -753,6 +870,11 @@
               "quote": "Doctors don’t recommend starting a gluten-free diet before diagnostic testing",
               "checked_at": "2026-10-29"
             }
+          ],
+          "source_corrections": [
+            {
+              "reason": "No retirar gluten antes del estudio inicial. NIDDK advierte que altera los resultados; el estudio diagnóstico precede a la dieta, en lugar de esperar un año de dieta para la primera biopsia."
+            }
           ]
         }
       ],
@@ -795,11 +917,11 @@
               "reason": "Puede existir falla hepática o deshidratación."
             }
           ],
-          "limits": "No se cronifica. Evitar extrapolar instrucciones de esterilización o prohibición absoluta de analgésicos del resumen sin contexto.",
+          "limits": "No se cronifica. La tarjeta cubre diagnóstico y soporte inicial; no prescribe esterilización de material ni una pauta analgésica.",
           "evidence": [
             {
               "page": 326,
-              "quote": "lgM anti-VHA"
+              "quote": "lgM anti-VHA se utiliza para infección aguda"
             },
             {
               "page": 326,
@@ -862,6 +984,11 @@
               "quote": "tenofovir disoproxil fumarate (TDF) or entecavir (ETV) are recommended as preferred regimens.",
               "checked_at": "2026-10-29"
             }
+          ],
+          "source_corrections": [
+            {
+              "reason": "La tabla del libro con lamivudina o combinaciones no representa el estándar actual. OMS 2024 prefiere análogos con alta barrera de resistencia, TDF o entecavir, cuando el paciente cumple criterios de tratamiento."
+            }
           ]
         },
         {
@@ -917,6 +1044,11 @@
               "quote": "Curative DAA treatment is recommended for essentially everyone with hepatitis C.",
               "checked_at": "2026-10-29"
             }
+          ],
+          "source_corrections": [
+            {
+              "reason": "El esquema de interferón y ribavirina del libro se sustituye por antivirales de acción directa. CDC recomienda tratamiento curativo para casi todas las personas con infección activa por VHC."
+            }
           ]
         },
         {
@@ -938,7 +1070,7 @@
               "finding": "Hallazgo histológico"
             }
           ],
-          "initial_action": "Completar exclusión de causas y evaluación de gravedad; iniciar inmunosupresión apropiada con hepatología si se confirma.",
+          "initial_action": "Excluir otras causas y evaluar gravedad e histología. Si se confirma enfermedad activa, iniciar con hepatología prednisona o prednisolona y seleccionar un ahorrador de corticoide según función hepática y contraindicaciones.",
           "action_reason": "El tratamiento controla inflamación y previene progresión.",
           "modifiers": [
             {
@@ -963,7 +1095,20 @@
               "quote": "prednisona más azatioprina"
             }
           ],
-          "source_gaps": []
+          "source_gaps": [],
+          "external_sources": [
+            {
+              "label": "EASL, Autoimmune hepatitis guideline 2025",
+              "url": "https://easlcampus.eu/sites/default/files/2025-08/EASL_CPGs_on_the_management_of_AIH.pdf",
+              "quote": "First-line therapy starts with predniso(lo)ne",
+              "checked_at": "2026-10-29"
+            }
+          ],
+          "source_corrections": [
+            {
+              "reason": "EASL 2025 admite selección de azatioprina o micofenolato como ahorrador. No aplicar automáticamente la combinación del libro a hepatitis aguda grave o cirrosis descompensada; la tarjeta exige selección especializada."
+            }
+          ]
         }
       ],
       "common_problem": "Ictericia y aminotransferasas elevadas.",
@@ -996,7 +1141,7 @@
               "finding": "Riesgo de fibrosis"
             }
           ],
-          "initial_action": "Evaluar causas, consumo de alcohol y fibrosis con herramientas apropiadas; tratar riesgo metabólico y establecer reducción de peso y actividad con seguimiento.",
+          "initial_action": "Evaluar consumo de alcohol y otras causas de esteatosis. En este contexto metabólico, calcular FIB-4 como primer paso de evaluación de fibrosis y decidir elastografía según resultado; tratar riesgo metabólico, peso y actividad.",
           "action_reason": "Identifica enfermedad avanzada y aborda factores modificables.",
           "modifiers": [
             {
@@ -1021,7 +1166,20 @@
               "quote": "reducción de un 10% del peso corporal."
             }
           ],
-          "source_gaps": []
+          "source_gaps": [],
+          "external_sources": [
+            {
+              "label": "EASL, MASLD guideline 2024",
+              "url": "https://easlcampus.eu/sites/default/files/2024-08/EASL_CPGs_management_of_MASLD.pdf",
+              "quote": "First, a FIB-4 test should be performed.",
+              "checked_at": "2026-10-29"
+            }
+          ],
+          "source_corrections": [
+            {
+              "reason": "La nomenclatura actual es MASLD en este contexto metabólico. EASL 2024 prioriza FIB-4 y pruebas no invasivas escalonadas; el cociente AST/ALT aislado del resumen no clasifica de forma fiable la fibrosis."
+            }
+          ]
         },
         {
           "id": "11.09-02",
@@ -1087,7 +1245,7 @@
           "source_pages": [
             312
           ],
-          "pattern": "Un paciente con daño hepático prolongado tiene hígado nodular en imagen y signos de hipertensión portal. Se evalúan ascitis, encefalopatía, bilirrubina, albúmina e INR para estimar repercusión.",
+          "pattern": "Un paciente con daño hepático prolongado tiene hígado nodular en imagen y signos de hipertensión portal. Se evalúan líquido abdominal, alteración de conciencia, bilirrubina, albúmina e INR para estimar repercusión.",
           "key_discriminator": "hígado nodular",
           "mechanism": "La fibrosis difusa y los nódulos distorsionan arquitectura y flujo hepáticos; la resistencia portal y la pérdida funcional producen complicaciones que distinguen compensación de descompensación.",
           "findings": [
@@ -1128,7 +1286,7 @@
           "source_pages": [
             307
           ],
-          "pattern": "Un adulto con cirrosis presenta aumento reciente del abdomen y matidez cambiante. Se obtiene líquido peritoneal para recuento celular, cultivo y albúmina, junto con albúmina sérica.",
+          "pattern": "Un adulto con daño hepático crónico presenta aumento reciente del abdomen y matidez cambiante. Se obtiene líquido peritoneal para recuento celular, cultivo y albúmina, junto con albúmina sérica.",
           "key_discriminator": "aumento reciente del abdomen",
           "mechanism": "La hipertensión portal y alteraciones circulatorias favorecen retención de sodio y líquido peritoneal; el gradiente de albúmina ayuda a distinguir mecanismo portal de otras causas.",
           "findings": [
@@ -1173,6 +1331,17 @@
               "url": "https://gastro.org/clinical-guidance/use-of-vasoactive-drugs-and-intravenous-albumin-in-cirrhosis/",
               "quote": "IV albumin should be administered at the time of large-volume (>5 L) paracentesis.",
               "checked_at": "2026-10-29"
+            },
+            {
+              "label": "AASLD, Ascites, SBP and hepatorenal syndrome guidance 2021",
+              "url": "https://aasldpubs.onlinelibrary.wiley.com/doi/full/10.1002/hep.31884",
+              "quote": "subtracting the ascitic fluid albumin from the serum albumin",
+              "checked_at": "2026-10-29"
+            }
+          ],
+          "source_corrections": [
+            {
+              "reason": "La página 307 invierte la resta del gradiente de albúmina. AASLD 2021 define albúmina sérica menos albúmina ascítica en muestras simultáneas. Se conserva la indicación de paracentesis y se corrige la fórmula."
             }
           ]
         },
@@ -1182,7 +1351,7 @@
           "source_pages": [
             317
           ],
-          "pattern": "Un paciente con cirrosis presenta inversión del sueño, desorientación y aleteo de manos. Lleva días estreñido y se investiga infección, sangrado y uso de sedantes.",
+          "pattern": "Un paciente con daño hepático crónico presenta inversión del sueño, desorientación y aleteo de manos. Lleva días estreñido y se investiga infección, sangrado y uso de sedantes.",
           "key_discriminator": "inversión del sueño",
           "mechanism": "El fallo hepático y derivación portosistémica permiten neurotoxinas y respuesta inflamatoria que alteran función cerebral; precipitantes reversibles pueden desencadenar síntomas en una enfermedad estable.",
           "findings": [
@@ -1220,10 +1389,23 @@
               "quote": "lactulosa son la terapia de primera"
             }
           ],
-          "source_gaps": []
+          "source_gaps": [],
+          "external_sources": [
+            {
+              "label": "ACG, Hepatic encephalopathy guideline 2026",
+              "url": "https://doi.org/10.14309/ajg.0000000000003899",
+              "quote": "We suggest against protein restriction in patients with HE",
+              "checked_at": "2026-10-29"
+            }
+          ],
+          "source_corrections": [
+            {
+              "reason": "La restricción proteica indiscriminada sugerida por el libro no es manejo actual. ACG 2026 desaconseja restringir proteína y mantiene búsqueda de precipitantes y tratamiento dirigido de la encefalopatía."
+            }
+          ]
         }
       ],
-      "common_problem": "Ascitis o alteración mental en hepatopatía.",
+      "common_problem": "Aumento abdominal o alteración mental en hepatopatía.",
       "mother": {
         "cue": "La hipertensión portal y falla metabólica producen complicaciones relacionadas.",
         "answer": "Descompensación de cirrosis",
@@ -1282,6 +1464,11 @@
               "quote": "then treated with a luminal agent",
               "checked_at": "2026-10-29"
             }
+          ],
+          "source_corrections": [
+            {
+              "reason": "El libro menciona metronidazol tisular, pero omite completar erradicación luminal. CDC Yellow Book indica amebicida tisular seguido de un agente luminal."
+            }
           ]
         },
         {
@@ -1303,7 +1490,7 @@
               "finding": "Hallazgos de foco asociado"
             }
           ],
-          "initial_action": "Iniciar antibióticos de cobertura apropiada y valorar drenaje percutáneo; tomar cultivos y buscar la fuente para controlarla y ajustar tratamiento.",
+          "initial_action": "Obtener hemocultivos e iniciar antibióticos contra enterobacterias y anaerobios, por ejemplo ceftriaxona más metronidazol según contexto y resistencias. Valorar drenaje percutáneo, cultivar la colección y controlar el foco biliar o abdominal.",
           "action_reason": "La terapia debe cubrir patógenos y resolver la colección y origen.",
           "modifiers": [
             {
@@ -1325,10 +1512,23 @@
             },
             {
               "page": 305,
-              "quote": "drenaje percutáneo y la"
+              "quote": "El tratamiento consta de drenaje percutáneo"
             }
           ],
-          "source_gaps": []
+          "source_gaps": [],
+          "external_sources": [
+            {
+              "label": "UCSF, Abdominal infections antimicrobial guidance",
+              "url": "https://idmp.ucsf.edu/content/abdominal-infections",
+              "quote": "Ceftriaxone PLUS Metronidazole",
+              "checked_at": "2026-10-29"
+            }
+          ],
+          "source_corrections": [
+            {
+              "reason": "La mención empírica de metronidazol en página 305 no constituye monoterapia adecuada para absceso piógeno. UCSF recomienda cobertura bacteriana combinada; se ajusta a cultivos, foco y resistencia local."
+            }
+          ]
         }
       ],
       "common_problem": "Fiebre y colección hepática.",
@@ -1363,7 +1563,7 @@
               "finding": "Riesgo de falla orgánica"
             }
           ],
-          "initial_action": "Confirmar criterios, iniciar líquidos ajustados y analgesia, valorar alimentación temprana según tolerancia y buscar causa. Monitorizar perfusión y falla orgánica.",
+          "initial_action": "Confirmar criterios, iniciar líquidos intravenosos ajustados, preferentemente Ringer lactato si es apropiado, y analgesia; valorar alimentación temprana según tolerancia y buscar causa. Monitorizar perfusión, sobrecarga y falla orgánica.",
           "action_reason": "El soporte y tratamiento causal reducen complicaciones sin sobrecarga innecesaria.",
           "modifiers": [
             {
@@ -1396,6 +1596,11 @@
               "quote": "Routine use of prophylactic antibiotics to prevent infection of sterile necrosis is not recommended.",
               "checked_at": "2026-10-29"
             }
+          ],
+          "source_corrections": [
+            {
+              "reason": "La página 337 indica profilaxis con meropenem para necrosis y cirugía temprana en forma general. AGA desaconseja antibióticos en necrosis estéril; drenaje o desbridamiento se reservan a indicaciones y momento apropiados."
+            }
           ]
         },
         {
@@ -1417,7 +1622,7 @@
               "finding": "Calcificaciones y alteraciones ductales"
             }
           ],
-          "initial_action": "Confirmar anatomía y función, retirar alcohol y tabaco y tratar dolor y malabsorción; usar enzimas con alimentación si existe insuficiencia exocrina.",
+          "initial_action": "Confirmar anatomía con TAC o resonancia y evaluar función. Retirar alcohol y tabaco y tratar dolor y malabsorción; usar enzimas con la alimentación si existe insuficiencia exocrina.",
           "action_reason": "El soporte nutricional y control de causas atienden secuelas de daño irreversible.",
           "modifiers": [
             {
@@ -1426,7 +1631,7 @@
               "reason": "Puede existir una complicación corregible."
             }
           ],
-          "limits": "No usar CPRE solo para diagnóstico rutinario ni octreótide como tratamiento universal. Las enzimas no garantizan control del dolor.",
+          "limits": "No usar CPRE como prueba diagnóstica inicial rutinaria. Las enzimas se dirigen a insuficiencia exocrina; la tarjeta no propone octreótide como tratamiento universal del dolor.",
           "evidence": [
             {
               "page": 338,
@@ -1437,7 +1642,20 @@
               "quote": "control del dolor y la malabsorción."
             }
           ],
-          "source_gaps": []
+          "source_gaps": [],
+          "external_sources": [
+            {
+              "label": "ACG, Chronic pancreatitis guideline 2020",
+              "url": "https://doi.org/10.14309/ajg.0000000000000535",
+              "quote": "We recommend computed tomography (CT) or MRI for the first-line diagnosis of CP.",
+              "checked_at": "2026-10-29"
+            }
+          ],
+          "source_corrections": [
+            {
+              "reason": "La página 338 denomina CPRE estándar de oro. ACG recomienda TAC o resonancia como diagnóstico de primera línea; la CPRE se reserva a indicaciones terapéuticas seleccionadas."
+            }
+          ]
         }
       ],
       "common_problem": "Dolor epigástrico a espalda con posible maldigestión.",
@@ -1577,7 +1795,20 @@
               "quote": "equipo multidisciplinario de expertos"
             }
           ],
-          "source_gaps": []
+          "source_gaps": [],
+          "external_sources": [
+            {
+              "label": "AASLD, Hepatocellular carcinoma guidance 2023",
+              "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10663390/",
+              "quote": "noninvasive imaging criteria and/or pathology",
+              "checked_at": "2026-10-29"
+            }
+          ],
+          "source_corrections": [
+            {
+              "reason": "La página 311 plantea biopsia confirmatoria y niega curación con trasplante. AASLD permite diagnóstico por imagen característica en población de riesgo y trasplante con intención curativa en candidatos seleccionados."
+            }
+          ]
         }
       ],
       "common_problem": "Adelgazamiento y síntomas digestivos progresivos.",
