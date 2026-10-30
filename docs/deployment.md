@@ -1,4 +1,4 @@
-# Despliegue de la muestra
+# Despliegue de ENARM Contraste
 
 URL: https://enarm.musel.dev/.
 
@@ -8,20 +8,19 @@ El registro DNS `enarm A 145.241.168.188`, TTL 60, se añadió con Chrome MCP en
 
 ## Publicar
 
-Requisitos locales: Node 22.12 o posterior compatible, npm, Chrome, SSH, rsync y ripgrep. El usuario SSH debe poder ejecutar nginx, instalar archivos en `/var/www` y recargar nginx con `sudo -n`.
+Requisitos locales: Node 22.12 o posterior compatible, npm, uv, Chrome, SSH, rsync y ripgrep. El usuario SSH debe poder ejecutar nginx, instalar archivos en `/var/www` y recargar nginx con `sudo -n`.
 
 ```sh
 npm ci
-npm test
-npm run build
+uv sync
 bash scripts/deploy.sh
 ```
 
-El script exige un árbol limpio y un commit subido a la rama remota de seguimiento. Ejecuta las pruebas y compila con base `/` antes de copiar solo `dist/`. Escribe el commit completo en `version.txt`. No copia PDF, mazos originales, comentarios locales ni credenciales.
+El script exige un árbol limpio y un commit subido a la rama remota de seguimiento. La compilación genera ambos mazos y audita sus bases SQLite. Requiere la validación de fuentes y las revisiones de las 34 secciones. Después ejecuta las pruebas de Python y navegador. Copia solo `dist/` y escribe el commit completo en `version.txt`. No copia PDF, mazos originales, comentarios locales ni credenciales.
 
 Cada publicación crea `/var/www/enarm-contraste/releases/<commit>-<fecha-UTC>-standalone/`. `scripts/setup-domain.sh` prepara únicamente el servidor HTTP de `enarm.musel.dev` y obtiene su certificado con Certbot, mediante el directorio de validación existente. `scripts/deploy.sh` instala `deploy/nginx-enarm.musel.dev.conf`, respalda la configuración previa y cambia `site-current` de forma atómica. Valida nginx antes de recargarlo.
 
-Las comprobaciones validan el commit desde el origen y la URL pública, la página, JavaScript, la muestra anterior y la salud del temporizador. Si falla una comprobación remota, se recuperan el enlace y la configuración anteriores del nuevo host. No se modifica la configuración de otros sitios.
+Las comprobaciones validan el commit desde el origen y la URL pública, la página, JavaScript, el manifiesto, ambos mazos, la muestra anterior y la salud del temporizador. Si falla una comprobación remota, se recuperan el enlace y la configuración anteriores del nuevo host. No se modifica la configuración de otros sitios. nginx devuelve 404 para archivos ausentes en `/study/`.
 
 ## Comprobar la publicación
 

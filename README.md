@@ -1,81 +1,69 @@
 # ENARM Contraste
 
-Sitio de estudio en español para preparar el ENARM mediante diagnóstico diferencial, casos comparables y decisiones de manejo.
+[Estudiar en enarm.musel.dev](https://enarm.musel.dev/).
 
-La muestra web usa React, TypeScript y Vite. El diseño usa Manrope y Lora, una paleta violeta y un mapa de contraste junto a los casos.
+Biblioteca de estudio en español. Agrupa los temas por problemas clínicos para comparar casos, reconocer el dato que distingue y conectar el mecanismo con el manejo.
 
-## Muestra web
+## Dos formatos
 
-[Abrir ENARM Contraste](https://enarm.musel.dev/).
+- **Eje Clínico:** casos del mismo grupo en el frente. Diagnósticos, discriminadores y primera decisión en el reverso.
+- **Patrones Madre:** cuatro niveles. Reconocer el patrón, nombrar el diagnóstico, explicar los hallazgos y decidir el manejo según los factores del caso.
 
-- Dos ejes: amenorrea secundaria e ictericia obstructiva.
-- Seis casos comparables con discriminadores resaltados, mecanismo y primera decisión.
-- Seis situaciones para ver qué cambia en el diagnóstico o en el manejo.
-- Ampliación de cada enfermedad con confirmación, tratamiento, modificadores y fuentes.
-- Dieciséis tarjetas de práctica con respuesta oculta y progreso local.
-- Comentarios por caso o sección, con descarga JSON y copia de texto para compartir.
-- Mapa breve por patrón y razonamiento desplegable, con la estructura de los mazos Eje Clínico y Patrones Madre compartidos por el usuario.
+El inventario contiene 34 secciones, 355 grupos y 730 apariciones de temas. Conserva 719 combinaciones únicas de tema y referencia. Los formatos producen 355 tarjetas Eje Clínico y 2,545 Patrones Madre: 2,900 tarjetas en total.
 
-El usuario añadió `ENARM_Capa1_Completo.pdf`. Se usaron sus bloques 05.03, 10.10, 14.01 y 14.02. La [nota de fuentes](content/source-notes.md) distingue las páginas de este PDF de las páginas del libro que cita. El contenido es una muestra parcial pendiente de revisión clínica.
+La biblioteca carga una sección a la vez. Permite ocultar las respuestas y las pistas, elegir un bloque y nivel, guardar el progreso y comentar una tarjeta. Los dos mazos completos se descargan como archivos `.apkg` para importar en Anki.
 
-### Desarrollo
+**Explorar casos** conserva la muestra de amenorrea secundaria e ictericia obstructiva. Incluye el mapa de contraste, la ampliación de enfermedades y los cambios del caso.
+
+## Fuentes y revisión
+
+El contenido usa el libro completo `Edwino.pdf`, de 1,150 páginas, y la agrupación de `ENARM_Capa1_Completo.pdf`. Los mazos Eje Clínico y Patrones Madre del usuario fijan la estructura. Las viñetas son originales. Las precisiones de fuentes primarias actuales se identifican en el reverso.
+
+Cada sección conserva evidencia de página. La validación comprueba las citas contra la extracción del libro. Un autor distinto revisa el contenido. Su aprobación queda ligada al hash de la sección. Cambiar el contenido invalida la comprobación anterior.
+
+El cotejo de fuentes y la revisión cruzada son controles editoriales. La revisión clínica profesional permanece pendiente. Las tarjetas son material de estudio.
+
+Los PDF, los mazos originales y la extracción bruta no se publican. La [nota de fuentes](content/source-notes.md) conserva la procedencia. El [contrato de autoría](docs/superpowers/specs/2026-10-29-full-book-card-contract.md) define los criterios.
+
+## Desarrollo
+
+Requisitos: Node compatible con Vite 8, npm, uv y Google Chrome.
 
 ```sh
 npm ci
+uv sync
+npm run prepare:study
 npm run dev
+```
+
+Abre `http://127.0.0.1:4178/`. `/#amenorrea` y `/#ictericia` abren la muestra anterior.
+
+```sh
+uv run python -m unittest discover -s tests -p 'test_*.py'
 npm test
 npm run build
 ```
 
-Abre `http://127.0.0.1:4178/`. Las pruebas requieren Google Chrome en `/usr/bin/google-chrome`; `CHROME_PATH` permite indicar otra ruta.
+`npm run build` genera los mazos y audita sus bases SQLite antes de compilar la web. Requiere todas las secciones, la validación de fuentes y las revisiones vigentes. Los archivos generados quedan en `app/public/study/` y se copian a `dist/study/`. Se excluyen de Git.
 
-Los comentarios y el progreso se guardan solo en el navegador. La muestra no incluye cuentas, sincronización ni un planificador de repetición espaciada. El [runbook de despliegue](docs/deployment.md) describe la publicación en el VPS.
+Chrome debe estar en `/usr/bin/google-chrome`. Usa `CHROME_PATH` para indicar otra ruta.
 
-## Diseño de aprendizaje por contraste
+## Cambios de contenido
 
-La [propuesta de aprendizaje por contraste](docs/superpowers/specs/2026-10-29-aprendizaje-clinico-por-contraste-design.md) organiza los temas por ejes clínicos. La capa 1 enseña con casos comparables, datos discriminadores resaltados y una relación entre la función alterada y el manejo inicial. Las variantes muestran qué factor cambia la decisión antes de ampliar cada enfermedad.
-
-El usuario aprobó este diseño. La muestra web implementa el flujo para evaluar el método antes de ampliar el contenido.
-
-## Piloto de tarjetas
-
-Diez tarjetas originales de coledocolitiasis y colangitis, basadas en las páginas 135 y 138 del extracto proporcionado. Cada concepto tiene cinco tipos: ancla, contraste, microvariación, discriminador y primera decisión.
-
-El mapa horizontal orienta la comparación antes de las tarjetas. Los frentes resaltan el discriminador con un color común. Las microvariaciones declaran un único cambio. Los reversos incluyen mecanismo breve, contraste, primera decisión, límites y referencias.
-
-Las viñetas y cifras clínicas son ejemplos construidos para enseñanza. Las precisiones de guías externas se identifican. Los criterios de autoría están en `content/criterios-tarjetas.txt` y el texto recibido está en `content/prompt-original.txt`.
-
-### Generar la muestra
+Edita `content/sections/NN.json`. Comprueba las citas con las páginas privadas del libro:
 
 ```sh
-uv sync
-uv run python scripts/build_pilot.py
+uv run python scripts/validate_sections.py --pages /tmp/enarm-authoring/pages --report content/source-validation.json
 ```
 
-Abre `output/piloto-biliar/revision-cobalto.html` en un navegador. Revela las respuestas y evalúa cada tarjeta con Conservar, Ajustar o Descartar. Exporta los comentarios antes de cerrar.
+Un revisor distinto debe comprobar la sección y actualizar `content/reviews/NN.json`. Después genera y comprueba los archivos:
 
-El generador también crea el mazo `enarm-contraste-piloto.apkg`, los datos JSON y un ZIP descargable. Comprueba diez notas y diez tarjetas en el paquete. Usa identificadores estables para conservar la identidad de las notas al regenerarlas.
+```sh
+npm run prepare:study
+```
 
-El script exporta contenido escrito en `content/piloto-biliar.json`. La ampliación del contenido requiere otra revisión. La página de evaluación y Anki mantienen registros separados.
+El compilador conserva identificadores estables de Anki. La auditoría comprueba todas las correspondencias entre casos, diagnósticos, mecanismos, hallazgos y acciones. También abre ambos paquetes y comprueba sus notas, tarjetas y bases de datos.
 
-### Diseño Cobalto
+Los comentarios y el progreso se guardan en el navegador. Los comentarios se comparten con **Descargar comentarios** o **Copiar texto**. La web no los envía automáticamente. Anki mantiene su propio progreso.
 
-- Fondo `#F3F6FC`, superficie `#FFFFFF`, texto `#253047`.
-- Controles y progreso `#304FC5`, acento suave `#DFE8FF`.
-- Discriminador `#92500A` sobre `#FFF0D9`.
-- Encabezados Outfit; texto Source Sans 3. Anki usa alternativas locales cuando las fuentes no están instaladas.
-
-Este piloto permite evaluar el contenido antes de generar más tarjetas o implementar el planificador.
-
-El libro completo tiene 1,150 páginas. El PDF local es un extracto. No se publica el PDF ni su texto extraído en este repositorio.
-
-## Estructura
-
-- `app/`: aplicación web de la muestra.
-- `content/`: contenido estructurado y referencias de las tarjetas.
-- `scripts/`: preparación y exportación de la muestra.
-- `output/`: archivos generados para revisión.
-- `tests/`: pruebas de navegador de los flujos de estudio y revisión.
-- `docs/`: diseño, plan y despliegue.
-
-Las tarjetas médicas permanecen como borradores hasta su revisión profesional.
+El [runbook de despliegue](docs/deployment.md) explica cómo publicar y recuperar una versión en el VPS. El [piloto biliar](content/piloto-biliar.json) y su generador anterior siguen disponibles para referencia.
