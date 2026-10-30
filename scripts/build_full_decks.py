@@ -179,7 +179,7 @@ def build(catalog: dict, sections: Path, reviews: Path, output: Path, preview: b
                 raise ValueError(f'Missing independent review: {expected["id"]}')
             validate_review(section, json.loads(review_path.read_text()))
         hashes[section['id']] = content_hash(section)
-        compiled.append(compile_section(section, catalog['book']['name']))
+        compiled.append(compile_section(section, catalog['book']['filename']))
     if not compiled:
         raise ValueError('No authored coverage')
     all_cards = [c for section in compiled for c in section['cards']]

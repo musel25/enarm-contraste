@@ -70,6 +70,7 @@ def main() -> None:
     source.add_argument('--guide-text', type=Path)
     parser.add_argument('--book', type=Path)
     parser.add_argument('--book-text', type=Path)
+    parser.add_argument('--visual-review-page', type=int, action='append', default=[], help='Additional diagram page checked visually')
     parser.add_argument('--output', type=Path, required=True)
     args = parser.parse_args()
     text = args.guide_text.read_text() if args.guide_text else subprocess.check_output(['pdftotext', '-layout', str(args.guide), '-'], text=True)
@@ -84,7 +85,7 @@ def main() -> None:
                 pages.pop()
             if len(pages) != data['book']['pages']:
                 raise ValueError('Extracted page count does not match the complete PDF')
-            data['book']['visual_review_pages'] = [i for i, page in enumerate(pages, 1) if len(page.strip()) < 80]
+            data['book']['visual_review_pages'] = sorted(set([i for i, page in enumerate(pages, 1) if len(page.strip()) < 80] + args.visual_review_page))
         for section in data['sections']:
             for block in section['blocks']:
                 for topic in block['topics']:
