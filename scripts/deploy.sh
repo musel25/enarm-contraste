@@ -19,7 +19,7 @@ asset=$(basename "$(rg --files dist/assets -g 'index-*.js')")
 release="/var/www/enarm-contraste/releases/${commit:0:12}-$(date -u +%Y%m%dT%H%M%S)-standalone"
 api_release="${release%-standalone}-api"
 config_upload="/tmp/enarm-nginx-${commit:0:12}.conf"
-unit_upload="/tmp/enarm-units-${commit:0:12}"
+unit_upload="/tmp/enarm-units-$(basename "$release")"
 ssh -o BatchMode=yes my-vps bash -s -- "$release" "$api_release" "$unit_upload" <<'PREPARE'
 set -euo pipefail
 sudo -n install -d -m 755 -o "$(id -un)" -g "$(id -gn)" \
@@ -58,6 +58,8 @@ if [[ -z "$previous_api" ]] && ss -ltnH | grep -F ':4187 ' > /dev/null; then
   exit 1
 fi
 for unit in enarm-progress.service enarm-progress-backup.service enarm-progress-backup.timer; do
+  if sudo -n systemctl is-enabled --quiet "$unit"; then touch "$unit_upload/$unit.was-enabled"; fi
+  if sudo -n systemctl is-active --quiet "$unit"; then touch "$unit_upload/$unit.was-active"; fi
   if [[ -e "/etc/systemd/system/$unit" ]]; then
     if ! grep -F '# ENARM Contraste progress' "/etc/systemd/system/$unit" > /dev/null; then
       echo 'Existing service unit belongs to another application.' >&2
@@ -78,18 +80,26 @@ rollback() {
     rm -f "$current"
   fi
   sudo -n cp -p "$backup" "$config"
-  for unit in enarm-progress.service enarm-progress-backup.service enarm-progress-backup.timer; do
-    if [[ -e "$unit_upload/$unit.previous" ]]; then sudo -n install -m 644 "$unit_upload/$unit.previous" "/etc/systemd/system/$unit"; fi
-  done
-  sudo -n systemctl daemon-reload
+  sudo -n systemctl disable --now enarm-progress.service enarm-progress-backup.timer || true
+  sudo -n systemctl stop enarm-progress-backup.service || true
   if [[ -n "$previous_api" ]]; then
     ln -sfn "$previous_api" "${api_current}.rollback"
     mv -Tf "${api_current}.rollback" "$api_current"
-    sudo -n systemctl restart enarm-progress.service
-  else
-    sudo -n systemctl stop enarm-progress.service || true
-    sudo -n systemctl disable --now enarm-progress-backup.timer || true
+  elif [[ -L "$api_current" ]]; then
+    unlink "$api_current"
   fi
+  for unit in enarm-progress.service enarm-progress-backup.service enarm-progress-backup.timer; do
+    if [[ -e "$unit_upload/$unit.previous" ]]; then
+      sudo -n install -m 644 "$unit_upload/$unit.previous" "/etc/systemd/system/$unit"
+    elif [[ -f "/etc/systemd/system/$unit" ]]; then
+      sudo -n unlink "/etc/systemd/system/$unit"
+    fi
+  done
+  sudo -n systemctl daemon-reload
+  for unit in enarm-progress.service enarm-progress-backup.service enarm-progress-backup.timer; do
+    if [[ -e "$unit_upload/$unit.was-enabled" ]]; then sudo -n systemctl enable "$unit"; fi
+    if [[ -e "$unit_upload/$unit.was-active" ]]; then sudo -n systemctl start "$unit"; fi
+  done
   sudo -n nginx -t && sudo -n systemctl reload nginx
   exit "$result"
 }
