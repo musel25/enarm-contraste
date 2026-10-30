@@ -30,8 +30,18 @@ export interface StudyManifest {
 function record(value: unknown): value is Record<string, unknown> {
   return typeof value === "object" && value !== null && !Array.isArray(value);
 }
+function optionalText(value: Record<string, unknown>, keys: string[]) {
+  return keys.every(key => value[key] === undefined || typeof value[key] === "string");
+}
+function sources(value: unknown): boolean {
+  return Array.isArray(value) && value.length > 0 && value.every(s => record(s) && typeof s.label === "string" &&
+    (s.pages === undefined || (Array.isArray(s.pages) && s.pages.every(p => Number.isInteger(p) && p > 0))) &&
+    (s.url === undefined || (typeof s.url === "string" && s.url.startsWith("https://"))));
+}
 function rows(value: unknown, answer = false): boolean {
-  return Array.isArray(value) && value.length > 0 && value.every(row => record(row) && typeof row.text === "string" && (!answer || typeof row.title === "string"));
+  return Array.isArray(value) && value.length > 0 && value.every(row => record(row) && typeof row.text === "string" &&
+    optionalText(row, ["highlight", "discriminator", "action", "reason", "limits"]) &&
+    (row.sources === undefined || sources(row.sources)) && (!answer || typeof row.title === "string"));
 }
 export function isManifest(value: unknown): value is StudyManifest {
   return record(value) && value.schema_version === 1 && typeof value.content_sha256 === "string" &&
@@ -42,5 +52,5 @@ export function isManifest(value: unknown): value is StudyManifest {
 export function isSection(value: unknown): value is StudySection {
   return record(value) && typeof value.id === "string" && typeof value.title === "string" &&
     Array.isArray(value.blocks) && value.blocks.length > 0 && value.blocks.every(b => record(b) && typeof b.id === "string" && typeof b.title === "string") &&
-    Array.isArray(value.cards) && value.cards.length > 0 && value.cards.every(c => record(c) && typeof c.id === "string" && (c.family === "eje" || c.family === "madre") && typeof c.level === "number" && typeof c.block_id === "string" && typeof c.prompt === "string" && typeof c.context === "string" && rows(c.front) && rows(c.back, true) && Array.isArray(c.sources));
+    Array.isArray(value.cards) && value.cards.length > 0 && value.cards.every(c => record(c) && typeof c.id === "string" && (c.family === "eje" || c.family === "madre") && typeof c.level === "number" && typeof c.block_id === "string" && typeof c.prompt === "string" && typeof c.context === "string" && rows(c.front) && rows(c.back, true) && sources(c.sources));
 }

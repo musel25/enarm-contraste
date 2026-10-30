@@ -71,3 +71,14 @@ test("recovers when a section request fails", async ({ page }) => {
   await page.getByRole("button", { name: "Reintentar", exact: true }).click();
   await expect(page.getByRole("region", { name: "Frente de la tarjeta" })).toBeVisible();
 });
+
+test("rejects malformed answer data before opening a card", async ({ page }) => {
+  await mockLibrary(page);
+  const broken = structuredClone(section);
+  Object.assign(broken.cards[0].back[0], { action: { unexpected: true } });
+  await page.route("**/study/sections/*.json*", route => route.fulfill({ json: broken }));
+  await page.goto("./#biblioteca");
+  await page.getByRole("button", { name: /Sección de prueba/ }).click();
+  await expect(page.getByRole("alert")).toContainText("No se pudo cargar");
+  await expect(page.getByRole("region", { name: "Frente de la tarjeta" })).toHaveCount(0);
+});
