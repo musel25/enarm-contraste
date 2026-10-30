@@ -1,0 +1,819 @@
+{
+  "id": "19",
+  "title": "Nefrología",
+  "blocks": [
+    {
+      "id": "19.01",
+      "title": "Creatinina elevada",
+      "topics": [
+        {
+          "id": "19.01-01",
+          "name": "Lesión renal aguda",
+          "source_pages": [
+            630,
+            631,
+            632
+          ],
+          "pattern": "Una persona con vómitos y mala ingesta presenta oliguria y elevación reciente de creatinina. Se evalúan perfusión, fármacos y obstrucción antes de atribuir el cambio a enfermedad renal crónica.",
+          "key_discriminator": "elevación reciente de creatinina",
+          "mechanism": "La reducción aguda de filtración puede deberse a hipoperfusión, daño parenquimatoso u obstrucción; identificar la causa permite limitar lesión y corregir complicaciones.",
+          "findings": [
+            {
+              "mechanism": "Caída aguda de filtración",
+              "finding": "Oliguria y aumento de creatinina"
+            }
+          ],
+          "initial_action": "Evaluar volemia, sedimento y obstrucción; retirar nefrotóxicos y tratar la causa con reposición ajustada si hay hipovolemia.",
+          "action_reason": "La intervención debe corresponder al mecanismo.",
+          "modifiers": [
+            {
+              "factor": "Sobrecarga pulmonar, hiperpotasemia o acidosis refractarias",
+              "action": "Valorar reemplazo renal urgente.",
+              "reason": "Las complicaciones pueden ser más urgentes que la cifra de creatinina."
+            }
+          ],
+          "limits": "Los índices urinarios no son absolutos ni válidos en todo contexto.",
+          "evidence": [
+            {
+              "page": 630,
+              "quote": "Hipovolemia: Hipotensión."
+            },
+            {
+              "page": 632,
+              "quote": "Resolver el trastorno subyacente"
+            }
+          ],
+          "source_gaps": [],
+          "verified_source_pages": [
+            630,
+            631,
+            632
+          ]
+        },
+        {
+          "id": "19.01-02",
+          "name": "Enfermedad renal crónica",
+          "source_pages": [
+            625,
+            626,
+            627
+          ],
+          "pattern": "Una persona tiene filtración glomerular reducida y albuminuria documentadas durante varios meses. No hay cambio agudo reciente; requiere clasificar riesgo, revisar medicamentos y prevenir progresión y complicaciones.",
+          "key_discriminator": "durante varios meses",
+          "mechanism": "La pérdida persistente de nefronas reduce filtración y altera manejo de volumen, electrolitos y funciones endocrinas, con riesgo dependiente de filtración y albuminuria.",
+          "findings": [
+            {
+              "mechanism": "Daño renal persistente",
+              "finding": "Filtración baja o albuminuria sostenida"
+            }
+          ],
+          "initial_action": "Confirmar cronicidad, clasificar por filtración y albuminuria y ajustar fármacos y factores de progresión.",
+          "action_reason": "El riesgo determina seguimiento y referencia.",
+          "modifiers": [
+            {
+              "factor": "Progresión rápida o complicación aguda",
+              "action": "Enviar con urgencia a nefrología.",
+              "reason": "Puede existir lesión superpuesta o necesidad de soporte."
+            }
+          ],
+          "limits": "No iniciar diálisis solo por una cifra aislada de filtración.",
+          "evidence": [
+            {
+              "page": 625,
+              "quote": "más de 3 meses"
+            },
+            {
+              "page": 626,
+              "quote": "Ajustar dosis de medicamentos"
+            }
+          ],
+          "source_gaps": [],
+          "verified_source_pages": [
+            625,
+            626,
+            627
+          ]
+        }
+      ],
+      "common_problem": "Una persona tiene creatinina elevada o menor diuresis.",
+      "mother": {
+        "cue": "La rapidez del cambio y los marcadores de daño separan lesión aguda de enfermedad crónica.",
+        "answer": "Pérdida de función renal según tiempo y causa",
+        "explanation": "La duración y reversibilidad cambian la evaluación."
+      }
+    },
+    {
+      "id": "19.02",
+      "title": "Diabetes con albuminuria",
+      "topics": [
+        {
+          "id": "19.02-01",
+          "name": "Nefropatía diabética",
+          "source_pages": [
+            634
+          ],
+          "pattern": "Una persona con diabetes de larga evolución presenta albuminuria persistente y descenso gradual de filtración. La presión arterial está elevada y no hay un sedimento claramente inflamatorio.",
+          "key_discriminator": "albuminuria persistente",
+          "mechanism": "La hiperfiltración inicial y el daño metabólico e inflamatorio producen alteraciones glomerulares e intersticiales que progresan a albuminuria y pérdida de filtración.",
+          "findings": [
+            {
+              "mechanism": "Daño glomerular metabólico y hemodinámico",
+              "finding": "Albuminuria y reducción de función"
+            }
+          ],
+          "initial_action": "Confirmar persistencia de albuminuria, valorar filtración y optimizar control metabólico, presión y protección renal.",
+          "action_reason": "Reduce progresión y riesgo cardiovascular.",
+          "modifiers": [
+            {
+              "factor": "Hematuria activa o deterioro rápido",
+              "action": "Buscar una causa renal adicional.",
+              "reason": "Puede no ser daño diabético típico."
+            }
+          ],
+          "limits": "El manejo actual incluye opciones renoprotectoras no descritas en la página.",
+          "evidence": [
+            {
+              "page": 634,
+              "quote": "albuminuria, la TFG o ambas"
+            },
+            {
+              "page": 634,
+              "quote": "Control de la presión arterial con IECAS."
+            }
+          ],
+          "source_gaps": [],
+          "verified_source_pages": [
+            634
+          ],
+          "external_sources": [
+            {
+              "label": "KDIGO: ERC 2024",
+              "url": "https://kdigo.org/wp-content/uploads/2026/04/KDIGO-2024-CKD-Guideline.pdf",
+              "quote": "SGLT2 inhibitors",
+              "checked_at": "2026-10-29"
+            }
+          ],
+          "source_corrections": [
+            "La página no incluye toda la renoprotección actual. Valorar SGLT2 en diabetes tipo 2 con ERC según filtración y elegibilidad, además de control metabólico y de presión."
+          ]
+        }
+      ],
+      "common_problem": "Una persona con diabetes presenta albuminuria.",
+      "mother": {
+        "cue": "La lesión glomerular y tubular progresa con alteraciones metabólicas y hemodinámicas.",
+        "answer": "Daño renal asociado a diabetes",
+        "explanation": "Se confirma persistencia y se evalúa filtración."
+      }
+    },
+    {
+      "id": "19.03",
+      "title": "Poliuria con hipernatremia",
+      "topics": [
+        {
+          "id": "19.03-01",
+          "name": "Diabetes insípida",
+          "source_pages": [
+            623
+          ],
+          "pattern": "Una persona presenta poliuria abundante, polidipsia e hipernatremia. La orina permanece muy diluida pese a plasma concentrado; tiene antecedente de cirugía hipofisaria y requiere evaluar concentración renal.",
+          "key_discriminator": "orina permanece muy diluida",
+          "mechanism": "La ausencia de secreción de ADH o de respuesta tubular impide reabsorber agua libre, produciendo orina diluida, poliuria y tendencia a hipernatremia.",
+          "findings": [
+            {
+              "mechanism": "Falla de antidiuresis",
+              "finding": "Poliuria hipotónica con plasma concentrado"
+            }
+          ],
+          "initial_action": "Corregir déficit de agua de forma controlada y distinguir origen central de resistencia renal bajo evaluación especializada.",
+          "action_reason": "El origen define el tratamiento.",
+          "modifiers": [
+            {
+              "factor": "Respuesta a desmopresina",
+              "action": "Apoya defecto central y orienta reposición.",
+              "reason": "Existe capacidad tubular de responder."
+            }
+          ],
+          "limits": "La privación de agua debe ser supervisada y no aplicarse indiscriminadamente en hipernatremia.",
+          "evidence": [
+            {
+              "page": 623,
+              "quote": "Osmolaridad urinaria baja"
+            },
+            {
+              "page": 623,
+              "quote": "es el tratamiento de elección."
+            }
+          ],
+          "source_gaps": [],
+          "verified_source_pages": [
+            623
+          ]
+        }
+      ],
+      "common_problem": "Una persona presenta poliuria e hipernatremia.",
+      "mother": {
+        "cue": "El riñón no concentra orina por falta de hormona antidiurética o de respuesta a ella.",
+        "answer": "Pérdida de agua libre por alteración de ADH",
+        "explanation": "La respuesta a desmopresina orienta la localización."
+      }
+    },
+    {
+      "id": "19.04",
+      "title": "Hiponatremia euvolémica",
+      "topics": [
+        {
+          "id": "19.04-01",
+          "name": "SIADH",
+          "source_pages": [
+            637
+          ],
+          "pattern": "Una persona tiene sodio bajo y osmolaridad plasmática reducida, sin edema ni hipovolemia aparente. La orina está inapropiadamente concentrada y usa un fármaco que puede estimular antidiuresis.",
+          "key_discriminator": "orina está inapropiadamente concentrada",
+          "mechanism": "La acción persistente de ADH limita excreción de agua y diluye sodio plasmático; el riesgo neurológico depende de gravedad y rapidez de instalación.",
+          "findings": [
+            {
+              "mechanism": "Retención de agua libre",
+              "finding": "Hiponatremia hipotónica con orina concentrada"
+            }
+          ],
+          "initial_action": "Confirmar hipotonía, excluir causas alternativas y tratar el desencadenante con corrección controlada del sodio.",
+          "action_reason": "La corrección excesiva puede causar desmielinización.",
+          "modifiers": [
+            {
+              "factor": "Convulsiones o compromiso neurológico grave",
+              "action": "Atender de urgencia con corrección protocolizada.",
+              "reason": "El edema cerebral requiere intervención inmediata."
+            }
+          ],
+          "limits": "El diagnóstico exige evaluar función suprarrenal, tiroidea y renal según el caso.",
+          "evidence": [
+            {
+              "page": 637,
+              "quote": "Los pacientes suelen ser euvolémicos"
+            },
+            {
+              "page": 637,
+              "quote": "La causa subyacente debe ser tratada"
+            }
+          ],
+          "source_gaps": [],
+          "verified_source_pages": [
+            637
+          ]
+        }
+      ],
+      "common_problem": "Una persona tiene hiponatremia sin edema ni deshidratación evidentes.",
+      "mother": {
+        "cue": "La retención de agua diluye el sodio y limita la excreción de orina libre de solutos.",
+        "answer": "Antidiuresis inapropiada",
+        "explanation": "La tonicidad y las causas alternativas deben evaluarse."
+      }
+    },
+    {
+      "id": "19.05",
+      "title": "Acidosis o alcalosis",
+      "topics": [
+        {
+          "id": "19.05-01",
+          "name": "Trastorno ácido-base",
+          "source_pages": [
+            643,
+            644,
+            645,
+            646,
+            647
+          ],
+          "pattern": "Una persona con diarrea intensa tiene pH bajo y bicarbonato reducido. Se revisan PCO2 y brecha aniónica para distinguir el trastorno primario, la respuesta respiratoria y una posible alteración mixta.",
+          "key_discriminator": "pH bajo y bicarbonato reducido",
+          "mechanism": "El pH refleja la relación entre bicarbonato metabólico y dióxido de carbono respiratorio; la compensación esperada y brecha aniónica distinguen trastornos simples de mixtos.",
+          "findings": [
+            {
+              "mechanism": "Pérdida de bicarbonato",
+              "finding": "Acidosis metabólica con brecha normal"
+            }
+          ],
+          "initial_action": "Identificar acidemia, componente primario, brecha aniónica y compensación esperada; tratar la causa.",
+          "action_reason": "Una gasometría puede contener más de un trastorno.",
+          "modifiers": [
+            {
+              "factor": "PCO2 fuera de compensación esperada",
+              "action": "Buscar componente respiratorio adicional.",
+              "reason": "Sugiere un trastorno mixto."
+            }
+          ],
+          "limits": "El método gráfico del libro no basta para validar compensación.",
+          "evidence": [
+            {
+              "page": 643,
+              "quote": "componente metabólico."
+            },
+            {
+              "page": 647,
+              "quote": "Verificar brecha"
+            }
+          ],
+          "source_gaps": [],
+          "verified_source_pages": [
+            643,
+            644,
+            645,
+            646,
+            647
+          ],
+          "external_sources": [
+            {
+              "label": "ATS: interpretación de gasometría",
+              "url": "https://site.thoracic.org/assemblies/cc/clinical-education/interpretation-of-abgs",
+              "quote": "If the observed compensation is not the expected compensation",
+              "checked_at": "2026-10-29"
+            }
+          ],
+          "source_corrections": [
+            "No se clasifica compensación solo porque el pH esté dentro del rango; se compara con la respuesta esperada para reconocer trastornos mixtos."
+          ]
+        },
+        {
+          "id": "19.05-02",
+          "name": "Acidosis tubular renal",
+          "source_pages": [
+            622
+          ],
+          "pattern": "Una persona tiene acidosis metabólica persistente con brecha aniónica normal y sin diarrea. El potasio está bajo y el pH urinario permanece alto; se estudia un defecto tubular.",
+          "key_discriminator": "brecha aniónica normal y sin diarrea",
+          "mechanism": "La falla de secreción de hidrógeno o de reabsorción de bicarbonato produce acidosis hiperclorémica; el potasio y pH urinario orientan el segmento tubular afectado.",
+          "findings": [
+            {
+              "mechanism": "Defecto de acidificación distal",
+              "finding": "Acidosis con orina inapropiadamente alcalina"
+            }
+          ],
+          "initial_action": "Clasificar con electrolitos y estudios urinarios y corregir déficit de álcali y potasio según el tipo.",
+          "action_reason": "El tratamiento cambia con el mecanismo tubular.",
+          "modifiers": [
+            {
+              "factor": "Hiperpotasemia",
+              "action": "Considerar defecto de aldosterona o resistencia.",
+              "reason": "Orienta al tipo 4."
+            }
+          ],
+          "limits": "No toda acidosis con brecha normal es tubular.",
+          "evidence": [
+            {
+              "page": 622,
+              "quote": "brecha aniónica normal"
+            },
+            {
+              "page": 622,
+              "quote": "terapia de alcalinización"
+            }
+          ],
+          "source_gaps": [],
+          "verified_source_pages": [
+            622
+          ]
+        }
+      ],
+      "common_problem": "Una persona tiene gasometría o bicarbonato anormales.",
+      "mother": {
+        "cue": "El componente respiratorio y el metabólico determinan el estado ácido-base.",
+        "answer": "Alteración del equilibrio ácido-base",
+        "explanation": "El anión gap y la compensación ayudan a clasificar."
+      }
+    },
+    {
+      "id": "19.06",
+      "title": "Hematuria vs proteinuria",
+      "topics": [
+        {
+          "id": "19.06-01",
+          "name": "Glomerulonefritis",
+          "source_pages": [
+            629
+          ],
+          "pattern": "Una persona tiene edema y examen de orina anormal. Se cuantifican proteínas y se revisan hematuria, albúmina, presión y filtración para definir el patrón glomerular predominante.",
+          "key_discriminator": "Se cuantifican proteínas",
+          "mechanism": "La lesión glomerular puede aumentar pérdida de proteínas o permitir paso de eritrocitos y reducir filtración; los hallazgos combinados definen un síndrome antes de su etiología.",
+          "findings": [
+            {
+              "mechanism": "Falla de barrera glomerular",
+              "finding": "Proteinuria o hematuria con edema"
+            }
+          ],
+          "initial_action": "Cuantificar proteinuria y valorar sedimento, albúmina, presión y función renal.",
+          "action_reason": "Permite distinguir patrón nefrótico, nefrítico o mixto.",
+          "modifiers": [
+            {
+              "factor": "Deterioro renal rápido",
+              "action": "Priorizar evaluación urgente.",
+              "reason": "Puede existir glomerulonefritis agresiva."
+            }
+          ],
+          "limits": "La página agrupa en exceso nefrítico y rápidamente progresivo; no son equivalentes.",
+          "evidence": [
+            {
+              "page": 629,
+              "quote": "Determinar proteínas"
+            },
+            {
+              "page": 629,
+              "quote": "Presencia de hematuria."
+            }
+          ],
+          "source_gaps": [],
+          "verified_source_pages": [
+            629
+          ]
+        },
+        {
+          "id": "19.06-02",
+          "name": "Síndrome nefrítico",
+          "source_pages": [
+            639
+          ],
+          "pattern": "Un niño presenta orina oscura, edema y presión elevada semanas después de una infección faríngea. Tiene hematuria, menor filtración y complemento bajo; se evalúa una respuesta glomerular postinfecciosa.",
+          "key_discriminator": "semanas después de una infección faríngea",
+          "mechanism": "La inflamación glomerular altera filtración y permite paso de sangre; la retención de sodio y agua produce edema e hipertensión en un cuadro postinfeccioso.",
+          "findings": [
+            {
+              "mechanism": "Inflamación y retención hidrosalina",
+              "finding": "Hematuria, edema e hipertensión"
+            }
+          ],
+          "initial_action": "Evaluar función renal, complemento y antecedente infeccioso; controlar sobrecarga y presión según gravedad.",
+          "action_reason": "El riesgo inicial depende de volumen y función renal.",
+          "modifiers": [
+            {
+              "factor": "Curso atípico o deterioro acelerado",
+              "action": "Valorar biopsia y otras etiologías.",
+              "reason": "No todo cuadro nefrítico es postestreptocócico."
+            }
+          ],
+          "limits": "La hematuria cercana a infección respiratoria puede orientar a nefropatía IgA.",
+          "evidence": [
+            {
+              "page": 639,
+              "quote": "hematuria, proteinuria,"
+            },
+            {
+              "page": 639,
+              "quote": "sobrecarga hídrica e hipertensión."
+            }
+          ],
+          "source_gaps": [],
+          "verified_source_pages": [
+            639
+          ]
+        },
+        {
+          "id": "19.06-03",
+          "name": "Síndrome nefrótico",
+          "source_pages": [
+            640,
+            641,
+            642
+          ],
+          "pattern": "Un niño presenta edema generalizado y aumento de peso. Tiene proteinuria intensa, albúmina baja e hipercolesterolemia, sin datos atípicos; se evalúa una alteración de permeabilidad glomerular.",
+          "key_discriminator": "proteinuria intensa, albúmina baja e hipercolesterolemia",
+          "mechanism": "La pérdida urinaria masiva de proteínas reduce presión oncótica y altera balance de líquidos; también aumenta susceptibilidad infecciosa y trombótica por pérdida de proteínas funcionales.",
+          "findings": [
+            {
+              "mechanism": "Pérdida glomerular de proteínas",
+              "finding": "Edema e hipoalbuminemia"
+            }
+          ],
+          "initial_action": "Evaluar causa, función renal y complicaciones; iniciar manejo de edema y tratamiento específico según presentación pediátrica.",
+          "action_reason": "La etiología y la volemia cambian la intervención.",
+          "modifiers": [
+            {
+              "factor": "Presentación típica de primer episodio pediátrico",
+              "action": "Valorar corticoide sin biopsia rutinaria.",
+              "reason": "Cambios mínimos es frecuente y responde a esteroide."
+            }
+          ],
+          "limits": "La anticoagulación no es universal; requiere valoración individual del riesgo.",
+          "evidence": [
+            {
+              "page": 640,
+              "quote": "hipoalbuminemia e hipercolesterolemia"
+            },
+            {
+              "page": 640,
+              "quote": "biopsia renal de rutina en el primer evento."
+            }
+          ],
+          "source_gaps": [],
+          "verified_source_pages": [
+            640,
+            641,
+            642
+          ]
+        }
+      ],
+      "common_problem": "Una persona tiene edema y alteración del examen de orina.",
+      "mother": {
+        "cue": "La lesión de barrera glomerular produce hematuria, proteinuria o ambas con repercusión diferente.",
+        "answer": "Síndrome glomerular",
+        "explanation": "El patrón de pérdida y la función renal orientan el estudio."
+      }
+    },
+    {
+      "id": "19.07",
+      "title": "Glomerulonefritis rápidamente evolutiva",
+      "topics": [
+        {
+          "id": "19.07-01",
+          "name": "Glomerulonefritis rápidamente progresiva",
+          "source_pages": [
+            628
+          ],
+          "pattern": "Una persona desarrolla hematuria y pérdida acelerada de función renal durante semanas. El sedimento es activo y la biopsia muestra semilunas; requiere establecer el mecanismo inmunitario sin retrasar atención.",
+          "key_discriminator": "biopsia muestra semilunas",
+          "mechanism": "La lesión de capilares glomerulares activa inflamación en espacio de Bowman y formación de semilunas, reduciendo rápidamente filtración por causas anti-MBG, inmunocomplejos o vasculitis.",
+          "findings": [
+            {
+              "mechanism": "Inflamación extracapilar",
+              "finding": "Semilunas y deterioro renal rápido"
+            }
+          ],
+          "initial_action": "Referir de urgencia, obtener serologías y biopsia y comenzar tratamiento especializado según causa.",
+          "action_reason": "El daño renal puede avanzar antes de completar estudio.",
+          "modifiers": [
+            {
+              "factor": "Hemorragia alveolar",
+              "action": "Investigar síndrome pulmonar-renal.",
+              "reason": "Puede requerir soporte respiratorio y tratamiento inmediato."
+            }
+          ],
+          "limits": "PAN no se asocia habitualmente a ANCA; la tabla del libro requiere precisión.",
+          "evidence": [
+            {
+              "page": 628,
+              "quote": "desarrollo de semilunas"
+            },
+            {
+              "page": 628,
+              "quote": "Metilprednisolona + Ciclofosfamida."
+            }
+          ],
+          "source_gaps": [],
+          "verified_source_pages": [
+            628
+          ]
+        },
+        {
+          "id": "19.07-02",
+          "name": "Síndrome de Goodpasture",
+          "source_pages": [
+            638
+          ],
+          "pattern": "Una persona joven presenta hemoptisis y deterioro renal rápido con hematuria. Se detectan anticuerpos contra membrana basal y se requiere tratar compromiso pulmonar y renal de forma urgente.",
+          "key_discriminator": "hemoptisis y deterioro renal rápido",
+          "mechanism": "Los autoanticuerpos contra colágeno de membranas basales glomerulares y alveolares activan inflamación, causando glomerulonefritis agresiva y hemorragia pulmonar en el síndrome combinado.",
+          "findings": [
+            {
+              "mechanism": "Lesión anti-membrana basal",
+              "finding": "Hemorragia alveolar y glomerulonefritis"
+            }
+          ],
+          "initial_action": "Activar manejo nefrológico urgente con inmunosupresión e intercambio plasmático según elegibilidad y soporte orgánico.",
+          "action_reason": "Se necesita reducir producción y retirar anticuerpos.",
+          "modifiers": [
+            {
+              "factor": "Insuficiencia respiratoria o renal grave",
+              "action": "Agregar soporte ventilatorio o diálisis.",
+              "reason": "El daño orgánico amenaza la vida."
+            }
+          ],
+          "limits": "El intercambio no se reserva solo para casos excepcionalmente graves.",
+          "evidence": [
+            {
+              "page": 638,
+              "quote": "anticuerpos dirigidos contra las membranas basales"
+            },
+            {
+              "page": 638,
+              "quote": "glucocorticoides y ciclofosfamida."
+            }
+          ],
+          "source_gaps": [],
+          "verified_source_pages": [
+            638
+          ],
+          "external_sources": [
+            {
+              "label": "KDIGO: enfermedades glomerulares 2021",
+              "url": "https://kdigo.org/wp-content/uploads/2017/02/KDIGO-Glomerular-Diseases-Guideline-2021-English.pdf",
+              "quote": "treatment should start without delay",
+              "checked_at": "2026-10-29"
+            }
+          ],
+          "source_corrections": [
+            "El manejo anti-MBG combina inmunosupresión e intercambio en pacientes elegibles; no reservar intercambio solo a cuadros muy graves. Existen excepciones según daño irreversible y hemorragia pulmonar."
+          ]
+        }
+      ],
+      "common_problem": "Una persona pierde función renal en días o semanas.",
+      "mother": {
+        "cue": "La lesión glomerular agresiva puede asociarse a autoanticuerpos o vasculitis y afectar pulmón.",
+        "answer": "Inflamación glomerular rápidamente progresiva",
+        "explanation": "La rapidez exige estudio y tratamiento urgentes."
+      }
+    },
+    {
+      "id": "19.08",
+      "title": "LES con lesión renal",
+      "topics": [
+        {
+          "id": "19.08-01",
+          "name": "Nefritis lúpica",
+          "source_pages": [
+            633
+          ],
+          "pattern": "Una mujer con lupus desarrolla proteinuria, hematuria y elevación de creatinina. Tiene complemento bajo y anti-DNA elevado; se necesita conocer clase histológica y actividad antes de elegir inmunosupresión.",
+          "key_discriminator": "complemento bajo y anti-DNA elevado",
+          "mechanism": "Los inmunocomplejos y la inflamación renal del lupus producen patrones histológicos distintos; actividad y cronicidad determinan reversibilidad y el balance del tratamiento inmunosupresor.",
+          "findings": [
+            {
+              "mechanism": "Inflamación renal por lupus",
+              "finding": "Proteinuria, hematuria e hipocomplementemia"
+            }
+          ],
+          "initial_action": "Solicitar evaluación nefrológica y considerar biopsia renal para clasificar y guiar inducción y mantenimiento.",
+          "action_reason": "El esquema depende de clase y actividad.",
+          "modifiers": [
+            {
+              "factor": "Lesión proliferativa activa",
+              "action": "Valorar inducción inmunosupresora especializada.",
+              "reason": "El riesgo renal es mayor."
+            }
+          ],
+          "limits": "No se adopta azatioprina o micofenolato en monoterapia universal para inducción.",
+          "evidence": [
+            {
+              "page": 633,
+              "quote": "Solicitar anticuerpos anti-DNA, EGO y creatinina sérica."
+            },
+            {
+              "page": 633,
+              "quote": "Biopsia renal confirma el diagnóstico."
+            }
+          ],
+          "source_gaps": [],
+          "verified_source_pages": [
+            633
+          ]
+        }
+      ],
+      "common_problem": "Una persona con lupus tiene alteración urinaria o de función renal.",
+      "mother": {
+        "cue": "La actividad inmunitaria renal requiere clasificar lesión y cronicidad.",
+        "answer": "Compromiso renal por enfermedad autoinmune",
+        "explanation": "La biopsia guía el tratamiento."
+      }
+    },
+    {
+      "id": "19.09",
+      "title": "Músculo lesionado y riñón",
+      "topics": [
+        {
+          "id": "19.09-01",
+          "name": "Rabdomiólisis",
+          "source_pages": [
+            636
+          ],
+          "pattern": "Una persona presenta mialgias y orina oscura después de ejercicio intenso con calor. La CK está muy elevada y la tira de orina detecta sangre sin eritrocitos al microscopio.",
+          "key_discriminator": "sangre sin eritrocitos",
+          "mechanism": "La necrosis muscular libera mioglobina y electrolitos; la hipoperfusión y toxicidad tubular pueden causar lesión renal y la hiperpotasemia producir arritmias.",
+          "findings": [
+            {
+              "mechanism": "Liberación de mioglobina",
+              "finding": "Orina oscura sin hematuria microscópica"
+            }
+          ],
+          "initial_action": "Iniciar líquidos intravenosos ajustados, vigilar potasio y función renal y eliminar el desencadenante.",
+          "action_reason": "La perfusión y corrección metabólica reducen complicaciones.",
+          "modifiers": [
+            {
+              "factor": "Trauma con dolor o tensión localizada",
+              "action": "Descartar síndrome compartimental.",
+              "reason": "Puede requerir intervención adicional urgente."
+            }
+          ],
+          "limits": "La ausencia de la tríada completa no excluye el cuadro.",
+          "evidence": [
+            {
+              "page": 636,
+              "quote": "sin eritrocitos"
+            },
+            {
+              "page": 636,
+              "quote": "líquidos intravenosos"
+            }
+          ],
+          "source_gaps": [],
+          "verified_source_pages": [
+            636
+          ]
+        }
+      ],
+      "common_problem": "Una persona con daño muscular presenta orina oscura.",
+      "mother": {
+        "cue": "La necrosis muscular libera pigmentos y electrolitos que amenazan riñón y corazón.",
+        "answer": "Lesión muscular con riesgo renal",
+        "explanation": "La perfusión y el potasio requieren vigilancia."
+      }
+    },
+    {
+      "id": "19.10",
+      "title": "Riñones grandes/diálisis",
+      "topics": [
+        {
+          "id": "19.10-01",
+          "name": "Enfermedad poliquística renal",
+          "source_pages": [
+            624
+          ],
+          "pattern": "Una persona adulta con familiares afectados presenta hipertensión, hematuria y riñones con múltiples quistes bilaterales. Se revisa historia familiar y se busca deterioro renal y complicaciones asociadas.",
+          "key_discriminator": "múltiples quistes bilaterales",
+          "mechanism": "Las alteraciones hereditarias de proteínas ciliares favorecen expansión quística y daño progresivo del parénquima; la forma dominante adulta puede asociarse a enfermedad vascular cerebral.",
+          "findings": [
+            {
+              "mechanism": "Expansión quística bilateral",
+              "finding": "Riñones grandes, hipertensión y hematuria"
+            }
+          ],
+          "initial_action": "Confirmar con imagen e historia familiar y evaluar función, presión y complicaciones con nefrología.",
+          "action_reason": "El seguimiento busca limitar daño y reconocer riesgos.",
+          "modifiers": [
+            {
+              "factor": "Historia familiar de aneurisma o síntomas neurológicos",
+              "action": "Valorar estudio vascular indicado.",
+              "reason": "El riesgo se individualiza."
+            }
+          ],
+          "limits": "El tamizaje de aneurisma no es universal para toda persona afectada.",
+          "evidence": [
+            {
+              "page": 624,
+              "quote": "Mutaciones en genes PKDl y PKD2"
+            },
+            {
+              "page": 624,
+              "quote": "El ultrasonido se utiliza comúnmente"
+            }
+          ],
+          "source_gaps": [],
+          "verified_source_pages": [
+            624
+          ]
+        },
+        {
+          "id": "19.10-02",
+          "name": "Peritonitis en diálisis peritoneal",
+          "source_pages": [
+            635
+          ],
+          "pattern": "Una persona en diálisis peritoneal presenta dolor abdominal y líquido drenado turbio. Tiene fiebre y se inspeccionan salida y túnel del catéter mientras se obtiene muestra del efluente.",
+          "key_discriminator": "líquido drenado turbio",
+          "mechanism": "La contaminación del sistema permite infección de membrana peritoneal y respuesta neutrofílica en efluente; el germen y respuesta determinan posibilidad de conservar el catéter.",
+          "findings": [
+            {
+              "mechanism": "Inflamación peritoneal infecciosa",
+              "finding": "Dolor y efluente turbio"
+            }
+          ],
+          "initial_action": "Obtener recuento celular y cultivo e iniciar antibióticos que cubran grampositivos y gramnegativos según protocolo local.",
+          "action_reason": "El tratamiento debe comenzar pronto y ajustarse al cultivo.",
+          "modifiers": [
+            {
+              "factor": "Peritonitis fúngica o refractaria",
+              "action": "Valorar retiro del catéter.",
+              "reason": "La conservación puede impedir control."
+            }
+          ],
+          "limits": "No toda peritonitis implica cambio definitivo a hemodiálisis.",
+          "evidence": [
+            {
+              "page": 635,
+              "quote": "líquido de diálisis túrbio"
+            },
+            {
+              "page": 635,
+              "quote": "conteo celular, diferencial y"
+            }
+          ],
+          "source_gaps": [],
+          "verified_source_pages": [
+            635
+          ]
+        }
+      ],
+      "common_problem": "Una persona tiene riñones quísticos o una complicación durante diálisis.",
+      "mother": {
+        "cue": "La estructura renal y la técnica de sustitución generan problemas clínicos distintos.",
+        "answer": "Enfermedad estructural o complicación de diálisis",
+        "explanation": "La imagen y el líquido de diálisis orientan la causa."
+      }
+    }
+  ]
+}
