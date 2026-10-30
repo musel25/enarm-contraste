@@ -4,9 +4,12 @@ import hashlib
 import json
 import re
 import subprocess
+import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
+sys.path.insert(0,str(ROOT / 'scripts'))
+from validate_sections import book_reference_pages, correction_notes
 DIFFICULTIES = ('easy', 'medium', 'contrast')
 
 def require(ok, message):
@@ -54,7 +57,7 @@ def validate_bank(source, bank, review, source_hash, bank_hash):
                 require(normalize(group['name']) not in normalize(variant['vignette']), label + ': answer visible in vignette')
 
 def sources(topic):
-    result = [{'label':'Edwino.pdf', 'pages':topic.get('verified_source_pages', topic['source_pages'])}]
+    result = [{'label':'Edwino.pdf', 'pages':book_reference_pages(topic)}]
     result += [{k:s[k] for k in ('label','url')} for s in topic.get('external_sources', [])]
     return result
 
@@ -81,7 +84,7 @@ def decision_steps(section):
     result = []
     for block in section['blocks']:
         for topic in block['topics']:
-            common = dict(section_id=section['id'], block_id=block['id'], topic_id=topic['id'], path_id=topic['id'], path_label=topic['name'], sources=sources(topic), corrections=topic.get('source_corrections', []))
+            common = dict(section_id=section['id'], block_id=block['id'], topic_id=topic['id'], path_id=topic['id'], path_label=topic['name'], sources=sources(topic), corrections=correction_notes(topic))
             steps = [
                 ('discriminator', '¿Qué dato cambia la dirección del diagnóstico?', topic['pattern'], topic['key_discriminator'], topic['limits']),
                 ('mechanism', '¿Dónde falla el sistema y qué produce ese fallo?', topic['pattern'], topic['mechanism'], ' '.join(f'{f["mechanism"]}: {f["finding"]}.' for f in topic['findings'])),
@@ -121,7 +124,7 @@ def build(root=ROOT):
         bank = json.loads(bank_path.read_text())
         validate_bank(source, bank, json.loads(review_path.read_text()), raw_hash(path), raw_hash(bank_path))
         topic_map = {t['id']:t for b in source['blocks'] for t in b['topics']}
-        groups = [{**{key:g[key] for key in ('id','parent_topic_id','block_id','name','answer_kind')}, 'variants':{difficulty:{key:value[key] for key in ('vignette','discriminator','explanation','confusable_with','why_not')} for difficulty,value in g['variants'].items()}, 'sources':practice_sources(topic_map[g['parent_topic_id']],g), 'corrections':topic_map[g['parent_topic_id']].get('source_corrections', [])} for g in bank['groups']]
+        groups = [{**{key:g[key] for key in ('id','parent_topic_id','block_id','name','answer_kind')}, 'variants':{difficulty:{key:value[key] for key in ('vignette','discriminator','explanation','confusable_with','why_not')} for difficulty,value in g['variants'].items()}, 'sources':practice_sources(topic_map[g['parent_topic_id']],g), 'corrections':correction_notes(topic_map[g['parent_topic_id']])} for g in bank['groups']]
         data = dict(schema_version=1,section_id=source['id'],groups=groups,decisions=compiled_decisions(source),professional_review='pending')
         target = output / f'{source["id"]}.json'
         write_json(target, data)

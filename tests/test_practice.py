@@ -64,6 +64,7 @@ class PracticeTests(unittest.TestCase):
     def test_publishes_hash_checked_sections_without_private_evidence(self):
         with tempfile.TemporaryDirectory() as temporary:
             root = Path(temporary)
+            self.topic['source_corrections'] = [{'reason':'Aclaración vigente.'}]
             def write(path, data):
                 path.parent.mkdir(parents=True, exist_ok=True)
                 path.write_text(json.dumps(data))
@@ -84,6 +85,7 @@ class PracticeTests(unittest.TestCase):
             self.assertEqual(index['sections'][0]['sha256'],self.module.raw_hash(public))
             generated = json.loads(public.read_text())
             self.assertNotIn('facts',generated['groups'][0]['variants']['easy'])
+            self.assertEqual(generated['groups'][0]['corrections'],['Aclaración vigente.'])
             self.assertTrue(any(s.get('url') == 'https://example.org/guide' for s in generated['groups'][0]['sources']))
             self.assertIn(999,generated['groups'][0]['sources'][0]['pages'])
             self.assertTrue(all(q['id'].startswith('decision/01.01/') for q in generated['decisions']))
@@ -109,6 +111,18 @@ class PracticeTests(unittest.TestCase):
         self.bank['groups'][0]['parent_topic_id'] = other['id']
         with self.assertRaisesRegex(ValueError,'identity'):
             self.validate()
+
+    def test_decision_corrections_are_text_not_source_objects(self):
+        self.topic['source_corrections'] = [{'reason':'Aclaración vigente.'}]
+        steps=self.module.decision_steps(self.source)
+        self.assertTrue(steps)
+        self.assertTrue(all(q['corrections']==['Aclaración vigente.'] for q in steps))
+
+    def test_references_keep_evidence_pages_and_honor_replacements(self):
+        self.topic.update(source_pages=[1,2],verified_source_pages=[3],evidence=[{'page':4,'quote':'Evidence'}])
+        self.assertEqual(self.module.sources(self.topic)[0]['pages'],[1,2,3,4])
+        self.topic['reference_page_mode']='replace'
+        self.assertEqual(self.module.sources(self.topic)[0]['pages'],[3,4])
 
 
 if __name__ == '__main__':
