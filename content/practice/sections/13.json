@@ -1,0 +1,2384 @@
+{
+  "schema_version": 1,
+  "section_id": "13",
+  "author": "practice_13_23",
+  "source_sha256": "139f45e130493dd69b98be412bb383962c2d71919f8d4208b3dbd1b0f763b79f",
+  "groups": [
+    {
+      "id": "13.01-01",
+      "parent_topic_id": "13.01-01",
+      "block_id": "13.01",
+      "name": "Realizar valoración geriátrica integral",
+      "answer_kind": "decision",
+      "variants": {
+        "easy": {
+          "vignette": "Una mujer mayor vive sola y toma varios medicamentos. Su familia informa pérdida de autonomía, menor ingesta y olvidos; necesita una evaluación que incluya su entorno.",
+          "discriminator": "pérdida de autonomía",
+          "explanation": "La evaluación multidimensional identifica problemas físicos, mentales, funcionales y sociales que interactúan y permite priorizar un plan individual. Permite priorizar problemas y objetivos funcionales.",
+          "confusable_with": "Evaluación exclusiva de memoria",
+          "why_not": "Una prueba cognitiva aislada no evalúa función, nutrición, fármacos y apoyo social.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Una mujer mayor vive sola y toma varios medicamentos. Su familia informa pérdida de autonomía, menor ingesta y olvidos; necesita una evaluación que incluya su entorno."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "pérdida de autonomía"
+            },
+            {
+              "field": "mechanism",
+              "text": "La evaluación multidimensional identifica problemas físicos, mentales, funcionales y sociales que interactúan y permite priorizar un plan individual."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Interacción de déficits"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Dependencia y necesidades de apoyo"
+            },
+            {
+              "field": "initial_action",
+              "text": "Realizar valoración geriátrica integral con revisión farmacológica, cognición, nutrición, función y apoyo social."
+            },
+            {
+              "field": "action_reason",
+              "text": "Permite priorizar problemas y objetivos funcionales."
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Cinco o más fármacos"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Revisar prescripción con Beers y STOPP/START."
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "Aumenta el riesgo de efectos adversos."
+            },
+            {
+              "field": "limits",
+              "text": "La valoración no sustituye el estudio de una enfermedad aguda."
+            }
+          ]
+        },
+        "medium": {
+          "vignette": "Un hombre mayor necesita ayuda para las tareas diarias. Su ingesta ha disminuido y tiene olvidos. La consulta debe integrar sus problemas físicos y su apoyo en casa. ¿Qué evaluación se requiere?",
+          "discriminator": "Dependencia junto con problemas nutricionales, cognitivos y sociales.",
+          "explanation": "La evaluación multidimensional identifica problemas físicos, mentales, funcionales y sociales que interactúan y permite priorizar un plan individual. Realizar valoración geriátrica integral con revisión farmacológica, cognición, nutrición, función y apoyo social.",
+          "confusable_with": "Evaluación exclusiva de memoria",
+          "why_not": "Una prueba cognitiva aislada no evalúa función, nutrición, fármacos y apoyo social.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Una mujer mayor vive sola y toma varios medicamentos. Su familia informa pérdida de autonomía, menor ingesta y olvidos; necesita una evaluación que incluya su entorno."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "pérdida de autonomía"
+            },
+            {
+              "field": "mechanism",
+              "text": "La evaluación multidimensional identifica problemas físicos, mentales, funcionales y sociales que interactúan y permite priorizar un plan individual."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Interacción de déficits"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Dependencia y necesidades de apoyo"
+            },
+            {
+              "field": "initial_action",
+              "text": "Realizar valoración geriátrica integral con revisión farmacológica, cognición, nutrición, función y apoyo social."
+            },
+            {
+              "field": "action_reason",
+              "text": "Permite priorizar problemas y objetivos funcionales."
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Cinco o más fármacos"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Revisar prescripción con Beers y STOPP/START."
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "Aumenta el riesgo de efectos adversos."
+            },
+            {
+              "field": "limits",
+              "text": "La valoración no sustituye el estudio de una enfermedad aguda."
+            }
+          ]
+        },
+        "contrast": {
+          "vignette": "Una mujer mayor con pérdida de autonomía toma seis medicamentos. Su familia pide revisar si todos son necesarios y organizar el apoyo domiciliario. ¿Qué evaluación permite integrar estas necesidades?",
+          "discriminator": "Pérdida de autonomía y polifarmacia en un contexto social vulnerable.",
+          "explanation": "Aumenta el riesgo de efectos adversos. La valoración no sustituye el estudio de una enfermedad aguda. Permite priorizar problemas y objetivos funcionales.",
+          "confusable_with": "Evaluación exclusiva de memoria",
+          "why_not": "Una prueba cognitiva aislada no evalúa función, nutrición, fármacos y apoyo social.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Una mujer mayor vive sola y toma varios medicamentos. Su familia informa pérdida de autonomía, menor ingesta y olvidos; necesita una evaluación que incluya su entorno."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "pérdida de autonomía"
+            },
+            {
+              "field": "mechanism",
+              "text": "La evaluación multidimensional identifica problemas físicos, mentales, funcionales y sociales que interactúan y permite priorizar un plan individual."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Interacción de déficits"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Dependencia y necesidades de apoyo"
+            },
+            {
+              "field": "initial_action",
+              "text": "Realizar valoración geriátrica integral con revisión farmacológica, cognición, nutrición, función y apoyo social."
+            },
+            {
+              "field": "action_reason",
+              "text": "Permite priorizar problemas y objetivos funcionales."
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Cinco o más fármacos"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Revisar prescripción con Beers y STOPP/START."
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "Aumenta el riesgo de efectos adversos."
+            },
+            {
+              "field": "limits",
+              "text": "La valoración no sustituye el estudio de una enfermedad aguda."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "13.01-02",
+      "parent_topic_id": "13.01-02",
+      "block_id": "13.01",
+      "name": "Seleccionar la escala geriátrica según el dominio afectado",
+      "answer_kind": "decision",
+      "variants": {
+        "easy": {
+          "vignette": "Un hombre mayor puede bañarse sin ayuda, pero ya no administra su dinero ni organiza sus medicamentos. Se debe elegir una herramienta para medir esta pérdida de autonomía.",
+          "discriminator": "no administra su dinero",
+          "explanation": "Las escalas separan autocuidado, actividades instrumentales, cognición y estado afectivo para medir dominios distintos de la función geriátrica. Cada escala mide un dominio funcional distinto.",
+          "confusable_with": "Katz o Barthel",
+          "why_not": "Katz y Barthel evalúan actividades básicas; el problema descrito afecta actividades instrumentales.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Un hombre mayor puede bañarse sin ayuda, pero ya no administra su dinero ni organiza sus medicamentos. Se debe elegir una herramienta para medir esta pérdida de autonomía."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "no administra su dinero"
+            },
+            {
+              "field": "mechanism",
+              "text": "Las escalas separan autocuidado, actividades instrumentales, cognición y estado afectivo para medir dominios distintos de la función geriátrica."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Pérdida de actividades instrumentales"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Dificultad para manejar dinero y medicamentos"
+            },
+            {
+              "field": "initial_action",
+              "text": "Aplicar Lawton y Brody para actividades instrumentales; usar Katz o Barthel para actividades básicas."
+            },
+            {
+              "field": "action_reason",
+              "text": "Cada escala mide un dominio funcional distinto."
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Sospecha de sobrecarga del cuidador"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Aplicar Zarit."
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "Evalúa al cuidador y no la autonomía del paciente."
+            },
+            {
+              "field": "limits",
+              "text": "Un resultado de tamizaje requiere interpretación clínica."
+            }
+          ]
+        },
+        "medium": {
+          "vignette": "El cuidador de una persona dependiente informa que el cuidado supera sus recursos. ¿Qué instrumento evalúa su sobrecarga?",
+          "discriminator": "La persona evaluada es el cuidador y el dominio es su carga.",
+          "explanation": "Corresponde Zarit. Lawton y Brody mide actividades instrumentales del paciente; Katz o Barthel mide las básicas.",
+          "confusable_with": "Lawton y Brody",
+          "why_not": "La pregunta se refiere a sobrecarga del cuidador, no a autonomía instrumental del paciente.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Un hombre mayor puede bañarse sin ayuda, pero ya no administra su dinero ni organiza sus medicamentos. Se debe elegir una herramienta para medir esta pérdida de autonomía."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "no administra su dinero"
+            },
+            {
+              "field": "mechanism",
+              "text": "Las escalas separan autocuidado, actividades instrumentales, cognición y estado afectivo para medir dominios distintos de la función geriátrica."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Pérdida de actividades instrumentales"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Dificultad para manejar dinero y medicamentos"
+            },
+            {
+              "field": "initial_action",
+              "text": "Aplicar Lawton y Brody para actividades instrumentales; usar Katz o Barthel para actividades básicas."
+            },
+            {
+              "field": "action_reason",
+              "text": "Cada escala mide un dominio funcional distinto."
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Sospecha de sobrecarga del cuidador"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Aplicar Zarit."
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "Evalúa al cuidador y no la autonomía del paciente."
+            },
+            {
+              "field": "limits",
+              "text": "Un resultado de tamizaje requiere interpretación clínica."
+            }
+          ]
+        },
+        "contrast": {
+          "vignette": "Una persona mayor requiere medir su capacidad de bañarse y otras tareas de autocuidado. Se propone Lawton y Brody. ¿Qué dominio y herramientas corresponden?",
+          "discriminator": "El autocuidado pertenece a actividades básicas.",
+          "explanation": "Katz o Barthel evalúan actividades básicas. Lawton y Brody se usa para dinero, medicamentos y otras tareas instrumentales.",
+          "confusable_with": "Lawton y Brody",
+          "why_not": "La dificultad descrita corresponde a autocuidado básico y necesita la escala de ese dominio.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Un hombre mayor puede bañarse sin ayuda, pero ya no administra su dinero ni organiza sus medicamentos. Se debe elegir una herramienta para medir esta pérdida de autonomía."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "no administra su dinero"
+            },
+            {
+              "field": "mechanism",
+              "text": "Las escalas separan autocuidado, actividades instrumentales, cognición y estado afectivo para medir dominios distintos de la función geriátrica."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Pérdida de actividades instrumentales"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Dificultad para manejar dinero y medicamentos"
+            },
+            {
+              "field": "initial_action",
+              "text": "Aplicar Lawton y Brody para actividades instrumentales; usar Katz o Barthel para actividades básicas."
+            },
+            {
+              "field": "action_reason",
+              "text": "Cada escala mide un dominio funcional distinto."
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Sospecha de sobrecarga del cuidador"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Aplicar Zarit."
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "Evalúa al cuidador y no la autonomía del paciente."
+            },
+            {
+              "field": "limits",
+              "text": "Un resultado de tamizaje requiere interpretación clínica."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "13.02-01",
+      "parent_topic_id": "13.02-01",
+      "block_id": "13.02",
+      "name": "Delirium",
+      "answer_kind": "diagnosis",
+      "variants": {
+        "easy": {
+          "vignette": "Un hombre hospitalizado por infección se muestra somnoliento desde ayer. No mantiene la atención y alterna períodos de lucidez con confusión durante la misma tarde.",
+          "discriminator": "alterna períodos de lucidez con confusión",
+          "explanation": "Un estímulo nocivo precipita disfunción cerebral aguda en una persona vulnerable, con alteración de la atención y curso fluctuante. La causa subyacente y el entorno mantienen el cuadro.",
+          "confusable_with": "Demencia",
+          "why_not": "La evolución aguda y fluctuante de la atención orienta a disfunción cerebral aguda, no a una pérdida cognitiva progresiva.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Un hombre hospitalizado por infección se muestra somnoliento desde ayer. No mantiene la atención y alterna períodos de lucidez con confusión durante la misma tarde."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "alterna períodos de lucidez con confusión"
+            },
+            {
+              "field": "mechanism",
+              "text": "Un estímulo nocivo precipita disfunción cerebral aguda en una persona vulnerable, con alteración de la atención y curso fluctuante."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Disfunción cerebral aguda"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Inatención y fluctuación de alerta"
+            },
+            {
+              "field": "initial_action",
+              "text": "Aplicar CAM, buscar precipitantes con evaluación clínica y estudios dirigidos, orientar al paciente y revisar fármacos."
+            },
+            {
+              "field": "action_reason",
+              "text": "La causa subyacente y el entorno mantienen el cuadro."
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Forma hipoactiva"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Priorizar orientación, iluminación y movilización."
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "La fuente no recomienda sedación rutinaria."
+            },
+            {
+              "field": "limits",
+              "text": "La agitación requiere evaluar seguridad antes de considerar antipsicóticos."
+            }
+          ]
+        },
+        "medium": {
+          "vignette": "Una persona hospitalizada tiene inatención y confusión de curso agudo. Ahora presenta agitación. Antes de considerar un antipsicótico se requiere evaluar la seguridad y buscar precipitantes.",
+          "discriminator": "La agitación modifica la evaluación de seguridad.",
+          "explanation": "Se evalúa seguridad antes de considerar antipsicóticos. Se buscan causas y se mantienen medidas de orientación; no se indica sedación rutinaria.",
+          "confusable_with": "Demencia",
+          "why_not": "La evolución aguda y fluctuante de la atención orienta a disfunción cerebral aguda, no a una pérdida cognitiva progresiva.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Un hombre hospitalizado por infección se muestra somnoliento desde ayer. No mantiene la atención y alterna períodos de lucidez con confusión durante la misma tarde."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "alterna períodos de lucidez con confusión"
+            },
+            {
+              "field": "mechanism",
+              "text": "Un estímulo nocivo precipita disfunción cerebral aguda en una persona vulnerable, con alteración de la atención y curso fluctuante."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Disfunción cerebral aguda"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Inatención y fluctuación de alerta"
+            },
+            {
+              "field": "initial_action",
+              "text": "Aplicar CAM, buscar precipitantes con evaluación clínica y estudios dirigidos, orientar al paciente y revisar fármacos."
+            },
+            {
+              "field": "action_reason",
+              "text": "La causa subyacente y el entorno mantienen el cuadro."
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Forma hipoactiva"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Priorizar orientación, iluminación y movilización."
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "La fuente no recomienda sedación rutinaria."
+            },
+            {
+              "field": "limits",
+              "text": "La agitación requiere evaluar seguridad antes de considerar antipsicóticos."
+            }
+          ]
+        },
+        "contrast": {
+          "vignette": "Se propone una demencia para explicar el cambio mental de un hospitalizado. El dato que cambia la evaluación es la inatención que aparece y desaparece durante la misma tarde.",
+          "discriminator": "La fluctuación de atención en horas distingue el proceso agudo.",
+          "explanation": "La inatención aguda fluctuante orienta delirium. Deben buscarse precipitantes antes de atribuir el cuadro a demencia progresiva.",
+          "confusable_with": "Demencia",
+          "why_not": "La evolución aguda y fluctuante de la atención orienta a disfunción cerebral aguda, no a una pérdida cognitiva progresiva.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Un hombre hospitalizado por infección se muestra somnoliento desde ayer. No mantiene la atención y alterna períodos de lucidez con confusión durante la misma tarde."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "alterna períodos de lucidez con confusión"
+            },
+            {
+              "field": "mechanism",
+              "text": "Un estímulo nocivo precipita disfunción cerebral aguda en una persona vulnerable, con alteración de la atención y curso fluctuante."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Disfunción cerebral aguda"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Inatención y fluctuación de alerta"
+            },
+            {
+              "field": "initial_action",
+              "text": "Aplicar CAM, buscar precipitantes con evaluación clínica y estudios dirigidos, orientar al paciente y revisar fármacos."
+            },
+            {
+              "field": "action_reason",
+              "text": "La causa subyacente y el entorno mantienen el cuadro."
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Forma hipoactiva"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Priorizar orientación, iluminación y movilización."
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "La fuente no recomienda sedación rutinaria."
+            },
+            {
+              "field": "limits",
+              "text": "La agitación requiere evaluar seguridad antes de considerar antipsicóticos."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "13.03-01",
+      "parent_topic_id": "13.03-01",
+      "block_id": "13.03",
+      "name": "Deterioro cognitivo leve",
+      "answer_kind": "diagnosis",
+      "variants": {
+        "easy": {
+          "vignette": "Una mujer presenta olvidos durante meses, pero conserva sus actividades habituales. No tiene inicio súbito ni fluctuación de la atención; solicita evaluar su memoria y causas tratables.",
+          "discriminator": "conserva sus actividades habituales",
+          "explanation": "El déficit cognitivo puede afectar memoria u otras funciones; la pérdida de autonomía distingue un trastorno leve de una demencia. Define gravedad y detecta causas tratables.",
+          "confusable_with": "Diagnosticar demencia únicamente con MMSE",
+          "why_not": "Una escala no establece por sí sola la etiología ni demuestra pérdida funcional.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Una mujer presenta olvidos durante meses, pero conserva sus actividades habituales. No tiene inicio súbito ni fluctuación de la atención; solicita evaluar su memoria y causas tratables."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "conserva sus actividades habituales"
+            },
+            {
+              "field": "mechanism",
+              "text": "El déficit cognitivo puede afectar memoria u otras funciones; la pérdida de autonomía distingue un trastorno leve de una demencia."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Alteración de funciones mentales"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Olvidos sin pérdida obligatoria de autonomía"
+            },
+            {
+              "field": "initial_action",
+              "text": "Evaluar cognición y función; buscar depresión, alteración tiroidea, déficit de B12 y otras causas reversibles."
+            },
+            {
+              "field": "action_reason",
+              "text": "Define gravedad y detecta causas tratables."
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Déficit ejecutivo con riesgo vascular"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Considerar MoCA e imagen cerebral."
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "Explora función ejecutiva y lesiones vasculares."
+            },
+            {
+              "field": "limits",
+              "text": "MMSE es una herramienta de evaluación; no define por sí solo la etiología."
+            }
+          ]
+        },
+        "medium": {
+          "vignette": "Una persona tiene dificultad persistente para planificar y concentrarse. La evaluación muestra déficit ejecutivo medible, pero conserva sus actividades de la vida diaria.",
+          "discriminator": "Déficit de un dominio cognitivo sin pérdida de autonomía.",
+          "explanation": "La función ejecutiva puede alterarse sin cumplir criterios de demencia. Se evalúan causas reversibles y riesgo vascular según contexto.",
+          "confusable_with": "Diagnosticar demencia únicamente con MMSE",
+          "why_not": "Una escala no establece por sí sola la etiología ni demuestra pérdida funcional.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Una mujer presenta olvidos durante meses, pero conserva sus actividades habituales. No tiene inicio súbito ni fluctuación de la atención; solicita evaluar su memoria y causas tratables."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "conserva sus actividades habituales"
+            },
+            {
+              "field": "mechanism",
+              "text": "El déficit cognitivo puede afectar memoria u otras funciones; la pérdida de autonomía distingue un trastorno leve de una demencia."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Alteración de funciones mentales"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Olvidos sin pérdida obligatoria de autonomía"
+            },
+            {
+              "field": "initial_action",
+              "text": "Evaluar cognición y función; buscar depresión, alteración tiroidea, déficit de B12 y otras causas reversibles."
+            },
+            {
+              "field": "action_reason",
+              "text": "Define gravedad y detecta causas tratables."
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Déficit ejecutivo con riesgo vascular"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Considerar MoCA e imagen cerebral."
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "Explora función ejecutiva y lesiones vasculares."
+            },
+            {
+              "field": "limits",
+              "text": "MMSE es una herramienta de evaluación; no define por sí solo la etiología."
+            }
+          ],
+          "source_evidence": [
+            {
+              "page": 365,
+              "quote": "ejecutiva (razonamiento)."
+            }
+          ]
+        },
+        "contrast": {
+          "vignette": "Una persona presenta dificultades medibles del lenguaje y reconocimiento visual durante meses. Mantiene sus actividades habituales y no tiene un cambio agudo de atención.",
+          "discriminator": "Alteración cognitiva no limitada a memoria con autonomía conservada.",
+          "explanation": "La cognición incluye varios dominios. La preservación funcional separa el trastorno leve de demencia; se estudian causas tratables.",
+          "confusable_with": "Diagnosticar demencia únicamente con MMSE",
+          "why_not": "Una escala no establece por sí sola la etiología ni demuestra pérdida funcional.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Una mujer presenta olvidos durante meses, pero conserva sus actividades habituales. No tiene inicio súbito ni fluctuación de la atención; solicita evaluar su memoria y causas tratables."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "conserva sus actividades habituales"
+            },
+            {
+              "field": "mechanism",
+              "text": "El déficit cognitivo puede afectar memoria u otras funciones; la pérdida de autonomía distingue un trastorno leve de una demencia."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Alteración de funciones mentales"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Olvidos sin pérdida obligatoria de autonomía"
+            },
+            {
+              "field": "initial_action",
+              "text": "Evaluar cognición y función; buscar depresión, alteración tiroidea, déficit de B12 y otras causas reversibles."
+            },
+            {
+              "field": "action_reason",
+              "text": "Define gravedad y detecta causas tratables."
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Déficit ejecutivo con riesgo vascular"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Considerar MoCA e imagen cerebral."
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "Explora función ejecutiva y lesiones vasculares."
+            },
+            {
+              "field": "limits",
+              "text": "MMSE es una herramienta de evaluación; no define por sí solo la etiología."
+            }
+          ],
+          "source_evidence": [
+            {
+              "page": 365,
+              "quote": "lenguaje, reconocimiento visual y conducta."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "13.03-02",
+      "parent_topic_id": "13.03-02",
+      "block_id": "13.03",
+      "name": "Identificar el perfil cognitivo y conductual predominante",
+      "answer_kind": "decision",
+      "variants": {
+        "easy": {
+          "vignette": "Un hombre de 58 años presenta desinhibición y cambios de lenguaje antes de que destaquen los olvidos. La familia describe pérdida de juicio y conductas sociales nuevas.",
+          "discriminator": "desinhibición y cambios de lenguaje",
+          "explanation": "La distribución del daño cerebral determina el perfil cognitivo y conductual, lo que orienta entre causas degenerativas y vasculares. La presentación inicial orienta la causa del deterioro.",
+          "confusable_with": "Asignar Alzheimer por cualquier olvido",
+          "why_not": "El predominio conductual o del lenguaje requiere un análisis del perfil; no todo deterioro comienza con memoria reciente.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Un hombre de 58 años presenta desinhibición y cambios de lenguaje antes de que destaquen los olvidos. La familia describe pérdida de juicio y conductas sociales nuevas."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "desinhibición y cambios de lenguaje"
+            },
+            {
+              "field": "mechanism",
+              "text": "La distribución del daño cerebral determina el perfil cognitivo y conductual, lo que orienta entre causas degenerativas y vasculares."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Daño frontal y temporal"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Desinhibición y alteración del lenguaje"
+            },
+            {
+              "field": "initial_action",
+              "text": "Identificar el perfil predominante y orientar evaluación especializada según conducta, memoria, focalidad o alucinaciones."
+            },
+            {
+              "field": "action_reason",
+              "text": "La presentación inicial orienta la causa del deterioro."
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Alucinaciones con parkinsonismo posterior"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Considerar el patrón por cuerpos de Lewy."
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "El perfil combina alteración cognitiva y motora."
+            },
+            {
+              "field": "limits",
+              "text": "Esta página compara perfiles; no contiene un algoritmo diagnóstico completo."
+            }
+          ]
+        },
+        "medium": {
+          "vignette": "Una familia consulta por cambios sociales y pérdida de juicio de un hombre de mediana edad. La alteración del lenguaje destaca más que los olvidos. ¿Qué perfil debe orientar el estudio?",
+          "discriminator": "Predominio conductual y del lenguaje.",
+          "explanation": "La distribución del daño cerebral determina el perfil cognitivo y conductual, lo que orienta entre causas degenerativas y vasculares. Identificar el perfil predominante y orientar evaluación especializada según conducta, memoria, focalidad o alucinaciones.",
+          "confusable_with": "Asignar Alzheimer por cualquier olvido",
+          "why_not": "El predominio conductual o del lenguaje requiere un análisis del perfil; no todo deterioro comienza con memoria reciente.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Un hombre de 58 años presenta desinhibición y cambios de lenguaje antes de que destaquen los olvidos. La familia describe pérdida de juicio y conductas sociales nuevas."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "desinhibición y cambios de lenguaje"
+            },
+            {
+              "field": "mechanism",
+              "text": "La distribución del daño cerebral determina el perfil cognitivo y conductual, lo que orienta entre causas degenerativas y vasculares."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Daño frontal y temporal"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Desinhibición y alteración del lenguaje"
+            },
+            {
+              "field": "initial_action",
+              "text": "Identificar el perfil predominante y orientar evaluación especializada según conducta, memoria, focalidad o alucinaciones."
+            },
+            {
+              "field": "action_reason",
+              "text": "La presentación inicial orienta la causa del deterioro."
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Alucinaciones con parkinsonismo posterior"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Considerar el patrón por cuerpos de Lewy."
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "El perfil combina alteración cognitiva y motora."
+            },
+            {
+              "field": "limits",
+              "text": "Esta página compara perfiles; no contiene un algoritmo diagnóstico completo."
+            }
+          ]
+        },
+        "contrast": {
+          "vignette": "En una consulta por deterioro cognitivo se comparan dos perfiles: cambios de conducta y lenguaje, o alucinaciones seguidas de parkinsonismo. ¿Qué se debe hacer antes de asignar una causa?",
+          "discriminator": "La distribución de síntomas permite orientar la etiología.",
+          "explanation": "El perfil frontal y temporal difiere del que combina alucinaciones y parkinsonismo. La fuente compara perfiles y no ofrece un algoritmo completo.",
+          "confusable_with": "Asignar Alzheimer por cualquier olvido",
+          "why_not": "El predominio conductual o del lenguaje requiere un análisis del perfil; no todo deterioro comienza con memoria reciente.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Un hombre de 58 años presenta desinhibición y cambios de lenguaje antes de que destaquen los olvidos. La familia describe pérdida de juicio y conductas sociales nuevas."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "desinhibición y cambios de lenguaje"
+            },
+            {
+              "field": "mechanism",
+              "text": "La distribución del daño cerebral determina el perfil cognitivo y conductual, lo que orienta entre causas degenerativas y vasculares."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Daño frontal y temporal"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Desinhibición y alteración del lenguaje"
+            },
+            {
+              "field": "initial_action",
+              "text": "Identificar el perfil predominante y orientar evaluación especializada según conducta, memoria, focalidad o alucinaciones."
+            },
+            {
+              "field": "action_reason",
+              "text": "La presentación inicial orienta la causa del deterioro."
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Alucinaciones con parkinsonismo posterior"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Considerar el patrón por cuerpos de Lewy."
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "El perfil combina alteración cognitiva y motora."
+            },
+            {
+              "field": "limits",
+              "text": "Esta página compara perfiles; no contiene un algoritmo diagnóstico completo."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "13.04-01",
+      "parent_topic_id": "13.04-01",
+      "block_id": "13.04",
+      "name": "Alzheimer",
+      "answer_kind": "diagnosis",
+      "variants": {
+        "easy": {
+          "vignette": "Una mujer de 74 años olvida hechos recientes de forma insidiosa y progresiva. Ahora repite preguntas y necesita ayuda para organizar actividades que antes realizaba sola.",
+          "discriminator": "olvida hechos recientes de forma insidiosa y progresiva",
+          "explanation": "La acumulación de beta amiloide y ovillos de tau produce daño neuronal progresivo, con afectación inicial importante de memoria reciente. El tratamiento es sintomático y depende de la etapa.",
+          "confusable_with": "Demencia vascular",
+          "why_not": "El patrón predominante es una pérdida progresiva de memoria reciente; el perfil vascular se relaciona con lesiones cerebrales y signos focales.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Una mujer de 74 años olvida hechos recientes de forma insidiosa y progresiva. Ahora repite preguntas y necesita ayuda para organizar actividades que antes realizaba sola."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "olvida hechos recientes de forma insidiosa y progresiva"
+            },
+            {
+              "field": "mechanism",
+              "text": "La acumulación de beta amiloide y ovillos de tau produce daño neuronal progresivo, con afectación inicial importante de memoria reciente."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Daño hipocampal"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Pérdida progresiva de memoria reciente"
+            },
+            {
+              "field": "initial_action",
+              "text": "Evaluar demencia y descartar causas reversibles; considerar un inhibidor de acetilcolinesterasa en enfermedad leve a moderada."
+            },
+            {
+              "field": "action_reason",
+              "text": "El tratamiento es sintomático y depende de la etapa."
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Etapa moderada a severa"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Considerar memantina."
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "La fuente la asigna a esta gravedad."
+            },
+            {
+              "field": "limits",
+              "text": "Los fármacos descritos no detienen la progresión."
+            }
+          ]
+        },
+        "medium": {
+          "vignette": "Una paciente con pérdida progresiva de memoria reciente ha llegado a una etapa moderada a severa. La evaluación plantea memantina como tratamiento sintomático.",
+          "discriminator": "El trastorno amnésico progresivo se encuentra en una etapa más avanzada.",
+          "explanation": "La fuente asigna memantina a la etapa moderada a severa. Los tratamientos no detienen la progresión; se mantiene evaluación y apoyo funcional.",
+          "confusable_with": "Demencia vascular",
+          "why_not": "El patrón predominante es una pérdida progresiva de memoria reciente; el perfil vascular se relaciona con lesiones cerebrales y signos focales.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Una mujer de 74 años olvida hechos recientes de forma insidiosa y progresiva. Ahora repite preguntas y necesita ayuda para organizar actividades que antes realizaba sola."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "olvida hechos recientes de forma insidiosa y progresiva"
+            },
+            {
+              "field": "mechanism",
+              "text": "La acumulación de beta amiloide y ovillos de tau produce daño neuronal progresivo, con afectación inicial importante de memoria reciente."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Daño hipocampal"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Pérdida progresiva de memoria reciente"
+            },
+            {
+              "field": "initial_action",
+              "text": "Evaluar demencia y descartar causas reversibles; considerar un inhibidor de acetilcolinesterasa en enfermedad leve a moderada."
+            },
+            {
+              "field": "action_reason",
+              "text": "El tratamiento es sintomático y depende de la etapa."
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Etapa moderada a severa"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Considerar memantina."
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "La fuente la asigna a esta gravedad."
+            },
+            {
+              "field": "limits",
+              "text": "Los fármacos descritos no detienen la progresión."
+            }
+          ]
+        },
+        "contrast": {
+          "vignette": "Se compara una causa degenerativa con una vascular en una paciente cuya familia destaca primero la pérdida insidiosa de recuerdos recientes. ¿Qué proceso explica mejor ese predominio amnésico?",
+          "discriminator": "La memoria reciente es el dominio inicial predominante.",
+          "explanation": "El daño progresivo hipocampal orienta Alzheimer. La evaluación debe descartar causas reversibles y valorar autonomía; puede coexistir enfermedad vascular.",
+          "confusable_with": "Demencia vascular",
+          "why_not": "El patrón predominante es una pérdida progresiva de memoria reciente; el perfil vascular se relaciona con lesiones cerebrales y signos focales.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Una mujer de 74 años olvida hechos recientes de forma insidiosa y progresiva. Ahora repite preguntas y necesita ayuda para organizar actividades que antes realizaba sola."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "olvida hechos recientes de forma insidiosa y progresiva"
+            },
+            {
+              "field": "mechanism",
+              "text": "La acumulación de beta amiloide y ovillos de tau produce daño neuronal progresivo, con afectación inicial importante de memoria reciente."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Daño hipocampal"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Pérdida progresiva de memoria reciente"
+            },
+            {
+              "field": "initial_action",
+              "text": "Evaluar demencia y descartar causas reversibles; considerar un inhibidor de acetilcolinesterasa en enfermedad leve a moderada."
+            },
+            {
+              "field": "action_reason",
+              "text": "El tratamiento es sintomático y depende de la etapa."
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Etapa moderada a severa"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Considerar memantina."
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "La fuente la asigna a esta gravedad."
+            },
+            {
+              "field": "limits",
+              "text": "Los fármacos descritos no detienen la progresión."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "13.04-02",
+      "parent_topic_id": "13.04-02",
+      "block_id": "13.04",
+      "name": "Demencia vascular",
+      "answer_kind": "diagnosis",
+      "variants": {
+        "easy": {
+          "vignette": "Un hombre con hipertensión presenta pérdida de capacidad para planear después de varios eventos cerebrales. El deterioro ocurre por escalones y persiste debilidad de un brazo.",
+          "discriminator": "deterioro ocurre por escalones",
+          "explanation": "Las lesiones cerebrovasculares isquémicas o hemorrágicas dañan redes cognitivas y producen deterioro cuyo perfil depende de la localización de las lesiones. La evidencia de daño vascular debe concordar con el deterioro.",
+          "confusable_with": "Alzheimer",
+          "why_not": "El curso por escalones y los signos focales favorecen daño vascular; puede coexistir un proceso degenerativo.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Un hombre con hipertensión presenta pérdida de capacidad para planear después de varios eventos cerebrales. El deterioro ocurre por escalones y persiste debilidad de un brazo."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "deterioro ocurre por escalones"
+            },
+            {
+              "field": "mechanism",
+              "text": "Las lesiones cerebrovasculares isquémicas o hemorrágicas dañan redes cognitivas y producen deterioro cuyo perfil depende de la localización de las lesiones."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Lesiones vasculares cerebrales"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Deterioro cognitivo con signos focales"
+            },
+            {
+              "field": "initial_action",
+              "text": "Solicitar evaluación por neurología o geriatría y correlacionar clínica con neuroimagen."
+            },
+            {
+              "field": "action_reason",
+              "text": "La evidencia de daño vascular debe concordar con el deterioro."
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Factores vasculares modificables"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Controlar hipertensión, diabetes y otros riesgos."
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "Se busca prevenir nuevas lesiones."
+            },
+            {
+              "field": "limits",
+              "text": "Puede coexistir enfermedad degenerativa."
+            }
+          ]
+        },
+        "medium": {
+          "vignette": "Una persona con deterioro cognitivo y lesiones cerebrales vasculares mantiene hipertensión y diabetes modificables. La consulta debe prevenir nuevas lesiones además de valorar sus déficits.",
+          "discriminator": "Lesiones vasculares con riesgos de recurrencia tratables.",
+          "explanation": "Se controlan factores vasculares y se correlaciona perfil con neuroimagen. La prevención busca reducir lesiones adicionales.",
+          "confusable_with": "Alzheimer",
+          "why_not": "El curso por escalones y los signos focales favorecen daño vascular; puede coexistir un proceso degenerativo.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Un hombre con hipertensión presenta pérdida de capacidad para planear después de varios eventos cerebrales. El deterioro ocurre por escalones y persiste debilidad de un brazo."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "deterioro ocurre por escalones"
+            },
+            {
+              "field": "mechanism",
+              "text": "Las lesiones cerebrovasculares isquémicas o hemorrágicas dañan redes cognitivas y producen deterioro cuyo perfil depende de la localización de las lesiones."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Lesiones vasculares cerebrales"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Deterioro cognitivo con signos focales"
+            },
+            {
+              "field": "initial_action",
+              "text": "Solicitar evaluación por neurología o geriatría y correlacionar clínica con neuroimagen."
+            },
+            {
+              "field": "action_reason",
+              "text": "La evidencia de daño vascular debe concordar con el deterioro."
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Factores vasculares modificables"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Controlar hipertensión, diabetes y otros riesgos."
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "Se busca prevenir nuevas lesiones."
+            },
+            {
+              "field": "limits",
+              "text": "Puede coexistir enfermedad degenerativa."
+            }
+          ]
+        },
+        "contrast": {
+          "vignette": "Se ha planteado Alzheimer en un paciente con deterioro cognitivo. La familia identifica pérdidas por escalones después de eventos cerebrales y persiste focalidad motora.",
+          "discriminator": "La temporalidad con eventos y los signos focales favorecen un componente vascular.",
+          "explanation": "El perfil depende de la localización de lesiones vasculares. Puede coexistir daño degenerativo; la neuroimagen y clínica deben concordar.",
+          "confusable_with": "Alzheimer",
+          "why_not": "El curso por escalones y los signos focales favorecen daño vascular; puede coexistir un proceso degenerativo.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Un hombre con hipertensión presenta pérdida de capacidad para planear después de varios eventos cerebrales. El deterioro ocurre por escalones y persiste debilidad de un brazo."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "deterioro ocurre por escalones"
+            },
+            {
+              "field": "mechanism",
+              "text": "Las lesiones cerebrovasculares isquémicas o hemorrágicas dañan redes cognitivas y producen deterioro cuyo perfil depende de la localización de las lesiones."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Lesiones vasculares cerebrales"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Deterioro cognitivo con signos focales"
+            },
+            {
+              "field": "initial_action",
+              "text": "Solicitar evaluación por neurología o geriatría y correlacionar clínica con neuroimagen."
+            },
+            {
+              "field": "action_reason",
+              "text": "La evidencia de daño vascular debe concordar con el deterioro."
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Factores vasculares modificables"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Controlar hipertensión, diabetes y otros riesgos."
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "Se busca prevenir nuevas lesiones."
+            },
+            {
+              "field": "limits",
+              "text": "Puede coexistir enfermedad degenerativa."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "13.05-01",
+      "parent_topic_id": "13.05-01",
+      "block_id": "13.05",
+      "name": "Sarcopenia",
+      "answer_kind": "diagnosis",
+      "variants": {
+        "easy": {
+          "vignette": "Una mujer de 80 años tiene dificultad para levantarse de una silla y caminar. La evaluación muestra poco músculo en las extremidades y desempeño físico reducido.",
+          "discriminator": "poco músculo en las extremidades",
+          "explanation": "La reducción de masa y función muscular disminuye fuerza, capacidad aeróbica y autonomía, y aumenta la probabilidad de discapacidad. Se deben abordar masa y capacidad funcional.",
+          "confusable_with": "Síndrome de fragilidad",
+          "why_not": "La fragilidad expresa vulnerabilidad multisistémica. La pérdida de masa y función muscular identifica el componente específico descrito.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Una mujer de 80 años tiene dificultad para levantarse de una silla y caminar. La evaluación muestra poco músculo en las extremidades y desempeño físico reducido."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "poco músculo en las extremidades"
+            },
+            {
+              "field": "mechanism",
+              "text": "La reducción de masa y función muscular disminuye fuerza, capacidad aeróbica y autonomía, y aumenta la probabilidad de discapacidad."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Pérdida de masa muscular"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Debilidad y desempeño físico pobre"
+            },
+            {
+              "field": "initial_action",
+              "text": "Aplicar SARC-F y evaluar masa y función muscular; iniciar apoyo nutricional y ejercicio de resistencia."
+            },
+            {
+              "field": "action_reason",
+              "text": "Se deben abordar masa y capacidad funcional."
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Dificultad importante para deambular"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Adaptar y supervisar el ejercicio."
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "El desempeño reducido limita la actividad."
+            },
+            {
+              "field": "limits",
+              "text": "Se relaciona con fragilidad, pero no son términos equivalentes."
+            }
+          ]
+        },
+        "medium": {
+          "vignette": "Una persona mayor con poca masa muscular tiene dificultad importante para deambular. Necesita ejercicio de resistencia adaptado y supervisado para mejorar función.",
+          "discriminator": "El desempeño muscular limita la capacidad de entrenar.",
+          "explanation": "La pérdida de masa y función muscular reduce autonomía. Se adapta el ejercicio y se aporta apoyo nutricional por el desempeño reducido.",
+          "confusable_with": "Síndrome de fragilidad",
+          "why_not": "La fragilidad expresa vulnerabilidad multisistémica. La pérdida de masa y función muscular identifica el componente específico descrito.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Una mujer de 80 años tiene dificultad para levantarse de una silla y caminar. La evaluación muestra poco músculo en las extremidades y desempeño físico reducido."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "poco músculo en las extremidades"
+            },
+            {
+              "field": "mechanism",
+              "text": "La reducción de masa y función muscular disminuye fuerza, capacidad aeróbica y autonomía, y aumenta la probabilidad de discapacidad."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Pérdida de masa muscular"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Debilidad y desempeño físico pobre"
+            },
+            {
+              "field": "initial_action",
+              "text": "Aplicar SARC-F y evaluar masa y función muscular; iniciar apoyo nutricional y ejercicio de resistencia."
+            },
+            {
+              "field": "action_reason",
+              "text": "Se deben abordar masa y capacidad funcional."
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Dificultad importante para deambular"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Adaptar y supervisar el ejercicio."
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "El desempeño reducido limita la actividad."
+            },
+            {
+              "field": "limits",
+              "text": "Se relaciona con fragilidad, pero no son términos equivalentes."
+            }
+          ]
+        },
+        "contrast": {
+          "vignette": "En una persona mayor con debilidad se discute fragilidad frente a una pérdida muscular específica. La evaluación identifica reducción de masa en extremidades junto con función muscular pobre.",
+          "discriminator": "La masa y función muscular definen el componente específico.",
+          "explanation": "La sarcopenia puede contribuir a fragilidad, pero ambas no son equivalentes. La medición muscular identifica este problema concreto.",
+          "confusable_with": "Síndrome de fragilidad",
+          "why_not": "La fragilidad expresa vulnerabilidad multisistémica. La pérdida de masa y función muscular identifica el componente específico descrito.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Una mujer de 80 años tiene dificultad para levantarse de una silla y caminar. La evaluación muestra poco músculo en las extremidades y desempeño físico reducido."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "poco músculo en las extremidades"
+            },
+            {
+              "field": "mechanism",
+              "text": "La reducción de masa y función muscular disminuye fuerza, capacidad aeróbica y autonomía, y aumenta la probabilidad de discapacidad."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Pérdida de masa muscular"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Debilidad y desempeño físico pobre"
+            },
+            {
+              "field": "initial_action",
+              "text": "Aplicar SARC-F y evaluar masa y función muscular; iniciar apoyo nutricional y ejercicio de resistencia."
+            },
+            {
+              "field": "action_reason",
+              "text": "Se deben abordar masa y capacidad funcional."
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Dificultad importante para deambular"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Adaptar y supervisar el ejercicio."
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "El desempeño reducido limita la actividad."
+            },
+            {
+              "field": "limits",
+              "text": "Se relaciona con fragilidad, pero no son términos equivalentes."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "13.05-02",
+      "parent_topic_id": "13.05-02",
+      "block_id": "13.05",
+      "name": "Síndrome de fragilidad",
+      "answer_kind": "diagnosis",
+      "variants": {
+        "easy": {
+          "vignette": "Un hombre mayor pierde peso, refiere poca energía y no puede levantarse repetidamente de una silla sin usar los brazos. Se recupera lentamente tras enfermedades menores.",
+          "discriminator": "pierde peso, refiere poca energía",
+          "explanation": "El deterioro de varios sistemas reduce la reserva fisiológica y aumenta la vulnerabilidad; la pérdida muscular contribuye a la limitación funcional. Busca mejorar reserva física y autonomía.",
+          "confusable_with": "Sarcopenia aislada",
+          "why_not": "La pérdida muscular puede contribuir, pero la vulnerabilidad multisistémica y la recuperación lenta amplían el problema.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Un hombre mayor pierde peso, refiere poca energía y no puede levantarse repetidamente de una silla sin usar los brazos. Se recupera lentamente tras enfermedades menores."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "pierde peso, refiere poca energía"
+            },
+            {
+              "field": "mechanism",
+              "text": "El deterioro de varios sistemas reduce la reserva fisiológica y aumenta la vulnerabilidad; la pérdida muscular contribuye a la limitación funcional."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Reserva multisistémica reducida"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Baja energía y menor resistencia"
+            },
+            {
+              "field": "initial_action",
+              "text": "Evaluar con FRAIL y planear nutrición adecuada con ejercicio de resistencia."
+            },
+            {
+              "field": "action_reason",
+              "text": "Busca mejorar reserva física y autonomía."
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Déficit de vitamina D documentado"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Considerar suplementación."
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "La fuente condiciona el uso al nivel sérico."
+            },
+            {
+              "field": "limits",
+              "text": "Las herramientas FRAIL y Ensrud tienen criterios diferentes."
+            }
+          ]
+        },
+        "medium": {
+          "vignette": "Una persona mayor con baja reserva, poca energía y pérdida de peso tiene déficit de vitamina D documentado. Se planifica nutrición, resistencia y suplementación condicionada al déficit.",
+          "discriminator": "La vulnerabilidad multisistémica tiene un déficit corregible documentado.",
+          "explanation": "La suplementación se considera por el nivel sérico, junto con nutrición y ejercicio. FRAIL y Ensrud tienen criterios distintos.",
+          "confusable_with": "Sarcopenia aislada",
+          "why_not": "La pérdida muscular puede contribuir, pero la vulnerabilidad multisistémica y la recuperación lenta amplían el problema.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Un hombre mayor pierde peso, refiere poca energía y no puede levantarse repetidamente de una silla sin usar los brazos. Se recupera lentamente tras enfermedades menores."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "pierde peso, refiere poca energía"
+            },
+            {
+              "field": "mechanism",
+              "text": "El deterioro de varios sistemas reduce la reserva fisiológica y aumenta la vulnerabilidad; la pérdida muscular contribuye a la limitación funcional."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Reserva multisistémica reducida"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Baja energía y menor resistencia"
+            },
+            {
+              "field": "initial_action",
+              "text": "Evaluar con FRAIL y planear nutrición adecuada con ejercicio de resistencia."
+            },
+            {
+              "field": "action_reason",
+              "text": "Busca mejorar reserva física y autonomía."
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Déficit de vitamina D documentado"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Considerar suplementación."
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "La fuente condiciona el uso al nivel sérico."
+            },
+            {
+              "field": "limits",
+              "text": "Las herramientas FRAIL y Ensrud tienen criterios diferentes."
+            }
+          ]
+        },
+        "contrast": {
+          "vignette": "Se debate si la limitación de un adulto mayor es solo muscular. Destaca que tras enfermedades menores pierde resistencia y tarda en recuperar su función.",
+          "discriminator": "La vulnerabilidad a estresores indica menor reserva de varios sistemas.",
+          "explanation": "La fragilidad incluye reducción multisistémica de reserva. La sarcopenia puede contribuir, pero la vulnerabilidad global amplía el mecanismo.",
+          "confusable_with": "Sarcopenia aislada",
+          "why_not": "La pérdida muscular puede contribuir, pero la vulnerabilidad multisistémica y la recuperación lenta amplían el problema.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Un hombre mayor pierde peso, refiere poca energía y no puede levantarse repetidamente de una silla sin usar los brazos. Se recupera lentamente tras enfermedades menores."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "pierde peso, refiere poca energía"
+            },
+            {
+              "field": "mechanism",
+              "text": "El deterioro de varios sistemas reduce la reserva fisiológica y aumenta la vulnerabilidad; la pérdida muscular contribuye a la limitación funcional."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Reserva multisistémica reducida"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Baja energía y menor resistencia"
+            },
+            {
+              "field": "initial_action",
+              "text": "Evaluar con FRAIL y planear nutrición adecuada con ejercicio de resistencia."
+            },
+            {
+              "field": "action_reason",
+              "text": "Busca mejorar reserva física y autonomía."
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Déficit de vitamina D documentado"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Considerar suplementación."
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "La fuente condiciona el uso al nivel sérico."
+            },
+            {
+              "field": "limits",
+              "text": "Las herramientas FRAIL y Ensrud tienen criterios diferentes."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "13.06-01",
+      "parent_topic_id": "13.06-01",
+      "block_id": "13.06",
+      "name": "Síndrome de caídas",
+      "answer_kind": "diagnosis",
+      "variants": {
+        "easy": {
+          "vignette": "Una mujer mayor ha caído dos veces al caminar al baño. Usa un sedante nuevo, tiene visión reducida y teme volver a caminar después del último episodio.",
+          "discriminator": "Usa un sedante nuevo",
+          "explanation": "La alteración de equilibrio, visión, fuerza y respuesta postural interactúa con obstáculos y fármacos para producir caídas y limitar la movilidad. La prevención requiere identificar factores corregibles.",
+          "confusable_with": "Sarcopenia aislada",
+          "why_not": "La masa muscular no explica por sí sola la asociación con un sedante, la visión reducida y las circunstancias del domicilio.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Una mujer mayor ha caído dos veces al caminar al baño. Usa un sedante nuevo, tiene visión reducida y teme volver a caminar después del último episodio."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "Usa un sedante nuevo"
+            },
+            {
+              "field": "mechanism",
+              "text": "La alteración de equilibrio, visión, fuerza y respuesta postural interactúa con obstáculos y fármacos para producir caídas y limitar la movilidad."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Inestabilidad y sedación"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Caídas y miedo a repetirlas"
+            },
+            {
+              "field": "initial_action",
+              "text": "Revisar circunstancias, fármacos y marcha; realizar levántate y anda y evaluar seguridad del domicilio."
+            },
+            {
+              "field": "action_reason",
+              "text": "La prevención requiere identificar factores corregibles."
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Uso de benzodiacepinas"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Revisar su necesidad y ajuste."
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "Se asocian con mayor riesgo de caídas."
+            },
+            {
+              "field": "limits",
+              "text": "Una caída requiere descartar lesiones y causas agudas según la historia."
+            }
+          ]
+        },
+        "medium": {
+          "vignette": "Una persona mayor ha llegado al suelo involuntariamente varias veces al ponerse de pie. Tiene alteración del equilibrio y se identifica hipotensión postural como factor modificable.",
+          "discriminator": "Pérdidas repetidas de estabilidad al cambiar de postura.",
+          "explanation": "El problema es multifactorial. El componente postural modifica la prevención, que incluye revisión de marcha, fuerza, medicamentos y domicilio.",
+          "confusable_with": "Sarcopenia aislada",
+          "why_not": "La masa muscular no explica por sí sola la asociación con un sedante, la visión reducida y las circunstancias del domicilio.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Una mujer mayor ha caído dos veces al caminar al baño. Usa un sedante nuevo, tiene visión reducida y teme volver a caminar después del último episodio."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "Usa un sedante nuevo"
+            },
+            {
+              "field": "mechanism",
+              "text": "La alteración de equilibrio, visión, fuerza y respuesta postural interactúa con obstáculos y fármacos para producir caídas y limitar la movilidad."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Inestabilidad y sedación"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Caídas y miedo a repetirlas"
+            },
+            {
+              "field": "initial_action",
+              "text": "Revisar circunstancias, fármacos y marcha; realizar levántate y anda y evaluar seguridad del domicilio."
+            },
+            {
+              "field": "action_reason",
+              "text": "La prevención requiere identificar factores corregibles."
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Uso de benzodiacepinas"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Revisar su necesidad y ajuste."
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "Se asocian con mayor riesgo de caídas."
+            },
+            {
+              "field": "limits",
+              "text": "Una caída requiere descartar lesiones y causas agudas según la historia."
+            }
+          ],
+          "source_evidence": [
+            {
+              "page": 373,
+              "quote": "corrección de hipotensión postura l."
+            }
+          ]
+        },
+        "contrast": {
+          "vignette": "Una persona mayor tropieza repetidamente en casa y desde el último episodio tiene miedo de caminar. Las limitaciones de marcha y los obstáculos del domicilio interactúan.",
+          "discriminator": "Tropiezos con miedo posterior que limita movilidad.",
+          "explanation": "El miedo después de caer forma parte del cuadro y puede reducir autonomía. Se estudian lesiones y causas agudas y se corrigen riesgos del hogar.",
+          "confusable_with": "Sarcopenia aislada",
+          "why_not": "La masa muscular no explica por sí sola la asociación con un sedante, la visión reducida y las circunstancias del domicilio.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Una mujer mayor ha caído dos veces al caminar al baño. Usa un sedante nuevo, tiene visión reducida y teme volver a caminar después del último episodio."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "Usa un sedante nuevo"
+            },
+            {
+              "field": "mechanism",
+              "text": "La alteración de equilibrio, visión, fuerza y respuesta postural interactúa con obstáculos y fármacos para producir caídas y limitar la movilidad."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Inestabilidad y sedación"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Caídas y miedo a repetirlas"
+            },
+            {
+              "field": "initial_action",
+              "text": "Revisar circunstancias, fármacos y marcha; realizar levántate y anda y evaluar seguridad del domicilio."
+            },
+            {
+              "field": "action_reason",
+              "text": "La prevención requiere identificar factores corregibles."
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Uso de benzodiacepinas"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Revisar su necesidad y ajuste."
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "Se asocian con mayor riesgo de caídas."
+            },
+            {
+              "field": "limits",
+              "text": "Una caída requiere descartar lesiones y causas agudas según la historia."
+            }
+          ],
+          "source_evidence": [
+            {
+              "page": 373,
+              "quote": "El 50% de los pacientes que caen presentan el síndrome de postcaída"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "13.07-01",
+      "parent_topic_id": "13.07-01",
+      "block_id": "13.07",
+      "name": "Depresión en el anciano",
+      "answer_kind": "diagnosis",
+      "variants": {
+        "easy": {
+          "vignette": "Un viudo mayor deja de disfrutar sus actividades y se aísla desde hace tres semanas. Tiene poca energía, sueño alterado y quejas de memoria sin fluctuación aguda.",
+          "discriminator": "deja de disfrutar sus actividades",
+          "explanation": "La alteración persistente del ánimo reduce interés, energía y participación social, y puede producir síntomas cognitivos que simulan deterioro neurodegenerativo. La escala detecta síntomas, mientras la entrevista define el trastorno.",
+          "confusable_with": "Deterioro cognitivo neurodegenerativo",
+          "why_not": "La anhedonia y el aislamiento requieren evaluar el ánimo antes de atribuir todas las quejas de memoria a neurodegeneración.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Un viudo mayor deja de disfrutar sus actividades y se aísla desde hace tres semanas. Tiene poca energía, sueño alterado y quejas de memoria sin fluctuación aguda."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "deja de disfrutar sus actividades"
+            },
+            {
+              "field": "mechanism",
+              "text": "La alteración persistente del ánimo reduce interés, energía y participación social, y puede producir síntomas cognitivos que simulan deterioro neurodegenerativo."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Pérdida de interés y vitalidad"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Anhedonia, aislamiento y cansancio"
+            },
+            {
+              "field": "initial_action",
+              "text": "Realizar entrevista clínica y tamizaje con Yesavage; confirmar el cuadro y valorar terapia cognitivo conductual con ISRS."
+            },
+            {
+              "field": "action_reason",
+              "text": "La escala detecta síntomas, mientras la entrevista define el trastorno."
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Síntomas de insomnio"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Evaluar y tratar también el sueño."
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "Puede mantener o agravar el cuadro."
+            },
+            {
+              "field": "limits",
+              "text": "La escala no sustituye los criterios clínicos ni la evaluación de riesgo suicida."
+            }
+          ]
+        },
+        "medium": {
+          "vignette": "Una persona mayor con anhedonia y aislamiento tiene insomnio que mantiene su falta de energía. La evaluación debe tratar también el sueño y confirmar el trastorno de ánimo.",
+          "discriminator": "El insomnio acompaña y puede agravar el ánimo persistente.",
+          "explanation": "La entrevista y Yesavage orientan el estudio. Se evalúan sueño y riesgo suicida; la escala no sustituye los criterios clínicos.",
+          "confusable_with": "Deterioro cognitivo neurodegenerativo",
+          "why_not": "La anhedonia y el aislamiento requieren evaluar el ánimo antes de atribuir todas las quejas de memoria a neurodegeneración.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Un viudo mayor deja de disfrutar sus actividades y se aísla desde hace tres semanas. Tiene poca energía, sueño alterado y quejas de memoria sin fluctuación aguda."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "deja de disfrutar sus actividades"
+            },
+            {
+              "field": "mechanism",
+              "text": "La alteración persistente del ánimo reduce interés, energía y participación social, y puede producir síntomas cognitivos que simulan deterioro neurodegenerativo."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Pérdida de interés y vitalidad"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Anhedonia, aislamiento y cansancio"
+            },
+            {
+              "field": "initial_action",
+              "text": "Realizar entrevista clínica y tamizaje con Yesavage; confirmar el cuadro y valorar terapia cognitivo conductual con ISRS."
+            },
+            {
+              "field": "action_reason",
+              "text": "La escala detecta síntomas, mientras la entrevista define el trastorno."
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Síntomas de insomnio"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Evaluar y tratar también el sueño."
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "Puede mantener o agravar el cuadro."
+            },
+            {
+              "field": "limits",
+              "text": "La escala no sustituye los criterios clínicos ni la evaluación de riesgo suicida."
+            }
+          ]
+        },
+        "contrast": {
+          "vignette": "Se propone una demencia para una persona mayor que consulta por memoria. La entrevista identifica primero pérdida persistente de disfrute y retiro de las actividades sociales.",
+          "discriminator": "La anhedonia y el aislamiento orientan evaluar depresión.",
+          "explanation": "El ánimo alterado puede producir quejas cognitivas. Deben evaluarse cognición y riesgo clínico sin atribuir todo a neurodegeneración.",
+          "confusable_with": "Deterioro cognitivo neurodegenerativo",
+          "why_not": "La anhedonia y el aislamiento requieren evaluar el ánimo antes de atribuir todas las quejas de memoria a neurodegeneración.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Un viudo mayor deja de disfrutar sus actividades y se aísla desde hace tres semanas. Tiene poca energía, sueño alterado y quejas de memoria sin fluctuación aguda."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "deja de disfrutar sus actividades"
+            },
+            {
+              "field": "mechanism",
+              "text": "La alteración persistente del ánimo reduce interés, energía y participación social, y puede producir síntomas cognitivos que simulan deterioro neurodegenerativo."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Pérdida de interés y vitalidad"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Anhedonia, aislamiento y cansancio"
+            },
+            {
+              "field": "initial_action",
+              "text": "Realizar entrevista clínica y tamizaje con Yesavage; confirmar el cuadro y valorar terapia cognitivo conductual con ISRS."
+            },
+            {
+              "field": "action_reason",
+              "text": "La escala detecta síntomas, mientras la entrevista define el trastorno."
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Síntomas de insomnio"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Evaluar y tratar también el sueño."
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "Puede mantener o agravar el cuadro."
+            },
+            {
+              "field": "limits",
+              "text": "La escala no sustituye los criterios clínicos ni la evaluación de riesgo suicida."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "13.07-02",
+      "parent_topic_id": "13.07-02",
+      "block_id": "13.07",
+      "name": "Insomnio en el adulto mayor",
+      "answer_kind": "diagnosis",
+      "variants": {
+        "easy": {
+          "vignette": "Una mujer mayor tarda en dormir y despierta varias veces desde hace un mes. Tiene cansancio diurno, toma un diurético por la noche y mantiene horarios variables.",
+          "discriminator": "toma un diurético por la noche",
+          "explanation": "Los cambios ambientales, enfermedades y fármacos alteran la continuidad del sueño; hábitos inadecuados pueden mantener el problema y causar limitación diurna. Es la primera intervención descrita y corrige factores que perpetúan el problema.",
+          "confusable_with": "Prescribir un hipnótico sin estudiar causas",
+          "why_not": "La nicturia, los fármacos y las enfermedades asociadas requieren evaluación y tratamiento específicos.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Una mujer mayor tarda en dormir y despierta varias veces desde hace un mes. Tiene cansancio diurno, toma un diurético por la noche y mantiene horarios variables."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "toma un diurético por la noche"
+            },
+            {
+              "field": "mechanism",
+              "text": "Los cambios ambientales, enfermedades y fármacos alteran la continuidad del sueño; hábitos inadecuados pueden mantener el problema y causar limitación diurna."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Nicturia y hábitos variables"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Sueño fragmentado y cansancio diurno"
+            },
+            {
+              "field": "initial_action",
+              "text": "Buscar causas secundarias y aplicar medidas conductuales e higiene del sueño."
+            },
+            {
+              "field": "action_reason",
+              "text": "Es la primera intervención descrita y corrige factores que perpetúan el problema."
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Enfermedad médica o psiquiátrica asociada"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Tratarla específicamente."
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "Puede ser la causa del insomnio."
+            },
+            {
+              "field": "limits",
+              "text": "Los hipnóticos requieren valoración individual por riesgo de caídas y dependencia."
+            }
+          ]
+        },
+        "medium": {
+          "vignette": "Una persona mayor con una enfermedad médica asociada duerme de forma fragmentada y tiene cansancio diurno. La consulta debe tratar la causa médica además de los hábitos de sueño.",
+          "discriminator": "Enfermedad secundaria que contribuye a la pérdida de continuidad del sueño.",
+          "explanation": "La enfermedad médica o psiquiátrica puede ser la causa. Se trata de forma específica y se aplican medidas conductuales.",
+          "confusable_with": "Prescribir un hipnótico sin estudiar causas",
+          "why_not": "La nicturia, los fármacos y las enfermedades asociadas requieren evaluación y tratamiento específicos.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Una mujer mayor tarda en dormir y despierta varias veces desde hace un mes. Tiene cansancio diurno, toma un diurético por la noche y mantiene horarios variables."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "toma un diurético por la noche"
+            },
+            {
+              "field": "mechanism",
+              "text": "Los cambios ambientales, enfermedades y fármacos alteran la continuidad del sueño; hábitos inadecuados pueden mantener el problema y causar limitación diurna."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Nicturia y hábitos variables"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Sueño fragmentado y cansancio diurno"
+            },
+            {
+              "field": "initial_action",
+              "text": "Buscar causas secundarias y aplicar medidas conductuales e higiene del sueño."
+            },
+            {
+              "field": "action_reason",
+              "text": "Es la primera intervención descrita y corrige factores que perpetúan el problema."
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Enfermedad médica o psiquiátrica asociada"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Tratarla específicamente."
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "Puede ser la causa del insomnio."
+            },
+            {
+              "field": "limits",
+              "text": "Los hipnóticos requieren valoración individual por riesgo de caídas y dependencia."
+            }
+          ]
+        },
+        "contrast": {
+          "vignette": "Se propone un hipnótico para una mujer mayor con cansancio diurno. La historia revela que toma diurético por la noche y su descanso se interrumpe por nicturia.",
+          "discriminator": "La relación con medicamento y nicturia orienta una causa secundaria.",
+          "explanation": "Se revisan fármacos y causas antes de elegir hipnótico. El riesgo de caídas y dependencia requiere valoración individual.",
+          "confusable_with": "Prescribir un hipnótico sin estudiar causas",
+          "why_not": "La nicturia, los fármacos y las enfermedades asociadas requieren evaluación y tratamiento específicos.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Una mujer mayor tarda en dormir y despierta varias veces desde hace un mes. Tiene cansancio diurno, toma un diurético por la noche y mantiene horarios variables."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "toma un diurético por la noche"
+            },
+            {
+              "field": "mechanism",
+              "text": "Los cambios ambientales, enfermedades y fármacos alteran la continuidad del sueño; hábitos inadecuados pueden mantener el problema y causar limitación diurna."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Nicturia y hábitos variables"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Sueño fragmentado y cansancio diurno"
+            },
+            {
+              "field": "initial_action",
+              "text": "Buscar causas secundarias y aplicar medidas conductuales e higiene del sueño."
+            },
+            {
+              "field": "action_reason",
+              "text": "Es la primera intervención descrita y corrige factores que perpetúan el problema."
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Enfermedad médica o psiquiátrica asociada"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Tratarla específicamente."
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "Puede ser la causa del insomnio."
+            },
+            {
+              "field": "limits",
+              "text": "Los hipnóticos requieren valoración individual por riesgo de caídas y dependencia."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "13.08-01",
+      "parent_topic_id": "13.08-01",
+      "block_id": "13.08",
+      "name": "Colapso del cuidador",
+      "answer_kind": "diagnosis",
+      "variants": {
+        "easy": {
+          "vignette": "Una hija cuida sola a su padre dependiente y casi no descansa. Presenta insomnio, irritabilidad y aislamiento; refiere que el cuidado supera sus recursos y afecta su salud.",
+          "discriminator": "el cuidado supera sus recursos",
+          "explanation": "La carga sostenida de cuidado supera recursos físicos, emocionales y sociales, y genera estrés percibido y deterioro del bienestar del cuidador. Cuantifica la carga y aborda los factores que la mantienen.",
+          "confusable_with": "Maltrato en el adulto mayor",
+          "why_not": "La sobrecarga requiere ayuda, pero no demuestra por sí sola actos u omisiones de maltrato.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Una hija cuida sola a su padre dependiente y casi no descansa. Presenta insomnio, irritabilidad y aislamiento; refiere que el cuidado supera sus recursos y afecta su salud."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "el cuidado supera sus recursos"
+            },
+            {
+              "field": "mechanism",
+              "text": "La carga sostenida de cuidado supera recursos físicos, emocionales y sociales, y genera estrés percibido y deterioro del bienestar del cuidador."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Sobrecarga sostenida"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Ansiedad, insomnio e irritabilidad"
+            },
+            {
+              "field": "initial_action",
+              "text": "Aplicar Zarit y organizar apoyo interdisciplinario, capacitación y descanso del cuidador."
+            },
+            {
+              "field": "action_reason",
+              "text": "Cuantifica la carga y aborda los factores que la mantienen."
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Síntomas depresivos"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Evaluar un trastorno del ánimo."
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "Puede requerir tratamiento adicional."
+            },
+            {
+              "field": "limits",
+              "text": "La sobrecarga no prueba por sí sola maltrato."
+            }
+          ]
+        },
+        "medium": {
+          "vignette": "Un cuidador que no descansa presenta ansiedad por la carga de atención y síntomas depresivos. Se necesita evaluar un trastorno del ánimo además de organizar apoyo y relevo.",
+          "discriminator": "La sobrecarga se acompaña de síntomas que necesitan evaluación adicional.",
+          "explanation": "Zarit mide la carga; el apoyo interdisciplinario y descanso son centrales. Los síntomas depresivos pueden requerir tratamiento específico.",
+          "confusable_with": "Maltrato en el adulto mayor",
+          "why_not": "La sobrecarga requiere ayuda, pero no demuestra por sí sola actos u omisiones de maltrato.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Una hija cuida sola a su padre dependiente y casi no descansa. Presenta insomnio, irritabilidad y aislamiento; refiere que el cuidado supera sus recursos y afecta su salud."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "el cuidado supera sus recursos"
+            },
+            {
+              "field": "mechanism",
+              "text": "La carga sostenida de cuidado supera recursos físicos, emocionales y sociales, y genera estrés percibido y deterioro del bienestar del cuidador."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Sobrecarga sostenida"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Ansiedad, insomnio e irritabilidad"
+            },
+            {
+              "field": "initial_action",
+              "text": "Aplicar Zarit y organizar apoyo interdisciplinario, capacitación y descanso del cuidador."
+            },
+            {
+              "field": "action_reason",
+              "text": "Cuantifica la carga y aborda los factores que la mantienen."
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Síntomas depresivos"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Evaluar un trastorno del ánimo."
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "Puede requerir tratamiento adicional."
+            },
+            {
+              "field": "limits",
+              "text": "La sobrecarga no prueba por sí sola maltrato."
+            }
+          ]
+        },
+        "contrast": {
+          "vignette": "Una hija declara que el cuidado de su padre supera sus recursos y ha perjudicado su salud. Se propone concluir maltrato solo por esa declaración. ¿Qué problema sí requiere evaluación?",
+          "discriminator": "La carga percibida indica sobrecarga, pero no prueba daño al paciente.",
+          "explanation": "La sobrecarga requiere evaluación con Zarit y apoyo. No demuestra por sí sola maltrato; se evalúan por separado los indicios de daño si existen.",
+          "confusable_with": "Maltrato en el adulto mayor",
+          "why_not": "La sobrecarga requiere ayuda, pero no demuestra por sí sola actos u omisiones de maltrato.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Una hija cuida sola a su padre dependiente y casi no descansa. Presenta insomnio, irritabilidad y aislamiento; refiere que el cuidado supera sus recursos y afecta su salud."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "el cuidado supera sus recursos"
+            },
+            {
+              "field": "mechanism",
+              "text": "La carga sostenida de cuidado supera recursos físicos, emocionales y sociales, y genera estrés percibido y deterioro del bienestar del cuidador."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Sobrecarga sostenida"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Ansiedad, insomnio e irritabilidad"
+            },
+            {
+              "field": "initial_action",
+              "text": "Aplicar Zarit y organizar apoyo interdisciplinario, capacitación y descanso del cuidador."
+            },
+            {
+              "field": "action_reason",
+              "text": "Cuantifica la carga y aborda los factores que la mantienen."
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Síntomas depresivos"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Evaluar un trastorno del ánimo."
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "Puede requerir tratamiento adicional."
+            },
+            {
+              "field": "limits",
+              "text": "La sobrecarga no prueba por sí sola maltrato."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "13.08-02",
+      "parent_topic_id": "13.08-02",
+      "block_id": "13.08",
+      "name": "Maltrato en el adulto mayor",
+      "answer_kind": "diagnosis",
+      "variants": {
+        "easy": {
+          "vignette": "Una persona mayor dependiente llega con mala higiene y heridas en distintas etapas de curación. Muestra miedo cuando entra su cuidador y evita explicar cómo aparecieron las lesiones.",
+          "discriminator": "Muestra miedo cuando entra su cuidador",
+          "explanation": "Los actos u omisiones de cuidado pueden dañar la integridad física, psicológica o patrimonial y comprometer autonomía y derechos de una persona mayor. La detección requiere activar respuesta y protección.",
+          "confusable_with": "Colapso del cuidador sin daño al paciente",
+          "why_not": "Aquí hay indicios de daño y negligencia sobre la persona dependiente; la evaluación de sobrecarga del cuidador no sustituye su protección.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Una persona mayor dependiente llega con mala higiene y heridas en distintas etapas de curación. Muestra miedo cuando entra su cuidador y evita explicar cómo aparecieron las lesiones."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "Muestra miedo cuando entra su cuidador"
+            },
+            {
+              "field": "mechanism",
+              "text": "Los actos u omisiones de cuidado pueden dañar la integridad física, psicológica o patrimonial y comprometer autonomía y derechos de una persona mayor."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Daño por actos u omisiones"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Lesiones repetidas y temor al cuidador"
+            },
+            {
+              "field": "initial_action",
+              "text": "Valorar seguridad y lesiones urgentes; entrevistar en privado cuando sea posible. Documentar hallazgos, activar protección y aplicar cribado sin retrasar la respuesta."
+            },
+            {
+              "field": "action_reason",
+              "text": "La detección requiere activar respuesta y protección."
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Posible negligencia"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Evaluar alimentación, hidratación, higiene y medicación."
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "Las omisiones también pueden causar daño."
+            },
+            {
+              "field": "limits",
+              "text": "Los indicios requieren evaluación; una lesión aislada no define maltrato. La notificación debe seguir la normativa y el circuito local de protección."
+            }
+          ]
+        },
+        "medium": {
+          "vignette": "Una persona mayor dependiente tiene lesiones repetidas y teme hablar frente a quien la cuida. Se observan problemas de higiene y se necesita una entrevista privada.",
+          "discriminator": "Temor al cuidador junto con lesiones y omisiones de cuidado.",
+          "explanation": "Los actos u omisiones de cuidado pueden dañar la integridad física, psicológica o patrimonial y comprometer autonomía y derechos de una persona mayor. Valorar seguridad y lesiones urgentes; entrevistar en privado cuando sea posible. Documentar hallazgos, activar protección y aplicar cribado sin retrasar la respuesta.",
+          "confusable_with": "Colapso del cuidador sin daño al paciente",
+          "why_not": "Aquí hay indicios de daño y negligencia sobre la persona dependiente; la evaluación de sobrecarga del cuidador no sustituye su protección.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Una persona mayor dependiente llega con mala higiene y heridas en distintas etapas de curación. Muestra miedo cuando entra su cuidador y evita explicar cómo aparecieron las lesiones."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "Muestra miedo cuando entra su cuidador"
+            },
+            {
+              "field": "mechanism",
+              "text": "Los actos u omisiones de cuidado pueden dañar la integridad física, psicológica o patrimonial y comprometer autonomía y derechos de una persona mayor."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Daño por actos u omisiones"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Lesiones repetidas y temor al cuidador"
+            },
+            {
+              "field": "initial_action",
+              "text": "Valorar seguridad y lesiones urgentes; entrevistar en privado cuando sea posible. Documentar hallazgos, activar protección y aplicar cribado sin retrasar la respuesta."
+            },
+            {
+              "field": "action_reason",
+              "text": "La detección requiere activar respuesta y protección."
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Posible negligencia"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Evaluar alimentación, hidratación, higiene y medicación."
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "Las omisiones también pueden causar daño."
+            },
+            {
+              "field": "limits",
+              "text": "Los indicios requieren evaluación; una lesión aislada no define maltrato. La notificación debe seguir la normativa y el circuito local de protección."
+            }
+          ]
+        },
+        "contrast": {
+          "vignette": "En una visita, una persona dependiente muestra mala higiene y cuidados de alimentación y medicación insuficientes. También tiene heridas de distintas etapas y evita explicar su origen frente al cuidador.",
+          "discriminator": "Las omisiones de cuidado acompañan signos repetidos de daño.",
+          "explanation": "Se evalúan seguridad y lesiones, se documenta y se activa la protección local. Los indicios requieren evaluación; una lesión aislada no basta.",
+          "confusable_with": "Colapso del cuidador sin daño al paciente",
+          "why_not": "Aquí hay indicios de daño y negligencia sobre la persona dependiente; la evaluación de sobrecarga del cuidador no sustituye su protección.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Una persona mayor dependiente llega con mala higiene y heridas en distintas etapas de curación. Muestra miedo cuando entra su cuidador y evita explicar cómo aparecieron las lesiones."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "Muestra miedo cuando entra su cuidador"
+            },
+            {
+              "field": "mechanism",
+              "text": "Los actos u omisiones de cuidado pueden dañar la integridad física, psicológica o patrimonial y comprometer autonomía y derechos de una persona mayor."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Daño por actos u omisiones"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Lesiones repetidas y temor al cuidador"
+            },
+            {
+              "field": "initial_action",
+              "text": "Valorar seguridad y lesiones urgentes; entrevistar en privado cuando sea posible. Documentar hallazgos, activar protección y aplicar cribado sin retrasar la respuesta."
+            },
+            {
+              "field": "action_reason",
+              "text": "La detección requiere activar respuesta y protección."
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Posible negligencia"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Evaluar alimentación, hidratación, higiene y medicación."
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "Las omisiones también pueden causar daño."
+            },
+            {
+              "field": "limits",
+              "text": "Los indicios requieren evaluación; una lesión aislada no define maltrato. La notificación debe seguir la normativa y el circuito local de protección."
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

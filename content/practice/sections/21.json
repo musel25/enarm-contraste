@@ -1,0 +1,2846 @@
+{
+  "schema_version": 1,
+  "section_id": "21",
+  "author": "practice_13_23",
+  "source_sha256": "2d97b66d1fc7605be2427748d5bc195c5af8551893158799bf38bb93d6aaf967",
+  "groups": [
+    {
+      "id": "21.01-01",
+      "parent_topic_id": "21.01-01",
+      "block_id": "21.01",
+      "name": "Asma en pediátricos",
+      "answer_kind": "diagnosis",
+      "variants": {
+        "easy": {
+          "vignette": "Un escolar tiene tos nocturna y episodios de sibilancias al correr o exponerse a alérgenos. Entre episodios mejora; se busca demostrar variabilidad del flujo aéreo y valorar control.",
+          "discriminator": "episodios de sibilancias",
+          "explanation": "La inflamación e hiperreactividad bronquial causan broncoconstricción, edema y moco variables; el tratamiento antiinflamatorio reduce síntomas y riesgo de exacerbación. El control requiere tratar inflamación y uso correcto.",
+          "confusable_with": "EPOC",
+          "why_not": "La variabilidad de síntomas con ejercicio o alérgenos y mejoría intercrítica difiere de obstrucción persistente asociada con exposición crónica.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Un escolar tiene tos nocturna y episodios de sibilancias al correr o exponerse a alérgenos. Entre episodios mejora; se busca demostrar variabilidad del flujo aéreo y valorar control."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "episodios de sibilancias"
+            },
+            {
+              "field": "mechanism",
+              "text": "La inflamación e hiperreactividad bronquial causan broncoconstricción, edema y moco variables; el tratamiento antiinflamatorio reduce síntomas y riesgo de exacerbación."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Obstrucción bronquial variable"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Sibilancias episódicas y tos nocturna"
+            },
+            {
+              "field": "initial_action",
+              "text": "Confirmar el patrón clínico con espirometría cuando sea factible; iniciar corticoide inhalado según edad y control, enseñar técnica y entregar plan de rescate."
+            },
+            {
+              "field": "action_reason",
+              "text": "El control requiere tratar inflamación y uso correcto."
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Mal control antes de subir tratamiento"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Revisar adherencia, técnica y desencadenantes."
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "Un error de uso puede explicar síntomas."
+            },
+            {
+              "field": "limits",
+              "text": "Una espirometría normal entre episodios no excluye el cuadro."
+            }
+          ]
+        },
+        "medium": {
+          "vignette": "Un escolar tiene sibilancias al correr y tos nocturna con mejoría entre episodios. La espirometría entre crisis es normal.",
+          "discriminator": "Variabilidad clínica pese a función normal entre episodios.",
+          "explanation": "Una espirometría normal intercrítica no excluye el cuadro. Se busca demostrar variabilidad y evaluar control.",
+          "confusable_with": "EPOC",
+          "why_not": "La variabilidad de síntomas con ejercicio o alérgenos y mejoría intercrítica difiere de obstrucción persistente asociada con exposición crónica.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Un escolar tiene tos nocturna y episodios de sibilancias al correr o exponerse a alérgenos. Entre episodios mejora; se busca demostrar variabilidad del flujo aéreo y valorar control."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "episodios de sibilancias"
+            },
+            {
+              "field": "mechanism",
+              "text": "La inflamación e hiperreactividad bronquial causan broncoconstricción, edema y moco variables; el tratamiento antiinflamatorio reduce síntomas y riesgo de exacerbación."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Obstrucción bronquial variable"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Sibilancias episódicas y tos nocturna"
+            },
+            {
+              "field": "initial_action",
+              "text": "Confirmar el patrón clínico con espirometría cuando sea factible; iniciar corticoide inhalado según edad y control, enseñar técnica y entregar plan de rescate."
+            },
+            {
+              "field": "action_reason",
+              "text": "El control requiere tratar inflamación y uso correcto."
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Mal control antes de subir tratamiento"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Revisar adherencia, técnica y desencadenantes."
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "Un error de uso puede explicar síntomas."
+            },
+            {
+              "field": "limits",
+              "text": "Una espirometría normal entre episodios no excluye el cuadro."
+            }
+          ]
+        },
+        "contrast": {
+          "vignette": "Un escolar con tos nocturna y episodios por alérgenos sigue mal controlado. Antes de aumentar tratamiento se revisan técnica, adherencia y desencadenantes.",
+          "discriminator": "Síntomas variables con posible error de uso.",
+          "explanation": "Un error de técnica o adherencia puede explicar mal control. Se revisan antes de subir tratamiento.",
+          "confusable_with": "EPOC",
+          "why_not": "La variabilidad de síntomas con ejercicio o alérgenos y mejoría intercrítica difiere de obstrucción persistente asociada con exposición crónica.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Un escolar tiene tos nocturna y episodios de sibilancias al correr o exponerse a alérgenos. Entre episodios mejora; se busca demostrar variabilidad del flujo aéreo y valorar control."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "episodios de sibilancias"
+            },
+            {
+              "field": "mechanism",
+              "text": "La inflamación e hiperreactividad bronquial causan broncoconstricción, edema y moco variables; el tratamiento antiinflamatorio reduce síntomas y riesgo de exacerbación."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Obstrucción bronquial variable"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Sibilancias episódicas y tos nocturna"
+            },
+            {
+              "field": "initial_action",
+              "text": "Confirmar el patrón clínico con espirometría cuando sea factible; iniciar corticoide inhalado según edad y control, enseñar técnica y entregar plan de rescate."
+            },
+            {
+              "field": "action_reason",
+              "text": "El control requiere tratar inflamación y uso correcto."
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Mal control antes de subir tratamiento"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Revisar adherencia, técnica y desencadenantes."
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "Un error de uso puede explicar síntomas."
+            },
+            {
+              "field": "limits",
+              "text": "Una espirometría normal entre episodios no excluye el cuadro."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "21.01-02",
+      "parent_topic_id": "21.01-02",
+      "block_id": "21.01",
+      "name": "Exacerbación de asma",
+      "answer_kind": "diagnosis",
+      "variants": {
+        "easy": {
+          "vignette": "Una persona con antecedentes de sibilancias llega con disnea intensa y habla solo palabras. Usa músculos accesorios y presenta saturación baja; se valora riesgo de fatiga o paro respiratorio.",
+          "discriminator": "habla solo palabras",
+          "explanation": "El aumento agudo de obstrucción bronquial limita flujo espiratorio y aumenta trabajo respiratorio; la fatiga y alteración de conciencia indican riesgo de falla ventilatoria. Reduce broncoconstricción e inflamación mientras se vigila respuesta.",
+          "confusable_with": "Asma estable con control parcial",
+          "why_not": "La hipoxemia, habla en palabras y fatiga indican una fase aguda grave, no una evaluación ordinaria de control.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Una persona con antecedentes de sibilancias llega con disnea intensa y habla solo palabras. Usa músculos accesorios y presenta saturación baja; se valora riesgo de fatiga o paro respiratorio."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "habla solo palabras"
+            },
+            {
+              "field": "mechanism",
+              "text": "El aumento agudo de obstrucción bronquial limita flujo espiratorio y aumenta trabajo respiratorio; la fatiga y alteración de conciencia indican riesgo de falla ventilatoria."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Obstrucción aguda grave"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Habla limitada y uso de músculos accesorios"
+            },
+            {
+              "field": "initial_action",
+              "text": "Administrar salbutamol inhalado repetido, oxígeno titulado y corticoide sistémico temprano; añadir ipratropio en crisis grave y reevaluar respuesta y fatiga."
+            },
+            {
+              "field": "action_reason",
+              "text": "Reduce broncoconstricción e inflamación mientras se vigila respuesta."
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Silencio respiratorio, letargia o fatiga"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Escalar a cuidados intensivos y soporte ventilatorio."
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "Sugiere amenaza vital."
+            },
+            {
+              "field": "limits",
+              "text": "El alta requiere estabilidad y plan antiinflamatorio y seguimiento."
+            }
+          ]
+        },
+        "medium": {
+          "vignette": "Una persona con crisis de sibilancias grave recibe broncodilatador repetido, oxígeno titulado y corticoide temprano. Se añade ipratropio y se reevalúa fatiga.",
+          "discriminator": "Etapa de manejo agudo que requiere reevaluación.",
+          "explanation": "La fuente contempla esa respuesta inicial en crisis grave. No se decide alta sin estabilidad, plan antiinflamatorio y seguimiento.",
+          "confusable_with": "Asma estable con control parcial",
+          "why_not": "La hipoxemia, habla en palabras y fatiga indican una fase aguda grave, no una evaluación ordinaria de control.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Una persona con antecedentes de sibilancias llega con disnea intensa y habla solo palabras. Usa músculos accesorios y presenta saturación baja; se valora riesgo de fatiga o paro respiratorio."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "habla solo palabras"
+            },
+            {
+              "field": "mechanism",
+              "text": "El aumento agudo de obstrucción bronquial limita flujo espiratorio y aumenta trabajo respiratorio; la fatiga y alteración de conciencia indican riesgo de falla ventilatoria."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Obstrucción aguda grave"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Habla limitada y uso de músculos accesorios"
+            },
+            {
+              "field": "initial_action",
+              "text": "Administrar salbutamol inhalado repetido, oxígeno titulado y corticoide sistémico temprano; añadir ipratropio en crisis grave y reevaluar respuesta y fatiga."
+            },
+            {
+              "field": "action_reason",
+              "text": "Reduce broncoconstricción e inflamación mientras se vigila respuesta."
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Silencio respiratorio, letargia o fatiga"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Escalar a cuidados intensivos y soporte ventilatorio."
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "Sugiere amenaza vital."
+            },
+            {
+              "field": "limits",
+              "text": "El alta requiere estabilidad y plan antiinflamatorio y seguimiento."
+            }
+          ]
+        },
+        "contrast": {
+          "vignette": "Una persona con crisis de sibilancias desarrolla silencio respiratorio, letargia o fatiga. Se requiere cuidados intensivos y soporte ventilatorio.",
+          "discriminator": "El silencio puede indicar amenaza vital, no mejoría.",
+          "explanation": "Estos signos obligan a escalar soporte. El alta necesita estabilidad, plan antiinflamatorio y seguimiento.",
+          "confusable_with": "Asma estable con control parcial",
+          "why_not": "La hipoxemia, habla en palabras y fatiga indican una fase aguda grave, no una evaluación ordinaria de control.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Una persona con antecedentes de sibilancias llega con disnea intensa y habla solo palabras. Usa músculos accesorios y presenta saturación baja; se valora riesgo de fatiga o paro respiratorio."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "habla solo palabras"
+            },
+            {
+              "field": "mechanism",
+              "text": "El aumento agudo de obstrucción bronquial limita flujo espiratorio y aumenta trabajo respiratorio; la fatiga y alteración de conciencia indican riesgo de falla ventilatoria."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Obstrucción aguda grave"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Habla limitada y uso de músculos accesorios"
+            },
+            {
+              "field": "initial_action",
+              "text": "Administrar salbutamol inhalado repetido, oxígeno titulado y corticoide sistémico temprano; añadir ipratropio en crisis grave y reevaluar respuesta y fatiga."
+            },
+            {
+              "field": "action_reason",
+              "text": "Reduce broncoconstricción e inflamación mientras se vigila respuesta."
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Silencio respiratorio, letargia o fatiga"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Escalar a cuidados intensivos y soporte ventilatorio."
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "Sugiere amenaza vital."
+            },
+            {
+              "field": "limits",
+              "text": "El alta requiere estabilidad y plan antiinflamatorio y seguimiento."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "21.02-01",
+      "parent_topic_id": "21.02-01",
+      "block_id": "21.02",
+      "name": "EPOC",
+      "answer_kind": "diagnosis",
+      "variants": {
+        "easy": {
+          "vignette": "Una persona fumadora tiene disnea progresiva, tos y esputo crónicos. La espirometría posbroncodilatador muestra limitación persistente; se evalúan síntomas, exacerbaciones y factores de riesgo antes de elegir mantenimiento.",
+          "discriminator": "limitación persistente",
+          "explanation": "La exposición crónica produce inflamación y lesión de vía aérea y alvéolos, limitando flujo espiratorio y causando síntomas persistentes con exacerbaciones de gravedad variable. El manejo depende de carga sintomática y riesgo.",
+          "confusable_with": "Asma episódica",
+          "why_not": "El curso progresivo por exposición y obstrucción persistente orienta EPOC; la reversibilidad parcial no la descarta.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Una persona fumadora tiene disnea progresiva, tos y esputo crónicos. La espirometría posbroncodilatador muestra limitación persistente; se evalúan síntomas, exacerbaciones y factores de riesgo antes de elegir mantenimiento."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "limitación persistente"
+            },
+            {
+              "field": "mechanism",
+              "text": "La exposición crónica produce inflamación y lesión de vía aérea y alvéolos, limitando flujo espiratorio y causando síntomas persistentes con exacerbaciones de gravedad variable."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Daño de vía aérea y alvéolos"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Disnea y obstrucción persistente"
+            },
+            {
+              "field": "initial_action",
+              "text": "Confirmar FEV1/FVC posbroncodilatador <0.7 en contexto compatible; evaluar síntomas y exacerbaciones, suspender exposición e iniciar broncodilatador de mantenimiento según evaluación ABE."
+            },
+            {
+              "field": "action_reason",
+              "text": "El manejo depende de carga sintomática y riesgo."
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Exacerbación con insuficiencia respiratoria"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Valorar hospitalización y soporte."
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "La fase aguda cambia prioridad."
+            },
+            {
+              "field": "limits",
+              "text": "La reversibilidad parcial no excluye EPOC; la clasificación ABCD del libro no es la actual."
+            },
+            {
+              "field": "source_corrections.0",
+              "text": "La clasificación inicial actual usa ABE y riesgo de exacerbación; no se replica ABCD del libro ni se exige ausencia absoluta de reversibilidad."
+            }
+          ]
+        },
+        "medium": {
+          "vignette": "Una persona fumadora tiene tos crónica y disnea progresiva. La espirometría mantiene obstrucción posbroncodilatador aunque hay reversibilidad parcial.",
+          "discriminator": "Limitación persistente pese a reversibilidad parcial.",
+          "explanation": "La corrección aclara que la reversibilidad parcial no excluye EPOC. La clasificación actual de inicio usa ABE.",
+          "confusable_with": "Asma episódica",
+          "why_not": "El curso progresivo por exposición y obstrucción persistente orienta EPOC; la reversibilidad parcial no la descarta.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Una persona fumadora tiene disnea progresiva, tos y esputo crónicos. La espirometría posbroncodilatador muestra limitación persistente; se evalúan síntomas, exacerbaciones y factores de riesgo antes de elegir mantenimiento."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "limitación persistente"
+            },
+            {
+              "field": "mechanism",
+              "text": "La exposición crónica produce inflamación y lesión de vía aérea y alvéolos, limitando flujo espiratorio y causando síntomas persistentes con exacerbaciones de gravedad variable."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Daño de vía aérea y alvéolos"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Disnea y obstrucción persistente"
+            },
+            {
+              "field": "initial_action",
+              "text": "Confirmar FEV1/FVC posbroncodilatador <0.7 en contexto compatible; evaluar síntomas y exacerbaciones, suspender exposición e iniciar broncodilatador de mantenimiento según evaluación ABE."
+            },
+            {
+              "field": "action_reason",
+              "text": "El manejo depende de carga sintomática y riesgo."
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Exacerbación con insuficiencia respiratoria"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Valorar hospitalización y soporte."
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "La fase aguda cambia prioridad."
+            },
+            {
+              "field": "limits",
+              "text": "La reversibilidad parcial no excluye EPOC; la clasificación ABCD del libro no es la actual."
+            },
+            {
+              "field": "source_corrections.0",
+              "text": "La clasificación inicial actual usa ABE y riesgo de exacerbación; no se replica ABCD del libro ni se exige ausencia absoluta de reversibilidad."
+            }
+          ]
+        },
+        "contrast": {
+          "vignette": "Una persona con obstrucción persistente, tos y esputo crónicos presenta exacerbación con insuficiencia respiratoria. Se valora hospitalización y soporte.",
+          "discriminator": "Fase aguda que cambia prioridades del mantenimiento.",
+          "explanation": "La insuficiencia respiratoria requiere soporte y valoración de ingreso. El plan de mantenimiento se revisa según síntomas y exacerbaciones.",
+          "confusable_with": "Asma episódica",
+          "why_not": "El curso progresivo por exposición y obstrucción persistente orienta EPOC; la reversibilidad parcial no la descarta.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Una persona fumadora tiene disnea progresiva, tos y esputo crónicos. La espirometría posbroncodilatador muestra limitación persistente; se evalúan síntomas, exacerbaciones y factores de riesgo antes de elegir mantenimiento."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "limitación persistente"
+            },
+            {
+              "field": "mechanism",
+              "text": "La exposición crónica produce inflamación y lesión de vía aérea y alvéolos, limitando flujo espiratorio y causando síntomas persistentes con exacerbaciones de gravedad variable."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Daño de vía aérea y alvéolos"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Disnea y obstrucción persistente"
+            },
+            {
+              "field": "initial_action",
+              "text": "Confirmar FEV1/FVC posbroncodilatador <0.7 en contexto compatible; evaluar síntomas y exacerbaciones, suspender exposición e iniciar broncodilatador de mantenimiento según evaluación ABE."
+            },
+            {
+              "field": "action_reason",
+              "text": "El manejo depende de carga sintomática y riesgo."
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Exacerbación con insuficiencia respiratoria"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Valorar hospitalización y soporte."
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "La fase aguda cambia prioridad."
+            },
+            {
+              "field": "limits",
+              "text": "La reversibilidad parcial no excluye EPOC; la clasificación ABCD del libro no es la actual."
+            },
+            {
+              "field": "source_corrections.0",
+              "text": "La clasificación inicial actual usa ABE y riesgo de exacerbación; no se replica ABCD del libro ni se exige ausencia absoluta de reversibilidad."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "21.02-02",
+      "parent_topic_id": "21.02-02",
+      "block_id": "21.02",
+      "name": "Tabaquismo",
+      "answer_kind": "diagnosis",
+      "variants": {
+        "easy": {
+          "vignette": "Una persona consume cigarrillos diariamente y pide ayuda porque ha fallado en sus intentos de suspenderlos. Se evalúan dependencia física y motivación.",
+          "discriminator": "Uso persistente de tabaco con dificultad para mantener abstinencia.",
+          "explanation": "Se caracteriza el consumo y se ofrece apoyo. Las contraindicaciones farmacológicas modifican tratamiento, no el reconocimiento del problema.",
+          "confusable_with": "Elegir bupropión sin valorar convulsiones",
+          "why_not": "La fuente lo contraindica en riesgo convulsivo.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Una persona fuma a diario y desea dejarlo. Se revisan dependencia, intentos previos y motivación; tiene antecedente de convulsiones que debe considerarse al seleccionar apoyo farmacológico."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "antecedente de convulsiones"
+            },
+            {
+              "field": "mechanism",
+              "text": "La nicotina mantiene dependencia y la exposición al humo produce daño cardiovascular y respiratorio; combinar intervención conductual y tratamiento apropiado mejora probabilidad de abstinencia."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Dependencia de nicotina"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Consumo persistente y abstinencia al suspender"
+            },
+            {
+              "field": "initial_action",
+              "text": "Evaluar dependencia y ofrecer plan de cesación con apoyo conductual y fármacos según preferencias y contraindicaciones."
+            },
+            {
+              "field": "action_reason",
+              "text": "La intervención debe adaptarse al paciente."
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Riesgo convulsivo"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Evitar bupropión."
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "La fuente lo contraindica."
+            },
+            {
+              "field": "limits",
+              "text": "El consumo bajo no es inocuo ni excluye ofrecer tratamiento."
+            }
+          ],
+          "source_evidence": [
+            {
+              "page": 721,
+              "quote": "Pacientes que no logran la"
+            }
+          ]
+        },
+        "medium": {
+          "vignette": "Una persona consume pocos cigarrillos cada día y cree que la cantidad no tiene riesgo. La historia confirma uso continuado de tabaco y se ofrece intervención.",
+          "discriminator": "El bajo consumo no elimina el problema ni su riesgo.",
+          "explanation": "La fuente rechaza considerar inocuo el consumo bajo. Se ofrece evaluación y apoyo sin exigir un consumo elevado.",
+          "confusable_with": "Elegir bupropión sin valorar convulsiones",
+          "why_not": "La fuente lo contraindica en riesgo convulsivo.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Una persona fuma a diario y desea dejarlo. Se revisan dependencia, intentos previos y motivación; tiene antecedente de convulsiones que debe considerarse al seleccionar apoyo farmacológico."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "antecedente de convulsiones"
+            },
+            {
+              "field": "mechanism",
+              "text": "La nicotina mantiene dependencia y la exposición al humo produce daño cardiovascular y respiratorio; combinar intervención conductual y tratamiento apropiado mejora probabilidad de abstinencia."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Dependencia de nicotina"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Consumo persistente y abstinencia al suspender"
+            },
+            {
+              "field": "initial_action",
+              "text": "Evaluar dependencia y ofrecer plan de cesación con apoyo conductual y fármacos según preferencias y contraindicaciones."
+            },
+            {
+              "field": "action_reason",
+              "text": "La intervención debe adaptarse al paciente."
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Riesgo convulsivo"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Evitar bupropión."
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "La fuente lo contraindica."
+            },
+            {
+              "field": "limits",
+              "text": "El consumo bajo no es inocuo ni excluye ofrecer tratamiento."
+            }
+          ],
+          "source_evidence": [
+            {
+              "page": 721,
+              "quote": "desmitificar el bajo consumo como inocuo."
+            }
+          ]
+        },
+        "contrast": {
+          "vignette": "Una embarazada mantiene consumo de cigarrillos y no logra abstinencia con la intervención inicial. Se necesita evaluar motivación y dependencia y ajustar apoyo de forma especializada.",
+          "discriminator": "Persistencia del consumo en contexto gestacional.",
+          "explanation": "El embarazo modifica selección de tratamiento. No se usa bupropión en este contexto y se ofrece intervención apropiada.",
+          "confusable_with": "Elegir bupropión sin valorar convulsiones",
+          "why_not": "La fuente lo contraindica en riesgo convulsivo.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Una persona fuma a diario y desea dejarlo. Se revisan dependencia, intentos previos y motivación; tiene antecedente de convulsiones que debe considerarse al seleccionar apoyo farmacológico."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "antecedente de convulsiones"
+            },
+            {
+              "field": "mechanism",
+              "text": "La nicotina mantiene dependencia y la exposición al humo produce daño cardiovascular y respiratorio; combinar intervención conductual y tratamiento apropiado mejora probabilidad de abstinencia."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Dependencia de nicotina"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Consumo persistente y abstinencia al suspender"
+            },
+            {
+              "field": "initial_action",
+              "text": "Evaluar dependencia y ofrecer plan de cesación con apoyo conductual y fármacos según preferencias y contraindicaciones."
+            },
+            {
+              "field": "action_reason",
+              "text": "La intervención debe adaptarse al paciente."
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Riesgo convulsivo"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Evitar bupropión."
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "La fuente lo contraindica."
+            },
+            {
+              "field": "limits",
+              "text": "El consumo bajo no es inocuo ni excluye ofrecer tratamiento."
+            }
+          ],
+          "source_evidence": [
+            {
+              "page": 721,
+              "quote": "Embarazadas: Asociado a RCI U."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "21.02-03",
+      "parent_topic_id": "21.02-03",
+      "block_id": "21.02",
+      "name": "Deficiencia alfa-1-antitripsina",
+      "answer_kind": "diagnosis",
+      "variants": {
+        "easy": {
+          "vignette": "Una persona joven no fumadora presenta enfisema predominante en bases y antecedentes familiares de enfermedad pulmonar. También tiene alteración hepática; se investiga un defecto de protección frente a proteasas.",
+          "discriminator": "enfisema predominante en bases",
+          "explanation": "La deficiencia del inhibidor de elastasa permite destrucción alveolar, mientras proteína anormal retenida en hígado puede provocar lesión hepática por un mecanismo distinto. El diagnóstico explica daño y permite evaluar tratamiento específico.",
+          "confusable_with": "EPOC por tabaquismo exclusivamente",
+          "why_not": "La edad joven, falta de tabaquismo y asociación hepática familiar orientan un defecto hereditario.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Una persona joven no fumadora presenta enfisema predominante en bases y antecedentes familiares de enfermedad pulmonar. También tiene alteración hepática; se investiga un defecto de protección frente a proteasas."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "enfisema predominante en bases"
+            },
+            {
+              "field": "mechanism",
+              "text": "La deficiencia del inhibidor de elastasa permite destrucción alveolar, mientras proteína anormal retenida en hígado puede provocar lesión hepática por un mecanismo distinto."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Protección antiproteasa insuficiente"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Enfisema panacinar temprano"
+            },
+            {
+              "field": "initial_action",
+              "text": "Medir alfa-1 antitripsina y completar caracterización; evaluar pulmón e hígado y evitar tabaco."
+            },
+            {
+              "field": "action_reason",
+              "text": "El diagnóstico explica daño y permite evaluar tratamiento específico."
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Deficiencia grave con enfisema establecido"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Valorar reemplazo en candidato apropiado."
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "Puede reducir progresión pulmonar."
+            },
+            {
+              "field": "limits",
+              "text": "La indicación de reemplazo no depende solo de un valor aislado."
+            }
+          ]
+        },
+        "medium": {
+          "vignette": "Una persona con hepatitis crónica y enfisema panacinar basal tiene concentración plasmática reducida del inhibidor de elastasa de neutrófilos. Se caracteriza el defecto hereditario.",
+          "discriminator": "Enfisema basal y daño hepático con déficit antiproteasa demostrado.",
+          "explanation": "La afectación de ambos órganos y el déficit apoyan la causa hereditaria. La indicación de reemplazo se individualiza, no depende solo de una cifra.",
+          "confusable_with": "EPOC por tabaquismo exclusivamente",
+          "why_not": "La edad joven, falta de tabaquismo y asociación hepática familiar orientan un defecto hereditario.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Una persona joven no fumadora presenta enfisema predominante en bases y antecedentes familiares de enfermedad pulmonar. También tiene alteración hepática; se investiga un defecto de protección frente a proteasas."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "enfisema predominante en bases"
+            },
+            {
+              "field": "mechanism",
+              "text": "La deficiencia del inhibidor de elastasa permite destrucción alveolar, mientras proteína anormal retenida en hígado puede provocar lesión hepática por un mecanismo distinto."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Protección antiproteasa insuficiente"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Enfisema panacinar temprano"
+            },
+            {
+              "field": "initial_action",
+              "text": "Medir alfa-1 antitripsina y completar caracterización; evaluar pulmón e hígado y evitar tabaco."
+            },
+            {
+              "field": "action_reason",
+              "text": "El diagnóstico explica daño y permite evaluar tratamiento específico."
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Deficiencia grave con enfisema establecido"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Valorar reemplazo en candidato apropiado."
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "Puede reducir progresión pulmonar."
+            },
+            {
+              "field": "limits",
+              "text": "La indicación de reemplazo no depende solo de un valor aislado."
+            }
+          ],
+          "source_evidence": [
+            {
+              "page": 696,
+              "quote": "enfisema panacinar (EPOC) y alteraciones hepáticas."
+            }
+          ]
+        },
+        "contrast": {
+          "vignette": "Una persona con deficiencia grave de protección antiproteasa tiene enfisema establecido. Se valora reemplazo según criterios de candidatura.",
+          "discriminator": "Defecto confirmado con repercusión pulmonar.",
+          "explanation": "La reposición se individualiza y no depende solo de un valor aislado. La alteración antiproteasa afecta pulmón y puede asociar daño hepático.",
+          "confusable_with": "EPOC por tabaquismo exclusivamente",
+          "why_not": "La edad joven, falta de tabaquismo y asociación hepática familiar orientan un defecto hereditario.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Una persona joven no fumadora presenta enfisema predominante en bases y antecedentes familiares de enfermedad pulmonar. También tiene alteración hepática; se investiga un defecto de protección frente a proteasas."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "enfisema predominante en bases"
+            },
+            {
+              "field": "mechanism",
+              "text": "La deficiencia del inhibidor de elastasa permite destrucción alveolar, mientras proteína anormal retenida en hígado puede provocar lesión hepática por un mecanismo distinto."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Protección antiproteasa insuficiente"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Enfisema panacinar temprano"
+            },
+            {
+              "field": "initial_action",
+              "text": "Medir alfa-1 antitripsina y completar caracterización; evaluar pulmón e hígado y evitar tabaco."
+            },
+            {
+              "field": "action_reason",
+              "text": "El diagnóstico explica daño y permite evaluar tratamiento específico."
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Deficiencia grave con enfisema establecido"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Valorar reemplazo en candidato apropiado."
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "Puede reducir progresión pulmonar."
+            },
+            {
+              "field": "limits",
+              "text": "La indicación de reemplazo no depende solo de un valor aislado."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "21.03-01",
+      "parent_topic_id": "21.03-01",
+      "block_id": "21.03",
+      "name": "Neumonía adquirida en la comunidad",
+      "answer_kind": "diagnosis",
+      "variants": {
+        "easy": {
+          "vignette": "Una persona presenta fiebre, tos productiva y dolor pleurítico. La radiografía muestra consolidación nueva; se evalúan saturación, presión, estado mental y capacidad de manejo ambulatorio antes de elegir antibiótico.",
+          "discriminator": "consolidación nueva",
+          "explanation": "La proliferación microbiana en alvéolos provoca exudado e inflamación, reduciendo intercambio gaseoso; la respuesta sistémica y las comorbilidades determinan gravedad y lugar de atención. La gravedad guía vía, cobertura y hospitalización.",
+          "confusable_with": "Neumonía atípica",
+          "why_not": "La consolidación focal y tos productiva apoyan el patrón comunitario típico; la imagen sola no determina microorganismo.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Una persona presenta fiebre, tos productiva y dolor pleurítico. La radiografía muestra consolidación nueva; se evalúan saturación, presión, estado mental y capacidad de manejo ambulatorio antes de elegir antibiótico."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "consolidación nueva"
+            },
+            {
+              "field": "mechanism",
+              "text": "La proliferación microbiana en alvéolos provoca exudado e inflamación, reduciendo intercambio gaseoso; la respuesta sistémica y las comorbilidades determinan gravedad y lugar de atención."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Inflamación alveolar"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Fiebre, estertores y consolidación"
+            },
+            {
+              "field": "initial_action",
+              "text": "Estratificar gravedad e iniciar antibiótico: amoxicilina en adulto ambulatorio sin comorbilidades relevantes; en hospital, ceftriaxona más azitromicina como opción según alergias, riesgo de resistencia y protocolo local. Corregir hipoxemia."
+            },
+            {
+              "field": "action_reason",
+              "text": "La gravedad guía vía, cobertura y hospitalización."
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Sepsis, hipoxemia o inestabilidad"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Hospitalizar y obtener estudios microbiológicos indicados."
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "Aumenta riesgo de deterioro."
+            },
+            {
+              "field": "limits",
+              "text": "La radiografía no identifica por sí sola el agente."
+            }
+          ]
+        },
+        "medium": {
+          "vignette": "Un adulto con consolidación infecciosa es elegible para manejo ambulatorio y no tiene comorbilidades relevantes. Se considera amoxicilina y vigilancia por gravedad.",
+          "discriminator": "La elegibilidad ambulatoria modifica selección inicial.",
+          "explanation": "Se estratifica gravedad y se usa opción ambulatoria según contexto. Alergias, resistencia y protocolo pueden cambiar el esquema.",
+          "confusable_with": "Neumonía atípica",
+          "why_not": "La consolidación focal y tos productiva apoyan el patrón comunitario típico; la imagen sola no determina microorganismo.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Una persona presenta fiebre, tos productiva y dolor pleurítico. La radiografía muestra consolidación nueva; se evalúan saturación, presión, estado mental y capacidad de manejo ambulatorio antes de elegir antibiótico."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "consolidación nueva"
+            },
+            {
+              "field": "mechanism",
+              "text": "La proliferación microbiana en alvéolos provoca exudado e inflamación, reduciendo intercambio gaseoso; la respuesta sistémica y las comorbilidades determinan gravedad y lugar de atención."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Inflamación alveolar"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Fiebre, estertores y consolidación"
+            },
+            {
+              "field": "initial_action",
+              "text": "Estratificar gravedad e iniciar antibiótico: amoxicilina en adulto ambulatorio sin comorbilidades relevantes; en hospital, ceftriaxona más azitromicina como opción según alergias, riesgo de resistencia y protocolo local. Corregir hipoxemia."
+            },
+            {
+              "field": "action_reason",
+              "text": "La gravedad guía vía, cobertura y hospitalización."
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Sepsis, hipoxemia o inestabilidad"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Hospitalizar y obtener estudios microbiológicos indicados."
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "Aumenta riesgo de deterioro."
+            },
+            {
+              "field": "limits",
+              "text": "La radiografía no identifica por sí sola el agente."
+            }
+          ]
+        },
+        "contrast": {
+          "vignette": "Una persona con consolidación nueva y fiebre desarrolla hipoxemia, sepsis o inestabilidad. Requiere hospitalización y microbiología indicada.",
+          "discriminator": "La gravedad cambia el sitio de atención.",
+          "explanation": "La radiografía confirma infiltrado pero no identifica agente por sí sola. La inestabilidad obliga a manejo hospitalario.",
+          "confusable_with": "Neumonía atípica",
+          "why_not": "La consolidación focal y tos productiva apoyan el patrón comunitario típico; la imagen sola no determina microorganismo.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Una persona presenta fiebre, tos productiva y dolor pleurítico. La radiografía muestra consolidación nueva; se evalúan saturación, presión, estado mental y capacidad de manejo ambulatorio antes de elegir antibiótico."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "consolidación nueva"
+            },
+            {
+              "field": "mechanism",
+              "text": "La proliferación microbiana en alvéolos provoca exudado e inflamación, reduciendo intercambio gaseoso; la respuesta sistémica y las comorbilidades determinan gravedad y lugar de atención."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Inflamación alveolar"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Fiebre, estertores y consolidación"
+            },
+            {
+              "field": "initial_action",
+              "text": "Estratificar gravedad e iniciar antibiótico: amoxicilina en adulto ambulatorio sin comorbilidades relevantes; en hospital, ceftriaxona más azitromicina como opción según alergias, riesgo de resistencia y protocolo local. Corregir hipoxemia."
+            },
+            {
+              "field": "action_reason",
+              "text": "La gravedad guía vía, cobertura y hospitalización."
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Sepsis, hipoxemia o inestabilidad"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Hospitalizar y obtener estudios microbiológicos indicados."
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "Aumenta riesgo de deterioro."
+            },
+            {
+              "field": "limits",
+              "text": "La radiografía no identifica por sí sola el agente."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "21.03-02",
+      "parent_topic_id": "21.03-02",
+      "block_id": "21.03",
+      "name": "Neumonía atípica",
+      "answer_kind": "diagnosis",
+      "variants": {
+        "easy": {
+          "vignette": "Una persona presenta infección respiratoria gradual, tos seca y síntomas extrapulmonares. La radiografía muestra infiltrados intersticiales bilaterales sin consolidación lobar dominante; se valora un agente bacteriano de presentación distinta.",
+          "discriminator": "tos seca y síntomas extrapulmonares",
+          "explanation": "Los agentes llamados atípicos pueden producir inflamación intersticial y manifestaciones fuera del pulmón; el patrón se superpone con infecciones virales y no confirma etiología. La cobertura depende del agente probable y escenario.",
+          "confusable_with": "Neumonía lobar típica",
+          "why_not": "El predominio intersticial y síntomas extrapulmonares difieren de consolidación lobar dominante.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Una persona presenta infección respiratoria gradual, tos seca y síntomas extrapulmonares. La radiografía muestra infiltrados intersticiales bilaterales sin consolidación lobar dominante; se valora un agente bacteriano de presentación distinta."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "tos seca y síntomas extrapulmonares"
+            },
+            {
+              "field": "mechanism",
+              "text": "Los agentes llamados atípicos pueden producir inflamación intersticial y manifestaciones fuera del pulmón; el patrón se superpone con infecciones virales y no confirma etiología."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Inflamación pulmonar no lobar"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Tos seca y hallazgos difusos"
+            },
+            {
+              "field": "initial_action",
+              "text": "Evaluar gravedad y contexto y cubrir agentes atípicos con macrólido o alternativa cuando esté indicado."
+            },
+            {
+              "field": "action_reason",
+              "text": "La cobertura depende del agente probable y escenario."
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Datos de gravedad"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Usar estrategia hospitalaria."
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "El término atípico no significa siempre leve."
+            },
+            {
+              "field": "limits",
+              "text": "No indicar oseltamivir o aciclovir para toda neumonía viral."
+            }
+          ]
+        },
+        "medium": {
+          "vignette": "Una persona presenta tos seca de inicio gradual e infiltrados intersticiales bilaterales junto con manifestaciones extrapulmonares. La evaluación dirige cobertura de agentes bacterianos de presentación distinta.",
+          "discriminator": "Patrón gradual intersticial con síntomas extrapulmonares.",
+          "explanation": "La presentación orienta neumonía atípica y requiere valorar gravedad. No se da antiviral universal por toda imagen intersticial.",
+          "confusable_with": "Neumonía lobar típica",
+          "why_not": "El predominio intersticial y síntomas extrapulmonares difieren de consolidación lobar dominante.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Una persona presenta infección respiratoria gradual, tos seca y síntomas extrapulmonares. La radiografía muestra infiltrados intersticiales bilaterales sin consolidación lobar dominante; se valora un agente bacteriano de presentación distinta."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "tos seca y síntomas extrapulmonares"
+            },
+            {
+              "field": "mechanism",
+              "text": "Los agentes llamados atípicos pueden producir inflamación intersticial y manifestaciones fuera del pulmón; el patrón se superpone con infecciones virales y no confirma etiología."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Inflamación pulmonar no lobar"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Tos seca y hallazgos difusos"
+            },
+            {
+              "field": "initial_action",
+              "text": "Evaluar gravedad y contexto y cubrir agentes atípicos con macrólido o alternativa cuando esté indicado."
+            },
+            {
+              "field": "action_reason",
+              "text": "La cobertura depende del agente probable y escenario."
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Datos de gravedad"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Usar estrategia hospitalaria."
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "El término atípico no significa siempre leve."
+            },
+            {
+              "field": "limits",
+              "text": "No indicar oseltamivir o aciclovir para toda neumonía viral."
+            }
+          ]
+        },
+        "contrast": {
+          "vignette": "Una persona con tos seca e infiltrados intersticiales bilaterales muestra datos de gravedad. El término atípico no permite considerarla leve y se usa estrategia hospitalaria.",
+          "discriminator": "La gravedad prevalece sobre la etiqueta atípica.",
+          "explanation": "La presentación no garantiza benignidad. Los antivirales no se indican para toda neumonía viral ni definen este patrón bacteriano.",
+          "confusable_with": "Neumonía lobar típica",
+          "why_not": "El predominio intersticial y síntomas extrapulmonares difieren de consolidación lobar dominante.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Una persona presenta infección respiratoria gradual, tos seca y síntomas extrapulmonares. La radiografía muestra infiltrados intersticiales bilaterales sin consolidación lobar dominante; se valora un agente bacteriano de presentación distinta."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "tos seca y síntomas extrapulmonares"
+            },
+            {
+              "field": "mechanism",
+              "text": "Los agentes llamados atípicos pueden producir inflamación intersticial y manifestaciones fuera del pulmón; el patrón se superpone con infecciones virales y no confirma etiología."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Inflamación pulmonar no lobar"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Tos seca y hallazgos difusos"
+            },
+            {
+              "field": "initial_action",
+              "text": "Evaluar gravedad y contexto y cubrir agentes atípicos con macrólido o alternativa cuando esté indicado."
+            },
+            {
+              "field": "action_reason",
+              "text": "La cobertura depende del agente probable y escenario."
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Datos de gravedad"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Usar estrategia hospitalaria."
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "El término atípico no significa siempre leve."
+            },
+            {
+              "field": "limits",
+              "text": "No indicar oseltamivir o aciclovir para toda neumonía viral."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "21.04-01",
+      "parent_topic_id": "21.04-01",
+      "block_id": "21.04",
+      "name": "Neumonía bacteriana adquirida en la comunidad Niños",
+      "answer_kind": "diagnosis",
+      "variants": {
+        "easy": {
+          "vignette": "Un niño presenta fiebre, tos y respiración rápida con crepitaciones focales. Tolera líquidos y no tiene hipoxemia ni letargia; se evalúa neumonía bacteriana no grave y seguimiento.",
+          "discriminator": "crepitaciones focales",
+          "explanation": "La infección alveolar bacteriana causa inflamación y compromiso ventilatorio; la reserva del niño y su capacidad de alimentación determinan posibilidad de manejo fuera del hospital. El manejo requiere control de respuesta y gravedad.",
+          "confusable_with": "Bronquiolitis",
+          "why_not": "La focalidad crepitante y el contexto infantil difieren del patrón difuso de sibilancias de un lactante; se integra edad y clínica.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Un niño presenta fiebre, tos y respiración rápida con crepitaciones focales. Tolera líquidos y no tiene hipoxemia ni letargia; se evalúa neumonía bacteriana no grave y seguimiento."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "crepitaciones focales"
+            },
+            {
+              "field": "mechanism",
+              "text": "La infección alveolar bacteriana causa inflamación y compromiso ventilatorio; la reserva del niño y su capacidad de alimentación determinan posibilidad de manejo fuera del hospital."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Inflamación alveolar focal"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Fiebre, taquipnea y crepitaciones"
+            },
+            {
+              "field": "initial_action",
+              "text": "Tratar con amoxicilina oral si se considera bacteriana no grave y programar reevaluación y datos de alarma."
+            },
+            {
+              "field": "action_reason",
+              "text": "El manejo requiere control de respuesta y gravedad."
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Hipoxemia, letargia o intolerancia oral"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Hospitalizar."
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "Son criterios de enfermedad grave."
+            },
+            {
+              "field": "limits",
+              "text": "Los virus son frecuentes; los biomarcadores solos no seleccionan tratamiento."
+            }
+          ]
+        },
+        "medium": {
+          "vignette": "Un niño tiene fiebre, taquipnea y crepitaciones focales. Bebe y no tiene hipoxemia ni letargia, por lo que se valora seguimiento ambulatorio.",
+          "discriminator": "Foco respiratorio sin criterios clínicos de gravedad.",
+          "explanation": "La infección alveolar bacteriana causa inflamación y compromiso ventilatorio; la reserva del niño y su capacidad de alimentación determinan posibilidad de manejo fuera del hospital. Tratar con amoxicilina oral si se considera bacteriana no grave y programar reevaluación y datos de alarma.",
+          "confusable_with": "Bronquiolitis",
+          "why_not": "La focalidad crepitante y el contexto infantil difieren del patrón difuso de sibilancias de un lactante; se integra edad y clínica.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Un niño presenta fiebre, tos y respiración rápida con crepitaciones focales. Tolera líquidos y no tiene hipoxemia ni letargia; se evalúa neumonía bacteriana no grave y seguimiento."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "crepitaciones focales"
+            },
+            {
+              "field": "mechanism",
+              "text": "La infección alveolar bacteriana causa inflamación y compromiso ventilatorio; la reserva del niño y su capacidad de alimentación determinan posibilidad de manejo fuera del hospital."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Inflamación alveolar focal"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Fiebre, taquipnea y crepitaciones"
+            },
+            {
+              "field": "initial_action",
+              "text": "Tratar con amoxicilina oral si se considera bacteriana no grave y programar reevaluación y datos de alarma."
+            },
+            {
+              "field": "action_reason",
+              "text": "El manejo requiere control de respuesta y gravedad."
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Hipoxemia, letargia o intolerancia oral"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Hospitalizar."
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "Son criterios de enfermedad grave."
+            },
+            {
+              "field": "limits",
+              "text": "Los virus son frecuentes; los biomarcadores solos no seleccionan tratamiento."
+            }
+          ]
+        },
+        "contrast": {
+          "vignette": "Un niño con fiebre y crepitaciones focales presenta hipoxemia o incapacidad para beber. Se requiere hospitalización.",
+          "discriminator": "Datos de gravedad modifican lugar de tratamiento.",
+          "explanation": "La hipoxemia, letargia o intolerancia oral requieren ingreso. Los biomarcadores solos no establecen etiología bacteriana.",
+          "confusable_with": "Bronquiolitis",
+          "why_not": "La focalidad crepitante y el contexto infantil difieren del patrón difuso de sibilancias de un lactante; se integra edad y clínica.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Un niño presenta fiebre, tos y respiración rápida con crepitaciones focales. Tolera líquidos y no tiene hipoxemia ni letargia; se evalúa neumonía bacteriana no grave y seguimiento."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "crepitaciones focales"
+            },
+            {
+              "field": "mechanism",
+              "text": "La infección alveolar bacteriana causa inflamación y compromiso ventilatorio; la reserva del niño y su capacidad de alimentación determinan posibilidad de manejo fuera del hospital."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Inflamación alveolar focal"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Fiebre, taquipnea y crepitaciones"
+            },
+            {
+              "field": "initial_action",
+              "text": "Tratar con amoxicilina oral si se considera bacteriana no grave y programar reevaluación y datos de alarma."
+            },
+            {
+              "field": "action_reason",
+              "text": "El manejo requiere control de respuesta y gravedad."
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Hipoxemia, letargia o intolerancia oral"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Hospitalizar."
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "Son criterios de enfermedad grave."
+            },
+            {
+              "field": "limits",
+              "text": "Los virus son frecuentes; los biomarcadores solos no seleccionan tratamiento."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "21.05-01",
+      "parent_topic_id": "21.05-01",
+      "block_id": "21.05",
+      "name": "Influenza",
+      "answer_kind": "diagnosis",
+      "variants": {
+        "easy": {
+          "vignette": "Una embarazada presenta fiebre abrupta, mialgias y tos seca durante circulación estacional. Lleva tres días enferma, sin vacunación reciente, y comienza con disnea al caminar y decaimiento intenso.",
+          "discriminator": "fiebre abrupta, mialgias y tos seca",
+          "explanation": "El virus infecta epitelio respiratorio y produce enfermedad sistémica de inicio brusco; edad, embarazo y comorbilidades aumentan riesgo de neumonía y falla respiratoria. La demora reduce beneficio, especialmente en alto riesgo.",
+          "confusable_with": "Resfriado sin riesgo de complicación",
+          "why_not": "La aparición abrupta de síntomas sistémicos y el riesgo gestacional o gravedad exigen otro nivel de valoración.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Una embarazada presenta fiebre abrupta, mialgias y tos seca durante circulación estacional. Lleva tres días enferma, sin vacunación reciente, y comienza con disnea al caminar y decaimiento intenso."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "fiebre abrupta, mialgias y tos seca"
+            },
+            {
+              "field": "mechanism",
+              "text": "El virus infecta epitelio respiratorio y produce enfermedad sistémica de inicio brusco; edad, embarazo y comorbilidades aumentan riesgo de neumonía y falla respiratoria."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Infección respiratoria viral aguda"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Fiebre y mialgias de inicio abrupto"
+            },
+            {
+              "field": "initial_action",
+              "text": "Iniciar oseltamivir temprano si está indicado por riesgo o gravedad y obtener prueba según escenario."
+            },
+            {
+              "field": "action_reason",
+              "text": "La demora reduce beneficio, especialmente en alto riesgo."
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Hospitalización o enfermedad grave"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Tratar aunque hayan transcurrido más de 48 horas."
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "La fuente no limita estos casos al inicio temprano."
+            },
+            {
+              "field": "limits",
+              "text": "La vacunación anual es prevención; una prueba antigénica negativa no excluye siempre infección."
+            }
+          ]
+        },
+        "medium": {
+          "vignette": "Durante circulación estacional, una embarazada tiene comienzo abrupto de fiebre, mialgias y tos seca. Está en el tercer día y comienza con disnea.",
+          "discriminator": "Inicio abrupto estacional en huésped de riesgo.",
+          "explanation": "El virus infecta epitelio respiratorio y produce enfermedad sistémica de inicio brusco; edad, embarazo y comorbilidades aumentan riesgo de neumonía y falla respiratoria. Iniciar oseltamivir temprano si está indicado por riesgo o gravedad y obtener prueba según escenario.",
+          "confusable_with": "Resfriado sin riesgo de complicación",
+          "why_not": "La aparición abrupta de síntomas sistémicos y el riesgo gestacional o gravedad exigen otro nivel de valoración.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Una embarazada presenta fiebre abrupta, mialgias y tos seca durante circulación estacional. Lleva tres días enferma, sin vacunación reciente, y comienza con disnea al caminar y decaimiento intenso."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "fiebre abrupta, mialgias y tos seca"
+            },
+            {
+              "field": "mechanism",
+              "text": "El virus infecta epitelio respiratorio y produce enfermedad sistémica de inicio brusco; edad, embarazo y comorbilidades aumentan riesgo de neumonía y falla respiratoria."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Infección respiratoria viral aguda"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Fiebre y mialgias de inicio abrupto"
+            },
+            {
+              "field": "initial_action",
+              "text": "Iniciar oseltamivir temprano si está indicado por riesgo o gravedad y obtener prueba según escenario."
+            },
+            {
+              "field": "action_reason",
+              "text": "La demora reduce beneficio, especialmente en alto riesgo."
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Hospitalización o enfermedad grave"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Tratar aunque hayan transcurrido más de 48 horas."
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "La fuente no limita estos casos al inicio temprano."
+            },
+            {
+              "field": "limits",
+              "text": "La vacunación anual es prevención; una prueba antigénica negativa no excluye siempre infección."
+            }
+          ]
+        },
+        "contrast": {
+          "vignette": "Un hombre presenta inicio abrupto de fiebre, mialgias y tos seca durante circulación estacional. Después de varios días desarrolla disnea e hipoxemia y requiere hospitalización.",
+          "discriminator": "Inicio sistémico abrupto estacional con progresión respiratoria grave.",
+          "explanation": "El patrón clínico orienta la infección estacional y se confirma según escenario. La hospitalización o gravedad permite tratar aunque hayan pasado más de 48 horas; ese plazo no sustituye los datos diagnósticos.",
+          "confusable_with": "Resfriado sin riesgo de complicación",
+          "why_not": "La aparición abrupta de síntomas sistémicos y el riesgo gestacional o gravedad exigen otro nivel de valoración.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Una embarazada presenta fiebre abrupta, mialgias y tos seca durante circulación estacional. Lleva tres días enferma, sin vacunación reciente, y comienza con disnea al caminar y decaimiento intenso."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "fiebre abrupta, mialgias y tos seca"
+            },
+            {
+              "field": "mechanism",
+              "text": "El virus infecta epitelio respiratorio y produce enfermedad sistémica de inicio brusco; edad, embarazo y comorbilidades aumentan riesgo de neumonía y falla respiratoria."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Infección respiratoria viral aguda"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Fiebre y mialgias de inicio abrupto"
+            },
+            {
+              "field": "initial_action",
+              "text": "Iniciar oseltamivir temprano si está indicado por riesgo o gravedad y obtener prueba según escenario."
+            },
+            {
+              "field": "action_reason",
+              "text": "La demora reduce beneficio, especialmente en alto riesgo."
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Hospitalización o enfermedad grave"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Tratar aunque hayan transcurrido más de 48 horas."
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "La fuente no limita estos casos al inicio temprano."
+            },
+            {
+              "field": "limits",
+              "text": "La vacunación anual es prevención; una prueba antigénica negativa no excluye siempre infección."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "21.05-02",
+      "parent_topic_id": "21.05-02",
+      "block_id": "21.05",
+      "name": "COVID-19",
+      "answer_kind": "diagnosis",
+      "variants": {
+        "easy": {
+          "vignette": "Una persona tiene fiebre y tos de inicio reciente. La prueba para SARS-CoV-2 es positiva y no necesita oxígeno, aunque tiene alto riesgo de progresión.",
+          "discriminator": "Infección respiratoria confirmada en un huésped de alto riesgo.",
+          "explanation": "El resultado confirma la etiología del cuadro. El riesgo orienta tratamiento temprano elegible tras revisar interacciones y función orgánica.",
+          "confusable_with": "Aplicar reglas farmacológicas de 2022 a todos los pacientes",
+          "why_not": "La elegibilidad actual y la gravedad determinan la estrategia.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Una persona presenta tos y fiebre con prueba positiva para SARS-CoV-2. No necesita oxígeno, pero tiene riesgo alto de progresión y pocos días de síntomas; se revisan interacciones y función renal."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "riesgo alto de progresión"
+            },
+            {
+              "field": "mechanism",
+              "text": "El virus entra por interacción de proteína S y ACE2 y puede causar inflamación respiratoria; el riesgo del huésped determina beneficio de antiviral precoz."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Infección viral y respuesta inflamatoria"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Síntomas respiratorios con riesgo de progresión"
+            },
+            {
+              "field": "initial_action",
+              "text": "En alto riesgo elegible, iniciar nirmatrelvir/ritonavir dentro de cinco días tras revisar interacciones y función renal/hepática; usar remdesivir IV por tres días, iniciado dentro de siete días, si la primera opción no es apropiada."
+            },
+            {
+              "field": "action_reason",
+              "text": "La selección depende de riesgo y tiempo de evolución."
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Necesidad de oxígeno"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Evaluar hospitalización y tratamiento de enfermedad grave."
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "La estrategia difiere de manejo ambulatorio."
+            },
+            {
+              "field": "limits",
+              "text": "Sotrovimab y reglas de 2022 del libro no se adoptan como opciones actuales universales."
+            },
+            {
+              "field": "source_corrections.0",
+              "text": "Se priorizan nirmatrelvir/ritonavir o remdesivir en pacientes elegibles de alto riesgo. No se conserva sotrovimab como opción actual universal ni reglas de función renal de 2022."
+            }
+          ],
+          "source_evidence": [
+            {
+              "page": 692,
+              "quote": "Prueba antigénica rápida:"
+            }
+          ]
+        },
+        "medium": {
+          "vignette": "Una persona con mialgias y cefalea desarrolla pérdida del olfato junto con tos. La prueba molecular detecta SARS-CoV-2.",
+          "discriminator": "Anosmia en un cuadro respiratorio con confirmación molecular.",
+          "explanation": "La anosmia es una manifestación posible. La prueba confirma etiología y la gravedad se evalúa por estado respiratorio.",
+          "confusable_with": "Aplicar reglas farmacológicas de 2022 a todos los pacientes",
+          "why_not": "La elegibilidad actual y la gravedad determinan la estrategia.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Una persona presenta tos y fiebre con prueba positiva para SARS-CoV-2. No necesita oxígeno, pero tiene riesgo alto de progresión y pocos días de síntomas; se revisan interacciones y función renal."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "riesgo alto de progresión"
+            },
+            {
+              "field": "mechanism",
+              "text": "El virus entra por interacción de proteína S y ACE2 y puede causar inflamación respiratoria; el riesgo del huésped determina beneficio de antiviral precoz."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Infección viral y respuesta inflamatoria"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Síntomas respiratorios con riesgo de progresión"
+            },
+            {
+              "field": "initial_action",
+              "text": "En alto riesgo elegible, iniciar nirmatrelvir/ritonavir dentro de cinco días tras revisar interacciones y función renal/hepática; usar remdesivir IV por tres días, iniciado dentro de siete días, si la primera opción no es apropiada."
+            },
+            {
+              "field": "action_reason",
+              "text": "La selección depende de riesgo y tiempo de evolución."
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Necesidad de oxígeno"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Evaluar hospitalización y tratamiento de enfermedad grave."
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "La estrategia difiere de manejo ambulatorio."
+            },
+            {
+              "field": "limits",
+              "text": "Sotrovimab y reglas de 2022 del libro no se adoptan como opciones actuales universales."
+            },
+            {
+              "field": "source_corrections.0",
+              "text": "Se priorizan nirmatrelvir/ritonavir o remdesivir en pacientes elegibles de alto riesgo. No se conserva sotrovimab como opción actual universal ni reglas de función renal de 2022."
+            }
+          ],
+          "source_evidence": [
+            {
+              "page": 691,
+              "quote": "disnea (29%) y anosmia (10%)."
+            }
+          ]
+        },
+        "contrast": {
+          "vignette": "Una persona con infección respiratoria confirmada por SARS-CoV-2 desarrolla neumonía, disnea e hipoxemia que requiere oxígeno.",
+          "discriminator": "Enfermedad confirmada con progresión respiratoria.",
+          "explanation": "La necesidad de oxígeno cambia el manejo a evaluación de enfermedad grave y posible hospitalización. No se aplican de forma universal reglas farmacológicas de 2022.",
+          "confusable_with": "Aplicar reglas farmacológicas de 2022 a todos los pacientes",
+          "why_not": "La elegibilidad actual y la gravedad determinan la estrategia.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Una persona presenta tos y fiebre con prueba positiva para SARS-CoV-2. No necesita oxígeno, pero tiene riesgo alto de progresión y pocos días de síntomas; se revisan interacciones y función renal."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "riesgo alto de progresión"
+            },
+            {
+              "field": "mechanism",
+              "text": "El virus entra por interacción de proteína S y ACE2 y puede causar inflamación respiratoria; el riesgo del huésped determina beneficio de antiviral precoz."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Infección viral y respuesta inflamatoria"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Síntomas respiratorios con riesgo de progresión"
+            },
+            {
+              "field": "initial_action",
+              "text": "En alto riesgo elegible, iniciar nirmatrelvir/ritonavir dentro de cinco días tras revisar interacciones y función renal/hepática; usar remdesivir IV por tres días, iniciado dentro de siete días, si la primera opción no es apropiada."
+            },
+            {
+              "field": "action_reason",
+              "text": "La selección depende de riesgo y tiempo de evolución."
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Necesidad de oxígeno"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Evaluar hospitalización y tratamiento de enfermedad grave."
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "La estrategia difiere de manejo ambulatorio."
+            },
+            {
+              "field": "limits",
+              "text": "Sotrovimab y reglas de 2022 del libro no se adoptan como opciones actuales universales."
+            },
+            {
+              "field": "source_corrections.0",
+              "text": "Se priorizan nirmatrelvir/ritonavir o remdesivir en pacientes elegibles de alto riesgo. No se conserva sotrovimab como opción actual universal ni reglas de función renal de 2022."
+            }
+          ],
+          "source_evidence": [
+            {
+              "page": 692,
+              "quote": "Signos clínicos o radiográficos de"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "21.05-03",
+      "parent_topic_id": "21.05-03",
+      "block_id": "21.05",
+      "name": "COVID-19 en el embarazo",
+      "answer_kind": "diagnosis",
+      "variants": {
+        "easy": {
+          "vignette": "Una embarazada presenta tos y fiebre desde hace dos días con prueba positiva para SARS-CoV-2. Está estable, sin hipoxemia ni alarma obstétrica, y tiene obesidad y diabetes pregestacional.",
+          "discriminator": "sin hipoxemia ni alarma obstétrica",
+          "explanation": "La infección respiratoria durante embarazo puede progresar y afectar salud materna y perinatal; el manejo combina gravedad respiratoria, riesgo individual y condiciones obstétricas. El embarazo modifica riesgo y coordinación asistencial.",
+          "confusable_with": "Indicar cesárea o suspender lactancia solo por infección",
+          "why_not": "La fuente no impone estas acciones por el diagnóstico aislado.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Una embarazada presenta tos y fiebre desde hace dos días con prueba positiva para SARS-CoV-2. Está estable, sin hipoxemia ni alarma obstétrica, y tiene obesidad y diabetes pregestacional."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "sin hipoxemia ni alarma obstétrica"
+            },
+            {
+              "field": "mechanism",
+              "text": "La infección respiratoria durante embarazo puede progresar y afectar salud materna y perinatal; el manejo combina gravedad respiratoria, riesgo individual y condiciones obstétricas."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Enfermedad respiratoria materna"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Riesgo de complicación materna y perinatal"
+            },
+            {
+              "field": "initial_action",
+              "text": "Evaluar tratamiento temprano por riesgo materno; considerar nirmatrelvir/ritonavir dentro de cinco días si es elegible, tras revisar interacciones y función renal/hepática. Vigilar alarma respiratoria y obstétrica y mantener atención prenatal."
+            },
+            {
+              "field": "action_reason",
+              "text": "El embarazo modifica riesgo y coordinación asistencial."
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Lactancia con madre infectada"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Mantenerla con higiene y medidas respiratorias apropiadas."
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "La fuente permite lactancia con prevención de contacto."
+            },
+            {
+              "field": "limits",
+              "text": "No se indica cesárea ni suspensión de lactancia solo por infección."
+            }
+          ]
+        },
+        "medium": {
+          "vignette": "Una embarazada presenta mialgias, tos y pérdida del olfato. Una prueba molecular confirma SARS-CoV-2 y se evalúan riesgo materno y bienestar obstétrico.",
+          "discriminator": "Enfermedad confirmada en gestación con manifestación olfatoria.",
+          "explanation": "La confirmación etiológica se integra con estado respiratorio y obstétrico. El embarazo requiere evaluación de tratamiento temprano según elegibilidad.",
+          "confusable_with": "Indicar cesárea o suspender lactancia solo por infección",
+          "why_not": "La fuente no impone estas acciones por el diagnóstico aislado.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Una embarazada presenta tos y fiebre desde hace dos días con prueba positiva para SARS-CoV-2. Está estable, sin hipoxemia ni alarma obstétrica, y tiene obesidad y diabetes pregestacional."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "sin hipoxemia ni alarma obstétrica"
+            },
+            {
+              "field": "mechanism",
+              "text": "La infección respiratoria durante embarazo puede progresar y afectar salud materna y perinatal; el manejo combina gravedad respiratoria, riesgo individual y condiciones obstétricas."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Enfermedad respiratoria materna"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Riesgo de complicación materna y perinatal"
+            },
+            {
+              "field": "initial_action",
+              "text": "Evaluar tratamiento temprano por riesgo materno; considerar nirmatrelvir/ritonavir dentro de cinco días si es elegible, tras revisar interacciones y función renal/hepática. Vigilar alarma respiratoria y obstétrica y mantener atención prenatal."
+            },
+            {
+              "field": "action_reason",
+              "text": "El embarazo modifica riesgo y coordinación asistencial."
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Lactancia con madre infectada"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Mantenerla con higiene y medidas respiratorias apropiadas."
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "La fuente permite lactancia con prevención de contacto."
+            },
+            {
+              "field": "limits",
+              "text": "No se indica cesárea ni suspensión de lactancia solo por infección."
+            }
+          ],
+          "source_evidence": [
+            {
+              "page": 691,
+              "quote": "disnea (29%) y anosmia (10%)."
+            }
+          ]
+        },
+        "contrast": {
+          "vignette": "Una mujer que aún está embarazada tiene neumonía e hipoxemia con una prueba positiva para SARS-CoV-2. Se requiere valorar enfermedad respiratoria grave y condiciones obstétricas.",
+          "discriminator": "La hipoxemia cambia gravedad en una infección confirmada durante gestación.",
+          "explanation": "Se evalúa hospitalización y manejo de enfermedad grave. La infección sola no determina cesárea; las condiciones maternas y obstétricas guían la atención.",
+          "confusable_with": "Indicar cesárea o suspender lactancia solo por infección",
+          "why_not": "La fuente no impone estas acciones por el diagnóstico aislado.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Una embarazada presenta tos y fiebre desde hace dos días con prueba positiva para SARS-CoV-2. Está estable, sin hipoxemia ni alarma obstétrica, y tiene obesidad y diabetes pregestacional."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "sin hipoxemia ni alarma obstétrica"
+            },
+            {
+              "field": "mechanism",
+              "text": "La infección respiratoria durante embarazo puede progresar y afectar salud materna y perinatal; el manejo combina gravedad respiratoria, riesgo individual y condiciones obstétricas."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Enfermedad respiratoria materna"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Riesgo de complicación materna y perinatal"
+            },
+            {
+              "field": "initial_action",
+              "text": "Evaluar tratamiento temprano por riesgo materno; considerar nirmatrelvir/ritonavir dentro de cinco días si es elegible, tras revisar interacciones y función renal/hepática. Vigilar alarma respiratoria y obstétrica y mantener atención prenatal."
+            },
+            {
+              "field": "action_reason",
+              "text": "El embarazo modifica riesgo y coordinación asistencial."
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Lactancia con madre infectada"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Mantenerla con higiene y medidas respiratorias apropiadas."
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "La fuente permite lactancia con prevención de contacto."
+            },
+            {
+              "field": "limits",
+              "text": "No se indica cesárea ni suspensión de lactancia solo por infección."
+            }
+          ],
+          "source_evidence": [
+            {
+              "page": 692,
+              "quote": "Signos clínicos o radiográficos de"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "21.06-01",
+      "parent_topic_id": "21.06-01",
+      "block_id": "21.06",
+      "name": "Derrame pleural",
+      "answer_kind": "diagnosis",
+      "variants": {
+        "easy": {
+          "vignette": "Una persona presenta disnea, matidez y reducción de ruidos respiratorios en una base. La ecografía confirma líquido pleural; se necesita decidir si tomar muestra y si existe infección que requiere drenaje.",
+          "discriminator": "líquido pleural",
+          "explanation": "El desequilibrio de presión o aumento de permeabilidad acumula líquido pleural; la composición distingue procesos sistémicos de inflamación y orienta necesidad de control de foco. La causa y la infección definen tratamiento.",
+          "confusable_with": "Observar todo derrame sin estudiar infección",
+          "why_not": "Pus, microorganismos o perfil infeccioso requieren control del foco.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Una persona presenta disnea, matidez y reducción de ruidos respiratorios en una base. La ecografía confirma líquido pleural; se necesita decidir si tomar muestra y si existe infección que requiere drenaje."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "líquido pleural"
+            },
+            {
+              "field": "mechanism",
+              "text": "El desequilibrio de presión o aumento de permeabilidad acumula líquido pleural; la composición distingue procesos sistémicos de inflamación y orienta necesidad de control de foco."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Acumulación pleural"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Matidez y menor ventilación basal"
+            },
+            {
+              "field": "initial_action",
+              "text": "Caracterizar con imagen y realizar toracocentesis diagnóstica cuando esté indicada, con análisis del líquido."
+            },
+            {
+              "field": "action_reason",
+              "text": "La causa y la infección definen tratamiento."
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Pus, microorganismos o derrame paraneumónico con pH ≤7.2"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Iniciar antibióticos y colocar drenaje pleural si existe volumen accesible con seguridad ecográfica."
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "La infección pleural necesita control del foco."
+            },
+            {
+              "field": "limits",
+              "text": "La tabla de Light tiene un error en la fila de trasudado; se precisa con guía vigente."
+            },
+            {
+              "field": "source_corrections.0",
+              "text": "La LDH pleural mayor de dos tercios del límite superior sérico favorece exudado; la tabla del libro coloca el mismo signo en ambos tipos. El drenaje depende de perfil de infección y contexto."
+            }
+          ]
+        },
+        "medium": {
+          "vignette": "Una persona con cirrosis e hipoalbuminemia presenta disnea. La ecografía muestra líquido en el espacio pleural y disminuyen los ruidos respiratorios en la base.",
+          "discriminator": "Líquido pleural en contexto de disminución de presión oncótica.",
+          "explanation": "El líquido puede originarse por alteración de fuerzas hidrostáticas u oncóticas. El contexto dirige el estudio y no implica drenaje por infección de forma automática.",
+          "confusable_with": "Observar todo derrame sin estudiar infección",
+          "why_not": "Pus, microorganismos o perfil infeccioso requieren control del foco.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Una persona presenta disnea, matidez y reducción de ruidos respiratorios en una base. La ecografía confirma líquido pleural; se necesita decidir si tomar muestra y si existe infección que requiere drenaje."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "líquido pleural"
+            },
+            {
+              "field": "mechanism",
+              "text": "El desequilibrio de presión o aumento de permeabilidad acumula líquido pleural; la composición distingue procesos sistémicos de inflamación y orienta necesidad de control de foco."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Acumulación pleural"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Matidez y menor ventilación basal"
+            },
+            {
+              "field": "initial_action",
+              "text": "Caracterizar con imagen y realizar toracocentesis diagnóstica cuando esté indicada, con análisis del líquido."
+            },
+            {
+              "field": "action_reason",
+              "text": "La causa y la infección definen tratamiento."
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Pus, microorganismos o derrame paraneumónico con pH ≤7.2"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Iniciar antibióticos y colocar drenaje pleural si existe volumen accesible con seguridad ecográfica."
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "La infección pleural necesita control del foco."
+            },
+            {
+              "field": "limits",
+              "text": "La tabla de Light tiene un error en la fila de trasudado; se precisa con guía vigente."
+            },
+            {
+              "field": "source_corrections.0",
+              "text": "La LDH pleural mayor de dos tercios del límite superior sérico favorece exudado; la tabla del libro coloca el mismo signo en ambos tipos. El drenaje depende de perfil de infección y contexto."
+            }
+          ],
+          "source_evidence": [
+            {
+              "page": 697,
+              "quote": "Cirrosis hepática."
+            }
+          ]
+        },
+        "contrast": {
+          "vignette": "Una persona tiene marcada asimetría torácica y disnea. La imagen muestra líquido que ocupa un hemitórax y desplaza el mediastino al lado contrario.",
+          "discriminator": "Acumulación masiva con desplazamiento mediastínico.",
+          "explanation": "El volumen modifica repercusión y prioridad. Se caracteriza etiología y se selecciona drenaje según clínica y seguridad.",
+          "confusable_with": "Observar todo derrame sin estudiar infección",
+          "why_not": "Pus, microorganismos o perfil infeccioso requieren control del foco.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Una persona presenta disnea, matidez y reducción de ruidos respiratorios en una base. La ecografía confirma líquido pleural; se necesita decidir si tomar muestra y si existe infección que requiere drenaje."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "líquido pleural"
+            },
+            {
+              "field": "mechanism",
+              "text": "El desequilibrio de presión o aumento de permeabilidad acumula líquido pleural; la composición distingue procesos sistémicos de inflamación y orienta necesidad de control de foco."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Acumulación pleural"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Matidez y menor ventilación basal"
+            },
+            {
+              "field": "initial_action",
+              "text": "Caracterizar con imagen y realizar toracocentesis diagnóstica cuando esté indicada, con análisis del líquido."
+            },
+            {
+              "field": "action_reason",
+              "text": "La causa y la infección definen tratamiento."
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Pus, microorganismos o derrame paraneumónico con pH ≤7.2"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Iniciar antibióticos y colocar drenaje pleural si existe volumen accesible con seguridad ecográfica."
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "La infección pleural necesita control del foco."
+            },
+            {
+              "field": "limits",
+              "text": "La tabla de Light tiene un error en la fila de trasudado; se precisa con guía vigente."
+            },
+            {
+              "field": "source_corrections.0",
+              "text": "La LDH pleural mayor de dos tercios del límite superior sérico favorece exudado; la tabla del libro coloca el mismo signo en ambos tipos. El drenaje depende de perfil de infección y contexto."
+            }
+          ],
+          "source_evidence": [
+            {
+              "page": 698,
+              "quote": "desplazan mediastino al lado opuesto."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "21.07-01",
+      "parent_topic_id": "21.07-01",
+      "block_id": "21.07",
+      "name": "Neumocistosis",
+      "answer_kind": "diagnosis",
+      "variants": {
+        "easy": {
+          "vignette": "Una persona con VIH avanzado tiene disnea subaguda, tos seca e hipoxemia. El cuadro dura semanas, la radiografía muestra infiltrados intersticiales bilaterales y la auscultación ofrece pocos hallazgos.",
+          "discriminator": "disnea subaguda, tos seca e hipoxemia",
+          "explanation": "La infección oportunista alveolar ocurre con inmunidad celular reducida y produce compromiso difuso del intercambio gaseoso, con disnea y oxigenación alterada desproporcionadas a veces a auscultación. La dosis profiláctica del libro no trata neumonía activa.",
+          "confusable_with": "Neumonía bacteriana focal",
+          "why_not": "La evolución de semanas, tos seca y patrón intersticial con poca auscultación favorecen neumonía oportunista.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Una persona con VIH avanzado tiene disnea subaguda, tos seca e hipoxemia. El cuadro dura semanas, la radiografía muestra infiltrados intersticiales bilaterales y la auscultación ofrece pocos hallazgos."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "disnea subaguda, tos seca e hipoxemia"
+            },
+            {
+              "field": "mechanism",
+              "text": "La infección oportunista alveolar ocurre con inmunidad celular reducida y produce compromiso difuso del intercambio gaseoso, con disnea y oxigenación alterada desproporcionadas a veces a auscultación."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Daño alveolar oportunista"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Disnea y tos no productiva"
+            },
+            {
+              "field": "initial_action",
+              "text": "Obtener muestra respiratoria sin retrasar TMP-SMX si la sospecha es alta: TMP 15–20 mg/kg/día dividido, con ajuste renal; tratar 21 días. Evaluar oxigenación y necesidad de hospitalización."
+            },
+            {
+              "field": "action_reason",
+              "text": "La dosis profiláctica del libro no trata neumonía activa."
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "PaO2 <70 mmHg al aire o gradiente alveoloarterial ≥35 mmHg"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Añadir corticoide sistémico, idealmente dentro de 72 horas de iniciar tratamiento."
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "Reduce complicaciones en enfermedad moderada o grave."
+            },
+            {
+              "field": "limits",
+              "text": "No equiparar tratamiento y profilaxis."
+            },
+            {
+              "field": "source_corrections.0",
+              "text": "La dosis diaria única del libro es profilaxis. El tratamiento requiere dosis por peso y ajuste renal y valorar corticoide según gravedad respiratoria."
+            }
+          ]
+        },
+        "medium": {
+          "vignette": "Una persona con inmunosupresión celular presenta fiebre, tos seca e hipoxemia moderada o grave. El estudio de una muestra respiratoria con tinción de plata apoya el agente oportunista.",
+          "discriminator": "Patrón clínico y evidencia respiratoria en enfermedad más grave.",
+          "explanation": "Se trata con dosis terapéutica y ajuste renal y se valora corticoide según oxigenación. No se usa una pauta de profilaxis para enfermedad activa.",
+          "confusable_with": "Neumonía bacteriana focal",
+          "why_not": "La evolución de semanas, tos seca y patrón intersticial con poca auscultación favorecen neumonía oportunista.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Una persona con VIH avanzado tiene disnea subaguda, tos seca e hipoxemia. El cuadro dura semanas, la radiografía muestra infiltrados intersticiales bilaterales y la auscultación ofrece pocos hallazgos."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "disnea subaguda, tos seca e hipoxemia"
+            },
+            {
+              "field": "mechanism",
+              "text": "La infección oportunista alveolar ocurre con inmunidad celular reducida y produce compromiso difuso del intercambio gaseoso, con disnea y oxigenación alterada desproporcionadas a veces a auscultación."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Daño alveolar oportunista"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Disnea y tos no productiva"
+            },
+            {
+              "field": "initial_action",
+              "text": "Obtener muestra respiratoria sin retrasar TMP-SMX si la sospecha es alta: TMP 15–20 mg/kg/día dividido, con ajuste renal; tratar 21 días. Evaluar oxigenación y necesidad de hospitalización."
+            },
+            {
+              "field": "action_reason",
+              "text": "La dosis profiláctica del libro no trata neumonía activa."
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "PaO2 <70 mmHg al aire o gradiente alveoloarterial ≥35 mmHg"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Añadir corticoide sistémico, idealmente dentro de 72 horas de iniciar tratamiento."
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "Reduce complicaciones en enfermedad moderada o grave."
+            },
+            {
+              "field": "limits",
+              "text": "No equiparar tratamiento y profilaxis."
+            },
+            {
+              "field": "source_corrections.0",
+              "text": "La dosis diaria única del libro es profilaxis. El tratamiento requiere dosis por peso y ajuste renal y valorar corticoide según gravedad respiratoria."
+            }
+          ],
+          "source_evidence": [
+            {
+              "page": 712,
+              "quote": "Metenamina de plata"
+            }
+          ]
+        },
+        "contrast": {
+          "vignette": "Una persona que recibió corticoides sistémicos desarrolla neumonía de tos no productiva y disnea progresiva. La PCR respiratoria confirma el hongo oportunista buscado.",
+          "discriminator": "Inmunosupresión farmacológica con confirmación molecular.",
+          "explanation": "El cuadro puede ocurrir fuera del VIH. La PCR es útil en ese contexto y se selecciona tratamiento por peso, función renal y gravedad.",
+          "confusable_with": "Neumonía bacteriana focal",
+          "why_not": "La evolución de semanas, tos seca y patrón intersticial con poca auscultación favorecen neumonía oportunista.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Una persona con VIH avanzado tiene disnea subaguda, tos seca e hipoxemia. El cuadro dura semanas, la radiografía muestra infiltrados intersticiales bilaterales y la auscultación ofrece pocos hallazgos."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "disnea subaguda, tos seca e hipoxemia"
+            },
+            {
+              "field": "mechanism",
+              "text": "La infección oportunista alveolar ocurre con inmunidad celular reducida y produce compromiso difuso del intercambio gaseoso, con disnea y oxigenación alterada desproporcionadas a veces a auscultación."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Daño alveolar oportunista"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Disnea y tos no productiva"
+            },
+            {
+              "field": "initial_action",
+              "text": "Obtener muestra respiratoria sin retrasar TMP-SMX si la sospecha es alta: TMP 15–20 mg/kg/día dividido, con ajuste renal; tratar 21 días. Evaluar oxigenación y necesidad de hospitalización."
+            },
+            {
+              "field": "action_reason",
+              "text": "La dosis profiláctica del libro no trata neumonía activa."
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "PaO2 <70 mmHg al aire o gradiente alveoloarterial ≥35 mmHg"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Añadir corticoide sistémico, idealmente dentro de 72 horas de iniciar tratamiento."
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "Reduce complicaciones en enfermedad moderada o grave."
+            },
+            {
+              "field": "limits",
+              "text": "No equiparar tratamiento y profilaxis."
+            },
+            {
+              "field": "source_corrections.0",
+              "text": "La dosis diaria única del libro es profilaxis. El tratamiento requiere dosis por peso y ajuste renal y valorar corticoide según gravedad respiratoria."
+            }
+          ],
+          "source_evidence": [
+            {
+              "page": 712,
+              "quote": "en las que recibieron corticoides sistémicos."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "21.08-01",
+      "parent_topic_id": "21.08-01",
+      "block_id": "21.08",
+      "name": "Neumoconiosis",
+      "answer_kind": "diagnosis",
+      "variants": {
+        "easy": {
+          "vignette": "Un trabajador que corta piedra presenta disnea crónica tras años de exposición a polvo. La radiografía muestra nódulos superiores y ganglios calcificados en cáscara de huevo; se evalúa función respiratoria.",
+          "discriminator": "corta piedra",
+          "explanation": "La inhalación de polvo mineral activa inflamación y depósito de colágeno, causando fibrosis cuya distribución y riesgos asociados dependen del agente y exposición acumulada. La prevención de nueva dosis es la intervención central.",
+          "confusable_with": "Tuberculosis aislada",
+          "why_not": "La exposición acumulada y ganglios en cáscara de huevo apoyan daño por polvo; la tuberculosis puede coexistir y requiere investigación si cambia el curso.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Un trabajador que corta piedra presenta disnea crónica tras años de exposición a polvo. La radiografía muestra nódulos superiores y ganglios calcificados en cáscara de huevo; se evalúa función respiratoria."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "corta piedra"
+            },
+            {
+              "field": "mechanism",
+              "text": "La inhalación de polvo mineral activa inflamación y depósito de colágeno, causando fibrosis cuya distribución y riesgos asociados dependen del agente y exposición acumulada."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Respuesta fibrogénica al polvo"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Disnea y alteraciones radiográficas crónicas"
+            },
+            {
+              "field": "initial_action",
+              "text": "Documentar exposición, evaluar imagen y función y retirar o reducir exposición con control ocupacional."
+            },
+            {
+              "field": "action_reason",
+              "text": "La prevención de nueva dosis es la intervención central."
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Datos de infección o deterioro acelerado"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Buscar complicaciones."
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "Pueden coexistir tuberculosis u otra enfermedad."
+            },
+            {
+              "field": "limits",
+              "text": "No se indican corticoides de forma universal para toda neumoconiosis."
+            }
+          ]
+        },
+        "medium": {
+          "vignette": "Un trabajador con enfermedad pulmonar por polvo necesita documentar exposición y función y reducir o retirar exposición con control ocupacional. Se revisa la propuesta de corticoide universal.",
+          "discriminator": "El control ocupacional forma parte del tratamiento crónico.",
+          "explanation": "La fuente no indica corticoides universales. Se documenta exposición y función y se investigan complicaciones si el curso se acelera.",
+          "confusable_with": "Tuberculosis aislada",
+          "why_not": "La exposición acumulada y ganglios en cáscara de huevo apoyan daño por polvo; la tuberculosis puede coexistir y requiere investigación si cambia el curso.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Un trabajador que corta piedra presenta disnea crónica tras años de exposición a polvo. La radiografía muestra nódulos superiores y ganglios calcificados en cáscara de huevo; se evalúa función respiratoria."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "corta piedra"
+            },
+            {
+              "field": "mechanism",
+              "text": "La inhalación de polvo mineral activa inflamación y depósito de colágeno, causando fibrosis cuya distribución y riesgos asociados dependen del agente y exposición acumulada."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Respuesta fibrogénica al polvo"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Disnea y alteraciones radiográficas crónicas"
+            },
+            {
+              "field": "initial_action",
+              "text": "Documentar exposición, evaluar imagen y función y retirar o reducir exposición con control ocupacional."
+            },
+            {
+              "field": "action_reason",
+              "text": "La prevención de nueva dosis es la intervención central."
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Datos de infección o deterioro acelerado"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Buscar complicaciones."
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "Pueden coexistir tuberculosis u otra enfermedad."
+            },
+            {
+              "field": "limits",
+              "text": "No se indican corticoides de forma universal para toda neumoconiosis."
+            }
+          ]
+        },
+        "contrast": {
+          "vignette": "Un trabajador con enfermedad nodular por polvo presenta deterioro acelerado o datos de infección. Se deben buscar tuberculosis u otras complicaciones.",
+          "discriminator": "Cambio de curso que no se atribuye solo a la exposición crónica.",
+          "explanation": "La infección puede coexistir. No se usan corticoides de forma universal en toda neumoconiosis.",
+          "confusable_with": "Tuberculosis aislada",
+          "why_not": "La exposición acumulada y ganglios en cáscara de huevo apoyan daño por polvo; la tuberculosis puede coexistir y requiere investigación si cambia el curso.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Un trabajador que corta piedra presenta disnea crónica tras años de exposición a polvo. La radiografía muestra nódulos superiores y ganglios calcificados en cáscara de huevo; se evalúa función respiratoria."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "corta piedra"
+            },
+            {
+              "field": "mechanism",
+              "text": "La inhalación de polvo mineral activa inflamación y depósito de colágeno, causando fibrosis cuya distribución y riesgos asociados dependen del agente y exposición acumulada."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Respuesta fibrogénica al polvo"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Disnea y alteraciones radiográficas crónicas"
+            },
+            {
+              "field": "initial_action",
+              "text": "Documentar exposición, evaluar imagen y función y retirar o reducir exposición con control ocupacional."
+            },
+            {
+              "field": "action_reason",
+              "text": "La prevención de nueva dosis es la intervención central."
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Datos de infección o deterioro acelerado"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Buscar complicaciones."
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "Pueden coexistir tuberculosis u otra enfermedad."
+            },
+            {
+              "field": "limits",
+              "text": "No se indican corticoides de forma universal para toda neumoconiosis."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "21.09-01",
+      "parent_topic_id": "21.09-01",
+      "block_id": "21.09",
+      "name": "Cáncer de pulmón",
+      "answer_kind": "diagnosis",
+      "variants": {
+        "easy": {
+          "vignette": "Una persona con tabaquismo presenta tos persistente, hemoptisis y pérdida de peso. La tomografía detecta una masa; se requiere tejido suficiente para clasificar tumor y estudiar extensión.",
+          "discriminator": "hemoptisis y pérdida de peso",
+          "explanation": "La proliferación maligna del epitelio respiratorio produce lesión local y puede invadir o metastatizar; la histología y biomarcadores determinan estrategia terapéutica junto con estadio. El tratamiento depende de tipo y extensión.",
+          "confusable_with": "Mesotelioma",
+          "why_not": "La masa pulmonar y el síndrome de invasión apical difieren del engrosamiento pleural asociado con asbesto.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Una persona con tabaquismo presenta tos persistente, hemoptisis y pérdida de peso. La tomografía detecta una masa; se requiere tejido suficiente para clasificar tumor y estudiar extensión."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "hemoptisis y pérdida de peso"
+            },
+            {
+              "field": "mechanism",
+              "text": "La proliferación maligna del epitelio respiratorio produce lesión local y puede invadir o metastatizar; la histología y biomarcadores determinan estrategia terapéutica junto con estadio."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Neoplasia pulmonar invasora"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Tos, hemoptisis y masa"
+            },
+            {
+              "field": "initial_action",
+              "text": "Referir para biopsia apropiada y estadificación; evaluar complicaciones y cese de tabaco."
+            },
+            {
+              "field": "action_reason",
+              "text": "El tratamiento depende de tipo y extensión."
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Dolor de hombro con signos neurológicos"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Evaluar invasión apical."
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "Puede comprometer plexo y cadena simpática."
+            },
+            {
+              "field": "limits",
+              "text": "La edad y paquetes de tamizaje del libro no sustituyen criterios vigentes; un síntoma requiere diagnóstico."
+            }
+          ]
+        },
+        "medium": {
+          "vignette": "Una persona tiene una masa pulmonar y desarrolla hipercalcemia. La biopsia demuestra proliferación epitelial maligna de tipo escamoso.",
+          "discriminator": "Neoplasia pulmonar con manifestación paraneoplásica.",
+          "explanation": "El carcinoma escamoso puede asociarse a hipercalcemia. Se confirma tejido y extensión y no se usa un algoritmo de tamizaje para una masa sintomática.",
+          "confusable_with": "Mesotelioma",
+          "why_not": "La masa pulmonar y el síndrome de invasión apical difieren del engrosamiento pleural asociado con asbesto.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Una persona con tabaquismo presenta tos persistente, hemoptisis y pérdida de peso. La tomografía detecta una masa; se requiere tejido suficiente para clasificar tumor y estudiar extensión."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "hemoptisis y pérdida de peso"
+            },
+            {
+              "field": "mechanism",
+              "text": "La proliferación maligna del epitelio respiratorio produce lesión local y puede invadir o metastatizar; la histología y biomarcadores determinan estrategia terapéutica junto con estadio."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Neoplasia pulmonar invasora"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Tos, hemoptisis y masa"
+            },
+            {
+              "field": "initial_action",
+              "text": "Referir para biopsia apropiada y estadificación; evaluar complicaciones y cese de tabaco."
+            },
+            {
+              "field": "action_reason",
+              "text": "El tratamiento depende de tipo y extensión."
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Dolor de hombro con signos neurológicos"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Evaluar invasión apical."
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "Puede comprometer plexo y cadena simpática."
+            },
+            {
+              "field": "limits",
+              "text": "La edad y paquetes de tamizaje del libro no sustituyen criterios vigentes; un síntoma requiere diagnóstico."
+            }
+          ],
+          "source_evidence": [
+            {
+              "page": 689,
+              "quote": "Hipercalcemia (carcinoma de células"
+            }
+          ]
+        },
+        "contrast": {
+          "vignette": "Una persona con masa pulmonar tiene dolor de hombro y signos neurológicos. Se investiga extensión apical hacia plexo y cadena simpática.",
+          "discriminator": "Síntomas que sugieren invasión apical.",
+          "explanation": "Se necesita tejido y estadificación. Una persona sintomática requiere diagnóstico y no un algoritmo de tamizaje.",
+          "confusable_with": "Mesotelioma",
+          "why_not": "La masa pulmonar y el síndrome de invasión apical difieren del engrosamiento pleural asociado con asbesto.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Una persona con tabaquismo presenta tos persistente, hemoptisis y pérdida de peso. La tomografía detecta una masa; se requiere tejido suficiente para clasificar tumor y estudiar extensión."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "hemoptisis y pérdida de peso"
+            },
+            {
+              "field": "mechanism",
+              "text": "La proliferación maligna del epitelio respiratorio produce lesión local y puede invadir o metastatizar; la histología y biomarcadores determinan estrategia terapéutica junto con estadio."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Neoplasia pulmonar invasora"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Tos, hemoptisis y masa"
+            },
+            {
+              "field": "initial_action",
+              "text": "Referir para biopsia apropiada y estadificación; evaluar complicaciones y cese de tabaco."
+            },
+            {
+              "field": "action_reason",
+              "text": "El tratamiento depende de tipo y extensión."
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Dolor de hombro con signos neurológicos"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Evaluar invasión apical."
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "Puede comprometer plexo y cadena simpática."
+            },
+            {
+              "field": "limits",
+              "text": "La edad y paquetes de tamizaje del libro no sustituyen criterios vigentes; un síntoma requiere diagnóstico."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "21.09-02",
+      "parent_topic_id": "21.09-02",
+      "block_id": "21.09",
+      "name": "Mesotelioma",
+      "answer_kind": "diagnosis",
+      "variants": {
+        "easy": {
+          "vignette": "Una persona expuesta a asbesto décadas antes presenta disnea y dolor torácico. La tomografía muestra engrosamiento pleural y derrame unilateral; se requiere biopsia para clasificar una neoplasia pleural.",
+          "discriminator": "expuesta a asbesto décadas antes",
+          "explanation": "La transformación maligna de células mesoteliales puede aparecer tras larga latencia ocupacional y extenderse por pleura, causando derrame y dolor por invasión local. La histología y estadio definen estrategia.",
+          "confusable_with": "Cáncer pulmonar parenquimatoso",
+          "why_not": "Predomina el engrosamiento pleural con derrame y exposición a asbesto; el diagnóstico requiere biopsia.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Una persona expuesta a asbesto décadas antes presenta disnea y dolor torácico. La tomografía muestra engrosamiento pleural y derrame unilateral; se requiere biopsia para clasificar una neoplasia pleural."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "expuesta a asbesto décadas antes"
+            },
+            {
+              "field": "mechanism",
+              "text": "La transformación maligna de células mesoteliales puede aparecer tras larga latencia ocupacional y extenderse por pleura, causando derrame y dolor por invasión local."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Proliferación mesotelial pleural"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Engrosamiento y derrame pleural"
+            },
+            {
+              "field": "initial_action",
+              "text": "Obtener biopsia pleural y evaluación multidisciplinaria para extensión y opciones de tratamiento y alivio de síntomas."
+            },
+            {
+              "field": "action_reason",
+              "text": "La histología y estadio definen estrategia."
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Derrame sintomático recurrente"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Valorar drenaje y control pleural."
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "Reduce disnea."
+            },
+            {
+              "field": "limits",
+              "text": "La afirmación de resistencia general a tratamiento no excluye opciones sistémicas actuales."
+            },
+            {
+              "field": "source_corrections.0",
+              "text": "La resistencia terapéutica descrita en el libro no excluye opciones sistémicas actuales; existen inmunoterapia y quimioterapia según etapa y elegibilidad."
+            }
+          ]
+        },
+        "medium": {
+          "vignette": "Una persona con exposición antigua a asbesto presenta engrosamiento pleural y pérdida de peso. La biopsia toracoscópica confirma una proliferación maligna de las células que revisten la pleura.",
+          "discriminator": "Confirmación tisular de neoplasia pleural en el contexto de asbesto.",
+          "explanation": "La biopsia y extensión guían las opciones. La corrección reconoce tratamientos sistémicos actuales y no asume resistencia universal.",
+          "confusable_with": "Cáncer pulmonar parenquimatoso",
+          "why_not": "Predomina el engrosamiento pleural con derrame y exposición a asbesto; el diagnóstico requiere biopsia.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Una persona expuesta a asbesto décadas antes presenta disnea y dolor torácico. La tomografía muestra engrosamiento pleural y derrame unilateral; se requiere biopsia para clasificar una neoplasia pleural."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "expuesta a asbesto décadas antes"
+            },
+            {
+              "field": "mechanism",
+              "text": "La transformación maligna de células mesoteliales puede aparecer tras larga latencia ocupacional y extenderse por pleura, causando derrame y dolor por invasión local."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Proliferación mesotelial pleural"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Engrosamiento y derrame pleural"
+            },
+            {
+              "field": "initial_action",
+              "text": "Obtener biopsia pleural y evaluación multidisciplinaria para extensión y opciones de tratamiento y alivio de síntomas."
+            },
+            {
+              "field": "action_reason",
+              "text": "La histología y estadio definen estrategia."
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Derrame sintomático recurrente"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Valorar drenaje y control pleural."
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "Reduce disnea."
+            },
+            {
+              "field": "limits",
+              "text": "La afirmación de resistencia general a tratamiento no excluye opciones sistémicas actuales."
+            },
+            {
+              "field": "source_corrections.0",
+              "text": "La resistencia terapéutica descrita en el libro no excluye opciones sistémicas actuales; existen inmunoterapia y quimioterapia según etapa y elegibilidad."
+            }
+          ],
+          "source_evidence": [
+            {
+              "page": 711,
+              "quote": "Biopsia por toracoscopia asistida por"
+            }
+          ]
+        },
+        "contrast": {
+          "vignette": "Una persona con neoplasia pleural y exposición a asbesto presenta derrame sintomático recurrente. Se valora control pleural para aliviar disnea.",
+          "discriminator": "La recurrencia sintomática modifica manejo del derrame.",
+          "explanation": "El control pleural alivia síntomas. La corrección reconoce opciones sistémicas actuales según etapa y elegibilidad.",
+          "confusable_with": "Cáncer pulmonar parenquimatoso",
+          "why_not": "Predomina el engrosamiento pleural con derrame y exposición a asbesto; el diagnóstico requiere biopsia.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Una persona expuesta a asbesto décadas antes presenta disnea y dolor torácico. La tomografía muestra engrosamiento pleural y derrame unilateral; se requiere biopsia para clasificar una neoplasia pleural."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "expuesta a asbesto décadas antes"
+            },
+            {
+              "field": "mechanism",
+              "text": "La transformación maligna de células mesoteliales puede aparecer tras larga latencia ocupacional y extenderse por pleura, causando derrame y dolor por invasión local."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Proliferación mesotelial pleural"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Engrosamiento y derrame pleural"
+            },
+            {
+              "field": "initial_action",
+              "text": "Obtener biopsia pleural y evaluación multidisciplinaria para extensión y opciones de tratamiento y alivio de síntomas."
+            },
+            {
+              "field": "action_reason",
+              "text": "La histología y estadio definen estrategia."
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Derrame sintomático recurrente"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Valorar drenaje y control pleural."
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "Reduce disnea."
+            },
+            {
+              "field": "limits",
+              "text": "La afirmación de resistencia general a tratamiento no excluye opciones sistémicas actuales."
+            },
+            {
+              "field": "source_corrections.0",
+              "text": "La resistencia terapéutica descrita en el libro no excluye opciones sistémicas actuales; existen inmunoterapia y quimioterapia según etapa y elegibilidad."
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

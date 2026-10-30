@@ -1,0 +1,2486 @@
+{
+  "schema_version": 1,
+  "section_id": "16",
+  "author": "practice_13_23",
+  "source_sha256": "56744b4531119fce117003b5ee1f7c46ac1241be4b30ad0314bd0101393535b2",
+  "groups": [
+    {
+      "id": "16.01-01",
+      "parent_topic_id": "16.01-01",
+      "block_id": "16.01",
+      "name": "Amenaza de aborto",
+      "answer_kind": "diagnosis",
+      "variants": {
+        "easy": {
+          "vignette": "Una mujer con embarazo temprano presenta sangrado escaso y cólico leve. El cérvix permanece cerrado y la ecografía confirma un embrión intrauterino con actividad cardíaca.",
+          "discriminator": "cérvix permanece cerrado",
+          "explanation": "El sangrado aparece en una gestación que conserva viabilidad y sin apertura cervical; requiere comprobar localización y vigilar evolución antes de establecer pérdida. Evita diagnosticar pérdida solo por sangrado.",
+          "confusable_with": "Aborto espontáneo incompleto",
+          "why_not": "La expulsión parcial con cuello abierto y restos corresponde a otro patrón; aquí persiste una gestación viable.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Una mujer con embarazo temprano presenta sangrado escaso y cólico leve. El cérvix permanece cerrado y la ecografía confirma un embrión intrauterino con actividad cardíaca."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "cérvix permanece cerrado"
+            },
+            {
+              "field": "mechanism",
+              "text": "El sangrado aparece en una gestación que conserva viabilidad y sin apertura cervical; requiere comprobar localización y vigilar evolución antes de establecer pérdida."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Sangrado sin dilatación"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Cérvix cerrado con gestación viable"
+            },
+            {
+              "field": "initial_action",
+              "text": "Valorar estabilidad y confirmar localización y viabilidad por ecografía; establecer seguimiento y datos de alarma."
+            },
+            {
+              "field": "action_reason",
+              "text": "Evita diagnosticar pérdida solo por sangrado."
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Dolor intenso o inestabilidad"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Atender de urgencia y descartar otras causas."
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "Puede indicar complicación hemorrágica."
+            },
+            {
+              "field": "modifiers.1.factor",
+              "text": "Sangrado con gestación intrauterina y aborto previo"
+            },
+            {
+              "field": "modifiers.1.action",
+              "text": "Ofrecer progesterona micronizada vaginal 400 mg cada 12 horas; con latido confirmado, continuar hasta 16 semanas completas."
+            },
+            {
+              "field": "modifiers.1.reason",
+              "text": "NICE recomienda esta pauta en el subgrupo con pérdida previa."
+            },
+            {
+              "field": "limits",
+              "text": "No se adopta reposo absoluto ni hCG o tocolíticos rutinarios del libro."
+            },
+            {
+              "field": "source_corrections.0",
+              "text": "Se omiten hCG, tocolíticos y reposo absoluto rutinarios del libro. NICE indica seguimiento; progesterona vaginal en sangrado con gestación intrauterina y aborto previo."
+            }
+          ]
+        },
+        "medium": {
+          "vignette": "Una embarazada con sangrado tiene antecedente de pérdida gestacional. La ecografía confirma embarazo intrauterino con latido y el cérvix está cerrado. Se valora progesterona según ese subgrupo.",
+          "discriminator": "El aborto previo modifica la opción de tratamiento en una gestación viable.",
+          "explanation": "NICE permite progesterona en sangrado con gestación intrauterina y aborto previo. No se indica reposo absoluto ni hCG o tocolíticos rutinarios.",
+          "confusable_with": "Aborto espontáneo incompleto",
+          "why_not": "La expulsión parcial con cuello abierto y restos corresponde a otro patrón; aquí persiste una gestación viable.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Una mujer con embarazo temprano presenta sangrado escaso y cólico leve. El cérvix permanece cerrado y la ecografía confirma un embrión intrauterino con actividad cardíaca."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "cérvix permanece cerrado"
+            },
+            {
+              "field": "mechanism",
+              "text": "El sangrado aparece en una gestación que conserva viabilidad y sin apertura cervical; requiere comprobar localización y vigilar evolución antes de establecer pérdida."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Sangrado sin dilatación"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Cérvix cerrado con gestación viable"
+            },
+            {
+              "field": "initial_action",
+              "text": "Valorar estabilidad y confirmar localización y viabilidad por ecografía; establecer seguimiento y datos de alarma."
+            },
+            {
+              "field": "action_reason",
+              "text": "Evita diagnosticar pérdida solo por sangrado."
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Dolor intenso o inestabilidad"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Atender de urgencia y descartar otras causas."
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "Puede indicar complicación hemorrágica."
+            },
+            {
+              "field": "modifiers.1.factor",
+              "text": "Sangrado con gestación intrauterina y aborto previo"
+            },
+            {
+              "field": "modifiers.1.action",
+              "text": "Ofrecer progesterona micronizada vaginal 400 mg cada 12 horas; con latido confirmado, continuar hasta 16 semanas completas."
+            },
+            {
+              "field": "modifiers.1.reason",
+              "text": "NICE recomienda esta pauta en el subgrupo con pérdida previa."
+            },
+            {
+              "field": "limits",
+              "text": "No se adopta reposo absoluto ni hCG o tocolíticos rutinarios del libro."
+            },
+            {
+              "field": "source_corrections.0",
+              "text": "Se omiten hCG, tocolíticos y reposo absoluto rutinarios del libro. NICE indica seguimiento; progesterona vaginal en sangrado con gestación intrauterina y aborto previo."
+            }
+          ]
+        },
+        "contrast": {
+          "vignette": "Una embarazada presenta sangrado sin dolor abdominal. El cuello uterino no está dilatado y la ecografía identifica una gestación intrauterina con actividad cardíaca.",
+          "discriminator": "El sangrado puede presentarse sin dolor y con gestación viable.",
+          "explanation": "La ausencia de dolor no excluye este patrón. El cuello cerrado y la viabilidad lo distinguen de una pérdida establecida; se evalúa estabilidad y seguimiento.",
+          "confusable_with": "Aborto espontáneo incompleto",
+          "why_not": "La expulsión parcial con cuello abierto y restos corresponde a otro patrón; aquí persiste una gestación viable.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Una mujer con embarazo temprano presenta sangrado escaso y cólico leve. El cérvix permanece cerrado y la ecografía confirma un embrión intrauterino con actividad cardíaca."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "cérvix permanece cerrado"
+            },
+            {
+              "field": "mechanism",
+              "text": "El sangrado aparece en una gestación que conserva viabilidad y sin apertura cervical; requiere comprobar localización y vigilar evolución antes de establecer pérdida."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Sangrado sin dilatación"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Cérvix cerrado con gestación viable"
+            },
+            {
+              "field": "initial_action",
+              "text": "Valorar estabilidad y confirmar localización y viabilidad por ecografía; establecer seguimiento y datos de alarma."
+            },
+            {
+              "field": "action_reason",
+              "text": "Evita diagnosticar pérdida solo por sangrado."
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Dolor intenso o inestabilidad"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Atender de urgencia y descartar otras causas."
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "Puede indicar complicación hemorrágica."
+            },
+            {
+              "field": "modifiers.1.factor",
+              "text": "Sangrado con gestación intrauterina y aborto previo"
+            },
+            {
+              "field": "modifiers.1.action",
+              "text": "Ofrecer progesterona micronizada vaginal 400 mg cada 12 horas; con latido confirmado, continuar hasta 16 semanas completas."
+            },
+            {
+              "field": "modifiers.1.reason",
+              "text": "NICE recomienda esta pauta en el subgrupo con pérdida previa."
+            },
+            {
+              "field": "limits",
+              "text": "No se adopta reposo absoluto ni hCG o tocolíticos rutinarios del libro."
+            },
+            {
+              "field": "source_corrections.0",
+              "text": "Se omiten hCG, tocolíticos y reposo absoluto rutinarios del libro. NICE indica seguimiento; progesterona vaginal en sangrado con gestación intrauterina y aborto previo."
+            }
+          ],
+          "source_evidence": [
+            {
+              "page": 481,
+              "quote": "puede estar acompañado o no de dolor abdominal"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "16.01-02",
+      "parent_topic_id": "16.01-02",
+      "block_id": "16.01",
+      "name": "Aborto espontáneo",
+      "answer_kind": "diagnosis",
+      "variants": {
+        "easy": {
+          "vignette": "Una mujer con embarazo temprano presenta sangrado, cólicos y expulsión parcial de tejido. El cuello está abierto y la ecografía muestra contenido uterino residual; permanece hemodinámicamente estable.",
+          "discriminator": "expulsión parcial de tejido",
+          "explanation": "La pérdida gestacional con expulsión incompleta mantiene tejido en cavidad, lo que puede sostener sangrado y aumentar riesgo de infección. Las opciones cambian con sangrado, infección y viabilidad.",
+          "confusable_with": "Amenaza de aborto",
+          "why_not": "La apertura del cuello y expulsión de tejido con contenido residual difieren de una gestación viable con cérvix cerrado.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Una mujer con embarazo temprano presenta sangrado, cólicos y expulsión parcial de tejido. El cuello está abierto y la ecografía muestra contenido uterino residual; permanece hemodinámicamente estable."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "expulsión parcial de tejido"
+            },
+            {
+              "field": "mechanism",
+              "text": "La pérdida gestacional con expulsión incompleta mantiene tejido en cavidad, lo que puede sostener sangrado y aumentar riesgo de infección."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Retención de tejido gestacional"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Sangrado persistente con restos"
+            },
+            {
+              "field": "initial_action",
+              "text": "Confirmar diagnóstico y estabilidad; ofrecer manejo expectante, farmacológico o evacuación según clínica, preferencias y seguimiento."
+            },
+            {
+              "field": "action_reason",
+              "text": "Las opciones cambian con sangrado, infección y viabilidad."
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Inestabilidad, infección o hemorragia excesiva"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Priorizar reanimación y evacuación urgente."
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "La vigilancia aislada no controla estas complicaciones."
+            },
+            {
+              "field": "limits",
+              "text": "Los esquemas farmacológicos y profilaxis Rh requieren protocolo vigente."
+            }
+          ]
+        },
+        "medium": {
+          "vignette": "Después de expulsar parte del tejido gestacional, una mujer presenta infección y permanece con contenido uterino residual. La observación aislada ya no es adecuada.",
+          "discriminator": "La infección complica una expulsión incompleta.",
+          "explanation": "Se priorizan estabilización y evacuación urgente. La infección cambia el manejo y requiere protocolo vigente.",
+          "confusable_with": "Amenaza de aborto",
+          "why_not": "La apertura del cuello y expulsión de tejido con contenido residual difieren de una gestación viable con cérvix cerrado.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Una mujer con embarazo temprano presenta sangrado, cólicos y expulsión parcial de tejido. El cuello está abierto y la ecografía muestra contenido uterino residual; permanece hemodinámicamente estable."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "expulsión parcial de tejido"
+            },
+            {
+              "field": "mechanism",
+              "text": "La pérdida gestacional con expulsión incompleta mantiene tejido en cavidad, lo que puede sostener sangrado y aumentar riesgo de infección."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Retención de tejido gestacional"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Sangrado persistente con restos"
+            },
+            {
+              "field": "initial_action",
+              "text": "Confirmar diagnóstico y estabilidad; ofrecer manejo expectante, farmacológico o evacuación según clínica, preferencias y seguimiento."
+            },
+            {
+              "field": "action_reason",
+              "text": "Las opciones cambian con sangrado, infección y viabilidad."
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Inestabilidad, infección o hemorragia excesiva"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Priorizar reanimación y evacuación urgente."
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "La vigilancia aislada no controla estas complicaciones."
+            },
+            {
+              "field": "limits",
+              "text": "Los esquemas farmacológicos y profilaxis Rh requieren protocolo vigente."
+            }
+          ]
+        },
+        "contrast": {
+          "vignette": "Una embarazada temprana tiene hemorragia excesiva tras expulsar tejido. El cuello está abierto y hay contenido residual. Requiere estabilización y evacuación urgente.",
+          "discriminator": "Restos gestacionales con complicación hemorrágica.",
+          "explanation": "La vigilancia aislada no controla hemorragia excesiva o infección. La reanimación y evacuación urgente preceden al manejo expectante.",
+          "confusable_with": "Amenaza de aborto",
+          "why_not": "La apertura del cuello y expulsión de tejido con contenido residual difieren de una gestación viable con cérvix cerrado.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Una mujer con embarazo temprano presenta sangrado, cólicos y expulsión parcial de tejido. El cuello está abierto y la ecografía muestra contenido uterino residual; permanece hemodinámicamente estable."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "expulsión parcial de tejido"
+            },
+            {
+              "field": "mechanism",
+              "text": "La pérdida gestacional con expulsión incompleta mantiene tejido en cavidad, lo que puede sostener sangrado y aumentar riesgo de infección."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Retención de tejido gestacional"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Sangrado persistente con restos"
+            },
+            {
+              "field": "initial_action",
+              "text": "Confirmar diagnóstico y estabilidad; ofrecer manejo expectante, farmacológico o evacuación según clínica, preferencias y seguimiento."
+            },
+            {
+              "field": "action_reason",
+              "text": "Las opciones cambian con sangrado, infección y viabilidad."
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Inestabilidad, infección o hemorragia excesiva"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Priorizar reanimación y evacuación urgente."
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "La vigilancia aislada no controla estas complicaciones."
+            },
+            {
+              "field": "limits",
+              "text": "Los esquemas farmacológicos y profilaxis Rh requieren protocolo vigente."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "16.02-01",
+      "parent_topic_id": "16.02-01",
+      "block_id": "16.02",
+      "name": "Embarazo ectópico",
+      "answer_kind": "diagnosis",
+      "variants": {
+        "easy": {
+          "vignette": "Una mujer con retraso menstrual tiene dolor abdominal y sangrado oscuro escaso. La ecografía no identifica gestación intrauterina y muestra una masa anexial; se evalúan signos de ruptura.",
+          "discriminator": "masa anexial",
+          "explanation": "La implantación fuera de la cavidad endometrial puede distender y romper la trompa, generando hemorragia intraperitoneal y pérdida rápida de volumen. La hemorragia interna puede comprometer la vida.",
+          "confusable_with": "Aborto espontáneo",
+          "why_not": "La masa anexial requiere investigar implantación extrauterina; un útero vacío por sí solo no diferencia las causas.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Una mujer con retraso menstrual tiene dolor abdominal y sangrado oscuro escaso. La ecografía no identifica gestación intrauterina y muestra una masa anexial; se evalúan signos de ruptura."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "masa anexial"
+            },
+            {
+              "field": "mechanism",
+              "text": "La implantación fuera de la cavidad endometrial puede distender y romper la trompa, generando hemorragia intraperitoneal y pérdida rápida de volumen."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Implantación tubárica"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Dolor, sangrado y posible hemoperitoneo"
+            },
+            {
+              "field": "initial_action",
+              "text": "Evaluar estabilidad, hCG y ecografía transvaginal; ante sospecha de ruptura o inestabilidad, activar manejo quirúrgico urgente."
+            },
+            {
+              "field": "action_reason",
+              "text": "La hemorragia interna puede comprometer la vida."
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Paciente estable sin ruptura y elegible"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Valorar tratamiento médico con seguimiento."
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "Permite una opción conservadora en casos seleccionados."
+            },
+            {
+              "field": "limits",
+              "text": "Una hCG aislada ni un útero vacío confirman por sí solos el diagnóstico."
+            }
+          ]
+        },
+        "medium": {
+          "vignette": "Una mujer con retraso menstrual y masa tubárica desarrolla dolor abdominal intenso, irritación peritoneal e inestabilidad. Se sospecha ruptura con hemorragia.",
+          "discriminator": "Gestación extrauterina con signos de rotura y compromiso circulatorio.",
+          "explanation": "La ruptura agrega dolor intenso y amenaza vital. Se priorizan estabilización y atención quirúrgica; una hCG aislada no localiza una gestación.",
+          "confusable_with": "Aborto espontáneo",
+          "why_not": "La masa anexial requiere investigar implantación extrauterina; un útero vacío por sí solo no diferencia las causas.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Una mujer con retraso menstrual tiene dolor abdominal y sangrado oscuro escaso. La ecografía no identifica gestación intrauterina y muestra una masa anexial; se evalúan signos de ruptura."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "masa anexial"
+            },
+            {
+              "field": "mechanism",
+              "text": "La implantación fuera de la cavidad endometrial puede distender y romper la trompa, generando hemorragia intraperitoneal y pérdida rápida de volumen."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Implantación tubárica"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Dolor, sangrado y posible hemoperitoneo"
+            },
+            {
+              "field": "initial_action",
+              "text": "Evaluar estabilidad, hCG y ecografía transvaginal; ante sospecha de ruptura o inestabilidad, activar manejo quirúrgico urgente."
+            },
+            {
+              "field": "action_reason",
+              "text": "La hemorragia interna puede comprometer la vida."
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Paciente estable sin ruptura y elegible"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Valorar tratamiento médico con seguimiento."
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "Permite una opción conservadora en casos seleccionados."
+            },
+            {
+              "field": "limits",
+              "text": "Una hCG aislada ni un útero vacío confirman por sí solos el diagnóstico."
+            }
+          ],
+          "source_evidence": [
+            {
+              "page": 489,
+              "quote": "signos de irritación peritoneal"
+            }
+          ]
+        },
+        "contrast": {
+          "vignette": "Después de reproducción asistida, una paciente presenta dolor y sangrado escaso. La ecografía transvaginal localiza una gestación fuera del endometrio, en una trompa.",
+          "discriminator": "Localización extrauterina demostrada en un contexto de riesgo.",
+          "explanation": "La localización establece el diagnóstico. La estabilidad, ruptura y elegibilidad determinan manejo; no se decide solo por un útero vacío.",
+          "confusable_with": "Aborto espontáneo",
+          "why_not": "La masa anexial requiere investigar implantación extrauterina; un útero vacío por sí solo no diferencia las causas.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Una mujer con retraso menstrual tiene dolor abdominal y sangrado oscuro escaso. La ecografía no identifica gestación intrauterina y muestra una masa anexial; se evalúan signos de ruptura."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "masa anexial"
+            },
+            {
+              "field": "mechanism",
+              "text": "La implantación fuera de la cavidad endometrial puede distender y romper la trompa, generando hemorragia intraperitoneal y pérdida rápida de volumen."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Implantación tubárica"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Dolor, sangrado y posible hemoperitoneo"
+            },
+            {
+              "field": "initial_action",
+              "text": "Evaluar estabilidad, hCG y ecografía transvaginal; ante sospecha de ruptura o inestabilidad, activar manejo quirúrgico urgente."
+            },
+            {
+              "field": "action_reason",
+              "text": "La hemorragia interna puede comprometer la vida."
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Paciente estable sin ruptura y elegible"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Valorar tratamiento médico con seguimiento."
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "Permite una opción conservadora en casos seleccionados."
+            },
+            {
+              "field": "limits",
+              "text": "Una hCG aislada ni un útero vacío confirman por sí solos el diagnóstico."
+            }
+          ],
+          "source_evidence": [
+            {
+              "page": 489,
+              "quote": "Técn icas de reproducción asistid a."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "16.03-01",
+      "parent_topic_id": "16.03-01",
+      "block_id": "16.03",
+      "name": "Enfermedad trofoblástica gestacional",
+      "answer_kind": "diagnosis",
+      "variants": {
+        "easy": {
+          "vignette": "Una embarazada presenta sangrado, vómitos intensos y útero mayor de lo esperado. La ecografía muestra múltiples espacios quísticos y no identifica embrión; la hCG es desproporcionada para la evolución.",
+          "discriminator": "múltiples espacios quísticos",
+          "explanation": "Una fecundación anormal produce proliferación trofoblástica y vellosidades hidrópicas; la secreción hormonal y la posible persistencia requieren vigilancia tras evacuación. La histología clasifica y la hormona detecta persistencia.",
+          "confusable_with": "Embarazo ectópico",
+          "why_not": "El patrón uterino quístico y el crecimiento desproporcionado favorecen enfermedad trofoblástica, no una masa de implantación anexial.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Una embarazada presenta sangrado, vómitos intensos y útero mayor de lo esperado. La ecografía muestra múltiples espacios quísticos y no identifica embrión; la hCG es desproporcionada para la evolución."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "múltiples espacios quísticos"
+            },
+            {
+              "field": "mechanism",
+              "text": "Una fecundación anormal produce proliferación trofoblástica y vellosidades hidrópicas; la secreción hormonal y la posible persistencia requieren vigilancia tras evacuación."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Proliferación trofoblástica"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Útero aumentado e imagen quística"
+            },
+            {
+              "field": "initial_action",
+              "text": "Referir para evacuación uterina, estudio histológico y seguimiento seriado de hCG."
+            },
+            {
+              "field": "action_reason",
+              "text": "La histología clasifica y la hormona detecta persistencia."
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "hCG persistente o ascendente"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Evaluar neoplasia trofoblástica."
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "Puede indicar enfermedad activa tras evacuación."
+            },
+            {
+              "field": "limits",
+              "text": "No se indica quimioterapia profiláctica de forma universal según una puntuación aislada."
+            }
+          ]
+        },
+        "medium": {
+          "vignette": "Una embarazada tiene vómitos intensos y sangrado. El tamaño uterino excede lo esperado; la ecografía muestra espacios quísticos y la hCG es desproporcionada.",
+          "discriminator": "Patrón quístico placentario con hCG excesiva.",
+          "explanation": "Una fecundación anormal produce proliferación trofoblástica y vellosidades hidrópicas; la secreción hormonal y la posible persistencia requieren vigilancia tras evacuación. Referir para evacuación uterina, estudio histológico y seguimiento seriado de hCG.",
+          "confusable_with": "Embarazo ectópico",
+          "why_not": "El patrón uterino quístico y el crecimiento desproporcionado favorecen enfermedad trofoblástica, no una masa de implantación anexial.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Una embarazada presenta sangrado, vómitos intensos y útero mayor de lo esperado. La ecografía muestra múltiples espacios quísticos y no identifica embrión; la hCG es desproporcionada para la evolución."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "múltiples espacios quísticos"
+            },
+            {
+              "field": "mechanism",
+              "text": "Una fecundación anormal produce proliferación trofoblástica y vellosidades hidrópicas; la secreción hormonal y la posible persistencia requieren vigilancia tras evacuación."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Proliferación trofoblástica"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Útero aumentado e imagen quística"
+            },
+            {
+              "field": "initial_action",
+              "text": "Referir para evacuación uterina, estudio histológico y seguimiento seriado de hCG."
+            },
+            {
+              "field": "action_reason",
+              "text": "La histología clasifica y la hormona detecta persistencia."
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "hCG persistente o ascendente"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Evaluar neoplasia trofoblástica."
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "Puede indicar enfermedad activa tras evacuación."
+            },
+            {
+              "field": "limits",
+              "text": "No se indica quimioterapia profiláctica de forma universal según una puntuación aislada."
+            }
+          ]
+        },
+        "contrast": {
+          "vignette": "Tras evacuar una gestación con múltiples espacios quísticos y sin embrión, la hCG persiste o asciende. Se requiere buscar enfermedad trofoblástica activa.",
+          "discriminator": "Persistencia de hCG después de evacuación del tejido anormal.",
+          "explanation": "La actividad trofoblástica persistente requiere evaluar neoplasia. No se indica quimioterapia profiláctica universal por una puntuación aislada.",
+          "confusable_with": "Embarazo ectópico",
+          "why_not": "El patrón uterino quístico y el crecimiento desproporcionado favorecen enfermedad trofoblástica, no una masa de implantación anexial.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Una embarazada presenta sangrado, vómitos intensos y útero mayor de lo esperado. La ecografía muestra múltiples espacios quísticos y no identifica embrión; la hCG es desproporcionada para la evolución."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "múltiples espacios quísticos"
+            },
+            {
+              "field": "mechanism",
+              "text": "Una fecundación anormal produce proliferación trofoblástica y vellosidades hidrópicas; la secreción hormonal y la posible persistencia requieren vigilancia tras evacuación."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Proliferación trofoblástica"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Útero aumentado e imagen quística"
+            },
+            {
+              "field": "initial_action",
+              "text": "Referir para evacuación uterina, estudio histológico y seguimiento seriado de hCG."
+            },
+            {
+              "field": "action_reason",
+              "text": "La histología clasifica y la hormona detecta persistencia."
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "hCG persistente o ascendente"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Evaluar neoplasia trofoblástica."
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "Puede indicar enfermedad activa tras evacuación."
+            },
+            {
+              "field": "limits",
+              "text": "No se indica quimioterapia profiláctica de forma universal según una puntuación aislada."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "16.04-01",
+      "parent_topic_id": "16.04-01",
+      "block_id": "16.04",
+      "name": "Placenta previa",
+      "answer_kind": "diagnosis",
+      "variants": {
+        "easy": {
+          "vignette": "Una mujer en el tercer trimestre presenta sangrado rojo brillante sin dolor. El útero está relajado y la ecografía identifica tejido placentario que cubre el orificio cervical interno.",
+          "discriminator": "sangrado rojo brillante sin dolor",
+          "explanation": "La placenta implantada sobre el segmento inferior puede sangrar al modificarse esa región y el cuello, sin requerir separación de una placenta normalmente localizada. La manipulación puede aumentar la hemorragia.",
+          "confusable_with": "Desprendimiento placentario",
+          "why_not": "El sangrado sin dolor y el útero relajado contrastan con dolor e hipertonía del desprendimiento.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Una mujer en el tercer trimestre presenta sangrado rojo brillante sin dolor. El útero está relajado y la ecografía identifica tejido placentario que cubre el orificio cervical interno."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "sangrado rojo brillante sin dolor"
+            },
+            {
+              "field": "mechanism",
+              "text": "La placenta implantada sobre el segmento inferior puede sangrar al modificarse esa región y el cuello, sin requerir separación de una placenta normalmente localizada."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Implantación sobre el cuello"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Sangrado indoloro"
+            },
+            {
+              "field": "initial_action",
+              "text": "Evaluar estabilidad y bienestar fetal; confirmar con ecografía transvaginal y evitar tacto digital hasta excluir localización placentaria anormal."
+            },
+            {
+              "field": "action_reason",
+              "text": "La manipulación puede aumentar la hemorragia."
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Sangrado activo con compromiso materno o fetal"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Estabilizar y resolver por cesárea urgente."
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "La seguridad impide conducta expectante."
+            },
+            {
+              "field": "limits",
+              "text": "El momento programado depende de sangrado y riesgo individual."
+            }
+          ]
+        },
+        "medium": {
+          "vignette": "Una embarazada presenta sangrado indoloro de color rojo vivo. La ecografía localiza placenta sobre el orificio cervical interno y el útero está relajado.",
+          "discriminator": "Placenta que cubre el orificio interno con sangrado indoloro.",
+          "explanation": "La placenta implantada sobre el segmento inferior puede sangrar al modificarse esa región y el cuello, sin requerir separación de una placenta normalmente localizada. Evaluar estabilidad y bienestar fetal; confirmar con ecografía transvaginal y evitar tacto digital hasta excluir localización placentaria anormal.",
+          "confusable_with": "Desprendimiento placentario",
+          "why_not": "El sangrado sin dolor y el útero relajado contrastan con dolor e hipertonía del desprendimiento.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Una mujer en el tercer trimestre presenta sangrado rojo brillante sin dolor. El útero está relajado y la ecografía identifica tejido placentario que cubre el orificio cervical interno."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "sangrado rojo brillante sin dolor"
+            },
+            {
+              "field": "mechanism",
+              "text": "La placenta implantada sobre el segmento inferior puede sangrar al modificarse esa región y el cuello, sin requerir separación de una placenta normalmente localizada."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Implantación sobre el cuello"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Sangrado indoloro"
+            },
+            {
+              "field": "initial_action",
+              "text": "Evaluar estabilidad y bienestar fetal; confirmar con ecografía transvaginal y evitar tacto digital hasta excluir localización placentaria anormal."
+            },
+            {
+              "field": "action_reason",
+              "text": "La manipulación puede aumentar la hemorragia."
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Sangrado activo con compromiso materno o fetal"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Estabilizar y resolver por cesárea urgente."
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "La seguridad impide conducta expectante."
+            },
+            {
+              "field": "limits",
+              "text": "El momento programado depende de sangrado y riesgo individual."
+            }
+          ]
+        },
+        "contrast": {
+          "vignette": "En el tercer trimestre, una mujer sangra sin dolor y presenta compromiso materno o fetal. La ecografía confirma placenta que cubre el orificio cervical interno.",
+          "discriminator": "Localización placentaria con sangrado activo que impide espera.",
+          "explanation": "El sangrado activo con compromiso requiere estabilización y cesárea urgente. El momento programado se individualiza si las condiciones permiten planificar.",
+          "confusable_with": "Desprendimiento placentario",
+          "why_not": "El sangrado sin dolor y el útero relajado contrastan con dolor e hipertonía del desprendimiento.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Una mujer en el tercer trimestre presenta sangrado rojo brillante sin dolor. El útero está relajado y la ecografía identifica tejido placentario que cubre el orificio cervical interno."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "sangrado rojo brillante sin dolor"
+            },
+            {
+              "field": "mechanism",
+              "text": "La placenta implantada sobre el segmento inferior puede sangrar al modificarse esa región y el cuello, sin requerir separación de una placenta normalmente localizada."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Implantación sobre el cuello"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Sangrado indoloro"
+            },
+            {
+              "field": "initial_action",
+              "text": "Evaluar estabilidad y bienestar fetal; confirmar con ecografía transvaginal y evitar tacto digital hasta excluir localización placentaria anormal."
+            },
+            {
+              "field": "action_reason",
+              "text": "La manipulación puede aumentar la hemorragia."
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Sangrado activo con compromiso materno o fetal"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Estabilizar y resolver por cesárea urgente."
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "La seguridad impide conducta expectante."
+            },
+            {
+              "field": "limits",
+              "text": "El momento programado depende de sangrado y riesgo individual."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "16.04-02",
+      "parent_topic_id": "16.04-02",
+      "block_id": "16.04",
+      "name": "Desprendimiento prematuro de placenta normoinserta",
+      "answer_kind": "diagnosis",
+      "variants": {
+        "easy": {
+          "vignette": "Una embarazada hipertensa tiene dolor abdominal, sangrado y útero hipertónico. El registro fetal muestra compromiso y la pérdida visible parece menor de lo que su estado circulatorio sugiere.",
+          "discriminator": "útero hipertónico",
+          "explanation": "La separación prematura placentaria produce hemorragia y reduce intercambio uteroplacentario; el sangrado oculto y la liberación procoagulante pueden agravar choque y coagulopatía. La prioridad es controlar hemorragia y deterioro fetal.",
+          "confusable_with": "Placenta previa",
+          "why_not": "La hipertonía dolorosa y el posible sangrado oculto no corresponden al patrón indoloro de placenta previa.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Una embarazada hipertensa tiene dolor abdominal, sangrado y útero hipertónico. El registro fetal muestra compromiso y la pérdida visible parece menor de lo que su estado circulatorio sugiere."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "útero hipertónico"
+            },
+            {
+              "field": "mechanism",
+              "text": "La separación prematura placentaria produce hemorragia y reduce intercambio uteroplacentario; el sangrado oculto y la liberación procoagulante pueden agravar choque y coagulopatía."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Separación placentaria"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Dolor, hipertonía y compromiso fetal"
+            },
+            {
+              "field": "initial_action",
+              "text": "Reanimar a la madre, evaluar coagulación y bienestar fetal y decidir resolución obstétrica urgente según estabilidad."
+            },
+            {
+              "field": "action_reason",
+              "text": "La prioridad es controlar hemorragia y deterioro fetal."
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Muerte fetal con madre estable"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Valorar parto vaginal si no hay contraindicaciones."
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "La vía depende de condiciones maternas y obstétricas."
+            },
+            {
+              "field": "limits",
+              "text": "La ecografía no debe retrasar atención ni excluir el diagnóstico clínico."
+            }
+          ]
+        },
+        "medium": {
+          "vignette": "Una embarazada hipertensa tiene dolor, hipertonía uterina y deterioro fetal. Su compromiso circulatorio parece mayor que la sangre visible.",
+          "discriminator": "Dolor e hipertonía con posible hemorragia oculta.",
+          "explanation": "La separación prematura placentaria produce hemorragia y reduce intercambio uteroplacentario; el sangrado oculto y la liberación procoagulante pueden agravar choque y coagulopatía. Reanimar a la madre, evaluar coagulación y bienestar fetal y decidir resolución obstétrica urgente según estabilidad.",
+          "confusable_with": "Placenta previa",
+          "why_not": "La hipertonía dolorosa y el posible sangrado oculto no corresponden al patrón indoloro de placenta previa.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Una embarazada hipertensa tiene dolor abdominal, sangrado y útero hipertónico. El registro fetal muestra compromiso y la pérdida visible parece menor de lo que su estado circulatorio sugiere."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "útero hipertónico"
+            },
+            {
+              "field": "mechanism",
+              "text": "La separación prematura placentaria produce hemorragia y reduce intercambio uteroplacentario; el sangrado oculto y la liberación procoagulante pueden agravar choque y coagulopatía."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Separación placentaria"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Dolor, hipertonía y compromiso fetal"
+            },
+            {
+              "field": "initial_action",
+              "text": "Reanimar a la madre, evaluar coagulación y bienestar fetal y decidir resolución obstétrica urgente según estabilidad."
+            },
+            {
+              "field": "action_reason",
+              "text": "La prioridad es controlar hemorragia y deterioro fetal."
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Muerte fetal con madre estable"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Valorar parto vaginal si no hay contraindicaciones."
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "La vía depende de condiciones maternas y obstétricas."
+            },
+            {
+              "field": "limits",
+              "text": "La ecografía no debe retrasar atención ni excluir el diagnóstico clínico."
+            }
+          ]
+        },
+        "contrast": {
+          "vignette": "Una embarazada presenta dolor y sangrado con útero hipertónico. Se confirma muerte fetal, pero la madre permanece estable. Se debe individualizar la vía del parto.",
+          "discriminator": "Separación placentaria dolorosa con muerte fetal y estabilidad materna.",
+          "explanation": "La estabilidad materna con muerte fetal permite valorar parto vaginal si no hay contraindicación. La ecografía no debe retrasar atención ni excluir el diagnóstico clínico.",
+          "confusable_with": "Placenta previa",
+          "why_not": "La hipertonía dolorosa y el posible sangrado oculto no corresponden al patrón indoloro de placenta previa.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Una embarazada hipertensa tiene dolor abdominal, sangrado y útero hipertónico. El registro fetal muestra compromiso y la pérdida visible parece menor de lo que su estado circulatorio sugiere."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "útero hipertónico"
+            },
+            {
+              "field": "mechanism",
+              "text": "La separación prematura placentaria produce hemorragia y reduce intercambio uteroplacentario; el sangrado oculto y la liberación procoagulante pueden agravar choque y coagulopatía."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Separación placentaria"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Dolor, hipertonía y compromiso fetal"
+            },
+            {
+              "field": "initial_action",
+              "text": "Reanimar a la madre, evaluar coagulación y bienestar fetal y decidir resolución obstétrica urgente según estabilidad."
+            },
+            {
+              "field": "action_reason",
+              "text": "La prioridad es controlar hemorragia y deterioro fetal."
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Muerte fetal con madre estable"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Valorar parto vaginal si no hay contraindicaciones."
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "La vía depende de condiciones maternas y obstétricas."
+            },
+            {
+              "field": "limits",
+              "text": "La ecografía no debe retrasar atención ni excluir el diagnóstico clínico."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "16.05-01",
+      "parent_topic_id": "16.05-01",
+      "block_id": "16.05",
+      "name": "Vasa previa",
+      "answer_kind": "diagnosis",
+      "variants": {
+        "easy": {
+          "vignette": "Durante la ruptura de membranas aparece sangrado oscuro seguido de bradicardia fetal brusca. La madre conserva inicialmente estabilidad, y se sospechan vasos fetales desprotegidos sobre la presentación.",
+          "discriminator": "bradicardia fetal brusca",
+          "explanation": "Los vasos fetales que cruzan membranas sin protección pueden romperse durante amniorrexis y causar pérdida sanguínea fetal rápida, aun con estabilidad materna. El feto puede exanguinarse rápidamente.",
+          "confusable_with": "Placenta previa",
+          "why_not": "La hemorragia fetal tras ruptura de membranas y la bradicardia brusca identifican vasos fetales vulnerables.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Durante la ruptura de membranas aparece sangrado oscuro seguido de bradicardia fetal brusca. La madre conserva inicialmente estabilidad, y se sospechan vasos fetales desprotegidos sobre la presentación."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "bradicardia fetal brusca"
+            },
+            {
+              "field": "mechanism",
+              "text": "Los vasos fetales que cruzan membranas sin protección pueden romperse durante amniorrexis y causar pérdida sanguínea fetal rápida, aun con estabilidad materna."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Ruptura de vasos fetales"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Sangrado con deterioro fetal súbito"
+            },
+            {
+              "field": "initial_action",
+              "text": "Activar cesárea de urgencia ante sospecha de ruptura y preparar atención neonatal."
+            },
+            {
+              "field": "action_reason",
+              "text": "El feto puede exanguinarse rápidamente."
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Diagnóstico prenatal sin ruptura"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Planear cesárea y vigilancia especializada."
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "Busca evitar ruptura durante parto."
+            },
+            {
+              "field": "limits",
+              "text": "El sangrado procede del feto; la estabilidad materna no indica bajo riesgo."
+            }
+          ]
+        },
+        "medium": {
+          "vignette": "Al romperse las membranas aparece sangre y bradicardia fetal inmediata. La madre conserva presión y perfusión inicialmente.",
+          "discriminator": "Deterioro fetal brusco tras sangrado con madre estable.",
+          "explanation": "Los vasos fetales que cruzan membranas sin protección pueden romperse durante amniorrexis y causar pérdida sanguínea fetal rápida, aun con estabilidad materna. Activar cesárea de urgencia ante sospecha de ruptura y preparar atención neonatal.",
+          "confusable_with": "Placenta previa",
+          "why_not": "La hemorragia fetal tras ruptura de membranas y la bradicardia brusca identifican vasos fetales vulnerables.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Durante la ruptura de membranas aparece sangrado oscuro seguido de bradicardia fetal brusca. La madre conserva inicialmente estabilidad, y se sospechan vasos fetales desprotegidos sobre la presentación."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "bradicardia fetal brusca"
+            },
+            {
+              "field": "mechanism",
+              "text": "Los vasos fetales que cruzan membranas sin protección pueden romperse durante amniorrexis y causar pérdida sanguínea fetal rápida, aun con estabilidad materna."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Ruptura de vasos fetales"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Sangrado con deterioro fetal súbito"
+            },
+            {
+              "field": "initial_action",
+              "text": "Activar cesárea de urgencia ante sospecha de ruptura y preparar atención neonatal."
+            },
+            {
+              "field": "action_reason",
+              "text": "El feto puede exanguinarse rápidamente."
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Diagnóstico prenatal sin ruptura"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Planear cesárea y vigilancia especializada."
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "Busca evitar ruptura durante parto."
+            },
+            {
+              "field": "limits",
+              "text": "El sangrado procede del feto; la estabilidad materna no indica bajo riesgo."
+            }
+          ]
+        },
+        "contrast": {
+          "vignette": "La valoración prenatal identifica vasos fetales desprotegidos sobre la presentación. No se han roto las membranas y se planifica cesárea con vigilancia especializada.",
+          "discriminator": "Vasos fetales expuestos antes de ruptura.",
+          "explanation": "La planificación busca impedir la rotura de vasos durante el parto. La estabilidad materna no indica bajo riesgo porque la pérdida sanguínea sería fetal.",
+          "confusable_with": "Placenta previa",
+          "why_not": "La hemorragia fetal tras ruptura de membranas y la bradicardia brusca identifican vasos fetales vulnerables.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Durante la ruptura de membranas aparece sangrado oscuro seguido de bradicardia fetal brusca. La madre conserva inicialmente estabilidad, y se sospechan vasos fetales desprotegidos sobre la presentación."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "bradicardia fetal brusca"
+            },
+            {
+              "field": "mechanism",
+              "text": "Los vasos fetales que cruzan membranas sin protección pueden romperse durante amniorrexis y causar pérdida sanguínea fetal rápida, aun con estabilidad materna."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Ruptura de vasos fetales"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Sangrado con deterioro fetal súbito"
+            },
+            {
+              "field": "initial_action",
+              "text": "Activar cesárea de urgencia ante sospecha de ruptura y preparar atención neonatal."
+            },
+            {
+              "field": "action_reason",
+              "text": "El feto puede exanguinarse rápidamente."
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Diagnóstico prenatal sin ruptura"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Planear cesárea y vigilancia especializada."
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "Busca evitar ruptura durante parto."
+            },
+            {
+              "field": "limits",
+              "text": "El sangrado procede del feto; la estabilidad materna no indica bajo riesgo."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "16.05-02",
+      "parent_topic_id": "16.05-02",
+      "block_id": "16.05",
+      "name": "Ruptura uterina",
+      "answer_kind": "diagnosis",
+      "variants": {
+        "easy": {
+          "vignette": "Una mujer en trabajo de parto con cesárea previa presenta dolor intenso, sangrado y alteración del registro fetal. La presentación fetal asciende y aparecen signos de inestabilidad circulatoria.",
+          "discriminator": "La presentación fetal asciende",
+          "explanation": "La separación completa de la pared uterina permite hemorragia y posible salida fetal a cavidad, comprometiendo perfusión materna y oxigenación fetal. Se requiere control quirúrgico inmediato.",
+          "confusable_with": "Desprendimiento placentario",
+          "why_not": "El ascenso de la presentación en una paciente con cicatriz y dolor agudo favorece pérdida de integridad uterina.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Una mujer en trabajo de parto con cesárea previa presenta dolor intenso, sangrado y alteración del registro fetal. La presentación fetal asciende y aparecen signos de inestabilidad circulatoria."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "La presentación fetal asciende"
+            },
+            {
+              "field": "mechanism",
+              "text": "La separación completa de la pared uterina permite hemorragia y posible salida fetal a cavidad, comprometiendo perfusión materna y oxigenación fetal."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Ruptura de pared uterina"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Dolor, pérdida de presentación y compromiso fetal"
+            },
+            {
+              "field": "initial_action",
+              "text": "Activar reanimación y laparotomía urgente sin retraso por ecografía en la paciente inestable."
+            },
+            {
+              "field": "action_reason",
+              "text": "Se requiere control quirúrgico inmediato."
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Lesión extensa o hemorragia no controlable"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Valorar histerectomía."
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "Puede ser necesaria para salvar la vida materna."
+            },
+            {
+              "field": "limits",
+              "text": "La dehiscencia de cicatriz no equivale a ruptura completa."
+            }
+          ]
+        },
+        "medium": {
+          "vignette": "Durante trabajo de parto después de cesárea, una mujer tiene dolor intenso y sangrado. La presentación asciende y se altera el registro fetal.",
+          "discriminator": "Cicatriz uterina con ascenso de presentación y deterioro fetal.",
+          "explanation": "La separación completa de la pared uterina permite hemorragia y posible salida fetal a cavidad, comprometiendo perfusión materna y oxigenación fetal. Activar reanimación y laparotomía urgente sin retraso por ecografía en la paciente inestable.",
+          "confusable_with": "Desprendimiento placentario",
+          "why_not": "El ascenso de la presentación en una paciente con cicatriz y dolor agudo favorece pérdida de integridad uterina.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Una mujer en trabajo de parto con cesárea previa presenta dolor intenso, sangrado y alteración del registro fetal. La presentación fetal asciende y aparecen signos de inestabilidad circulatoria."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "La presentación fetal asciende"
+            },
+            {
+              "field": "mechanism",
+              "text": "La separación completa de la pared uterina permite hemorragia y posible salida fetal a cavidad, comprometiendo perfusión materna y oxigenación fetal."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Ruptura de pared uterina"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Dolor, pérdida de presentación y compromiso fetal"
+            },
+            {
+              "field": "initial_action",
+              "text": "Activar reanimación y laparotomía urgente sin retraso por ecografía en la paciente inestable."
+            },
+            {
+              "field": "action_reason",
+              "text": "Se requiere control quirúrgico inmediato."
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Lesión extensa o hemorragia no controlable"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Valorar histerectomía."
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "Puede ser necesaria para salvar la vida materna."
+            },
+            {
+              "field": "limits",
+              "text": "La dehiscencia de cicatriz no equivale a ruptura completa."
+            }
+          ]
+        },
+        "contrast": {
+          "vignette": "Una mujer en trabajo de parto con cesárea previa presenta dolor, inestabilidad y pérdida de estación fetal. La lesión uterina es extensa y la hemorragia no se controla.",
+          "discriminator": "Lesión de pared uterina con hemorragia grave.",
+          "explanation": "El cuadro requiere atención quirúrgica urgente. Si la lesión es extensa o el sangrado no se controla puede ser necesaria histerectomía; dehiscencia y ruptura completa no son equivalentes.",
+          "confusable_with": "Desprendimiento placentario",
+          "why_not": "El ascenso de la presentación en una paciente con cicatriz y dolor agudo favorece pérdida de integridad uterina.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Una mujer en trabajo de parto con cesárea previa presenta dolor intenso, sangrado y alteración del registro fetal. La presentación fetal asciende y aparecen signos de inestabilidad circulatoria."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "La presentación fetal asciende"
+            },
+            {
+              "field": "mechanism",
+              "text": "La separación completa de la pared uterina permite hemorragia y posible salida fetal a cavidad, comprometiendo perfusión materna y oxigenación fetal."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Ruptura de pared uterina"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Dolor, pérdida de presentación y compromiso fetal"
+            },
+            {
+              "field": "initial_action",
+              "text": "Activar reanimación y laparotomía urgente sin retraso por ecografía en la paciente inestable."
+            },
+            {
+              "field": "action_reason",
+              "text": "Se requiere control quirúrgico inmediato."
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Lesión extensa o hemorragia no controlable"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Valorar histerectomía."
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "Puede ser necesaria para salvar la vida materna."
+            },
+            {
+              "field": "limits",
+              "text": "La dehiscencia de cicatriz no equivale a ruptura completa."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "16.06-01",
+      "parent_topic_id": "16.06-01",
+      "block_id": "16.06",
+      "name": "Hemorragia postparto",
+      "answer_kind": "diagnosis",
+      "variants": {
+        "easy": {
+          "vignette": "Una puérpera presenta sangrado abundante tras el nacimiento. Se evalúan tono uterino, integridad del canal del parto, expulsión placentaria y coagulación mientras el equipo inicia estabilización.",
+          "discriminator": "tono uterino, integridad del canal del parto",
+          "explanation": "La hemostasia posparto falla por atonía, tejido retenido, trauma o coagulopatía; cada causa requiere una intervención distinta durante la reanimación. La evaluación causal y la estabilización deben ser simultáneas.",
+          "confusable_with": "Atribuir todo sangrado a atonía",
+          "why_not": "Un útero firme orienta a trauma, tejido o coagulación y exige tratamiento causal.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Una puérpera presenta sangrado abundante tras el nacimiento. Se evalúan tono uterino, integridad del canal del parto, expulsión placentaria y coagulación mientras el equipo inicia estabilización."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "tono uterino, integridad del canal del parto"
+            },
+            {
+              "field": "mechanism",
+              "text": "La hemostasia posparto falla por atonía, tejido retenido, trauma o coagulopatía; cada causa requiere una intervención distinta durante la reanimación."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Falla de hemostasia posparto"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Sangrado y posible inestabilidad"
+            },
+            {
+              "field": "initial_action",
+              "text": "Activar respuesta obstétrica, reanimar y cuantificar pérdida; iniciar masaje uterino, oxitocina y tranexámico temprano si es elegible, mientras se buscan y tratan las cuatro T."
+            },
+            {
+              "field": "action_reason",
+              "text": "La evaluación causal y la estabilización deben ser simultáneas."
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Útero firme con sangrado persistente"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Buscar trauma, tejido o coagulopatía."
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "El tono conservado orienta otras causas."
+            },
+            {
+              "field": "limits",
+              "text": "No esperar una pérdida estimada exacta ante inestabilidad."
+            },
+            {
+              "field": "source_corrections.0",
+              "text": "Se concreta el paquete inicial de respuesta con la recomendación OMS vigente."
+            }
+          ]
+        },
+        "medium": {
+          "vignette": "Después del parto continúa un sangrado abundante aunque el útero está firme. Se evalúan trauma del canal, tejido y coagulación mientras se estabiliza a la paciente.",
+          "discriminator": "Sangrado posparto significativo sin falta de tono.",
+          "explanation": "La hemorragia puede ocurrir con útero firme. Se investigan otras causas y se inicia respuesta coordinada, sin atribuir todo a atonía.",
+          "confusable_with": "Atribuir todo sangrado a atonía",
+          "why_not": "Un útero firme orienta a trauma, tejido o coagulación y exige tratamiento causal.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Una puérpera presenta sangrado abundante tras el nacimiento. Se evalúan tono uterino, integridad del canal del parto, expulsión placentaria y coagulación mientras el equipo inicia estabilización."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "tono uterino, integridad del canal del parto"
+            },
+            {
+              "field": "mechanism",
+              "text": "La hemostasia posparto falla por atonía, tejido retenido, trauma o coagulopatía; cada causa requiere una intervención distinta durante la reanimación."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Falla de hemostasia posparto"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Sangrado y posible inestabilidad"
+            },
+            {
+              "field": "initial_action",
+              "text": "Activar respuesta obstétrica, reanimar y cuantificar pérdida; iniciar masaje uterino, oxitocina y tranexámico temprano si es elegible, mientras se buscan y tratan las cuatro T."
+            },
+            {
+              "field": "action_reason",
+              "text": "La evaluación causal y la estabilización deben ser simultáneas."
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Útero firme con sangrado persistente"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Buscar trauma, tejido o coagulopatía."
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "El tono conservado orienta otras causas."
+            },
+            {
+              "field": "limits",
+              "text": "No esperar una pérdida estimada exacta ante inestabilidad."
+            },
+            {
+              "field": "source_corrections.0",
+              "text": "Se concreta el paquete inicial de respuesta con la recomendación OMS vigente."
+            }
+          ]
+        },
+        "contrast": {
+          "vignette": "Una mujer después del nacimiento tiene sangrado abundante y compromiso circulatorio. La pérdida estimada todavía no es exacta, pero necesita reanimación y control de la causa.",
+          "discriminator": "Hemorragia clínicamente significativa que no espera un volumen exacto.",
+          "explanation": "La inestabilidad exige respuesta inmediata. La estimación visual no debe retrasar el diagnóstico clínico ni el tratamiento de la hemorragia.",
+          "confusable_with": "Atribuir todo sangrado a atonía",
+          "why_not": "Un útero firme orienta a trauma, tejido o coagulación y exige tratamiento causal.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Una puérpera presenta sangrado abundante tras el nacimiento. Se evalúan tono uterino, integridad del canal del parto, expulsión placentaria y coagulación mientras el equipo inicia estabilización."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "tono uterino, integridad del canal del parto"
+            },
+            {
+              "field": "mechanism",
+              "text": "La hemostasia posparto falla por atonía, tejido retenido, trauma o coagulopatía; cada causa requiere una intervención distinta durante la reanimación."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Falla de hemostasia posparto"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Sangrado y posible inestabilidad"
+            },
+            {
+              "field": "initial_action",
+              "text": "Activar respuesta obstétrica, reanimar y cuantificar pérdida; iniciar masaje uterino, oxitocina y tranexámico temprano si es elegible, mientras se buscan y tratan las cuatro T."
+            },
+            {
+              "field": "action_reason",
+              "text": "La evaluación causal y la estabilización deben ser simultáneas."
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Útero firme con sangrado persistente"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Buscar trauma, tejido o coagulopatía."
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "El tono conservado orienta otras causas."
+            },
+            {
+              "field": "limits",
+              "text": "No esperar una pérdida estimada exacta ante inestabilidad."
+            },
+            {
+              "field": "source_corrections.0",
+              "text": "Se concreta el paquete inicial de respuesta con la recomendación OMS vigente."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "16.06-02",
+      "parent_topic_id": "16.06-02",
+      "block_id": "16.06",
+      "name": "Atonía uterina",
+      "answer_kind": "diagnosis",
+      "variants": {
+        "easy": {
+          "vignette": "Después de un parto prolongado, una mujer presenta sangrado rutilante y un útero grande y flácido. La placenta parece completa; se requiere recuperar contracción uterina y valorar perfusión.",
+          "discriminator": "útero grande y flácido",
+          "explanation": "La ausencia de contracción miometrial impide comprimir vasos del lecho placentario tras alumbramiento, manteniendo hemorragia pese a coagulación inicialmente normal. La contracción comprime los vasos del lecho placentario.",
+          "confusable_with": "Trauma del canal del parto con útero firme",
+          "why_not": "El útero aumentado y flácido identifica falta de contracción, frente al sangrado de otras causas con tono conservado.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Después de un parto prolongado, una mujer presenta sangrado rutilante y un útero grande y flácido. La placenta parece completa; se requiere recuperar contracción uterina y valorar perfusión."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "útero grande y flácido"
+            },
+            {
+              "field": "mechanism",
+              "text": "La ausencia de contracción miometrial impide comprimir vasos del lecho placentario tras alumbramiento, manteniendo hemorragia pese a coagulación inicialmente normal."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Falla de contracción"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Útero blando y sangrado posparto"
+            },
+            {
+              "field": "initial_action",
+              "text": "Activar respuesta obstétrica; dar masaje uterino, oxitocina y reanimación con líquidos o hemoderivados según perfusión. Añadir tranexámico 1 g IV en 10 minutos dentro de las tres horas del nacimiento, si no está contraindicado."
+            },
+            {
+              "field": "action_reason",
+              "text": "La contracción comprime los vasos del lecho placentario."
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Trastorno hipertensivo"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Evitar ergonovina."
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "La fuente la contraindica en este contexto."
+            },
+            {
+              "field": "modifiers.1.factor",
+              "text": "Sangrado que persiste 30 minutos tras tranexámico"
+            },
+            {
+              "field": "modifiers.1.action",
+              "text": "Repetir 1 g IV y escalar control del foco."
+            },
+            {
+              "field": "modifiers.1.reason",
+              "text": "La OMS permite una segunda dosis cuando continúa la hemorragia."
+            },
+            {
+              "field": "limits",
+              "text": "El tranexámico es parte del tratamiento inicial; no debe retrasar control mecánico o quirúrgico si persiste la hemorragia."
+            },
+            {
+              "field": "source_corrections.0",
+              "text": "El libro indica repetir tranexámico tras 15 minutos. OMS usa segunda dosis si continúa sangrado a los 30 minutos o reinicia en 24 horas; primera dosis dentro de tres horas desde nacimiento."
+            }
+          ]
+        },
+        "medium": {
+          "vignette": "Una puérpera con trastorno hipertensivo sangra y tiene un útero grande y flácido. Se requiere recuperar la contracción y evitar ergonovina.",
+          "discriminator": "Útero flácido con hipertensión que modifica el uterotónico.",
+          "explanation": "La falta de contracción causa sangrado. El trastorno hipertensivo contraindica ergonovina; se requiere tratamiento inicial y control del foco sin retrasos.",
+          "confusable_with": "Trauma del canal del parto con útero firme",
+          "why_not": "El útero aumentado y flácido identifica falta de contracción, frente al sangrado de otras causas con tono conservado.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Después de un parto prolongado, una mujer presenta sangrado rutilante y un útero grande y flácido. La placenta parece completa; se requiere recuperar contracción uterina y valorar perfusión."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "útero grande y flácido"
+            },
+            {
+              "field": "mechanism",
+              "text": "La ausencia de contracción miometrial impide comprimir vasos del lecho placentario tras alumbramiento, manteniendo hemorragia pese a coagulación inicialmente normal."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Falla de contracción"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Útero blando y sangrado posparto"
+            },
+            {
+              "field": "initial_action",
+              "text": "Activar respuesta obstétrica; dar masaje uterino, oxitocina y reanimación con líquidos o hemoderivados según perfusión. Añadir tranexámico 1 g IV en 10 minutos dentro de las tres horas del nacimiento, si no está contraindicado."
+            },
+            {
+              "field": "action_reason",
+              "text": "La contracción comprime los vasos del lecho placentario."
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Trastorno hipertensivo"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Evitar ergonovina."
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "La fuente la contraindica en este contexto."
+            },
+            {
+              "field": "modifiers.1.factor",
+              "text": "Sangrado que persiste 30 minutos tras tranexámico"
+            },
+            {
+              "field": "modifiers.1.action",
+              "text": "Repetir 1 g IV y escalar control del foco."
+            },
+            {
+              "field": "modifiers.1.reason",
+              "text": "La OMS permite una segunda dosis cuando continúa la hemorragia."
+            },
+            {
+              "field": "limits",
+              "text": "El tranexámico es parte del tratamiento inicial; no debe retrasar control mecánico o quirúrgico si persiste la hemorragia."
+            },
+            {
+              "field": "source_corrections.0",
+              "text": "El libro indica repetir tranexámico tras 15 minutos. OMS usa segunda dosis si continúa sangrado a los 30 minutos o reinicia en 24 horas; primera dosis dentro de tres horas desde nacimiento."
+            }
+          ]
+        },
+        "contrast": {
+          "vignette": "Una mujer mantiene hemorragia con útero flácido después de tratamiento inicial. El sangrado persiste 30 minutos tras tranexámico y se escala el control del foco.",
+          "discriminator": "Falta de tono con hemorragia persistente.",
+          "explanation": "La corrección OMS permite repetir tranexámico si persiste sangrado a los 30 minutos. Esto no debe retrasar el control mecánico o quirúrgico.",
+          "confusable_with": "Trauma del canal del parto con útero firme",
+          "why_not": "El útero aumentado y flácido identifica falta de contracción, frente al sangrado de otras causas con tono conservado.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Después de un parto prolongado, una mujer presenta sangrado rutilante y un útero grande y flácido. La placenta parece completa; se requiere recuperar contracción uterina y valorar perfusión."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "útero grande y flácido"
+            },
+            {
+              "field": "mechanism",
+              "text": "La ausencia de contracción miometrial impide comprimir vasos del lecho placentario tras alumbramiento, manteniendo hemorragia pese a coagulación inicialmente normal."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Falla de contracción"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Útero blando y sangrado posparto"
+            },
+            {
+              "field": "initial_action",
+              "text": "Activar respuesta obstétrica; dar masaje uterino, oxitocina y reanimación con líquidos o hemoderivados según perfusión. Añadir tranexámico 1 g IV en 10 minutos dentro de las tres horas del nacimiento, si no está contraindicado."
+            },
+            {
+              "field": "action_reason",
+              "text": "La contracción comprime los vasos del lecho placentario."
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Trastorno hipertensivo"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Evitar ergonovina."
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "La fuente la contraindica en este contexto."
+            },
+            {
+              "field": "modifiers.1.factor",
+              "text": "Sangrado que persiste 30 minutos tras tranexámico"
+            },
+            {
+              "field": "modifiers.1.action",
+              "text": "Repetir 1 g IV y escalar control del foco."
+            },
+            {
+              "field": "modifiers.1.reason",
+              "text": "La OMS permite una segunda dosis cuando continúa la hemorragia."
+            },
+            {
+              "field": "limits",
+              "text": "El tranexámico es parte del tratamiento inicial; no debe retrasar control mecánico o quirúrgico si persiste la hemorragia."
+            },
+            {
+              "field": "source_corrections.0",
+              "text": "El libro indica repetir tranexámico tras 15 minutos. OMS usa segunda dosis si continúa sangrado a los 30 minutos o reinicia en 24 horas; primera dosis dentro de tres horas desde nacimiento."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "16.06-03",
+      "parent_topic_id": "16.06-03",
+      "block_id": "16.06",
+      "name": "Acretismo placentario",
+      "answer_kind": "diagnosis",
+      "variants": {
+        "easy": {
+          "vignette": "Una embarazada con placenta previa y varias cesáreas presenta lagunas placentarias y pérdida de la interfase con el miometrio. Se planifica nacimiento en un centro con capacidad para hemorragia grave.",
+          "discriminator": "pérdida de la interfase",
+          "explanation": "La ausencia de decidua permite adherencia o invasión anormal de vellosidades, impide separación placentaria segura y puede comprometer órganos vecinos. La separación puede desencadenar hemorragia masiva.",
+          "confusable_with": "Placenta previa aislada",
+          "why_not": "La pérdida de interfase y signos de invasión exceden una alteración de localización placentaria.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Una embarazada con placenta previa y varias cesáreas presenta lagunas placentarias y pérdida de la interfase con el miometrio. Se planifica nacimiento en un centro con capacidad para hemorragia grave."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "pérdida de la interfase"
+            },
+            {
+              "field": "mechanism",
+              "text": "La ausencia de decidua permite adherencia o invasión anormal de vellosidades, impide separación placentaria segura y puede comprometer órganos vecinos."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Invasión placentaria anormal"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Lagunas y pérdida de plano retroplacentario"
+            },
+            {
+              "field": "initial_action",
+              "text": "Referir a equipo especializado y planear resolución con recursos de transfusión; evitar intentar desprender la placenta en manejo quirúrgico previsto."
+            },
+            {
+              "field": "action_reason",
+              "text": "La separación puede desencadenar hemorragia masiva."
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Sospecha de invasión vesical"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Ampliar evaluación y equipo quirúrgico."
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "Puede existir invasión de órganos vecinos."
+            },
+            {
+              "field": "limits",
+              "text": "La vía y el momento dependen de hallazgos y condiciones maternas."
+            }
+          ]
+        },
+        "medium": {
+          "vignette": "Una mujer con cesáreas previas y placenta previa muestra lagunas placentarias y pérdida de la interfase miometrial en la imagen.",
+          "discriminator": "Riesgo por cicatrices con signos de adherencia placentaria anormal.",
+          "explanation": "La ausencia de decidua permite adherencia o invasión anormal de vellosidades, impide separación placentaria segura y puede comprometer órganos vecinos. Referir a equipo especializado y planear resolución con recursos de transfusión; evitar intentar desprender la placenta en manejo quirúrgico previsto.",
+          "confusable_with": "Placenta previa aislada",
+          "why_not": "La pérdida de interfase y signos de invasión exceden una alteración de localización placentaria.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Una embarazada con placenta previa y varias cesáreas presenta lagunas placentarias y pérdida de la interfase con el miometrio. Se planifica nacimiento en un centro con capacidad para hemorragia grave."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "pérdida de la interfase"
+            },
+            {
+              "field": "mechanism",
+              "text": "La ausencia de decidua permite adherencia o invasión anormal de vellosidades, impide separación placentaria segura y puede comprometer órganos vecinos."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Invasión placentaria anormal"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Lagunas y pérdida de plano retroplacentario"
+            },
+            {
+              "field": "initial_action",
+              "text": "Referir a equipo especializado y planear resolución con recursos de transfusión; evitar intentar desprender la placenta en manejo quirúrgico previsto."
+            },
+            {
+              "field": "action_reason",
+              "text": "La separación puede desencadenar hemorragia masiva."
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Sospecha de invasión vesical"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Ampliar evaluación y equipo quirúrgico."
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "Puede existir invasión de órganos vecinos."
+            },
+            {
+              "field": "limits",
+              "text": "La vía y el momento dependen de hallazgos y condiciones maternas."
+            }
+          ]
+        },
+        "contrast": {
+          "vignette": "La imagen de una embarazada con placenta previa y varias cesáreas sugiere invasión hacia vejiga. Se requiere ampliar equipo y planificación quirúrgica.",
+          "discriminator": "Sospecha de invasión de órganos vecinos.",
+          "explanation": "La adherencia e invasión placentaria requieren un centro preparado para hemorragia grave. La sospecha vesical amplía la evaluación y el equipo.",
+          "confusable_with": "Placenta previa aislada",
+          "why_not": "La pérdida de interfase y signos de invasión exceden una alteración de localización placentaria.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Una embarazada con placenta previa y varias cesáreas presenta lagunas placentarias y pérdida de la interfase con el miometrio. Se planifica nacimiento en un centro con capacidad para hemorragia grave."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "pérdida de la interfase"
+            },
+            {
+              "field": "mechanism",
+              "text": "La ausencia de decidua permite adherencia o invasión anormal de vellosidades, impide separación placentaria segura y puede comprometer órganos vecinos."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Invasión placentaria anormal"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Lagunas y pérdida de plano retroplacentario"
+            },
+            {
+              "field": "initial_action",
+              "text": "Referir a equipo especializado y planear resolución con recursos de transfusión; evitar intentar desprender la placenta en manejo quirúrgico previsto."
+            },
+            {
+              "field": "action_reason",
+              "text": "La separación puede desencadenar hemorragia masiva."
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Sospecha de invasión vesical"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Ampliar evaluación y equipo quirúrgico."
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "Puede existir invasión de órganos vecinos."
+            },
+            {
+              "field": "limits",
+              "text": "La vía y el momento dependen de hallazgos y condiciones maternas."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "16.07-01",
+      "parent_topic_id": "16.07-01",
+      "block_id": "16.07",
+      "name": "Choque hemorrágico en obstetricia",
+      "answer_kind": "diagnosis",
+      "variants": {
+        "easy": {
+          "vignette": "Una puérpera con sangrado activo tiene taquicardia, extremidades frías y oliguria. La presión comienza a bajar y presenta somnolencia; la hemoglobina de control todavía está pendiente.",
+          "discriminator": "taquicardia, extremidades frías y oliguria",
+          "explanation": "La pérdida sanguínea reduce volumen circulante y entrega de oxígeno; la compensación del embarazo puede ocultar la gravedad hasta que la perfusión empeora. La demora sostiene hipoxia y coagulopatía.",
+          "confusable_with": "Esperar confirmación de anemia antes de reanimar",
+          "why_not": "La hipoperfusión clínica ya demuestra una urgencia y el laboratorio puede retrasarse.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Una puérpera con sangrado activo tiene taquicardia, extremidades frías y oliguria. La presión comienza a bajar y presenta somnolencia; la hemoglobina de control todavía está pendiente."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "taquicardia, extremidades frías y oliguria"
+            },
+            {
+              "field": "mechanism",
+              "text": "La pérdida sanguínea reduce volumen circulante y entrega de oxígeno; la compensación del embarazo puede ocultar la gravedad hasta que la perfusión empeora."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Volumen circulante reducido"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Hipoperfusión y oliguria"
+            },
+            {
+              "field": "initial_action",
+              "text": "Activar código obstétrico, asegurar accesos, iniciar reanimación y hemoderivados según gravedad, y controlar el origen del sangrado."
+            },
+            {
+              "field": "action_reason",
+              "text": "La demora sostiene hipoxia y coagulopatía."
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Choque grave con sangrado activo"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "No retrasar transfusión por hemoglobina pendiente."
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "El valor inicial puede no reflejar pérdida aguda."
+            },
+            {
+              "field": "limits",
+              "text": "Las metas y reposición se ajustan a respuesta clínica y protocolo."
+            }
+          ]
+        },
+        "medium": {
+          "vignette": "Una puérpera con sangrado tiene taquicardia, extremidades frías y baja diuresis. La presión desciende y se altera la conciencia.",
+          "discriminator": "Hipoperfusión progresiva asociada con hemorragia activa.",
+          "explanation": "La pérdida sanguínea reduce volumen circulante y entrega de oxígeno; la compensación del embarazo puede ocultar la gravedad hasta que la perfusión empeora. Activar código obstétrico, asegurar accesos, iniciar reanimación y hemoderivados según gravedad, y controlar el origen del sangrado.",
+          "confusable_with": "Esperar confirmación de anemia antes de reanimar",
+          "why_not": "La hipoperfusión clínica ya demuestra una urgencia y el laboratorio puede retrasarse.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Una puérpera con sangrado activo tiene taquicardia, extremidades frías y oliguria. La presión comienza a bajar y presenta somnolencia; la hemoglobina de control todavía está pendiente."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "taquicardia, extremidades frías y oliguria"
+            },
+            {
+              "field": "mechanism",
+              "text": "La pérdida sanguínea reduce volumen circulante y entrega de oxígeno; la compensación del embarazo puede ocultar la gravedad hasta que la perfusión empeora."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Volumen circulante reducido"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Hipoperfusión y oliguria"
+            },
+            {
+              "field": "initial_action",
+              "text": "Activar código obstétrico, asegurar accesos, iniciar reanimación y hemoderivados según gravedad, y controlar el origen del sangrado."
+            },
+            {
+              "field": "action_reason",
+              "text": "La demora sostiene hipoxia y coagulopatía."
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Choque grave con sangrado activo"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "No retrasar transfusión por hemoglobina pendiente."
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "El valor inicial puede no reflejar pérdida aguda."
+            },
+            {
+              "field": "limits",
+              "text": "Las metas y reposición se ajustan a respuesta clínica y protocolo."
+            }
+          ]
+        },
+        "contrast": {
+          "vignette": "Una puérpera sangra activamente y presenta choque grave. La hemoglobina todavía no está disponible. Se requiere transfundir sin esperar ese valor.",
+          "discriminator": "El compromiso clínico exige reanimación antes del resultado.",
+          "explanation": "La cifra inicial puede no reflejar la pérdida aguda. La transfusión y reposición se guían por la respuesta y el protocolo, sin retrasarse por hemoglobina pendiente.",
+          "confusable_with": "Esperar confirmación de anemia antes de reanimar",
+          "why_not": "La hipoperfusión clínica ya demuestra una urgencia y el laboratorio puede retrasarse.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Una puérpera con sangrado activo tiene taquicardia, extremidades frías y oliguria. La presión comienza a bajar y presenta somnolencia; la hemoglobina de control todavía está pendiente."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "taquicardia, extremidades frías y oliguria"
+            },
+            {
+              "field": "mechanism",
+              "text": "La pérdida sanguínea reduce volumen circulante y entrega de oxígeno; la compensación del embarazo puede ocultar la gravedad hasta que la perfusión empeora."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Volumen circulante reducido"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Hipoperfusión y oliguria"
+            },
+            {
+              "field": "initial_action",
+              "text": "Activar código obstétrico, asegurar accesos, iniciar reanimación y hemoderivados según gravedad, y controlar el origen del sangrado."
+            },
+            {
+              "field": "action_reason",
+              "text": "La demora sostiene hipoxia y coagulopatía."
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Choque grave con sangrado activo"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "No retrasar transfusión por hemoglobina pendiente."
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "El valor inicial puede no reflejar pérdida aguda."
+            },
+            {
+              "field": "limits",
+              "text": "Las metas y reposición se ajustan a respuesta clínica y protocolo."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "16.07-02",
+      "parent_topic_id": "16.07-02",
+      "block_id": "16.07",
+      "name": "Clasificar frecuencia de contracciones y valorar tono basal por separado",
+      "answer_kind": "decision",
+      "variants": {
+        "easy": {
+          "vignette": "Durante un trabajo de parto se revisa el registro de contracciones. Hay más de cinco en diez minutos; se necesita describir la frecuencia por separado del tono basal y la intensidad.",
+          "discriminator": "más de cinco en diez minutos",
+          "explanation": "La actividad uterina tiene componentes de tono, frecuencia e intensidad; su evaluación separada identifica alteraciones dinámicas sin asumir una causa de hemorragia. Son variables diferentes de la dinámica uterina.",
+          "confusable_with": "Clasificar solo la intensidad de contracciones",
+          "why_not": "La frecuencia, el tono basal y la intensidad son dimensiones distintas.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Durante un trabajo de parto se revisa el registro de contracciones. Hay más de cinco en diez minutos; se necesita describir la frecuencia por separado del tono basal y la intensidad."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "más de cinco en diez minutos"
+            },
+            {
+              "field": "mechanism",
+              "text": "La actividad uterina tiene componentes de tono, frecuencia e intensidad; su evaluación separada identifica alteraciones dinámicas sin asumir una causa de hemorragia."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Frecuencia contráctil aumentada"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Polisistolia en el registro"
+            },
+            {
+              "field": "initial_action",
+              "text": "Identificar la alteración de frecuencia y distinguirla de cambios de tono o intensidad."
+            },
+            {
+              "field": "action_reason",
+              "text": "Son variables diferentes de la dinámica uterina."
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Tono basal elevado"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Clasificar también hipertonía."
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "Puede coexistir con frecuencia anormal."
+            },
+            {
+              "field": "limits",
+              "text": "Esta página es un fundamento de dinámica uterina y no un algoritmo de choque."
+            }
+          ]
+        },
+        "medium": {
+          "vignette": "En el registro de trabajo de parto hay más de cinco contracciones en diez minutos. ¿Qué alteración de frecuencia debe describirse aparte de la intensidad?",
+          "discriminator": "Frecuencia mayor de cinco contracciones en diez minutos.",
+          "explanation": "La actividad uterina tiene componentes de tono, frecuencia e intensidad; su evaluación separada identifica alteraciones dinámicas sin asumir una causa de hemorragia. Identificar la alteración de frecuencia y distinguirla de cambios de tono o intensidad.",
+          "confusable_with": "Clasificar solo la intensidad de contracciones",
+          "why_not": "La frecuencia, el tono basal y la intensidad son dimensiones distintas.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Durante un trabajo de parto se revisa el registro de contracciones. Hay más de cinco en diez minutos; se necesita describir la frecuencia por separado del tono basal y la intensidad."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "más de cinco en diez minutos"
+            },
+            {
+              "field": "mechanism",
+              "text": "La actividad uterina tiene componentes de tono, frecuencia e intensidad; su evaluación separada identifica alteraciones dinámicas sin asumir una causa de hemorragia."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Frecuencia contráctil aumentada"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Polisistolia en el registro"
+            },
+            {
+              "field": "initial_action",
+              "text": "Identificar la alteración de frecuencia y distinguirla de cambios de tono o intensidad."
+            },
+            {
+              "field": "action_reason",
+              "text": "Son variables diferentes de la dinámica uterina."
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Tono basal elevado"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Clasificar también hipertonía."
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "Puede coexistir con frecuencia anormal."
+            },
+            {
+              "field": "limits",
+              "text": "Esta página es un fundamento de dinámica uterina y no un algoritmo de choque."
+            }
+          ]
+        },
+        "contrast": {
+          "vignette": "Un registro muestra más de cinco contracciones por diez minutos y tono basal elevado. ¿Qué alteraciones deben distinguirse al describir la dinámica?",
+          "discriminator": "Frecuencia aumentada e hipertonía pueden coexistir.",
+          "explanation": "La frecuencia no mide el tono basal. Se clasifica el aumento de frecuencia y también la hipertonía si existe.",
+          "confusable_with": "Clasificar solo la intensidad de contracciones",
+          "why_not": "La frecuencia, el tono basal y la intensidad son dimensiones distintas.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Durante un trabajo de parto se revisa el registro de contracciones. Hay más de cinco en diez minutos; se necesita describir la frecuencia por separado del tono basal y la intensidad."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "más de cinco en diez minutos"
+            },
+            {
+              "field": "mechanism",
+              "text": "La actividad uterina tiene componentes de tono, frecuencia e intensidad; su evaluación separada identifica alteraciones dinámicas sin asumir una causa de hemorragia."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Frecuencia contráctil aumentada"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Polisistolia en el registro"
+            },
+            {
+              "field": "initial_action",
+              "text": "Identificar la alteración de frecuencia y distinguirla de cambios de tono o intensidad."
+            },
+            {
+              "field": "action_reason",
+              "text": "Son variables diferentes de la dinámica uterina."
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Tono basal elevado"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Clasificar también hipertonía."
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "Puede coexistir con frecuencia anormal."
+            },
+            {
+              "field": "limits",
+              "text": "Esta página es un fundamento de dinámica uterina y no un algoritmo de choque."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "16.07-03",
+      "parent_topic_id": "16.07-03",
+      "block_id": "16.07",
+      "name": "Valorar perfusión y localizar la causa obstétrica del sangrado",
+      "answer_kind": "decision",
+      "variants": {
+        "easy": {
+          "vignette": "Una mujer embarazada presenta sangrado de origen aún incierto. El equipo relaciona el momento gestacional, el dolor, la exploración y la ecografía para distinguir causas y valorar compromiso circulatorio.",
+          "discriminator": "momento gestacional, el dolor",
+          "explanation": "La causa del sangrado cambia con etapa gestacional y tono uterino; la pérdida visible puede subestimar el compromiso de perfusión o el sangrado interno. La localización y la causa cambian el manejo.",
+          "confusable_with": "Usar solo el color o volumen visual para decidir la causa",
+          "why_not": "El contexto gestacional, dolor, exploración e imagen deben integrarse.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Una mujer embarazada presenta sangrado de origen aún incierto. El equipo relaciona el momento gestacional, el dolor, la exploración y la ecografía para distinguir causas y valorar compromiso circulatorio."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "momento gestacional, el dolor"
+            },
+            {
+              "field": "mechanism",
+              "text": "La causa del sangrado cambia con etapa gestacional y tono uterino; la pérdida visible puede subestimar el compromiso de perfusión o el sangrado interno."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Causa obstétrica dependiente del momento"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Patrones diferentes antes, durante y después del parto"
+            },
+            {
+              "field": "initial_action",
+              "text": "Evaluar perfusión y etapa gestacional; usar hCG y ecografía en sangrado temprano y estudio placentario en etapas tardías."
+            },
+            {
+              "field": "action_reason",
+              "text": "La localización y la causa cambian el manejo."
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Sangrado posparto"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Buscar tono, tejido, trauma y coagulación."
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "Permite tratamiento causal."
+            },
+            {
+              "field": "limits",
+              "text": "Los esquemas de hCG y estimación visual no deben usarse como reglas absolutas."
+            }
+          ]
+        },
+        "medium": {
+          "vignette": "Una embarazada sangra y aún no se conoce el origen. ¿Qué evaluación integra momento gestacional, dolor, exploración e imagen para localizar la causa y valorar perfusión?",
+          "discriminator": "La etapa gestacional y el patrón clínico orientan causas distintas.",
+          "explanation": "La causa del sangrado cambia con etapa gestacional y tono uterino; la pérdida visible puede subestimar el compromiso de perfusión o el sangrado interno. Evaluar perfusión y etapa gestacional; usar hCG y ecografía en sangrado temprano y estudio placentario en etapas tardías.",
+          "confusable_with": "Usar solo el color o volumen visual para decidir la causa",
+          "why_not": "El contexto gestacional, dolor, exploración e imagen deben integrarse.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Una mujer embarazada presenta sangrado de origen aún incierto. El equipo relaciona el momento gestacional, el dolor, la exploración y la ecografía para distinguir causas y valorar compromiso circulatorio."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "momento gestacional, el dolor"
+            },
+            {
+              "field": "mechanism",
+              "text": "La causa del sangrado cambia con etapa gestacional y tono uterino; la pérdida visible puede subestimar el compromiso de perfusión o el sangrado interno."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Causa obstétrica dependiente del momento"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Patrones diferentes antes, durante y después del parto"
+            },
+            {
+              "field": "initial_action",
+              "text": "Evaluar perfusión y etapa gestacional; usar hCG y ecografía en sangrado temprano y estudio placentario en etapas tardías."
+            },
+            {
+              "field": "action_reason",
+              "text": "La localización y la causa cambian el manejo."
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Sangrado posparto"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Buscar tono, tejido, trauma y coagulación."
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "Permite tratamiento causal."
+            },
+            {
+              "field": "limits",
+              "text": "Los esquemas de hCG y estimación visual no deben usarse como reglas absolutas."
+            }
+          ]
+        },
+        "contrast": {
+          "vignette": "Una mujer sangra después del parto. ¿Qué evaluación causal debe acompañar la valoración de su estado circulatorio?",
+          "discriminator": "En el posparto se revisan tono, tejido, trauma y coagulación.",
+          "explanation": "La búsqueda ordenada de estas causas permite tratamiento dirigido. Los esquemas de hCG o la estimación visual no son reglas absolutas.",
+          "confusable_with": "Usar solo el color o volumen visual para decidir la causa",
+          "why_not": "El contexto gestacional, dolor, exploración e imagen deben integrarse.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Una mujer embarazada presenta sangrado de origen aún incierto. El equipo relaciona el momento gestacional, el dolor, la exploración y la ecografía para distinguir causas y valorar compromiso circulatorio."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "momento gestacional, el dolor"
+            },
+            {
+              "field": "mechanism",
+              "text": "La causa del sangrado cambia con etapa gestacional y tono uterino; la pérdida visible puede subestimar el compromiso de perfusión o el sangrado interno."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Causa obstétrica dependiente del momento"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Patrones diferentes antes, durante y después del parto"
+            },
+            {
+              "field": "initial_action",
+              "text": "Evaluar perfusión y etapa gestacional; usar hCG y ecografía en sangrado temprano y estudio placentario en etapas tardías."
+            },
+            {
+              "field": "action_reason",
+              "text": "La localización y la causa cambian el manejo."
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Sangrado posparto"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Buscar tono, tejido, trauma y coagulación."
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "Permite tratamiento causal."
+            },
+            {
+              "field": "limits",
+              "text": "Los esquemas de hCG y estimación visual no deben usarse como reglas absolutas."
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

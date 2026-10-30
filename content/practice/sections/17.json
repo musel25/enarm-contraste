@@ -1,0 +1,3128 @@
+{
+  "schema_version": 1,
+  "section_id": "17",
+  "author": "practice_13_23",
+  "source_sha256": "e97da1e5978df1731e9d816e4cdee119fa3f129d7db999c496bd1e1e733e1c21",
+  "groups": [
+    {
+      "id": "17.01-01",
+      "parent_topic_id": "17.01-01",
+      "block_id": "17.01",
+      "name": "Comparar cronología, morfología, mucosas y vacunación",
+      "answer_kind": "decision",
+      "variants": {
+        "easy": {
+          "vignette": "Un niño presenta fiebre y manchas en todo el cuerpo. Se revisan edad, vacunación, secuencia temporal, morfología y mucosas antes de decidir pruebas y medidas específicas.",
+          "discriminator": "secuencia temporal, morfología y mucosas",
+          "explanation": "Los distintos agentes producen exantemas con distribución y evolución específicas; relacionar síntomas previos y lesiones permite orientar el diferencial y las complicaciones. Evita tratar todos los exantemas como la misma infección.",
+          "confusable_with": "Asignar todos los exantemas a un mismo agente",
+          "why_not": "La cronología, morfología y mucosas distinguen mecanismos y riesgos.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Un niño presenta fiebre y manchas en todo el cuerpo. Se revisan edad, vacunación, secuencia temporal, morfología y mucosas antes de decidir pruebas y medidas específicas."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "secuencia temporal, morfología y mucosas"
+            },
+            {
+              "field": "mechanism",
+              "text": "Los distintos agentes producen exantemas con distribución y evolución específicas; relacionar síntomas previos y lesiones permite orientar el diferencial y las complicaciones."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Patrón temporal y cutáneo"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Perfiles exantemáticos distintos"
+            },
+            {
+              "field": "initial_action",
+              "text": "Describir lesiones y relación con fiebre; buscar datos de gravedad y orientar pruebas y tratamiento al patrón probable."
+            },
+            {
+              "field": "action_reason",
+              "text": "Evita tratar todos los exantemas como la misma infección."
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Vesículas en varios estadios"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Considerar infección por VZV."
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "La coexistencia de lesiones orienta ese patrón."
+            },
+            {
+              "field": "limits",
+              "text": "Es un diferencial; la apariencia no sustituye confirmación cuando se requiere."
+            }
+          ]
+        },
+        "medium": {
+          "vignette": "Un niño con fiebre tiene lesiones en piel y mucosas. ¿Qué datos deben ordenarse antes de elegir una prueba o medida específica?",
+          "discriminator": "Secuencia temporal y morfología junto con vacunación.",
+          "explanation": "Los distintos agentes producen exantemas con distribución y evolución específicas; relacionar síntomas previos y lesiones permite orientar el diferencial y las complicaciones. Describir lesiones y relación con fiebre; buscar datos de gravedad y orientar pruebas y tratamiento al patrón probable.",
+          "confusable_with": "Asignar todos los exantemas a un mismo agente",
+          "why_not": "La cronología, morfología y mucosas distinguen mecanismos y riesgos.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Un niño presenta fiebre y manchas en todo el cuerpo. Se revisan edad, vacunación, secuencia temporal, morfología y mucosas antes de decidir pruebas y medidas específicas."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "secuencia temporal, morfología y mucosas"
+            },
+            {
+              "field": "mechanism",
+              "text": "Los distintos agentes producen exantemas con distribución y evolución específicas; relacionar síntomas previos y lesiones permite orientar el diferencial y las complicaciones."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Patrón temporal y cutáneo"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Perfiles exantemáticos distintos"
+            },
+            {
+              "field": "initial_action",
+              "text": "Describir lesiones y relación con fiebre; buscar datos de gravedad y orientar pruebas y tratamiento al patrón probable."
+            },
+            {
+              "field": "action_reason",
+              "text": "Evita tratar todos los exantemas como la misma infección."
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Vesículas en varios estadios"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Considerar infección por VZV."
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "La coexistencia de lesiones orienta ese patrón."
+            },
+            {
+              "field": "limits",
+              "text": "Es un diferencial; la apariencia no sustituye confirmación cuando se requiere."
+            }
+          ]
+        },
+        "contrast": {
+          "vignette": "Un niño febril tiene pápulas, vesículas y costras al mismo tiempo. ¿Qué evaluación del exantema permite orientar una infección por VZV?",
+          "discriminator": "La coexistencia de estadios orienta el diferencial.",
+          "explanation": "Se integran morfología, secuencia, edad y vacunación. La apariencia no sustituye confirmación cuando se requiere.",
+          "confusable_with": "Asignar todos los exantemas a un mismo agente",
+          "why_not": "La cronología, morfología y mucosas distinguen mecanismos y riesgos.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Un niño presenta fiebre y manchas en todo el cuerpo. Se revisan edad, vacunación, secuencia temporal, morfología y mucosas antes de decidir pruebas y medidas específicas."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "secuencia temporal, morfología y mucosas"
+            },
+            {
+              "field": "mechanism",
+              "text": "Los distintos agentes producen exantemas con distribución y evolución específicas; relacionar síntomas previos y lesiones permite orientar el diferencial y las complicaciones."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Patrón temporal y cutáneo"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Perfiles exantemáticos distintos"
+            },
+            {
+              "field": "initial_action",
+              "text": "Describir lesiones y relación con fiebre; buscar datos de gravedad y orientar pruebas y tratamiento al patrón probable."
+            },
+            {
+              "field": "action_reason",
+              "text": "Evita tratar todos los exantemas como la misma infección."
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Vesículas en varios estadios"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Considerar infección por VZV."
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "La coexistencia de lesiones orienta ese patrón."
+            },
+            {
+              "field": "limits",
+              "text": "Es un diferencial; la apariencia no sustituye confirmación cuando se requiere."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "17.01-02",
+      "parent_topic_id": "17.01-02",
+      "block_id": "17.01",
+      "name": "Sarampión",
+      "answer_kind": "diagnosis",
+      "variants": {
+        "easy": {
+          "vignette": "Un niño sin vacunas presenta fiebre, tos, coriza y conjuntivitis. Después aparecen puntos blancos en mucosa yugal y un exantema que inicia detrás de las orejas y desciende.",
+          "discriminator": "tos, coriza y conjuntivitis",
+          "explanation": "La infección viral sistémica produce pródromo respiratorio y ocular antes de una respuesta exantemática cefalocaudal; puede complicarse con neumonía o encefalitis. Reduce transmisión y atiende riesgo de complicaciones.",
+          "confusable_with": "Rubéola",
+          "why_not": "La tos, coriza, conjuntivitis y puntos yugales orientan este patrón frente al exantema leve con adenopatías retroauriculares.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Un niño sin vacunas presenta fiebre, tos, coriza y conjuntivitis. Después aparecen puntos blancos en mucosa yugal y un exantema que inicia detrás de las orejas y desciende."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "tos, coriza y conjuntivitis"
+            },
+            {
+              "field": "mechanism",
+              "text": "La infección viral sistémica produce pródromo respiratorio y ocular antes de una respuesta exantemática cefalocaudal; puede complicarse con neumonía o encefalitis."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Infección respiratoria y diseminación"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Pródromo catarral y exantema descendente"
+            },
+            {
+              "field": "initial_action",
+              "text": "Aplicar aislamiento por vía aérea, coordinar confirmación y dar soporte y vitamina A bajo indicación pediátrica."
+            },
+            {
+              "field": "action_reason",
+              "text": "Reduce transmisión y atiende riesgo de complicaciones."
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Desnutrición, inmunosupresión o complicaciones"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Referir para atención hospitalaria."
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "Aumentan gravedad."
+            },
+            {
+              "field": "limits",
+              "text": "La transmisión aérea requiere medidas más amplias que gotas."
+            },
+            {
+              "field": "source_corrections.0",
+              "text": "La transmisión requiere precauciones aéreas; la descripción por gotas del libro es incompleta."
+            }
+          ]
+        },
+        "medium": {
+          "vignette": "Un niño sin vacunación tiene fiebre, tos y conjuntivitis. Aparecen puntos blancos yugales antes de una erupción que desciende desde la región retroauricular.",
+          "discriminator": "Enantema yugal con pródromo respiratorio y exantema descendente.",
+          "explanation": "La infección viral sistémica produce pródromo respiratorio y ocular antes de una respuesta exantemática cefalocaudal; puede complicarse con neumonía o encefalitis. Aplicar aislamiento por vía aérea, coordinar confirmación y dar soporte y vitamina A bajo indicación pediátrica.",
+          "confusable_with": "Rubéola",
+          "why_not": "La tos, coriza, conjuntivitis y puntos yugales orientan este patrón frente al exantema leve con adenopatías retroauriculares.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Un niño sin vacunas presenta fiebre, tos, coriza y conjuntivitis. Después aparecen puntos blancos en mucosa yugal y un exantema que inicia detrás de las orejas y desciende."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "tos, coriza y conjuntivitis"
+            },
+            {
+              "field": "mechanism",
+              "text": "La infección viral sistémica produce pródromo respiratorio y ocular antes de una respuesta exantemática cefalocaudal; puede complicarse con neumonía o encefalitis."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Infección respiratoria y diseminación"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Pródromo catarral y exantema descendente"
+            },
+            {
+              "field": "initial_action",
+              "text": "Aplicar aislamiento por vía aérea, coordinar confirmación y dar soporte y vitamina A bajo indicación pediátrica."
+            },
+            {
+              "field": "action_reason",
+              "text": "Reduce transmisión y atiende riesgo de complicaciones."
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Desnutrición, inmunosupresión o complicaciones"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Referir para atención hospitalaria."
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "Aumentan gravedad."
+            },
+            {
+              "field": "limits",
+              "text": "La transmisión aérea requiere medidas más amplias que gotas."
+            },
+            {
+              "field": "source_corrections.0",
+              "text": "La transmisión requiere precauciones aéreas; la descripción por gotas del libro es incompleta."
+            }
+          ]
+        },
+        "contrast": {
+          "vignette": "Un niño desnutrido no vacunado tiene fiebre, coriza, conjuntivitis y exantema descendente. La mucosa yugal muestra puntos blancos. Requiere referencia por mayor riesgo.",
+          "discriminator": "Patrón clínico característico en huésped de mayor gravedad.",
+          "explanation": "El cuadro requiere medidas aéreas según la corrección. La desnutrición o las complicaciones justifican atención hospitalaria.",
+          "confusable_with": "Rubéola",
+          "why_not": "La tos, coriza, conjuntivitis y puntos yugales orientan este patrón frente al exantema leve con adenopatías retroauriculares.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Un niño sin vacunas presenta fiebre, tos, coriza y conjuntivitis. Después aparecen puntos blancos en mucosa yugal y un exantema que inicia detrás de las orejas y desciende."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "tos, coriza y conjuntivitis"
+            },
+            {
+              "field": "mechanism",
+              "text": "La infección viral sistémica produce pródromo respiratorio y ocular antes de una respuesta exantemática cefalocaudal; puede complicarse con neumonía o encefalitis."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Infección respiratoria y diseminación"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Pródromo catarral y exantema descendente"
+            },
+            {
+              "field": "initial_action",
+              "text": "Aplicar aislamiento por vía aérea, coordinar confirmación y dar soporte y vitamina A bajo indicación pediátrica."
+            },
+            {
+              "field": "action_reason",
+              "text": "Reduce transmisión y atiende riesgo de complicaciones."
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Desnutrición, inmunosupresión o complicaciones"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Referir para atención hospitalaria."
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "Aumentan gravedad."
+            },
+            {
+              "field": "limits",
+              "text": "La transmisión aérea requiere medidas más amplias que gotas."
+            },
+            {
+              "field": "source_corrections.0",
+              "text": "La transmisión requiere precauciones aéreas; la descripción por gotas del libro es incompleta."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "17.01-03",
+      "parent_topic_id": "17.01-03",
+      "block_id": "17.01",
+      "name": "Rubéola",
+      "answer_kind": "diagnosis",
+      "variants": {
+        "easy": {
+          "vignette": "Una niña no vacunada presenta exantema rosado y adenopatías retroauriculares dolorosas. Tiene pocos síntomas generales; se identifica contacto cercano con una embarazada que necesita valoración de exposición.",
+          "discriminator": "adenopatías retroauriculares dolorosas",
+          "explanation": "La infección viral produce adenopatías y exantema generalmente leve, pero la transmisión durante embarazo puede comprometer al feto y cambia la relevancia clínica. El riesgo fetal exige evaluar contactos susceptibles.",
+          "confusable_with": "Sarampión",
+          "why_not": "Predominan ganglios retroauriculares y pocos síntomas generales, en lugar de pródromo respiratorio intenso con puntos yugales.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Una niña no vacunada presenta exantema rosado y adenopatías retroauriculares dolorosas. Tiene pocos síntomas generales; se identifica contacto cercano con una embarazada que necesita valoración de exposición."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "adenopatías retroauriculares dolorosas"
+            },
+            {
+              "field": "mechanism",
+              "text": "La infección viral produce adenopatías y exantema generalmente leve, pero la transmisión durante embarazo puede comprometer al feto y cambia la relevancia clínica."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Infección sistémica viral"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Ganglios retroauriculares y exantema rosado"
+            },
+            {
+              "field": "initial_action",
+              "text": "Ofrecer tratamiento sintomático y coordinar confirmación cuando corresponda, especialmente ante exposición gestacional."
+            },
+            {
+              "field": "action_reason",
+              "text": "El riesgo fetal exige evaluar contactos susceptibles."
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Paciente embarazada o contacto gestacional"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Solicitar evaluación específica."
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "La infección congénita tiene consecuencias distintas."
+            },
+            {
+              "field": "limits",
+              "text": "La clínica puede confundirse con otros exantemas."
+            }
+          ]
+        },
+        "medium": {
+          "vignette": "Una niña tiene erupción rosada con pocos síntomas generales y ganglios retroauriculares dolorosos. Se investiga una exposición gestacional.",
+          "discriminator": "Adenopatías retroauriculares con exantema leve.",
+          "explanation": "La infección viral produce adenopatías y exantema generalmente leve, pero la transmisión durante embarazo puede comprometer al feto y cambia la relevancia clínica. Ofrecer tratamiento sintomático y coordinar confirmación cuando corresponda, especialmente ante exposición gestacional.",
+          "confusable_with": "Sarampión",
+          "why_not": "Predominan ganglios retroauriculares y pocos síntomas generales, en lugar de pródromo respiratorio intenso con puntos yugales.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Una niña no vacunada presenta exantema rosado y adenopatías retroauriculares dolorosas. Tiene pocos síntomas generales; se identifica contacto cercano con una embarazada que necesita valoración de exposición."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "adenopatías retroauriculares dolorosas"
+            },
+            {
+              "field": "mechanism",
+              "text": "La infección viral produce adenopatías y exantema generalmente leve, pero la transmisión durante embarazo puede comprometer al feto y cambia la relevancia clínica."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Infección sistémica viral"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Ganglios retroauriculares y exantema rosado"
+            },
+            {
+              "field": "initial_action",
+              "text": "Ofrecer tratamiento sintomático y coordinar confirmación cuando corresponda, especialmente ante exposición gestacional."
+            },
+            {
+              "field": "action_reason",
+              "text": "El riesgo fetal exige evaluar contactos susceptibles."
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Paciente embarazada o contacto gestacional"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Solicitar evaluación específica."
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "La infección congénita tiene consecuencias distintas."
+            },
+            {
+              "field": "limits",
+              "text": "La clínica puede confundirse con otros exantemas."
+            }
+          ]
+        },
+        "contrast": {
+          "vignette": "Una niña no vacunada con exantema rosado y adenopatías retroauriculares convivió con una embarazada. La exposición exige evaluación específica por riesgo congénito.",
+          "discriminator": "Patrón leve en la niña con implicación gestacional.",
+          "explanation": "La clínica se confunde con otros exantemas. El contacto gestacional cambia las consecuencias y requiere estudio específico.",
+          "confusable_with": "Sarampión",
+          "why_not": "Predominan ganglios retroauriculares y pocos síntomas generales, en lugar de pródromo respiratorio intenso con puntos yugales.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Una niña no vacunada presenta exantema rosado y adenopatías retroauriculares dolorosas. Tiene pocos síntomas generales; se identifica contacto cercano con una embarazada que necesita valoración de exposición."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "adenopatías retroauriculares dolorosas"
+            },
+            {
+              "field": "mechanism",
+              "text": "La infección viral produce adenopatías y exantema generalmente leve, pero la transmisión durante embarazo puede comprometer al feto y cambia la relevancia clínica."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Infección sistémica viral"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Ganglios retroauriculares y exantema rosado"
+            },
+            {
+              "field": "initial_action",
+              "text": "Ofrecer tratamiento sintomático y coordinar confirmación cuando corresponda, especialmente ante exposición gestacional."
+            },
+            {
+              "field": "action_reason",
+              "text": "El riesgo fetal exige evaluar contactos susceptibles."
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Paciente embarazada o contacto gestacional"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Solicitar evaluación específica."
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "La infección congénita tiene consecuencias distintas."
+            },
+            {
+              "field": "limits",
+              "text": "La clínica puede confundirse con otros exantemas."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "17.01-04",
+      "parent_topic_id": "17.01-04",
+      "block_id": "17.01",
+      "name": "Escarlatina",
+      "answer_kind": "diagnosis",
+      "variants": {
+        "easy": {
+          "vignette": "Un escolar presenta fiebre y dolor faríngeo seguidos de un exantema áspero al tacto. Tiene lengua roja y petequias lineales en pliegues, con descamación posterior.",
+          "discriminator": "exantema áspero al tacto",
+          "explanation": "Una cepa estreptocócica productora de exotoxina pirógena causa inflamación faríngea y respuesta cutánea difusa con textura áspera y cambios linguales. El antibiótico trata el foco y previene complicaciones seleccionadas.",
+          "confusable_with": "Enfermedad de Kawasaki",
+          "why_not": "El patrón faríngeo con textura áspera y líneas en pliegues orienta la causa; la lengua roja aislada no define vasculitis.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Un escolar presenta fiebre y dolor faríngeo seguidos de un exantema áspero al tacto. Tiene lengua roja y petequias lineales en pliegues, con descamación posterior."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "exantema áspero al tacto"
+            },
+            {
+              "field": "mechanism",
+              "text": "Una cepa estreptocócica productora de exotoxina pirógena causa inflamación faríngea y respuesta cutánea difusa con textura áspera y cambios linguales."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Exotoxina estreptocócica"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Piel de lija y lengua aframbuesada"
+            },
+            {
+              "field": "initial_action",
+              "text": "Confirmar infección estreptocócica y tratar con penicilina o amoxicilina si es apropiado."
+            },
+            {
+              "field": "action_reason",
+              "text": "El antibiótico trata el foco y previene complicaciones seleccionadas."
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Alergia a penicilina"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Elegir alternativa según tipo de reacción y resistencia."
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "No todas las alternativas son iguales."
+            },
+            {
+              "field": "limits",
+              "text": "No se usa antiestreptolisina para confirmar faringitis aguda rutinaria."
+            }
+          ]
+        },
+        "medium": {
+          "vignette": "Un escolar con fiebre y faringitis desarrolla una erupción áspera. Tiene lengua roja y líneas petequiales en pliegues.",
+          "discriminator": "Faringitis con exantema áspero y líneas en pliegues.",
+          "explanation": "Una cepa estreptocócica productora de exotoxina pirógena causa inflamación faríngea y respuesta cutánea difusa con textura áspera y cambios linguales. Confirmar infección estreptocócica y tratar con penicilina o amoxicilina si es apropiado.",
+          "confusable_with": "Enfermedad de Kawasaki",
+          "why_not": "El patrón faríngeo con textura áspera y líneas en pliegues orienta la causa; la lengua roja aislada no define vasculitis.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Un escolar presenta fiebre y dolor faríngeo seguidos de un exantema áspero al tacto. Tiene lengua roja y petequias lineales en pliegues, con descamación posterior."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "exantema áspero al tacto"
+            },
+            {
+              "field": "mechanism",
+              "text": "Una cepa estreptocócica productora de exotoxina pirógena causa inflamación faríngea y respuesta cutánea difusa con textura áspera y cambios linguales."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Exotoxina estreptocócica"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Piel de lija y lengua aframbuesada"
+            },
+            {
+              "field": "initial_action",
+              "text": "Confirmar infección estreptocócica y tratar con penicilina o amoxicilina si es apropiado."
+            },
+            {
+              "field": "action_reason",
+              "text": "El antibiótico trata el foco y previene complicaciones seleccionadas."
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Alergia a penicilina"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Elegir alternativa según tipo de reacción y resistencia."
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "No todas las alternativas son iguales."
+            },
+            {
+              "field": "limits",
+              "text": "No se usa antiestreptolisina para confirmar faringitis aguda rutinaria."
+            }
+          ]
+        },
+        "contrast": {
+          "vignette": "Un niño con faringitis, lengua roja y erupción áspera presenta descamación posterior. Tiene alergia a penicilina y se debe precisar la reacción para elegir alternativa.",
+          "discriminator": "Patrón toxigénico faríngeo con alergia que modifica tratamiento.",
+          "explanation": "El patrón clínico orienta infección estreptocócica toxigénica. Se elige alternativa por tipo de alergia y resistencia; antiestreptolisina no confirma faringitis aguda rutinaria.",
+          "confusable_with": "Enfermedad de Kawasaki",
+          "why_not": "El patrón faríngeo con textura áspera y líneas en pliegues orienta la causa; la lengua roja aislada no define vasculitis.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Un escolar presenta fiebre y dolor faríngeo seguidos de un exantema áspero al tacto. Tiene lengua roja y petequias lineales en pliegues, con descamación posterior."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "exantema áspero al tacto"
+            },
+            {
+              "field": "mechanism",
+              "text": "Una cepa estreptocócica productora de exotoxina pirógena causa inflamación faríngea y respuesta cutánea difusa con textura áspera y cambios linguales."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Exotoxina estreptocócica"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Piel de lija y lengua aframbuesada"
+            },
+            {
+              "field": "initial_action",
+              "text": "Confirmar infección estreptocócica y tratar con penicilina o amoxicilina si es apropiado."
+            },
+            {
+              "field": "action_reason",
+              "text": "El antibiótico trata el foco y previene complicaciones seleccionadas."
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Alergia a penicilina"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Elegir alternativa según tipo de reacción y resistencia."
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "No todas las alternativas son iguales."
+            },
+            {
+              "field": "limits",
+              "text": "No se usa antiestreptolisina para confirmar faringitis aguda rutinaria."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "17.02-01",
+      "parent_topic_id": "17.02-01",
+      "block_id": "17.02",
+      "name": "Exantema súbito",
+      "answer_kind": "diagnosis",
+      "variants": {
+        "easy": {
+          "vignette": "Un lactante tiene fiebre alta durante tres días y buen aspecto entre picos. Cuando la temperatura desaparece de forma súbita, aparece un exantema rosado que inicia en el tronco.",
+          "discriminator": "Cuando la temperatura desaparece",
+          "explanation": "La infección por herpesvirus humano 6 o 7 causa una fase febril seguida de respuesta exantemática al ceder la fiebre en lactantes. Suele ser un cuadro autolimitado sin necesidad de antiviral.",
+          "confusable_with": "Sarampión",
+          "why_not": "En este patrón el exantema aparece tras la defervescencia, sin el pródromo catarral y enantema yugal descritos en sarampión.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Un lactante tiene fiebre alta durante tres días y buen aspecto entre picos. Cuando la temperatura desaparece de forma súbita, aparece un exantema rosado que inicia en el tronco."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "Cuando la temperatura desaparece"
+            },
+            {
+              "field": "mechanism",
+              "text": "La infección por herpesvirus humano 6 o 7 causa una fase febril seguida de respuesta exantemática al ceder la fiebre en lactantes."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Infección viral con fases sucesivas"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Exantema tras defervescencia"
+            },
+            {
+              "field": "initial_action",
+              "text": "Dar tratamiento sintomático y vigilar hidratación y crisis febriles."
+            },
+            {
+              "field": "action_reason",
+              "text": "Suele ser un cuadro autolimitado sin necesidad de antiviral."
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Convulsión durante fase febril"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Evaluar según características de la crisis."
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "Es una complicación descrita."
+            },
+            {
+              "field": "limits",
+              "text": "La fiebre persistente con mal estado general exige otro estudio."
+            }
+          ]
+        },
+        "medium": {
+          "vignette": "Un lactante presenta una convulsión durante la fase de fiebre alta. Después de la defervescencia aparece un exantema troncal. Se necesita evaluar las características de la crisis.",
+          "discriminator": "La complicación convulsiva añade una evaluación específica.",
+          "explanation": "La convulsión se evalúa según sus características. El patrón de fiebre y exantema orienta el cuadro, pero no reemplaza esa evaluación.",
+          "confusable_with": "Sarampión",
+          "why_not": "En este patrón el exantema aparece tras la defervescencia, sin el pródromo catarral y enantema yugal descritos en sarampión.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Un lactante tiene fiebre alta durante tres días y buen aspecto entre picos. Cuando la temperatura desaparece de forma súbita, aparece un exantema rosado que inicia en el tronco."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "Cuando la temperatura desaparece"
+            },
+            {
+              "field": "mechanism",
+              "text": "La infección por herpesvirus humano 6 o 7 causa una fase febril seguida de respuesta exantemática al ceder la fiebre en lactantes."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Infección viral con fases sucesivas"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Exantema tras defervescencia"
+            },
+            {
+              "field": "initial_action",
+              "text": "Dar tratamiento sintomático y vigilar hidratación y crisis febriles."
+            },
+            {
+              "field": "action_reason",
+              "text": "Suele ser un cuadro autolimitado sin necesidad de antiviral."
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Convulsión durante fase febril"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Evaluar según características de la crisis."
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "Es una complicación descrita."
+            },
+            {
+              "field": "limits",
+              "text": "La fiebre persistente con mal estado general exige otro estudio."
+            }
+          ]
+        },
+        "contrast": {
+          "vignette": "Un lactante tuvo una convulsión en la fase de fiebre alta. Al ceder bruscamente la temperatura aparece una erupción troncal rosada.",
+          "discriminator": "La secuencia fiebre seguida de exantema orienta el cuadro.",
+          "explanation": "La convulsión se evalúa según sus características. Fiebre persistente con mal estado general exige otra investigación.",
+          "confusable_with": "Sarampión",
+          "why_not": "En este patrón el exantema aparece tras la defervescencia, sin el pródromo catarral y enantema yugal descritos en sarampión.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Un lactante tiene fiebre alta durante tres días y buen aspecto entre picos. Cuando la temperatura desaparece de forma súbita, aparece un exantema rosado que inicia en el tronco."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "Cuando la temperatura desaparece"
+            },
+            {
+              "field": "mechanism",
+              "text": "La infección por herpesvirus humano 6 o 7 causa una fase febril seguida de respuesta exantemática al ceder la fiebre en lactantes."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Infección viral con fases sucesivas"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Exantema tras defervescencia"
+            },
+            {
+              "field": "initial_action",
+              "text": "Dar tratamiento sintomático y vigilar hidratación y crisis febriles."
+            },
+            {
+              "field": "action_reason",
+              "text": "Suele ser un cuadro autolimitado sin necesidad de antiviral."
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Convulsión durante fase febril"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Evaluar según características de la crisis."
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "Es una complicación descrita."
+            },
+            {
+              "field": "limits",
+              "text": "La fiebre persistente con mal estado general exige otro estudio."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "17.02-02",
+      "parent_topic_id": "17.02-02",
+      "block_id": "17.02",
+      "name": "Eritema infeccioso",
+      "answer_kind": "diagnosis",
+      "variants": {
+        "easy": {
+          "vignette": "Un escolar presenta mejillas muy rojas con palidez alrededor de la boca. Después surge un exantema reticulado en extremidades que reaparece con calor; tiene un familiar con anemia hemolítica crónica.",
+          "discriminator": "exantema reticulado",
+          "explanation": "La infección por parvovirus B19 causa exantema y puede suprimir transitoriamente precursores eritroides, con mayor repercusión en pacientes con hemólisis crónica. El huésped determina el riesgo más allá del exantema.",
+          "confusable_with": "Rubéola",
+          "why_not": "La erupción reticulada y el eritema intenso de mejillas difieren del exantema rosado con adenopatías retroauriculares.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Un escolar presenta mejillas muy rojas con palidez alrededor de la boca. Después surge un exantema reticulado en extremidades que reaparece con calor; tiene un familiar con anemia hemolítica crónica."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "exantema reticulado"
+            },
+            {
+              "field": "mechanism",
+              "text": "La infección por parvovirus B19 causa exantema y puede suprimir transitoriamente precursores eritroides, con mayor repercusión en pacientes con hemólisis crónica."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Supresión eritroide"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Riesgo de crisis aplásica en huésped susceptible"
+            },
+            {
+              "field": "initial_action",
+              "text": "Dar soporte en cuadro típico y valorar estudios si existe anemia, inmunosupresión o exposición gestacional."
+            },
+            {
+              "field": "action_reason",
+              "text": "El huésped determina el riesgo más allá del exantema."
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Inmunocompromiso o crisis aplásica"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Considerar PCR."
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "La respuesta serológica puede ser insuficiente."
+            },
+            {
+              "field": "limits",
+              "text": "No todo paciente requiere seguimiento virológico."
+            }
+          ]
+        },
+        "medium": {
+          "vignette": "Un escolar tiene mejillas intensamente rojas y palidez perioral. Más tarde aparece un dibujo reticulado en extremidades que reaparece con calor.",
+          "discriminator": "Mejillas rojas seguidas de exantema reticulado.",
+          "explanation": "La infección por parvovirus B19 causa exantema y puede suprimir transitoriamente precursores eritroides, con mayor repercusión en pacientes con hemólisis crónica. Dar soporte en cuadro típico y valorar estudios si existe anemia, inmunosupresión o exposición gestacional.",
+          "confusable_with": "Rubéola",
+          "why_not": "La erupción reticulada y el eritema intenso de mejillas difieren del exantema rosado con adenopatías retroauriculares.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Un escolar presenta mejillas muy rojas con palidez alrededor de la boca. Después surge un exantema reticulado en extremidades que reaparece con calor; tiene un familiar con anemia hemolítica crónica."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "exantema reticulado"
+            },
+            {
+              "field": "mechanism",
+              "text": "La infección por parvovirus B19 causa exantema y puede suprimir transitoriamente precursores eritroides, con mayor repercusión en pacientes con hemólisis crónica."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Supresión eritroide"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Riesgo de crisis aplásica en huésped susceptible"
+            },
+            {
+              "field": "initial_action",
+              "text": "Dar soporte en cuadro típico y valorar estudios si existe anemia, inmunosupresión o exposición gestacional."
+            },
+            {
+              "field": "action_reason",
+              "text": "El huésped determina el riesgo más allá del exantema."
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Inmunocompromiso o crisis aplásica"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Considerar PCR."
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "La respuesta serológica puede ser insuficiente."
+            },
+            {
+              "field": "limits",
+              "text": "No todo paciente requiere seguimiento virológico."
+            }
+          ]
+        },
+        "contrast": {
+          "vignette": "Un niño inmunocomprometido desarrolla el patrón de mejillas rojas y exantema reticulado. La respuesta serológica puede ser insuficiente y se considera PCR.",
+          "discriminator": "Morfología característica con huésped que modifica confirmación.",
+          "explanation": "El contexto de inmunocompromiso o crisis aplásica puede hacer necesaria PCR. No todo paciente requiere seguimiento virológico.",
+          "confusable_with": "Rubéola",
+          "why_not": "La erupción reticulada y el eritema intenso de mejillas difieren del exantema rosado con adenopatías retroauriculares.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Un escolar presenta mejillas muy rojas con palidez alrededor de la boca. Después surge un exantema reticulado en extremidades que reaparece con calor; tiene un familiar con anemia hemolítica crónica."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "exantema reticulado"
+            },
+            {
+              "field": "mechanism",
+              "text": "La infección por parvovirus B19 causa exantema y puede suprimir transitoriamente precursores eritroides, con mayor repercusión en pacientes con hemólisis crónica."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Supresión eritroide"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Riesgo de crisis aplásica en huésped susceptible"
+            },
+            {
+              "field": "initial_action",
+              "text": "Dar soporte en cuadro típico y valorar estudios si existe anemia, inmunosupresión o exposición gestacional."
+            },
+            {
+              "field": "action_reason",
+              "text": "El huésped determina el riesgo más allá del exantema."
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Inmunocompromiso o crisis aplásica"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Considerar PCR."
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "La respuesta serológica puede ser insuficiente."
+            },
+            {
+              "field": "limits",
+              "text": "No todo paciente requiere seguimiento virológico."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "17.02-03",
+      "parent_topic_id": "17.02-03",
+      "block_id": "17.02",
+      "name": "Varicela",
+      "answer_kind": "diagnosis",
+      "variants": {
+        "easy": {
+          "vignette": "Un niño presenta fiebre leve y erupción pruriginosa centrípeta. En el tronco se observan al mismo tiempo pápulas, vesículas y costras, con nuevas lesiones en brotes.",
+          "discriminator": "al mismo tiempo pápulas, vesículas y costras",
+          "explanation": "La infección primaria por VZV genera lesiones cutáneas en brotes sucesivos y establece latencia; la coexistencia de etapas produce el aspecto característico. El huésped define la probabilidad de complicación.",
+          "confusable_with": "Síndrome mano pie boca",
+          "why_not": "La distribución centrípeta con lesiones en varios estadios difiere del predominio de úlceras orales y vesículas palmoplantares.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Un niño presenta fiebre leve y erupción pruriginosa centrípeta. En el tronco se observan al mismo tiempo pápulas, vesículas y costras, con nuevas lesiones en brotes."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "al mismo tiempo pápulas, vesículas y costras"
+            },
+            {
+              "field": "mechanism",
+              "text": "La infección primaria por VZV genera lesiones cutáneas en brotes sucesivos y establece latencia; la coexistencia de etapas produce el aspecto característico."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Brotes cutáneos sucesivos"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Lesiones en distintas fases"
+            },
+            {
+              "field": "initial_action",
+              "text": "Dar soporte y valorar necesidad de antiviral según edad, riesgo y tiempo de evolución."
+            },
+            {
+              "field": "action_reason",
+              "text": "El huésped define la probabilidad de complicación."
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Inmunosupresión o signos neurológicos"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Referir con urgencia y administrar aciclovir intravenoso en enfermedad grave o inmunosupresión según valoración especializada."
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "Aumenta riesgo de enfermedad grave."
+            },
+            {
+              "field": "modifiers.1.factor",
+              "text": "Exposición significativa, sin inmunidad, alto riesgo y vacuna contraindicada"
+            },
+            {
+              "field": "modifiers.1.action",
+              "text": "Valorar inmunoglobulina específica cuanto antes; puede darse hasta diez días después de la exposición."
+            },
+            {
+              "field": "modifiers.1.reason",
+              "text": "La profilaxis depende del huésped y no se limita a 96 horas."
+            },
+            {
+              "field": "limits",
+              "text": "No aplicar de forma universal las reglas de inmunoglobulina y vacunación del libro."
+            },
+            {
+              "field": "source_corrections.0",
+              "text": "VariZIG se administra cuanto antes y puede usarse hasta diez días en personas elegibles; no se limita universalmente a 96 horas ni se indica a toda persona con una sola vacuna."
+            }
+          ]
+        },
+        "medium": {
+          "vignette": "Un niño tiene erupción pruriginosa predominante en tronco. Nuevos brotes hacen coexistir vesículas, pápulas y costras.",
+          "discriminator": "Lesiones en distintos estadios y distribución centrípeta.",
+          "explanation": "La infección primaria por VZV genera lesiones cutáneas en brotes sucesivos y establece latencia; la coexistencia de etapas produce el aspecto característico. Dar soporte y valorar necesidad de antiviral según edad, riesgo y tiempo de evolución.",
+          "confusable_with": "Síndrome mano pie boca",
+          "why_not": "La distribución centrípeta con lesiones en varios estadios difiere del predominio de úlceras orales y vesículas palmoplantares.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Un niño presenta fiebre leve y erupción pruriginosa centrípeta. En el tronco se observan al mismo tiempo pápulas, vesículas y costras, con nuevas lesiones en brotes."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "al mismo tiempo pápulas, vesículas y costras"
+            },
+            {
+              "field": "mechanism",
+              "text": "La infección primaria por VZV genera lesiones cutáneas en brotes sucesivos y establece latencia; la coexistencia de etapas produce el aspecto característico."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Brotes cutáneos sucesivos"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Lesiones en distintas fases"
+            },
+            {
+              "field": "initial_action",
+              "text": "Dar soporte y valorar necesidad de antiviral según edad, riesgo y tiempo de evolución."
+            },
+            {
+              "field": "action_reason",
+              "text": "El huésped define la probabilidad de complicación."
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Inmunosupresión o signos neurológicos"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Referir con urgencia y administrar aciclovir intravenoso en enfermedad grave o inmunosupresión según valoración especializada."
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "Aumenta riesgo de enfermedad grave."
+            },
+            {
+              "field": "modifiers.1.factor",
+              "text": "Exposición significativa, sin inmunidad, alto riesgo y vacuna contraindicada"
+            },
+            {
+              "field": "modifiers.1.action",
+              "text": "Valorar inmunoglobulina específica cuanto antes; puede darse hasta diez días después de la exposición."
+            },
+            {
+              "field": "modifiers.1.reason",
+              "text": "La profilaxis depende del huésped y no se limita a 96 horas."
+            },
+            {
+              "field": "limits",
+              "text": "No aplicar de forma universal las reglas de inmunoglobulina y vacunación del libro."
+            },
+            {
+              "field": "source_corrections.0",
+              "text": "VariZIG se administra cuanto antes y puede usarse hasta diez días en personas elegibles; no se limita universalmente a 96 horas ni se indica a toda persona con una sola vacuna."
+            }
+          ]
+        },
+        "contrast": {
+          "vignette": "Un niño inmunosuprimido presenta lesiones pruriginosas en brotes y en varios estadios. La gravedad del huésped exige referencia urgente y valoración de tratamiento intravenoso.",
+          "discriminator": "Erupción polimorfa en huésped de alto riesgo.",
+          "explanation": "La inmunosupresión eleva el riesgo de enfermedad grave. La corrección sobre inmunoglobulina no se aplica universalmente a cualquier exposición.",
+          "confusable_with": "Síndrome mano pie boca",
+          "why_not": "La distribución centrípeta con lesiones en varios estadios difiere del predominio de úlceras orales y vesículas palmoplantares.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Un niño presenta fiebre leve y erupción pruriginosa centrípeta. En el tronco se observan al mismo tiempo pápulas, vesículas y costras, con nuevas lesiones en brotes."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "al mismo tiempo pápulas, vesículas y costras"
+            },
+            {
+              "field": "mechanism",
+              "text": "La infección primaria por VZV genera lesiones cutáneas en brotes sucesivos y establece latencia; la coexistencia de etapas produce el aspecto característico."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Brotes cutáneos sucesivos"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Lesiones en distintas fases"
+            },
+            {
+              "field": "initial_action",
+              "text": "Dar soporte y valorar necesidad de antiviral según edad, riesgo y tiempo de evolución."
+            },
+            {
+              "field": "action_reason",
+              "text": "El huésped define la probabilidad de complicación."
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Inmunosupresión o signos neurológicos"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Referir con urgencia y administrar aciclovir intravenoso en enfermedad grave o inmunosupresión según valoración especializada."
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "Aumenta riesgo de enfermedad grave."
+            },
+            {
+              "field": "modifiers.1.factor",
+              "text": "Exposición significativa, sin inmunidad, alto riesgo y vacuna contraindicada"
+            },
+            {
+              "field": "modifiers.1.action",
+              "text": "Valorar inmunoglobulina específica cuanto antes; puede darse hasta diez días después de la exposición."
+            },
+            {
+              "field": "modifiers.1.reason",
+              "text": "La profilaxis depende del huésped y no se limita a 96 horas."
+            },
+            {
+              "field": "limits",
+              "text": "No aplicar de forma universal las reglas de inmunoglobulina y vacunación del libro."
+            },
+            {
+              "field": "source_corrections.0",
+              "text": "VariZIG se administra cuanto antes y puede usarse hasta diez días en personas elegibles; no se limita universalmente a 96 horas ni se indica a toda persona con una sola vacuna."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "17.02-04",
+      "parent_topic_id": "17.02-04",
+      "block_id": "17.02",
+      "name": "Síndrome mano pie boca",
+      "answer_kind": "diagnosis",
+      "variants": {
+        "easy": {
+          "vignette": "Un preescolar presenta fiebre baja, úlceras dolorosas en la boca y vesículas en palmas y plantas. Evita beber por dolor oral, pero no tiene alteración de conciencia.",
+          "discriminator": "vesículas en palmas y plantas",
+          "explanation": "Los enterovirus infectan mucosas y piel, produciendo lesiones orales y acrales; el dolor puede reducir ingesta y causar deshidratación aun con enfermedad leve. La principal intervención inicial es soporte sintomático.",
+          "confusable_with": "Varicela",
+          "why_not": "El patrón localizado en boca, palmas y plantas difiere de brotes centrípetos en diferentes estadios.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Un preescolar presenta fiebre baja, úlceras dolorosas en la boca y vesículas en palmas y plantas. Evita beber por dolor oral, pero no tiene alteración de conciencia."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "vesículas en palmas y plantas"
+            },
+            {
+              "field": "mechanism",
+              "text": "Los enterovirus infectan mucosas y piel, produciendo lesiones orales y acrales; el dolor puede reducir ingesta y causar deshidratación aun con enfermedad leve."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Lesiones mucocutáneas"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Úlceras orales y vesículas acrales"
+            },
+            {
+              "field": "initial_action",
+              "text": "Aliviar dolor y mantener hidratación; vigilar tolerancia oral y signos de complicación."
+            },
+            {
+              "field": "action_reason",
+              "text": "La principal intervención inicial es soporte sintomático."
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Vómitos persistentes o síntomas neurológicos"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Ampliar evaluación."
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "Algunas infecciones pueden complicarse."
+            },
+            {
+              "field": "limits",
+              "text": "Las lesiones y el estado clínico orientan más que una edad aislada."
+            }
+          ]
+        },
+        "medium": {
+          "vignette": "Un preescolar tiene úlceras dolorosas en boca y vesículas en manos y pies. La molestia oral limita la ingesta.",
+          "discriminator": "Lesiones orales y palmoplantares con riesgo de deshidratación.",
+          "explanation": "Los enterovirus infectan mucosas y piel, produciendo lesiones orales y acrales; el dolor puede reducir ingesta y causar deshidratación aun con enfermedad leve. Aliviar dolor y mantener hidratación; vigilar tolerancia oral y signos de complicación.",
+          "confusable_with": "Varicela",
+          "why_not": "El patrón localizado en boca, palmas y plantas difiere de brotes centrípetos en diferentes estadios.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Un preescolar presenta fiebre baja, úlceras dolorosas en la boca y vesículas en palmas y plantas. Evita beber por dolor oral, pero no tiene alteración de conciencia."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "vesículas en palmas y plantas"
+            },
+            {
+              "field": "mechanism",
+              "text": "Los enterovirus infectan mucosas y piel, produciendo lesiones orales y acrales; el dolor puede reducir ingesta y causar deshidratación aun con enfermedad leve."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Lesiones mucocutáneas"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Úlceras orales y vesículas acrales"
+            },
+            {
+              "field": "initial_action",
+              "text": "Aliviar dolor y mantener hidratación; vigilar tolerancia oral y signos de complicación."
+            },
+            {
+              "field": "action_reason",
+              "text": "La principal intervención inicial es soporte sintomático."
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Vómitos persistentes o síntomas neurológicos"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Ampliar evaluación."
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "Algunas infecciones pueden complicarse."
+            },
+            {
+              "field": "limits",
+              "text": "Las lesiones y el estado clínico orientan más que una edad aislada."
+            }
+          ]
+        },
+        "contrast": {
+          "vignette": "Un niño con úlceras orales y lesiones en palmas y plantas desarrolla vómitos persistentes. Se requiere ampliar evaluación por posible complicación.",
+          "discriminator": "Patrón mucocutáneo con vómitos persistentes como alarma.",
+          "explanation": "El estado clínico y la tolerancia oral orientan soporte. Los vómitos persistentes o síntomas neurológicos requieren evaluación adicional.",
+          "confusable_with": "Varicela",
+          "why_not": "El patrón localizado en boca, palmas y plantas difiere de brotes centrípetos en diferentes estadios.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Un preescolar presenta fiebre baja, úlceras dolorosas en la boca y vesículas en palmas y plantas. Evita beber por dolor oral, pero no tiene alteración de conciencia."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "vesículas en palmas y plantas"
+            },
+            {
+              "field": "mechanism",
+              "text": "Los enterovirus infectan mucosas y piel, produciendo lesiones orales y acrales; el dolor puede reducir ingesta y causar deshidratación aun con enfermedad leve."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Lesiones mucocutáneas"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Úlceras orales y vesículas acrales"
+            },
+            {
+              "field": "initial_action",
+              "text": "Aliviar dolor y mantener hidratación; vigilar tolerancia oral y signos de complicación."
+            },
+            {
+              "field": "action_reason",
+              "text": "La principal intervención inicial es soporte sintomático."
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Vómitos persistentes o síntomas neurológicos"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Ampliar evaluación."
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "Algunas infecciones pueden complicarse."
+            },
+            {
+              "field": "limits",
+              "text": "Las lesiones y el estado clínico orientan más que una edad aislada."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "17.03-01",
+      "parent_topic_id": "17.03-01",
+      "block_id": "17.03",
+      "name": "Laringotraqueítis (crup)",
+      "answer_kind": "diagnosis",
+      "variants": {
+        "easy": {
+          "vignette": "Un niño pequeño presenta rinorrea seguida de tos perruna, disfonía y estridor inspiratorio. El estridor persiste en reposo y existe tiraje, sin sialorrea ni dificultad importante para tragar.",
+          "discriminator": "tos perruna, disfonía y estridor inspiratorio",
+          "explanation": "La inflamación viral subglótica estrecha la vía aérea y produce tos traqueal y estridor; la obstrucción se valora por trabajo respiratorio y estado general. Reduce edema y obstrucción.",
+          "confusable_with": "Epiglotitis",
+          "why_not": "La tos perruna y disfonía sin sialorrea ni gran disfagia favorecen laringotraqueitis; el babeo y posición de trípode requieren otro enfoque.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Un niño pequeño presenta rinorrea seguida de tos perruna, disfonía y estridor inspiratorio. El estridor persiste en reposo y existe tiraje, sin sialorrea ni dificultad importante para tragar."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "tos perruna, disfonía y estridor inspiratorio"
+            },
+            {
+              "field": "mechanism",
+              "text": "La inflamación viral subglótica estrecha la vía aérea y produce tos traqueal y estridor; la obstrucción se valora por trabajo respiratorio y estado general."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Estrechamiento subglótico"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Tos perruna y estridor"
+            },
+            {
+              "field": "initial_action",
+              "text": "Evaluar vía aérea; administrar dexametasona y epinefrina nebulizada por estridor en reposo con tiraje. Mantener observación y escalar atención si persiste obstrucción."
+            },
+            {
+              "field": "action_reason",
+              "text": "Reduce edema y obstrucción."
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Agitación, letargia o compromiso respiratorio"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Escalar atención urgente."
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "Sugiere enfermedad grave."
+            },
+            {
+              "field": "limits",
+              "text": "La radiografía no es necesaria para todo cuadro típico."
+            },
+            {
+              "field": "source_corrections.0",
+              "text": "Se concreta epinefrina nebulizada en el patrón moderado con estridor en reposo, según CPS."
+            }
+          ]
+        },
+        "medium": {
+          "vignette": "Un niño tiene tos perruna, voz ronca y estridor inspiratorio después de rinorrea. El estridor está presente en reposo y hay tiraje.",
+          "discriminator": "Tos perruna y disfonía con estridor en reposo.",
+          "explanation": "La inflamación viral subglótica estrecha la vía aérea y produce tos traqueal y estridor; la obstrucción se valora por trabajo respiratorio y estado general. Evaluar vía aérea; administrar dexametasona y epinefrina nebulizada por estridor en reposo con tiraje. Mantener observación y escalar atención si persiste obstrucción.",
+          "confusable_with": "Epiglotitis",
+          "why_not": "La tos perruna y disfonía sin sialorrea ni gran disfagia favorecen laringotraqueitis; el babeo y posición de trípode requieren otro enfoque.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Un niño pequeño presenta rinorrea seguida de tos perruna, disfonía y estridor inspiratorio. El estridor persiste en reposo y existe tiraje, sin sialorrea ni dificultad importante para tragar."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "tos perruna, disfonía y estridor inspiratorio"
+            },
+            {
+              "field": "mechanism",
+              "text": "La inflamación viral subglótica estrecha la vía aérea y produce tos traqueal y estridor; la obstrucción se valora por trabajo respiratorio y estado general."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Estrechamiento subglótico"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Tos perruna y estridor"
+            },
+            {
+              "field": "initial_action",
+              "text": "Evaluar vía aérea; administrar dexametasona y epinefrina nebulizada por estridor en reposo con tiraje. Mantener observación y escalar atención si persiste obstrucción."
+            },
+            {
+              "field": "action_reason",
+              "text": "Reduce edema y obstrucción."
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Agitación, letargia o compromiso respiratorio"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Escalar atención urgente."
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "Sugiere enfermedad grave."
+            },
+            {
+              "field": "limits",
+              "text": "La radiografía no es necesaria para todo cuadro típico."
+            },
+            {
+              "field": "source_corrections.0",
+              "text": "Se concreta epinefrina nebulizada en el patrón moderado con estridor en reposo, según CPS."
+            }
+          ]
+        },
+        "contrast": {
+          "vignette": "Un niño con tos perruna y estridor se muestra agitado o letárgico y tiene compromiso respiratorio. El cuadro requiere atención urgente.",
+          "discriminator": "Obstrucción laríngea con datos de gravedad.",
+          "explanation": "La gravedad obliga a escalar atención. La corrección precisa epinefrina nebulizada en el patrón moderado con estridor en reposo; no se necesita radiografía en todo cuadro típico.",
+          "confusable_with": "Epiglotitis",
+          "why_not": "La tos perruna y disfonía sin sialorrea ni gran disfagia favorecen laringotraqueitis; el babeo y posición de trípode requieren otro enfoque.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Un niño pequeño presenta rinorrea seguida de tos perruna, disfonía y estridor inspiratorio. El estridor persiste en reposo y existe tiraje, sin sialorrea ni dificultad importante para tragar."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "tos perruna, disfonía y estridor inspiratorio"
+            },
+            {
+              "field": "mechanism",
+              "text": "La inflamación viral subglótica estrecha la vía aérea y produce tos traqueal y estridor; la obstrucción se valora por trabajo respiratorio y estado general."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Estrechamiento subglótico"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Tos perruna y estridor"
+            },
+            {
+              "field": "initial_action",
+              "text": "Evaluar vía aérea; administrar dexametasona y epinefrina nebulizada por estridor en reposo con tiraje. Mantener observación y escalar atención si persiste obstrucción."
+            },
+            {
+              "field": "action_reason",
+              "text": "Reduce edema y obstrucción."
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Agitación, letargia o compromiso respiratorio"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Escalar atención urgente."
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "Sugiere enfermedad grave."
+            },
+            {
+              "field": "limits",
+              "text": "La radiografía no es necesaria para todo cuadro típico."
+            },
+            {
+              "field": "source_corrections.0",
+              "text": "Se concreta epinefrina nebulizada en el patrón moderado con estridor en reposo, según CPS."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "17.03-02",
+      "parent_topic_id": "17.03-02",
+      "block_id": "17.03",
+      "name": "Epiglotitis",
+      "answer_kind": "diagnosis",
+      "variants": {
+        "easy": {
+          "vignette": "Un preescolar sin vacunación completa presenta fiebre, voz apagada, babeo y estridor de rápida evolución. Permanece sentado inclinado hacia delante y tiene dificultad para deglutir.",
+          "discriminator": "babeo y estridor de rápida evolución",
+          "explanation": "La inflamación aguda de la epiglotis estrecha la entrada laríngea y puede obstruir rápidamente la vía aérea, produciendo disfagia y acumulación de secreciones. La obstrucción amenaza la vida.",
+          "confusable_with": "CRUP",
+          "why_not": "El babeo, disfagia y posición inclinada contrastan con la tos perruna típica del CRUP.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Un preescolar sin vacunación completa presenta fiebre, voz apagada, babeo y estridor de rápida evolución. Permanece sentado inclinado hacia delante y tiene dificultad para deglutir."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "babeo y estridor de rápida evolución"
+            },
+            {
+              "field": "mechanism",
+              "text": "La inflamación aguda de la epiglotis estrecha la entrada laríngea y puede obstruir rápidamente la vía aérea, produciendo disfagia y acumulación de secreciones."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Edema supraglótico"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Babeo, disfagia y posición de trípode"
+            },
+            {
+              "field": "initial_action",
+              "text": "Activar equipo experto para asegurar vía aérea y administrar antibiótico parenteral sin retrasar atención por estudios."
+            },
+            {
+              "field": "action_reason",
+              "text": "La obstrucción amenaza la vida."
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Vía aérea inestable"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Priorizar manejo controlado en entorno preparado."
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "La instrumentación puede precipitar deterioro."
+            },
+            {
+              "field": "limits",
+              "text": "La imagen solo se considera si el paciente está estable y no retrasa control."
+            }
+          ]
+        },
+        "medium": {
+          "vignette": "Un niño con vacunación incompleta tiene fiebre, babeo y voz apagada. Se mantiene inclinado hacia delante porque le cuesta tragar y respirar.",
+          "discriminator": "Sialorrea y disfagia con obstrucción de rápida evolución.",
+          "explanation": "La inflamación aguda de la epiglotis estrecha la entrada laríngea y puede obstruir rápidamente la vía aérea, produciendo disfagia y acumulación de secreciones. Activar equipo experto para asegurar vía aérea y administrar antibiótico parenteral sin retrasar atención por estudios.",
+          "confusable_with": "CRUP",
+          "why_not": "El babeo, disfagia y posición inclinada contrastan con la tos perruna típica del CRUP.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Un preescolar sin vacunación completa presenta fiebre, voz apagada, babeo y estridor de rápida evolución. Permanece sentado inclinado hacia delante y tiene dificultad para deglutir."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "babeo y estridor de rápida evolución"
+            },
+            {
+              "field": "mechanism",
+              "text": "La inflamación aguda de la epiglotis estrecha la entrada laríngea y puede obstruir rápidamente la vía aérea, produciendo disfagia y acumulación de secreciones."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Edema supraglótico"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Babeo, disfagia y posición de trípode"
+            },
+            {
+              "field": "initial_action",
+              "text": "Activar equipo experto para asegurar vía aérea y administrar antibiótico parenteral sin retrasar atención por estudios."
+            },
+            {
+              "field": "action_reason",
+              "text": "La obstrucción amenaza la vida."
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Vía aérea inestable"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Priorizar manejo controlado en entorno preparado."
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "La instrumentación puede precipitar deterioro."
+            },
+            {
+              "field": "limits",
+              "text": "La imagen solo se considera si el paciente está estable y no retrasa control."
+            }
+          ]
+        },
+        "contrast": {
+          "vignette": "Un preescolar con babeo, voz apagada y estridor empeora rápidamente. La vía aérea es inestable y debe manejarse en un entorno preparado antes de intentar imagen.",
+          "discriminator": "Amenaza de vía aérea con riesgo por instrumentación.",
+          "explanation": "Se prioriza control de vía aérea. La imagen solo se considera en estabilidad y sin retrasar el manejo.",
+          "confusable_with": "CRUP",
+          "why_not": "El babeo, disfagia y posición inclinada contrastan con la tos perruna típica del CRUP.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Un preescolar sin vacunación completa presenta fiebre, voz apagada, babeo y estridor de rápida evolución. Permanece sentado inclinado hacia delante y tiene dificultad para deglutir."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "babeo y estridor de rápida evolución"
+            },
+            {
+              "field": "mechanism",
+              "text": "La inflamación aguda de la epiglotis estrecha la entrada laríngea y puede obstruir rápidamente la vía aérea, produciendo disfagia y acumulación de secreciones."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Edema supraglótico"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Babeo, disfagia y posición de trípode"
+            },
+            {
+              "field": "initial_action",
+              "text": "Activar equipo experto para asegurar vía aérea y administrar antibiótico parenteral sin retrasar atención por estudios."
+            },
+            {
+              "field": "action_reason",
+              "text": "La obstrucción amenaza la vida."
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Vía aérea inestable"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Priorizar manejo controlado en entorno preparado."
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "La instrumentación puede precipitar deterioro."
+            },
+            {
+              "field": "limits",
+              "text": "La imagen solo se considera si el paciente está estable y no retrasa control."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "17.03-03",
+      "parent_topic_id": "17.03-03",
+      "block_id": "17.03",
+      "name": "Tos ferina",
+      "answer_kind": "diagnosis",
+      "variants": {
+        "easy": {
+          "vignette": "Un lactante no vacunado tiene accesos repetidos de tos que provocan cianosis y vómito. Entre episodios parece mejorar; un conviviente presenta tos prolongada desde hace varias semanas.",
+          "discriminator": "tos que provocan cianosis y vómito",
+          "explanation": "Las toxinas de Bordetella alteran el epitelio respiratorio y generan tos paroxística prolongada; el lactante puede presentar compromiso respiratorio con pocos síntomas entre accesos. El lactante tiene riesgo de complicaciones y transmisión.",
+          "confusable_with": "Bronquiolitis",
+          "why_not": "Los accesos con vómito y cianosis y el contacto con tos prolongada difieren de un cuadro continuo de taquipnea y sibilancias.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Un lactante no vacunado tiene accesos repetidos de tos que provocan cianosis y vómito. Entre episodios parece mejorar; un conviviente presenta tos prolongada desde hace varias semanas."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "tos que provocan cianosis y vómito"
+            },
+            {
+              "field": "mechanism",
+              "text": "Las toxinas de Bordetella alteran el epitelio respiratorio y generan tos paroxística prolongada; el lactante puede presentar compromiso respiratorio con pocos síntomas entre accesos."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Tos paroxística por toxinas"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Vómito postusivo y cianosis"
+            },
+            {
+              "field": "initial_action",
+              "text": "Evaluar oxigenación y necesidad de hospitalización; obtener muestra nasofaríngea e iniciar macrólido según edad y sospecha."
+            },
+            {
+              "field": "action_reason",
+              "text": "El lactante tiene riesgo de complicaciones y transmisión."
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Menor de un mes"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "La fuente prefiere azitromicina."
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "La edad modifica selección."
+            },
+            {
+              "field": "limits",
+              "text": "El tratamiento tardío puede reducir transmisión sin resolver de inmediato la tos."
+            }
+          ]
+        },
+        "medium": {
+          "vignette": "Un lactante presenta accesos de tos con cianosis y vómitos. Un conviviente lleva semanas con tos y el lactante no está vacunado.",
+          "discriminator": "Tos paroxística con exposición a tos prolongada.",
+          "explanation": "Las toxinas de Bordetella alteran el epitelio respiratorio y generan tos paroxística prolongada; el lactante puede presentar compromiso respiratorio con pocos síntomas entre accesos. Evaluar oxigenación y necesidad de hospitalización; obtener muestra nasofaríngea e iniciar macrólido según edad y sospecha.",
+          "confusable_with": "Bronquiolitis",
+          "why_not": "Los accesos con vómito y cianosis y el contacto con tos prolongada difieren de un cuadro continuo de taquipnea y sibilancias.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Un lactante no vacunado tiene accesos repetidos de tos que provocan cianosis y vómito. Entre episodios parece mejorar; un conviviente presenta tos prolongada desde hace varias semanas."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "tos que provocan cianosis y vómito"
+            },
+            {
+              "field": "mechanism",
+              "text": "Las toxinas de Bordetella alteran el epitelio respiratorio y generan tos paroxística prolongada; el lactante puede presentar compromiso respiratorio con pocos síntomas entre accesos."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Tos paroxística por toxinas"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Vómito postusivo y cianosis"
+            },
+            {
+              "field": "initial_action",
+              "text": "Evaluar oxigenación y necesidad de hospitalización; obtener muestra nasofaríngea e iniciar macrólido según edad y sospecha."
+            },
+            {
+              "field": "action_reason",
+              "text": "El lactante tiene riesgo de complicaciones y transmisión."
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Menor de un mes"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "La fuente prefiere azitromicina."
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "La edad modifica selección."
+            },
+            {
+              "field": "limits",
+              "text": "El tratamiento tardío puede reducir transmisión sin resolver de inmediato la tos."
+            }
+          ]
+        },
+        "contrast": {
+          "vignette": "Un recién nacido menor de un mes tiene accesos de tos y cianosis con mejoría entre episodios. En casa hay tos prolongada; la edad modifica el antibiótico.",
+          "discriminator": "Paroxismos en lactante muy pequeño con contacto domiciliario.",
+          "explanation": "La fuente prefiere azitromicina en menores de un mes. El tratamiento tardío puede reducir transmisión sin resolver inmediatamente la tos.",
+          "confusable_with": "Bronquiolitis",
+          "why_not": "Los accesos con vómito y cianosis y el contacto con tos prolongada difieren de un cuadro continuo de taquipnea y sibilancias.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Un lactante no vacunado tiene accesos repetidos de tos que provocan cianosis y vómito. Entre episodios parece mejorar; un conviviente presenta tos prolongada desde hace varias semanas."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "tos que provocan cianosis y vómito"
+            },
+            {
+              "field": "mechanism",
+              "text": "Las toxinas de Bordetella alteran el epitelio respiratorio y generan tos paroxística prolongada; el lactante puede presentar compromiso respiratorio con pocos síntomas entre accesos."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Tos paroxística por toxinas"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Vómito postusivo y cianosis"
+            },
+            {
+              "field": "initial_action",
+              "text": "Evaluar oxigenación y necesidad de hospitalización; obtener muestra nasofaríngea e iniciar macrólido según edad y sospecha."
+            },
+            {
+              "field": "action_reason",
+              "text": "El lactante tiene riesgo de complicaciones y transmisión."
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Menor de un mes"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "La fuente prefiere azitromicina."
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "La edad modifica selección."
+            },
+            {
+              "field": "limits",
+              "text": "El tratamiento tardío puede reducir transmisión sin resolver de inmediato la tos."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "17.04-01",
+      "parent_topic_id": "17.04-01",
+      "block_id": "17.04",
+      "name": "Bronquiolitis",
+      "answer_kind": "diagnosis",
+      "variants": {
+        "easy": {
+          "vignette": "Un lactante de cuatro meses presenta rinorrea y tos que progresan a taquipnea, sibilancias y estertores finos. Come menos y se evalúan saturación, hidratación y presencia de apnea.",
+          "discriminator": "sibilancias y estertores finos",
+          "explanation": "La inflamación y el moco obstruyen bronquiolos pequeños tras infección viral, produciendo dificultad ventilatoria y problemas de alimentación en un lactante vulnerable. La insuficiencia respiratoria y la ingesta determinan atención.",
+          "confusable_with": "Tos ferina",
+          "why_not": "El predominio de sibilancias y estertores con taquipnea no equivale a paroxismos típicos de tos con vómito.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Un lactante de cuatro meses presenta rinorrea y tos que progresan a taquipnea, sibilancias y estertores finos. Come menos y se evalúan saturación, hidratación y presencia de apnea."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "sibilancias y estertores finos"
+            },
+            {
+              "field": "mechanism",
+              "text": "La inflamación y el moco obstruyen bronquiolos pequeños tras infección viral, produciendo dificultad ventilatoria y problemas de alimentación en un lactante vulnerable."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Obstrucción bronquiolar"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Sibilancias, taquipnea y estertores"
+            },
+            {
+              "field": "initial_action",
+              "text": "Valorar gravedad y dar soporte de oxigenación e hidratación según necesidad."
+            },
+            {
+              "field": "action_reason",
+              "text": "La insuficiencia respiratoria y la ingesta determinan atención."
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Apnea, hipoxemia o intolerancia oral"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Hospitalizar."
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "Son datos de riesgo."
+            },
+            {
+              "field": "limits",
+              "text": "No se indican broncodilatadores o solución hipertónica de rutina según guía actual."
+            },
+            {
+              "field": "source_corrections.0",
+              "text": "NICE no recomienda salbutamol ni solución hipertónica como tratamiento de bronquiolitis; se prioriza soporte."
+            }
+          ]
+        },
+        "medium": {
+          "vignette": "Un lactante tiene rinorrea seguida de tos, taquipnea y sibilancias. Come menos y necesita valoración de hidratación y saturación.",
+          "discriminator": "Primera presentación respiratoria de vías pequeñas en lactante.",
+          "explanation": "La inflamación y el moco obstruyen bronquiolos pequeños tras infección viral, produciendo dificultad ventilatoria y problemas de alimentación en un lactante vulnerable. Valorar gravedad y dar soporte de oxigenación e hidratación según necesidad.",
+          "confusable_with": "Tos ferina",
+          "why_not": "El predominio de sibilancias y estertores con taquipnea no equivale a paroxismos típicos de tos con vómito.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Un lactante de cuatro meses presenta rinorrea y tos que progresan a taquipnea, sibilancias y estertores finos. Come menos y se evalúan saturación, hidratación y presencia de apnea."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "sibilancias y estertores finos"
+            },
+            {
+              "field": "mechanism",
+              "text": "La inflamación y el moco obstruyen bronquiolos pequeños tras infección viral, produciendo dificultad ventilatoria y problemas de alimentación en un lactante vulnerable."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Obstrucción bronquiolar"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Sibilancias, taquipnea y estertores"
+            },
+            {
+              "field": "initial_action",
+              "text": "Valorar gravedad y dar soporte de oxigenación e hidratación según necesidad."
+            },
+            {
+              "field": "action_reason",
+              "text": "La insuficiencia respiratoria y la ingesta determinan atención."
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Apnea, hipoxemia o intolerancia oral"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Hospitalizar."
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "Son datos de riesgo."
+            },
+            {
+              "field": "limits",
+              "text": "No se indican broncodilatadores o solución hipertónica de rutina según guía actual."
+            },
+            {
+              "field": "source_corrections.0",
+              "text": "NICE no recomienda salbutamol ni solución hipertónica como tratamiento de bronquiolitis; se prioriza soporte."
+            }
+          ]
+        },
+        "contrast": {
+          "vignette": "Un lactante con sibilancias y estertores tras rinorrea presenta apnea o intolerancia oral. Estos hallazgos cambian la conducta a hospitalización.",
+          "discriminator": "Apnea o dificultad de alimentación como riesgo.",
+          "explanation": "El soporte respiratorio e hídrico guía el manejo. La corrección NICE excluye salbutamol y solución hipertónica de rutina.",
+          "confusable_with": "Tos ferina",
+          "why_not": "El predominio de sibilancias y estertores con taquipnea no equivale a paroxismos típicos de tos con vómito.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Un lactante de cuatro meses presenta rinorrea y tos que progresan a taquipnea, sibilancias y estertores finos. Come menos y se evalúan saturación, hidratación y presencia de apnea."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "sibilancias y estertores finos"
+            },
+            {
+              "field": "mechanism",
+              "text": "La inflamación y el moco obstruyen bronquiolos pequeños tras infección viral, produciendo dificultad ventilatoria y problemas de alimentación en un lactante vulnerable."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Obstrucción bronquiolar"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Sibilancias, taquipnea y estertores"
+            },
+            {
+              "field": "initial_action",
+              "text": "Valorar gravedad y dar soporte de oxigenación e hidratación según necesidad."
+            },
+            {
+              "field": "action_reason",
+              "text": "La insuficiencia respiratoria y la ingesta determinan atención."
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Apnea, hipoxemia o intolerancia oral"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Hospitalizar."
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "Son datos de riesgo."
+            },
+            {
+              "field": "limits",
+              "text": "No se indican broncodilatadores o solución hipertónica de rutina según guía actual."
+            },
+            {
+              "field": "source_corrections.0",
+              "text": "NICE no recomienda salbutamol ni solución hipertónica como tratamiento de bronquiolitis; se prioriza soporte."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "17.05-01",
+      "parent_topic_id": "17.05-01",
+      "block_id": "17.05",
+      "name": "IVU en menores",
+      "answer_kind": "diagnosis",
+      "variants": {
+        "easy": {
+          "vignette": "Un lactante presenta fiebre sin foco y rechazo de alimento. No puede expresar síntomas urinarios; se obtiene orina por una técnica de baja contaminación para evaluar piuria y realizar cultivo.",
+          "discriminator": "fiebre sin foco",
+          "explanation": "La colonización ascendente por bacterias intestinales puede alcanzar tracto urinario y riñón; en lactantes produce síntomas sistémicos inespecíficos y riesgo de cicatriz renal. El cultivo orienta tratamiento y confirma infección.",
+          "confusable_with": "Infección confirmada solo por bolsa recolectora",
+          "why_not": "La bolsa tiene alta contaminación y no establece el diagnóstico por sí sola.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Un lactante presenta fiebre sin foco y rechazo de alimento. No puede expresar síntomas urinarios; se obtiene orina por una técnica de baja contaminación para evaluar piuria y realizar cultivo."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "fiebre sin foco"
+            },
+            {
+              "field": "mechanism",
+              "text": "La colonización ascendente por bacterias intestinales puede alcanzar tracto urinario y riñón; en lactantes produce síntomas sistémicos inespecíficos y riesgo de cicatriz renal."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Infección urinaria ascendente"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Fiebre, irritabilidad y mala ingesta"
+            },
+            {
+              "field": "initial_action",
+              "text": "Obtener muestra adecuada para uroanálisis y cultivo e iniciar antibiótico según sospecha y gravedad."
+            },
+            {
+              "field": "action_reason",
+              "text": "El cultivo orienta tratamiento y confirma infección."
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Menor de tres meses o aspecto séptico"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Hospitalizar y usar tratamiento parenteral."
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "La edad y gravedad aumentan riesgo."
+            },
+            {
+              "field": "limits",
+              "text": "La bolsa recolectora tiene alta contaminación; no confirma por sí sola infección."
+            }
+          ]
+        },
+        "medium": {
+          "vignette": "Un lactante febril rechaza alimento y no tiene foco evidente. La orina obtenida con baja contaminación muestra piuria y se envía cultivo.",
+          "discriminator": "Fiebre sin foco con estudio urinario apropiado.",
+          "explanation": "La colonización ascendente por bacterias intestinales puede alcanzar tracto urinario y riñón; en lactantes produce síntomas sistémicos inespecíficos y riesgo de cicatriz renal. Obtener muestra adecuada para uroanálisis y cultivo e iniciar antibiótico según sospecha y gravedad.",
+          "confusable_with": "Infección confirmada solo por bolsa recolectora",
+          "why_not": "La bolsa tiene alta contaminación y no establece el diagnóstico por sí sola.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Un lactante presenta fiebre sin foco y rechazo de alimento. No puede expresar síntomas urinarios; se obtiene orina por una técnica de baja contaminación para evaluar piuria y realizar cultivo."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "fiebre sin foco"
+            },
+            {
+              "field": "mechanism",
+              "text": "La colonización ascendente por bacterias intestinales puede alcanzar tracto urinario y riñón; en lactantes produce síntomas sistémicos inespecíficos y riesgo de cicatriz renal."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Infección urinaria ascendente"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Fiebre, irritabilidad y mala ingesta"
+            },
+            {
+              "field": "initial_action",
+              "text": "Obtener muestra adecuada para uroanálisis y cultivo e iniciar antibiótico según sospecha y gravedad."
+            },
+            {
+              "field": "action_reason",
+              "text": "El cultivo orienta tratamiento y confirma infección."
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Menor de tres meses o aspecto séptico"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Hospitalizar y usar tratamiento parenteral."
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "La edad y gravedad aumentan riesgo."
+            },
+            {
+              "field": "limits",
+              "text": "La bolsa recolectora tiene alta contaminación; no confirma por sí sola infección."
+            }
+          ]
+        },
+        "contrast": {
+          "vignette": "Un menor de tres meses con fiebre sin foco y rechazo alimentario tiene sospecha de foco urinario. Requiere hospitalización y tratamiento parenteral.",
+          "discriminator": "Edad de alto riesgo con necesidad de confirmación urinaria.",
+          "explanation": "La técnica de recolección y cultivo son esenciales. Una bolsa contaminada no confirma infección; edad o aspecto séptico justifican ingreso.",
+          "confusable_with": "Infección confirmada solo por bolsa recolectora",
+          "why_not": "La bolsa tiene alta contaminación y no establece el diagnóstico por sí sola.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Un lactante presenta fiebre sin foco y rechazo de alimento. No puede expresar síntomas urinarios; se obtiene orina por una técnica de baja contaminación para evaluar piuria y realizar cultivo."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "fiebre sin foco"
+            },
+            {
+              "field": "mechanism",
+              "text": "La colonización ascendente por bacterias intestinales puede alcanzar tracto urinario y riñón; en lactantes produce síntomas sistémicos inespecíficos y riesgo de cicatriz renal."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Infección urinaria ascendente"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Fiebre, irritabilidad y mala ingesta"
+            },
+            {
+              "field": "initial_action",
+              "text": "Obtener muestra adecuada para uroanálisis y cultivo e iniciar antibiótico según sospecha y gravedad."
+            },
+            {
+              "field": "action_reason",
+              "text": "El cultivo orienta tratamiento y confirma infección."
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Menor de tres meses o aspecto séptico"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Hospitalizar y usar tratamiento parenteral."
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "La edad y gravedad aumentan riesgo."
+            },
+            {
+              "field": "limits",
+              "text": "La bolsa recolectora tiene alta contaminación; no confirma por sí sola infección."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "17.05-02",
+      "parent_topic_id": "17.05-02",
+      "block_id": "17.05",
+      "name": "Onfalitis",
+      "answer_kind": "diagnosis",
+      "variants": {
+        "easy": {
+          "vignette": "Un recién nacido presenta ombligo con eritema que se extiende a la piel, induración y secreción fétida. Está letárgico y come poco; se sospecha extensión sistémica desde el foco umbilical.",
+          "discriminator": "eritema que se extiende a la piel",
+          "explanation": "La infección del muñón y piel periumbilical puede propagarse a tejidos y circulación, causando sepsis o fascitis en un neonato con baja reserva inmunitaria. Los signos sistémicos indican riesgo de progresión.",
+          "confusable_with": "Inflamación umbilical local sin extensión",
+          "why_not": "La piel afectada, letargia y mala ingesta sugieren infección con riesgo sistémico.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Un recién nacido presenta ombligo con eritema que se extiende a la piel, induración y secreción fétida. Está letárgico y come poco; se sospecha extensión sistémica desde el foco umbilical."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "eritema que se extiende a la piel"
+            },
+            {
+              "field": "mechanism",
+              "text": "La infección del muñón y piel periumbilical puede propagarse a tejidos y circulación, causando sepsis o fascitis en un neonato con baja reserva inmunitaria."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Infección umbilical invasiva"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Eritema, induración y secreción fétida"
+            },
+            {
+              "field": "initial_action",
+              "text": "Iniciar evaluación de sepsis, antibióticos intravenosos y traslado urgente a atención hospitalaria."
+            },
+            {
+              "field": "action_reason",
+              "text": "Los signos sistémicos indican riesgo de progresión."
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Extensión rápida o necrosis"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Valorar fascitis y cirugía urgente."
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "Puede existir infección profunda."
+            },
+            {
+              "field": "limits",
+              "text": "No usar tratamiento tópico aislado en el neonato con signos sistémicos."
+            }
+          ]
+        },
+        "medium": {
+          "vignette": "Un recién nacido tiene secreción fétida en ombligo y eritema que invade la piel vecina. Está letárgico y se alimenta mal.",
+          "discriminator": "Foco umbilical inflamatorio con signos sistémicos.",
+          "explanation": "La infección del muñón y piel periumbilical puede propagarse a tejidos y circulación, causando sepsis o fascitis en un neonato con baja reserva inmunitaria. Iniciar evaluación de sepsis, antibióticos intravenosos y traslado urgente a atención hospitalaria.",
+          "confusable_with": "Inflamación umbilical local sin extensión",
+          "why_not": "La piel afectada, letargia y mala ingesta sugieren infección con riesgo sistémico.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Un recién nacido presenta ombligo con eritema que se extiende a la piel, induración y secreción fétida. Está letárgico y come poco; se sospecha extensión sistémica desde el foco umbilical."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "eritema que se extiende a la piel"
+            },
+            {
+              "field": "mechanism",
+              "text": "La infección del muñón y piel periumbilical puede propagarse a tejidos y circulación, causando sepsis o fascitis en un neonato con baja reserva inmunitaria."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Infección umbilical invasiva"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Eritema, induración y secreción fétida"
+            },
+            {
+              "field": "initial_action",
+              "text": "Iniciar evaluación de sepsis, antibióticos intravenosos y traslado urgente a atención hospitalaria."
+            },
+            {
+              "field": "action_reason",
+              "text": "Los signos sistémicos indican riesgo de progresión."
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Extensión rápida o necrosis"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Valorar fascitis y cirugía urgente."
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "Puede existir infección profunda."
+            },
+            {
+              "field": "limits",
+              "text": "No usar tratamiento tópico aislado en el neonato con signos sistémicos."
+            }
+          ]
+        },
+        "contrast": {
+          "vignette": "Un neonato con secreción umbilical y eritema presenta extensión rápida y necrosis. Se necesita cirugía urgente por posible infección profunda.",
+          "discriminator": "Progresión rápida del foco umbilical con necrosis.",
+          "explanation": "La extensión profunda puede representar fascitis. No se usa tratamiento tópico aislado cuando hay signos sistémicos.",
+          "confusable_with": "Inflamación umbilical local sin extensión",
+          "why_not": "La piel afectada, letargia y mala ingesta sugieren infección con riesgo sistémico.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Un recién nacido presenta ombligo con eritema que se extiende a la piel, induración y secreción fétida. Está letárgico y come poco; se sospecha extensión sistémica desde el foco umbilical."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "eritema que se extiende a la piel"
+            },
+            {
+              "field": "mechanism",
+              "text": "La infección del muñón y piel periumbilical puede propagarse a tejidos y circulación, causando sepsis o fascitis en un neonato con baja reserva inmunitaria."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Infección umbilical invasiva"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Eritema, induración y secreción fétida"
+            },
+            {
+              "field": "initial_action",
+              "text": "Iniciar evaluación de sepsis, antibióticos intravenosos y traslado urgente a atención hospitalaria."
+            },
+            {
+              "field": "action_reason",
+              "text": "Los signos sistémicos indican riesgo de progresión."
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Extensión rápida o necrosis"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Valorar fascitis y cirugía urgente."
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "Puede existir infección profunda."
+            },
+            {
+              "field": "limits",
+              "text": "No usar tratamiento tópico aislado en el neonato con signos sistémicos."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "17.06-01",
+      "parent_topic_id": "17.06-01",
+      "block_id": "17.06",
+      "name": "Adenitis mesentérica",
+      "answer_kind": "diagnosis",
+      "variants": {
+        "easy": {
+          "vignette": "Un niño presenta fiebre, náusea y dolor en la fosa ilíaca derecha. La ecografía identifica ganglios mesentéricos agrupados y un apéndice normal, sin otra causa quirúrgica evidente.",
+          "discriminator": "ganglios mesentéricos agrupados y un apéndice normal",
+          "explanation": "La inflamación ganglionar mesentérica produce dolor abdominal que puede simular apendicitis; la imagen y exclusión de otras causas permiten manejo conservador seleccionado. El cuadro suele autolimitarse cuando no existe causa secundaria importante.",
+          "confusable_with": "Apendicitis",
+          "why_not": "La ecografía evalúa y muestra normal el apéndice; no basta con observar ganglios para excluir apendicitis.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Un niño presenta fiebre, náusea y dolor en la fosa ilíaca derecha. La ecografía identifica ganglios mesentéricos agrupados y un apéndice normal, sin otra causa quirúrgica evidente."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "ganglios mesentéricos agrupados y un apéndice normal"
+            },
+            {
+              "field": "mechanism",
+              "text": "La inflamación ganglionar mesentérica produce dolor abdominal que puede simular apendicitis; la imagen y exclusión de otras causas permiten manejo conservador seleccionado."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Inflamación ganglionar abdominal"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Dolor periumbilical o en fosa derecha"
+            },
+            {
+              "field": "initial_action",
+              "text": "Excluir urgencia quirúrgica y dar hidratación, corrección electrolítica y analgesia."
+            },
+            {
+              "field": "action_reason",
+              "text": "El cuadro suele autolimitarse cuando no existe causa secundaria importante."
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Causa infecciosa o sistémica identificada"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Tratar la causa."
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "La adenitis puede ser secundaria."
+            },
+            {
+              "field": "limits",
+              "text": "El hallazgo ganglionar aislado no excluye apendicitis sin evaluar el apéndice."
+            }
+          ]
+        },
+        "medium": {
+          "vignette": "En un niño con ganglios mesentéricos agrupados se identifica una causa infecciosa o sistémica secundaria. Debe tratarse esa causa además de atender el dolor.",
+          "discriminator": "La etiología secundaria modifica el tratamiento.",
+          "explanation": "Los ganglios pueden ser reactivos a otra enfermedad. Se evalúa el apéndice y no se excluye apendicitis por el hallazgo ganglionar solo.",
+          "confusable_with": "Apendicitis",
+          "why_not": "La ecografía evalúa y muestra normal el apéndice; no basta con observar ganglios para excluir apendicitis.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Un niño presenta fiebre, náusea y dolor en la fosa ilíaca derecha. La ecografía identifica ganglios mesentéricos agrupados y un apéndice normal, sin otra causa quirúrgica evidente."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "ganglios mesentéricos agrupados y un apéndice normal"
+            },
+            {
+              "field": "mechanism",
+              "text": "La inflamación ganglionar mesentérica produce dolor abdominal que puede simular apendicitis; la imagen y exclusión de otras causas permiten manejo conservador seleccionado."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Inflamación ganglionar abdominal"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Dolor periumbilical o en fosa derecha"
+            },
+            {
+              "field": "initial_action",
+              "text": "Excluir urgencia quirúrgica y dar hidratación, corrección electrolítica y analgesia."
+            },
+            {
+              "field": "action_reason",
+              "text": "El cuadro suele autolimitarse cuando no existe causa secundaria importante."
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Causa infecciosa o sistémica identificada"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Tratar la causa."
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "La adenitis puede ser secundaria."
+            },
+            {
+              "field": "limits",
+              "text": "El hallazgo ganglionar aislado no excluye apendicitis sin evaluar el apéndice."
+            }
+          ]
+        },
+        "contrast": {
+          "vignette": "En un niño con dolor abdominal se encuentran ganglios mesentéricos agrupados y se visualiza un apéndice normal. Se identifica una causa infecciosa secundaria que requiere tratamiento.",
+          "discriminator": "Patrón ganglionar con causa secundaria identificada.",
+          "explanation": "Los ganglios pueden responder a una enfermedad infecciosa o sistémica. El hallazgo aislado no excluye apendicitis sin evaluar el apéndice.",
+          "confusable_with": "Apendicitis",
+          "why_not": "La ecografía evalúa y muestra normal el apéndice; no basta con observar ganglios para excluir apendicitis.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Un niño presenta fiebre, náusea y dolor en la fosa ilíaca derecha. La ecografía identifica ganglios mesentéricos agrupados y un apéndice normal, sin otra causa quirúrgica evidente."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "ganglios mesentéricos agrupados y un apéndice normal"
+            },
+            {
+              "field": "mechanism",
+              "text": "La inflamación ganglionar mesentérica produce dolor abdominal que puede simular apendicitis; la imagen y exclusión de otras causas permiten manejo conservador seleccionado."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Inflamación ganglionar abdominal"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Dolor periumbilical o en fosa derecha"
+            },
+            {
+              "field": "initial_action",
+              "text": "Excluir urgencia quirúrgica y dar hidratación, corrección electrolítica y analgesia."
+            },
+            {
+              "field": "action_reason",
+              "text": "El cuadro suele autolimitarse cuando no existe causa secundaria importante."
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Causa infecciosa o sistémica identificada"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Tratar la causa."
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "La adenitis puede ser secundaria."
+            },
+            {
+              "field": "limits",
+              "text": "El hallazgo ganglionar aislado no excluye apendicitis sin evaluar el apéndice."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "17.07-01",
+      "parent_topic_id": "17.07-01",
+      "block_id": "17.07",
+      "name": "Mononucleosis infecciosa",
+      "answer_kind": "diagnosis",
+      "variants": {
+        "easy": {
+          "vignette": "Un adolescente presenta fiebre, faringitis y adenopatías cervicales posteriores. Tiene esplenomegalia y linfocitos atípicos; desarrolló un exantema después de recibir amoxicilina por el dolor faríngeo.",
+          "discriminator": "adenopatías cervicales posteriores",
+          "explanation": "La infección por EBV activa y expande tejido linfoide, causando faringitis y adenopatías; la respuesta inmunitaria produce linfocitos atípicos y puede aumentar el bazo. La mayoría no requiere tratamiento antiviral específico.",
+          "confusable_with": "Faringitis estreptocócica aislada",
+          "why_not": "La esplenomegalia, ganglios posteriores y linfocitos atípicos orientan a un síndrome sistémico distinto.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Un adolescente presenta fiebre, faringitis y adenopatías cervicales posteriores. Tiene esplenomegalia y linfocitos atípicos; desarrolló un exantema después de recibir amoxicilina por el dolor faríngeo."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "adenopatías cervicales posteriores"
+            },
+            {
+              "field": "mechanism",
+              "text": "La infección por EBV activa y expande tejido linfoide, causando faringitis y adenopatías; la respuesta inmunitaria produce linfocitos atípicos y puede aumentar el bazo."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Activación linfoide viral"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Faringitis, adenopatías y esplenomegalia"
+            },
+            {
+              "field": "initial_action",
+              "text": "Dar soporte, confirmar con serología según el caso y valorar riesgo de complicaciones esplénicas o de vía aérea."
+            },
+            {
+              "field": "action_reason",
+              "text": "La mayoría no requiere tratamiento antiviral específico."
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Obstrucción de vía aérea"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Solicitar atención urgente y manejo especializado."
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "El edema puede comprometer ventilación."
+            },
+            {
+              "field": "limits",
+              "text": "No se adopta aciclovir rutinario de la página."
+            }
+          ]
+        },
+        "medium": {
+          "vignette": "Un adolescente con faringitis tiene ganglios cervicales posteriores y esplenomegalia. Aparece erupción después de amoxicilina y hay linfocitos atípicos.",
+          "discriminator": "Faringitis con adenopatías posteriores, esplenomegalia y linfocitos atípicos.",
+          "explanation": "La infección por EBV activa y expande tejido linfoide, causando faringitis y adenopatías; la respuesta inmunitaria produce linfocitos atípicos y puede aumentar el bazo. Dar soporte, confirmar con serología según el caso y valorar riesgo de complicaciones esplénicas o de vía aérea.",
+          "confusable_with": "Faringitis estreptocócica aislada",
+          "why_not": "La esplenomegalia, ganglios posteriores y linfocitos atípicos orientan a un síndrome sistémico distinto.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Un adolescente presenta fiebre, faringitis y adenopatías cervicales posteriores. Tiene esplenomegalia y linfocitos atípicos; desarrolló un exantema después de recibir amoxicilina por el dolor faríngeo."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "adenopatías cervicales posteriores"
+            },
+            {
+              "field": "mechanism",
+              "text": "La infección por EBV activa y expande tejido linfoide, causando faringitis y adenopatías; la respuesta inmunitaria produce linfocitos atípicos y puede aumentar el bazo."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Activación linfoide viral"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Faringitis, adenopatías y esplenomegalia"
+            },
+            {
+              "field": "initial_action",
+              "text": "Dar soporte, confirmar con serología según el caso y valorar riesgo de complicaciones esplénicas o de vía aérea."
+            },
+            {
+              "field": "action_reason",
+              "text": "La mayoría no requiere tratamiento antiviral específico."
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Obstrucción de vía aérea"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Solicitar atención urgente y manejo especializado."
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "El edema puede comprometer ventilación."
+            },
+            {
+              "field": "limits",
+              "text": "No se adopta aciclovir rutinario de la página."
+            }
+          ]
+        },
+        "contrast": {
+          "vignette": "Un adolescente presenta faringitis, adenopatías cervicales posteriores y esplenomegalia. El edema faríngeo amenaza la vía aérea y exige manejo urgente.",
+          "discriminator": "Síndrome linfoide con complicación obstructiva.",
+          "explanation": "La obstrucción necesita atención especializada. No se adopta aciclovir rutinario de la fuente.",
+          "confusable_with": "Faringitis estreptocócica aislada",
+          "why_not": "La esplenomegalia, ganglios posteriores y linfocitos atípicos orientan a un síndrome sistémico distinto.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Un adolescente presenta fiebre, faringitis y adenopatías cervicales posteriores. Tiene esplenomegalia y linfocitos atípicos; desarrolló un exantema después de recibir amoxicilina por el dolor faríngeo."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "adenopatías cervicales posteriores"
+            },
+            {
+              "field": "mechanism",
+              "text": "La infección por EBV activa y expande tejido linfoide, causando faringitis y adenopatías; la respuesta inmunitaria produce linfocitos atípicos y puede aumentar el bazo."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Activación linfoide viral"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Faringitis, adenopatías y esplenomegalia"
+            },
+            {
+              "field": "initial_action",
+              "text": "Dar soporte, confirmar con serología según el caso y valorar riesgo de complicaciones esplénicas o de vía aérea."
+            },
+            {
+              "field": "action_reason",
+              "text": "La mayoría no requiere tratamiento antiviral específico."
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Obstrucción de vía aérea"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Solicitar atención urgente y manejo especializado."
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "El edema puede comprometer ventilación."
+            },
+            {
+              "field": "limits",
+              "text": "No se adopta aciclovir rutinario de la página."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "17.07-02",
+      "parent_topic_id": "17.07-02",
+      "block_id": "17.07",
+      "name": "Parotiditis",
+      "answer_kind": "diagnosis",
+      "variants": {
+        "easy": {
+          "vignette": "Un adolescente sin vacuna presenta fiebre y aumento doloroso bilateral de las parótidas. Días después desarrolla dolor testicular; se evalúan complicaciones y se confirma el agente con una muestra apropiada.",
+          "discriminator": "aumento doloroso bilateral de las parótidas",
+          "explanation": "El virus se disemina desde epitelio respiratorio hacia glándulas y otros tejidos, causando parotiditis y posibles manifestaciones gonadales, pancreáticas o neurológicas. La infección no tiene antiviral específico descrito.",
+          "confusable_with": "Adenitis cervical",
+          "why_not": "La localización en parótidas y la complicación testicular diferencian el cuadro de ganglios cervicales aislados.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Un adolescente sin vacuna presenta fiebre y aumento doloroso bilateral de las parótidas. Días después desarrolla dolor testicular; se evalúan complicaciones y se confirma el agente con una muestra apropiada."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "aumento doloroso bilateral de las parótidas"
+            },
+            {
+              "field": "mechanism",
+              "text": "El virus se disemina desde epitelio respiratorio hacia glándulas y otros tejidos, causando parotiditis y posibles manifestaciones gonadales, pancreáticas o neurológicas."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Diseminación viral glandular"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Inflamación parotídea y posible orquitis"
+            },
+            {
+              "field": "initial_action",
+              "text": "Dar manejo sintomático y coordinar confirmación; ante orquitis, valorar soporte y descartar otras causas de dolor testicular."
+            },
+            {
+              "field": "action_reason",
+              "text": "La infección no tiene antiviral específico descrito."
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Dolor testicular"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Añadir soporte escrotal y medidas locales."
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "Reduce molestias de la inflamación."
+            },
+            {
+              "field": "limits",
+              "text": "La afirmación del libro de mayor orquitis prepúber es incorrecta."
+            },
+            {
+              "field": "source_corrections.0",
+              "text": "Se corrige el predominio prepúber descrito en el libro; la orquitis es principalmente una complicación pospuberal."
+            }
+          ]
+        },
+        "medium": {
+          "vignette": "Un adolescente sin vacuna presenta aumento doloroso bilateral de parótidas y fiebre. Luego desarrolla inflamación testicular dolorosa.",
+          "discriminator": "Tumefacción parotídea bilateral con complicación pospuberal.",
+          "explanation": "El virus se disemina desde epitelio respiratorio hacia glándulas y otros tejidos, causando parotiditis y posibles manifestaciones gonadales, pancreáticas o neurológicas. Dar manejo sintomático y coordinar confirmación; ante orquitis, valorar soporte y descartar otras causas de dolor testicular.",
+          "confusable_with": "Adenitis cervical",
+          "why_not": "La localización en parótidas y la complicación testicular diferencian el cuadro de ganglios cervicales aislados.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Un adolescente sin vacuna presenta fiebre y aumento doloroso bilateral de las parótidas. Días después desarrolla dolor testicular; se evalúan complicaciones y se confirma el agente con una muestra apropiada."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "aumento doloroso bilateral de las parótidas"
+            },
+            {
+              "field": "mechanism",
+              "text": "El virus se disemina desde epitelio respiratorio hacia glándulas y otros tejidos, causando parotiditis y posibles manifestaciones gonadales, pancreáticas o neurológicas."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Diseminación viral glandular"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Inflamación parotídea y posible orquitis"
+            },
+            {
+              "field": "initial_action",
+              "text": "Dar manejo sintomático y coordinar confirmación; ante orquitis, valorar soporte y descartar otras causas de dolor testicular."
+            },
+            {
+              "field": "action_reason",
+              "text": "La infección no tiene antiviral específico descrito."
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Dolor testicular"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Añadir soporte escrotal y medidas locales."
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "Reduce molestias de la inflamación."
+            },
+            {
+              "field": "limits",
+              "text": "La afirmación del libro de mayor orquitis prepúber es incorrecta."
+            },
+            {
+              "field": "source_corrections.0",
+              "text": "Se corrige el predominio prepúber descrito en el libro; la orquitis es principalmente una complicación pospuberal."
+            }
+          ]
+        },
+        "contrast": {
+          "vignette": "Un joven después de la pubertad tiene fiebre y dolor en ambas parótidas. El dolor testicular posterior requiere soporte escrotal y medidas locales.",
+          "discriminator": "Orquitis posterior a inflamación parotídea.",
+          "explanation": "La corrección establece que la orquitis ocurre principalmente después de la pubertad, no antes. Se confirma el agente con muestra apropiada.",
+          "confusable_with": "Adenitis cervical",
+          "why_not": "La localización en parótidas y la complicación testicular diferencian el cuadro de ganglios cervicales aislados.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Un adolescente sin vacuna presenta fiebre y aumento doloroso bilateral de las parótidas. Días después desarrolla dolor testicular; se evalúan complicaciones y se confirma el agente con una muestra apropiada."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "aumento doloroso bilateral de las parótidas"
+            },
+            {
+              "field": "mechanism",
+              "text": "El virus se disemina desde epitelio respiratorio hacia glándulas y otros tejidos, causando parotiditis y posibles manifestaciones gonadales, pancreáticas o neurológicas."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Diseminación viral glandular"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Inflamación parotídea y posible orquitis"
+            },
+            {
+              "field": "initial_action",
+              "text": "Dar manejo sintomático y coordinar confirmación; ante orquitis, valorar soporte y descartar otras causas de dolor testicular."
+            },
+            {
+              "field": "action_reason",
+              "text": "La infección no tiene antiviral específico descrito."
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Dolor testicular"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Añadir soporte escrotal y medidas locales."
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "Reduce molestias de la inflamación."
+            },
+            {
+              "field": "limits",
+              "text": "La afirmación del libro de mayor orquitis prepúber es incorrecta."
+            },
+            {
+              "field": "source_corrections.0",
+              "text": "Se corrige el predominio prepúber descrito en el libro; la orquitis es principalmente una complicación pospuberal."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "17.08-01",
+      "parent_topic_id": "17.08-01",
+      "block_id": "17.08",
+      "name": "Enfermedad de Kawasaki",
+      "answer_kind": "diagnosis",
+      "variants": {
+        "easy": {
+          "vignette": "Un niño presenta fiebre persistente, conjuntivitis bilateral sin exudado, labios fisurados y cambios en manos y pies. Tiene una adenopatía cervical y necesita evaluación cardiovascular aunque no haya soplo.",
+          "discriminator": "conjuntivitis bilateral sin exudado",
+          "explanation": "La vasculitis multisistémica inflama arterias medianas y puede lesionar coronarias; la combinación de fiebre y cambios mucocutáneos permite reconocimiento temprano. El tratamiento temprano reduce riesgo de aneurismas.",
+          "confusable_with": "Escarlatina",
+          "why_not": "La conjuntivitis sin exudado y cambios de extremidades con fiebre persistente orientan vasculitis, más allá de una lengua roja aislada.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Un niño presenta fiebre persistente, conjuntivitis bilateral sin exudado, labios fisurados y cambios en manos y pies. Tiene una adenopatía cervical y necesita evaluación cardiovascular aunque no haya soplo."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "conjuntivitis bilateral sin exudado"
+            },
+            {
+              "field": "mechanism",
+              "text": "La vasculitis multisistémica inflama arterias medianas y puede lesionar coronarias; la combinación de fiebre y cambios mucocutáneos permite reconocimiento temprano."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Inflamación arterial sistémica"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Fiebre, cambios mucosos y riesgo coronario"
+            },
+            {
+              "field": "initial_action",
+              "text": "Referir para ecocardiograma y tratamiento con inmunoglobulina intravenosa y ácido acetilsalicílico según protocolo."
+            },
+            {
+              "field": "action_reason",
+              "text": "El tratamiento temprano reduce riesgo de aneurismas."
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Criterios incompletos con sospecha alta"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "No excluir sin evaluación especializada."
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "Ningún hallazgo aislado es patognomónico."
+            },
+            {
+              "field": "limits",
+              "text": "La dosis y evaluación de resistencia requieren protocolo pediátrico."
+            }
+          ]
+        },
+        "medium": {
+          "vignette": "Un niño con fiebre persistente tiene solo parte de los cambios mucocutáneos esperados, pero la sospecha de vasculitis es alta. Se necesita evaluación especializada cardiovascular.",
+          "discriminator": "Los criterios incompletos no excluyen el cuadro.",
+          "explanation": "Ningún hallazgo es patognomónico. La sospecha alta exige evaluación sin esperar que se complete todo el patrón.",
+          "confusable_with": "Escarlatina",
+          "why_not": "La conjuntivitis sin exudado y cambios de extremidades con fiebre persistente orientan vasculitis, más allá de una lengua roja aislada.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Un niño presenta fiebre persistente, conjuntivitis bilateral sin exudado, labios fisurados y cambios en manos y pies. Tiene una adenopatía cervical y necesita evaluación cardiovascular aunque no haya soplo."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "conjuntivitis bilateral sin exudado"
+            },
+            {
+              "field": "mechanism",
+              "text": "La vasculitis multisistémica inflama arterias medianas y puede lesionar coronarias; la combinación de fiebre y cambios mucocutáneos permite reconocimiento temprano."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Inflamación arterial sistémica"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Fiebre, cambios mucosos y riesgo coronario"
+            },
+            {
+              "field": "initial_action",
+              "text": "Referir para ecocardiograma y tratamiento con inmunoglobulina intravenosa y ácido acetilsalicílico según protocolo."
+            },
+            {
+              "field": "action_reason",
+              "text": "El tratamiento temprano reduce riesgo de aneurismas."
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Criterios incompletos con sospecha alta"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "No excluir sin evaluación especializada."
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "Ningún hallazgo aislado es patognomónico."
+            },
+            {
+              "field": "limits",
+              "text": "La dosis y evaluación de resistencia requieren protocolo pediátrico."
+            }
+          ]
+        },
+        "contrast": {
+          "vignette": "Durante el seguimiento de un niño con vasculitis mucocutánea febril se necesita decidir evaluación de resistencia al tratamiento y dosis. Se requiere protocolo pediátrico y valoración cardiovascular.",
+          "discriminator": "La etapa de seguimiento requiere protocolo y no una regla por un hallazgo aislado.",
+          "explanation": "La fuente condiciona dosis y evaluación de resistencia a protocolo. El riesgo cardiovascular exige valoración aun sin soplo.",
+          "confusable_with": "Escarlatina",
+          "why_not": "La conjuntivitis sin exudado y cambios de extremidades con fiebre persistente orientan vasculitis, más allá de una lengua roja aislada.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Un niño presenta fiebre persistente, conjuntivitis bilateral sin exudado, labios fisurados y cambios en manos y pies. Tiene una adenopatía cervical y necesita evaluación cardiovascular aunque no haya soplo."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "conjuntivitis bilateral sin exudado"
+            },
+            {
+              "field": "mechanism",
+              "text": "La vasculitis multisistémica inflama arterias medianas y puede lesionar coronarias; la combinación de fiebre y cambios mucocutáneos permite reconocimiento temprano."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Inflamación arterial sistémica"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Fiebre, cambios mucosos y riesgo coronario"
+            },
+            {
+              "field": "initial_action",
+              "text": "Referir para ecocardiograma y tratamiento con inmunoglobulina intravenosa y ácido acetilsalicílico según protocolo."
+            },
+            {
+              "field": "action_reason",
+              "text": "El tratamiento temprano reduce riesgo de aneurismas."
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Criterios incompletos con sospecha alta"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "No excluir sin evaluación especializada."
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "Ningún hallazgo aislado es patognomónico."
+            },
+            {
+              "field": "limits",
+              "text": "La dosis y evaluación de resistencia requieren protocolo pediátrico."
+            }
+          ]
+        }
+      }
+    }
+  ]
+}
