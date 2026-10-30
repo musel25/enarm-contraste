@@ -67,7 +67,7 @@
               "finding": "Pérdida de peso"
             }
           ],
-          "initial_action": "Confirmar criterios en contexto sintomático y buscar descompensación. Definir tipo y tratamiento individual, con educación y evaluación de riñón, retina, neuropatía y riesgo cardiovascular.",
+          "initial_action": "La glucosa al azar y síntomas clásicos cumplen criterios de diabetes. Buscar crisis y considerar iniciar insulina por síntomas y pérdida de peso mientras se define el tipo. Dar educación y evaluar riñón, retina, neuropatía y riesgo cardiovascular.",
           "action_reason": "La presentación y comorbilidades determinan urgencia y selección terapéutica.",
           "modifiers": [
             {
@@ -92,7 +92,20 @@
               "quote": "descompensación metabólica"
             }
           ],
-          "source_gaps": []
+          "source_gaps": [],
+          "external_sources": [
+            {
+              "label": "ADA 2026: tratamiento farmacológico de diabetes",
+              "url": "https://doi.org/10.2337/dc26-s009",
+              "quote": "initiation of insulin should be considered",
+              "checked_at": "2026-10-29"
+            }
+          ],
+          "source_corrections": [
+            {
+              "reason": "Se concreta la conducta ante hiperglucemia sintomática con catabolismo de p275. Las restricciones generales a iSGLT2 de p273/276 son antiguas; ADA incorpora beneficio cardiorrenal independientemente de HbA1c según perfil."
+            }
+          ]
         }
       ],
       "common_problem": "Glucosa elevada con o sin síntomas.",
@@ -153,7 +166,20 @@
               "quote": "El tratamiento es con insulina"
             }
           ],
-          "source_gaps": []
+          "source_gaps": [],
+          "external_sources": [
+            {
+              "label": "ISPAD 2024: diabetes tipo 2 pediátrica",
+              "url": "https://www.ispad.org/static/af2eab1f-01ab-4709-a6eb1ff978a1fa2f/ICPCG-Chapter-3-2024.pdf",
+              "quote": "Can increase to 2,000 mg",
+              "checked_at": "2026-10-29"
+            }
+          ],
+          "source_corrections": [
+            {
+              "reason": "Se verifica que la dosis «7gr cada 72 horas» de p270 es errónea; la tarjeta se centra en detectar crisis e iniciar insulina en déficit absoluto, sin reproducir ese régimen."
+            }
+          ]
         },
         {
           "id": "10.02-02",
@@ -316,6 +342,11 @@
               "quote": "insulin therapy should be delayed until the potassium level increases to >3.5 mmol/L",
               "checked_at": "2026-10-29"
             }
+          ],
+          "source_corrections": [
+            {
+              "reason": "Se verifica el consenso 2024: diferir insulina cuando K <3.5 mmol/L hasta corregir por encima de 3.5, en lugar del umbral <3 de p261/262."
+            }
           ]
         },
         {
@@ -412,7 +443,7 @@
               "reason": "El beneficio potencial puede ser mayor."
             }
           ],
-          "limits": "Orlistat no es la única primera opción actual y los criterios quirúrgicos del resumen son de una guía antigua.",
+          "limits": "Orlistat no es la única opción farmacológica; pueden considerarse terapias GLP-1 según elegibilidad. ASMBS/IFSO recomienda valorar cirugía con IMC ≥35 aunque no haya comorbilidad, con evaluación multidisciplinaria y contexto local.",
           "evidence": [
             {
               "page": 299,
@@ -423,7 +454,29 @@
               "quote": "Tratamiento no farmacológico: Dieta DASH o mediterránea."
             }
           ],
-          "source_gaps": []
+          "source_gaps": [],
+          "external_sources": [
+            {
+              "label": "WHO 2025: terapias GLP-1 para obesidad adulta",
+              "url": "https://doi.org/10.1001/jama.2025.24288",
+              "quote": "GLP-1 therapies may be used as a long-term treatment for obesity.",
+              "checked_at": "2026-10-29"
+            },
+            {
+              "label": "ASMBS/IFSO 2022: indicaciones de cirugía metabólica",
+              "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9834364/",
+              "quote": "MBS should be strongly recommended in these patients regardless of presence or absence of evident obesity-related co-morbidities.",
+              "checked_at": "2026-10-29"
+            }
+          ],
+          "source_corrections": [
+            {
+              "reason": "Se verifica la disponibilidad de opciones actuales además de orlistat; no se prescribe un fármaco sin revisar elegibilidad individual."
+            },
+            {
+              "reason": "Se verifica corrección de los criterios quirúrgicos antiguos de p299 para IMC ≥35; el caso mantiene evaluación integral como primera acción."
+            }
+          ]
         },
         {
           "id": "10.04-02",
@@ -464,7 +517,20 @@
               "quote": "plan dietético y de actividad física personalizado"
             }
           ],
-          "source_gaps": []
+          "source_gaps": [],
+          "external_sources": [
+            {
+              "label": "NHLBI: informe ATP III",
+              "url": "https://www.nhlbi.nih.gov/files/docs/guidelines/atp3xsum.pdf",
+              "quote": "three or more of the risk determinants",
+              "checked_at": "2026-10-29"
+            }
+          ],
+          "source_corrections": [
+            {
+              "reason": "Se corrige «más de 3» de p302 por tres o más componentes; los puntos de corte dependen del criterio y población."
+            }
+          ]
         },
         {
           "id": "10.04-03",
@@ -592,12 +658,12 @@
               "finding": "Temblor y palpitaciones"
             }
           ],
-          "initial_action": "Confirmar bioquímica y causa, controlar síntomas según contraindicaciones y valorar antitiroideo en hiperproducción. Evaluar orbitopatía y alternativas definitivas con endocrinología.",
+          "initial_action": "Confirmar bioquímica y probable enfermedad de Graves, controlar síntomas con betabloqueador si no hay contraindicaciones e iniciar metimazol según valoración clínica. Evaluar orbitopatía y alternativas definitivas con endocrinología.",
           "action_reason": "La causa diferencia bloquear síntesis de tratar una liberación o ingestión hormonal.",
           "modifiers": [
             {
               "factor": "Primer trimestre de embarazo",
-              "action": "Seleccionar antitiroideo compatible con contexto.",
+              "action": "Preferir propiltiouracilo durante el primer trimestre, con valoración especializada y revisión posterior del fármaco.",
               "reason": "Los riesgos fetales y hepáticos difieren."
             },
             {
@@ -617,7 +683,20 @@
               "quote": "metimazol a dosis de"
             }
           ],
-          "source_gaps": []
+          "source_gaps": [],
+          "external_sources": [
+            {
+              "label": "ATA 2016: hipertiroidismo y otras causas de tirotoxicosis",
+              "url": "https://journals.sagepub.com/doi/epdf/10.1089/thy.2016.0229",
+              "quote": "high thyroid hormone action",
+              "checked_at": "2026-10-29"
+            }
+          ],
+          "source_corrections": [
+            {
+              "reason": "Se verifica la distinción de p290: tirotoxicosis incluye exceso hormonal de cualquier fuente; el caso es hiperproducción compatible con Graves, cuyo tratamiento no se extrapola a tiroiditis."
+            }
+          ]
         }
       ],
       "common_problem": "Cambios de peso, energía y tolerancia térmica.",
@@ -670,14 +749,27 @@
           "evidence": [
             {
               "page": 296,
-              "quote": "USG a todos los pacientes con nódulo tiroideo."
+              "quote": "Nódulo más alto que ancho."
             },
             {
-              "page": 297,
-              "quote": "Clase 1 No diagnóstica"
+              "page": 296,
+              "quote": "USG a todos los pacientes con nódulo tiroideo."
             }
           ],
-          "source_gaps": []
+          "source_gaps": [],
+          "external_sources": [
+            {
+              "label": "ETA 2023: manejo de nódulos tiroideos",
+              "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10448590/",
+              "quote": "stratify the thyroid nodule risk according to EU-TIRADS",
+              "checked_at": "2026-10-29"
+            }
+          ],
+          "source_corrections": [
+            {
+              "reason": "Se verifica corrección de p296: la punción depende de patrón de riesgo y tamaño; no es universal por superar un centímetro."
+            }
+          ]
         },
         {
           "id": "10.06-02",
@@ -757,7 +849,7 @@
               "finding": "Hiperpigmentación"
             }
           ],
-          "initial_action": "Medir cortisol y ACTH y confirmar según contexto; si hay crisis, dar hidrocortisona y reanimación sin esperar pruebas. Planear reposición y educación para estrés.",
+          "initial_action": "Medir cortisol, ACTH, renina y aldosterona y confirmar según contexto. Si hay crisis, administrar hidrocortisona IV y reanimar sin esperar pruebas. En enfermedad estable confirmada, reponer glucocorticoide y añadir fludrocortisona si hay déficit de aldosterona.",
           "action_reason": "La crisis puede ser fatal y requiere corregir déficit hormonal y volumen.",
           "modifiers": [
             {
@@ -782,7 +874,20 @@
               "quote": "Hidrocortisona IV."
             }
           ],
-          "source_gaps": []
+          "source_gaps": [],
+          "external_sources": [
+            {
+              "label": "Endocrine Society: insuficiencia suprarrenal primaria",
+              "url": "https://www.endocrine.org/clinical-practice-guidelines/primary-adrenal-insufficiency",
+              "quote": "all patients with confirmed aldosterone deficiency receive mineralocorticoid replacement with fludrocortisone",
+              "checked_at": "2026-10-29"
+            }
+          ],
+          "source_corrections": [
+            {
+              "reason": "Se precisa la reposición crónica del caso de p279 y se conserva tratamiento inmediato de crisis sin esperar confirmación."
+            }
+          ]
         }
       ],
       "common_problem": "Hipotensión con cambios de pigmento y electrolitos.",
@@ -835,7 +940,20 @@
               "quote": "Cirugía transesfenoidal"
             }
           ],
-          "source_gaps": []
+          "source_gaps": [],
+          "external_sources": [
+            {
+              "label": "Pituitary Society 2021: enfermedad de Cushing",
+              "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8743006/",
+              "quote": "None of the diagnostic tests reach 100% specificity",
+              "checked_at": "2026-10-29"
+            }
+          ],
+          "source_corrections": [
+            {
+              "reason": "Se verifica la limitación de dexametasona a dosis altas y se evita atribuir hipercortisolismo a una lesión incidental solo por la imagen de p280."
+            }
+          ]
         },
         {
           "id": "10.08-02",
@@ -856,7 +974,7 @@
               "finding": "Hiperglucemia e hipertensión"
             }
           ],
-          "initial_action": "Revisar exposición a corticoides. Si se sospecha origen endógeno, documentar hipercortisolismo con una prueba validada y después estudiar ACTH y localización.",
+          "initial_action": "Revisar exposición a corticoides. Si se sospecha origen endógeno, documentar hipercortisolismo con cortisol salival nocturno, cortisol libre urinario o supresión con dexametasona a dosis baja; después estudiar ACTH y localización.",
           "action_reason": "Primero se confirma exceso, luego se determina la fuente.",
           "modifiers": [
             {
@@ -939,7 +1057,29 @@
               "quote": "Antagonistas de mineralocorticoides"
             }
           ],
-          "source_gaps": []
+          "source_gaps": [],
+          "external_sources": [
+            {
+              "label": "Endocrine Society 2025: aldosteronismo primario",
+              "url": "https://www.endocrine.org/clinical-practice-guidelines/primary-aldosteronism-2",
+              "quote": "determination of the aldosterone to renin ratio (ARR)",
+              "checked_at": "2026-10-29"
+            },
+            {
+              "label": "Consenso 2021: progresión corticotropa tras adrenalectomía bilateral",
+              "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8060870/",
+              "quote": "complication subsequent to bilateral adrenalectomy (BADX) for Cushing’s disease.",
+              "checked_at": "2026-10-29"
+            }
+          ],
+          "source_corrections": [
+            {
+              "reason": "Se verifica la dirección correcta de la relación de p286 y el manejo por lateralidad; no es renina/aldosterona."
+            },
+            {
+              "reason": "Se verifica corrección del recuadro de p286: Nelson corresponde a contexto de adrenalectomía bilateral por Cushing, no a complicación propia del aldosteronismo."
+            }
+          ]
         },
         {
           "id": "10.09-02",
@@ -992,6 +1132,11 @@
               "url": "https://www.cancer.gov/types/pheochromocytoma/hp/pheochromocytoma-treatment-pdq",
               "quote": "Beta-adrenergic blockade must never be initiated before alpha-adrenergic blockade",
               "checked_at": "2026-10-29"
+            }
+          ],
+          "source_corrections": [
+            {
+              "reason": "Se verifica bloqueo alfa antes de beta con NCI. Fenoxibenzamina es bloqueador alfa, no alfa y beta como dice p285."
             }
           ]
         }
@@ -1049,10 +1194,23 @@
             },
             {
               "page": 289,
-              "quote": "es obligatorio efectuar una"
+              "quote": "La resonancia magnética, es considerada la técnica de imagen de elección para el diagnóstico de los trastornos"
             }
           ],
-          "source_gaps": []
+          "source_gaps": [],
+          "external_sources": [
+            {
+              "label": "Pituitary Society 2023: prolactinoma",
+              "url": "https://www.nature.com/articles/s41574-023-00886-5",
+              "quote": "Medication use should be rigorously reviewed to exclude drug-induced hyperprolactinaemia",
+              "checked_at": "2026-10-29"
+            }
+          ],
+          "source_corrections": [
+            {
+              "reason": "Se verifica enfoque de p288/289: confirmar prolactina, causas reversibles y macroprolactina selectiva; cromatografía no es estudio inicial rutinario."
+            }
+          ]
         }
       ],
       "common_problem": "Amenorrea y galactorrea.",
@@ -1110,7 +1268,20 @@
               "quote": "Medición de factor de crecimiento similar a la insulina tipo 1"
             }
           ],
-          "source_gaps": []
+          "source_gaps": [],
+          "external_sources": [
+            {
+              "label": "Endocrine Society: acromegalia",
+              "url": "https://www.endocrine.org/clinical-practice-guidelines/acromegaly",
+              "quote": "including hypertension, diabetes mellitus, cardiovascular disease, osteoarthritis, and sleep apnea",
+              "checked_at": "2026-10-29"
+            }
+          ],
+          "source_corrections": [
+            {
+              "reason": "Se verifica corrección de p257: la acromegalia se asocia a resistencia a insulina y diabetes mellitus; no debe enseñarse diabetes insípida como complicación más frecuente."
+            }
+          ]
         },
         {
           "id": "10.11-02",
@@ -1131,7 +1302,7 @@
               "finding": "Pérdida de densidad"
             }
           ],
-          "initial_action": "Confirmar alteración bioquímica y excluir causas alternativas; valorar riñón y hueso y referir para decidir paratiroidectomía o seguimiento.",
+          "initial_action": "Confirmar hipercalcemia con PTH inapropiada y excluir causas alternativas; valorar riñón y hueso. Referir para paratiroidectomía por litiasis renal recurrente, si se confirma hiperparatiroidismo primario y es candidato.",
           "action_reason": "La indicación se basa en diagnóstico y repercusión; la imagen sirve para localizar antes de operar.",
           "modifiers": [
             {
@@ -1161,8 +1332,37 @@
             {
               "label": "Endocrine Society, Primary Hyperparathyroidism",
               "url": "https://www.endocrine.org/patient-engagement/endocrine-library/primary-hyperparathyroidism",
-              "quote": "limit the amount of calcium you get from food and beverages.",
+              "quote": "don’t need to change your diet or limit the amount of calcium",
               "checked_at": "2026-10-29"
+            },
+            {
+              "label": "Quinto taller internacional 2022: hiperparatiroidismo primario",
+              "url": "https://onlinelibrary.wiley.com/doi/full/10.1002/jbmr.4677",
+              "quote": "Calcium intake/supplementation should follow the Institute of Medicine nutritional guidelines",
+              "checked_at": "2026-10-29"
+            },
+            {
+              "label": "Estudio de QTc en hiperparatiroidismo primario",
+              "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8947224/",
+              "quote": "PHPT patients had shorter QTc intervals",
+              "checked_at": "2026-10-29"
+            },
+            {
+              "label": "Society for Endocrinology: hipercalcemia aguda",
+              "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5314807/",
+              "quote": "Loop diuretics rarely used and only if fluid overload develops",
+              "checked_at": "2026-10-29"
+            }
+          ],
+          "source_corrections": [
+            {
+              "reason": "Se verifica corrección de p287: evitar restricción indiscriminada de calcio; la litiasis es una indicación para valoración quirúrgica en HPTP confirmado."
+            },
+            {
+              "reason": "Se verifica corrección del QT prolongado de p287: la hipercalcemia se asocia a QTc más corto."
+            },
+            {
+              "reason": "Se verifica corrección del uso rutinario de diurético de asa de p287; la hidratación se individualiza y el diurético se reserva para sobrecarga."
             }
           ]
         },
@@ -1185,7 +1385,7 @@
               "finding": "Síndromes de exceso específicos"
             }
           ],
-          "initial_action": "Referir a endocrinología y genética, definir el patrón y realizar búsqueda dirigida de lesiones y familiares en riesgo antes de programar procedimientos.",
+          "initial_action": "Reconocer un patrón compatible con MEN1 y referir a endocrinología y genética. Confirmar predisposición y buscar de forma dirigida lesiones paratiroideas, hipofisarias y duodenopancreáticas y familiares en riesgo.",
           "action_reason": "La evaluación conjunta evita tratar cada tumor de forma aislada.",
           "modifiers": [
             {
@@ -1210,7 +1410,21 @@
               "quote": "Neuromas mucosos."
             }
           ],
-          "source_gaps": []
+          "source_gaps": [],
+          "answer_name": "Neoplasia endocrina múltiple",
+          "external_sources": [
+            {
+              "label": "NCI PDQ: MEN2",
+              "url": "https://www.cancer.gov/publications/pdq/information-summaries/genetics/men2-hp-pdq",
+              "quote": "PHPT has not been associated with MEN2B",
+              "checked_at": "2026-10-29"
+            }
+          ],
+          "source_corrections": [
+            {
+              "reason": "Se corrige la errata «múltple» del inventario y el rótulo de la tercera columna de p295 a MEN2B; no indicar paratiroidectomía como rasgo habitual de MEN2B."
+            }
+          ]
         }
       ],
       "common_problem": "Crecimiento acral, hipercalcemia o tumores múltiples.",
