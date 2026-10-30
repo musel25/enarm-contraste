@@ -108,3 +108,13 @@ test('due decision reminders open only the questions that need review',async({pa
  await page.getByRole('button',{name:'Empezar subtest (1)',exact:true}).click();
  await expect(page.getByRole('heading',{name:'¿Cuál es la primera bifurcación?'})).toBeVisible();
 });
+
+test('guided steps fit a narrow screen and keep controls visible',async({page})=>{
+ await page.setViewportSize({width:360,height:780});
+ await page.goto('./#avance?section=01&mode=decisions');
+ await page.getByRole('button',{name:'Seleccionar todas',exact:true}).click();
+ await page.getByRole('button',{name:/Empezar subtest/}).click();
+ await expect(page.getByRole('heading',{name:'¿Cuál es la primera bifurcación?'})).toBeVisible();
+ expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBe(true);
+ await page.screenshot({path:'/tmp/enarm-decision-mobile.png',fullPage:true});
+});
