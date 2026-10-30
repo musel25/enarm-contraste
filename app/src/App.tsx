@@ -7,6 +7,7 @@ import Variants from "./Variants";
 import Practice from "./Practice";
 import Review from "./Review";
 import Library from "./Library";
+import Coach from "./coach/Coach";
 import {
   REVIEW_KEY,
   useLocalData,
@@ -120,7 +121,7 @@ function ContrastArtwork() {
 }
 
 export default function App() {
-  const [library, setLibrary] = useState(() => !location.hash || location.hash === "#biblioteca");
+  const [view, setView] = useState<"today" | "library" | "sample">(() => location.hash === "#biblioteca" ? "library" : axes.some(a => `#${a.id}` === location.hash) ? "sample" : "today");
   const [axisId, setAxisId] = useState(() =>
     axes.some((axis) => axis.id === location.hash.slice(1))
       ? location.hash.slice(1)
@@ -144,9 +145,9 @@ export default function App() {
   };
   const openReview = (label?: string, caseId?: string) =>
     setReview({
-      axisId: axis.id,
-      section: mode,
-      label: `${axis.title} · ${label || modes[mode]}`,
+      axisId: view === "sample" ? axis.id : view,
+      section: view === "sample" ? mode : view,
+      label: view === "sample" ? `${axis.title} · ${label || modes[mode]}` : view === "today" ? "Plan y sesión diaria" : "Biblioteca",
       ...(caseId ? { caseId } : {}),
     });
   return (
@@ -171,8 +172,9 @@ export default function App() {
             </span>
           </a>
           <nav className="header-links" aria-label="Ayuda de estudio">
-            <button className={`method-trigger ${library ? "current-view" : ""}`} onClick={() => { setLibrary(true); history.replaceState(null, "", "#biblioteca"); }}>Biblioteca</button>
-            <button className={`method-trigger ${!library ? "current-view" : ""}`} onClick={() => { setLibrary(false); history.replaceState(null, "", `#${axisId}`); }}>Explorar casos</button>
+            <button className={`method-trigger ${view === "today" ? "current-view" : ""}`} onClick={() => { setView("today"); history.replaceState(null, "", "#hoy"); }}>Hoy</button>
+            <button className={`method-trigger ${view === "library" ? "current-view" : ""}`} onClick={() => { setView("library"); history.replaceState(null, "", "#biblioteca"); }}>Biblioteca</button>
+            <button className={`method-trigger ${view === "sample" ? "current-view" : ""}`} onClick={() => { setView("sample"); history.replaceState(null, "", `#${axisId}`); }}>Explorar casos</button>
             <button className="method-trigger" onClick={() => setMethod(true)}>
               El método
             </button>
@@ -183,7 +185,7 @@ export default function App() {
           </nav>
         </div>
       </header>
-      {library ? <Library onReview={setReview} /> : <div className="workspace">
+      {view === "today" ? <Coach suspended={!!review || method} onReview={setReview} /> : view === "library" ? <Library onReview={setReview} /> : <div className="workspace">
         <nav className="axis-nav" aria-label="Ejes clínicos">
           <span className="axis-nav-label">Elige un eje clínico</span>
           <div>

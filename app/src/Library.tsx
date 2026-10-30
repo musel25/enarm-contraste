@@ -91,6 +91,7 @@ export default function Library({ onReview }: { onReview: (context: ReviewContex
   const matchingSections = manifest.sections.filter(s => searchText(s.title).includes(term));
   const matchingGroups = term ? (manifest.groups || []).filter(g => searchText(`${g.title} ${g.problem}`).includes(term)) : [];
   return <main className="library-main" id="study" tabIndex={-1}>
+    <p className="library-free-practice">Práctica libre. Estas marcas son independientes de tu plan diario en «Hoy».</p>
     {sectionId ? <>
       <div className="library-breadcrumb"><button onClick={() => selectSection(null)}>‹ Todas las secciones</button><span>{manifest.sections.find(s => s.id === sectionId)?.title}</span></div>
       <div className="library-reader-heading"><div><h1>Una pista cambia la decisión.</h1><p>Lee, compara y explica tu respuesta.</p></div><span className="library-progress"><Icon name="check" size={15} />{recognized} {recognized === 1 ? "tarjeta reconocida" : "tarjetas reconocidas"}</span></div>

@@ -4,6 +4,16 @@
 
 Biblioteca de estudio en español. Agrupa los temas por problemas clínicos para comparar casos, reconocer el dato que distingue y conectar el mecanismo con el manejo.
 
+## Tu plan diario
+
+La página abre en **Hoy**. Elige una fecha objetivo o los minutos que puedes estudiar cada día. Selecciona los temas y formatos. La estimación incluye tarjetas nuevas y repasos FSRS. Supone respuestas «Bien» y se ajusta con tus tiempos activos.
+
+Hoy abre la primera tarjeta asignada. Revelar la respuesta no suma progreso. Califica con **Otra vez**, **Difícil**, **Bien** o **Fácil**. Cada respuesta guardada hace avanzar la meta diaria y programa el repaso. La meta se conserva al recargar. Las tarjetas extra no cambian su tamaño. Puedes deshacer la última respuesta.
+
+La **primera vuelta** cuenta tarjetas practicadas al menos una vez. No indica dominio. Los repasos continúan después. Las animaciones respetan la preferencia de movimiento reducido. El sonido está apagado al inicio.
+
+El plan se guarda en IndexedDB en este dispositivo. **Copia de mi progreso** permite exportar o importar el plan y las respuestas. Una importación conserva una copia del estado anterior. No hay sincronización de cuentas. La biblioteca permite práctica libre con marcas separadas. Anki conserva su propio progreso.
+
 ## Dos formatos
 
 - **Eje Clínico:** casos del mismo grupo en el frente. Diagnósticos, discriminadores y primera decisión en el reverso.
@@ -36,7 +46,7 @@ npm run prepare:study
 npm run dev
 ```
 
-Abre `http://127.0.0.1:4178/`. `/#amenorrea` y `/#ictericia` abren la muestra anterior.
+Abre `http://127.0.0.1:4178/`. `/#hoy` abre el plan. `/#biblioteca` abre la biblioteca. `/#amenorrea` y `/#ictericia` abren la muestra anterior.
 
 ```sh
 uv run python -m unittest discover -s tests -p 'test_*.py'

@@ -34,10 +34,10 @@ test("serves complete coverage and both verified Anki files", async ({ request }
   }
 });
 
-test("opens the full library by default and loads only the chosen section", async ({ page }) => {
+test("opens the explicit full library route and loads only the chosen section", async ({ page }) => {
   const loaded: string[] = [];
   page.on("request", request => { if (/\/study\/sections\//.test(request.url())) loaded.push(request.url()); });
-  await page.goto("./");
+  await page.goto("./#biblioteca");
   await expect(page.getByRole("heading", { name: "Estudia por contraste", exact: true })).toBeVisible();
   expect(loaded).toHaveLength(0);
   await page.getByRole("searchbox", { name: "Buscar síntoma o sección" }).fill("ginecologia");

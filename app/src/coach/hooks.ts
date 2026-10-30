@@ -1,0 +1,66 @@
+import { useCallback, useEffect, useRef, useState } from "react";
+import { dayKey, emptyState } from "./engine";
+import { readCoach, SaveConflict, writeCoach } from "./storage";
+import type { CoachIndex, CoachState, Forecast } from "./types";
+
+export function useCoachStore() {
+  const [state, setState] = useState<CoachState>(emptyState);
+  const ref = useRef(state);
+  const lock = useRef(false);
+  const [loading, setLoading] = useState(true);
+  const [saving, setSaving] = useState(false);
+  const [error, setError] = useState("");
+  const [pending, setPending] = useState<CoachState | null>(null);
+  const [latest, setLatest] = useState<CoachState | null>(null);
+  const reload = useCallback(async () => {
+    try { const saved = await readCoach(); ref.current = saved; setState(saved); setError(""); setPending(null); setLatest(null); }
+    catch (failure) { setError((failure as Error).message); }
+    finally { setLoading(false); }
+  }, []);
+  useEffect(() => { void reload(); }, [reload]);
+  const commit = useCallback(async (change: (previous: CoachState) => CoachState, preserve = false): Promise<CoachState | null> => {
+    if (lock.current) return null;
+    lock.current = true; setSaving(true);
+    let next: CoachState | null = null;
+    try {
+      next = change(ref.current);
+      const saved = await writeCoach(ref.current.revision, next, preserve);
+      ref.current = saved; setState(saved); setPending(null); setLatest(null); setError(""); return saved;
+    } catch (failure) {
+      setPending(next); setError((failure as Error).message);
+      if (failure instanceof SaveConflict) setLatest(failure.latest);
+      return null;
+    } finally { lock.current = false; setSaving(false); }
+  }, []);
+  return { state, loading, saving, error, pending, latest, commit, reload, retry: () => pending ? commit(() => pending) : reload() };
+}
+
+export function useStudyDay(timezone: string) {
+  const [day, setDay] = useState(() => dayKey(timezone));
+  useEffect(() => {
+    const update = () => setDay(dayKey(timezone)); update();
+    const id = setInterval(update, 30_000);
+    window.addEventListener("focus", update); document.addEventListener("visibilitychange", update);
+    return () => { clearInterval(id); window.removeEventListener("focus", update); document.removeEventListener("visibilitychange", update); };
+  }, [timezone]);
+  return day;
+}
+
+export function useForecast(state: CoachState, index: CoachIndex, day: string) {
+  const [result, setResult] = useState<Forecast | null>(null);
+  const [pending, setPending] = useState(true);
+  const [error, setError] = useState("");
+  useEffect(() => {
+    setPending(true); setError("");
+    const worker = new Worker(new URL("./forecast.worker.ts", import.meta.url), { type: "module" });
+    const timer = setTimeout(() => worker.postMessage({ state, index, day }), 120);
+    worker.onmessage = event => {
+      if (event.data.result) { setResult(event.data.result); setError(""); }
+      else { setResult(null); setError(event.data.error || "No se pudo calcular el plan."); }
+      setPending(false);
+    };
+    worker.onerror = () => { setResult(null); setError("No se pudo calcular el plan. Recarga la página."); setPending(false); };
+    return () => { clearTimeout(timer); worker.terminate(); };
+  }, [state, index, day]);
+  return { result, pending, error };
+}
