@@ -1,0 +1,588 @@
+{
+  "id": "23",
+  "title": "Nutrición",
+  "blocks": [
+    {
+      "id": "23.01",
+      "title": "Alimentación de lactante sano",
+      "topics": [
+        {
+          "id": "23.01-01",
+          "name": "Lactancia materna",
+          "source_pages": [
+            771,
+            772,
+            773,
+            774,
+            775
+          ],
+          "pattern": "Una madre de un recién nacido sano desea alimentarlo solo con su leche. Tiene dolor al prenderlo al pecho y duda si debe añadir agua porque lo ve mamar con frecuencia.",
+          "key_discriminator": "dolor al prenderlo al pecho",
+          "mechanism": "La succión estimula prolactina para producir leche y oxitocina para su eyección; la transferencia eficaz depende del agarre y del vaciamiento mamario frecuente.",
+          "findings": [
+            {
+              "mechanism": "Succión y transferencia adecuadas",
+              "finding": "Producción sostenida con deglución y crecimiento del lactante."
+            }
+          ],
+          "initial_action": "Observar una toma, corregir agarre y posición, y evaluar transferencia, hidratación y peso. Apoyar lactancia exclusiva durante los primeros seis meses cuando es adecuada, sin añadir agua de rutina.",
+          "action_reason": "El apoyo técnico y la evaluación del crecimiento resuelven dificultades sin interrumpir una fuente nutricional e inmunológica útil.",
+          "modifiers": [
+            {
+              "factor": "Medicamento o enfermedad materna",
+              "action": "Comprobar compatibilidad actual de forma individual antes de interrumpir; usar leche extraída o donada cuando esté indicado.",
+              "reason": "Las contraindicaciones dependen del agente, del tratamiento y de la condición del niño."
+            }
+          ],
+          "limits": "Las listas absolutas de fármacos y enfermedades del libro requieren actualización; el plan para VIH o enfermedad metabólica necesita asesoría específica.",
+          "evidence": [
+            {
+              "page": 771,
+              "quote": "hacerlo durante los primeros seis meses."
+            },
+            {
+              "page": 775,
+              "quote": "vigilar y mejorar la técnica de agarre del recién nacido al"
+            }
+          ],
+          "source_gaps": [],
+          "verified_source_pages": [
+            771,
+            772,
+            773,
+            774,
+            775
+          ],
+          "external_sources": [
+            {
+              "label": "CDC: contraindicaciones de lactancia",
+              "url": "https://www.cdc.gov/breastfeeding-special-circumstances/hcp/contraindications/",
+              "quote": "Physicians should make case-by-case assessments",
+              "checked_at": "2026-10-29"
+            },
+            {
+              "label": "NHS: alimentación en fenilcetonuria",
+              "url": "https://www.gov.uk/government/publications/pku-suspected-description-in-brief/phenylketonuria-pku-detailed-information",
+              "quote": "a limited daily volume of breastmilk feeds or infant formula",
+              "checked_at": "2026-10-29"
+            }
+          ],
+          "source_corrections": [
+            "Las páginas 772–775 contienen contraindicaciones demasiado amplias. Se evalúan fármacos con información actual, incluido LactMed. En VIH la recomendación depende de tratamiento, supresión viral y contexto; se requiere asesoría especializada y no se extrapola una regla única. Tampoco se decide cirugía del frenillo solo por anatomía sin valorar transferencia y apoyo de lactancia.",
+            "La fenilcetonuria no es una contraindicación absoluta como afirma la página 772: puede incluirse leche materna medida en un plan metabólico supervisado con control de fenilalanina."
+          ]
+        },
+        {
+          "id": "23.01-02",
+          "name": "Alimentación complementaria",
+          "source_pages": [
+            763
+          ],
+          "pattern": "Un lactante de seis meses se mantiene sentado con apoyo, controla la cabeza y muestra interés por la comida. Hasta ahora recibe leche y su familia solicita un plan para comenzar otros alimentos.",
+          "key_discriminator": "lactante de seis meses",
+          "mechanism": "Al crecer el lactante, la leche deja de cubrir por sí sola todos los requerimientos; los alimentos complementan energía y micronutrientes mientras maduran las habilidades alimentarias.",
+          "findings": [
+            {
+              "mechanism": "Aumento de necesidades y madurez para comer",
+              "finding": "Interés por alimentos y capacidad para aceptar texturas apropiadas."
+            }
+          ],
+          "initial_action": "Iniciar alimentos variados, nutritivos y con textura segura desde alrededor de los seis meses; aumentar cantidad y consistencia de forma gradual y mantener lactancia. Adaptar la oferta a hambre, saciedad y desarrollo.",
+          "action_reason": "La diversidad y la progresión cubren nutrientes y favorecen habilidades sin desplazar bruscamente la leche.",
+          "modifiers": [
+            {
+              "factor": "Introducción de alimentos alergénicos",
+              "action": "Ofrecerlos en formas apropiadas junto con los demás alimentos; valorar orientación especial si existe alergia o riesgo alto.",
+              "reason": "Retrasarlos de forma sistemática no previene alergias."
+            }
+          ],
+          "limits": "No dar miel antes de doce meses ni alimentos que causen atragantamiento; los frutos secos enteros no son una forma segura de introducción.",
+          "evidence": [
+            {
+              "page": 763,
+              "quote": "El momento ideal para iniciarla es a los 6 meses"
+            },
+            {
+              "page": 763,
+              "quote": "Iniciar con alimentos suaves"
+            }
+          ],
+          "source_gaps": [],
+          "verified_source_pages": [
+            763
+          ],
+          "external_sources": [
+            {
+              "label": "CDC: introducción de alimentos",
+              "url": "https://www.cdc.gov/infant-toddler-nutrition/foods-and-drinks/when-what-and-how-to-introduce-solid-foods.html",
+              "quote": "Introduce potentially allergenic foods when you introduce other foods.",
+              "checked_at": "2026-10-29"
+            }
+          ],
+          "source_corrections": [
+            "La página 763 aconseja retrasar huevo, cacahuate y otros alimentos para prevenir alergia. No se recomienda retraso sistemático: introducir formas seguras junto con los demás alimentos y valorar riesgo individual. La miel se evita antes de doce meses."
+          ]
+        }
+      ],
+      "common_problem": "Un lactante sano necesita un plan de alimentación acorde con su desarrollo.",
+      "mother": {
+        "cue": "La leche cubre el inicio de la vida; después aumenta la necesidad de energía, nutrientes y texturas.",
+        "answer": "Alimentación del lactante por etapas.",
+        "explanation": "La edad y la capacidad para comer determinan qué ofrecer y cómo mantener la lactancia."
+      }
+    },
+    {
+      "id": "23.02",
+      "title": "Diarrea tras lácteos",
+      "topics": [
+        {
+          "id": "23.02-01",
+          "name": "Intolerancia a la lactosa",
+          "source_pages": [
+            770
+          ],
+          "pattern": "Un escolar presenta distensión, dolor y evacuaciones líquidas después de beber leche. Los síntomas disminuyen al evacuar gases; no tiene urticaria, sangrado ni dificultad respiratoria tras la ingesta.",
+          "key_discriminator": "síntomas disminuyen al evacuar gases",
+          "mechanism": "La actividad insuficiente de lactasa impide hidrolizar la lactosa; el azúcar retenido atrae agua y su fermentación colónica produce gas, dolor y diarrea.",
+          "findings": [
+            {
+              "mechanism": "Lactosa no absorbida con fermentación y efecto osmótico",
+              "finding": "Distensión, flatulencia y diarrea relacionadas con la cantidad ingerida."
+            }
+          ],
+          "initial_action": "Relacionar síntomas con ingesta, valorar una reducción y reintroducción supervisada y asegurar aporte de calcio y energía. Solicitar hidrógeno espirado si la incertidumbre diagnóstica lo requiere.",
+          "action_reason": "La tolerancia suele ser parcial y se busca controlar síntomas sin una restricción nutricional innecesaria.",
+          "modifiers": [
+            {
+              "factor": "Inicio después de gastroenteritis o enfermedad intestinal",
+              "action": "Tratar la causa y reevaluar la tolerancia tras la recuperación.",
+              "reason": "La reducción secundaria de lactasa puede ser transitoria."
+            }
+          ],
+          "limits": "No equivale a alergia a proteína de leche; una forma congénita grave desde el nacimiento requiere otro plan.",
+          "evidence": [
+            {
+              "page": 770,
+              "quote": "intolerancia a la lactosa generalmente es"
+            },
+            {
+              "page": 770,
+              "quote": "Prueba de hidrógeno espirado"
+            }
+          ],
+          "source_gaps": [],
+          "verified_source_pages": [
+            770
+          ]
+        }
+      ],
+      "common_problem": "Un niño presenta dolor abdominal y diarrea después de ciertos lácteos.",
+      "mother": {
+        "cue": "Un carbohidrato que no se digiere permanece en la luz intestinal y es fermentado.",
+        "answer": "Maldigestión de un azúcar alimentario.",
+        "explanation": "El vínculo con la ingesta, el gas y la diarrea orientan un defecto enzimático, distinto de alergia."
+      }
+    },
+    {
+      "id": "23.03",
+      "title": "Bajo peso o edema",
+      "topics": [
+        {
+          "id": "23.03-01",
+          "name": "Desnutrición pedíatrica",
+          "source_pages": [
+            765,
+            766,
+            767,
+            768
+          ],
+          "pattern": "Un niño pequeño perdió músculo y grasa durante meses de alimentación insuficiente. Ahora tiene edema en ambos pies, poco apetito y letargia, aunque el peso parece menos bajo de lo esperado.",
+          "key_discriminator": "edema en ambos pies",
+          "mechanism": "El aporte o aprovechamiento insuficiente de energía y nutrientes reduce reservas y función inmunológica; la desnutrición con edema altera además la distribución de líquidos y complica la valoración del peso.",
+          "findings": [
+            {
+              "mechanism": "Pérdida de tejidos con posible retención de líquido",
+              "finding": "Emaciación o edema bilateral que puede ocultar el bajo peso."
+            }
+          ],
+          "initial_action": "Buscar y tratar signos de peligro, hipoglucemia, hipotermia e infección. Medir peso, talla y perímetro braquial e identificar edema; ante letargia, inapetencia o complicaciones, referir para estabilización hospitalaria.",
+          "action_reason": "La alimentación y los líquidos deben ajustarse a una fisiología vulnerable antes de la recuperación nutricional.",
+          "modifiers": [
+            {
+              "factor": "Emaciación sin complicaciones y apetito conservado",
+              "action": "Valorar atención ambulatoria con alimentación terapéutica y vigilancia estrecha según clasificación actual.",
+              "reason": "La gravedad antropométrica y las complicaciones determinan el lugar del tratamiento."
+            }
+          ],
+          "limits": "La talla baja identifica retraso crónico, no toda desnutrición aguda; el edema exige investigar también otras causas.",
+          "evidence": [
+            {
+              "page": 768,
+              "quote": "Edema bilateral ( + ), ( ++) o ( +++)"
+            },
+            {
+              "page": 768,
+              "quote": "Tratar/prevenir hipoglucemia e hipotermia."
+            }
+          ],
+          "source_gaps": [],
+          "verified_source_pages": [
+            765,
+            766,
+            767,
+            768
+          ],
+          "external_sources": [
+            {
+              "label": "OMS: identificación de desnutrición aguda grave",
+              "url": "https://www.who.int/tools/elena/interventions/sam-identification",
+              "quote": "mid-upper arm circumference <115 mm",
+              "checked_at": "2026-10-29"
+            },
+            {
+              "label": "OMS 2023: desnutrición, triaje",
+              "url": "https://www.ncbi.nlm.nih.gov/books/NBK601642/?report=printable",
+              "quote": "those with emergency or danger signs receive immediate life-saving care",
+              "checked_at": "2026-10-29"
+            }
+          ],
+          "source_corrections": [
+            "Las páginas 765–768 mezclan retraso crónico, emaciación y umbrales de gravedad; no se usa 133 mm como diagnóstico universal. En 6–59 meses, edema bilateral, perímetro menor de 115 mm o peso para talla menor de −3 Z exigen evaluación de desnutrición aguda grave.",
+            "El lugar de tratamiento depende también del apetito y las complicaciones. Se omiten pautas de líquidos y fórmulas impresas con unidades inconsistentes; se requiere estabilización y protocolo nutricional actual."
+          ]
+        }
+      ],
+      "common_problem": "Un niño tiene crecimiento insuficiente, pérdida de tejidos o edema.",
+      "mother": {
+        "cue": "La falta de energía o nutrientes reduce tejidos y función; el edema puede ocultar la pérdida de peso.",
+        "answer": "Déficit nutricional con posible compromiso sistémico.",
+        "explanation": "La antropometría y los signos de peligro establecen gravedad y lugar del tratamiento."
+      }
+    },
+    {
+      "id": "23.04",
+      "title": "Déficit de vitaminas",
+      "topics": [
+        {
+          "id": "23.04-01",
+          "name": "Hipovitaminosis",
+          "source_pages": [
+            769
+          ],
+          "pattern": "Un niño con dieta muy limitada presenta palidez, glositis y regresión de habilidades. La biometría muestra macrocitosis; también se buscan cambios de piel, mucosas y signos neurológicos para orientar los déficits.",
+          "key_discriminator": "macrocitosis",
+          "mechanism": "Las vitaminas hidrosolubles actúan como cofactores metabólicos; su déficit altera síntesis de ADN, función neurológica, epitelios o colágeno según la vitamina y el contexto nutricional.",
+          "findings": [
+            {
+              "mechanism": "Carencia de cobalamina con falla de síntesis y función neuronal",
+              "finding": "Anemia megaloblástica y posible regresión del desarrollo."
+            },
+            {
+              "mechanism": "Carencia de riboflavina o biotina con disfunción epitelial",
+              "finding": "Queilosis y glositis en la primera; dermatitis periorificial y alopecia en la segunda."
+            },
+            {
+              "mechanism": "Deficiencia de ascorbato con síntesis alterada de colágeno",
+              "finding": "Irritabilidad, dolor y edema de piernas en un niño con dieta muy restringida."
+            }
+          ],
+          "initial_action": "Revisar dieta, absorción y medicamentos; evaluar anemia y función neurológica. Ante este patrón, estudiar cobalamina y folato y reponer el déficit identificado, con cobalamina parenteral si corresponde.",
+          "action_reason": "La macrocitosis y la regresión orientan una carencia tratable cuya reposición no debe limitarse a corregir la hemoglobina.",
+          "modifiers": [
+            {
+              "factor": "Convulsiones o anemia durante uso prolongado de isoniacida",
+              "action": "Investigar déficit de piridoxina y ajustar la reposición según el contexto.",
+              "reason": "El fármaco puede alterar su disponibilidad y función."
+            },
+            {
+              "factor": "Anemia megaloblástica sin causa establecida",
+              "action": "Valorar cobalamina y síntomas neurológicos antes de usar folato como única reposición.",
+              "reason": "Ambas carencias producen macrocitosis, pero la lesión neurológica orienta a cobalamina."
+            }
+          ],
+          "limits": "La tabla incluye carencias distintas: glositis y queilosis orientan riboflavina; dermatitis periorificial con alopecia, biotina; dolor y edema de piernas, vitamina C. No existe una pauta única para todas.",
+          "evidence": [
+            {
+              "page": 769,
+              "quote": "Anemia megaloblástica,"
+            },
+            {
+              "page": 769,
+              "quote": "vitamina B12 vía"
+            }
+          ],
+          "source_gaps": [],
+          "verified_source_pages": [
+            769
+          ]
+        },
+        {
+          "id": "23.04-02",
+          "name": "Deficiencia de vitamina A",
+          "source_pages": [
+            764
+          ],
+          "pattern": "Un preescolar con dieta escasa presenta dificultad para ver al anochecer. La conjuntiva está seca y tiene placas blanquecinas; su familia refiere episodios de diarrea y poco acceso a alimentos variados.",
+          "key_discriminator": "dificultad para ver al anochecer",
+          "mechanism": "La falta de retinoides altera el ciclo visual y la diferenciación epitelial, causando mala adaptación a la oscuridad, sequedad ocular y vulnerabilidad corneal e infecciosa.",
+          "findings": [
+            {
+              "mechanism": "Alteración del pigmento visual y epitelio ocular",
+              "finding": "Ceguera nocturna, xerosis y manchas conjuntivales."
+            }
+          ],
+          "initial_action": "Evaluar de inmediato la córnea y el estado nutricional; iniciar reposición de vitamina A según edad y gravedad, con atención oftalmológica si hay daño ocular. Investigar dieta, diarrea y malabsorción.",
+          "action_reason": "El compromiso corneal puede progresar a pérdida visual y exige tratamiento oportuno.",
+          "modifiers": [
+            {
+              "factor": "Úlcera corneal o queratomalacia",
+              "action": "Referir con urgencia y tratar la deficiencia sin esperar solo una cifra sérica.",
+              "reason": "La lesión ocular avanzada amenaza la integridad de la córnea."
+            }
+          ],
+          "limits": "Las unidades de retinol impresas son inconsistentes; tampoco se indica suplementación alta rutinaria a todas las embarazadas.",
+          "evidence": [
+            {
+              "page": 764,
+              "quote": "Ceguera nocturna."
+            },
+            {
+              "page": 764,
+              "quote": "La administración de suplementos de vitamina A"
+            }
+          ],
+          "source_gaps": [],
+          "verified_source_pages": [
+            764
+          ],
+          "external_sources": [
+            {
+              "label": "OMS: vitamina A en embarazo",
+              "url": "https://www.who.int/tools/elena/interventions/vitamina-pregnancy",
+              "quote": "only recommended for pregnant women in areas where vitamin A deficiency is a severe public health problem",
+              "checked_at": "2026-10-29"
+            }
+          ],
+          "source_corrections": [
+            "La página 764 no sustenta suplementación rutinaria a todas las embarazadas. Además mezcla mg/dL con µg/dL: la carencia se expresa como retinol menor de 0,70 µmol/L (20 µg/dL), interpretado con el contexto clínico e inflamatorio; no se copian sus unidades erróneas."
+          ]
+        },
+        {
+          "id": "23.04-03",
+          "name": "Pelagra en niños",
+          "source_pages": [
+            777
+          ],
+          "pattern": "Un niño con dieta monótona basada en cereales presenta diarrea, irritabilidad y placas simétricas que se oscurecen en zonas expuestas al sol, especialmente alrededor del cuello y en el dorso de las manos.",
+          "key_discriminator": "placas simétricas que se oscurecen en zonas expuestas al sol",
+          "mechanism": "La disponibilidad insuficiente de niacina o triptófano reduce las coenzimas NAD y NADP, alterando el metabolismo energético en piel, intestino y sistema nervioso.",
+          "findings": [
+            {
+              "mechanism": "Déficit de coenzimas con compromiso epitelial y neurológico",
+              "finding": "Dermatitis fotosensible, diarrea y cambios de conducta o cognición."
+            }
+          ],
+          "initial_action": "Reconocer el patrón clínico e iniciar reposición de nicotinamida con rehabilitación nutricional. Investigar ingesta, malabsorción y medicamentos que afecten la síntesis o disponibilidad de niacina.",
+          "action_reason": "La reposición trata una causa reversible y la respuesta clínica apoya el diagnóstico.",
+          "modifiers": [
+            {
+              "factor": "Diarrea persistente o dieta muy restringida",
+              "action": "Corregir la causa y valorar otras carencias asociadas.",
+              "reason": "Una deficiencia aislada es menos probable cuando falla el aporte o la absorción de múltiples nutrientes."
+            }
+          ],
+          "limits": "La tríada puede ser incompleta y las pruebas bioquímicas no son indispensables para comenzar tratamiento de un cuadro típico.",
+          "evidence": [
+            {
+              "page": 777,
+              "quote": "Cuello \"Collar de Casal\""
+            },
+            {
+              "page": 777,
+              "quote": "300 mg de nicotinamida"
+            }
+          ],
+          "source_gaps": [],
+          "verified_source_pages": [
+            777
+          ]
+        },
+        {
+          "id": "23.04-04",
+          "name": "Raquitismo carencial",
+          "source_pages": [
+            778,
+            779,
+            780
+          ],
+          "pattern": "Un lactante sin suplemento adecuado presenta retraso motor, prominencia frontal y muñecas ensanchadas. Tiene piernas arqueadas al comenzar a caminar y fosfatasa alcalina elevada, con alteraciones de las metáfisis en radiografías.",
+          "key_discriminator": "muñecas ensanchadas",
+          "mechanism": "La falta de vitamina D o de calcio reduce la disponibilidad mineral para el hueso en crecimiento; la mineralización defectuosa de la placa causa deformidad y debilidad.",
+          "findings": [
+            {
+              "mechanism": "Mineralización insuficiente de cartílago y osteoide",
+              "finding": "Ensanchamiento de muñecas, deformidad de piernas y retraso motor."
+            }
+          ],
+          "initial_action": "Evaluar calcio, fósforo, fosfatasa alcalina, PTH y 25-hidroxivitamina D, junto con radiografías apropiadas. Corregir vitamina D y calcio según el contexto y tratar de inmediato la hipocalcemia sintomática.",
+          "action_reason": "El conjunto clínico, bioquímico y radiográfico permite reconocer la causa y evitar complicaciones metabólicas.",
+          "modifiers": [
+            {
+              "factor": "Falta de respuesta a reposición adecuada",
+              "action": "Revisar adherencia, aporte de calcio, malabsorción y causas renales o genéticas.",
+              "reason": "No toda alteración de la mineralización se debe a una carencia nutricional simple."
+            }
+          ],
+          "limits": "Una concentración baja de vitamina D sola no confirma el trastorno óseo; el calcitriol no es la reposición habitual de toda deficiencia.",
+          "evidence": [
+            {
+              "page": 778,
+              "quote": "Ensanchamiento de muñecas y tobillos"
+            },
+            {
+              "page": 779,
+              "quote": "mantenimiento+ calcio elemental."
+            }
+          ],
+          "source_gaps": [],
+          "verified_source_pages": [
+            778,
+            779,
+            780
+          ],
+          "external_sources": [
+            {
+              "label": "Consenso internacional: raquitismo nutricional",
+              "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4880117/",
+              "quote": "is caused by vitamin D deficiency and/or low calcium intake in children.",
+              "checked_at": "2026-10-29"
+            }
+          ],
+          "source_corrections": [
+            "La página 779 llama confirmatoria a 25-hidroxivitamina D aislada. El diagnóstico integra clínica, bioquímica y radiografías; también puede existir por ingesta baja de calcio. La alopecia por defecto del receptor no define raquitismo carencial grave y exige considerar una causa genética."
+          ]
+        }
+      ],
+      "common_problem": "Una dieta limitada o la mala absorción se acompañan de alteraciones orgánicas.",
+      "mother": {
+        "cue": "La falta de micronutrientes altera funciones metabólicas, epiteliales o de mineralización con patrones distintos.",
+        "answer": "Deficiencia de micronutrientes.",
+        "explanation": "Los hallazgos y el riesgo dietético orientan la reposición y la investigación de su causa."
+      }
+    },
+    {
+      "id": "23.05",
+      "title": "Exceso ponderal infantil",
+      "topics": [
+        {
+          "id": "23.05-01",
+          "name": "Obesidad en escolares",
+          "source_pages": [
+            776
+          ],
+          "pattern": "Un escolar tiene aumento persistente de adiposidad y un índice de masa corporal por encima del percentil 95 para edad y sexo. Consume bebidas azucaradas y su actividad física diaria es limitada.",
+          "key_discriminator": "por encima del percentil 95",
+          "mechanism": "La interacción de predisposición biológica, entorno y hábitos favorece acumulación excesiva de grasa; la inflamación y resistencia a insulina aumentan el riesgo de complicaciones sistémicas.",
+          "findings": [
+            {
+              "mechanism": "Adiposidad excesiva sostenida",
+              "finding": "Elevación del índice de masa corporal y posible repercusión metabólica."
+            }
+          ],
+          "initial_action": "Confirmar antropometría y trayectoria de crecimiento; evaluar presión, comorbilidades y contexto familiar. Iniciar o referir a una intervención familiar intensiva con nutrición, actividad y apoyo conductual, sin esperar progresión.",
+          "action_reason": "El tratamiento temprano y sostenido aborda tanto la adiposidad como sus consecuencias y barreras familiares.",
+          "modifiers": [
+            {
+              "factor": "Comorbilidad o gravedad elevada",
+              "action": "Solicitar atención especializada y valorar terapias adicionales según edad e indicaciones.",
+              "reason": "La intervención se ajusta al riesgo y puede requerir más que orientación general."
+            }
+          ],
+          "limits": "El percentil 97 no define por sí solo obesidad grave; las metas de peso deben individualizarse durante el crecimiento.",
+          "evidence": [
+            {
+              "page": 776,
+              "quote": "medición del IMC en niños a partir"
+            },
+            {
+              "page": 776,
+              "quote": "programa de nutrición, psicología, educación"
+            }
+          ],
+          "source_gaps": [],
+          "verified_source_pages": [
+            776
+          ],
+          "external_sources": [
+            {
+              "label": "AAP 2023: tratamiento de obesidad pediátrica",
+              "url": "https://publications.aap.org/pediatrics/article-pdf/151/2/e2022060640/1451060/peds_2022060640.pdf",
+              "quote": "intensive health behavior and lifestyle treatment",
+              "checked_at": "2026-10-29"
+            }
+          ],
+          "source_corrections": [
+            "La página 776 ofrece metas fijas de pérdida y seguimiento a seis meses. Se individualizan objetivos y seguimiento y se ofrece intervención familiar intensiva desde el diagnóstico. La gravedad no se define simplemente por percentil 97; no se solicita insulina sérica rutinaria como prueba diagnóstica de obesidad."
+          ]
+        },
+        {
+          "id": "23.05-02",
+          "name": "Síndrome metabólico en niños",
+          "source_pages": [
+            781
+          ],
+          "pattern": "Un adolescente con adiposidad abdominal presenta triglicéridos elevados, colesterol HDL bajo y presión arterial aumentada en mediciones repetidas. También tiene glucosa en ayuno alterada y antecedentes familiares de diabetes.",
+          "key_discriminator": "adiposidad abdominal",
+          "mechanism": "La adiposidad visceral favorece resistencia a insulina, dislipidemia e inflamación crónica; su agrupación con hipertensión y alteración glucémica aumenta el riesgo cardiometabólico a largo plazo.",
+          "findings": [
+            {
+              "mechanism": "Resistencia a insulina asociada con grasa visceral",
+              "finding": "Concurrencia de alteraciones de glucosa, lípidos y presión."
+            }
+          ],
+          "initial_action": "Medir cintura y presión con técnica apropiada y evaluar glucosa y lípidos. Tratar cada componente y ofrecer una intervención familiar sobre alimentación, actividad física y sedentarismo.",
+          "action_reason": "El riesgo depende de alteraciones concretas que requieren seguimiento, aun cuando cambie la etiqueta diagnóstica.",
+          "modifiers": [
+            {
+              "factor": "Edad menor de diez años",
+              "action": "Evaluar y tratar factores de riesgo sin aplicar automáticamente la definición IDF del adolescente.",
+              "reason": "La definición depende de la edad y no diagnostica este síndrome en menores de diez años."
+            }
+          ],
+          "limits": "La metformina no se indica solo por agrupar criterios ni por falta de respuesta al ejercicio; requiere una indicación específica.",
+          "evidence": [
+            {
+              "page": 781,
+              "quote": "La resistencia a la insulina y la obesidad"
+            },
+            {
+              "page": 781,
+              "quote": "promoción de estilo de vida saludable"
+            }
+          ],
+          "source_gaps": [],
+          "verified_source_pages": [
+            781
+          ],
+          "external_sources": [
+            {
+              "label": "IDF: definición pediátrica por edad",
+              "url": "https://idf.org/media/uploads/2023/05/attachments-31.pdf",
+              "quote": "the metabolic syndrome should not be diagnosed in children younger than 10 years",
+              "checked_at": "2026-10-29"
+            }
+          ],
+          "source_corrections": [
+            "La página 781 rotula una columna como menores de seis años y contiene cifras mal transcritas. La definición IDF es por grupos de edad; no diagnostica síndrome en menores de diez años. Se tratan componentes concretos y no se inicia metformina solo por el rótulo o por no mejorar con ejercicio."
+          ]
+        }
+      ],
+      "common_problem": "Un niño tiene exceso de adiposidad y posible riesgo cardiometabólico.",
+      "mother": {
+        "cue": "El exceso de tejido adiposo se asocia con alteración metabólica; se deben estudiar sus consecuencias concretas.",
+        "answer": "Exceso ponderal y agrupación de riesgos metabólicos.",
+        "explanation": "La antropometría identifica el problema; presión, glucosa y lípidos determinan el riesgo asociado."
+      }
+    }
+  ]
+}
