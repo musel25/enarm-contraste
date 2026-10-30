@@ -13,6 +13,8 @@ from contextlib import closing
 from html.parser import HTMLParser
 from pathlib import Path
 
+from validate_sections import answer_in_text, book_reference_pages, correction_notes
+
 
 def digest(value: dict) -> str:
     return hashlib.sha256(json.dumps(value, ensure_ascii=False, sort_keys=True, separators=(',', ':')).encode()).hexdigest()
@@ -55,6 +57,13 @@ def audit(catalog: dict, sources: Path, library: Path) -> dict:
     groups = []
     topic_occurrences = 0
     blocks = 0
+
+    def provenance(card: dict, topics: list[dict]) -> None:
+        expected = sorted({page for topic in topics for page in book_reference_pages(topic)})
+        actual = sorted({page for source in card['sources'] if source['label'] == catalog['book']['filename'] for page in source.get('pages', [])})
+        require(actual == expected, f'Source page correspondence mismatch: {card["id"]}')
+        expected_urls = {s['url'] for topic in topics for s in topic.get('external_sources', [])}
+        require({s['url'] for s in card['sources'] if s.get('url')} == expected_urls, f'External source correspondence mismatch: {card["id"]}')
     for expected in catalog['sections']:
         section = json.loads((sources / f'{expected["id"]}.json').read_text())
         source_hashes[section['id']] = digest(section)
@@ -71,17 +80,27 @@ def audit(catalog: dict, sources: Path, library: Path) -> dict:
             expected_ids.update([eje_id, mother_id])
             require(eje_id in cards and mother_id in cards, f'Missing block correspondence: {block["id"]}')
             eje = cards[eje_id]
+            provenance(eje, block['topics'])
+            provenance(cards[mother_id], block['topics'])
             require([r['text'] for r in eje['front']] == [t['pattern'] for t in block['topics']], f'Case correspondence mismatch: {eje_id}')
             require([r['title'] for r in eje['back']] == [t.get('answer_name', t['name']) for t in block['topics']], f'Diagnosis correspondence mismatch: {eje_id}')
             require([r['action'] for r in eje['back']] == [t['initial_action'] for t in block['topics']], f'Action correspondence mismatch: {eje_id}')
             for field, source_field in [('text', 'mechanism'), ('discriminator', 'key_discriminator'), ('reason', 'action_reason'), ('limits', 'limits')]:
                 require([r[field] for r in eje['back']] == [t[source_field] for t in block['topics']], f'{field} correspondence mismatch: {eje_id}')
             require(cards[mother_id]['front'][0]['text'] == block['mother']['cue'] and cards[mother_id]['back'][0]['title'] == block['mother']['answer'], f'Mother pattern correspondence mismatch: {mother_id}')
+            require(cards[mother_id].get('corrections', []) == [f'{t.get("answer_name", t["name"])}: {note}' for t in block['topics'] for note in correction_notes(t)], f'Mother correction correspondence mismatch: {mother_id}')
+            for row, topic in zip(eje['back'], block['topics']):
+                require(row.get('corrections', []) == correction_notes(topic), f'Case correction correspondence mismatch: {topic["id"]}')
+                pages = sorted({p for s in row['sources'] if s['label'] == catalog['book']['filename'] for p in s.get('pages', [])})
+                require(pages == book_reference_pages(topic), f'Case source correspondence mismatch: {topic["id"]}')
             for topic in block['topics']:
                 tid = topic['id']
                 expected_ids.update(f'madre/{level}/{tid}' for level in [2, 3, 4])
                 for level in [2, 3, 4]:
                     require(f'madre/{level}/{tid}' in cards, f'Missing topic correspondence: {tid} N{level}')
+                    current = cards[f'madre/{level}/{tid}']
+                    provenance(current, [topic])
+                    require(current.get('corrections', []) == correction_notes(topic), f'Correction correspondence mismatch: {tid} N{level}')
                 recognition = cards[f'madre/2/{tid}']
                 causal = cards[f'madre/3/{tid}']
                 management = cards[f'madre/4/{tid}']
@@ -122,16 +141,18 @@ def audit(catalog: dict, sources: Path, library: Path) -> dict:
                     exported_ids.add(identity)
                     card = all_cards[identity]
                     ordered([r['text'] for r in card['front']], text(front), identity)
-                    ordered([value for r in card['back'] for value in [r.get(field, '') for field in ['title', 'text', 'discriminator', 'action', 'reason', 'limits']] if value], text(back), identity)
+                    ordered([value for r in card['back'] for value in [r.get(field, '') for field in ['title', 'text', 'discriminator', 'action', 'reason', 'limits']] + r.get('corrections', []) if value] + card.get('corrections', []), text(back), identity)
                     if card['level'] in [0, 2]:
                         for answer in card['back']:
-                            require(answer['title'].casefold() not in text(front).casefold(), f'Answer leaked on recognition front: {identity}')
+                            require(not answer_in_text(answer['title'], text(front)), f'Answer leaked on recognition front: {identity}')
                     require(catalog['book']['filename'] not in front, f'Source leaked on front: {identity}')
                 require(exported_ids == expected_ids, 'Anki coverage mismatch')
                 notes += len(rows)
     require(len(manifest['downloads']) == 2 and {d['family'] for d in manifest['downloads']} == {'eje', 'madre'}, 'Both complete downloads are required')
     require(notes == len(all_cards), 'Combined Anki count mismatch')
-    return {'content_sha256': manifest['content_sha256'], 'sections': len(source_hashes), 'blocks': blocks, 'topic_occurrences': topic_occurrences, 'cards': len(all_cards), 'anki_notes': notes, 'families': dict(counts), 'review_status': manifest['review_status']}
+    referenced = {p for card in all_cards.values() for source in card['sources'] if source['label'] == catalog['book']['filename'] for p in source.get('pages', [])}
+    require(referenced == set(range(1, catalog['book']['pages'] + 1)), 'Complete book reference coverage mismatch')
+    return {'content_sha256': manifest['content_sha256'], 'sections': len(source_hashes), 'blocks': blocks, 'topic_occurrences': topic_occurrences, 'cards': len(all_cards), 'anki_notes': notes, 'book_pages_referenced': len(referenced), 'families': dict(counts), 'review_status': manifest['review_status']}
 
 
 def main() -> None:

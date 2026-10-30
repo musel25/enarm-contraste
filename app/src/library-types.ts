@@ -9,8 +9,9 @@ export interface StudyCardData {
   prompt: string;
   context: string;
   front: { text: string; highlight?: string }[];
-  back: { title: string; text: string; topic_id?: string; discriminator?: string; action?: string; reason?: string; limits?: string; sources?: CardSource[] }[];
+  back: { title: string; text: string; topic_id?: string; discriminator?: string; action?: string; reason?: string; limits?: string; sources?: CardSource[]; corrections?: string[] }[];
   sources: CardSource[];
+  corrections?: string[];
 }
 export interface StudySection {
   id: string;
@@ -35,6 +36,9 @@ function record(value: unknown): value is Record<string, unknown> {
 function optionalText(value: Record<string, unknown>, keys: string[]) {
   return keys.every(key => value[key] === undefined || typeof value[key] === "string");
 }
+function notes(value: unknown): boolean {
+  return value === undefined || (Array.isArray(value) && value.every(note => typeof note === "string"));
+}
 function sources(value: unknown): boolean {
   return Array.isArray(value) && value.length > 0 && value.every(s => record(s) && typeof s.label === "string" &&
     (s.pages === undefined || (Array.isArray(s.pages) && s.pages.every(p => Number.isInteger(p) && p > 0))) &&
@@ -43,6 +47,7 @@ function sources(value: unknown): boolean {
 function rows(value: unknown, answer = false): boolean {
   return Array.isArray(value) && value.length > 0 && value.every(row => record(row) && typeof row.text === "string" &&
     optionalText(row, ["highlight", "discriminator", "action", "reason", "limits", "topic_id"]) &&
+    notes(row.corrections) &&
     (row.sources === undefined || sources(row.sources)) && (!answer || typeof row.title === "string"));
 }
 export function isManifest(value: unknown): value is StudyManifest {
@@ -55,5 +60,5 @@ export function isManifest(value: unknown): value is StudyManifest {
 export function isSection(value: unknown): value is StudySection {
   return record(value) && typeof value.id === "string" && typeof value.title === "string" &&
     Array.isArray(value.blocks) && value.blocks.length > 0 && value.blocks.every(b => record(b) && typeof b.id === "string" && typeof b.title === "string") &&
-    Array.isArray(value.cards) && value.cards.length > 0 && value.cards.every(c => record(c) && typeof c.id === "string" && (c.family === "eje" || c.family === "madre") && typeof c.level === "number" && typeof c.block_id === "string" && typeof c.prompt === "string" && typeof c.context === "string" && rows(c.front) && rows(c.back, true) && sources(c.sources));
+    Array.isArray(value.cards) && value.cards.length > 0 && value.cards.every(c => record(c) && typeof c.id === "string" && (c.family === "eje" || c.family === "madre") && typeof c.level === "number" && typeof c.block_id === "string" && typeof c.prompt === "string" && typeof c.context === "string" && rows(c.front) && rows(c.back, true) && sources(c.sources) && notes(c.corrections));
 }

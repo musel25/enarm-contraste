@@ -38,7 +38,7 @@ class FullDeckTests(unittest.TestCase):
 
     def write_section(self):
         (self.sections / '01.json').write_text(json.dumps(self.section))
-        review = {'section_id': '01', 'status': 'approved', 'author': 'author_a', 'reviewer': 'reviewer_b', 'content_sha256': digest(self.section), 'topic_ids': [t['id'] for t in self.section['blocks'][0]['topics']], 'issues': [], 'pages_checked': [1], 'external_urls_checked': []}
+        review = {'section_id': '01', 'status': 'approved', 'author': 'author_a', 'reviewer': 'reviewer_b', 'content_sha256': digest(self.section), 'topic_ids': [t['id'] for t in self.section['blocks'][0]['topics']], 'issues': [], 'pages_checked': sorted({p for b in self.section['blocks'] for t in b['topics'] for p in t['source_pages'] + t.get('verified_source_pages', [])}), 'external_urls_checked': []}
         (self.reviews / '01.json').write_text(json.dumps(review))
 
     def build(self, name='build'):
@@ -175,6 +175,49 @@ class FullDeckTests(unittest.TestCase):
         recognition = next(c for c in data['cards'] if c['id'] == 'madre/2/01.01-01')
         self.assertEqual(recognition['back'][0]['title'], 'Diagnóstico corregido')
         self.assertEqual(self.audit()['cards'], 8)
+
+    def test_rejects_accent_and_punctuation_variants_of_answer_on_front(self):
+        self.section['blocks'][0]['topics'][0]['pattern'] += ' Es un diagnostico-alfa.'
+        self.write_section()
+        with self.assertRaisesRegex(ValueError, 'Answer leaked'):
+            self.build()
+
+    def test_exports_complete_topic_reference_ranges(self):
+        self.section['blocks'][0]['topics'][0]['source_pages'] = [1, 2, 3]
+        self.catalog['sections'][0]['blocks'][0]['topics'][0]['source_pages'] = [1, 2, 3]
+        self.catalog['book']['pages'] = 3
+        self.write_section()
+        self.build()
+        data = json.loads((self.root / 'build/sections/01.json').read_text())
+        self.assertEqual(data['cards'][0]['back'][0]['sources'][0]['pages'], [1, 2, 3])
+
+    def test_distinguishes_replaced_pages_from_added_support(self):
+        self.catalog['book']['pages'] = 3
+        first, second = self.section['blocks'][0]['topics']
+        first.update(verified_source_pages=[2], reference_page_mode='replace', source_corrections=['La página 2 reemplaza la referencia errónea.'])
+        first['evidence'][0]['page'] = 2
+        (self.root / 'pages/0002.txt').write_text('Una frase original del libro.')
+        second.update(verified_source_pages=[3], reference_page_mode='extend', source_corrections=['La página 3 complementa la referencia original.'])
+        self.write_section()
+        self.build()
+        data = json.loads((self.root / 'build/sections/01.json').read_text())
+        rows = data['cards'][0]['back']
+        self.assertEqual(rows[0]['sources'][0]['pages'], [2])
+        self.assertEqual(rows[1]['sources'][0]['pages'], [1, 3])
+
+    def test_preserves_source_corrections_on_backs_and_each_comparison_row(self):
+        notes = ['El libro usa un umbral antiguo.', 'La guía omite un factor.']
+        self.section['blocks'][0]['topics'][0]['source_corrections'] = [notes[0], {'reason': notes[1]}]
+        self.write_section()
+        self.build()
+        data = json.loads((self.root / 'build/sections/01.json').read_text())
+        eje = data['cards'][0]
+        self.assertEqual(eje['back'][0]['corrections'], notes)
+        action = next(c for c in data['cards'] if c['id'] == 'madre/4/01.01-01')
+        self.assertEqual(action['corrections'], notes)
+        for card in [eje, action]:
+            self.assertIn(notes[0], self.module.render_back(card))
+            self.assertNotIn(notes[0], self.module.render_front(card))
 
 
 if __name__ == '__main__':

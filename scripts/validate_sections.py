@@ -15,6 +15,26 @@ def normalized(value: str) -> str:
     return re.sub(r'\s+', ' ', unicodedata.normalize('NFKC', value)).strip().casefold()
 
 
+def answer_in_text(answer: str, text: str) -> bool:
+    def tokens(value: str) -> str:
+        decomposed = ''.join(char for char in unicodedata.normalize('NFKD', value.casefold()) if not unicodedata.combining(char))
+        return re.sub(r'[\W_]+', ' ', decomposed).strip()
+    key = tokens(answer)
+    return bool(key) and f' {key} ' in f' {tokens(text)} '
+
+
+def book_reference_pages(topic: dict) -> list[int]:
+    original = topic.get('source_pages', [])
+    verified = topic.get('verified_source_pages', [])
+    declared = verified if topic.get('reference_page_mode') == 'replace' else original + verified
+    return sorted(set(declared + [item['page'] for item in topic.get('evidence', [])]))
+
+
+def correction_notes(topic: dict) -> list[str]:
+    notes = [item if isinstance(item, str) else item['reason'] for item in topic.get('source_corrections', [])]
+    return list(dict.fromkeys(note.strip() for note in notes))
+
+
 def validate(catalog: dict, directory: Path, pages: Path | None, selected: list[str] | None = None, allow_partial: bool = False) -> dict:
     report = {'source_text_checked': pages is not None, 'source_book_sha256': catalog.get('book', {}).get('sha256'), 'section_hashes': {}, 'verified_sections': 0, 'verified_blocks': 0, 'verified_topics': 0, 'verified_evidence': 0, 'visual_evidence': 0, 'external_sources': 0, 'missing_sections': [], 'errors': []}
     book_pages = catalog.get('book', {}).get('pages', 1150)
@@ -71,6 +91,8 @@ def validate(catalog: dict, directory: Path, pages: Path | None, selected: list[
             mother = block.get('mother', {})
             for field in ('cue', 'answer', 'explanation'):
                 text_field(mother, field, bid)
+            if answer_in_text(mother.get('answer', ''), mother.get('cue', '')):
+                error('answer_leak', bid, 'Answer leaked on mother front')
             topics = block.get('topics', [])
             if not isinstance(topics, list):
                 error('invalid_topics', bid, 'Expected an array')
@@ -96,14 +118,24 @@ def validate(catalog: dict, directory: Path, pages: Path | None, selected: list[
                     text_field(topic, 'answer_name', tid)
                     if topic['answer_name'] != topic['name'] and not topic.get('source_corrections'):
                         error('unexplained_answer_correction', tid, 'answer_name requires source_corrections')
+                corrections = topic.get('source_corrections', [])
+                if not isinstance(corrections, list) or any(not (isinstance(item, str) and item.strip() or isinstance(item, dict) and isinstance(item.get('reason'), str) and item['reason'].strip()) for item in corrections):
+                    error('invalid_corrections', tid, 'Expected text or objects with a reason')
                 if topic.get('source_pages') != expected_topic['source_pages'] and not topic.get('source_corrections'):
                     error('source_pages_changed', tid, 'Correction must be explicit')
                 verified_pages = topic.get('verified_source_pages', [])
                 if set(verified_pages) - set(expected_topic['source_pages']) and not topic.get('source_corrections'):
                     error('unexplained_page_correction', tid, 'verified_source_pages requires source_corrections')
-                declared_pages = set(topic.get('source_pages', []) + verified_pages)
+                mode = topic.get('reference_page_mode', 'extend')
+                if mode not in ('extend', 'replace'):
+                    error('invalid_reference_mode', tid, str(mode))
+                if mode == 'replace' and (not verified_pages or not topic.get('source_corrections')):
+                    error('unexplained_reference_replacement', tid, 'Replacement requires verified pages and correction')
+                declared_pages = set(verified_pages if mode == 'replace' else topic.get('source_pages', []) + verified_pages)
                 for field in ('pattern', 'key_discriminator', 'mechanism', 'initial_action', 'action_reason', 'limits'):
                     text_field(topic, field, tid)
+                if answer_in_text(topic.get('answer_name', topic.get('name', '')), topic.get('pattern', '')):
+                    error('answer_leak', tid, 'Answer leaked on recognition front')
                 for field, minimum, maximum in [('pattern', 20, 45), ('mechanism', 15, 35), ('initial_action', 1, 45)]:
                     words = len(topic.get(field, '').split())
                     if not minimum <= words <= maximum:

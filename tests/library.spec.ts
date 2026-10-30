@@ -124,3 +124,16 @@ test("finds a clinical group by symptom and opens its differential directly", as
   await expect(page.getByRole("button", { name: "Eje Clínico", exact: true })).toHaveAttribute("aria-pressed", "true");
   await expect(page.getByRole("region", { name: "Respuesta de la tarjeta" })).toHaveCount(0);
 });
+
+test("shows source corrections after the answer is revealed", async ({ page }) => {
+  await mockLibrary(page);
+  const data = structuredClone(section);
+  Object.assign(data.cards[0].back[0], { corrections: ["La guía usaba un umbral antiguo. La fuente actual lo corrige."] });
+  await page.route("**/study/sections/*.json*", route => route.fulfill({ json: data }));
+  await page.goto("./#biblioteca");
+  await page.getByRole("button", { name: /Sección de prueba/ }).click();
+  await expect(page.getByText("Precisiones de las fuentes", { exact: true })).toHaveCount(0);
+  await page.getByRole("button", { name: "Mostrar respuesta", exact: true }).click();
+  await page.getByText("Precisiones de las fuentes", { exact: true }).click();
+  await expect(page.getByRole("region", { name: "Respuesta de la tarjeta" })).toContainText("La fuente actual lo corrige.");
+});

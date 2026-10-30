@@ -77,3 +77,5 @@ Con el inventario actual: 355 tarjetas Eje Clínico y 2,545 Patrones Madre. Esto
 Dos mazos completos `.apkg`, exportación estructurada y biblioteca web por sección y bloque. Frentes sin respuestas filtradas por títulos o fuentes. Todas las tarjetas deben poder estudiarse por separado. El sitio debe indicar las referencias del libro y el estado real de revisión y cobertura.
 
 La web enlaza cada diagnóstico del Eje Clínico con la tarjeta de manejo del mismo tema. Al cambiar entre niveles 2, 3 y 4 conserva el tema seleccionado. Los identificadores del tema se incluyen solo como metadatos; no se muestran como pistas en el frente.
+
+Las referencias del reverso conservan el rango completo de cada tema y sus páginas de apoyo. `reference_page_mode: "extend"` es el valor predeterminado. `"replace"` exige páginas verificadas y una corrección explícita; evita presentar una referencia errónea como válida. Las precisiones de `source_corrections` se muestran solo en los reversos, por caso en Eje Clínico. Las comprobaciones de fuga ignoran diferencias de acento y puntuación.

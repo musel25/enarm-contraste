@@ -14,7 +14,7 @@ from pathlib import Path
 import genanki
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-from validate_sections import validate
+from validate_sections import answer_in_text, book_reference_pages, correction_notes, validate
 
 
 def content_hash(value: dict) -> str:
@@ -31,7 +31,7 @@ def answer_name(topic: dict) -> str:
 
 
 def references(topics: list[dict], book_name: str) -> list[dict]:
-    pages = sorted({item['page'] for topic in topics for item in topic.get('evidence', [])})
+    pages = sorted({page for topic in topics for page in book_reference_pages(topic)})
     result = [{'label': book_name, 'pages': pages}] if pages else []
     urls = set()
     for topic in topics:
@@ -51,15 +51,16 @@ def compile_section(section: dict, book_name: str) -> dict:
         cards.append({**base, 'id': f'eje/{block["id"]}', 'family': 'eje', 'level': 0,
                       'prompt': '¿Qué diagnóstico corresponde a cada caso?', 'context': block['common_problem'],
                       'front': [{'text': t['pattern'], 'highlight': t['key_discriminator']} for t in topics],
-                      'back': [{'topic_id': t['id'], 'title': answer_name(t), 'text': t['mechanism'], 'discriminator': t['key_discriminator'], 'action': t['initial_action'], 'reason': t['action_reason'], 'limits': t['limits'], 'sources': references([t], book_name)} for t in topics], 'sources': all_sources})
+                      'back': [{'topic_id': t['id'], 'title': answer_name(t), 'text': t['mechanism'], 'discriminator': t['key_discriminator'], 'action': t['initial_action'], 'reason': t['action_reason'], 'limits': t['limits'], 'corrections': correction_notes(t), 'sources': references([t], book_name)} for t in topics], 'sources': all_sources})
         mother = block['mother']
         cards.append({**base, 'id': f'madre/1/{block["id"]}', 'family': 'madre', 'level': 1,
                       'prompt': '¿Qué patrón organiza este problema?', 'context': '',
                       'front': [{'text': mother['cue']}],
-                      'back': [{'title': mother['answer'], 'text': mother['explanation']}], 'sources': all_sources})
+                      'back': [{'title': mother['answer'], 'text': mother['explanation']}], 'sources': all_sources,
+                      'corrections': [f'{answer_name(t)}: {note}' for t in topics for note in correction_notes(t)]})
         for topic in topics:
             sources = references([topic], book_name)
-            topic_base = {**base, 'topic_id': topic['id']}
+            topic_base = {**base, 'topic_id': topic['id'], 'corrections': correction_notes(topic)}
             cards.append({**topic_base, 'id': f'madre/2/{topic["id"]}', 'family': 'madre', 'level': 2,
                           'prompt': '¿Qué diagnóstico o concepto explica este caso?', 'context': '',
                           'front': [{'text': topic['pattern'], 'highlight': topic['key_discriminator']}],
@@ -104,6 +105,12 @@ def render_sources(sources: list[dict]) -> str:
     return '<ul class="sources">' + ''.join(rows) + '</ul>'
 
 
+def render_corrections(notes: list[str]) -> str:
+    if not notes:
+        return ''
+    return '<details class="corrections"><summary>Precisiones de las fuentes</summary><ul>' + ''.join(f'<li>{escaped(note)}</li>' for note in notes) + '</ul></details>'
+
+
 def render_back(card: dict) -> str:
     rows = []
     for row in card['back']:
@@ -112,8 +119,8 @@ def render_back(card: dict) -> str:
         for field, label in [('discriminator', 'Dato clave'), ('action', 'Primera acción'), ('reason', 'Por qué'), ('limits', 'Límite del patrón')]:
             if row.get(field):
                 details += f'<p><strong>{label}:</strong> {escaped(row[field])}</p>'
-        rows.append(f'<li>{title}<p>{escaped(row["text"])}</p>{details}</li>')
-    return '<ol class="answers">' + ''.join(rows) + '</ol>' + render_sources(card['sources']) + '<p class="notice">Material de estudio. Revisión clínica profesional pendiente.</p>'
+        rows.append(f'<li>{title}<p>{escaped(row["text"])}</p>{details}{render_corrections(row.get("corrections", []))}</li>')
+    return '<ol class="answers">' + ''.join(rows) + '</ol>' + render_corrections(card.get('corrections', [])) + render_sources(card['sources']) + '<p class="notice">Material de estudio. Revisión clínica profesional pendiente.</p>'
 
 
 CSS = """
@@ -121,8 +128,10 @@ CSS = """
 h2,h3 {line-height:1.3} h2 {font-size:23px} h3 {font-size:21px;color:#5c408a;margin:0 0 8px}
 ol {padding-left:30px} li {padding:12px 5px;border-bottom:1px solid #e0d9ed} p {margin:8px 0}
 mark {background:#ffdfab;color:#50391b;padding:1px 3px;border-radius:3px} .context {font-style:italic}
-.sources,.notice {font-size:13px;color:#625b6b} a {color:#684399} .nightMode .card {background:#211d2a;color:#eee8f5}
-.nightMode h3,.nightMode a {color:#d5bbff} .nightMode .sources,.nightMode .notice {color:#c6bcd2}
+.sources,.notice {font-size:13px;color:#625b6b} a {color:#684399} .nightMode.card,.night_mode.card,.nightMode .card {background:#211d2a;color:#eee8f5}
+.corrections {font-size:14px;margin:12px 0;color:#665076} .corrections summary {cursor:pointer} .corrections li {padding:6px 0}
+.nightMode h3,.nightMode a,.night_mode h3,.night_mode a {color:#d5bbff} .nightMode .sources,.nightMode .notice,.night_mode .sources,.night_mode .notice {color:#c6bcd2}
+.nightMode .corrections,.night_mode .corrections {color:#d1bbdf}
 """
 
 
@@ -151,7 +160,7 @@ def check_coverage(section: dict, expected: dict) -> None:
         raise ValueError(f'Block coverage mismatch: {section["id"]}')
     for block in expected['blocks']:
         authored = actual[block['id']]
-        if authored['mother']['answer'].casefold() in authored['mother']['cue'].casefold():
+        if answer_in_text(authored['mother']['answer'], authored['mother']['cue']):
             raise ValueError(f'Answer leaked on mother front: {block["id"]}')
         if Counter(t['id'] for t in authored['topics']) != Counter(t['id'] for t in block['topics']):
             raise ValueError(f'Topic coverage mismatch: {block["id"]}')
@@ -159,7 +168,7 @@ def check_coverage(section: dict, expected: dict) -> None:
         for topic in authored['topics']:
             if topic['name'] != names[topic['id']] or topic.get('source_gaps') != []:
                 raise ValueError(f'Incomplete coverage: {topic["id"]}')
-            if answer_name(topic).casefold() in topic['pattern'].casefold():
+            if answer_in_text(answer_name(topic), topic['pattern']):
                 raise ValueError(f'Answer leaked on recognition front: {topic["id"]}')
             for field in ['pattern', 'key_discriminator', 'mechanism', 'initial_action', 'action_reason', 'limits']:
                 if not isinstance(topic.get(field), str) or not topic[field].strip():
