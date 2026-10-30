@@ -233,7 +233,7 @@
               "finding": "Prolapso al evacuar"
             }
           ],
-          "initial_action": "Realizar historia y exploración para confirmar origen del sangrado. Iniciar fibra, líquidos y corrección del esfuerzo; valorar procedimiento según grado y respuesta.",
+          "initial_action": "Reconocer probable enfermedad hemorroidal interna grado II y confirmar el origen del sangrado con historia y exploración. Iniciar fibra, líquidos y corrección del esfuerzo; valorar ligadura con banda si persisten síntomas.",
           "action_reason": "Mejora consistencia de heces y reduce traumatismo y congestión.",
           "modifiers": [
             {
@@ -255,7 +255,7 @@
             },
             {
               "page": 190,
-              "quote": "la fibra y los líquidos"
+              "quote": "la fibra y los líquidos como primera línea en"
             }
           ],
           "source_gaps": []
@@ -292,7 +292,7 @@
               "finding": "Absceso"
             }
           ],
-          "initial_action": "Valorar estabilidad y realizar TAC cuando se requiere confirmar o clasificar. Seleccionar manejo ambulatorio u hospitalario por tolerancia, comorbilidad y complicación.",
+          "initial_action": "Valorar estabilidad y realizar TAC para confirmar y buscar complicaciones. Si es leve, no complicada e inmunocompetente, iniciar líquidos y analgesia con seguimiento; usar antibióticos por riesgo o complicación y hospitalizar si no tolera vía oral.",
           "action_reason": "La extensión por imagen y repercusión sistémica guían tratamiento.",
           "modifiers": [
             {
@@ -317,7 +317,20 @@
               "quote": "Diverticulitis: Realizar TAC de abdomen"
             }
           ],
-          "source_gaps": []
+          "source_gaps": [],
+          "external_sources": [
+            {
+              "label": "AGA: manejo médico de diverticulitis",
+              "url": "https://gastro.org/clinical-guidance/medical-management-of-colonic-diverticulitis/",
+              "quote": "Antibiotic treatment can be used selectively, rather than routinely, in immunocompetent patients with mild uncomplicated diverticulitis.",
+              "checked_at": "2026-10-29"
+            }
+          ],
+          "source_corrections": [
+            {
+              "reason": "Se precisa el manejo inicial por gravedad y uso selectivo de antibióticos. El paquete de rifaximina, mesalazina y probióticos de p188 no es universal."
+            }
+          ]
         }
       ],
       "common_problem": "Dolor abdominal izquierdo y fiebre.",
@@ -392,7 +405,7 @@
               "finding": "Riesgo de isquemia"
             }
           ],
-          "initial_action": "Reanimar y valorar destorsión y descompresión endoscópica urgente si no hay signos de isquemia o perforación. Planear tratamiento definitivo para reducir recurrencia.",
+          "initial_action": "Reanimar y solicitar destorsión y descompresión endoscópica urgente si no hay signos de isquemia o perforación. Tras el éxito, ofrecer resección de sigmoides temprana, preferentemente durante el mismo ingreso, según condición quirúrgica.",
           "action_reason": "La reducción descomprime, pero no elimina el riesgo anatómico.",
           "modifiers": [
             {
@@ -405,14 +418,27 @@
           "evidence": [
             {
               "page": 199,
-              "quote": "grano de café"
+              "quote": "aspecto en U invertida (86%} o en grano de café (76%)."
             },
             {
               "page": 200,
               "quote": "Destorsión y descompresión con sigmoidoscopia"
             }
           ],
-          "source_gaps": []
+          "source_gaps": [],
+          "external_sources": [
+            {
+              "label": "WSES 2023: vólvulo sigmoideo",
+              "url": "https://link.springer.com/article/10.1186/s13017-023-00502-x",
+              "quote": "The colectomy should be performed as early as possible, even during the index admission.",
+              "checked_at": "2026-10-29"
+            }
+          ],
+          "source_corrections": [
+            {
+              "reason": "Se concreta la prevención de recurrencia tras destorsión y se evita la sigmoidopexia automática del diagrama de p200."
+            }
+          ]
         }
       ],
       "common_problem": "Obstrucción colónica con asa muy dilatada.",
@@ -472,7 +498,20 @@
               "quote": "Colonoscopía + toma de biopsia"
             }
           ],
-          "source_gaps": []
+          "source_gaps": [],
+          "external_sources": [
+            {
+              "label": "NCI PDQ: tratamiento de cáncer de colon",
+              "url": "https://www.cancer.gov/types/colorectal/hp/colon-treatment-pdq",
+              "quote": "Surgery. Wide surgical resection and anastomosis.",
+              "checked_at": "2026-10-29"
+            }
+          ],
+          "source_corrections": [
+            {
+              "reason": "Se verifica la corrección de p186: radioterapia no es tratamiento universal del cáncer de colon etapa II. El caso se centra en diagnóstico con biopsia."
+            }
+          ]
         },
         {
           "id": "07.06-02",
@@ -507,7 +546,7 @@
               "reason": "La vigilancia sola puede no prevenir progresión."
             }
           ],
-          "limits": "No esperar a los dieciocho años de forma automática; el inicio y calendario de vigilancia dependen de variante, familia y guía vigente.",
+          "limits": "En PAF clásica, la vigilancia de familiares en riesgo suele comenzar a los 12–14 años, antes si hay síntomas. No esperar automáticamente a los 18 años; adaptar el calendario al genotipo y fenotipo.",
           "evidence": [
             {
               "page": 195,
@@ -518,7 +557,20 @@
               "quote": "Colectomía profiláctica"
             }
           ],
-          "source_gaps": []
+          "source_gaps": [],
+          "external_sources": [
+            {
+              "label": "ASCRS 2024: poliposis adenomatosa hereditaria",
+              "url": "https://www.ascrsu.com/ascrs/view/ASCRS-Evidence-Based-Guidelines-and-Expert-Consensus/3982023/all/Management_of_Inherited_Adenomatous_Polyposis_Syndromes__2024_",
+              "quote": "should have surveillance colonoscopy starting at the age of 12 to 14 years.",
+              "checked_at": "2026-10-29"
+            }
+          ],
+          "source_corrections": [
+            {
+              "reason": "Se corrige el inicio uniforme a los 18 años de p195 para familiares en riesgo de PAF clásica."
+            }
+          ]
         }
       ],
       "common_problem": "Sangrado crónico, anemia o riesgo familiar de cáncer.",
