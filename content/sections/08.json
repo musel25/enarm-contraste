@@ -60,7 +60,20 @@
               "quote": "Prostaglandinas para mantener el conducto arterioso permeable."
             }
           ],
-          "source_gaps": []
+          "source_gaps": [],
+          "external_sources": [
+            {
+              "label": "AHA: d-transposición de grandes arterias",
+              "url": "https://www.heart.org/en/health-topics/congenital-heart-defects/about-congenital-heart-defects/d-transposition-of-the-great-arteries",
+              "quote": "This is the surgery most commonly used today.",
+              "checked_at": "2026-10-29"
+            }
+          ],
+          "source_corrections": [
+            {
+              "reason": "Se verifica corrección de p206: el switch arterial es la cirugía habitual actual de d-TGA; Senning/Mustard son procedimientos históricos seleccionados."
+            }
+          ]
         }
       ],
       "common_problem": "Recién nacido con soplo, cianosis o mala alimentación.",
@@ -179,7 +192,7 @@
           "source_pages": [
             211
           ],
-          "pattern": "Un lactante presenta un soplo continuo infraclavicular izquierdo y pulsos saltones. Tiene dificultad alimentaria y taquipnea; el ecocardiograma estudia una comunicación entre aorta y arteria pulmonar.",
+          "pattern": "Un lactante de tres meses, nacido a término, presenta soplo continuo infraclavicular izquierdo y pulsos saltones. Tiene dificultad alimentaria y taquipnea; el ecocardiograma estudia una comunicación entre aorta y arteria pulmonar.",
           "key_discriminator": "soplo continuo infraclavicular izquierdo",
           "mechanism": "La conexión aortopulmonar persistente puede desviar sangre de izquierda a derecha tras disminuir resistencia pulmonar; el hiperflujo sobrecarga pulmón y cavidades izquierdas.",
           "findings": [
@@ -192,7 +205,7 @@
               "finding": "Pulsos saltones"
             }
           ],
-          "initial_action": "Confirmar por ecocardiograma y valorar repercusión, edad y prematuridad para decidir observación, cierre farmacológico o intervención.",
+          "initial_action": "Confirmar por ecocardiograma y valorar repercusión. En este lactante sintomático nacido a término, referir a cardiología para cierre por catéter o cirugía según anatomía y peso.",
           "action_reason": "El tamaño y el efecto hemodinámico determinan el beneficio del cierre.",
           "modifiers": [
             {
@@ -206,7 +219,7 @@
               "reason": "El conducto puede sostener flujo necesario."
             }
           ],
-          "limits": "Indometacina o ibuprofeno no son tratamiento universal en niños mayores; la referencia mezcla poblaciones y tiempos de cierre.",
+          "limits": "No extrapolar el cierre farmacológico de prematuros seleccionados al lactante a término. La hipertensión pulmonar exige valorar operabilidad antes de cerrar.",
           "evidence": [
             {
               "page": 211,
@@ -217,7 +230,20 @@
               "quote": "ecocardiograma doppler a color."
             }
           ],
-          "source_gaps": []
+          "source_gaps": [],
+          "external_sources": [
+            {
+              "label": "ACC 2026: cortocircuitos aislados izquierda-derecha",
+              "url": "https://www.jacc.org/doi/10.1016/j.jacc.2025.11.020",
+              "quote": "Symptomatic patients and those with left heart dilation related to PDA",
+              "checked_at": "2026-10-29"
+            }
+          ],
+          "source_corrections": [
+            {
+              "reason": "Se separa la población del caso de los prematuros; la recomendación farmacológica uniforme de p211 no corresponde al lactante a término sintomático."
+            }
+          ]
         }
       ],
       "common_problem": "Soplo con pulsos o presiones anormales.",
@@ -356,9 +382,14 @@
               "factor": "Exacerbación infecciosa",
               "action": "Seleccionar antimicrobiano según cultivos y gravedad.",
               "reason": "Los agentes y resistencias cambian el tratamiento."
+            },
+            {
+              "factor": "Variante CFTR susceptible y edad elegible",
+              "action": "Valorar modulador CFTR con el equipo especializado.",
+              "reason": "Puede corregir parte del defecto funcional de la proteína."
             }
           ],
-          "limits": "No se necesitan dos variantes idénticas; pueden ser distintas. La azitromicina no se indica en aerosol y el trasplante no es el único tratamiento modificador actual.",
+          "limits": "Las variantes causales pueden ser diferentes y deben estar en alelos distintos. La azitromicina crónica, cuando está indicada, es oral. Los moduladores CFTR amplían el tratamiento según variante y edad.",
           "evidence": [
             {
               "page": 209,
@@ -369,7 +400,38 @@
               "quote": "Reemplazo de enzimas pancreáticas"
             }
           ],
-          "source_gaps": []
+          "source_gaps": [],
+          "external_sources": [
+            {
+              "label": "CFF: diagnóstico de fibrosis quística",
+              "url": "https://www.cff.org/medical-professionals/cf-diagnosis-clinical-care-guidelines",
+              "quote": "Individuals with two copies on separate alleles will likely have CF",
+              "checked_at": "2026-10-29"
+            },
+            {
+              "label": "CFF: tratamiento modulador CFTR",
+              "url": "https://www.cff.org/medical-professionals/cftr-modulator-therapy-care-guidelines",
+              "quote": "approved new CFTR modulators",
+              "checked_at": "2026-10-29"
+            },
+            {
+              "label": "CFF: guía para pacientes y familias, séptima edición",
+              "url": "https://www.cff.org/media/9531/download",
+              "quote": "It is a pill that is taken by mouth three times a week.",
+              "checked_at": "2026-10-29"
+            }
+          ],
+          "source_corrections": [
+            {
+              "reason": "Se corrige p209: no se exigen dos variantes idénticas; integrar variantes causales en trans, sudor y contexto clínico."
+            },
+            {
+              "reason": "Se verifica la existencia de tratamiento dirigido a CFTR que el resumen de p209 omite."
+            },
+            {
+              "reason": "Se corrige la vía en aerosol de azitromicina de p209: la administración crónica descrita es oral; no se indica universalmente."
+            }
+          ]
         }
       ],
       "common_problem": "Infecciones respiratorias y mala ganancia de peso.",
@@ -479,7 +541,20 @@
               "quote": "rehabilitación física a los niños diagnosticados"
             }
           ],
-          "source_gaps": []
+          "source_gaps": [],
+          "external_sources": [
+            {
+              "label": "CDC: síndrome de rubéola congénita",
+              "url": "https://www.cdc.gov/surv-manual/php/table-of-contents/chapter-15-congenital-rubella-syndrome.html",
+              "quote": "congenital anomalies are rare after rubella infection in the 20th week",
+              "checked_at": "2026-10-29"
+            }
+          ],
+          "source_corrections": [
+            {
+              "reason": "Se verifica corrección del riesgo cero después de 16 semanas de p215: el riesgo cae con la edad gestacional, sin ese límite absoluto."
+            }
+          ]
         },
         {
           "id": "08.07-02",
@@ -504,12 +579,12 @@
           "action_reason": "La embriopatía y la infección neonatal activa tienen objetivos de tratamiento diferentes.",
           "modifiers": [
             {
-              "factor": "Varicela materna alrededor del parto",
-              "action": "Valorar profilaxis neonatal específica urgente según exposición.",
+              "factor": "Exantema materno desde cinco días antes hasta dos días después del parto",
+              "action": "Indicar valoración neonatal urgente para inmunoglobulina específica contra varicela lo antes posible tras exposición.",
               "reason": "La falta de anticuerpos protectores puede causar enfermedad grave."
             }
           ],
-          "limits": "No confundir varicela congénita con neonatal. La ventana de inmunoglobulina debe verificarse en guía vigente, no limitarse automáticamente a 96 horas.",
+          "limits": "Distinguir secuelas congénitas de infección neonatal activa. VariZIG puede administrarse hasta diez días después de exposición; no retrasarla por considerar agotada una ventana de 96 horas.",
           "evidence": [
             {
               "page": 219,
@@ -520,7 +595,20 @@
               "quote": "Varicela congénita ya no progresa"
             }
           ],
-          "source_gaps": []
+          "source_gaps": [],
+          "external_sources": [
+            {
+              "label": "CDC: personas con riesgo de varicela grave",
+              "url": "https://www.cdc.gov/chickenpox/hcp/clinical-guidance/index.html",
+              "quote": "It can be given within 10 days of exposure.",
+              "checked_at": "2026-10-29"
+            }
+          ],
+          "source_corrections": [
+            {
+              "reason": "Se corrige la ventana de inmunoglobulina de p219 y se precisa riesgo neonatal por exantema materno peri parto."
+            }
+          ]
         }
       ],
       "common_problem": "Malformaciones tras exposición materna a enfermedad exantemática.",
@@ -558,7 +646,7 @@
               "finding": "Petequias"
             }
           ],
-          "initial_action": "Confirmar infección con PCR en muestra neonatal temprana, valorar SNC, audición y ojos, y consultar infectología para posible antiviral si el cuadro cumple indicaciones.",
+          "initial_action": "Confirmar con PCR neonatal de saliva y confirmación en orina dentro de las primeras tres semanas. Valorar SNC, audición y ojos y consultar infectología para iniciar ganciclovir o valganciclovir en enfermedad sintomática con afectación del SNC.",
           "action_reason": "El diagnóstico temprano distingue infección congénita de adquisición posterior y permite decidir tratamiento.",
           "modifiers": [
             {
@@ -590,6 +678,11 @@
               "url": "https://www.cdc.gov/cytomegalovirus/hcp/clinical-overview/index.html",
               "quote": "Testing should be done within 2 to 3 weeks after birth.",
               "checked_at": "2026-10-29"
+            }
+          ],
+          "source_corrections": [
+            {
+              "reason": "Se sustituye la biopsia rutinaria de p213 por PCR neonatal temprana y se concreta el antiviral para el caso sintomático con daño del SNC."
             }
           ]
         },
@@ -640,6 +733,11 @@
               "quote": "Congenitally infected newborns are generally treated with pyrimethamine, a sulfonamide, and leucovorin for 12 months.",
               "checked_at": "2026-10-29"
             }
+          ],
+          "source_corrections": [
+            {
+              "reason": "Se corrige ácido fólico de p218 por ácido folínico (leucovorina), respaldo CDC comprobado."
+            }
           ]
         }
       ],
@@ -678,7 +776,7 @@
               "finding": "Hepatomegalia"
             }
           ],
-          "initial_action": "Comparar pruebas no treponémicas materna y neonatal, revisar tratamiento materno y evaluar órganos según riesgo. Iniciar penicilina apropiada para enfermedad probable o confirmada sin retrasos.",
+          "initial_action": "Obtener pruebas no treponémicas cuantitativas materna y neonatal y evaluar LCR, hemograma y huesos largos según protocolo. Iniciar penicilina G cristalina acuosa intravenosa por diez días ante enfermedad probable o confirmada, con frecuencia ajustada a edad neonatal.",
           "action_reason": "La decisión depende del conjunto de riesgo y hallazgos, no solo de una serología neonatal.",
           "modifiers": [
             {
@@ -710,6 +808,11 @@
               "url": "https://www.cdc.gov/std/treatment-guidelines/congenital-syphilis.htm",
               "quote": "comparison of maternal (at delivery) and neonatal nontreponemal serologic titers",
               "checked_at": "2026-10-29"
+            }
+          ],
+          "source_corrections": [
+            {
+              "reason": "Se corrigen formulaciones y frecuencia erróneas de p217 con CDC. El caso sintomático corresponde a enfermedad altamente probable; no se usa un esquema de dosis única."
             }
           ]
         },
@@ -768,6 +871,11 @@
               "url": "https://www.cdc.gov/std/treatment-guidelines/herpes.htm",
               "quote": "acyclovir 20 mg/kg body weight IV every 8 hours",
               "checked_at": "2026-10-29"
+            }
+          ],
+          "source_corrections": [
+            {
+              "reason": "Se corrige la dosis diaria insuficiente de p214 con CDC: 20 mg/kg por dosis IV cada ocho horas; duración por afectación de SNC o diseminación."
             }
           ]
         }
