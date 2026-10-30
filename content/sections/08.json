@@ -1,0 +1,783 @@
+{
+  "id": "08",
+  "title": "Congénitas",
+  "blocks": [
+    {
+      "id": "08.01",
+      "title": "RN con soplo o cianosis",
+      "topics": [
+        {
+          "id": "08.01-01",
+          "name": "Cardiopatías congénitas",
+          "source_pages": [
+            201,
+            202,
+            203,
+            204,
+            205,
+            206
+          ],
+          "pattern": "Un recién nacido presenta cianosis persistente y dificultad para alimentarse. Se revisan saturación, pulsos, soplos y signos de congestión; una radiografía sugiere una silueta cardíaca anormal.",
+          "key_discriminator": "cianosis persistente",
+          "mechanism": "Una malformación modifica flujo intracardíaco o salida vascular desde el nacimiento; la mezcla derecha-izquierda, obstrucción o hiperflujo producen patrones distintos de hipoxemia y perfusión.",
+          "findings": [
+            {
+              "mechanism": "Mezcla de sangre desoxigenada",
+              "finding": "Cianosis"
+            },
+            {
+              "mechanism": "Hiperflujo pulmonar",
+              "finding": "Congestión y dificultad alimentaria"
+            }
+          ],
+          "initial_action": "Valorar estabilidad y oxigenación, obtener ecocardiograma y solicitar cardiología pediátrica urgente si hay cianosis o mala perfusión. Considerar soporte ductal por equipo neonatal si se sospecha dependencia del conducto.",
+          "action_reason": "La anatomía define si se necesita mantener flujo pulmonar, sistémico o mezcla.",
+          "modifiers": [
+            {
+              "factor": "Desdoblamiento fijo de segundo ruido",
+              "action": "Investigar comunicación interauricular.",
+              "reason": "Orienta a sobrecarga derecha por cortocircuito."
+            },
+            {
+              "factor": "Cianosis grave precoz",
+              "action": "Buscar circulación en paralelo u obstrucción pulmonar.",
+              "reason": "Puede requerir intervención inmediata."
+            }
+          ],
+          "limits": "Las siluetas radiográficas son orientativas, no pruebas únicas. No todas las cardiopatías acianóticas son cortocircuitos y la corrección de transposición actual no es siempre un cambio auricular.",
+          "evidence": [
+            {
+              "page": 201,
+              "quote": "electrocardiograma y ecocardiograma"
+            },
+            {
+              "page": 203,
+              "quote": "Signo de huevo",
+              "visual": true
+            },
+            {
+              "page": 206,
+              "quote": "Prostaglandinas para mantener el conducto arterioso permeable."
+            }
+          ],
+          "source_gaps": []
+        }
+      ],
+      "common_problem": "Recién nacido con soplo, cianosis o mala alimentación.",
+      "mother": {
+        "cue": "La anatomía anormal cambia oxigenación, flujo pulmonar y perfusión sistémica.",
+        "answer": "Cardiopatía congénita por repercusión funcional",
+        "explanation": "La estabilidad y el ecocardiograma orientan soporte y corrección."
+      }
+    },
+    {
+      "id": "08.02",
+      "title": "Cianosis con crisis",
+      "topics": [
+        {
+          "id": "08.02-01",
+          "name": "Tetralogía de Fallot",
+          "source_pages": [
+            221
+          ],
+          "pattern": "Un lactante con cardiopatía cianótica desarrolla una crisis de coloración azul intensa después de llorar. Disminuye su tono y nivel de respuesta; la familia refiere episodios parecidos.",
+          "key_discriminator": "después de llorar",
+          "mechanism": "La obstrucción de salida ventricular derecha favorece flujo hacia aorta a través del defecto septal; un aumento de obstrucción reduce flujo pulmonar y agrava hipoxemia.",
+          "findings": [
+            {
+              "mechanism": "Menor flujo pulmonar",
+              "finding": "Crisis cianótica"
+            },
+            {
+              "mechanism": "Hipoxemia intensa",
+              "finding": "Hipotonía y alteración de conciencia"
+            }
+          ],
+          "initial_action": "Activar atención urgente, calmar al niño, colocar posición genupectoral y administrar oxígeno. Añadir tratamiento de la crisis por equipo pediátrico y planear reparación.",
+          "action_reason": "La postura y el control de desencadenantes ayudan a reducir el cortocircuito durante la crisis.",
+          "modifiers": [
+            {
+              "factor": "Crisis recurrentes",
+              "action": "Valorar prevención farmacológica y prioridad de corrección.",
+              "reason": "Existe riesgo de nuevas desaturaciones."
+            },
+            {
+              "factor": "Escasa obstrucción pulmonar",
+              "action": "No exigir cianosis basal intensa.",
+              "reason": "La obstrucción determina la expresión clínica."
+            }
+          ],
+          "limits": "No toda crisis cianótica es la misma cardiopatía; confirmar anatomía por ecocardiograma.",
+          "evidence": [
+            {
+              "page": 221,
+              "quote": "El grado de obstrucción al flujo de salida"
+            },
+            {
+              "page": 221,
+              "quote": "Colocar en posición genupectoral"
+            }
+          ],
+          "source_gaps": []
+        }
+      ],
+      "common_problem": "Niño con episodios de cianosis más intensa.",
+      "mother": {
+        "cue": "La obstrucción de salida derecha puede reducir de forma brusca el flujo pulmonar.",
+        "answer": "Crisis hipóxica en cardiopatía cianótica",
+        "explanation": "La postura, el soporte y el control de desencadenantes atienden la crisis."
+      }
+    },
+    {
+      "id": "08.03",
+      "title": "Pulsos anormales y soplo",
+      "topics": [
+        {
+          "id": "08.03-01",
+          "name": "Coartación aórtica",
+          "source_pages": [
+            207
+          ],
+          "pattern": "Un escolar tiene hipertensión en brazos y pulsos femorales débiles y retrasados. La presión de piernas es menor y se ausculta soplo en la región interescapular.",
+          "key_discriminator": "pulsos femorales débiles y retrasados",
+          "mechanism": "El estrechamiento del arco o istmo limita flujo a aorta distal; aumenta presión proximal y reduce perfusión y pulso de extremidades inferiores, con desarrollo de colaterales.",
+          "findings": [
+            {
+              "mechanism": "Obstrucción aórtica",
+              "finding": "Gradiente brazos-piernas"
+            },
+            {
+              "mechanism": "Flujo distal reducido",
+              "finding": "Retardo femoral"
+            }
+          ],
+          "initial_action": "Comparar presión y pulsos de las cuatro extremidades y solicitar ecocardiografía y cardiología. Definir anatomía y necesidad de intervención por gravedad y edad.",
+          "action_reason": "La exploración localiza obstrucción y la imagen permite planear corrección.",
+          "modifiers": [
+            {
+              "factor": "Neonato con shock al cerrar el conducto",
+              "action": "Valorar prostaglandina y soporte urgente especializado.",
+              "reason": "La perfusión distal puede ser ductodependiente."
+            }
+          ],
+          "limits": "La técnica de intervención no es universal; neonato, anatomía del arco y lesiones asociadas modifican el plan.",
+          "evidence": [
+            {
+              "page": 207,
+              "quote": "Disminución o retardo de los pulsos femorales"
+            },
+            {
+              "page": 207,
+              "quote": "Prostaglandinas El para mantener"
+            }
+          ],
+          "source_gaps": []
+        },
+        {
+          "id": "08.03-02",
+          "name": "Persistencia del conducto arterioso",
+          "source_pages": [
+            211
+          ],
+          "pattern": "Un lactante presenta un soplo continuo infraclavicular izquierdo y pulsos saltones. Tiene dificultad alimentaria y taquipnea; el ecocardiograma estudia una comunicación entre aorta y arteria pulmonar.",
+          "key_discriminator": "soplo continuo infraclavicular izquierdo",
+          "mechanism": "La conexión aortopulmonar persistente puede desviar sangre de izquierda a derecha tras disminuir resistencia pulmonar; el hiperflujo sobrecarga pulmón y cavidades izquierdas.",
+          "findings": [
+            {
+              "mechanism": "Cortocircuito continuo",
+              "finding": "Soplo en maquinaria"
+            },
+            {
+              "mechanism": "Fuga diastólica y flujo elevado",
+              "finding": "Pulsos saltones"
+            }
+          ],
+          "initial_action": "Confirmar por ecocardiograma y valorar repercusión, edad y prematuridad para decidir observación, cierre farmacológico o intervención.",
+          "action_reason": "El tamaño y el efecto hemodinámico determinan el beneficio del cierre.",
+          "modifiers": [
+            {
+              "factor": "Insuficiencia cardíaca o hipertensión pulmonar",
+              "action": "Priorizar valoración de cierre y operabilidad.",
+              "reason": "Hay repercusión importante."
+            },
+            {
+              "factor": "Cardiopatía ductodependiente",
+              "action": "Evitar cierre automático.",
+              "reason": "El conducto puede sostener flujo necesario."
+            }
+          ],
+          "limits": "Indometacina o ibuprofeno no son tratamiento universal en niños mayores; la referencia mezcla poblaciones y tiempos de cierre.",
+          "evidence": [
+            {
+              "page": 211,
+              "quote": "Soplo sistólico - continuo en maquinaria de Gibson"
+            },
+            {
+              "page": 211,
+              "quote": "ecocardiograma doppler a color."
+            }
+          ],
+          "source_gaps": []
+        }
+      ],
+      "common_problem": "Soplo con pulsos o presiones anormales.",
+      "mother": {
+        "cue": "Distinguir un obstáculo al flujo distal de una conexión aortopulmonar persistente.",
+        "answer": "Flujo aórtico y conducto arterioso",
+        "explanation": "La necesidad de mantener o cerrar el conducto depende de la anatomía."
+      }
+    },
+    {
+      "id": "08.04",
+      "title": "Deterioro al iniciar alimentación",
+      "topics": [
+        {
+          "id": "08.04-01",
+          "name": "Galactosemia clásica",
+          "source_pages": [
+            210
+          ],
+          "pattern": "Un recién nacido empeora después de iniciar leche con vómitos, ictericia, hipotonía y rechazo del alimento. La exploración encuentra hepatomegalia y opacidad del cristalino; se considera una intoxicación metabólica.",
+          "key_discriminator": "empeora después de iniciar leche",
+          "mechanism": "La deficiencia de GALT impide metabolizar galactosa adecuadamente; galactosa-1-fosfato y galactitol se acumulan y lesionan hígado, sistema nervioso y cristalino tras exposición alimentaria.",
+          "findings": [
+            {
+              "mechanism": "Metabolitos hepatotóxicos",
+              "finding": "Ictericia y hepatomegalia"
+            },
+            {
+              "mechanism": "Galactitol en cristalino",
+              "finding": "Catarata"
+            }
+          ],
+          "initial_action": "Retirar galactosa y lactosa de la alimentación ante sospecha importante, usar nutrición especializada y obtener pruebas enzimáticas y metabólicas sin retrasar tratamiento.",
+          "action_reason": "La exposición continua puede causar daño irreversible o muerte neonatal.",
+          "modifiers": [
+            {
+              "factor": "Tamiz positivo sin síntomas",
+              "action": "Realizar confirmación e intervención nutricional inmediata según equipo metabólico.",
+              "reason": "El tratamiento precoz busca prevenir intoxicación."
+            }
+          ],
+          "limits": "La elección de fórmula debe asegurar ausencia del sustrato y nutrición suficiente; no basta con cambiar de marca de leche.",
+          "evidence": [
+            {
+              "page": 210,
+              "quote": "posterior a la ingesta de leche humana"
+            },
+            {
+              "page": 210,
+              "quote": "Eliminación de la galactosa de la dieta"
+            }
+          ],
+          "source_gaps": []
+        },
+        {
+          "id": "08.04-02",
+          "name": "Fenilcetonuria",
+          "source_pages": [
+            208
+          ],
+          "pattern": "Un neonato asintomático tiene fenilalanina elevada en el tamiz. La familia pregunta por qué se necesita tratamiento temprano aunque el niño se alimente y se comporte normalmente.",
+          "key_discriminator": "fenilalanina elevada en el tamiz",
+          "mechanism": "La actividad insuficiente de fenilalanina hidroxilasa reduce conversión a tirosina; la acumulación de fenilalanina es neurotóxica y puede lesionar desarrollo antes de signos evidentes.",
+          "findings": [
+            {
+              "mechanism": "Fenilalanina elevada sostenida",
+              "finding": "Riesgo de daño cognitivo"
+            },
+            {
+              "mechanism": "Menor síntesis de pigmento",
+              "finding": "Hipopigmentación posible"
+            }
+          ],
+          "initial_action": "Confirmar elevación y referir a metabolismo para restricción controlada de fenilalanina, fórmula especial y seguimiento de niveles y crecimiento.",
+          "action_reason": "La intervención presintomática previene neurotoxicidad sin causar déficit nutricional.",
+          "modifiers": [
+            {
+              "factor": "Respuesta a cofactor en un subtipo susceptible",
+              "action": "Valorar sapropterina por equipo especializado.",
+              "reason": "La respuesta depende del mecanismo y variante."
+            }
+          ],
+          "limits": "No suspender toda proteína ni lactancia de forma indiscriminada; ajustar aporte según niveles y necesidades.",
+          "evidence": [
+            {
+              "page": 208,
+              "quote": "deficiencia o ausencia de la enzima Fenilalanina-hidroxilasa"
+            },
+            {
+              "page": 208,
+              "quote": "Restringir la fenilalanina en la dieta."
+            }
+          ],
+          "source_gaps": []
+        }
+      ],
+      "common_problem": "Neonato con tamiz anormal o deterioro tras alimentación.",
+      "mother": {
+        "cue": "La acumulación de un sustrato puede lesionar órganos antes de síntomas claros.",
+        "answer": "Errores innatos con tratamiento nutricional",
+        "explanation": "El sustrato y la confirmación determinan una restricción específica y segura."
+      }
+    },
+    {
+      "id": "08.05",
+      "title": "Infecciones respiratorias y malabsorción",
+      "topics": [
+        {
+          "id": "08.05-01",
+          "name": "Fibrosis quística",
+          "source_pages": [
+            209
+          ],
+          "pattern": "Un niño tiene tos crónica con infecciones respiratorias repetidas, escasa ganancia de peso y datos de malabsorción. Hubo dificultad para expulsar meconio y se solicita una prueba del sudor.",
+          "key_discriminator": "tos crónica con infecciones respiratorias repetidas",
+          "mechanism": "La disfunción de CFTR altera transporte de cloro y agua epitelial; las secreciones espesas obstruyen vías respiratorias y conductos pancreáticos, produciendo infección y malabsorción.",
+          "findings": [
+            {
+              "mechanism": "Moco respiratorio espeso",
+              "finding": "Bronquiectasias e infección"
+            },
+            {
+              "mechanism": "Insuficiencia pancreática",
+              "finding": "Malabsorción y falla de medro"
+            }
+          ],
+          "initial_action": "Confirmar con cloro en sudor en un centro capacitado y estudio genético según contexto. Iniciar evaluación pulmonar y nutricional para tratamiento especializado.",
+          "action_reason": "La confirmación integra función CFTR y presentación, y permite atender órganos afectados.",
+          "modifiers": [
+            {
+              "factor": "Insuficiencia pancreática",
+              "action": "Valorar reemplazo enzimático y vitaminas.",
+              "reason": "La mala digestión afecta crecimiento."
+            },
+            {
+              "factor": "Exacerbación infecciosa",
+              "action": "Seleccionar antimicrobiano según cultivos y gravedad.",
+              "reason": "Los agentes y resistencias cambian el tratamiento."
+            }
+          ],
+          "limits": "No se necesitan dos variantes idénticas; pueden ser distintas. La azitromicina no se indica en aerosol y el trasplante no es el único tratamiento modificador actual.",
+          "evidence": [
+            {
+              "page": 209,
+              "quote": "anormalidades en el transporte"
+            },
+            {
+              "page": 209,
+              "quote": "Reemplazo de enzimas pancreáticas"
+            }
+          ],
+          "source_gaps": []
+        }
+      ],
+      "common_problem": "Infecciones respiratorias y mala ganancia de peso.",
+      "mother": {
+        "cue": "Un defecto de transporte epitelial altera moco y digestión.",
+        "answer": "Disfunción de CFTR",
+        "explanation": "La confirmación funcional y genética permite atención pulmonar y nutricional."
+      }
+    },
+    {
+      "id": "08.06",
+      "title": "Infección congénita: enfoque",
+      "topics": [
+        {
+          "id": "08.06-01",
+          "name": "STORCH",
+          "source_pages": [
+            220
+          ],
+          "pattern": "Un recién nacido tiene bajo crecimiento, petequias, ictericia y alteraciones oculares. La madre no recuerda enfermedad durante el embarazo; se necesita una evaluación dirigida de posibles infecciones perinatales.",
+          "key_discriminator": "petequias, ictericia y alteraciones oculares",
+          "mechanism": "Distintos agentes transmitidos durante gestación o parto lesionan órganos fetales; sus manifestaciones se superponen y la ausencia de síntomas maternos no excluye infección.",
+          "findings": [
+            {
+              "mechanism": "Infección fetal multisistémica",
+              "finding": "Alteraciones hepáticas y hematológicas"
+            },
+            {
+              "mechanism": "Daño neurológico u ocular",
+              "finding": "Cambios de desarrollo o visión"
+            }
+          ],
+          "initial_action": "Revisar historia materna, momento de exposición y hallazgos del neonato; seleccionar pruebas específicas por agente y valorar órganos afectados, en lugar de interpretar un panel aislado.",
+          "action_reason": "La cronología y el patrón permiten pruebas útiles y tratamiento oportuno.",
+          "modifiers": [
+            {
+              "factor": "Manifestación tardía o asintomático al nacer",
+              "action": "Mantener seguimiento dirigido según agente.",
+              "reason": "Las secuelas pueden aparecer después."
+            }
+          ],
+          "limits": "No todas estas infecciones son crónicas o latentes; el acrónimo agrupa agentes distintos y no define una sola enfermedad.",
+          "evidence": [
+            {
+              "page": 220,
+              "quote": "Rasgos característicos se traslapan"
+            },
+            {
+              "page": 220,
+              "quote": "La enfermedad materna generalmente es asintomática."
+            }
+          ],
+          "source_gaps": []
+        }
+      ],
+      "common_problem": "Neonato con afectación de varios órganos.",
+      "mother": {
+        "cue": "Las infecciones gestacionales o perinatales comparten signos y requieren pruebas dirigidas.",
+        "answer": "Enfoque de infecciones congénitas",
+        "explanation": "Historia, cronología y órganos afectados guían la investigación."
+      }
+    },
+    {
+      "id": "08.07",
+      "title": "Exantema/tamiz fetal materno",
+      "topics": [
+        {
+          "id": "08.07-01",
+          "name": "STORCH Rubéola congénita",
+          "source_pages": [
+            215
+          ],
+          "pattern": "Un lactante presenta cataratas, alteración auditiva y un soplo continuo. Su madre tuvo una enfermedad exantemática al inicio de la gestación y no tenía inmunidad documentada.",
+          "key_discriminator": "cataratas, alteración auditiva",
+          "mechanism": "La infección fetal por rubéola durante organogénesis altera desarrollo ocular, auditivo y cardíaco; el momento gestacional condiciona riesgo y gravedad de las malformaciones.",
+          "findings": [
+            {
+              "mechanism": "Daño del cristalino",
+              "finding": "Cataratas"
+            },
+            {
+              "mechanism": "Lesión auditiva",
+              "finding": "Hipoacusia"
+            },
+            {
+              "mechanism": "Defecto cardiovascular",
+              "finding": "Soplo por lesión congénita"
+            }
+          ],
+          "initial_action": "Solicitar confirmación virológica o serológica apropiada y valoración cardíaca, auditiva y oftalmológica. Iniciar rehabilitación temprana según déficits.",
+          "action_reason": "El manejo busca identificar afectación multisistémica y reducir impacto funcional.",
+          "modifiers": [
+            {
+              "factor": "Sospecha o confirmación",
+              "action": "Aplicar medidas de control de infección y seguimiento.",
+              "reason": "El niño puede eliminar virus durante meses."
+            }
+          ],
+          "limits": "No interpretar el 0% después de dieciséis semanas como garantía absoluta de ausencia de daño; los riesgos son dependientes del momento y manifestación.",
+          "evidence": [
+            {
+              "page": 215,
+              "quote": "Sordera neurosensorial."
+            },
+            {
+              "page": 215,
+              "quote": "rehabilitación física a los niños diagnosticados"
+            }
+          ],
+          "source_gaps": []
+        },
+        {
+          "id": "08.07-02",
+          "name": "STORCH Varicela congénita",
+          "source_pages": [
+            219
+          ],
+          "pattern": "Un neonato presenta cicatrices cutáneas en distribución segmentaria y una extremidad hipoplásica. La madre refiere varicela durante el segundo trimestre; se buscan alteraciones oculares y neurológicas.",
+          "key_discriminator": "cicatrices cutáneas en distribución segmentaria",
+          "mechanism": "La infección fetal por varicela puede lesionar piel, nervios y extremidades en desarrollo; el patrón segmentario y las hipoplasias orientan a embriopatía tras exposición gestacional.",
+          "findings": [
+            {
+              "mechanism": "Lesión segmentaria fetal",
+              "finding": "Cicatrices en dermatomas"
+            },
+            {
+              "mechanism": "Daño de desarrollo",
+              "finding": "Hipoplasia de extremidad"
+            }
+          ],
+          "initial_action": "Evaluar extensión de secuelas con pediatría, ojos y neurología, y dar soporte y rehabilitación. Distinguir este cuadro de exposición perinatal con riesgo de enfermedad neonatal aguda.",
+          "action_reason": "La embriopatía y la infección neonatal activa tienen objetivos de tratamiento diferentes.",
+          "modifiers": [
+            {
+              "factor": "Varicela materna alrededor del parto",
+              "action": "Valorar profilaxis neonatal específica urgente según exposición.",
+              "reason": "La falta de anticuerpos protectores puede causar enfermedad grave."
+            }
+          ],
+          "limits": "No confundir varicela congénita con neonatal. La ventana de inmunoglobulina debe verificarse en guía vigente, no limitarse automáticamente a 96 horas.",
+          "evidence": [
+            {
+              "page": 219,
+              "quote": "cicatrices o zonas hipoplásicas"
+            },
+            {
+              "page": 219,
+              "quote": "Varicela congénita ya no progresa"
+            }
+          ],
+          "source_gaps": []
+        }
+      ],
+      "common_problem": "Malformaciones tras exposición materna a enfermedad exantemática.",
+      "mother": {
+        "cue": "El agente y momento de organogénesis determinan el patrón de daño.",
+        "answer": "Embriopatía infecciosa",
+        "explanation": "Cataratas, audición y lesiones segmentarias orientan causas distintas."
+      }
+    },
+    {
+      "id": "08.08",
+      "title": "Lesiones de SNC y ojos",
+      "topics": [
+        {
+          "id": "08.08-01",
+          "name": "STORCH Citomegalovirus",
+          "source_pages": [
+            212,
+            213
+          ],
+          "pattern": "Un recién nacido presenta microcefalia, petequias y calcificaciones periventriculares. Tiene alteración auditiva en la evaluación inicial; la madre pudo tener una infección poco sintomática durante el embarazo.",
+          "key_discriminator": "calcificaciones periventriculares",
+          "mechanism": "La infección fetal por CMV lesiona sistema nervioso y órganos hematopoyéticos; la alteración del desarrollo cerebral y auditivo puede existir al nacer o aparecer durante seguimiento.",
+          "findings": [
+            {
+              "mechanism": "Lesión cerebral fetal",
+              "finding": "Microcefalia y calcificaciones"
+            },
+            {
+              "mechanism": "Daño auditivo",
+              "finding": "Hipoacusia"
+            },
+            {
+              "mechanism": "Afectación hematológica",
+              "finding": "Petequias"
+            }
+          ],
+          "initial_action": "Confirmar infección con PCR en muestra neonatal temprana, valorar SNC, audición y ojos, y consultar infectología para posible antiviral si el cuadro cumple indicaciones.",
+          "action_reason": "El diagnóstico temprano distingue infección congénita de adquisición posterior y permite decidir tratamiento.",
+          "modifiers": [
+            {
+              "factor": "Muestra tomada después de tres semanas",
+              "action": "Revisar limitaciones para confirmar origen congénito.",
+              "reason": "Puede representar infección adquirida después del parto."
+            },
+            {
+              "factor": "Antiviral indicado",
+              "action": "Vigilar hemograma y función orgánica.",
+              "reason": "Puede producir neutropenia."
+            }
+          ],
+          "limits": "La biopsia no es la prueba neonatal habitual. CDC recomienda PCR dentro de dos a tres semanas; serología sola no confirma infección congénita.",
+          "evidence": [
+            {
+              "page": 212,
+              "quote": "microcefalia; calcificaciones"
+            },
+            {
+              "page": 213,
+              "quote": "Detección del virus en orina, en cultivo y por PCR"
+            }
+          ],
+          "source_gaps": [],
+          "external_sources": [
+            {
+              "label": "CDC, Clinical Overview of CMV",
+              "url": "https://www.cdc.gov/cytomegalovirus/hcp/clinical-overview/index.html",
+              "quote": "Testing should be done within 2 to 3 weeks after birth.",
+              "checked_at": "2026-10-29"
+            }
+          ]
+        },
+        {
+          "id": "08.08-02",
+          "name": "STORCH Toxoplasmosis",
+          "source_pages": [
+            218
+          ],
+          "pattern": "Un lactante tiene hidrocefalia, calcificaciones intracraneales y coriorretinitis. Se investiga infección materna durante la gestación y se solicita confirmación con pruebas específicas para el niño.",
+          "key_discriminator": "hidrocefalia, calcificaciones intracraneales y coriorretinitis",
+          "mechanism": "La infección fetal por Toxoplasma puede lesionar retina y cerebro; la inflamación causa alteraciones del flujo de líquido cefalorraquídeo y secuelas visuales o neurológicas.",
+          "findings": [
+            {
+              "mechanism": "Lesión retiniana",
+              "finding": "Coriorretinitis"
+            },
+            {
+              "mechanism": "Daño cerebral",
+              "finding": "Hidrocefalia y calcificaciones"
+            }
+          ],
+          "initial_action": "Solicitar evaluación especializada y confirmar infección; iniciar tratamiento de la infección congénita con pirimetamina, sulfadiazina y ácido folínico según protocolo y vigilancia.",
+          "action_reason": "La terapia busca limitar lesión activa y proteger médula ósea frente al antifolato.",
+          "modifiers": [
+            {
+              "factor": "Niño confirmado sin síntomas",
+              "action": "Valorar tratamiento igualmente.",
+              "reason": "La ausencia de manifestaciones no elimina riesgo de secuelas."
+            }
+          ],
+          "limits": "Ácido folínico o leucovorina es el rescate indicado, no ácido fólico como dice el resumen. Una IgM negativa aislada no excluye infección.",
+          "evidence": [
+            {
+              "page": 218,
+              "quote": "Coriorretinitis:"
+            },
+            {
+              "page": 218,
+              "quote": "Iniciar tratamiento a todos los RN infectados"
+            }
+          ],
+          "source_gaps": [],
+          "external_sources": [
+            {
+              "label": "CDC, Clinical Care of Toxoplasmosis",
+              "url": "https://www.cdc.gov/toxoplasmosis/hcp/clinical-care/index.html",
+              "quote": "Congenitally infected newborns are generally treated with pyrimethamine, a sulfonamide, and leucovorin for 12 months.",
+              "checked_at": "2026-10-29"
+            }
+          ]
+        }
+      ],
+      "common_problem": "Alteraciones neurológicas y oculares en un neonato.",
+      "mother": {
+        "cue": "La infección fetal puede alterar retina, desarrollo cerebral y líquido cefalorraquídeo.",
+        "answer": "Infección congénita con daño de SNC y ojos",
+        "explanation": "La distribución de calcificaciones orienta, pero requiere confirmación."
+      }
+    },
+    {
+      "id": "08.09",
+      "title": "Sífilis o herpes del RN",
+      "topics": [
+        {
+          "id": "08.09-01",
+          "name": "STORCH Sífilis congénita",
+          "source_pages": [
+            216,
+            217
+          ],
+          "pattern": "Un recién nacido tiene rinitis con sangre, lesiones en palmas y plantas y hepatomegalia. La madre tuvo una prueba reactiva durante el embarazo y no hay tratamiento adecuado documentado.",
+          "key_discriminator": "rinitis con sangre",
+          "mechanism": "Treponema atraviesa la placenta y produce infección multisistémica fetal; el daño mucocutáneo, óseo y visceral puede aparecer después de un nacimiento inicialmente asintomático.",
+          "findings": [
+            {
+              "mechanism": "Infección mucosa",
+              "finding": "Rinitis hemorrágica"
+            },
+            {
+              "mechanism": "Lesión cutánea",
+              "finding": "Ampollas o lesiones palmoplantares"
+            },
+            {
+              "mechanism": "Afectación visceral",
+              "finding": "Hepatomegalia"
+            }
+          ],
+          "initial_action": "Comparar pruebas no treponémicas materna y neonatal, revisar tratamiento materno y evaluar órganos según riesgo. Iniciar penicilina apropiada para enfermedad probable o confirmada sin retrasos.",
+          "action_reason": "La decisión depende del conjunto de riesgo y hallazgos, no solo de una serología neonatal.",
+          "modifiers": [
+            {
+              "factor": "Madre tratada de forma adecuada y niño normal",
+              "action": "Clasificar riesgo y seguimiento con protocolo.",
+              "reason": "La transmisión pasiva de anticuerpos puede confundir interpretación."
+            },
+            {
+              "factor": "Prueba reactiva",
+              "action": "Programar control cuantitativo seriado.",
+              "reason": "La evolución de títulos permite valorar respuesta."
+            }
+          ],
+          "limits": "La formulación, dosis y frecuencia de penicilina del libro tienen errores; usar protocolo neonatal vigente y no intercambiar vías.",
+          "evidence": [
+            {
+              "page": 216,
+              "quote": "Rinitis hemorrágica."
+            },
+            {
+              "page": 217,
+              "quote": "penicilina G sódica cristalina."
+            }
+          ],
+          "source_gaps": [],
+          "external_sources": [
+            {
+              "label": "CDC, Congenital Syphilis Treatment Guidelines",
+              "url": "https://www.cdc.gov/std/treatment-guidelines/congenital-syphilis.htm",
+              "quote": "comparison of maternal (at delivery) and neonatal nontreponemal serologic titers",
+              "checked_at": "2026-10-29"
+            }
+          ]
+        },
+        {
+          "id": "08.09-02",
+          "name": "STORCH Herpes simple",
+          "source_pages": [
+            214
+          ],
+          "pattern": "Un neonato de diez días presenta vesículas agrupadas en el cuero cabelludo, rechazo del alimento y convulsiones. Se investiga exposición genital materna y posible enfermedad diseminada.",
+          "key_discriminator": "vesículas agrupadas",
+          "mechanism": "La infección adquirida en torno al parto puede extenderse desde piel y mucosas al sistema nervioso o vísceras; la progresión neonatal rápida exige tratamiento ante sospecha.",
+          "findings": [
+            {
+              "mechanism": "Infección cutánea",
+              "finding": "Vesículas"
+            },
+            {
+              "mechanism": "Invasión neurológica",
+              "finding": "Convulsiones"
+            },
+            {
+              "mechanism": "Diseminación",
+              "finding": "Deterioro sistémico"
+            }
+          ],
+          "initial_action": "Obtener muestras para PCR y evaluación de SNC y órganos, e iniciar aciclovir intravenoso urgente con soporte neonatal.",
+          "action_reason": "El tratamiento temprano es decisivo y no debe esperar confirmación si la sospecha es alta.",
+          "modifiers": [
+            {
+              "factor": "Enfermedad limitada a piel y mucosas",
+              "action": "Usar duración según clasificación.",
+              "reason": "El esquema difiere de enfermedad de SNC o diseminada."
+            },
+            {
+              "factor": "Ausencia de vesículas",
+              "action": "Mantener sospecha si hay cuadro compatible.",
+              "reason": "La infección grave puede no tener lesión cutánea inicial."
+            }
+          ],
+          "limits": "CDC indica 20 mg/kg IV cada ocho horas; la duración es catorce días en piel/mucosas y veintiuno en SNC/diseminada. La dosis diaria del resumen es insuficiente.",
+          "evidence": [
+            {
+              "page": 214,
+              "quote": "vesículas cutáneas"
+            },
+            {
+              "page": 214,
+              "quote": "Elección: Aciclovir dosis de"
+            }
+          ],
+          "source_gaps": [],
+          "external_sources": [
+            {
+              "label": "CDC, Herpes STI Treatment Guidelines, Neonatal Herpes",
+              "url": "https://www.cdc.gov/std/treatment-guidelines/herpes.htm",
+              "quote": "acyclovir 20 mg/kg body weight IV every 8 hours",
+              "checked_at": "2026-10-29"
+            }
+          ]
+        }
+      ],
+      "common_problem": "Neonato con lesiones cutáneas y riesgo de infección materna.",
+      "mother": {
+        "cue": "Distinguir infección treponémica de una infección viral de progresión rápida.",
+        "answer": "Infección neonatal tratable",
+        "explanation": "Las pruebas y antecedentes determinan penicilina o antiviral oportuno."
+      }
+    }
+  ]
+}
