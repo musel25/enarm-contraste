@@ -59,6 +59,7 @@ class PracticeTests(unittest.TestCase):
         self.assertNotIn(self.topic['modifiers'][0]['factor'], initial['context'])
         self.assertEqual(modifier['answer'], self.topic['modifiers'][0]['action'])
         self.assertIn(self.topic['modifiers'][0]['factor'], modifier['context'])
+        self.assertIn(self.topic['name'], modifier['context'])
 
     def test_publishes_hash_checked_sections_without_private_evidence(self):
         with tempfile.TemporaryDirectory() as temporary:

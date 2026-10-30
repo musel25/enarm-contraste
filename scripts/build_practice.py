@@ -65,7 +65,7 @@ def decision_steps(section):
                 ('mechanism', '¿Dónde falla el sistema y qué produce ese fallo?', topic['pattern'], topic['mechanism'], ' '.join(f'{f["mechanism"]}: {f["finding"]}.' for f in topic['findings'])),
                 ('initial', '¿Qué haces primero en esta situación?', topic['pattern'], topic['initial_action'], topic['action_reason']),
             ]
-            steps += [(f'modifier-{i+1}', 'Este dato cambia. ¿Cómo cambia tu decisión?', 'Situación modificada: ' + m['factor'], m['action'], m['reason']) for i,m in enumerate(topic['modifiers'])]
+            steps += [(f'modifier-{i+1}', 'Este dato cambia. ¿Cómo cambia tu decisión?', 'Problema evaluado: ' + topic.get('answer_name', topic['name']) + '.\nSituación modificada: ' + m['factor'], m['action'], m['reason']) for i,m in enumerate(topic['modifiers'])]
             for position,(node,prompt,context,answer,explanation) in enumerate(steps):
                 result.append({**common,'id':f'decision/{block["id"]}/{topic["id"]}/{node}', 'node_id':node,'step':position+1,'steps':len(steps),'prompt':prompt,'context':context,'answer':answer,'explanation':explanation,'discriminator':topic['key_discriminator'],'options':[]})
     return result
