@@ -16,7 +16,7 @@
 - Each coherent commit is immediately pushed. Use the existing native worktree and feature branch.
 - Bearer codes have256bits of entropy. Store only code hashes in SQLite. No tokens in URLs, logs or public files.
 - Revision checks and pre-import copies occur in one database transaction. Replay identical mutations without duplicating a grade or replacing the recovery copy.
-- Maximum request20MB. Responses no-store. The database and14daily backups live outside release directories.
+- Maximum request20MB. Responses no-store. The database and14latest timestamped backups live outside release directories. Daily and deployment snapshots share this limit.
 - A failed server write cannot advance a card. A confirmed server write survives a browser-cache failure. Cached data stays available for export during an outage.
 
 ## Review focus
