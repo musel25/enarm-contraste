@@ -1,0 +1,1591 @@
+{
+  "id": "11",
+  "title": "Gastroenterología",
+  "blocks": [
+    {
+      "id": "11.01",
+      "title": "Ardor retroesternal/dispepsia",
+      "topics": [
+        {
+          "id": "11.01-01",
+          "name": "ERGE",
+          "source_pages": [
+            323,
+            324
+          ],
+          "pattern": "Un adulto presenta ardor retroesternal y regurgitación después de comer y al acostarse. No hay pérdida de peso, anemia ni dificultad para tragar; se revisan hábitos y medicamentos.",
+          "key_discriminator": "ardor retroesternal y regurgitación",
+          "mechanism": "La barrera gastroesofágica insuficiente permite ascenso de contenido gástrico; la exposición esofágica produce síntomas y a veces lesión, incluso cuando la endoscopia no muestra erosiones.",
+          "findings": [
+            {
+              "mechanism": "Reflujo al esófago",
+              "finding": "Pirosis y regurgitación"
+            }
+          ],
+          "initial_action": "Valorar datos de alarma y síntomas cardíacos. En presentación típica sin alarma, iniciar medidas dirigidas y una prueba de IBP; reevaluar respuesta y necesidad de estudios.",
+          "action_reason": "La probabilidad clínica permite un inicio terapéutico, pero la persistencia requiere reconsiderar diagnóstico.",
+          "modifiers": [
+            {
+              "factor": "Disfagia, anemia o pérdida de peso",
+              "action": "Indicar endoscopia.",
+              "reason": "Requiere descartar complicación u otra causa."
+            },
+            {
+              "factor": "Endoscopia negativa y duda persistente",
+              "action": "Valorar monitorización de reflujo.",
+              "reason": "La ausencia de erosión no excluye reflujo."
+            }
+          ],
+          "limits": "La mejoría con IBP no confirma por sí sola ERGE. La edad joven no es una indicación quirúrgica suficiente.",
+          "evidence": [
+            {
+              "page": 323,
+              "quote": "Pirosis (manifestación más frecuente)"
+            },
+            {
+              "page": 323,
+              "quote": "prueba terapéutica con IBP"
+            }
+          ],
+          "source_gaps": []
+        },
+        {
+          "id": "11.01-02",
+          "name": "Dispepsia funcional",
+          "source_pages": [
+            315
+          ],
+          "pattern": "Una adulta tiene plenitud molesta y saciedad temprana recurrentes, con dolor epigástrico ocasional. No presenta alarmas y la evaluación apropiada no encuentra una causa orgánica que explique el cuadro.",
+          "key_discriminator": "saciedad temprana",
+          "mechanism": "La alteración de sensibilidad y función gastroduodenal puede producir malestar posprandial sin lesión estructural explicativa; el diagnóstico requiere un patrón compatible y evaluación según riesgo.",
+          "findings": [
+            {
+              "mechanism": "Respuesta gastroduodenal alterada",
+              "finding": "Plenitud y saciedad precoz"
+            }
+          ],
+          "initial_action": "Revisar signos de alarma, fármacos y H. pylori según contexto. Establecer un plan de tratamiento y seguimiento por síntomas tras excluir causas relevantes.",
+          "action_reason": "Evita estudios innecesarios sin ignorar enfermedad orgánica.",
+          "modifiers": [
+            {
+              "factor": "Anemia, pérdida de peso o vómito persistente",
+              "action": "Valorar endoscopia.",
+              "reason": "Cambia el riesgo de lesión orgánica."
+            }
+          ],
+          "limits": "Los criterios Roma III y el orden metoclopramida-ranitidina del libro son antiguos; no usar ranitidina como opción automática actual.",
+          "evidence": [
+            {
+              "page": 315,
+              "quote": "saciedad temprana, plenitud"
+            },
+            {
+              "page": 315,
+              "quote": "cualquier signo y síntoma de alarma"
+            }
+          ],
+          "source_gaps": []
+        },
+        {
+          "id": "11.01-03",
+          "name": "Enfermedad ácido péptica",
+          "source_pages": [
+            318,
+            319
+          ],
+          "pattern": "Un adulto que usa antiinflamatorios tiene dolor epigástrico recurrente. La endoscopia identifica una úlcera gástrica; se investiga infección por H. pylori y se toma muestra de la lesión.",
+          "key_discriminator": "una úlcera gástrica",
+          "mechanism": "El ácido daña una mucosa con defensa alterada por AINE o H. pylori; una lesión profunda puede sangrar, perforar o penetrar y requiere tratar el factor causal.",
+          "findings": [
+            {
+              "mechanism": "Defensa mucosa reducida",
+              "finding": "Úlcera y dolor"
+            },
+            {
+              "mechanism": "Erosión vascular",
+              "finding": "Hemorragia"
+            }
+          ],
+          "initial_action": "Suspender o ajustar el agente causal cuando sea posible, iniciar supresión ácida y evaluar H. pylori. Biopsiar úlcera gástrica y confirmar curación y erradicación según indicación.",
+          "action_reason": "Trata lesión y causa y evita omitir malignidad.",
+          "modifiers": [
+            {
+              "factor": "Sangrado o irritación peritoneal",
+              "action": "Priorizar atención urgente.",
+              "reason": "Sugiere complicación."
+            },
+            {
+              "factor": "H. pylori confirmado",
+              "action": "Elegir esquema según susceptibilidad y antecedentes.",
+              "reason": "La resistencia modifica eficacia."
+            }
+          ],
+          "limits": "No repetir de forma ciega un esquema fallido ni usar triple terapia con claritromicina sin considerar resistencia.",
+          "evidence": [
+            {
+              "page": 318,
+              "quote": "Uso de AINE o inhibidores selectivos"
+            },
+            {
+              "page": 318,
+              "quote": "tomar biopsia al momento de endoscopía"
+            }
+          ],
+          "source_gaps": []
+        }
+      ],
+      "common_problem": "Ardor retroesternal o dolor y plenitud epigástricos.",
+      "mother": {
+        "cue": "Distinguir reflujo, síntomas funcionales y lesión mucosa.",
+        "answer": "Síntomas digestivos altos por mecanismo",
+        "explanation": "Las alarmas, exposición a fármacos y pruebas dirigidas orientan estudio."
+      }
+    },
+    {
+      "id": "11.02",
+      "title": "Disfagia progresiva",
+      "topics": [
+        {
+          "id": "11.02-01",
+          "name": "Acalasia",
+          "source_pages": [
+            306
+          ],
+          "pattern": "Un adulto tiene dificultad progresiva para tragar sólidos y líquidos desde el inicio, con regurgitación de alimentos no digeridos. El tratamiento con inhibidor ácido no resolvió los síntomas.",
+          "key_discriminator": "sólidos y líquidos desde el inicio",
+          "mechanism": "La pérdida de inervación inhibitoria impide relajación adecuada de la unión esofagogástrica y reduce peristalsis; el contenido se retiene y produce disfagia y regurgitación.",
+          "findings": [
+            {
+              "mechanism": "Relajación incompleta",
+              "finding": "Disfagia a sólidos y líquidos"
+            },
+            {
+              "mechanism": "Retención esofágica",
+              "finding": "Regurgitación no digerida"
+            }
+          ],
+          "initial_action": "Realizar endoscopia para descartar obstrucción o pseudoacalasia y confirmar motilidad con manometría; usar esofagograma como estudio anatómico complementario.",
+          "action_reason": "La confirmación funcional evita tratar como reflujo una obstrucción de salida.",
+          "modifiers": [
+            {
+              "factor": "Pérdida de peso rápida o edad de riesgo",
+              "action": "Buscar neoplasia con atención especial.",
+              "reason": "Puede imitar un trastorno motor."
+            }
+          ],
+          "limits": "La imagen en pico de pájaro orienta, pero no reemplaza la manometría ni excluye cáncer.",
+          "evidence": [
+            {
+              "page": 306,
+              "quote": "disfagia a sólidos y líquidos"
+            },
+            {
+              "page": 306,
+              "quote": "confirmarse el diagnóstico de acalasia con"
+            }
+          ],
+          "source_gaps": []
+        },
+        {
+          "id": "11.02-02",
+          "name": "Esófago de Barret",
+          "source_pages": [
+            325
+          ],
+          "pattern": "Un adulto con reflujo de larga duración se somete a endoscopia. Se observan lengüetas de mucosa distinta en el esófago distal y se toman biopsias para valorar metaplasia y displasia.",
+          "key_discriminator": "lengüetas de mucosa distinta",
+          "mechanism": "La exposición crónica puede reemplazar epitelio escamoso distal por epitelio columnar metaplásico; la presencia y grado de displasia determinan el riesgo de progresión neoplásica.",
+          "findings": [
+            {
+              "mechanism": "Metaplasia distal",
+              "finding": "Lengüetas de mucosa columnar"
+            },
+            {
+              "mechanism": "Displasia",
+              "finding": "Mayor riesgo de adenocarcinoma"
+            }
+          ],
+          "initial_action": "Confirmar histología y extensión, controlar reflujo y programar vigilancia o tratamiento endoscópico según displasia y riesgo.",
+          "action_reason": "Permite detectar o tratar progresión antes de cáncer avanzado.",
+          "modifiers": [
+            {
+              "factor": "Displasia detectada",
+              "action": "Solicitar confirmación por patólogo experto y manejo especializado.",
+              "reason": "La clasificación cambia intervención."
+            }
+          ],
+          "limits": "No toda mucosa gástrica o irregularidad mínima constituye Barrett; aplicar criterios diagnósticos vigentes y no asumir disfagia como síntoma obligatorio.",
+          "evidence": [
+            {
+              "page": 325,
+              "quote": "células caliciformes"
+            },
+            {
+              "page": 325,
+              "quote": "Vigilancia con EGO acorde resultados de biopsia"
+            }
+          ],
+          "source_gaps": []
+        },
+        {
+          "id": "11.02-03",
+          "name": "Cáncer de esófago",
+          "source_pages": [
+            308
+          ],
+          "pattern": "Un adulto presenta dificultad para tragar que comenzó con sólidos y avanzó a líquidos en pocos meses. Tiene pérdida rápida de peso y dolor retroesternal ocasional.",
+          "key_discriminator": "comenzó con sólidos y avanzó a líquidos",
+          "mechanism": "Una masa infiltrante reduce progresivamente la luz esofágica; la obstrucción primero afecta sólidos y luego líquidos, con menor ingesta y pérdida ponderal acelerada.",
+          "findings": [
+            {
+              "mechanism": "Estrechamiento progresivo",
+              "finding": "Disfagia mecánica"
+            },
+            {
+              "mechanism": "Ingesta reducida y tumor",
+              "finding": "Pérdida de peso"
+            }
+          ],
+          "initial_action": "Solicitar endoscopia con biopsia y evaluación nutricional. Tras confirmación, completar estadificación y valoración multidisciplinaria.",
+          "action_reason": "La histología y extensión determinan tratamiento y posibilidad de resección.",
+          "modifiers": [
+            {
+              "factor": "Imposibilidad de ingerir o aspiración",
+              "action": "Priorizar soporte y vía nutricional apropiada.",
+              "reason": "Existe riesgo inmediato de deshidratación o neumonía."
+            }
+          ],
+          "limits": "La secuencia de disfagia orienta, pero no confirma; los tratamientos actuales no se reducen a cisplatino para todos.",
+          "evidence": [
+            {
+              "page": 308,
+              "quote": "inicia con sólidos"
+            },
+            {
+              "page": 308,
+              "quote": "Endoscopía con toma de biopsia"
+            }
+          ],
+          "source_gaps": []
+        }
+      ],
+      "common_problem": "Dificultad progresiva para deglutir o reflujo crónico.",
+      "mother": {
+        "cue": "Separar fallo motor, metaplasia y obstrucción tumoral.",
+        "answer": "Patología esofágica funcional y estructural",
+        "explanation": "La secuencia de disfagia y endoscopia determinan la siguiente prueba."
+      }
+    },
+    {
+      "id": "11.03",
+      "title": "Úlcera recurrente",
+      "topics": [
+        {
+          "id": "11.03-01",
+          "name": "Zollinger Ellison",
+          "source_pages": [
+            346
+          ],
+          "pattern": "Un adulto presenta úlceras pépticas recurrentes a pesar de tratamiento, diarrea y esofagitis. Se revisan fármacos, acidez gástrica y la posibilidad de una secreción hormonal excesiva.",
+          "key_discriminator": "úlceras pépticas recurrentes",
+          "mechanism": "Un gastrinoma secreta gastrina y estimula ácido en exceso; la hipersecreción causa úlceras difíciles de controlar y puede alterar digestión con diarrea.",
+          "findings": [
+            {
+              "mechanism": "Hipersecreción ácida",
+              "finding": "Úlceras y esofagitis"
+            },
+            {
+              "mechanism": "Ácido en intestino",
+              "finding": "Diarrea"
+            }
+          ],
+          "initial_action": "Controlar secreción ácida y medir gastrina en un contexto interpretativo seguro con especialista; confirmar exceso inapropiado y después localizar el tumor y valorar MEN1.",
+          "action_reason": "Los IBP y la hipoclorhidria pueden elevar gastrina sin gastrinoma.",
+          "modifiers": [
+            {
+              "factor": "Hiperparatiroidismo o tumor hipofisario",
+              "action": "Investigar síndrome hereditario.",
+              "reason": "La asociación cambia vigilancia y plan quirúrgico."
+            }
+          ],
+          "limits": "No suspender IBP de forma peligrosa para una prueba ni confirmar por gastrina aislada; la acidez y medicación cambian interpretación.",
+          "evidence": [
+            {
+              "page": 346,
+              "quote": "Úlceras pépticas recurrentes"
+            },
+            {
+              "page": 346,
+              "quote": "lnhibidor de bombas de protones a dosis altas"
+            }
+          ],
+          "source_gaps": []
+        }
+      ],
+      "common_problem": "Úlceras repetidas con diarrea o esofagitis.",
+      "mother": {
+        "cue": "El exceso de secreción ácida puede tener una fuente hormonal.",
+        "answer": "Hipersecreción por gastrinoma",
+        "explanation": "La gastrina requiere interpretación junto a acidez y medicamentos."
+      }
+    },
+    {
+      "id": "11.04",
+      "title": "Hematemesis o melena",
+      "topics": [
+        {
+          "id": "11.04-01",
+          "name": "STDA",
+          "source_pages": [
+            342,
+            343
+          ],
+          "pattern": "Un adulto presenta vómito con sangre y heces negras. Está mareado y taquicárdico; se obtiene acceso venoso y se investiga uso de antiinflamatorios y enfermedad hepática.",
+          "key_discriminator": "vómito con sangre y heces negras",
+          "mechanism": "El sangrado proximal a Treitz puede producir hematemesis o sangre digerida en heces; la pérdida de volumen determina perfusión y prioridad antes de localizar la lesión.",
+          "findings": [
+            {
+              "mechanism": "Sangre proximal",
+              "finding": "Hematemesis o melena"
+            },
+            {
+              "mechanism": "Pérdida de volumen",
+              "finding": "Taquicardia y mareo"
+            }
+          ],
+          "initial_action": "Iniciar ABC y reanimación según necesidad, obtener hemograma y pruebas apropiadas, estratificar riesgo y realizar endoscopia tras estabilización. Seleccionar tratamiento por causa variceal o no variceal.",
+          "action_reason": "Primero se sostiene perfusión y después se obtiene control del sangrado.",
+          "modifiers": [
+            {
+              "factor": "Signos de perforación",
+              "action": "Solicitar cirugía y estudio urgente.",
+              "reason": "La endoscopia no es la prioridad habitual."
+            },
+            {
+              "factor": "Resangrado o control endoscópico fallido",
+              "action": "Valorar nueva intervención, radiología o cirugía.",
+              "reason": "La fuente sigue activa."
+            }
+          ],
+          "limits": "Hematoquecia con shock puede ser de origen alto. No decidir volumen de sangrado solo por color.",
+          "evidence": [
+            {
+              "page": 342,
+              "quote": "Hematemesis."
+            },
+            {
+              "page": 343,
+              "quote": "estabilizar hemodinamicamente."
+            }
+          ],
+          "source_gaps": []
+        },
+        {
+          "id": "11.04-02",
+          "name": "Varices esofágicas",
+          "source_pages": [
+            345
+          ],
+          "pattern": "Un paciente con cirrosis presenta hematemesis abundante y mareo. Tiene ascitis y signos de hipertensión portal; se inicia estabilización mientras se organiza endoscopia terapéutica.",
+          "key_discriminator": "cirrosis presenta hematemesis abundante",
+          "mechanism": "La hipertensión portal dilata colaterales gastroesofágicas de pared frágil; su ruptura causa hemorragia importante y requiere reducir flujo portal además del control endoscópico.",
+          "findings": [
+            {
+              "mechanism": "Colaterales portales dilatadas",
+              "finding": "Várices"
+            },
+            {
+              "mechanism": "Ruptura vascular",
+              "finding": "Hematemesis"
+            }
+          ],
+          "initial_action": "Estabilizar y comenzar vasoactivo ante sospecha, junto con profilaxis antibiótica indicada en cirrosis con sangrado. Organizar endoscopia temprana para ligadura tras reanimación.",
+          "action_reason": "Combina soporte, reducción de presión y control local del sangrado.",
+          "modifiers": [
+            {
+              "factor": "Control no logrado o alto riesgo",
+              "action": "Valorar rescate y derivación portal en centro experto.",
+              "reason": "Puede requerir tratamiento más allá de ligadura."
+            },
+            {
+              "factor": "Sin sangrado actual",
+              "action": "Definir prevención primaria por riesgo.",
+              "reason": "El objetivo cambia a prevenir la primera ruptura."
+            }
+          ],
+          "limits": "Un balón es una medida puente con riesgos, no tratamiento definitivo; requiere personal y vigilancia especializados.",
+          "evidence": [
+            {
+              "page": 345,
+              "quote": "Terlipresina IV u octreótide."
+            },
+            {
+              "page": 345,
+              "quote": "después de estabilizar hemodinámicamente."
+            }
+          ],
+          "source_gaps": [],
+          "external_sources": [
+            {
+              "label": "AGA, vasoactivos y albúmina en cirrosis",
+              "url": "https://gastro.org/clinical-guidance/use-of-vasoactive-drugs-and-intravenous-albumin-in-cirrhosis/",
+              "quote": "Vasoactive drugs should be initiated as soon as the diagnosis of variceal hemorrhage is suspected or confirmed",
+              "checked_at": "2026-10-29"
+            },
+            {
+              "label": "KASL, guía de ascitis y complicaciones 2026",
+              "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13430399/",
+              "quote": "In cirrhotic patients with gastrointestinal bleeding, intravenous ceftriaxone 1 g/day is recommended",
+              "checked_at": "2026-10-29"
+            }
+          ]
+        },
+        {
+          "id": "11.04-03",
+          "name": "Mallory Weiss",
+          "source_pages": [
+            334
+          ],
+          "pattern": "Un adulto tuvo varios vómitos sin sangre después de beber alcohol. Luego presenta hematemesis; no hay datos claros de perforación y se valora estabilidad antes de la endoscopia.",
+          "key_discriminator": "vómitos sin sangre",
+          "mechanism": "El aumento brusco de presión durante arcadas desgarra mucosa en la unión gastroesofágica; si alcanza vasos submucosos produce hematemesis después de emesis inicialmente no sanguinolenta.",
+          "findings": [
+            {
+              "mechanism": "Desgarro mucoso",
+              "finding": "Hematemesis tras arcadas"
+            }
+          ],
+          "initial_action": "Estabilizar como sangrado alto y realizar endoscopia según gravedad. Si existe sangrado persistente o de alto riesgo, aplicar hemostasia endoscópica.",
+          "action_reason": "Muchos episodios se detienen solos, pero se debe identificar y tratar los activos.",
+          "modifiers": [
+            {
+              "factor": "Dolor intenso con sospecha de ruptura transmural",
+              "action": "Investigar perforación esofágica urgente.",
+              "reason": "Tiene mecanismo y gravedad diferentes."
+            }
+          ],
+          "limits": "No confundir el desgarro mucoso con Boerhaave; la complicación principal aquí es hemorragia.",
+          "evidence": [
+            {
+              "page": 334,
+              "quote": "emesis no sanguinolentas"
+            },
+            {
+              "page": 334,
+              "quote": "Estabilizar hemodinámicamente"
+            }
+          ],
+          "source_gaps": []
+        }
+      ],
+      "common_problem": "Hematemesis o melena.",
+      "mother": {
+        "cue": "La pérdida de volumen precede a localizar y controlar la lesión.",
+        "answer": "Hemorragia digestiva alta",
+        "explanation": "Antecedente hepático y arcadas orientan causas con tratamientos diferentes."
+      }
+    },
+    {
+      "id": "11.05",
+      "title": "Sangre roja por recto",
+      "topics": [
+        {
+          "id": "11.05-01",
+          "name": "STDB",
+          "source_pages": [
+            344
+          ],
+          "pattern": "Un adulto mayor presenta sangre roja por recto sin vómito sanguinolento. Se evalúan presión y pulso, dolor abdominal, fármacos y región anorrectal antes de localizar el origen.",
+          "key_discriminator": "sangre roja por recto",
+          "mechanism": "Una lesión distal a Treitz puede sangrar por divertículos, vasos, inflamación o tumor; la velocidad de pérdida y el tránsito influyen en apariencia y repercusión.",
+          "findings": [
+            {
+              "mechanism": "Sangrado distal",
+              "finding": "Hematoquecia"
+            },
+            {
+              "mechanism": "Pérdida relevante",
+              "finding": "Anemia o inestabilidad"
+            }
+          ],
+          "initial_action": "Valorar y sostener hemodinamia, realizar historia y exploración y seleccionar estudio por estabilidad y actividad del sangrado; en estable, colonoscopia con preparación apropiada.",
+          "action_reason": "La localización y gravedad definen la intervención.",
+          "modifiers": [
+            {
+              "factor": "Inestabilidad con sangrado importante",
+              "action": "Descartar también origen alto y valorar imagen vascular urgente.",
+              "reason": "La sangre roja no garantiza origen distal."
+            },
+            {
+              "factor": "Dolor y diarrea sanguinolenta",
+              "action": "Investigar colitis isquémica, infecciosa o inflamatoria.",
+              "reason": "La etiología cambia tratamiento."
+            }
+          ],
+          "limits": "No indicar colectomía sin localizar o valorar alternativas; muchas causas admiten tratamiento dirigido.",
+          "evidence": [
+            {
+              "page": 344,
+              "quote": "Colonoscopia es el estudio de elección"
+            },
+            {
+              "page": 344,
+              "quote": "historia clínica completa"
+            }
+          ],
+          "source_gaps": []
+        }
+      ],
+      "common_problem": "Sangre roja por recto.",
+      "mother": {
+        "cue": "La estabilidad y la actividad del sangrado definen localización y urgencia.",
+        "answer": "Hemorragia digestiva baja",
+        "explanation": "La apariencia de sangre no excluye un origen alto rápido."
+      }
+    },
+    {
+      "id": "11.06",
+      "title": "Diarrea crónica sin alarmas",
+      "topics": [
+        {
+          "id": "11.06-01",
+          "name": "Síndrome de intestino irritable",
+          "source_pages": [
+            339,
+            340,
+            341
+          ],
+          "pattern": "Una adulta tiene dolor abdominal recurrente relacionado con la evacuación y cambios entre heces duras y blandas. Lleva meses así, sin sangrado, fiebre, pérdida de peso ni síntomas nocturnos.",
+          "key_discriminator": "relacionado con la evacuación",
+          "mechanism": "La interacción intestino-cerebro altera sensibilidad visceral y motilidad sin lesión estructural que explique el patrón; los cambios de hábito permiten clasificar subtipos y orientar alivio sintomático.",
+          "findings": [
+            {
+              "mechanism": "Hipersensibilidad visceral",
+              "finding": "Dolor recurrente"
+            },
+            {
+              "mechanism": "Motilidad variable",
+              "finding": "Cambios de forma o frecuencia fecal"
+            }
+          ],
+          "initial_action": "Establecer diagnóstico positivo con criterios actuales y revisar alarmas. Iniciar educación, hábitos y dieta individualizada, con tratamiento por subtipo y seguimiento.",
+          "action_reason": "La estrategia dirige el manejo sin convertirlo en un diagnóstico de exclusión ilimitada.",
+          "modifiers": [
+            {
+              "factor": "Sangrado, anemia, adelgazamiento o síntomas nocturnos",
+              "action": "Ampliar estudio orgánico.",
+              "reason": "No corresponde al patrón sin alarmas."
+            },
+            {
+              "factor": "Predominio de estreñimiento o diarrea",
+              "action": "Seleccionar terapia por subtipo.",
+              "reason": "El mismo fármaco puede empeorar el extremo contrario."
+            }
+          ],
+          "limits": "Los criterios Roma III del resumen son antiguos; las dosis de loperamida en la página tienen errores y no deben usarse.",
+          "evidence": [
+            {
+              "page": 340,
+              "quote": "El diagnóstico de Sil debe basarse"
+            },
+            {
+              "page": 341,
+              "quote": "depende de la presentación clínica."
+            }
+          ],
+          "source_gaps": []
+        }
+      ],
+      "common_problem": "Dolor abdominal crónico con cambios de hábito sin alarmas.",
+      "mother": {
+        "cue": "La interacción intestino-cerebro puede alterar sensibilidad y tránsito.",
+        "answer": "Síndrome de intestino irritable",
+        "explanation": "El diagnóstico positivo y subtipo orientan manejo."
+      }
+    },
+    {
+      "id": "11.07",
+      "title": "Diarrea inflamatoria",
+      "topics": [
+        {
+          "id": "11.07-01",
+          "name": "Enfermedad de Crohn",
+          "source_pages": [
+            321,
+            322
+          ],
+          "pattern": "Una joven presenta diarrea crónica, dolor abdominal y pérdida de peso con una fístula perianal. La endoscopia muestra lesiones separadas por mucosa de aspecto conservado.",
+          "key_discriminator": "lesiones separadas por mucosa de aspecto conservado",
+          "mechanism": "La inflamación transmural y segmentaria puede afectar distintos niveles digestivos; su profundidad favorece fístulas, abscesos y estenosis además de diarrea y malabsorción.",
+          "findings": [
+            {
+              "mechanism": "Inflamación discontinua",
+              "finding": "Lesiones en parches"
+            },
+            {
+              "mechanism": "Compromiso transmural",
+              "finding": "Fístulas o estenosis"
+            }
+          ],
+          "initial_action": "Descartar infección y evaluar con endoscopia, biopsias e imagen según localización. Clasificar actividad y complicaciones para iniciar tratamiento especializado.",
+          "action_reason": "No existe una prueba única que defina todo el diagnóstico.",
+          "modifiers": [
+            {
+              "factor": "Absceso, obstrucción o perforación",
+              "action": "Priorizar control de complicación.",
+              "reason": "No basta escalar inmunosupresión."
+            },
+            {
+              "factor": "Enfermedad limitada apropiada",
+              "action": "Valorar terapia de inducción según localización.",
+              "reason": "Budesonida no sirve igual en todos los segmentos."
+            }
+          ],
+          "limits": "Los corticoides no son mantenimiento. Una fístula o perforación no se trata solo con metronidazol.",
+          "evidence": [
+            {
+              "page": 321,
+              "quote": "lesiones transmurales discontinuas."
+            },
+            {
+              "page": 322,
+              "quote": "No se dispone de un estándar de oro"
+            }
+          ],
+          "source_gaps": []
+        },
+        {
+          "id": "11.07-02",
+          "name": "Colitis ulcerativa",
+          "source_pages": [
+            313,
+            314
+          ],
+          "pattern": "Un adulto presenta diarrea con sangre y urgencia rectal. La endoscopia muestra inflamación continua desde el recto y las biopsias describen afectación mucosa con alteración de criptas.",
+          "key_discriminator": "inflamación continua desde el recto",
+          "mechanism": "La inflamación mucosa colónica continua produce friabilidad y sangrado; la extensión y la actividad determinan síntomas, riesgo de megacolon y necesidad de terapia local o sistémica.",
+          "findings": [
+            {
+              "mechanism": "Mucosa friable",
+              "finding": "Diarrea sanguinolenta"
+            },
+            {
+              "mechanism": "Afectación rectal",
+              "finding": "Urgencia y tenesmo"
+            }
+          ],
+          "initial_action": "Descartar infección, valorar gravedad y obtener evaluación endoscópica y biopsia apropiadas. Seleccionar tratamiento según extensión y actividad con gastroenterología.",
+          "action_reason": "El cuadro grave necesita atención más rápida que una forma limitada.",
+          "modifiers": [
+            {
+              "factor": "Toxicidad sistémica o distensión importante",
+              "action": "Hospitalizar y descartar megacolon.",
+              "reason": "Puede requerir rescate o cirugía."
+            },
+            {
+              "factor": "Enfermedad leve a moderada",
+              "action": "Valorar mesalazina por vía adecuada.",
+              "reason": "Su alcance depende de extensión."
+            }
+          ],
+          "limits": "Azatioprina no es rescate rápido. Colectomía no es colostomía; no limitar vigilancia oncológica a una endoscopia cada diez años.",
+          "evidence": [
+            {
+              "page": 313,
+              "quote": "afección continua"
+            },
+            {
+              "page": 314,
+              "quote": "Las formas leves o moderadas: Mesalazina."
+            }
+          ],
+          "source_gaps": []
+        },
+        {
+          "id": "11.07-03",
+          "name": "Enfermedad celíaca",
+          "source_pages": [
+            320
+          ],
+          "pattern": "Una adulta presenta diarrea crónica, distensión y anemia ferropénica. Sigue comiendo trigo y tiene antecedente familiar de autoinmunidad; se prepara un estudio de malabsorción.",
+          "key_discriminator": "anemia ferropénica",
+          "mechanism": "La respuesta inmune al gluten en personas predispuestas lesiona vellosidades del intestino delgado; la menor superficie absortiva causa déficit nutricional y síntomas digestivos o extraintestinales.",
+          "findings": [
+            {
+              "mechanism": "Atrofia vellosa",
+              "finding": "Malabsorción"
+            },
+            {
+              "mechanism": "Déficit de hierro",
+              "finding": "Anemia"
+            }
+          ],
+          "initial_action": "Solicitar serología apropiada, incluida valoración de IgA, mientras consume gluten y confirmar según contexto con especialista. Iniciar dieta sin gluten después de establecer diagnóstico.",
+          "action_reason": "Retirar gluten antes puede volver falsamente negativas las pruebas.",
+          "modifiers": [
+            {
+              "factor": "Deficiencia de IgA",
+              "action": "Usar pruebas apropiadas de otra clase.",
+              "reason": "La serología IgA puede ser negativa."
+            },
+            {
+              "factor": "Diarrea persistente pese a dieta",
+              "action": "Revisar exposición y diagnósticos antes de inmunosupresión.",
+              "reason": "No todo caso es enfermedad refractaria."
+            }
+          ],
+          "limits": "No confirmar con una biopsia tomada solo un año después de retirar gluten como propone una frase del resumen.",
+          "evidence": [
+            {
+              "page": 320,
+              "quote": "atrofia de las vellosidades"
+            },
+            {
+              "page": 320,
+              "quote": "transglutaminasa tisular."
+            }
+          ],
+          "source_gaps": [],
+          "external_sources": [
+            {
+              "label": "NIDDK, Diagnosis of Celiac Disease",
+              "url": "https://www.niddk.nih.gov/health-information/digestive-diseases/celiac-disease/diagnosis",
+              "quote": "Doctors don’t recommend starting a gluten-free diet before diagnostic testing",
+              "checked_at": "2026-10-29"
+            }
+          ]
+        }
+      ],
+      "common_problem": "Diarrea crónica con sangre, pérdida de peso o malabsorción.",
+      "mother": {
+        "cue": "Distribución, profundidad y exposición a gluten separan mecanismos.",
+        "answer": "Inflamación intestinal y daño absortivo",
+        "explanation": "Pruebas de infección, endoscopia y serología tienen funciones distintas."
+      }
+    },
+    {
+      "id": "11.08",
+      "title": "Ictericia con transaminasas",
+      "topics": [
+        {
+          "id": "11.08-01",
+          "name": "Hepatitis A",
+          "source_pages": [
+            326
+          ],
+          "pattern": "Un adulto presenta malestar, náusea e ictericia después de una exposición alimentaria compartida. Tiene aminotransferasas elevadas y se solicita IgM específica para una infección de transmisión fecal-oral.",
+          "key_discriminator": "exposición alimentaria compartida",
+          "mechanism": "El virus adquirido por vía fecal-oral causa inflamación hepatocelular aguda; la respuesta inmune produce lesión y alteración del procesamiento biliar sin establecer una infección crónica habitual.",
+          "findings": [
+            {
+              "mechanism": "Inflamación hepática",
+              "finding": "Aminotransferasas elevadas"
+            },
+            {
+              "mechanism": "Colestasis",
+              "finding": "Ictericia y coluria"
+            }
+          ],
+          "initial_action": "Confirmar infección aguda por IgM anti-VHA cuando corresponda y dar soporte de hidratación y síntomas. Revisar coagulación, conciencia y prevención en contactos según exposición.",
+          "action_reason": "No hay antiviral específico para el cuadro habitual; la gravedad define referencia.",
+          "modifiers": [
+            {
+              "factor": "Confusión, coagulopatía o vómito persistente",
+              "action": "Enviar a evaluación hospitalaria.",
+              "reason": "Puede existir falla hepática o deshidratación."
+            }
+          ],
+          "limits": "No se cronifica. Evitar extrapolar instrucciones de esterilización o prohibición absoluta de analgésicos del resumen sin contexto.",
+          "evidence": [
+            {
+              "page": 326,
+              "quote": "lgM anti-VHA"
+            },
+            {
+              "page": 326,
+              "quote": "tratamiento de sostén"
+            }
+          ],
+          "source_gaps": []
+        },
+        {
+          "id": "11.08-02",
+          "name": "Hepatitis B",
+          "source_pages": [
+            328,
+            329,
+            330
+          ],
+          "pattern": "Un adulto tiene HBsAg persistente durante más de seis meses. Se siente bien, pero se estudian ALT, ADN viral y fibrosis para definir actividad y necesidad de tratamiento.",
+          "key_discriminator": "HBsAg persistente durante más de seis meses",
+          "mechanism": "La persistencia de infección por VHB mantiene riesgo de inflamación, fibrosis y cáncer; carga viral y respuesta del huésped determinan actividad aunque no existan síntomas.",
+          "findings": [
+            {
+              "mechanism": "Infección persistente",
+              "finding": "HBsAg positivo"
+            },
+            {
+              "mechanism": "Actividad o fibrosis",
+              "finding": "ALT o pruebas estructurales alteradas"
+            }
+          ],
+          "initial_action": "Confirmar fase y actividad con pruebas virales y evaluación de fibrosis; revisar coinfecciones y referir para tratamiento y vigilancia según criterios.",
+          "action_reason": "No toda infección crónica tiene la misma indicación o urgencia terapéutica.",
+          "modifiers": [
+            {
+              "factor": "Tratamiento antiviral indicado",
+              "action": "Preferir opciones de alta barrera a resistencia como tenofovir o entecavir según contexto.",
+              "reason": "Lamivudina favorece resistencia."
+            },
+            {
+              "factor": "Embarazo o inmunosupresión",
+              "action": "Evaluar prevención de transmisión o reactivación.",
+              "reason": "Cambia el riesgo y el plan."
+            }
+          ],
+          "limits": "Anti-HBc no aparece por vacunación. La tabla del resumen no debe usarse como algoritmo terapéutico actual.",
+          "evidence": [
+            {
+              "page": 328,
+              "quote": "si persiste> 6 meses"
+            },
+            {
+              "page": 328,
+              "quote": "Disminuir la replicación sostenida de VHB."
+            }
+          ],
+          "source_gaps": [],
+          "external_sources": [
+            {
+              "label": "OMS 2024, First-line antiviral therapies for CHB",
+              "url": "https://www.ncbi.nlm.nih.gov/sites/books/NBK614996/",
+              "quote": "tenofovir disoproxil fumarate (TDF) or entecavir (ETV) are recommended as preferred regimens.",
+              "checked_at": "2026-10-29"
+            }
+          ]
+        },
+        {
+          "id": "11.08-03",
+          "name": "Hepatitis C",
+          "source_pages": [
+            331,
+            332
+          ],
+          "pattern": "Una persona asintomática tiene anticuerpos positivos después de una transfusión antigua. Se solicita ARN viral para saber si persiste infección y se evalúa fibrosis hepática.",
+          "key_discriminator": "Se solicita ARN viral",
+          "mechanism": "La exposición a VHC genera anticuerpos que pueden persistir tras curación; detectar ARN demuestra viremia y permite tratar infección activa antes de progresión a fibrosis o cirrosis.",
+          "findings": [
+            {
+              "mechanism": "Contacto previo",
+              "finding": "Anticuerpo anti-VHC"
+            },
+            {
+              "mechanism": "Replicación actual",
+              "finding": "ARN detectable"
+            }
+          ],
+          "initial_action": "Confirmar viremia y evaluar cirrosis, función renal, interacciones y coinfecciones; ofrecer tratamiento con antivirales de acción directa según guía y contexto.",
+          "action_reason": "La terapia actual puede curar y es diferente de los esquemas con interferón del libro.",
+          "modifiers": [
+            {
+              "factor": "Cirrosis",
+              "action": "Mantener vigilancia y manejo de riesgo hepático aun después de curación.",
+              "reason": "La eliminación viral no borra toda fibrosis."
+            },
+            {
+              "factor": "Anticuerpo negativo con inmunosupresión y sospecha",
+              "action": "Valorar ARN directo.",
+              "reason": "La respuesta de anticuerpos puede ser insuficiente."
+            }
+          ],
+          "limits": "No usar interferón-ribavirina como estándar actual. Anti-VHC positivo no distingue infección activa de resuelta.",
+          "evidence": [
+            {
+              "page": 332,
+              "quote": "No permite identificar si existe viremia"
+            },
+            {
+              "page": 332,
+              "quote": "realizar PCR-RNA.VHC."
+            }
+          ],
+          "source_gaps": [],
+          "external_sources": [
+            {
+              "label": "CDC, Clinical Care of Hepatitis C",
+              "url": "https://www.cdc.gov/hepatitis-c/hcp/clinical-care/index.html",
+              "quote": "Curative DAA treatment is recommended for essentially everyone with hepatitis C.",
+              "checked_at": "2026-10-29"
+            }
+          ]
+        },
+        {
+          "id": "11.08-04",
+          "name": "Hepatitis autoinmune",
+          "source_pages": [
+            327
+          ],
+          "pattern": "Una adulta tiene transaminasas e IgG elevadas, pruebas virales negativas y autoanticuerpos compatibles. La biopsia muestra inflamación de interfase; se revisan fármacos y otras causas.",
+          "key_discriminator": "inflamación de interfase",
+          "mechanism": "La respuesta inmune dirigida al hígado mantiene necroinflamación y puede causar fibrosis; el diagnóstico integra IgG, autoanticuerpos e histología tras excluir causas alternativas.",
+          "findings": [
+            {
+              "mechanism": "Inflamación inmunitaria",
+              "finding": "Transaminasas e IgG elevadas"
+            },
+            {
+              "mechanism": "Lesión de interfase",
+              "finding": "Hallazgo histológico"
+            }
+          ],
+          "initial_action": "Completar exclusión de causas y evaluación de gravedad; iniciar inmunosupresión apropiada con hepatología si se confirma.",
+          "action_reason": "El tratamiento controla inflamación y previene progresión.",
+          "modifiers": [
+            {
+              "factor": "Falla hepática o cirrosis descompensada",
+              "action": "Referir de forma urgente a centro especializado.",
+              "reason": "Puede necesitar estrategia distinta o trasplante."
+            },
+            {
+              "factor": "Exposición a fármaco compatible",
+              "action": "Considerar lesión inducida por medicamento.",
+              "reason": "Puede imitar el patrón."
+            }
+          ],
+          "limits": "Un autoanticuerpo aislado o panel viral negativo no confirma el diagnóstico.",
+          "evidence": [
+            {
+              "page": 327,
+              "quote": "hepatitis de interfase"
+            },
+            {
+              "page": 327,
+              "quote": "prednisona más azatioprina"
+            }
+          ],
+          "source_gaps": []
+        }
+      ],
+      "common_problem": "Ictericia y aminotransferasas elevadas.",
+      "mother": {
+        "cue": "La inflamación hepática puede ser viral o autoinmune y requiere etiología específica.",
+        "answer": "Hepatitis por agente y respuesta inmune",
+        "explanation": "La confirmación determina soporte, antiviral o inmunosupresión."
+      }
+    },
+    {
+      "id": "11.09",
+      "title": "Hígado graso y fallo hepático",
+      "topics": [
+        {
+          "id": "11.09-01",
+          "name": "EHGNA",
+          "source_pages": [
+            316
+          ],
+          "pattern": "Un adulto con obesidad y diabetes tiene esteatosis incidental en ultrasonido. Presenta elevación leve de aminotransferasas; se cuantifica alcohol y se revisan otras causas y riesgo de fibrosis.",
+          "key_discriminator": "esteatosis incidental",
+          "mechanism": "La acumulación grasa asociada a disfunción metabólica puede acompañarse de lesión inflamatoria y fibrosis; el riesgo clínico depende más de fibrosis y comorbilidades que de grasa aislada.",
+          "findings": [
+            {
+              "mechanism": "Acumulación de triglicéridos",
+              "finding": "Esteatosis por imagen"
+            },
+            {
+              "mechanism": "Daño progresivo",
+              "finding": "Riesgo de fibrosis"
+            }
+          ],
+          "initial_action": "Evaluar causas, consumo de alcohol y fibrosis con herramientas apropiadas; tratar riesgo metabólico y establecer reducción de peso y actividad con seguimiento.",
+          "action_reason": "Identifica enfermedad avanzada y aborda factores modificables.",
+          "modifiers": [
+            {
+              "factor": "Alta probabilidad de fibrosis o duda diagnóstica",
+              "action": "Referir para evaluación especializada.",
+              "reason": "Puede requerir elastografía u otros estudios."
+            },
+            {
+              "factor": "Esteatohepatitis seleccionada",
+              "action": "Valorar tratamiento específico por contexto.",
+              "reason": "No todo hígado graso requiere vitamina E o pioglitazona."
+            }
+          ],
+          "limits": "La nomenclatura actual incluye MASLD/MASH. Una relación AST/ALT aislada no confirma ni excluye fibrosis.",
+          "evidence": [
+            {
+              "page": 316,
+              "quote": "elevación de aminotransferasas o esteatosis"
+            },
+            {
+              "page": 316,
+              "quote": "reducción de un 10% del peso corporal."
+            }
+          ],
+          "source_gaps": []
+        },
+        {
+          "id": "11.09-02",
+          "name": "Insuficiencia hepática",
+          "source_pages": [
+            333
+          ],
+          "pattern": "Un adulto con hepatopatía crónica desarrolla ictericia, ascitis y tendencia al sangrado. La albúmina está baja y el tiempo de coagulación prolongado; se buscan complicaciones y desencadenantes.",
+          "key_discriminator": "albúmina está baja",
+          "mechanism": "La pérdida de función hepática reduce síntesis y procesamiento metabólico; la fibrosis y presión portal añaden congestión y complicaciones, que marcan descompensación de enfermedad crónica.",
+          "findings": [
+            {
+              "mechanism": "Síntesis reducida",
+              "finding": "Albúmina baja y coagulopatía"
+            },
+            {
+              "mechanism": "Hipertensión portal",
+              "finding": "Ascitis y várices"
+            }
+          ],
+          "initial_action": "Evaluar función, etiología y complicaciones con laboratorio e imagen; hospitalizar si hay descompensación relevante y valorar referencia a hepatología y posible trasplante.",
+          "action_reason": "El control causal y de complicaciones define pronóstico y atención.",
+          "modifiers": [
+            {
+              "factor": "Confusión o infección",
+              "action": "Buscar encefalopatía y foco precipitante.",
+              "reason": "Puede acelerar deterioro."
+            },
+            {
+              "factor": "Hemorragia digestiva",
+              "action": "Activar manejo urgente.",
+              "reason": "Es una complicación potencialmente letal."
+            }
+          ],
+          "limits": "La página trata insuficiencia crónica; no describe un algoritmo completo de falla hepática aguda.",
+          "evidence": [
+            {
+              "page": 333,
+              "quote": "solicitar pruebas de función hepática + USG."
+            },
+            {
+              "page": 333,
+              "quote": "Hospitalizar si presenta descompensación clínica"
+            }
+          ],
+          "source_gaps": []
+        }
+      ],
+      "common_problem": "Esteatosis o signos de función hepática reducida.",
+      "mother": {
+        "cue": "El riesgo de fibrosis y descompensación importa más que grasa aislada.",
+        "answer": "Daño hepático metabólico y pérdida funcional",
+        "explanation": "La evaluación de gravedad guía seguimiento y referencia."
+      }
+    },
+    {
+      "id": "11.10",
+      "title": "Ascitis/confusión en hepatópata",
+      "topics": [
+        {
+          "id": "11.10-01",
+          "name": "Cirrosis hepática",
+          "source_pages": [
+            312
+          ],
+          "pattern": "Un paciente con daño hepático prolongado tiene hígado nodular en imagen y signos de hipertensión portal. Se evalúan ascitis, encefalopatía, bilirrubina, albúmina e INR para estimar repercusión.",
+          "key_discriminator": "hígado nodular",
+          "mechanism": "La fibrosis difusa y los nódulos distorsionan arquitectura y flujo hepáticos; la resistencia portal y la pérdida funcional producen complicaciones que distinguen compensación de descompensación.",
+          "findings": [
+            {
+              "mechanism": "Resistencia portal",
+              "finding": "Ascitis y colaterales"
+            },
+            {
+              "mechanism": "Función sintética reducida",
+              "finding": "Albúmina baja e INR prolongado"
+            }
+          ],
+          "initial_action": "Identificar causa y grado de descompensación, usar herramientas pronósticas y tratar complicaciones. Establecer vigilancia de cáncer y prevención de sangrado según riesgo.",
+          "action_reason": "El pronóstico depende de función, complicaciones y posibilidad de tratar la causa.",
+          "modifiers": [
+            {
+              "factor": "Ascitis, hemorragia o encefalopatía nuevas",
+              "action": "Investigar precipitantes y valorar atención hospitalaria.",
+              "reason": "Marcan cambio clínico significativo."
+            }
+          ],
+          "limits": "Child-Pugh requiere datos clínicos y analíticos; no se calcula solo por transaminasas ni equivale exactamente a compensación en todos los casos.",
+          "evidence": [
+            {
+              "page": 312,
+              "quote": "fibrosis y conversión de la arquitectura normal"
+            },
+            {
+              "page": 312,
+              "quote": "El tratamiento va dirigido a control de complicaciones."
+            }
+          ],
+          "source_gaps": []
+        },
+        {
+          "id": "11.10-02",
+          "name": "Ascitis",
+          "source_pages": [
+            307
+          ],
+          "pattern": "Un adulto con cirrosis presenta aumento reciente del abdomen y matidez cambiante. Se obtiene líquido peritoneal para recuento celular, cultivo y albúmina, junto con albúmina sérica.",
+          "key_discriminator": "aumento reciente del abdomen",
+          "mechanism": "La hipertensión portal y alteraciones circulatorias favorecen retención de sodio y líquido peritoneal; el gradiente de albúmina ayuda a distinguir mecanismo portal de otras causas.",
+          "findings": [
+            {
+              "mechanism": "Presión portal y retención",
+              "finding": "Líquido peritoneal"
+            },
+            {
+              "mechanism": "Acumulación abdominal",
+              "finding": "Matidez cambiante"
+            }
+          ],
+          "initial_action": "Realizar paracentesis diagnóstica en ascitis nueva o descompensada. Calcular GASA como albúmina sérica menos albúmina ascítica e investigar infección según neutrófilos y contexto.",
+          "action_reason": "Define mecanismo y detecta una complicación tratable.",
+          "modifiers": [
+            {
+              "factor": "Ascitis tensa o refractaria",
+              "action": "Valorar paracentesis terapéutica y albúmina según volumen y contexto.",
+              "reason": "Alivia compromiso y evita disfunción circulatoria."
+            },
+            {
+              "factor": "Neutrófilos elevados compatibles con infección",
+              "action": "Iniciar tratamiento apropiado sin esperar cultivo.",
+              "reason": "La infección puede ser poco sintomática."
+            }
+          ],
+          "limits": "El texto invierte la resta de GASA. Las proteínas aisladas no distinguen de forma segura peritonitis primaria de secundaria.",
+          "evidence": [
+            {
+              "page": 307,
+              "quote": "Paracentesis diagnóstica"
+            },
+            {
+              "page": 307,
+              "quote": "Espironolactona + furosemida"
+            }
+          ],
+          "source_gaps": [],
+          "external_sources": [
+            {
+              "label": "AGA, Use of vasoactive drugs and IV albumin in cirrhosis",
+              "url": "https://gastro.org/clinical-guidance/use-of-vasoactive-drugs-and-intravenous-albumin-in-cirrhosis/",
+              "quote": "IV albumin should be administered at the time of large-volume (>5 L) paracentesis.",
+              "checked_at": "2026-10-29"
+            }
+          ]
+        },
+        {
+          "id": "11.10-03",
+          "name": "Encefalopatía hepática",
+          "source_pages": [
+            317
+          ],
+          "pattern": "Un paciente con cirrosis presenta inversión del sueño, desorientación y aleteo de manos. Lleva días estreñido y se investiga infección, sangrado y uso de sedantes.",
+          "key_discriminator": "inversión del sueño",
+          "mechanism": "El fallo hepático y derivación portosistémica permiten neurotoxinas y respuesta inflamatoria que alteran función cerebral; precipitantes reversibles pueden desencadenar síntomas en una enfermedad estable.",
+          "findings": [
+            {
+              "mechanism": "Neurotoxicidad e inflamación",
+              "finding": "Alteración de conciencia"
+            },
+            {
+              "mechanism": "Disfunción motora",
+              "finding": "Asterixis"
+            }
+          ],
+          "initial_action": "Buscar y corregir precipitantes, descartar otras causas de confusión y usar lactulosa según estado y vía segura. Proteger la vía aérea si el nivel de conciencia lo requiere.",
+          "action_reason": "Trata el episodio y el factor que lo sostiene.",
+          "modifiers": [
+            {
+              "factor": "Infección o hemorragia",
+              "action": "Tratar la causa de inmediato.",
+              "reason": "Aumenta carga de toxinas o inflamación."
+            },
+            {
+              "factor": "Recurrente pese a manejo adecuado",
+              "action": "Valorar prevención adicional con hepatología.",
+              "reason": "Puede requerir terapia combinada."
+            }
+          ],
+          "limits": "El amonio aislado no confirma gravedad ni excluye otras causas. No restringir proteínas de manera indiscriminada.",
+          "evidence": [
+            {
+              "page": 317,
+              "quote": "El diagnóstico es clínico"
+            },
+            {
+              "page": 317,
+              "quote": "lactulosa son la terapia de primera"
+            }
+          ],
+          "source_gaps": []
+        }
+      ],
+      "common_problem": "Ascitis o alteración mental en hepatopatía.",
+      "mother": {
+        "cue": "La hipertensión portal y falla metabólica producen complicaciones relacionadas.",
+        "answer": "Descompensación de cirrosis",
+        "explanation": "Buscar infección y otros precipitantes evita atribuir todo al hígado."
+      }
+    },
+    {
+      "id": "11.11",
+      "title": "Fiebre y masa hepática",
+      "topics": [
+        {
+          "id": "11.11-01",
+          "name": "Absceso hepático amebiano",
+          "source_pages": [
+            303,
+            304
+          ],
+          "pattern": "Un adulto con exposición a agua contaminada presenta fiebre y dolor en hipocondrio derecho que se refiere al hombro. El ultrasonido muestra una lesión hepática y se investiga etiología parasitaria.",
+          "key_discriminator": "se refiere al hombro",
+          "mechanism": "La invasión por Entamoeba alcanza el hígado y produce necrosis focal; la irritación diafragmática explica dolor referido y la imagen localiza el absceso sin definir sola su causa.",
+          "findings": [
+            {
+              "mechanism": "Necrosis hepática",
+              "finding": "Lesión focal y fiebre"
+            },
+            {
+              "mechanism": "Irritación diafragmática",
+              "finding": "Dolor a hombro"
+            }
+          ],
+          "initial_action": "Integrar imagen y pruebas etiológicas e iniciar metronidazol o alternativa indicada; completar erradicación intestinal con un amebicida luminal según guía. Valorar drenaje solo por indicaciones.",
+          "action_reason": "La terapia tisular trata invasión y la luminal elimina reservorio intestinal.",
+          "modifiers": [
+            {
+              "factor": "Lóbulo izquierdo, riesgo de ruptura o falta de respuesta",
+              "action": "Valorar punción o drenaje.",
+              "reason": "Aumenta riesgo o sugiere diagnóstico o complicación adicional."
+            }
+          ],
+          "limits": "El aspecto de la imagen no distingue de forma definitiva absceso amebiano de bacteriano; no indicar drenaje rutinario en todo caso.",
+          "evidence": [
+            {
+              "page": 303,
+              "quote": "dolor pleural del lado derecho o referido a hombro."
+            },
+            {
+              "page": 304,
+              "quote": "administración de metronidazol"
+            }
+          ],
+          "source_gaps": [],
+          "external_sources": [
+            {
+              "label": "CDC Yellow Book, Travelers’ Diarrhea, amebiasis",
+              "url": "https://www.cdc.gov/yellow-book/hcp/preparing-international-travelers/travelers-diarrhea.html",
+              "quote": "then treated with a luminal agent",
+              "checked_at": "2026-10-29"
+            }
+          ]
+        },
+        {
+          "id": "11.11-02",
+          "name": "Absceso hepático piógeno",
+          "source_pages": [
+            305
+          ],
+          "pattern": "Un adulto mayor con enfermedad biliar tiene fiebre, escalofríos y dolor hepático. La tomografía muestra colecciones y se obtienen hemocultivos; se busca una fuente biliar o abdominal.",
+          "key_discriminator": "se busca una fuente biliar",
+          "mechanism": "Las bacterias llegan por vía biliar, portal o sangre y forman colecciones hepáticas; el foco original y cultivos determinan antibióticos, mientras el pus puede requerir drenaje.",
+          "findings": [
+            {
+              "mechanism": "Infección bacteriana focal",
+              "finding": "Fiebre y colección"
+            },
+            {
+              "mechanism": "Origen biliar o portal",
+              "finding": "Hallazgos de foco asociado"
+            }
+          ],
+          "initial_action": "Iniciar antibióticos de cobertura apropiada y valorar drenaje percutáneo; tomar cultivos y buscar la fuente para controlarla y ajustar tratamiento.",
+          "action_reason": "La terapia debe cubrir patógenos y resolver la colección y origen.",
+          "modifiers": [
+            {
+              "factor": "Cultivo disponible",
+              "action": "Dirigir el esquema.",
+              "reason": "Reduce tratamiento innecesario y atiende resistencia."
+            },
+            {
+              "factor": "Falla de drenaje o complicación",
+              "action": "Valorar intervención adicional.",
+              "reason": "Puede persistir foco no controlado."
+            }
+          ],
+          "limits": "Metronidazol solo no cubre todos los patógenos bacterianos habituales; la duración no es idéntica en todo absceso.",
+          "evidence": [
+            {
+              "page": 305,
+              "quote": "Fuente de infecciones: Vía biliar"
+            },
+            {
+              "page": 305,
+              "quote": "drenaje percutáneo y la"
+            }
+          ],
+          "source_gaps": []
+        }
+      ],
+      "common_problem": "Fiebre y colección hepática.",
+      "mother": {
+        "cue": "Definir agente y fuente separa terapia tisular de antibiótico y drenaje.",
+        "answer": "Absceso hepático",
+        "explanation": "La imagen localiza, pero la etiología y respuesta determinan intervención."
+      }
+    },
+    {
+      "id": "11.12",
+      "title": "Dolor epigástrico hacia espalda",
+      "topics": [
+        {
+          "id": "11.12-01",
+          "name": "Pancreatitis aguda",
+          "source_pages": [
+            335,
+            336,
+            337
+          ],
+          "pattern": "Un adulto presenta dolor epigástrico persistente que irradia a espalda y vómitos. La lipasa está claramente elevada y se investiga litiasis, alcohol y otras causas.",
+          "key_discriminator": "irradia a espalda",
+          "mechanism": "La lesión acinar desencadena inflamación pancreática y respuesta sistémica; edema o necrosis y persistencia de falla orgánica determinan gravedad más que el dolor o enzimas aislados.",
+          "findings": [
+            {
+              "mechanism": "Inflamación pancreática",
+              "finding": "Dolor epigástrico"
+            },
+            {
+              "mechanism": "Respuesta sistémica",
+              "finding": "Riesgo de falla orgánica"
+            }
+          ],
+          "initial_action": "Confirmar criterios, iniciar líquidos ajustados y analgesia, valorar alimentación temprana según tolerancia y buscar causa. Monitorizar perfusión y falla orgánica.",
+          "action_reason": "El soporte y tratamiento causal reducen complicaciones sin sobrecarga innecesaria.",
+          "modifiers": [
+            {
+              "factor": "Necrosis estéril",
+              "action": "No dar antibiótico profiláctico solo por la imagen.",
+              "reason": "No previene infección de forma demostrada."
+            },
+            {
+              "factor": "Colangitis o infección de necrosis",
+              "action": "Indicar antibióticos y control especializado.",
+              "reason": "Hay un foco infeccioso."
+            }
+          ],
+          "limits": "No indicar TAC temprana rutinaria si el diagnóstico es claro. La necrosis sola no exige antibiótico ni cirugía inmediata.",
+          "evidence": [
+            {
+              "page": 335,
+              "quote": "se irradia a la espalda."
+            },
+            {
+              "page": 336,
+              "quote": "Reanimación hídrica de tipo conservador"
+            }
+          ],
+          "source_gaps": [],
+          "external_sources": [
+            {
+              "label": "AGA, Management of pancreatic necrosis",
+              "url": "https://gastro.org/clinical-guidance/management-of-pancreatic-necrosis/",
+              "quote": "Routine use of prophylactic antibiotics to prevent infection of sterile necrosis is not recommended.",
+              "checked_at": "2026-10-29"
+            }
+          ]
+        },
+        {
+          "id": "11.12-02",
+          "name": "Pancreatitis crónica",
+          "source_pages": [
+            338
+          ],
+          "pattern": "Un adulto con episodios de dolor pancreático tiene pérdida de peso y heces grasas. La imagen muestra calcificaciones y alteraciones ductales; se evalúan función exocrina y glucosa.",
+          "key_discriminator": "heces grasas",
+          "mechanism": "La inflamación sostenida causa fibrosis irreversible y pérdida de tejido exocrino y endocrino; la maldigestión produce esteatorrea y adelgazamiento, con posible diabetes pancreatogénica.",
+          "findings": [
+            {
+              "mechanism": "Insuficiencia exocrina",
+              "finding": "Esteatorrea y pérdida de peso"
+            },
+            {
+              "mechanism": "Fibrosis",
+              "finding": "Calcificaciones y alteraciones ductales"
+            }
+          ],
+          "initial_action": "Confirmar anatomía y función, retirar alcohol y tabaco y tratar dolor y malabsorción; usar enzimas con alimentación si existe insuficiencia exocrina.",
+          "action_reason": "El soporte nutricional y control de causas atienden secuelas de daño irreversible.",
+          "modifiers": [
+            {
+              "factor": "Obstrucción ductal o pseudoquiste sintomático",
+              "action": "Valorar intervención especializada.",
+              "reason": "Puede existir una complicación corregible."
+            }
+          ],
+          "limits": "No usar CPRE solo para diagnóstico rutinario ni octreótide como tratamiento universal. Las enzimas no garantizan control del dolor.",
+          "evidence": [
+            {
+              "page": 338,
+              "quote": "fibrosis y pérdida de función."
+            },
+            {
+              "page": 338,
+              "quote": "control del dolor y la malabsorción."
+            }
+          ],
+          "source_gaps": []
+        }
+      ],
+      "common_problem": "Dolor epigástrico a espalda con posible maldigestión.",
+      "mother": {
+        "cue": "La inflamación aguda y la fibrosis crónica producen necesidades distintas.",
+        "answer": "Daño pancreático agudo o irreversible",
+        "explanation": "La función orgánica y exocrina guían soporte y tratamiento."
+      }
+    },
+    {
+      "id": "11.13",
+      "title": "Adelgazamiento y síntomas progresivos",
+      "topics": [
+        {
+          "id": "11.13-01",
+          "name": "Cáncer gástrico",
+          "source_pages": [
+            310
+          ],
+          "pattern": "Un adulto presenta saciedad temprana progresiva, pérdida de peso y anemia. La dispepsia es reciente y persiste; se decide evaluar el estómago por una posible lesión orgánica.",
+          "key_discriminator": "saciedad temprana progresiva",
+          "mechanism": "El crecimiento de una neoplasia gástrica puede ulcerar, sangrar o reducir capacidad y vaciamiento; la fase temprana puede ser silenciosa y los síntomas de alarma requieren endoscopia.",
+          "findings": [
+            {
+              "mechanism": "Sangrado crónico",
+              "finding": "Anemia"
+            },
+            {
+              "mechanism": "Infiltración o menor capacidad",
+              "finding": "Saciedad temprana y pérdida de peso"
+            }
+          ],
+          "initial_action": "Solicitar endoscopia con biopsias y evaluación nutricional. Si se confirma, estadificar y valorar tratamiento multidisciplinario según localización y extensión.",
+          "action_reason": "La histología y etapa determinan la posibilidad de terapia curativa.",
+          "modifiers": [
+            {
+              "factor": "Obstrucción o sangrado activo",
+              "action": "Priorizar estabilización y manejo de la complicación.",
+              "reason": "Puede requerir intervención antes del plan definitivo."
+            }
+          ],
+          "limits": "La edad de corte para endoscopia depende de guía y riesgo; no usar un único número para ignorar alarmas en jóvenes.",
+          "evidence": [
+            {
+              "page": 310,
+              "quote": "saciedad temprana"
+            },
+            {
+              "page": 310,
+              "quote": "Endoscopía con toma de biopsia"
+            }
+          ],
+          "source_gaps": []
+        },
+        {
+          "id": "11.13-02",
+          "name": "Cáncer de páncreas",
+          "source_pages": [
+            309
+          ],
+          "pattern": "Un adulto mayor desarrolla ictericia, coluria y pérdida de peso con poco dolor. Tiene una diabetes reciente y se solicita imagen para definir una posible obstrucción pancreatobiliar.",
+          "key_discriminator": "ictericia, coluria y pérdida de peso",
+          "mechanism": "Un tumor pancreático puede obstruir vía biliar en la cabeza o infiltrar tejidos sin ictericia en otros sitios; la extensión vascular y metastásica determina resecabilidad.",
+          "findings": [
+            {
+              "mechanism": "Obstrucción biliar",
+              "finding": "Ictericia y coluria"
+            },
+            {
+              "mechanism": "Enfermedad tumoral",
+              "finding": "Adelgazamiento"
+            }
+          ],
+          "initial_action": "Obtener imagen pancreática con contraste apropiado y referir a equipo hepatopancreatobiliar; definir extensión y necesidad de tejido antes de tratamiento.",
+          "action_reason": "La localización y resecabilidad cambian la secuencia de intervención.",
+          "modifiers": [
+            {
+              "factor": "Colangitis o obstrucción que requiere drenaje",
+              "action": "Priorizar control biliar.",
+              "reason": "Añade riesgo infeccioso o limitación terapéutica."
+            }
+          ],
+          "limits": "CA 19-9 no es prueba de tamizaje ni confirma el diagnóstico; puede aumentar por colestasis y otros tumores.",
+          "evidence": [
+            {
+              "page": 309,
+              "quote": "Tomografía helicoidal computada es la mejor prueba"
+            },
+            {
+              "page": 309,
+              "quote": "CA 19-9 tiene utilidad en el seguimiento"
+            }
+          ],
+          "source_gaps": []
+        },
+        {
+          "id": "11.13-03",
+          "name": "Carcinoma hepatocelular",
+          "source_pages": [
+            311
+          ],
+          "pattern": "En la vigilancia de un adulto con cirrosis aparece un nódulo hepático nuevo. Se solicita imagen multifásica para caracterizarlo y se revisan función hepática y estado general.",
+          "key_discriminator": "nódulo hepático nuevo",
+          "mechanism": "La lesión hepática crónica favorece transformación hepatocelular; el patrón vascular de imagen en pacientes de riesgo puede definir diagnóstico y la reserva hepática condiciona opciones terapéuticas.",
+          "findings": [
+            {
+              "mechanism": "Tumor primario hepático",
+              "finding": "Nódulo nuevo"
+            },
+            {
+              "mechanism": "Enfermedad de base",
+              "finding": "Reserva funcional limitada"
+            }
+          ],
+          "initial_action": "Completar TAC multifásica o resonancia dinámica y discutir diagnóstico y estadio con equipo experto. Decidir resección, ablación, trasplante u otra estrategia según tumor y función.",
+          "action_reason": "El tratamiento requiere valorar cáncer y enfermedad hepática a la vez.",
+          "modifiers": [
+            {
+              "factor": "Imagen no característica",
+              "action": "Valorar estudios adicionales o biopsia según contexto.",
+              "reason": "No todos los nódulos son el mismo tumor."
+            },
+            {
+              "factor": "Cirrosis tras tratamiento",
+              "action": "Mantener vigilancia.",
+              "reason": "Persiste riesgo de nuevos tumores."
+            }
+          ],
+          "limits": "La biopsia no es obligatoria en todo caso con imagen típica de alto riesgo. El trasplante es opción curativa en candidatos seleccionados.",
+          "evidence": [
+            {
+              "page": 311,
+              "quote": "tomografía computarizada multifásica"
+            },
+            {
+              "page": 311,
+              "quote": "equipo multidisciplinario de expertos"
+            }
+          ],
+          "source_gaps": []
+        }
+      ],
+      "common_problem": "Adelgazamiento y síntomas digestivos progresivos.",
+      "mother": {
+        "cue": "Localizar la lesión y medir extensión permite valorar terapia curativa o control.",
+        "answer": "Neoplasia digestiva y hepatopancreática",
+        "explanation": "Biopsia, imagen y reserva funcional se seleccionan por órgano."
+      }
+    }
+  ]
+}
