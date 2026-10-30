@@ -103,7 +103,8 @@
               "quote": "It is reasonable to position a person with decreased alertness of nontraumatic cause",
               "checked_at": "2026-10-29"
             }
-          ]
+          ],
+          "reference_page_mode": "replace"
         }
       ],
       "common_problem": "Persona colapsada sin respuesta. Se deben valorar respiración y circulación.",
@@ -152,6 +153,11 @@
               "factor": "Retorno de circulación",
               "action": "Iniciar cuidados posparo.",
               "reason": "Cambian las metas de oxigenación, ventilación y perfusión."
+            },
+            {
+              "factor": "Lactante o niño antes de la pubertad, fuera de la reanimación al nacimiento",
+              "action": "Usar el algoritmo pediátrico. Asegurar ventilación junto con compresiones; sin vía aérea avanzada, usar 30:2 con un reanimador o 15:2 con dos. Con vía aérea avanzada, mantener compresiones continuas y una ventilación cada 2 a 3 segundos.",
+              "reason": "El paro pediátrico suele seguir deterioro respiratorio; la edad cambia la técnica, la relación y la frecuencia de ventilación."
             }
           ],
           "limits": "No suspender RCP por un valor aislado de CO2 espirado; el propio texto exige reevaluar su calidad.",
@@ -167,9 +173,30 @@
             {
               "page": 13,
               "quote": "Realice un ECG de 12 derivaciones."
+            },
+            {
+              "page": 8,
+              "quote": "Principal causa de paro cardiaco en edad pediátrica: Asfixia."
             }
           ],
-          "source_gaps": []
+          "source_gaps": [],
+          "verified_source_pages": [
+            8
+          ],
+          "reference_page_mode": "extend",
+          "source_corrections": [
+            {
+              "reason": "La página 8 trata RCP pediátrica y pertenece como extensión de este tema de RCP. No respalda PLS; las referencias de ambos temas PLS se reemplazan por página 17. El modificador pediátrico distingue la relación según número de reanimadores, precisada por AHA 2025."
+            }
+          ],
+          "external_sources": [
+            {
+              "label": "AHA y AAP, Pediatric Basic Life Support 2025",
+              "url": "https://cpr.heart.org/en/resuscitation-science/cpr-and-ecc-guidelines/pediatric-basic-life-support",
+              "quote": "Respiratory conditions remain the major cause of cardiac arrest in infants and children",
+              "checked_at": "2026-10-29"
+            }
+          ]
         },
         {
           "id": "01.02-02",
@@ -793,7 +820,8 @@
               "quote": "It is reasonable to position a person with decreased alertness of nontraumatic cause",
               "checked_at": "2026-10-29"
             }
-          ]
+          ],
+          "reference_page_mode": "replace"
         },
         {
           "id": "01.10-02",
