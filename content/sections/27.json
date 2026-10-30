@@ -1,0 +1,1163 @@
+{
+  "id": "27",
+  "title": "ORL",
+  "blocks": [
+    {
+      "id": "27.01",
+      "title": "Otalgia aguda",
+      "topics": [
+        {
+          "id": "27.01-01",
+          "name": "Otitis externa aguda",
+          "source_pages": [
+            920
+          ],
+          "pattern": "Un nadador presenta otalgia y prurito después de varios días en alberca. Duele al presionar el trago. La otoscopia muestra conducto auditivo edematoso con secreción.",
+          "key_discriminator": "Duele al presionar el trago",
+          "mechanism": "La humedad y microtrauma alteran barrera protectora del cerumen, favorecen infección del conducto auditivo externo y producen inflamación dolorosa al movilizar estructuras externas.",
+          "findings": [
+            {
+              "mechanism": "Inflamación del conducto",
+              "finding": "Dolor del trago y edema"
+            }
+          ],
+          "initial_action": "Dar analgesia y tratamiento tópico apropiado tras evaluar integridad timpánica; mantener oído seco.",
+          "action_reason": "Trata infección local y reduce nueva humedad.",
+          "modifiers": [
+            {
+              "factor": "Diabetes con dolor intenso persistente",
+              "action": "Descartar forma necrosante y referir",
+              "reason": "Puede haber infección del hueso temporal"
+            }
+          ],
+          "limits": "La selección de gotas cambia si hay perforación timpánica.",
+          "evidence": [
+            {
+              "page": 920,
+              "quote": "Signo de trago positivo"
+            },
+            {
+              "page": 920,
+              "quote": "y eritema del conducto. • Gotas alcalinas. • Audífonos. • Signo de"
+            }
+          ],
+          "source_gaps": []
+        },
+        {
+          "id": "27.01-02",
+          "name": "Otitis media aguda",
+          "source_pages": [
+            921,
+            922,
+            923
+          ],
+          "pattern": "Un niño con catarro reciente desarrolla otalgia y fiebre. La membrana timpánica está abombada y tiene movilidad reducida en la otoscopia neumática. Se evalúa gravedad y seguimiento disponible.",
+          "key_discriminator": "membrana timpánica está abombada",
+          "mechanism": "La disfunción tubárica tras infección respiratoria facilita acumulación de líquido e infección en oído medio, genera presión y abombamiento timpánico con dolor y fiebre.",
+          "findings": [
+            {
+              "mechanism": "Líquido e inflamación del oído medio",
+              "finding": "Abombamiento y movilidad reducida"
+            }
+          ],
+          "initial_action": "Dar analgesia y decidir antibiótico u observación según edad, gravedad, otorrea y posibilidad de revisión.",
+          "action_reason": "No todos los cuadros tienen la misma indicación antibiótica.",
+          "modifiers": [
+            {
+              "factor": "Otorrea o complicaciones",
+              "action": "Iniciar antibiótico y valorar referencia",
+              "reason": "Son datos de mayor riesgo"
+            }
+          ],
+          "limits": "Una membrana roja aislada no confirma infección del oído medio.",
+          "evidence": [
+            {
+              "page": 921,
+              "quote": "membrana timpánica hiperémica y"
+            },
+            {
+              "page": 922,
+              "quote": "manejo del dolor"
+            }
+          ],
+          "source_gaps": []
+        }
+      ],
+      "common_problem": "Paciente con dolor de oído y posible infección.",
+      "mother": {
+        "cue": "Inflamación del conducto externo o del oído medio con localización por otoscopia.",
+        "answer": "Otalgia infecciosa.",
+        "explanation": "El trago y la membrana timpánica distinguen el sitio principal."
+      }
+    },
+    {
+      "id": "27.02",
+      "title": "Dolor retroauricular y otorrea",
+      "topics": [
+        {
+          "id": "27.02-01",
+          "name": "Mastoiditis aguda",
+          "source_pages": [
+            917
+          ],
+          "pattern": "Un niño tratado por infección de oído mantiene fiebre y otalgia. Aparece inflamación detrás de la oreja y desplazamiento del pabellón. Se busca extensión fuera del oído medio.",
+          "key_discriminator": "desplazamiento del pabellón",
+          "mechanism": "La infección del oído medio puede extenderse a celdillas y hueso mastoideo, producir inflamación retroauricular y abscesos, con riesgo de propagación intracraneal.",
+          "findings": [
+            {
+              "mechanism": "Extensión a mastoides",
+              "finding": "Inflamación retroauricular"
+            }
+          ],
+          "initial_action": "Referir urgentemente a hospital para antibióticos intravenosos y evaluación otorrinolaringológica de drenaje.",
+          "action_reason": "Previene extensión ósea e intracraneal.",
+          "modifiers": [
+            {
+              "factor": "Absceso o complicación intracraneal",
+              "action": "Valorar mastoidectomía",
+              "reason": "Puede requerir control quirúrgico"
+            }
+          ],
+          "limits": "La duración antibiótica requiere evaluación especializada.",
+          "evidence": [
+            {
+              "page": 917,
+              "quote": "desplazamiento de pabellón auricular"
+            },
+            {
+              "page": 917,
+              "quote": "mastoidectomía está indicada"
+            }
+          ],
+          "source_gaps": []
+        },
+        {
+          "id": "27.02-02",
+          "name": "Perforación timpánica",
+          "source_pages": [
+            927
+          ],
+          "pattern": "Una persona presenta dolor y pérdida auditiva después de introducir un objeto en el oído. La otoscopia muestra un defecto en la membrana timpánica. No hay signos neurológicos.",
+          "key_discriminator": "defecto en la membrana timpánica",
+          "mechanism": "La pérdida de continuidad timpánica altera transmisión de sonido y expone oído medio al agua y microorganismos; trauma o infección crónica determinan evaluación y recuperación.",
+          "findings": [
+            {
+              "mechanism": "Rotura de membrana",
+              "finding": "Hipoacusia de conducción"
+            }
+          ],
+          "initial_action": "Evitar entrada de agua y manipulación; valorar audición y seguimiento por otorrinolaringología según extensión y síntomas.",
+          "action_reason": "Reduce sobreinfección y detecta daño asociado.",
+          "modifiers": [
+            {
+              "factor": "Perforación marginal con escamas",
+              "action": "Investigar colesteatoma",
+              "reason": "Puede erosionar estructuras óseas"
+            }
+          ],
+          "limits": "Vértigo intenso o pérdida auditiva marcada requiere evaluación urgente.",
+          "evidence": [
+            {
+              "page": 927,
+              "quote": "diagnóstico se realiza con otoscopia."
+            },
+            {
+              "page": 927,
+              "quote": "Evitar la entrada de agua"
+            }
+          ],
+          "source_gaps": []
+        }
+      ],
+      "common_problem": "Paciente con infección ótica complicada o salida por tímpano.",
+      "mother": {
+        "cue": "Extensión de infección o pérdida de continuidad de membrana timpánica.",
+        "answer": "Complicación de enfermedad ótica.",
+        "explanation": "La mastoides y el tipo de perforación determinan referencia."
+      }
+    },
+    {
+      "id": "27.03",
+      "title": "Oído tapado/pérdida conductiva",
+      "topics": [
+        {
+          "id": "27.03-01",
+          "name": "Cerumen impactado",
+          "source_pages": [
+            908
+          ],
+          "pattern": "Un adulto tiene plenitud ótica e hipoacusia gradual. La otoscopia muestra un tapón que obstruye el conducto. No presenta fiebre, secreción ni antecedente de perforación timpánica.",
+          "key_discriminator": "tapón que obstruye el conducto",
+          "mechanism": "La falla de migración y autolimpieza permite acumular cerumen hasta obstruir el conducto, reduce transmisión sonora y puede producir plenitud, dolor o tinnitus.",
+          "findings": [
+            {
+              "mechanism": "Obstrucción del conducto",
+              "finding": "Hipoacusia conductiva"
+            }
+          ],
+          "initial_action": "Confirmar impactación sintomática y elegir extracción segura tras revisar antecedentes e integridad timpánica.",
+          "action_reason": "Retira una causa reversible de pérdida auditiva.",
+          "modifiers": [
+            {
+              "factor": "Perforación o cirugía ótica previa",
+              "action": "Evitar irrigación y referir",
+              "reason": "Hay riesgo de lesión o infección"
+            }
+          ],
+          "limits": "El cerumen normal no requiere limpieza rutinaria.",
+          "evidence": [
+            {
+              "page": 908,
+              "quote": "Otoscopia con presenta cerumen impactado."
+            },
+            {
+              "page": 908,
+              "quote": "Perforación timpánica actual o pasada."
+            }
+          ],
+          "source_gaps": []
+        },
+        {
+          "id": "27.03-02",
+          "name": "Otosclerosis",
+          "source_pages": [
+            924
+          ],
+          "pattern": "Una mujer joven presenta hipoacusia de conducción lentamente progresiva con acúfenos. Su madre tuvo un problema similar. El conducto está libre y no hay infección activa en la otoscopia.",
+          "key_discriminator": "lentamente progresiva con acúfenos",
+          "mechanism": "La remodelación ósea anormal de cápsula ótica fija la cadena osicular, limita transmisión mecánica y produce pérdida conductiva progresiva que puede ser bilateral y familiar.",
+          "findings": [
+            {
+              "mechanism": "Fijación de huesecillos",
+              "finding": "Hipoacusia conductiva"
+            }
+          ],
+          "initial_action": "Realizar pruebas de conducción y audiometría; referir para valorar rehabilitación auditiva o cirugía según hallazgos.",
+          "action_reason": "Define tipo y grado de pérdida.",
+          "modifiers": [
+            {
+              "factor": "Compromiso bilateral",
+              "action": "Valorar función de ambos oídos",
+              "reason": "Es frecuente afectación de ambos lados"
+            }
+          ],
+          "limits": "No indicar fluoruro de sodio rutinario. Elegir rehabilitación o cirugía por valoración de audición y anatomía.",
+          "evidence": [
+            {
+              "page": 924,
+              "quote": "causa fijación de los huesecillos"
+            },
+            {
+              "page": 924,
+              "quote": "diagnóstico de hipoacusia es"
+            }
+          ],
+          "source_gaps": [],
+          "external_sources": [
+            {
+              "label": "Brazilian Society of Otology task force: otosclerosis (2023)",
+              "url": "https://repositorio.usp.br/directbitstream/3bf59bed-e01c-4b69-9c8d-26297f20c183/3154010.pdf",
+              "quote": "its use is not recommended",
+              "checked_at": "2026-10-29"
+            }
+          ],
+          "source_corrections": [
+            {
+              "reason": "El consenso de otología desaconseja fluoruro por bajo potencial y evidencia insuficiente. Se mantienen audiometría y opciones de rehabilitación o cirugía."
+            }
+          ]
+        }
+      ],
+      "common_problem": "Paciente con audición reducida de conducción.",
+      "mother": {
+        "cue": "Obstrucción externa o fijación de cadena osicular limita transmisión sonora.",
+        "answer": "Hipoacusia conductiva.",
+        "explanation": "La otoscopia y audiometría distinguen causa reversible de enfermedad osicular."
+      }
+    },
+    {
+      "id": "27.04",
+      "title": "Hipoacusia neurosensorial",
+      "topics": [
+        {
+          "id": "27.04-01",
+          "name": "Presbiacusia",
+          "source_pages": [
+            929
+          ],
+          "pattern": "Un adulto mayor tiene dificultad progresiva para entender conversaciones, sobre todo con ruido. La pérdida es bilateral y simétrica. La familia nota que oye sonidos pero no comprende palabras.",
+          "key_discriminator": "bilateral y simétrica",
+          "mechanism": "El envejecimiento daña células sensoriales cocleares y fibras nerviosas, afecta primero frecuencias altas y reduce comprensión del habla, con repercusión social y cognitiva.",
+          "findings": [
+            {
+              "mechanism": "Daño sensorial de frecuencias altas",
+              "finding": "Dificultad para entender palabras"
+            }
+          ],
+          "initial_action": "Descartar cerumen, hacer tamizaje auditivo y solicitar audiometría si es positivo.",
+          "action_reason": "Identifica déficit y opciones de rehabilitación.",
+          "modifiers": [
+            {
+              "factor": "Pérdida súbita o asimétrica",
+              "action": "Investigar otra causa con prioridad",
+              "reason": "No es patrón típico de envejecimiento"
+            }
+          ],
+          "limits": "La indicación de auxiliar auditivo se individualiza según función.",
+          "evidence": [
+            {
+              "page": 929,
+              "quote": "comienza con las frecuencias altas"
+            },
+            {
+              "page": 929,
+              "quote": "descartar impactación de cerumen"
+            }
+          ],
+          "source_gaps": []
+        },
+        {
+          "id": "27.04-02",
+          "name": "Hipoacusia sensorineural súbita idiopática",
+          "source_pages": [
+            916
+          ],
+          "pattern": "Una persona despierta con pérdida importante de audición en un oído y acúfeno. No hay cerumen ni infección visible. Los síntomas comenzaron hace pocas horas y requieren evaluación inmediata.",
+          "key_discriminator": "comenzaron hace pocas horas",
+          "mechanism": "La lesión aguda coclear o neural puede causar pérdida neurosensorial rápida sin causa evidente; distinguirla de obstrucción conductiva permite tratamiento y estudio oportunos.",
+          "findings": [
+            {
+              "mechanism": "Disfunción sensorial aguda",
+              "finding": "Hipoacusia súbita sin obstrucción"
+            }
+          ],
+          "initial_action": "Enviar urgentemente a otorrinolaringología o audiología para audiometría y valoración terapéutica temprana.",
+          "action_reason": "El retraso puede reducir oportunidades de recuperación.",
+          "modifiers": [
+            {
+              "factor": "Vértigo o signos neurológicos",
+              "action": "Buscar causa central o asociada",
+              "reason": "No toda pérdida súbita es idiopática"
+            }
+          ],
+          "limits": "La referencia es urgente desde la detección. Evaluar audición pronto y causas retrococleares; no esperar treinta días.",
+          "evidence": [
+            {
+              "page": 916,
+              "quote": "hipoacusia sensorineural"
+            },
+            {
+              "page": 916,
+              "quote": "primeras horas de detectada"
+            }
+          ],
+          "source_gaps": [],
+          "external_sources": [
+            {
+              "label": "AAO-HNSF: sudden hearing loss guideline",
+              "url": "https://aao-hnsfjournals.onlinelibrary.wiley.com/doi/10.1177/0194599819859885",
+              "quote": "within 14 days of symptom onset",
+              "checked_at": "2026-10-29"
+            }
+          ],
+          "source_corrections": [
+            {
+              "reason": "La audiometría debe obtenerse cuanto antes y dentro de 14 días; puede ofrecerse corticoide dentro de dos semanas. No esperar treinta días."
+            }
+          ]
+        }
+      ],
+      "common_problem": "Paciente con pérdida auditiva neurosensorial.",
+      "mother": {
+        "cue": "Lesión coclear o neural con curso crónico o súbito.",
+        "answer": "Hipoacusia neurosensorial.",
+        "explanation": "La rapidez de inicio modifica urgencia."
+      }
+    },
+    {
+      "id": "27.05",
+      "title": "Vértigo breve posicional",
+      "topics": [
+        {
+          "id": "27.05-01",
+          "name": "VPPB",
+          "source_pages": [
+            938,
+            939
+          ],
+          "pattern": "Una persona presenta vértigo de segundos al girar en la cama. No tiene pérdida auditiva. Una maniobra posicional provoca nistagmo breve con latencia y agotamiento.",
+          "key_discriminator": "vértigo de segundos al girar",
+          "mechanism": "Los otolitos desplazados hacia un canal semicircular generan señal vestibular anormal con cambios de posición, causando crisis breves y nistagmo que depende del canal afectado.",
+          "findings": [
+            {
+              "mechanism": "Partículas en canal semicircular",
+              "finding": "Vértigo posicional breve"
+            }
+          ],
+          "initial_action": "Realizar prueba posicional segura e identificar canal; tratar con maniobra de reposición indicada.",
+          "action_reason": "Reposiciona partículas que causan la señal anormal.",
+          "modifiers": [
+            {
+              "factor": "Limitación cervical importante",
+              "action": "Adaptar evaluación o referir",
+              "reason": "Las maniobras pueden no ser seguras"
+            }
+          ],
+          "limits": "No indicar collarín o restricciones posturales de rutina tras reposición. Reexaminar si persisten síntomas o hay signos centrales.",
+          "evidence": [
+            {
+              "page": 938,
+              "quote": "Vértigo provocado por cambios de posición"
+            },
+            {
+              "page": 939,
+              "quote": "Maniobra de Epley"
+            }
+          ],
+          "source_gaps": [],
+          "external_sources": [
+            {
+              "label": "AAO-HNSF: BPPV updated guidance",
+              "url": "https://www.entnet.org/resource/aao-hnsf-updated-cpg-bppv-press-release-fact-sheet/",
+              "quote": "should not recommend postprocedural postural restrictions",
+              "checked_at": "2026-10-29"
+            }
+          ],
+          "source_corrections": [
+            {
+              "reason": "No recomendar restricciones posturales después de reposición del canal posterior; el collarín rutinario del libro no corresponde."
+            }
+          ]
+        }
+      ],
+      "common_problem": "Paciente con vértigo breve al cambiar de posición.",
+      "mother": {
+        "cue": "Partículas desplazadas estimulan un canal semicircular con movimientos de la cabeza.",
+        "answer": "Vértigo posicional periférico.",
+        "explanation": "El nistagmo provocado permite identificar el canal y la maniobra."
+      }
+    },
+    {
+      "id": "27.06",
+      "title": "Vértigo persistente/recidivante",
+      "topics": [
+        {
+          "id": "27.06-01",
+          "name": "Enfermedad de Meniére",
+          "source_pages": [
+            909
+          ],
+          "pattern": "Un adulto tiene crisis espontáneas de vértigo que duran horas. Durante los episodios nota plenitud en un oído, acúfeno e hipoacusia fluctuante. Entre crisis mejora parcialmente.",
+          "key_discriminator": "hipoacusia fluctuante",
+          "mechanism": "La alteración del volumen endolinfático del oído interno se asocia con síntomas vestibulares y cocleares episódicos; la combinación auditiva lo distingue de vértigo posicional aislado.",
+          "findings": [
+            {
+              "mechanism": "Alteración endolinfática",
+              "finding": "Vértigo con hipoacusia y plenitud"
+            }
+          ],
+          "initial_action": "Solicitar valoración otorrinolaringológica y audiometría; iniciar educación y medidas dietéticas individualizadas.",
+          "action_reason": "Confirma patrón auditivo y orienta control.",
+          "modifiers": [
+            {
+              "factor": "Síntomas persistentes pese a manejo",
+              "action": "Valorar opciones especializadas",
+              "reason": "Algunos tratamientos pueden lesionar función vestibular o auditiva"
+            }
+          ],
+          "limits": "La gentamicina intratimpánica requiere selección y consentimiento por riesgo auditivo y vestibular; se usa tras fracaso de manejo no ablativo.",
+          "evidence": [
+            {
+              "page": 909,
+              "quote": "hipoacusia neurosensorial fluctuante"
+            },
+            {
+              "page": 909,
+              "quote": "Dieta hiposódica"
+            }
+          ],
+          "source_gaps": [],
+          "external_sources": [
+            {
+              "label": "AAO-HNSF: Ménière guideline",
+              "url": "https://aao-hnsfjournals.onlinelibrary.wiley.com/doi/10.1177/0194599820909438",
+              "quote": "not responsive to nonablative therapy",
+              "checked_at": "2026-10-29"
+            }
+          ],
+          "source_corrections": [
+            {
+              "reason": "La gentamicina intratimpánica se reserva para enfermedad activa refractaria a terapia no ablativa y puede causar pérdida auditiva; no es primera elección inocua."
+            }
+          ]
+        },
+        {
+          "id": "27.06-02",
+          "name": "Neuritis vestibular",
+          "source_pages": [
+            919
+          ],
+          "pattern": "Una persona después de una infección viral presenta vértigo continuo intenso, náusea y dificultad para caminar. No tiene pérdida auditiva. El impulso cefálico muestra una sacada correctora.",
+          "key_discriminator": "No tiene pérdida auditiva",
+          "mechanism": "La disfunción unilateral del nervio vestibular altera equilibrio de señales entre ambos lados y reflejo vestibuloocular, causa vértigo sostenido y sacadas correctoras sin afectar audición.",
+          "findings": [
+            {
+              "mechanism": "Falla vestibular unilateral",
+              "finding": "Vértigo y sacada correctora"
+            }
+          ],
+          "initial_action": "Evaluar signos centrales y seguridad de marcha; controlar síntomas agudos y planificar rehabilitación vestibular.",
+          "action_reason": "Debe excluirse enfermedad central antes de asumir origen periférico.",
+          "modifiers": [
+            {
+              "factor": "Pérdida auditiva asociada",
+              "action": "Reconsiderar diagnóstico",
+              "reason": "La forma vestibular pura conserva audición"
+            }
+          ],
+          "limits": "El impulso cefálico positivo no excluye por sí solo lesión central.",
+          "evidence": [
+            {
+              "page": 919,
+              "quote": "se conserva la función auditiva"
+            },
+            {
+              "page": 919,
+              "quote": "rehabilitación vestibular"
+            }
+          ],
+          "source_gaps": []
+        }
+      ],
+      "common_problem": "Paciente con vértigo prolongado o recurrente.",
+      "mother": {
+        "cue": "Alteración vestibular periférica con o sin compromiso de audición.",
+        "answer": "Síndrome vestibular periférico.",
+        "explanation": "Los síntomas auditivos y duración separan entidades."
+      }
+    },
+    {
+      "id": "27.07",
+      "title": "Epistaxis y traumatismo",
+      "topics": [
+        {
+          "id": "27.07-01",
+          "name": "Epistaxis",
+          "source_pages": [
+            910,
+            911
+          ],
+          "pattern": "Una persona presenta sangrado por una fosa nasal después de manipularla. Está estable y el sangrado parece anterior. Se requiere control local y valoración de factores que favorezcan recurrencia.",
+          "key_discriminator": "el sangrado parece anterior",
+          "mechanism": "La lesión de vasos de la mucosa nasal, con frecuencia anterior, provoca hemorragia; la localización y repercusión determinan escalamiento desde compresión a procedimientos de control.",
+          "findings": [
+            {
+              "mechanism": "Lesión vascular de mucosa",
+              "finding": "Sangrado nasal"
+            }
+          ],
+          "initial_action": "Aplicar presión nasal directa y valorar vasoconstrictor local según contexto; identificar sitio si persiste.",
+          "action_reason": "La compresión puede detener el sangrado anterior.",
+          "modifiers": [
+            {
+              "factor": "Sangrado grave, posterior o refractario",
+              "action": "Referir para taponamiento o control especializado",
+              "reason": "Puede amenazar vía aérea y estabilidad"
+            }
+          ],
+          "limits": "Revisar anticoagulación y enfermedad sistémica según historia.",
+          "evidence": [
+            {
+              "page": 910,
+              "quote": "Anterior (90%)"
+            },
+            {
+              "page": 911,
+              "quote": "Presión nasal directa"
+            }
+          ],
+          "source_gaps": []
+        },
+        {
+          "id": "27.07-02",
+          "name": "Fracturas nasales",
+          "source_pages": [
+            914,
+            915
+          ],
+          "pattern": "Un joven recibe un golpe directo en la nariz y presenta dolor, deformidad y epistaxis. La inspección interna encuentra abombamiento del tabique. Se requiere evaluar lesiones urgentes.",
+          "key_discriminator": "abombamiento del tabique",
+          "mechanism": "El trauma rompe huesos o vasos nasales y puede acumular sangre bajo mucopericondrio; el hematoma septal compromete nutrición del cartílago y requiere atención prioritaria.",
+          "findings": [
+            {
+              "mechanism": "Trauma óseo y septal",
+              "finding": "Deformidad y sangrado"
+            }
+          ],
+          "initial_action": "Asegurar vía aérea, controlar sangrado y buscar hematoma septal; referir para tratamiento especializado.",
+          "action_reason": "El hematoma necesita atención para prevenir daño septal.",
+          "modifiers": [
+            {
+              "factor": "Sospecha de lesión facial compleja o fuga de líquido",
+              "action": "Valorar tomografía",
+              "reason": "Puede haber lesiones adyacentes"
+            }
+          ],
+          "limits": "La radiografía simple normal no excluye fractura nasal.",
+          "evidence": [
+            {
+              "page": 914,
+              "quote": "Hematoma septal."
+            },
+            {
+              "page": 915,
+              "quote": "asegurar la permeabilidad de la vía aérea"
+            }
+          ],
+          "source_gaps": []
+        }
+      ],
+      "common_problem": "Paciente con sangrado nasal o trauma facial.",
+      "mother": {
+        "cue": "Lesión de mucosa, vasos o huesos nasales que requiere control inicial.",
+        "answer": "Urgencia nasal.",
+        "explanation": "La vía aérea, sangrado y tabique se revisan primero."
+      }
+    },
+    {
+      "id": "27.08",
+      "title": "Nariz obstruida",
+      "topics": [
+        {
+          "id": "27.08-01",
+          "name": "Rinitis aguda",
+          "source_pages": [
+            930,
+            931
+          ],
+          "pattern": "Un adolescente tiene rinorrea acuosa, estornudos y prurito nasal recurrentes al limpiar su habitación. Presenta lagrimeo y congestión que altera el sueño. No tiene fiebre.",
+          "key_discriminator": "prurito nasal recurrentes",
+          "mechanism": "La exposición a un alérgeno activa respuesta mediada por IgE en mucosa nasal, genera inflamación, rinorrea y estornudos y puede acompañarse de síntomas oculares.",
+          "findings": [
+            {
+              "mechanism": "Inflamación alérgica nasal",
+              "finding": "Prurito, estornudos y rinorrea"
+            }
+          ],
+          "initial_action": "Reducir exposición y tratar según impacto; considerar corticoide intranasal si afecta calidad de vida.",
+          "action_reason": "Controla inflamación y síntomas persistentes.",
+          "modifiers": [
+            {
+              "factor": "Fracaso del manejo empírico",
+              "action": "Valorar IgE específica y referencia",
+              "reason": "Permite confirmar sensibilización relevante"
+            }
+          ],
+          "limits": "El título del inventario dice aguda, pero las páginas describen rinitis alérgica.",
+          "evidence": [
+            {
+              "page": 931,
+              "quote": "mediada por la inmunoglobulina E"
+            },
+            {
+              "page": 930,
+              "quote": "síntomas afecten su calidad de vida."
+            }
+          ],
+          "source_gaps": []
+        },
+        {
+          "id": "27.08-02",
+          "name": "Rinosinusitis",
+          "source_pages": [
+            932,
+            933
+          ],
+          "pattern": "Un adulto tiene obstrucción nasal, descarga purulenta y dolor facial que persisten tras una infección respiratoria. Se evalúan duración y evolución. No hay edema ocular ni signos neurológicos.",
+          "key_discriminator": "descarga purulenta y dolor facial",
+          "mechanism": "La inflamación nasal y sinusal altera drenaje y aclaramiento, produce retención de secreciones y dolor; muchas formas son virales y solo algunas requieren antibiótico.",
+          "findings": [
+            {
+              "mechanism": "Inflamación y drenaje alterado",
+              "finding": "Congestión y dolor facial"
+            }
+          ],
+          "initial_action": "Clasificar evolución y gravedad; dar alivio sintomático y decidir antibiótico si cumple criterios bacterianos actuales.",
+          "action_reason": "Evita tratar toda inflamación como infección bacteriana.",
+          "modifiers": [
+            {
+              "factor": "Oftalmoplejía o baja visual",
+              "action": "Referir con urgencia y estudiar complicación",
+              "reason": "Puede existir extensión orbitaria"
+            }
+          ],
+          "limits": "No toda rinorrea purulenta exige antibiótico. Reevaluar evolución, gravedad y resistencia local; imagen reservada a indicación específica.",
+          "evidence": [
+            {
+              "page": 932,
+              "quote": "Dolor facial."
+            },
+            {
+              "page": 933,
+              "quote": "No se recomiendan las radiografías simples"
+            }
+          ],
+          "source_gaps": [],
+          "external_sources": [
+            {
+              "label": "NICE NG79: acute sinusitis antibiotics",
+              "url": "https://www.nice.org.uk/guidance/ng79/chapter/recommendations",
+              "quote": "Consider no antibiotic prescription",
+              "checked_at": "2026-10-29"
+            }
+          ],
+          "source_corrections": [
+            {
+              "reason": "Incluso con más de diez días sin mejoría puede considerarse no dar antibiótico o prescripción diferida; se prioriza gravedad, riesgo y signos de complicación."
+            }
+          ]
+        },
+        {
+          "id": "27.08-03",
+          "name": "Pólipo nasal",
+          "source_pages": [
+            928
+          ],
+          "pattern": "Una persona con asma tiene obstrucción nasal crónica y pérdida de olfato. La rinoscopia muestra formaciones pálidas semejantes a racimos. Los síntomas llevan más de tres meses.",
+          "key_discriminator": "pérdida de olfato",
+          "mechanism": "La inflamación crónica de mucosa produce protrusiones edematosas que obstruyen fosas y drenaje sinusal, reducen olfato y tienden a recurrir pese al tratamiento.",
+          "findings": [
+            {
+              "mechanism": "Edema y proliferación mucosa",
+              "finding": "Obstrucción y anosmia"
+            }
+          ],
+          "initial_action": "Valorar por otorrinolaringología y comenzar lavados salinos y corticoide intranasal según evaluación.",
+          "action_reason": "Reduce inflamación y obstrucción.",
+          "modifiers": [
+            {
+              "factor": "Lesión atípica o sospecha tumoral",
+              "action": "Valorar biopsia",
+              "reason": "Debe excluirse neoplasia u otra enfermedad"
+            }
+          ],
+          "limits": "Una masa unilateral requiere evaluación específica.",
+          "evidence": [
+            {
+              "page": 928,
+              "quote": "alteraciones del olfato"
+            },
+            {
+              "page": 928,
+              "quote": "Glucocorticoide tópicos"
+            }
+          ],
+          "source_gaps": []
+        }
+      ],
+      "common_problem": "Paciente con congestión y rinorrea.",
+      "mother": {
+        "cue": "Inflamación de mucosa nasal con posible compromiso sinusal o poliposis.",
+        "answer": "Obstrucción nasal inflamatoria.",
+        "explanation": "El tiempo, atopia y hallazgos nasales guían el estudio."
+      }
+    },
+    {
+      "id": "27.09",
+      "title": "Dolor faríngeo y absceso",
+      "topics": [
+        {
+          "id": "27.09-01",
+          "name": "Faringoamigdalitis",
+          "source_pages": [
+            912,
+            913
+          ],
+          "pattern": "Un escolar presenta fiebre, exudado amigdalino y ganglios cervicales anteriores dolorosos. No tiene tos ni rinorrea. Se estima probabilidad de infección estreptocócica antes de decidir tratamiento.",
+          "key_discriminator": "No tiene tos ni rinorrea",
+          "mechanism": "La infección faríngea puede ser viral o estreptocócica; el estreptococo induce inflamación local y puede generar complicaciones supurativas e inmunes que justifican tratamiento cuando se confirma.",
+          "findings": [
+            {
+              "mechanism": "Inflamación faríngea estreptocócica",
+              "finding": "Exudado y adenopatía dolorosa"
+            }
+          ],
+          "initial_action": "Valorar prueba de antígeno o cultivo según edad y contexto; tratar infección estreptocócica confirmada con antibiótico apropiado.",
+          "action_reason": "Los signos clínicos no bastan para confirmar etiología.",
+          "modifiers": [
+            {
+              "factor": "Tos, rinorrea y conjuntivitis",
+              "action": "Orientar a etiología viral",
+              "reason": "Disminuye probabilidad estreptocócica"
+            }
+          ],
+          "limits": "En niños sintomáticos de tres años o más, un antígeno negativo requiere cultivo de respaldo. No usar TMP-SMX para este cuadro.",
+          "evidence": [
+            {
+              "page": 912,
+              "quote": "Ausencia de tos."
+            },
+            {
+              "page": 913,
+              "quote": "prevenir el desarrollo de fiebre reumática"
+            }
+          ],
+          "source_gaps": [],
+          "external_sources": [
+            {
+              "label": "CDC: group A streptococcal pharyngitis",
+              "url": "https://www.cdc.gov/group-a-strep/hcp/clinical-guidance/strep-throat.html",
+              "quote": "Penicillin or amoxicillin is the antibiotic of choice",
+              "checked_at": "2026-10-29"
+            }
+          ],
+          "source_corrections": [
+            {
+              "reason": "Los signos clínicos sin síntomas virales no distinguen por sí solos etiología. Confirmar con antígeno o cultivo; penicilina o amoxicilina son elección y TMP-SMX no forma parte de regímenes recomendados."
+            }
+          ]
+        },
+        {
+          "id": "27.09-02",
+          "name": "Abscesos profundos de cuello",
+          "source_pages": [
+            905
+          ],
+          "pattern": "Una persona con infección dental desarrolla fiebre, dolor cervical, aumento de volumen y trismus. Tiene disfagia y voz alterada. Se sospecha infección que atraviesa espacios profundos del cuello.",
+          "key_discriminator": "aumento de volumen y trismus",
+          "mechanism": "La infección odontógena o faríngea se disemina por planos fasciales y forma colecciones profundas, con riesgo de obstrucción respiratoria, mediastinitis y sepsis.",
+          "findings": [
+            {
+              "mechanism": "Diseminación por planos fasciales",
+              "finding": "Trismus y edema cervical"
+            }
+          ],
+          "initial_action": "Asegurar vía aérea y enviar a hospital; iniciar antibióticos intravenosos y evaluar tomografía y drenaje.",
+          "action_reason": "El control de vía aérea precede al estudio.",
+          "modifiers": [
+            {
+              "factor": "Varios espacios o colección",
+              "action": "Valorar drenaje quirúrgico",
+              "reason": "El antibiótico puede no controlar el foco"
+            }
+          ],
+          "limits": "No retrasar protección respiratoria para obtener imagen.",
+          "evidence": [
+            {
+              "page": 905,
+              "quote": "El manejo inicial es asegurar la vía aérea"
+            },
+            {
+              "page": 905,
+              "quote": "tomografía computarizada"
+            }
+          ],
+          "source_gaps": []
+        },
+        {
+          "id": "27.09-03",
+          "name": "Angina de Ludwig",
+          "source_pages": [
+            907
+          ],
+          "pattern": "Un adulto con infección odontógena presenta edema duro bilateral del piso de boca. La lengua está elevada y tiene dificultad para deglutir y respirar. El cuadro progresa rápidamente.",
+          "key_discriminator": "lengua está elevada",
+          "mechanism": "La infección de espacios submandibulares y sublinguales produce edema indurado que desplaza lengua hacia arriba y atrás, reduce vía aérea y puede propagarse por cuello.",
+          "findings": [
+            {
+              "mechanism": "Edema del piso de boca",
+              "finding": "Elevación lingual y obstrucción"
+            }
+          ],
+          "initial_action": "Asegurar vía aérea por equipo experto, hospitalizar e iniciar antibióticos intravenosos con evaluación de control del foco.",
+          "action_reason": "La obstrucción puede avanzar rápidamente.",
+          "modifiers": [
+            {
+              "factor": "Colección o foco dental persistente",
+              "action": "Valorar drenaje y tratamiento odontológico",
+              "reason": "Se requiere eliminar origen infeccioso"
+            }
+          ],
+          "limits": "Puede ser celulitis sin colección; no asumir absceso en todos los casos.",
+          "evidence": [
+            {
+              "page": 907,
+              "quote": "la empuja hacia"
+            },
+            {
+              "page": 907,
+              "quote": "asegurar la vía aérea y hospitalizar"
+            }
+          ],
+          "source_gaps": []
+        }
+      ],
+      "common_problem": "Paciente con dolor al deglutir y posible infección profunda.",
+      "mother": {
+        "cue": "Infección faríngea o cervical que puede comprometer vía aérea.",
+        "answer": "Infección de faringe y cuello.",
+        "explanation": "Trismus, lengua elevada y obstrucción cambian la urgencia."
+      }
+    },
+    {
+      "id": "27.10",
+      "title": "Ronquido/disfonía",
+      "topics": [
+        {
+          "id": "27.10-01",
+          "name": "SAOS",
+          "source_pages": [
+            934,
+            935,
+            936
+          ],
+          "pattern": "Un adulto con obesidad ronca cada noche y su pareja observa pausas respiratorias. Tiene sueño no reparador y somnolencia diurna. Se requiere determinar si hay obstrucción durante el sueño.",
+          "key_discriminator": "pausas respiratorias",
+          "mechanism": "El colapso repetido de vía aérea durante sueño produce apnea o hipopnea con esfuerzo respiratorio, fragmentación del sueño y desaturaciones que causan somnolencia y riesgo cardiovascular.",
+          "findings": [
+            {
+              "mechanism": "Obstrucción nocturna repetida",
+              "finding": "Apneas observadas y somnolencia"
+            }
+          ],
+          "initial_action": "Estimar riesgo y solicitar estudio de sueño apropiado; tratar factores reversibles y seleccionar presión positiva según gravedad.",
+          "action_reason": "Confirma eventos y guía tratamiento.",
+          "modifiers": [
+            {
+              "factor": "Niño o adulto con comorbilidad relevante",
+              "action": "Preferir polisomnografía",
+              "reason": "Un estudio simplificado puede ser insuficiente"
+            }
+          ],
+          "limits": "El ronquido aislado no establece diagnóstico.",
+          "evidence": [
+            {
+              "page": 934,
+              "quote": "Apneas presenciadas"
+            },
+            {
+              "page": 935,
+              "quote": "Polisomnografía (PSG)"
+            }
+          ],
+          "source_gaps": []
+        },
+        {
+          "id": "27.10-02",
+          "name": "Papilomatosis laíngea juvenil",
+          "source_pages": [
+            925
+          ],
+          "pattern": "Un niño presenta ronquera progresiva, estridor y dificultad respiratoria. Se sospechan lesiones de laringe. No mejora con el tratamiento habitual de episodios respiratorios y requiere evaluación de vía aérea.",
+          "key_discriminator": "ronquera progresiva, estridor",
+          "mechanism": "La infección por VPH induce proliferaciones papilomatosas laríngeas que alteran vibración vocal y pueden reducir luz respiratoria; las recurrencias hacen necesario seguimiento endoscópico.",
+          "findings": [
+            {
+              "mechanism": "Lesiones papilomatosas laríngeas",
+              "finding": "Disfonía y estridor"
+            }
+          ],
+          "initial_action": "Evaluar vía aérea y referir para laringoscopia, confirmación histológica y tratamiento de lesiones.",
+          "action_reason": "La obstrucción puede comprometer respiración.",
+          "modifiers": [
+            {
+              "factor": "Dificultad respiratoria importante",
+              "action": "Atender de urgencia",
+              "reason": "La luz laríngea puede estar amenazada"
+            }
+          ],
+          "limits": "El tratamiento y vigilancia dependen de recurrencia y extensión.",
+          "evidence": [
+            {
+              "page": 925,
+              "quote": "Disfonía o ronquera, estridor y dificultad respiratoria."
+            },
+            {
+              "page": 925,
+              "quote": "laringoscopia e histopatológico"
+            }
+          ],
+          "source_gaps": []
+        },
+        {
+          "id": "27.10-03",
+          "name": "Amigdalectomía en niños",
+          "source_pages": [
+            906
+          ],
+          "pattern": "Un niño con ronquido y apneas tiene amígdalas muy grandes. Su familia pregunta por cirugía. Se revisan alteraciones del sueño, crecimiento y antecedentes de infecciones documentadas.",
+          "key_discriminator": "amígdalas muy grandes",
+          "mechanism": "La hipertrofia amigdalina puede estrechar vía aérea superior, especialmente al dormir; la cirugía elimina tejido obstructivo o un foco de infecciones recurrentes en pacientes seleccionados.",
+          "findings": [
+            {
+              "mechanism": "Hipertrofia obstructiva",
+              "finding": "Apnea y ronquido"
+            }
+          ],
+          "initial_action": "Referir a otorrinolaringología para valorar indicación de cirugía y estudio del sueño según contexto.",
+          "action_reason": "La selección requiere documentar repercusión y riesgos.",
+          "modifiers": [
+            {
+              "factor": "Infecciones recurrentes sin obstrucción",
+              "action": "Documentar frecuencia y características",
+              "reason": "La indicación no depende solo del tamaño"
+            }
+          ],
+          "limits": "El riesgo de hemorragia y dolor requiere información previa.",
+          "evidence": [
+            {
+              "page": 906,
+              "quote": "obstrucción de vía aérea en SAOS"
+            },
+            {
+              "page": 906,
+              "quote": "enviar a segundo nivel"
+            }
+          ],
+          "source_gaps": []
+        }
+      ],
+      "common_problem": "Paciente con ronquido, disfonía o obstrucción respiratoria.",
+      "mother": {
+        "cue": "La vía aérea superior puede colapsarse al dormir o estrecharse por tejido anormal.",
+        "answer": "Obstrucción de vía aérea superior.",
+        "explanation": "El patrón del sueño y la laringe o amígdalas dirigen evaluación."
+      }
+    },
+    {
+      "id": "27.11",
+      "title": "Parálisis facial unilateral",
+      "topics": [
+        {
+          "id": "27.11-01",
+          "name": "Parálisis de Bell",
+          "source_pages": [
+            926
+          ],
+          "pattern": "Un adulto presenta debilidad súbita de toda una mitad de la cara. No logra cerrar el ojo ni arrugar la frente de ese lado. No tiene otros déficits neurológicos ni vesículas.",
+          "key_discriminator": "No logra cerrar el ojo",
+          "mechanism": "La disfunción periférica aguda del nervio facial afecta músculos superiores e inferiores ipsilaterales y cierre palpebral, exponiendo córnea y causando alteración de expresión y gusto.",
+          "findings": [
+            {
+              "mechanism": "Lesión periférica facial",
+              "finding": "Debilidad de frente y boca"
+            }
+          ],
+          "initial_action": "Excluir causas alternativas, proteger córnea con lubricación y valorar corticoide temprano si corresponde.",
+          "action_reason": "La exposición ocular puede causar lesión.",
+          "modifiers": [
+            {
+              "factor": "Vesículas óticas o parálisis de otros nervios",
+              "action": "Investigar etiología específica",
+              "reason": "Puede requerir antiviral y atención especializada"
+            }
+          ],
+          "limits": "Déficits neurológicos adicionales requieren evaluación urgente.",
+          "evidence": [
+            {
+              "page": 926,
+              "quote": "primeras 72 horas"
+            },
+            {
+              "page": 926,
+              "quote": "gotas y ungüentos lubricantes"
+            }
+          ],
+          "source_gaps": []
+        },
+        {
+          "id": "27.11-02",
+          "name": "Síndrome de Ramsay Hunt",
+          "source_pages": [
+            937
+          ],
+          "pattern": "Un adulto mayor tiene dolor de oído, vesículas en el conducto auditivo y parálisis facial del mismo lado. También refiere disminución auditiva. Se evalúa compromiso de nervios craneales.",
+          "key_discriminator": "vesículas en el conducto auditivo",
+          "mechanism": "La reactivación de varicela-zóster en ganglio geniculado afecta nervio facial y puede extenderse a estructuras auditivas y vestibulares, causando parálisis dolorosa con lesiones vesiculares.",
+          "findings": [
+            {
+              "mechanism": "Reactivación viral neural",
+              "finding": "Otalgia, vesículas y parálisis"
+            }
+          ],
+          "initial_action": "Referir pronto para antiviral, valoración de corticoide y protección ocular; evaluar audición y otros nervios.",
+          "action_reason": "El tratamiento y prevención de daño ocular son oportunos.",
+          "modifiers": [
+            {
+              "factor": "Cierre palpebral insuficiente",
+              "action": "Proteger córnea",
+              "reason": "La exposición puede producir lesión"
+            }
+          ],
+          "limits": "La vía del antiviral depende de gravedad y contexto.",
+          "evidence": [
+            {
+              "page": 937,
+              "quote": "vesículas en el canal auditivo"
+            },
+            {
+              "page": 937,
+              "quote": "referencia con el otorrinolaringólogo"
+            }
+          ],
+          "source_gaps": []
+        }
+      ],
+      "common_problem": "Paciente con debilidad facial periférica.",
+      "mother": {
+        "cue": "Afección del séptimo nervio craneal con protección ocular necesaria.",
+        "answer": "Parálisis facial periférica.",
+        "explanation": "Vesículas y otalgia orientan etiología viral específica."
+      }
+    },
+    {
+      "id": "27.12",
+      "title": "Dolor facial eléctrico",
+      "topics": [
+        {
+          "id": "27.12-01",
+          "name": "Neuralgia de trigémino",
+          "source_pages": [
+            918
+          ],
+          "pattern": "Una persona tiene descargas eléctricas breves e intensas en una mitad de la cara al cepillarse los dientes. Entre ataques está bien y la exploración sensitiva no muestra déficit.",
+          "key_discriminator": "descargas eléctricas breves",
+          "mechanism": "La activación paroxística de fibras trigeminales genera dolor en su territorio ante estímulos leves; puede relacionarse con compresión neurovascular o causas secundarias que requieren estudio.",
+          "findings": [
+            {
+              "mechanism": "Descarga trigeminal anormal",
+              "finding": "Dolor eléctrico por estímulo leve"
+            }
+          ],
+          "initial_action": "Evaluar características y causas secundarias; iniciar tratamiento específico como carbamazepina u oxcarbazepina según valoración y seguridad.",
+          "action_reason": "Reduce excitabilidad y episodios dolorosos.",
+          "modifiers": [
+            {
+              "factor": "Déficit sensitivo, bilateralidad o inicio joven",
+              "action": "Investigar causa secundaria con imagen",
+              "reason": "Es un patrón menos típico"
+            }
+          ],
+          "limits": "La respuesta al fármaco no excluye una causa estructural.",
+          "evidence": [
+            {
+              "page": 918,
+              "quote": "cepillarse los dientes"
+            },
+            {
+              "page": 918,
+              "quote": "Carbamazepina"
+            }
+          ],
+          "source_gaps": []
+        }
+      ],
+      "common_problem": "Paciente con dolor facial en descargas.",
+      "mother": {
+        "cue": "Activación dolorosa paroxística del territorio trigeminal por estímulos leves.",
+        "answer": "Neuralgia trigeminal.",
+        "explanation": "Distribución, disparadores y exploración orientan estudio etiológico."
+      }
+    }
+  ]
+}
