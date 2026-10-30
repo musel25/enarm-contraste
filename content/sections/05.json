@@ -1,0 +1,971 @@
+{
+  "id": "05",
+  "title": "Cirugía abdominal",
+  "blocks": [
+    {
+      "id": "05.01",
+      "title": "Dolor en fosa iliaca derecha",
+      "topics": [
+        {
+          "id": "05.01-01",
+          "name": "Apendicitis aguda",
+          "source_pages": [
+            129,
+            130,
+            131,
+            132
+          ],
+          "pattern": "Un joven presenta dolor que comenzó alrededor del ombligo y migró a la fosa ilíaca derecha. Después aparecieron anorexia, náusea y dolor localizado al soltar la palpación.",
+          "key_discriminator": "migró a la fosa ilíaca derecha",
+          "mechanism": "La obstrucción apendicular causa inflamación y congestión; el dolor visceral inicial se localiza cuando se irrita el peritoneo parietal, con riesgo de necrosis y perforación.",
+          "findings": [
+            {
+              "mechanism": "Dolor visceral inicial",
+              "finding": "Dolor periumbilical"
+            },
+            {
+              "mechanism": "Irritación peritoneal",
+              "finding": "Dolor localizado y rebote"
+            }
+          ],
+          "initial_action": "Valorar estabilidad, probabilidad clínica y diagnósticos alternativos; solicitar imagen cuando corresponda y valoración quirúrgica oportuna. No retrasar referencia por estudios ambulatorios ante alta sospecha.",
+          "action_reason": "El retraso favorece complicaciones y la presentación puede variar.",
+          "modifiers": [
+            {
+              "factor": "Mujer en edad fértil",
+              "action": "Incluir prueba de embarazo.",
+              "reason": "Un embarazo ectópico cambia la prioridad."
+            },
+            {
+              "factor": "Peritonitis o deterioro",
+              "action": "Priorizar cirugía urgente y soporte.",
+              "reason": "Sugiere enfermedad complicada."
+            }
+          ],
+          "limits": "Una puntuación baja de Alvarado no excluye por sí sola. La fuente antigua presenta cirugía como universal y contraindicaciones de laparoscopia que requieren actualización.",
+          "evidence": [
+            {
+              "page": 130,
+              "quote": "La migración del dolor"
+            },
+            {
+              "page": 131,
+              "quote": "gonadotropina coriónica."
+            },
+            {
+              "page": 132,
+              "quote": "La profilax is antibiótica preoperatoria es efectiva"
+            }
+          ],
+          "source_gaps": []
+        },
+        {
+          "id": "05.01-02",
+          "name": "Apendicitis en el embarazo",
+          "source_pages": [
+            133
+          ],
+          "pattern": "Una embarazada presenta dolor persistente en el lado derecho del abdomen con anorexia. La ecografía no define la causa y el equipo considera una prueba adicional sin gadolinio.",
+          "key_discriminator": "sin gadolinio",
+          "mechanism": "La inflamación apendicular puede tener localización atípica por cambios anatómicos gestacionales; el retraso diagnóstico aumenta riesgo de perforación y daño maternofetal.",
+          "findings": [
+            {
+              "mechanism": "Inflamación apendicular",
+              "finding": "Dolor derecho persistente"
+            },
+            {
+              "mechanism": "Desplazamiento gestacional",
+              "finding": "Localización variable"
+            }
+          ],
+          "initial_action": "Iniciar con ecografía y, si no resuelve la sospecha, valorar resonancia sin gadolinio. Solicitar cirugía y obstetricia para tratamiento oportuno cuando se confirma.",
+          "action_reason": "La resonancia aporta información sin radiación ionizante y la gestación no justifica retrasar una urgencia.",
+          "modifiers": [
+            {
+              "factor": "Resonancia no disponible o contraindicada",
+              "action": "Valorar TAC si es necesaria para la decisión.",
+              "reason": "El riesgo de no diagnosticar puede superar el de la imagen."
+            },
+            {
+              "factor": "Tercer trimestre",
+              "action": "Individualizar el abordaje según anatomía y experiencia.",
+              "reason": "El útero puede dificultar laparoscopia."
+            }
+          ],
+          "limits": "El dolor no siempre cambia de sitio. La referencia llama caudal a un desplazamiento que describe por encima de la posición normal.",
+          "evidence": [
+            {
+              "page": 133,
+              "quote": "La resonancia magnética (sin gadolinio)"
+            },
+            {
+              "page": 133,
+              "quote": "apendicetomía lo más pronto posible"
+            }
+          ],
+          "source_gaps": []
+        }
+      ],
+      "common_problem": "Dolor abdominal que predomina a la derecha.",
+      "mother": {
+        "cue": "La inflamación apendicular puede cambiar de localización según contexto.",
+        "answer": "Síndrome apendicular",
+        "explanation": "La gestación modifica imagen y anatomía, pero no elimina la urgencia."
+      }
+    },
+    {
+      "id": "05.02",
+      "title": "Dolor episódico en hipocondrio derecho",
+      "topics": [
+        {
+          "id": "05.02-01",
+          "name": "Cólico biliar",
+          "source_pages": [
+            145
+          ],
+          "pattern": "Una adulta presenta dolor continuo en hipocondrio derecho después de una comida grasa. Tiene náusea, pero no fiebre ni respuesta inflamatoria. El dolor cede durante la valoración.",
+          "key_discriminator": "no fiebre ni respuesta inflamatoria",
+          "mechanism": "La obstrucción transitoria del cístico eleva presión vesicular sin inflamación persistente; la contracción tras alimentos desencadena dolor mientras el cálculo impide vaciamiento.",
+          "findings": [
+            {
+              "mechanism": "Presión vesicular elevada",
+              "finding": "Dolor posprandial"
+            },
+            {
+              "mechanism": "Ausencia de infección sostenida",
+              "finding": "Sin fiebre sistémica"
+            }
+          ],
+          "initial_action": "Dar analgesia apropiada y solicitar ultrasonido para documentar litiasis. Remitir a cirugía por enfermedad sintomática, sin asumir necesidad de operación urgente si el cuadro se resuelve.",
+          "action_reason": "Controla síntomas y permite prevenir nuevos episodios.",
+          "modifiers": [
+            {
+              "factor": "Dolor persistente, fiebre o ictericia",
+              "action": "Buscar complicación biliar.",
+              "reason": "Puede existir inflamación, obstrucción de colédoco o infección."
+            }
+          ],
+          "limits": "El término cólico no implica dolor intermitente. La duración aislada no distingue todas las complicaciones.",
+          "evidence": [
+            {
+              "page": 145,
+              "quote": "ausencia de datos de respuesta inflamatoria sistémica."
+            },
+            {
+              "page": 145,
+              "quote": "los AINEs como primera opción"
+            }
+          ],
+          "source_gaps": []
+        },
+        {
+          "id": "05.02-02",
+          "name": "Colelitiasis",
+          "source_pages": [
+            139,
+            140,
+            141,
+            142,
+            143,
+            144
+          ],
+          "pattern": "Durante un estudio de una adulta sin dolor actual se observan cálculos dentro de la vesícula. No tiene fiebre, ictericia ni datos de inflamación; se revisan antecedentes y síntomas previos.",
+          "key_discriminator": "cálculos dentro de la vesícula",
+          "mechanism": "La sobresaturación biliar y factores de nucleación favorecen cálculos; su presencia puede ser asintomática o producir obstrucción transitoria, inflamación o migración hacia la vía principal.",
+          "findings": [
+            {
+              "mechanism": "Cálculos confinados",
+              "finding": "Hallazgo ecográfico"
+            },
+            {
+              "mechanism": "Obstrucción del cístico",
+              "finding": "Dolor biliar"
+            }
+          ],
+          "initial_action": "Determinar si la litiasis es sintomática y buscar complicaciones. En asintomáticos, valorar seguimiento e indicaciones especiales; en sintomáticos, solicitar evaluación para colecistectomía.",
+          "action_reason": "La presencia aislada de un cálculo no define la misma conducta que una complicación.",
+          "modifiers": [
+            {
+              "factor": "Fiebre y dolor persistente",
+              "action": "Evaluar colecistitis.",
+              "reason": "Sugiere inflamación vesicular."
+            },
+            {
+              "factor": "Colestasis o dilatación del colédoco",
+              "action": "Investigar cálculo en vía principal.",
+              "reason": "Puede requerir extracción endoscópica."
+            }
+          ],
+          "limits": "No indicar disolución farmacológica a toda persona con litiasis; su utilidad es limitada a casos seleccionados.",
+          "evidence": [
+            {
+              "page": 139,
+              "quote": "presencia de cálcu los dentro de la vesícu la"
+            },
+            {
+              "page": 140,
+              "quote": "La colecistectomía genera lmente se indica en pacientes"
+            }
+          ],
+          "source_gaps": []
+        }
+      ],
+      "common_problem": "Dolor episódico después de comida grasa.",
+      "mother": {
+        "cue": "Un cálculo puede existir sin síntomas o bloquear transitoriamente el vaciamiento.",
+        "answer": "Litiasis y dolor biliar no complicado",
+        "explanation": "La respuesta inflamatoria y la evolución separan complicaciones."
+      }
+    },
+    {
+      "id": "05.03",
+      "title": "Fiebre e ictericia con dolor",
+      "topics": [
+        {
+          "id": "05.03-01",
+          "name": "Colecistitis aguda",
+          "source_pages": [
+            136,
+            137
+          ],
+          "pattern": "Una mujer tiene dolor persistente en hipocondrio derecho, fiebre y leucocitosis. La inspiración se interrumpe al palpar esa zona y el ultrasonido muestra inflamación de la pared vesicular.",
+          "key_discriminator": "La inspiración se interrumpe",
+          "mechanism": "La obstrucción persistente del cístico inflama la vesícula y puede favorecer infección; la irritación local produce dolor y Murphy, y los casos graves desarrollan disfunción orgánica.",
+          "findings": [
+            {
+              "mechanism": "Inflamación vesicular",
+              "finding": "Murphy y dolor persistente"
+            },
+            {
+              "mechanism": "Respuesta sistémica",
+              "finding": "Fiebre y leucocitosis"
+            }
+          ],
+          "initial_action": "Valorar gravedad, dar líquidos y analgesia, iniciar antibiótico según contexto y solicitar cirugía para control de foco y colecistectomía cuando corresponda.",
+          "action_reason": "El tratamiento depende de repercusión sistémica y posibilidad de intervención temprana.",
+          "modifiers": [
+            {
+              "factor": "Disfunción orgánica o sepsis",
+              "action": "Priorizar reanimación y control urgente del foco.",
+              "reason": "La gravedad exige más que analgesia."
+            },
+            {
+              "factor": "Ultrasonido no concluyente",
+              "action": "Valorar estudios adicionales según sospecha.",
+              "reason": "No todos los casos muestran hallazgos iniciales claros."
+            }
+          ],
+          "limits": "No decidir cirugía abierta solo por sexo masculino o ictericia. Las cifras de la tabla presentan errores de extracción.",
+          "evidence": [
+            {
+              "page": 136,
+              "quote": "interrupción brusca"
+            },
+            {
+              "page": 137,
+              "quote": "La elección del antibiótico depende del antibiograma,"
+            }
+          ],
+          "source_gaps": []
+        },
+        {
+          "id": "05.03-02",
+          "name": "Coledocolitiasis",
+          "source_pages": [
+            138
+          ],
+          "pattern": "Una persona con dolor biliar desarrolla ictericia y coluria. La bilirrubina directa y fosfatasa alcalina están elevadas; el ultrasonido muestra dilatación de la vía biliar principal.",
+          "key_discriminator": "bilirrubina directa y fosfatasa alcalina",
+          "mechanism": "Un cálculo en el colédoco impide drenaje de bilis, produce colestasis y puede desencadenar infección ascendente o pancreatitis cuando afecta la salida pancreatobiliar.",
+          "findings": [
+            {
+              "mechanism": "Obstrucción biliar",
+              "finding": "Ictericia y coluria"
+            },
+            {
+              "mechanism": "Colestasis",
+              "finding": "Bilirrubina directa y enzimas colestásicas elevadas"
+            }
+          ],
+          "initial_action": "Estimar probabilidad con clínica, laboratorio y ultrasonido. Valorar colangiorresonancia o ecoendoscopia si se requiere confirmación y CPRE cuando hay indicación terapéutica.",
+          "action_reason": "Permite confirmar sin exponer a todos al riesgo de una CPRE diagnóstica.",
+          "modifiers": [
+            {
+              "factor": "Fiebre, hipotensión o confusión",
+              "action": "Tratar como posible infección biliar y priorizar drenaje.",
+              "reason": "La obstrucción infectada puede causar sepsis."
+            }
+          ],
+          "limits": "Una colecistectomía previa no excluye cálculos en el colédoco; la CPRE puede causar pancreatitis.",
+          "evidence": [
+            {
+              "page": 138,
+              "quote": "Bilirrubina directa elevada"
+            },
+            {
+              "page": 138,
+              "quote": "Colangio resonancia magnética o ecoendoscopia."
+            }
+          ],
+          "source_gaps": []
+        },
+        {
+          "id": "05.03-03",
+          "name": "Colangitis aguda",
+          "source_pages": [
+            135
+          ],
+          "pattern": "Un adulto con dolor en hipocondrio derecho presenta ictericia y escalofríos. Durante la evaluación desarrolla hipotensión y confusión, con pruebas de laboratorio que muestran colestasis.",
+          "key_discriminator": "hipotensión y confusión",
+          "mechanism": "La obstrucción biliar permite proliferación bacteriana en bilis estancada; la infección puede pasar a circulación y causar sepsis con disfunción orgánica.",
+          "findings": [
+            {
+              "mechanism": "Obstrucción",
+              "finding": "Ictericia"
+            },
+            {
+              "mechanism": "Infección biliar",
+              "finding": "Fiebre y escalofríos"
+            },
+            {
+              "mechanism": "Sepsis",
+              "finding": "Hipotensión y confusión"
+            }
+          ],
+          "initial_action": "Iniciar reanimación y antibióticos, obtener cultivos sin retraso y activar drenaje biliar urgente, habitualmente por CPRE según disponibilidad y gravedad.",
+          "action_reason": "Los antibióticos no sustituyen el control de una vía obstruida infectada.",
+          "modifiers": [
+            {
+              "factor": "Drenaje endoscópico no posible",
+              "action": "Valorar drenaje percutáneo u otra vía especializada.",
+              "reason": "Se mantiene la necesidad de descompresión."
+            }
+          ],
+          "limits": "La ausencia de la tríada completa no excluye infección; el libro indica que aparece en menos de la mitad.",
+          "evidence": [
+            {
+              "page": 135,
+              "quote": "shock y confusión"
+            },
+            {
+              "page": 135,
+              "quote": "drenaje endoscópico por CPRE"
+            }
+          ],
+          "source_gaps": []
+        }
+      ],
+      "common_problem": "Dolor derecho con fiebre, ictericia o colestasis.",
+      "mother": {
+        "cue": "Localizar obstrucción e identificar infección define la necesidad de drenaje.",
+        "answer": "Complicación vesicular o de vía biliar",
+        "explanation": "El cístico, el colédoco y la infección tienen decisiones distintas."
+      }
+    },
+    {
+      "id": "05.04",
+      "title": "Obstrucción biliar inusual",
+      "topics": [
+        {
+          "id": "05.04-01",
+          "name": "Fístulas biliointestinales",
+          "source_pages": [
+            147
+          ],
+          "pattern": "Una mujer mayor con litiasis previa tiene vómitos y distensión. La imagen muestra obstrucción intestinal, aire en la vía biliar y un cálculo fuera de la vesícula.",
+          "key_discriminator": "aire en la vía biliar",
+          "mechanism": "La erosión por un cálculo comunica vesícula e intestino; un cálculo migrado puede impactarse y producir obstrucción mecánica, mientras la comunicación permite entrada de aire biliar.",
+          "findings": [
+            {
+              "mechanism": "Comunicación bilioentérica",
+              "finding": "Neumobilia"
+            },
+            {
+              "mechanism": "Cálculo impactado",
+              "finding": "Obstrucción intestinal"
+            }
+          ],
+          "initial_action": "Estabilizar con líquidos y descompresión gástrica, solicitar TAC y valoración quirúrgica para extracción del cálculo obstructivo.",
+          "action_reason": "La obstrucción requiere resolver el cálculo y corregir pérdidas.",
+          "modifiers": [
+            {
+              "factor": "Sin obstrucción por el cálculo migrado",
+              "action": "Definir conducta por síntomas y anatomía.",
+              "reason": "No toda fístula produce íleo biliar."
+            }
+          ],
+          "limits": "La tríada radiográfica puede estar incompleta; una historia sin diagnóstico previo de Mirizzi no excluye fístula.",
+          "evidence": [
+            {
+              "page": 147,
+              "quote": "produciendo una fístula colecistoentérica"
+            },
+            {
+              "page": 147,
+              "quote": "Enterolitotomía"
+            }
+          ],
+          "source_gaps": []
+        },
+        {
+          "id": "05.04-02",
+          "name": "Colangiocarcinoma",
+          "source_pages": [
+            134
+          ],
+          "pattern": "Un adulto mayor presenta ictericia progresiva, prurito, coluria y pérdida de peso. El ultrasonido sugiere obstrucción hiliar y no muestra un cálculo que la explique.",
+          "key_discriminator": "obstrucción hiliar",
+          "mechanism": "Una neoplasia del epitelio biliar estrecha los conductos y bloquea la salida de bilis; el patrón de obstrucción y extensión define posibilidad de resección o drenaje.",
+          "findings": [
+            {
+              "mechanism": "Obstrucción tumoral",
+              "finding": "Ictericia y prurito"
+            },
+            {
+              "mechanism": "Enfermedad neoplásica",
+              "finding": "Pérdida de peso"
+            }
+          ],
+          "initial_action": "Solicitar perfil hepático e imagen para definir el nivel de obstrucción; completar con estudio especializado y valoración hepatobiliar antes de decidir obtención de tejido o tratamiento.",
+          "action_reason": "La localización y resecabilidad condicionan el abordaje diagnóstico y terapéutico.",
+          "modifiers": [
+            {
+              "factor": "Colangitis concomitante",
+              "action": "Priorizar antibióticos y drenaje indicado.",
+              "reason": "La infección añade urgencia."
+            },
+            {
+              "factor": "Enfermedad no resecable",
+              "action": "Valorar tratamiento oncológico y alivio de obstrucción.",
+              "reason": "El objetivo cambia según extensión."
+            }
+          ],
+          "limits": "CA 19-9 no confirma por sí solo y aumenta en obstrucción benigna. La vía de biopsia depende de localización y plan de tratamiento.",
+          "evidence": [
+            {
+              "page": 134,
+              "quote": "obstrucción biliar o ictericia"
+            },
+            {
+              "page": 134,
+              "quote": "Inicial: USG con pruebas de funcionamiento hepático."
+            }
+          ],
+          "source_gaps": []
+        }
+      ],
+      "common_problem": "Obstrucción biliar o intestinal en una persona mayor.",
+      "mother": {
+        "cue": "Buscar una comunicación anormal por cálculo o una obstrucción tumoral.",
+        "answer": "Complicación biliar estructural",
+        "explanation": "La imagen define sitio, causa y posibilidad de control."
+      }
+    },
+    {
+      "id": "05.05",
+      "title": "Masa dolorosa de región inguinal",
+      "topics": [
+        {
+          "id": "05.05-01",
+          "name": "Hernias",
+          "source_pages": [
+            155,
+            156
+          ],
+          "pattern": "Un adulto tiene un bulto inguinal que ya no puede reducir. Ahora es tenso, muy doloroso y violáceo. Se debe distinguir atrapamiento de contenido de compromiso de su circulación.",
+          "key_discriminator": "tenso, muy doloroso y violáceo",
+          "mechanism": "Un defecto musculoaponeurótico permite protrusión de contenido abdominal; si el cuello compromete su circulación, el atrapamiento progresa a isquemia del tejido herniado.",
+          "findings": [
+            {
+              "mechanism": "Contenido no reducible",
+              "finding": "Incarceración"
+            },
+            {
+              "mechanism": "Compromiso vascular",
+              "finding": "Dolor intenso y color violáceo"
+            }
+          ],
+          "initial_action": "Identificar si hay compromiso vascular y solicitar valoración quirúrgica urgente ante sospecha de estrangulación. Evaluar obstrucción y repercusión sistémica.",
+          "action_reason": "El tejido isquémico puede necrosarse y perforar.",
+          "modifiers": [
+            {
+              "factor": "Bulto reducible sin alarma",
+              "action": "Caracterizar localización y síntomas para plan de reparación o vigilancia.",
+              "reason": "La urgencia cambia con reducibilidad y repercusión."
+            }
+          ],
+          "limits": "Una hernia de Richter compromete parte de la pared intestinal y puede no causar obstrucción completa; el cuadro de la página 155 es incompleto.",
+          "evidence": [
+            {
+              "page": 156,
+              "quote": "vascular del contenido herniado."
+            },
+            {
+              "page": 156,
+              "quote": "Hernia que presenta compromiso"
+            }
+          ],
+          "source_gaps": []
+        },
+        {
+          "id": "05.05-02",
+          "name": "Hernia inguinal",
+          "source_pages": [
+            151,
+            152
+          ],
+          "pattern": "Un hombre presenta bulto por encima del ligamento inguinal que aumenta al toser y desaparece al acostarse. Tiene molestia leve y no hay vómito ni cambios de color.",
+          "key_discriminator": "por encima del ligamento inguinal",
+          "mechanism": "La debilidad posterior o persistencia de un trayecto peritoneal permite protrusión por la ingle; el esfuerzo aumenta presión abdominal y hace evidente el defecto.",
+          "findings": [
+            {
+              "mechanism": "Presión abdominal aumentada",
+              "finding": "Bulto con esfuerzo"
+            },
+            {
+              "mechanism": "Contenido reducible",
+              "finding": "Desaparece en decúbito"
+            }
+          ],
+          "initial_action": "Confirmar clínicamente y valorar síntomas, reducibilidad y riesgo. Planear reparación en sintomáticos; considerar vigilancia informada en hombres con síntomas mínimos y sin complicación.",
+          "action_reason": "La exploración suele bastar y la indicación depende del contexto.",
+          "modifiers": [
+            {
+              "factor": "Exploración dudosa",
+              "action": "Solicitar ultrasonido y ampliar imagen si persiste duda.",
+              "reason": "Puede haber hernia oculta u otra causa de dolor."
+            },
+            {
+              "factor": "Dolor continuo o irreductibilidad",
+              "action": "Evaluar complicación urgente.",
+              "reason": "Puede existir incarceración o estrangulación."
+            }
+          ],
+          "limits": "No invertir la relación con vasos epigástricos: la indirecta pasa lateral y la directa medial; la figura del resumen puede confundir.",
+          "evidence": [
+            {
+              "page": 151,
+              "quote": "por encima del ligamento inguinal"
+            },
+            {
+              "page": 152,
+              "quote": "La vigilancia es una opción aceptable"
+            }
+          ],
+          "source_gaps": []
+        },
+        {
+          "id": "05.05-03",
+          "name": "Hernia femoral",
+          "source_pages": [
+            149
+          ],
+          "pattern": "Una mujer mayor presenta una masa dolorosa por debajo del ligamento inguinal y lateral al tubérculo púbico. La masa no desaparece en decúbito y el dolor persiste.",
+          "key_discriminator": "por debajo del ligamento inguinal",
+          "mechanism": "La protrusión por el canal femoral atraviesa un espacio estrecho; el cuello rígido favorece atrapamiento y compromiso vascular del contenido más que otros defectos inguinales.",
+          "findings": [
+            {
+              "mechanism": "Defecto bajo ligamento",
+              "finding": "Masa femoral"
+            },
+            {
+              "mechanism": "Atrapamiento de contenido",
+              "finding": "Dolor constante e irreductibilidad"
+            }
+          ],
+          "initial_action": "Solicitar evaluación quirúrgica prioritaria y urgente si hay irreductibilidad, obstrucción o sospecha de isquemia.",
+          "action_reason": "El riesgo de estrangulación es elevado.",
+          "modifiers": [
+            {
+              "factor": "Obesidad con exploración poco clara",
+              "action": "Valorar imagen dirigida.",
+              "reason": "El defecto puede pasar inadvertido o confundirse con hernia inguinal."
+            }
+          ],
+          "limits": "Una hernia femoral reducible requiere reparación oportuna, pero la frase de cirugía de urgencia universal del libro debe interpretarse según signos de complicación.",
+          "evidence": [
+            {
+              "page": 149,
+              "quote": "por debajo del liga mento"
+            },
+            {
+              "page": 149,
+              "quote": "mayor riesg o de complicaciones"
+            }
+          ],
+          "source_gaps": []
+        }
+      ],
+      "common_problem": "Masa en la región inguinal con dolor variable.",
+      "mother": {
+        "cue": "La localización respecto al ligamento y el compromiso del contenido definen riesgo.",
+        "answer": "Hernia de la ingle y complicación",
+        "explanation": "Reducibilidad, obstrucción e isquemia determinan urgencia."
+      }
+    },
+    {
+      "id": "05.06",
+      "title": "Abultamiento de pared abdominal",
+      "topics": [
+        {
+          "id": "05.06-01",
+          "name": "Hernia umbilical",
+          "source_pages": [
+            153
+          ],
+          "pattern": "Una adulta con obesidad presenta abultamiento del ombligo que aumenta con Valsalva. Es reducible y no tiene dolor continuo, vómito ni cambios de la piel.",
+          "key_discriminator": "abultamiento del ombligo",
+          "mechanism": "La debilidad de la fascia umbilical permite salida de epiplón o intestino; el aumento de presión abdominal hace protruir el contenido a través del defecto.",
+          "findings": [
+            {
+              "mechanism": "Defecto fascial umbilical",
+              "finding": "Bulto con esfuerzo"
+            }
+          ],
+          "initial_action": "Establecer diagnóstico clínico y referir para valorar reparación según tamaño, síntomas y riesgo. Buscar complicación si aparece dolor persistente o irreductibilidad.",
+          "action_reason": "La exploración define el defecto y el contexto determina intervención.",
+          "modifiers": [
+            {
+              "factor": "Niño pequeño con hernia no complicada",
+              "action": "Valorar vigilancia por posibilidad de cierre espontáneo.",
+              "reason": "La evolución pediátrica difiere de la adulta."
+            },
+            {
+              "factor": "Incarceración o estrangulación",
+              "action": "Solicitar cirugía urgente.",
+              "reason": "Existe riesgo de daño intestinal."
+            }
+          ],
+          "limits": "Los límites de edad para reparación pediátrica del resumen son antiguos; no aplicar el criterio de dos años a todos los niños.",
+          "evidence": [
+            {
+              "page": 153,
+              "quote": "especialmente ante esfuerzos"
+            },
+            {
+              "page": 153,
+              "quote": "El diagnóstico de la hernia umbilical es clínico."
+            }
+          ],
+          "source_gaps": []
+        },
+        {
+          "id": "05.06-02",
+          "name": "Hernia ventral",
+          "source_pages": [
+            154
+          ],
+          "pattern": "Un adulto con laparotomía previa presenta un bulto sobre la cicatriz, mayor al hacer esfuerzo. La exploración identifica un anillo de pared por el que protruye contenido abdominal.",
+          "key_discriminator": "un anillo de pared",
+          "mechanism": "El fallo de continuidad fascial permite herniación anterolateral; la presión y los factores de mala cicatrización amplían el defecto y aumentan riesgo de recurrencia.",
+          "findings": [
+            {
+              "mechanism": "Defecto de fascia",
+              "finding": "Bulto sobre cicatriz"
+            },
+            {
+              "mechanism": "Contenido atrapado",
+              "finding": "Posible obstrucción"
+            }
+          ],
+          "initial_action": "Valorar complicaciones y definir el defecto clínicamente; solicitar imagen si hay duda o para planear reparación. Optimizar factores modificables y referir a cirugía.",
+          "action_reason": "La anatomía y estado del campo condicionan la técnica.",
+          "modifiers": [
+            {
+              "factor": "Dolor, obstrucción o isquemia",
+              "action": "Estabilizar y evaluar cirugía urgente.",
+              "reason": "Puede existir contenido comprometido."
+            },
+            {
+              "factor": "Separación de rectos sin anillo",
+              "action": "Reconocer diástasis.",
+              "reason": "No hay el mismo defecto herniario."
+            }
+          ],
+          "limits": "No confundir diástasis con hernia. El uso de malla depende también de contaminación y características del caso.",
+          "evidence": [
+            {
+              "page": 154,
+              "quote": "sin que exista un anillo herniario."
+            },
+            {
+              "page": 154,
+              "quote": "Siempre que se presente duda diagnóstica"
+            }
+          ],
+          "source_gaps": []
+        },
+        {
+          "id": "05.06-03",
+          "name": "Hernia hiatal",
+          "source_pages": [
+            150
+          ],
+          "pattern": "Una adulta mayor presenta regurgitación, dolor torácico después de comer y disfagia. Un estudio contrastado muestra fondo gástrico intratorácico junto a una unión gastroesofágica que conserva posición.",
+          "key_discriminator": "fondo gástrico intratorácico",
+          "mechanism": "El hiato dilatado permite herniación del estómago; la relación de la unión gastroesofágica con el diafragma distingue deslizamiento de una hernia paraesofágica y su repercusión.",
+          "findings": [
+            {
+              "mechanism": "Herniación de fondo",
+              "finding": "Compresión o disfagia"
+            },
+            {
+              "mechanism": "Alteración de barrera antirreflujo",
+              "finding": "Regurgitación"
+            }
+          ],
+          "initial_action": "Definir anatomía con estudio contrastado y valorar endoscopia y evaluación quirúrgica en una hernia paraesofágica sintomática.",
+          "action_reason": "La anatomía y los síntomas orientan reparación y estudios preoperatorios.",
+          "modifiers": [
+            {
+              "factor": "Dolor intenso persistente, vómito o deterioro",
+              "action": "Evaluar complicación obstructiva o vascular urgente.",
+              "reason": "El estómago herniado puede quedar comprometido."
+            }
+          ],
+          "limits": "El tratamiento quirúrgico descrito se refiere sobre todo a hernia paraesofágica; no implica operar toda hernia deslizante incidental.",
+          "evidence": [
+            {
+              "page": 150,
+              "quote": "El fondo gástrico es el punto"
+            },
+            {
+              "page": 150,
+              "quote": "estudio radiológico contrastado con"
+            }
+          ],
+          "source_gaps": []
+        }
+      ],
+      "common_problem": "Abultamiento de pared o desplazamiento gástrico.",
+      "mother": {
+        "cue": "Identificar el defecto y el contenido antes de decidir reparación.",
+        "answer": "Defectos de pared y hiato",
+        "explanation": "La anatomía y los síntomas separan vigilancia de intervención."
+      }
+    },
+    {
+      "id": "05.07",
+      "title": "Distensión y vómitos",
+      "topics": [
+        {
+          "id": "05.07-01",
+          "name": "Oclusión intestinal",
+          "source_pages": [
+            159,
+            160,
+            161
+          ],
+          "pattern": "Un adulto con cirugía abdominal previa presenta distensión, dolor cólico, vómitos y ausencia de gases. Tiene ruidos de lucha; se evalúa si existen peritonitis o datos de isquemia.",
+          "key_discriminator": "ausencia de gases",
+          "mechanism": "Un obstáculo impide tránsito y produce acumulación de gas y líquido proximal; la distensión y las pérdidas reducen volumen circulante y la estrangulación compromete perfusión intestinal.",
+          "findings": [
+            {
+              "mechanism": "Acumulación proximal",
+              "finding": "Distensión y vómitos"
+            },
+            {
+              "mechanism": "Tránsito bloqueado",
+              "finding": "Falta de gases y heces"
+            }
+          ],
+          "initial_action": "Reanimar, mantener ayuno y descomprimir según necesidad. Solicitar imagen y valoración quirúrgica; reservar manejo conservador para casos seleccionados sin peritonitis, estrangulación ni otras indicaciones urgentes.",
+          "action_reason": "Corrige pérdidas y evita observar un intestino isquémico.",
+          "modifiers": [
+            {
+              "factor": "Dolor continuo, fiebre, acidosis o irritación peritoneal",
+              "action": "Priorizar intervención urgente.",
+              "reason": "Sugiere estrangulación o perforación."
+            },
+            {
+              "factor": "Íleo paralítico",
+              "action": "Corregir causa y electrolitos.",
+              "reason": "No hay un obstáculo mecánico que deba liberarse."
+            }
+          ],
+          "limits": "No esperar 48–72 horas ante signos de complicación; los porcentajes de respuesta del resumen son inconsistentes.",
+          "evidence": [
+            {
+              "page": 159,
+              "quote": "Cuando hay datos de peritonitis o estrangulación"
+            },
+            {
+              "page": 161,
+              "quote": "ayuno y líquidos intravenosos."
+            }
+          ],
+          "source_gaps": []
+        }
+      ],
+      "common_problem": "Distensión, vómito y falta de tránsito.",
+      "mother": {
+        "cue": "La acumulación proximal puede deberse a obstáculo o fallo de motilidad.",
+        "answer": "Interrupción del tránsito intestinal",
+        "explanation": "La isquemia o peritonitis impiden un ensayo conservador prolongado."
+      }
+    },
+    {
+      "id": "05.08",
+      "title": "Dolor desproporcionado",
+      "topics": [
+        {
+          "id": "05.08-01",
+          "name": "Isquemia intestinal",
+          "source_pages": [
+            157,
+            158
+          ],
+          "pattern": "Un adulto mayor con riesgo vascular presenta dolor abdominal súbito e intenso, desproporcionado a los hallazgos iniciales. Luego aparece acidosis; todavía no hay una causa mecánica clara.",
+          "key_discriminator": "desproporcionado a los hallazgos iniciales",
+          "mechanism": "La interrupción del aporte mesentérico lesiona mucosa y pared intestinal; la necrosis permite translocación bacteriana y produce acidosis, peritonitis y deterioro sistémico.",
+          "findings": [
+            {
+              "mechanism": "Hipoperfusión intestinal",
+              "finding": "Dolor intenso"
+            },
+            {
+              "mechanism": "Necrosis progresiva",
+              "finding": "Acidosis y peritonitis"
+            }
+          ],
+          "initial_action": "Iniciar estabilización, solicitar angio-TAC urgente y activar evaluación vascular y quirúrgica. Valorar antibióticos y restauración de flujo según causa, sin retrasar cirugía si hay peritonitis.",
+          "action_reason": "La viabilidad intestinal depende del tiempo hasta reperfusión y control del tejido necrótico.",
+          "modifiers": [
+            {
+              "factor": "Peritonitis, gangrena o perforación",
+              "action": "Realizar valoración quirúrgica urgente.",
+              "reason": "No corresponde reposo intestinal aislado."
+            },
+            {
+              "factor": "Dolor posprandial repetido con pérdida de peso",
+              "action": "Valorar isquemia crónica.",
+              "reason": "La demanda alimentaria puede superar reserva vascular."
+            }
+          ],
+          "limits": "El dímero D no está siempre elevado ni excluye por sí solo. La indicación de reposo ante gangrena del resumen es errónea.",
+          "evidence": [
+            {
+              "page": 158,
+              "quote": "Se presenta como dolor abdominal"
+            },
+            {
+              "page": 157,
+              "quote": "Estabilización hemodinámica es esencial"
+            }
+          ],
+          "source_gaps": []
+        }
+      ],
+      "common_problem": "Dolor abdominal intenso con riesgo vascular.",
+      "mother": {
+        "cue": "La pérdida de aporte sanguíneo amenaza viabilidad intestinal.",
+        "answer": "Isquemia intestinal",
+        "explanation": "La rapidez diagnóstica y el control vascular o quirúrgico son decisivos."
+      }
+    },
+    {
+      "id": "05.09",
+      "title": "Fiebre o dolor posoperatorio",
+      "topics": [
+        {
+          "id": "05.09-01",
+          "name": "Heridas quirúrgicas",
+          "source_pages": [
+            148
+          ],
+          "pattern": "En una operación se abre el tubo digestivo de forma controlada, sin infección y sin derrame de contenido. El equipo necesita clasificar el campo para registrar el riesgo de infección.",
+          "key_discriminator": "de forma controlada",
+          "mechanism": "La clasificación de herida estima exposición microbiana del campo operatorio; distingue ausencia de entrada a tractos colonizados, entrada controlada, contaminación importante e infección ya existente.",
+          "findings": [
+            {
+              "mechanism": "Entrada controlada a tracto colonizado",
+              "finding": "Herida limpia-contaminada"
+            },
+            {
+              "mechanism": "Pus o víscera perforada",
+              "finding": "Herida sucia"
+            }
+          ],
+          "initial_action": "Clasificar el campo como limpio-contaminado en el caso descrito y registrar si hubo derrame, fallos de asepsia o infección previa.",
+          "action_reason": "La categoría depende de lo ocurrido durante la operación y del estado de tejidos.",
+          "modifiers": [
+            {
+              "factor": "Escape no controlado de contenido",
+              "action": "Reclasificar como contaminada.",
+              "reason": "La carga de exposición es mayor."
+            },
+            {
+              "factor": "Colección purulenta o víscera perforada",
+              "action": "Clasificar como sucia o infectada.",
+              "reason": "La infección ya está presente."
+            }
+          ],
+          "limits": "La categoría no sustituye evaluación clínica de infección ni define por sí sola un esquema antibiótico.",
+          "evidence": [
+            {
+              "page": 148,
+              "quote": "bajo condiciones controladas."
+            },
+            {
+              "page": 148,
+              "quote": "Tejidos infectados con colecciones purulentas"
+            }
+          ],
+          "source_gaps": []
+        },
+        {
+          "id": "05.09-02",
+          "name": "Complicaciones post Qx",
+          "source_pages": [
+            146
+          ],
+          "pattern": "Un adulto mayor presenta fiebre y confusión varios días después de cirugía. Tiene sonda urinaria y una herida reciente; se revisan también respiración, perfusión, dolor y medicamentos.",
+          "key_discriminator": "fiebre y confusión",
+          "mechanism": "El estrés quirúrgico y las intervenciones favorecen complicaciones infecciosas, cardiopulmonares y metabólicas; la vulnerabilidad del adulto mayor puede expresarse como delirium o deterioro funcional.",
+          "findings": [
+            {
+              "mechanism": "Infección o alteración metabólica",
+              "finding": "Fiebre y delirium"
+            },
+            {
+              "mechanism": "Inmovilidad e instrumentación",
+              "finding": "Riesgo pulmonar, trombótico y urinario"
+            }
+          ],
+          "initial_action": "Valorar signos vitales, estado mental y focos posibles; dirigir estudios y tratamiento a hallazgos, con atención urgente si existe inestabilidad o disfunción orgánica.",
+          "action_reason": "El día posoperatorio orienta posibilidades, pero no identifica una causa por sí solo.",
+          "modifiers": [
+            {
+              "factor": "Hipoxia o disnea",
+              "action": "Buscar complicación pulmonar o embolia.",
+              "reason": "Puede requerir respuesta inmediata."
+            },
+            {
+              "factor": "Dolor focal o signos de herida",
+              "action": "Evaluar infección local o colección.",
+              "reason": "Puede necesitar control de foco."
+            }
+          ],
+          "limits": "No atribuir automáticamente fiebre temprana a atelectasia; la cronología del resumen es orientativa y no confirma causalidad.",
+          "evidence": [
+            {
+              "page": 146,
+              "quote": "Delirium (es lo más frecuente)"
+            },
+            {
+              "page": 146,
+              "quote": "absceso intraabdominal, TVP y TEP."
+            }
+          ],
+          "source_gaps": []
+        }
+      ],
+      "common_problem": "Fiebre, dolor o deterioro después de cirugía.",
+      "mother": {
+        "cue": "Clasificar exposición del campo y buscar complicaciones por hallazgos.",
+        "answer": "Riesgo y complicación posoperatoria",
+        "explanation": "La cronología orienta, pero no sustituye exploración y control de foco."
+      }
+    }
+  ]
+}
