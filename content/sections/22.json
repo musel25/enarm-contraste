@@ -1,0 +1,1145 @@
+{
+  "id": "22",
+  "title": "Neurología",
+  "blocks": [
+    {
+      "id": "22.01",
+      "title": "Déficit neurológico brusco",
+      "topics": [
+        {
+          "id": "22.01-01",
+          "name": "EVC isquémico",
+          "source_pages": [
+            739,
+            740,
+            741,
+            742,
+            743,
+            744,
+            745,
+            746
+          ],
+          "pattern": "Un hombre desarrolla afasia y debilidad derecha hace una hora. La glucosa capilar es normal. La tomografía sin contraste excluye sangre, mientras persiste un déficit incapacitante.",
+          "key_discriminator": "tomografía sin contraste excluye sangre",
+          "mechanism": "La oclusión arterial reduce el aporte cerebral de oxígeno y crea tejido infartado junto a una penumbra potencialmente recuperable mediante reperfusión oportuna.",
+          "findings": [
+            {
+              "mechanism": "Interrupción del flujo en un territorio arterial",
+              "finding": "Déficit focal súbito, como afasia y hemiparesia."
+            }
+          ],
+          "initial_action": "Activar el código cerebro, establecer la última hora sin síntomas, medir glucosa y obtener neuroimagen urgente. Si reúne criterios, iniciar reperfusión sin retrasos evitables.",
+          "action_reason": "La ventana de beneficio depende del tiempo y la hemorragia cambia por completo la decisión.",
+          "modifiers": [
+            {
+              "factor": "Oclusión de gran vaso",
+              "action": "Evaluar trombectomía urgente mediante imagen vascular y criterios actuales, incluso en ventanas extendidas seleccionadas.",
+              "reason": "La reperfusión endovascular puede beneficiar a personas elegibles más allá de seis horas."
+            }
+          ],
+          "limits": "Una tomografía inicialmente normal no excluye isquemia; la elegibilidad no se decide solo con una cifra de NIHSS.",
+          "evidence": [
+            {
+              "page": 746,
+              "quote": "Activar código cerebro."
+            },
+            {
+              "page": 743,
+              "quote": "excluir hemorragia intracerebral"
+            }
+          ],
+          "source_gaps": [],
+          "verified_source_pages": [
+            739,
+            740,
+            741,
+            742,
+            743,
+            744,
+            745,
+            746
+          ],
+          "external_sources": [
+            {
+              "label": "AHA/ASA: EVC isquémico 2026",
+              "url": "https://professional.heart.org/en/science-news/2026-guideline-for-the-early-management-of-patients-with-acute-ischemic-stroke",
+              "quote": "broader eligibility for endovascular thrombectomy",
+              "checked_at": "2026-10-29"
+            }
+          ],
+          "source_corrections": [
+            "Las páginas 744–745 resumen criterios previos y contienen cifras de presión inconsistentes. La selección actual admite alteplasa o tenecteplasa y trombectomía en ventanas extendidas para personas elegibles; no se copian las cifras erróneas."
+          ]
+        },
+        {
+          "id": "22.01-02",
+          "name": "EVC hemorrágico",
+          "source_pages": [
+            738
+          ],
+          "pattern": "Una mujer hipertensa presenta hemiparesia súbita, vómitos y cefalea intensa. La tomografía muestra una colección sanguínea profunda con edema alrededor y disminuye su nivel de conciencia.",
+          "key_discriminator": "colección sanguínea profunda",
+          "mechanism": "La rotura de un vaso cerebral produce un hematoma que lesiona tejido directamente y eleva la presión intracraneal por expansión y edema.",
+          "findings": [
+            {
+              "mechanism": "Sangrado profundo con efecto de masa",
+              "finding": "Déficit focal acompañado de cefalea, vómito o deterioro de conciencia."
+            }
+          ],
+          "initial_action": "Estabilizar vía aérea y circulación, confirmar la localización por tomografía y solicitar atención neurocrítica. Controlar la presión de forma protocolizada y revisar de inmediato anticoagulantes.",
+          "action_reason": "Se deben limitar la expansión del hematoma y las complicaciones de la presión intracraneal.",
+          "modifiers": [
+            {
+              "factor": "Uso de anticoagulante",
+              "action": "Suspender y revertir su efecto de inmediato según el fármaco.",
+              "reason": "La anticoagulación favorece la expansión y la reversión rápida puede mejorar la supervivencia."
+            }
+          ],
+          "limits": "Los síntomas no distinguen con certeza el tipo vascular; el tratamiento de reperfusión requiere excluir sangre.",
+          "evidence": [
+            {
+              "page": 738,
+              "quote": "Son hemorragias profundas."
+            },
+            {
+              "page": 738,
+              "quote": "Control de TA"
+            }
+          ],
+          "source_gaps": [],
+          "verified_source_pages": [
+            738
+          ],
+          "external_sources": [
+            {
+              "label": "AHA/ASA: hemorragia intracerebral 2022",
+              "url": "https://www.ahajournals.org/doi/10.1161/STR.0000000000000407",
+              "quote": "Management requires emergency reversal of anticoagulation",
+              "checked_at": "2026-10-29"
+            }
+          ],
+          "source_corrections": [
+            "La frase «abordaje igual» de la página 738 solo se aplica a estabilización y diagnóstico urgente. El sangrado confirmado exige manejo específico y reversión de anticoagulación cuando existe."
+          ]
+        }
+      ],
+      "common_problem": "Una persona pierde de forma súbita una función neurológica.",
+      "mother": {
+        "cue": "Aparece un déficit focal en minutos; la imagen determina la vía de tratamiento.",
+        "answer": "Lesión vascular cerebral aguda.",
+        "explanation": "La rapidez exige excluir hemorragia y buscar tejido recuperable antes de elegir tratamiento."
+      }
+    },
+    {
+      "id": "22.02",
+      "title": "Cefalea en trueno",
+      "topics": [
+        {
+          "id": "22.02-01",
+          "name": "Hemorragia subaracnoidea",
+          "source_pages": [
+            749,
+            750,
+            751
+          ],
+          "pattern": "Una mujer desarrolla la peor cefalea de su vida durante un esfuerzo. El dolor alcanza intensidad máxima en segundos y después aparecen vómito, fotofobia y rigidez de nuca.",
+          "key_discriminator": "intensidad máxima en segundos",
+          "mechanism": "La rotura de un vaso introduce sangre en el espacio subaracnoideo, irrita las meninges y puede causar hipertensión intracraneal, resangrado e isquemia tardía.",
+          "findings": [
+            {
+              "mechanism": "Sangre en contacto con meninges",
+              "finding": "Cefalea explosiva con fotofobia y rigidez cervical."
+            }
+          ],
+          "initial_action": "Solicitar tomografía de cráneo urgente y atención neurovascular. Si se confirma sangrado, identificar el origen, iniciar nimodipino enteral y planear el cierre temprano del aneurisma por un equipo especializado.",
+          "action_reason": "La identificación rápida permite prevenir resangrado y reducir la isquemia cerebral tardía.",
+          "modifiers": [
+            {
+              "factor": "Tomografía negativa con sospecha persistente",
+              "action": "Completar la investigación según el tiempo de evolución y el protocolo, sin dar por excluido el sangrado.",
+              "reason": "La sensibilidad de la tomografía depende del momento y de la técnica."
+            }
+          ],
+          "limits": "La localización anterior o posterior por sí sola no decide clipaje frente a embolización.",
+          "evidence": [
+            {
+              "page": 749,
+              "quote": "la peor cefalea de su vida"
+            },
+            {
+              "page": 751,
+              "quote": "Se previene con nimodipino VO."
+            }
+          ],
+          "source_gaps": [],
+          "verified_source_pages": [
+            749,
+            750,
+            751
+          ],
+          "external_sources": [
+            {
+              "label": "AHA/ASA: hemorragia subaracnoidea 2023",
+              "url": "https://professional.heart.org/en/science-news/2023-guideline-for-the-management-of-patients-with-aneurysmal-subarachnoid-hemorrhage/top-things-to-know",
+              "quote": "preferably within 24 hours",
+              "checked_at": "2026-10-29"
+            }
+          ],
+          "source_corrections": [
+            "Las páginas 750–751 no fijan la decisión solo por Hunt-Hess o circulación anterior/posterior. La guía actual recomienda evaluación multidisciplinaria, nimodipino enteral temprano y tratamiento del aneurisma preferentemente dentro de 24 horas. Se omite la pauta incorrecta impresa de nimodipino."
+          ]
+        }
+      ],
+      "common_problem": "Una cefalea alcanza su máxima intensidad de forma casi inmediata.",
+      "mother": {
+        "cue": "Dolor craneal explosivo con posible irritación meníngea o deterioro de conciencia.",
+        "answer": "Sangrado agudo en el espacio meníngeo.",
+        "explanation": "El inicio en trueno obliga a investigar sangrado aunque no exista focalidad."
+      }
+    },
+    {
+      "id": "22.03",
+      "title": "Cefalea recurrente",
+      "topics": [
+        {
+          "id": "22.03-01",
+          "name": "Cefaleas primarias",
+          "source_pages": [
+            724,
+            725
+          ],
+          "pattern": "Un adulto describe ataques repetidos de dolor craneal desde hace años, con exploración neurológica normal y características estables. Consulta para distinguir los episodios y elegir una intervención según su presentación.",
+          "key_discriminator": "características estables",
+          "mechanism": "Las cefaleas primarias son trastornos del procesamiento del dolor sin una lesión causal identificada; sus patrones temporales y síntomas acompañantes permiten clasificarlas clínicamente.",
+          "findings": [
+            {
+              "mechanism": "Activación de vías del dolor sin lesión estructural demostrada",
+              "finding": "Episodios estereotipados con exploración normal entre ataques."
+            }
+          ],
+          "initial_action": "Caracterizar lateralidad, calidad, duración, síntomas asociados e impacto. Buscar alarmas y clasificar el dolor antes de indicar tratamiento específico; no solicitar imagen rutinaria en un patrón típico sin alarmas.",
+          "action_reason": "La clasificación clínica orienta el manejo y evita omitir una causa secundaria.",
+          "modifiers": [
+            {
+              "factor": "Dolor súbito, focalidad, fiebre o cambio reciente",
+              "action": "Investigar una causa secundaria y seleccionar neuroimagen urgente cuando corresponda.",
+              "reason": "Estos datos rompen el patrón estable y pueden señalar hemorragia, infección o masa."
+            }
+          ],
+          "limits": "Exploración normal y recurrencia no descartan una causa secundaria cuando existen alarmas.",
+          "evidence": [
+            {
+              "page": 724,
+              "quote": "Estándar de oro en el diagnóstico es clínico."
+            },
+            {
+              "page": 724,
+              "quote": "Evaluación neurológica anormal."
+            }
+          ],
+          "source_gaps": [],
+          "verified_source_pages": [
+            724,
+            725
+          ]
+        },
+        {
+          "id": "22.03-02",
+          "name": "Migraña",
+          "source_pages": [
+            758
+          ],
+          "pattern": "Una joven presenta dolor unilateral pulsátil durante varias horas. Subir escaleras lo empeora y prefiere descansar en un cuarto oscuro por náusea, fotofobia y molestia intensa al ruido.",
+          "key_discriminator": "dolor unilateral pulsátil",
+          "mechanism": "La activación del sistema trigeminovascular y de vías sensitivas centrales produce dolor pulsátil y síntomas autonómicos, con posible disfunción cortical transitoria durante el aura.",
+          "findings": [
+            {
+              "mechanism": "Sensibilización trigeminovascular y sensorial",
+              "finding": "Dolor agravado por actividad con náusea, fotofobia o fonofobia."
+            }
+          ],
+          "initial_action": "Tratar el ataque temprano con un analgésico apropiado o un triptano según intensidad, respuesta previa y contraindicaciones. Valorar discapacidad y frecuencia para decidir prevención.",
+          "action_reason": "El tratamiento precoz reduce el ataque; la prevención se ajusta a su carga funcional.",
+          "modifiers": [
+            {
+              "factor": "Cardiopatía isquémica",
+              "action": "Evitar triptanos y elegir otra opción adecuada.",
+              "reason": "La acción vasoconstrictora impide su uso en esta condición."
+            }
+          ],
+          "limits": "Un primer episodio explosivo, focalidad persistente o un cambio claro del patrón exige estudiar otra causa.",
+          "evidence": [
+            {
+              "page": 758,
+              "quote": "unilaterales, pulsátiles"
+            },
+            {
+              "page": 758,
+              "quote": "Para los ataques agudos se recomienda paracetamol"
+            }
+          ],
+          "source_gaps": [],
+          "verified_source_pages": [
+            758
+          ]
+        },
+        {
+          "id": "22.03-03",
+          "name": "Cefalea tensional",
+          "source_pages": [
+            723
+          ],
+          "pattern": "Una mujer refiere presión bilateral en banda al final de jornadas con estrés. El dolor es leve, no empeora al caminar y no presenta náusea ni vómito.",
+          "key_discriminator": "presión bilateral en banda",
+          "mechanism": "La alteración del procesamiento nociceptivo y la sensibilidad de estructuras pericraneales generan dolor opresivo bilateral, sin el conjunto de síntomas sensitivos de otros ataques primarios.",
+          "findings": [
+            {
+              "mechanism": "Dolor opresivo sin agravamiento por actividad",
+              "finding": "Molestia bilateral leve o moderada con actividad conservada."
+            }
+          ],
+          "initial_action": "Confirmar el patrón clínico y descartar alarmas. Ofrecer analgesia simple para el episodio y revisar sueño, estrés y frecuencia del uso de analgésicos.",
+          "action_reason": "El patrón típico suele responder a medidas simples y no necesita imagen rutinaria.",
+          "modifiers": [
+            {
+              "factor": "Episodios frecuentes o crónicos",
+              "action": "Considerar prevención con amitriptilina y seguimiento de respuesta.",
+              "reason": "El uso repetido de analgesia aguda no resuelve una carga persistente de dolor."
+            }
+          ],
+          "limits": "Las dosis impresas como 7000 mg son erróneas y no deben usarse para prescribir.",
+          "evidence": [
+            {
+              "page": 723,
+              "quote": "sin empeoramiento con la actividad física."
+            },
+            {
+              "page": 723,
+              "quote": "Profilaxis con amitriptilina"
+            }
+          ],
+          "source_gaps": [],
+          "verified_source_pages": [
+            723
+          ],
+          "external_sources": [
+            {
+              "label": "NICE CG150: cefalea tensional",
+              "url": "https://www.nice.org.uk/guidance/cg150/chapter/Recommendations",
+              "quote": "Consider aspirin, paracetamol or an NSAID for the acute treatment of tension‑type headache",
+              "checked_at": "2026-10-29"
+            }
+          ],
+          "source_corrections": [
+            "La página 723 imprime 7000 mg de aspirina y paracetamol. Es una cifra errónea; se retira sin sustituirla por una dosis no comprobada en el libro. El analgésico se ajusta a comorbilidad y riesgo."
+          ]
+        }
+      ],
+      "common_problem": "Una persona presenta episodios repetidos de dolor craneal.",
+      "mother": {
+        "cue": "El dolor se repite con características estables; primero se buscan signos de una causa secundaria.",
+        "answer": "Síndrome de cefalea recurrente.",
+        "explanation": "La duración, el carácter, los síntomas asociados y las alarmas separan los patrones."
+      }
+    },
+    {
+      "id": "22.04",
+      "title": "Crisis de movimientos",
+      "topics": [
+        {
+          "id": "22.04-01",
+          "name": "Crisis convulsivas",
+          "source_pages": [
+            726,
+            727,
+            728
+          ],
+          "pattern": "Un adulto inicia con sensación extraña y movimientos de una mano. Después pierde la conciencia, presenta rigidez y sacudidas generalizadas, y permanece confuso varios minutos tras el evento.",
+          "key_discriminator": "permanece confuso varios minutos",
+          "mechanism": "Una descarga neuronal excesiva y sincrónica puede iniciarse en una red focal y propagarse, alterando la conciencia y produciendo manifestaciones motoras y recuperación posictal.",
+          "findings": [
+            {
+              "mechanism": "Propagación de actividad eléctrica desde una red focal",
+              "finding": "Síntomas iniciales localizados seguidos de convulsión bilateral y confusión."
+            }
+          ],
+          "initial_action": "Durante el evento, proteger la vía aérea, colocar de lado cuando sea posible, retirar peligros y medir su duración. Medir glucosa y buscar la causa tras estabilizar; tratar si la actividad se prolonga.",
+          "action_reason": "La prioridad es evitar lesión y reconocer actividad sostenida o una causa reversible.",
+          "modifiers": [
+            {
+              "factor": "Primer evento con recuperación completa",
+              "action": "Realizar evaluación etiológica y del riesgo de recurrencia antes de iniciar tratamiento crónico.",
+              "reason": "Una crisis aislada no equivale automáticamente a epilepsia."
+            }
+          ],
+          "limits": "El fármaco de mantenimiento depende del tipo de crisis y del contexto; algunos medicamentos agravan ausencias o mioclonías.",
+          "evidence": [
+            {
+              "page": 727,
+              "quote": "no colocar objetos en la boca"
+            },
+            {
+              "page": 727,
+              "quote": "No se recomienda prescribir tratamiento de"
+            }
+          ],
+          "source_gaps": [],
+          "verified_source_pages": [
+            726,
+            727,
+            728
+          ]
+        },
+        {
+          "id": "22.04-02",
+          "name": "Crisis de ausencia",
+          "source_pages": [
+            729
+          ],
+          "pattern": "Una niña interrumpe el habla varias veces al día y mira fijamente durante segundos. Conserva la postura, vuelve de inmediato a la tarea y no recuerda la breve desconexión.",
+          "key_discriminator": "vuelve de inmediato a la tarea",
+          "mechanism": "La sincronización anormal de circuitos talamocorticales interrumpe brevemente la conciencia, produce descargas generalizadas de espiga y onda y permite recuperación inmediata sin fase posictal.",
+          "findings": [
+            {
+              "mechanism": "Descarga generalizada breve de circuitos talamocorticales",
+              "finding": "Desconexión con postura conservada y sin confusión posterior."
+            }
+          ],
+          "initial_action": "Solicitar electroencefalograma con maniobras de activación apropiadas. Si se confirma el patrón típico aislado, iniciar etosuximida bajo valoración clínica.",
+          "action_reason": "El registro apoya la clasificación y la etosuximida es la primera opción para ausencias aisladas.",
+          "modifiers": [
+            {
+              "factor": "Otros tipos de crisis asociados",
+              "action": "Elegir un fármaco que cubra el conjunto de crisis con apoyo especializado.",
+              "reason": "La etosuximida no controla todas las epilepsias generalizadas."
+            }
+          ],
+          "limits": "Una desconexión prolongada o recuperación confusa requiere otro diferencial; no copiar la dosis impresa errónea.",
+          "evidence": [
+            {
+              "page": 729,
+              "quote": "descarga de espiga y onda de 3 Hz"
+            },
+            {
+              "page": 729,
+              "quote": "El tratamiento de primera línea es la etosuximida"
+            }
+          ],
+          "source_gaps": [],
+          "verified_source_pages": [
+            729
+          ],
+          "external_sources": [
+            {
+              "label": "NICE NG217: ausencias",
+              "url": "https://www.nice.org.uk/guidance/ng217/chapter/treating-epileptic-seizures-in-children-young-people-and-adults",
+              "quote": "Offer ethosuximide as first-line treatment for absence seizures.",
+              "checked_at": "2026-10-29"
+            }
+          ],
+          "source_corrections": [
+            "La primera opción para ausencias aisladas es etosuximida. La coexistencia de otras crisis cambia la selección; no se copia la pauta «5-70 mg/kg» de la página 729."
+          ]
+        },
+        {
+          "id": "22.04-03",
+          "name": "Síndromes epilépticos específicos",
+          "source_pages": [
+            760
+          ],
+          "pattern": "Un lactante presenta grupos de flexiones bruscas del tronco al despertar. Sus cuidadores notan pérdida de habilidades y el electroencefalograma muestra un patrón desorganizado de gran amplitud.",
+          "key_discriminator": "pérdida de habilidades",
+          "mechanism": "Algunas redes cerebrales inmaduras generan síndromes eléctricos ligados a la edad, con tipos de crisis y patrones electroencefalográficos que pueden comprometer el desarrollo neurológico.",
+          "findings": [
+            {
+              "mechanism": "Actividad epileptiforme extensa en un cerebro en desarrollo",
+              "finding": "Espasmos agrupados y regresión o retraso psicomotor."
+            }
+          ],
+          "initial_action": "Referir con urgencia a neurología pediátrica para electroencefalograma de sueño, clasificación del síndrome y tratamiento rápido de los espasmos.",
+          "action_reason": "La duración del síndrome activo puede afectar el desarrollo; no basta tratarlo como cualquier crisis generalizada.",
+          "modifiers": [
+            {
+              "factor": "Niño mayor con caídas, varias crisis y onda lenta",
+              "action": "Valorar otro síndrome; en un adolescente con sacudidas matutinas, investigar el patrón mioclónico y sus desencadenantes.",
+              "reason": "La edad, el tipo de evento y el electroencefalograma cambian la clasificación y el tratamiento."
+            }
+          ],
+          "limits": "El valproato no es una elección universal; requiere valorar riesgos reproductivos y el síndrome concreto.",
+          "evidence": [
+            {
+              "page": 760,
+              "quote": "Retraso psicomotor."
+            },
+            {
+              "page": 760,
+              "quote": "EEG: Patrón Hipsarrítmico."
+            }
+          ],
+          "source_gaps": [],
+          "verified_source_pages": [
+            760
+          ],
+          "external_sources": [
+            {
+              "label": "NICE NG217: espasmos infantiles",
+              "url": "https://www.nice.org.uk/guidance/ng217/chapter/treating-childhood-onset-epilepsies",
+              "quote": "refer the child urgently to, a tertiary paediatric neurologist",
+              "checked_at": "2026-10-29"
+            },
+            {
+              "label": "OMS: riesgos reproductivos del valproato",
+              "url": "https://www.who.int/news/item/02-05-2023-use-of-valproic-acid-in-women-and-girls-of-childbearing-potential/",
+              "quote": "should not be prescribed to women and girls of childbearing potential",
+              "checked_at": "2026-10-29"
+            }
+          ],
+          "source_corrections": [
+            "La página 760 reconoce síndromes pero no aporta tratamiento de los espasmos infantiles. NICE exige evaluación urgente, EEG de sueño y tratamiento específico; no se extrapola valproato a todos los síndromes.",
+            "La elección universal de valproato descrita en las páginas 726 y 760 omite el riesgo reproductivo. La selección exige asesoría especializada y alternativas apropiadas para mujeres y niñas con posibilidad de embarazo."
+          ]
+        }
+      ],
+      "common_problem": "Una persona presenta episodios de movimientos o desconexión.",
+      "mother": {
+        "cue": "La alteración eléctrica produce eventos estereotipados cuyo inicio y recuperación orientan su clasificación.",
+        "answer": "Crisis cerebral paroxística.",
+        "explanation": "Distinguir el inicio focal, generalizado o una desconexión breve permite elegir estudios y tratamiento."
+      }
+    },
+    {
+      "id": "22.05",
+      "title": "Convulsión con fiebre o duración larga",
+      "topics": [
+        {
+          "id": "22.05-01",
+          "name": "Crisis febriles",
+          "source_pages": [
+            730,
+            731
+          ],
+          "pattern": "Un niño de dos años con infección respiratoria y fiebre presenta una convulsión generalizada de tres minutos. Recupera su conducta habitual y no tiene signos meníngeos ni otro episodio ese día.",
+          "key_discriminator": "convulsión generalizada de tres minutos",
+          "mechanism": "La susceptibilidad del cerebro infantil ante fiebre favorece una descarga transitoria; la ausencia de infección cerebral y de eventos afebriles permite clasificar el episodio.",
+          "findings": [
+            {
+              "mechanism": "Umbral convulsivo reducido durante un proceso febril",
+              "finding": "Evento breve generalizado con recuperación completa."
+            }
+          ],
+          "initial_action": "Estabilizar, medir la duración y examinar al niño para identificar la causa de la fiebre y excluir neuroinfección. Tras una crisis simple, observar y orientar a sus cuidadores.",
+          "action_reason": "El riesgo y los estudios dependen de la recuperación y del foco febril, no de la fiebre por sí sola.",
+          "modifiers": [
+            {
+              "factor": "Duración mayor de cinco minutos o crisis en curso",
+              "action": "Administrar una benzodiacepina por una vía disponible y dar soporte respiratorio según necesidad.",
+              "reason": "La persistencia requiere detener la actividad y vigilar depresión respiratoria."
+            }
+          ],
+          "limits": "Focalidad, recurrencia, recuperación anormal o signos meníngeos requieren otra evaluación; el antitérmico no sustituye el manejo de la crisis.",
+          "evidence": [
+            {
+              "page": 730,
+              "quote": "6 meses - 5 años."
+            },
+            {
+              "page": 731,
+              "quote": "Solo vigilancia de paciente."
+            }
+          ],
+          "source_gaps": [],
+          "verified_source_pages": [
+            730,
+            731
+          ]
+        },
+        {
+          "id": "22.05-02",
+          "name": "Estatus epiléptico",
+          "source_pages": [
+            737
+          ],
+          "pattern": "Un hombre continúa con rigidez y sacudidas generalizadas después de cinco minutos. No recupera la conciencia y su familia refiere que suspendió recientemente el medicamento que tomaba para las crisis.",
+          "key_discriminator": "después de cinco minutos",
+          "mechanism": "La actividad convulsiva sostenida pierde sus mecanismos de terminación, aumenta la demanda metabólica cerebral y puede causar lesión neuronal y compromiso respiratorio o circulatorio.",
+          "findings": [
+            {
+              "mechanism": "Descarga continua con alto consumo energético",
+              "finding": "Convulsiones persistentes sin recuperación de conciencia."
+            }
+          ],
+          "initial_action": "Iniciar soporte de vía aérea, respiración y circulación, monitorizar y medir glucosa. Administrar una benzodiacepina inmediata; si persiste, cargar un segundo antiepiléptico y activar atención especializada.",
+          "action_reason": "La probabilidad de control disminuye con el tiempo y deben corregirse causas reversibles.",
+          "modifiers": [
+            {
+              "factor": "Persistencia pese al tratamiento inicial",
+              "action": "Escalar a cuidados intensivos, tratamiento anestésico según protocolo y monitorización electroencefalográfica.",
+              "reason": "Puede persistir actividad eléctrica aun después de desaparecer las sacudidas."
+            }
+          ],
+          "limits": "La referencia no debe esperar a completar treinta minutos; la dosis y el segundo fármaco dependen del protocolo y del paciente.",
+          "evidence": [
+            {
+              "page": 737,
+              "quote": "las convulsiones duran al menos 5 minutos."
+            },
+            {
+              "page": 737,
+              "quote": "uso de solución glucosada si existe hipoglucemia."
+            }
+          ],
+          "source_gaps": [],
+          "verified_source_pages": [
+            737
+          ],
+          "external_sources": [
+            {
+              "label": "NICE NG217: estatus epiléptico",
+              "url": "https://www.nice.org.uk/guidance/ng217/chapter/treating-status-epilepticus-repeated-or-cluster-seizures-and-prolonged-seizures",
+              "quote": "seek expert guidance in hospital",
+              "checked_at": "2026-10-29"
+            }
+          ],
+          "source_corrections": [
+            "La página 737 propone traslado si no hay control a los treinta minutos. Se activa apoyo urgente desde el fracaso del tratamiento inicial; no se espera ese plazo ni se considera fenitoína la única segunda opción."
+          ]
+        }
+      ],
+      "common_problem": "Una persona convulsiona durante fiebre o permanece convulsionando.",
+      "mother": {
+        "cue": "La duración y la recuperación establecen la urgencia; la fiebre exige buscar su origen.",
+        "answer": "Crisis provocada o actividad convulsiva sostenida.",
+        "explanation": "Una crisis breve con recuperación difiere de actividad continua o infección del sistema nervioso."
+      }
+    },
+    {
+      "id": "22.06",
+      "title": "Fiebre, cefalea y alteración mental",
+      "topics": [
+        {
+          "id": "22.06-01",
+          "name": "Meningitis",
+          "source_pages": [
+            752,
+            753,
+            754
+          ],
+          "pattern": "Un adulto presenta fiebre, cefalea intensa, rigidez cervical y confusión de inicio agudo. No tiene focalidad ni papiledema y se considera seguro obtener líquido cefalorraquídeo.",
+          "key_discriminator": "rigidez cervical y confusión",
+          "mechanism": "La infección de las meninges desencadena inflamación y altera la barrera hematoencefálica, causando pleocitosis, irritación meníngea y riesgo de lesión neurológica y sepsis.",
+          "findings": [
+            {
+              "mechanism": "Inflamación de las cubiertas meníngeas",
+              "finding": "Fiebre, cefalea, rigidez cervical y alteración del estado mental."
+            }
+          ],
+          "initial_action": "Obtener hemocultivos y líquido cefalorraquídeo si es seguro, sin retrasar antibiótico empírico intravenoso. Usar ceftriaxona o cefotaxima y ajustar cobertura a edad, inmunidad y resistencia local.",
+          "action_reason": "La infección bacteriana exige tratamiento inmediato; el cultivo permite ajustar el esquema.",
+          "modifiers": [
+            {
+              "factor": "Papiledema, déficit focal o alteración importante de conciencia",
+              "action": "Diferir la punción, realizar neuroimagen y comenzar tratamiento sin esperar el estudio del líquido.",
+              "reason": "La punción puede ser peligrosa y la espera de imagen no debe retrasar antimicrobianos."
+            }
+          ],
+          "limits": "Añadir cobertura para Listeria o neumococo resistente cuando corresponda; la vancomicina no impide por sí sola usar dexametasona.",
+          "evidence": [
+            {
+              "page": 752,
+              "quote": "fiebre, rigidez de cuello y alteraciones del"
+            },
+            {
+              "page": 754,
+              "quote": "Ceftriaxona / Cefotaxima."
+            }
+          ],
+          "source_gaps": [],
+          "verified_source_pages": [
+            752,
+            753,
+            754
+          ],
+          "external_sources": [
+            {
+              "label": "OMS 2025: meningitis, recomendaciones",
+              "url": "https://www.ncbi.nlm.nih.gov/books/NBK614844/",
+              "quote": "intravenous ceftriaxone or cefotaxime should be administered as empiric treatment",
+              "checked_at": "2026-10-29"
+            }
+          ],
+          "source_corrections": [
+            "La página 754 contiene una exclusión de dexametasona si se usa vancomicina que no corresponde como regla. El esquema empírico se ajusta al riesgo de Listeria y resistencia neumocócica; el tratamiento no espera una punción diferida."
+          ]
+        },
+        {
+          "id": "22.06-02",
+          "name": "Encefalitis viral",
+          "source_pages": [
+            732
+          ],
+          "pattern": "Una persona presenta fiebre, cefalea y conducta extraña durante dos días. Después desarrolla una crisis focal y desorientación; la resonancia muestra compromiso temporal y el líquido tiene pleocitosis linfocítica.",
+          "key_discriminator": "conducta extraña",
+          "mechanism": "La infección del parénquima cerebral altera redes cognitivas y eléctricas; el tropismo temporal de algunos virus favorece cambios conductuales, confusión y crisis focales.",
+          "findings": [
+            {
+              "mechanism": "Inflamación del tejido cerebral",
+              "finding": "Disfunción mental sostenida con crisis y posible focalidad."
+            }
+          ],
+          "initial_action": "Hospitalizar, estabilizar y comenzar aciclovir intravenoso ante sospecha de etiología herpética. Obtener resonancia y estudio de líquido con PCR cuando sea seguro, sin esperar confirmación para tratar.",
+          "action_reason": "El retraso del antiviral puede aumentar el daño de una infección herpética tratable.",
+          "modifiers": [
+            {
+              "factor": "Signos de hipertensión intracraneal o masa",
+              "action": "Evaluar con imagen y diferir la punción hasta establecer seguridad.",
+              "reason": "La obtención de líquido no debe provocar herniación ni retrasar tratamiento."
+            }
+          ],
+          "limits": "No toda inflamación cerebral es viral; los corticoides no se indican de forma rutinaria para todos los casos.",
+          "evidence": [
+            {
+              "page": 732,
+              "quote": "La encefalitis es una inflamación del parénquima cerebral"
+            },
+            {
+              "page": 732,
+              "quote": "Antivirales (aciclovir) en sospecha de VHS ."
+            }
+          ],
+          "source_gaps": [],
+          "verified_source_pages": [
+            732
+          ],
+          "external_sources": [
+            {
+              "label": "EAN/ESCMID: encefalitis infecciosa 2026",
+              "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13650609/",
+              "quote": "we are unable to recommend for or against the use of corticosteroids",
+              "checked_at": "2026-10-29"
+            }
+          ],
+          "source_corrections": [
+            "La página 732 presenta corticoides como soporte general. La guía actual no permite recomendar su uso sistemático en encefalitis herpética; sí recomienda aciclovir IV temprano ante sospecha."
+          ]
+        },
+        {
+          "id": "22.06-03",
+          "name": "Absceso cerebral",
+          "source_pages": [
+            722
+          ],
+          "pattern": "Un hombre con infección ótica reciente desarrolla cefalea progresiva, fiebre y debilidad de un brazo. Presenta papiledema; la resonancia muestra una lesión con realce anular y edema alrededor.",
+          "key_discriminator": "lesión con realce anular",
+          "mechanism": "La infección focal del parénquima forma una colección de pus y edema; la expansión produce efecto de masa, focalidad y aumento de la presión intracraneal.",
+          "findings": [
+            {
+              "mechanism": "Colección parenquimatosa con edema",
+              "finding": "Cefalea, fiebre, déficit focal y posible papiledema."
+            }
+          ],
+          "initial_action": "Obtener resonancia con contraste y solicitar valoración neuroquirúrgica urgente. Planear toma de material, drenaje y antimicrobianos intravenosos según gravedad y origen probable. Evitar punción lumbar si hay efecto de masa.",
+          "action_reason": "La imagen localiza la colección y el material permite dirigir el tratamiento sin aumentar el riesgo de herniación.",
+          "modifiers": [
+            {
+              "factor": "Efecto de masa importante o deterioro",
+              "action": "Controlar la urgencia intracraneal; considerar glucocorticoide y drenaje prioritario con el equipo tratante.",
+              "reason": "El edema puede amenazar la vida antes de conocerse el microorganismo."
+            }
+          ],
+          "limits": "El realce en anillo no identifica por sí solo el agente; la punción propuesta en el libro no es una prueba rutinaria segura.",
+          "evidence": [
+            {
+              "page": 722,
+              "quote": "Se observa un realce en anillo."
+            },
+            {
+              "page": 722,
+              "quote": "Aspiración con aguja guiado por imagen"
+            }
+          ],
+          "source_gaps": [],
+          "verified_source_pages": [
+            722
+          ],
+          "external_sources": [
+            {
+              "label": "OMS 2025: seguridad de la punción lumbar",
+              "url": "https://www.ncbi.nlm.nih.gov/books/NBK614844/",
+              "quote": "lumbar puncture can increase the risk of cerebral herniation",
+              "checked_at": "2026-10-29"
+            }
+          ],
+          "source_corrections": [
+            "La página 722 propone punción lumbar para excluir meningitis. No debe realizarse de rutina en una lesión con efecto de masa, edema importante o desplazamiento de línea media por el riesgo de herniación."
+          ]
+        }
+      ],
+      "common_problem": "Fiebre y cefalea se acompañan de alteración neurológica.",
+      "mother": {
+        "cue": "La infección puede comprometer las cubiertas, el parénquima o formar una colección focal.",
+        "answer": "Infección del sistema nervioso central.",
+        "explanation": "La focalidad, la conducta y la imagen cambian el estudio del líquido y el tratamiento inicial."
+      }
+    },
+    {
+      "id": "22.07",
+      "title": "Debilidad progresiva",
+      "topics": [
+        {
+          "id": "22.07-01",
+          "name": "Guillain Barré",
+          "source_pages": [
+            747,
+            748
+          ],
+          "pattern": "Un adulto presenta debilidad simétrica que asciende desde las piernas días después de una diarrea. Los reflejos están ausentes y comienza a tener dificultad para elevar la cabeza y respirar.",
+          "key_discriminator": "debilidad simétrica que asciende",
+          "mechanism": "La respuesta autoinmune posterior a un estímulo infeccioso lesiona raíces y nervios periféricos, alterando la conducción motora y, a veces, la sensibilidad y función autonómica.",
+          "findings": [
+            {
+              "mechanism": "Lesión periférica aguda de nervios y raíces",
+              "finding": "Debilidad progresiva con hiporreflexia o arreflexia."
+            }
+          ],
+          "initial_action": "Hospitalizar y evaluar de inmediato función respiratoria, deglución y estabilidad autonómica. Solicitar estudios de apoyo e iniciar inmunoglobulina intravenosa o recambio plasmático según gravedad y valoración especializada.",
+          "action_reason": "La debilidad respiratoria y la disautonomía pueden avanzar aunque la persona aún pueda hablar.",
+          "modifiers": [
+            {
+              "factor": "Líquido normal al inicio",
+              "action": "Mantener la sospecha y apoyar el diagnóstico con la evolución y estudios neurofisiológicos.",
+              "reason": "La disociación entre proteína y células puede aparecer después de los primeros días."
+            }
+          ],
+          "limits": "Los corticoides no sustituyen inmunoglobulina ni plasmaféresis; la clínica no exige esperar una punción positiva.",
+          "evidence": [
+            {
+              "page": 747,
+              "quote": "Debilidad progresiva en más de una extremidad."
+            },
+            {
+              "page": 748,
+              "quote": "No es recomendable administrar esteroides orales"
+            }
+          ],
+          "source_gaps": [],
+          "verified_source_pages": [
+            747,
+            748
+          ]
+        },
+        {
+          "id": "22.07-02",
+          "name": "Miastenia gravis",
+          "source_pages": [
+            755,
+            756,
+            757
+          ],
+          "pattern": "Una mujer presenta diplopía y caída de los párpados al final del día. La fuerza mejora después de dormir, pero hablar y masticar durante varios minutos vuelve a debilitarla.",
+          "key_discriminator": "fuerza mejora después de dormir",
+          "mechanism": "Los autoanticuerpos reducen la transmisión postsináptica en la unión neuromuscular; la repetición del esfuerzo supera su margen de seguridad y produce debilidad fatigable.",
+          "findings": [
+            {
+              "mechanism": "Pérdida del margen de transmisión neuromuscular",
+              "finding": "Ptosis, diplopía o debilidad bulbar que empeoran con esfuerzo y mejoran con reposo."
+            }
+          ],
+          "initial_action": "Evaluar primero respiración y deglución. En una persona estable, solicitar anticuerpos anti-AChR y valoración especializada; confirmar con estudios apropiados e investigar enfermedad tímica.",
+          "action_reason": "La debilidad fluctuante orienta el estudio, pero el compromiso bulbar o respiratorio cambia la prioridad.",
+          "modifiers": [
+            {
+              "factor": "Disfagia o dificultad respiratoria",
+              "action": "Hospitalizar, dar soporte y valorar inmunoglobulina intravenosa o recambio plasmático.",
+              "reason": "Una crisis puede requerir ventilación antes de que actúe el tratamiento inmunológico."
+            }
+          ],
+          "limits": "Una serología negativa no excluye la enfermedad; la indicación de timectomía depende del timo y del subtipo clínico.",
+          "evidence": [
+            {
+              "page": 755,
+              "quote": "Empeora con el ejercicio y mejora con el"
+            },
+            {
+              "page": 757,
+              "quote": "La piridostigmina oral es el tratamiento de primera línea"
+            }
+          ],
+          "source_gaps": [],
+          "verified_source_pages": [
+            755,
+            756,
+            757
+          ]
+        },
+        {
+          "id": "22.07-03",
+          "name": "Síndrome de Lambert-Eaton",
+          "source_pages": [
+            759
+          ],
+          "pattern": "Un fumador presenta dificultad para levantarse de una silla, boca seca y reflejos disminuidos. Después de repetir movimientos, mejora brevemente la fuerza y los reflejos se hacen más evidentes.",
+          "key_discriminator": "mejora brevemente la fuerza",
+          "mechanism": "Los anticuerpos contra canales presinápticos de calcio reducen la liberación de acetilcolina; la estimulación repetida acumula calcio y facilita temporalmente la transmisión muscular.",
+          "findings": [
+            {
+              "mechanism": "Liberación presináptica reducida con facilitación por esfuerzo",
+              "finding": "Debilidad proximal, hiporreflexia y síntomas autonómicos."
+            }
+          ],
+          "initial_action": "Solicitar estudios neurofisiológicos con estimulación repetitiva y buscar una neoplasia asociada, en especial pulmonar de células pequeñas. Coordinar tratamiento de la causa y del defecto de transmisión.",
+          "action_reason": "La enfermedad puede ser paraneoplásica y preceder a la detección del tumor.",
+          "modifiers": [
+            {
+              "factor": "Neoplasia identificada",
+              "action": "Tratar el tumor y valorar amifampridina con el especialista.",
+              "reason": "La terapia oncológica y la facilitación de liberación de acetilcolina pueden mejorar la función."
+            }
+          ],
+          "limits": "La ausencia inicial de cáncer no elimina su asociación; requiere seguimiento según el riesgo.",
+          "evidence": [
+            {
+              "page": 759,
+              "quote": "Debilidad mejora con la actividad."
+            },
+            {
+              "page": 759,
+              "quote": "prueba de estimulación nerviosa repetitiva"
+            }
+          ],
+          "source_gaps": [],
+          "verified_source_pages": [
+            759
+          ]
+        }
+      ],
+      "common_problem": "Una persona pierde fuerza de forma progresiva.",
+      "mother": {
+        "cue": "El patrón de reflejos, la fatigabilidad y los síntomas autonómicos localizan la falla motora.",
+        "answer": "Falla de nervio periférico o transmisión neuromuscular.",
+        "explanation": "La distribución y la respuesta al esfuerzo distinguen mecanismos con riesgos respiratorios compartidos."
+      }
+    },
+    {
+      "id": "22.08",
+      "title": "Temblor, rigidez o brotes",
+      "topics": [
+        {
+          "id": "22.08-01",
+          "name": "Enfermedad de Parkinson",
+          "source_pages": [
+            734,
+            735
+          ],
+          "pattern": "Un hombre desarrolla lentitud al vestirse, rigidez y temblor de una mano cuando está en reposo. Camina con pasos cortos y los síntomas han progresado de forma asimétrica durante meses.",
+          "key_discriminator": "temblor de una mano cuando está en reposo",
+          "mechanism": "La pérdida de neuronas dopaminérgicas nigroestriatales altera los circuitos de los ganglios basales, dificultando iniciar y regular movimientos y produciendo bradicinesia, rigidez y temblor.",
+          "findings": [
+            {
+              "mechanism": "Déficit de señal dopaminérgica en ganglios basales",
+              "finding": "Bradicinesia con rigidez y temblor de reposo inicialmente asimétrico."
+            }
+          ],
+          "initial_action": "Confirmar clínicamente el síndrome, revisar fármacos y causas alternativas, y valorar impacto funcional. Elegir tratamiento sintomático individualizado, incluida levodopa con carbidopa cuando el deterioro lo justifique.",
+          "action_reason": "El tratamiento se ajusta a función, síntomas y efectos adversos; la levodopa ofrece el mayor efecto motor.",
+          "modifiers": [
+            {
+              "factor": "Fluctuaciones o complicaciones motoras pese a manejo óptimo",
+              "action": "Solicitar valoración especializada para ajustes y eventual terapia avanzada en candidatos.",
+              "reason": "La estimulación cerebral profunda requiere selección clínica, no solo gravedad."
+            }
+          ],
+          "limits": "El temblor aislado no confirma el diagnóstico y las manifestaciones atípicas tempranas requieren reconsiderarlo.",
+          "evidence": [
+            {
+              "page": 734,
+              "quote": "Al inicio es típicamente en cuenta de monedas y asimétrico."
+            },
+            {
+              "page": 735,
+              "quote": "La levodopa es el tratamiento sintomático"
+            }
+          ],
+          "source_gaps": [],
+          "verified_source_pages": [
+            734,
+            735
+          ]
+        },
+        {
+          "id": "22.08-02",
+          "name": "Esclerosis múltiple",
+          "source_pages": [
+            736
+          ],
+          "pattern": "Una mujer joven presentó pérdida visual dolorosa que mejoró. Meses después desarrolla diplopía y parestesias, con sensación eléctrica al flexionar el cuello y lesiones en distintas regiones de la resonancia.",
+          "key_discriminator": "lesiones en distintas regiones",
+          "mechanism": "La inflamación autoinmune lesiona mielina y axones del sistema nervioso central en sitios y momentos distintos, causando déficits variables y recuperación incompleta entre episodios.",
+          "findings": [
+            {
+              "mechanism": "Lesiones desmielinizantes diseminadas",
+              "finding": "Episodios separados de neuritis óptica, diplopía, alteración sensitiva o motora."
+            }
+          ],
+          "initial_action": "Solicitar resonancia de encéfalo y valoración neurológica para demostrar diseminación y excluir alternativas. Ante un brote incapacitante confirmado, considerar metilprednisolona según el protocolo.",
+          "action_reason": "La imagen apoya el diagnóstico y el corticoide acelera la recuperación de un brote funcionalmente importante.",
+          "modifiers": [
+            {
+              "factor": "Brote grave con respuesta insuficiente",
+              "action": "Valorar recambio plasmático y atención especializada.",
+              "reason": "La gravedad y la respuesta cambian el tratamiento agudo."
+            }
+          ],
+          "limits": "Una lesión aislada no confirma la enfermedad; el tratamiento modificador de largo plazo se individualiza más allá del esquema resumido del libro.",
+          "evidence": [
+            {
+              "page": 736,
+              "quote": "Signo de Lhermitte: Descarga eléctrica al flexionar el cuello."
+            },
+            {
+              "page": 736,
+              "quote": "Metilprednisolona VO o IV de 3 a 5 días."
+            }
+          ],
+          "source_gaps": [],
+          "verified_source_pages": [
+            736
+          ],
+          "external_sources": [
+            {
+              "label": "NICE NG220: esclerosis múltiple",
+              "url": "https://www.nice.org.uk/guidance/ng220/chapter/Recommendations",
+              "quote": "not all relapses need treating with steroids",
+              "checked_at": "2026-10-29"
+            }
+          ],
+          "source_corrections": [
+            "El tratamiento de brotes se condiciona al impacto y a excluir infección. La página 736 resume opciones modificadoras antiguas; su selección actual requiere valorar actividad y características de la enfermedad."
+          ]
+        }
+      ],
+      "common_problem": "Una persona presenta lentitud motora o déficits neurológicos recurrentes.",
+      "mother": {
+        "cue": "El curso continuo o por episodios y los sistemas afectados orientan el sitio de lesión.",
+        "answer": "Disfunción motora central degenerativa o inflamatoria.",
+        "explanation": "La bradicinesia sostenida difiere de síntomas diseminados que recuperan entre brotes."
+      }
+    },
+    {
+      "id": "22.09",
+      "title": "Cefalea con focalidad progresiva",
+      "topics": [
+        {
+          "id": "22.09-01",
+          "name": "Tumores en SNC",
+          "source_pages": [
+            761,
+            762
+          ],
+          "pattern": "Un niño presenta cefalea que empeora durante semanas, lo despierta y se acompaña de vómito matutino. Ahora camina inestable y tiene visión doble, sin fiebre ni infección reciente.",
+          "key_discriminator": "vómito matutino",
+          "mechanism": "Una neoplasia intracraneal puede infiltrar estructuras, generar edema u obstruir la circulación del líquido cefalorraquídeo, causando hipertensión intracraneal y déficit dependiente de su localización.",
+          "findings": [
+            {
+              "mechanism": "Ocupación intracraneal con edema u obstrucción del líquido",
+              "finding": "Cefalea progresiva con vómito y focalidad o alteración de la marcha."
+            }
+          ],
+          "initial_action": "Realizar exploración neurológica y resonancia con contraste; referir con urgencia a un centro especializado. Si existe deterioro, estabilizar vía aérea y circulación y tratar las complicaciones intracraneales antes del traslado.",
+          "action_reason": "La imagen define la lesión y el deterioro por presión requiere atención inmediata.",
+          "modifiers": [
+            {
+              "factor": "Crisis o edema con compromiso clínico",
+              "action": "Controlar las crisis y valorar dexametasona para edema según el contexto.",
+              "reason": "El control de complicaciones precede al tratamiento definitivo del tumor."
+            }
+          ],
+          "limits": "El patrón reconoce una masa; no define histología ni permite usar las asociaciones epidemiológicas del libro como reglas absolutas.",
+          "evidence": [
+            {
+              "page": 761,
+              "quote": "Vómito de predominio matutino"
+            },
+            {
+              "page": 762,
+              "quote": "La resonancia magnética con gadolinio"
+            }
+          ],
+          "source_gaps": [],
+          "verified_source_pages": [
+            761,
+            762
+          ]
+        }
+      ],
+      "common_problem": "La cefalea aumenta y aparece una alteración neurológica focal.",
+      "mother": {
+        "cue": "El dolor progresivo con vómito o déficit sugiere ocupación intracraneal y posible obstrucción del líquido.",
+        "answer": "Lesión intracraneal con efecto de masa.",
+        "explanation": "La imagen establece la localización y permite planear el control de la urgencia."
+      }
+    },
+    {
+      "id": "22.10",
+      "title": "Confusión por malnutrición",
+      "topics": [
+        {
+          "id": "22.10-01",
+          "name": "Encefalopatía de Wernicke",
+          "source_pages": [
+            733
+          ],
+          "pattern": "Un hombre con consumo crónico de alcohol y alimentación escasa llega desorientado. Presenta nistagmo, dificultad para mover los ojos y una marcha inestable que apareció en los últimos días.",
+          "key_discriminator": "nistagmo",
+          "mechanism": "La deficiencia de tiamina reduce la actividad de enzimas del metabolismo energético, lesionando regiones cerebrales vulnerables relacionadas con memoria, movimientos oculares y coordinación de la marcha.",
+          "findings": [
+            {
+              "mechanism": "Falla energética cerebral por déficit de tiamina",
+              "finding": "Confusión, alteración oculomotora y ataxia, que pueden aparecer incompletas."
+            }
+          ],
+          "initial_action": "Administrar tiamina parenteral inmediata y valorar glucosa, electrolitos y nutrición. No esperar confirmación de laboratorio; si hay hipoglucemia, tratarla sin demora junto con la tiamina.",
+          "action_reason": "El tratamiento temprano puede evitar daño persistente y la hipoglucemia también amenaza el cerebro.",
+          "modifiers": [
+            {
+              "factor": "Cirugía bariátrica, vómito prolongado o malabsorción",
+              "action": "Mantener la misma sospecha aun sin consumo de alcohol.",
+              "reason": "La carencia de tiamina depende de disponibilidad y absorción, no solo del alcohol."
+            }
+          ],
+          "limits": "La tríada completa no es necesaria; la glucosa urgente no debe retrasarse para administrar primero la vitamina.",
+          "evidence": [
+            {
+              "page": 733,
+              "quote": "Nistagmo, parálisis de recto lateral y diplopía."
+            },
+            {
+              "page": 733,
+              "quote": "Tia mina IV o IM hasta desparecer los síntomas."
+            }
+          ],
+          "source_gaps": [],
+          "verified_source_pages": [
+            733
+          ],
+          "external_sources": [
+            {
+              "label": "ASAM: tiamina y glucosa",
+              "url": "https://downloads.asam.org/sitefinity-production-blobs/docs/default-source/guidelines/awg-3-20-20.pdf",
+              "quote": "Patients also receiving glucose can be administered thiamine and glucose in any order or concurrently.",
+              "checked_at": "2026-10-29"
+            }
+          ],
+          "source_corrections": [
+            "La página 733 exige glucosa después de tiamina. Se administra tiamina parenteral sin demora, pero no se retrasa la corrección urgente de hipoglucemia; pueden darse de forma simultánea."
+          ]
+        }
+      ],
+      "common_problem": "Una persona con malnutrición desarrolla confusión e inestabilidad.",
+      "mother": {
+        "cue": "La falta de un cofactor energético puede afectar la conciencia, la mirada y la marcha.",
+        "answer": "Disfunción cerebral por déficit vitamínico agudo.",
+        "explanation": "La sospecha clínica exige reposición inmediata antes de esperar pruebas confirmatorias."
+      }
+    }
+  ]
+}
