@@ -1,0 +1,1254 @@
+{
+  "id": "03",
+  "title": "ATLS",
+  "blocks": [
+    {
+      "id": "03.01",
+      "title": "Entrada de paciente politraumatizado",
+      "topics": [
+        {
+          "id": "03.01-01",
+          "name": "Politrauma",
+          "source_pages": [
+            57,
+            58,
+            59,
+            60
+          ],
+          "pattern": "Tras una colisión, un adulto tiene respiración ruidosa, dolor torácico y una herida sangrante en la pierna. Está confuso y el equipo inicia la evaluación simultánea de lesiones.",
+          "key_discriminator": "respiración ruidosa",
+          "mechanism": "Varias lesiones pueden comprometer oxigenación y perfusión al mismo tiempo; la revisión primaria ordena amenazas inmediatas y permite tratarlas antes de una evaluación anatómica completa.",
+          "findings": [
+            {
+              "mechanism": "Obstrucción de vía aérea",
+              "finding": "Respiración ruidosa"
+            },
+            {
+              "mechanism": "Hipoperfusión",
+              "finding": "Confusión"
+            }
+          ],
+          "initial_action": "Iniciar revisión ABCDE con protección cervical y control inmediato de hemorragia. Tratar cada amenaza al detectarla y reevaluar antes de pasar a revisión secundaria.",
+          "action_reason": "La prioridad es corregir causas reversibles de muerte temprana.",
+          "modifiers": [
+            {
+              "factor": "Paciente aún inestable",
+              "action": "Mantener reanimación y buscar hemorragia o lesión torácica letal.",
+              "reason": "No corresponde retrasar control para una revisión secundaria completa."
+            },
+            {
+              "factor": "Necesidad de traslado",
+              "action": "Coordinarlo durante la evaluación inicial.",
+              "reason": "El centro receptor puede aportar tratamiento definitivo."
+            }
+          ],
+          "limits": "Una vía aérea permeable no garantiza ventilación adecuada. Glasgow de 3 por sí solo no establece muerte encefálica.",
+          "evidence": [
+            {
+              "page": 57,
+              "quote": "Fase 1: Valoración inicial o revisión primaria se realiza el A BCD E."
+            },
+            {
+              "page": 58,
+              "quote": "Una vía aérea permeable no garantiza una adecuada ventilación."
+            }
+          ],
+          "source_gaps": []
+        }
+      ],
+      "common_problem": "Paciente con varias lesiones tras trauma.",
+      "mother": {
+        "cue": "Identificar y corregir amenazas de oxigenación y perfusión por prioridad.",
+        "answer": "Evaluación primaria del trauma",
+        "explanation": "El tratamiento de amenazas inmediatas precede al inventario completo de lesiones."
+      }
+    },
+    {
+      "id": "03.02",
+      "title": "Hipotensión traumática",
+      "topics": [
+        {
+          "id": "03.02-01",
+          "name": "Tipos de shock",
+          "source_pages": [
+            74,
+            75
+          ],
+          "pattern": "Un paciente presenta hipotensión, confusión y oliguria. Se buscan pérdidas sanguíneas, congestión pulmonar, infección y obstrucción torácica para decidir qué mecanismo impide una perfusión adecuada.",
+          "key_discriminator": "hipotensión, confusión y oliguria",
+          "mechanism": "El aporte o uso de oxígeno tisular es insuficiente por pérdida de volumen, fallo de bomba, vasodilatación u obstrucción; el mecanismo determina el tratamiento causal.",
+          "findings": [
+            {
+              "mechanism": "Hipoperfusión cerebral",
+              "finding": "Confusión"
+            },
+            {
+              "mechanism": "Hipoperfusión renal",
+              "finding": "Oliguria"
+            }
+          ],
+          "initial_action": "Iniciar soporte de oxigenación y perfusión mientras se identifica el mecanismo con antecedentes, exploración y estudios dirigidos. Tratar la causa sin esperar todos los resultados.",
+          "action_reason": "Los tipos de shock comparten hipoperfusión, pero requieren tratamientos causales diferentes.",
+          "modifiers": [
+            {
+              "factor": "Estertores y datos de fallo cardíaco",
+              "action": "Valorar origen cardiogénico.",
+              "reason": "El fallo de bomba puede acompañarse de congestión."
+            },
+            {
+              "factor": "Ausencia unilateral de ruidos y timpanismo",
+              "action": "Buscar obstrucción torácica urgente.",
+              "reason": "Una lesión a tensión puede reducir el retorno venoso."
+            }
+          ],
+          "limits": "No descartar shock por presión inicialmente normal; puede haber hipoperfusión compensada.",
+          "evidence": [
+            {
+              "page": 74,
+              "quote": "del estado mental: hipoperfusión"
+            },
+            {
+              "page": 75,
+              "quote": "Iniciar el tratamiento y la evaluación en busca de la etiología,"
+            }
+          ],
+          "source_gaps": []
+        },
+        {
+          "id": "03.02-02",
+          "name": "Choque hipovolémico",
+          "source_pages": [
+            44
+          ],
+          "pattern": "Un adulto lesionado en un choque vehicular presenta taquicardia, piel fría, presión baja y confusión. No se observa sangrado externo suficiente para explicar su deterioro circulatorio.",
+          "key_discriminator": "No se observa sangrado externo suficiente",
+          "mechanism": "La pérdida sanguínea disminuye retorno venoso y gasto cardíaco; la vasoconstricción compensadora no mantiene perfusión cuando el déficit de volumen progresa.",
+          "findings": [
+            {
+              "mechanism": "Pérdida de volumen",
+              "finding": "Taquicardia e hipotensión"
+            },
+            {
+              "mechanism": "Perfusión cerebral reducida",
+              "finding": "Confusión"
+            }
+          ],
+          "initial_action": "Controlar hemorragia y buscar sangrado torácico, abdominal, pélvico o de huesos largos. Iniciar reanimación y hemoderivados según gravedad, con prevención de hipotermia.",
+          "action_reason": "La reposición sin control de la fuente no detiene la pérdida.",
+          "modifiers": [
+            {
+              "factor": "Respuesta mínima a reanimación",
+              "action": "Priorizar intervención para control definitivo.",
+              "reason": "Puede persistir hemorragia activa."
+            },
+            {
+              "factor": "TCE asociado",
+              "action": "Evitar metas de presión permisivamente bajas.",
+              "reason": "La perfusión cerebral requiere atención específica."
+            }
+          ],
+          "limits": "Las clases hemorrágicas son orientativas; no estimar pérdida exacta por un solo signo.",
+          "evidence": [
+            {
+              "page": 44,
+              "quote": "es la causa más común de choque en el paciente traumatizado."
+            },
+            {
+              "page": 44,
+              "quote": "En caso de respuesta mínima con"
+            }
+          ],
+          "source_gaps": []
+        },
+        {
+          "id": "03.02-03",
+          "name": "Shock neurogénico",
+          "source_pages": [
+            65
+          ],
+          "pattern": "Tras una caída con lesión cervical, un adulto presenta hipotensión, pulso lento y piel sin vasoconstricción marcada. El equipo busca hemorragia oculta antes de atribuir el patrón a la médula.",
+          "key_discriminator": "hipotensión, pulso lento",
+          "mechanism": "La lesión de vías simpáticas descendentes reduce tono vascular y estimulación cardíaca; la vasodilatación y la ausencia de taquicardia compensadora disminuyen la perfusión.",
+          "findings": [
+            {
+              "mechanism": "Pérdida de tono vasomotor",
+              "finding": "Hipotensión sin vasoconstricción"
+            },
+            {
+              "mechanism": "Predominio vagal",
+              "finding": "Bradicardia"
+            }
+          ],
+          "initial_action": "Descartar y tratar hipovolemia traumática. Si persiste el patrón tras evaluación, sostener perfusión con vasopresor y tratar bradicardia significativa según necesidad.",
+          "action_reason": "La hemorragia es más frecuente; la pérdida simpática no se corrige solo con grandes volúmenes.",
+          "modifiers": [
+            {
+              "factor": "Sobrecarga durante líquidos",
+              "action": "Reevaluar y limitar expansión indiscriminada.",
+              "reason": "Puede producir edema pulmonar sin corregir el tono vascular."
+            }
+          ],
+          "limits": "Shock medular describe pérdida transitoria de función y reflejos; no equivale al shock circulatorio neurogénico.",
+          "evidence": [
+            {
+              "page": 65,
+              "quote": "sin taquicardia o hipotensión sin vasoconstricción cutánea."
+            },
+            {
+              "page": 65,
+              "quote": "Vasopresores puede ser requerido"
+            }
+          ],
+          "source_gaps": []
+        }
+      ],
+      "common_problem": "Hipotensión tras trauma con hallazgos variables.",
+      "mother": {
+        "cue": "Determinar si falta volumen, tono vascular, función de bomba o retorno venoso.",
+        "answer": "Mecanismos de shock traumático",
+        "explanation": "La hemorragia debe buscarse primero, pero otros mecanismos cambian la intervención."
+      }
+    },
+    {
+      "id": "03.03",
+      "title": "Disnea unilateral aguda tras trauma",
+      "topics": [
+        {
+          "id": "03.03-01",
+          "name": "Trauma torácico",
+          "source_pages": [
+            87,
+            88,
+            89
+          ],
+          "pattern": "Tras un impacto lateral, un adulto presenta dolor intenso al respirar y movimiento paradójico de una zona costal. Tiene hipoxemia y el equipo busca lesiones intratorácicas asociadas.",
+          "key_discriminator": "movimiento paradójico",
+          "mechanism": "La lesión de pared altera la mecánica ventilatoria; la contusión pulmonar asociada compromete intercambio gaseoso y puede explicar hipoxemia mayor que el defecto mecánico.",
+          "findings": [
+            {
+              "mechanism": "Segmento costal inestable",
+              "finding": "Movimiento paradójico"
+            },
+            {
+              "mechanism": "Contusión alveolar",
+              "finding": "Hipoxemia e infiltrados"
+            }
+          ],
+          "initial_action": "Evaluar ABCDE y descartar lesiones torácicas letales. Dar oxígeno y analgesia, y valorar apoyo ventilatorio si la oxigenación o ventilación son insuficientes.",
+          "action_reason": "La hipoxia es una amenaza inmediata y el dolor limita ventilación.",
+          "modifiers": [
+            {
+              "factor": "Hipoxemia persistente o fatiga",
+              "action": "Valorar intubación y ventilación.",
+              "reason": "El soporte inicial puede ser insuficiente."
+            },
+            {
+              "factor": "Sospecha de lesión aórtica por desaceleración",
+              "action": "Solicitar angiotomografía si la condición permite.",
+              "reason": "Requiere estudio vascular específico."
+            }
+          ],
+          "limits": "La extensión de lesión externa no predice por sí sola la lesión pulmonar o vascular interna.",
+          "evidence": [
+            {
+              "page": 88,
+              "quote": "protruye durante exhalación y se"
+            },
+            {
+              "page": 88,
+              "quote": "Oxigenación, hidratación y"
+            },
+            {
+              "page": 87,
+              "quote": "Se recomienda realizar la angiotomografía en"
+            }
+          ],
+          "source_gaps": []
+        },
+        {
+          "id": "03.03-02",
+          "name": "Neumotórax a tensión",
+          "source_pages": [
+            54
+          ],
+          "pattern": "Un traumatizado desarrolla disnea intensa, hipotensión y ausencia de ruidos respiratorios en un hemitórax. La percusión es hiperresonante y las venas del cuello están distendidas.",
+          "key_discriminator": "percusión es hiperresonante",
+          "mechanism": "El aire entra al espacio pleural sin poder salir; la presión creciente colapsa el pulmón y reduce retorno venoso, lo que genera choque obstructivo.",
+          "findings": [
+            {
+              "mechanism": "Aire pleural bajo presión",
+              "finding": "Ausencia unilateral de ruidos"
+            },
+            {
+              "mechanism": "Retorno venoso reducido",
+              "finding": "Hipotensión y distensión yugular"
+            }
+          ],
+          "initial_action": "Realizar descompresión torácica urgente según técnica disponible y continuar con drenaje pleural definitivo. No esperar radiografía cuando el cuadro clínico es compatible.",
+          "action_reason": "La presión intratorácica compromete de inmediato ventilación y circulación.",
+          "modifiers": [
+            {
+              "factor": "Colapso durante ventilación mecánica",
+              "action": "Buscar y tratar tensión pleural de inmediato.",
+              "reason": "La presión positiva puede precipitarla."
+            }
+          ],
+          "limits": "La página presenta diferencias entre ATLS y GPC sobre sitio y calibre; la técnica debe seguir protocolo vigente del servicio.",
+          "evidence": [
+            {
+              "page": 54,
+              "quote": "No es necesaria la radiografía es una urgencia."
+            },
+            {
+              "page": 54,
+              "quote": "Se recomienda colocar sonda endopleural posterior a"
+            }
+          ],
+          "source_gaps": []
+        },
+        {
+          "id": "03.03-03",
+          "name": "Neumotórax abierto",
+          "source_pages": [
+            55
+          ],
+          "pattern": "Un adulto tiene una herida penetrante del tórax por la que entra y sale aire con cada respiración. Presenta dolor, hipoxia y timpanismo del lado lesionado.",
+          "key_discriminator": "entra y sale aire",
+          "mechanism": "El defecto de pared comunica la cavidad pleural con la atmósfera; el flujo por la herida impide presión negativa eficaz y expansión pulmonar.",
+          "findings": [
+            {
+              "mechanism": "Comunicación pleuroatmosférica",
+              "finding": "Herida que respira"
+            },
+            {
+              "mechanism": "Expansión pulmonar reducida",
+              "finding": "Hipoxia"
+            }
+          ],
+          "initial_action": "Cubrir la herida con un sistema unidireccional apropiado y valorar ventilación. Colocar drenaje pleural alejado del defecto y solicitar reparación quirúrgica.",
+          "action_reason": "Se limita la entrada de aire sin impedir su salida y se restaura el drenaje pleural.",
+          "modifiers": [
+            {
+              "factor": "Deterioro tras cubrir la herida",
+              "action": "Reevaluar tensión pleural y el funcionamiento del sello.",
+              "reason": "El aire atrapado puede aumentar la presión."
+            }
+          ],
+          "limits": "El manejo exige vigilancia continua; un sello no sustituye el drenaje ni la reparación indicada.",
+          "evidence": [
+            {
+              "page": 55,
+              "quote": "Herida que respira"
+            },
+            {
+              "page": 55,
+              "quote": "Válvula unidireccional"
+            }
+          ],
+          "source_gaps": []
+        },
+        {
+          "id": "03.03-04",
+          "name": "Neumotórax simple",
+          "source_pages": [
+            56
+          ],
+          "pattern": "Después de una fractura costal, un adulto estable tiene dolor y reducción de ruidos respiratorios de un lado. La presión es normal y la radiografía muestra aire pleural.",
+          "key_discriminator": "La presión es normal",
+          "mechanism": "La laceración pulmonar permite aire pleural y pérdida parcial de expansión; el deterioro ventilación-perfusión produce hipoxemia sin el compromiso circulatorio propio de tensión.",
+          "findings": [
+            {
+              "mechanism": "Aire pleural",
+              "finding": "Hiperresonancia y menor murmullo"
+            },
+            {
+              "mechanism": "Alteración ventilación-perfusión",
+              "finding": "Hipoxemia"
+            }
+          ],
+          "initial_action": "Valorar extensión, síntomas y necesidad de ventilación. En un caso pequeño y estable, mantener vigilancia clínica e imagen; colocar drenaje cuando esté indicado por evolución o contexto.",
+          "action_reason": "El manejo depende de repercusión y riesgo de progresión.",
+          "modifiers": [
+            {
+              "factor": "Hipotensión o distensión yugular nuevas",
+              "action": "Reevaluar tensión pleural urgente.",
+              "reason": "Cambió la repercusión circulatoria."
+            },
+            {
+              "factor": "Lesión pequeña sin deterioro",
+              "action": "Considerar manejo conservador supervisado.",
+              "reason": "La página permite observación con vigilancia clínica y radiológica."
+            }
+          ],
+          "limits": "El tamaño apical aislado no sustituye la evaluación clínica; los umbrales y oxígeno de alto flujo del resumen requieren protocolo vigente.",
+          "evidence": [
+            {
+              "page": 56,
+              "quote": "No existe hipotensión ni distensión yugular"
+            },
+            {
+              "page": 56,
+              "quote": "siempre y cuando se mantenga en vigilancia clínica y"
+            }
+          ],
+          "source_gaps": []
+        }
+      ],
+      "common_problem": "Disnea y ruidos respiratorios disminuidos de un lado tras trauma.",
+      "mother": {
+        "cue": "El aire pleural puede producir pérdida de expansión con o sin compromiso circulatorio.",
+        "answer": "Lesión ventilatoria de pared o pleura",
+        "explanation": "La herida y la repercusión hemodinámica determinan sellado, drenaje o descompresión urgente."
+      }
+    },
+    {
+      "id": "03.04",
+      "title": "Hipoxemia y choque torácico",
+      "topics": [
+        {
+          "id": "03.04-01",
+          "name": "Hemotórax",
+          "source_pages": [
+            50
+          ],
+          "pattern": "Un adulto con herida torácica tiene disnea, presión baja y ruidos respiratorios ausentes en un lado. La percusión es mate y las venas cervicales están aplanadas.",
+          "key_discriminator": "percusión es mate",
+          "mechanism": "La sangre acumulada en pleura comprime pulmón y reduce volumen circulante; el cuadro combina compromiso ventilatorio con shock hemorrágico cuando la pérdida es importante.",
+          "findings": [
+            {
+              "mechanism": "Sangre pleural",
+              "finding": "Matidez y ausencia de murmullo"
+            },
+            {
+              "mechanism": "Pérdida intravascular",
+              "finding": "Hipotensión y venas aplanadas"
+            }
+          ],
+          "initial_action": "Iniciar reanimación hemorrágica, drenaje pleural y evaluación quirúrgica urgente. Cuantificar el sangrado drenado y valorar toracotomía por pérdida inicial masiva o sangrado persistente.",
+          "action_reason": "Se debe evacuar sangre y controlar la fuente activa.",
+          "modifiers": [
+            {
+              "factor": "Evacuación inicial mayor de 1500 ml o sangrado persistente importante",
+              "action": "Solicitar control quirúrgico.",
+              "reason": "Sugiere lesión vascular o sangrado no controlado."
+            }
+          ],
+          "limits": "La página difiere sobre toracotomía inicial entre GPC y ATLS; no retrasar valoración quirúrgica en un paciente inestable.",
+          "evidence": [
+            {
+              "page": 50,
+              "quote": "Venas el cuello aplanadas"
+            },
+            {
+              "page": 50,
+              "quote": "Reposición de volumen + descompresión"
+            }
+          ],
+          "source_gaps": []
+        },
+        {
+          "id": "03.04-02",
+          "name": "Taponamiento cardiaco",
+          "source_pages": [
+            66
+          ],
+          "pattern": "Tras una herida precordial, un adulto tiene hipotensión, venas yugulares distendidas y ruidos cardíacos apagados. Los ruidos respiratorios se conservan y el equipo dispone de ultrasonido.",
+          "key_discriminator": "ruidos cardíacos apagados",
+          "mechanism": "La sangre pericárdica comprime las cavidades e impide llenado diastólico; el gasto cae pese a actividad eléctrica y puede aparecer paro sin pulso.",
+          "findings": [
+            {
+              "mechanism": "Llenado cardíaco impedido",
+              "finding": "Hipotensión"
+            },
+            {
+              "mechanism": "Presión venosa elevada",
+              "finding": "Ingurgitación yugular"
+            }
+          ],
+          "initial_action": "Realizar FAST inmediato si está disponible sin retrasar atención. Activar al equipo quirúrgico para descompresión y reparación; valorar drenaje de rescate según recursos y situación.",
+          "action_reason": "La sangre pericárdica debe evacuarse y la lesión causal requiere control.",
+          "modifiers": [
+            {
+              "factor": "Actividad eléctrica sin pulso tras trauma penetrante",
+              "action": "Considerar taponamiento dentro de causas reversibles.",
+              "reason": "Puede existir actividad eléctrica sin llenado suficiente."
+            }
+          ],
+          "limits": "La pericardiocentesis del resumen no sustituye el control quirúrgico de una lesión cardíaca traumática.",
+          "evidence": [
+            {
+              "page": 66,
+              "quote": "dificulta llenado de cavidades"
+            },
+            {
+              "page": 66,
+              "quote": "Confirmatorio: USG FAST."
+            },
+            {
+              "page": 66,
+              "quote": "Toracotomía con ventana pericárdica."
+            }
+          ],
+          "source_gaps": []
+        }
+      ],
+      "common_problem": "Hipoxemia e hipotensión después de trauma torácico.",
+      "mother": {
+        "cue": "La sangre puede reducir volumen circulante o impedir llenado cardíaco.",
+        "answer": "Hemorragia torácica y obstrucción al llenado",
+        "explanation": "La percusión, venas cervicales y ultrasonido orientan el sitio de acumulación."
+      }
+    },
+    {
+      "id": "03.05",
+      "title": "Lesión torácica difícil",
+      "topics": [
+        {
+          "id": "03.05-01",
+          "name": "Lesión traqueobronquial",
+          "source_pages": [
+            53
+          ],
+          "pattern": "Tras desaceleración intensa, un adulto presenta hemoptisis y enfisema cervical. Un neumotórax persiste y sale gran cantidad de aire por la sonda pleural colocada durante la reanimación.",
+          "key_discriminator": "sale gran cantidad de aire",
+          "mechanism": "La discontinuidad de tráquea o bronquio permite escape aéreo continuo hacia pleura y tejidos; el drenaje pleural no corrige por sí solo el defecto de vía aérea.",
+          "findings": [
+            {
+              "mechanism": "Escape aéreo central",
+              "finding": "Fuga persistente por drenaje"
+            },
+            {
+              "mechanism": "Aire en tejidos",
+              "finding": "Enfisema subcutáneo cervical"
+            }
+          ],
+          "initial_action": "Asegurar oxigenación con apoyo experto de vía aérea. Solicitar broncoscopia y evaluación quirúrgica urgente; planear intubación guiada cuando corresponda.",
+          "action_reason": "La instrumentación sin control puede agravar el desgarro y la fuga.",
+          "modifiers": [
+            {
+              "factor": "Dificultad para ventilar pese al drenaje",
+              "action": "Priorizar control experto de vía aérea.",
+              "reason": "La lesión central puede impedir ventilación eficaz."
+            }
+          ],
+          "limits": "Una intubación puede producir o agravar la lesión; no repetir maniobras traumáticas sin ayuda.",
+          "evidence": [
+            {
+              "page": 53,
+              "quote": "Salida de grandes cantidades de aire posterior"
+            },
+            {
+              "page": 53,
+              "quote": "broncoscopia que confirma diagnóstico."
+            }
+          ],
+          "source_gaps": []
+        },
+        {
+          "id": "03.05-02",
+          "name": "Ruptura diafragmática",
+          "source_pages": [
+            64
+          ],
+          "pattern": "Un adulto tiene disnea después de un accidente vehicular. La radiografía muestra elevación del hemidiafragma izquierdo; la tomografía identifica asas abdominales dentro de la cavidad torácica.",
+          "key_discriminator": "asas abdominales dentro de la cavidad torácica",
+          "mechanism": "El desgarro diafragmático permite herniación de vísceras al tórax; altera la mecánica respiratoria y expone el intestino herniado a compromiso vascular o lesión.",
+          "findings": [
+            {
+              "mechanism": "Defecto diafragmático",
+              "finding": "Vísceras abdominales intratorácicas"
+            }
+          ],
+          "initial_action": "Estabilizar según ABCDE y solicitar valoración quirúrgica para reparación del defecto. Usar tomografía para definir lesión cuando la condición permite.",
+          "action_reason": "La herniación requiere corrección anatómica y evaluación de vísceras asociadas.",
+          "modifiers": [
+            {
+              "factor": "Inestabilidad o lesión abdominal asociada",
+              "action": "Priorizar control urgente de lesiones.",
+              "reason": "La imagen no debe retrasar una intervención necesaria."
+            }
+          ],
+          "limits": "La radiografía puede ser poco evidente; una elevación aislada no confirma por sí sola el desgarro.",
+          "evidence": [
+            {
+              "page": 64,
+              "quote": "Diagnóstico confirmatorio es con TAC"
+            },
+            {
+              "page": 64,
+              "quote": "Reparación Directa"
+            }
+          ],
+          "source_gaps": []
+        }
+      ],
+      "common_problem": "Deterioro respiratorio persistente tras lesión torácica.",
+      "mother": {
+        "cue": "Buscar discontinuidad de vía aérea o de separación toracoabdominal.",
+        "answer": "Lesiones estructurales torácicas complejas",
+        "explanation": "El drenaje pleural aislado puede no resolver un defecto central o diafragmático."
+      }
+    },
+    {
+      "id": "03.06",
+      "title": "Abdomen tras trauma",
+      "topics": [
+        {
+          "id": "03.06-01",
+          "name": "Trauma abdominal",
+          "source_pages": [
+            76,
+            77,
+            78,
+            79
+          ],
+          "pattern": "Un adulto con golpe abdominal presenta dolor y equimosis transversal bajo el cinturón de seguridad. La presión cae durante la observación y se sospecha sangrado o lesión intestinal.",
+          "key_discriminator": "equimosis transversal",
+          "mechanism": "El impacto y la desaceleración lesionan órganos sólidos, vísceras o mesenterio; el sangrado reduce perfusión y la lesión intestinal puede manifestarse de forma tardía.",
+          "findings": [
+            {
+              "mechanism": "Desgarro visceral o mesentérico",
+              "finding": "Dolor y hemoperitoneo"
+            },
+            {
+              "mechanism": "Lesión por cinturón",
+              "finding": "Equimosis transversal"
+            }
+          ],
+          "initial_action": "Iniciar ABCDE y determinar estabilidad. En el inestable, usar FAST inmediato si aporta decisión y activar control quirúrgico; en el estable, valorar TAC con contraste.",
+          "action_reason": "La estabilidad define si hay tiempo para caracterizar lesiones por imagen.",
+          "modifiers": [
+            {
+              "factor": "Irritación peritoneal o deterioro",
+              "action": "Solicitar cirugía urgente.",
+              "reason": "Sugiere lesión que no admite observación simple."
+            },
+            {
+              "factor": "FAST negativo con sospecha persistente",
+              "action": "Continuar evaluación.",
+              "reason": "FAST no excluye lesiones intestinales, pancreáticas o diafragmáticas."
+            }
+          ],
+          "limits": "Un examen inicial poco llamativo no excluye lesión, en especial con alteración de conciencia o mecanismo de cinturón.",
+          "evidence": [
+            {
+              "page": 77,
+              "quote": "actitud con servadora en pacientes"
+            },
+            {
+              "page": 78,
+              "quote": "Paciente hemodinámicament e"
+            },
+            {
+              "page": 79,
+              "quote": "signo del cinturón de seguridad"
+            }
+          ],
+          "source_gaps": []
+        },
+        {
+          "id": "03.06-02",
+          "name": "Trauma esplénico",
+          "source_pages": [
+            83
+          ],
+          "pattern": "Tras un golpe en el costado izquierdo, un adulto presenta dolor abdominal. La tomografía muestra lesión del bazo y líquido libre; mantiene presión y perfusión durante la valoración.",
+          "key_discriminator": "mantiene presión y perfusión",
+          "mechanism": "La fragilidad esplénica permite desgarro y hemorragia tras trauma cerrado; la estabilidad indica si el paciente puede recibir vigilancia y estrategias de preservación del órgano.",
+          "findings": [
+            {
+              "mechanism": "Lesión de parénquima y vasos",
+              "finding": "Hemoperitoneo"
+            },
+            {
+              "mechanism": "Pérdida sanguínea progresiva",
+              "finding": "Deterioro hemodinámico"
+            }
+          ],
+          "initial_action": "Valorar manejo no operatorio con vigilancia hospitalaria si permanece estable y existen recursos de rescate. Consultar cirugía y seguir signos de sangrado.",
+          "action_reason": "La preservación es posible en pacientes seleccionados; la estabilidad debe ser sostenida.",
+          "modifiers": [
+            {
+              "factor": "Inestabilidad o hemorragia persistente",
+              "action": "Reanimar y realizar control intervencionista o quirúrgico urgente.",
+              "reason": "La observación dejó de ser segura."
+            },
+            {
+              "factor": "Esplenectomía prevista",
+              "action": "Planear prevención de infección posesplenectomía.",
+              "reason": "La pérdida esplénica cambia el riesgo infeccioso."
+            }
+          ],
+          "limits": "El grado anatómico por sí solo no determina toda la conducta; también importan estabilidad y recursos.",
+          "evidence": [
+            {
+              "page": 83,
+              "quote": "manejo conservador"
+            },
+            {
+              "page": 83,
+              "quote": "niños y adultos con estabilidad hemodinámica."
+            }
+          ],
+          "source_gaps": []
+        }
+      ],
+      "common_problem": "Dolor o deterioro circulatorio tras impacto abdominal.",
+      "mother": {
+        "cue": "La estabilidad separa caracterización por imagen de control urgente de hemorragia.",
+        "answer": "Lesión intraabdominal traumática",
+        "explanation": "Órganos y mesenterio pueden estar dañados aunque el examen inicial sea poco llamativo."
+      }
+    },
+    {
+      "id": "03.07",
+      "title": "Pelvis o gestación lesionada",
+      "topics": [
+        {
+          "id": "03.07-01",
+          "name": "Trauma pélvico",
+          "source_pages": [
+            86
+          ],
+          "pattern": "Un adulto llega tras una colisión de alta energía con dolor pélvico, hipotensión y hematoma perineal. Se observa sangre en el meato uretral durante la exposición inicial.",
+          "key_discriminator": "sangre en el meato uretral",
+          "mechanism": "La disrupción del anillo pélvico puede producir hemorragia retroperitoneal y lesión genitourinaria; la compresión estabiliza el anillo mientras se organiza control del sangrado.",
+          "findings": [
+            {
+              "mechanism": "Lesión vascular pélvica",
+              "finding": "Shock hemorrágico"
+            },
+            {
+              "mechanism": "Lesión uretral asociada",
+              "finding": "Sangre en meato"
+            }
+          ],
+          "initial_action": "Iniciar reanimación hemorrágica y estabilizar pelvis a nivel de trocánteres mayores. Coordinar control del sangrado; evaluar lesión uretral antes de instrumentar si hay signos de sospecha.",
+          "action_reason": "El anillo inestable favorece sangrado y los signos uretrales cambian la colocación de sonda.",
+          "modifiers": [
+            {
+              "factor": "Sangrado arterial persistente",
+              "action": "Valorar embolización.",
+              "reason": "Puede controlar la fuente arterial."
+            },
+            {
+              "factor": "Sin angiografía disponible",
+              "action": "Valorar empaquetamiento preperitoneal por equipo de trauma.",
+              "reason": "Se necesita otra forma de control."
+            }
+          ],
+          "limits": "La uretrografía estudia la uretra; no confirma la fractura pélvica aunque el resumen mezcle ambas referencias.",
+          "evidence": [
+            {
+              "page": 86,
+              "quote": "a nivel de trocánteres mayores"
+            },
+            {
+              "page": 86,
+              "quote": "sangre en meato, equimosis perineal o hematoma escrotal."
+            }
+          ],
+          "source_gaps": []
+        },
+        {
+          "id": "03.07-02",
+          "name": "Trauma obstétrico",
+          "source_pages": [
+            84,
+            85
+          ],
+          "pattern": "Una embarazada de tercer trimestre sufre una colisión. Tiene dolor abdominal y taquicardia. La presión aún es normal; se solicita evaluación simultánea del estado materno y fetal.",
+          "key_discriminator": "tercer trimestre",
+          "mechanism": "El embarazo modifica respuestas al sangrado y permite compresión de vena cava por el útero; la perfusión fetal depende de la estabilización materna y la integridad placentaria.",
+          "findings": [
+            {
+              "mechanism": "Compresión de vena cava",
+              "finding": "Retorno venoso reducido"
+            },
+            {
+              "mechanism": "Lesión placentaria",
+              "finding": "Alteraciones fetales o dolor uterino"
+            }
+          ],
+          "initial_action": "Evaluar y reanimar primero a la madre con ABCDE y protección espinal. Desplazar el útero hacia la izquierda cuando corresponda e iniciar evaluación obstétrica y fetal.",
+          "action_reason": "Restaurar perfusión materna es esencial para la supervivencia fetal.",
+          "modifiers": [
+            {
+              "factor": "Dolor uterino, sangrado o factores de riesgo",
+              "action": "Prolongar vigilancia obstétrica según hallazgos.",
+              "reason": "Puede existir desprendimiento placentario."
+            },
+            {
+              "factor": "Madre Rh negativa",
+              "action": "Valorar profilaxis anti-D indicada.",
+              "reason": "El trauma puede producir hemorragia fetomaterna."
+            }
+          ],
+          "limits": "Presión materna normal no excluye hemorragia importante. La fuente ofrece duraciones de vigilancia discordantes; individualizar con obstetricia.",
+          "evidence": [
+            {
+              "page": 85,
+              "quote": "Evaluar y reanimar a la madre"
+            },
+            {
+              "page": 85,
+              "quote": "Desplazar útero a la izquierda"
+            }
+          ],
+          "source_gaps": []
+        }
+      ],
+      "common_problem": "Trauma de alta energía con lesión pélvica o embarazo.",
+      "mother": {
+        "cue": "Valorar sangrado oculto y ajustar estabilización a la anatomía y fisiología.",
+        "answer": "Trauma con riesgo pélvico u obstétrico",
+        "explanation": "El control de hemorragia y la perfusión materna son decisiones prioritarias."
+      }
+    },
+    {
+      "id": "03.08",
+      "title": "Cráneo: adulto vs niño",
+      "topics": [
+        {
+          "id": "03.08-01",
+          "name": "TCE adultos",
+          "source_pages": [
+            67,
+            68,
+            69,
+            70,
+            71
+          ],
+          "pattern": "Tras un golpe craneal, un adulto presenta somnolencia progresiva, vómitos repetidos y una pupila más dilatada. Su acompañante refiere que al inicio podía responder con claridad.",
+          "key_discriminator": "somnolencia progresiva",
+          "mechanism": "El daño primario puede complicarse con hemorragia, edema e hipertensión intracraneal; la hipoxia o hipotensión añaden lesión secundaria y reducen la perfusión cerebral.",
+          "findings": [
+            {
+              "mechanism": "Lesión expansiva",
+              "finding": "Deterioro de conciencia y anisocoria"
+            },
+            {
+              "mechanism": "Perfusión cerebral insuficiente",
+              "finding": "Empeoramiento neurológico"
+            }
+          ],
+          "initial_action": "Aplicar ABCDE con protección cervical, evitar hipoxia e hipotensión y solicitar evaluación neuroquirúrgica urgente. Realizar TAC tras estabilización, sin retrasar traslado necesario.",
+          "action_reason": "La prioridad es prevenir lesión secundaria y detectar una lesión tratable.",
+          "modifiers": [
+            {
+              "factor": "Incapacidad para proteger la vía aérea",
+              "action": "Asegurar vía aérea con equipo capacitado.",
+              "reason": "El deterioro de conciencia aumenta el riesgo respiratorio."
+            },
+            {
+              "factor": "Signos de herniación",
+              "action": "Activar manejo urgente de hipertensión intracraneal.",
+              "reason": "El desplazamiento cerebral amenaza función vital."
+            }
+          ],
+          "limits": "No usar hiperventilación preventiva rutinaria ni diagnosticar muerte encefálica por Glasgow aislado; el resumen contiene simplificaciones.",
+          "evidence": [
+            {
+              "page": 67,
+              "quote": "adecuada oxigenación y perfusión cerebra l"
+            },
+            {
+              "page": 69,
+              "quote": "su obtención no debe retrasar el traslado"
+            },
+            {
+              "page": 70,
+              "quote": "urgente o traslado inmediato."
+            }
+          ],
+          "source_gaps": []
+        },
+        {
+          "id": "03.08-02",
+          "name": "TCE pediátrico",
+          "source_pages": [
+            72,
+            73
+          ],
+          "pattern": "Un niño sufre una caída y luego vomita repetidamente. Está somnoliento y responde menos a sus padres. Se revisan mecanismo, edad y signos de fractura antes de decidir imagen.",
+          "key_discriminator": "responde menos a sus padres",
+          "mechanism": "El trauma pediátrico puede alterar conciencia con o sin lesión estructural; edad y signos de riesgo ayudan a estimar daño intracraneal y evitar estudios innecesarios.",
+          "findings": [
+            {
+              "mechanism": "Daño cerebral",
+              "finding": "Alteración del comportamiento y conciencia"
+            },
+            {
+              "mechanism": "Irritación o presión intracraneal",
+              "finding": "Vómitos"
+            }
+          ],
+          "initial_action": "Estabilizar ABCDE y valorar Glasgow adaptado a edad. Aplicar una regla pediátrica validada para decidir TAC u observación y solicitar apoyo especializado si hay deterioro.",
+          "action_reason": "La decisión combina riesgo clínico, edad y evolución.",
+          "modifiers": [
+            {
+              "factor": "Sospecha de maltrato o lesión de alto riesgo",
+              "action": "Ampliar evaluación y considerar imagen urgente.",
+              "reason": "El mecanismo o la historia pueden ocultar lesión relevante."
+            },
+            {
+              "factor": "Alta tras lesión leve",
+              "action": "Entregar signos de alarma y vigilancia por cuidador.",
+              "reason": "Algunos niños se deterioran después de la evaluación inicial."
+            }
+          ],
+          "limits": "No combinar umbrales aislados de tablas diferentes como una regla nueva. La profilaxis anticonvulsiva requiere selección según gravedad.",
+          "evidence": [
+            {
+              "page": 72,
+              "quote": "Reglas PECARN para pediátrico con TCE"
+            },
+            {
+              "page": 73,
+              "quote": "Cualquier alteración en el comportamiento habitual del paciente"
+            }
+          ],
+          "source_gaps": []
+        },
+        {
+          "id": "03.08-03",
+          "name": "Fracturas de cráneo",
+          "source_pages": [
+            45
+          ],
+          "pattern": "Tras trauma craneal, un adulto presenta equimosis alrededor de ambos ojos y salida de líquido claro por la nariz. Se sospecha una lesión ósea asociada a daño intracraneal.",
+          "key_discriminator": "salida de líquido claro por la nariz",
+          "mechanism": "Una fractura de base puede comunicar espacios intracraneales con oído o cavidad nasal; la lesión dural permite fuga de líquido cefalorraquídeo y requiere buscar lesiones asociadas.",
+          "findings": [
+            {
+              "mechanism": "Fractura anterior de base",
+              "finding": "Equimosis periorbitaria y rinorraquia"
+            },
+            {
+              "mechanism": "Fractura temporal",
+              "finding": "Hemotímpano o signos auditivos"
+            }
+          ],
+          "initial_action": "Seguir el abordaje del TCE y solicitar TAC con ventana ósea. Valorar neurología, fuga de LCR y necesidad de atención neuroquirúrgica.",
+          "action_reason": "La fractura puede acompañarse de sangrado o lesión neurovascular.",
+          "modifiers": [
+            {
+              "factor": "Déficit de pares craneales o sospecha vascular",
+              "action": "Ampliar estudio dirigido.",
+              "reason": "La fractura puede comprometer nervios o arterias."
+            }
+          ],
+          "limits": "La ausencia de estos signos no excluye fractura; la lesión de base posterior puede no dar un patrón clínico definido.",
+          "evidence": [
+            {
+              "page": 45,
+              "quote": "Fuga de líquido cefalorraquídeo"
+            },
+            {
+              "page": 45,
+              "quote": "evaluación por TAC con técnicas de ventana ósea"
+            }
+          ],
+          "source_gaps": []
+        }
+      ],
+      "common_problem": "Deterioro neurológico tras impacto craneal en adulto o niño.",
+      "mother": {
+        "cue": "Prevenir hipoxia e hipotensión y estimar riesgo de lesión intracraneal.",
+        "answer": "Trauma craneoencefálico y lesión secundaria",
+        "explanation": "La edad y la evolución cambian criterios de imagen, vigilancia y referencia."
+      }
+    },
+    {
+      "id": "03.09",
+      "title": "Déficit motor después de trauma",
+      "topics": [
+        {
+          "id": "03.09-01",
+          "name": "Trauma espinal",
+          "source_pages": [
+            80,
+            81,
+            82
+          ],
+          "pattern": "Tras hiperextensión del cuello en una caída, un adulto presenta debilidad mayor en los brazos que en las piernas. El equipo mantiene protección cervical y evalúa sensibilidad y función motora.",
+          "key_discriminator": "debilidad mayor en los brazos",
+          "mechanism": "La lesión medular interrumpe vías motoras y sensitivas según nivel y distribución; el patrón central puede afectar desproporcionadamente miembros superiores después de hiperextensión cervical.",
+          "findings": [
+            {
+              "mechanism": "Daño medular central",
+              "finding": "Debilidad predominante en brazos"
+            },
+            {
+              "mechanism": "Lesión cervical alta",
+              "finding": "Posible compromiso respiratorio"
+            }
+          ],
+          "initial_action": "Restringir movimientos de columna, aplicar ABCDE y documentar examen motor y sensitivo con ASIA. Obtener imagen según sospecha y solicitar valoración especializada urgente.",
+          "action_reason": "Evita desplazamiento secundario y define nivel y extensión funcional.",
+          "modifiers": [
+            {
+              "factor": "TAC normal con déficit o sospecha persistente",
+              "action": "Valorar resonancia.",
+              "reason": "La médula o ligamentos pueden estar lesionados sin fractura visible."
+            },
+            {
+              "factor": "Hipotensión sin taquicardia",
+              "action": "Buscar sangrado y valorar componente neurogénico.",
+              "reason": "La lesión simpática puede alterar la respuesta circulatoria."
+            }
+          ],
+          "limits": "La ausencia de dolor no excluye lesión en pacientes no valorables o con déficit; la fuente contiene esa simplificación.",
+          "evidence": [
+            {
+              "page": 81,
+              "quote": "Pérdida de fuerza"
+            },
+            {
+              "page": 82,
+              "quote": "Si la TAC esta normal y"
+            }
+          ],
+          "source_gaps": []
+        }
+      ],
+      "common_problem": "Déficit motor o sensitivo después de un trauma.",
+      "mother": {
+        "cue": "Localizar la alteración neurológica y limitar daño adicional.",
+        "answer": "Lesión raquimedular",
+        "explanation": "La distribución funcional y el nivel de lesión orientan imagen y soporte."
+      }
+    },
+    {
+      "id": "03.10",
+      "title": "Paciente frío tras reanimación",
+      "topics": [
+        {
+          "id": "03.10-01",
+          "name": "Hipotermia",
+          "source_pages": [
+            51,
+            52
+          ],
+          "pattern": "Un adulto permanece inmóvil en el suelo durante horas después de una caída. Está frío, somnoliento y ya no tiembla. La medición central muestra una temperatura muy reducida.",
+          "key_discriminator": "ya no tiembla",
+          "mechanism": "La pérdida de calor supera la producción metabólica; el enfriamiento deprime conciencia, conducción cardíaca y coagulación, con riesgo de arritmias y deterioro circulatorio progresivo.",
+          "findings": [
+            {
+              "mechanism": "Enfriamiento cerebral",
+              "finding": "Somnolencia"
+            },
+            {
+              "mechanism": "Enfriamiento miocárdico",
+              "finding": "Bradicardia y arritmias"
+            }
+          ],
+          "initial_action": "Aplicar ABCDE, evitar más pérdida de calor y medir temperatura central. Recalentar según gravedad con monitorización cardíaca y movilización cuidadosa.",
+          "action_reason": "El grado de enfriamiento determina necesidad de medidas externas, internas o extracorpóreas.",
+          "modifiers": [
+            {
+              "factor": "Inestabilidad grave",
+              "action": "Valorar recalentamiento central o extracorpóreo en centro capacitado.",
+              "reason": "El soporte externo puede ser insuficiente."
+            },
+            {
+              "factor": "Ausencia de circulación",
+              "action": "Iniciar RCP y recalentamiento.",
+              "reason": "El frío puede producir paro potencialmente reversible."
+            }
+          ],
+          "limits": "No usar un valor aislado de potasio o temperatura para decidir futilidad; las tablas del resumen no sustituyen criterios especializados.",
+          "evidence": [
+            {
+              "page": 51,
+              "quote": "Hipotermia se define como temperatura central"
+            },
+            {
+              "page": 52,
+              "quote": "Usar la técnica de recalentamiento dependiendo de la gravedad."
+            }
+          ],
+          "source_gaps": []
+        }
+      ],
+      "common_problem": "Paciente frío con alteración de conciencia o perfusión.",
+      "mother": {
+        "cue": "La pérdida térmica deprime funciones vitales y aumenta complicaciones de trauma.",
+        "answer": "Hipotermia y recalentamiento",
+        "explanation": "La temperatura central y la estabilidad definen el tipo de recalentamiento."
+      }
+    },
+    {
+      "id": "03.11",
+      "title": "Quemado: superficial vs grave",
+      "topics": [
+        {
+          "id": "03.11-01",
+          "name": "Quemaduras",
+          "source_pages": [
+            61,
+            62,
+            63
+          ],
+          "pattern": "Un adulto derrama líquido caliente sobre un brazo. La piel está rosada, húmeda y dolorosa, con ampollas que palidecen al presionar. Se debe estimar profundidad y extensión.",
+          "key_discriminator": "ampollas que palidecen",
+          "mechanism": "El calor lesiona epidermis y parte de dermis; conservar terminaciones sensitivas y perfusión produce dolor y blanqueamiento, distintos de la lesión profunda insensible.",
+          "findings": [
+            {
+              "mechanism": "Daño dérmico parcial",
+              "finding": "Ampollas y humedad"
+            },
+            {
+              "mechanism": "Sensibilidad conservada",
+              "finding": "Dolor"
+            }
+          ],
+          "initial_action": "Realizar evaluación inicial, estimar superficie y profundidad, tratar dolor y dar cuidados locales apropiados. Determinar si la extensión o localización requiere referencia o reanimación intravenosa.",
+          "action_reason": "La profundidad y extensión definen cicatrización, líquidos y necesidad de cirugía.",
+          "modifiers": [
+            {
+              "factor": "Lesión seca, carbonizada e insensible",
+              "action": "Valorar lesión de espesor total y cirugía especializada.",
+              "reason": "La destrucción profunda reduce reparación espontánea."
+            },
+            {
+              "factor": "Niño",
+              "action": "Usar una estimación de superficie apropiada para edad.",
+              "reason": "Las proporciones corporales cambian."
+            }
+          ],
+          "limits": "Las fórmulas de líquidos son un inicio y se ajustan a respuesta; no usar el mismo coeficiente en toda quemadura.",
+          "evidence": [
+            {
+              "page": 62,
+              "quote": "dolorosa y presenta ampollas."
+            },
+            {
+              "page": 63,
+              "quote": "Valoración de% de superficie corporal total quemada"
+            }
+          ],
+          "source_gaps": []
+        },
+        {
+          "id": "03.11-02",
+          "name": "Gran quemado",
+          "source_pages": [
+            46,
+            47,
+            48,
+            49
+          ],
+          "pattern": "Un adulto sale de un incendio en un lugar cerrado con quemaduras extensas, ronquera y dificultad para manejar secreciones. La lesión facial progresa durante el traslado a urgencias.",
+          "key_discriminator": "ronquera y dificultad para manejar secreciones",
+          "mechanism": "Las quemaduras extensas producen fuga capilar y pérdida de volumen; la inhalación añade lesión de vía aérea y toxicidad por humo, con edema que puede obstruirla.",
+          "findings": [
+            {
+              "mechanism": "Edema de vía aérea",
+              "finding": "Ronquera y estridor"
+            },
+            {
+              "mechanism": "Fuga capilar",
+              "finding": "Hipovolemia"
+            }
+          ],
+          "initial_action": "Aplicar ABCDE, administrar oxígeno y valorar intubación temprana por equipo capacitado ante compromiso de vía aérea. Iniciar reanimación ajustada y traslado a unidad de quemados.",
+          "action_reason": "La obstrucción puede progresar y la pérdida de volumen necesita reposición vigilada.",
+          "modifiers": [
+            {
+              "factor": "Lesión eléctrica",
+              "action": "Añadir monitorización cardíaca y búsqueda de rabdomiólisis.",
+              "reason": "Puede existir daño profundo mayor que el visible."
+            },
+            {
+              "factor": "Agente químico",
+              "action": "Retirar el agente e irrigar de inmediato según sustancia.",
+              "reason": "El contacto persistente prolonga la lesión."
+            }
+          ],
+          "limits": "La piel rojo cereza es poco frecuente en intoxicación por CO; su ausencia no excluye lesión por humo.",
+          "evidence": [
+            {
+              "page": 47,
+              "quote": "Signos de obstrucción de la vía aérea"
+            },
+            {
+              "page": 47,
+              "quote": "de la vía aérea debe realizarse intubación temprana"
+            }
+          ],
+          "source_gaps": []
+        }
+      ],
+      "common_problem": "Lesión por calor, humo, electricidad o químicos.",
+      "mother": {
+        "cue": "Definir profundidad, extensión y compromiso respiratorio o sistémico.",
+        "answer": "Lesión térmica y respuesta sistémica",
+        "explanation": "Una quemadura pequeña visible puede ocultar lesión inhalatoria o eléctrica grave."
+      }
+    },
+    {
+      "id": "03.12",
+      "title": "Acceso venoso y complicaciones",
+      "topics": [
+        {
+          "id": "03.12-01",
+          "name": "Catéter venoso central",
+          "source_pages": [
+            42,
+            43
+          ],
+          "pattern": "Un paciente necesita nutrición parenteral y no dispone de un acceso apropiado. Se considera una vía central, con evaluación del sitio, riesgo hemorrágico y medidas para prevenir complicaciones.",
+          "key_discriminator": "necesita nutrición parenteral",
+          "mechanism": "El acceso a una vena central permite administrar soluciones no apropiadas para vía periférica; la punción y permanencia añaden riesgo mecánico, trombótico e infeccioso.",
+          "findings": [
+            {
+              "mechanism": "Punción cercana a pleura",
+              "finding": "Riesgo de neumotórax"
+            },
+            {
+              "mechanism": "Contaminación del dispositivo",
+              "finding": "Bacteriemia relacionada con catéter"
+            }
+          ],
+          "initial_action": "Confirmar indicación, seleccionar sitio y usar técnica aséptica con barrera máxima. Emplear guía ecográfica cuando corresponda y reevaluar cada día la necesidad del acceso.",
+          "action_reason": "Reduce inserciones innecesarias y complicaciones prevenibles.",
+          "modifiers": [
+            {
+              "factor": "Infección o lesión en sitio previsto",
+              "action": "Seleccionar otro sitio o estrategia.",
+              "reason": "Aumenta el riesgo de contaminación."
+            },
+            {
+              "factor": "Fiebre con sospecha de infección del acceso",
+              "action": "Obtener estudios dirigidos y valorar retiro según gravedad y microorganismo.",
+              "reason": "El dispositivo puede ser el foco."
+            }
+          ],
+          "limits": "El sitio de acceso depende de contexto y experiencia; el resumen no cubre toda la técnica ni confirmación de posición.",
+          "evidence": [
+            {
+              "page": 42,
+              "quote": "la administración de nutrición parenteral."
+            },
+            {
+              "page": 42,
+              "quote": "retirados tan pronto como sea posible."
+            },
+            {
+              "page": 43,
+              "quote": "Falta de uso de método de barrera máxima."
+            }
+          ],
+          "source_gaps": []
+        }
+      ],
+      "common_problem": "Necesidad de acceso vascular con riesgo de complicaciones.",
+      "mother": {
+        "cue": "Usar acceso central solo cuando su función supera los riesgos de punción y permanencia.",
+        "answer": "Acceso venoso central seguro",
+        "explanation": "Indicación, sitio, técnica y revisión diaria determinan el beneficio."
+      }
+    }
+  ]
+}
