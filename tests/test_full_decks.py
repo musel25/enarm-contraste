@@ -161,6 +161,20 @@ class FullDeckTests(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, 'correspondence'):
             self.audit()
 
+    def test_uses_corrected_clinical_name_without_losing_inventory_identity(self):
+        topic = self.section['blocks'][0]['topics'][0]
+        topic['answer_name'] = 'Diagnóstico corregido'
+        topic['source_corrections'] = ['La guía usa un título incorrecto.']
+        self.write_section()
+        self.build()
+        data = json.loads((self.root / 'build/sections/01.json').read_text())
+        eje = next(c for c in data['cards'] if c['family'] == 'eje')
+        self.assertEqual(eje['back'][0]['title'], 'Diagnóstico corregido')
+        self.assertEqual(eje['back'][0]['topic_id'], '01.01-01')
+        recognition = next(c for c in data['cards'] if c['id'] == 'madre/2/01.01-01')
+        self.assertEqual(recognition['back'][0]['title'], 'Diagnóstico corregido')
+        self.assertEqual(self.audit()['cards'], 8)
+
 
 if __name__ == '__main__':
     unittest.main()

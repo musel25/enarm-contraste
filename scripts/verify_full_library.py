@@ -70,7 +70,7 @@ def audit(catalog: dict, sources: Path, library: Path) -> dict:
             require(eje_id in cards and mother_id in cards, f'Missing block correspondence: {block["id"]}')
             eje = cards[eje_id]
             require([r['text'] for r in eje['front']] == [t['pattern'] for t in block['topics']], f'Case correspondence mismatch: {eje_id}')
-            require([r['title'] for r in eje['back']] == [t['name'] for t in block['topics']], f'Diagnosis correspondence mismatch: {eje_id}')
+            require([r['title'] for r in eje['back']] == [t.get('answer_name', t['name']) for t in block['topics']], f'Diagnosis correspondence mismatch: {eje_id}')
             require([r['action'] for r in eje['back']] == [t['initial_action'] for t in block['topics']], f'Action correspondence mismatch: {eje_id}')
             for field, source_field in [('text', 'mechanism'), ('discriminator', 'key_discriminator'), ('reason', 'action_reason'), ('limits', 'limits')]:
                 require([r[field] for r in eje['back']] == [t[source_field] for t in block['topics']], f'{field} correspondence mismatch: {eje_id}')
@@ -83,7 +83,7 @@ def audit(catalog: dict, sources: Path, library: Path) -> dict:
                 recognition = cards[f'madre/2/{tid}']
                 causal = cards[f'madre/3/{tid}']
                 management = cards[f'madre/4/{tid}']
-                require(recognition['front'][0]['text'] == topic['pattern'] and recognition['back'][0]['title'] == topic['name'], f'Recognition correspondence mismatch: {tid}')
+                require(recognition['front'][0]['text'] == topic['pattern'] and recognition['back'][0]['title'] == topic.get('answer_name', topic['name']), f'Recognition correspondence mismatch: {tid}')
                 require(recognition['back'][0]['text'] == topic['mechanism'] and recognition['back'][0]['discriminator'] == topic['key_discriminator'], f'Recognition explanation correspondence mismatch: {tid}')
                 require([r['text'] for r in causal['front']] == [f['mechanism'] for f in topic['findings']] and [r['text'] for r in causal['back']] == [f['finding'] for f in topic['findings']], f'Mechanism correspondence mismatch: {tid}')
                 require([r['text'] for r in management['back']] == [topic['initial_action']] + [m['action'] for m in topic['modifiers']], f'Management correspondence mismatch: {tid}')

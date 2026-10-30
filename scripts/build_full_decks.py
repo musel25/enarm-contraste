@@ -26,6 +26,10 @@ def write_json(path: Path, value: dict) -> None:
     path.write_text(json.dumps(value, ensure_ascii=False, indent=2) + '\n')
 
 
+def answer_name(topic: dict) -> str:
+    return topic.get('answer_name', topic['name'])
+
+
 def references(topics: list[dict], book_name: str) -> list[dict]:
     pages = sorted({item['page'] for topic in topics for item in topic.get('evidence', [])})
     result = [{'label': book_name, 'pages': pages}] if pages else []
@@ -47,7 +51,7 @@ def compile_section(section: dict, book_name: str) -> dict:
         cards.append({**base, 'id': f'eje/{block["id"]}', 'family': 'eje', 'level': 0,
                       'prompt': '¿Qué diagnóstico corresponde a cada caso?', 'context': block['common_problem'],
                       'front': [{'text': t['pattern'], 'highlight': t['key_discriminator']} for t in topics],
-                      'back': [{'topic_id': t['id'], 'title': t['name'], 'text': t['mechanism'], 'discriminator': t['key_discriminator'], 'action': t['initial_action'], 'reason': t['action_reason'], 'limits': t['limits'], 'sources': references([t], book_name)} for t in topics], 'sources': all_sources})
+                      'back': [{'topic_id': t['id'], 'title': answer_name(t), 'text': t['mechanism'], 'discriminator': t['key_discriminator'], 'action': t['initial_action'], 'reason': t['action_reason'], 'limits': t['limits'], 'sources': references([t], book_name)} for t in topics], 'sources': all_sources})
         mother = block['mother']
         cards.append({**base, 'id': f'madre/1/{block["id"]}', 'family': 'madre', 'level': 1,
                       'prompt': '¿Qué patrón organiza este problema?', 'context': '',
@@ -59,9 +63,9 @@ def compile_section(section: dict, book_name: str) -> dict:
             cards.append({**topic_base, 'id': f'madre/2/{topic["id"]}', 'family': 'madre', 'level': 2,
                           'prompt': '¿Qué diagnóstico o concepto explica este caso?', 'context': '',
                           'front': [{'text': topic['pattern'], 'highlight': topic['key_discriminator']}],
-                          'back': [{'title': topic['name'], 'text': topic['mechanism'], 'discriminator': topic['key_discriminator'], 'limits': topic['limits']}], 'sources': sources})
+                          'back': [{'title': answer_name(topic), 'text': topic['mechanism'], 'discriminator': topic['key_discriminator'], 'limits': topic['limits']}], 'sources': sources})
             cards.append({**topic_base, 'id': f'madre/3/{topic["id"]}', 'family': 'madre', 'level': 3,
-                          'prompt': '¿Qué hallazgo produce cada mecanismo?', 'context': topic['name'],
+                          'prompt': '¿Qué hallazgo produce cada mecanismo?', 'context': answer_name(topic),
                           'front': [{'text': finding['mechanism']} for finding in topic['findings']],
                           'back': [{'title': '', 'text': finding['finding']} for finding in topic['findings']], 'sources': sources})
             cards.append({**topic_base, 'id': f'madre/4/{topic["id"]}', 'family': 'madre', 'level': 4,
@@ -155,7 +159,7 @@ def check_coverage(section: dict, expected: dict) -> None:
         for topic in authored['topics']:
             if topic['name'] != names[topic['id']] or topic.get('source_gaps') != []:
                 raise ValueError(f'Incomplete coverage: {topic["id"]}')
-            if topic['name'].casefold() in topic['pattern'].casefold():
+            if answer_name(topic).casefold() in topic['pattern'].casefold():
                 raise ValueError(f'Answer leaked on recognition front: {topic["id"]}')
             for field in ['pattern', 'key_discriminator', 'mechanism', 'initial_action', 'action_reason', 'limits']:
                 if not isinstance(topic.get(field), str) or not topic[field].strip():

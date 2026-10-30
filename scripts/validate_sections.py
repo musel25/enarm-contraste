@@ -92,6 +92,10 @@ def validate(catalog: dict, directory: Path, pages: Path | None, selected: list[
                 topic_errors = len(report['errors'])
                 if topic.get('name') != expected_topic['name']:
                     error('topic_name', tid, f'Expected {expected_topic["name"]}')
+                if 'answer_name' in topic:
+                    text_field(topic, 'answer_name', tid)
+                    if topic['answer_name'] != topic['name'] and not topic.get('source_corrections'):
+                        error('unexplained_answer_correction', tid, 'answer_name requires source_corrections')
                 if topic.get('source_pages') != expected_topic['source_pages'] and not topic.get('source_corrections'):
                     error('source_pages_changed', tid, 'Correction must be explicit')
                 verified_pages = topic.get('verified_source_pages', [])
