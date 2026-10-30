@@ -45,6 +45,25 @@ class FullDeckTests(unittest.TestCase):
         proof = self.module.validate(self.catalog, self.sections, self.root / 'pages')
         return self.module.build(self.catalog, self.sections, self.reviews, self.root / name, source_validation=proof)
 
+    def test_planner_index_retains_all_card_ids_and_has_no_answers(self):
+        manifest = self.build()
+        planner = manifest['planner']
+        path = self.root / 'build' / planner['url']
+        index = json.loads(path.read_text())
+        exported = json.loads((self.root / 'build/sections/01.json').read_text())
+        self.assertEqual(index['content_sha256'], manifest['content_sha256'])
+        self.assertEqual(planner['sha256'], hashlib.sha256(path.read_bytes()).hexdigest())
+        self.assertEqual(planner['cards'], 8)
+        self.assertEqual([c['id'] for c in index['cards']], [c['id'] for c in exported['cards']])
+        for order, card in enumerate(index['cards']):
+            self.assertEqual(card['order'], order)
+            self.assertGreaterEqual(card['new_seconds'], 30)
+            self.assertGreaterEqual(card['review_seconds'], 15)
+            self.assertLess(card['review_seconds'], card['new_seconds'])
+            self.assertNotIn('front', card)
+            self.assertNotIn('back', card)
+            self.assertNotIn('title', card)
+
     def test_rejects_stale_source_validation(self):
         proof = self.module.validate(self.catalog, self.sections, self.root / 'pages')
         self.section['blocks'][0]['topics'][0]['initial_action'] = 'Cambiar la acción.'

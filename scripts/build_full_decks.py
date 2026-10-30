@@ -5,6 +5,7 @@ import argparse
 import hashlib
 import html
 import json
+import math
 import shutil
 import sys
 import tempfile
@@ -28,6 +29,14 @@ def write_json(path: Path, value: dict) -> None:
 
 def answer_name(topic: dict) -> str:
     return topic.get('answer_name', topic['name'])
+
+
+def planner_card(card: dict, order: int) -> dict:
+    front = ' '.join([card['context']] + [row['text'] for row in card['front']])
+    back = ' '.join(row.get(field, '') for row in card['back'] for field in ['title', 'text', 'discriminator', 'action', 'reason'])
+    new_seconds = max(30, math.ceil(len((front + ' ' + back).split()) / 3 + 25))
+    review_seconds = min(new_seconds - 5, max(15, math.ceil(len(front.split()) * 60 / 220 + 12)))
+    return {field: card[field] for field in ['id', 'section_id', 'block_id', 'family', 'level']} | {'order': order, 'new_seconds': new_seconds, 'review_seconds': review_seconds}
 
 
 def references(topics: list[dict], book_name: str) -> list[dict]:
@@ -228,6 +237,9 @@ def build(catalog: dict, sections: Path, reviews: Path, output: Path, preview: b
         stage.mkdir()
         for section in compiled:
             write_json(stage / f'sections/{section["id"]}.json', section)
+        index = {'schema_version': 1, 'content_sha256': manifest['content_sha256'], 'cards': [planner_card(card, order) for order, card in enumerate(all_cards)]}
+        write_json(stage / 'index.json', index)
+        manifest['planner'] = {'url': 'index.json', 'cards': len(all_cards), 'sha256': hashlib.sha256((stage / 'index.json').read_bytes()).hexdigest()}
         model = genanki.Model(stable_id('enarm-contraste-full-v1-model'), 'ENARM Contraste · Dos formatos v1',
                               fields=[{'name': n} for n in ['Identity', 'Front', 'Back']],
                               templates=[{'name': 'Reconocer y decidir', 'qfmt': '{{Front}}', 'afmt': '{{FrontSide}}<hr id="answer">{{Back}}'}], css=CSS)

@@ -3,6 +3,7 @@ import { defineConfig } from "@playwright/test";
 const remote = process.env.PLAYWRIGHT_BASE_URL;
 export default defineConfig({
   testDir: "./tests",
+  testIgnore: ["**/unit/**"],
   fullyParallel: true,
   workers: 2,
   timeout: 20000,

@@ -128,6 +128,16 @@ def audit(catalog: dict, sources: Path, library: Path) -> dict:
     counts = Counter(c['family'] for c in all_cards.values())
     require(counts['eje'] == blocks and counts['madre'] == blocks + 3 * topic_occurrences, 'Family count mismatch')
     require(manifest['counts']['cards'] == len(all_cards), 'Manifest card count mismatch')
+    planner = manifest.get('planner', {})
+    require(planner.get('url') == 'index.json', 'Missing study planner index')
+    index_path = library / 'index.json'
+    require(hashlib.sha256(index_path.read_bytes()).hexdigest() == planner.get('sha256'), 'Study index checksum mismatch')
+    index = json.loads(index_path.read_text())
+    require(index['content_sha256'] == manifest['content_sha256'], 'Study index content mismatch')
+    require([c['id'] for c in index['cards']] == list(all_cards), 'Study index coverage mismatch')
+    require(planner['cards'] == len(all_cards), 'Study index count mismatch')
+    for order, card in enumerate(index['cards']):
+        require(card['order'] == order and 15 <= card['review_seconds'] < card['new_seconds'], f'Invalid study cost: {card["id"]}')
     notes = 0
     for download in manifest['downloads']:
         family = download['family']
