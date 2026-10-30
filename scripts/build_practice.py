@@ -58,6 +58,25 @@ def sources(topic):
     result += [{k:s[k] for k in ('label','url')} for s in topic.get('external_sources', [])]
     return result
 
+def practice_sources(topic, group):
+    result = sources(topic)
+    known = {s.get('url',s['label']) for s in result}
+    annotations = [group,*group['variants'].values()]
+    pages = set(result[0]['pages'])
+    for annotation in annotations:
+        for evidence in annotation.get('source_evidence', []):
+            if isinstance(evidence.get('page'), int) and evidence['page'] > 0:
+                pages.add(evidence['page'])
+        for source in annotation.get('sources', []):
+            key = source.get('url',source['label'])
+            if key not in known:
+                require(not source.get('url') or source['url'].startswith('https://'), 'Invalid practice source URL')
+                result.append({k:source[k] for k in ('label','url','pages') if k in source})
+                known.add(key)
+    result[0]['pages'] = sorted(pages)
+    return result
+
+
 def decision_steps(section):
     result = []
     for block in section['blocks']:
@@ -102,7 +121,7 @@ def build(root=ROOT):
         bank = json.loads(bank_path.read_text())
         validate_bank(source, bank, json.loads(review_path.read_text()), raw_hash(path), raw_hash(bank_path))
         topic_map = {t['id']:t for b in source['blocks'] for t in b['topics']}
-        groups = [{**{key:g[key] for key in ('id','parent_topic_id','block_id','name','answer_kind')}, 'variants':{difficulty:{key:value[key] for key in ('vignette','discriminator','explanation','confusable_with','why_not')} for difficulty,value in g['variants'].items()}, 'sources':g.get('sources', sources(topic_map[g['parent_topic_id']])), 'corrections':topic_map[g['parent_topic_id']].get('source_corrections', [])} for g in bank['groups']]
+        groups = [{**{key:g[key] for key in ('id','parent_topic_id','block_id','name','answer_kind')}, 'variants':{difficulty:{key:value[key] for key in ('vignette','discriminator','explanation','confusable_with','why_not')} for difficulty,value in g['variants'].items()}, 'sources':practice_sources(topic_map[g['parent_topic_id']],g), 'corrections':topic_map[g['parent_topic_id']].get('source_corrections', [])} for g in bank['groups']]
         data = dict(schema_version=1,section_id=source['id'],groups=groups,decisions=compiled_decisions(source),professional_review='pending')
         target = output / f'{source["id"]}.json'
         write_json(target, data)

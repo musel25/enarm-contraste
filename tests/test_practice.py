@@ -70,6 +70,8 @@ class PracticeTests(unittest.TestCase):
             source_path = root / 'content/sections/01.json'
             write(source_path, self.source)
             self.bank['source_sha256'] = self.module.raw_hash(source_path)
+            self.bank['groups'][0]['variants']['easy']['sources'] = [{'label':'Guía adicional','url':'https://example.org/guide'}]
+            self.bank['groups'][0]['variants']['easy']['source_evidence'] = [{'page':999,'quote':'Supporting text'}]
             bank_path = root / 'content/practice/sections/01.json'
             write(bank_path,self.bank)
             self.review['source_sha256'] = self.bank['source_sha256']
@@ -82,6 +84,8 @@ class PracticeTests(unittest.TestCase):
             self.assertEqual(index['sections'][0]['sha256'],self.module.raw_hash(public))
             generated = json.loads(public.read_text())
             self.assertNotIn('facts',generated['groups'][0]['variants']['easy'])
+            self.assertTrue(any(s.get('url') == 'https://example.org/guide' for s in generated['groups'][0]['sources']))
+            self.assertIn(999,generated['groups'][0]['sources'][0]['pages'])
             self.assertTrue(all(q['id'].startswith('decision/01.01/') for q in generated['decisions']))
             manifest = json.loads((root / 'app/public/study/manifest.json').read_text())
             self.assertEqual(manifest['practice']['sha256'],self.module.raw_hash(root / 'app/public/study/practice/index.json'))
