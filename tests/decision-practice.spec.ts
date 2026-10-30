@@ -118,3 +118,17 @@ test('guided steps fit a narrow screen and keep controls visible',async({page})=
  expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBe(true);
  await page.screenshot({path:'/tmp/enarm-decision-mobile.png',fullPage:true});
 });
+
+test('a comment on a new decision retains its question context and saved answer',async({page})=>{
+ await page.goto('./#avance?section=01&mode=decisions');
+ await page.getByRole('checkbox').first().check();
+ await page.getByRole('button',{name:/Empezar subtest/}).click();
+ await page.getByRole('button',{name:'Respuesta correcta',exact:true}).click();
+ await page.getByRole('button',{name:'Comentar esta pregunta',exact:true}).click();
+ await expect(page.getByRole('dialog')).toContainText('Ruta alfa · Paso 1/2');
+ await page.getByLabel('Comentario',{exact:true}).fill('Revisar la claridad de esta bifurcación.');
+ await page.getByRole('button',{name:'Guardar comentario',exact:true}).click();
+ await expect(page.getByRole('dialog')).toContainText('Revisar la claridad de esta bifurcación.');
+ await page.getByRole('button',{name:'Cerrar',exact:true}).click();
+ await expect(page.getByText('Respuesta correcta.',{exact:true})).toBeVisible();
+});
