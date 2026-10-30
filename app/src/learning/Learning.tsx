@@ -77,7 +77,7 @@ export default function Learning({ suspended, onReview }: { suspended: boolean; 
   return <main id="study" tabIndex={-1} className="learning-main">
     <div className="learning-heading"><div><h1>Mi avance</h1><p>Ve lo que ya estudiaste. Elige lo que necesitas repetir.</p></div><p><strong>{analytics.sections.reduce((sum, row) => sum + row.practiced, 0)}</strong> de {index.cards.length} flashcards practicadas</p></div>
     {store.error && <div className="coach-save-error" role="alert"><strong>No se pudo guardar el progreso.</strong><p>{store.error}</p><button onClick={() => void store.reload()}>Cargar progreso guardado</button><button onClick={() => downloadBackup(store.pending || state)}>Exportar copia</button></div>}
-    {test ? <TestSession questions={test} disabled={disabled} onClose={() => { setTest(null); setSelected(new Set()); }} onReview={question => onReview({ axisId: `libro-${sectionId}`, section: 'subtest', caseId: question.id, label: question.label })} onAnswer={async (question, grade, seconds, attemptId) => {
+    {test ? <TestSession key={store.generation} questions={test} disabled={disabled} onClose={() => { setTest(null); setSelected(new Set()); }} onReview={question => onReview({ axisId: `libro-${sectionId}`, section: 'subtest', caseId: question.id, label: question.label })} onAnswer={async (question, grade, seconds, attemptId) => {
       const meta = index.cards.find(card => card.id === question.id) || caseMeta(question.id);
       if (!meta) return null;
       let notices: ReturnType<typeof completionNotices> = [];

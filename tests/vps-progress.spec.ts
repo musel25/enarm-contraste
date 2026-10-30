@@ -206,3 +206,34 @@ test("a lost server acknowledgment retries without duplicating the saved answer"
   await page.reload();
   await expect(page.getByRole("progressbar", { name: "Meta diaria" })).toHaveAttribute("aria-valuenow", "1");
 });
+
+for (const view of ["library", "subtest"] as const) {
+  test(`reloading a changed profile resets the ${view} answer`, async ({ page, context, browser }) => {
+    await start(page);
+    if (view === "library") {
+      await page.getByRole("button", { name: "Biblioteca", exact: true }).click();
+      await page.getByRole("button", { name: /Sección de prueba/ }).click();
+    } else {
+      await page.getByRole("button", { name: "Mi avance", exact: true }).click();
+      await page.getByRole("checkbox").first().check();
+      await page.getByRole("button", { name: /Empezar subtest/ }).click();
+    }
+    await page.getByRole("button", { name: "Mostrar respuesta", exact: true }).click();
+    const separate = await browser.newContext({ timezoneId: "UTC", reducedMotion: "reduce" });
+    try {
+      const source = await separate.newPage(); await mockCoach(source); await start(source);
+      await source.getByRole("button", { name: "Mi progreso en el VPS" }).click();
+      const code = await privateCode(source);
+      const other = await context.newPage(); await mockCoach(other); await other.goto("./");
+      await other.getByRole("button", { name: "Mi progreso en el VPS" }).click();
+      await other.getByLabel("Código de otro dispositivo", { exact: true }).fill(code);
+      await other.getByRole("button", { name: "Ver progreso", exact: true }).click();
+      await other.getByRole("button", { name: "Conectar este progreso", exact: true }).click();
+      await expect(other.getByRole("dialog")).toHaveCount(0);
+      await page.getByRole("button", { name: view === "library" ? "Lo reconocí" : "Acerté", exact: true }).click();
+      await expect(page.getByRole("button", { name: "Cargar progreso guardado", exact: true })).toBeVisible();
+      await page.getByRole("button", { name: "Cargar progreso guardado", exact: true }).click();
+      await expect(page.getByRole("region", { name: "Respuesta de la tarjeta", exact: true })).toHaveCount(0);
+    } finally { await separate.close(); }
+  });
+}
