@@ -5,7 +5,7 @@ test("uses a symptom contrast map and connects mechanism to the initial decision
   page,
 }) => {
   await page.setViewportSize({ width: 1440, height: 1000 });
-  await page.goto("./");
+  await page.goto("./#amenorrea");
   const map = page.getByRole("complementary", { name: "Mapa de contraste" });
   await expect(map).toBeVisible();
   await map
@@ -40,7 +40,7 @@ test("uses a symptom contrast map and connects mechanism to the initial decision
 test("explains the learning method using the supplied Anki references", async ({
   page,
 }) => {
-  await page.goto("./");
+  await page.goto("./#amenorrea");
   await page.getByRole("button", { name: "El método", exact: true }).click();
   await expect(page.getByRole("dialog")).toContainText("Patrones Madre");
   await expect(page.getByRole("dialog")).toContainText("Eje Clínico");
@@ -59,7 +59,7 @@ test("explains the learning method using the supplied Anki references", async ({
 test("teaches four alternatives together and can remove the discriminator highlight", async ({
   page,
 }) => {
-  await page.goto("./");
+  await page.goto("./#amenorrea");
   await expect(
     page.getByRole("heading", { name: "Amenorrea secundaria", exact: true }),
   ).toBeVisible();
@@ -83,7 +83,7 @@ test("teaches four alternatives together and can remove the discriminator highli
 test("shows the changed factor and why it changes management", async ({
   page,
 }) => {
-  await page.goto("./");
+  await page.goto("./#amenorrea");
   await page.getByRole("button", { name: /Cambiar el caso/ }).click();
   await page.getByRole("button", { name: /Bradicardia grave/ }).click();
   await expect(
@@ -109,7 +109,7 @@ test("shows the changed factor and why it changes management", async ({
 test("keeps practice answers hidden and resets reveal when changing cases or axes", async ({
   page,
 }) => {
-  await page.goto("./");
+  await page.goto("./#amenorrea");
   await page.getByRole("button", { name: /Practicar/ }).click();
   await expect(
     page.getByRole("heading", { name: "Embarazo", exact: true }),
@@ -151,7 +151,7 @@ test("keeps practice answers hidden and resets reveal when changing cases or axe
 test("persists review comments with their case context and exports the actual text", async ({
   page,
 }) => {
-  await page.goto("./");
+  await page.goto("./#amenorrea");
   await page
     .getByRole("article")
     .filter({
@@ -204,7 +204,7 @@ test("recovers from malformed saved data and works when storage is blocked", asy
       throw new DOMException("Blocked", "SecurityError");
     };
   });
-  await page.goto("./");
+  await page.goto("./#amenorrea");
   await expect(page.getByRole("article")).toHaveCount(4);
   await page.getByRole("button", { name: /Tu revisión/ }).click();
   await page
@@ -228,7 +228,7 @@ test("fits a phone viewport and restores focus after closing disease detail", as
   page.on("pageerror", (error) => errors.push(error.message));
   await page.setViewportSize({ width: 375, height: 812 });
   await page.route("**/*.woff2", (route) => route.abort());
-  await page.goto("./");
+  await page.goto("./#amenorrea");
   expect(
     await page.evaluate(
       () => document.documentElement.scrollWidth <= window.innerWidth,
@@ -258,7 +258,7 @@ test("fits a phone viewport and restores focus after closing disease detail", as
 test("opens disease detail and changes the symptom axis without mixing cases", async ({
   page,
 }) => {
-  await page.goto("./");
+  await page.goto("./#amenorrea");
   await page
     .getByRole("article")
     .filter({

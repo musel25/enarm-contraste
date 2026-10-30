@@ -6,6 +6,7 @@ import Comparison from "./Comparison";
 import Variants from "./Variants";
 import Practice from "./Practice";
 import Review from "./Review";
+import Library from "./Library";
 import {
   REVIEW_KEY,
   useLocalData,
@@ -119,6 +120,7 @@ function ContrastArtwork() {
 }
 
 export default function App() {
+  const [library, setLibrary] = useState(() => !location.hash || location.hash === "#biblioteca");
   const [axisId, setAxisId] = useState(() =>
     axes.some((axis) => axis.id === location.hash.slice(1))
       ? location.hash.slice(1)
@@ -169,7 +171,8 @@ export default function App() {
             </span>
           </a>
           <nav className="header-links" aria-label="Ayuda de estudio">
-            <span className="header-edition">ENARM · Muestra de estudio</span>
+            <button className={`method-trigger ${library ? "current-view" : ""}`} onClick={() => { setLibrary(true); history.replaceState(null, "", "#biblioteca"); }}>Biblioteca</button>
+            <button className={`method-trigger ${!library ? "current-view" : ""}`} onClick={() => { setLibrary(false); history.replaceState(null, "", `#${axisId}`); }}>Explorar casos</button>
             <button className="method-trigger" onClick={() => setMethod(true)}>
               El método
             </button>
@@ -180,7 +183,7 @@ export default function App() {
           </nav>
         </div>
       </header>
-      <div className="workspace">
+      {library ? <Library onReview={setReview} /> : <div className="workspace">
         <nav className="axis-nav" aria-label="Ejes clínicos">
           <span className="axis-nav-label">Elige un eje clínico</span>
           <div>
@@ -308,7 +311,7 @@ export default function App() {
             </footer>
           </div>
         </main>
-      </div>
+      </div>}
       {detail && (
         <Modal title={detail.diagnosis} onClose={() => setDetail(null)}>
           <span className="detail-category">{axis.title}</span>
