@@ -1,4 +1,18 @@
-# Fuentes de la muestra web
+# Fuentes y procedencia
+
+## Biblioteca del libro completo
+
+El usuario añadió `Edwino.pdf`, de 1,150 páginas, con SHA-256 `c6540ab02b29b941f4f8aff3d793a21988f35ad8f6cf963f0292bb0a64835703`. La agrupación procede de `ENARM_Capa1_Completo.pdf`, de 143 páginas. El inventario conserva 34 secciones, 355 bloques, 730 apariciones y 719 combinaciones únicas de tema y páginas. Sus referencias cubren las 1,150 páginas físicas del libro.
+
+La autoría se conserva en `content/sections/`. Cada tema tiene viñeta, discriminador, mecanismo, hallazgos, primera acción, modificadores, límites y evidencia. Las citas se cotejan con el texto de la página. Las páginas 164, 166 y 203 requieren inspección visual por falta de texto extraíble. La página 579 requiere inspección del diagrama de medios de cultivo.
+
+La guía tiene referencias incorrectas y el libro contiene afirmaciones antiguas o contradictorias. Las secciones registran las correcciones. Las precisiones clínicas actuales usan fuentes primarias identificadas en cada tema. La referencia externa se distingue de las páginas del libro.
+
+Las revisiones independientes se conservan en `content/reviews/`. Incluyen todos los identificadores de temas revisados, páginas comprobadas, fuentes externas y el hash de la sección. La validación de fuentes se conserva en `content/source-validation.json`. El compilador exige coincidencia de los hashes para publicar. La revisión clínica profesional permanece pendiente.
+
+La biblioteca web y los paquetes Anki se generan desde la misma autoría. Eje Clínico contiene una tarjeta por bloque. Patrones Madre contiene una tarjeta de nivel 1 por bloque y una de cada nivel 2–4 por aparición de tema. La auditoría abre los paquetes reales y comprueba las correspondencias. Los archivos generados no incluyen las citas de evidencia ni el texto bruto del libro; muestran las referencias y las precisiones externas.
+
+## Primera muestra web
 
 El usuario añadió `ENARM_Capa1_Completo.pdf` el 29 de octubre de 2026. Se usó para construir la muestra.
 
