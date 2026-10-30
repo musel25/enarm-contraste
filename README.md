@@ -12,7 +12,11 @@ Hoy abre la primera tarjeta asignada. Revelar la respuesta no suma progreso. Cal
 
 La **primera vuelta** cuenta tarjetas practicadas al menos una vez. No indica dominio. Los repasos continúan después. Las animaciones respetan la preferencia de movimiento reducido. El sonido está apagado al inicio.
 
-El plan se guarda en IndexedDB en este dispositivo. **Copia de mi progreso** permite exportar o importar el plan y las respuestas. Una importación conserva una copia del estado anterior. No hay sincronización de cuentas. La biblioteca permite práctica libre con marcas separadas. Anki conserva su propio progreso.
+El plan, las respuestas, los repasos y las metas se guardan en una base SQLite privada en el VPS. La primera visita después de la actualización sube el progreso previo del navegador. Cada respuesta avanza solo cuando el servidor confirma el guardado. Si no hay conexión, la copia local permanece visible y el estudio se pausa hasta reconectar.
+
+**Mi progreso en el VPS** muestra un código privado. Guárdalo. En otro dispositivo, introduce ese código y conecta el progreso encontrado. Quien tenga el código puede ver y modificar el plan. El enlace normal del sitio no lo contiene. Cada estudiante recibe un código distinto.
+
+**Copia de mi progreso** conserva la exportación e importación JSON. Una importación respalda el estado anterior en el VPS. El servicio también genera copias nocturnas de SQLite y conserva las 14 más recientes. Las publicaciones conservan la base fuera del directorio web. La biblioteca permite práctica libre con marcas separadas. Anki conserva su propio progreso.
 
 ## Dos formatos
 
@@ -74,6 +78,6 @@ npm run prepare:study
 
 El compilador conserva identificadores estables de Anki. La auditoría comprueba todas las correspondencias entre casos, diagnósticos, mecanismos, hallazgos y acciones. También abre ambos paquetes y comprueba sus notas, tarjetas y bases de datos.
 
-Los comentarios y el progreso se guardan en el navegador. Los comentarios se comparten con **Descargar comentarios** o **Copiar texto**. La web no los envía automáticamente. Anki mantiene su propio progreso.
+Los comentarios y las marcas de práctica libre se guardan en el navegador. El progreso del plan diario se guarda en el VPS. Los comentarios se comparten con **Descargar comentarios** o **Copiar texto**. La web no los envía automáticamente. Anki mantiene su propio progreso.
 
 El [runbook de despliegue](docs/deployment.md) explica cómo publicar y recuperar una versión en el VPS. El [piloto biliar](content/piloto-biliar.json) y su generador anterior siguen disponibles para referencia.

@@ -17,30 +17,55 @@ npm test
 printf '%s\n' "$commit" > dist/version.txt
 asset=$(basename "$(rg --files dist/assets -g 'index-*.js')")
 release="/var/www/enarm-contraste/releases/${commit:0:12}-$(date -u +%Y%m%dT%H%M%S)-standalone"
+api_release="${release%-standalone}-api"
 config_upload="/tmp/enarm-nginx-${commit:0:12}.conf"
-ssh -o BatchMode=yes my-vps bash -s -- "$release" <<'PREPARE'
+unit_upload="/tmp/enarm-units-${commit:0:12}"
+ssh -o BatchMode=yes my-vps bash -s -- "$release" "$api_release" "$unit_upload" <<'PREPARE'
 set -euo pipefail
 sudo -n install -d -m 755 -o "$(id -un)" -g "$(id -gn)" \
-  /var/www/enarm-contraste /var/www/enarm-contraste/releases "$1"
+  /var/www/enarm-contraste /var/www/enarm-contraste/releases "$1" "$2" "$3"
 PREPARE
 rsync -az --chmod=D755,F644 dist/ "my-vps:$release/"
+rsync -az --chmod=D755,F644 dist-server/ "my-vps:$api_release/"
+rsync -az deploy/enarm-progress.service deploy/enarm-progress-backup.service deploy/enarm-progress-backup.timer "my-vps:$unit_upload/"
 rsync -az deploy/nginx-enarm.musel.dev.conf "my-vps:$config_upload"
 bash scripts/setup-domain.sh
 
-ssh -o BatchMode=yes my-vps bash -s -- "$release" "$commit" "$asset" "$config_upload" <<'REMOTE'
+ssh -o BatchMode=yes my-vps bash -s -- "$release" "$commit" "$asset" "$config_upload" "$api_release" "$unit_upload" <<'REMOTE'
 set -euo pipefail
 release=$1
 commit=$2
 asset=$3
 config_upload=$4
+api_release=$5
+unit_upload=$6
 current=/var/www/enarm-contraste/site-current
+api_current=/var/www/enarm-contraste/api-current
 config=/etc/nginx/sites-available/enarm.musel.dev
 backup="${config}.backup-$(date -u +%Y%m%dT%H%M%S)"
 if [[ -e "$current" && ! -L "$current" ]]; then
   echo 'Refusing to replace a current path that is not a symbolic link.' >&2
   exit 1
 fi
+if [[ -e "$api_current" && ! -L "$api_current" ]]; then
+  echo 'Refusing to replace an API path that is not a symbolic link.' >&2
+  exit 1
+fi
 previous=$(readlink "$current" || true)
+previous_api=$(readlink "$api_current" || true)
+if [[ -z "$previous_api" ]] && ss -ltnH | grep -F ':4187 ' > /dev/null; then
+  echo 'Port4187 belongs to an existing service. Refusing to replace it.' >&2
+  exit 1
+fi
+for unit in enarm-progress.service enarm-progress-backup.service enarm-progress-backup.timer; do
+  if [[ -e "/etc/systemd/system/$unit" ]]; then
+    if ! grep -F '# ENARM Contraste progress' "/etc/systemd/system/$unit" > /dev/null; then
+      echo 'Existing service unit belongs to another application.' >&2
+      exit 1
+    fi
+    sudo -n cp -p "/etc/systemd/system/$unit" "$unit_upload/$unit.previous"
+  fi
+done
 sudo -n cp -p "$config" "$backup"
 rollback() {
   result=$?
@@ -53,10 +78,34 @@ rollback() {
     rm -f "$current"
   fi
   sudo -n cp -p "$backup" "$config"
+  for unit in enarm-progress.service enarm-progress-backup.service enarm-progress-backup.timer; do
+    if [[ -e "$unit_upload/$unit.previous" ]]; then sudo -n install -m 644 "$unit_upload/$unit.previous" "/etc/systemd/system/$unit"; fi
+  done
+  sudo -n systemctl daemon-reload
+  if [[ -n "$previous_api" ]]; then
+    ln -sfn "$previous_api" "${api_current}.rollback"
+    mv -Tf "${api_current}.rollback" "$api_current"
+    sudo -n systemctl restart enarm-progress.service
+  else
+    sudo -n systemctl stop enarm-progress.service || true
+    sudo -n systemctl disable --now enarm-progress-backup.timer || true
+  fi
   sudo -n nginx -t && sudo -n systemctl reload nginx
   exit "$result"
 }
 trap rollback ERR
+if ! id enarm-progress > /dev/null 2>&1; then sudo -n useradd --system --user-group --home-dir /var/lib/enarm-contraste --shell /usr/sbin/nologin enarm-progress; fi
+sudo -n install -d -m 700 -o enarm-progress -g enarm-progress /var/lib/enarm-contraste
+sudo -n -u enarm-progress env ENARM_DATABASE=/var/lib/enarm-contraste/progress.sqlite /usr/bin/node "$api_release/server.mjs" --backup
+for unit in enarm-progress.service enarm-progress-backup.service enarm-progress-backup.timer; do sudo -n install -m 644 "$unit_upload/$unit" "/etc/systemd/system/$unit"; done
+sudo -n systemd-analyze verify /etc/systemd/system/enarm-progress.service /etc/systemd/system/enarm-progress-backup.service /etc/systemd/system/enarm-progress-backup.timer
+ln -sfn "$api_release" "${api_current}.next"
+mv -Tf "${api_current}.next" "$api_current"
+sudo -n systemctl daemon-reload
+sudo -n systemctl enable enarm-progress.service enarm-progress-backup.timer
+sudo -n systemctl restart enarm-progress.service
+curl -fsS --retry 10 --retry-all-errors --retry-delay 1 --max-time 5 http://127.0.0.1:4187/api/health | grep -F '"ok":true' > /dev/null
+sudo -n systemctl start enarm-progress-backup.timer enarm-progress-backup.service
 sudo -n install -m 644 "$config_upload" "$config"
 ln -sfn "$release" "${current}.next"
 mv -Tf "${current}.next" "$current"
@@ -68,6 +117,7 @@ curl -fsS --resolve enarm.musel.dev:443:127.0.0.1 \
 curl -fsS --retry 5 --retry-all-errors --retry-delay 1 --max-time 10 \
   https://enarm.musel.dev/version.txt | grep -Fx "$commit" > /dev/null
 curl -fsS --max-time 15 https://enarm.musel.dev/ | grep -F '<title>ENARM Contraste' > /dev/null
+curl -fsS --max-time 15 https://enarm.musel.dev/api/health | grep -F '"ok":true' > /dev/null
 curl -fsS --max-time 15 "https://enarm.musel.dev/assets/$asset" > /dev/null
 curl -fsS --max-time 15 https://enarm.musel.dev/study/manifest.json | grep -F '"cross-reviewed"' > /dev/null
 curl -fsS --max-time 30 https://enarm.musel.dev/study/enarm-eje.apkg > /dev/null

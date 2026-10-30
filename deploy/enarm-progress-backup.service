@@ -1,0 +1,16 @@
+# ENARM Contraste progress
+[Unit]
+Description=Back up ENARM study progress
+
+[Service]
+Type=oneshot
+User=enarm-progress
+Group=enarm-progress
+Environment=ENARM_DATABASE=/var/lib/enarm-contraste/progress.sqlite
+ExecStart=/usr/bin/node /var/www/enarm-contraste/api-current/server.mjs --backup
+UMask=0077
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=strict
+ProtectHome=true
+ReadWritePaths=/var/lib/enarm-contraste

@@ -1,0 +1,11 @@
+# ENARM Contraste progress
+[Unit]
+Description=Daily ENARM progress backup
+
+[Timer]
+OnCalendar=*-*-* 04:15:00 UTC
+Persistent=true
+RandomizedDelaySec=300
+
+[Install]
+WantedBy=timers.target

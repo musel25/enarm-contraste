@@ -1,0 +1,27 @@
+# ENARM Contraste progress
+[Unit]
+Description=ENARM private study progress API
+After=network.target
+
+[Service]
+Type=simple
+User=enarm-progress
+Group=enarm-progress
+Environment=ENARM_DATABASE=/var/lib/enarm-contraste/progress.sqlite
+Environment=ENARM_ORIGIN=https://enarm.musel.dev
+Environment=ENARM_PORT=4187
+ExecStart=/usr/bin/node /var/www/enarm-contraste/api-current/server.mjs
+Restart=on-failure
+RestartSec=2
+UMask=0077
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=strict
+ProtectHome=true
+ReadWritePaths=/var/lib/enarm-contraste
+RestrictAddressFamilies=AF_UNIX AF_INET AF_INET6
+MemoryMax=512M
+TimeoutStopSec=15
+
+[Install]
+WantedBy=multi-user.target
