@@ -39,6 +39,8 @@ def validate_bank(source, bank, review, source_hash, bank_hash):
     for group in groups:
         label = f'{sid}/{group["id"]}'
         require(group.get('parent_topic_id') in topics, label + ': unknown parent')
+        require(group['id'] not in topics or group['id'] == group['parent_topic_id'], label + ': original identity reassigned')
+        require(re.fullmatch(r'[A-Za-z0-9][A-Za-z0-9._-]*',group['id']), label + ': invalid identity')
         block, topic = topics[group['parent_topic_id']]
         require(group.get('block_id') == block and group.get('answer_kind') in ('diagnosis', 'decision') and group.get('name'), label + ': invalid group')
         variants = group.get('variants', {})

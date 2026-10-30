@@ -95,6 +95,17 @@ class PracticeTests(unittest.TestCase):
         generic = self.module.decision_steps(source)
         self.assertGreater(len(steps),len(generic))
 
+    def test_original_identity_cannot_be_reassigned_to_another_topic(self):
+        other = copy.deepcopy(self.topic)
+        other['id'] = '01.01-02'
+        self.source['blocks'][0]['topics'].append(other)
+        second = copy.deepcopy(self.bank['groups'][0])
+        second['id'] = second['parent_topic_id'] = other['id']
+        self.bank['groups'].append(second)
+        self.bank['groups'][0]['parent_topic_id'] = other['id']
+        with self.assertRaisesRegex(ValueError,'identity'):
+            self.validate()
+
 
 if __name__ == '__main__':
     unittest.main()
