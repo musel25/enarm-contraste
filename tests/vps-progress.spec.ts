@@ -237,3 +237,23 @@ for (const view of ["library", "subtest"] as const) {
     } finally { await separate.close(); }
   });
 }
+
+test("library waits for its server profile before allowing an answer to open", async ({ page }) => {
+  let release!: () => void;
+  const loading = new Promise<void>(resolve => { release = resolve; });
+  await page.route("**/api/progress", async route => {
+    if (route.request().method() === "GET") await loading;
+    await route.fallback();
+  });
+  try {
+    await page.goto("./#biblioteca");
+    const section = page.waitForResponse(r => r.url().includes("/study/sections/"));
+    await page.getByRole("button", { name: /Sección de prueba/ }).click();
+    await (await section).finished();
+    await page.evaluate(() => new Promise<void>(resolve => requestAnimationFrame(() => requestAnimationFrame(() => resolve()))));
+    await expect(page.getByRole("button", { name: "Mostrar respuesta", exact: true })).toHaveCount(0);
+    release();
+    await page.getByRole("button", { name: "Mostrar respuesta", exact: true }).click();
+    await expect(page.getByRole("button", { name: "Lo reconocí", exact: true })).toBeEnabled();
+  } finally { release(); }
+});

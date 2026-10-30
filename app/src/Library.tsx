@@ -135,7 +135,7 @@ export default function Library({ onReview }: { onReview: (context: ReviewContex
           <div className="library-route-note"><span className="route-node" /><p>Primero distingue la pista.<br />Después explica por qué cambia la decisión.</p></div>
         </aside>
         <div className="library-study-column">
-          {sectionError ? <LoadError onRetry={() => setSectionAttempt(a => a + 1)} /> : !section ? <p role="status" className="library-loading">Cargando tarjetas…</p> : card ? <>
+          {sectionError ? <LoadError onRetry={() => setSectionAttempt(a => a + 1)} /> : !section || store.loading ? <p role="status" className="library-loading">Cargando tarjetas…</p> : card ? <>
             <div className="library-card-pagination"><span>Tarjeta {index + 1} de {cards.length}</span><div><button aria-label="Tarjeta anterior" disabled={index === 0} onClick={() => setIndex(i => i - 1)}>‹</button><button aria-label="Tarjeta siguiente" disabled={index >= cards.length - 1} onClick={() => setIndex(i => i + 1)}>›</button></div></div>
             <StudyCard key={`${store.generation}/${card.id}`} card={card} status={combined[card.id]} ratingDisabled={store.loading || store.saving || !!store.error} onFollow={followCase} onRate={value => void rate(value)} onReview={() => onReview({ axisId: `libro-${sectionId}`, section: "library", caseId: card.id, label: `${section.title} · ${card.id}` })} />
             {store.state.progress[card.id] && <p role="status">Próximo repaso: {dateLabel(store.state.progress[card.id].due_day)}</p>}
