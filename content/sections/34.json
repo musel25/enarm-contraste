@@ -12,7 +12,7 @@
           "source_pages": [
             1146
           ],
-          "pattern": "Un centro de salud revisa cartillas y encuentra niños con vacunas pendientes. También registra eventos posteriores a inmunización. Se requiere aumentar cobertura sin perder seguridad y continuidad de seguimiento.",
+          "pattern": "Un centro de salud encuentra niños con vacunas pendientes al revisar cartillas. Algunas familias tienen dificultades para regresar a consulta; también existen reportes de fiebre y otros eventos posteriores a inmunización.",
           "key_discriminator": "vacunas pendientes",
           "mechanism": "La inmunización poblacional reduce susceptibilidad y circulación de enfermedades prevenibles; la cobertura oportuna, conservación y vigilancia de eventos sostienen protección individual y control comunitario.",
           "findings": [
@@ -62,8 +62,8 @@
           "source_pages": [
             1148
           ],
-          "pattern": "Una persona pregunta por qué una vacuna no actúa igual que una inmunoglobulina. También presenta fiebre después de vacunarse. Se debe explicar tipo de inmunidad y evaluar gravedad sin asumir causalidad.",
-          "key_discriminator": "sin asumir causalidad",
+          "pattern": "Una persona pregunta por qué una vacuna no actúa igual que una inmunoglobulina. Presenta fiebre al día siguiente de vacunarse, sin dificultad respiratoria, hipotensión ni alteración del estado de conciencia.",
+          "key_discriminator": "fiebre al día siguiente de vacunarse",
           "mechanism": "La inmunización activa estimula respuesta y memoria propias; la pasiva transfiere anticuerpos y protección transitoria, mientras un evento posterior a vacuna requiere evaluación antes de atribuir causa.",
           "findings": [
             {
@@ -99,7 +99,7 @@
           "source_pages": [
             1144
           ],
-          "pattern": "Un estudiante compara una vacuna con microorganismos vivos atenuados, otra con antígenos purificados y una con toxoide. Debe identificar qué se administra y cómo cambia la evaluación en inmunodeficiencia.",
+          "pattern": "Un estudiante compara tres productos: uno contiene microorganismos vivos atenuados, otro antígenos purificados y otro una toxina modificada. Un paciente que recibe inmunosupresores pregunta si todos tienen las mismas precauciones.",
           "key_discriminator": "microorganismos vivos atenuados",
           "mechanism": "Las plataformas presentan antígenos por microorganismos replicativos, inactivados, subunidades, toxoides o ácidos nucleicos; su capacidad replicativa y componentes modifican respuesta, precauciones y uso en condiciones especiales.",
           "findings": [
@@ -125,7 +125,7 @@
             },
             {
               "page": 1144,
-              "quote": "ser de células enteras o Toxoides inmunodeprimidos. fraccionadas, las"
+              "quote": "Es una toxina que ha sido modificada"
             }
           ],
           "source_gaps": []
@@ -140,7 +140,7 @@
             1132,
             1133
           ],
-          "pattern": "Una familia lleva una cartilla incompleta a consulta. El niño recibió algunas vacunas, pero varias fechas no están registradas. Se necesita reconstruir antecedentes y aplicar recuperación de esquema según edad.",
+          "pattern": "Una familia lleva una cartilla incompleta a consulta. El niño recibió algunas vacunas, pero varias fechas no están registradas; sus padres creen que debe volver a recibir todas las dosis desde el inicio.",
           "key_discriminator": "cartilla incompleta",
           "mechanism": "Las series y refuerzos establecen y mantienen memoria protectora en momentos de vulnerabilidad; documentar dosis, intervalos y edad evita oportunidades perdidas y aplicaciones incompatibles con el producto.",
           "findings": [
@@ -190,8 +190,8 @@
           "source_pages": [
             1125
           ],
-          "pattern": "Un lactante recibirá varias vacunas en una visita. El personal revisa presentación, dosis, vía y sitio según edad y masa muscular. Se planea registrar cada aplicación y evitar errores de técnica.",
-          "key_discriminator": "vía y sitio según edad",
+          "pattern": "Un lactante recibirá varios biológicos en una visita. Hay presentaciones con distintas vías y volúmenes; su masa muscular es pequeña y la familia pregunta si todos pueden aplicarse en el mismo sitio.",
+          "key_discriminator": "presentaciones con distintas vías y volúmenes",
           "mechanism": "La técnica deposita antígeno en el tejido indicado y preserva seguridad y respuesta; vía, volumen, aguja y sitio dependen de producto, edad y anatomía del paciente.",
           "findings": [
             {
@@ -206,6 +206,11 @@
               "factor": "Aplicación simultánea",
               "action": "Usar sitios separados y registro individual",
               "reason": "Permite técnica segura y trazabilidad"
+            },
+            {
+              "factor": "Vacuna intramuscular en lactante pequeño",
+              "action": "Preferir cara anterolateral del muslo; verificar vía específica de cada producto",
+              "reason": "El sitio depende de masa muscular y tejido indicado"
             }
           ],
           "limits": "Los volúmenes y lado corporal no son universales para toda marca.",
@@ -216,7 +221,7 @@
             },
             {
               "page": 1125,
-              "quote": "separación anatómica será de 2.5cm de distancia. CeNSIA I Secretaría de"
+              "quote": "la separación anatómica será de 2.5cm de distancia."
             }
           ],
           "source_gaps": []
@@ -240,7 +245,7 @@
             1126,
             1127
           ],
-          "pattern": "Un recién nacido estable acude para prevención de formas graves de tuberculosis. Se confirma peso y se revisa inmunodeficiencia o exposición a VIH antes de administrar una vacuna viva por vía intradérmica.",
+          "pattern": "Un recién nacido estable acude para prevención de formas graves de tuberculosis. Tiene peso adecuado y no presenta datos de inmunodeficiencia; su familia pregunta por la vacuna intradérmica y la lesión local posterior.",
           "key_discriminator": "formas graves de tuberculosis",
           "mechanism": "El bacilo vivo atenuado de Mycobacterium bovis induce respuesta inmune que protege principalmente frente a tuberculosis meníngea y miliar infantil, con precauciones especiales si hay inmunodeficiencia.",
           "findings": [
@@ -277,8 +282,8 @@
           "source_pages": [
             1135
           ],
-          "pattern": "Un recién nacido requiere prevención de una infección viral transmitida por sangre y durante el parto. Se revisa el antígeno de superficie materno para decidir vacunación temprana y medidas adicionales.",
-          "key_discriminator": "antígeno de superficie materno",
+          "pattern": "Un bebé de dos horas de vida está estable. El control prenatal materno documentó antígeno de superficie positivo para un virus de transmisión sanguínea; no tiene constancia de profilaxis después del parto.",
+          "key_discriminator": "antígeno de superficie positivo",
           "mechanism": "El antígeno de superficie recombinante induce anticuerpos protectores frente a hepatitis B; la prevención neonatal reduce transmisión perinatal y riesgo de infección crónica, con inmunoglobulina cuando corresponde.",
           "findings": [
             {
@@ -286,13 +291,13 @@
               "finding": "Prevención de infección perinatal"
             }
           ],
-          "initial_action": "Administrar vacuna neonatal oportunamente y evaluar inmunoglobulina según estado materno y protocolo; programar serie y pruebas de seguimiento cuando proceda.",
+          "initial_action": "Administrar vacuna monovalente e inmunoglobulina contra VHB en sitios distintos dentro de 12 horas del nacimiento. Completar serie y realizar HBsAg y anti-HBs a los 9–12 meses.",
           "action_reason": "La oportunidad protege frente a exposición del nacimiento.",
           "modifiers": [
             {
-              "factor": "Madre HBsAg positiva",
-              "action": "Añadir inmunoglobulina y seguimiento específico",
-              "reason": "Existe exposición perinatal documentada"
+              "factor": "Peso al nacer menor de 2000 g y madre HBsAg positiva",
+              "action": "No contar la dosis natal para completar serie; añadir tres dosis desde el mes de edad",
+              "reason": "La respuesta a la dosis natal puede ser menor"
             }
           ],
           "limits": "No posponer una exposición perinatal por el esquema general.",
@@ -306,10 +311,29 @@
               "quote": "lnmunoglobulina contra VHB"
             }
           ],
-          "source_gaps": []
+          "source_gaps": [],
+          "source_corrections": [
+            {
+              "reason": "Ante HBsAg materno positivo, vacuna monovalente e inmunoglobulina son urgentes dentro de 12 horas; no esperar el límite general de 24 horas. El control posterior usa HBsAg y anti-HBs a los 9–12 meses."
+            }
+          ],
+          "external_sources": [
+            {
+              "label": "CDC: prevención perinatal de hepatitis B",
+              "url": "https://www.cdc.gov/hepatitis-b/hcp/perinatal-provider-overview/index.html",
+              "quote": "HepB vaccine and HBIG within 12 hours of birth",
+              "checked_at": "2026-10-29"
+            },
+            {
+              "label": "CDC: hepatitis B en prematuros",
+              "url": "https://www.cdc.gov/vaccines/hcp/imz-best-practices/special-situations.html",
+              "quote": "The initial vaccine dose should not be counted toward completion of the hepatitis B series",
+              "checked_at": "2026-10-29"
+            }
+          ]
         }
       ],
-      "common_problem": "Recién nacido que requiere prevención frente a tuberculosis grave y hepatitis B.",
+      "common_problem": "Recién nacido que requiere prevención de infección micobacteriana grave y transmisión viral perinatal.",
       "mother": {
         "cue": "La inmunización temprana reduce enfermedad grave o transmisión perinatal.",
         "answer": "Vacunación del recién nacido.",
@@ -335,7 +359,7 @@
               "finding": "Protección combinada infantil"
             }
           ],
-          "initial_action": "Revisar edad y dosis previas y aplicar hexavalente según esquema y producto; registrar siguiente dosis.",
+          "initial_action": "Revisar dosis previas y aplicar hexavalente intramuscular a los 2, 4 y 6 meses, con refuerzo a los 18 meses; usar recuperación válida si hay retraso.",
           "action_reason": "Completa protección sin omitir componentes.",
           "modifiers": [
             {
@@ -355,7 +379,15 @@
               "quote": "actualización de esquema"
             }
           ],
-          "source_gaps": []
+          "source_gaps": [],
+          "external_sources": [
+            {
+              "label": "Secretaría de Salud: hexavalente en México, octubre 2026",
+              "url": "https://www.gob.mx/salud/articulos/vacunacion-pieza-fundamental-para-prevenir-la-poliomielitis?idiom=es",
+              "quote": "se aplica a los 2, 4, 6 y 18 meses de edad",
+              "checked_at": "2026-10-29"
+            }
+          ]
         },
         {
           "id": "34.03-02",
@@ -400,8 +432,8 @@
           "source_pages": [
             1138
           ],
-          "pattern": "Un lactante acude a prevención de infección invasiva por una bacteria encapsulada respiratoria. Otra persona con asplenia solicita protección por riesgo elevado. Se revisan edad, antecedentes y formulación conjugada o polisacárida.",
-          "key_discriminator": "persona con asplenia",
+          "pattern": "Un lactante con asplenia funcional tiene registros incompletos. Su familia pregunta por protección contra una bacteria encapsulada que puede causar meningitis y bacteriemia; desconoce qué formulación recibió y cuántas dosis tiene.",
+          "key_discriminator": "asplenia funcional",
           "mechanism": "Los antígenos capsulares generan protección serotipo-específica; la conjugación mejora respuesta inmunitaria, mientras edad, inmunodeficiencia y vacunación previa determinan qué formulación y secuencia corresponde al riesgo.",
           "findings": [
             {
@@ -437,7 +469,7 @@
           "source_pages": [
             1140
           ],
-          "pattern": "Un familiar pide gotas de poliomielitis para un niño con esquema incompleto. El registro muestra vacuna inactivada dentro de la combinada. Se necesita explicar el cambio del programa y completar protección.",
+          "pattern": "Un familiar pide gotas de poliomielitis para un niño con esquema incompleto. El registro muestra vacuna inactivada dentro de la combinada y la familia recuerda campañas antiguas con administración oral.",
           "key_discriminator": "vacuna inactivada dentro de la combinada",
           "mechanism": "La vacuna oral viva genera inmunidad intestinal pero puede excretarse y originar virus derivados en baja cobertura; la vacuna inactivada evita replicación y forma parte de esquemas actuales.",
           "findings": [
@@ -486,7 +518,7 @@
           "source_pages": [
             1142
           ],
-          "pattern": "Un niño sin contraindicaciones acude a completar protección contra sarampión, rubéola y parotiditis. Se revisan edad, dosis documentadas y recepción reciente de sangre o inmunoglobulinas antes de aplicar vacuna viva.",
+          "pattern": "Un niño acude a completar protección contra sarampión, rubéola y parotiditis. Tiene dosis documentadas y recepción reciente de sangre o inmunoglobulinas; sus padres preguntan si este antecedente cambia la oportunidad de vacunación.",
           "key_discriminator": "recepción reciente de sangre o inmunoglobulinas",
           "mechanism": "Los virus atenuados inducen respuesta y memoria frente a tres infecciones; inmunosupresión relevante, embarazo y anticuerpos pasivos pueden modificar seguridad o eficacia y oportunidad de aplicación.",
           "findings": [
@@ -512,7 +544,7 @@
             },
             {
               "page": 1142,
-              "quote": "tricípital a) Se aplicarán 2 dosis vía subcutánea : La primera dosis al"
+              "quote": "Se puede presentar exantema 7-10 días después de la vacunación."
             }
           ],
           "source_gaps": [],
@@ -545,7 +577,7 @@
           "source_pages": [
             1149
           ],
-          "pattern": "Una persona susceptible sin antecedente de exantema vesicular pruriginoso pregunta por vacunación. Se verifica que no esté embarazada y se revisa grado de inmunosupresión antes de seleccionar una vacuna viva.",
+          "pattern": "Una persona susceptible sin antecedente de exantema vesicular pruriginoso pregunta por vacunación. No está embarazada ni recibe inmunosupresores; una conviviente acaba de presentar una erupción contagiosa similar a la de otros niños de su escuela.",
           "key_discriminator": "exantema vesicular pruriginoso",
           "mechanism": "El virus atenuado de varicela induce inmunidad protectora y reduce enfermedad grave; por replicación del producto la seguridad depende de embarazo y grado y tipo de inmunodeficiencia.",
           "findings": [
@@ -571,7 +603,7 @@
             },
             {
               "page": 1149,
-              "quote": "Esquema Edad Dosis Vía Sitio • Embarazo. Evitar embarazarse durante 72 Región"
+              "quote": "Es una vacuna de virus vivos atenuados"
             }
           ],
           "source_gaps": [],
@@ -604,7 +636,7 @@
               "finding": "Prevención de infección futura"
             }
           ],
-          "initial_action": "Revisar elegibilidad en programa actual y completar dosis según edad e inmunocompromiso; explicar objetivo preventivo.",
+          "initial_action": "Ofrecer vacunación a niñas y niños de quinto de primaria o de 11 años no escolarizados; revisar dosis e indicaciones de otros grupos de riesgo según programa mexicano vigente.",
           "action_reason": "La mayor utilidad es prevenir exposición futura.",
           "modifiers": [
             {
@@ -627,9 +659,9 @@
           "source_gaps": [],
           "external_sources": [
             {
-              "label": "Secretaría de Salud: vacunación VPH 2026",
-              "url": "https://www.gob.mx/salud/prensa/085-arranca-la-semana-nacional-de-vacunacion-2026?idiom=es",
-              "quote": "VPH (Virus del Papiloma Humano) en niñas y niños",
+              "label": "Secretaría de Salud: población objetivo de VPH 2026",
+              "url": "https://www.gob.mx/salud/articulos/la-vacunacion-es-la-herramienta-principal-para-prevenir-el-virus-del-papiloma-humano",
+              "quote": "niñas y niños de quinto grado de primaria y de 11 años no escolarizados",
               "checked_at": "2026-10-29"
             }
           ],
@@ -663,8 +695,8 @@
           "source_pages": [
             1137
           ],
-          "pattern": "Una embarazada acude durante campaña estacional para prevenir enfermedad respiratoria por un ortomixovirus. Se revisan antecedentes de reacción a vacunas y se confirma que el producto inactivado sea apropiado para embarazo.",
-          "key_discriminator": "producto inactivado",
+          "pattern": "Una embarazada acude durante campaña estacional para prevenir enfermedad respiratoria por un ortomixovirus. Tiene alergia al huevo, pero nunca ha presentado una reacción a vacunas; pregunta por la protección de su bebé.",
+          "key_discriminator": "nunca ha presentado una reacción a vacunas",
           "mechanism": "La vacuna inactivada induce anticuerpos frente a cepas seleccionadas y reduce riesgo de enfermedad y complicaciones; los cambios virales y caída de protección justifican vacunación estacional.",
           "findings": [
             {
@@ -713,7 +745,7 @@
           "source_pages": [
             1128
           ],
-          "pattern": "Un niño acude a refuerzo después de una serie infantil que contiene difteria, tétanos y tos ferina. Se revisan edad y antecedentes de reacción neurológica o alérgica antes de la aplicación.",
+          "pattern": "Un niño de cuatro años acude a refuerzo después de completar cuatro dosis de la vacuna infantil combinada que protege contra seis infecciones. Sus padres no recuerdan reacciones neurológicas ni alérgicas después de esas aplicaciones.",
           "key_discriminator": "acude a refuerzo",
           "mechanism": "Los toxoides diftérico y tetánico y el componente pertussis refuerzan inmunidad de la serie primaria; las formulaciones y límites de edad difieren de productos para adolescentes y adultos.",
           "findings": [
@@ -722,13 +754,13 @@
               "finding": "Protección mantenida frente a tres enfermedades"
             }
           ],
-          "initial_action": "Confirmar serie y edad para aplicar DPT cuando corresponda; revisar contraindicaciones y registrar.",
+          "initial_action": "Confirmar serie infantil y aplicar refuerzo DPT a los 4 años; en recuperación respetar edad máxima de 6 años, 11 meses y 29 días.",
           "action_reason": "Mantiene protección infantil con formulación adecuada.",
           "modifiers": [
             {
-              "factor": "Encefalopatía inexplicada tras componente pertussis",
-              "action": "Revisar contraindicación específica",
-              "reason": "Puede requerir producto sin ese componente"
+              "factor": "Encefalopatía inexplicada dentro de siete días de vacuna con pertussis",
+              "action": "No administrar el componente pertussis; valorar producto alternativo apropiado",
+              "reason": "Es una contraindicación específica, no cualquier síntoma neurológico"
             }
           ],
           "limits": "No sustituir indistintamente por formulaciones de otras edades.",
@@ -742,7 +774,15 @@
               "quote": "Encefalopatía"
             }
           ],
-          "source_gaps": []
+          "source_gaps": [],
+          "external_sources": [
+            {
+              "label": "Consejo de Salubridad General: PRONAM vacunación",
+              "url": "https://www.dof.gob.mx/2025/CSG/PRONAM_Vacunacion_a_lo_largo_de%20_la_vida.pdf",
+              "quote": "la edad de aplicación no debe sobrepasar los 6 años, 11 meses y 29 días",
+              "checked_at": "2026-10-29"
+            }
+          ]
         },
         {
           "id": "34.05-03",
@@ -750,7 +790,7 @@
           "source_pages": [
             1143
           ],
-          "pattern": "Un adulto consulta por herida contaminada y no recuerda su vacunación antitetánica. Se debe limpiar la herida y decidir vacuna y necesidad de inmunoglobulina a partir del tipo de lesión y antecedentes.",
+          "pattern": "Un adulto consulta por herida contaminada tras pisar un clavo en un terreno con tierra. No recuerda su vacunación previa y no dispone de cartilla; permanece estable y tiene material extraño visible en la lesión.",
           "key_discriminator": "herida contaminada",
           "mechanism": "El toxoide induce inmunidad activa frente a toxina tetánica, mientras inmunoglobulina aporta protección pasiva inmediata; la necesidad de ambas depende de herida y vacunación previa.",
           "findings": [
@@ -759,7 +799,7 @@
               "finding": "Prevención de tétanos"
             }
           ],
-          "initial_action": "Limpiar la herida y revisar esquema; indicar vacuna y, si procede, inmunoglobulina según riesgo y antecedente.",
+          "initial_action": "Limpiar y retirar material extraño; administrar vacuna antitetánica e inmunoglobulina antitetánica de 250 UI intramuscular por herida sucia e historia desconocida. Iniciar o completar serie después de la atención inmediata.",
           "action_reason": "La vacuna sola no aporta protección inmediata completa en no inmunizado.",
           "modifiers": [
             {
@@ -812,7 +852,7 @@
           "source_pages": [
             1134
           ],
-          "pattern": "Una persona sin inmunidad conocida trabajará en una guardería y solicita prevención de hepatitis de transmisión fecal y oral. Se revisan edad, exposición, antecedentes y producto para planificar vacunación.",
+          "pattern": "Una persona sin inmunidad conocida trabajará en una guardería y solicita prevención de hepatitis de transmisión fecal y oral. No tiene hepatopatía ni antecedente documentado de infección o vacunación contra este virus.",
           "key_discriminator": "transmisión fecal y oral",
           "mechanism": "El virus inactivado induce inmunidad activa contra hepatitis A, reduce infección y complicaciones; la indicación programática o por exposición depende de edad y contexto epidemiológico y laboral.",
           "findings": [
@@ -849,7 +889,7 @@
           "source_pages": [
             1141
           ],
-          "pattern": "Una persona viajará a una región con riesgo de fiebre tifoidea. Se revisa su edad e inmunidad y se comparan vacuna oral viva y parenteral, además de medidas de agua y alimentos.",
+          "pattern": "Una persona viajará a una región con riesgo de fiebre tifoidea. Pregunta por la vacuna oral y la inyectable, y cree que cualquiera le permitirá consumir agua y alimentos sin precauciones durante el viaje.",
           "key_discriminator": "riesgo de fiebre tifoidea",
           "mechanism": "Las vacunas contra Salmonella Typhi inducen protección específica con formulaciones vivas orales o antígenos capsulares; no previenen todas las salmonelosis ni eliminan riesgo por exposición alimentaria.",
           "findings": [
@@ -898,7 +938,7 @@
           "source_pages": [
             1147
           ],
-          "pattern": "Una gestante acude con cartilla incompleta y pregunta cómo proteger a su bebé durante los primeros meses. Se revisan edad gestacional, dosis previas y vacunas indicadas, con exclusión de productos vivos contraindicados.",
+          "pattern": "Una gestante de 22 semanas acude con cartilla incompleta y pregunta cómo proteger a su bebé durante los primeros meses. Recibió un refuerzo antitetánico antes del embarazo y no tiene vacunación estacional documentada.",
           "key_discriminator": "proteger a su bebé",
           "mechanism": "La vacunación materna genera anticuerpos y su transferencia placentaria aporta protección pasiva neonatal; plataforma, edad gestacional y riesgo determinan qué vacunas pueden aplicarse con seguridad durante embarazo.",
           "findings": [
@@ -907,7 +947,7 @@
               "finding": "Protección neonatal temprana"
             }
           ],
-          "initial_action": "Revisar esquema y ofrecer Tdpa desde semana 20 en cada gestación, influenza estacional y vacuna contra VSR entre semanas 32 y 36 según programa mexicano vigente.",
+          "initial_action": "Ofrecer Tdpa desde semana 20 en cada embarazo, influenza estacional, COVID-19 desde segundo trimestre y vacuna contra VSR entre semanas 32 y 36, según programa mexicano vigente y antecedentes.",
           "action_reason": "Protege a madre y recién nacido.",
           "modifiers": [
             {
@@ -946,6 +986,12 @@
               "url": "https://www.gob.mx/salud/es/articulos/prevencion-de-la-salud-2026?idiom=es",
               "quote": "personas embarazadas entre la semana 32 y 36",
               "checked_at": "2026-10-29"
+            },
+            {
+              "label": "Presidencia de México: indicaciones gestacionales 2026",
+              "url": "https://www.gob.mx/presidencia/prensa/el-objetivo-es-otorgar-el-derecho-a-la-salud-presidenta-anuncia-que-la-semana-nacional-de-vacunacion-se-extendera-hasta-mayo?idiom=en",
+              "quote": "a partir del segundo trimestre contra el Covid-19",
+              "checked_at": "2026-10-29"
             }
           ],
           "source_corrections": [
@@ -957,6 +1003,9 @@
             },
             {
               "reason": "El programa mexicano 2026 incorpora vacuna contra VSR entre semanas 32 y 36. Tdpa se ofrece desde semana 20 y la vacuna estacional según programa."
+            },
+            {
+              "reason": "El programa mexicano 2026 también indica COVID-19 desde el segundo trimestre. Las recomendaciones gestacionales se explicitan para México y no se sustituyen por el calendario estadounidense."
             }
           ]
         },
@@ -966,7 +1015,7 @@
           "source_pages": [
             1145
           ],
-          "pattern": "Una trabajadora de salud inicia actividades con exposición a sangre y pacientes respiratorios. No tiene registros completos. Se revisan vacunas y evidencia de inmunidad para protegerla y reducir riesgo laboral.",
+          "pattern": "Una trabajadora de salud inicia actividades con exposición a sangre y pacientes respiratorios. No tiene registros completos de vacunación ni resultados de anticuerpos; pregunta si su edad basta para asumir protección frente a infecciones ocupacionales.",
           "key_discriminator": "exposición a sangre",
           "mechanism": "La vacunación ocupacional reduce susceptibilidad frente a agentes transmitidos por sangre, respiración o contacto; el riesgo del puesto y evidencia de inmunidad determinan dosis y evaluación posterior.",
           "findings": [
