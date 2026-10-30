@@ -1,0 +1,1812 @@
+{
+  "schema_version": 1,
+  "section_id": "12",
+  "author": "practice_01_12",
+  "source_sha256": "99cb73c9589c3dc8bf35d52c257bf1c4d37d9c97aaf309d118ecf4d6148c0d39",
+  "groups": [
+    {
+      "id": "12.01-01",
+      "parent_topic_id": "12.01-01",
+      "block_id": "12.01",
+      "name": "Síndrome de Turner",
+      "answer_kind": "diagnosis",
+      "variants": {
+        "easy": {
+          "vignette": "Una adolescente tiene talla baja, cuello alado y ausencia de desarrollo puberal con amenorrea primaria. Se detecta presión elevada y se revisan pulsos y posibles lesiones aórticas.",
+          "discriminator": "talla baja, cuello alado",
+          "explanation": "El dato decisivo es talla baja, cuello alado. La ausencia completa o parcial de material del cromosoma X altera desarrollo gonadal y crecimiento; la disgenesia ovárica produce hipogonadismo y coexiste riesgo cardiovascular y renal. Confirmar con cariotipo y coordinar evaluación endocrina, cardíaca y renal. Valorar crecimiento e inducción puberal según edad y situación clínica.",
+          "confusable_with": "Hipogonadismo central aislado",
+          "why_not": "El fenotipo y el hipogonadismo hipergonadotrópico orientan a Turner. La evaluación cromosómica y el riesgo aórtico requieren atención específica.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Una adolescente tiene talla baja, cuello alado y ausencia de desarrollo puberal con amenorrea primaria. Se detecta presión elevada y se revisan pulsos y posibles lesiones aórticas."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "talla baja, cuello alado"
+            },
+            {
+              "field": "mechanism",
+              "text": "La ausencia completa o parcial de material del cromosoma X altera desarrollo gonadal y crecimiento; la disgenesia ovárica produce hipogonadismo y coexiste riesgo cardiovascular y renal."
+            },
+            {
+              "field": "initial_action",
+              "text": "Confirmar con cariotipo y coordinar evaluación endocrina, cardíaca y renal. Valorar crecimiento e inducción puberal según edad y situación clínica."
+            },
+            {
+              "field": "action_reason",
+              "text": "El diagnóstico permite tratar déficit y detectar lesiones de alto riesgo."
+            },
+            {
+              "field": "limits",
+              "text": "No limitar la vigilancia aórtica a un intervalo fijo para todas; anatomía, presión y crecimiento cambian la frecuencia."
+            },
+            {
+              "field": "source_corrections.0.reason",
+              "text": "El intervalo aórtico fijo de cinco a diez años del libro no aplica a todos los pacientes. La guía internacional 2024 determina la frecuencia por factores de riesgo, incluido tamaño aórtico, hipertensión, válvula bicúspide y coartación."
+            }
+          ]
+        },
+        "medium": {
+          "vignette": "Una adolescente con talla baja y fallo ovárico tiene coartación o válvula aórtica bicúspide. Se establece vigilancia aórtica individualizada.",
+          "discriminator": "Fenotipo gonadal con riesgo aórtico",
+          "explanation": "El dato decisivo es Fenotipo gonadal con riesgo aórtico. Aumenta riesgo cardiovascular. Establecer vigilancia aórtica individualizada.",
+          "confusable_with": "Hipogonadismo central aislado",
+          "why_not": "El fenotipo y el hipogonadismo hipergonadotrópico orientan a Turner. La evaluación cromosómica y el riesgo aórtico requieren atención específica.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Una adolescente tiene talla baja, cuello alado y ausencia de desarrollo puberal con amenorrea primaria. Se detecta presión elevada y se revisan pulsos y posibles lesiones aórticas."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "talla baja, cuello alado"
+            },
+            {
+              "field": "mechanism",
+              "text": "La ausencia completa o parcial de material del cromosoma X altera desarrollo gonadal y crecimiento; la disgenesia ovárica produce hipogonadismo y coexiste riesgo cardiovascular y renal."
+            },
+            {
+              "field": "initial_action",
+              "text": "Confirmar con cariotipo y coordinar evaluación endocrina, cardíaca y renal. Valorar crecimiento e inducción puberal según edad y situación clínica."
+            },
+            {
+              "field": "action_reason",
+              "text": "El diagnóstico permite tratar déficit y detectar lesiones de alto riesgo."
+            },
+            {
+              "field": "limits",
+              "text": "No limitar la vigilancia aórtica a un intervalo fijo para todas; anatomía, presión y crecimiento cambian la frecuencia."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Disgenesia gonadal"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Amenorrea e hipogonadismo hipergonadotrópico"
+            },
+            {
+              "field": "findings.1.mechanism",
+              "text": "Alteración del crecimiento"
+            },
+            {
+              "field": "findings.1.finding",
+              "text": "Talla baja"
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Coartación o válvula bicúspide"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Establecer vigilancia aórtica individualizada."
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "Aumenta riesgo cardiovascular."
+            },
+            {
+              "field": "modifiers.1.factor",
+              "text": "Sospecha de mosaicismo"
+            },
+            {
+              "field": "modifiers.1.action",
+              "text": "Completar estudio citogenético apropiado."
+            },
+            {
+              "field": "modifiers.1.reason",
+              "text": "La alteración puede no ser una monosomía uniforme."
+            },
+            {
+              "field": "source_corrections.0.reason",
+              "text": "El intervalo aórtico fijo de cinco a diez años del libro no aplica a todos los pacientes. La guía internacional 2024 determina la frecuencia por factores de riesgo, incluido tamaño aórtico, hipertensión, válvula bicúspide y coartación."
+            }
+          ]
+        },
+        "contrast": {
+          "vignette": "Una adolescente con amenorrea primaria y rasgos compatibles tiene sospecha de mosaicismo. Se completa estudio citogenético apropiado.",
+          "discriminator": "Sospecha de mosaicismo en disgenesia gonadal",
+          "explanation": "El dato decisivo es Sospecha de mosaicismo en disgenesia gonadal. La alteración puede no ser una monosomía uniforme. Completar estudio citogenético apropiado.",
+          "confusable_with": "Hipogonadismo central aislado",
+          "why_not": "El fenotipo y el hipogonadismo hipergonadotrópico orientan a Turner. La evaluación cromosómica y el riesgo aórtico requieren atención específica.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Una adolescente tiene talla baja, cuello alado y ausencia de desarrollo puberal con amenorrea primaria. Se detecta presión elevada y se revisan pulsos y posibles lesiones aórticas."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "talla baja, cuello alado"
+            },
+            {
+              "field": "mechanism",
+              "text": "La ausencia completa o parcial de material del cromosoma X altera desarrollo gonadal y crecimiento; la disgenesia ovárica produce hipogonadismo y coexiste riesgo cardiovascular y renal."
+            },
+            {
+              "field": "initial_action",
+              "text": "Confirmar con cariotipo y coordinar evaluación endocrina, cardíaca y renal. Valorar crecimiento e inducción puberal según edad y situación clínica."
+            },
+            {
+              "field": "action_reason",
+              "text": "El diagnóstico permite tratar déficit y detectar lesiones de alto riesgo."
+            },
+            {
+              "field": "limits",
+              "text": "No limitar la vigilancia aórtica a un intervalo fijo para todas; anatomía, presión y crecimiento cambian la frecuencia."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Disgenesia gonadal"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Amenorrea e hipogonadismo hipergonadotrópico"
+            },
+            {
+              "field": "findings.1.mechanism",
+              "text": "Alteración del crecimiento"
+            },
+            {
+              "field": "findings.1.finding",
+              "text": "Talla baja"
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Coartación o válvula bicúspide"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Establecer vigilancia aórtica individualizada."
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "Aumenta riesgo cardiovascular."
+            },
+            {
+              "field": "modifiers.1.factor",
+              "text": "Sospecha de mosaicismo"
+            },
+            {
+              "field": "modifiers.1.action",
+              "text": "Completar estudio citogenético apropiado."
+            },
+            {
+              "field": "modifiers.1.reason",
+              "text": "La alteración puede no ser una monosomía uniforme."
+            },
+            {
+              "field": "source_corrections.0.reason",
+              "text": "El intervalo aórtico fijo de cinco a diez años del libro no aplica a todos los pacientes. La guía internacional 2024 determina la frecuencia por factores de riesgo, incluido tamaño aórtico, hipertensión, válvula bicúspide y coartación."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "12.01-02",
+      "parent_topic_id": "12.01-02",
+      "block_id": "12.01",
+      "name": "Síndrome de Klinefelter",
+      "answer_kind": "diagnosis",
+      "variants": {
+        "easy": {
+          "vignette": "Un adulto alto consulta por infertilidad. Tiene testículos pequeños, ginecomastia y testosterona baja con LH y FSH elevadas; se considera una alteración cromosómica del desarrollo testicular.",
+          "discriminator": "testículos pequeños",
+          "explanation": "El dato decisivo es testículos pequeños. Un cromosoma X adicional puede alterar función testicular y producir fallo gonadal primario; la testosterona disminuye y las gonadotropinas aumentan por pérdida de retroalimentación. Solicitar cariotipo y evaluación endocrina y reproductiva. Abordar opciones de fertilidad antes de iniciar testosterona cuando sea posible; valorar reemplazo por hipogonadismo y salud ósea con seguimiento.",
+          "confusable_with": "Hipogonadismo central",
+          "why_not": "La testosterona baja con LH y FSH elevadas indica fallo testicular. El fenotipo cromosómico exige abordar fertilidad y estudiar hallazgos mamarios de alarma.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Un adulto alto consulta por infertilidad. Tiene testículos pequeños, ginecomastia y testosterona baja con LH y FSH elevadas; se considera una alteración cromosómica del desarrollo testicular."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "testículos pequeños"
+            },
+            {
+              "field": "mechanism",
+              "text": "Un cromosoma X adicional puede alterar función testicular y producir fallo gonadal primario; la testosterona disminuye y las gonadotropinas aumentan por pérdida de retroalimentación."
+            },
+            {
+              "field": "initial_action",
+              "text": "Solicitar cariotipo y evaluación endocrina y reproductiva. Abordar opciones de fertilidad antes de iniciar testosterona cuando sea posible; valorar reemplazo por hipogonadismo y salud ósea con seguimiento."
+            },
+            {
+              "field": "action_reason",
+              "text": "Confirma la causa y aborda consecuencias de hipogonadismo."
+            },
+            {
+              "field": "limits",
+              "text": "El cariotipo más común es 47,XXY, correctamente visible en la página original. No asumir infertilidad absoluta; si se planea extracción testicular de espermatozoides, no iniciar testosterona sin coordinar el plan reproductivo."
+            },
+            {
+              "field": "source_corrections.0.reason",
+              "text": "La imagen de página 351 muestra 47,XXY; las V son errores de extracción y no del cariotipo impreso. EAA/ESE indica abordar fertilidad antes de testosterona y evitar iniciarla cuando se planea extracción testicular de espermatozoides."
+            }
+          ]
+        },
+        "medium": {
+          "vignette": "Una persona con testículos pequeños, gonadotropinas altas y dificultades de aprendizaje necesita evaluación y apoyo, además de revisar fertilidad antes de testosterona.",
+          "discriminator": "Fallo testicular con necesidades del desarrollo",
+          "explanation": "El dato decisivo es Fallo testicular con necesidades del desarrollo. Puede coexistir afectación del desarrollo. Ofrecer evaluación y apoyo.",
+          "confusable_with": "Hipogonadismo central",
+          "why_not": "La testosterona baja con LH y FSH elevadas indica fallo testicular. El fenotipo cromosómico exige abordar fertilidad y estudiar hallazgos mamarios de alarma.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Un adulto alto consulta por infertilidad. Tiene testículos pequeños, ginecomastia y testosterona baja con LH y FSH elevadas; se considera una alteración cromosómica del desarrollo testicular."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "testículos pequeños"
+            },
+            {
+              "field": "mechanism",
+              "text": "Un cromosoma X adicional puede alterar función testicular y producir fallo gonadal primario; la testosterona disminuye y las gonadotropinas aumentan por pérdida de retroalimentación."
+            },
+            {
+              "field": "initial_action",
+              "text": "Solicitar cariotipo y evaluación endocrina y reproductiva. Abordar opciones de fertilidad antes de iniciar testosterona cuando sea posible; valorar reemplazo por hipogonadismo y salud ósea con seguimiento."
+            },
+            {
+              "field": "action_reason",
+              "text": "Confirma la causa y aborda consecuencias de hipogonadismo."
+            },
+            {
+              "field": "limits",
+              "text": "El cariotipo más común es 47,XXY, correctamente visible en la página original. No asumir infertilidad absoluta; si se planea extracción testicular de espermatozoides, no iniciar testosterona sin coordinar el plan reproductivo."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Fallo testicular"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Testosterona baja y LH/FSH altas"
+            },
+            {
+              "field": "findings.1.mechanism",
+              "text": "Alteración de espermatogénesis"
+            },
+            {
+              "field": "findings.1.finding",
+              "text": "Infertilidad"
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Dificultades de aprendizaje"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Ofrecer evaluación y apoyo."
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "Puede coexistir afectación del desarrollo."
+            },
+            {
+              "field": "modifiers.1.factor",
+              "text": "Masa mamaria sospechosa"
+            },
+            {
+              "field": "modifiers.1.action",
+              "text": "Estudiar de forma dirigida."
+            },
+            {
+              "field": "modifiers.1.reason",
+              "text": "Existe riesgo mamario aumentado."
+            },
+            {
+              "field": "source_corrections.0.reason",
+              "text": "La imagen de página 351 muestra 47,XXY; las V son errores de extracción y no del cariotipo impreso. EAA/ESE indica abordar fertilidad antes de testosterona y evitar iniciarla cuando se planea extracción testicular de espermatozoides."
+            }
+          ]
+        },
+        "contrast": {
+          "vignette": "Un adulto con hipogonadismo hipergonadotrópico y ginecomastia presenta una masa mamaria sospechosa. Se realiza estudio dirigido.",
+          "discriminator": "Fenotipo testicular con masa mamaria",
+          "explanation": "El dato decisivo es Fenotipo testicular con masa mamaria. Existe riesgo mamario aumentado. Estudiar de forma dirigida.",
+          "confusable_with": "Hipogonadismo central",
+          "why_not": "La testosterona baja con LH y FSH elevadas indica fallo testicular. El fenotipo cromosómico exige abordar fertilidad y estudiar hallazgos mamarios de alarma.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Un adulto alto consulta por infertilidad. Tiene testículos pequeños, ginecomastia y testosterona baja con LH y FSH elevadas; se considera una alteración cromosómica del desarrollo testicular."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "testículos pequeños"
+            },
+            {
+              "field": "mechanism",
+              "text": "Un cromosoma X adicional puede alterar función testicular y producir fallo gonadal primario; la testosterona disminuye y las gonadotropinas aumentan por pérdida de retroalimentación."
+            },
+            {
+              "field": "initial_action",
+              "text": "Solicitar cariotipo y evaluación endocrina y reproductiva. Abordar opciones de fertilidad antes de iniciar testosterona cuando sea posible; valorar reemplazo por hipogonadismo y salud ósea con seguimiento."
+            },
+            {
+              "field": "action_reason",
+              "text": "Confirma la causa y aborda consecuencias de hipogonadismo."
+            },
+            {
+              "field": "limits",
+              "text": "El cariotipo más común es 47,XXY, correctamente visible en la página original. No asumir infertilidad absoluta; si se planea extracción testicular de espermatozoides, no iniciar testosterona sin coordinar el plan reproductivo."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Fallo testicular"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Testosterona baja y LH/FSH altas"
+            },
+            {
+              "field": "findings.1.mechanism",
+              "text": "Alteración de espermatogénesis"
+            },
+            {
+              "field": "findings.1.finding",
+              "text": "Infertilidad"
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Dificultades de aprendizaje"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Ofrecer evaluación y apoyo."
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "Puede coexistir afectación del desarrollo."
+            },
+            {
+              "field": "modifiers.1.factor",
+              "text": "Masa mamaria sospechosa"
+            },
+            {
+              "field": "modifiers.1.action",
+              "text": "Estudiar de forma dirigida."
+            },
+            {
+              "field": "modifiers.1.reason",
+              "text": "Existe riesgo mamario aumentado."
+            },
+            {
+              "field": "source_corrections.0.reason",
+              "text": "La imagen de página 351 muestra 47,XXY; las V son errores de extracción y no del cariotipo impreso. EAA/ESE indica abordar fertilidad antes de testosterona y evitar iniciarla cuando se planea extracción testicular de espermatozoides."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "12.02-01",
+      "parent_topic_id": "12.02-01",
+      "block_id": "12.02",
+      "name": "Confirmar trisomía 21 y evaluar mecanismo y riesgos",
+      "answer_kind": "decision",
+      "variants": {
+        "easy": {
+          "vignette": "Un recién nacido tiene hipotonía, perfil facial plano y pliegue palmar único. Se escucha un soplo; la familia solicita confirmación y una evaluación de problemas asociados. ¿Qué acción o clasificación corresponde a este contexto?",
+          "discriminator": "hipotonía, perfil facial plano",
+          "explanation": "El dato decisivo es hipotonía, perfil facial plano. El material adicional del cromosoma 21 altera desarrollo de varios órganos; el patrón clínico orienta, pero el cariotipo define la alteración y ayuda a valorar recurrencia familiar. Confirmar citogenéticamente y solicitar ecocardiograma neonatal, aunque exista estudio fetal; evaluar alimentación y otras comorbilidades. Coordinar seguimiento del desarrollo y asesoría genética.",
+          "confusable_with": "Tamiz prenatal como diagnóstico definitivo",
+          "why_not": "Un hallazgo de riesgo no equivale a confirmación. El cariotipo determina el mecanismo y una translocación puede modificar la evaluación familiar.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Un recién nacido tiene hipotonía, perfil facial plano y pliegue palmar único. Se escucha un soplo; la familia solicita confirmación y una evaluación de problemas asociados."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "hipotonía, perfil facial plano"
+            },
+            {
+              "field": "mechanism",
+              "text": "El material adicional del cromosoma 21 altera desarrollo de varios órganos; el patrón clínico orienta, pero el cariotipo define la alteración y ayuda a valorar recurrencia familiar."
+            },
+            {
+              "field": "initial_action",
+              "text": "Confirmar citogenéticamente y solicitar ecocardiograma neonatal, aunque exista estudio fetal; evaluar alimentación y otras comorbilidades. Coordinar seguimiento del desarrollo y asesoría genética."
+            },
+            {
+              "field": "action_reason",
+              "text": "El fenotipo no define si hay trisomía libre, translocación o mosaicismo."
+            },
+            {
+              "field": "limits",
+              "text": "El tamiz prenatal positivo no confirma el diagnóstico. La edad gestacional para una prueba invasiva sigue el protocolo vigente; los límites de ocho semanas para biopsia corial y doce para amniocentesis del libro no son adecuados."
+            },
+            {
+              "field": "source_corrections.0.reason",
+              "text": "La página 348 propone biopsia corial después de ocho semanas y amniocentesis después de doce. RCOG establece ventanas posteriores y la tarjeta las corrige. AAP recomienda ecocardiograma neonatal aunque se haya realizado uno fetal."
+            }
+          ]
+        },
+        "medium": {
+          "vignette": "Se confirma una trisomía por translocación en un niño con hipotonía y rasgos físicos compatibles. Se valora estudio y asesoría de los familiares. ¿Qué acción o clasificación corresponde a este contexto?",
+          "discriminator": "Translocación que modifica el riesgo familiar",
+          "explanation": "El dato decisivo es Translocación que modifica el riesgo familiar. El riesgo de recurrencia puede cambiar. Valorar cariotipos y asesoría familiar según indicación.",
+          "confusable_with": "Tamiz prenatal como diagnóstico definitivo",
+          "why_not": "Un hallazgo de riesgo no equivale a confirmación. El cariotipo determina el mecanismo y una translocación puede modificar la evaluación familiar.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Un recién nacido tiene hipotonía, perfil facial plano y pliegue palmar único. Se escucha un soplo; la familia solicita confirmación y una evaluación de problemas asociados."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "hipotonía, perfil facial plano"
+            },
+            {
+              "field": "mechanism",
+              "text": "El material adicional del cromosoma 21 altera desarrollo de varios órganos; el patrón clínico orienta, pero el cariotipo define la alteración y ayuda a valorar recurrencia familiar."
+            },
+            {
+              "field": "initial_action",
+              "text": "Confirmar citogenéticamente y solicitar ecocardiograma neonatal, aunque exista estudio fetal; evaluar alimentación y otras comorbilidades. Coordinar seguimiento del desarrollo y asesoría genética."
+            },
+            {
+              "field": "action_reason",
+              "text": "El fenotipo no define si hay trisomía libre, translocación o mosaicismo."
+            },
+            {
+              "field": "limits",
+              "text": "El tamiz prenatal positivo no confirma el diagnóstico. La edad gestacional para una prueba invasiva sigue el protocolo vigente; los límites de ocho semanas para biopsia corial y doce para amniocentesis del libro no son adecuados."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Desarrollo cromosómico alterado"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Hipotonía y rasgos físicos"
+            },
+            {
+              "field": "findings.1.mechanism",
+              "text": "Defecto cardíaco asociado"
+            },
+            {
+              "field": "findings.1.finding",
+              "text": "Soplo"
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Translocación"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Valorar cariotipos y asesoría familiar según indicación."
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "El riesgo de recurrencia puede cambiar."
+            },
+            {
+              "field": "modifiers.1.factor",
+              "text": "Hallazgo prenatal de riesgo"
+            },
+            {
+              "field": "modifiers.1.action",
+              "text": "Ofrecer asesoría y confirmación diagnóstica. Según RCOG, programar biopsia corial habitualmente a las 11+0–13+6 semanas, nunca antes de 10+0, o amniocentesis desde 15+0 semanas."
+            },
+            {
+              "field": "modifiers.1.reason",
+              "text": "El tamizaje no es diagnóstico y hacer una prueba invasiva demasiado pronto aumenta riesgos."
+            },
+            {
+              "field": "source_corrections.0.reason",
+              "text": "La página 348 propone biopsia corial después de ocho semanas y amniocentesis después de doce. RCOG establece ventanas posteriores y la tarjeta las corrige. AAP recomienda ecocardiograma neonatal aunque se haya realizado uno fetal."
+            }
+          ]
+        },
+        "contrast": {
+          "vignette": "Un hallazgo prenatal sugiere trisomía 21. Se ofrece asesoría y confirmación con una prueba invasiva dentro de la ventana gestacional apropiada. ¿Qué acción o clasificación corresponde a este contexto?",
+          "discriminator": "Riesgo prenatal que requiere confirmación",
+          "explanation": "El dato decisivo es Riesgo prenatal que requiere confirmación. El tamizaje no es diagnóstico y hacer una prueba invasiva demasiado pronto aumenta riesgos. Ofrecer asesoría y confirmación diagnóstica. Según RCOG, programar biopsia corial habitualmente a las 11+0–13+6 semanas, nunca antes de 10+0, o amniocentesis desde 15+0 semanas.",
+          "confusable_with": "Tamiz prenatal como diagnóstico definitivo",
+          "why_not": "Un hallazgo de riesgo no equivale a confirmación. El cariotipo determina el mecanismo y una translocación puede modificar la evaluación familiar.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Un recién nacido tiene hipotonía, perfil facial plano y pliegue palmar único. Se escucha un soplo; la familia solicita confirmación y una evaluación de problemas asociados."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "hipotonía, perfil facial plano"
+            },
+            {
+              "field": "mechanism",
+              "text": "El material adicional del cromosoma 21 altera desarrollo de varios órganos; el patrón clínico orienta, pero el cariotipo define la alteración y ayuda a valorar recurrencia familiar."
+            },
+            {
+              "field": "initial_action",
+              "text": "Confirmar citogenéticamente y solicitar ecocardiograma neonatal, aunque exista estudio fetal; evaluar alimentación y otras comorbilidades. Coordinar seguimiento del desarrollo y asesoría genética."
+            },
+            {
+              "field": "action_reason",
+              "text": "El fenotipo no define si hay trisomía libre, translocación o mosaicismo."
+            },
+            {
+              "field": "limits",
+              "text": "El tamiz prenatal positivo no confirma el diagnóstico. La edad gestacional para una prueba invasiva sigue el protocolo vigente; los límites de ocho semanas para biopsia corial y doce para amniocentesis del libro no son adecuados."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Desarrollo cromosómico alterado"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Hipotonía y rasgos físicos"
+            },
+            {
+              "field": "findings.1.mechanism",
+              "text": "Defecto cardíaco asociado"
+            },
+            {
+              "field": "findings.1.finding",
+              "text": "Soplo"
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Translocación"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Valorar cariotipos y asesoría familiar según indicación."
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "El riesgo de recurrencia puede cambiar."
+            },
+            {
+              "field": "modifiers.1.factor",
+              "text": "Hallazgo prenatal de riesgo"
+            },
+            {
+              "field": "modifiers.1.action",
+              "text": "Ofrecer asesoría y confirmación diagnóstica. Según RCOG, programar biopsia corial habitualmente a las 11+0–13+6 semanas, nunca antes de 10+0, o amniocentesis desde 15+0 semanas."
+            },
+            {
+              "field": "modifiers.1.reason",
+              "text": "El tamizaje no es diagnóstico y hacer una prueba invasiva demasiado pronto aumenta riesgos."
+            },
+            {
+              "field": "source_corrections.0.reason",
+              "text": "La página 348 propone biopsia corial después de ocho semanas y amniocentesis después de doce. RCOG establece ventanas posteriores y la tarjeta las corrige. AAP recomienda ecocardiograma neonatal aunque se haya realizado uno fetal."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "12.03-01",
+      "parent_topic_id": "12.03-01",
+      "block_id": "12.03",
+      "name": "Síndrome de Marfan",
+      "answer_kind": "diagnosis",
+      "variants": {
+        "easy": {
+          "vignette": "Un adolescente alto y delgado tiene dedos largos, deformidad esternal y desplazamiento del cristalino. Se solicita estudio de raíz aórtica aunque no refiere dolor torácico.",
+          "discriminator": "desplazamiento del cristalino",
+          "explanation": "El dato decisivo es desplazamiento del cristalino. La alteración de fibrilina compromete microfibrillas del tejido conectivo; la debilidad estructural afecta esqueleto, soporte del cristalino y pared aórtica, con riesgo de dilatación y disección. Evaluar criterios de Ghent y antecedentes, solicitar valoración cardiológica con imagen aórtica y oftalmología, y considerar genética.",
+          "confusable_with": "Hábito alto sin síndrome hereditario",
+          "why_not": "La ectopia lentis y la afectación de raíz aórtica orientan a Marfan. Los familiares requieren evaluación y el dolor súbito exige atención urgente.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Un adolescente alto y delgado tiene dedos largos, deformidad esternal y desplazamiento del cristalino. Se solicita estudio de raíz aórtica aunque no refiere dolor torácico."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "desplazamiento del cristalino"
+            },
+            {
+              "field": "mechanism",
+              "text": "La alteración de fibrilina compromete microfibrillas del tejido conectivo; la debilidad estructural afecta esqueleto, soporte del cristalino y pared aórtica, con riesgo de dilatación y disección."
+            },
+            {
+              "field": "initial_action",
+              "text": "Evaluar criterios de Ghent y antecedentes, solicitar valoración cardiológica con imagen aórtica y oftalmología, y considerar genética."
+            },
+            {
+              "field": "action_reason",
+              "text": "La amenaza aórtica puede ser silenciosa y requiere vigilancia."
+            },
+            {
+              "field": "limits",
+              "text": "El hábito alto aislado no confirma el síndrome; integrar aorta, ojos, historia y genética."
+            }
+          ]
+        },
+        "medium": {
+          "vignette": "Una persona con aracnodactilia y ectopia lentis desarrolla dolor torácico súbito. Se descarta un síndrome aórtico urgente.",
+          "discriminator": "Fenotipo conectivo con dolor torácico súbito",
+          "explanation": "El dato decisivo es Fenotipo conectivo con dolor torácico súbito. Puede existir disección. Descartar síndrome aórtico urgente.",
+          "confusable_with": "Hábito alto sin síndrome hereditario",
+          "why_not": "La ectopia lentis y la afectación de raíz aórtica orientan a Marfan. Los familiares requieren evaluación y el dolor súbito exige atención urgente.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Un adolescente alto y delgado tiene dedos largos, deformidad esternal y desplazamiento del cristalino. Se solicita estudio de raíz aórtica aunque no refiere dolor torácico."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "desplazamiento del cristalino"
+            },
+            {
+              "field": "mechanism",
+              "text": "La alteración de fibrilina compromete microfibrillas del tejido conectivo; la debilidad estructural afecta esqueleto, soporte del cristalino y pared aórtica, con riesgo de dilatación y disección."
+            },
+            {
+              "field": "initial_action",
+              "text": "Evaluar criterios de Ghent y antecedentes, solicitar valoración cardiológica con imagen aórtica y oftalmología, y considerar genética."
+            },
+            {
+              "field": "action_reason",
+              "text": "La amenaza aórtica puede ser silenciosa y requiere vigilancia."
+            },
+            {
+              "field": "limits",
+              "text": "El hábito alto aislado no confirma el síndrome; integrar aorta, ojos, historia y genética."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Tejido conectivo alterado"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Aracnodactilia y ectopia lentis"
+            },
+            {
+              "field": "findings.1.mechanism",
+              "text": "Pared aórtica vulnerable"
+            },
+            {
+              "field": "findings.1.finding",
+              "text": "Dilatación de raíz"
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Dolor torácico súbito"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Descartar síndrome aórtico urgente."
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "Puede existir disección."
+            },
+            {
+              "field": "modifiers.1.factor",
+              "text": "Familiares afectados"
+            },
+            {
+              "field": "modifiers.1.action",
+              "text": "Ofrecer evaluación familiar."
+            },
+            {
+              "field": "modifiers.1.reason",
+              "text": "La herencia es autosómica dominante."
+            }
+          ]
+        },
+        "contrast": {
+          "vignette": "Un familiar de una persona con dilatación de raíz aórtica y ectopia lentis solicita evaluación. Se organiza estudio familiar aunque no refiera dolor.",
+          "discriminator": "Riesgo familiar de enfermedad aórtica",
+          "explanation": "El dato decisivo es Riesgo familiar de enfermedad aórtica. La herencia es autosómica dominante. Ofrecer evaluación familiar.",
+          "confusable_with": "Hábito alto sin síndrome hereditario",
+          "why_not": "La ectopia lentis y la afectación de raíz aórtica orientan a Marfan. Los familiares requieren evaluación y el dolor súbito exige atención urgente.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Un adolescente alto y delgado tiene dedos largos, deformidad esternal y desplazamiento del cristalino. Se solicita estudio de raíz aórtica aunque no refiere dolor torácico."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "desplazamiento del cristalino"
+            },
+            {
+              "field": "mechanism",
+              "text": "La alteración de fibrilina compromete microfibrillas del tejido conectivo; la debilidad estructural afecta esqueleto, soporte del cristalino y pared aórtica, con riesgo de dilatación y disección."
+            },
+            {
+              "field": "initial_action",
+              "text": "Evaluar criterios de Ghent y antecedentes, solicitar valoración cardiológica con imagen aórtica y oftalmología, y considerar genética."
+            },
+            {
+              "field": "action_reason",
+              "text": "La amenaza aórtica puede ser silenciosa y requiere vigilancia."
+            },
+            {
+              "field": "limits",
+              "text": "El hábito alto aislado no confirma el síndrome; integrar aorta, ojos, historia y genética."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Tejido conectivo alterado"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Aracnodactilia y ectopia lentis"
+            },
+            {
+              "field": "findings.1.mechanism",
+              "text": "Pared aórtica vulnerable"
+            },
+            {
+              "field": "findings.1.finding",
+              "text": "Dilatación de raíz"
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Dolor torácico súbito"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Descartar síndrome aórtico urgente."
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "Puede existir disección."
+            },
+            {
+              "field": "modifiers.1.factor",
+              "text": "Familiares afectados"
+            },
+            {
+              "field": "modifiers.1.action",
+              "text": "Ofrecer evaluación familiar."
+            },
+            {
+              "field": "modifiers.1.reason",
+              "text": "La herencia es autosómica dominante."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "12.04-01",
+      "parent_topic_id": "12.04-01",
+      "block_id": "12.04",
+      "name": "Investigar predisposición reparadora y planear prevención individual",
+      "answer_kind": "decision",
+      "variants": {
+        "easy": {
+          "vignette": "Una adulta tiene familiares de dos generaciones con cáncer colorrectal y endometrial a edades tempranas, sin poliposis extensa. Se considera una predisposición por reparación defectuosa del ADN. ¿Qué acción o clasificación corresponde?",
+          "discriminator": "sin poliposis extensa",
+          "explanation": "El dato decisivo es sin poliposis extensa. Las variantes de reparación de errores de apareamiento favorecen inestabilidad genómica y tumores colorrectales y extracolónicos; la historia familiar y estudio tumoral orientan evaluación germinal. Referir a asesoría genética y evaluación especializada de tejido y variantes; establecer vigilancia de colon y órganos de riesgo según gen e historia.",
+          "confusable_with": "Poliposis adenomatosa familiar",
+          "why_not": "Los cánceres tempranos de colon y endometrio sin poliposis extensa favorecen Lynch. La pérdida de proteínas en un tumor no demuestra por sí sola origen germinal.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Una adulta tiene familiares de dos generaciones con cáncer colorrectal y endometrial a edades tempranas, sin poliposis extensa. Se considera una predisposición por reparación defectuosa del ADN."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "sin poliposis extensa"
+            },
+            {
+              "field": "mechanism",
+              "text": "Las variantes de reparación de errores de apareamiento favorecen inestabilidad genómica y tumores colorrectales y extracolónicos; la historia familiar y estudio tumoral orientan evaluación germinal."
+            },
+            {
+              "field": "initial_action",
+              "text": "Referir a asesoría genética y evaluación especializada de tejido y variantes; establecer vigilancia de colon y órganos de riesgo según gen e historia."
+            },
+            {
+              "field": "action_reason",
+              "text": "La confirmación permite prevención y estudio de familiares."
+            },
+            {
+              "field": "limits",
+              "text": "Ámsterdam y Bethesda no son requisitos únicos actuales. Colectomía no equivale a colostomía ni se indica automáticamente a todo portador."
+            },
+            {
+              "field": "source_corrections.0.reason",
+              "text": "La IHC detecta expresión de proteínas y no demuestra por sí misma una variante germinal. El estudio actual no depende solo de Ámsterdam/Bethesda. La colectomía se selecciona por neoplasia, gen y riesgos; no corresponde a colostomía automática de todo portador."
+            }
+          ]
+        },
+        "medium": {
+          "vignette": "En un tumor se demuestra pérdida de proteínas reparadoras de ADN. Se completa interpretación molecular antes de afirmar una variante germinal. ¿Qué acción o clasificación corresponde?",
+          "discriminator": "Inmunohistoquímica que requiere interpretación molecular",
+          "explanation": "El dato decisivo es Inmunohistoquímica que requiere interpretación molecular. La inmunohistoquímica detecta expresión, no directamente la mutación germinal. Completar interpretación molecular.",
+          "confusable_with": "Poliposis adenomatosa familiar",
+          "why_not": "Los cánceres tempranos de colon y endometrio sin poliposis extensa favorecen Lynch. La pérdida de proteínas en un tumor no demuestra por sí sola origen germinal.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Una adulta tiene familiares de dos generaciones con cáncer colorrectal y endometrial a edades tempranas, sin poliposis extensa. Se considera una predisposición por reparación defectuosa del ADN."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "sin poliposis extensa"
+            },
+            {
+              "field": "mechanism",
+              "text": "Las variantes de reparación de errores de apareamiento favorecen inestabilidad genómica y tumores colorrectales y extracolónicos; la historia familiar y estudio tumoral orientan evaluación germinal."
+            },
+            {
+              "field": "initial_action",
+              "text": "Referir a asesoría genética y evaluación especializada de tejido y variantes; establecer vigilancia de colon y órganos de riesgo según gen e historia."
+            },
+            {
+              "field": "action_reason",
+              "text": "La confirmación permite prevención y estudio de familiares."
+            },
+            {
+              "field": "limits",
+              "text": "Ámsterdam y Bethesda no son requisitos únicos actuales. Colectomía no equivale a colostomía ni se indica automáticamente a todo portador."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Reparación defectuosa"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Cánceres tempranos"
+            },
+            {
+              "field": "findings.1.mechanism",
+              "text": "Predisposición multiorgánica"
+            },
+            {
+              "field": "findings.1.finding",
+              "text": "Tumores de colon y endometrio"
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Tumor con pérdida de proteínas reparadoras"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Completar interpretación molecular."
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "La inmunohistoquímica detecta expresión, no directamente la mutación germinal."
+            },
+            {
+              "field": "modifiers.1.factor",
+              "text": "Plan reproductivo completo y riesgo ginecológico"
+            },
+            {
+              "field": "modifiers.1.action",
+              "text": "Discutir medidas preventivas individualizadas."
+            },
+            {
+              "field": "modifiers.1.reason",
+              "text": "La decisión depende de riesgo y preferencias."
+            },
+            {
+              "field": "source_corrections.0.reason",
+              "text": "La IHC detecta expresión de proteínas y no demuestra por sí misma una variante germinal. El estudio actual no depende solo de Ámsterdam/Bethesda. La colectomía se selecciona por neoplasia, gen y riesgos; no corresponde a colostomía automática de todo portador."
+            }
+          ]
+        },
+        "contrast": {
+          "vignette": "Una mujer tiene predisposición por reparación de ADN alterada, familiares con cáncer de colon y endometrio temprano y ausencia de poliposis extensa. Tras completar su plan reproductivo, revisa prevención ginecológica individualizada. ¿Qué acción o clasificación corresponde?",
+          "discriminator": "Predisposición reparadora con riesgo endometrial",
+          "explanation": "El patrón familiar y molecular orienta a Lynch. Tras completar el plan reproductivo se discuten medidas preventivas ginecológicas según el riesgo individual.",
+          "confusable_with": "Poliposis adenomatosa familiar",
+          "why_not": "Los cánceres tempranos de colon y endometrio sin poliposis extensa favorecen Lynch. La pérdida de proteínas en un tumor no demuestra por sí sola origen germinal.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Una adulta tiene familiares de dos generaciones con cáncer colorrectal y endometrial a edades tempranas, sin poliposis extensa. Se considera una predisposición por reparación defectuosa del ADN."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "sin poliposis extensa"
+            },
+            {
+              "field": "mechanism",
+              "text": "Las variantes de reparación de errores de apareamiento favorecen inestabilidad genómica y tumores colorrectales y extracolónicos; la historia familiar y estudio tumoral orientan evaluación germinal."
+            },
+            {
+              "field": "initial_action",
+              "text": "Referir a asesoría genética y evaluación especializada de tejido y variantes; establecer vigilancia de colon y órganos de riesgo según gen e historia."
+            },
+            {
+              "field": "action_reason",
+              "text": "La confirmación permite prevención y estudio de familiares."
+            },
+            {
+              "field": "limits",
+              "text": "Ámsterdam y Bethesda no son requisitos únicos actuales. Colectomía no equivale a colostomía ni se indica automáticamente a todo portador."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Reparación defectuosa"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Cánceres tempranos"
+            },
+            {
+              "field": "findings.1.mechanism",
+              "text": "Predisposición multiorgánica"
+            },
+            {
+              "field": "findings.1.finding",
+              "text": "Tumores de colon y endometrio"
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Tumor con pérdida de proteínas reparadoras"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Completar interpretación molecular."
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "La inmunohistoquímica detecta expresión, no directamente la mutación germinal."
+            },
+            {
+              "field": "modifiers.1.factor",
+              "text": "Plan reproductivo completo y riesgo ginecológico"
+            },
+            {
+              "field": "modifiers.1.action",
+              "text": "Discutir medidas preventivas individualizadas."
+            },
+            {
+              "field": "modifiers.1.reason",
+              "text": "La decisión depende de riesgo y preferencias."
+            },
+            {
+              "field": "source_corrections.0.reason",
+              "text": "La IHC detecta expresión de proteínas y no demuestra por sí misma una variante germinal. El estudio actual no depende solo de Ámsterdam/Bethesda. La colectomía se selecciona por neoplasia, gen y riesgos; no corresponde a colostomía automática de todo portador."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "12.04-02",
+      "parent_topic_id": "12.04-02",
+      "block_id": "12.04",
+      "name": "Síndrome de Peutz-Jeghers",
+      "answer_kind": "diagnosis",
+      "variants": {
+        "easy": {
+          "vignette": "Un joven presenta manchas oscuras en labios y mucosa oral, episodios de dolor abdominal y pólipos hamartomatosos intestinales. Hay antecedentes familiares de hallazgos similares.",
+          "discriminator": "manchas oscuras en labios y mucosa oral",
+          "explanation": "El dato decisivo es manchas oscuras en labios y mucosa oral. Una variante de STK11 predispone a pólipos hamartomatosos y pigmentación mucocutánea; los pólipos pueden sangrar o causar invaginación y el síndrome aumenta riesgo de varios cánceres. Referir a genética y gastroenterología para confirmar, definir carga polipoide, realizar polipectomía indicada y establecer vigilancia de tumores por edad y órgano.",
+          "confusable_with": "Poliposis adenomatosa familiar",
+          "why_not": "La pigmentación mucocutánea y los pólipos hamartomatosos favorecen Peutz-Jeghers. La PAF produce poliposis adenomatosa y tiene otro perfil.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Un joven presenta manchas oscuras en labios y mucosa oral, episodios de dolor abdominal y pólipos hamartomatosos intestinales. Hay antecedentes familiares de hallazgos similares."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "manchas oscuras en labios y mucosa oral"
+            },
+            {
+              "field": "mechanism",
+              "text": "Una variante de STK11 predispone a pólipos hamartomatosos y pigmentación mucocutánea; los pólipos pueden sangrar o causar invaginación y el síndrome aumenta riesgo de varios cánceres."
+            },
+            {
+              "field": "initial_action",
+              "text": "Referir a genética y gastroenterología para confirmar, definir carga polipoide, realizar polipectomía indicada y establecer vigilancia de tumores por edad y órgano."
+            },
+            {
+              "field": "action_reason",
+              "text": "La prevención aborda complicaciones mecánicas y riesgo oncológico."
+            },
+            {
+              "field": "limits",
+              "text": "No todo pólipo requiere la misma intervención; tamaño, síntomas y localización condicionan tratamiento."
+            },
+            {
+              "field": "source_corrections.0.reason",
+              "text": "Se conserva el nombre original del inventario y se corrige la respuesta a Peutz-Jeghers. La guía EHTG precisa que la polipectomía se indica según tamaño y síntomas; no requiere resección idéntica de todos los pólipos."
+            }
+          ]
+        },
+        "medium": {
+          "vignette": "Una persona con pigmentación perioral y pólipos hamartomatosos desarrolla dolor agudo y vómitos. Se busca invaginación u obstrucción.",
+          "discriminator": "Poliposis hamartomatosa con síntomas obstructivos",
+          "explanation": "El dato decisivo es Poliposis hamartomatosa con síntomas obstructivos. Un pólipo puede actuar como punto guía. Buscar invaginación u obstrucción.",
+          "confusable_with": "Poliposis adenomatosa familiar",
+          "why_not": "La pigmentación mucocutánea y los pólipos hamartomatosos favorecen Peutz-Jeghers. La PAF produce poliposis adenomatosa y tiene otro perfil.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Un joven presenta manchas oscuras en labios y mucosa oral, episodios de dolor abdominal y pólipos hamartomatosos intestinales. Hay antecedentes familiares de hallazgos similares."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "manchas oscuras en labios y mucosa oral"
+            },
+            {
+              "field": "mechanism",
+              "text": "Una variante de STK11 predispone a pólipos hamartomatosos y pigmentación mucocutánea; los pólipos pueden sangrar o causar invaginación y el síndrome aumenta riesgo de varios cánceres."
+            },
+            {
+              "field": "initial_action",
+              "text": "Referir a genética y gastroenterología para confirmar, definir carga polipoide, realizar polipectomía indicada y establecer vigilancia de tumores por edad y órgano."
+            },
+            {
+              "field": "action_reason",
+              "text": "La prevención aborda complicaciones mecánicas y riesgo oncológico."
+            },
+            {
+              "field": "limits",
+              "text": "No todo pólipo requiere la misma intervención; tamaño, síntomas y localización condicionan tratamiento."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Pólipos hamartomatosos"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Sangrado u obstrucción"
+            },
+            {
+              "field": "findings.1.mechanism",
+              "text": "Pigmentación mucocutánea"
+            },
+            {
+              "field": "findings.1.finding",
+              "text": "Máculas periorales y orales"
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Dolor agudo con vómitos"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Buscar invaginación u obstrucción."
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "Un pólipo puede actuar como punto guía."
+            },
+            {
+              "field": "modifiers.1.factor",
+              "text": "Familiares en riesgo"
+            },
+            {
+              "field": "modifiers.1.action",
+              "text": "Ofrecer evaluación dirigida."
+            },
+            {
+              "field": "modifiers.1.reason",
+              "text": "La herencia es dominante."
+            },
+            {
+              "field": "source_corrections.0.reason",
+              "text": "Se conserva el nombre original del inventario y se corrige la respuesta a Peutz-Jeghers. La guía EHTG precisa que la polipectomía se indica según tamaño y síntomas; no requiere resección idéntica de todos los pólipos."
+            }
+          ]
+        },
+        "contrast": {
+          "vignette": "Un familiar de una persona con manchas de labios y mucosa oral y pólipos hamartomatosos está en riesgo. Se ofrece evaluación dirigida.",
+          "discriminator": "Antecedente familiar de pigmentación y pólipos hamartomatosos",
+          "explanation": "El dato decisivo es Antecedente familiar de pigmentación y pólipos hamartomatosos. La herencia es dominante. Ofrecer evaluación dirigida.",
+          "confusable_with": "Poliposis adenomatosa familiar",
+          "why_not": "La pigmentación mucocutánea y los pólipos hamartomatosos favorecen Peutz-Jeghers. La PAF produce poliposis adenomatosa y tiene otro perfil.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Un joven presenta manchas oscuras en labios y mucosa oral, episodios de dolor abdominal y pólipos hamartomatosos intestinales. Hay antecedentes familiares de hallazgos similares."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "manchas oscuras en labios y mucosa oral"
+            },
+            {
+              "field": "mechanism",
+              "text": "Una variante de STK11 predispone a pólipos hamartomatosos y pigmentación mucocutánea; los pólipos pueden sangrar o causar invaginación y el síndrome aumenta riesgo de varios cánceres."
+            },
+            {
+              "field": "initial_action",
+              "text": "Referir a genética y gastroenterología para confirmar, definir carga polipoide, realizar polipectomía indicada y establecer vigilancia de tumores por edad y órgano."
+            },
+            {
+              "field": "action_reason",
+              "text": "La prevención aborda complicaciones mecánicas y riesgo oncológico."
+            },
+            {
+              "field": "limits",
+              "text": "No todo pólipo requiere la misma intervención; tamaño, síntomas y localización condicionan tratamiento."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Pólipos hamartomatosos"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Sangrado u obstrucción"
+            },
+            {
+              "field": "findings.1.mechanism",
+              "text": "Pigmentación mucocutánea"
+            },
+            {
+              "field": "findings.1.finding",
+              "text": "Máculas periorales y orales"
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Dolor agudo con vómitos"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Buscar invaginación u obstrucción."
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "Un pólipo puede actuar como punto guía."
+            },
+            {
+              "field": "modifiers.1.factor",
+              "text": "Familiares en riesgo"
+            },
+            {
+              "field": "modifiers.1.action",
+              "text": "Ofrecer evaluación dirigida."
+            },
+            {
+              "field": "modifiers.1.reason",
+              "text": "La herencia es dominante."
+            },
+            {
+              "field": "source_corrections.0.reason",
+              "text": "Se conserva el nombre original del inventario y se corrige la respuesta a Peutz-Jeghers. La guía EHTG precisa que la polipectomía se indica según tamaño y síntomas; no requiere resección idéntica de todos los pólipos."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "12.05-01",
+      "parent_topic_id": "12.05-01",
+      "block_id": "12.05",
+      "name": "Von Hippel Lindau",
+      "answer_kind": "diagnosis",
+      "variants": {
+        "easy": {
+          "vignette": "Un adulto joven tiene un tumor vascular de retina y lesiones renales múltiples. Un familiar tuvo un tumor de sistema nervioso central; se investiga predisposición tumoral hereditaria.",
+          "discriminator": "tumor vascular de retina",
+          "explanation": "El dato decisivo es tumor vascular de retina. La pérdida de función del gen VHL favorece tumores y quistes en varios órganos; el patrón familiar y multiorgánico exige vigilancia coordinada más allá de la lesión que inició el estudio. Solicitar genética y evaluación multiorgánica especializada, con vigilancia de retina, SNC, riñones y otros órganos según protocolo y hallazgos.",
+          "confusable_with": "Neoplasia endocrina múltiple",
+          "why_not": "La combinación de hemangioblastomas y lesiones renales orienta a VHL. El riesgo catecolaminérgico varía y no debe sustituir la vigilancia multiorgánica.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Un adulto joven tiene un tumor vascular de retina y lesiones renales múltiples. Un familiar tuvo un tumor de sistema nervioso central; se investiga predisposición tumoral hereditaria."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "tumor vascular de retina"
+            },
+            {
+              "field": "mechanism",
+              "text": "La pérdida de función del gen VHL favorece tumores y quistes en varios órganos; el patrón familiar y multiorgánico exige vigilancia coordinada más allá de la lesión que inició el estudio."
+            },
+            {
+              "field": "initial_action",
+              "text": "Solicitar genética y evaluación multiorgánica especializada, con vigilancia de retina, SNC, riñones y otros órganos según protocolo y hallazgos."
+            },
+            {
+              "field": "action_reason",
+              "text": "La detección temprana permite tratar lesiones antes de daño o extensión."
+            },
+            {
+              "field": "limits",
+              "text": "La penetrancia de cada tumor varía por variante y tipo; no aplicar el porcentaje de feocromocitoma del resumen a todos."
+            },
+            {
+              "field": "source_corrections.0.reason",
+              "text": "El 60% de feocromocitoma de página 356 no se usa como riesgo general. NCI describe fuerte variación por genotipo, con mayor riesgo en tipo 2; se conserva vigilancia multiorgánica y evaluación bioquímica dirigida."
+            }
+          ]
+        },
+        "medium": {
+          "vignette": "Una persona con tumores vasculares retinianos y lesiones renales tiene sospecha de feocromocitoma. Se realiza evaluación bioquímica antes de procedimientos.",
+          "discriminator": "Predisposición multiorgánica con riesgo catecolaminérgico",
+          "explanation": "El dato decisivo es Predisposición multiorgánica con riesgo catecolaminérgico. La secreción catecolaminérgica cambia preparación. Realizar evaluación bioquímica antes de procedimientos.",
+          "confusable_with": "Neoplasia endocrina múltiple",
+          "why_not": "La combinación de hemangioblastomas y lesiones renales orienta a VHL. El riesgo catecolaminérgico varía y no debe sustituir la vigilancia multiorgánica.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Un adulto joven tiene un tumor vascular de retina y lesiones renales múltiples. Un familiar tuvo un tumor de sistema nervioso central; se investiga predisposición tumoral hereditaria."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "tumor vascular de retina"
+            },
+            {
+              "field": "mechanism",
+              "text": "La pérdida de función del gen VHL favorece tumores y quistes en varios órganos; el patrón familiar y multiorgánico exige vigilancia coordinada más allá de la lesión que inició el estudio."
+            },
+            {
+              "field": "initial_action",
+              "text": "Solicitar genética y evaluación multiorgánica especializada, con vigilancia de retina, SNC, riñones y otros órganos según protocolo y hallazgos."
+            },
+            {
+              "field": "action_reason",
+              "text": "La detección temprana permite tratar lesiones antes de daño o extensión."
+            },
+            {
+              "field": "limits",
+              "text": "La penetrancia de cada tumor varía por variante y tipo; no aplicar el porcentaje de feocromocitoma del resumen a todos."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Predisposición vascular tumoral"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Hemangioblastomas retinianos o de SNC"
+            },
+            {
+              "field": "findings.1.mechanism",
+              "text": "Tumores renales"
+            },
+            {
+              "field": "findings.1.finding",
+              "text": "Lesiones múltiples"
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Sospecha de feocromocitoma"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Realizar evaluación bioquímica antes de procedimientos."
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "La secreción catecolaminérgica cambia preparación."
+            },
+            {
+              "field": "modifiers.1.factor",
+              "text": "Lesión sintomática o creciente"
+            },
+            {
+              "field": "modifiers.1.action",
+              "text": "Valorar intervención por ubicación y tamaño."
+            },
+            {
+              "field": "modifiers.1.reason",
+              "text": "No todas las lesiones se operan al detectarlas."
+            },
+            {
+              "field": "source_corrections.0.reason",
+              "text": "El 60% de feocromocitoma de página 356 no se usa como riesgo general. NCI describe fuerte variación por genotipo, con mayor riesgo en tipo 2; se conserva vigilancia multiorgánica y evaluación bioquímica dirigida."
+            }
+          ]
+        },
+        "contrast": {
+          "vignette": "En una persona con predisposición a hemangioblastomas y lesiones renales, una lesión crece o produce síntomas. Se valora intervención por ubicación y tamaño.",
+          "discriminator": "Lesión sintomática o creciente",
+          "explanation": "El dato decisivo es Lesión sintomática o creciente. No todas las lesiones se operan al detectarlas. Valorar intervención por ubicación y tamaño.",
+          "confusable_with": "Neoplasia endocrina múltiple",
+          "why_not": "La combinación de hemangioblastomas y lesiones renales orienta a VHL. El riesgo catecolaminérgico varía y no debe sustituir la vigilancia multiorgánica.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Un adulto joven tiene un tumor vascular de retina y lesiones renales múltiples. Un familiar tuvo un tumor de sistema nervioso central; se investiga predisposición tumoral hereditaria."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "tumor vascular de retina"
+            },
+            {
+              "field": "mechanism",
+              "text": "La pérdida de función del gen VHL favorece tumores y quistes en varios órganos; el patrón familiar y multiorgánico exige vigilancia coordinada más allá de la lesión que inició el estudio."
+            },
+            {
+              "field": "initial_action",
+              "text": "Solicitar genética y evaluación multiorgánica especializada, con vigilancia de retina, SNC, riñones y otros órganos según protocolo y hallazgos."
+            },
+            {
+              "field": "action_reason",
+              "text": "La detección temprana permite tratar lesiones antes de daño o extensión."
+            },
+            {
+              "field": "limits",
+              "text": "La penetrancia de cada tumor varía por variante y tipo; no aplicar el porcentaje de feocromocitoma del resumen a todos."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Predisposición vascular tumoral"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Hemangioblastomas retinianos o de SNC"
+            },
+            {
+              "field": "findings.1.mechanism",
+              "text": "Tumores renales"
+            },
+            {
+              "field": "findings.1.finding",
+              "text": "Lesiones múltiples"
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Sospecha de feocromocitoma"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Realizar evaluación bioquímica antes de procedimientos."
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "La secreción catecolaminérgica cambia preparación."
+            },
+            {
+              "field": "modifiers.1.factor",
+              "text": "Lesión sintomática o creciente"
+            },
+            {
+              "field": "modifiers.1.action",
+              "text": "Valorar intervención por ubicación y tamaño."
+            },
+            {
+              "field": "modifiers.1.reason",
+              "text": "No todas las lesiones se operan al detectarlas."
+            },
+            {
+              "field": "source_corrections.0.reason",
+              "text": "El 60% de feocromocitoma de página 356 no se usa como riesgo general. NCI describe fuerte variación por genotipo, con mayor riesgo en tipo 2; se conserva vigilancia multiorgánica y evaluación bioquímica dirigida."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "12.06-01",
+      "parent_topic_id": "12.06-01",
+      "block_id": "12.06",
+      "name": "Enfermedad de Wilson",
+      "answer_kind": "diagnosis",
+      "variants": {
+        "easy": {
+          "vignette": "Un joven presenta hepatitis sin causa clara, temblor y cambios de conducta. La exploración ocular encuentra un anillo corneal; también hay anemia hemolítica con prueba de Coombs negativa.",
+          "discriminator": "anemia hemolítica con prueba de Coombs negativa",
+          "explanation": "El dato decisivo es anemia hemolítica con prueba de Coombs negativa. La alteración de ATP7B impide manejo y excreción biliar de cobre; su acumulación lesiona hígado, ganglios basales y otros tejidos y puede causar hemólisis. Integrar ceruloplasmina, cobre urinario de 24 horas, evaluación ocular y genética o estudio hepático según contexto. Si se confirma enfermedad sintomática, iniciar quelación con D-penicilamina o trientina bajo supervisión especializada.",
+          "confusable_with": "Hepatitis autoinmune",
+          "why_not": "La afectación hepática y neurológica con anillo corneal o hemólisis no inmune orienta a Wilson. La falla aguda y el riesgo familiar requieren acciones específicas.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Un joven presenta hepatitis sin causa clara, temblor y cambios de conducta. La exploración ocular encuentra un anillo corneal; también hay anemia hemolítica con prueba de Coombs negativa."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "anemia hemolítica con prueba de Coombs negativa"
+            },
+            {
+              "field": "mechanism",
+              "text": "La alteración de ATP7B impide manejo y excreción biliar de cobre; su acumulación lesiona hígado, ganglios basales y otros tejidos y puede causar hemólisis."
+            },
+            {
+              "field": "initial_action",
+              "text": "Integrar ceruloplasmina, cobre urinario de 24 horas, evaluación ocular y genética o estudio hepático según contexto. Si se confirma enfermedad sintomática, iniciar quelación con D-penicilamina o trientina bajo supervisión especializada."
+            },
+            {
+              "field": "action_reason",
+              "text": "No hay un hallazgo aislado suficiente en todas las presentaciones."
+            },
+            {
+              "field": "limits",
+              "text": "El cobre sérico total puede estar bajo y no descarta. El cobre hepático se informa en μg/g de peso seco, no en μg/dl; valores y otras pruebas deben interpretarse juntos."
+            },
+            {
+              "field": "source_corrections.0.reason",
+              "text": "La imagen original 347 confirma que el libro imprime cobre hepático en mcg/dl, unidad incorrecta para tejido. AASLD lo expresa por gramo de peso seco. La guía también aclara que el cobre sérico total suele estar bajo y que el cuadro sintomático requiere quelante."
+            }
+          ]
+        },
+        "medium": {
+          "vignette": "Un joven con trastorno del cobre desarrolla falla hepática aguda. Se refiere de urgencia a un centro con trasplante.",
+          "discriminator": "Enfermedad por cobre con falla hepática aguda",
+          "explanation": "El dato decisivo es Enfermedad por cobre con falla hepática aguda. La quelación puede ser insuficiente ante deterioro grave. Referir urgente a centro con trasplante.",
+          "confusable_with": "Hepatitis autoinmune",
+          "why_not": "La afectación hepática y neurológica con anillo corneal o hemólisis no inmune orienta a Wilson. La falla aguda y el riesgo familiar requieren acciones específicas.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Un joven presenta hepatitis sin causa clara, temblor y cambios de conducta. La exploración ocular encuentra un anillo corneal; también hay anemia hemolítica con prueba de Coombs negativa."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "anemia hemolítica con prueba de Coombs negativa"
+            },
+            {
+              "field": "mechanism",
+              "text": "La alteración de ATP7B impide manejo y excreción biliar de cobre; su acumulación lesiona hígado, ganglios basales y otros tejidos y puede causar hemólisis."
+            },
+            {
+              "field": "initial_action",
+              "text": "Integrar ceruloplasmina, cobre urinario de 24 horas, evaluación ocular y genética o estudio hepático según contexto. Si se confirma enfermedad sintomática, iniciar quelación con D-penicilamina o trientina bajo supervisión especializada."
+            },
+            {
+              "field": "action_reason",
+              "text": "No hay un hallazgo aislado suficiente en todas las presentaciones."
+            },
+            {
+              "field": "limits",
+              "text": "El cobre sérico total puede estar bajo y no descarta. El cobre hepático se informa en μg/g de peso seco, no en μg/dl; valores y otras pruebas deben interpretarse juntos."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Cobre hepático acumulado"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Hepatitis o cirrosis"
+            },
+            {
+              "field": "findings.1.mechanism",
+              "text": "Depósito corneal"
+            },
+            {
+              "field": "findings.1.finding",
+              "text": "Anillo de Kayser-Fleischer"
+            },
+            {
+              "field": "findings.2.mechanism",
+              "text": "Daño eritrocitario"
+            },
+            {
+              "field": "findings.2.finding",
+              "text": "Hemólisis no inmune"
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Falla hepática aguda"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Referir urgente a centro con trasplante."
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "La quelación puede ser insuficiente ante deterioro grave."
+            },
+            {
+              "field": "modifiers.1.factor",
+              "text": "Familiares en riesgo"
+            },
+            {
+              "field": "modifiers.1.action",
+              "text": "Organizar estudio dirigido."
+            },
+            {
+              "field": "modifiers.1.reason",
+              "text": "La herencia recesiva permite detectar otros afectados."
+            },
+            {
+              "field": "source_corrections.0.reason",
+              "text": "La imagen original 347 confirma que el libro imprime cobre hepático en mcg/dl, unidad incorrecta para tejido. AASLD lo expresa por gramo de peso seco. La guía también aclara que el cobre sérico total suele estar bajo y que el cuadro sintomático requiere quelante."
+            }
+          ]
+        },
+        "contrast": {
+          "vignette": "Un familiar de un paciente con hepatitis, temblor y anillo corneal solicita estudio. Se organiza evaluación dirigida para detectar afectación antes de síntomas.",
+          "discriminator": "Riesgo familiar de alteración del cobre",
+          "explanation": "El dato decisivo es Riesgo familiar de alteración del cobre. La herencia recesiva permite detectar otros afectados. Organizar estudio dirigido.",
+          "confusable_with": "Hepatitis autoinmune",
+          "why_not": "La afectación hepática y neurológica con anillo corneal o hemólisis no inmune orienta a Wilson. La falla aguda y el riesgo familiar requieren acciones específicas.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Un joven presenta hepatitis sin causa clara, temblor y cambios de conducta. La exploración ocular encuentra un anillo corneal; también hay anemia hemolítica con prueba de Coombs negativa."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "anemia hemolítica con prueba de Coombs negativa"
+            },
+            {
+              "field": "mechanism",
+              "text": "La alteración de ATP7B impide manejo y excreción biliar de cobre; su acumulación lesiona hígado, ganglios basales y otros tejidos y puede causar hemólisis."
+            },
+            {
+              "field": "initial_action",
+              "text": "Integrar ceruloplasmina, cobre urinario de 24 horas, evaluación ocular y genética o estudio hepático según contexto. Si se confirma enfermedad sintomática, iniciar quelación con D-penicilamina o trientina bajo supervisión especializada."
+            },
+            {
+              "field": "action_reason",
+              "text": "No hay un hallazgo aislado suficiente en todas las presentaciones."
+            },
+            {
+              "field": "limits",
+              "text": "El cobre sérico total puede estar bajo y no descarta. El cobre hepático se informa en μg/g de peso seco, no en μg/dl; valores y otras pruebas deben interpretarse juntos."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Cobre hepático acumulado"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Hepatitis o cirrosis"
+            },
+            {
+              "field": "findings.1.mechanism",
+              "text": "Depósito corneal"
+            },
+            {
+              "field": "findings.1.finding",
+              "text": "Anillo de Kayser-Fleischer"
+            },
+            {
+              "field": "findings.2.mechanism",
+              "text": "Daño eritrocitario"
+            },
+            {
+              "field": "findings.2.finding",
+              "text": "Hemólisis no inmune"
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Falla hepática aguda"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Referir urgente a centro con trasplante."
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "La quelación puede ser insuficiente ante deterioro grave."
+            },
+            {
+              "field": "modifiers.1.factor",
+              "text": "Familiares en riesgo"
+            },
+            {
+              "field": "modifiers.1.action",
+              "text": "Organizar estudio dirigido."
+            },
+            {
+              "field": "modifiers.1.reason",
+              "text": "La herencia recesiva permite detectar otros afectados."
+            },
+            {
+              "field": "source_corrections.0.reason",
+              "text": "La imagen original 347 confirma que el libro imprime cobre hepático en mcg/dl, unidad incorrecta para tejido. AASLD lo expresa por gramo de peso seco. La guía también aclara que el cobre sérico total suele estar bajo y que el cuadro sintomático requiere quelante."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "12.06-02",
+      "parent_topic_id": "12.06-02",
+      "block_id": "12.06",
+      "name": "Tratar crisis y mantenimiento en síndrome de Dravet",
+      "answer_kind": "decision",
+      "variants": {
+        "easy": {
+          "vignette": "Un lactante previamente sin alteraciones presenta convulsión hemiclónica prolongada con fiebre. En meses posteriores aparecen crisis de varios tipos y se enlentece el desarrollo, sin una causa estructural clara. ¿Qué acción o clasificación corresponde a este contexto?",
+          "discriminator": "convulsión hemiclónica prolongada con fiebre",
+          "explanation": "El dato decisivo es convulsión hemiclónica prolongada con fiebre. La disfunción de canales de sodio, frecuentemente por SCN1A, altera redes inhibitorias y favorece epilepsia temprana sensible a temperatura; la evolución incluye crisis múltiples y trastorno del desarrollo. Tratar la crisis prolongada con benzodiacepina según protocolo y solicitar atención urgente si persiste. Referir a neurología pediátrica para evaluación genética y plan individual de rescate y mantenimiento.",
+          "confusable_with": "Convulsión febril simple",
+          "why_not": "La duración, el carácter hemiclónico, la aparición de varios tipos y el enlentecimiento del desarrollo exceden una convulsión febril simple. La urgencia y el mantenimiento no tienen la misma selección farmacológica.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Un lactante previamente sin alteraciones presenta convulsión hemiclónica prolongada con fiebre. En meses posteriores aparecen crisis de varios tipos y se enlentece el desarrollo, sin una causa estructural clara."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "convulsión hemiclónica prolongada con fiebre"
+            },
+            {
+              "field": "mechanism",
+              "text": "La disfunción de canales de sodio, frecuentemente por SCN1A, altera redes inhibitorias y favorece epilepsia temprana sensible a temperatura; la evolución incluye crisis múltiples y trastorno del desarrollo."
+            },
+            {
+              "field": "initial_action",
+              "text": "Tratar la crisis prolongada con benzodiacepina según protocolo y solicitar atención urgente si persiste. Referir a neurología pediátrica para evaluación genética y plan individual de rescate y mantenimiento."
+            },
+            {
+              "field": "action_reason",
+              "text": "La evolución requiere identificar el síndrome y prevenir estados prolongados."
+            },
+            {
+              "field": "limits",
+              "text": "La fiebre tras una vacuna puede precipitar una crisis en una predisposición genética; no demuestra daño cerebral causado por la vacuna. La recomendación de evitar ciertos fármacos de mantenimiento no prohíbe fenitoína o fosfenitoína para estado epiléptico bajo protocolo experto."
+            },
+            {
+              "field": "source_corrections.0.reason",
+              "text": "La prohibición farmacológica del libro requiere distinguir mantenimiento de urgencia. El consenso 2022 permite fenitoína/fosfenitoína en estado epiléptico, recomienda plan de rescate y todas las vacunas rutinarias; no equipara crisis precipitada por fiebre con encefalopatía causada por vacuna."
+            }
+          ]
+        },
+        "medium": {
+          "vignette": "Un niño con crisis febriles prolongadas y varios tipos de crisis necesita tratamiento de mantenimiento. Se evitan fármacos de sodio que pueden empeorar el síndrome, con neurología. ¿Qué acción o clasificación corresponde a este contexto?",
+          "discriminator": "Mantenimiento en epilepsia con crisis febriles prolongadas",
+          "explanation": "El dato decisivo es Mantenimiento en epilepsia con crisis febriles prolongadas. La selección de mantenimiento difiere de la medicación aguda para estado epiléptico. Evitar bloqueadores de sodio que empeoran este síndrome, como lamotrigina o carbamazepina, y seleccionar terapia con neurología.",
+          "confusable_with": "Convulsión febril simple",
+          "why_not": "La duración, el carácter hemiclónico, la aparición de varios tipos y el enlentecimiento del desarrollo exceden una convulsión febril simple. La urgencia y el mantenimiento no tienen la misma selección farmacológica.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Un lactante previamente sin alteraciones presenta convulsión hemiclónica prolongada con fiebre. En meses posteriores aparecen crisis de varios tipos y se enlentece el desarrollo, sin una causa estructural clara."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "convulsión hemiclónica prolongada con fiebre"
+            },
+            {
+              "field": "mechanism",
+              "text": "La disfunción de canales de sodio, frecuentemente por SCN1A, altera redes inhibitorias y favorece epilepsia temprana sensible a temperatura; la evolución incluye crisis múltiples y trastorno del desarrollo."
+            },
+            {
+              "field": "initial_action",
+              "text": "Tratar la crisis prolongada con benzodiacepina según protocolo y solicitar atención urgente si persiste. Referir a neurología pediátrica para evaluación genética y plan individual de rescate y mantenimiento."
+            },
+            {
+              "field": "action_reason",
+              "text": "La evolución requiere identificar el síndrome y prevenir estados prolongados."
+            },
+            {
+              "field": "limits",
+              "text": "La fiebre tras una vacuna puede precipitar una crisis en una predisposición genética; no demuestra daño cerebral causado por la vacuna. La recomendación de evitar ciertos fármacos de mantenimiento no prohíbe fenitoína o fosfenitoína para estado epiléptico bajo protocolo experto."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Excitabilidad alterada"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Crisis febriles prolongadas"
+            },
+            {
+              "field": "findings.1.mechanism",
+              "text": "Encefalopatía epiléptica"
+            },
+            {
+              "field": "findings.1.finding",
+              "text": "Dificultades del desarrollo"
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Tratamiento de mantenimiento"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Evitar bloqueadores de sodio que empeoran este síndrome, como lamotrigina o carbamazepina, y seleccionar terapia con neurología."
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "La selección de mantenimiento difiere de la medicación aguda para estado epiléptico."
+            },
+            {
+              "field": "modifiers.1.factor",
+              "text": "Fiebre tras vacunación"
+            },
+            {
+              "field": "modifiers.1.action",
+              "text": "Tratar la fiebre y aplicar el plan de rescate si hay crisis. Mantener vacunación rutinaria con un plan preventivo individual."
+            },
+            {
+              "field": "modifiers.1.reason",
+              "text": "La temperatura puede precipitar crisis, pero la asociación temporal no indica que la vacuna causó la enfermedad genética."
+            },
+            {
+              "field": "source_corrections.0.reason",
+              "text": "La prohibición farmacológica del libro requiere distinguir mantenimiento de urgencia. El consenso 2022 permite fenitoína/fosfenitoína en estado epiléptico, recomienda plan de rescate y todas las vacunas rutinarias; no equipara crisis precipitada por fiebre con encefalopatía causada por vacuna."
+            }
+          ]
+        },
+        "contrast": {
+          "vignette": "Un niño con esta epilepsia tiene fiebre después de vacunación. Se controla la fiebre, se aplica rescate si hay crisis y se mantiene vacunación rutinaria con plan individual. ¿Qué acción o clasificación corresponde a este contexto?",
+          "discriminator": "Fiebre posvacunal que requiere plan preventivo",
+          "explanation": "El dato decisivo es Fiebre posvacunal que requiere plan preventivo. La temperatura puede precipitar crisis, pero la asociación temporal no indica que la vacuna causó la enfermedad genética. Tratar la fiebre y aplicar el plan de rescate si hay crisis. Mantener vacunación rutinaria con un plan preventivo individual.",
+          "confusable_with": "Convulsión febril simple",
+          "why_not": "La duración, el carácter hemiclónico, la aparición de varios tipos y el enlentecimiento del desarrollo exceden una convulsión febril simple. La urgencia y el mantenimiento no tienen la misma selección farmacológica.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Un lactante previamente sin alteraciones presenta convulsión hemiclónica prolongada con fiebre. En meses posteriores aparecen crisis de varios tipos y se enlentece el desarrollo, sin una causa estructural clara."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "convulsión hemiclónica prolongada con fiebre"
+            },
+            {
+              "field": "mechanism",
+              "text": "La disfunción de canales de sodio, frecuentemente por SCN1A, altera redes inhibitorias y favorece epilepsia temprana sensible a temperatura; la evolución incluye crisis múltiples y trastorno del desarrollo."
+            },
+            {
+              "field": "initial_action",
+              "text": "Tratar la crisis prolongada con benzodiacepina según protocolo y solicitar atención urgente si persiste. Referir a neurología pediátrica para evaluación genética y plan individual de rescate y mantenimiento."
+            },
+            {
+              "field": "action_reason",
+              "text": "La evolución requiere identificar el síndrome y prevenir estados prolongados."
+            },
+            {
+              "field": "limits",
+              "text": "La fiebre tras una vacuna puede precipitar una crisis en una predisposición genética; no demuestra daño cerebral causado por la vacuna. La recomendación de evitar ciertos fármacos de mantenimiento no prohíbe fenitoína o fosfenitoína para estado epiléptico bajo protocolo experto."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Excitabilidad alterada"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Crisis febriles prolongadas"
+            },
+            {
+              "field": "findings.1.mechanism",
+              "text": "Encefalopatía epiléptica"
+            },
+            {
+              "field": "findings.1.finding",
+              "text": "Dificultades del desarrollo"
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Tratamiento de mantenimiento"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Evitar bloqueadores de sodio que empeoran este síndrome, como lamotrigina o carbamazepina, y seleccionar terapia con neurología."
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "La selección de mantenimiento difiere de la medicación aguda para estado epiléptico."
+            },
+            {
+              "field": "modifiers.1.factor",
+              "text": "Fiebre tras vacunación"
+            },
+            {
+              "field": "modifiers.1.action",
+              "text": "Tratar la fiebre y aplicar el plan de rescate si hay crisis. Mantener vacunación rutinaria con un plan preventivo individual."
+            },
+            {
+              "field": "modifiers.1.reason",
+              "text": "La temperatura puede precipitar crisis, pero la asociación temporal no indica que la vacuna causó la enfermedad genética."
+            },
+            {
+              "field": "source_corrections.0.reason",
+              "text": "La prohibición farmacológica del libro requiere distinguir mantenimiento de urgencia. El consenso 2022 permite fenitoína/fosfenitoína en estado epiléptico, recomienda plan de rescate y todas las vacunas rutinarias; no equipara crisis precipitada por fiebre con encefalopatía causada por vacuna."
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

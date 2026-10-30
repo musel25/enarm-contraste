@@ -1,0 +1,3900 @@
+{
+  "schema_version": 1,
+  "section_id": "04",
+  "author": "practice_01_12",
+  "source_sha256": "90810c0052bb1936c2ad6873c67f9b96b3fa3d22e137e61a5c93d826918ba97a",
+  "groups": [
+    {
+      "id": "04.01-01",
+      "parent_topic_id": "04.01-01",
+      "block_id": "04.01",
+      "name": "Reclasificar dolor coronario estable ante nuevos datos de lesión",
+      "answer_kind": "decision",
+      "variants": {
+        "easy": {
+          "vignette": "Un adulto con tabaquismo presenta opresión retroesternal al subir escaleras. Cede en pocos minutos al detenerse y se reproduce con un esfuerzo similar, sin dolor actual en reposo. ¿Qué acción o clasificación corresponde?",
+          "discriminator": "se reproduce con un esfuerzo similar",
+          "explanation": "El dato decisivo es se reproduce con un esfuerzo similar. La obstrucción coronaria limita la reserva de flujo; durante el esfuerzo la demanda de oxígeno supera el aporte y produce dolor que mejora al bajar la demanda. Caracterizar el dolor, obtener ECG y valorar riesgo cardiovascular. Si el patrón es estable, organizar estudio de isquemia y prevención; si cambia, evaluar síndrome coronario agudo.",
+          "confusable_with": "Infarto agudo de miocardio",
+          "why_not": "El dolor estable ligado al esfuerzo sugiere isquemia crónica. Un cambio a dolor nuevo o en reposo exige descartar síndrome agudo y no se maneja como patrón estable.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Un adulto con tabaquismo presenta opresión retroesternal al subir escaleras. Cede en pocos minutos al detenerse y se reproduce con un esfuerzo similar, sin dolor actual en reposo."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "se reproduce con un esfuerzo similar"
+            },
+            {
+              "field": "mechanism",
+              "text": "La obstrucción coronaria limita la reserva de flujo; durante el esfuerzo la demanda de oxígeno supera el aporte y produce dolor que mejora al bajar la demanda."
+            },
+            {
+              "field": "initial_action",
+              "text": "Caracterizar el dolor, obtener ECG y valorar riesgo cardiovascular. Si el patrón es estable, organizar estudio de isquemia y prevención; si cambia, evaluar síndrome coronario agudo."
+            },
+            {
+              "field": "action_reason",
+              "text": "La relación predecible con esfuerzo orienta a isquemia crónica, pero la evolución puede cambiar la urgencia."
+            },
+            {
+              "field": "limits",
+              "text": "La duración o un ECG normal aislado no excluyen enfermedad coronaria; troponina elevada por isquemia cambia la clasificación."
+            }
+          ]
+        },
+        "medium": {
+          "vignette": "Una persona con dolor retroesternal reproducible al esfuerzo ahora presenta un episodio nuevo, prolongado y en reposo. Se necesita reclasificar la urgencia. ¿Qué acción o clasificación corresponde?",
+          "discriminator": "Cambio de dolor de esfuerzo a dolor prolongado en reposo",
+          "explanation": "El dato decisivo es Cambio de dolor de esfuerzo a dolor prolongado en reposo. Puede existir una placa complicada. Enviar a evaluación urgente de síndrome coronario agudo.",
+          "confusable_with": "Infarto agudo de miocardio",
+          "why_not": "El dolor estable ligado al esfuerzo sugiere isquemia crónica. Un cambio a dolor nuevo o en reposo exige descartar síndrome agudo y no se maneja como patrón estable.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Un adulto con tabaquismo presenta opresión retroesternal al subir escaleras. Cede en pocos minutos al detenerse y se reproduce con un esfuerzo similar, sin dolor actual en reposo."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "se reproduce con un esfuerzo similar"
+            },
+            {
+              "field": "mechanism",
+              "text": "La obstrucción coronaria limita la reserva de flujo; durante el esfuerzo la demanda de oxígeno supera el aporte y produce dolor que mejora al bajar la demanda."
+            },
+            {
+              "field": "initial_action",
+              "text": "Caracterizar el dolor, obtener ECG y valorar riesgo cardiovascular. Si el patrón es estable, organizar estudio de isquemia y prevención; si cambia, evaluar síndrome coronario agudo."
+            },
+            {
+              "field": "action_reason",
+              "text": "La relación predecible con esfuerzo orienta a isquemia crónica, pero la evolución puede cambiar la urgencia."
+            },
+            {
+              "field": "limits",
+              "text": "La duración o un ECG normal aislado no excluyen enfermedad coronaria; troponina elevada por isquemia cambia la clasificación."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Demanda superior al aporte"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Angina de esfuerzo"
+            },
+            {
+              "field": "findings.1.mechanism",
+              "text": "Demanda reducida en reposo"
+            },
+            {
+              "field": "findings.1.finding",
+              "text": "Alivio del dolor"
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Dolor nuevo, prolongado o en reposo"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Enviar a evaluación urgente de síndrome coronario agudo."
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "Puede existir una placa complicada."
+            }
+          ]
+        },
+        "contrast": {
+          "vignette": "Una persona con dolor compatible con isquemia tiene troponina elevada atribuida a isquemia. Debe cambiarse la clasificación y organizar evaluación urgente en lugar de estudio ambulatorio de angina estable. ¿Qué acción o clasificación corresponde?",
+          "discriminator": "Lesión miocárdica isquémica que cambia la clasificación",
+          "explanation": "La elevación de troponina por isquemia cambia la clasificación. Se requiere evaluación de síndrome coronario agudo y no basta el plan del patrón estable.",
+          "confusable_with": "Angina estable sin lesión miocárdica",
+          "why_not": "La elevación de troponina atribuida a isquemia cambia la clasificación. Este paciente requiere evaluación aguda y no solo estudio ambulatorio del patrón estable.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Un adulto con tabaquismo presenta opresión retroesternal al subir escaleras. Cede en pocos minutos al detenerse y se reproduce con un esfuerzo similar, sin dolor actual en reposo."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "se reproduce con un esfuerzo similar"
+            },
+            {
+              "field": "mechanism",
+              "text": "La obstrucción coronaria limita la reserva de flujo; durante el esfuerzo la demanda de oxígeno supera el aporte y produce dolor que mejora al bajar la demanda."
+            },
+            {
+              "field": "initial_action",
+              "text": "Caracterizar el dolor, obtener ECG y valorar riesgo cardiovascular. Si el patrón es estable, organizar estudio de isquemia y prevención; si cambia, evaluar síndrome coronario agudo."
+            },
+            {
+              "field": "action_reason",
+              "text": "La relación predecible con esfuerzo orienta a isquemia crónica, pero la evolución puede cambiar la urgencia."
+            },
+            {
+              "field": "limits",
+              "text": "La duración o un ECG normal aislado no excluyen enfermedad coronaria; troponina elevada por isquemia cambia la clasificación."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Demanda superior al aporte"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Angina de esfuerzo"
+            },
+            {
+              "field": "findings.1.mechanism",
+              "text": "Demanda reducida en reposo"
+            },
+            {
+              "field": "findings.1.finding",
+              "text": "Alivio del dolor"
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Dolor nuevo, prolongado o en reposo"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Enviar a evaluación urgente de síndrome coronario agudo."
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "Puede existir una placa complicada."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "04.01-02",
+      "parent_topic_id": "04.01-02",
+      "block_id": "04.01",
+      "name": "Infarto agudo de miocardio",
+      "answer_kind": "diagnosis",
+      "variants": {
+        "easy": {
+          "vignette": "Un adulto tiene opresión torácica intensa de treinta minutos con diaforesis y náusea. El ECG muestra elevación del ST en derivaciones contiguas y persiste el dolor durante la valoración.",
+          "discriminator": "elevación del ST en derivaciones contiguas",
+          "explanation": "El dato decisivo es elevación del ST en derivaciones contiguas. La isquemia coronaria sostenida lesiona cardiomiocitos y libera troponina; una oclusión aguda con elevación del ST exige reperfusión oportuna para limitar necrosis y complicaciones. Obtener ECG inmediato, activar la red de reperfusión y administrar tratamiento antitrombótico indicado tras revisar contraindicaciones. Priorizar intervención coronaria percutánea según disponibilidad y tiempos.",
+          "confusable_with": "Angina estable",
+          "why_not": "La elevación persistente del ST y el dolor prolongado requieren reperfusión urgente. El contexto hemodinámico modifica los fármacos que pueden administrarse.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Un adulto tiene opresión torácica intensa de treinta minutos con diaforesis y náusea. El ECG muestra elevación del ST en derivaciones contiguas y persiste el dolor durante la valoración."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "elevación del ST en derivaciones contiguas"
+            },
+            {
+              "field": "mechanism",
+              "text": "La isquemia coronaria sostenida lesiona cardiomiocitos y libera troponina; una oclusión aguda con elevación del ST exige reperfusión oportuna para limitar necrosis y complicaciones."
+            },
+            {
+              "field": "initial_action",
+              "text": "Obtener ECG inmediato, activar la red de reperfusión y administrar tratamiento antitrombótico indicado tras revisar contraindicaciones. Priorizar intervención coronaria percutánea según disponibilidad y tiempos."
+            },
+            {
+              "field": "action_reason",
+              "text": "La reperfusión reduce la extensión de lesión y el riesgo de muerte."
+            },
+            {
+              "field": "limits",
+              "text": "No indicar fibrinólisis en SCA sin elevación del ST. El texto contiene cifras y contraindicaciones por edad erróneas; verificar protocolos y dosis antes de prescribir."
+            }
+          ]
+        },
+        "medium": {
+          "vignette": "Una persona con elevación persistente del ST y dolor prolongado llega a un lugar sin ICP disponible a tiempo. Se valora reperfusión y traslado.",
+          "discriminator": "Síndrome con elevación del ST sin ICP oportuna",
+          "explanation": "El dato decisivo es Síndrome con elevación del ST sin ICP oportuna. La reperfusión no debe demorarse de forma innecesaria. Valorar fibrinólisis y traslado a centro con ICP.",
+          "confusable_with": "Angina estable",
+          "why_not": "La elevación persistente del ST y el dolor prolongado requieren reperfusión urgente. El contexto hemodinámico modifica los fármacos que pueden administrarse.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Un adulto tiene opresión torácica intensa de treinta minutos con diaforesis y náusea. El ECG muestra elevación del ST en derivaciones contiguas y persiste el dolor durante la valoración."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "elevación del ST en derivaciones contiguas"
+            },
+            {
+              "field": "mechanism",
+              "text": "La isquemia coronaria sostenida lesiona cardiomiocitos y libera troponina; una oclusión aguda con elevación del ST exige reperfusión oportuna para limitar necrosis y complicaciones."
+            },
+            {
+              "field": "initial_action",
+              "text": "Obtener ECG inmediato, activar la red de reperfusión y administrar tratamiento antitrombótico indicado tras revisar contraindicaciones. Priorizar intervención coronaria percutánea según disponibilidad y tiempos."
+            },
+            {
+              "field": "action_reason",
+              "text": "La reperfusión reduce la extensión de lesión y el riesgo de muerte."
+            },
+            {
+              "field": "limits",
+              "text": "No indicar fibrinólisis en SCA sin elevación del ST. El texto contiene cifras y contraindicaciones por edad erróneas; verificar protocolos y dosis antes de prescribir."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Isquemia miocárdica"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Dolor opresivo y diaforesis"
+            },
+            {
+              "field": "findings.1.mechanism",
+              "text": "Lesión celular"
+            },
+            {
+              "field": "findings.1.finding",
+              "text": "Elevación de troponina"
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "ICP no disponible a tiempo y candidato en ventana"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Valorar fibrinólisis y traslado a centro con ICP."
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "La reperfusión no debe demorarse de forma innecesaria."
+            },
+            {
+              "field": "modifiers.1.factor",
+              "text": "Hipotensión y sospecha de infarto de ventrículo derecho"
+            },
+            {
+              "field": "modifiers.1.action",
+              "text": "Evitar nitratos y valorar hemodinamia."
+            },
+            {
+              "field": "modifiers.1.reason",
+              "text": "Puede depender de precarga."
+            }
+          ]
+        },
+        "contrast": {
+          "vignette": "Una persona con elevación persistente del ST y sospecha de lesión del ventrículo derecho presenta hipotensión. Se debe revisar la seguridad de los nitratos.",
+          "discriminator": "Compromiso ventricular derecho con hipotensión",
+          "explanation": "Se evitan nitratos y se valora la hemodinamia. La hipotensión y la posible afectación derecha modifican el tratamiento mientras se organiza reperfusión.",
+          "confusable_with": "Angina estable",
+          "why_not": "La elevación persistente del ST y el dolor prolongado requieren reperfusión urgente. El contexto hemodinámico modifica los fármacos que pueden administrarse.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Un adulto tiene opresión torácica intensa de treinta minutos con diaforesis y náusea. El ECG muestra elevación del ST en derivaciones contiguas y persiste el dolor durante la valoración."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "elevación del ST en derivaciones contiguas"
+            },
+            {
+              "field": "mechanism",
+              "text": "La isquemia coronaria sostenida lesiona cardiomiocitos y libera troponina; una oclusión aguda con elevación del ST exige reperfusión oportuna para limitar necrosis y complicaciones."
+            },
+            {
+              "field": "initial_action",
+              "text": "Obtener ECG inmediato, activar la red de reperfusión y administrar tratamiento antitrombótico indicado tras revisar contraindicaciones. Priorizar intervención coronaria percutánea según disponibilidad y tiempos."
+            },
+            {
+              "field": "action_reason",
+              "text": "La reperfusión reduce la extensión de lesión y el riesgo de muerte."
+            },
+            {
+              "field": "limits",
+              "text": "No indicar fibrinólisis en SCA sin elevación del ST. El texto contiene cifras y contraindicaciones por edad erróneas; verificar protocolos y dosis antes de prescribir."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Isquemia miocárdica"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Dolor opresivo y diaforesis"
+            },
+            {
+              "field": "findings.1.mechanism",
+              "text": "Lesión celular"
+            },
+            {
+              "field": "findings.1.finding",
+              "text": "Elevación de troponina"
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "ICP no disponible a tiempo y candidato en ventana"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Valorar fibrinólisis y traslado a centro con ICP."
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "La reperfusión no debe demorarse de forma innecesaria."
+            },
+            {
+              "field": "modifiers.1.factor",
+              "text": "Hipotensión y sospecha de infarto de ventrículo derecho"
+            },
+            {
+              "field": "modifiers.1.action",
+              "text": "Evitar nitratos y valorar hemodinamia."
+            },
+            {
+              "field": "modifiers.1.reason",
+              "text": "Puede depender de precarga."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "04.02-01",
+      "parent_topic_id": "04.02-01",
+      "block_id": "04.02",
+      "name": "Insuficiencia cardíaca aguda",
+      "answer_kind": "diagnosis",
+      "variants": {
+        "easy": {
+          "vignette": "Un adulto con cardiopatía presenta disnea de inicio reciente, ortopnea y estertores. Tiene edema de piernas y extremidades tibias; la presión se conserva durante el examen.",
+          "discriminator": "extremidades tibias",
+          "explanation": "El dato decisivo es extremidades tibias. La elevación aguda de presiones de llenado causa congestión; la perfusión puede conservarse o caer, y esa combinación define necesidades de diurético, soporte y vigilancia. Valorar oxigenación, congestión y perfusión; buscar el desencadenante. En el perfil congestionado con perfusión conservada, iniciar diurético de asa intravenoso y vigilancia hospitalaria.",
+          "confusable_with": "Insuficiencia cardíaca crónica estable",
+          "why_not": "El deterioro reciente y la necesidad de estabilizar congestión o perfusión definen la presentación aguda. La presión y la perfusión cambian la conducta inmediata.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Un adulto con cardiopatía presenta disnea de inicio reciente, ortopnea y estertores. Tiene edema de piernas y extremidades tibias; la presión se conserva durante el examen."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "extremidades tibias"
+            },
+            {
+              "field": "mechanism",
+              "text": "La elevación aguda de presiones de llenado causa congestión; la perfusión puede conservarse o caer, y esa combinación define necesidades de diurético, soporte y vigilancia."
+            },
+            {
+              "field": "initial_action",
+              "text": "Valorar oxigenación, congestión y perfusión; buscar el desencadenante. En el perfil congestionado con perfusión conservada, iniciar diurético de asa intravenoso y vigilancia hospitalaria."
+            },
+            {
+              "field": "action_reason",
+              "text": "Reduce sobrecarga mientras se identifica isquemia, arritmia u otra causa precipitante."
+            },
+            {
+              "field": "limits",
+              "text": "No administrar vasodilatadores de forma automática al paciente frío e hipotenso; la página ofrece descripciones discordantes."
+            }
+          ]
+        },
+        "medium": {
+          "vignette": "Una persona con congestión de inicio reciente presenta presión elevada, ortopnea y estertores. Se valora vasodilatación si la presión lo permite.",
+          "discriminator": "Congestión aguda con hipertensión",
+          "explanation": "El dato decisivo es Congestión aguda con hipertensión. Puede reducir las presiones de llenado. Valorar vasodilatación si la presión permite.",
+          "confusable_with": "Insuficiencia cardíaca crónica estable",
+          "why_not": "El deterioro reciente y la necesidad de estabilizar congestión o perfusión definen la presentación aguda. La presión y la perfusión cambian la conducta inmediata.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Un adulto con cardiopatía presenta disnea de inicio reciente, ortopnea y estertores. Tiene edema de piernas y extremidades tibias; la presión se conserva durante el examen."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "extremidades tibias"
+            },
+            {
+              "field": "mechanism",
+              "text": "La elevación aguda de presiones de llenado causa congestión; la perfusión puede conservarse o caer, y esa combinación define necesidades de diurético, soporte y vigilancia."
+            },
+            {
+              "field": "initial_action",
+              "text": "Valorar oxigenación, congestión y perfusión; buscar el desencadenante. En el perfil congestionado con perfusión conservada, iniciar diurético de asa intravenoso y vigilancia hospitalaria."
+            },
+            {
+              "field": "action_reason",
+              "text": "Reduce sobrecarga mientras se identifica isquemia, arritmia u otra causa precipitante."
+            },
+            {
+              "field": "limits",
+              "text": "No administrar vasodilatadores de forma automática al paciente frío e hipotenso; la página ofrece descripciones discordantes."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Congestión pulmonar"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Ortopnea y estertores"
+            },
+            {
+              "field": "findings.1.mechanism",
+              "text": "Retención de líquido"
+            },
+            {
+              "field": "findings.1.finding",
+              "text": "Edema periférico"
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Hipoperfusión o choque"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Activar atención de mayor complejidad y valorar soporte circulatorio."
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "El diurético aislado no corrige bajo gasto."
+            },
+            {
+              "field": "modifiers.1.factor",
+              "text": "Hipertensión con congestión"
+            },
+            {
+              "field": "modifiers.1.action",
+              "text": "Valorar vasodilatación si la presión permite."
+            },
+            {
+              "field": "modifiers.1.reason",
+              "text": "Puede reducir las presiones de llenado."
+            }
+          ]
+        },
+        "contrast": {
+          "vignette": "Un paciente con disnea reciente y edema deja de mantener perfusión y desarrolla choque. Se solicita soporte de mayor complejidad.",
+          "discriminator": "Congestión con hipoperfusión nueva",
+          "explanation": "El dato decisivo es Congestión con hipoperfusión nueva. El diurético aislado no corrige bajo gasto. Activar atención de mayor complejidad y valorar soporte circulatorio.",
+          "confusable_with": "Insuficiencia cardíaca crónica estable",
+          "why_not": "El deterioro reciente y la necesidad de estabilizar congestión o perfusión definen la presentación aguda. La presión y la perfusión cambian la conducta inmediata.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Un adulto con cardiopatía presenta disnea de inicio reciente, ortopnea y estertores. Tiene edema de piernas y extremidades tibias; la presión se conserva durante el examen."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "extremidades tibias"
+            },
+            {
+              "field": "mechanism",
+              "text": "La elevación aguda de presiones de llenado causa congestión; la perfusión puede conservarse o caer, y esa combinación define necesidades de diurético, soporte y vigilancia."
+            },
+            {
+              "field": "initial_action",
+              "text": "Valorar oxigenación, congestión y perfusión; buscar el desencadenante. En el perfil congestionado con perfusión conservada, iniciar diurético de asa intravenoso y vigilancia hospitalaria."
+            },
+            {
+              "field": "action_reason",
+              "text": "Reduce sobrecarga mientras se identifica isquemia, arritmia u otra causa precipitante."
+            },
+            {
+              "field": "limits",
+              "text": "No administrar vasodilatadores de forma automática al paciente frío e hipotenso; la página ofrece descripciones discordantes."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Congestión pulmonar"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Ortopnea y estertores"
+            },
+            {
+              "field": "findings.1.mechanism",
+              "text": "Retención de líquido"
+            },
+            {
+              "field": "findings.1.finding",
+              "text": "Edema periférico"
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Hipoperfusión o choque"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Activar atención de mayor complejidad y valorar soporte circulatorio."
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "El diurético aislado no corrige bajo gasto."
+            },
+            {
+              "field": "modifiers.1.factor",
+              "text": "Hipertensión con congestión"
+            },
+            {
+              "field": "modifiers.1.action",
+              "text": "Valorar vasodilatación si la presión permite."
+            },
+            {
+              "field": "modifiers.1.reason",
+              "text": "Puede reducir las presiones de llenado."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "04.02-02",
+      "parent_topic_id": "04.02-02",
+      "block_id": "04.02",
+      "name": "Edema pulmonar",
+      "answer_kind": "diagnosis",
+      "variants": {
+        "easy": {
+          "vignette": "Un adulto presenta disnea intensa, ortopnea y tos con espuma rosada. Se auscultan estertores difusos y hay congestión yugular; la radiografía muestra opacidades perihiliares y cardiomegalia.",
+          "discriminator": "tos con espuma rosada",
+          "explanation": "El dato decisivo es tos con espuma rosada. El aumento de presión hidrostática pulmonar desplaza líquido al intersticio y alvéolos; el líquido reduce intercambio gaseoso y distensibilidad, con hipoxemia y trabajo respiratorio elevado. Iniciar soporte respiratorio según gravedad y tratar la causa. En origen cardiogénico, valorar diurético y vasodilatador según congestión y presión arterial.",
+          "confusable_with": "Insuficiencia cardíaca como causa universal",
+          "why_not": "La presencia de líquido alveolar no demuestra por sí sola un origen cardíaco. La causa y la gravedad respiratoria determinan el soporte y el uso de diuréticos.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Un adulto presenta disnea intensa, ortopnea y tos con espuma rosada. Se auscultan estertores difusos y hay congestión yugular; la radiografía muestra opacidades perihiliares y cardiomegalia."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "tos con espuma rosada"
+            },
+            {
+              "field": "mechanism",
+              "text": "El aumento de presión hidrostática pulmonar desplaza líquido al intersticio y alvéolos; el líquido reduce intercambio gaseoso y distensibilidad, con hipoxemia y trabajo respiratorio elevado."
+            },
+            {
+              "field": "initial_action",
+              "text": "Iniciar soporte respiratorio según gravedad y tratar la causa. En origen cardiogénico, valorar diurético y vasodilatador según congestión y presión arterial."
+            },
+            {
+              "field": "action_reason",
+              "text": "El soporte mejora oxigenación mientras se reducen presiones y exceso de volumen."
+            },
+            {
+              "field": "limits",
+              "text": "Las alas de mariposa no distinguen por sí solas el origen; integrar clínica e imagen."
+            }
+          ]
+        },
+        "medium": {
+          "vignette": "En un paciente con ortopnea y espuma rosada aparecen hipoxemia grave y fatiga respiratoria. Se necesita decidir soporte ventilatorio.",
+          "discriminator": "Inundación alveolar con fatiga e hipoxemia grave",
+          "explanation": "El dato decisivo es Inundación alveolar con fatiga e hipoxemia grave. El oxígeno aislado puede ser insuficiente. Valorar ventilación no invasiva o invasiva según condición.",
+          "confusable_with": "Insuficiencia cardíaca como causa universal",
+          "why_not": "La presencia de líquido alveolar no demuestra por sí sola un origen cardíaco. La causa y la gravedad respiratoria determinan el soporte y el uso de diuréticos.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Un adulto presenta disnea intensa, ortopnea y tos con espuma rosada. Se auscultan estertores difusos y hay congestión yugular; la radiografía muestra opacidades perihiliares y cardiomegalia."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "tos con espuma rosada"
+            },
+            {
+              "field": "mechanism",
+              "text": "El aumento de presión hidrostática pulmonar desplaza líquido al intersticio y alvéolos; el líquido reduce intercambio gaseoso y distensibilidad, con hipoxemia y trabajo respiratorio elevado."
+            },
+            {
+              "field": "initial_action",
+              "text": "Iniciar soporte respiratorio según gravedad y tratar la causa. En origen cardiogénico, valorar diurético y vasodilatador según congestión y presión arterial."
+            },
+            {
+              "field": "action_reason",
+              "text": "El soporte mejora oxigenación mientras se reducen presiones y exceso de volumen."
+            },
+            {
+              "field": "limits",
+              "text": "Las alas de mariposa no distinguen por sí solas el origen; integrar clínica e imagen."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Líquido alveolar"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Esputo espumoso e hipoxemia"
+            },
+            {
+              "field": "findings.1.mechanism",
+              "text": "Congestión cardíaca"
+            },
+            {
+              "field": "findings.1.finding",
+              "text": "Ortopnea e ingurgitación yugular"
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Hipoxemia grave o fatiga"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Valorar ventilación no invasiva o invasiva según condición."
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "El oxígeno aislado puede ser insuficiente."
+            },
+            {
+              "field": "modifiers.1.factor",
+              "text": "Origen no cardiogénico"
+            },
+            {
+              "field": "modifiers.1.action",
+              "text": "Dirigir el manejo a la causa y evitar asumir beneficio de diuresis."
+            },
+            {
+              "field": "modifiers.1.reason",
+              "text": "La lesión de permeabilidad tiene un mecanismo diferente."
+            }
+          ]
+        },
+        "contrast": {
+          "vignette": "Una persona presenta disnea intensa y estertores, pero la evaluación identifica un origen no cardiogénico. Se debe dirigir el tratamiento a la causa.",
+          "discriminator": "Edema de origen no cardiogénico",
+          "explanation": "El dato decisivo es Edema de origen no cardiogénico. La lesión de permeabilidad tiene un mecanismo diferente. Dirigir el manejo a la causa y evitar asumir beneficio de diuresis.",
+          "confusable_with": "Insuficiencia cardíaca como causa universal",
+          "why_not": "La presencia de líquido alveolar no demuestra por sí sola un origen cardíaco. La causa y la gravedad respiratoria determinan el soporte y el uso de diuréticos.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Un adulto presenta disnea intensa, ortopnea y tos con espuma rosada. Se auscultan estertores difusos y hay congestión yugular; la radiografía muestra opacidades perihiliares y cardiomegalia."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "tos con espuma rosada"
+            },
+            {
+              "field": "mechanism",
+              "text": "El aumento de presión hidrostática pulmonar desplaza líquido al intersticio y alvéolos; el líquido reduce intercambio gaseoso y distensibilidad, con hipoxemia y trabajo respiratorio elevado."
+            },
+            {
+              "field": "initial_action",
+              "text": "Iniciar soporte respiratorio según gravedad y tratar la causa. En origen cardiogénico, valorar diurético y vasodilatador según congestión y presión arterial."
+            },
+            {
+              "field": "action_reason",
+              "text": "El soporte mejora oxigenación mientras se reducen presiones y exceso de volumen."
+            },
+            {
+              "field": "limits",
+              "text": "Las alas de mariposa no distinguen por sí solas el origen; integrar clínica e imagen."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Líquido alveolar"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Esputo espumoso e hipoxemia"
+            },
+            {
+              "field": "findings.1.mechanism",
+              "text": "Congestión cardíaca"
+            },
+            {
+              "field": "findings.1.finding",
+              "text": "Ortopnea e ingurgitación yugular"
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Hipoxemia grave o fatiga"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Valorar ventilación no invasiva o invasiva según condición."
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "El oxígeno aislado puede ser insuficiente."
+            },
+            {
+              "field": "modifiers.1.factor",
+              "text": "Origen no cardiogénico"
+            },
+            {
+              "field": "modifiers.1.action",
+              "text": "Dirigir el manejo a la causa y evitar asumir beneficio de diuresis."
+            },
+            {
+              "field": "modifiers.1.reason",
+              "text": "La lesión de permeabilidad tiene un mecanismo diferente."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "04.03-01",
+      "parent_topic_id": "04.03-01",
+      "block_id": "04.03",
+      "name": "Insuficiencia cardíaca crónica",
+      "answer_kind": "diagnosis",
+      "variants": {
+        "easy": {
+          "vignette": "Un adulto consulta por meses de fatiga y disnea al caminar. Ahora necesita más almohadas y presenta edema de tobillos. El ecocardiograma documenta función ventricular izquierda reducida.",
+          "discriminator": "meses de fatiga y disnea",
+          "explanation": "El dato decisivo es meses de fatiga y disnea. La alteración de bomba o llenado impide cubrir necesidades metabólicas; la activación compensadora y la retención de sodio favorecen congestión y remodelado progresivo. Valorar congestión, presión, función renal y potasio. En fracción de eyección reducida estable, iniciar u optimizar ARNI o IECA/ARA, betabloqueador con evidencia, antagonista mineralocorticoide e inhibidor SGLT2 según elegibilidad y tolerancia; añadir diurético por congestión.",
+          "confusable_with": "Rehabilitación cardíaca aislada",
+          "why_not": "La disnea crónica con función ventricular reducida requiere tratamiento de la insuficiencia. Una nueva hipoperfusión exige evaluar descompensación antes de actividades de recuperación.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Un adulto consulta por meses de fatiga y disnea al caminar. Ahora necesita más almohadas y presenta edema de tobillos. El ecocardiograma documenta función ventricular izquierda reducida."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "meses de fatiga y disnea"
+            },
+            {
+              "field": "mechanism",
+              "text": "La alteración de bomba o llenado impide cubrir necesidades metabólicas; la activación compensadora y la retención de sodio favorecen congestión y remodelado progresivo."
+            },
+            {
+              "field": "initial_action",
+              "text": "Valorar congestión, presión, función renal y potasio. En fracción de eyección reducida estable, iniciar u optimizar ARNI o IECA/ARA, betabloqueador con evidencia, antagonista mineralocorticoide e inhibidor SGLT2 según elegibilidad y tolerancia; añadir diurético por congestión."
+            },
+            {
+              "field": "action_reason",
+              "text": "La función ventricular y tolerancia determinan los fármacos y el seguimiento."
+            },
+            {
+              "field": "limits",
+              "text": "No anticoagular por cardiomegalia aislada. El esquema de 2015 omite pilares actuales; cada fármaco exige revisar contraindicaciones y vigilancia."
+            },
+            {
+              "field": "source_corrections.0.reason",
+              "text": "Se sustituye la acción genérica por los cuatro grupos actuales para FE reducida estable. La guía incluye inhibición renina-angiotensina/ARNI, betabloqueador, antagonista mineralocorticoide y SGLT2; ajustar por elegibilidad y tolerancia."
+            }
+          ]
+        },
+        "medium": {
+          "vignette": "Una persona con disnea de meses y FEVI reducida estable tiene sobrecarga de líquido. Se evalúa alivio de congestión junto con tratamiento de base.",
+          "discriminator": "FEVI reducida crónica con congestión",
+          "explanation": "El dato decisivo es FEVI reducida crónica con congestión. Reduce síntomas por líquido acumulado. Usar diurético para aliviar sobrecarga.",
+          "confusable_with": "Rehabilitación cardíaca aislada",
+          "why_not": "La disnea crónica con función ventricular reducida requiere tratamiento de la insuficiencia. Una nueva hipoperfusión exige evaluar descompensación antes de actividades de recuperación.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Un adulto consulta por meses de fatiga y disnea al caminar. Ahora necesita más almohadas y presenta edema de tobillos. El ecocardiograma documenta función ventricular izquierda reducida."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "meses de fatiga y disnea"
+            },
+            {
+              "field": "mechanism",
+              "text": "La alteración de bomba o llenado impide cubrir necesidades metabólicas; la activación compensadora y la retención de sodio favorecen congestión y remodelado progresivo."
+            },
+            {
+              "field": "initial_action",
+              "text": "Valorar congestión, presión, función renal y potasio. En fracción de eyección reducida estable, iniciar u optimizar ARNI o IECA/ARA, betabloqueador con evidencia, antagonista mineralocorticoide e inhibidor SGLT2 según elegibilidad y tolerancia; añadir diurético por congestión."
+            },
+            {
+              "field": "action_reason",
+              "text": "La función ventricular y tolerancia determinan los fármacos y el seguimiento."
+            },
+            {
+              "field": "limits",
+              "text": "No anticoagular por cardiomegalia aislada. El esquema de 2015 omite pilares actuales; cada fármaco exige revisar contraindicaciones y vigilancia."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Gasto insuficiente con actividad"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Fatiga y disnea"
+            },
+            {
+              "field": "findings.1.mechanism",
+              "text": "Presiones de llenado elevadas"
+            },
+            {
+              "field": "findings.1.finding",
+              "text": "Ortopnea y edema"
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Congestión"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Usar diurético para aliviar sobrecarga."
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "Reduce síntomas por líquido acumulado."
+            },
+            {
+              "field": "modifiers.1.factor",
+              "text": "Descompensación o hipoperfusión nuevas"
+            },
+            {
+              "field": "modifiers.1.action",
+              "text": "Evaluar de forma urgente."
+            },
+            {
+              "field": "modifiers.1.reason",
+              "text": "Puede requerir manejo de insuficiencia aguda."
+            },
+            {
+              "field": "source_corrections.0.reason",
+              "text": "Se sustituye la acción genérica por los cuatro grupos actuales para FE reducida estable. La guía incluye inhibición renina-angiotensina/ARNI, betabloqueador, antagonista mineralocorticoide y SGLT2; ajustar por elegibilidad y tolerancia."
+            }
+          ]
+        },
+        "contrast": {
+          "vignette": "Durante seguimiento de función ventricular reducida aparece hipoperfusión nueva. El equipo deja la evaluación habitual y organiza atención urgente.",
+          "discriminator": "Cambio desde enfermedad estable a hipoperfusión",
+          "explanation": "El dato decisivo es Cambio desde enfermedad estable a hipoperfusión. Puede requerir manejo de insuficiencia aguda. Evaluar de forma urgente.",
+          "confusable_with": "Rehabilitación cardíaca aislada",
+          "why_not": "La disnea crónica con función ventricular reducida requiere tratamiento de la insuficiencia. Una nueva hipoperfusión exige evaluar descompensación antes de actividades de recuperación.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Un adulto consulta por meses de fatiga y disnea al caminar. Ahora necesita más almohadas y presenta edema de tobillos. El ecocardiograma documenta función ventricular izquierda reducida."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "meses de fatiga y disnea"
+            },
+            {
+              "field": "mechanism",
+              "text": "La alteración de bomba o llenado impide cubrir necesidades metabólicas; la activación compensadora y la retención de sodio favorecen congestión y remodelado progresivo."
+            },
+            {
+              "field": "initial_action",
+              "text": "Valorar congestión, presión, función renal y potasio. En fracción de eyección reducida estable, iniciar u optimizar ARNI o IECA/ARA, betabloqueador con evidencia, antagonista mineralocorticoide e inhibidor SGLT2 según elegibilidad y tolerancia; añadir diurético por congestión."
+            },
+            {
+              "field": "action_reason",
+              "text": "La función ventricular y tolerancia determinan los fármacos y el seguimiento."
+            },
+            {
+              "field": "limits",
+              "text": "No anticoagular por cardiomegalia aislada. El esquema de 2015 omite pilares actuales; cada fármaco exige revisar contraindicaciones y vigilancia."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Gasto insuficiente con actividad"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Fatiga y disnea"
+            },
+            {
+              "field": "findings.1.mechanism",
+              "text": "Presiones de llenado elevadas"
+            },
+            {
+              "field": "findings.1.finding",
+              "text": "Ortopnea y edema"
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Congestión"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Usar diurético para aliviar sobrecarga."
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "Reduce síntomas por líquido acumulado."
+            },
+            {
+              "field": "modifiers.1.factor",
+              "text": "Descompensación o hipoperfusión nuevas"
+            },
+            {
+              "field": "modifiers.1.action",
+              "text": "Evaluar de forma urgente."
+            },
+            {
+              "field": "modifiers.1.reason",
+              "text": "Puede requerir manejo de insuficiencia aguda."
+            },
+            {
+              "field": "source_corrections.0.reason",
+              "text": "Se sustituye la acción genérica por los cuatro grupos actuales para FE reducida estable. La guía incluye inhibición renina-angiotensina/ARNI, betabloqueador, antagonista mineralocorticoide y SGLT2; ajustar por elegibilidad y tolerancia."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "04.03-02",
+      "parent_topic_id": "04.03-02",
+      "block_id": "04.03",
+      "name": "Planificar rehabilitación cardíaca según fase",
+      "answer_kind": "decision",
+      "variants": {
+        "easy": {
+          "vignette": "Una persona clínicamente estable egresa después de un evento coronario. Tiene temor al esfuerzo, sobrepeso y tabaquismo. Se necesita planear recuperación funcional y prevención de nuevos eventos. ¿Qué acción o clasificación corresponde a este contexto?",
+          "discriminator": "clínicamente estable egresa",
+          "explanation": "El dato decisivo es clínicamente estable egresa. La recuperación cardiovascular requiere entrenamiento graduado, educación y control de factores de riesgo; la intervención multidisciplinaria facilita reintegración física y social con menor exposición a desencadenantes. Referir a rehabilitación cardiovascular, estratificar riesgo y establecer actividad supervisada, control de comorbilidades, nutrición y abandono de tabaco según capacidad y evolución.",
+          "confusable_with": "Tratamiento de un síndrome coronario agudo activo",
+          "why_not": "La estabilidad permite un programa de recuperación y prevención. La fase hospitalaria y la de mantenimiento tienen objetivos funcionales progresivos.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Una persona clínicamente estable egresa después de un evento coronario. Tiene temor al esfuerzo, sobrepeso y tabaquismo. Se necesita planear recuperación funcional y prevención de nuevos eventos."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "clínicamente estable egresa"
+            },
+            {
+              "field": "mechanism",
+              "text": "La recuperación cardiovascular requiere entrenamiento graduado, educación y control de factores de riesgo; la intervención multidisciplinaria facilita reintegración física y social con menor exposición a desencadenantes."
+            },
+            {
+              "field": "initial_action",
+              "text": "Referir a rehabilitación cardiovascular, estratificar riesgo y establecer actividad supervisada, control de comorbilidades, nutrición y abandono de tabaco según capacidad y evolución."
+            },
+            {
+              "field": "action_reason",
+              "text": "Integra recuperación funcional y prevención secundaria."
+            },
+            {
+              "field": "limits",
+              "text": "No fijar reinicio de actividad sexual o intensidad de ejercicio solo por calendario; valorar estabilidad y capacidad funcional."
+            }
+          ]
+        },
+        "medium": {
+          "vignette": "Una persona estable sigue hospitalizada después de un evento coronario. El equipo debe iniciar educación y movilización apropiadas. ¿Qué acción o clasificación corresponde a este contexto?",
+          "discriminator": "Fase hospitalaria tras evento estable",
+          "explanation": "El dato decisivo es Fase hospitalaria tras evento estable. La rehabilitación comienza antes del alta. Iniciar educación y movilización apropiada.",
+          "confusable_with": "Tratamiento de un síndrome coronario agudo activo",
+          "why_not": "La estabilidad permite un programa de recuperación y prevención. La fase hospitalaria y la de mantenimiento tienen objetivos funcionales progresivos.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Una persona clínicamente estable egresa después de un evento coronario. Tiene temor al esfuerzo, sobrepeso y tabaquismo. Se necesita planear recuperación funcional y prevención de nuevos eventos."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "clínicamente estable egresa"
+            },
+            {
+              "field": "mechanism",
+              "text": "La recuperación cardiovascular requiere entrenamiento graduado, educación y control de factores de riesgo; la intervención multidisciplinaria facilita reintegración física y social con menor exposición a desencadenantes."
+            },
+            {
+              "field": "initial_action",
+              "text": "Referir a rehabilitación cardiovascular, estratificar riesgo y establecer actividad supervisada, control de comorbilidades, nutrición y abandono de tabaco según capacidad y evolución."
+            },
+            {
+              "field": "action_reason",
+              "text": "Integra recuperación funcional y prevención secundaria."
+            },
+            {
+              "field": "limits",
+              "text": "No fijar reinicio de actividad sexual o intensidad de ejercicio solo por calendario; valorar estabilidad y capacidad funcional."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Desacondicionamiento"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Menor tolerancia al esfuerzo"
+            },
+            {
+              "field": "findings.1.mechanism",
+              "text": "Factores modificables persistentes"
+            },
+            {
+              "field": "findings.1.finding",
+              "text": "Riesgo cardiovascular residual"
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Fase hospitalaria"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Iniciar educación y movilización apropiada."
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "La rehabilitación comienza antes del alta."
+            },
+            {
+              "field": "modifiers.1.factor",
+              "text": "Fase de mantenimiento"
+            },
+            {
+              "field": "modifiers.1.action",
+              "text": "Sostener ejercicio y control de riesgo."
+            },
+            {
+              "field": "modifiers.1.reason",
+              "text": "La prevención requiere continuidad."
+            }
+          ]
+        },
+        "contrast": {
+          "vignette": "Una persona completó la etapa inicial de recuperación cardíaca. Se planifica sostener ejercicio y control de tabaquismo y otros factores a largo plazo. ¿Qué acción o clasificación corresponde a este contexto?",
+          "discriminator": "Fase de mantenimiento",
+          "explanation": "El dato decisivo es Fase de mantenimiento. La prevención requiere continuidad. Sostener ejercicio y control de riesgo.",
+          "confusable_with": "Tratamiento de un síndrome coronario agudo activo",
+          "why_not": "La estabilidad permite un programa de recuperación y prevención. La fase hospitalaria y la de mantenimiento tienen objetivos funcionales progresivos.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Una persona clínicamente estable egresa después de un evento coronario. Tiene temor al esfuerzo, sobrepeso y tabaquismo. Se necesita planear recuperación funcional y prevención de nuevos eventos."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "clínicamente estable egresa"
+            },
+            {
+              "field": "mechanism",
+              "text": "La recuperación cardiovascular requiere entrenamiento graduado, educación y control de factores de riesgo; la intervención multidisciplinaria facilita reintegración física y social con menor exposición a desencadenantes."
+            },
+            {
+              "field": "initial_action",
+              "text": "Referir a rehabilitación cardiovascular, estratificar riesgo y establecer actividad supervisada, control de comorbilidades, nutrición y abandono de tabaco según capacidad y evolución."
+            },
+            {
+              "field": "action_reason",
+              "text": "Integra recuperación funcional y prevención secundaria."
+            },
+            {
+              "field": "limits",
+              "text": "No fijar reinicio de actividad sexual o intensidad de ejercicio solo por calendario; valorar estabilidad y capacidad funcional."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Desacondicionamiento"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Menor tolerancia al esfuerzo"
+            },
+            {
+              "field": "findings.1.mechanism",
+              "text": "Factores modificables persistentes"
+            },
+            {
+              "field": "findings.1.finding",
+              "text": "Riesgo cardiovascular residual"
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Fase hospitalaria"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Iniciar educación y movilización apropiada."
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "La rehabilitación comienza antes del alta."
+            },
+            {
+              "field": "modifiers.1.factor",
+              "text": "Fase de mantenimiento"
+            },
+            {
+              "field": "modifiers.1.action",
+              "text": "Sostener ejercicio y control de riesgo."
+            },
+            {
+              "field": "modifiers.1.reason",
+              "text": "La prevención requiere continuidad."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "04.04-01",
+      "parent_topic_id": "04.04-01",
+      "block_id": "04.04",
+      "name": "Hipertensión arterial sistémica",
+      "answer_kind": "diagnosis",
+      "variants": {
+        "easy": {
+          "vignette": "Un adulto asintomático tiene presión elevada en varias consultas. No presenta dolor torácico ni déficit neurológico. Se revisa la técnica y se planean mediciones fuera del consultorio.",
+          "discriminator": "presión elevada en varias consultas",
+          "explanation": "El dato decisivo es presión elevada en varias consultas. La presión elevada persistente aumenta la carga vascular y cardíaca; confirmar su persistencia y buscar daño de órgano permite distinguir riesgo crónico de elevaciones circunstanciales. Repetir medición con técnica correcta y confirmar con MAPA o medición domiciliaria. Valorar riesgo, daño de órgano y causas secundarias antes de ajustar cambios de estilo de vida y fármacos.",
+          "confusable_with": "Crisis hipertensiva con daño agudo",
+          "why_not": "La elevación persistente requiere confirmación y manejo crónico. La resistencia y la fragilidad cambian la evaluación, pero no demuestran daño agudo de órgano.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Un adulto asintomático tiene presión elevada en varias consultas. No presenta dolor torácico ni déficit neurológico. Se revisa la técnica y se planean mediciones fuera del consultorio."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "presión elevada en varias consultas"
+            },
+            {
+              "field": "mechanism",
+              "text": "La presión elevada persistente aumenta la carga vascular y cardíaca; confirmar su persistencia y buscar daño de órgano permite distinguir riesgo crónico de elevaciones circunstanciales."
+            },
+            {
+              "field": "initial_action",
+              "text": "Repetir medición con técnica correcta y confirmar con MAPA o medición domiciliaria. Valorar riesgo, daño de órgano y causas secundarias antes de ajustar cambios de estilo de vida y fármacos."
+            },
+            {
+              "field": "action_reason",
+              "text": "Reduce diagnóstico por error de medición y permite individualizar metas."
+            },
+            {
+              "field": "limits",
+              "text": "Los umbrales dependen de técnica y guía; no usar cifras de consultorio para interpretar todo registro domiciliario."
+            }
+          ]
+        },
+        "medium": {
+          "vignette": "Una persona menor de cuarenta años mantiene presión elevada pese al tratamiento. Se revisan adherencia y causas secundarias.",
+          "discriminator": "Hipertensión temprana o resistente",
+          "explanation": "El dato decisivo es Hipertensión temprana o resistente. Puede existir un mecanismo corregible. Buscar causa secundaria y revisar adherencia.",
+          "confusable_with": "Crisis hipertensiva con daño agudo",
+          "why_not": "La elevación persistente requiere confirmación y manejo crónico. La resistencia y la fragilidad cambian la evaluación, pero no demuestran daño agudo de órgano.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Un adulto asintomático tiene presión elevada en varias consultas. No presenta dolor torácico ni déficit neurológico. Se revisa la técnica y se planean mediciones fuera del consultorio."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "presión elevada en varias consultas"
+            },
+            {
+              "field": "mechanism",
+              "text": "La presión elevada persistente aumenta la carga vascular y cardíaca; confirmar su persistencia y buscar daño de órgano permite distinguir riesgo crónico de elevaciones circunstanciales."
+            },
+            {
+              "field": "initial_action",
+              "text": "Repetir medición con técnica correcta y confirmar con MAPA o medición domiciliaria. Valorar riesgo, daño de órgano y causas secundarias antes de ajustar cambios de estilo de vida y fármacos."
+            },
+            {
+              "field": "action_reason",
+              "text": "Reduce diagnóstico por error de medición y permite individualizar metas."
+            },
+            {
+              "field": "limits",
+              "text": "Los umbrales dependen de técnica y guía; no usar cifras de consultorio para interpretar todo registro domiciliario."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Resistencia vascular elevada"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Presión arterial persistente"
+            },
+            {
+              "field": "findings.1.mechanism",
+              "text": "Carga crónica"
+            },
+            {
+              "field": "findings.1.finding",
+              "text": "Hipertrofia o daño renal"
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Menor de cuarenta años o resistencia terapéutica"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Buscar causa secundaria y revisar adherencia."
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "Puede existir un mecanismo corregible."
+            },
+            {
+              "field": "modifiers.1.factor",
+              "text": "Fragilidad"
+            },
+            {
+              "field": "modifiers.1.action",
+              "text": "Individualizar intensidad y metas."
+            },
+            {
+              "field": "modifiers.1.reason",
+              "text": "La tolerancia y el riesgo de hipotensión cambian el balance."
+            }
+          ]
+        },
+        "contrast": {
+          "vignette": "Una persona frágil presenta presión persistentemente elevada en mediciones repetidas. Se individualizan la intensidad del tratamiento y sus metas.",
+          "discriminator": "Fragilidad con elevación persistente",
+          "explanation": "El dato decisivo es Fragilidad con elevación persistente. La tolerancia y el riesgo de hipotensión cambian el balance. Individualizar intensidad y metas.",
+          "confusable_with": "Crisis hipertensiva con daño agudo",
+          "why_not": "La elevación persistente requiere confirmación y manejo crónico. La resistencia y la fragilidad cambian la evaluación, pero no demuestran daño agudo de órgano.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Un adulto asintomático tiene presión elevada en varias consultas. No presenta dolor torácico ni déficit neurológico. Se revisa la técnica y se planean mediciones fuera del consultorio."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "presión elevada en varias consultas"
+            },
+            {
+              "field": "mechanism",
+              "text": "La presión elevada persistente aumenta la carga vascular y cardíaca; confirmar su persistencia y buscar daño de órgano permite distinguir riesgo crónico de elevaciones circunstanciales."
+            },
+            {
+              "field": "initial_action",
+              "text": "Repetir medición con técnica correcta y confirmar con MAPA o medición domiciliaria. Valorar riesgo, daño de órgano y causas secundarias antes de ajustar cambios de estilo de vida y fármacos."
+            },
+            {
+              "field": "action_reason",
+              "text": "Reduce diagnóstico por error de medición y permite individualizar metas."
+            },
+            {
+              "field": "limits",
+              "text": "Los umbrales dependen de técnica y guía; no usar cifras de consultorio para interpretar todo registro domiciliario."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Resistencia vascular elevada"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Presión arterial persistente"
+            },
+            {
+              "field": "findings.1.mechanism",
+              "text": "Carga crónica"
+            },
+            {
+              "field": "findings.1.finding",
+              "text": "Hipertrofia o daño renal"
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Menor de cuarenta años o resistencia terapéutica"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Buscar causa secundaria y revisar adherencia."
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "Puede existir un mecanismo corregible."
+            },
+            {
+              "field": "modifiers.1.factor",
+              "text": "Fragilidad"
+            },
+            {
+              "field": "modifiers.1.action",
+              "text": "Individualizar intensidad y metas."
+            },
+            {
+              "field": "modifiers.1.reason",
+              "text": "La tolerancia y el riesgo de hipotensión cambian el balance."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "04.05-01",
+      "parent_topic_id": "04.05-01",
+      "block_id": "04.05",
+      "name": "Crisis hipertensivas",
+      "answer_kind": "diagnosis",
+      "variants": {
+        "easy": {
+          "vignette": "Un adulto con presión de 210/125 presenta disnea aguda y estertores. La exploración busca daño neurológico, renal y cardíaco para definir la urgencia del descenso de presión.",
+          "discriminator": "disnea aguda y estertores",
+          "explanation": "El dato decisivo es disnea aguda y estertores. La presión muy elevada puede superar autorregulación y causar daño agudo de órgano; la presencia de lesión, más que la cifra aislada, define la emergencia terapéutica. Buscar daño agudo de órgano. Si existe, hospitalizar y usar tratamiento intravenoso titulable dirigido a la lesión con monitorización; evitar un descenso indiscriminado.",
+          "confusable_with": "Hipertensión crónica sin urgencia",
+          "why_not": "La existencia de daño agudo determina la emergencia y la estrategia de descenso. Una cifra aislada no define el mismo tratamiento que una disección.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Un adulto con presión de 210/125 presenta disnea aguda y estertores. La exploración busca daño neurológico, renal y cardíaco para definir la urgencia del descenso de presión."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "disnea aguda y estertores"
+            },
+            {
+              "field": "mechanism",
+              "text": "La presión muy elevada puede superar autorregulación y causar daño agudo de órgano; la presencia de lesión, más que la cifra aislada, define la emergencia terapéutica."
+            },
+            {
+              "field": "initial_action",
+              "text": "Buscar daño agudo de órgano. Si existe, hospitalizar y usar tratamiento intravenoso titulable dirigido a la lesión con monitorización; evitar un descenso indiscriminado."
+            },
+            {
+              "field": "action_reason",
+              "text": "Cada órgano tiene objetivos y velocidad de reducción específicos."
+            },
+            {
+              "field": "limits",
+              "text": "Una cefalea aislada no demuestra encefalopatía. Las cifras de la tabla tienen errores de extracción; no usarlas sin verificar."
+            }
+          ]
+        },
+        "medium": {
+          "vignette": "Una persona tiene presión muy elevada, pero la evaluación no identifica daño agudo. Se considera ajuste oral y seguimiento según el contexto.",
+          "discriminator": "Elevación grave sin daño agudo",
+          "explanation": "El dato decisivo es Elevación grave sin daño agudo. No requiere la misma reducción inmediata. Ajustar tratamiento oral y seguimiento según contexto.",
+          "confusable_with": "Hipertensión crónica sin urgencia",
+          "why_not": "La existencia de daño agudo determina la emergencia y la estrategia de descenso. Una cifra aislada no define el mismo tratamiento que una disección.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Un adulto con presión de 210/125 presenta disnea aguda y estertores. La exploración busca daño neurológico, renal y cardíaco para definir la urgencia del descenso de presión."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "disnea aguda y estertores"
+            },
+            {
+              "field": "mechanism",
+              "text": "La presión muy elevada puede superar autorregulación y causar daño agudo de órgano; la presencia de lesión, más que la cifra aislada, define la emergencia terapéutica."
+            },
+            {
+              "field": "initial_action",
+              "text": "Buscar daño agudo de órgano. Si existe, hospitalizar y usar tratamiento intravenoso titulable dirigido a la lesión con monitorización; evitar un descenso indiscriminado."
+            },
+            {
+              "field": "action_reason",
+              "text": "Cada órgano tiene objetivos y velocidad de reducción específicos."
+            },
+            {
+              "field": "limits",
+              "text": "Una cefalea aislada no demuestra encefalopatía. Las cifras de la tabla tienen errores de extracción; no usarlas sin verificar."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Sobrecarga cardíaca aguda"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Edema pulmonar"
+            },
+            {
+              "field": "findings.1.mechanism",
+              "text": "Lesión de órgano"
+            },
+            {
+              "field": "findings.1.finding",
+              "text": "Síntomas neurológicos o deterioro renal"
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Elevación sin daño agudo"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Ajustar tratamiento oral y seguimiento según contexto."
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "No requiere la misma reducción inmediata."
+            },
+            {
+              "field": "modifiers.1.factor",
+              "text": "Disección aórtica"
+            },
+            {
+              "field": "modifiers.1.action",
+              "text": "Iniciar estrategia urgente de control de impulso y valoración quirúrgica."
+            },
+            {
+              "field": "modifiers.1.reason",
+              "text": "La tensión de pared exige manejo específico."
+            }
+          ]
+        },
+        "contrast": {
+          "vignette": "Una persona con elevación intensa de presión presenta un síndrome de disección aórtica. Se requiere control urgente del impulso y valoración quirúrgica.",
+          "discriminator": "Daño aórtico agudo asociado a hipertensión",
+          "explanation": "El dato decisivo es Daño aórtico agudo asociado a hipertensión. La tensión de pared exige manejo específico. Iniciar estrategia urgente de control de impulso y valoración quirúrgica.",
+          "confusable_with": "Hipertensión crónica sin urgencia",
+          "why_not": "La existencia de daño agudo determina la emergencia y la estrategia de descenso. Una cifra aislada no define el mismo tratamiento que una disección.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Un adulto con presión de 210/125 presenta disnea aguda y estertores. La exploración busca daño neurológico, renal y cardíaco para definir la urgencia del descenso de presión."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "disnea aguda y estertores"
+            },
+            {
+              "field": "mechanism",
+              "text": "La presión muy elevada puede superar autorregulación y causar daño agudo de órgano; la presencia de lesión, más que la cifra aislada, define la emergencia terapéutica."
+            },
+            {
+              "field": "initial_action",
+              "text": "Buscar daño agudo de órgano. Si existe, hospitalizar y usar tratamiento intravenoso titulable dirigido a la lesión con monitorización; evitar un descenso indiscriminado."
+            },
+            {
+              "field": "action_reason",
+              "text": "Cada órgano tiene objetivos y velocidad de reducción específicos."
+            },
+            {
+              "field": "limits",
+              "text": "Una cefalea aislada no demuestra encefalopatía. Las cifras de la tabla tienen errores de extracción; no usarlas sin verificar."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Sobrecarga cardíaca aguda"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Edema pulmonar"
+            },
+            {
+              "field": "findings.1.mechanism",
+              "text": "Lesión de órgano"
+            },
+            {
+              "field": "findings.1.finding",
+              "text": "Síntomas neurológicos o deterioro renal"
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Elevación sin daño agudo"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Ajustar tratamiento oral y seguimiento según contexto."
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "No requiere la misma reducción inmediata."
+            },
+            {
+              "field": "modifiers.1.factor",
+              "text": "Disección aórtica"
+            },
+            {
+              "field": "modifiers.1.action",
+              "text": "Iniciar estrategia urgente de control de impulso y valoración quirúrgica."
+            },
+            {
+              "field": "modifiers.1.reason",
+              "text": "La tensión de pared exige manejo específico."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "04.06-01",
+      "parent_topic_id": "04.06-01",
+      "block_id": "04.06",
+      "name": "Hipotensión ortostática",
+      "answer_kind": "diagnosis",
+      "variants": {
+        "easy": {
+          "vignette": "Un adulto mayor refiere mareo al levantarse de la cama y alivio al recostarse. Toma varios fármacos. Se mide presión y pulso después de reposo y durante la bipedestación.",
+          "discriminator": "mareo al levantarse",
+          "explanation": "El dato decisivo es mareo al levantarse. La adaptación circulatoria al ponerse de pie es insuficiente por volumen bajo, fármacos o disfunción autonómica; la caída de presión reduce perfusión cerebral transitoriamente. Medir presión y pulso en reposo y al minuto y tres minutos de pie. Revisar fármacos, hidratación y causas reversibles; iniciar medidas posturales y compresión según contexto.",
+          "confusable_with": "Síncope por estenosis aórtica",
+          "why_not": "El desencadenante postural y la medición durante bipedestación orientan al trastorno ortostático. El síncope de esfuerzo con soplo aórtico requiere otra evaluación.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Un adulto mayor refiere mareo al levantarse de la cama y alivio al recostarse. Toma varios fármacos. Se mide presión y pulso después de reposo y durante la bipedestación."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "mareo al levantarse"
+            },
+            {
+              "field": "mechanism",
+              "text": "La adaptación circulatoria al ponerse de pie es insuficiente por volumen bajo, fármacos o disfunción autonómica; la caída de presión reduce perfusión cerebral transitoriamente."
+            },
+            {
+              "field": "initial_action",
+              "text": "Medir presión y pulso en reposo y al minuto y tres minutos de pie. Revisar fármacos, hidratación y causas reversibles; iniciar medidas posturales y compresión según contexto."
+            },
+            {
+              "field": "action_reason",
+              "text": "Documenta relación postural y atiende mecanismos corregibles."
+            },
+            {
+              "field": "limits",
+              "text": "No atribuir todo síncope a postura; evaluar causas cardíacas si hay datos de riesgo."
+            }
+          ]
+        },
+        "medium": {
+          "vignette": "Un adulto mayor mantiene mareo al ponerse de pie pese a las medidas iniciales. Se valora tratamiento farmacológico individualizado.",
+          "discriminator": "Síntomas posturales persistentes",
+          "explanation": "El dato decisivo es Síntomas posturales persistentes. Puede existir disfunción autonómica sostenida. Valorar tratamiento farmacológico individualizado.",
+          "confusable_with": "Síncope por estenosis aórtica",
+          "why_not": "El desencadenante postural y la medición durante bipedestación orientan al trastorno ortostático. El síncope de esfuerzo con soplo aórtico requiere otra evaluación.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Un adulto mayor refiere mareo al levantarse de la cama y alivio al recostarse. Toma varios fármacos. Se mide presión y pulso después de reposo y durante la bipedestación."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "mareo al levantarse"
+            },
+            {
+              "field": "mechanism",
+              "text": "La adaptación circulatoria al ponerse de pie es insuficiente por volumen bajo, fármacos o disfunción autonómica; la caída de presión reduce perfusión cerebral transitoriamente."
+            },
+            {
+              "field": "initial_action",
+              "text": "Medir presión y pulso en reposo y al minuto y tres minutos de pie. Revisar fármacos, hidratación y causas reversibles; iniciar medidas posturales y compresión según contexto."
+            },
+            {
+              "field": "action_reason",
+              "text": "Documenta relación postural y atiende mecanismos corregibles."
+            },
+            {
+              "field": "limits",
+              "text": "No atribuir todo síncope a postura; evaluar causas cardíacas si hay datos de riesgo."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Acumulación venosa al ponerse de pie"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Descenso de presión"
+            },
+            {
+              "field": "findings.1.mechanism",
+              "text": "Perfusión cerebral reducida"
+            },
+            {
+              "field": "findings.1.finding",
+              "text": "Mareo o síncope"
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Persistencia pese a medidas iniciales"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Valorar tratamiento farmacológico individualizado."
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "Puede existir disfunción autonómica sostenida."
+            },
+            {
+              "field": "modifiers.1.factor",
+              "text": "Insuficiencia cardíaca o renal"
+            },
+            {
+              "field": "modifiers.1.action",
+              "text": "Individualizar aporte de sal y líquidos."
+            },
+            {
+              "field": "modifiers.1.reason",
+              "text": "La expansión puede agravar sobrecarga."
+            }
+          ]
+        },
+        "contrast": {
+          "vignette": "Una persona con insuficiencia cardíaca presenta caída de presión y mareo al levantarse. Antes de indicar sal y líquidos se revisa su tolerancia a volumen.",
+          "discriminator": "Caída postural con límite al aporte de volumen",
+          "explanation": "El dato decisivo es Caída postural con límite al aporte de volumen. La expansión puede agravar sobrecarga. Individualizar aporte de sal y líquidos.",
+          "confusable_with": "Síncope por estenosis aórtica",
+          "why_not": "El desencadenante postural y la medición durante bipedestación orientan al trastorno ortostático. El síncope de esfuerzo con soplo aórtico requiere otra evaluación.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Un adulto mayor refiere mareo al levantarse de la cama y alivio al recostarse. Toma varios fármacos. Se mide presión y pulso después de reposo y durante la bipedestación."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "mareo al levantarse"
+            },
+            {
+              "field": "mechanism",
+              "text": "La adaptación circulatoria al ponerse de pie es insuficiente por volumen bajo, fármacos o disfunción autonómica; la caída de presión reduce perfusión cerebral transitoriamente."
+            },
+            {
+              "field": "initial_action",
+              "text": "Medir presión y pulso en reposo y al minuto y tres minutos de pie. Revisar fármacos, hidratación y causas reversibles; iniciar medidas posturales y compresión según contexto."
+            },
+            {
+              "field": "action_reason",
+              "text": "Documenta relación postural y atiende mecanismos corregibles."
+            },
+            {
+              "field": "limits",
+              "text": "No atribuir todo síncope a postura; evaluar causas cardíacas si hay datos de riesgo."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Acumulación venosa al ponerse de pie"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Descenso de presión"
+            },
+            {
+              "field": "findings.1.mechanism",
+              "text": "Perfusión cerebral reducida"
+            },
+            {
+              "field": "findings.1.finding",
+              "text": "Mareo o síncope"
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Persistencia pese a medidas iniciales"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Valorar tratamiento farmacológico individualizado."
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "Puede existir disfunción autonómica sostenida."
+            },
+            {
+              "field": "modifiers.1.factor",
+              "text": "Insuficiencia cardíaca o renal"
+            },
+            {
+              "field": "modifiers.1.action",
+              "text": "Individualizar aporte de sal y líquidos."
+            },
+            {
+              "field": "modifiers.1.reason",
+              "text": "La expansión puede agravar sobrecarga."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "04.07-01",
+      "parent_topic_id": "04.07-01",
+      "block_id": "04.07",
+      "name": "Evaluar estenosis aórtica e indicar intervención según gravedad",
+      "answer_kind": "decision",
+      "variants": {
+        "easy": {
+          "vignette": "Un adulto mayor tiene síncope de esfuerzo y angina. Se ausculta soplo sistólico de eyección en foco aórtico que irradia al cuello; el ascenso del pulso carotídeo es lento. ¿Qué acción o clasificación corresponde?",
+          "discriminator": "irradia al cuello",
+          "explanation": "El dato decisivo es irradia al cuello. El estrechamiento aórtico obstruye la eyección ventricular y aumenta la poscarga; la limitación de gasto durante ejercicio y la demanda miocárdica explican síncope y angina. Solicitar ecocardiograma y valoración por cardiología. Si la lesión es severa y sintomática, valorar intervención valvular de forma prioritaria.",
+          "confusable_with": "Insuficiencia aórtica",
+          "why_not": "El soplo sistólico de eyección y el pulso tardío indican obstrucción. Un soplo diastólico con pulso amplio y colapsante sugiere regurgitación aórtica.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Un adulto mayor tiene síncope de esfuerzo y angina. Se ausculta soplo sistólico de eyección en foco aórtico que irradia al cuello; el ascenso del pulso carotídeo es lento."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "irradia al cuello"
+            },
+            {
+              "field": "mechanism",
+              "text": "El estrechamiento aórtico obstruye la eyección ventricular y aumenta la poscarga; la limitación de gasto durante ejercicio y la demanda miocárdica explican síncope y angina."
+            },
+            {
+              "field": "initial_action",
+              "text": "Solicitar ecocardiograma y valoración por cardiología. Si la lesión es severa y sintomática, valorar intervención valvular de forma prioritaria."
+            },
+            {
+              "field": "action_reason",
+              "text": "Los síntomas sugieren repercusión y peor pronóstico sin corrección."
+            },
+            {
+              "field": "limits",
+              "text": "La auscultación no cuantifica severidad. Las restricciones absolutas a vasodilatadores del resumen no sustituyen evaluación individual."
+            }
+          ]
+        },
+        "medium": {
+          "vignette": "En una persona sin síntomas se identifica soplo sistólico de eyección irradiado al cuello y pulso carotídeo tardío. Se establece vigilancia por gravedad y función ventricular. ¿Qué acción o clasificación corresponde?",
+          "discriminator": "Obstrucción valvular con ausencia de síntomas",
+          "explanation": "El dato decisivo es Obstrucción valvular con ausencia de síntomas. La ausencia de síntomas no elimina riesgo de progresión. Establecer vigilancia según gravedad y función ventricular.",
+          "confusable_with": "Insuficiencia aórtica",
+          "why_not": "El soplo sistólico de eyección y el pulso tardío indican obstrucción. Un soplo diastólico con pulso amplio y colapsante sugiere regurgitación aórtica.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Un adulto mayor tiene síncope de esfuerzo y angina. Se ausculta soplo sistólico de eyección en foco aórtico que irradia al cuello; el ascenso del pulso carotídeo es lento."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "irradia al cuello"
+            },
+            {
+              "field": "mechanism",
+              "text": "El estrechamiento aórtico obstruye la eyección ventricular y aumenta la poscarga; la limitación de gasto durante ejercicio y la demanda miocárdica explican síncope y angina."
+            },
+            {
+              "field": "initial_action",
+              "text": "Solicitar ecocardiograma y valoración por cardiología. Si la lesión es severa y sintomática, valorar intervención valvular de forma prioritaria."
+            },
+            {
+              "field": "action_reason",
+              "text": "Los síntomas sugieren repercusión y peor pronóstico sin corrección."
+            },
+            {
+              "field": "limits",
+              "text": "La auscultación no cuantifica severidad. Las restricciones absolutas a vasodilatadores del resumen no sustituyen evaluación individual."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Eyección obstruida"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Soplo sistólico e irradiación cervical"
+            },
+            {
+              "field": "findings.1.mechanism",
+              "text": "Ascenso de flujo lento"
+            },
+            {
+              "field": "findings.1.finding",
+              "text": "Pulso tardío"
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Paciente asintomático"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Establecer vigilancia según gravedad y función ventricular."
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "La ausencia de síntomas no elimina riesgo de progresión."
+            }
+          ]
+        },
+        "contrast": {
+          "vignette": "El ecocardiograma demuestra una obstrucción aórtica severa. El paciente desarrolla síncope y angina de esfuerzo y necesita definir prioridad de intervención valvular. ¿Qué acción o clasificación corresponde?",
+          "discriminator": "Lesión severa confirmada con síntomas de esfuerzo",
+          "explanation": "La lesión severa sintomática requiere valoración prioritaria de intervención. La intensidad del soplo por sí sola no cuantifica severidad; se integran ecocardiograma y función ventricular.",
+          "confusable_with": "Insuficiencia aórtica",
+          "why_not": "El soplo sistólico de eyección y el pulso tardío indican obstrucción. Un soplo diastólico con pulso amplio y colapsante sugiere regurgitación aórtica.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Un adulto mayor tiene síncope de esfuerzo y angina. Se ausculta soplo sistólico de eyección en foco aórtico que irradia al cuello; el ascenso del pulso carotídeo es lento."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "irradia al cuello"
+            },
+            {
+              "field": "mechanism",
+              "text": "El estrechamiento aórtico obstruye la eyección ventricular y aumenta la poscarga; la limitación de gasto durante ejercicio y la demanda miocárdica explican síncope y angina."
+            },
+            {
+              "field": "initial_action",
+              "text": "Solicitar ecocardiograma y valoración por cardiología. Si la lesión es severa y sintomática, valorar intervención valvular de forma prioritaria."
+            },
+            {
+              "field": "action_reason",
+              "text": "Los síntomas sugieren repercusión y peor pronóstico sin corrección."
+            },
+            {
+              "field": "limits",
+              "text": "La auscultación no cuantifica severidad. Las restricciones absolutas a vasodilatadores del resumen no sustituyen evaluación individual."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Eyección obstruida"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Soplo sistólico e irradiación cervical"
+            },
+            {
+              "field": "findings.1.mechanism",
+              "text": "Ascenso de flujo lento"
+            },
+            {
+              "field": "findings.1.finding",
+              "text": "Pulso tardío"
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Paciente asintomático"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Establecer vigilancia según gravedad y función ventricular."
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "La ausencia de síntomas no elimina riesgo de progresión."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "04.07-02",
+      "parent_topic_id": "04.07-02",
+      "block_id": "04.07",
+      "name": "Clasificar soplos derechos y solicitar Doppler",
+      "answer_kind": "decision",
+      "variants": {
+        "easy": {
+          "vignette": "Un adulto con edema y ascitis tiene un soplo holosistólico paraesternal inferior que aumenta con la inspiración. Se busca una lesión valvular derecha mediante ecocardiograma Doppler. ¿Qué acción o clasificación corresponde a este contexto?",
+          "discriminator": "aumenta con la inspiración",
+          "explanation": "El dato decisivo es aumenta con la inspiración. La regurgitación de una válvula derecha eleva presión venosa sistémica; el mayor retorno venoso durante inspiración puede aumentar la intensidad del soplo correspondiente. Reconocer probable insuficiencia tricuspídea y solicitar ecocardiograma Doppler para definir mecanismo y gravedad. Valorar diuréticos por congestión y referencia según repercusión.",
+          "confusable_with": "Insuficiencia tricuspídea en todos los soplos derechos",
+          "why_not": "El momento del soplo es decisivo. El holosistólico inspiratorio orienta a regurgitación tricuspídea; el diastólico con chasquido orienta a obstrucción, y el continuo amplía el diferencial.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Un adulto con edema y ascitis tiene un soplo holosistólico paraesternal inferior que aumenta con la inspiración. Se busca una lesión valvular derecha mediante ecocardiograma Doppler."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "aumenta con la inspiración"
+            },
+            {
+              "field": "mechanism",
+              "text": "La regurgitación de una válvula derecha eleva presión venosa sistémica; el mayor retorno venoso durante inspiración puede aumentar la intensidad del soplo correspondiente."
+            },
+            {
+              "field": "initial_action",
+              "text": "Reconocer probable insuficiencia tricuspídea y solicitar ecocardiograma Doppler para definir mecanismo y gravedad. Valorar diuréticos por congestión y referencia según repercusión."
+            },
+            {
+              "field": "action_reason",
+              "text": "El soplo orienta, pero la imagen define lesión y necesidad de intervención."
+            },
+            {
+              "field": "limits",
+              "text": "No asumir antecedente reumático o infeccioso obligatorio en regurgitación tricuspídea; la página simplifica su etiología."
+            },
+            {
+              "field": "source_corrections.0.reason",
+              "text": "El soplo holosistólico que aumenta con inspiración y la congestión sistémica del caso orientan a insuficiencia tricuspídea en página 125; se nombra explícitamente para resolver el caso."
+            }
+          ]
+        },
+        "medium": {
+          "vignette": "Una persona con edema y ascitis tiene un soplo diastólico derecho con chasquido que aumenta al inspirar. Se necesita localizar y clasificar la lesión. ¿Qué acción o clasificación corresponde a este contexto?",
+          "discriminator": "Soplo diastólico derecho con chasquido inspiratorio",
+          "explanation": "El dato decisivo es Soplo diastólico derecho con chasquido inspiratorio. La fase del ciclo cambia el mecanismo. Valorar obstrucción tricuspídea.",
+          "confusable_with": "Insuficiencia tricuspídea en todos los soplos derechos",
+          "why_not": "El momento del soplo es decisivo. El holosistólico inspiratorio orienta a regurgitación tricuspídea; el diastólico con chasquido orienta a obstrucción, y el continuo amplía el diferencial.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Un adulto con edema y ascitis tiene un soplo holosistólico paraesternal inferior que aumenta con la inspiración. Se busca una lesión valvular derecha mediante ecocardiograma Doppler."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "aumenta con la inspiración"
+            },
+            {
+              "field": "mechanism",
+              "text": "La regurgitación de una válvula derecha eleva presión venosa sistémica; el mayor retorno venoso durante inspiración puede aumentar la intensidad del soplo correspondiente."
+            },
+            {
+              "field": "initial_action",
+              "text": "Reconocer probable insuficiencia tricuspídea y solicitar ecocardiograma Doppler para definir mecanismo y gravedad. Valorar diuréticos por congestión y referencia según repercusión."
+            },
+            {
+              "field": "action_reason",
+              "text": "El soplo orienta, pero la imagen define lesión y necesidad de intervención."
+            },
+            {
+              "field": "limits",
+              "text": "No asumir antecedente reumático o infeccioso obligatorio en regurgitación tricuspídea; la página simplifica su etiología."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Congestión venosa sistémica"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Edema y ascitis"
+            },
+            {
+              "field": "findings.1.mechanism",
+              "text": "Flujo regurgitante derecho"
+            },
+            {
+              "field": "findings.1.finding",
+              "text": "Soplo que aumenta al inspirar"
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Soplo diastólico con chasquido derecho"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Valorar obstrucción tricuspídea."
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "La fase del ciclo cambia el mecanismo."
+            },
+            {
+              "field": "modifiers.1.factor",
+              "text": "Soplo continuo"
+            },
+            {
+              "field": "modifiers.1.action",
+              "text": "Ampliar diferencial a una comunicación persistente."
+            },
+            {
+              "field": "modifiers.1.reason",
+              "text": "No corresponde a toda lesión valvular."
+            },
+            {
+              "field": "source_corrections.0.reason",
+              "text": "El soplo holosistólico que aumenta con inspiración y la congestión sistémica del caso orientan a insuficiencia tricuspídea en página 125; se nombra explícitamente para resolver el caso."
+            }
+          ]
+        },
+        "contrast": {
+          "vignette": "Durante el estudio de un soplo que inicialmente se consideró valvular se detecta que es continuo. Se amplía la evaluación hacia una comunicación persistente. ¿Qué acción o clasificación corresponde a este contexto?",
+          "discriminator": "Soplo continuo",
+          "explanation": "El dato decisivo es Soplo continuo. No corresponde a toda lesión valvular. Ampliar diferencial a una comunicación persistente.",
+          "confusable_with": "Insuficiencia tricuspídea en todos los soplos derechos",
+          "why_not": "El momento del soplo es decisivo. El holosistólico inspiratorio orienta a regurgitación tricuspídea; el diastólico con chasquido orienta a obstrucción, y el continuo amplía el diferencial.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Un adulto con edema y ascitis tiene un soplo holosistólico paraesternal inferior que aumenta con la inspiración. Se busca una lesión valvular derecha mediante ecocardiograma Doppler."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "aumenta con la inspiración"
+            },
+            {
+              "field": "mechanism",
+              "text": "La regurgitación de una válvula derecha eleva presión venosa sistémica; el mayor retorno venoso durante inspiración puede aumentar la intensidad del soplo correspondiente."
+            },
+            {
+              "field": "initial_action",
+              "text": "Reconocer probable insuficiencia tricuspídea y solicitar ecocardiograma Doppler para definir mecanismo y gravedad. Valorar diuréticos por congestión y referencia según repercusión."
+            },
+            {
+              "field": "action_reason",
+              "text": "El soplo orienta, pero la imagen define lesión y necesidad de intervención."
+            },
+            {
+              "field": "limits",
+              "text": "No asumir antecedente reumático o infeccioso obligatorio en regurgitación tricuspídea; la página simplifica su etiología."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Congestión venosa sistémica"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Edema y ascitis"
+            },
+            {
+              "field": "findings.1.mechanism",
+              "text": "Flujo regurgitante derecho"
+            },
+            {
+              "field": "findings.1.finding",
+              "text": "Soplo que aumenta al inspirar"
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Soplo diastólico con chasquido derecho"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Valorar obstrucción tricuspídea."
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "La fase del ciclo cambia el mecanismo."
+            },
+            {
+              "field": "modifiers.1.factor",
+              "text": "Soplo continuo"
+            },
+            {
+              "field": "modifiers.1.action",
+              "text": "Ampliar diferencial a una comunicación persistente."
+            },
+            {
+              "field": "modifiers.1.reason",
+              "text": "No corresponde a toda lesión valvular."
+            },
+            {
+              "field": "source_corrections.0.reason",
+              "text": "El soplo holosistólico que aumenta con inspiración y la congestión sistémica del caso orientan a insuficiencia tricuspídea en página 125; se nombra explícitamente para resolver el caso."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "04.08-01",
+      "parent_topic_id": "04.08-01",
+      "block_id": "04.08",
+      "name": "Estenosis mitral",
+      "answer_kind": "diagnosis",
+      "variants": {
+        "easy": {
+          "vignette": "Una adulta con antecedente de fiebre reumática tiene disnea de esfuerzo y hemoptisis. Se ausculta chasquido de apertura seguido de soplo diastólico apical y presenta palpitaciones irregulares.",
+          "discriminator": "chasquido de apertura",
+          "explanation": "El dato decisivo es chasquido de apertura. La válvula mitral estrecha dificulta el llenado ventricular y eleva presión auricular izquierda; la congestión pulmonar y la dilatación auricular favorecen disnea y fibrilación auricular. Realizar ecocardiograma para valorar área, anatomía y presión pulmonar. Tratar congestión y evaluar el ritmo; referir para intervención si la repercusión lo indica.",
+          "confusable_with": "Insuficiencia mitral",
+          "why_not": "El chasquido y el soplo diastólico apical indican obstrucción de entrada. La regurgitación mitral suele producir un soplo sistólico apical.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Una adulta con antecedente de fiebre reumática tiene disnea de esfuerzo y hemoptisis. Se ausculta chasquido de apertura seguido de soplo diastólico apical y presenta palpitaciones irregulares."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "chasquido de apertura"
+            },
+            {
+              "field": "mechanism",
+              "text": "La válvula mitral estrecha dificulta el llenado ventricular y eleva presión auricular izquierda; la congestión pulmonar y la dilatación auricular favorecen disnea y fibrilación auricular."
+            },
+            {
+              "field": "initial_action",
+              "text": "Realizar ecocardiograma para valorar área, anatomía y presión pulmonar. Tratar congestión y evaluar el ritmo; referir para intervención si la repercusión lo indica."
+            },
+            {
+              "field": "action_reason",
+              "text": "La anatomía y gravedad definen vigilancia, valvuloplastia o cirugía."
+            },
+            {
+              "field": "limits",
+              "text": "Los umbrales de área de la página son de una clasificación antigua; integrar gradientes, síntomas y guía vigente."
+            }
+          ]
+        },
+        "medium": {
+          "vignette": "Una persona con chasquido de apertura y soplo diastólico apical desarrolla un ritmo auricular irregular. Se evalúan frecuencia y prevención embólica.",
+          "discriminator": "Obstrucción mitral con fibrilación auricular",
+          "explanation": "El dato decisivo es Obstrucción mitral con fibrilación auricular. Aumenta el riesgo embólico. Valorar control de frecuencia y anticoagulación apropiada para la valvulopatía.",
+          "confusable_with": "Insuficiencia mitral",
+          "why_not": "El chasquido y el soplo diastólico apical indican obstrucción de entrada. La regurgitación mitral suele producir un soplo sistólico apical.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Una adulta con antecedente de fiebre reumática tiene disnea de esfuerzo y hemoptisis. Se ausculta chasquido de apertura seguido de soplo diastólico apical y presenta palpitaciones irregulares."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "chasquido de apertura"
+            },
+            {
+              "field": "mechanism",
+              "text": "La válvula mitral estrecha dificulta el llenado ventricular y eleva presión auricular izquierda; la congestión pulmonar y la dilatación auricular favorecen disnea y fibrilación auricular."
+            },
+            {
+              "field": "initial_action",
+              "text": "Realizar ecocardiograma para valorar área, anatomía y presión pulmonar. Tratar congestión y evaluar el ritmo; referir para intervención si la repercusión lo indica."
+            },
+            {
+              "field": "action_reason",
+              "text": "La anatomía y gravedad definen vigilancia, valvuloplastia o cirugía."
+            },
+            {
+              "field": "limits",
+              "text": "Los umbrales de área de la página son de una clasificación antigua; integrar gradientes, síntomas y guía vigente."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Presión auricular izquierda elevada"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Disnea y hemoptisis"
+            },
+            {
+              "field": "findings.1.mechanism",
+              "text": "Dilatación auricular"
+            },
+            {
+              "field": "findings.1.finding",
+              "text": "Fibrilación auricular"
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Fibrilación auricular"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Valorar control de frecuencia y anticoagulación apropiada para la valvulopatía."
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "Aumenta el riesgo embólico."
+            },
+            {
+              "field": "modifiers.1.factor",
+              "text": "Anatomía desfavorable para balón"
+            },
+            {
+              "field": "modifiers.1.action",
+              "text": "Valorar cirugía."
+            },
+            {
+              "field": "modifiers.1.reason",
+              "text": "No toda obstrucción admite intervención percutánea."
+            }
+          ]
+        },
+        "contrast": {
+          "vignette": "Un paciente con disnea y lesión mitral obstructiva tiene anatomía desfavorable para tratamiento con balón. Se solicita evaluación quirúrgica.",
+          "discriminator": "Anatomía no favorable para balón",
+          "explanation": "El dato decisivo es Anatomía no favorable para balón. No toda obstrucción admite intervención percutánea. Valorar cirugía.",
+          "confusable_with": "Insuficiencia mitral",
+          "why_not": "El chasquido y el soplo diastólico apical indican obstrucción de entrada. La regurgitación mitral suele producir un soplo sistólico apical.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Una adulta con antecedente de fiebre reumática tiene disnea de esfuerzo y hemoptisis. Se ausculta chasquido de apertura seguido de soplo diastólico apical y presenta palpitaciones irregulares."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "chasquido de apertura"
+            },
+            {
+              "field": "mechanism",
+              "text": "La válvula mitral estrecha dificulta el llenado ventricular y eleva presión auricular izquierda; la congestión pulmonar y la dilatación auricular favorecen disnea y fibrilación auricular."
+            },
+            {
+              "field": "initial_action",
+              "text": "Realizar ecocardiograma para valorar área, anatomía y presión pulmonar. Tratar congestión y evaluar el ritmo; referir para intervención si la repercusión lo indica."
+            },
+            {
+              "field": "action_reason",
+              "text": "La anatomía y gravedad definen vigilancia, valvuloplastia o cirugía."
+            },
+            {
+              "field": "limits",
+              "text": "Los umbrales de área de la página son de una clasificación antigua; integrar gradientes, síntomas y guía vigente."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Presión auricular izquierda elevada"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Disnea y hemoptisis"
+            },
+            {
+              "field": "findings.1.mechanism",
+              "text": "Dilatación auricular"
+            },
+            {
+              "field": "findings.1.finding",
+              "text": "Fibrilación auricular"
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Fibrilación auricular"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Valorar control de frecuencia y anticoagulación apropiada para la valvulopatía."
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "Aumenta el riesgo embólico."
+            },
+            {
+              "field": "modifiers.1.factor",
+              "text": "Anatomía desfavorable para balón"
+            },
+            {
+              "field": "modifiers.1.action",
+              "text": "Valorar cirugía."
+            },
+            {
+              "field": "modifiers.1.reason",
+              "text": "No toda obstrucción admite intervención percutánea."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "04.08-02",
+      "parent_topic_id": "04.08-02",
+      "block_id": "04.08",
+      "name": "Insuficiencia aórtica",
+      "answer_kind": "diagnosis",
+      "variants": {
+        "easy": {
+          "vignette": "Un adulto consulta por disnea progresiva. Tiene pulso amplio con colapso rápido y soplo diastólico aórtico. El ecocardiograma muestra dilatación del ventrículo izquierdo y flujo retrógrado.",
+          "discriminator": "pulso amplio con colapso rápido",
+          "explanation": "El dato decisivo es pulso amplio con colapso rápido. El cierre aórtico incompetente permite retorno diastólico al ventrículo; la sobrecarga de volumen aumenta volumen sistólico y remodela la cavidad en formas crónicas. Valorar ecocardiográficamente gravedad y función ventricular, y referir a cardiología para definir tratamiento e intervención según síntomas y dimensiones.",
+          "confusable_with": "Estenosis aórtica",
+          "why_not": "El flujo retrógrado diastólico y el pulso amplio indican regurgitación. La obstrucción aórtica produce soplo de eyección y pulso tardío.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Un adulto consulta por disnea progresiva. Tiene pulso amplio con colapso rápido y soplo diastólico aórtico. El ecocardiograma muestra dilatación del ventrículo izquierdo y flujo retrógrado."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "pulso amplio con colapso rápido"
+            },
+            {
+              "field": "mechanism",
+              "text": "El cierre aórtico incompetente permite retorno diastólico al ventrículo; la sobrecarga de volumen aumenta volumen sistólico y remodela la cavidad en formas crónicas."
+            },
+            {
+              "field": "initial_action",
+              "text": "Valorar ecocardiográficamente gravedad y función ventricular, y referir a cardiología para definir tratamiento e intervención según síntomas y dimensiones."
+            },
+            {
+              "field": "action_reason",
+              "text": "La repercusión ventricular condiciona oportunidad de corrección."
+            },
+            {
+              "field": "limits",
+              "text": "Los signos periféricos son propios sobre todo de formas crónicas; pueden faltar en la insuficiencia aguda."
+            }
+          ]
+        },
+        "medium": {
+          "vignette": "Una persona presenta inicio agudo de soplo diastólico aórtico con edema y choque. Se buscan endocarditis o disección y se solicita cirugía urgente.",
+          "discriminator": "Regurgitación aórtica aguda con choque",
+          "explanation": "El dato decisivo es Regurgitación aórtica aguda con choque. No hay adaptación ventricular suficiente. Solicitar valoración quirúrgica urgente y buscar endocarditis o disección.",
+          "confusable_with": "Estenosis aórtica",
+          "why_not": "El flujo retrógrado diastólico y el pulso amplio indican regurgitación. La obstrucción aórtica produce soplo de eyección y pulso tardío.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Un adulto consulta por disnea progresiva. Tiene pulso amplio con colapso rápido y soplo diastólico aórtico. El ecocardiograma muestra dilatación del ventrículo izquierdo y flujo retrógrado."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "pulso amplio con colapso rápido"
+            },
+            {
+              "field": "mechanism",
+              "text": "El cierre aórtico incompetente permite retorno diastólico al ventrículo; la sobrecarga de volumen aumenta volumen sistólico y remodela la cavidad en formas crónicas."
+            },
+            {
+              "field": "initial_action",
+              "text": "Valorar ecocardiográficamente gravedad y función ventricular, y referir a cardiología para definir tratamiento e intervención según síntomas y dimensiones."
+            },
+            {
+              "field": "action_reason",
+              "text": "La repercusión ventricular condiciona oportunidad de corrección."
+            },
+            {
+              "field": "limits",
+              "text": "Los signos periféricos son propios sobre todo de formas crónicas; pueden faltar en la insuficiencia aguda."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Regurgitación diastólica"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Soplo diastólico"
+            },
+            {
+              "field": "findings.1.mechanism",
+              "text": "Volumen sistólico alto y fuga diastólica"
+            },
+            {
+              "field": "findings.1.finding",
+              "text": "Pulso amplio y colapsante"
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Inicio agudo con edema o choque"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Solicitar valoración quirúrgica urgente y buscar endocarditis o disección."
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "No hay adaptación ventricular suficiente."
+            }
+          ]
+        },
+        "contrast": {
+          "vignette": "En una persona con disección aórtica aparece flujo diastólico retrógrado hacia el ventrículo izquierdo y choque. Se organiza evaluación quirúrgica urgente.",
+          "discriminator": "Regurgitación aórtica aguda asociada a disección",
+          "explanation": "El inicio agudo no permite adaptación ventricular y puede causar choque. Se solicita cirugía urgente; los signos periféricos crónicos pueden faltar.",
+          "confusable_with": "Estenosis aórtica",
+          "why_not": "El flujo retrógrado diastólico y el pulso amplio indican regurgitación. La obstrucción aórtica produce soplo de eyección y pulso tardío.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Un adulto consulta por disnea progresiva. Tiene pulso amplio con colapso rápido y soplo diastólico aórtico. El ecocardiograma muestra dilatación del ventrículo izquierdo y flujo retrógrado."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "pulso amplio con colapso rápido"
+            },
+            {
+              "field": "mechanism",
+              "text": "El cierre aórtico incompetente permite retorno diastólico al ventrículo; la sobrecarga de volumen aumenta volumen sistólico y remodela la cavidad en formas crónicas."
+            },
+            {
+              "field": "initial_action",
+              "text": "Valorar ecocardiográficamente gravedad y función ventricular, y referir a cardiología para definir tratamiento e intervención según síntomas y dimensiones."
+            },
+            {
+              "field": "action_reason",
+              "text": "La repercusión ventricular condiciona oportunidad de corrección."
+            },
+            {
+              "field": "limits",
+              "text": "Los signos periféricos son propios sobre todo de formas crónicas; pueden faltar en la insuficiencia aguda."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Regurgitación diastólica"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Soplo diastólico"
+            },
+            {
+              "field": "findings.1.mechanism",
+              "text": "Volumen sistólico alto y fuga diastólica"
+            },
+            {
+              "field": "findings.1.finding",
+              "text": "Pulso amplio y colapsante"
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Inicio agudo con edema o choque"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Solicitar valoración quirúrgica urgente y buscar endocarditis o disección."
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "No hay adaptación ventricular suficiente."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "04.09-01",
+      "parent_topic_id": "04.09-01",
+      "block_id": "04.09",
+      "name": "Insuficiencia mitral",
+      "answer_kind": "diagnosis",
+      "variants": {
+        "easy": {
+          "vignette": "Un adulto presenta disnea súbita después de un infarto inferior. Aparece un soplo sistólico apical irradiado a la axila y edema pulmonar; el equipo sospecha una complicación mecánica.",
+          "discriminator": "irradiado a la axila",
+          "explanation": "El dato decisivo es irradiado a la axila. La pérdida de cierre mitral permite flujo sistólico a la aurícula izquierda; una rotura papilar aguda eleva rápidamente la presión pulmonar sin adaptación previa. Solicitar ecocardiografía urgente y activar valoración cardiológica y quirúrgica. Tratar edema y perfusión mientras se define una posible rotura de músculo papilar.",
+          "confusable_with": "Estenosis mitral",
+          "why_not": "El soplo sistólico apical irradiado a axila indica regurgitación. El contexto posterior a infarto puede representar lesión mecánica aguda y requiere atención urgente.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Un adulto presenta disnea súbita después de un infarto inferior. Aparece un soplo sistólico apical irradiado a la axila y edema pulmonar; el equipo sospecha una complicación mecánica."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "irradiado a la axila"
+            },
+            {
+              "field": "mechanism",
+              "text": "La pérdida de cierre mitral permite flujo sistólico a la aurícula izquierda; una rotura papilar aguda eleva rápidamente la presión pulmonar sin adaptación previa."
+            },
+            {
+              "field": "initial_action",
+              "text": "Solicitar ecocardiografía urgente y activar valoración cardiológica y quirúrgica. Tratar edema y perfusión mientras se define una posible rotura de músculo papilar."
+            },
+            {
+              "field": "action_reason",
+              "text": "La lesión aguda puede requerir reparación inmediata y revascularización."
+            },
+            {
+              "field": "limits",
+              "text": "La ausencia de soplo intenso no descarta regurgitación aguda grave. No excluir cirugía solo por una FEVI baja."
+            }
+          ]
+        },
+        "medium": {
+          "vignette": "Una persona con soplo apical irradiado a axila mantiene un curso crónico estable. Se valoran síntomas, función ventricular y posibilidad de reparación.",
+          "discriminator": "Curso crónico de regurgitación apical",
+          "explanation": "El dato decisivo es Curso crónico de regurgitación apical. La adaptación ventricular permite evaluación programada. Valorar síntomas, función ventricular y posibilidad de reparación.",
+          "confusable_with": "Estenosis mitral",
+          "why_not": "El soplo sistólico apical irradiado a axila indica regurgitación. El contexto posterior a infarto puede representar lesión mecánica aguda y requiere atención urgente.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Un adulto presenta disnea súbita después de un infarto inferior. Aparece un soplo sistólico apical irradiado a la axila y edema pulmonar; el equipo sospecha una complicación mecánica."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "irradiado a la axila"
+            },
+            {
+              "field": "mechanism",
+              "text": "La pérdida de cierre mitral permite flujo sistólico a la aurícula izquierda; una rotura papilar aguda eleva rápidamente la presión pulmonar sin adaptación previa."
+            },
+            {
+              "field": "initial_action",
+              "text": "Solicitar ecocardiografía urgente y activar valoración cardiológica y quirúrgica. Tratar edema y perfusión mientras se define una posible rotura de músculo papilar."
+            },
+            {
+              "field": "action_reason",
+              "text": "La lesión aguda puede requerir reparación inmediata y revascularización."
+            },
+            {
+              "field": "limits",
+              "text": "La ausencia de soplo intenso no descarta regurgitación aguda grave. No excluir cirugía solo por una FEVI baja."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Regurgitación sistólica"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Soplo apical"
+            },
+            {
+              "field": "findings.1.mechanism",
+              "text": "Aumento agudo de presión auricular"
+            },
+            {
+              "field": "findings.1.finding",
+              "text": "Edema pulmonar"
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Curso crónico estable"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Valorar síntomas, función ventricular y posibilidad de reparación."
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "La adaptación ventricular permite evaluación programada."
+            }
+          ]
+        },
+        "contrast": {
+          "vignette": "Después de un infarto aparece edema pulmonar brusco, pero no se oye un soplo intenso. La ecocardiografía busca rotura de músculo papilar y flujo sistólico hacia la aurícula izquierda.",
+          "discriminator": "Regurgitación aguda grave sin soplo intenso",
+          "explanation": "La ausencia de soplo intenso no excluye insuficiencia mitral aguda grave. Se solicita ecocardiografía urgente y valoración cardiológica y quirúrgica mientras se trata edema y perfusión.",
+          "confusable_with": "Estenosis mitral",
+          "why_not": "El soplo sistólico apical irradiado a axila indica regurgitación. El contexto posterior a infarto puede representar lesión mecánica aguda y requiere atención urgente.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Un adulto presenta disnea súbita después de un infarto inferior. Aparece un soplo sistólico apical irradiado a la axila y edema pulmonar; el equipo sospecha una complicación mecánica."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "irradiado a la axila"
+            },
+            {
+              "field": "mechanism",
+              "text": "La pérdida de cierre mitral permite flujo sistólico a la aurícula izquierda; una rotura papilar aguda eleva rápidamente la presión pulmonar sin adaptación previa."
+            },
+            {
+              "field": "initial_action",
+              "text": "Solicitar ecocardiografía urgente y activar valoración cardiológica y quirúrgica. Tratar edema y perfusión mientras se define una posible rotura de músculo papilar."
+            },
+            {
+              "field": "action_reason",
+              "text": "La lesión aguda puede requerir reparación inmediata y revascularización."
+            },
+            {
+              "field": "limits",
+              "text": "La ausencia de soplo intenso no descarta regurgitación aguda grave. No excluir cirugía solo por una FEVI baja."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Regurgitación sistólica"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Soplo apical"
+            },
+            {
+              "field": "findings.1.mechanism",
+              "text": "Aumento agudo de presión auricular"
+            },
+            {
+              "field": "findings.1.finding",
+              "text": "Edema pulmonar"
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Curso crónico estable"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Valorar síntomas, función ventricular y posibilidad de reparación."
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "La adaptación ventricular permite evaluación programada."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "04.10-01",
+      "parent_topic_id": "04.10-01",
+      "block_id": "04.10",
+      "name": "Endocarditis infecciosa",
+      "answer_kind": "diagnosis",
+      "variants": {
+        "easy": {
+          "vignette": "Un adulto con prótesis valvular tiene fiebre persistente y un soplo nuevo. Presenta lesiones periféricas compatibles con embolia; todavía no ha recibido antibióticos y conserva estabilidad circulatoria.",
+          "discriminator": "fiebre persistente y un soplo nuevo",
+          "explanation": "El dato decisivo es fiebre persistente y un soplo nuevo. La infección endocárdica genera vegetaciones que dañan válvulas y pueden embolizar; bacteriemia e imagen cardíaca aportan evidencia complementaria para identificar el agente y la lesión. Obtener hemocultivos antes del antibiótico si no retrasa atención urgente y solicitar ecocardiografía. Iniciar tratamiento dirigido por contexto y cultivos con equipo especializado.",
+          "confusable_with": "Fiebre reumática",
+          "why_not": "La prótesis, la fiebre persistente y las embolias sugieren infección endocárdica. La negatividad inicial de cultivos requiere investigación y no elimina esa posibilidad.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Un adulto con prótesis valvular tiene fiebre persistente y un soplo nuevo. Presenta lesiones periféricas compatibles con embolia; todavía no ha recibido antibióticos y conserva estabilidad circulatoria."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "fiebre persistente y un soplo nuevo"
+            },
+            {
+              "field": "mechanism",
+              "text": "La infección endocárdica genera vegetaciones que dañan válvulas y pueden embolizar; bacteriemia e imagen cardíaca aportan evidencia complementaria para identificar el agente y la lesión."
+            },
+            {
+              "field": "initial_action",
+              "text": "Obtener hemocultivos antes del antibiótico si no retrasa atención urgente y solicitar ecocardiografía. Iniciar tratamiento dirigido por contexto y cultivos con equipo especializado."
+            },
+            {
+              "field": "action_reason",
+              "text": "La identificación microbiológica permite seleccionar terapia y la imagen detecta complicaciones."
+            },
+            {
+              "field": "limits",
+              "text": "No aplicar los esquemas antibióticos antiguos del resumen sin guía actual; agente, prótesis y sensibilidad modifican la terapia."
+            }
+          ]
+        },
+        "medium": {
+          "vignette": "Una persona con fiebre, soplo nuevo y embolias desarrolla insuficiencia cardíaca y se sospecha absceso. Se pide valoración quirúrgica urgente.",
+          "discriminator": "Infección valvular con complicación cardíaca",
+          "explanation": "El dato decisivo es Infección valvular con complicación cardíaca. La terapia médica puede no controlar daño o foco. Solicitar valoración quirúrgica urgente.",
+          "confusable_with": "Fiebre reumática",
+          "why_not": "La prótesis, la fiebre persistente y las embolias sugieren infección endocárdica. La negatividad inicial de cultivos requiere investigación y no elimina esa posibilidad.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Un adulto con prótesis valvular tiene fiebre persistente y un soplo nuevo. Presenta lesiones periféricas compatibles con embolia; todavía no ha recibido antibióticos y conserva estabilidad circulatoria."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "fiebre persistente y un soplo nuevo"
+            },
+            {
+              "field": "mechanism",
+              "text": "La infección endocárdica genera vegetaciones que dañan válvulas y pueden embolizar; bacteriemia e imagen cardíaca aportan evidencia complementaria para identificar el agente y la lesión."
+            },
+            {
+              "field": "initial_action",
+              "text": "Obtener hemocultivos antes del antibiótico si no retrasa atención urgente y solicitar ecocardiografía. Iniciar tratamiento dirigido por contexto y cultivos con equipo especializado."
+            },
+            {
+              "field": "action_reason",
+              "text": "La identificación microbiológica permite seleccionar terapia y la imagen detecta complicaciones."
+            },
+            {
+              "field": "limits",
+              "text": "No aplicar los esquemas antibióticos antiguos del resumen sin guía actual; agente, prótesis y sensibilidad modifican la terapia."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Infección intravascular"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Fiebre y hemocultivos positivos"
+            },
+            {
+              "field": "findings.1.mechanism",
+              "text": "Vegetaciones friables"
+            },
+            {
+              "field": "findings.1.finding",
+              "text": "Embolias"
+            },
+            {
+              "field": "findings.2.mechanism",
+              "text": "Daño valvular"
+            },
+            {
+              "field": "findings.2.finding",
+              "text": "Soplo nuevo"
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Insuficiencia cardíaca, absceso o infección no controlada"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Solicitar valoración quirúrgica urgente."
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "La terapia médica puede no controlar daño o foco."
+            },
+            {
+              "field": "modifiers.1.factor",
+              "text": "Cultivos negativos"
+            },
+            {
+              "field": "modifiers.1.action",
+              "text": "Investigar agentes y exposición según contexto."
+            },
+            {
+              "field": "modifiers.1.reason",
+              "text": "La negatividad no excluye infección."
+            }
+          ]
+        },
+        "contrast": {
+          "vignette": "Una persona con prótesis valvular, fiebre persistente y embolias tiene cultivos negativos. Se investigan exposiciones y agentes según el contexto.",
+          "discriminator": "Sospecha de infección valvular con cultivos negativos",
+          "explanation": "El dato decisivo es Sospecha de infección valvular con cultivos negativos. La negatividad no excluye infección. Investigar agentes y exposición según contexto.",
+          "confusable_with": "Fiebre reumática",
+          "why_not": "La prótesis, la fiebre persistente y las embolias sugieren infección endocárdica. La negatividad inicial de cultivos requiere investigación y no elimina esa posibilidad.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Un adulto con prótesis valvular tiene fiebre persistente y un soplo nuevo. Presenta lesiones periféricas compatibles con embolia; todavía no ha recibido antibióticos y conserva estabilidad circulatoria."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "fiebre persistente y un soplo nuevo"
+            },
+            {
+              "field": "mechanism",
+              "text": "La infección endocárdica genera vegetaciones que dañan válvulas y pueden embolizar; bacteriemia e imagen cardíaca aportan evidencia complementaria para identificar el agente y la lesión."
+            },
+            {
+              "field": "initial_action",
+              "text": "Obtener hemocultivos antes del antibiótico si no retrasa atención urgente y solicitar ecocardiografía. Iniciar tratamiento dirigido por contexto y cultivos con equipo especializado."
+            },
+            {
+              "field": "action_reason",
+              "text": "La identificación microbiológica permite seleccionar terapia y la imagen detecta complicaciones."
+            },
+            {
+              "field": "limits",
+              "text": "No aplicar los esquemas antibióticos antiguos del resumen sin guía actual; agente, prótesis y sensibilidad modifican la terapia."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Infección intravascular"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Fiebre y hemocultivos positivos"
+            },
+            {
+              "field": "findings.1.mechanism",
+              "text": "Vegetaciones friables"
+            },
+            {
+              "field": "findings.1.finding",
+              "text": "Embolias"
+            },
+            {
+              "field": "findings.2.mechanism",
+              "text": "Daño valvular"
+            },
+            {
+              "field": "findings.2.finding",
+              "text": "Soplo nuevo"
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Insuficiencia cardíaca, absceso o infección no controlada"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Solicitar valoración quirúrgica urgente."
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "La terapia médica puede no controlar daño o foco."
+            },
+            {
+              "field": "modifiers.1.factor",
+              "text": "Cultivos negativos"
+            },
+            {
+              "field": "modifiers.1.action",
+              "text": "Investigar agentes y exposición según contexto."
+            },
+            {
+              "field": "modifiers.1.reason",
+              "text": "La negatividad no excluye infección."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "04.10-02",
+      "parent_topic_id": "04.10-02",
+      "block_id": "04.10",
+      "name": "Fiebre reumática",
+      "answer_kind": "diagnosis",
+      "variants": {
+        "easy": {
+          "vignette": "Un escolar tuvo faringitis semanas antes. Ahora presenta dolor que migra entre articulaciones grandes, fiebre y un soplo nuevo. Se buscan datos de afectación cardíaca y evidencia estreptocócica previa.",
+          "discriminator": "dolor que migra",
+          "explanation": "El dato decisivo es dolor que migra. La respuesta inmunitaria tras infección faríngea por estreptococo del grupo A afecta articulaciones, corazón y otros tejidos; el daño valvular puede persistir y recurrir. Aplicar criterios de Jones con evidencia de infección previa y valorar ecocardiografía. Erradicar el estreptococo y planear profilaxis secundaria si se confirma.",
+          "confusable_with": "Endocarditis infecciosa",
+          "why_not": "La relación con infección estreptocócica previa y las manifestaciones inmunes, como artritis migratoria o corea, orientan a fiebre reumática y exigen valorar el corazón.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Un escolar tuvo faringitis semanas antes. Ahora presenta dolor que migra entre articulaciones grandes, fiebre y un soplo nuevo. Se buscan datos de afectación cardíaca y evidencia estreptocócica previa."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "dolor que migra"
+            },
+            {
+              "field": "mechanism",
+              "text": "La respuesta inmunitaria tras infección faríngea por estreptococo del grupo A afecta articulaciones, corazón y otros tejidos; el daño valvular puede persistir y recurrir."
+            },
+            {
+              "field": "initial_action",
+              "text": "Aplicar criterios de Jones con evidencia de infección previa y valorar ecocardiografía. Erradicar el estreptococo y planear profilaxis secundaria si se confirma."
+            },
+            {
+              "field": "action_reason",
+              "text": "La erradicación y prevención de nuevas infecciones reducen recurrencia y progresión."
+            },
+            {
+              "field": "limits",
+              "text": "Los criterios varían con riesgo poblacional; ASLO elevada indica exposición previa, no confirma por sí sola el diagnóstico."
+            }
+          ]
+        },
+        "medium": {
+          "vignette": "Después de una infección faríngea aparecen manifestaciones compatibles con carditis e insuficiencia cardíaca. Se solicita manejo especializado.",
+          "discriminator": "Carditis posestreptocócica con insuficiencia",
+          "explanation": "El dato decisivo es Carditis posestreptocócica con insuficiencia. Hay repercusión hemodinámica. Referir para manejo especializado.",
+          "confusable_with": "Endocarditis infecciosa",
+          "why_not": "La relación con infección estreptocócica previa y las manifestaciones inmunes, como artritis migratoria o corea, orientan a fiebre reumática y exigen valorar el corazón.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Un escolar tuvo faringitis semanas antes. Ahora presenta dolor que migra entre articulaciones grandes, fiebre y un soplo nuevo. Se buscan datos de afectación cardíaca y evidencia estreptocócica previa."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "dolor que migra"
+            },
+            {
+              "field": "mechanism",
+              "text": "La respuesta inmunitaria tras infección faríngea por estreptococo del grupo A afecta articulaciones, corazón y otros tejidos; el daño valvular puede persistir y recurrir."
+            },
+            {
+              "field": "initial_action",
+              "text": "Aplicar criterios de Jones con evidencia de infección previa y valorar ecocardiografía. Erradicar el estreptococo y planear profilaxis secundaria si se confirma."
+            },
+            {
+              "field": "action_reason",
+              "text": "La erradicación y prevención de nuevas infecciones reducen recurrencia y progresión."
+            },
+            {
+              "field": "limits",
+              "text": "Los criterios varían con riesgo poblacional; ASLO elevada indica exposición previa, no confirma por sí sola el diagnóstico."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Inflamación articular migratoria"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Dolor en distintas articulaciones"
+            },
+            {
+              "field": "findings.1.mechanism",
+              "text": "Carditis"
+            },
+            {
+              "field": "findings.1.finding",
+              "text": "Soplo nuevo"
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Carditis con insuficiencia cardíaca"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Referir para manejo especializado."
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "Hay repercusión hemodinámica."
+            },
+            {
+              "field": "modifiers.1.factor",
+              "text": "Corea"
+            },
+            {
+              "field": "modifiers.1.action",
+              "text": "Evaluar afectación cardíaca y necesidad de tratamiento neurológico."
+            },
+            {
+              "field": "modifiers.1.reason",
+              "text": "Puede coexistir con carditis incluso con pocos otros datos."
+            }
+          ]
+        },
+        "contrast": {
+          "vignette": "Un escolar con antecedente faríngeo presenta corea. Se busca afectación cardíaca y se organiza tratamiento neurológico si se necesita.",
+          "discriminator": "Corea en contexto posestreptocócico",
+          "explanation": "El dato decisivo es Corea en contexto posestreptocócico. Puede coexistir con carditis incluso con pocos otros datos. Evaluar afectación cardíaca y necesidad de tratamiento neurológico.",
+          "confusable_with": "Endocarditis infecciosa",
+          "why_not": "La relación con infección estreptocócica previa y las manifestaciones inmunes, como artritis migratoria o corea, orientan a fiebre reumática y exigen valorar el corazón.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Un escolar tuvo faringitis semanas antes. Ahora presenta dolor que migra entre articulaciones grandes, fiebre y un soplo nuevo. Se buscan datos de afectación cardíaca y evidencia estreptocócica previa."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "dolor que migra"
+            },
+            {
+              "field": "mechanism",
+              "text": "La respuesta inmunitaria tras infección faríngea por estreptococo del grupo A afecta articulaciones, corazón y otros tejidos; el daño valvular puede persistir y recurrir."
+            },
+            {
+              "field": "initial_action",
+              "text": "Aplicar criterios de Jones con evidencia de infección previa y valorar ecocardiografía. Erradicar el estreptococo y planear profilaxis secundaria si se confirma."
+            },
+            {
+              "field": "action_reason",
+              "text": "La erradicación y prevención de nuevas infecciones reducen recurrencia y progresión."
+            },
+            {
+              "field": "limits",
+              "text": "Los criterios varían con riesgo poblacional; ASLO elevada indica exposición previa, no confirma por sí sola el diagnóstico."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Inflamación articular migratoria"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Dolor en distintas articulaciones"
+            },
+            {
+              "field": "findings.1.mechanism",
+              "text": "Carditis"
+            },
+            {
+              "field": "findings.1.finding",
+              "text": "Soplo nuevo"
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Carditis con insuficiencia cardíaca"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Referir para manejo especializado."
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "Hay repercusión hemodinámica."
+            },
+            {
+              "field": "modifiers.1.factor",
+              "text": "Corea"
+            },
+            {
+              "field": "modifiers.1.action",
+              "text": "Evaluar afectación cardíaca y necesidad de tratamiento neurológico."
+            },
+            {
+              "field": "modifiers.1.reason",
+              "text": "Puede coexistir con carditis incluso con pocos otros datos."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "04.11-01",
+      "parent_topic_id": "04.11-01",
+      "block_id": "04.11",
+      "name": "Pericarditis",
+      "answer_kind": "diagnosis",
+      "variants": {
+        "easy": {
+          "vignette": "Un adulto tiene dolor torácico que aumenta al inspirar y mejora al inclinarse hacia delante. Se escucha frote y el ECG muestra elevación difusa del ST con descenso del PR.",
+          "discriminator": "mejora al inclinarse hacia delante",
+          "explanation": "El dato decisivo es mejora al inclinarse hacia delante. La inflamación de hojas pericárdicas causa roce y dolor posicional; los cambios eléctricos reflejan inflamación superficial y el derrame puede afectar llenado si progresa. Obtener ECG, marcadores y ecocardiograma; buscar datos de alto riesgo. En un caso no complicado, valorar antiinflamatorio y colchicina según guía y contraindicaciones.",
+          "confusable_with": "Infarto agudo de miocardio",
+          "why_not": "El frote, el alivio al inclinarse y los cambios difusos con descenso de PR favorecen inflamación pericárdica. El derrame o los factores infecciosos modifican el manejo.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Un adulto tiene dolor torácico que aumenta al inspirar y mejora al inclinarse hacia delante. Se escucha frote y el ECG muestra elevación difusa del ST con descenso del PR."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "mejora al inclinarse hacia delante"
+            },
+            {
+              "field": "mechanism",
+              "text": "La inflamación de hojas pericárdicas causa roce y dolor posicional; los cambios eléctricos reflejan inflamación superficial y el derrame puede afectar llenado si progresa."
+            },
+            {
+              "field": "initial_action",
+              "text": "Obtener ECG, marcadores y ecocardiograma; buscar datos de alto riesgo. En un caso no complicado, valorar antiinflamatorio y colchicina según guía y contraindicaciones."
+            },
+            {
+              "field": "action_reason",
+              "text": "Controla inflamación y permite detectar derrame o compromiso miocárdico."
+            },
+            {
+              "field": "limits",
+              "text": "Un ecocardiograma normal no excluye inflamación sin derrame; no usarlo como prueba única de confirmación."
+            }
+          ]
+        },
+        "medium": {
+          "vignette": "Una persona con dolor que mejora al inclinarse y frote presenta derrame importante con posible taponamiento. Se valora hospitalización y drenaje.",
+          "discriminator": "Inflamación pericárdica con derrame importante",
+          "explanation": "El dato decisivo es Inflamación pericárdica con derrame importante. El llenado cardíaco puede estar comprometido. Hospitalizar y valorar drenaje.",
+          "confusable_with": "Infarto agudo de miocardio",
+          "why_not": "El frote, el alivio al inclinarse y los cambios difusos con descenso de PR favorecen inflamación pericárdica. El derrame o los factores infecciosos modifican el manejo.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Un adulto tiene dolor torácico que aumenta al inspirar y mejora al inclinarse hacia delante. Se escucha frote y el ECG muestra elevación difusa del ST con descenso del PR."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "mejora al inclinarse hacia delante"
+            },
+            {
+              "field": "mechanism",
+              "text": "La inflamación de hojas pericárdicas causa roce y dolor posicional; los cambios eléctricos reflejan inflamación superficial y el derrame puede afectar llenado si progresa."
+            },
+            {
+              "field": "initial_action",
+              "text": "Obtener ECG, marcadores y ecocardiograma; buscar datos de alto riesgo. En un caso no complicado, valorar antiinflamatorio y colchicina según guía y contraindicaciones."
+            },
+            {
+              "field": "action_reason",
+              "text": "Controla inflamación y permite detectar derrame o compromiso miocárdico."
+            },
+            {
+              "field": "limits",
+              "text": "Un ecocardiograma normal no excluye inflamación sin derrame; no usarlo como prueba única de confirmación."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Roce pericárdico"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Frote"
+            },
+            {
+              "field": "findings.1.mechanism",
+              "text": "Inflamación superficial"
+            },
+            {
+              "field": "findings.1.finding",
+              "text": "Elevación difusa de ST y depresión de PR"
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Taponamiento o derrame importante"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Hospitalizar y valorar drenaje."
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "El llenado cardíaco puede estar comprometido."
+            },
+            {
+              "field": "modifiers.1.factor",
+              "text": "Fiebre importante, inmunosupresión o sospecha infecciosa"
+            },
+            {
+              "field": "modifiers.1.action",
+              "text": "Ampliar estudio y valorar hospitalización."
+            },
+            {
+              "field": "modifiers.1.reason",
+              "text": "La etiología modifica tratamiento y pronóstico."
+            }
+          ]
+        },
+        "contrast": {
+          "vignette": "Un paciente con dolor pleurítico y elevación difusa del ST tiene fiebre importante e inmunosupresión. Se amplía el estudio infeccioso.",
+          "discriminator": "Patrón pericárdico con factores de riesgo",
+          "explanation": "El dato decisivo es Patrón pericárdico con factores de riesgo. La etiología modifica tratamiento y pronóstico. Ampliar estudio y valorar hospitalización.",
+          "confusable_with": "Infarto agudo de miocardio",
+          "why_not": "El frote, el alivio al inclinarse y los cambios difusos con descenso de PR favorecen inflamación pericárdica. El derrame o los factores infecciosos modifican el manejo.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Un adulto tiene dolor torácico que aumenta al inspirar y mejora al inclinarse hacia delante. Se escucha frote y el ECG muestra elevación difusa del ST con descenso del PR."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "mejora al inclinarse hacia delante"
+            },
+            {
+              "field": "mechanism",
+              "text": "La inflamación de hojas pericárdicas causa roce y dolor posicional; los cambios eléctricos reflejan inflamación superficial y el derrame puede afectar llenado si progresa."
+            },
+            {
+              "field": "initial_action",
+              "text": "Obtener ECG, marcadores y ecocardiograma; buscar datos de alto riesgo. En un caso no complicado, valorar antiinflamatorio y colchicina según guía y contraindicaciones."
+            },
+            {
+              "field": "action_reason",
+              "text": "Controla inflamación y permite detectar derrame o compromiso miocárdico."
+            },
+            {
+              "field": "limits",
+              "text": "Un ecocardiograma normal no excluye inflamación sin derrame; no usarlo como prueba única de confirmación."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Roce pericárdico"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Frote"
+            },
+            {
+              "field": "findings.1.mechanism",
+              "text": "Inflamación superficial"
+            },
+            {
+              "field": "findings.1.finding",
+              "text": "Elevación difusa de ST y depresión de PR"
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Taponamiento o derrame importante"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Hospitalizar y valorar drenaje."
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "El llenado cardíaco puede estar comprometido."
+            },
+            {
+              "field": "modifiers.1.factor",
+              "text": "Fiebre importante, inmunosupresión o sospecha infecciosa"
+            },
+            {
+              "field": "modifiers.1.action",
+              "text": "Ampliar estudio y valorar hospitalización."
+            },
+            {
+              "field": "modifiers.1.reason",
+              "text": "La etiología modifica tratamiento y pronóstico."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "04.12-01",
+      "parent_topic_id": "04.12-01",
+      "block_id": "04.12",
+      "name": "Hipertensión pulmonar",
+      "answer_kind": "diagnosis",
+      "variants": {
+        "easy": {
+          "vignette": "Una adulta presenta disnea progresiva y síncope durante ejercicio. El ecocardiograma sugiere presión pulmonar elevada y crecimiento de cavidades derechas, sin una causa establecida todavía.",
+          "discriminator": "síncope durante ejercicio",
+          "explanation": "El dato decisivo es síncope durante ejercicio. La elevación de presión pulmonar aumenta la carga del ventrículo derecho; definir si procede de vasos, corazón izquierdo, pulmón o tromboembolia evita tratamientos inapropiados. Usar ecocardiograma para estimar probabilidad y buscar la causa. Referir a evaluación especializada y confirmar hemodinamia con cateterismo derecho cuando esté indicado.",
+          "confusable_with": "Cor pulmonar como explicación universal",
+          "why_not": "La presión pulmonar elevada tiene varios grupos causales. Se requiere clasificación hemodinámica y etiológica antes de extrapolar tratamiento específico.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Una adulta presenta disnea progresiva y síncope durante ejercicio. El ecocardiograma sugiere presión pulmonar elevada y crecimiento de cavidades derechas, sin una causa establecida todavía."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "síncope durante ejercicio"
+            },
+            {
+              "field": "mechanism",
+              "text": "La elevación de presión pulmonar aumenta la carga del ventrículo derecho; definir si procede de vasos, corazón izquierdo, pulmón o tromboembolia evita tratamientos inapropiados."
+            },
+            {
+              "field": "initial_action",
+              "text": "Usar ecocardiograma para estimar probabilidad y buscar la causa. Referir a evaluación especializada y confirmar hemodinamia con cateterismo derecho cuando esté indicado."
+            },
+            {
+              "field": "action_reason",
+              "text": "La clasificación y medición invasiva determinan tratamiento específico."
+            },
+            {
+              "field": "limits",
+              "text": "El umbral >25 mmHg del libro es antiguo. ESC/ERS 2022 define PH con PAP media >20 mmHg; precapilar añade presión de enclavamiento ≤15 y resistencia >2 unidades Wood."
+            }
+          ]
+        },
+        "medium": {
+          "vignette": "En una persona con presión pulmonar elevada se identifica enfermedad del corazón izquierdo o del pulmón. Se clasifica la causa antes de elegir vasodilatadores específicos.",
+          "discriminator": "Hipertensión pulmonar con causa cardiopulmonar",
+          "explanation": "El dato decisivo es Hipertensión pulmonar con causa cardiopulmonar. No todos los grupos responden igual. Tratar la causa y clasificar antes de vasodilatadores específicos.",
+          "confusable_with": "Cor pulmonar como explicación universal",
+          "why_not": "La presión pulmonar elevada tiene varios grupos causales. Se requiere clasificación hemodinámica y etiológica antes de extrapolar tratamiento específico.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Una adulta presenta disnea progresiva y síncope durante ejercicio. El ecocardiograma sugiere presión pulmonar elevada y crecimiento de cavidades derechas, sin una causa establecida todavía."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "síncope durante ejercicio"
+            },
+            {
+              "field": "mechanism",
+              "text": "La elevación de presión pulmonar aumenta la carga del ventrículo derecho; definir si procede de vasos, corazón izquierdo, pulmón o tromboembolia evita tratamientos inapropiados."
+            },
+            {
+              "field": "initial_action",
+              "text": "Usar ecocardiograma para estimar probabilidad y buscar la causa. Referir a evaluación especializada y confirmar hemodinamia con cateterismo derecho cuando esté indicado."
+            },
+            {
+              "field": "action_reason",
+              "text": "La clasificación y medición invasiva determinan tratamiento específico."
+            },
+            {
+              "field": "limits",
+              "text": "El umbral >25 mmHg del libro es antiguo. ESC/ERS 2022 define PH con PAP media >20 mmHg; precapilar añade presión de enclavamiento ≤15 y resistencia >2 unidades Wood."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Sobrecarga ventricular derecha"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Crecimiento de cavidades derechas"
+            },
+            {
+              "field": "findings.1.mechanism",
+              "text": "Gasto limitado con ejercicio"
+            },
+            {
+              "field": "findings.1.finding",
+              "text": "Disnea y síncope"
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Sospecha de enfermedad pulmonar o cardíaca izquierda"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Tratar la causa y clasificar antes de vasodilatadores específicos."
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "No todos los grupos responden igual."
+            },
+            {
+              "field": "modifiers.1.factor",
+              "text": "HAP idiopática, hereditaria o por fármacos"
+            },
+            {
+              "field": "modifiers.1.action",
+              "text": "Valorar prueba de vasorreactividad en centro experto."
+            },
+            {
+              "field": "modifiers.1.reason",
+              "text": "Solo algunos pacientes son candidatos a calcioantagonistas."
+            }
+          ]
+        },
+        "contrast": {
+          "vignette": "Una persona con posible enfermedad arterial pulmonar idiopática es referida a un centro experto para valorar vasorreactividad.",
+          "discriminator": "Sospecha de forma arterial idiopática",
+          "explanation": "El dato decisivo es Sospecha de forma arterial idiopática. Solo algunos pacientes son candidatos a calcioantagonistas. Valorar prueba de vasorreactividad en centro experto.",
+          "confusable_with": "Cor pulmonar como explicación universal",
+          "why_not": "La presión pulmonar elevada tiene varios grupos causales. Se requiere clasificación hemodinámica y etiológica antes de extrapolar tratamiento específico.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Una adulta presenta disnea progresiva y síncope durante ejercicio. El ecocardiograma sugiere presión pulmonar elevada y crecimiento de cavidades derechas, sin una causa establecida todavía."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "síncope durante ejercicio"
+            },
+            {
+              "field": "mechanism",
+              "text": "La elevación de presión pulmonar aumenta la carga del ventrículo derecho; definir si procede de vasos, corazón izquierdo, pulmón o tromboembolia evita tratamientos inapropiados."
+            },
+            {
+              "field": "initial_action",
+              "text": "Usar ecocardiograma para estimar probabilidad y buscar la causa. Referir a evaluación especializada y confirmar hemodinamia con cateterismo derecho cuando esté indicado."
+            },
+            {
+              "field": "action_reason",
+              "text": "La clasificación y medición invasiva determinan tratamiento específico."
+            },
+            {
+              "field": "limits",
+              "text": "El umbral >25 mmHg del libro es antiguo. ESC/ERS 2022 define PH con PAP media >20 mmHg; precapilar añade presión de enclavamiento ≤15 y resistencia >2 unidades Wood."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Sobrecarga ventricular derecha"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Crecimiento de cavidades derechas"
+            },
+            {
+              "field": "findings.1.mechanism",
+              "text": "Gasto limitado con ejercicio"
+            },
+            {
+              "field": "findings.1.finding",
+              "text": "Disnea y síncope"
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Sospecha de enfermedad pulmonar o cardíaca izquierda"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Tratar la causa y clasificar antes de vasodilatadores específicos."
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "No todos los grupos responden igual."
+            },
+            {
+              "field": "modifiers.1.factor",
+              "text": "HAP idiopática, hereditaria o por fármacos"
+            },
+            {
+              "field": "modifiers.1.action",
+              "text": "Valorar prueba de vasorreactividad en centro experto."
+            },
+            {
+              "field": "modifiers.1.reason",
+              "text": "Solo algunos pacientes son candidatos a calcioantagonistas."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "04.12-02",
+      "parent_topic_id": "04.12-02",
+      "block_id": "04.12",
+      "name": "Cor pulmonar crónico",
+      "answer_kind": "diagnosis",
+      "variants": {
+        "easy": {
+          "vignette": "Un adulto con enfermedad pulmonar obstructiva de larga evolución desarrolla edema de piernas e ingurgitación yugular. Tiene disnea crónica y datos de hipoxemia, sin una cardiopatía izquierda conocida.",
+          "discriminator": "enfermedad pulmonar obstructiva de larga evolución",
+          "explanation": "El dato decisivo es enfermedad pulmonar obstructiva de larga evolución. La hipoxia o lesión vascular pulmonar elevan resistencia y presión; la sobrecarga crónica produce hipertrofia o dilatación del ventrículo derecho y congestión sistémica. Evaluar oxigenación y enfermedad pulmonar de base, documentar repercusión derecha y tratar hipoxemia y congestión según indicaciones.",
+          "confusable_with": "Insuficiencia ventricular izquierda aislada",
+          "why_not": "La enfermedad pulmonar crónica y la congestión derecha orientan a cor pulmonar. La oxigenación y la tolerancia a diuresis requieren valoración individual.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Un adulto con enfermedad pulmonar obstructiva de larga evolución desarrolla edema de piernas e ingurgitación yugular. Tiene disnea crónica y datos de hipoxemia, sin una cardiopatía izquierda conocida."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "enfermedad pulmonar obstructiva de larga evolución"
+            },
+            {
+              "field": "mechanism",
+              "text": "La hipoxia o lesión vascular pulmonar elevan resistencia y presión; la sobrecarga crónica produce hipertrofia o dilatación del ventrículo derecho y congestión sistémica."
+            },
+            {
+              "field": "initial_action",
+              "text": "Evaluar oxigenación y enfermedad pulmonar de base, documentar repercusión derecha y tratar hipoxemia y congestión según indicaciones."
+            },
+            {
+              "field": "action_reason",
+              "text": "La causa pulmonar y el estado de volumen sostienen la sobrecarga."
+            },
+            {
+              "field": "limits",
+              "text": "No indicar fármacos específicos de HAP a todo paciente con EPOC; requieren clasificación y evaluación especializada."
+            }
+          ]
+        },
+        "medium": {
+          "vignette": "Una persona con enfermedad pulmonar crónica y congestión derecha tiene hipoxemia sostenida que cumple criterios de oxígeno domiciliario.",
+          "discriminator": "Fallo derecho asociado a hipoxemia crónica",
+          "explanation": "El dato decisivo es Fallo derecho asociado a hipoxemia crónica. La corrección sostenida puede mejorar pronóstico. Valorar oxígeno domiciliario.",
+          "confusable_with": "Insuficiencia ventricular izquierda aislada",
+          "why_not": "La enfermedad pulmonar crónica y la congestión derecha orientan a cor pulmonar. La oxigenación y la tolerancia a diuresis requieren valoración individual.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Un adulto con enfermedad pulmonar obstructiva de larga evolución desarrolla edema de piernas e ingurgitación yugular. Tiene disnea crónica y datos de hipoxemia, sin una cardiopatía izquierda conocida."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "enfermedad pulmonar obstructiva de larga evolución"
+            },
+            {
+              "field": "mechanism",
+              "text": "La hipoxia o lesión vascular pulmonar elevan resistencia y presión; la sobrecarga crónica produce hipertrofia o dilatación del ventrículo derecho y congestión sistémica."
+            },
+            {
+              "field": "initial_action",
+              "text": "Evaluar oxigenación y enfermedad pulmonar de base, documentar repercusión derecha y tratar hipoxemia y congestión según indicaciones."
+            },
+            {
+              "field": "action_reason",
+              "text": "La causa pulmonar y el estado de volumen sostienen la sobrecarga."
+            },
+            {
+              "field": "limits",
+              "text": "No indicar fármacos específicos de HAP a todo paciente con EPOC; requieren clasificación y evaluación especializada."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Sobrecarga derecha"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Ingurgitación yugular"
+            },
+            {
+              "field": "findings.1.mechanism",
+              "text": "Retención por fallo derecho"
+            },
+            {
+              "field": "findings.1.finding",
+              "text": "Edema periférico"
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Hipoxemia crónica que cumple criterios"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Valorar oxígeno domiciliario."
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "La corrección sostenida puede mejorar pronóstico."
+            },
+            {
+              "field": "modifiers.1.factor",
+              "text": "Retención de líquido"
+            },
+            {
+              "field": "modifiers.1.action",
+              "text": "Valorar diuréticos con vigilancia de perfusión."
+            },
+            {
+              "field": "modifiers.1.reason",
+              "text": "Alivia congestión sin corregir la causa pulmonar."
+            }
+          ]
+        },
+        "contrast": {
+          "vignette": "En un paciente con enfermedad pulmonar de larga evolución aparecen edema e ingurgitación yugular. La retención de líquido requiere valorar diurético y vigilar perfusión.",
+          "discriminator": "Congestión derecha con enfermedad pulmonar crónica",
+          "explanation": "El dato decisivo es Congestión derecha con enfermedad pulmonar crónica. Alivia congestión sin corregir la causa pulmonar. Valorar diuréticos con vigilancia de perfusión.",
+          "confusable_with": "Insuficiencia ventricular izquierda aislada",
+          "why_not": "La enfermedad pulmonar crónica y la congestión derecha orientan a cor pulmonar. La oxigenación y la tolerancia a diuresis requieren valoración individual.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Un adulto con enfermedad pulmonar obstructiva de larga evolución desarrolla edema de piernas e ingurgitación yugular. Tiene disnea crónica y datos de hipoxemia, sin una cardiopatía izquierda conocida."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "enfermedad pulmonar obstructiva de larga evolución"
+            },
+            {
+              "field": "mechanism",
+              "text": "La hipoxia o lesión vascular pulmonar elevan resistencia y presión; la sobrecarga crónica produce hipertrofia o dilatación del ventrículo derecho y congestión sistémica."
+            },
+            {
+              "field": "initial_action",
+              "text": "Evaluar oxigenación y enfermedad pulmonar de base, documentar repercusión derecha y tratar hipoxemia y congestión según indicaciones."
+            },
+            {
+              "field": "action_reason",
+              "text": "La causa pulmonar y el estado de volumen sostienen la sobrecarga."
+            },
+            {
+              "field": "limits",
+              "text": "No indicar fármacos específicos de HAP a todo paciente con EPOC; requieren clasificación y evaluación especializada."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Sobrecarga derecha"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Ingurgitación yugular"
+            },
+            {
+              "field": "findings.1.mechanism",
+              "text": "Retención por fallo derecho"
+            },
+            {
+              "field": "findings.1.finding",
+              "text": "Edema periférico"
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Hipoxemia crónica que cumple criterios"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Valorar oxígeno domiciliario."
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "La corrección sostenida puede mejorar pronóstico."
+            },
+            {
+              "field": "modifiers.1.factor",
+              "text": "Retención de líquido"
+            },
+            {
+              "field": "modifiers.1.action",
+              "text": "Valorar diuréticos con vigilancia de perfusión."
+            },
+            {
+              "field": "modifiers.1.reason",
+              "text": "Alivia congestión sin corregir la causa pulmonar."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "04.13-01",
+      "parent_topic_id": "04.13-01",
+      "block_id": "04.13",
+      "name": "Disección aórtica",
+      "answer_kind": "diagnosis",
+      "variants": {
+        "easy": {
+          "vignette": "Un adulto hipertenso presenta dolor torácico súbito que se extiende hacia la espalda. La radiografía muestra mediastino ancho y se prepara una prueba vascular urgente mientras se monitoriza la perfusión.",
+          "discriminator": "dolor torácico súbito",
+          "explanation": "El dato decisivo es dolor torácico súbito. Un desgarro intimal permite que sangre separe capas de pared aórtica y forme una falsa luz; puede comprometer ramas, válvula o integridad de la aorta. Activar atención especializada, obtener imagen aórtica urgente y controlar impulso con betabloqueo intravenoso si la perfusión lo permite, antes de añadir vasodilatador.",
+          "confusable_with": "Enfermedad coronaria estable",
+          "why_not": "El inicio súbito, la irradiación a espalda y la lesión de la aorta orientan a disección. La localización ascendente o la ruptura cambian la urgencia quirúrgica.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Un adulto hipertenso presenta dolor torácico súbito que se extiende hacia la espalda. La radiografía muestra mediastino ancho y se prepara una prueba vascular urgente mientras se monitoriza la perfusión."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "dolor torácico súbito"
+            },
+            {
+              "field": "mechanism",
+              "text": "Un desgarro intimal permite que sangre separe capas de pared aórtica y forme una falsa luz; puede comprometer ramas, válvula o integridad de la aorta."
+            },
+            {
+              "field": "initial_action",
+              "text": "Activar atención especializada, obtener imagen aórtica urgente y controlar impulso con betabloqueo intravenoso si la perfusión lo permite, antes de añadir vasodilatador."
+            },
+            {
+              "field": "action_reason",
+              "text": "Disminuye fuerza sobre pared mientras se define extensión y tratamiento definitivo."
+            },
+            {
+              "field": "limits",
+              "text": "Una radiografía normal no excluye disección. El ligamento arterioso no pertenece a la aorta ascendente como sugiere una frase del resumen."
+            }
+          ]
+        },
+        "medium": {
+          "vignette": "Una persona con dolor torácico súbito hacia la espalda tiene imagen con compromiso de aorta ascendente. Se organiza cirugía urgente.",
+          "discriminator": "Compromiso de aorta ascendente",
+          "explanation": "El dato decisivo es Compromiso de aorta ascendente. La disección tipo A tiene complicaciones letales. Solicitar cirugía urgente.",
+          "confusable_with": "Enfermedad coronaria estable",
+          "why_not": "El inicio súbito, la irradiación a espalda y la lesión de la aorta orientan a disección. La localización ascendente o la ruptura cambian la urgencia quirúrgica.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Un adulto hipertenso presenta dolor torácico súbito que se extiende hacia la espalda. La radiografía muestra mediastino ancho y se prepara una prueba vascular urgente mientras se monitoriza la perfusión."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "dolor torácico súbito"
+            },
+            {
+              "field": "mechanism",
+              "text": "Un desgarro intimal permite que sangre separe capas de pared aórtica y forme una falsa luz; puede comprometer ramas, válvula o integridad de la aorta."
+            },
+            {
+              "field": "initial_action",
+              "text": "Activar atención especializada, obtener imagen aórtica urgente y controlar impulso con betabloqueo intravenoso si la perfusión lo permite, antes de añadir vasodilatador."
+            },
+            {
+              "field": "action_reason",
+              "text": "Disminuye fuerza sobre pared mientras se define extensión y tratamiento definitivo."
+            },
+            {
+              "field": "limits",
+              "text": "Una radiografía normal no excluye disección. El ligamento arterioso no pertenece a la aorta ascendente como sugiere una frase del resumen."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Separación de pared"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Dolor intenso de inicio súbito"
+            },
+            {
+              "field": "findings.1.mechanism",
+              "text": "Compromiso de ramas"
+            },
+            {
+              "field": "findings.1.finding",
+              "text": "Déficit de perfusión"
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Aorta ascendente comprometida"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Solicitar cirugía urgente."
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "La disección tipo A tiene complicaciones letales."
+            },
+            {
+              "field": "modifiers.1.factor",
+              "text": "Hipotensión o signos de ruptura"
+            },
+            {
+              "field": "modifiers.1.action",
+              "text": "Priorizar reanimación y cirugía."
+            },
+            {
+              "field": "modifiers.1.reason",
+              "text": "El descenso farmacológico no corresponde igual al shock."
+            }
+          ]
+        },
+        "contrast": {
+          "vignette": "Durante estudio de un dolor torácico súbito aparecen hipotensión y signos de ruptura aórtica. Se priorizan reanimación y cirugía.",
+          "discriminator": "Inestabilidad con sospecha de ruptura aórtica",
+          "explanation": "El dato decisivo es Inestabilidad con sospecha de ruptura aórtica. El descenso farmacológico no corresponde igual al shock. Priorizar reanimación y cirugía.",
+          "confusable_with": "Enfermedad coronaria estable",
+          "why_not": "El inicio súbito, la irradiación a espalda y la lesión de la aorta orientan a disección. La localización ascendente o la ruptura cambian la urgencia quirúrgica.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Un adulto hipertenso presenta dolor torácico súbito que se extiende hacia la espalda. La radiografía muestra mediastino ancho y se prepara una prueba vascular urgente mientras se monitoriza la perfusión."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "dolor torácico súbito"
+            },
+            {
+              "field": "mechanism",
+              "text": "Un desgarro intimal permite que sangre separe capas de pared aórtica y forme una falsa luz; puede comprometer ramas, válvula o integridad de la aorta."
+            },
+            {
+              "field": "initial_action",
+              "text": "Activar atención especializada, obtener imagen aórtica urgente y controlar impulso con betabloqueo intravenoso si la perfusión lo permite, antes de añadir vasodilatador."
+            },
+            {
+              "field": "action_reason",
+              "text": "Disminuye fuerza sobre pared mientras se define extensión y tratamiento definitivo."
+            },
+            {
+              "field": "limits",
+              "text": "Una radiografía normal no excluye disección. El ligamento arterioso no pertenece a la aorta ascendente como sugiere una frase del resumen."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Separación de pared"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Dolor intenso de inicio súbito"
+            },
+            {
+              "field": "findings.1.mechanism",
+              "text": "Compromiso de ramas"
+            },
+            {
+              "field": "findings.1.finding",
+              "text": "Déficit de perfusión"
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Aorta ascendente comprometida"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Solicitar cirugía urgente."
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "La disección tipo A tiene complicaciones letales."
+            },
+            {
+              "field": "modifiers.1.factor",
+              "text": "Hipotensión o signos de ruptura"
+            },
+            {
+              "field": "modifiers.1.action",
+              "text": "Priorizar reanimación y cirugía."
+            },
+            {
+              "field": "modifiers.1.reason",
+              "text": "El descenso farmacológico no corresponde igual al shock."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "04.13-02",
+      "parent_topic_id": "04.13-02",
+      "block_id": "04.13",
+      "name": "Aneurisma aórtico abdominal",
+      "answer_kind": "diagnosis",
+      "variants": {
+        "easy": {
+          "vignette": "Un fumador mayor presenta dolor abdominal y lumbar nuevo con una masa pulsátil. Está hipotenso y sudoroso; el equipo considera una fuente vascular de hemorragia interna.",
+          "discriminator": "masa pulsátil",
+          "explanation": "El dato decisivo es masa pulsátil. La degeneración de pared dilata la aorta abdominal y puede llevar a ruptura; la hemorragia resultante causa dolor, hipovolemia y colapso circulatorio. Solicitar valoración vascular y quirúrgica inmediata, iniciar reanimación y usar imagen disponible sin retrasar control en un paciente inestable con alta sospecha de ruptura.",
+          "confusable_with": "Disección aórtica torácica",
+          "why_not": "La localización abdominal y la masa pulsátil orientan a aneurisma abdominal. Los síntomas nuevos o la hipotensión requieren evaluar complicación urgente.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Un fumador mayor presenta dolor abdominal y lumbar nuevo con una masa pulsátil. Está hipotenso y sudoroso; el equipo considera una fuente vascular de hemorragia interna."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "masa pulsátil"
+            },
+            {
+              "field": "mechanism",
+              "text": "La degeneración de pared dilata la aorta abdominal y puede llevar a ruptura; la hemorragia resultante causa dolor, hipovolemia y colapso circulatorio."
+            },
+            {
+              "field": "initial_action",
+              "text": "Solicitar valoración vascular y quirúrgica inmediata, iniciar reanimación y usar imagen disponible sin retrasar control en un paciente inestable con alta sospecha de ruptura."
+            },
+            {
+              "field": "action_reason",
+              "text": "La combinación de dolor, masa e hipotensión exige descartar una emergencia hemorrágica."
+            },
+            {
+              "field": "limits",
+              "text": "La tríada completa no siempre está presente; su ausencia no excluye ruptura."
+            }
+          ]
+        },
+        "medium": {
+          "vignette": "En una persona sin síntomas se encuentra una dilatación de aorta abdominal. Se mide por ultrasonido y se decide seguimiento o reparación según sus características.",
+          "discriminator": "Hallazgo incidental asintomático",
+          "explanation": "El dato decisivo es Hallazgo incidental asintomático. La conducta depende de diámetro, crecimiento y riesgo. Medir con ultrasonido y planear seguimiento o reparación según características.",
+          "confusable_with": "Disección aórtica torácica",
+          "why_not": "La localización abdominal y la masa pulsátil orientan a aneurisma abdominal. Los síntomas nuevos o la hipotensión requieren evaluar complicación urgente.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Un fumador mayor presenta dolor abdominal y lumbar nuevo con una masa pulsátil. Está hipotenso y sudoroso; el equipo considera una fuente vascular de hemorragia interna."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "masa pulsátil"
+            },
+            {
+              "field": "mechanism",
+              "text": "La degeneración de pared dilata la aorta abdominal y puede llevar a ruptura; la hemorragia resultante causa dolor, hipovolemia y colapso circulatorio."
+            },
+            {
+              "field": "initial_action",
+              "text": "Solicitar valoración vascular y quirúrgica inmediata, iniciar reanimación y usar imagen disponible sin retrasar control en un paciente inestable con alta sospecha de ruptura."
+            },
+            {
+              "field": "action_reason",
+              "text": "La combinación de dolor, masa e hipotensión exige descartar una emergencia hemorrágica."
+            },
+            {
+              "field": "limits",
+              "text": "La tríada completa no siempre está presente; su ausencia no excluye ruptura."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Dilatación aórtica"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Masa pulsátil"
+            },
+            {
+              "field": "findings.1.mechanism",
+              "text": "Ruptura y pérdida sanguínea"
+            },
+            {
+              "field": "findings.1.finding",
+              "text": "Hipotensión"
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Hallazgo incidental asintomático"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Medir con ultrasonido y planear seguimiento o reparación según características."
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "La conducta depende de diámetro, crecimiento y riesgo."
+            },
+            {
+              "field": "modifiers.1.factor",
+              "text": "Aneurisma sintomático"
+            },
+            {
+              "field": "modifiers.1.action",
+              "text": "Priorizar evaluación para reparación."
+            },
+            {
+              "field": "modifiers.1.reason",
+              "text": "Los síntomas modifican indicación aunque el diámetro no sea grande."
+            }
+          ]
+        },
+        "contrast": {
+          "vignette": "Una persona con dilatación aórtica abdominal conocida desarrolla dolor abdominal o lumbar nuevo. Se prioriza evaluación para reparación.",
+          "discriminator": "Aneurisma abdominal ahora sintomático",
+          "explanation": "El dato decisivo es Aneurisma abdominal ahora sintomático. Los síntomas modifican indicación aunque el diámetro no sea grande. Priorizar evaluación para reparación.",
+          "confusable_with": "Disección aórtica torácica",
+          "why_not": "La localización abdominal y la masa pulsátil orientan a aneurisma abdominal. Los síntomas nuevos o la hipotensión requieren evaluar complicación urgente.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Un fumador mayor presenta dolor abdominal y lumbar nuevo con una masa pulsátil. Está hipotenso y sudoroso; el equipo considera una fuente vascular de hemorragia interna."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "masa pulsátil"
+            },
+            {
+              "field": "mechanism",
+              "text": "La degeneración de pared dilata la aorta abdominal y puede llevar a ruptura; la hemorragia resultante causa dolor, hipovolemia y colapso circulatorio."
+            },
+            {
+              "field": "initial_action",
+              "text": "Solicitar valoración vascular y quirúrgica inmediata, iniciar reanimación y usar imagen disponible sin retrasar control en un paciente inestable con alta sospecha de ruptura."
+            },
+            {
+              "field": "action_reason",
+              "text": "La combinación de dolor, masa e hipotensión exige descartar una emergencia hemorrágica."
+            },
+            {
+              "field": "limits",
+              "text": "La tríada completa no siempre está presente; su ausencia no excluye ruptura."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Dilatación aórtica"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Masa pulsátil"
+            },
+            {
+              "field": "findings.1.mechanism",
+              "text": "Ruptura y pérdida sanguínea"
+            },
+            {
+              "field": "findings.1.finding",
+              "text": "Hipotensión"
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Hallazgo incidental asintomático"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Medir con ultrasonido y planear seguimiento o reparación según características."
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "La conducta depende de diámetro, crecimiento y riesgo."
+            },
+            {
+              "field": "modifiers.1.factor",
+              "text": "Aneurisma sintomático"
+            },
+            {
+              "field": "modifiers.1.action",
+              "text": "Priorizar evaluación para reparación."
+            },
+            {
+              "field": "modifiers.1.reason",
+              "text": "Los síntomas modifican indicación aunque el diámetro no sea grande."
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

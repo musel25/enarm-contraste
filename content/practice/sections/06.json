@@ -1,0 +1,3460 @@
+{
+  "schema_version": 1,
+  "section_id": "06",
+  "author": "practice_01_12",
+  "source_sha256": "93c82d74ba2d8668dd20b9d180adc84d23fe0045232bcb62a8b44dae178a5e50",
+  "groups": [
+    {
+      "id": "06.01-01",
+      "parent_topic_id": "06.01-01",
+      "block_id": "06.01",
+      "name": "Reconocer sospecha esofágica y estabilizar antes de reparación",
+      "answer_kind": "decision",
+      "variants": {
+        "easy": {
+          "vignette": "Un recién nacido tiene salivación abundante y se atraganta al intentar alimentarse. Una sonda no avanza al estómago. El embarazo cursó con exceso de líquido amniótico. ¿Qué acción o clasificación corresponde?",
+          "discriminator": "Una sonda no avanza",
+          "explanation": "El dato decisivo es Una sonda no avanza. La discontinuidad esofágica impide deglución y acumula secreciones en el cabo proximal; una fístula asociada permite comunicación respiratoria y riesgo de aspiración. Suspender alimentación, aspirar secreciones, mantener posición y soporte apropiados, y referir a cirugía neonatal para definir anatomía y reparación.",
+          "confusable_with": "Atresia de coanas",
+          "why_not": "La detención de la sonda hacia el estómago y la sialorrea orientan al esófago. La imposibilidad de paso por las narinas con mejoría al llorar orienta a coanas.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Un recién nacido tiene salivación abundante y se atraganta al intentar alimentarse. Una sonda no avanza al estómago. El embarazo cursó con exceso de líquido amniótico."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "Una sonda no avanza"
+            },
+            {
+              "field": "mechanism",
+              "text": "La discontinuidad esofágica impide deglución y acumula secreciones en el cabo proximal; una fístula asociada permite comunicación respiratoria y riesgo de aspiración."
+            },
+            {
+              "field": "initial_action",
+              "text": "Suspender alimentación, aspirar secreciones, mantener posición y soporte apropiados, y referir a cirugía neonatal para definir anatomía y reparación."
+            },
+            {
+              "field": "action_reason",
+              "text": "Evita aspiración mientras se confirma el defecto y la fístula."
+            },
+            {
+              "field": "limits",
+              "text": "No forzar la sonda ni usar contraste de rutina sin indicación especializada por riesgo de aspiración."
+            }
+          ]
+        },
+        "medium": {
+          "vignette": "Un recién nacido con sonda que no alcanza el estómago y salivación abundante desarrolla dificultad respiratoria. Se prioriza estabilización de la vía aérea. ¿Qué acción o clasificación corresponde?",
+          "discriminator": "Obstrucción esofágica neonatal con compromiso respiratorio",
+          "explanation": "El dato decisivo es Obstrucción esofágica neonatal con compromiso respiratorio. La aspiración o comunicación traqueal puede comprometer ventilación. Priorizar estabilización y control experto de vía aérea.",
+          "confusable_with": "Atresia de coanas",
+          "why_not": "La detención de la sonda hacia el estómago y la sialorrea orientan al esófago. La imposibilidad de paso por las narinas con mejoría al llorar orienta a coanas.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Un recién nacido tiene salivación abundante y se atraganta al intentar alimentarse. Una sonda no avanza al estómago. El embarazo cursó con exceso de líquido amniótico."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "Una sonda no avanza"
+            },
+            {
+              "field": "mechanism",
+              "text": "La discontinuidad esofágica impide deglución y acumula secreciones en el cabo proximal; una fístula asociada permite comunicación respiratoria y riesgo de aspiración."
+            },
+            {
+              "field": "initial_action",
+              "text": "Suspender alimentación, aspirar secreciones, mantener posición y soporte apropiados, y referir a cirugía neonatal para definir anatomía y reparación."
+            },
+            {
+              "field": "action_reason",
+              "text": "Evita aspiración mientras se confirma el defecto y la fístula."
+            },
+            {
+              "field": "limits",
+              "text": "No forzar la sonda ni usar contraste de rutina sin indicación especializada por riesgo de aspiración."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Esófago interrumpido"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Sonda detenida y sialorrea"
+            },
+            {
+              "field": "findings.1.mechanism",
+              "text": "Aspiración o fístula"
+            },
+            {
+              "field": "findings.1.finding",
+              "text": "Tos y cianosis al comer"
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Dificultad respiratoria"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Priorizar estabilización y control experto de vía aérea."
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "La aspiración o comunicación traqueal puede comprometer ventilación."
+            }
+          ]
+        },
+        "contrast": {
+          "vignette": "El ultrasonido prenatal muestra polihidramnios y un estómago sin líquido. Se investiga una posible interrupción de la deglución y se organiza confirmación neonatal cuidadosa. ¿Qué acción o clasificación corresponde?",
+          "discriminator": "Sospecha prenatal por polihidramnios y estómago sin líquido",
+          "explanation": "La ausencia de continuidad esofágica impide deglutir y puede producir estos hallazgos prenatales. Se prepara evaluación neonatal y no se fuerza una sonda ni se usa contraste rutinario sin indicación especializada.",
+          "confusable_with": "Atresia de coanas",
+          "why_not": "La alteración de deglución prenatal con polihidramnios dirige la sospecha al esófago. Los hallazgos prenatales requieren confirmación neonatal; la obstrucción coanal se localiza en la vía nasal.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Un recién nacido tiene salivación abundante y se atraganta al intentar alimentarse. Una sonda no avanza al estómago. El embarazo cursó con exceso de líquido amniótico."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "Una sonda no avanza"
+            },
+            {
+              "field": "mechanism",
+              "text": "La discontinuidad esofágica impide deglución y acumula secreciones en el cabo proximal; una fístula asociada permite comunicación respiratoria y riesgo de aspiración."
+            },
+            {
+              "field": "initial_action",
+              "text": "Suspender alimentación, aspirar secreciones, mantener posición y soporte apropiados, y referir a cirugía neonatal para definir anatomía y reparación."
+            },
+            {
+              "field": "action_reason",
+              "text": "Evita aspiración mientras se confirma el defecto y la fístula."
+            },
+            {
+              "field": "limits",
+              "text": "No forzar la sonda ni usar contraste de rutina sin indicación especializada por riesgo de aspiración."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Esófago interrumpido"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Sonda detenida y sialorrea"
+            },
+            {
+              "field": "findings.1.mechanism",
+              "text": "Aspiración o fístula"
+            },
+            {
+              "field": "findings.1.finding",
+              "text": "Tos y cianosis al comer"
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Dificultad respiratoria"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Priorizar estabilización y control experto de vía aérea."
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "La aspiración o comunicación traqueal puede comprometer ventilación."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "06.01-02",
+      "parent_topic_id": "06.01-02",
+      "block_id": "06.01",
+      "name": "Atresia de coanas",
+      "answer_kind": "diagnosis",
+      "variants": {
+        "easy": {
+          "vignette": "Un neonato se torna cianótico al alimentarse, pero mejora cuando llora. La sonda no pasa desde ambas narinas hacia la nasofaringe y no hay explicación pulmonar inicial.",
+          "discriminator": "mejora cuando llora",
+          "explanation": "El dato decisivo es mejora cuando llora. La obstrucción posterior nasal bilateral dificulta respiración durante alimentación; el llanto abre la boca y permite flujo aéreo alternativo, con alivio transitorio de la hipoxemia. Asegurar una vía aérea oral apropiada y apoyo respiratorio. Suspender alimentación oral si no es segura y solicitar confirmación anatómica y reparación especializada.",
+          "confusable_with": "Atresia esofágica",
+          "why_not": "La localización nasal del bloqueo y la mejoría al llorar orientan a coanas. La sialorrea con sonda detenida hacia el estómago sugiere un defecto esofágico.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Un neonato se torna cianótico al alimentarse, pero mejora cuando llora. La sonda no pasa desde ambas narinas hacia la nasofaringe y no hay explicación pulmonar inicial."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "mejora cuando llora"
+            },
+            {
+              "field": "mechanism",
+              "text": "La obstrucción posterior nasal bilateral dificulta respiración durante alimentación; el llanto abre la boca y permite flujo aéreo alternativo, con alivio transitorio de la hipoxemia."
+            },
+            {
+              "field": "initial_action",
+              "text": "Asegurar una vía aérea oral apropiada y apoyo respiratorio. Suspender alimentación oral si no es segura y solicitar confirmación anatómica y reparación especializada."
+            },
+            {
+              "field": "action_reason",
+              "text": "Proporciona una vía alternativa mientras se resuelve la obstrucción."
+            },
+            {
+              "field": "limits",
+              "text": "La imposibilidad de pasar una sonda orienta, pero requiere confirmación anatómica."
+            }
+          ]
+        },
+        "medium": {
+          "vignette": "Un lactante presenta rinorrea unilateral persistente. Se evalúa permeabilidad nasal y se considera una obstrucción congénita de un lado.",
+          "discriminator": "Presentación nasal unilateral",
+          "explanation": "El dato decisivo es Presentación nasal unilateral. Puede no causar dificultad neonatal grave. Valorar rinorrea unilateral persistente y estudio dirigido.",
+          "confusable_with": "Atresia esofágica",
+          "why_not": "La localización nasal del bloqueo y la mejoría al llorar orientan a coanas. La sialorrea con sonda detenida hacia el estómago sugiere un defecto esofágico.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Un neonato se torna cianótico al alimentarse, pero mejora cuando llora. La sonda no pasa desde ambas narinas hacia la nasofaringe y no hay explicación pulmonar inicial."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "mejora cuando llora"
+            },
+            {
+              "field": "mechanism",
+              "text": "La obstrucción posterior nasal bilateral dificulta respiración durante alimentación; el llanto abre la boca y permite flujo aéreo alternativo, con alivio transitorio de la hipoxemia."
+            },
+            {
+              "field": "initial_action",
+              "text": "Asegurar una vía aérea oral apropiada y apoyo respiratorio. Suspender alimentación oral si no es segura y solicitar confirmación anatómica y reparación especializada."
+            },
+            {
+              "field": "action_reason",
+              "text": "Proporciona una vía alternativa mientras se resuelve la obstrucción."
+            },
+            {
+              "field": "limits",
+              "text": "La imposibilidad de pasar una sonda orienta, pero requiere confirmación anatómica."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Obstrucción nasal posterior"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Imposibilidad de pasar sonda"
+            },
+            {
+              "field": "findings.1.mechanism",
+              "text": "Respiración oral durante llanto"
+            },
+            {
+              "field": "findings.1.finding",
+              "text": "Mejoría de cianosis"
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Presentación unilateral"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Valorar rinorrea unilateral persistente y estudio dirigido."
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "Puede no causar dificultad neonatal grave."
+            },
+            {
+              "field": "modifiers.1.factor",
+              "text": "Otras malformaciones"
+            },
+            {
+              "field": "modifiers.1.action",
+              "text": "Buscar asociación CHARGE."
+            },
+            {
+              "field": "modifiers.1.reason",
+              "text": "La obstrucción puede formar parte de un síndrome."
+            }
+          ]
+        },
+        "contrast": {
+          "vignette": "Un neonato tiene obstrucción de ambas narinas con cianosis que mejora al llorar. Se identifican otras malformaciones y se busca asociación CHARGE.",
+          "discriminator": "Obstrucción coanal con otras anomalías",
+          "explanation": "El dato decisivo es Obstrucción coanal con otras anomalías. La obstrucción puede formar parte de un síndrome. Buscar asociación CHARGE.",
+          "confusable_with": "Atresia esofágica",
+          "why_not": "La localización nasal del bloqueo y la mejoría al llorar orientan a coanas. La sialorrea con sonda detenida hacia el estómago sugiere un defecto esofágico.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Un neonato se torna cianótico al alimentarse, pero mejora cuando llora. La sonda no pasa desde ambas narinas hacia la nasofaringe y no hay explicación pulmonar inicial."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "mejora cuando llora"
+            },
+            {
+              "field": "mechanism",
+              "text": "La obstrucción posterior nasal bilateral dificulta respiración durante alimentación; el llanto abre la boca y permite flujo aéreo alternativo, con alivio transitorio de la hipoxemia."
+            },
+            {
+              "field": "initial_action",
+              "text": "Asegurar una vía aérea oral apropiada y apoyo respiratorio. Suspender alimentación oral si no es segura y solicitar confirmación anatómica y reparación especializada."
+            },
+            {
+              "field": "action_reason",
+              "text": "Proporciona una vía alternativa mientras se resuelve la obstrucción."
+            },
+            {
+              "field": "limits",
+              "text": "La imposibilidad de pasar una sonda orienta, pero requiere confirmación anatómica."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Obstrucción nasal posterior"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Imposibilidad de pasar sonda"
+            },
+            {
+              "field": "findings.1.mechanism",
+              "text": "Respiración oral durante llanto"
+            },
+            {
+              "field": "findings.1.finding",
+              "text": "Mejoría de cianosis"
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Presentación unilateral"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Valorar rinorrea unilateral persistente y estudio dirigido."
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "Puede no causar dificultad neonatal grave."
+            },
+            {
+              "field": "modifiers.1.factor",
+              "text": "Otras malformaciones"
+            },
+            {
+              "field": "modifiers.1.action",
+              "text": "Buscar asociación CHARGE."
+            },
+            {
+              "field": "modifiers.1.reason",
+              "text": "La obstrucción puede formar parte de un síndrome."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "06.02-01",
+      "parent_topic_id": "06.02-01",
+      "block_id": "06.02",
+      "name": "Evaluar obstrucción duodenal y anomalías asociadas",
+      "answer_kind": "decision",
+      "variants": {
+        "easy": {
+          "vignette": "Un recién nacido vomita contenido verde desde sus primeras tomas. La radiografía muestra dos burbujas gaseosas proximales. Hubo polihidramnios prenatal y aún no se ha completado la evaluación de malformaciones. ¿Qué acción o clasificación corresponde?",
+          "discriminator": "dos burbujas gaseosas proximales",
+          "explanation": "El dato decisivo es dos burbujas gaseosas proximales. La luz duodenal interrumpida impide el paso del contenido gástrico y duodenal; el segmento proximal se dilata y origina el patrón radiográfico de obstrucción alta. Mantener ayuno, descomprimir con sonda orogástrica y corregir líquidos y electrolitos. Referir a cirugía neonatal para reparación tras estabilización.",
+          "confusable_with": "Atresia yeyunoileal",
+          "why_not": "La doble burbuja localiza una obstrucción proximal duodenal. Una interrupción más distal produce dilatación y burbujas intestinales adicionales.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Un recién nacido vomita contenido verde desde sus primeras tomas. La radiografía muestra dos burbujas gaseosas proximales. Hubo polihidramnios prenatal y aún no se ha completado la evaluación de malformaciones."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "dos burbujas gaseosas proximales"
+            },
+            {
+              "field": "mechanism",
+              "text": "La luz duodenal interrumpida impide el paso del contenido gástrico y duodenal; el segmento proximal se dilata y origina el patrón radiográfico de obstrucción alta."
+            },
+            {
+              "field": "initial_action",
+              "text": "Mantener ayuno, descomprimir con sonda orogástrica y corregir líquidos y electrolitos. Referir a cirugía neonatal para reparación tras estabilización."
+            },
+            {
+              "field": "action_reason",
+              "text": "Previene distensión y aspiración mientras se corrige la obstrucción."
+            },
+            {
+              "field": "limits",
+              "text": "La doble burbuja indica obstrucción duodenal y no define por sí sola todas sus causas; valorar diagnóstico diferencial."
+            }
+          ]
+        },
+        "medium": {
+          "vignette": "Un neonato con dos burbujas proximales y vómito bilioso tiene datos de otras anomalías. Se completa la evaluación congénita antes de planear la corrección. ¿Qué acción o clasificación corresponde?",
+          "discriminator": "Doble burbuja con anomalías asociadas",
+          "explanation": "El dato decisivo es Doble burbuja con anomalías asociadas. La página describe asociación con trisomía 21. Completar evaluación congénita.",
+          "confusable_with": "Atresia yeyunoileal",
+          "why_not": "La doble burbuja localiza una obstrucción proximal duodenal. Una interrupción más distal produce dilatación y burbujas intestinales adicionales.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Un recién nacido vomita contenido verde desde sus primeras tomas. La radiografía muestra dos burbujas gaseosas proximales. Hubo polihidramnios prenatal y aún no se ha completado la evaluación de malformaciones."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "dos burbujas gaseosas proximales"
+            },
+            {
+              "field": "mechanism",
+              "text": "La luz duodenal interrumpida impide el paso del contenido gástrico y duodenal; el segmento proximal se dilata y origina el patrón radiográfico de obstrucción alta."
+            },
+            {
+              "field": "initial_action",
+              "text": "Mantener ayuno, descomprimir con sonda orogástrica y corregir líquidos y electrolitos. Referir a cirugía neonatal para reparación tras estabilización."
+            },
+            {
+              "field": "action_reason",
+              "text": "Previene distensión y aspiración mientras se corrige la obstrucción."
+            },
+            {
+              "field": "limits",
+              "text": "La doble burbuja indica obstrucción duodenal y no define por sí sola todas sus causas; valorar diagnóstico diferencial."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Obstrucción duodenal"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Doble burbuja"
+            },
+            {
+              "field": "findings.1.mechanism",
+              "text": "Acumulación proximal"
+            },
+            {
+              "field": "findings.1.finding",
+              "text": "Vómito bilioso"
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Datos de otras anomalías"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Completar evaluación congénita."
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "La página describe asociación con trisomía 21."
+            }
+          ]
+        },
+        "contrast": {
+          "vignette": "Un recién nacido con trisomía 21 presenta vómito bilioso. Se busca un patrón de doble burbuja y se organiza evaluación de obstrucción congénita. ¿Qué acción o clasificación corresponde?",
+          "discriminator": "Vómito bilioso en neonato con trisomía 21",
+          "explanation": "La asociación con trisomía 21 orienta la búsqueda de atresia duodenal. La doble burbuja localiza obstrucción alta, pero requiere valorar otras causas y anomalías antes de planear la reparación.",
+          "confusable_with": "Atresia yeyunoileal",
+          "why_not": "La doble burbuja localiza una obstrucción proximal duodenal. Una interrupción más distal produce dilatación y burbujas intestinales adicionales.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Un recién nacido vomita contenido verde desde sus primeras tomas. La radiografía muestra dos burbujas gaseosas proximales. Hubo polihidramnios prenatal y aún no se ha completado la evaluación de malformaciones."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "dos burbujas gaseosas proximales"
+            },
+            {
+              "field": "mechanism",
+              "text": "La luz duodenal interrumpida impide el paso del contenido gástrico y duodenal; el segmento proximal se dilata y origina el patrón radiográfico de obstrucción alta."
+            },
+            {
+              "field": "initial_action",
+              "text": "Mantener ayuno, descomprimir con sonda orogástrica y corregir líquidos y electrolitos. Referir a cirugía neonatal para reparación tras estabilización."
+            },
+            {
+              "field": "action_reason",
+              "text": "Previene distensión y aspiración mientras se corrige la obstrucción."
+            },
+            {
+              "field": "limits",
+              "text": "La doble burbuja indica obstrucción duodenal y no define por sí sola todas sus causas; valorar diagnóstico diferencial."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Obstrucción duodenal"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Doble burbuja"
+            },
+            {
+              "field": "findings.1.mechanism",
+              "text": "Acumulación proximal"
+            },
+            {
+              "field": "findings.1.finding",
+              "text": "Vómito bilioso"
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Datos de otras anomalías"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Completar evaluación congénita."
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "La página describe asociación con trisomía 21."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "06.02-02",
+      "parent_topic_id": "06.02-02",
+      "block_id": "06.02",
+      "name": "Atresia yeyunoileal",
+      "answer_kind": "diagnosis",
+      "variants": {
+        "easy": {
+          "vignette": "Un neonato presenta vómito bilioso desde el nacimiento. La imagen muestra dilatación gástrica, duodenal y de yeyuno proximal; se sospecha una interrupción intestinal por debajo del duodeno.",
+          "discriminator": "yeyuno proximal",
+          "explanation": "El dato decisivo es yeyuno proximal. Una alteración vascular fetal puede interrumpir continuidad del intestino delgado; la obstrucción acumula contenido proximal y la imagen depende del nivel afectado. Iniciar ayuno, descompresión y corrección hidroelectrolítica. Referir a cirugía neonatal para definir nivel, viabilidad y reparación intestinal.",
+          "confusable_with": "Atresia duodenal",
+          "why_not": "La dilatación que alcanza yeyuno proximal orienta a obstrucción más distal que una doble burbuja duodenal aislada.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Un neonato presenta vómito bilioso desde el nacimiento. La imagen muestra dilatación gástrica, duodenal y de yeyuno proximal; se sospecha una interrupción intestinal por debajo del duodeno."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "yeyuno proximal"
+            },
+            {
+              "field": "mechanism",
+              "text": "Una alteración vascular fetal puede interrumpir continuidad del intestino delgado; la obstrucción acumula contenido proximal y la imagen depende del nivel afectado."
+            },
+            {
+              "field": "initial_action",
+              "text": "Iniciar ayuno, descompresión y corrección hidroelectrolítica. Referir a cirugía neonatal para definir nivel, viabilidad y reparación intestinal."
+            },
+            {
+              "field": "action_reason",
+              "text": "La obstrucción no se resuelve con alimentación y requiere corrección anatómica."
+            },
+            {
+              "field": "limits",
+              "text": "La frase «sin distensión» del resumen no debe usarse como requisito universal; la presentación cambia con el nivel de obstrucción."
+            }
+          ]
+        },
+        "medium": {
+          "vignette": "Un neonato con obstrucción más allá del duodeno tiene otra anomalía intestinal, incluida sospecha de malrotación. Se amplía la evaluación quirúrgica.",
+          "discriminator": "Interrupción distal con anomalía asociada",
+          "explanation": "El dato decisivo es Interrupción distal con anomalía asociada. Puede coexistir más de una causa obstructiva. Ampliar evaluación y plan quirúrgico.",
+          "confusable_with": "Atresia duodenal",
+          "why_not": "La dilatación que alcanza yeyuno proximal orienta a obstrucción más distal que una doble burbuja duodenal aislada.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Un neonato presenta vómito bilioso desde el nacimiento. La imagen muestra dilatación gástrica, duodenal y de yeyuno proximal; se sospecha una interrupción intestinal por debajo del duodeno."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "yeyuno proximal"
+            },
+            {
+              "field": "mechanism",
+              "text": "Una alteración vascular fetal puede interrumpir continuidad del intestino delgado; la obstrucción acumula contenido proximal y la imagen depende del nivel afectado."
+            },
+            {
+              "field": "initial_action",
+              "text": "Iniciar ayuno, descompresión y corrección hidroelectrolítica. Referir a cirugía neonatal para definir nivel, viabilidad y reparación intestinal."
+            },
+            {
+              "field": "action_reason",
+              "text": "La obstrucción no se resuelve con alimentación y requiere corrección anatómica."
+            },
+            {
+              "field": "limits",
+              "text": "La frase «sin distensión» del resumen no debe usarse como requisito universal; la presentación cambia con el nivel de obstrucción."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Continuidad intestinal interrumpida"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Vómito bilioso"
+            },
+            {
+              "field": "findings.1.mechanism",
+              "text": "Dilatación proximal"
+            },
+            {
+              "field": "findings.1.finding",
+              "text": "Burbujas intestinales en imagen"
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Malrotación u otra anomalía asociada"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Ampliar evaluación y plan quirúrgico."
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "Puede coexistir más de una causa obstructiva."
+            }
+          ]
+        },
+        "contrast": {
+          "vignette": "Un neonato con vómito bilioso tiene distensión y dilatación que alcanza intestino delgado proximal. No debe descartarse una interrupción distal por exigir la frase del resumen 'sin distensión'.",
+          "discriminator": "Obstrucción distal cuya presentación incluye distensión",
+          "explanation": "La presentación depende del nivel. La ausencia de distensión no es un requisito universal para atresia yeyunoileal; se inicia ayuno, descompresión y corrección hidroelectrolítica con cirugía neonatal.",
+          "confusable_with": "Atresia duodenal",
+          "why_not": "La dilatación que alcanza yeyuno proximal orienta a obstrucción más distal que una doble burbuja duodenal aislada.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Un neonato presenta vómito bilioso desde el nacimiento. La imagen muestra dilatación gástrica, duodenal y de yeyuno proximal; se sospecha una interrupción intestinal por debajo del duodeno."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "yeyuno proximal"
+            },
+            {
+              "field": "mechanism",
+              "text": "Una alteración vascular fetal puede interrumpir continuidad del intestino delgado; la obstrucción acumula contenido proximal y la imagen depende del nivel afectado."
+            },
+            {
+              "field": "initial_action",
+              "text": "Iniciar ayuno, descompresión y corrección hidroelectrolítica. Referir a cirugía neonatal para definir nivel, viabilidad y reparación intestinal."
+            },
+            {
+              "field": "action_reason",
+              "text": "La obstrucción no se resuelve con alimentación y requiere corrección anatómica."
+            },
+            {
+              "field": "limits",
+              "text": "La frase «sin distensión» del resumen no debe usarse como requisito universal; la presentación cambia con el nivel de obstrucción."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Continuidad intestinal interrumpida"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Vómito bilioso"
+            },
+            {
+              "field": "findings.1.mechanism",
+              "text": "Dilatación proximal"
+            },
+            {
+              "field": "findings.1.finding",
+              "text": "Burbujas intestinales en imagen"
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Malrotación u otra anomalía asociada"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Ampliar evaluación y plan quirúrgico."
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "Puede coexistir más de una causa obstructiva."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "06.02-03",
+      "parent_topic_id": "06.02-03",
+      "block_id": "06.02",
+      "name": "Malrotación intestinal",
+      "answer_kind": "diagnosis",
+      "variants": {
+        "easy": {
+          "vignette": "Un lactante presenta dolor agudo y vómitos verdes. Al inicio el abdomen parece poco alterado, pero luego aparece sangre rectal. Se considera una obstrucción con riesgo vascular.",
+          "discriminator": "vómitos verdes",
+          "explanation": "El dato decisivo es vómitos verdes. La rotación y fijación anormales dejan una base mesentérica vulnerable al giro; el vólvulo puede obstruir lumen y vasos, con rápida pérdida de viabilidad intestinal. Suspender alimentación, estabilizar y solicitar evaluación quirúrgica urgente. En el estable, realizar estudio dirigido de rotación; no retrasar cirugía ante signos de catástrofe intestinal.",
+          "confusable_with": "Estenosis pilórica",
+          "why_not": "El vómito bilioso obliga a buscar obstrucción distal y riesgo de vólvulo. La estenosis pilórica produce vómito no bilioso y no explica sangre rectal por compromiso vascular.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Un lactante presenta dolor agudo y vómitos verdes. Al inicio el abdomen parece poco alterado, pero luego aparece sangre rectal. Se considera una obstrucción con riesgo vascular."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "vómitos verdes"
+            },
+            {
+              "field": "mechanism",
+              "text": "La rotación y fijación anormales dejan una base mesentérica vulnerable al giro; el vólvulo puede obstruir lumen y vasos, con rápida pérdida de viabilidad intestinal."
+            },
+            {
+              "field": "initial_action",
+              "text": "Suspender alimentación, estabilizar y solicitar evaluación quirúrgica urgente. En el estable, realizar estudio dirigido de rotación; no retrasar cirugía ante signos de catástrofe intestinal."
+            },
+            {
+              "field": "action_reason",
+              "text": "El vólvulo amenaza perfusión y puede requerir tratamiento inmediato."
+            },
+            {
+              "field": "limits",
+              "text": "La exploración inicialmente normal no excluye una urgencia; la sensibilidad ecográfica depende de experiencia."
+            }
+          ]
+        },
+        "medium": {
+          "vignette": "Un lactante con vómito bilioso permanece estable y sin peritonitis. Se valora una serie gastrointestinal alta o ultrasonido experto para definir la anatomía.",
+          "discriminator": "Vómito bilioso con estabilidad para imagen",
+          "explanation": "El dato decisivo es Vómito bilioso con estabilidad para imagen. Permite definir anatomía. Valorar serie gastrointestinal alta o ultrasonido experto.",
+          "confusable_with": "Estenosis pilórica",
+          "why_not": "El vómito bilioso obliga a buscar obstrucción distal y riesgo de vólvulo. La estenosis pilórica produce vómito no bilioso y no explica sangre rectal por compromiso vascular.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Un lactante presenta dolor agudo y vómitos verdes. Al inicio el abdomen parece poco alterado, pero luego aparece sangre rectal. Se considera una obstrucción con riesgo vascular."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "vómitos verdes"
+            },
+            {
+              "field": "mechanism",
+              "text": "La rotación y fijación anormales dejan una base mesentérica vulnerable al giro; el vólvulo puede obstruir lumen y vasos, con rápida pérdida de viabilidad intestinal."
+            },
+            {
+              "field": "initial_action",
+              "text": "Suspender alimentación, estabilizar y solicitar evaluación quirúrgica urgente. En el estable, realizar estudio dirigido de rotación; no retrasar cirugía ante signos de catástrofe intestinal."
+            },
+            {
+              "field": "action_reason",
+              "text": "El vólvulo amenaza perfusión y puede requerir tratamiento inmediato."
+            },
+            {
+              "field": "limits",
+              "text": "La exploración inicialmente normal no excluye una urgencia; la sensibilidad ecográfica depende de experiencia."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Obstrucción duodenal o intestinal"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Vómito bilioso"
+            },
+            {
+              "field": "findings.1.mechanism",
+              "text": "Compromiso vascular"
+            },
+            {
+              "field": "findings.1.finding",
+              "text": "Sangrado y peritonitis"
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Sin peritonitis y con estabilidad"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Valorar serie gastrointestinal alta o ultrasonido experto."
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "Permite definir anatomía."
+            },
+            {
+              "field": "modifiers.1.factor",
+              "text": "Sangrado o irritación peritoneal"
+            },
+            {
+              "field": "modifiers.1.action",
+              "text": "Priorizar exploración quirúrgica."
+            },
+            {
+              "field": "modifiers.1.reason",
+              "text": "Sugiere isquemia avanzada."
+            }
+          ]
+        },
+        "contrast": {
+          "vignette": "Un lactante con vómito verde desarrolla sangrado rectal e irritación peritoneal. Se solicita exploración quirúrgica urgente.",
+          "discriminator": "Vómito bilioso con signos de compromiso vascular",
+          "explanation": "El dato decisivo es Vómito bilioso con signos de compromiso vascular. Sugiere isquemia avanzada. Priorizar exploración quirúrgica.",
+          "confusable_with": "Estenosis pilórica",
+          "why_not": "El vómito bilioso obliga a buscar obstrucción distal y riesgo de vólvulo. La estenosis pilórica produce vómito no bilioso y no explica sangre rectal por compromiso vascular.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Un lactante presenta dolor agudo y vómitos verdes. Al inicio el abdomen parece poco alterado, pero luego aparece sangre rectal. Se considera una obstrucción con riesgo vascular."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "vómitos verdes"
+            },
+            {
+              "field": "mechanism",
+              "text": "La rotación y fijación anormales dejan una base mesentérica vulnerable al giro; el vólvulo puede obstruir lumen y vasos, con rápida pérdida de viabilidad intestinal."
+            },
+            {
+              "field": "initial_action",
+              "text": "Suspender alimentación, estabilizar y solicitar evaluación quirúrgica urgente. En el estable, realizar estudio dirigido de rotación; no retrasar cirugía ante signos de catástrofe intestinal."
+            },
+            {
+              "field": "action_reason",
+              "text": "El vólvulo amenaza perfusión y puede requerir tratamiento inmediato."
+            },
+            {
+              "field": "limits",
+              "text": "La exploración inicialmente normal no excluye una urgencia; la sensibilidad ecográfica depende de experiencia."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Obstrucción duodenal o intestinal"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Vómito bilioso"
+            },
+            {
+              "field": "findings.1.mechanism",
+              "text": "Compromiso vascular"
+            },
+            {
+              "field": "findings.1.finding",
+              "text": "Sangrado y peritonitis"
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Sin peritonitis y con estabilidad"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Valorar serie gastrointestinal alta o ultrasonido experto."
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "Permite definir anatomía."
+            },
+            {
+              "field": "modifiers.1.factor",
+              "text": "Sangrado o irritación peritoneal"
+            },
+            {
+              "field": "modifiers.1.action",
+              "text": "Priorizar exploración quirúrgica."
+            },
+            {
+              "field": "modifiers.1.reason",
+              "text": "Sugiere isquemia avanzada."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "06.03-01",
+      "parent_topic_id": "06.03-01",
+      "block_id": "06.03",
+      "name": "Estenosis pilórica",
+      "answer_kind": "diagnosis",
+      "variants": {
+        "easy": {
+          "vignette": "Un lactante de cinco semanas tiene vómitos progresivos en proyectil, sin bilis, después de comer. Presenta deshidratación y una pequeña masa epigástrica; el laboratorio muestra alcalosis hipoclorémica.",
+          "discriminator": "sin bilis",
+          "explanation": "El dato decisivo es sin bilis. La hipertrofia muscular pilórica obstruye el vaciamiento gástrico antes de la entrada de bilis; la pérdida repetida de ácido y cloro causa alcalosis y deshidratación. Confirmar con ultrasonido y corregir deshidratación y alteraciones electrolíticas antes de piloromiotomía.",
+          "confusable_with": "Malrotación con vólvulo",
+          "why_not": "El vómito no bilioso y la alcalosis favorecen obstrucción pilórica. La falta de vómito en proyectil en prematuros o una imagen dudosa no excluyen la sospecha.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Un lactante de cinco semanas tiene vómitos progresivos en proyectil, sin bilis, después de comer. Presenta deshidratación y una pequeña masa epigástrica; el laboratorio muestra alcalosis hipoclorémica."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "sin bilis"
+            },
+            {
+              "field": "mechanism",
+              "text": "La hipertrofia muscular pilórica obstruye el vaciamiento gástrico antes de la entrada de bilis; la pérdida repetida de ácido y cloro causa alcalosis y deshidratación."
+            },
+            {
+              "field": "initial_action",
+              "text": "Confirmar con ultrasonido y corregir deshidratación y alteraciones electrolíticas antes de piloromiotomía."
+            },
+            {
+              "field": "action_reason",
+              "text": "La cirugía resuelve la obstrucción, pero el desequilibrio aumenta el riesgo anestésico."
+            },
+            {
+              "field": "limits",
+              "text": "No llevar a cirugía sin corregir electrolitos. La vía abierta no es obligatoria en todos los centros como afirma el resumen."
+            },
+            {
+              "field": "source_corrections.0.reason",
+              "text": "La obligación de cirugía abierta de p170 no se sostiene: ambas vías son opciones según experiencia; se mantiene corrección electrolítica previa."
+            }
+          ]
+        },
+        "medium": {
+          "vignette": "Un prematuro presenta vómito no bilioso y deshidratación. Aunque el vómito no es en proyectil, se investiga obstrucción de salida gástrica.",
+          "discriminator": "Prematuridad sin exigir vómito en proyectil",
+          "explanation": "El dato decisivo es Prematuridad sin exigir vómito en proyectil. La musculatura puede producir un cuadro menos típico. No exigir vómito en proyectil para sospechar.",
+          "confusable_with": "Malrotación con vólvulo",
+          "why_not": "El vómito no bilioso y la alcalosis favorecen obstrucción pilórica. La falta de vómito en proyectil en prematuros o una imagen dudosa no excluyen la sospecha.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Un lactante de cinco semanas tiene vómitos progresivos en proyectil, sin bilis, después de comer. Presenta deshidratación y una pequeña masa epigástrica; el laboratorio muestra alcalosis hipoclorémica."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "sin bilis"
+            },
+            {
+              "field": "mechanism",
+              "text": "La hipertrofia muscular pilórica obstruye el vaciamiento gástrico antes de la entrada de bilis; la pérdida repetida de ácido y cloro causa alcalosis y deshidratación."
+            },
+            {
+              "field": "initial_action",
+              "text": "Confirmar con ultrasonido y corregir deshidratación y alteraciones electrolíticas antes de piloromiotomía."
+            },
+            {
+              "field": "action_reason",
+              "text": "La cirugía resuelve la obstrucción, pero el desequilibrio aumenta el riesgo anestésico."
+            },
+            {
+              "field": "limits",
+              "text": "No llevar a cirugía sin corregir electrolitos. La vía abierta no es obligatoria en todos los centros como afirma el resumen."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Obstrucción de salida gástrica"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Vómito no bilioso"
+            },
+            {
+              "field": "findings.1.mechanism",
+              "text": "Pérdida de ácido clorhídrico"
+            },
+            {
+              "field": "findings.1.finding",
+              "text": "Alcalosis hipoclorémica"
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Prematuro"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "No exigir vómito en proyectil para sospechar."
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "La musculatura puede producir un cuadro menos típico."
+            },
+            {
+              "field": "modifiers.1.factor",
+              "text": "Ultrasonido dudoso"
+            },
+            {
+              "field": "modifiers.1.action",
+              "text": "Valorar imagen adicional dirigida."
+            },
+            {
+              "field": "modifiers.1.reason",
+              "text": "Se necesita distinguir otras causas de obstrucción."
+            },
+            {
+              "field": "source_corrections.0.reason",
+              "text": "La obligación de cirugía abierta de p170 no se sostiene: ambas vías son opciones según experiencia; se mantiene corrección electrolítica previa."
+            }
+          ]
+        },
+        "contrast": {
+          "vignette": "En un lactante con vómitos no biliosos y alcalosis hipoclorémica, el ultrasonido es dudoso. Se considera imagen adicional dirigida después de corregir el estado hidroelectrolítico.",
+          "discriminator": "Sospecha persistente con ultrasonido dudoso",
+          "explanation": "El dato decisivo es Sospecha persistente con ultrasonido dudoso. Se necesita distinguir otras causas de obstrucción. Valorar imagen adicional dirigida.",
+          "confusable_with": "Malrotación con vólvulo",
+          "why_not": "El vómito no bilioso y la alcalosis favorecen obstrucción pilórica. La falta de vómito en proyectil en prematuros o una imagen dudosa no excluyen la sospecha.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Un lactante de cinco semanas tiene vómitos progresivos en proyectil, sin bilis, después de comer. Presenta deshidratación y una pequeña masa epigástrica; el laboratorio muestra alcalosis hipoclorémica."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "sin bilis"
+            },
+            {
+              "field": "mechanism",
+              "text": "La hipertrofia muscular pilórica obstruye el vaciamiento gástrico antes de la entrada de bilis; la pérdida repetida de ácido y cloro causa alcalosis y deshidratación."
+            },
+            {
+              "field": "initial_action",
+              "text": "Confirmar con ultrasonido y corregir deshidratación y alteraciones electrolíticas antes de piloromiotomía."
+            },
+            {
+              "field": "action_reason",
+              "text": "La cirugía resuelve la obstrucción, pero el desequilibrio aumenta el riesgo anestésico."
+            },
+            {
+              "field": "limits",
+              "text": "No llevar a cirugía sin corregir electrolitos. La vía abierta no es obligatoria en todos los centros como afirma el resumen."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Obstrucción de salida gástrica"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Vómito no bilioso"
+            },
+            {
+              "field": "findings.1.mechanism",
+              "text": "Pérdida de ácido clorhídrico"
+            },
+            {
+              "field": "findings.1.finding",
+              "text": "Alcalosis hipoclorémica"
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Prematuro"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "No exigir vómito en proyectil para sospechar."
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "La musculatura puede producir un cuadro menos típico."
+            },
+            {
+              "field": "modifiers.1.factor",
+              "text": "Ultrasonido dudoso"
+            },
+            {
+              "field": "modifiers.1.action",
+              "text": "Valorar imagen adicional dirigida."
+            },
+            {
+              "field": "modifiers.1.reason",
+              "text": "Se necesita distinguir otras causas de obstrucción."
+            },
+            {
+              "field": "source_corrections.0.reason",
+              "text": "La obligación de cirugía abierta de p170 no se sostiene: ambas vías son opciones según experiencia; se mantiene corrección electrolítica previa."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "06.04-01",
+      "parent_topic_id": "06.04-01",
+      "block_id": "06.04",
+      "name": "Invaginación intestinal",
+      "answer_kind": "diagnosis",
+      "variants": {
+        "easy": {
+          "vignette": "Un lactante presenta crisis súbitas de dolor con intervalos de aparente calma y vómitos. Después evacua moco con sangre; el ultrasonido muestra una imagen en diana.",
+          "discriminator": "imagen en diana",
+          "explanation": "El dato decisivo es imagen en diana. Un segmento intestinal se introduce dentro del distal, arrastra mesenterio y obstruye el tránsito; la congestión vascular causa edema y sangrado de mucosa. Estabilizar y valorar reducción neumática o hidrostática por equipo capacitado si no hay peritonitis, perforación ni shock.",
+          "confusable_with": "Divertículo de Meckel con sangrado aislado",
+          "why_not": "El dolor paroxístico y la imagen en diana favorecen invaginación. La peritonitis o el fracaso de reducción requieren valoración quirúrgica.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Un lactante presenta crisis súbitas de dolor con intervalos de aparente calma y vómitos. Después evacua moco con sangre; el ultrasonido muestra una imagen en diana."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "imagen en diana"
+            },
+            {
+              "field": "mechanism",
+              "text": "Un segmento intestinal se introduce dentro del distal, arrastra mesenterio y obstruye el tránsito; la congestión vascular causa edema y sangrado de mucosa."
+            },
+            {
+              "field": "initial_action",
+              "text": "Estabilizar y valorar reducción neumática o hidrostática por equipo capacitado si no hay peritonitis, perforación ni shock."
+            },
+            {
+              "field": "action_reason",
+              "text": "La reducción puede resolver el telescopaje sin resección en un paciente seleccionado."
+            },
+            {
+              "field": "limits",
+              "text": "La jalea de grosella puede faltar y no es exclusiva. La asociación vacunal no sustituye la evaluación de riesgo-beneficio de vacunación."
+            }
+          ]
+        },
+        "medium": {
+          "vignette": "Un lactante con dolor en crisis y vómitos desarrolla peritonitis e inestabilidad. Ya no es candidato a una reducción no operatoria habitual.",
+          "discriminator": "Cuadro intestinal con peritonitis o inestabilidad",
+          "explanation": "El dato decisivo es Cuadro intestinal con peritonitis o inestabilidad. La reducción por enema puede ser inapropiada. Solicitar cirugía urgente.",
+          "confusable_with": "Divertículo de Meckel con sangrado aislado",
+          "why_not": "El dolor paroxístico y la imagen en diana favorecen invaginación. La peritonitis o el fracaso de reducción requieren valoración quirúrgica.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Un lactante presenta crisis súbitas de dolor con intervalos de aparente calma y vómitos. Después evacua moco con sangre; el ultrasonido muestra una imagen en diana."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "imagen en diana"
+            },
+            {
+              "field": "mechanism",
+              "text": "Un segmento intestinal se introduce dentro del distal, arrastra mesenterio y obstruye el tránsito; la congestión vascular causa edema y sangrado de mucosa."
+            },
+            {
+              "field": "initial_action",
+              "text": "Estabilizar y valorar reducción neumática o hidrostática por equipo capacitado si no hay peritonitis, perforación ni shock."
+            },
+            {
+              "field": "action_reason",
+              "text": "La reducción puede resolver el telescopaje sin resección en un paciente seleccionado."
+            },
+            {
+              "field": "limits",
+              "text": "La jalea de grosella puede faltar y no es exclusiva. La asociación vacunal no sustituye la evaluación de riesgo-beneficio de vacunación."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Obstrucción intermitente"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Dolor paroxístico y vómitos"
+            },
+            {
+              "field": "findings.1.mechanism",
+              "text": "Congestión mucosa"
+            },
+            {
+              "field": "findings.1.finding",
+              "text": "Moco y sangre"
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Peritonitis, perforación o inestabilidad"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Solicitar cirugía urgente."
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "La reducción por enema puede ser inapropiada."
+            },
+            {
+              "field": "modifiers.1.factor",
+              "text": "Reducción no exitosa"
+            },
+            {
+              "field": "modifiers.1.action",
+              "text": "Valorar tratamiento quirúrgico."
+            },
+            {
+              "field": "modifiers.1.reason",
+              "text": "La obstrucción persiste."
+            }
+          ]
+        },
+        "contrast": {
+          "vignette": "En un lactante con imagen en diana y moco con sangre no se logra la reducción. Se valora tratamiento quirúrgico.",
+          "discriminator": "Reducción no exitosa de una lesión en diana",
+          "explanation": "El dato decisivo es Reducción no exitosa de una lesión en diana. La obstrucción persiste. Valorar tratamiento quirúrgico.",
+          "confusable_with": "Divertículo de Meckel con sangrado aislado",
+          "why_not": "El dolor paroxístico y la imagen en diana favorecen invaginación. La peritonitis o el fracaso de reducción requieren valoración quirúrgica.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Un lactante presenta crisis súbitas de dolor con intervalos de aparente calma y vómitos. Después evacua moco con sangre; el ultrasonido muestra una imagen en diana."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "imagen en diana"
+            },
+            {
+              "field": "mechanism",
+              "text": "Un segmento intestinal se introduce dentro del distal, arrastra mesenterio y obstruye el tránsito; la congestión vascular causa edema y sangrado de mucosa."
+            },
+            {
+              "field": "initial_action",
+              "text": "Estabilizar y valorar reducción neumática o hidrostática por equipo capacitado si no hay peritonitis, perforación ni shock."
+            },
+            {
+              "field": "action_reason",
+              "text": "La reducción puede resolver el telescopaje sin resección en un paciente seleccionado."
+            },
+            {
+              "field": "limits",
+              "text": "La jalea de grosella puede faltar y no es exclusiva. La asociación vacunal no sustituye la evaluación de riesgo-beneficio de vacunación."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Obstrucción intermitente"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Dolor paroxístico y vómitos"
+            },
+            {
+              "field": "findings.1.mechanism",
+              "text": "Congestión mucosa"
+            },
+            {
+              "field": "findings.1.finding",
+              "text": "Moco y sangre"
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Peritonitis, perforación o inestabilidad"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Solicitar cirugía urgente."
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "La reducción por enema puede ser inapropiada."
+            },
+            {
+              "field": "modifiers.1.factor",
+              "text": "Reducción no exitosa"
+            },
+            {
+              "field": "modifiers.1.action",
+              "text": "Valorar tratamiento quirúrgico."
+            },
+            {
+              "field": "modifiers.1.reason",
+              "text": "La obstrucción persiste."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "06.04-02",
+      "parent_topic_id": "06.04-02",
+      "block_id": "06.04",
+      "name": "Divertículo de Meckel",
+      "answer_kind": "diagnosis",
+      "variants": {
+        "easy": {
+          "vignette": "Un niño pequeño presenta sangrado digestivo sin dolor importante y sin una lesión anal visible. Se considera una fuente de mucosa ectópica en intestino delgado tras estabilizarlo.",
+          "discriminator": "sangrado digestivo sin dolor importante",
+          "explanation": "El dato decisivo es sangrado digestivo sin dolor importante. La persistencia del conducto vitelino forma un divertículo que puede contener mucosa gástrica; su secreción lesiona intestino adyacente y puede causar hemorragia u obstrucción. Valorar perfusión y hemoglobina y reponer volumen si se necesita. Investigar la fuente con estudios dirigidos y cirugía pediátrica; considerar gammagrafía según sospecha.",
+          "confusable_with": "Fisura anal",
+          "why_not": "La fuente sospechada está en intestino delgado y puede contener mucosa ectópica. Una fisura suele producir dolor ligado a la evacuación y sangre roja escasa.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Un niño pequeño presenta sangrado digestivo sin dolor importante y sin una lesión anal visible. Se considera una fuente de mucosa ectópica en intestino delgado tras estabilizarlo."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "sangrado digestivo sin dolor importante"
+            },
+            {
+              "field": "mechanism",
+              "text": "La persistencia del conducto vitelino forma un divertículo que puede contener mucosa gástrica; su secreción lesiona intestino adyacente y puede causar hemorragia u obstrucción."
+            },
+            {
+              "field": "initial_action",
+              "text": "Valorar perfusión y hemoglobina y reponer volumen si se necesita. Investigar la fuente con estudios dirigidos y cirugía pediátrica; considerar gammagrafía según sospecha."
+            },
+            {
+              "field": "action_reason",
+              "text": "La prioridad es estabilizar el sangrado y localizar una lesión tratable."
+            },
+            {
+              "field": "limits",
+              "text": "Un estudio negativo no excluye todas las lesiones; la decisión no depende de un diámetro único ni implica operar todo hallazgo incidental."
+            }
+          ]
+        },
+        "medium": {
+          "vignette": "Un niño con una lesión diverticular de intestino delgado desarrolla obstrucción o inflamación. Se evalúa resección por la complicación.",
+          "discriminator": "Divertículo intestinal complicado",
+          "explanation": "El dato decisivo es Divertículo intestinal complicado. La complicación exige tratar el divertículo. Valorar resección quirúrgica.",
+          "confusable_with": "Fisura anal",
+          "why_not": "La fuente sospechada está en intestino delgado y puede contener mucosa ectópica. Una fisura suele producir dolor ligado a la evacuación y sangre roja escasa.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Un niño pequeño presenta sangrado digestivo sin dolor importante y sin una lesión anal visible. Se considera una fuente de mucosa ectópica en intestino delgado tras estabilizarlo."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "sangrado digestivo sin dolor importante"
+            },
+            {
+              "field": "mechanism",
+              "text": "La persistencia del conducto vitelino forma un divertículo que puede contener mucosa gástrica; su secreción lesiona intestino adyacente y puede causar hemorragia u obstrucción."
+            },
+            {
+              "field": "initial_action",
+              "text": "Valorar perfusión y hemoglobina y reponer volumen si se necesita. Investigar la fuente con estudios dirigidos y cirugía pediátrica; considerar gammagrafía según sospecha."
+            },
+            {
+              "field": "action_reason",
+              "text": "La prioridad es estabilizar el sangrado y localizar una lesión tratable."
+            },
+            {
+              "field": "limits",
+              "text": "Un estudio negativo no excluye todas las lesiones; la decisión no depende de un diámetro único ni implica operar todo hallazgo incidental."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Mucosa gástrica ectópica"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Sangrado intestinal"
+            },
+            {
+              "field": "findings.1.mechanism",
+              "text": "Brida o punto de invaginación"
+            },
+            {
+              "field": "findings.1.finding",
+              "text": "Obstrucción"
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Obstrucción, inflamación o sangrado complicado"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Valorar resección quirúrgica."
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "La complicación exige tratar el divertículo."
+            }
+          ]
+        },
+        "contrast": {
+          "vignette": "En un niño con sangrado digestivo poco doloroso se investiga mucosa ectópica mediante gammagrafía, después de estabilizarlo.",
+          "discriminator": "Sangrado poco doloroso con búsqueda de mucosa ectópica",
+          "explanation": "El dato decisivo es Sangrado poco doloroso con búsqueda de mucosa ectópica. La persistencia del conducto vitelino forma un divertículo que puede contener mucosa gástrica; su secreción lesiona intestino adyacente y puede causar hemorragia u obstrucción. Valorar perfusión y hemoglobina y reponer volumen si se necesita. Investigar la fuente con estudios dirigidos y cirugía pediátrica; considerar gammagrafía según sospecha.",
+          "confusable_with": "Fisura anal",
+          "why_not": "La fuente sospechada está en intestino delgado y puede contener mucosa ectópica. Una fisura suele producir dolor ligado a la evacuación y sangre roja escasa.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Un niño pequeño presenta sangrado digestivo sin dolor importante y sin una lesión anal visible. Se considera una fuente de mucosa ectópica en intestino delgado tras estabilizarlo."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "sangrado digestivo sin dolor importante"
+            },
+            {
+              "field": "mechanism",
+              "text": "La persistencia del conducto vitelino forma un divertículo que puede contener mucosa gástrica; su secreción lesiona intestino adyacente y puede causar hemorragia u obstrucción."
+            },
+            {
+              "field": "initial_action",
+              "text": "Valorar perfusión y hemoglobina y reponer volumen si se necesita. Investigar la fuente con estudios dirigidos y cirugía pediátrica; considerar gammagrafía según sospecha."
+            },
+            {
+              "field": "action_reason",
+              "text": "La prioridad es estabilizar el sangrado y localizar una lesión tratable."
+            },
+            {
+              "field": "limits",
+              "text": "Un estudio negativo no excluye todas las lesiones; la decisión no depende de un diámetro único ni implica operar todo hallazgo incidental."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Mucosa gástrica ectópica"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Sangrado intestinal"
+            },
+            {
+              "field": "findings.1.mechanism",
+              "text": "Brida o punto de invaginación"
+            },
+            {
+              "field": "findings.1.finding",
+              "text": "Obstrucción"
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Obstrucción, inflamación o sangrado complicado"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Valorar resección quirúrgica."
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "La complicación exige tratar el divertículo."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "06.05-01",
+      "parent_topic_id": "06.05-01",
+      "block_id": "06.05",
+      "name": "Clasificar malformación anorrectal y estudiar anomalías",
+      "answer_kind": "decision",
+      "variants": {
+        "easy": {
+          "vignette": "En la revisión de un recién nacido no se identifica un ano permeable. Hay meconio en una abertura perineal anormal y se buscan alteraciones urinarias, cardíacas y de columna. ¿Qué acción o clasificación corresponde a este contexto?",
+          "discriminator": "no se identifica un ano permeable",
+          "explanation": "El dato decisivo es no se identifica un ano permeable. La formación anorrectal anormal puede interrumpir salida intestinal o comunicarla con tractos urogenitales; la anatomía de fístula y esfínter determina la reparación. Iniciar ayuno, líquidos intravenosos y descompresión indicada. Referir a un centro con cirugía neonatal y completar búsqueda de anomalías asociadas.",
+          "confusable_with": "Obstrucción intestinal proximal aislada",
+          "why_not": "El ano ausente o ectópico y la salida de meconio por un orificio anormal localizan el defecto en el desarrollo anorrectal.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "En la revisión de un recién nacido no se identifica un ano permeable. Hay meconio en una abertura perineal anormal y se buscan alteraciones urinarias, cardíacas y de columna."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "no se identifica un ano permeable"
+            },
+            {
+              "field": "mechanism",
+              "text": "La formación anorrectal anormal puede interrumpir salida intestinal o comunicarla con tractos urogenitales; la anatomía de fístula y esfínter determina la reparación."
+            },
+            {
+              "field": "initial_action",
+              "text": "Iniciar ayuno, líquidos intravenosos y descompresión indicada. Referir a un centro con cirugía neonatal y completar búsqueda de anomalías asociadas."
+            },
+            {
+              "field": "action_reason",
+              "text": "La corrección depende de anatomía y requiere atención multidisciplinaria."
+            },
+            {
+              "field": "limits",
+              "text": "No toda lesión requiere la misma colostomía o reparación primaria; definir el tipo antes de operar."
+            }
+          ]
+        },
+        "medium": {
+          "vignette": "En una recién nacida se identifica un solo orificio perineal. Se solicita evaluación especializada por posible malformación cloacal. ¿Qué acción o clasificación corresponde a este contexto?",
+          "discriminator": "Orificio perineal único en niña",
+          "explanation": "El dato decisivo es Orificio perineal único en niña. Puede comprometer intestino, vía urinaria y genitales. Valorar malformación cloacal.",
+          "confusable_with": "Obstrucción intestinal proximal aislada",
+          "why_not": "El ano ausente o ectópico y la salida de meconio por un orificio anormal localizan el defecto en el desarrollo anorrectal.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "En la revisión de un recién nacido no se identifica un ano permeable. Hay meconio en una abertura perineal anormal y se buscan alteraciones urinarias, cardíacas y de columna."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "no se identifica un ano permeable"
+            },
+            {
+              "field": "mechanism",
+              "text": "La formación anorrectal anormal puede interrumpir salida intestinal o comunicarla con tractos urogenitales; la anatomía de fístula y esfínter determina la reparación."
+            },
+            {
+              "field": "initial_action",
+              "text": "Iniciar ayuno, líquidos intravenosos y descompresión indicada. Referir a un centro con cirugía neonatal y completar búsqueda de anomalías asociadas."
+            },
+            {
+              "field": "action_reason",
+              "text": "La corrección depende de anatomía y requiere atención multidisciplinaria."
+            },
+            {
+              "field": "limits",
+              "text": "No toda lesión requiere la misma colostomía o reparación primaria; definir el tipo antes de operar."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Salida anorrectal anormal"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Ano ausente o ectópico"
+            },
+            {
+              "field": "findings.1.mechanism",
+              "text": "Comunicación urogenital"
+            },
+            {
+              "field": "findings.1.finding",
+              "text": "Meconio por orificio no anal"
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Orificio perineal único en niña"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Valorar malformación cloacal."
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "Puede comprometer intestino, vía urinaria y genitales."
+            }
+          ]
+        },
+        "contrast": {
+          "vignette": "Un recién nacido elimina meconio por la uretra. Se busca una comunicación intestinal con el tracto urinario y se completa evaluación de anomalías antes de decidir el tipo de reparación. ¿Qué acción o clasificación corresponde?",
+          "discriminator": "Meconio por uretra",
+          "explanation": "La salida de meconio por vía urinaria orienta a malformación anorrectal con comunicación. El tipo anatómico determina la reparación; no se aplica una colostomía o anoplastia idéntica a todos los defectos.",
+          "confusable_with": "Obstrucción intestinal proximal aislada",
+          "why_not": "El ano ausente o ectópico y la salida de meconio por un orificio anormal localizan el defecto en el desarrollo anorrectal.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "En la revisión de un recién nacido no se identifica un ano permeable. Hay meconio en una abertura perineal anormal y se buscan alteraciones urinarias, cardíacas y de columna."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "no se identifica un ano permeable"
+            },
+            {
+              "field": "mechanism",
+              "text": "La formación anorrectal anormal puede interrumpir salida intestinal o comunicarla con tractos urogenitales; la anatomía de fístula y esfínter determina la reparación."
+            },
+            {
+              "field": "initial_action",
+              "text": "Iniciar ayuno, líquidos intravenosos y descompresión indicada. Referir a un centro con cirugía neonatal y completar búsqueda de anomalías asociadas."
+            },
+            {
+              "field": "action_reason",
+              "text": "La corrección depende de anatomía y requiere atención multidisciplinaria."
+            },
+            {
+              "field": "limits",
+              "text": "No toda lesión requiere la misma colostomía o reparación primaria; definir el tipo antes de operar."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Salida anorrectal anormal"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Ano ausente o ectópico"
+            },
+            {
+              "field": "findings.1.mechanism",
+              "text": "Comunicación urogenital"
+            },
+            {
+              "field": "findings.1.finding",
+              "text": "Meconio por orificio no anal"
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Orificio perineal único en niña"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Valorar malformación cloacal."
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "Puede comprometer intestino, vía urinaria y genitales."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "06.05-02",
+      "parent_topic_id": "06.05-02",
+      "block_id": "06.05",
+      "name": "Distinguir gastrosquisis y onfalocele y estabilizar",
+      "answer_kind": "decision",
+      "variants": {
+        "easy": {
+          "vignette": "Un neonato nace con vísceras expuestas a la derecha del cordón, sin una membrana que las cubra. El equipo protege el intestino mientras inicia estabilización y evaluación de defectos asociados. ¿Qué acción o clasificación corresponde a este contexto?",
+          "discriminator": "sin una membrana",
+          "explanation": "El dato decisivo es sin una membrana. El defecto de pared permite exteriorización de vísceras; la ausencia de cobertura favorece pérdida de calor y líquido y expone intestino a lesión e inflamación. Reconocer gastrosquisis, proteger vísceras con cobertura estéril apropiada y evitar torsión y pérdida de calor. Mantener ayuno y descompresión e iniciar estabilización y referencia a cirugía neonatal.",
+          "confusable_with": "Gastrosquisis y onfalocele como términos equivalentes",
+          "why_not": "La localización paraumbilical sin membrana corresponde a gastrosquisis; la membrana en la base del cordón orienta a onfalocele. La presión abdominal limita el cierre.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Un neonato nace con vísceras expuestas a la derecha del cordón, sin una membrana que las cubra. El equipo protege el intestino mientras inicia estabilización y evaluación de defectos asociados."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "sin una membrana"
+            },
+            {
+              "field": "mechanism",
+              "text": "El defecto de pared permite exteriorización de vísceras; la ausencia de cobertura favorece pérdida de calor y líquido y expone intestino a lesión e inflamación."
+            },
+            {
+              "field": "initial_action",
+              "text": "Reconocer gastrosquisis, proteger vísceras con cobertura estéril apropiada y evitar torsión y pérdida de calor. Mantener ayuno y descompresión e iniciar estabilización y referencia a cirugía neonatal."
+            },
+            {
+              "field": "action_reason",
+              "text": "La protección y estabilización preceden al cierre seguro."
+            },
+            {
+              "field": "limits",
+              "text": "No asumir cesárea prematura universal ni cierre primario obligatorio; el plan depende de condiciones maternofetales y del defecto."
+            },
+            {
+              "field": "source_corrections.0.reason",
+              "text": "El caso de p179 corresponde a gastrosquisis; se explicita el subtipo dentro del tema general."
+            }
+          ]
+        },
+        "medium": {
+          "vignette": "Un recién nacido presenta vísceras cubiertas por una membrana en la base del cordón. Se debe clasificar el defecto y buscar malformaciones asociadas. ¿Qué acción o clasificación corresponde a este contexto?",
+          "discriminator": "Vísceras recubiertas en base del cordón",
+          "explanation": "El dato decisivo es Vísceras recubiertas en base del cordón. El defecto y asociaciones son distintos. Reconocer onfalocele y buscar anomalías asociadas.",
+          "confusable_with": "Gastrosquisis y onfalocele como términos equivalentes",
+          "why_not": "La localización paraumbilical sin membrana corresponde a gastrosquisis; la membrana en la base del cordón orienta a onfalocele. La presión abdominal limita el cierre.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Un neonato nace con vísceras expuestas a la derecha del cordón, sin una membrana que las cubra. El equipo protege el intestino mientras inicia estabilización y evaluación de defectos asociados."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "sin una membrana"
+            },
+            {
+              "field": "mechanism",
+              "text": "El defecto de pared permite exteriorización de vísceras; la ausencia de cobertura favorece pérdida de calor y líquido y expone intestino a lesión e inflamación."
+            },
+            {
+              "field": "initial_action",
+              "text": "Reconocer gastrosquisis, proteger vísceras con cobertura estéril apropiada y evitar torsión y pérdida de calor. Mantener ayuno y descompresión e iniciar estabilización y referencia a cirugía neonatal."
+            },
+            {
+              "field": "action_reason",
+              "text": "La protección y estabilización preceden al cierre seguro."
+            },
+            {
+              "field": "limits",
+              "text": "No asumir cesárea prematura universal ni cierre primario obligatorio; el plan depende de condiciones maternofetales y del defecto."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Vísceras sin cobertura"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Asas expuestas paraumbilicales"
+            },
+            {
+              "field": "findings.1.mechanism",
+              "text": "Exposición ambiental"
+            },
+            {
+              "field": "findings.1.finding",
+              "text": "Pérdida térmica y de líquido"
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Vísceras cubiertas por membrana en base de cordón"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Reconocer onfalocele y buscar anomalías asociadas."
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "El defecto y asociaciones son distintos."
+            },
+            {
+              "field": "modifiers.1.factor",
+              "text": "Cierre aumenta presión abdominal"
+            },
+            {
+              "field": "modifiers.1.action",
+              "text": "Valorar cierre diferido o silo especializado."
+            },
+            {
+              "field": "modifiers.1.reason",
+              "text": "La presión puede comprometer respiración y perfusión."
+            },
+            {
+              "field": "source_corrections.0.reason",
+              "text": "El caso de p179 corresponde a gastrosquisis; se explicita el subtipo dentro del tema general."
+            }
+          ]
+        },
+        "contrast": {
+          "vignette": "En un neonato con asas expuestas de pared abdominal, el cierre eleva la presión intraabdominal. Se valora silo o cierre diferido especializado. ¿Qué acción o clasificación corresponde a este contexto?",
+          "discriminator": "Cierre limitado por presión intraabdominal",
+          "explanation": "El dato decisivo es Cierre limitado por presión intraabdominal. La presión puede comprometer respiración y perfusión. Valorar cierre diferido o silo especializado.",
+          "confusable_with": "Gastrosquisis y onfalocele como términos equivalentes",
+          "why_not": "La localización paraumbilical sin membrana corresponde a gastrosquisis; la membrana en la base del cordón orienta a onfalocele. La presión abdominal limita el cierre.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Un neonato nace con vísceras expuestas a la derecha del cordón, sin una membrana que las cubra. El equipo protege el intestino mientras inicia estabilización y evaluación de defectos asociados."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "sin una membrana"
+            },
+            {
+              "field": "mechanism",
+              "text": "El defecto de pared permite exteriorización de vísceras; la ausencia de cobertura favorece pérdida de calor y líquido y expone intestino a lesión e inflamación."
+            },
+            {
+              "field": "initial_action",
+              "text": "Reconocer gastrosquisis, proteger vísceras con cobertura estéril apropiada y evitar torsión y pérdida de calor. Mantener ayuno y descompresión e iniciar estabilización y referencia a cirugía neonatal."
+            },
+            {
+              "field": "action_reason",
+              "text": "La protección y estabilización preceden al cierre seguro."
+            },
+            {
+              "field": "limits",
+              "text": "No asumir cesárea prematura universal ni cierre primario obligatorio; el plan depende de condiciones maternofetales y del defecto."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Vísceras sin cobertura"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Asas expuestas paraumbilicales"
+            },
+            {
+              "field": "findings.1.mechanism",
+              "text": "Exposición ambiental"
+            },
+            {
+              "field": "findings.1.finding",
+              "text": "Pérdida térmica y de líquido"
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Vísceras cubiertas por membrana en base de cordón"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Reconocer onfalocele y buscar anomalías asociadas."
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "El defecto y asociaciones son distintos."
+            },
+            {
+              "field": "modifiers.1.factor",
+              "text": "Cierre aumenta presión abdominal"
+            },
+            {
+              "field": "modifiers.1.action",
+              "text": "Valorar cierre diferido o silo especializado."
+            },
+            {
+              "field": "modifiers.1.reason",
+              "text": "La presión puede comprometer respiración y perfusión."
+            },
+            {
+              "field": "source_corrections.0.reason",
+              "text": "El caso de p179 corresponde a gastrosquisis; se explicita el subtipo dentro del tema general."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "06.06-01",
+      "parent_topic_id": "06.06-01",
+      "block_id": "06.06",
+      "name": "Hernía diafragmática congénita",
+      "answer_kind": "diagnosis",
+      "variants": {
+        "easy": {
+          "vignette": "Un recién nacido presenta dificultad respiratoria y cianosis tempranas. Tiene abdomen excavado y murmullo reducido de un lado; la radiografía muestra vísceras abdominales dentro del tórax.",
+          "discriminator": "abdomen excavado",
+          "explanation": "El dato decisivo es abdomen excavado. La falta de cierre diafragmático permite herniación fetal de vísceras y limita desarrollo pulmonar; la hipoplasia y alteraciones vasculares explican el compromiso respiratorio neonatal. Solicitar intubación endotraqueal y ventilación cuidadosa por el equipo neonatal; evitar ventilación con bolsa y mascarilla. Descomprimir estómago con sonda orogástrica y estabilizar antes de reparar el diafragma.",
+          "confusable_with": "Neumotórax neonatal",
+          "why_not": "Las vísceras torácicas con abdomen excavado indican un defecto diafragmático. La presión con mascarilla puede distenderlas y empeorar la ventilación.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Un recién nacido presenta dificultad respiratoria y cianosis tempranas. Tiene abdomen excavado y murmullo reducido de un lado; la radiografía muestra vísceras abdominales dentro del tórax."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "abdomen excavado"
+            },
+            {
+              "field": "mechanism",
+              "text": "La falta de cierre diafragmático permite herniación fetal de vísceras y limita desarrollo pulmonar; la hipoplasia y alteraciones vasculares explican el compromiso respiratorio neonatal."
+            },
+            {
+              "field": "initial_action",
+              "text": "Solicitar intubación endotraqueal y ventilación cuidadosa por el equipo neonatal; evitar ventilación con bolsa y mascarilla. Descomprimir estómago con sonda orogástrica y estabilizar antes de reparar el diafragma."
+            },
+            {
+              "field": "action_reason",
+              "text": "La insuficiencia pulmonar requiere control antes del tratamiento anatómico."
+            },
+            {
+              "field": "limits",
+              "text": "La reparación no debe fijarse solo por 24–48 horas; depende de estabilidad respiratoria y hemodinámica."
+            },
+            {
+              "field": "source_corrections.0.reason",
+              "text": "Se precisa el soporte respiratorio de p172 para evitar distensión de vísceras herniadas con bolsa y mascarilla."
+            }
+          ]
+        },
+        "medium": {
+          "vignette": "Un niño tiene un defecto anterior del diafragma con vísceras abdominales en tórax, detectado como hallazgo tardío poco sintomático. Se completa evaluación anatómica.",
+          "discriminator": "Defecto diafragmático anterior de presentación tardía",
+          "explanation": "La presentación anterior puede ser tardía o incidental. Se debe definir anatomía y repercusión aunque la insuficiencia respiratoria neonatal intensa no sea el motivo de consulta.",
+          "confusable_with": "Neumotórax neonatal",
+          "why_not": "Las vísceras torácicas con abdomen excavado indican un defecto diafragmático. La presión con mascarilla puede distenderlas y empeorar la ventilación.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Un recién nacido presenta dificultad respiratoria y cianosis tempranas. Tiene abdomen excavado y murmullo reducido de un lado; la radiografía muestra vísceras abdominales dentro del tórax."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "abdomen excavado"
+            },
+            {
+              "field": "mechanism",
+              "text": "La falta de cierre diafragmático permite herniación fetal de vísceras y limita desarrollo pulmonar; la hipoplasia y alteraciones vasculares explican el compromiso respiratorio neonatal."
+            },
+            {
+              "field": "initial_action",
+              "text": "Solicitar intubación endotraqueal y ventilación cuidadosa por el equipo neonatal; evitar ventilación con bolsa y mascarilla. Descomprimir estómago con sonda orogástrica y estabilizar antes de reparar el diafragma."
+            },
+            {
+              "field": "action_reason",
+              "text": "La insuficiencia pulmonar requiere control antes del tratamiento anatómico."
+            },
+            {
+              "field": "limits",
+              "text": "La reparación no debe fijarse solo por 24–48 horas; depende de estabilidad respiratoria y hemodinámica."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Vísceras intratorácicas"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Murmullo reducido y abdomen excavado"
+            },
+            {
+              "field": "findings.1.mechanism",
+              "text": "Hipoplasia pulmonar"
+            },
+            {
+              "field": "findings.1.finding",
+              "text": "Insuficiencia respiratoria"
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Hernia anterior menos sintomática"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Completar evaluación anatómica aunque sea incidental."
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "La presentación puede ser más tardía."
+            },
+            {
+              "field": "source_corrections.0.reason",
+              "text": "Se precisa el soporte respiratorio de p172 para evitar distensión de vísceras herniadas con bolsa y mascarilla."
+            }
+          ]
+        },
+        "contrast": {
+          "vignette": "Un neonato con abdomen excavado y vísceras en el tórax necesita soporte respiratorio. Se evita distender el intestino con bolsa y mascarilla y se solicita manejo experto.",
+          "discriminator": "Insuficiencia respiratoria con vísceras intratorácicas",
+          "explanation": "El dato decisivo es Insuficiencia respiratoria con vísceras intratorácicas. La falta de cierre diafragmático permite herniación fetal de vísceras y limita desarrollo pulmonar; la hipoplasia y alteraciones vasculares explican el compromiso respiratorio neonatal. Solicitar intubación endotraqueal y ventilación cuidadosa por el equipo neonatal; evitar ventilación con bolsa y mascarilla. Descomprimir estómago con sonda orogástrica y estabilizar antes de reparar el diafragma.",
+          "confusable_with": "Neumotórax neonatal",
+          "why_not": "Las vísceras torácicas con abdomen excavado indican un defecto diafragmático. La presión con mascarilla puede distenderlas y empeorar la ventilación.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Un recién nacido presenta dificultad respiratoria y cianosis tempranas. Tiene abdomen excavado y murmullo reducido de un lado; la radiografía muestra vísceras abdominales dentro del tórax."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "abdomen excavado"
+            },
+            {
+              "field": "mechanism",
+              "text": "La falta de cierre diafragmático permite herniación fetal de vísceras y limita desarrollo pulmonar; la hipoplasia y alteraciones vasculares explican el compromiso respiratorio neonatal."
+            },
+            {
+              "field": "initial_action",
+              "text": "Solicitar intubación endotraqueal y ventilación cuidadosa por el equipo neonatal; evitar ventilación con bolsa y mascarilla. Descomprimir estómago con sonda orogástrica y estabilizar antes de reparar el diafragma."
+            },
+            {
+              "field": "action_reason",
+              "text": "La insuficiencia pulmonar requiere control antes del tratamiento anatómico."
+            },
+            {
+              "field": "limits",
+              "text": "La reparación no debe fijarse solo por 24–48 horas; depende de estabilidad respiratoria y hemodinámica."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Vísceras intratorácicas"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Murmullo reducido y abdomen excavado"
+            },
+            {
+              "field": "findings.1.mechanism",
+              "text": "Hipoplasia pulmonar"
+            },
+            {
+              "field": "findings.1.finding",
+              "text": "Insuficiencia respiratoria"
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Hernia anterior menos sintomática"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Completar evaluación anatómica aunque sea incidental."
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "La presentación puede ser más tardía."
+            },
+            {
+              "field": "source_corrections.0.reason",
+              "text": "Se precisa el soporte respiratorio de p172 para evitar distensión de vísceras herniadas con bolsa y mascarilla."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "06.07-01",
+      "parent_topic_id": "06.07-01",
+      "block_id": "06.07",
+      "name": "Atresia biliar",
+      "answer_kind": "diagnosis",
+      "variants": {
+        "easy": {
+          "vignette": "Un lactante de cuatro semanas sigue amarillo y presenta heces muy pálidas y orina oscura. Parece alimentarse bien, pero la bilirrubina directa está elevada.",
+          "discriminator": "heces muy pálidas y orina oscura",
+          "explanation": "El dato decisivo es heces muy pálidas y orina oscura. La obliteración progresiva de conductos extrahepáticos bloquea salida de bilis; la colestasis causa hiperbilirrubinemia conjugada y ausencia de pigmento fecal, con daño hepático progresivo. Solicitar evaluación urgente de colestasis y referir a hepatología y cirugía pediátrica sin esperar resolución espontánea.",
+          "confusable_with": "Ictericia no conjugada del lactante",
+          "why_not": "La acolia y la bilirrubina directa elevada indican obstrucción o colestasis. La buena alimentación aparente no permite retrasar su estudio.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Un lactante de cuatro semanas sigue amarillo y presenta heces muy pálidas y orina oscura. Parece alimentarse bien, pero la bilirrubina directa está elevada."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "heces muy pálidas y orina oscura"
+            },
+            {
+              "field": "mechanism",
+              "text": "La obliteración progresiva de conductos extrahepáticos bloquea salida de bilis; la colestasis causa hiperbilirrubinemia conjugada y ausencia de pigmento fecal, con daño hepático progresivo."
+            },
+            {
+              "field": "initial_action",
+              "text": "Solicitar evaluación urgente de colestasis y referir a hepatología y cirugía pediátrica sin esperar resolución espontánea."
+            },
+            {
+              "field": "action_reason",
+              "text": "La oportunidad de una portoenterostomía temprana modifica el pronóstico."
+            },
+            {
+              "field": "limits",
+              "text": "A las 2–4 semanas, bilirrubina directa o conjugada ≥1 mg/dL requiere consulta urgente. No usar el umbral antiguo de >2 mg/dL o >20% del total para retrasar evaluación."
+            },
+            {
+              "field": "source_corrections.0.reason",
+              "text": "Se corrige el umbral antiguo de p162; se conserva la referencia urgente del caso con acolia y coluria."
+            }
+          ]
+        },
+        "medium": {
+          "vignette": "Un lactante continúa ictérico después de dos semanas. Se fracciona bilirrubina y se pregunta por el color de las heces para no omitir colestasis.",
+          "discriminator": "Ictericia persistente que exige fraccionamiento",
+          "explanation": "El dato decisivo es Ictericia persistente que exige fraccionamiento. No toda ictericia prolongada es fisiológica. Fraccionar bilirrubina y valorar color de heces.",
+          "confusable_with": "Ictericia no conjugada del lactante",
+          "why_not": "La acolia y la bilirrubina directa elevada indican obstrucción o colestasis. La buena alimentación aparente no permite retrasar su estudio.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Un lactante de cuatro semanas sigue amarillo y presenta heces muy pálidas y orina oscura. Parece alimentarse bien, pero la bilirrubina directa está elevada."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "heces muy pálidas y orina oscura"
+            },
+            {
+              "field": "mechanism",
+              "text": "La obliteración progresiva de conductos extrahepáticos bloquea salida de bilis; la colestasis causa hiperbilirrubinemia conjugada y ausencia de pigmento fecal, con daño hepático progresivo."
+            },
+            {
+              "field": "initial_action",
+              "text": "Solicitar evaluación urgente de colestasis y referir a hepatología y cirugía pediátrica sin esperar resolución espontánea."
+            },
+            {
+              "field": "action_reason",
+              "text": "La oportunidad de una portoenterostomía temprana modifica el pronóstico."
+            },
+            {
+              "field": "limits",
+              "text": "A las 2–4 semanas, bilirrubina directa o conjugada ≥1 mg/dL requiere consulta urgente. No usar el umbral antiguo de >2 mg/dL o >20% del total para retrasar evaluación."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Bilis no llega al intestino"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Acolia"
+            },
+            {
+              "field": "findings.1.mechanism",
+              "text": "Bilirrubina conjugada circulante"
+            },
+            {
+              "field": "findings.1.finding",
+              "text": "Coluria e ictericia"
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Ictericia persistente más allá de dos semanas"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Fraccionar bilirrubina y valorar color de heces."
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "No toda ictericia prolongada es fisiológica."
+            },
+            {
+              "field": "source_corrections.0.reason",
+              "text": "Se corrige el umbral antiguo de p162; se conserva la referencia urgente del caso con acolia y coluria."
+            }
+          ]
+        },
+        "contrast": {
+          "vignette": "Un lactante con colestasis persistente llega en etapa tardía con hepatosplenomegalia y ascitis. Se investiga obstrucción biliar y se refiere sin esperar resolución espontánea.",
+          "discriminator": "Colestasis con repercusión hepática tardía",
+          "explanation": "La obstrucción biliar progresiva puede causar repercusión hepática. Se requiere hepatología y cirugía pediátrica urgentes; no se usan umbrales antiguos para retrasar el estudio.",
+          "confusable_with": "Ictericia no conjugada del lactante",
+          "why_not": "La acolia y la bilirrubina directa elevada indican obstrucción o colestasis. La buena alimentación aparente no permite retrasar su estudio.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Un lactante de cuatro semanas sigue amarillo y presenta heces muy pálidas y orina oscura. Parece alimentarse bien, pero la bilirrubina directa está elevada."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "heces muy pálidas y orina oscura"
+            },
+            {
+              "field": "mechanism",
+              "text": "La obliteración progresiva de conductos extrahepáticos bloquea salida de bilis; la colestasis causa hiperbilirrubinemia conjugada y ausencia de pigmento fecal, con daño hepático progresivo."
+            },
+            {
+              "field": "initial_action",
+              "text": "Solicitar evaluación urgente de colestasis y referir a hepatología y cirugía pediátrica sin esperar resolución espontánea."
+            },
+            {
+              "field": "action_reason",
+              "text": "La oportunidad de una portoenterostomía temprana modifica el pronóstico."
+            },
+            {
+              "field": "limits",
+              "text": "A las 2–4 semanas, bilirrubina directa o conjugada ≥1 mg/dL requiere consulta urgente. No usar el umbral antiguo de >2 mg/dL o >20% del total para retrasar evaluación."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Bilis no llega al intestino"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Acolia"
+            },
+            {
+              "field": "findings.1.mechanism",
+              "text": "Bilirrubina conjugada circulante"
+            },
+            {
+              "field": "findings.1.finding",
+              "text": "Coluria e ictericia"
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Ictericia persistente más allá de dos semanas"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Fraccionar bilirrubina y valorar color de heces."
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "No toda ictericia prolongada es fisiológica."
+            },
+            {
+              "field": "source_corrections.0.reason",
+              "text": "Se corrige el umbral antiguo de p162; se conserva la referencia urgente del caso con acolia y coluria."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "06.08-01",
+      "parent_topic_id": "06.08-01",
+      "block_id": "06.08",
+      "name": "Evaluar posición testicular y realizar referencia oportuna",
+      "answer_kind": "decision",
+      "variants": {
+        "easy": {
+          "vignette": "En la exploración de un lactante de seis meses de edad corregida no se palpa un testículo dentro del escroto. No permanece allí al movilizarlo y el hallazgo persiste desde el nacimiento. ¿Qué acción o clasificación corresponde?",
+          "discriminator": "seis meses de edad corregida",
+          "explanation": "El dato decisivo es seis meses de edad corregida. El descenso testicular incompleto deja el testículo fuera de la bolsa escrotal; distinguir ausencia, localización ectópica y retracción evita retrasar evaluación de un testículo no descendido. Documentar palpabilidad con exploración cuidadosa y descartar testículo retráctil. Referir ahora a urología o cirugía pediátrica para orquidopexia, idealmente antes de 12 meses y como máximo a los 18 meses.",
+          "confusable_with": "Testículo retráctil",
+          "why_not": "Un testículo que no permanece en el escroto no se debe considerar simplemente retráctil. La bilateralidad no palpable o genitales atípicos amplían la evaluación.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "En la exploración de un lactante de seis meses de edad corregida no se palpa un testículo dentro del escroto. No permanece allí al movilizarlo y el hallazgo persiste desde el nacimiento."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "seis meses de edad corregida"
+            },
+            {
+              "field": "mechanism",
+              "text": "El descenso testicular incompleto deja el testículo fuera de la bolsa escrotal; distinguir ausencia, localización ectópica y retracción evita retrasar evaluación de un testículo no descendido."
+            },
+            {
+              "field": "initial_action",
+              "text": "Documentar palpabilidad con exploración cuidadosa y descartar testículo retráctil. Referir ahora a urología o cirugía pediátrica para orquidopexia, idealmente antes de 12 meses y como máximo a los 18 meses."
+            },
+            {
+              "field": "action_reason",
+              "text": "La exploración orienta localización y necesidad de corrección."
+            },
+            {
+              "field": "limits",
+              "text": "No esperar un año para referir. El ultrasonido rutinario antes de referencia no localiza de manera fiable un testículo no palpable y puede retrasar su atención."
+            },
+            {
+              "field": "source_corrections.0.reason",
+              "text": "Se reemplaza la vigilancia imprecisa de p167 por referencia a los seis meses corregidos y plazo quirúrgico actual; se evita imagen rutinaria."
+            }
+          ]
+        },
+        "medium": {
+          "vignette": "En un lactante ninguno de los dos testículos es palpable. La presencia de genitales atípicos exige valoración especializada más amplia. ¿Qué acción o clasificación corresponde?",
+          "discriminator": "Testículos bilaterales no palpables o genitales atípicos",
+          "explanation": "El dato decisivo es Testículos bilaterales no palpables o genitales atípicos. Puede requerir estudio endocrino y genético. Ampliar valoración especializada.",
+          "confusable_with": "Testículo retráctil",
+          "why_not": "Un testículo que no permanece en el escroto no se debe considerar simplemente retráctil. La bilateralidad no palpable o genitales atípicos amplían la evaluación.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "En la exploración de un lactante de seis meses de edad corregida no se palpa un testículo dentro del escroto. No permanece allí al movilizarlo y el hallazgo persiste desde el nacimiento."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "seis meses de edad corregida"
+            },
+            {
+              "field": "mechanism",
+              "text": "El descenso testicular incompleto deja el testículo fuera de la bolsa escrotal; distinguir ausencia, localización ectópica y retracción evita retrasar evaluación de un testículo no descendido."
+            },
+            {
+              "field": "initial_action",
+              "text": "Documentar palpabilidad con exploración cuidadosa y descartar testículo retráctil. Referir ahora a urología o cirugía pediátrica para orquidopexia, idealmente antes de 12 meses y como máximo a los 18 meses."
+            },
+            {
+              "field": "action_reason",
+              "text": "La exploración orienta localización y necesidad de corrección."
+            },
+            {
+              "field": "limits",
+              "text": "No esperar un año para referir. El ultrasonido rutinario antes de referencia no localiza de manera fiable un testículo no palpable y puede retrasar su atención."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Descenso incompleto"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Escroto vacío unilateral o bilateral"
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Ambos testículos no palpables o genitales atípicos"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Ampliar valoración especializada."
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "Puede requerir estudio endocrino y genético."
+            },
+            {
+              "field": "source_corrections.0.reason",
+              "text": "Se reemplaza la vigilancia imprecisa de p167 por referencia a los seis meses corregidos y plazo quirúrgico actual; se evita imagen rutinaria."
+            }
+          ]
+        },
+        "contrast": {
+          "vignette": "Un testículo es palpable fuera de la trayectoria habitual de descenso y no ocupa el escroto. Se diferencia un testículo ectópico de uno retráctil y se solicita valoración especializada. ¿Qué acción o clasificación corresponde?",
+          "discriminator": "Testículo ectópico palpable fuera del trayecto normal",
+          "explanation": "El testículo ectópico se encuentra fuera de su trayecto y requiere valoración. La palpabilidad y la exploración guían la referencia; no se necesita ultrasonido rutinario que retrase la atención.",
+          "confusable_with": "Testículo retráctil",
+          "why_not": "La ubicación fuera de la trayectoria normal corresponde a ectopia. La exploración de movilidad y posición distingue este contexto de un testículo retráctil.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "En la exploración de un lactante de seis meses de edad corregida no se palpa un testículo dentro del escroto. No permanece allí al movilizarlo y el hallazgo persiste desde el nacimiento."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "seis meses de edad corregida"
+            },
+            {
+              "field": "mechanism",
+              "text": "El descenso testicular incompleto deja el testículo fuera de la bolsa escrotal; distinguir ausencia, localización ectópica y retracción evita retrasar evaluación de un testículo no descendido."
+            },
+            {
+              "field": "initial_action",
+              "text": "Documentar palpabilidad con exploración cuidadosa y descartar testículo retráctil. Referir ahora a urología o cirugía pediátrica para orquidopexia, idealmente antes de 12 meses y como máximo a los 18 meses."
+            },
+            {
+              "field": "action_reason",
+              "text": "La exploración orienta localización y necesidad de corrección."
+            },
+            {
+              "field": "limits",
+              "text": "No esperar un año para referir. El ultrasonido rutinario antes de referencia no localiza de manera fiable un testículo no palpable y puede retrasar su atención."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Descenso incompleto"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Escroto vacío unilateral o bilateral"
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Ambos testículos no palpables o genitales atípicos"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Ampliar valoración especializada."
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "Puede requerir estudio endocrino y genético."
+            },
+            {
+              "field": "source_corrections.0.reason",
+              "text": "Se reemplaza la vigilancia imprecisa de p167 por referencia a los seis meses corregidos y plazo quirúrgico actual; se evita imagen rutinaria."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "06.08-02",
+      "parent_topic_id": "06.08-02",
+      "block_id": "06.08",
+      "name": "Proteger defecto neural y evaluar según cobertura",
+      "answer_kind": "decision",
+      "variants": {
+        "easy": {
+          "vignette": "Un recién nacido presenta un saco abierto en la región lumbar con tejido neural visible. Se evita presión sobre la lesión mientras se valoran respiración, movimiento de piernas y perímetro cefálico. ¿Qué acción o clasificación corresponde a este contexto?",
+          "discriminator": "tejido neural visible",
+          "explanation": "El dato decisivo es tejido neural visible. El fallo de cierre del tubo neural deja un defecto vertebral con protrusión variable de meninges y tejido nervioso; la exposición aumenta riesgo de lesión e infección. Colocar en prono o lateral, proteger la lesión con técnica estéril y mantener evaluación neonatal. Solicitar neurocirugía y valorar hidrocefalia y déficits asociados.",
+          "confusable_with": "Cuidados idénticos para defectos abiertos y cerrados",
+          "why_not": "La exposición del tejido neural determina el riesgo de contaminación y los cuidados locales. Un defecto cerrado también requiere evaluación, con necesidades distintas.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Un recién nacido presenta un saco abierto en la región lumbar con tejido neural visible. Se evita presión sobre la lesión mientras se valoran respiración, movimiento de piernas y perímetro cefálico."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "tejido neural visible"
+            },
+            {
+              "field": "mechanism",
+              "text": "El fallo de cierre del tubo neural deja un defecto vertebral con protrusión variable de meninges y tejido nervioso; la exposición aumenta riesgo de lesión e infección."
+            },
+            {
+              "field": "initial_action",
+              "text": "Colocar en prono o lateral, proteger la lesión con técnica estéril y mantener evaluación neonatal. Solicitar neurocirugía y valorar hidrocefalia y déficits asociados."
+            },
+            {
+              "field": "action_reason",
+              "text": "La protección evita traumatismo y contaminación mientras se planea cierre."
+            },
+            {
+              "field": "limits",
+              "text": "Una lesión cutánea cerrada no excluye disrafismo subyacente; la evaluación neurológica sigue siendo necesaria."
+            }
+          ]
+        },
+        "medium": {
+          "vignette": "Un recién nacido con defecto lumbar abierto presenta ruptura del saco. Se protegen los tejidos y se valora infección y antimicrobianos según el contexto. ¿Qué acción o clasificación corresponde a este contexto?",
+          "discriminator": "Saco neural roto",
+          "explanation": "El dato decisivo es Saco neural roto. Hay mayor exposición infecciosa. Valorar cultivos y antimicrobianos según contexto.",
+          "confusable_with": "Cuidados idénticos para defectos abiertos y cerrados",
+          "why_not": "La exposición del tejido neural determina el riesgo de contaminación y los cuidados locales. Un defecto cerrado también requiere evaluación, con necesidades distintas.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Un recién nacido presenta un saco abierto en la región lumbar con tejido neural visible. Se evita presión sobre la lesión mientras se valoran respiración, movimiento de piernas y perímetro cefálico."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "tejido neural visible"
+            },
+            {
+              "field": "mechanism",
+              "text": "El fallo de cierre del tubo neural deja un defecto vertebral con protrusión variable de meninges y tejido nervioso; la exposición aumenta riesgo de lesión e infección."
+            },
+            {
+              "field": "initial_action",
+              "text": "Colocar en prono o lateral, proteger la lesión con técnica estéril y mantener evaluación neonatal. Solicitar neurocirugía y valorar hidrocefalia y déficits asociados."
+            },
+            {
+              "field": "action_reason",
+              "text": "La protección evita traumatismo y contaminación mientras se planea cierre."
+            },
+            {
+              "field": "limits",
+              "text": "Una lesión cutánea cerrada no excluye disrafismo subyacente; la evaluación neurológica sigue siendo necesaria."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Tejido neural herniado"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Defecto motor o sensitivo"
+            },
+            {
+              "field": "findings.1.mechanism",
+              "text": "Saco abierto"
+            },
+            {
+              "field": "findings.1.finding",
+              "text": "Riesgo de contaminación"
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Saco roto"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Valorar cultivos y antimicrobianos según contexto."
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "Hay mayor exposición infecciosa."
+            },
+            {
+              "field": "modifiers.1.factor",
+              "text": "Defecto cerrado"
+            },
+            {
+              "field": "modifiers.1.action",
+              "text": "Referir para evaluación aunque no necesite los mismos cuidados del saco abierto."
+            },
+            {
+              "field": "modifiers.1.reason",
+              "text": "El riesgo y la anatomía difieren."
+            }
+          ]
+        },
+        "contrast": {
+          "vignette": "Se identifica un defecto espinal cerrado en un recién nacido. Aunque no requiere los mismos cuidados de un saco abierto, se organiza evaluación especializada. ¿Qué acción o clasificación corresponde a este contexto?",
+          "discriminator": "Defecto espinal cerrado",
+          "explanation": "El dato decisivo es Defecto espinal cerrado. El riesgo y la anatomía difieren. Referir para evaluación aunque no necesite los mismos cuidados del saco abierto.",
+          "confusable_with": "Cuidados idénticos para defectos abiertos y cerrados",
+          "why_not": "La exposición del tejido neural determina el riesgo de contaminación y los cuidados locales. Un defecto cerrado también requiere evaluación, con necesidades distintas.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Un recién nacido presenta un saco abierto en la región lumbar con tejido neural visible. Se evita presión sobre la lesión mientras se valoran respiración, movimiento de piernas y perímetro cefálico."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "tejido neural visible"
+            },
+            {
+              "field": "mechanism",
+              "text": "El fallo de cierre del tubo neural deja un defecto vertebral con protrusión variable de meninges y tejido nervioso; la exposición aumenta riesgo de lesión e infección."
+            },
+            {
+              "field": "initial_action",
+              "text": "Colocar en prono o lateral, proteger la lesión con técnica estéril y mantener evaluación neonatal. Solicitar neurocirugía y valorar hidrocefalia y déficits asociados."
+            },
+            {
+              "field": "action_reason",
+              "text": "La protección evita traumatismo y contaminación mientras se planea cierre."
+            },
+            {
+              "field": "limits",
+              "text": "Una lesión cutánea cerrada no excluye disrafismo subyacente; la evaluación neurológica sigue siendo necesaria."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Tejido neural herniado"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Defecto motor o sensitivo"
+            },
+            {
+              "field": "findings.1.mechanism",
+              "text": "Saco abierto"
+            },
+            {
+              "field": "findings.1.finding",
+              "text": "Riesgo de contaminación"
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Saco roto"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Valorar cultivos y antimicrobianos según contexto."
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "Hay mayor exposición infecciosa."
+            },
+            {
+              "field": "modifiers.1.factor",
+              "text": "Defecto cerrado"
+            },
+            {
+              "field": "modifiers.1.action",
+              "text": "Referir para evaluación aunque no necesite los mismos cuidados del saco abierto."
+            },
+            {
+              "field": "modifiers.1.reason",
+              "text": "El riesgo y la anatomía difieren."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "06.09-01",
+      "parent_topic_id": "06.09-01",
+      "block_id": "06.09",
+      "name": "Distinguir origen renal o simpático de una masa infantil",
+      "answer_kind": "decision",
+      "variants": {
+        "easy": {
+          "vignette": "Un niño tiene una masa abdominal sin causa definida. Se compara si cruza la línea media, su movilidad y la presencia de hematuria, hipertensión o síntomas constitucionales. ¿Qué acción o clasificación corresponde a este contexto?",
+          "discriminator": "si cruza la línea media",
+          "explanation": "El dato decisivo es si cruza la línea media. El origen renal o simpático de una masa pediátrica produce patrones diferentes; la localización, movilidad y manifestaciones asociadas orientan estudios sin sustituir confirmación anatómica e histológica. Solicitar ultrasonido abdominal y referencia pediátrica especializada. Dirigir estudios adicionales según órgano de origen, sin elegir tratamiento solo por la palpación.",
+          "confusable_with": "Nefroblastoma y neuroblastoma como una misma entidad",
+          "why_not": "La localización renal y la hematuria orientan a nefroblastoma. Una masa fija con síntomas sistémicos y sospecha simpática requiere investigar neuroblastoma.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Un niño tiene una masa abdominal sin causa definida. Se compara si cruza la línea media, su movilidad y la presencia de hematuria, hipertensión o síntomas constitucionales."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "si cruza la línea media"
+            },
+            {
+              "field": "mechanism",
+              "text": "El origen renal o simpático de una masa pediátrica produce patrones diferentes; la localización, movilidad y manifestaciones asociadas orientan estudios sin sustituir confirmación anatómica e histológica."
+            },
+            {
+              "field": "initial_action",
+              "text": "Solicitar ultrasonido abdominal y referencia pediátrica especializada. Dirigir estudios adicionales según órgano de origen, sin elegir tratamiento solo por la palpación."
+            },
+            {
+              "field": "action_reason",
+              "text": "La imagen localiza y permite planear diagnóstico seguro."
+            },
+            {
+              "field": "limits",
+              "text": "Cruzar o no la línea media orienta, pero no es una regla absoluta ni basta para indicar cirugía."
+            }
+          ]
+        },
+        "medium": {
+          "vignette": "Un niño con masa abdominal fija y síntomas generales requiere estudio de un posible origen simpático. Se solicitan metabolitos urinarios de catecolaminas. ¿Qué acción o clasificación corresponde a este contexto?",
+          "discriminator": "Masa con sospecha de origen simpático",
+          "explanation": "El dato decisivo es Masa con sospecha de origen simpático. Aportan apoyo bioquímico. Valorar metabolitos urinarios de catecolaminas.",
+          "confusable_with": "Nefroblastoma y neuroblastoma como una misma entidad",
+          "why_not": "La localización renal y la hematuria orientan a nefroblastoma. Una masa fija con síntomas sistémicos y sospecha simpática requiere investigar neuroblastoma.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Un niño tiene una masa abdominal sin causa definida. Se compara si cruza la línea media, su movilidad y la presencia de hematuria, hipertensión o síntomas constitucionales."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "si cruza la línea media"
+            },
+            {
+              "field": "mechanism",
+              "text": "El origen renal o simpático de una masa pediátrica produce patrones diferentes; la localización, movilidad y manifestaciones asociadas orientan estudios sin sustituir confirmación anatómica e histológica."
+            },
+            {
+              "field": "initial_action",
+              "text": "Solicitar ultrasonido abdominal y referencia pediátrica especializada. Dirigir estudios adicionales según órgano de origen, sin elegir tratamiento solo por la palpación."
+            },
+            {
+              "field": "action_reason",
+              "text": "La imagen localiza y permite planear diagnóstico seguro."
+            },
+            {
+              "field": "limits",
+              "text": "Cruzar o no la línea media orienta, pero no es una regla absoluta ni basta para indicar cirugía."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Origen renal"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Hematuria e hipertensión posibles"
+            },
+            {
+              "field": "findings.1.mechanism",
+              "text": "Origen simpático"
+            },
+            {
+              "field": "findings.1.finding",
+              "text": "Masa fija y síntomas sistémicos posibles"
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Sospecha simpática"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Valorar metabolitos urinarios de catecolaminas."
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "Aportan apoyo bioquímico."
+            },
+            {
+              "field": "modifiers.1.factor",
+              "text": "Sospecha renal"
+            },
+            {
+              "field": "modifiers.1.action",
+              "text": "Completar imagen y estadificación especializada."
+            },
+            {
+              "field": "modifiers.1.reason",
+              "text": "El plan depende de extensión y protocolo."
+            }
+          ]
+        },
+        "contrast": {
+          "vignette": "Un niño presenta masa de flanco con hematuria e hipertensión. La evaluación orienta a origen renal y se organiza estadificación especializada. ¿Qué acción o clasificación corresponde a este contexto?",
+          "discriminator": "Masa con sospecha de origen renal",
+          "explanation": "El dato decisivo es Masa con sospecha de origen renal. El plan depende de extensión y protocolo. Completar imagen y estadificación especializada.",
+          "confusable_with": "Nefroblastoma y neuroblastoma como una misma entidad",
+          "why_not": "La localización renal y la hematuria orientan a nefroblastoma. Una masa fija con síntomas sistémicos y sospecha simpática requiere investigar neuroblastoma.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Un niño tiene una masa abdominal sin causa definida. Se compara si cruza la línea media, su movilidad y la presencia de hematuria, hipertensión o síntomas constitucionales."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "si cruza la línea media"
+            },
+            {
+              "field": "mechanism",
+              "text": "El origen renal o simpático de una masa pediátrica produce patrones diferentes; la localización, movilidad y manifestaciones asociadas orientan estudios sin sustituir confirmación anatómica e histológica."
+            },
+            {
+              "field": "initial_action",
+              "text": "Solicitar ultrasonido abdominal y referencia pediátrica especializada. Dirigir estudios adicionales según órgano de origen, sin elegir tratamiento solo por la palpación."
+            },
+            {
+              "field": "action_reason",
+              "text": "La imagen localiza y permite planear diagnóstico seguro."
+            },
+            {
+              "field": "limits",
+              "text": "Cruzar o no la línea media orienta, pero no es una regla absoluta ni basta para indicar cirugía."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Origen renal"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Hematuria e hipertensión posibles"
+            },
+            {
+              "field": "findings.1.mechanism",
+              "text": "Origen simpático"
+            },
+            {
+              "field": "findings.1.finding",
+              "text": "Masa fija y síntomas sistémicos posibles"
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Sospecha simpática"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Valorar metabolitos urinarios de catecolaminas."
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "Aportan apoyo bioquímico."
+            },
+            {
+              "field": "modifiers.1.factor",
+              "text": "Sospecha renal"
+            },
+            {
+              "field": "modifiers.1.action",
+              "text": "Completar imagen y estadificación especializada."
+            },
+            {
+              "field": "modifiers.1.reason",
+              "text": "El plan depende de extensión y protocolo."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "06.09-02",
+      "parent_topic_id": "06.09-02",
+      "block_id": "06.09",
+      "name": "Nefroblastoma",
+      "answer_kind": "diagnosis",
+      "variants": {
+        "easy": {
+          "vignette": "Un preescolar tiene masa en un flanco, hematuria e hipertensión. La imagen inicial sugiere origen renal y se organiza evaluación de extensión con un equipo de oncología pediátrica.",
+          "discriminator": "origen renal",
+          "explanation": "El dato decisivo es origen renal. Un tumor embrionario renal forma una masa de parénquima y puede alterar vías urinarias o perfusión renal; la extensión y la bilateralidad condicionan tratamiento y preservación renal. Completar imagen abdominal y estudio de extensión con oncología y cirugía pediátricas antes de decidir biopsia, resección o quimioterapia.",
+          "confusable_with": "Neuroblastoma",
+          "why_not": "El origen renal y la hematuria favorecen nefroblastoma. La bilateralidad cambia la planificación renal y la extensión exige evaluación oncológica.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Un preescolar tiene masa en un flanco, hematuria e hipertensión. La imagen inicial sugiere origen renal y se organiza evaluación de extensión con un equipo de oncología pediátrica."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "origen renal"
+            },
+            {
+              "field": "mechanism",
+              "text": "Un tumor embrionario renal forma una masa de parénquima y puede alterar vías urinarias o perfusión renal; la extensión y la bilateralidad condicionan tratamiento y preservación renal."
+            },
+            {
+              "field": "initial_action",
+              "text": "Completar imagen abdominal y estudio de extensión con oncología y cirugía pediátricas antes de decidir biopsia, resección o quimioterapia."
+            },
+            {
+              "field": "action_reason",
+              "text": "Los protocolos y anatomía determinan secuencia terapéutica."
+            },
+            {
+              "field": "limits",
+              "text": "No toda masa necesita biopsia previa ni toda sospecha debe operarse de inmediato; el resumen mezcla estrategias de protocolos distintos."
+            }
+          ]
+        },
+        "medium": {
+          "vignette": "En un niño con tumor renal se encuentra afectación bilateral. El equipo planifica tratamiento que preserve función renal según protocolo.",
+          "discriminator": "Tumor renal bilateral",
+          "explanation": "El dato decisivo es Tumor renal bilateral. La resección cambia el riesgo de insuficiencia renal. Planear preservación renal según protocolo.",
+          "confusable_with": "Neuroblastoma",
+          "why_not": "El origen renal y la hematuria favorecen nefroblastoma. La bilateralidad cambia la planificación renal y la extensión exige evaluación oncológica.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Un preescolar tiene masa en un flanco, hematuria e hipertensión. La imagen inicial sugiere origen renal y se organiza evaluación de extensión con un equipo de oncología pediátrica."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "origen renal"
+            },
+            {
+              "field": "mechanism",
+              "text": "Un tumor embrionario renal forma una masa de parénquima y puede alterar vías urinarias o perfusión renal; la extensión y la bilateralidad condicionan tratamiento y preservación renal."
+            },
+            {
+              "field": "initial_action",
+              "text": "Completar imagen abdominal y estudio de extensión con oncología y cirugía pediátricas antes de decidir biopsia, resección o quimioterapia."
+            },
+            {
+              "field": "action_reason",
+              "text": "Los protocolos y anatomía determinan secuencia terapéutica."
+            },
+            {
+              "field": "limits",
+              "text": "No toda masa necesita biopsia previa ni toda sospecha debe operarse de inmediato; el resumen mezcla estrategias de protocolos distintos."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Masa renal"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Tumoración en flanco"
+            },
+            {
+              "field": "findings.1.mechanism",
+              "text": "Afectación urinaria"
+            },
+            {
+              "field": "findings.1.finding",
+              "text": "Hematuria"
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Enfermedad bilateral"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Planear preservación renal según protocolo."
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "La resección cambia el riesgo de insuficiencia renal."
+            },
+            {
+              "field": "modifiers.1.factor",
+              "text": "Sospecha de metástasis"
+            },
+            {
+              "field": "modifiers.1.action",
+              "text": "Estudiar especialmente tórax."
+            },
+            {
+              "field": "modifiers.1.reason",
+              "text": "El pulmón es un sitio relevante."
+            }
+          ]
+        },
+        "contrast": {
+          "vignette": "Un niño con masa renal y hematuria tiene sospecha de metástasis. La evaluación de extensión incluye especial atención al tórax.",
+          "discriminator": "Tumor renal con necesidad de estadificación torácica",
+          "explanation": "El dato decisivo es Tumor renal con necesidad de estadificación torácica. El pulmón es un sitio relevante. Estudiar especialmente tórax.",
+          "confusable_with": "Neuroblastoma",
+          "why_not": "El origen renal y la hematuria favorecen nefroblastoma. La bilateralidad cambia la planificación renal y la extensión exige evaluación oncológica.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Un preescolar tiene masa en un flanco, hematuria e hipertensión. La imagen inicial sugiere origen renal y se organiza evaluación de extensión con un equipo de oncología pediátrica."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "origen renal"
+            },
+            {
+              "field": "mechanism",
+              "text": "Un tumor embrionario renal forma una masa de parénquima y puede alterar vías urinarias o perfusión renal; la extensión y la bilateralidad condicionan tratamiento y preservación renal."
+            },
+            {
+              "field": "initial_action",
+              "text": "Completar imagen abdominal y estudio de extensión con oncología y cirugía pediátricas antes de decidir biopsia, resección o quimioterapia."
+            },
+            {
+              "field": "action_reason",
+              "text": "Los protocolos y anatomía determinan secuencia terapéutica."
+            },
+            {
+              "field": "limits",
+              "text": "No toda masa necesita biopsia previa ni toda sospecha debe operarse de inmediato; el resumen mezcla estrategias de protocolos distintos."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Masa renal"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Tumoración en flanco"
+            },
+            {
+              "field": "findings.1.mechanism",
+              "text": "Afectación urinaria"
+            },
+            {
+              "field": "findings.1.finding",
+              "text": "Hematuria"
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Enfermedad bilateral"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Planear preservación renal según protocolo."
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "La resección cambia el riesgo de insuficiencia renal."
+            },
+            {
+              "field": "modifiers.1.factor",
+              "text": "Sospecha de metástasis"
+            },
+            {
+              "field": "modifiers.1.action",
+              "text": "Estudiar especialmente tórax."
+            },
+            {
+              "field": "modifiers.1.reason",
+              "text": "El pulmón es un sitio relevante."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "06.09-03",
+      "parent_topic_id": "06.09-03",
+      "block_id": "06.09",
+      "name": "Neuroblastoma",
+      "answer_kind": "diagnosis",
+      "variants": {
+        "easy": {
+          "vignette": "Un niño pequeño presenta una masa abdominal dura y fija que cruza la línea media. Tiene dolor óseo y síntomas generales; se solicitan metabolitos urinarios de catecolaminas.",
+          "discriminator": "dura y fija",
+          "explanation": "El dato decisivo es dura y fija. El tumor deriva de cresta neural simpática, con frecuencia suprarrenal; puede producir metabolitos de catecolaminas, extenderse localmente y diseminar a hueso y médula. Referir a oncología pediátrica y completar imagen, metabolitos urinarios y confirmación tisular según plan especializado. Estratificar riesgo antes de seleccionar tratamiento.",
+          "confusable_with": "Nefroblastoma",
+          "why_not": "Los metabolitos de catecolaminas y el posible origen paravertebral favorecen neuroblastoma. La estratificación incorpora datos moleculares y no depende solo de la masa.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Un niño pequeño presenta una masa abdominal dura y fija que cruza la línea media. Tiene dolor óseo y síntomas generales; se solicitan metabolitos urinarios de catecolaminas."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "dura y fija"
+            },
+            {
+              "field": "mechanism",
+              "text": "El tumor deriva de cresta neural simpática, con frecuencia suprarrenal; puede producir metabolitos de catecolaminas, extenderse localmente y diseminar a hueso y médula."
+            },
+            {
+              "field": "initial_action",
+              "text": "Referir a oncología pediátrica y completar imagen, metabolitos urinarios y confirmación tisular según plan especializado. Estratificar riesgo antes de seleccionar tratamiento."
+            },
+            {
+              "field": "action_reason",
+              "text": "Edad, extensión y biología tumoral cambian intensidad terapéutica."
+            },
+            {
+              "field": "limits",
+              "text": "La estadificación no se reduce a un esquema simple de cirugía por número; existen sistemas actuales y factores biológicos adicionales."
+            }
+          ]
+        },
+        "medium": {
+          "vignette": "En un niño con masa de probable origen simpático aparece déficit neurológico y localización paravertebral. Se prioriza resonancia por riesgo de compresión medular.",
+          "discriminator": "Masa paravertebral con déficit neurológico",
+          "explanation": "El dato decisivo es Masa paravertebral con déficit neurológico. La extensión puede dañar médula. Priorizar resonancia y evaluación de compresión medular.",
+          "confusable_with": "Nefroblastoma",
+          "why_not": "Los metabolitos de catecolaminas y el posible origen paravertebral favorecen neuroblastoma. La estratificación incorpora datos moleculares y no depende solo de la masa.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Un niño pequeño presenta una masa abdominal dura y fija que cruza la línea media. Tiene dolor óseo y síntomas generales; se solicitan metabolitos urinarios de catecolaminas."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "dura y fija"
+            },
+            {
+              "field": "mechanism",
+              "text": "El tumor deriva de cresta neural simpática, con frecuencia suprarrenal; puede producir metabolitos de catecolaminas, extenderse localmente y diseminar a hueso y médula."
+            },
+            {
+              "field": "initial_action",
+              "text": "Referir a oncología pediátrica y completar imagen, metabolitos urinarios y confirmación tisular según plan especializado. Estratificar riesgo antes de seleccionar tratamiento."
+            },
+            {
+              "field": "action_reason",
+              "text": "Edad, extensión y biología tumoral cambian intensidad terapéutica."
+            },
+            {
+              "field": "limits",
+              "text": "La estadificación no se reduce a un esquema simple de cirugía por número; existen sistemas actuales y factores biológicos adicionales."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Tumor simpático"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Metabolitos urinarios elevados"
+            },
+            {
+              "field": "findings.1.mechanism",
+              "text": "Diseminación ósea"
+            },
+            {
+              "field": "findings.1.finding",
+              "text": "Dolor óseo"
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Lesión paravertebral o déficit neurológico"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Priorizar resonancia y evaluación de compresión medular."
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "La extensión puede dañar médula."
+            },
+            {
+              "field": "modifiers.1.factor",
+              "text": "Amplificación de MYCN"
+            },
+            {
+              "field": "modifiers.1.action",
+              "text": "Incorporarla a estratificación."
+            },
+            {
+              "field": "modifiers.1.reason",
+              "text": "Es un marcador de biología desfavorable."
+            }
+          ]
+        },
+        "contrast": {
+          "vignette": "En un tumor infantil con metabolitos de catecolaminas elevados se identifica amplificación de MYCN. Se integra el hallazgo a la estratificación.",
+          "discriminator": "Catecolaminas urinarias y factor molecular de riesgo",
+          "explanation": "El dato decisivo es Catecolaminas urinarias y factor molecular de riesgo. Es un marcador de biología desfavorable. Incorporarla a estratificación.",
+          "confusable_with": "Nefroblastoma",
+          "why_not": "Los metabolitos de catecolaminas y el posible origen paravertebral favorecen neuroblastoma. La estratificación incorpora datos moleculares y no depende solo de la masa.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Un niño pequeño presenta una masa abdominal dura y fija que cruza la línea media. Tiene dolor óseo y síntomas generales; se solicitan metabolitos urinarios de catecolaminas."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "dura y fija"
+            },
+            {
+              "field": "mechanism",
+              "text": "El tumor deriva de cresta neural simpática, con frecuencia suprarrenal; puede producir metabolitos de catecolaminas, extenderse localmente y diseminar a hueso y médula."
+            },
+            {
+              "field": "initial_action",
+              "text": "Referir a oncología pediátrica y completar imagen, metabolitos urinarios y confirmación tisular según plan especializado. Estratificar riesgo antes de seleccionar tratamiento."
+            },
+            {
+              "field": "action_reason",
+              "text": "Edad, extensión y biología tumoral cambian intensidad terapéutica."
+            },
+            {
+              "field": "limits",
+              "text": "La estadificación no se reduce a un esquema simple de cirugía por número; existen sistemas actuales y factores biológicos adicionales."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Tumor simpático"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Metabolitos urinarios elevados"
+            },
+            {
+              "field": "findings.1.mechanism",
+              "text": "Diseminación ósea"
+            },
+            {
+              "field": "findings.1.finding",
+              "text": "Dolor óseo"
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Lesión paravertebral o déficit neurológico"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Priorizar resonancia y evaluación de compresión medular."
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "La extensión puede dañar médula."
+            },
+            {
+              "field": "modifiers.1.factor",
+              "text": "Amplificación de MYCN"
+            },
+            {
+              "field": "modifiers.1.action",
+              "text": "Incorporarla a estratificación."
+            },
+            {
+              "field": "modifiers.1.reason",
+              "text": "Es un marcador de biología desfavorable."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "06.10-01",
+      "parent_topic_id": "06.10-01",
+      "block_id": "06.10",
+      "name": "Retinoblastoma",
+      "answer_kind": "diagnosis",
+      "variants": {
+        "easy": {
+          "vignette": "La familia observa un reflejo blanco en la pupila de un niño pequeño en fotografías. En la consulta el reflejo rojo es anormal y hay estrabismo reciente.",
+          "discriminator": "reflejo blanco en la pupila",
+          "explanation": "El dato decisivo es reflejo blanco en la pupila. Una neoplasia de retina altera el reflejo luminoso y puede comprometer visión y extenderse fuera del ojo; reconocer leucocoria permite valoración urgente antes de progresión. Solicitar evaluación oftalmológica urgente con exploración especializada y estudios de extensión apropiados. No realizar punción diagnóstica del ojo.",
+          "confusable_with": "Estrabismo aislado",
+          "why_not": "El reflejo blanco o rojo anormal indica una lesión ocular que requiere evaluación urgente. La bilateralidad o el antecedente familiar añade la evaluación genética.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "La familia observa un reflejo blanco en la pupila de un niño pequeño en fotografías. En la consulta el reflejo rojo es anormal y hay estrabismo reciente."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "reflejo blanco en la pupila"
+            },
+            {
+              "field": "mechanism",
+              "text": "Una neoplasia de retina altera el reflejo luminoso y puede comprometer visión y extenderse fuera del ojo; reconocer leucocoria permite valoración urgente antes de progresión."
+            },
+            {
+              "field": "initial_action",
+              "text": "Solicitar evaluación oftalmológica urgente con exploración especializada y estudios de extensión apropiados. No realizar punción diagnóstica del ojo."
+            },
+            {
+              "field": "action_reason",
+              "text": "El diagnóstico ocular requiere técnicas que eviten diseminación y orienten salvamento visual y vital."
+            },
+            {
+              "field": "limits",
+              "text": "No toda leucocoria es tumoral, pero exige evaluación urgente. La biopsia por aspiración puede sembrar el tumor."
+            }
+          ]
+        },
+        "medium": {
+          "vignette": "Un niño con reflejo rojo anormal tiene afectación de ambos ojos. Se valora asesoría genética y estudio de RB1.",
+          "discriminator": "Afectación ocular bilateral",
+          "explanation": "El dato decisivo es Afectación ocular bilateral. Puede existir predisposición hereditaria. Valorar asesoría genética y estudio de RB1.",
+          "confusable_with": "Estrabismo aislado",
+          "why_not": "El reflejo blanco o rojo anormal indica una lesión ocular que requiere evaluación urgente. La bilateralidad o el antecedente familiar añade la evaluación genética.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "La familia observa un reflejo blanco en la pupila de un niño pequeño en fotografías. En la consulta el reflejo rojo es anormal y hay estrabismo reciente."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "reflejo blanco en la pupila"
+            },
+            {
+              "field": "mechanism",
+              "text": "Una neoplasia de retina altera el reflejo luminoso y puede comprometer visión y extenderse fuera del ojo; reconocer leucocoria permite valoración urgente antes de progresión."
+            },
+            {
+              "field": "initial_action",
+              "text": "Solicitar evaluación oftalmológica urgente con exploración especializada y estudios de extensión apropiados. No realizar punción diagnóstica del ojo."
+            },
+            {
+              "field": "action_reason",
+              "text": "El diagnóstico ocular requiere técnicas que eviten diseminación y orienten salvamento visual y vital."
+            },
+            {
+              "field": "limits",
+              "text": "No toda leucocoria es tumoral, pero exige evaluación urgente. La biopsia por aspiración puede sembrar el tumor."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Masa retiniana"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Leucocoria"
+            },
+            {
+              "field": "findings.1.mechanism",
+              "text": "Visión alterada"
+            },
+            {
+              "field": "findings.1.finding",
+              "text": "Estrabismo"
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Afectación bilateral o historia familiar"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Valorar asesoría genética y estudio de RB1."
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "Puede existir predisposición hereditaria."
+            }
+          ]
+        },
+        "contrast": {
+          "vignette": "En una familia con antecedente de tumor retiniano, un niño desarrolla leucocoria y estrabismo. Se organiza evaluación oftalmológica y genética urgente.",
+          "discriminator": "Leucocoria con antecedente familiar",
+          "explanation": "El dato decisivo es Leucocoria con antecedente familiar. Puede existir predisposición hereditaria. Valorar asesoría genética y estudio de RB1.",
+          "confusable_with": "Estrabismo aislado",
+          "why_not": "El reflejo blanco o rojo anormal indica una lesión ocular que requiere evaluación urgente. La bilateralidad o el antecedente familiar añade la evaluación genética.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "La familia observa un reflejo blanco en la pupila de un niño pequeño en fotografías. En la consulta el reflejo rojo es anormal y hay estrabismo reciente."
+            },
+            {
+              "field": "key_discriminator",
+              "text": "reflejo blanco en la pupila"
+            },
+            {
+              "field": "mechanism",
+              "text": "Una neoplasia de retina altera el reflejo luminoso y puede comprometer visión y extenderse fuera del ojo; reconocer leucocoria permite valoración urgente antes de progresión."
+            },
+            {
+              "field": "initial_action",
+              "text": "Solicitar evaluación oftalmológica urgente con exploración especializada y estudios de extensión apropiados. No realizar punción diagnóstica del ojo."
+            },
+            {
+              "field": "action_reason",
+              "text": "El diagnóstico ocular requiere técnicas que eviten diseminación y orienten salvamento visual y vital."
+            },
+            {
+              "field": "limits",
+              "text": "No toda leucocoria es tumoral, pero exige evaluación urgente. La biopsia por aspiración puede sembrar el tumor."
+            },
+            {
+              "field": "findings.0.mechanism",
+              "text": "Masa retiniana"
+            },
+            {
+              "field": "findings.0.finding",
+              "text": "Leucocoria"
+            },
+            {
+              "field": "findings.1.mechanism",
+              "text": "Visión alterada"
+            },
+            {
+              "field": "findings.1.finding",
+              "text": "Estrabismo"
+            },
+            {
+              "field": "modifiers.0.factor",
+              "text": "Afectación bilateral o historia familiar"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Valorar asesoría genética y estudio de RB1."
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "Puede existir predisposición hereditaria."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "06.05-02-gastrosquisis",
+      "parent_topic_id": "06.05-02",
+      "block_id": "06.05",
+      "name": "Gastrosquisis",
+      "answer_kind": "diagnosis",
+      "variants": {
+        "easy": {
+          "vignette": "Un recién nacido presenta asas intestinales expuestas a la derecha de un cordón umbilical normal. No existe membrana que las recubra.",
+          "discriminator": "Defecto paraumbilical derecho sin membrana",
+          "explanation": "La localización lateral al cordón y la falta de cobertura identifican gastrosquisis. Se protegen las asas, se evita torsión y se inicia estabilización y referencia neonatal.",
+          "confusable_with": "Onfalocele",
+          "why_not": "La falta de membrana y la posición lateral derecha favorecen gastrosquisis. En onfalocele las vísceras están cubiertas en la base del cordón.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Un neonato nace con vísceras expuestas a la derecha del cordón, sin una membrana que las cubra. El equipo protege el intestino mientras inicia estabilización y evaluación de defectos asociados."
+            },
+            {
+              "field": "mechanism",
+              "text": "El defecto de pared permite exteriorización de vísceras; la ausencia de cobertura favorece pérdida de calor y líquido y expone intestino a lesión e inflamación."
+            },
+            {
+              "field": "initial_action",
+              "text": "Reconocer gastrosquisis, proteger vísceras con cobertura estéril apropiada y evitar torsión y pérdida de calor. Mantener ayuno y descompresión e iniciar estabilización y referencia a cirugía neonatal."
+            },
+            {
+              "field": "modifiers.1.factor",
+              "text": "Cierre aumenta presión abdominal"
+            },
+            {
+              "field": "modifiers.1.action",
+              "text": "Valorar cierre diferido o silo especializado."
+            },
+            {
+              "field": "modifiers.1.reason",
+              "text": "La presión puede comprometer respiración y perfusión."
+            },
+            {
+              "field": "limits",
+              "text": "No asumir cesárea prematura universal ni cierre primario obligatorio; el plan depende de condiciones maternofetales y del defecto."
+            }
+          ]
+        },
+        "medium": {
+          "vignette": "Un neonato con asas descubiertas a la derecha del cordón presenta además una malrotación intestinal asociada. Se debe integrar la anomalía al plan de estabilización y cierre.",
+          "discriminator": "Defecto paraumbilical sin cubierta con anomalía intestinal",
+          "explanation": "La gastrosquisis puede asociarse a malformaciones intestinales, como atresia o malrotación. Se protegen asas y se define el plan con cirugía neonatal.",
+          "confusable_with": "Onfalocele",
+          "why_not": "La falta de membrana y la posición lateral derecha favorecen gastrosquisis. En onfalocele las vísceras están cubiertas en la base del cordón.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Un neonato nace con vísceras expuestas a la derecha del cordón, sin una membrana que las cubra. El equipo protege el intestino mientras inicia estabilización y evaluación de defectos asociados."
+            },
+            {
+              "field": "mechanism",
+              "text": "El defecto de pared permite exteriorización de vísceras; la ausencia de cobertura favorece pérdida de calor y líquido y expone intestino a lesión e inflamación."
+            },
+            {
+              "field": "initial_action",
+              "text": "Reconocer gastrosquisis, proteger vísceras con cobertura estéril apropiada y evitar torsión y pérdida de calor. Mantener ayuno y descompresión e iniciar estabilización y referencia a cirugía neonatal."
+            },
+            {
+              "field": "modifiers.1.factor",
+              "text": "Cierre aumenta presión abdominal"
+            },
+            {
+              "field": "modifiers.1.action",
+              "text": "Valorar cierre diferido o silo especializado."
+            },
+            {
+              "field": "modifiers.1.reason",
+              "text": "La presión puede comprometer respiración y perfusión."
+            },
+            {
+              "field": "limits",
+              "text": "No asumir cesárea prematura universal ni cierre primario obligatorio; el plan depende de condiciones maternofetales y del defecto."
+            }
+          ]
+        },
+        "contrast": {
+          "vignette": "En un neonato con intestino exteriorizado sin membrana, a la derecha del cordón, el intento de cierre eleva la presión abdominal. Se necesita otro plan de cierre.",
+          "discriminator": "Intestino descubierto con presión que limita el cierre",
+          "explanation": "La apariencia corresponde a gastrosquisis. Si el cierre aumenta la presión abdominal, se valora cierre diferido o silo por el equipo especializado.",
+          "confusable_with": "Onfalocele",
+          "why_not": "La falta de membrana y la posición lateral derecha favorecen gastrosquisis. En onfalocele las vísceras están cubiertas en la base del cordón.",
+          "facts": [
+            {
+              "field": "pattern",
+              "text": "Un neonato nace con vísceras expuestas a la derecha del cordón, sin una membrana que las cubra. El equipo protege el intestino mientras inicia estabilización y evaluación de defectos asociados."
+            },
+            {
+              "field": "mechanism",
+              "text": "El defecto de pared permite exteriorización de vísceras; la ausencia de cobertura favorece pérdida de calor y líquido y expone intestino a lesión e inflamación."
+            },
+            {
+              "field": "initial_action",
+              "text": "Reconocer gastrosquisis, proteger vísceras con cobertura estéril apropiada y evitar torsión y pérdida de calor. Mantener ayuno y descompresión e iniciar estabilización y referencia a cirugía neonatal."
+            },
+            {
+              "field": "modifiers.1.factor",
+              "text": "Cierre aumenta presión abdominal"
+            },
+            {
+              "field": "modifiers.1.action",
+              "text": "Valorar cierre diferido o silo especializado."
+            },
+            {
+              "field": "modifiers.1.reason",
+              "text": "La presión puede comprometer respiración y perfusión."
+            },
+            {
+              "field": "limits",
+              "text": "No asumir cesárea prematura universal ni cierre primario obligatorio; el plan depende de condiciones maternofetales y del defecto."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "06.05-02-onfalocele",
+      "parent_topic_id": "06.05-02",
+      "block_id": "06.05",
+      "name": "Onfalocele",
+      "answer_kind": "diagnosis",
+      "variants": {
+        "easy": {
+          "vignette": "Un recién nacido tiene vísceras abdominales cubiertas por una membrana en la base del cordón. Se debe identificar el defecto antes de planear el manejo.",
+          "discriminator": "Vísceras cubiertas por membrana en base del cordón",
+          "explanation": "La membrana y la localización en la base del cordón favorecen onfalocele. Se organiza atención especializada y búsqueda de anomalías asociadas.",
+          "confusable_with": "Gastrosquisis",
+          "why_not": "La membrana en la base del cordón favorece onfalocele. El defecto lateral derecho sin cubierta corresponde a gastrosquisis.",
+          "facts": [
+            {
+              "field": "modifiers.0.factor",
+              "text": "Vísceras cubiertas por membrana en base de cordón"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Reconocer onfalocele y buscar anomalías asociadas."
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "El defecto y asociaciones son distintos."
+            },
+            {
+              "field": "modifiers.1.factor",
+              "text": "Cierre aumenta presión abdominal"
+            },
+            {
+              "field": "modifiers.1.action",
+              "text": "Valorar cierre diferido o silo especializado."
+            },
+            {
+              "field": "modifiers.1.reason",
+              "text": "La presión puede comprometer respiración y perfusión."
+            },
+            {
+              "field": "limits",
+              "text": "No asumir cesárea prematura universal ni cierre primario obligatorio; el plan depende de condiciones maternofetales y del defecto."
+            }
+          ]
+        },
+        "medium": {
+          "vignette": "Un neonato con saco membranoso en la base del cordón tiene una malformación cardíaca asociada. Se amplía la evaluación congénita antes de planear reparación.",
+          "discriminator": "Defecto membranoso con malformación cardíaca",
+          "explanation": "La membrana en la base del cordón identifica onfalocele. Las anomalías cardíacas asociadas requieren evaluación y coordinación del plan neonatal.",
+          "confusable_with": "Gastrosquisis",
+          "why_not": "La membrana en la base del cordón favorece onfalocele. El defecto lateral derecho sin cubierta corresponde a gastrosquisis.",
+          "facts": [
+            {
+              "field": "modifiers.0.factor",
+              "text": "Vísceras cubiertas por membrana en base de cordón"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Reconocer onfalocele y buscar anomalías asociadas."
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "El defecto y asociaciones son distintos."
+            },
+            {
+              "field": "modifiers.1.factor",
+              "text": "Cierre aumenta presión abdominal"
+            },
+            {
+              "field": "modifiers.1.action",
+              "text": "Valorar cierre diferido o silo especializado."
+            },
+            {
+              "field": "modifiers.1.reason",
+              "text": "La presión puede comprometer respiración y perfusión."
+            },
+            {
+              "field": "limits",
+              "text": "No asumir cesárea prematura universal ni cierre primario obligatorio; el plan depende de condiciones maternofetales y del defecto."
+            }
+          ]
+        },
+        "contrast": {
+          "vignette": "Un neonato con vísceras recubiertas por membrana en el cordón no tolera cierre del defecto por aumento de presión abdominal. Se consulta al equipo para un cierre diferido.",
+          "discriminator": "Defecto membranoso con límite por presión abdominal",
+          "explanation": "La membrana en la base del cordón identifica onfalocele. El aumento de presión limita el cierre y obliga a valorar cierre diferido o silo especializado.",
+          "confusable_with": "Gastrosquisis",
+          "why_not": "La membrana en la base del cordón favorece onfalocele. El defecto lateral derecho sin cubierta corresponde a gastrosquisis.",
+          "facts": [
+            {
+              "field": "modifiers.0.factor",
+              "text": "Vísceras cubiertas por membrana en base de cordón"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Reconocer onfalocele y buscar anomalías asociadas."
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "El defecto y asociaciones son distintos."
+            },
+            {
+              "field": "modifiers.1.factor",
+              "text": "Cierre aumenta presión abdominal"
+            },
+            {
+              "field": "modifiers.1.action",
+              "text": "Valorar cierre diferido o silo especializado."
+            },
+            {
+              "field": "modifiers.1.reason",
+              "text": "La presión puede comprometer respiración y perfusión."
+            },
+            {
+              "field": "limits",
+              "text": "No asumir cesárea prematura universal ni cierre primario obligatorio; el plan depende de condiciones maternofetales y del defecto."
+            }
+          ]
+        }
+      }
+    }
+  ]
+}
