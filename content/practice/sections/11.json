@@ -8,15 +8,15 @@
       "id": "11.01-01",
       "parent_topic_id": "11.01-01",
       "block_id": "11.01",
-      "name": "Evaluar reflujo según alarmas y evidencia objetiva",
-      "answer_kind": "decision",
+      "name": "ERGE",
+      "answer_kind": "diagnosis",
       "variants": {
         "easy": {
-          "vignette": "Un adulto presenta ardor retroesternal y regurgitación después de comer y al acostarse. No hay pérdida de peso, anemia ni dificultad para tragar; se revisan hábitos y medicamentos. ¿Qué acción o clasificación corresponde a este contexto?",
+          "vignette": "Un adulto presenta ardor retroesternal y regurgitación después de comer y al acostarse. No hay pérdida de peso, anemia ni dificultad para tragar; se revisan hábitos y medicamentos.",
           "discriminator": "ardor retroesternal y regurgitación",
           "explanation": "El dato decisivo es ardor retroesternal y regurgitación. La barrera gastroesofágica insuficiente permite ascenso de contenido gástrico; la exposición esofágica produce síntomas y a veces lesión, incluso cuando la endoscopia no muestra erosiones. Valorar datos de alarma y síntomas cardíacos. En síntomas típicos sin alarma, iniciar medidas dirigidas y una prueba de IBP durante ocho semanas; reevaluar respuesta y necesidad de estudios.",
-          "confusable_with": "Respuesta a IBP como confirmación definitiva",
-          "why_not": "Los síntomas típicos permiten un enfoque inicial, pero la respuesta a IBP no confirma por sí sola el diagnóstico. Las alarmas y la duda persistente modifican el estudio.",
+          "confusable_with": "Acalasia",
+          "why_not": "La regurgitación ácida y la evidencia de exposición o lesión por reflujo orientan a ERGE. La acalasia produce retención de alimento y disfagia a sólidos y líquidos por falla de relajación.",
           "facts": [
             {
               "field": "pattern",
@@ -49,11 +49,11 @@
           ]
         },
         "medium": {
-          "vignette": "Una persona con pirosis y regurgitación desarrolla disfagia, anemia o pérdida de peso. Se indica endoscopia. ¿Qué acción o clasificación corresponde a este contexto?",
-          "discriminator": "Síntomas de reflujo con alarmas",
-          "explanation": "El dato decisivo es Síntomas de reflujo con alarmas. Requiere descartar complicación u otra causa. Indicar endoscopia.",
-          "confusable_with": "Respuesta a IBP como confirmación definitiva",
-          "why_not": "Los síntomas típicos permiten un enfoque inicial, pero la respuesta a IBP no confirma por sí sola el diagnóstico. Las alarmas y la duda persistente modifican el estudio.",
+          "vignette": "Una persona con pirosis y regurgitación desarrolla dificultad para tragar. La endoscopia demuestra lesión erosiva por reflujo en esófago distal, concordante con sus síntomas.",
+          "discriminator": "Enfermedad erosiva en contexto de síntomas típicos",
+          "explanation": "Enfermedad erosiva en contexto de síntomas típicos. Este patrón orienta a ERGE. La barrera gastroesofágica insuficiente permite ascenso de contenido gástrico; la exposición esofágica produce síntomas y a veces lesión, incluso cuando la endoscopia no muestra erosiones.",
+          "confusable_with": "Acalasia",
+          "why_not": "La regurgitación ácida y la evidencia de exposición o lesión por reflujo orientan a ERGE. La acalasia produce retención de alimento y disfagia a sólidos y líquidos por falla de relajación.",
           "facts": [
             {
               "field": "pattern",
@@ -118,11 +118,11 @@
           ]
         },
         "contrast": {
-          "vignette": "Los síntomas típicos persisten y la endoscopia es negativa, pero sigue la duda diagnóstica. Se valora monitorización objetiva de reflujo. ¿Qué acción o clasificación corresponde a este contexto?",
-          "discriminator": "Duda persistente tras endoscopia negativa",
-          "explanation": "El dato decisivo es Duda persistente tras endoscopia negativa. La ausencia de erosión no excluye reflujo. Valorar monitorización de reflujo.",
-          "confusable_with": "Respuesta a IBP como confirmación definitiva",
-          "why_not": "Los síntomas típicos permiten un enfoque inicial, pero la respuesta a IBP no confirma por sí sola el diagnóstico. Las alarmas y la duda persistente modifican el estudio.",
+          "vignette": "Una persona tiene síntomas retroesternales y regurgitación, pero la endoscopia no muestra lesión. La monitorización ambulatoria demuestra exposición ácida excesiva concordante con los episodios.",
+          "discriminator": "Reflujo objetivado sin erosiones en endoscopia",
+          "explanation": "Reflujo objetivado sin erosiones en endoscopia. Este patrón orienta a ERGE. La barrera gastroesofágica insuficiente permite ascenso de contenido gástrico; la exposición esofágica produce síntomas y a veces lesión, incluso cuando la endoscopia no muestra erosiones.",
+          "confusable_with": "Acalasia",
+          "why_not": "La regurgitación ácida y la evidencia de exposición o lesión por reflujo orientan a ERGE. La acalasia produce retención de alimento y disfagia a sólidos y líquidos por falla de relajación.",
           "facts": [
             {
               "field": "pattern",
@@ -186,21 +186,34 @@
             }
           ]
         }
-      }
+      },
+      "sources": [
+        {
+          "label": "Edwino.pdf",
+          "pages": [
+            323,
+            324
+          ]
+        },
+        {
+          "label": "ACG, GERD guideline 2022",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8754510/"
+        }
+      ]
     },
     {
       "id": "11.01-02",
       "parent_topic_id": "11.01-02",
       "block_id": "11.01",
-      "name": "Evaluar dispepsia y buscar alarmas orgánicas",
-      "answer_kind": "decision",
+      "name": "Dispepsia funcional",
+      "answer_kind": "diagnosis",
       "variants": {
         "easy": {
-          "vignette": "Una adulta tiene plenitud molesta y saciedad temprana recurrentes, con dolor epigástrico ocasional. No presenta alarmas y la evaluación apropiada no encuentra una causa orgánica que explique el cuadro. ¿Qué acción o clasificación corresponde a este contexto?",
+          "vignette": "Una adulta tiene plenitud molesta y saciedad temprana recurrentes, con dolor epigástrico ocasional. No presenta alarmas y la evaluación apropiada no encuentra una causa orgánica que explique el cuadro.",
           "discriminator": "saciedad temprana",
           "explanation": "El dato decisivo es saciedad temprana. La alteración de sensibilidad y función gastroduodenal puede producir malestar posprandial sin lesión estructural explicativa; el diagnóstico requiere un patrón compatible y evaluación según riesgo. Revisar alarmas, fármacos y estado de H. pylori; erradicar si resulta positivo. Si es negativo o persisten síntomas tras erradicación, iniciar prueba con IBP y reevaluar.",
-          "confusable_with": "Cáncer gástrico",
-          "why_not": "El diagnóstico funcional exige evaluación apropiada sin causa que explique los síntomas. La anemia, el adelgazamiento o el vómito persistente obligan a reabrir el estudio orgánico.",
+          "confusable_with": "Enfermedad ácido péptica",
+          "why_not": "La dispepsia funcional requiere síntomas compatibles sin una causa orgánica que los explique. La demostración de una úlcera u otra lesión cambiaría el diagnóstico.",
           "facts": [
             {
               "field": "pattern",
@@ -233,11 +246,11 @@
           ]
         },
         "medium": {
-          "vignette": "Una persona con plenitud y saciedad precoz desarrolla anemia, adelgazamiento o vómito persistente. Se necesita evaluar causa orgánica con endoscopia. ¿Qué acción o clasificación corresponde a este contexto?",
-          "discriminator": "Síntomas dispépticos con alarmas",
-          "explanation": "El dato decisivo es Síntomas dispépticos con alarmas. Cambia el riesgo de lesión orgánica. Valorar endoscopia.",
-          "confusable_with": "Cáncer gástrico",
-          "why_not": "El diagnóstico funcional exige evaluación apropiada sin causa que explique los síntomas. La anemia, el adelgazamiento o el vómito persistente obligan a reabrir el estudio orgánico.",
+          "vignette": "Una persona tiene dolor epigástrico recurrente que predomina sobre la plenitud. La evaluación apropiada, incluida endoscopia cuando se indica, no encuentra una causa orgánica que explique el dolor.",
+          "discriminator": "Subtipo de predominio doloroso sin lesión orgánica",
+          "explanation": "Subtipo de predominio doloroso sin lesión orgánica. Este patrón orienta a Dispepsia funcional. La alteración de sensibilidad y función gastroduodenal puede producir malestar posprandial sin lesión estructural explicativa; el diagnóstico requiere un patrón compatible y evaluación según riesgo.",
+          "confusable_with": "Enfermedad ácido péptica",
+          "why_not": "La dispepsia funcional requiere síntomas compatibles sin una causa orgánica que los explique. La demostración de una úlcera u otra lesión cambiaría el diagnóstico.",
           "facts": [
             {
               "field": "pattern",
@@ -290,11 +303,11 @@
           ]
         },
         "contrast": {
-          "vignette": "Una persona con plenitud y saciedad precoz ya tuvo evaluación apropiada sin causa orgánica. Antes de elegir tratamiento posterior se revisa la secuencia de H. pylori, IBP y respuesta, sin adoptar un procinético universal. ¿Qué acción o clasificación corresponde?",
-          "discriminator": "Selección por respuesta tras evaluación sin causa orgánica",
-          "explanation": "El enfoque revisado valora H. pylori y después IBP, con tratamiento posterior según respuesta. No se enseña una pauta universal de metoclopramida o ranitidina.",
-          "confusable_with": "Cáncer gástrico",
-          "why_not": "El diagnóstico funcional exige evaluación apropiada sin causa que explique los síntomas. La anemia, el adelgazamiento o el vómito persistente obligan a reabrir el estudio orgánico.",
+          "vignette": "Tras estudiar y tratar H. pylori cuando correspondía, una persona mantiene saciedad temprana y plenitud posprandial molestas. La evaluación no demuestra una lesión que explique los síntomas y no hay alarmas actuales.",
+          "discriminator": "Síntomas persistentes de plenitud tras evaluación etiológica apropiada",
+          "explanation": "Síntomas persistentes de plenitud tras evaluación etiológica apropiada. Este patrón orienta a Dispepsia funcional. La alteración de sensibilidad y función gastroduodenal puede producir malestar posprandial sin lesión estructural explicativa; el diagnóstico requiere un patrón compatible y evaluación según riesgo.",
+          "confusable_with": "Enfermedad ácido péptica",
+          "why_not": "La dispepsia funcional requiere síntomas compatibles sin una causa orgánica que los explique. La demostración de una úlcera u otra lesión cambiaría el diagnóstico.",
           "facts": [
             {
               "field": "pattern",
@@ -346,7 +359,19 @@
             }
           ]
         }
-      }
+      },
+      "sources": [
+        {
+          "label": "Edwino.pdf",
+          "pages": [
+            315
+          ]
+        },
+        {
+          "label": "ACG y CAG, Dyspepsia guideline 2017",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/28631728/"
+        }
+      ]
     },
     {
       "id": "11.01-03",
@@ -546,7 +571,20 @@
             }
           ]
         }
-      }
+      },
+      "sources": [
+        {
+          "label": "Edwino.pdf",
+          "pages": [
+            318,
+            319
+          ]
+        },
+        {
+          "label": "ACG, H. pylori treatment guideline 2024",
+          "url": "https://webfiles.gi.org/links/journals/ACG-Hpylori-Guidelines-Highlights-2024-FINAL.pdf"
+        }
+      ]
     },
     {
       "id": "11.02-01",
@@ -560,7 +598,7 @@
           "discriminator": "sólidos y líquidos desde el inicio",
           "explanation": "El dato decisivo es sólidos y líquidos desde el inicio. La pérdida de inervación inhibitoria impide relajación adecuada de la unión esofagogástrica y reduce peristalsis; el contenido se retiene y produce disfagia y regurgitación. Realizar endoscopia para descartar obstrucción o pseudoacalasia y confirmar motilidad con manometría; usar esofagograma como estudio anatómico complementario.",
           "confusable_with": "Cáncer de esófago",
-          "why_not": "La disfagia a sólidos y líquidos desde el inicio favorece alteración motora. La pérdida rápida de peso o edad de riesgo exige excluir una neoplasia que la imite.",
+          "why_not": "La alteración manométrica y la disfagia a ambos tipos de alimento orientan a acalasia. La pérdida rápida de peso obliga a excluir una neoplasia que pueda imitarla antes de atribuir todo al trastorno motor.",
           "facts": [
             {
               "field": "pattern",
@@ -589,11 +627,11 @@
           ]
         },
         "medium": {
-          "vignette": "Una persona con disfagia a sólidos y líquidos pierde peso rápidamente. Se busca neoplasia con atención especial antes de atribuir todo a un trastorno motor.",
-          "discriminator": "Disfagia motora aparente con pérdida rápida de peso",
-          "explanation": "El dato decisivo es Disfagia motora aparente con pérdida rápida de peso. Puede imitar un trastorno motor. Buscar neoplasia con atención especial.",
+          "vignette": "Una persona con disfagia a sólidos y líquidos pierde peso rápidamente. La evaluación no encuentra una obstrucción tumoral y la manometría demuestra falla de relajación de la unión esofagogástrica con peristalsis alterada.",
+          "discriminator": "Trastorno motor confirmado después de excluir pseudoacalasia",
+          "explanation": "Trastorno motor confirmado después de excluir pseudoacalasia. Este patrón orienta a Acalasia. La pérdida de inervación inhibitoria impide relajación adecuada de la unión esofagogástrica y reduce peristalsis; el contenido se retiene y produce disfagia y regurgitación.",
           "confusable_with": "Cáncer de esófago",
-          "why_not": "La disfagia a sólidos y líquidos desde el inicio favorece alteración motora. La pérdida rápida de peso o edad de riesgo exige excluir una neoplasia que la imite.",
+          "why_not": "La alteración manométrica y la disfagia a ambos tipos de alimento orientan a acalasia. La pérdida rápida de peso obliga a excluir una neoplasia que pueda imitarla antes de atribuir todo al trastorno motor.",
           "facts": [
             {
               "field": "pattern",
@@ -650,11 +688,11 @@
           ]
         },
         "contrast": {
-          "vignette": "Se planifican endoscopia para excluir obstrucción y manometría para investigar falla de relajación del esfínter inferior en un paciente que regurgita alimento no digerido.",
-          "discriminator": "Evaluación manométrica de falla de relajación",
-          "explanation": "El dato decisivo es Evaluación manométrica de falla de relajación. La pérdida de inervación inhibitoria impide relajación adecuada de la unión esofagogástrica y reduce peristalsis; el contenido se retiene y produce disfagia y regurgitación. Realizar endoscopia para descartar obstrucción o pseudoacalasia y confirmar motilidad con manometría; usar esofagograma como estudio anatómico complementario.",
+          "vignette": "Una persona regurgita alimento no digerido y tiene disfagia para líquidos desde el inicio. La manometría demuestra pérdida de la relajación coordinada y el estudio anatómico muestra retención del contenido esofágico.",
+          "discriminator": "Retención de alimento por falla motora de la unión",
+          "explanation": "Retención de alimento por falla motora de la unión. Este patrón orienta a Acalasia. La pérdida de inervación inhibitoria impide relajación adecuada de la unión esofagogástrica y reduce peristalsis; el contenido se retiene y produce disfagia y regurgitación.",
           "confusable_with": "Cáncer de esófago",
-          "why_not": "La disfagia a sólidos y líquidos desde el inicio favorece alteración motora. La pérdida rápida de peso o edad de riesgo exige excluir una neoplasia que la imite.",
+          "why_not": "La alteración manométrica y la disfagia a ambos tipos de alimento orientan a acalasia. La pérdida rápida de peso obliga a excluir una neoplasia que pueda imitarla antes de atribuir todo al trastorno motor.",
           "facts": [
             {
               "field": "pattern",
@@ -710,7 +748,15 @@
             }
           ]
         }
-      }
+      },
+      "sources": [
+        {
+          "label": "Edwino.pdf",
+          "pages": [
+            306
+          ]
+        }
+      ]
     },
     {
       "id": "11.02-02",
@@ -720,9 +766,9 @@
       "answer_kind": "diagnosis",
       "variants": {
         "easy": {
-          "vignette": "Un adulto con reflujo de larga duración se somete a endoscopia. Se observan lengüetas de mucosa distinta en el esófago distal y se toman biopsias para valorar metaplasia y displasia.",
-          "discriminator": "lengüetas de mucosa distinta",
-          "explanation": "El dato decisivo es lengüetas de mucosa distinta. La exposición crónica puede reemplazar epitelio escamoso distal por epitelio columnar metaplásico; la presencia y grado de displasia determinan el riesgo de progresión neoplásica. Confirmar histología y extensión, controlar reflujo y programar vigilancia o tratamiento endoscópico según displasia y riesgo.",
+          "vignette": "Una persona con reflujo crónico tiene lengüetas de mucosa columnar en esófago distal. La biopsia confirma metaplasia intestinal y permite evaluar si existe displasia.",
+          "discriminator": "Metaplasia intestinal esofágica confirmada",
+          "explanation": "Metaplasia intestinal esofágica confirmada. La exposición crónica puede reemplazar epitelio escamoso distal por epitelio columnar metaplásico; la presencia y grado de displasia determinan el riesgo de progresión neoplásica.",
           "confusable_with": "Adenocarcinoma esofágico invasivo",
           "why_not": "La metaplasia es una lesión precursora y no equivale a cáncer invasivo. La displasia necesita confirmación experta y cambia el manejo.",
           "facts": [
@@ -886,21 +932,33 @@
             }
           ]
         }
-      }
+      },
+      "sources": [
+        {
+          "label": "Edwino.pdf",
+          "pages": [
+            325
+          ]
+        },
+        {
+          "label": "ACG, Barrett guideline 2022",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10259184/"
+        }
+      ]
     },
     {
       "id": "11.02-03",
       "parent_topic_id": "11.02-03",
       "block_id": "11.02",
-      "name": "Confirmar cáncer esofágico y definir extensión y soporte",
-      "answer_kind": "decision",
+      "name": "Cáncer de esófago",
+      "answer_kind": "diagnosis",
       "variants": {
         "easy": {
-          "vignette": "Un adulto presenta dificultad para tragar que comenzó con sólidos y avanzó a líquidos en pocos meses. Tiene pérdida rápida de peso y dolor retroesternal ocasional. ¿Qué acción o clasificación corresponde?",
+          "vignette": "Un adulto presenta dificultad para tragar que comenzó con sólidos y avanzó a líquidos en pocos meses. Tiene pérdida rápida de peso y dolor retroesternal ocasional.",
           "discriminator": "comenzó con sólidos y avanzó a líquidos",
           "explanation": "El dato decisivo es comenzó con sólidos y avanzó a líquidos. Una masa infiltrante reduce progresivamente la luz esofágica; la obstrucción primero afecta sólidos y luego líquidos, con menor ingesta y pérdida ponderal acelerada. Solicitar endoscopia con biopsia y evaluación nutricional. Tras confirmación, completar estadificación y valoración multidisciplinaria.",
           "confusable_with": "Acalasia",
-          "why_not": "La progresión de sólidos a líquidos y la pérdida rápida de peso favorecen una obstrucción tumoral. La acalasia suele dificultar ambos desde el inicio.",
+          "why_not": "La lesión estructural invasora con progresión de sólidos a líquidos favorece cáncer de esófago. La acalasia dificulta sólidos y líquidos desde el inicio y requiere demostrar el patrón motor.",
           "facts": [
             {
               "field": "pattern",
@@ -929,11 +987,11 @@
           ]
         },
         "medium": {
-          "vignette": "La disfagia progresiva impide ingerir y produce riesgo de aspiración. Se priorizan soporte y una vía nutricional apropiada mientras se estudia el tumor. ¿Qué acción o clasificación corresponde?",
-          "discriminator": "Imposibilidad de ingerir o aspiración",
-          "explanation": "El dato decisivo es Imposibilidad de ingerir o aspiración. Existe riesgo inmediato de deshidratación o neumonía. Priorizar soporte y vía nutricional apropiada.",
+          "vignette": "Una persona con disfagia que progresó de sólidos a líquidos ya no puede ingerir y tiene aspiración. La endoscopia identifica una lesión que estrecha el esófago y la biopsia demuestra células epiteliales invasoras.",
+          "discriminator": "Obstrucción esofágica con invasión demostrada y repercusión nutricional",
+          "explanation": "Obstrucción esofágica con invasión demostrada y repercusión nutricional. Este patrón orienta a Cáncer de esófago. Una masa infiltrante reduce progresivamente la luz esofágica; la obstrucción primero afecta sólidos y luego líquidos, con menor ingesta y pérdida ponderal acelerada.",
           "confusable_with": "Acalasia",
-          "why_not": "La progresión de sólidos a líquidos y la pérdida rápida de peso favorecen una obstrucción tumoral. La acalasia suele dificultar ambos desde el inicio.",
+          "why_not": "La lesión estructural invasora con progresión de sólidos a líquidos favorece cáncer de esófago. La acalasia dificulta sólidos y líquidos desde el inicio y requiere demostrar el patrón motor.",
           "facts": [
             {
               "field": "pattern",
@@ -990,11 +1048,11 @@
           ]
         },
         "contrast": {
-          "vignette": "Una biopsia confirma una neoplasia del esófago en una persona con disfagia progresiva. Ahora se necesita estadificación para elegir tratamiento y plan de soporte. ¿Qué acción o clasificación corresponde?",
-          "discriminator": "Tumor confirmado que requiere estadificación",
-          "explanation": "La confirmación histológica precede a la elección por estadio y condición. Se organiza extensión y soporte; la imposibilidad de ingerir o aspiración requieren prioridad nutricional.",
+          "vignette": "Una persona pierde peso rápidamente y tiene dolor retroesternal con disfagia progresiva. La imagen y la endoscopia localizan una masa estenosante en esófago; el tejido muestra infiltración tumoral.",
+          "discriminator": "Lesión esofágica infiltrante con síndrome mecánico progresivo",
+          "explanation": "Lesión esofágica infiltrante con síndrome mecánico progresivo. Este patrón orienta a Cáncer de esófago. Una masa infiltrante reduce progresivamente la luz esofágica; la obstrucción primero afecta sólidos y luego líquidos, con menor ingesta y pérdida ponderal acelerada.",
           "confusable_with": "Acalasia",
-          "why_not": "La progresión de sólidos a líquidos y la pérdida rápida de peso favorecen una obstrucción tumoral. La acalasia suele dificultar ambos desde el inicio.",
+          "why_not": "La lesión estructural invasora con progresión de sólidos a líquidos favorece cáncer de esófago. La acalasia dificulta sólidos y líquidos desde el inicio y requiere demostrar el patrón motor.",
           "facts": [
             {
               "field": "pattern",
@@ -1050,7 +1108,15 @@
             }
           ]
         }
-      }
+      },
+      "sources": [
+        {
+          "label": "Edwino.pdf",
+          "pages": [
+            308
+          ]
+        }
+      ]
     },
     {
       "id": "11.03-01",
@@ -1063,8 +1129,8 @@
           "vignette": "Un adulto presenta úlceras pépticas recurrentes a pesar de tratamiento, diarrea y esofagitis. Se revisan fármacos, acidez gástrica y la posibilidad de una secreción hormonal excesiva.",
           "discriminator": "úlceras pépticas recurrentes",
           "explanation": "El dato decisivo es úlceras pépticas recurrentes. Un gastrinoma secreta gastrina y estimula ácido en exceso; la hipersecreción causa úlceras difíciles de controlar y puede alterar digestión con diarrea. Controlar secreción ácida y medir gastrina en un contexto interpretativo seguro con especialista; confirmar exceso inapropiado y después localizar el tumor y valorar MEN1.",
-          "confusable_with": "Enfermedad ácido péptica habitual",
-          "why_not": "Las úlceras recurrentes con diarrea sugieren hipersecreción. La gastrina aislada no confirma un gastrinoma y la retirada no controlada de IBP puede causar daño.",
+          "confusable_with": "Hipergastrinemia farmacológica aislada",
+          "why_not": "La gastrina debe interpretarse con la acidez y los medicamentos. Su elevación aislada bajo IBP no prueba Zollinger-Ellison; las úlceras recurrentes con hipersecreción apoyan el síndrome.",
           "facts": [
             {
               "field": "pattern",
@@ -1097,11 +1163,11 @@
           ]
         },
         "medium": {
-          "vignette": "Una persona con úlceras recurrentes, diarrea y exceso de gastrina también presenta hiperparatiroidismo o tumor hipofisario. Se investiga predisposición hereditaria.",
-          "discriminator": "Hipersecreción ácida con otras endocrinopatías",
-          "explanation": "El dato decisivo es Hipersecreción ácida con otras endocrinopatías. La asociación cambia vigilancia y plan quirúrgico. Investigar síndrome hereditario.",
-          "confusable_with": "Enfermedad ácido péptica habitual",
-          "why_not": "Las úlceras recurrentes con diarrea sugieren hipersecreción. La gastrina aislada no confirma un gastrinoma y la retirada no controlada de IBP puede causar daño.",
+          "vignette": "Una persona con úlceras recurrentes y diarrea tiene gastrina elevada de forma inapropiada para la acidez gástrica presente. Coexisten hiperparatiroidismo o tumor hipofisario, que orientan a predisposición hereditaria.",
+          "discriminator": "Hipersecreción ácida y gastrina con otras endocrinopatías",
+          "explanation": "Hipersecreción ácida y gastrina con otras endocrinopatías. Este patrón orienta a Zollinger Ellison. Un gastrinoma secreta gastrina y estimula ácido en exceso; la hipersecreción causa úlceras difíciles de controlar y puede alterar digestión con diarrea.",
+          "confusable_with": "Hipergastrinemia farmacológica aislada",
+          "why_not": "La gastrina debe interpretarse con la acidez y los medicamentos. Su elevación aislada bajo IBP no prueba Zollinger-Ellison; las úlceras recurrentes con hipersecreción apoyan el síndrome.",
           "facts": [
             {
               "field": "pattern",
@@ -1162,11 +1228,11 @@
           ]
         },
         "contrast": {
-          "vignette": "Al evaluar gastrina elevada en una persona con úlceras recurrentes se revisan IBP y acidez gástrica. Cualquier retirada del inhibidor se planifica con un equipo experto.",
-          "discriminator": "Gastrina interpretada junto con acidez y medicamentos",
-          "explanation": "El dato decisivo es Gastrina interpretada junto con acidez y medicamentos. Un gastrinoma secreta gastrina y estimula ácido en exceso; la hipersecreción causa úlceras difíciles de controlar y puede alterar digestión con diarrea. Controlar secreción ácida y medir gastrina en un contexto interpretativo seguro con especialista; confirmar exceso inapropiado y después localizar el tumor y valorar MEN1.",
-          "confusable_with": "Enfermedad ácido péptica habitual",
-          "why_not": "Las úlceras recurrentes con diarrea sugieren hipersecreción. La gastrina aislada no confirma un gastrinoma y la retirada no controlada de IBP puede causar daño.",
+          "vignette": "Una persona tiene úlceras resistentes y esofagitis con diarrea. La evaluación confirma secreción excesiva de gastrina con producción ácida, interpretada junto con medicamentos y estudios dirigidos de la fuente secretora.",
+          "discriminator": "Exceso de gastrina en un contexto de hipersecreción ácida",
+          "explanation": "Exceso de gastrina en un contexto de hipersecreción ácida. Este patrón orienta a Zollinger Ellison. Un gastrinoma secreta gastrina y estimula ácido en exceso; la hipersecreción causa úlceras difíciles de controlar y puede alterar digestión con diarrea.",
+          "confusable_with": "Hipergastrinemia farmacológica aislada",
+          "why_not": "La gastrina debe interpretarse con la acidez y los medicamentos. Su elevación aislada bajo IBP no prueba Zollinger-Ellison; las úlceras recurrentes con hipersecreción apoyan el síndrome.",
           "facts": [
             {
               "field": "pattern",
@@ -1226,7 +1292,19 @@
             }
           ]
         }
-      }
+      },
+      "sources": [
+        {
+          "label": "Edwino.pdf",
+          "pages": [
+            346
+          ]
+        },
+        {
+          "label": "ENETS, Functioning pancreatic NET syndromes 2023",
+          "url": "https://onlinelibrary.wiley.com/doi/10.1111/jne.13318"
+        }
+      ]
     },
     {
       "id": "11.04-01",
@@ -1414,7 +1492,16 @@
             }
           ]
         }
-      }
+      },
+      "sources": [
+        {
+          "label": "Edwino.pdf",
+          "pages": [
+            342,
+            343
+          ]
+        }
+      ]
     },
     {
       "id": "11.04-02",
@@ -1428,7 +1515,7 @@
           "discriminator": "cirrosis presenta hematemesis abundante",
           "explanation": "El dato decisivo es cirrosis presenta hematemesis abundante. La hipertensión portal dilata colaterales gastroesofágicas de pared frágil; su ruptura causa hemorragia importante y requiere reducir flujo portal además del control endoscópico. Estabilizar e iniciar un vasoactivo, como octreótide, desde la sospecha, junto con profilaxis antibiótica, habitualmente ceftriaxona según contexto local. Organizar endoscopia temprana con ligadura tras reanimación.",
           "confusable_with": "Mallory-Weiss",
-          "why_not": "La hipertensión portal produce várices y cambia el tratamiento y la prevención. Un desgarro tras arcadas tiene otro mecanismo y no explica la necesidad de reducir riesgo portal.",
+          "why_not": "Las dilataciones venosas en el contexto portal identifican várices. Mallory-Weiss es un desgarro mucoso asociado a arcadas, con otra apariencia y mecanismo.",
           "facts": [
             {
               "field": "pattern",
@@ -1457,11 +1544,11 @@
           ]
         },
         "medium": {
-          "vignette": "En una persona con cirrosis no se logra controlar la hemorragia portal en la endoscopia. Se valora rescate y derivación portal en un centro experto.",
-          "discriminator": "Hemorragia portal no controlada",
-          "explanation": "La falta de control requiere medidas de rescate y valorar una derivación portal en un centro experto.",
+          "vignette": "Una persona con cirrosis presenta hematemesis que persiste. La endoscopia identifica sangrado de venas esofágicas dilatadas relacionadas con hipertensión portal.",
+          "discriminator": "Fuente venosa esofágica de sangrado portal",
+          "explanation": "Fuente venosa esofágica de sangrado portal. Este patrón orienta a Varices esofágicas. La hipertensión portal dilata colaterales gastroesofágicas de pared frágil; su ruptura causa hemorragia importante y requiere reducir flujo portal además del control endoscópico.",
           "confusable_with": "Mallory-Weiss",
-          "why_not": "La hipertensión portal produce várices y cambia el tratamiento y la prevención. Un desgarro tras arcadas tiene otro mecanismo y no explica la necesidad de reducir riesgo portal.",
+          "why_not": "Las dilataciones venosas en el contexto portal identifican várices. Mallory-Weiss es un desgarro mucoso asociado a arcadas, con otra apariencia y mecanismo.",
           "facts": [
             {
               "field": "pattern",
@@ -1530,11 +1617,11 @@
           ]
         },
         "contrast": {
-          "vignette": "En una persona con hipertensión portal se observan dilataciones venosas esofágicas sin sangrado actual. Se decide prevención primaria según el riesgo.",
-          "discriminator": "Lesión venosa portal sin hemorragia actual",
-          "explanation": "La ausencia de sangrado actual cambia el objetivo a prevención primaria según riesgo; no se aplica el mismo manejo que a una hemorragia activa.",
+          "vignette": "En una persona con hipertensión portal, la endoscopia demuestra dilataciones venosas esofágicas antes de que ocurra hemorragia. Se reconocen como una lesión de riesgo, no como un desgarro mucoso.",
+          "discriminator": "Dilataciones venosas sin sangrado actual",
+          "explanation": "Dilataciones venosas sin sangrado actual. Este patrón orienta a Varices esofágicas. La hipertensión portal dilata colaterales gastroesofágicas de pared frágil; su ruptura causa hemorragia importante y requiere reducir flujo portal además del control endoscópico.",
           "confusable_with": "Mallory-Weiss",
-          "why_not": "La hipertensión portal produce várices y cambia el tratamiento y la prevención. Un desgarro tras arcadas tiene otro mecanismo y no explica la necesidad de reducir riesgo portal.",
+          "why_not": "Las dilataciones venosas en el contexto portal identifican várices. Mallory-Weiss es un desgarro mucoso asociado a arcadas, con otra apariencia y mecanismo.",
           "facts": [
             {
               "field": "pattern",
@@ -1602,21 +1689,37 @@
             }
           ]
         }
-      }
+      },
+      "sources": [
+        {
+          "label": "Edwino.pdf",
+          "pages": [
+            345
+          ]
+        },
+        {
+          "label": "AGA, vasoactivos y albúmina en cirrosis",
+          "url": "https://gastro.org/clinical-guidance/use-of-vasoactive-drugs-and-intravenous-albumin-in-cirrhosis/"
+        },
+        {
+          "label": "KASL, guía de ascitis y complicaciones 2026",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13430399/"
+        }
+      ]
     },
     {
       "id": "11.04-03",
       "parent_topic_id": "11.04-03",
       "block_id": "11.04",
-      "name": "Distinguir desgarro mucoso de ruptura esofágica",
-      "answer_kind": "decision",
+      "name": "Mallory Weiss",
+      "answer_kind": "diagnosis",
       "variants": {
         "easy": {
-          "vignette": "Un adulto tuvo varios vómitos sin sangre después de beber alcohol. Luego presenta hematemesis; no hay datos claros de perforación y se valora estabilidad antes de la endoscopia. ¿Qué acción o clasificación corresponde a este contexto?",
+          "vignette": "Un adulto tuvo varios vómitos sin sangre después de beber alcohol. Luego presenta hematemesis; no hay datos claros de perforación y se valora estabilidad antes de la endoscopia.",
           "discriminator": "vómitos sin sangre",
           "explanation": "El dato decisivo es vómitos sin sangre. El aumento brusco de presión durante arcadas desgarra mucosa en la unión gastroesofágica; si alcanza vasos submucosos produce hematemesis después de emesis inicialmente no sanguinolenta. Estabilizar como sangrado alto y realizar endoscopia según gravedad. Si existe sangrado persistente o de alto riesgo, aplicar hemostasia endoscópica.",
-          "confusable_with": "Perforación esofágica transmural",
-          "why_not": "El desgarro mucoso tras arcadas favorece Mallory-Weiss. El dolor intenso y la sospecha de ruptura transmural requieren otro estudio y otra urgencia.",
+          "confusable_with": "Várices esofágicas",
+          "why_not": "La secuencia de arcadas seguidas de hematemesis y el desgarro mucoso favorecen Mallory-Weiss. Las várices se relacionan con hipertensión portal y tienen otra lesión endoscópica.",
           "facts": [
             {
               "field": "pattern",
@@ -1645,11 +1748,11 @@
           ]
         },
         "medium": {
-          "vignette": "Después de arcadas y hematemesis aparece dolor intenso con sospecha de ruptura de toda la pared esofágica. Se investiga perforación urgente. ¿Qué acción o clasificación corresponde a este contexto?",
-          "discriminator": "Dolor intenso que obliga a excluir ruptura transmural",
-          "explanation": "El dato decisivo es Dolor intenso que obliga a excluir ruptura transmural. Tiene mecanismo y gravedad diferentes. Investigar perforación esofágica urgente.",
-          "confusable_with": "Perforación esofágica transmural",
-          "why_not": "El desgarro mucoso tras arcadas favorece Mallory-Weiss. El dolor intenso y la sospecha de ruptura transmural requieren otro estudio y otra urgencia.",
+          "vignette": "Después de vómitos repetidos por un episodio digestivo, una persona presenta hematemesis. La endoscopia identifica un desgarro mucoso en la unión gastroesofágica.",
+          "discriminator": "Desgarro mucoso tras esfuerzo emético sin relación obligatoria con alcohol",
+          "explanation": "Desgarro mucoso tras esfuerzo emético sin relación obligatoria con alcohol. Este patrón orienta a Mallory Weiss. El aumento brusco de presión durante arcadas desgarra mucosa en la unión gastroesofágica; si alcanza vasos submucosos produce hematemesis después de emesis inicialmente no sanguinolenta.",
+          "confusable_with": "Várices esofágicas",
+          "why_not": "La secuencia de arcadas seguidas de hematemesis y el desgarro mucoso favorecen Mallory-Weiss. Las várices se relacionan con hipertensión portal y tienen otra lesión endoscópica.",
           "facts": [
             {
               "field": "pattern",
@@ -1698,11 +1801,11 @@
           ]
         },
         "contrast": {
-          "vignette": "La endoscopia por sangre tras vómitos repetidos identifica un desgarro mucoso de la unión gastroesofágica. Se decide hemostasia según la actividad del sangrado. ¿Qué acción o clasificación corresponde a este contexto?",
-          "discriminator": "Desgarro mucoso después de arcadas",
-          "explanation": "El dato decisivo es Desgarro mucoso después de arcadas. El aumento brusco de presión durante arcadas desgarra mucosa en la unión gastroesofágica; si alcanza vasos submucosos produce hematemesis después de emesis inicialmente no sanguinolenta. Estabilizar como sangrado alto y realizar endoscopia según gravedad. Si existe sangrado persistente o de alto riesgo, aplicar hemostasia endoscópica.",
-          "confusable_with": "Perforación esofágica transmural",
-          "why_not": "El desgarro mucoso tras arcadas favorece Mallory-Weiss. El dolor intenso y la sospecha de ruptura transmural requieren otro estudio y otra urgencia.",
+          "vignette": "Una persona con arcadas previas presenta sangrado alto persistente. La endoscopia localiza el sangrado en una laceración superficial de la unión gastroesofágica, sin ruptura de toda la pared.",
+          "discriminator": "Sangrado activo de una laceración mucosa de la unión",
+          "explanation": "Sangrado activo de una laceración mucosa de la unión. Este patrón orienta a Mallory Weiss. El aumento brusco de presión durante arcadas desgarra mucosa en la unión gastroesofágica; si alcanza vasos submucosos produce hematemesis después de emesis inicialmente no sanguinolenta.",
+          "confusable_with": "Várices esofágicas",
+          "why_not": "La secuencia de arcadas seguidas de hematemesis y el desgarro mucoso favorecen Mallory-Weiss. Las várices se relacionan con hipertensión portal y tienen otra lesión endoscópica.",
           "facts": [
             {
               "field": "pattern",
@@ -1750,7 +1853,15 @@
             }
           ]
         }
-      }
+      },
+      "sources": [
+        {
+          "label": "Edwino.pdf",
+          "pages": [
+            334
+          ]
+        }
+      ]
     },
     {
       "id": "11.05-01",
@@ -1938,21 +2049,29 @@
             }
           ]
         }
-      }
+      },
+      "sources": [
+        {
+          "label": "Edwino.pdf",
+          "pages": [
+            344
+          ]
+        }
+      ]
     },
     {
       "id": "11.06-01",
       "parent_topic_id": "11.06-01",
       "block_id": "11.06",
-      "name": "Evaluar patrón intestinal funcional y detectar alarmas",
-      "answer_kind": "decision",
+      "name": "Síndrome de intestino irritable",
+      "answer_kind": "diagnosis",
       "variants": {
         "easy": {
-          "vignette": "Una adulta tiene dolor abdominal recurrente relacionado con la evacuación y cambios entre heces duras y blandas. Lleva meses así, sin sangrado, fiebre, pérdida de peso ni síntomas nocturnos. ¿Qué acción o clasificación corresponde a este contexto?",
+          "vignette": "Una adulta tiene dolor abdominal recurrente relacionado con la evacuación y cambios entre heces duras y blandas. Lleva meses así, sin sangrado, fiebre, pérdida de peso ni síntomas nocturnos.",
           "discriminator": "relacionado con la evacuación",
           "explanation": "El dato decisivo es relacionado con la evacuación. La interacción intestino-cerebro altera sensibilidad visceral y motilidad sin lesión estructural que explique el patrón; los cambios de hábito permiten clasificar subtipos y orientar alivio sintomático. Establecer diagnóstico positivo y revisar alarmas con pruebas básicas dirigidas. Iniciar educación, hábitos y dieta individualizada; considerar fibra soluble como psyllium, con tratamiento por subtipo y seguimiento.",
           "confusable_with": "Enfermedad inflamatoria intestinal",
-          "why_not": "El patrón funcional se apoya en dolor relacionado con evacuación y cambios fecales sin alarmas. El sangrado o la pérdida de peso requieren investigar enfermedad orgánica.",
+          "why_not": "El patrón de dolor relacionado con evacuación y cambios fecales sin alarmas favorece SII. El sangrado, la anemia o los síntomas nocturnos obligan a investigar enfermedad orgánica.",
           "facts": [
             {
               "field": "pattern",
@@ -1985,11 +2104,11 @@
           ]
         },
         "medium": {
-          "vignette": "Una persona con dolor relacionado con evacuación desarrolla sangrado, anemia o síntomas nocturnos. Se amplía el estudio orgánico. ¿Qué acción o clasificación corresponde a este contexto?",
-          "discriminator": "Alarmas nuevas en un cuadro funcional aparente",
-          "explanation": "El dato decisivo es Alarmas nuevas en un cuadro funcional aparente. No corresponde al patrón sin alarmas. Ampliar estudio orgánico.",
+          "vignette": "Una persona tiene dolor abdominal recurrente relacionado con evacuar y predominan heces blandas y frecuentes. No hay sangrado, pérdida de peso ni síntomas nocturnos y la evaluación clínica permite un patrón funcional.",
+          "discriminator": "Subtipo con predominio de diarrea sin alarmas",
+          "explanation": "Subtipo con predominio de diarrea sin alarmas. Este patrón orienta a Síndrome de intestino irritable. La interacción intestino-cerebro altera sensibilidad visceral y motilidad sin lesión estructural que explique el patrón; los cambios de hábito permiten clasificar subtipos y orientar alivio sintomático.",
           "confusable_with": "Enfermedad inflamatoria intestinal",
-          "why_not": "El patrón funcional se apoya en dolor relacionado con evacuación y cambios fecales sin alarmas. El sangrado o la pérdida de peso requieren investigar enfermedad orgánica.",
+          "why_not": "El patrón de dolor relacionado con evacuación y cambios fecales sin alarmas favorece SII. El sangrado, la anemia o los síntomas nocturnos obligan a investigar enfermedad orgánica.",
           "facts": [
             {
               "field": "pattern",
@@ -2058,15 +2177,21 @@
             {
               "field": "source_corrections.0.reason",
               "text": "La página 341 imprime dosis de loperamida incorrectas, incluida 70 mg/día; la ficha oficial fija máximo de 16 mg/día bajo prescripción. La acción se centra en dieta y fibra soluble, no en una pauta de loperamida."
+            }
+          ],
+          "source_evidence": [
+            {
+              "page": 339,
+              "quote": "ánica que lo justifique. Existen distintos subtipos de SIi, ya sea predominantemente diarrea (SIi-O), constipación (SII-C) o mixto (SII-M). Epidem"
             }
           ]
         },
         "contrast": {
-          "vignette": "Tras evaluación sin alarmas, una persona con dolor recurrente relacionado con heces tiene predominio de estreñimiento o diarrea. Se selecciona tratamiento por subtipo. ¿Qué acción o clasificación corresponde a este contexto?",
-          "discriminator": "Subtipo fecal que orienta tratamiento",
-          "explanation": "El dato decisivo es Subtipo fecal que orienta tratamiento. El mismo fármaco puede empeorar el extremo contrario. Seleccionar terapia por subtipo.",
+          "vignette": "Una persona presenta dolor recurrente ligado a la evacuación y predominan heces duras y menos frecuentes. Lleva meses con ese patrón, sin fiebre, sangrado ni adelgazamiento.",
+          "discriminator": "Subtipo con predominio de estreñimiento",
+          "explanation": "Subtipo con predominio de estreñimiento. Este patrón orienta a Síndrome de intestino irritable. La interacción intestino-cerebro altera sensibilidad visceral y motilidad sin lesión estructural que explique el patrón; los cambios de hábito permiten clasificar subtipos y orientar alivio sintomático.",
           "confusable_with": "Enfermedad inflamatoria intestinal",
-          "why_not": "El patrón funcional se apoya en dolor relacionado con evacuación y cambios fecales sin alarmas. El sangrado o la pérdida de peso requieren investigar enfermedad orgánica.",
+          "why_not": "El patrón de dolor relacionado con evacuación y cambios fecales sin alarmas favorece SII. El sangrado, la anemia o los síntomas nocturnos obligan a investigar enfermedad orgánica.",
           "facts": [
             {
               "field": "pattern",
@@ -2136,23 +2261,47 @@
               "field": "source_corrections.0.reason",
               "text": "La página 341 imprime dosis de loperamida incorrectas, incluida 70 mg/día; la ficha oficial fija máximo de 16 mg/día bajo prescripción. La acción se centra en dieta y fibra soluble, no en una pauta de loperamida."
             }
+          ],
+          "source_evidence": [
+            {
+              "page": 339,
+              "quote": "ánica que lo justifique. Existen distintos subtipos de SIi, ya sea predominantemente diarrea (SIi-O), constipación (SII-C) o mixto (SII-M). Epidem"
+            }
           ]
         }
-      }
+      },
+      "sources": [
+        {
+          "label": "Edwino.pdf",
+          "pages": [
+            339,
+            340,
+            341
+          ]
+        },
+        {
+          "label": "AGA, Diet in IBS 2022",
+          "url": "https://gastro.org/clinical-guidance/the-role-of-diet-in-irritable-bowel-syndrome-ibs/"
+        },
+        {
+          "label": "DailyMed, Loperamide hydrochloride prescribing information",
+          "url": "https://www.dailymed.nlm.nih.gov/dailymed/fda/fdaDrugXsl.cfm?setid=f422ade5-8395-40e4-e053-2a95a90a4044&type=display"
+        }
+      ]
     },
     {
       "id": "11.07-01",
       "parent_topic_id": "11.07-01",
       "block_id": "11.07",
-      "name": "Tratar Crohn según localización y controlar complicaciones",
-      "answer_kind": "decision",
+      "name": "Enfermedad de Crohn",
+      "answer_kind": "diagnosis",
       "variants": {
         "easy": {
-          "vignette": "Una joven presenta diarrea crónica, dolor abdominal y pérdida de peso con una fístula perianal. La endoscopia muestra lesiones separadas por mucosa de aspecto conservado. ¿Qué acción o clasificación corresponde a este contexto?",
+          "vignette": "Una joven presenta diarrea crónica, dolor abdominal y pérdida de peso con una fístula perianal. La endoscopia muestra lesiones separadas por mucosa de aspecto conservado.",
           "discriminator": "lesiones separadas por mucosa de aspecto conservado",
           "explanation": "El dato decisivo es lesiones separadas por mucosa de aspecto conservado. La inflamación transmural y segmentaria puede afectar distintos niveles digestivos; su profundidad favorece fístulas, abscesos y estenosis además de diarrea y malabsorción. Descartar infección y evaluar intestino con endoscopia, biopsias e imagen. Ante la fístula perianal del caso, solicitar valoración coloproctológica e imagen pélvica para buscar un absceso; controlar sepsis antes de seleccionar terapia avanzada.",
           "confusable_with": "Colitis ulcerativa",
-          "why_not": "La distribución en parches y las fístulas favorecen Crohn. La enfermedad continua desde recto con afectación mucosa orienta a colitis ulcerativa.",
+          "why_not": "La discontinuidad, las fístulas, el absceso y las estenosis favorecen Crohn. La colitis ulcerativa típicamente empieza en el recto y se extiende de forma continua por la mucosa.",
           "facts": [
             {
               "field": "pattern",
@@ -2185,11 +2334,11 @@
           ]
         },
         "medium": {
-          "vignette": "Una persona con inflamación intestinal en parches desarrolla absceso, obstrucción o perforación. Se prioriza controlar la complicación. ¿Qué acción o clasificación corresponde a este contexto?",
-          "discriminator": "Inflamación transmural complicada",
-          "explanation": "El dato decisivo es Inflamación transmural complicada. No basta escalar inmunosupresión. Priorizar control de complicación.",
+          "vignette": "Una persona con diarrea y dolor abdominal desarrolla un absceso. La evaluación intestinal muestra inflamación en parches, separada por segmentos conservados, y un mecanismo transmural.",
+          "discriminator": "Enfermedad segmentaria con complicación supurativa",
+          "explanation": "Enfermedad segmentaria con complicación supurativa. Este patrón orienta a Enfermedad de Crohn. La inflamación transmural y segmentaria puede afectar distintos niveles digestivos; su profundidad favorece fístulas, abscesos y estenosis además de diarrea y malabsorción.",
           "confusable_with": "Colitis ulcerativa",
-          "why_not": "La distribución en parches y las fístulas favorecen Crohn. La enfermedad continua desde recto con afectación mucosa orienta a colitis ulcerativa.",
+          "why_not": "La discontinuidad, las fístulas, el absceso y las estenosis favorecen Crohn. La colitis ulcerativa típicamente empieza en el recto y se extiende de forma continua por la mucosa.",
           "facts": [
             {
               "field": "pattern",
@@ -2262,11 +2411,11 @@
           ]
         },
         "contrast": {
-          "vignette": "La enfermedad inflamatoria intestinal está limitada a una localización apropiada. Se elige inducción por localización y gravedad, sin usar corticoide como mantenimiento. ¿Qué acción o clasificación corresponde a este contexto?",
-          "discriminator": "Localización que modifica inducción",
-          "explanation": "El dato decisivo es Localización que modifica inducción. Budesonida no sirve igual en todos los segmentos. Valorar terapia de inducción según localización.",
+          "vignette": "Una persona presenta episodios de obstrucción por estenosis intestinal. La evaluación muestra lesiones discontinuas y daño transmural, junto con antecedente de afectación perianal.",
+          "discriminator": "Fenotipo estenosante y transmural",
+          "explanation": "Fenotipo estenosante y transmural. Este patrón orienta a Enfermedad de Crohn. La inflamación transmural y segmentaria puede afectar distintos niveles digestivos; su profundidad favorece fístulas, abscesos y estenosis además de diarrea y malabsorción.",
           "confusable_with": "Colitis ulcerativa",
-          "why_not": "La distribución en parches y las fístulas favorecen Crohn. La enfermedad continua desde recto con afectación mucosa orienta a colitis ulcerativa.",
+          "why_not": "La discontinuidad, las fístulas, el absceso y las estenosis favorecen Crohn. La colitis ulcerativa típicamente empieza en el recto y se extiende de forma continua por la mucosa.",
           "facts": [
             {
               "field": "pattern",
@@ -2338,7 +2487,20 @@
             }
           ]
         }
-      }
+      },
+      "sources": [
+        {
+          "label": "Edwino.pdf",
+          "pages": [
+            321,
+            322
+          ]
+        },
+        {
+          "label": "BSG, IBD management guideline 2025",
+          "url": "https://gut.bmj.com/content/74/Suppl_2/s1"
+        }
+      ]
     },
     {
       "id": "11.07-02",
@@ -2538,21 +2700,38 @@
             }
           ]
         }
-      }
+      },
+      "sources": [
+        {
+          "label": "Edwino.pdf",
+          "pages": [
+            313,
+            314
+          ]
+        },
+        {
+          "label": "BSG, IBD management guideline 2025",
+          "url": "https://gut.bmj.com/content/74/Suppl_2/s1"
+        },
+        {
+          "label": "AGA, IBD colorectal dysplasia surveillance 2021",
+          "url": "https://gastro.org/clinical-guidance/endoscopic-surveillance-and-management-of-colorectal-dysplasia-in-inflammatory-bowel-diseases-ibd/"
+        }
+      ]
     },
     {
       "id": "11.07-03",
       "parent_topic_id": "11.07-03",
       "block_id": "11.07",
-      "name": "Estudiar malabsorción por gluten según IgA y exposición",
-      "answer_kind": "decision",
+      "name": "Enfermedad celíaca",
+      "answer_kind": "diagnosis",
       "variants": {
         "easy": {
-          "vignette": "Una adulta presenta diarrea crónica, distensión y anemia ferropénica. Sigue comiendo trigo y tiene antecedente familiar de autoinmunidad; se prepara un estudio de malabsorción. ¿Qué acción o clasificación corresponde a este contexto?",
+          "vignette": "Una adulta presenta diarrea crónica, distensión y anemia ferropénica. Sigue comiendo trigo y tiene antecedente familiar de autoinmunidad; se prepara un estudio de malabsorción.",
           "discriminator": "anemia ferropénica",
           "explanation": "El dato decisivo es anemia ferropénica. La respuesta inmune al gluten en personas predispuestas lesiona vellosidades del intestino delgado; la menor superficie absortiva causa déficit nutricional y síntomas digestivos o extraintestinales. Solicitar serología apropiada, incluida valoración de IgA, mientras consume gluten y confirmar según contexto con especialista. Iniciar dieta sin gluten después de establecer diagnóstico.",
           "confusable_with": "Síndrome de intestino irritable",
-          "why_not": "La malabsorción y la anemia requieren estudiar causa orgánica. La clase de inmunoglobulina y la exposición a gluten cambian la interpretación de las pruebas.",
+          "why_not": "La malabsorción, la anemia y la lesión de vellosidades favorecen celiaquía. Un trastorno funcional no explica esa lesión histológica; retirar gluten antes del estudio puede alterar los resultados.",
           "facts": [
             {
               "field": "pattern",
@@ -2585,11 +2764,11 @@
           ]
         },
         "medium": {
-          "vignette": "Una persona con sospecha de malabsorción por gluten tiene deficiencia de IgA. Se eligen pruebas de otra clase sin retirar gluten antes del estudio. ¿Qué acción o clasificación corresponde a este contexto?",
-          "discriminator": "Deficiencia de IgA que modifica serología",
-          "explanation": "El dato decisivo es Deficiencia de IgA que modifica serología. La serología IgA puede ser negativa. Usar pruebas apropiadas de otra clase.",
+          "vignette": "Una persona con anemia y malabsorción tiene deficiencia de IgA. Los estudios apropiados de otra clase y la biopsia duodenal demuestran lesión compatible mientras aún consume gluten.",
+          "discriminator": "Confirmación de enteropatía cuando IgA no es fiable",
+          "explanation": "Confirmación de enteropatía cuando IgA no es fiable. Este patrón orienta a Enfermedad celíaca. La respuesta inmune al gluten en personas predispuestas lesiona vellosidades del intestino delgado; la menor superficie absortiva causa déficit nutricional y síntomas digestivos o extraintestinales.",
           "confusable_with": "Síndrome de intestino irritable",
-          "why_not": "La malabsorción y la anemia requieren estudiar causa orgánica. La clase de inmunoglobulina y la exposición a gluten cambian la interpretación de las pruebas.",
+          "why_not": "La malabsorción, la anemia y la lesión de vellosidades favorecen celiaquía. Un trastorno funcional no explica esa lesión histológica; retirar gluten antes del estudio puede alterar los resultados.",
           "facts": [
             {
               "field": "pattern",
@@ -2662,11 +2841,11 @@
           ]
         },
         "contrast": {
-          "vignette": "Una persona continúa con diarrea pese a dieta sin gluten. Se revisan exposición y diagnósticos alternativos antes de indicar inmunosupresión. ¿Qué acción o clasificación corresponde a este contexto?",
-          "discriminator": "Síntomas persistentes pese a dieta",
-          "explanation": "El dato decisivo es Síntomas persistentes pese a dieta. No todo caso es enfermedad refractaria. Revisar exposición y diagnósticos antes de inmunosupresión.",
+          "vignette": "Una persona tiene anemia ferropénica persistente y distensión. Sigue consumiendo trigo; el estudio serológico y la biopsia demuestran daño de vellosidades asociado a esa exposición.",
+          "discriminator": "Presentación con predominio de déficit de hierro y lesión vellosa",
+          "explanation": "Presentación con predominio de déficit de hierro y lesión vellosa. Este patrón orienta a Enfermedad celíaca. La respuesta inmune al gluten en personas predispuestas lesiona vellosidades del intestino delgado; la menor superficie absortiva causa déficit nutricional y síntomas digestivos o extraintestinales.",
           "confusable_with": "Síndrome de intestino irritable",
-          "why_not": "La malabsorción y la anemia requieren estudiar causa orgánica. La clase de inmunoglobulina y la exposición a gluten cambian la interpretación de las pruebas.",
+          "why_not": "La malabsorción, la anemia y la lesión de vellosidades favorecen celiaquía. Un trastorno funcional no explica esa lesión histológica; retirar gluten antes del estudio puede alterar los resultados.",
           "facts": [
             {
               "field": "pattern",
@@ -2738,21 +2917,33 @@
             }
           ]
         }
-      }
+      },
+      "sources": [
+        {
+          "label": "Edwino.pdf",
+          "pages": [
+            320
+          ]
+        },
+        {
+          "label": "NIDDK, Diagnosis of Celiac Disease",
+          "url": "https://www.niddk.nih.gov/health-information/digestive-diseases/celiac-disease/diagnosis"
+        }
+      ]
     },
     {
       "id": "11.08-01",
       "parent_topic_id": "11.08-01",
       "block_id": "11.08",
-      "name": "Confirmar infección hepática fecal-oral y reconocer gravedad",
-      "answer_kind": "decision",
+      "name": "Hepatitis A",
+      "answer_kind": "diagnosis",
       "variants": {
         "easy": {
-          "vignette": "Un adulto presenta malestar, náusea e ictericia después de una exposición alimentaria compartida. Tiene aminotransferasas elevadas y se solicita IgM específica para una infección de transmisión fecal-oral. ¿Qué acción o clasificación corresponde?",
+          "vignette": "Un adulto presenta malestar, náusea e ictericia después de una exposición alimentaria compartida. Tiene aminotransferasas elevadas y se solicita IgM específica para una infección de transmisión fecal-oral.",
           "discriminator": "exposición alimentaria compartida",
           "explanation": "El dato decisivo es exposición alimentaria compartida. El virus adquirido por vía fecal-oral causa inflamación hepatocelular aguda; la respuesta inmune produce lesión y alteración del procesamiento biliar sin establecer una infección crónica habitual. Confirmar infección aguda por IgM anti-VHA cuando corresponda y dar soporte de hidratación y síntomas. Revisar coagulación, conciencia y prevención en contactos según exposición.",
-          "confusable_with": "Hepatitis B crónica",
-          "why_not": "La exposición fecal-oral y la IgM específica favorecen hepatitis A aguda. La persistencia de HBsAg por más de seis meses define otro contexto.",
+          "confusable_with": "Hepatitis B",
+          "why_not": "El contexto fecal-oral y la IgM de infección aguda orientan a hepatitis A. La confirmación específica distingue otros virus; la forma A no sigue el patrón crónico habitual de B o C.",
           "facts": [
             {
               "field": "pattern",
@@ -2781,11 +2972,11 @@
           ]
         },
         "medium": {
-          "vignette": "Una persona con lesión hepática aguda tras exposición alimentaria desarrolla confusión, coagulopatía o vómitos persistentes. Se refiere a evaluación hospitalaria. ¿Qué acción o clasificación corresponde?",
-          "discriminator": "Hepatitis aguda con signos de gravedad",
-          "explanation": "El dato decisivo es Hepatitis aguda con signos de gravedad. Puede existir falla hepática o deshidratación. Enviar a evaluación hospitalaria.",
-          "confusable_with": "Hepatitis B crónica",
-          "why_not": "La exposición fecal-oral y la IgM específica favorecen hepatitis A aguda. La persistencia de HBsAg por más de seis meses define otro contexto.",
+          "vignette": "Una persona con exposición alimentaria compartida desarrolla ictericia, elevación de aminotransferasas y después confusión con coagulopatía. La IgM de la infección fecal-oral aguda es positiva.",
+          "discriminator": "Infección fecal-oral con lesión hepática aguda grave",
+          "explanation": "Infección fecal-oral con lesión hepática aguda grave. Este patrón orienta a Hepatitis A. El virus adquirido por vía fecal-oral causa inflamación hepatocelular aguda; la respuesta inmune produce lesión y alteración del procesamiento biliar sin establecer una infección crónica habitual.",
+          "confusable_with": "Hepatitis B",
+          "why_not": "El contexto fecal-oral y la IgM de infección aguda orientan a hepatitis A. La confirmación específica distingue otros virus; la forma A no sigue el patrón crónico habitual de B o C.",
           "facts": [
             {
               "field": "pattern",
@@ -2842,11 +3033,11 @@
           ]
         },
         "contrast": {
-          "vignette": "Una persona comparte exposición alimentaria con un caso de infección hepática fecal-oral. Desarrolla ictericia y tiene IgM específica de infección aguda. Se organiza soporte y prevención, sin plan de seguimiento de cronicidad como el de otros virus. ¿Qué acción o clasificación corresponde?",
-          "discriminator": "Infección fecal-oral aguda confirmada",
-          "explanation": "La IgM específica apoya hepatitis A aguda. El tratamiento es de soporte y prevención; si aparecen confusión, coagulopatía o vómitos persistentes se requiere hospital.",
-          "confusable_with": "Hepatitis B crónica",
-          "why_not": "La exposición fecal-oral y la IgM específica favorecen hepatitis A aguda. La persistencia de HBsAg por más de seis meses define otro contexto.",
+          "vignette": "Una persona tiene malestar y náusea después de una exposición fecal-oral, con aminotransferasas elevadas antes de predominar la ictericia. La serología de fase aguda confirma una infección que no establece cronicidad habitual.",
+          "discriminator": "Fase inicial anictérica o preictérica de infección aguda fecal-oral",
+          "explanation": "Fase inicial anictérica o preictérica de infección aguda fecal-oral. Este patrón orienta a Hepatitis A. El virus adquirido por vía fecal-oral causa inflamación hepatocelular aguda; la respuesta inmune produce lesión y alteración del procesamiento biliar sin establecer una infección crónica habitual.",
+          "confusable_with": "Hepatitis B",
+          "why_not": "El contexto fecal-oral y la IgM de infección aguda orientan a hepatitis A. La confirmación específica distingue otros virus; la forma A no sigue el patrón crónico habitual de B o C.",
           "facts": [
             {
               "field": "pattern",
@@ -2902,21 +3093,29 @@
             }
           ]
         }
-      }
+      },
+      "sources": [
+        {
+          "label": "Edwino.pdf",
+          "pages": [
+            326
+          ]
+        }
+      ]
     },
     {
       "id": "11.08-02",
       "parent_topic_id": "11.08-02",
       "block_id": "11.08",
-      "name": "Evaluar infección por HBsAg persistente y seleccionar tratamiento",
-      "answer_kind": "decision",
+      "name": "Hepatitis B",
+      "answer_kind": "diagnosis",
       "variants": {
         "easy": {
-          "vignette": "Un adulto tiene HBsAg persistente durante más de seis meses. Se siente bien, pero se estudian ALT, ADN viral y fibrosis para definir actividad y necesidad de tratamiento. ¿Qué acción o clasificación corresponde?",
+          "vignette": "Un adulto tiene HBsAg persistente durante más de seis meses. Se siente bien, pero se estudian ALT, ADN viral y fibrosis para definir actividad y necesidad de tratamiento.",
           "discriminator": "HBsAg persistente durante más de seis meses",
           "explanation": "El dato decisivo es HBsAg persistente durante más de seis meses. La persistencia de infección por VHB mantiene riesgo de inflamación, fibrosis y cáncer; carga viral y respuesta del huésped determinan actividad aunque no existan síntomas. Confirmar fase y actividad con pruebas virales y evaluación de fibrosis; revisar coinfecciones y referir para tratamiento y vigilancia según criterios.",
-          "confusable_with": "Tratar toda positividad de HBsAg con la misma pauta",
-          "why_not": "La actividad, la fibrosis y el contexto determinan tratamiento y prevención. El embarazo o la inmunosupresión añaden decisiones específicas.",
+          "confusable_with": "Hepatitis A",
+          "why_not": "El HBsAg y el ADN viral correspondiente identifican hepatitis B. La hepatitis A se confirma con su IgM y no establece el mismo estado persistente.",
           "facts": [
             {
               "field": "pattern",
@@ -2949,11 +3148,11 @@
           ]
         },
         "medium": {
-          "vignette": "Una persona con HBsAg persistente y actividad viral que cumple criterios requiere antiviral. Se selecciona una opción de alta barrera a resistencia según contexto. ¿Qué acción o clasificación corresponde?",
-          "discriminator": "HBsAg persistente con indicación terapéutica",
-          "explanation": "Cuando existe indicación, se prefieren opciones de alta barrera a resistencia, como tenofovir o entecavir según contexto. La positividad por sí sola no establece una pauta universal.",
-          "confusable_with": "Tratar toda positividad de HBsAg con la misma pauta",
-          "why_not": "La actividad, la fibrosis y el contexto determinan tratamiento y prevención. El embarazo o la inmunosupresión añaden decisiones específicas.",
+          "vignette": "Una persona con HBsAg persistente recibe inmunosupresión y desarrolla aumento de ALT y ADN viral. Se identifica actividad de una infección hepática previamente persistente.",
+          "discriminator": "Reactivación de infección identificada por HBsAg",
+          "explanation": "Reactivación de infección identificada por HBsAg. Este patrón orienta a Hepatitis B. La persistencia de infección por VHB mantiene riesgo de inflamación, fibrosis y cáncer; carga viral y respuesta del huésped determinan actividad aunque no existan síntomas.",
+          "confusable_with": "Hepatitis A",
+          "why_not": "El HBsAg y el ADN viral correspondiente identifican hepatitis B. La hepatitis A se confirma con su IgM y no establece el mismo estado persistente.",
           "facts": [
             {
               "field": "pattern",
@@ -3026,11 +3225,11 @@
           ]
         },
         "contrast": {
-          "vignette": "Una persona con HBsAg persistente va a recibir inmunosupresión o está embarazada. Se evalúa prevención de reactivación o transmisión. ¿Qué acción o clasificación corresponde?",
-          "discriminator": "Contexto de inmunosupresión o embarazo",
-          "explanation": "El dato decisivo es Contexto de inmunosupresión o embarazo. Cambia el riesgo y el plan. Evaluar prevención de transmisión o reactivación.",
-          "confusable_with": "Tratar toda positividad de HBsAg con la misma pauta",
-          "why_not": "La actividad, la fibrosis y el contexto determinan tratamiento y prevención. El embarazo o la inmunosupresión añaden decisiones específicas.",
+          "vignette": "Una embarazada sin síntomas tiene HBsAg positivo. La evaluación de ADN viral y función hepática confirma infección persistente y permite valorar el riesgo perinatal.",
+          "discriminator": "Infección detectada durante evaluación gestacional",
+          "explanation": "Infección detectada durante evaluación gestacional. Este patrón orienta a Hepatitis B. La persistencia de infección por VHB mantiene riesgo de inflamación, fibrosis y cáncer; carga viral y respuesta del huésped determinan actividad aunque no existan síntomas.",
+          "confusable_with": "Hepatitis A",
+          "why_not": "El HBsAg y el ADN viral correspondiente identifican hepatitis B. La hepatitis A se confirma con su IgM y no establece el mismo estado persistente.",
           "facts": [
             {
               "field": "pattern",
@@ -3102,21 +3301,35 @@
             }
           ]
         }
-      }
+      },
+      "sources": [
+        {
+          "label": "Edwino.pdf",
+          "pages": [
+            328,
+            329,
+            330
+          ]
+        },
+        {
+          "label": "OMS 2024, First-line antiviral therapies for CHB",
+          "url": "https://www.ncbi.nlm.nih.gov/sites/books/NBK614996/"
+        }
+      ]
     },
     {
       "id": "11.08-03",
       "parent_topic_id": "11.08-03",
       "block_id": "11.08",
-      "name": "Confirmar infección activa por ARN y mantener vigilancia por cirrosis",
-      "answer_kind": "decision",
+      "name": "Hepatitis C",
+      "answer_kind": "diagnosis",
       "variants": {
         "easy": {
-          "vignette": "Una persona asintomática tiene anticuerpos positivos después de una transfusión antigua. Se solicita ARN viral para saber si persiste infección y se evalúa fibrosis hepática. ¿Qué acción o clasificación corresponde?",
+          "vignette": "Una persona asintomática tiene anticuerpos positivos después de una transfusión antigua. Se solicita ARN viral para saber si persiste infección y se evalúa fibrosis hepática.",
           "discriminator": "Se solicita ARN viral",
           "explanation": "El dato decisivo es Se solicita ARN viral. La exposición a VHC genera anticuerpos que pueden persistir tras curación; detectar ARN demuestra viremia y permite tratar infección activa antes de progresión a fibrosis o cirrosis. Confirmar viremia y evaluar cirrosis, función renal, interacciones y coinfecciones; ofrecer tratamiento con antivirales de acción directa según guía y contexto.",
-          "confusable_with": "Anticuerpo aislado como prueba de infección activa",
-          "why_not": "El ARN determina infección activa. Un anticuerpo negativo puede ser insuficiente en inmunosupresión, y la cirrosis conserva riesgos incluso después de curación.",
+          "confusable_with": "Anticuerpo positivo sin infección activa",
+          "why_not": "El ARN detectable establece infección activa por hepatitis C. Los anticuerpos aislados no distinguen infección resuelta de activa, y su ausencia puede ser insuficiente en inmunosupresión.",
           "facts": [
             {
               "field": "pattern",
@@ -3149,11 +3362,11 @@
           ]
         },
         "medium": {
-          "vignette": "Una persona con anticuerpo y ARN viral detectables tenía cirrosis antes de lograr curación virológica. Se mantiene vigilancia del riesgo hepático. ¿Qué acción o clasificación corresponde?",
-          "discriminator": "Cirrosis que conserva riesgo tras curación",
-          "explanation": "La curación virológica no elimina los riesgos de una cirrosis previa. Se mantiene vigilancia y manejo hepático apropiado.",
-          "confusable_with": "Anticuerpo aislado como prueba de infección activa",
-          "why_not": "El ARN determina infección activa. Un anticuerpo negativo puede ser insuficiente en inmunosupresión, y la cirrosis conserva riesgos incluso después de curación.",
+          "vignette": "Una persona con cirrosis y antecedente de exposición sanguínea tiene anticuerpos específicos y ARN viral detectable. El resultado confirma infección activa, además del daño crónico ya presente.",
+          "discriminator": "Infección activa con daño hepático avanzado",
+          "explanation": "Infección activa con daño hepático avanzado. Este patrón orienta a Hepatitis C. La exposición a VHC genera anticuerpos que pueden persistir tras curación; detectar ARN demuestra viremia y permite tratar infección activa antes de progresión a fibrosis o cirrosis.",
+          "confusable_with": "Anticuerpo positivo sin infección activa",
+          "why_not": "El ARN detectable establece infección activa por hepatitis C. Los anticuerpos aislados no distinguen infección resuelta de activa, y su ausencia puede ser insuficiente en inmunosupresión.",
           "facts": [
             {
               "field": "pattern",
@@ -3226,11 +3439,11 @@
           ]
         },
         "contrast": {
-          "vignette": "Una persona inmunosuprimida tiene sospecha de infección tras exposición sanguínea antigua, pero el anticuerpo es negativo. Se valora ARN viral directo. ¿Qué acción o clasificación corresponde?",
-          "discriminator": "Anticuerpo negativo que no excluye infección en inmunosupresión",
-          "explanation": "En inmunosupresión y sospecha puede solicitarse ARN directo. Los anticuerpos solos no establecen ni excluyen siempre la infección activa.",
-          "confusable_with": "Anticuerpo aislado como prueba de infección activa",
-          "why_not": "El ARN determina infección activa. Un anticuerpo negativo puede ser insuficiente en inmunosupresión, y la cirrosis conserva riesgos incluso después de curación.",
+          "vignette": "Una persona inmunosuprimida tiene sospecha por exposición sanguínea y anticuerpos negativos. La prueba directa de ARN identifica replicación del virus, confirmando infección activa pese a esa serología.",
+          "discriminator": "ARN positivo con respuesta de anticuerpos insuficiente",
+          "explanation": "ARN positivo con respuesta de anticuerpos insuficiente. Este patrón orienta a Hepatitis C. La exposición a VHC genera anticuerpos que pueden persistir tras curación; detectar ARN demuestra viremia y permite tratar infección activa antes de progresión a fibrosis o cirrosis.",
+          "confusable_with": "Anticuerpo positivo sin infección activa",
+          "why_not": "El ARN detectable establece infección activa por hepatitis C. Los anticuerpos aislados no distinguen infección resuelta de activa, y su ausencia puede ser insuficiente en inmunosupresión.",
           "facts": [
             {
               "field": "pattern",
@@ -3302,21 +3515,34 @@
             }
           ]
         }
-      }
+      },
+      "sources": [
+        {
+          "label": "Edwino.pdf",
+          "pages": [
+            331,
+            332
+          ]
+        },
+        {
+          "label": "CDC, Clinical Care of Hepatitis C",
+          "url": "https://www.cdc.gov/hepatitis-c/hcp/clinical-care/index.html"
+        }
+      ]
     },
     {
       "id": "11.08-04",
       "parent_topic_id": "11.08-04",
       "block_id": "11.08",
-      "name": "Evaluar hepatitis inmunitaria y excluir lesión por medicamento",
-      "answer_kind": "decision",
+      "name": "Hepatitis autoinmune",
+      "answer_kind": "diagnosis",
       "variants": {
         "easy": {
-          "vignette": "Una adulta tiene transaminasas e IgG elevadas, pruebas virales negativas y autoanticuerpos compatibles. La biopsia muestra inflamación de interfase; se revisan fármacos y otras causas. ¿Qué acción o clasificación corresponde?",
+          "vignette": "Una adulta tiene transaminasas e IgG elevadas, pruebas virales negativas y autoanticuerpos compatibles. La biopsia muestra inflamación de interfase; se revisan fármacos y otras causas.",
           "discriminator": "inflamación de interfase",
           "explanation": "El dato decisivo es inflamación de interfase. La respuesta inmune dirigida al hígado mantiene necroinflamación y puede causar fibrosis; el diagnóstico integra IgG, autoanticuerpos e histología tras excluir causas alternativas. Excluir otras causas y evaluar gravedad e histología. Si se confirma enfermedad activa, iniciar con hepatología prednisona o prednisolona y seleccionar un ahorrador de corticoide según función hepática y contraindicaciones.",
-          "confusable_with": "Hepatitis viral como única causa",
-          "why_not": "La IgG, los autoanticuerpos y la histología apoyan un mecanismo inmunitario, pero se deben revisar fármacos y otras causas. La descompensación exige manejo experto.",
+          "confusable_with": "Hepatitis inducida por fármacos",
+          "why_not": "La combinación clínica, IgG, autoanticuerpos e histología apoya hepatitis autoinmune después de evaluar causas alternativas. Un fármaco compatible puede imitar el patrón y requiere evaluación específica, no una atribución automática.",
           "facts": [
             {
               "field": "pattern",
@@ -3349,11 +3575,11 @@
           ]
         },
         "medium": {
-          "vignette": "Una persona con hepatitis de interfase e IgG elevada desarrolla falla hepática o cirrosis descompensada. Se refiere urgentemente a centro experto. ¿Qué acción o clasificación corresponde?",
-          "discriminator": "Hepatitis inmunitaria con descompensación",
-          "explanation": "El dato decisivo es Hepatitis inmunitaria con descompensación. Puede necesitar estrategia distinta o trasplante. Referir de forma urgente a centro especializado.",
-          "confusable_with": "Hepatitis viral como única causa",
-          "why_not": "La IgG, los autoanticuerpos y la histología apoyan un mecanismo inmunitario, pero se deben revisar fármacos y otras causas. La descompensación exige manejo experto.",
+          "vignette": "Una persona con IgG alta y autoanticuerpos compatibles desarrolla falla hepática. La biopsia demuestra hepatitis de interfase y se excluyen las causas virales y farmacológicas relevantes.",
+          "discriminator": "Hepatitis inmunitaria que se presenta como falla aguda",
+          "explanation": "Hepatitis inmunitaria que se presenta como falla aguda. Este patrón orienta a Hepatitis autoinmune. La respuesta inmune dirigida al hígado mantiene necroinflamación y puede causar fibrosis; el diagnóstico integra IgG, autoanticuerpos e histología tras excluir causas alternativas.",
+          "confusable_with": "Hepatitis inducida por fármacos",
+          "why_not": "La combinación clínica, IgG, autoanticuerpos e histología apoya hepatitis autoinmune después de evaluar causas alternativas. Un fármaco compatible puede imitar el patrón y requiere evaluación específica, no una atribución automática.",
           "facts": [
             {
               "field": "pattern",
@@ -3426,11 +3652,11 @@
           ]
         },
         "contrast": {
-          "vignette": "En una persona con autoanticuerpos e inflamación de interfase se identifica exposición farmacológica compatible. Se considera lesión inducida por medicamento. ¿Qué acción o clasificación corresponde?",
-          "discriminator": "Exposición farmacológica que imita autoinmunidad",
-          "explanation": "El dato decisivo es Exposición farmacológica que imita autoinmunidad. Puede imitar el patrón. Considerar lesión inducida por medicamento.",
-          "confusable_with": "Hepatitis viral como única causa",
-          "why_not": "La IgG, los autoanticuerpos y la histología apoyan un mecanismo inmunitario, pero se deben revisar fármacos y otras causas. La descompensación exige manejo experto.",
+          "vignette": "Una persona con hepatopatía crónica se descompensa. El estudio muestra IgG elevada, autoanticuerpos y lesión de interfase; la evaluación de fármacos y virus no aporta otra explicación suficiente.",
+          "discriminator": "Presentación crónica descompensada con evidencia inmunitaria e histológica",
+          "explanation": "Presentación crónica descompensada con evidencia inmunitaria e histológica. Este patrón orienta a Hepatitis autoinmune. La respuesta inmune dirigida al hígado mantiene necroinflamación y puede causar fibrosis; el diagnóstico integra IgG, autoanticuerpos e histología tras excluir causas alternativas.",
+          "confusable_with": "Hepatitis inducida por fármacos",
+          "why_not": "La combinación clínica, IgG, autoanticuerpos e histología apoya hepatitis autoinmune después de evaluar causas alternativas. Un fármaco compatible puede imitar el patrón y requiere evaluación específica, no una atribución automática.",
           "facts": [
             {
               "field": "pattern",
@@ -3502,7 +3728,19 @@
             }
           ]
         }
-      }
+      },
+      "sources": [
+        {
+          "label": "Edwino.pdf",
+          "pages": [
+            327
+          ]
+        },
+        {
+          "label": "EASL, Autoimmune hepatitis guideline 2025",
+          "url": "https://easlcampus.eu/sites/default/files/2025-08/EASL_CPGs_on_the_management_of_AIH.pdf"
+        }
+      ]
     },
     {
       "id": "11.09-01",
@@ -3515,8 +3753,8 @@
           "vignette": "Un adulto con obesidad y diabetes tiene esteatosis incidental en ultrasonido. Presenta elevación leve de aminotransferasas; se cuantifica alcohol y se revisan otras causas y riesgo de fibrosis.",
           "discriminator": "esteatosis incidental",
           "explanation": "El dato decisivo es esteatosis incidental. La acumulación grasa asociada a disfunción metabólica puede acompañarse de lesión inflamatoria y fibrosis; el riesgo clínico depende más de fibrosis y comorbilidades que de grasa aislada. Evaluar consumo de alcohol y otras causas de esteatosis. En este contexto metabólico, calcular FIB-4 como primer paso de evaluación de fibrosis y decidir elastografía según resultado; tratar riesgo metabólico, peso y actividad.",
-          "confusable_with": "Esteatosis como sinónimo de fibrosis avanzada",
-          "why_not": "La grasa hepática no determina por sí sola el estadio de fibrosis. El riesgo metabólico exige evaluación escalonada y selección del tratamiento.",
+          "confusable_with": "Hepatopatía por alcohol",
+          "why_not": "La esteatosis en el contexto metabólico, después de cuantificar alcohol y evaluar otras causas, favorece EHGNA/MASLD. La imagen grasa aislada no determina ni etiología completa ni estadio de fibrosis.",
           "facts": [
             {
               "field": "pattern",
@@ -3549,11 +3787,11 @@
           ]
         },
         "medium": {
-          "vignette": "Una persona con esteatosis y riesgo metabólico tiene alta probabilidad de fibrosis o duda diagnóstica. Se refiere para evaluación especializada.",
-          "discriminator": "Riesgo alto de fibrosis",
-          "explanation": "El dato decisivo es Riesgo alto de fibrosis. Puede requerir elastografía u otros estudios. Referir para evaluación especializada.",
-          "confusable_with": "Esteatosis como sinónimo de fibrosis avanzada",
-          "why_not": "La grasa hepática no determina por sí sola el estadio de fibrosis. El riesgo metabólico exige evaluación escalonada y selección del tratamiento.",
+          "vignette": "Una persona con obesidad y diabetes tiene esteatosis en imagen y alto riesgo de fibrosis. La evaluación de alcohol y otras causas permite relacionar la grasa hepática con disfunción metabólica.",
+          "discriminator": "Esteatosis metabólica con riesgo de fibrosis",
+          "explanation": "Esteatosis metabólica con riesgo de fibrosis. Este patrón orienta a EHGNA. La acumulación grasa asociada a disfunción metabólica puede acompañarse de lesión inflamatoria y fibrosis; el riesgo clínico depende más de fibrosis y comorbilidades que de grasa aislada.",
+          "confusable_with": "Hepatopatía por alcohol",
+          "why_not": "La esteatosis en el contexto metabólico, después de cuantificar alcohol y evaluar otras causas, favorece EHGNA/MASLD. La imagen grasa aislada no determina ni etiología completa ni estadio de fibrosis.",
           "facts": [
             {
               "field": "pattern",
@@ -3626,11 +3864,11 @@
           ]
         },
         "contrast": {
-          "vignette": "En una persona con esteatohepatitis seleccionada se valora tratamiento específico según contexto, junto con control metabólico y de peso.",
-          "discriminator": "Esteatohepatitis que requiere selección terapéutica",
-          "explanation": "El dato decisivo es Esteatohepatitis que requiere selección terapéutica. No todo hígado graso requiere vitamina E o pioglitazona. Valorar tratamiento específico por contexto.",
-          "confusable_with": "Esteatosis como sinónimo de fibrosis avanzada",
-          "why_not": "La grasa hepática no determina por sí sola el estadio de fibrosis. El riesgo metabólico exige evaluación escalonada y selección del tratamiento.",
+          "vignette": "Una persona con riesgo cardiometabólico tiene esteatosis y datos de esteatohepatitis en la evaluación especializada. Se documenta el contexto metabólico y se estudia su repercusión, en vez de atribuirla solo a alcohol.",
+          "discriminator": "Fenotipo metabólico con inflamación hepática",
+          "explanation": "Fenotipo metabólico con inflamación hepática. Este patrón orienta a EHGNA. La acumulación grasa asociada a disfunción metabólica puede acompañarse de lesión inflamatoria y fibrosis; el riesgo clínico depende más de fibrosis y comorbilidades que de grasa aislada.",
+          "confusable_with": "Hepatopatía por alcohol",
+          "why_not": "La esteatosis en el contexto metabólico, después de cuantificar alcohol y evaluar otras causas, favorece EHGNA/MASLD. La imagen grasa aislada no determina ni etiología completa ni estadio de fibrosis.",
           "facts": [
             {
               "field": "pattern",
@@ -3702,7 +3940,19 @@
             }
           ]
         }
-      }
+      },
+      "sources": [
+        {
+          "label": "Edwino.pdf",
+          "pages": [
+            316
+          ]
+        },
+        {
+          "label": "EASL, MASLD guideline 2024",
+          "url": "https://easlcampus.eu/sites/default/files/2024-08/EASL_CPGs_management_of_MASLD.pdf"
+        }
+      ]
     },
     {
       "id": "11.09-02",
@@ -3715,8 +3965,8 @@
           "vignette": "Un adulto con hepatopatía crónica desarrolla ictericia, ascitis y tendencia al sangrado. La albúmina está baja y el tiempo de coagulación prolongado; se buscan complicaciones y desencadenantes.",
           "discriminator": "albúmina está baja",
           "explanation": "El dato decisivo es albúmina está baja. La pérdida de función hepática reduce síntesis y procesamiento metabólico; la fibrosis y presión portal añaden congestión y complicaciones, que marcan descompensación de enfermedad crónica. Evaluar función, etiología y complicaciones con laboratorio e imagen; hospitalizar si hay descompensación relevante y valorar referencia a hepatología y posible trasplante.",
-          "confusable_with": "Hepatitis sin pérdida funcional",
-          "why_not": "La hipoalbuminemia y la coagulopatía indican pérdida de función, y la ascitis refleja repercusión portal. Las complicaciones exigen atención dirigida.",
+          "confusable_with": "Hepatitis sin insuficiencia funcional",
+          "why_not": "La hipoalbuminemia y la coagulopatía en el contexto apropiado orientan a insuficiencia hepática. La elevación aislada de aminotransferasas no demuestra ese mismo grado de fallo.",
           "facts": [
             {
               "field": "pattern",
@@ -3745,11 +3995,11 @@
           ]
         },
         "medium": {
-          "vignette": "Una persona con falla hepática crónica presenta confusión o infección. Se buscan encefalopatía y un precipitante tratable.",
-          "discriminator": "Falla hepática con confusión o infección",
-          "explanation": "El dato decisivo es Falla hepática con confusión o infección. Puede acelerar deterioro. Buscar encefalopatía y foco precipitante.",
-          "confusable_with": "Hepatitis sin pérdida funcional",
-          "why_not": "La hipoalbuminemia y la coagulopatía indican pérdida de función, y la ascitis refleja repercusión portal. Las complicaciones exigen atención dirigida.",
+          "vignette": "Una persona con hepatopatía tiene albúmina baja y coagulación prolongada. Desarrolla confusión y se investiga infección como desencadenante de la descompensación.",
+          "discriminator": "Pérdida de función de síntesis con repercusión neurológica",
+          "explanation": "Pérdida de función de síntesis con repercusión neurológica. Este patrón orienta a Insuficiencia hepática. La pérdida de función hepática reduce síntesis y procesamiento metabólico; la fibrosis y presión portal añaden congestión y complicaciones, que marcan descompensación de enfermedad crónica.",
+          "confusable_with": "Hepatitis sin insuficiencia funcional",
+          "why_not": "La hipoalbuminemia y la coagulopatía en el contexto apropiado orientan a insuficiencia hepática. La elevación aislada de aminotransferasas no demuestra ese mismo grado de fallo.",
           "facts": [
             {
               "field": "pattern",
@@ -3818,11 +4068,11 @@
           ]
         },
         "contrast": {
-          "vignette": "Una persona con albúmina baja, coagulopatía y ascitis presenta hemorragia digestiva. Se activa manejo urgente.",
-          "discriminator": "Falla de síntesis con hemorragia digestiva",
-          "explanation": "El dato decisivo es Falla de síntesis con hemorragia digestiva. Es una complicación potencialmente letal. Activar manejo urgente.",
-          "confusable_with": "Hepatitis sin pérdida funcional",
-          "why_not": "La hipoalbuminemia y la coagulopatía indican pérdida de función, y la ascitis refleja repercusión portal. Las complicaciones exigen atención dirigida.",
+          "vignette": "Una persona con ascitis y signos de hipertensión portal presenta hemorragia digestiva. La albúmina baja y la coagulopatía demuestran repercusión funcional hepática, además del sangrado.",
+          "discriminator": "Fallo funcional hepático con complicación hemorrágica",
+          "explanation": "Fallo funcional hepático con complicación hemorrágica. Este patrón orienta a Insuficiencia hepática. La pérdida de función hepática reduce síntesis y procesamiento metabólico; la fibrosis y presión portal añaden congestión y complicaciones, que marcan descompensación de enfermedad crónica.",
+          "confusable_with": "Hepatitis sin insuficiencia funcional",
+          "why_not": "La hipoalbuminemia y la coagulopatía en el contexto apropiado orientan a insuficiencia hepática. La elevación aislada de aminotransferasas no demuestra ese mismo grado de fallo.",
           "facts": [
             {
               "field": "pattern",
@@ -3890,7 +4140,15 @@
             }
           ]
         }
-      }
+      },
+      "sources": [
+        {
+          "label": "Edwino.pdf",
+          "pages": [
+            333
+          ]
+        }
+      ]
     },
     {
       "id": "11.10-01",
@@ -4054,21 +4312,29 @@
             }
           ]
         }
-      }
+      },
+      "sources": [
+        {
+          "label": "Edwino.pdf",
+          "pages": [
+            312
+          ]
+        }
+      ]
     },
     {
       "id": "11.10-02",
       "parent_topic_id": "11.10-02",
       "block_id": "11.10",
-      "name": "Estudiar líquido ascítico y tratar complicaciones",
-      "answer_kind": "decision",
+      "name": "Ascitis",
+      "answer_kind": "diagnosis",
       "variants": {
         "easy": {
-          "vignette": "Un adulto con daño hepático crónico presenta aumento reciente del abdomen y matidez cambiante. Se obtiene líquido peritoneal para recuento celular, cultivo y albúmina, junto con albúmina sérica. ¿Qué acción o clasificación corresponde a este contexto?",
+          "vignette": "Un adulto con daño hepático crónico presenta aumento reciente del abdomen y matidez cambiante. Se obtiene líquido peritoneal para recuento celular, cultivo y albúmina, junto con albúmina sérica.",
           "discriminator": "aumento reciente del abdomen",
           "explanation": "El dato decisivo es aumento reciente del abdomen. La hipertensión portal y alteraciones circulatorias favorecen retención de sodio y líquido peritoneal; el gradiente de albúmina ayuda a distinguir mecanismo portal de otras causas. Realizar paracentesis diagnóstica en ascitis nueva o descompensada. Calcular GASA como albúmina sérica menos albúmina ascítica e investigar infección según neutrófilos y contexto.",
-          "confusable_with": "Aumento abdominal sin estudio del líquido",
-          "why_not": "El análisis del líquido define causa y complicaciones. El gradiente se calcula con albúmina sérica menos ascítica; la infección requiere tratamiento inmediato.",
+          "confusable_with": "Distensión por gas intestinal",
+          "why_not": "El líquido peritoneal, la matidez cambiante y el ultrasonido identifican ascitis. El gas puede distender el abdomen, pero no produce ese líquido ni los resultados de paracentesis.",
           "facts": [
             {
               "field": "pattern",
@@ -4101,11 +4367,11 @@
           ]
         },
         "medium": {
-          "vignette": "Una persona con líquido abdominal presenta ascitis tensa o refractaria. Se valora paracentesis terapéutica y albúmina según volumen y contexto. ¿Qué acción o clasificación corresponde a este contexto?",
-          "discriminator": "Líquido peritoneal tenso o refractario",
-          "explanation": "El dato decisivo es Líquido peritoneal tenso o refractario. Alivia compromiso y evita disfunción circulatoria. Valorar paracentesis terapéutica y albúmina según volumen y contexto.",
-          "confusable_with": "Aumento abdominal sin estudio del líquido",
-          "why_not": "El análisis del líquido define causa y complicaciones. El gradiente se calcula con albúmina sérica menos ascítica; la infección requiere tratamiento inmediato.",
+          "vignette": "Una persona con daño hepático tiene abdomen muy distendido y matidez cambiante. El ultrasonido demuestra gran cantidad de líquido libre peritoneal, responsable de la tensión abdominal.",
+          "discriminator": "Gran volumen de líquido peritoneal",
+          "explanation": "Gran volumen de líquido peritoneal. Este patrón orienta a Ascitis. La hipertensión portal y alteraciones circulatorias favorecen retención de sodio y líquido peritoneal; el gradiente de albúmina ayuda a distinguir mecanismo portal de otras causas.",
+          "confusable_with": "Distensión por gas intestinal",
+          "why_not": "El líquido peritoneal, la matidez cambiante y el ultrasonido identifican ascitis. El gas puede distender el abdomen, pero no produce ese líquido ni los resultados de paracentesis.",
           "facts": [
             {
               "field": "pattern",
@@ -4178,11 +4444,11 @@
           ]
         },
         "contrast": {
-          "vignette": "El recuento de neutrófilos del líquido peritoneal es compatible con infección. Se inicia tratamiento sin esperar el cultivo. ¿Qué acción o clasificación corresponde a este contexto?",
-          "discriminator": "Infección del líquido peritoneal por recuento celular",
-          "explanation": "El dato decisivo es Infección del líquido peritoneal por recuento celular. La infección puede ser poco sintomática. Iniciar tratamiento apropiado sin esperar cultivo.",
-          "confusable_with": "Aumento abdominal sin estudio del líquido",
-          "why_not": "El análisis del líquido define causa y complicaciones. El gradiente se calcula con albúmina sérica menos ascítica; la infección requiere tratamiento inmediato.",
+          "vignette": "Una persona con abdomen aumentado desarrolla fiebre. La paracentesis obtiene líquido peritoneal con neutrófilos compatibles con infección; ya se había demostrado líquido libre en el abdomen.",
+          "discriminator": "Líquido libre peritoneal con complicación infecciosa",
+          "explanation": "Líquido libre peritoneal con complicación infecciosa. Este patrón orienta a Ascitis. La hipertensión portal y alteraciones circulatorias favorecen retención de sodio y líquido peritoneal; el gradiente de albúmina ayuda a distinguir mecanismo portal de otras causas.",
+          "confusable_with": "Distensión por gas intestinal",
+          "why_not": "El líquido peritoneal, la matidez cambiante y el ultrasonido identifican ascitis. El gas puede distender el abdomen, pero no produce ese líquido ni los resultados de paracentesis.",
           "facts": [
             {
               "field": "pattern",
@@ -4254,7 +4520,23 @@
             }
           ]
         }
-      }
+      },
+      "sources": [
+        {
+          "label": "Edwino.pdf",
+          "pages": [
+            307
+          ]
+        },
+        {
+          "label": "AGA, Use of vasoactive drugs and IV albumin in cirrhosis",
+          "url": "https://gastro.org/clinical-guidance/use-of-vasoactive-drugs-and-intravenous-albumin-in-cirrhosis/"
+        },
+        {
+          "label": "AASLD, Ascites, SBP and hepatorenal syndrome guidance 2021",
+          "url": "https://aasldpubs.onlinelibrary.wiley.com/doi/full/10.1002/hep.31884"
+        }
+      ]
     },
     {
       "id": "11.10-03",
@@ -4454,7 +4736,19 @@
             }
           ]
         }
-      }
+      },
+      "sources": [
+        {
+          "label": "Edwino.pdf",
+          "pages": [
+            317
+          ]
+        },
+        {
+          "label": "ACG, Hepatic encephalopathy guideline 2026",
+          "url": "https://doi.org/10.14309/ajg.0000000000003899"
+        }
+      ]
     },
     {
       "id": "11.11-01",
@@ -4468,7 +4762,7 @@
           "discriminator": "se refiere al hombro",
           "explanation": "El dato decisivo es se refiere al hombro. La invasión por Entamoeba alcanza el hígado y produce necrosis focal; la irritación diafragmática explica dolor referido y la imagen localiza el absceso sin definir sola su causa. Integrar imagen y pruebas etiológicas e iniciar metronidazol o alternativa indicada; completar erradicación intestinal con un amebicida luminal según guía. Valorar drenaje solo por indicaciones.",
           "confusable_with": "Absceso hepático piógeno",
-          "why_not": "La exposición y confirmación parasitaria orientan a amebiasis. El tratamiento tisular debe completarse con agente luminal; el drenaje se reserva a indicaciones.",
+          "why_not": "La evidencia de Entamoeba y el contexto de invasión intestinal apoyan absceso amebiano. La imagen sola no distingue la causa y una fuente biliar con cultivo bacteriano orienta a absceso piógeno.",
           "facts": [
             {
               "field": "pattern",
@@ -4501,11 +4795,11 @@
           ]
         },
         "medium": {
-          "vignette": "Una lesión hepática febril por amebas se sitúa en lóbulo izquierdo o tiene riesgo de ruptura. Se valora punción o drenaje.",
-          "discriminator": "Lesión con riesgo de ruptura",
-          "explanation": "El dato decisivo es Lesión con riesgo de ruptura. Aumenta riesgo o sugiere diagnóstico o complicación adicional. Valorar punción o drenaje.",
+          "vignette": "Una persona con exposición a agua contaminada tiene fiebre y dolor referido al hombro. La imagen muestra una lesión hepática en el lóbulo izquierdo y las pruebas etiológicas apoyan invasión por un protozoo intestinal.",
+          "discriminator": "Lesión hepática de etiología parasitaria con riesgo de ruptura",
+          "explanation": "Lesión hepática de etiología parasitaria con riesgo de ruptura. Este patrón orienta a Absceso hepático amebiano. La invasión por Entamoeba alcanza el hígado y produce necrosis focal; la irritación diafragmática explica dolor referido y la imagen localiza el absceso sin definir sola su causa.",
           "confusable_with": "Absceso hepático piógeno",
-          "why_not": "La exposición y confirmación parasitaria orientan a amebiasis. El tratamiento tisular debe completarse con agente luminal; el drenaje se reserva a indicaciones.",
+          "why_not": "La evidencia de Entamoeba y el contexto de invasión intestinal apoyan absceso amebiano. La imagen sola no distingue la causa y una fuente biliar con cultivo bacteriano orienta a absceso piógeno.",
           "facts": [
             {
               "field": "pattern",
@@ -4566,11 +4860,11 @@
           ]
         },
         "contrast": {
-          "vignette": "Una persona con lesión hepática parasitaria no responde al tratamiento. Se reevalúa necesidad de drenaje y se asegura erradicación luminal tras el amebicida tisular.",
-          "discriminator": "Falta de respuesta y necesidad de completar tratamiento luminal",
-          "explanation": "El dato decisivo es Falta de respuesta y necesidad de completar tratamiento luminal. Aumenta riesgo o sugiere diagnóstico o complicación adicional. Valorar punción o drenaje.",
+          "vignette": "Una persona tiene fiebre persistente y dolor hepático tras exposición fecal-oral. La imagen demuestra una colección y el estudio etiológico identifica Entamoeba, con necesidad de distinguir invasión tisular de persistencia intestinal.",
+          "discriminator": "Confirmación de etiología amebiana en una lesión focal hepática",
+          "explanation": "Confirmación de etiología amebiana en una lesión focal hepática. Este patrón orienta a Absceso hepático amebiano. La invasión por Entamoeba alcanza el hígado y produce necrosis focal; la irritación diafragmática explica dolor referido y la imagen localiza el absceso sin definir sola su causa.",
           "confusable_with": "Absceso hepático piógeno",
-          "why_not": "La exposición y confirmación parasitaria orientan a amebiasis. El tratamiento tisular debe completarse con agente luminal; el drenaje se reserva a indicaciones.",
+          "why_not": "La evidencia de Entamoeba y el contexto de invasión intestinal apoyan absceso amebiano. La imagen sola no distingue la causa y una fuente biliar con cultivo bacteriano orienta a absceso piógeno.",
           "facts": [
             {
               "field": "pattern",
@@ -4630,7 +4924,20 @@
             }
           ]
         }
-      }
+      },
+      "sources": [
+        {
+          "label": "Edwino.pdf",
+          "pages": [
+            303,
+            304
+          ]
+        },
+        {
+          "label": "CDC Yellow Book, Travelers’ Diarrhea, amebiasis",
+          "url": "https://www.cdc.gov/yellow-book/hcp/preparing-international-travelers/travelers-diarrhea.html"
+        }
+      ]
     },
     {
       "id": "11.11-02",
@@ -4644,7 +4951,7 @@
           "discriminator": "se busca una fuente biliar",
           "explanation": "El dato decisivo es se busca una fuente biliar. Las bacterias llegan por vía biliar, portal o sangre y forman colecciones hepáticas; el foco original y cultivos determinan antibióticos, mientras el pus puede requerir drenaje. Obtener hemocultivos e iniciar antibióticos contra enterobacterias y anaerobios, por ejemplo ceftriaxona más metronidazol según contexto y resistencias. Valorar drenaje percutáneo, cultivar la colección y controlar el foco biliar o abdominal.",
           "confusable_with": "Absceso hepático amebiano",
-          "why_not": "El foco biliar o abdominal y los cultivos orientan a infección bacteriana. El tratamiento requiere cobertura apropiada y control del foco, no metronidazol aislado.",
+          "why_not": "El foco biliar o abdominal y los cultivos bacterianos favorecen absceso piógeno. La amebiasis requiere evidencia etiológica propia y otro tratamiento de erradicación.",
           "facts": [
             {
               "field": "pattern",
@@ -4677,11 +4984,11 @@
           ]
         },
         "medium": {
-          "vignette": "En una colección hepática de origen bacteriano ya hay cultivo. Se ajusta el esquema al microorganismo y al foco.",
-          "discriminator": "Cultivo disponible para dirigir antibióticos",
-          "explanation": "El dato decisivo es Cultivo disponible para dirigir antibióticos. Reduce tratamiento innecesario y atiende resistencia. Dirigir el esquema.",
+          "vignette": "Una persona con enfermedad biliar tiene fiebre y colecciones hepáticas. Los cultivos identifican bacterias y permiten relacionar el foco hepático con una fuente abdominal o biliar.",
+          "discriminator": "Colección hepática con evidencia bacteriana",
+          "explanation": "Colección hepática con evidencia bacteriana. Este patrón orienta a Absceso hepático piógeno. Las bacterias llegan por vía biliar, portal o sangre y forman colecciones hepáticas; el foco original y cultivos determinan antibióticos, mientras el pus puede requerir drenaje.",
           "confusable_with": "Absceso hepático amebiano",
-          "why_not": "El foco biliar o abdominal y los cultivos orientan a infección bacteriana. El tratamiento requiere cobertura apropiada y control del foco, no metronidazol aislado.",
+          "why_not": "El foco biliar o abdominal y los cultivos bacterianos favorecen absceso piógeno. La amebiasis requiere evidencia etiológica propia y otro tratamiento de erradicación.",
           "facts": [
             {
               "field": "pattern",
@@ -4754,11 +5061,11 @@
           ]
         },
         "contrast": {
-          "vignette": "Una persona con colecciones hepáticas y foco biliar no mejora pese al drenaje. Se valora otra intervención y control adicional del foco.",
-          "discriminator": "Fallo de drenaje",
-          "explanation": "El dato decisivo es Fallo de drenaje. Puede persistir foco no controlado. Valorar intervención adicional.",
+          "vignette": "Una persona con fiebre y colecciones en hígado tiene un foco biliar persistente. El drenaje no controla la infección y se siguen obteniendo datos de una fuente bacteriana.",
+          "discriminator": "Colecciones bacterianas con foco no controlado",
+          "explanation": "Colecciones bacterianas con foco no controlado. Este patrón orienta a Absceso hepático piógeno. Las bacterias llegan por vía biliar, portal o sangre y forman colecciones hepáticas; el foco original y cultivos determinan antibióticos, mientras el pus puede requerir drenaje.",
           "confusable_with": "Absceso hepático amebiano",
-          "why_not": "El foco biliar o abdominal y los cultivos orientan a infección bacteriana. El tratamiento requiere cobertura apropiada y control del foco, no metronidazol aislado.",
+          "why_not": "El foco biliar o abdominal y los cultivos bacterianos favorecen absceso piógeno. La amebiasis requiere evidencia etiológica propia y otro tratamiento de erradicación.",
           "facts": [
             {
               "field": "pattern",
@@ -4830,21 +5137,33 @@
             }
           ]
         }
-      }
+      },
+      "sources": [
+        {
+          "label": "Edwino.pdf",
+          "pages": [
+            305
+          ]
+        },
+        {
+          "label": "UCSF, Abdominal infections antimicrobial guidance",
+          "url": "https://idmp.ucsf.edu/content/abdominal-infections"
+        }
+      ]
     },
     {
       "id": "11.12-01",
       "parent_topic_id": "11.12-01",
       "block_id": "11.12",
-      "name": "Distinguir necrosis estéril de infección pancreática",
-      "answer_kind": "decision",
+      "name": "Pancreatitis aguda",
+      "answer_kind": "diagnosis",
       "variants": {
         "easy": {
-          "vignette": "Un adulto presenta dolor epigástrico persistente que irradia a espalda y vómitos. La lipasa está claramente elevada y se investiga litiasis, alcohol y otras causas. ¿Qué acción o clasificación corresponde a este contexto?",
+          "vignette": "Un adulto presenta dolor epigástrico persistente que irradia a espalda y vómitos. La lipasa está claramente elevada y se investiga litiasis, alcohol y otras causas.",
           "discriminator": "irradia a espalda",
           "explanation": "El dato decisivo es irradia a espalda. La lesión acinar desencadena inflamación pancreática y respuesta sistémica; edema o necrosis y persistencia de falla orgánica determinan gravedad más que el dolor o enzimas aislados. Confirmar criterios, iniciar líquidos intravenosos ajustados, preferentemente Ringer lactato si es apropiado, y analgesia; valorar alimentación temprana según tolerancia y buscar causa. Monitorizar perfusión, sobrecarga y falla orgánica.",
-          "confusable_with": "Necrosis pancreática como sinónimo de infección",
-          "why_not": "La necrosis puede ser estéril y no exige profilaxis antibiótica. La infección demostrada o la colangitis cambian la conducta.",
+          "confusable_with": "Cólico biliar",
+          "why_not": "El dolor persistente hacia espalda y la lipasa elevada apoyan pancreatitis. El cólico biliar transitorio no produce por sí solo ese patrón de lesión pancreática.",
           "facts": [
             {
               "field": "pattern",
@@ -4877,11 +5196,11 @@
           ]
         },
         "medium": {
-          "vignette": "En una persona con lesión pancreática aguda la imagen muestra necrosis estéril. Se evita antibiótico profiláctico solo por el hallazgo. ¿Qué acción o clasificación corresponde a este contexto?",
-          "discriminator": "Necrosis estéril",
-          "explanation": "El dato decisivo es Necrosis estéril. No previene infección de forma demostrada. No dar antibiótico profiláctico solo por la imagen.",
-          "confusable_with": "Necrosis pancreática como sinónimo de infección",
-          "why_not": "La necrosis puede ser estéril y no exige profilaxis antibiótica. La infección demostrada o la colangitis cambian la conducta.",
+          "vignette": "Una persona tiene dolor epigástrico hacia espalda, vómitos y lipasa elevada. La imagen muestra necrosis pancreática que se clasifica como estéril en la evaluación.",
+          "discriminator": "Inflamación pancreática aguda con necrosis estéril",
+          "explanation": "Inflamación pancreática aguda con necrosis estéril. Este patrón orienta a Pancreatitis aguda. La lesión acinar desencadena inflamación pancreática y respuesta sistémica; edema o necrosis y persistencia de falla orgánica determinan gravedad más que el dolor o enzimas aislados.",
+          "confusable_with": "Cólico biliar",
+          "why_not": "El dolor persistente hacia espalda y la lipasa elevada apoyan pancreatitis. El cólico biliar transitorio no produce por sí solo ese patrón de lesión pancreática.",
           "facts": [
             {
               "field": "pattern",
@@ -4954,11 +5273,11 @@
           ]
         },
         "contrast": {
-          "vignette": "Una persona con lesión pancreática aguda desarrolla colangitis o infección de la necrosis. Se indican antibióticos y control especializado. ¿Qué acción o clasificación corresponde a este contexto?",
-          "discriminator": "Infección o foco biliar concomitante",
-          "explanation": "El dato decisivo es Infección o foco biliar concomitante. Hay un foco infeccioso. Indicar antibióticos y control especializado.",
-          "confusable_with": "Necrosis pancreática como sinónimo de infección",
-          "why_not": "La necrosis puede ser estéril y no exige profilaxis antibiótica. La infección demostrada o la colangitis cambian la conducta.",
+          "vignette": "Una persona con cálculos biliares desarrolla dolor epigástrico persistente irradiado a espalda y vómitos. La lipasa está elevada y la evaluación identifica un episodio pancreático de origen biliar.",
+          "discriminator": "Episodio pancreático de etiología biliar",
+          "explanation": "Episodio pancreático de etiología biliar. Este patrón orienta a Pancreatitis aguda. La lesión acinar desencadena inflamación pancreática y respuesta sistémica; edema o necrosis y persistencia de falla orgánica determinan gravedad más que el dolor o enzimas aislados.",
+          "confusable_with": "Cólico biliar",
+          "why_not": "El dolor persistente hacia espalda y la lipasa elevada apoyan pancreatitis. El cólico biliar transitorio no produce por sí solo ese patrón de lesión pancreática.",
           "facts": [
             {
               "field": "pattern",
@@ -5030,21 +5349,35 @@
             }
           ]
         }
-      }
+      },
+      "sources": [
+        {
+          "label": "Edwino.pdf",
+          "pages": [
+            335,
+            336,
+            337
+          ]
+        },
+        {
+          "label": "AGA, Management of pancreatic necrosis",
+          "url": "https://gastro.org/clinical-guidance/management-of-pancreatic-necrosis/"
+        }
+      ]
     },
     {
       "id": "11.12-02",
       "parent_topic_id": "11.12-02",
       "block_id": "11.12",
-      "name": "Estudiar daño pancreático crónico y tratar complicaciones",
-      "answer_kind": "decision",
+      "name": "Pancreatitis crónica",
+      "answer_kind": "diagnosis",
       "variants": {
         "easy": {
-          "vignette": "Un adulto con episodios de dolor pancreático tiene pérdida de peso y heces grasas. La imagen muestra calcificaciones y alteraciones ductales; se evalúan función exocrina y glucosa. ¿Qué acción o clasificación corresponde?",
+          "vignette": "Un adulto con episodios de dolor pancreático tiene pérdida de peso y heces grasas. La imagen muestra calcificaciones y alteraciones ductales; se evalúan función exocrina y glucosa.",
           "discriminator": "heces grasas",
           "explanation": "El dato decisivo es heces grasas. La inflamación sostenida causa fibrosis irreversible y pérdida de tejido exocrino y endocrino; la maldigestión produce esteatorrea y adelgazamiento, con posible diabetes pancreatogénica. Confirmar anatomía con TAC o resonancia y evaluar función. Retirar alcohol y tabaco y tratar dolor y malabsorción; usar enzimas con la alimentación si existe insuficiencia exocrina.",
           "confusable_with": "Pancreatitis aguda aislada",
-          "why_not": "Las calcificaciones, las alteraciones ductales y la malabsorción indican daño crónico. La CPRE se reserva a indicaciones terapéuticas seleccionadas.",
+          "why_not": "Las calcificaciones, los cambios ductales y la pérdida funcional orientan a daño crónico. Un episodio agudo aislado no explica por sí solo esas secuelas estructurales.",
           "facts": [
             {
               "field": "pattern",
@@ -5077,11 +5410,11 @@
           ]
         },
         "medium": {
-          "vignette": "Una persona con calcificaciones y alteraciones ductales pancreáticas presenta pseudoquiste sintomático u obstrucción ductal. Se valora intervención especializada. ¿Qué acción o clasificación corresponde?",
-          "discriminator": "Complicación ductal o pseudoquiste sintomático",
-          "explanation": "El dato decisivo es Complicación ductal o pseudoquiste sintomático. Puede existir una complicación corregible. Valorar intervención especializada.",
+          "vignette": "Una persona con episodios previos de dolor pancreático tiene calcificaciones y alteraciones ductales. Aparece obstrucción del conducto o pseudoquiste sintomático, junto con pérdida de peso y malabsorción.",
+          "discriminator": "Daño estructural crónico con complicación ductal",
+          "explanation": "Daño estructural crónico con complicación ductal. Este patrón orienta a Pancreatitis crónica. La inflamación sostenida causa fibrosis irreversible y pérdida de tejido exocrino y endocrino; la maldigestión produce esteatorrea y adelgazamiento, con posible diabetes pancreatogénica.",
           "confusable_with": "Pancreatitis aguda aislada",
-          "why_not": "Las calcificaciones, las alteraciones ductales y la malabsorción indican daño crónico. La CPRE se reserva a indicaciones terapéuticas seleccionadas.",
+          "why_not": "Las calcificaciones, los cambios ductales y la pérdida funcional orientan a daño crónico. Un episodio agudo aislado no explica por sí solo esas secuelas estructurales.",
           "facts": [
             {
               "field": "pattern",
@@ -5142,11 +5475,11 @@
           ]
         },
         "contrast": {
-          "vignette": "Una persona con calcificaciones pancreáticas y malabsorción necesita estudio anatómico inicial. Se revisa la propuesta de CPRE diagnóstica rutinaria y se elige TAC o resonancia como primera línea. ¿Qué acción o clasificación corresponde?",
-          "discriminator": "Elección de imagen en daño pancreático crónico",
-          "explanation": "La corrección prioriza TAC o resonancia como primera línea. La CPRE se reserva a indicaciones terapéuticas seleccionadas; se evalúan función exocrina y glucosa.",
+          "vignette": "Una persona presenta esteatorrea, pérdida de peso y alteración de glucosa. La imagen demuestra calcificaciones pancreáticas y cambios ductales que explican pérdida de función exocrina y endocrina.",
+          "discriminator": "Presentación funcional doble con calcificaciones",
+          "explanation": "Presentación funcional doble con calcificaciones. Este patrón orienta a Pancreatitis crónica. La inflamación sostenida causa fibrosis irreversible y pérdida de tejido exocrino y endocrino; la maldigestión produce esteatorrea y adelgazamiento, con posible diabetes pancreatogénica.",
           "confusable_with": "Pancreatitis aguda aislada",
-          "why_not": "Las calcificaciones, las alteraciones ductales y la malabsorción indican daño crónico. La CPRE se reserva a indicaciones terapéuticas seleccionadas.",
+          "why_not": "Las calcificaciones, los cambios ductales y la pérdida funcional orientan a daño crónico. Un episodio agudo aislado no explica por sí solo esas secuelas estructurales.",
           "facts": [
             {
               "field": "pattern",
@@ -5206,21 +5539,33 @@
             }
           ]
         }
-      }
+      },
+      "sources": [
+        {
+          "label": "Edwino.pdf",
+          "pages": [
+            338
+          ]
+        },
+        {
+          "label": "ACG, Chronic pancreatitis guideline 2020",
+          "url": "https://doi.org/10.14309/ajg.0000000000000535"
+        }
+      ]
     },
     {
       "id": "11.13-01",
       "parent_topic_id": "11.13-01",
       "block_id": "11.13",
-      "name": "Confirmar lesión gástrica maligna y definir extensión",
-      "answer_kind": "decision",
+      "name": "Cáncer gástrico",
+      "answer_kind": "diagnosis",
       "variants": {
         "easy": {
-          "vignette": "Un adulto presenta saciedad temprana progresiva, pérdida de peso y anemia. La dispepsia es reciente y persiste; se decide evaluar el estómago por una posible lesión orgánica. ¿Qué acción o clasificación corresponde?",
+          "vignette": "Un adulto presenta saciedad temprana progresiva, pérdida de peso y anemia. La dispepsia es reciente y persiste; se decide evaluar el estómago por una posible lesión orgánica.",
           "discriminator": "saciedad temprana progresiva",
           "explanation": "El dato decisivo es saciedad temprana progresiva. El crecimiento de una neoplasia gástrica puede ulcerar, sangrar o reducir capacidad y vaciamiento; la fase temprana puede ser silenciosa y los síntomas de alarma requieren endoscopia. Solicitar endoscopia con biopsias y evaluación nutricional. Si se confirma, estadificar y valorar tratamiento multidisciplinario según localización y extensión.",
           "confusable_with": "Dispepsia funcional",
-          "why_not": "La anemia, el adelgazamiento y la progresión requieren estudio orgánico. La biopsia y la extensión determinan el diagnóstico y el tratamiento.",
+          "why_not": "La lesión infiltrante y el tejido tumoral orientan a cáncer gástrico. La dispepsia funcional exige ausencia de una lesión orgánica que explique los síntomas.",
           "facts": [
             {
               "field": "pattern",
@@ -5249,11 +5594,11 @@
           ]
         },
         "medium": {
-          "vignette": "Una persona con lesión gástrica sospechosa presenta obstrucción o sangrado activo. Se estabiliza y se controla la complicación. ¿Qué acción o clasificación corresponde?",
-          "discriminator": "Lesión gástrica con obstrucción o sangrado",
-          "explanation": "El dato decisivo es Lesión gástrica con obstrucción o sangrado. Puede requerir intervención antes del plan definitivo. Priorizar estabilización y manejo de la complicación.",
+          "vignette": "Una persona con anemia y saciedad temprana presenta sangrado u obstrucción. La endoscopia localiza una lesión gástrica infiltrante y el tejido demuestra invasión por células tumorales.",
+          "discriminator": "Tumor gástrico con complicación hemorrágica u obstructiva",
+          "explanation": "Tumor gástrico con complicación hemorrágica u obstructiva. Este patrón orienta a Cáncer gástrico. El crecimiento de una neoplasia gástrica puede ulcerar, sangrar o reducir capacidad y vaciamiento; la fase temprana puede ser silenciosa y los síntomas de alarma requieren endoscopia.",
           "confusable_with": "Dispepsia funcional",
-          "why_not": "La anemia, el adelgazamiento y la progresión requieren estudio orgánico. La biopsia y la extensión determinan el diagnóstico y el tratamiento.",
+          "why_not": "La lesión infiltrante y el tejido tumoral orientan a cáncer gástrico. La dispepsia funcional exige ausencia de una lesión orgánica que explique los síntomas.",
           "facts": [
             {
               "field": "pattern",
@@ -5310,11 +5655,11 @@
           ]
         },
         "contrast": {
-          "vignette": "La biopsia de una lesión gástrica identifica malignidad. Después de la sospecha por anemia y saciedad precoz se necesita definir extensión y resecabilidad antes del tratamiento. ¿Qué acción o clasificación corresponde?",
-          "discriminator": "Neoplasia gástrica confirmada que requiere estadificación",
-          "explanation": "La biopsia establece el diagnóstico y el estudio de extensión orienta el tratamiento. La obstrucción o el sangrado activo requieren estabilización y manejo de la complicación.",
+          "vignette": "Una persona pierde peso y deja de tolerar cantidades habituales de alimento. La endoscopia muestra una lesión ulceroinfiltrativa del estómago y la biopsia demuestra infiltración tumoral, en lugar de una evaluación sin causa orgánica.",
+          "discriminator": "Lesión gástrica infiltrante con confirmación tisular",
+          "explanation": "Lesión gástrica infiltrante con confirmación tisular. Este patrón orienta a Cáncer gástrico. El crecimiento de una neoplasia gástrica puede ulcerar, sangrar o reducir capacidad y vaciamiento; la fase temprana puede ser silenciosa y los síntomas de alarma requieren endoscopia.",
           "confusable_with": "Dispepsia funcional",
-          "why_not": "La anemia, el adelgazamiento y la progresión requieren estudio orgánico. La biopsia y la extensión determinan el diagnóstico y el tratamiento.",
+          "why_not": "La lesión infiltrante y el tejido tumoral orientan a cáncer gástrico. La dispepsia funcional exige ausencia de una lesión orgánica que explique los síntomas.",
           "facts": [
             {
               "field": "pattern",
@@ -5370,21 +5715,29 @@
             }
           ]
         }
-      }
+      },
+      "sources": [
+        {
+          "label": "Edwino.pdf",
+          "pages": [
+            310
+          ]
+        }
+      ]
     },
     {
       "id": "11.13-02",
       "parent_topic_id": "11.13-02",
       "block_id": "11.13",
-      "name": "Definir extensión de masa pancreática y controlar obstrucción",
-      "answer_kind": "decision",
+      "name": "Cáncer de páncreas",
+      "answer_kind": "diagnosis",
       "variants": {
         "easy": {
-          "vignette": "Un adulto mayor desarrolla ictericia, coluria y pérdida de peso con poco dolor. Tiene una diabetes reciente y se solicita imagen para definir una posible obstrucción pancreatobiliar. ¿Qué acción o clasificación corresponde?",
+          "vignette": "Un adulto mayor desarrolla ictericia, coluria y pérdida de peso con poco dolor. Tiene una diabetes reciente y se solicita imagen para definir una posible obstrucción pancreatobiliar.",
           "discriminator": "ictericia, coluria y pérdida de peso",
           "explanation": "El dato decisivo es ictericia, coluria y pérdida de peso. Un tumor pancreático puede obstruir vía biliar en la cabeza o infiltrar tejidos sin ictericia en otros sitios; la extensión vascular y metastásica determina resecabilidad. Obtener imagen pancreática con contraste apropiado y referir a equipo hepatopancreatobiliar; definir extensión y necesidad de tejido antes de tratamiento.",
-          "confusable_with": "Colelitiasis simple",
-          "why_not": "La ictericia progresiva poco dolorosa y el adelgazamiento obligan a buscar tumor pancreático. La infección biliar superpuesta requiere control urgente.",
+          "confusable_with": "Coledocolitiasis",
+          "why_not": "Una masa pancreática infiltrante orienta a cáncer de páncreas. Los tumores de cabeza pueden causar ictericia; los de otros sitios pueden no obstruir la vía biliar y no deben excluirse por esa ausencia.",
           "facts": [
             {
               "field": "pattern",
@@ -5413,11 +5766,11 @@
           ]
         },
         "medium": {
-          "vignette": "Una persona con lesión pancreatobiliar y adelgazamiento desarrolla colangitis u obstrucción que necesita drenaje. Se prioriza control biliar. ¿Qué acción o clasificación corresponde?",
-          "discriminator": "Lesión pancreática con complicación biliar",
-          "explanation": "El dato decisivo es Lesión pancreática con complicación biliar. Añade riesgo infeccioso o limitación terapéutica. Priorizar control biliar.",
-          "confusable_with": "Colelitiasis simple",
-          "why_not": "La ictericia progresiva poco dolorosa y el adelgazamiento obligan a buscar tumor pancreático. La infección biliar superpuesta requiere control urgente.",
+          "vignette": "Una persona con ictericia progresiva y adelgazamiento desarrolla colangitis. La imagen identifica una masa en la cabeza pancreática que obstruye la vía biliar.",
+          "discriminator": "Masa de cabeza pancreática con complicación biliar",
+          "explanation": "Masa de cabeza pancreática con complicación biliar. Este patrón orienta a Cáncer de páncreas. Un tumor pancreático puede obstruir vía biliar en la cabeza o infiltrar tejidos sin ictericia en otros sitios; la extensión vascular y metastásica determina resecabilidad.",
+          "confusable_with": "Coledocolitiasis",
+          "why_not": "Una masa pancreática infiltrante orienta a cáncer de páncreas. Los tumores de cabeza pueden causar ictericia; los de otros sitios pueden no obstruir la vía biliar y no deben excluirse por esa ausencia.",
           "facts": [
             {
               "field": "pattern",
@@ -5474,11 +5827,11 @@
           ]
         },
         "contrast": {
-          "vignette": "La imagen de una persona con ictericia y pérdida de peso identifica una masa pancreática. El siguiente trabajo es definir extensión y resecabilidad, además de vigilar obstrucción biliar. ¿Qué acción o clasificación corresponde?",
-          "discriminator": "Masa pancreática que requiere definir resecabilidad",
-          "explanation": "El tratamiento depende de extensión y resecabilidad. Se organiza valoración especializada y se prioriza control biliar si existe colangitis u obstrucción que necesite drenaje.",
-          "confusable_with": "Colelitiasis simple",
-          "why_not": "La ictericia progresiva poco dolorosa y el adelgazamiento obligan a buscar tumor pancreático. La infección biliar superpuesta requiere control urgente.",
+          "vignette": "Una persona presenta pérdida de peso y dolor por infiltración local. La imagen identifica un tumor del cuerpo o cola del páncreas, que puede crecer sin causar la ictericia obstructiva de una lesión de cabeza.",
+          "discriminator": "Lesión pancreática fuera de la cabeza con presentación no obstructiva",
+          "explanation": "Lesión pancreática fuera de la cabeza con presentación no obstructiva. Este patrón orienta a Cáncer de páncreas. Un tumor pancreático puede obstruir vía biliar en la cabeza o infiltrar tejidos sin ictericia en otros sitios; la extensión vascular y metastásica determina resecabilidad.",
+          "confusable_with": "Coledocolitiasis",
+          "why_not": "Una masa pancreática infiltrante orienta a cáncer de páncreas. Los tumores de cabeza pueden causar ictericia; los de otros sitios pueden no obstruir la vía biliar y no deben excluirse por esa ausencia.",
           "facts": [
             {
               "field": "pattern",
@@ -5534,21 +5887,29 @@
             }
           ]
         }
-      }
+      },
+      "sources": [
+        {
+          "label": "Edwino.pdf",
+          "pages": [
+            309
+          ]
+        }
+      ]
     },
     {
       "id": "11.13-03",
       "parent_topic_id": "11.13-03",
       "block_id": "11.13",
-      "name": "Caracterizar nódulo hepático y mantener vigilancia",
-      "answer_kind": "decision",
+      "name": "Carcinoma hepatocelular",
+      "answer_kind": "diagnosis",
       "variants": {
         "easy": {
-          "vignette": "En la vigilancia de un adulto con cirrosis aparece un nódulo hepático nuevo. Se solicita imagen multifásica para caracterizarlo y se revisan función hepática y estado general. ¿Qué acción o clasificación corresponde a este contexto?",
-          "discriminator": "nódulo hepático nuevo",
-          "explanation": "El dato decisivo es nódulo hepático nuevo. La lesión hepática crónica favorece transformación hepatocelular; el patrón vascular de imagen en pacientes de riesgo puede definir diagnóstico y la reserva hepática condiciona opciones terapéuticas. Completar TAC multifásica o resonancia dinámica y discutir diagnóstico y estadio con equipo experto. Decidir resección, ablación, trasplante u otra estrategia según tumor y función.",
-          "confusable_with": "Biopsia obligatoria de todo nódulo en hígado cirrótico",
-          "why_not": "La imagen multifásica puede establecer diagnóstico en población de riesgo si es característica. La imagen dudosa requiere otra evaluación y el tratamiento no elimina la vigilancia.",
+          "vignette": "En la vigilancia de una persona con cirrosis aparece un nódulo hepático nuevo. La imagen multifásica demuestra un patrón característico de realce arterial y lavado posterior en esa población de riesgo.",
+          "discriminator": "Lesión nueva con patrón vascular diagnóstico en cirrosis",
+          "explanation": "Lesión nueva con patrón vascular diagnóstico en cirrosis. La lesión hepática crónica favorece transformación hepatocelular; el patrón vascular de imagen en pacientes de riesgo puede definir diagnóstico y la reserva hepática condiciona opciones terapéuticas.",
+          "confusable_with": "Metástasis hepática",
+          "why_not": "La imagen característica en población de riesgo o el origen hepatocitario demostrado apoyan hepatocarcinoma. Una lesión no característica requiere estudio y no toda masa hepática es una metástasis ni todo nódulo cirrótico es maligno.",
           "facts": [
             {
               "field": "pattern",
@@ -5581,11 +5942,11 @@
           ]
         },
         "medium": {
-          "vignette": "Un nódulo nuevo en un hígado cirrótico no tiene imagen característica. Se valora estudio adicional o biopsia según el contexto. ¿Qué acción o clasificación corresponde a este contexto?",
-          "discriminator": "Nódulo con imagen no característica",
-          "explanation": "El dato decisivo es Nódulo con imagen no característica. No todos los nódulos son el mismo tumor. Valorar estudios adicionales o biopsia según contexto.",
-          "confusable_with": "Biopsia obligatoria de todo nódulo en hígado cirrótico",
-          "why_not": "La imagen multifásica puede establecer diagnóstico en población de riesgo si es característica. La imagen dudosa requiere otra evaluación y el tratamiento no elimina la vigilancia.",
+          "vignette": "Una persona con cirrosis tiene una nueva lesión hepática y síntomas de progresión. La imagen multifásica muestra un patrón característico de captación arterial y lavado posterior en ese contexto de riesgo.",
+          "discriminator": "Patrón vascular característico en hígado de riesgo",
+          "explanation": "Patrón vascular característico en hígado de riesgo. Este patrón orienta a Carcinoma hepatocelular. La lesión hepática crónica favorece transformación hepatocelular; el patrón vascular de imagen en pacientes de riesgo puede definir diagnóstico y la reserva hepática condiciona opciones terapéuticas.",
+          "confusable_with": "Metástasis hepática",
+          "why_not": "La imagen característica en población de riesgo o el origen hepatocitario demostrado apoyan hepatocarcinoma. Una lesión no característica requiere estudio y no toda masa hepática es una metástasis ni todo nódulo cirrótico es maligno.",
           "facts": [
             {
               "field": "pattern",
@@ -5658,11 +6019,11 @@
           ]
         },
         "contrast": {
-          "vignette": "Después de tratar una neoplasia hepática en un paciente con cirrosis se mantiene vigilancia por el riesgo persistente del hígado. ¿Qué acción o clasificación corresponde a este contexto?",
-          "discriminator": "Cirrosis que requiere vigilancia tras tratamiento",
-          "explanation": "El dato decisivo es Cirrosis que requiere vigilancia tras tratamiento. Persiste riesgo de nuevos tumores. Mantener vigilancia.",
-          "confusable_with": "Biopsia obligatoria de todo nódulo en hígado cirrótico",
-          "why_not": "La imagen multifásica puede establecer diagnóstico en población de riesgo si es característica. La imagen dudosa requiere otra evaluación y el tratamiento no elimina la vigilancia.",
+          "vignette": "Una persona con cirrosis tiene un nódulo cuya imagen no es característica. La biopsia demuestra proliferación hepatocitaria tumoral e invasión, estableciendo el origen de la lesión.",
+          "discriminator": "Confirmación tisular cuando la imagen no es diagnóstica",
+          "explanation": "Confirmación tisular cuando la imagen no es diagnóstica. Este patrón orienta a Carcinoma hepatocelular. La lesión hepática crónica favorece transformación hepatocelular; el patrón vascular de imagen en pacientes de riesgo puede definir diagnóstico y la reserva hepática condiciona opciones terapéuticas.",
+          "confusable_with": "Metástasis hepática",
+          "why_not": "La imagen característica en población de riesgo o el origen hepatocitario demostrado apoyan hepatocarcinoma. Una lesión no característica requiere estudio y no toda masa hepática es una metástasis ni todo nódulo cirrótico es maligno.",
           "facts": [
             {
               "field": "pattern",
@@ -5734,7 +6095,19 @@
             }
           ]
         }
-      }
+      },
+      "sources": [
+        {
+          "label": "Edwino.pdf",
+          "pages": [
+            311
+          ]
+        },
+        {
+          "label": "AASLD, Hepatocellular carcinoma guidance 2023",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10663390/"
+        }
+      ]
     }
   ]
 }

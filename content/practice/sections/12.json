@@ -15,8 +15,8 @@
           "vignette": "Una adolescente tiene talla baja, cuello alado y ausencia de desarrollo puberal con amenorrea primaria. Se detecta presión elevada y se revisan pulsos y posibles lesiones aórticas.",
           "discriminator": "talla baja, cuello alado",
           "explanation": "El dato decisivo es talla baja, cuello alado. La ausencia completa o parcial de material del cromosoma X altera desarrollo gonadal y crecimiento; la disgenesia ovárica produce hipogonadismo y coexiste riesgo cardiovascular y renal. Confirmar con cariotipo y coordinar evaluación endocrina, cardíaca y renal. Valorar crecimiento e inducción puberal según edad y situación clínica.",
-          "confusable_with": "Hipogonadismo central aislado",
-          "why_not": "El fenotipo y el hipogonadismo hipergonadotrópico orientan a Turner. La evaluación cromosómica y el riesgo aórtico requieren atención específica.",
+          "confusable_with": "Hipogonadismo central",
+          "why_not": "La pérdida de material X y las gonadotropinas altas apoyan Turner. El fallo central tiene gonadotropinas bajas o inapropiadamente normales y otra localización.",
           "facts": [
             {
               "field": "pattern",
@@ -49,11 +49,11 @@
           ]
         },
         "medium": {
-          "vignette": "Una adolescente con talla baja y fallo ovárico tiene coartación o válvula aórtica bicúspide. Se establece vigilancia aórtica individualizada.",
-          "discriminator": "Fenotipo gonadal con riesgo aórtico",
-          "explanation": "El dato decisivo es Fenotipo gonadal con riesgo aórtico. Aumenta riesgo cardiovascular. Establecer vigilancia aórtica individualizada.",
-          "confusable_with": "Hipogonadismo central aislado",
-          "why_not": "El fenotipo y el hipogonadismo hipergonadotrópico orientan a Turner. La evaluación cromosómica y el riesgo aórtico requieren atención específica.",
+          "vignette": "Una adolescente con talla baja y ausencia de progresión puberal tiene hipogonadismo hipergonadotrópico y una coartación o válvula bicúspide. El estudio cromosómico confirma pérdida de material X.",
+          "discriminator": "Disgenesia gonadal con lesión aórtica y pérdida de X",
+          "explanation": "Disgenesia gonadal con lesión aórtica y pérdida de X. Este patrón orienta a Síndrome de Turner. La ausencia completa o parcial de material del cromosoma X altera desarrollo gonadal y crecimiento; la disgenesia ovárica produce hipogonadismo y coexiste riesgo cardiovascular y renal.",
+          "confusable_with": "Hipogonadismo central",
+          "why_not": "La pérdida de material X y las gonadotropinas altas apoyan Turner. El fallo central tiene gonadotropinas bajas o inapropiadamente normales y otra localización.",
           "facts": [
             {
               "field": "pattern",
@@ -126,11 +126,11 @@
           ]
         },
         "contrast": {
-          "vignette": "Una adolescente con amenorrea primaria y rasgos compatibles tiene sospecha de mosaicismo. Se completa estudio citogenético apropiado.",
-          "discriminator": "Sospecha de mosaicismo en disgenesia gonadal",
-          "explanation": "El dato decisivo es Sospecha de mosaicismo en disgenesia gonadal. La alteración puede no ser una monosomía uniforme. Completar estudio citogenético apropiado.",
-          "confusable_with": "Hipogonadismo central aislado",
-          "why_not": "El fenotipo y el hipogonadismo hipergonadotrópico orientan a Turner. La evaluación cromosómica y el riesgo aórtico requieren atención específica.",
+          "vignette": "Una adolescente con amenorrea primaria y talla baja tiene un estudio citogenético que demuestra líneas 45,X y 46,XX. La expresión clínica es variable por el mosaicismo.",
+          "discriminator": "Mosaicismo cromosómico confirmado",
+          "explanation": "Mosaicismo cromosómico confirmado. Este patrón orienta a Síndrome de Turner. La ausencia completa o parcial de material del cromosoma X altera desarrollo gonadal y crecimiento; la disgenesia ovárica produce hipogonadismo y coexiste riesgo cardiovascular y renal.",
+          "confusable_with": "Hipogonadismo central",
+          "why_not": "La pérdida de material X y las gonadotropinas altas apoyan Turner. El fallo central tiene gonadotropinas bajas o inapropiadamente normales y otra localización.",
           "facts": [
             {
               "field": "pattern",
@@ -202,7 +202,19 @@
             }
           ]
         }
-      }
+      },
+      "sources": [
+        {
+          "label": "Edwino.pdf",
+          "pages": [
+            355
+          ]
+        },
+        {
+          "label": "International Turner Syndrome Consensus Group, guideline 2024",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11759048/"
+        }
+      ]
     },
     {
       "id": "12.01-02",
@@ -216,7 +228,7 @@
           "discriminator": "testículos pequeños",
           "explanation": "El dato decisivo es testículos pequeños. Un cromosoma X adicional puede alterar función testicular y producir fallo gonadal primario; la testosterona disminuye y las gonadotropinas aumentan por pérdida de retroalimentación. Solicitar cariotipo y evaluación endocrina y reproductiva. Abordar opciones de fertilidad antes de iniciar testosterona cuando sea posible; valorar reemplazo por hipogonadismo y salud ósea con seguimiento.",
           "confusable_with": "Hipogonadismo central",
-          "why_not": "La testosterona baja con LH y FSH elevadas indica fallo testicular. El fenotipo cromosómico exige abordar fertilidad y estudiar hallazgos mamarios de alarma.",
+          "why_not": "La testosterona baja con gonadotropinas altas y el cariotipo XXY identifican Klinefelter. El fallo central no explica esa elevación de LH y FSH ni el complemento cromosómico.",
           "facts": [
             {
               "field": "pattern",
@@ -249,11 +261,11 @@
           ]
         },
         "medium": {
-          "vignette": "Una persona con testículos pequeños, gonadotropinas altas y dificultades de aprendizaje necesita evaluación y apoyo, además de revisar fertilidad antes de testosterona.",
-          "discriminator": "Fallo testicular con necesidades del desarrollo",
-          "explanation": "El dato decisivo es Fallo testicular con necesidades del desarrollo. Puede coexistir afectación del desarrollo. Ofrecer evaluación y apoyo.",
+          "vignette": "Una persona con dificultades de aprendizaje presenta testículos pequeños y testosterona baja con LH y FSH altas. El cariotipo demuestra 47,XXY.",
+          "discriminator": "Fallo testicular con cromosoma X adicional",
+          "explanation": "Fallo testicular con cromosoma X adicional. Este patrón orienta a Síndrome de Klinefelter. Un cromosoma X adicional puede alterar función testicular y producir fallo gonadal primario; la testosterona disminuye y las gonadotropinas aumentan por pérdida de retroalimentación.",
           "confusable_with": "Hipogonadismo central",
-          "why_not": "La testosterona baja con LH y FSH elevadas indica fallo testicular. El fenotipo cromosómico exige abordar fertilidad y estudiar hallazgos mamarios de alarma.",
+          "why_not": "La testosterona baja con gonadotropinas altas y el cariotipo XXY identifican Klinefelter. El fallo central no explica esa elevación de LH y FSH ni el complemento cromosómico.",
           "facts": [
             {
               "field": "pattern",
@@ -326,11 +338,11 @@
           ]
         },
         "contrast": {
-          "vignette": "Un adulto con hipogonadismo hipergonadotrópico y ginecomastia presenta una masa mamaria sospechosa. Se realiza estudio dirigido.",
-          "discriminator": "Fenotipo testicular con masa mamaria",
-          "explanation": "El dato decisivo es Fenotipo testicular con masa mamaria. Existe riesgo mamario aumentado. Estudiar de forma dirigida.",
+          "vignette": "Un adulto con infertilidad, ginecomastia y testículos pequeños presenta un hallazgo mamario que necesita estudio. El cariotipo 47,XXY explica el fenotipo gonadal, sin atribuir automáticamente toda masa mamaria al síndrome.",
+          "discriminator": "Alteración cromosómica confirmada con hallazgo mamario independiente",
+          "explanation": "Alteración cromosómica confirmada con hallazgo mamario independiente. Este patrón orienta a Síndrome de Klinefelter. Un cromosoma X adicional puede alterar función testicular y producir fallo gonadal primario; la testosterona disminuye y las gonadotropinas aumentan por pérdida de retroalimentación.",
           "confusable_with": "Hipogonadismo central",
-          "why_not": "La testosterona baja con LH y FSH elevadas indica fallo testicular. El fenotipo cromosómico exige abordar fertilidad y estudiar hallazgos mamarios de alarma.",
+          "why_not": "La testosterona baja con gonadotropinas altas y el cariotipo XXY identifican Klinefelter. El fallo central no explica esa elevación de LH y FSH ni el complemento cromosómico.",
           "facts": [
             {
               "field": "pattern",
@@ -402,21 +414,33 @@
             }
           ]
         }
-      }
+      },
+      "sources": [
+        {
+          "label": "Edwino.pdf",
+          "pages": [
+            351
+          ]
+        },
+        {
+          "label": "EAA y ESE, Klinefelter syndrome guideline 2021",
+          "url": "https://onlinelibrary.wiley.com/doi/10.1111/andr.12909"
+        }
+      ]
     },
     {
       "id": "12.02-01",
       "parent_topic_id": "12.02-01",
       "block_id": "12.02",
-      "name": "Confirmar trisomía 21 y evaluar mecanismo y riesgos",
-      "answer_kind": "decision",
+      "name": "Síndrome de Down",
+      "answer_kind": "diagnosis",
       "variants": {
         "easy": {
-          "vignette": "Un recién nacido tiene hipotonía, perfil facial plano y pliegue palmar único. Se escucha un soplo; la familia solicita confirmación y una evaluación de problemas asociados. ¿Qué acción o clasificación corresponde a este contexto?",
+          "vignette": "Un recién nacido tiene hipotonía, perfil facial plano y pliegue palmar único. Se escucha un soplo; la familia solicita confirmación y una evaluación de problemas asociados.",
           "discriminator": "hipotonía, perfil facial plano",
           "explanation": "El dato decisivo es hipotonía, perfil facial plano. El material adicional del cromosoma 21 altera desarrollo de varios órganos; el patrón clínico orienta, pero el cariotipo define la alteración y ayuda a valorar recurrencia familiar. Confirmar citogenéticamente y solicitar ecocardiograma neonatal, aunque exista estudio fetal; evaluar alimentación y otras comorbilidades. Coordinar seguimiento del desarrollo y asesoría genética.",
-          "confusable_with": "Tamiz prenatal como diagnóstico definitivo",
-          "why_not": "Un hallazgo de riesgo no equivale a confirmación. El cariotipo determina el mecanismo y una translocación puede modificar la evaluación familiar.",
+          "confusable_with": "Tamiz prenatal positivo sin confirmación",
+          "why_not": "El exceso confirmado de material cromosómico 21 identifica Down. Un resultado de tamiz solo estima riesgo y necesita confirmación diagnóstica.",
           "facts": [
             {
               "field": "pattern",
@@ -449,11 +473,11 @@
           ]
         },
         "medium": {
-          "vignette": "Se confirma una trisomía por translocación en un niño con hipotonía y rasgos físicos compatibles. Se valora estudio y asesoría de los familiares. ¿Qué acción o clasificación corresponde a este contexto?",
-          "discriminator": "Translocación que modifica el riesgo familiar",
-          "explanation": "El dato decisivo es Translocación que modifica el riesgo familiar. El riesgo de recurrencia puede cambiar. Valorar cariotipos y asesoría familiar según indicación.",
-          "confusable_with": "Tamiz prenatal como diagnóstico definitivo",
-          "why_not": "Un hallazgo de riesgo no equivale a confirmación. El cariotipo determina el mecanismo y una translocación puede modificar la evaluación familiar.",
+          "vignette": "Un recién nacido con hipotonía y rasgos físicos compatibles tiene material adicional del cromosoma 21 debido a una translocación. Se estudia el mecanismo y el riesgo familiar.",
+          "discriminator": "Exceso de material del cromosoma 21 por translocación",
+          "explanation": "Exceso de material del cromosoma 21 por translocación. Este patrón orienta a Síndrome de Down. El material adicional del cromosoma 21 altera desarrollo de varios órganos; el patrón clínico orienta, pero el cariotipo define la alteración y ayuda a valorar recurrencia familiar.",
+          "confusable_with": "Tamiz prenatal positivo sin confirmación",
+          "why_not": "El exceso confirmado de material cromosómico 21 identifica Down. Un resultado de tamiz solo estima riesgo y necesita confirmación diagnóstica.",
           "facts": [
             {
               "field": "pattern",
@@ -526,11 +550,11 @@
           ]
         },
         "contrast": {
-          "vignette": "Un hallazgo prenatal sugiere trisomía 21. Se ofrece asesoría y confirmación con una prueba invasiva dentro de la ventana gestacional apropiada. ¿Qué acción o clasificación corresponde a este contexto?",
-          "discriminator": "Riesgo prenatal que requiere confirmación",
-          "explanation": "El dato decisivo es Riesgo prenatal que requiere confirmación. El tamizaje no es diagnóstico y hacer una prueba invasiva demasiado pronto aumenta riesgos. Ofrecer asesoría y confirmación diagnóstica. Según RCOG, programar biopsia corial habitualmente a las 11+0–13+6 semanas, nunca antes de 10+0, o amniocentesis desde 15+0 semanas.",
-          "confusable_with": "Tamiz prenatal como diagnóstico definitivo",
-          "why_not": "Un hallazgo de riesgo no equivale a confirmación. El cariotipo determina el mecanismo y una translocación puede modificar la evaluación familiar.",
+          "vignette": "Tras un tamiz prenatal de alto riesgo, una prueba diagnóstica fetal confirma material extra del cromosoma 21. El resultado permite diferenciar riesgo de tamiz de una alteración cromosómica demostrada.",
+          "discriminator": "Confirmación prenatal de trisomía 21",
+          "explanation": "Confirmación prenatal de trisomía 21. Este patrón orienta a Síndrome de Down. El material adicional del cromosoma 21 altera desarrollo de varios órganos; el patrón clínico orienta, pero el cariotipo define la alteración y ayuda a valorar recurrencia familiar.",
+          "confusable_with": "Tamiz prenatal positivo sin confirmación",
+          "why_not": "El exceso confirmado de material cromosómico 21 identifica Down. Un resultado de tamiz solo estima riesgo y necesita confirmación diagnóstica.",
           "facts": [
             {
               "field": "pattern",
@@ -602,7 +626,24 @@
             }
           ]
         }
-      }
+      },
+      "sources": [
+        {
+          "label": "Edwino.pdf",
+          "pages": [
+            348,
+            349
+          ]
+        },
+        {
+          "label": "AAP, Health supervision in Down syndrome 2022",
+          "url": "https://publications.aap.org/pediatrics/article/149/5/e2022057010/186778/Health-Supervision-for-Children-and-Adolescents"
+        },
+        {
+          "label": "RCOG, Amniocentesis and CVS, Green-top guideline 8, reviewed 2024",
+          "url": "https://www.rcog.org.uk/guidance/browse-all-guidance/green-top-guidelines/amniocentesis-and-chorionic-villus-sampling-green-top-guideline-no-8/"
+        }
+      ]
     },
     {
       "id": "12.03-01",
@@ -615,8 +656,8 @@
           "vignette": "Un adolescente alto y delgado tiene dedos largos, deformidad esternal y desplazamiento del cristalino. Se solicita estudio de raíz aórtica aunque no refiere dolor torácico.",
           "discriminator": "desplazamiento del cristalino",
           "explanation": "El dato decisivo es desplazamiento del cristalino. La alteración de fibrilina compromete microfibrillas del tejido conectivo; la debilidad estructural afecta esqueleto, soporte del cristalino y pared aórtica, con riesgo de dilatación y disección. Evaluar criterios de Ghent y antecedentes, solicitar valoración cardiológica con imagen aórtica y oftalmología, y considerar genética.",
-          "confusable_with": "Hábito alto sin síndrome hereditario",
-          "why_not": "La ectopia lentis y la afectación de raíz aórtica orientan a Marfan. Los familiares requieren evaluación y el dolor súbito exige atención urgente.",
+          "confusable_with": "Hábito alto aislado",
+          "why_not": "La afectación ocular y aórtica junto con rasgos esqueléticos orienta a Marfan. La talla alta aislada no establece un síndrome de tejido conectivo.",
           "facts": [
             {
               "field": "pattern",
@@ -645,11 +686,11 @@
           ]
         },
         "medium": {
-          "vignette": "Una persona con aracnodactilia y ectopia lentis desarrolla dolor torácico súbito. Se descarta un síndrome aórtico urgente.",
-          "discriminator": "Fenotipo conectivo con dolor torácico súbito",
-          "explanation": "El dato decisivo es Fenotipo conectivo con dolor torácico súbito. Puede existir disección. Descartar síndrome aórtico urgente.",
-          "confusable_with": "Hábito alto sin síndrome hereditario",
-          "why_not": "La ectopia lentis y la afectación de raíz aórtica orientan a Marfan. Los familiares requieren evaluación y el dolor súbito exige atención urgente.",
+          "vignette": "Una persona con aracnodactilia y ectopia lentis presenta dolor torácico súbito. La imagen demuestra compromiso de raíz aórtica en el contexto del trastorno de tejido conectivo.",
+          "discriminator": "Fenotipo conectivo con complicación aórtica",
+          "explanation": "Fenotipo conectivo con complicación aórtica. Este patrón orienta a Síndrome de Marfan. La alteración de fibrilina compromete microfibrillas del tejido conectivo; la debilidad estructural afecta esqueleto, soporte del cristalino y pared aórtica, con riesgo de dilatación y disección.",
+          "confusable_with": "Hábito alto aislado",
+          "why_not": "La afectación ocular y aórtica junto con rasgos esqueléticos orienta a Marfan. La talla alta aislada no establece un síndrome de tejido conectivo.",
           "facts": [
             {
               "field": "pattern",
@@ -718,11 +759,11 @@
           ]
         },
         "contrast": {
-          "vignette": "Un familiar de una persona con dilatación de raíz aórtica y ectopia lentis solicita evaluación. Se organiza estudio familiar aunque no refiera dolor.",
-          "discriminator": "Riesgo familiar de enfermedad aórtica",
-          "explanation": "El dato decisivo es Riesgo familiar de enfermedad aórtica. La herencia es autosómica dominante. Ofrecer evaluación familiar.",
-          "confusable_with": "Hábito alto sin síndrome hereditario",
-          "why_not": "La ectopia lentis y la afectación de raíz aórtica orientan a Marfan. Los familiares requieren evaluación y el dolor súbito exige atención urgente.",
+          "vignette": "Un familiar de una persona afectada tiene dedos largos y deformidad esternal. La evaluación dirigida identifica ectopia del cristalino y dilatación de raíz aórtica, aunque no había consultado por dolor.",
+          "discriminator": "Fenotipo detectado en evaluación familiar",
+          "explanation": "Fenotipo detectado en evaluación familiar. Este patrón orienta a Síndrome de Marfan. La alteración de fibrilina compromete microfibrillas del tejido conectivo; la debilidad estructural afecta esqueleto, soporte del cristalino y pared aórtica, con riesgo de dilatación y disección.",
+          "confusable_with": "Hábito alto aislado",
+          "why_not": "La afectación ocular y aórtica junto con rasgos esqueléticos orienta a Marfan. La talla alta aislada no establece un síndrome de tejido conectivo.",
           "facts": [
             {
               "field": "pattern",
@@ -790,21 +831,29 @@
             }
           ]
         }
-      }
+      },
+      "sources": [
+        {
+          "label": "Edwino.pdf",
+          "pages": [
+            353
+          ]
+        }
+      ]
     },
     {
       "id": "12.04-01",
       "parent_topic_id": "12.04-01",
       "block_id": "12.04",
-      "name": "Investigar predisposición reparadora y planear prevención individual",
-      "answer_kind": "decision",
+      "name": "Síndrome de Lynch",
+      "answer_kind": "diagnosis",
       "variants": {
         "easy": {
-          "vignette": "Una adulta tiene familiares de dos generaciones con cáncer colorrectal y endometrial a edades tempranas, sin poliposis extensa. Se considera una predisposición por reparación defectuosa del ADN. ¿Qué acción o clasificación corresponde?",
+          "vignette": "Una adulta tiene familiares de dos generaciones con cáncer colorrectal y endometrial a edades tempranas, sin poliposis extensa. Se considera una predisposición por reparación defectuosa del ADN.",
           "discriminator": "sin poliposis extensa",
           "explanation": "El dato decisivo es sin poliposis extensa. Las variantes de reparación de errores de apareamiento favorecen inestabilidad genómica y tumores colorrectales y extracolónicos; la historia familiar y estudio tumoral orientan evaluación germinal. Referir a asesoría genética y evaluación especializada de tejido y variantes; establecer vigilancia de colon y órganos de riesgo según gen e historia.",
           "confusable_with": "Poliposis adenomatosa familiar",
-          "why_not": "Los cánceres tempranos de colon y endometrio sin poliposis extensa favorecen Lynch. La pérdida de proteínas en un tumor no demuestra por sí sola origen germinal.",
+          "why_not": "La predisposición reparadora germinal y el patrón de colon/endometrio favorecen Lynch. La pérdida de proteínas solo en el tumor no prueba origen germinal; la poliposis adenomatosa extensa orientaría a PAF.",
           "facts": [
             {
               "field": "pattern",
@@ -837,11 +886,11 @@
           ]
         },
         "medium": {
-          "vignette": "En un tumor se demuestra pérdida de proteínas reparadoras de ADN. Se completa interpretación molecular antes de afirmar una variante germinal. ¿Qué acción o clasificación corresponde?",
-          "discriminator": "Inmunohistoquímica que requiere interpretación molecular",
-          "explanation": "El dato decisivo es Inmunohistoquímica que requiere interpretación molecular. La inmunohistoquímica detecta expresión, no directamente la mutación germinal. Completar interpretación molecular.",
+          "vignette": "Una persona con cáncer de colon temprano tiene pérdida de proteínas reparadoras en el tumor. El estudio posterior confirma una variante germinal patógena en un gen reparador y el contexto familiar concuerda.",
+          "discriminator": "Defecto reparador germinal demostrado tras el estudio tumoral",
+          "explanation": "Defecto reparador germinal demostrado tras el estudio tumoral. Este patrón orienta a Síndrome de Lynch. Las variantes de reparación de errores de apareamiento favorecen inestabilidad genómica y tumores colorrectales y extracolónicos; la historia familiar y estudio tumoral orientan evaluación germinal.",
           "confusable_with": "Poliposis adenomatosa familiar",
-          "why_not": "Los cánceres tempranos de colon y endometrio sin poliposis extensa favorecen Lynch. La pérdida de proteínas en un tumor no demuestra por sí sola origen germinal.",
+          "why_not": "La predisposición reparadora germinal y el patrón de colon/endometrio favorecen Lynch. La pérdida de proteínas solo en el tumor no prueba origen germinal; la poliposis adenomatosa extensa orientaría a PAF.",
           "facts": [
             {
               "field": "pattern",
@@ -914,11 +963,11 @@
           ]
         },
         "contrast": {
-          "vignette": "Una mujer tiene predisposición por reparación de ADN alterada, familiares con cáncer de colon y endometrio temprano y ausencia de poliposis extensa. Tras completar su plan reproductivo, revisa prevención ginecológica individualizada. ¿Qué acción o clasificación corresponde?",
-          "discriminator": "Predisposición reparadora con riesgo endometrial",
-          "explanation": "El patrón familiar y molecular orienta a Lynch. Tras completar el plan reproductivo se discuten medidas preventivas ginecológicas según el riesgo individual.",
+          "vignette": "Una persona con cáncer endometrial temprano tiene familiares con tumores de colon. No hay poliposis extensa y se confirma una predisposición germinal por reparación defectuosa de ADN.",
+          "discriminator": "Tumor endometrial índice en una predisposición reparadora familiar",
+          "explanation": "Tumor endometrial índice en una predisposición reparadora familiar. Este patrón orienta a Síndrome de Lynch. Las variantes de reparación de errores de apareamiento favorecen inestabilidad genómica y tumores colorrectales y extracolónicos; la historia familiar y estudio tumoral orientan evaluación germinal.",
           "confusable_with": "Poliposis adenomatosa familiar",
-          "why_not": "Los cánceres tempranos de colon y endometrio sin poliposis extensa favorecen Lynch. La pérdida de proteínas en un tumor no demuestra por sí sola origen germinal.",
+          "why_not": "La predisposición reparadora germinal y el patrón de colon/endometrio favorecen Lynch. La pérdida de proteínas solo en el tumor no prueba origen germinal; la poliposis adenomatosa extensa orientaría a PAF.",
           "facts": [
             {
               "field": "pattern",
@@ -990,7 +1039,23 @@
             }
           ]
         }
-      }
+      },
+      "sources": [
+        {
+          "label": "Edwino.pdf",
+          "pages": [
+            352
+          ]
+        },
+        {
+          "label": "NCI PDQ, Genetics of colorectal cancer",
+          "url": "https://www.cancer.gov/types/colorectal/hp/colorectal-genetics-pdq"
+        },
+        {
+          "label": "BSG, ACPGBI y UKCGG, Hereditary colorectal cancer guideline 2020",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7034349/"
+        }
+      ]
     },
     {
       "id": "12.04-02",
@@ -1004,7 +1069,7 @@
           "discriminator": "manchas oscuras en labios y mucosa oral",
           "explanation": "El dato decisivo es manchas oscuras en labios y mucosa oral. Una variante de STK11 predispone a pólipos hamartomatosos y pigmentación mucocutánea; los pólipos pueden sangrar o causar invaginación y el síndrome aumenta riesgo de varios cánceres. Referir a genética y gastroenterología para confirmar, definir carga polipoide, realizar polipectomía indicada y establecer vigilancia de tumores por edad y órgano.",
           "confusable_with": "Poliposis adenomatosa familiar",
-          "why_not": "La pigmentación mucocutánea y los pólipos hamartomatosos favorecen Peutz-Jeghers. La PAF produce poliposis adenomatosa y tiene otro perfil.",
+          "why_not": "La pigmentación mucocutánea y los pólipos hamartomatosos favorecen Peutz-Jeghers. La PAF presenta adenomas y otro patrón clínico.",
           "facts": [
             {
               "field": "pattern",
@@ -1037,11 +1102,11 @@
           ]
         },
         "medium": {
-          "vignette": "Una persona con pigmentación perioral y pólipos hamartomatosos desarrolla dolor agudo y vómitos. Se busca invaginación u obstrucción.",
-          "discriminator": "Poliposis hamartomatosa con síntomas obstructivos",
-          "explanation": "El dato decisivo es Poliposis hamartomatosa con síntomas obstructivos. Un pólipo puede actuar como punto guía. Buscar invaginación u obstrucción.",
+          "vignette": "Una persona con máculas periorales y pólipos hamartomatosos desarrolla dolor agudo y vómitos. Se encuentra invaginación u obstrucción sobre ese contexto de poliposis.",
+          "discriminator": "Poliposis hamartomatosa con complicación obstructiva",
+          "explanation": "Poliposis hamartomatosa con complicación obstructiva. Este patrón orienta a Síndrome de Peutz-Jeghers. Una variante de STK11 predispone a pólipos hamartomatosos y pigmentación mucocutánea; los pólipos pueden sangrar o causar invaginación y el síndrome aumenta riesgo de varios cánceres.",
           "confusable_with": "Poliposis adenomatosa familiar",
-          "why_not": "La pigmentación mucocutánea y los pólipos hamartomatosos favorecen Peutz-Jeghers. La PAF produce poliposis adenomatosa y tiene otro perfil.",
+          "why_not": "La pigmentación mucocutánea y los pólipos hamartomatosos favorecen Peutz-Jeghers. La PAF presenta adenomas y otro patrón clínico.",
           "facts": [
             {
               "field": "pattern",
@@ -1114,11 +1179,11 @@
           ]
         },
         "contrast": {
-          "vignette": "Un familiar de una persona con manchas de labios y mucosa oral y pólipos hamartomatosos está en riesgo. Se ofrece evaluación dirigida.",
-          "discriminator": "Antecedente familiar de pigmentación y pólipos hamartomatosos",
-          "explanation": "El dato decisivo es Antecedente familiar de pigmentación y pólipos hamartomatosos. La herencia es dominante. Ofrecer evaluación dirigida.",
+          "vignette": "Durante evaluación familiar, un joven tiene manchas en labios y mucosa oral. La endoscopia identifica pólipos hamartomatosos intestinales, aun antes de presentar una obstrucción.",
+          "discriminator": "Fenotipo pigmentario y poliposis identificados por evaluación familiar",
+          "explanation": "Fenotipo pigmentario y poliposis identificados por evaluación familiar. Este patrón orienta a Síndrome de Peutz-Jeghers. Una variante de STK11 predispone a pólipos hamartomatosos y pigmentación mucocutánea; los pólipos pueden sangrar o causar invaginación y el síndrome aumenta riesgo de varios cánceres.",
           "confusable_with": "Poliposis adenomatosa familiar",
-          "why_not": "La pigmentación mucocutánea y los pólipos hamartomatosos favorecen Peutz-Jeghers. La PAF produce poliposis adenomatosa y tiene otro perfil.",
+          "why_not": "La pigmentación mucocutánea y los pólipos hamartomatosos favorecen Peutz-Jeghers. La PAF presenta adenomas y otro patrón clínico.",
           "facts": [
             {
               "field": "pattern",
@@ -1190,7 +1255,19 @@
             }
           ]
         }
-      }
+      },
+      "sources": [
+        {
+          "label": "Edwino.pdf",
+          "pages": [
+            354
+          ]
+        },
+        {
+          "label": "EHTG, Peutz-Jeghers syndrome guideline 2021",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7865862/"
+        }
+      ]
     },
     {
       "id": "12.05-01",
@@ -1390,7 +1467,19 @@
             }
           ]
         }
-      }
+      },
+      "sources": [
+        {
+          "label": "Edwino.pdf",
+          "pages": [
+            356
+          ]
+        },
+        {
+          "label": "NCI PDQ, Von Hippel-Lindau disease",
+          "url": "https://www.cancer.gov/publications/pdq/information-summaries/genetics/vhl-syndrome-hp-pdq"
+        }
+      ]
     },
     {
       "id": "12.06-01",
@@ -1404,7 +1493,7 @@
           "discriminator": "anemia hemolítica con prueba de Coombs negativa",
           "explanation": "El dato decisivo es anemia hemolítica con prueba de Coombs negativa. La alteración de ATP7B impide manejo y excreción biliar de cobre; su acumulación lesiona hígado, ganglios basales y otros tejidos y puede causar hemólisis. Integrar ceruloplasmina, cobre urinario de 24 horas, evaluación ocular y genética o estudio hepático según contexto. Si se confirma enfermedad sintomática, iniciar quelación con D-penicilamina o trientina bajo supervisión especializada.",
           "confusable_with": "Hepatitis autoinmune",
-          "why_not": "La afectación hepática y neurológica con anillo corneal o hemólisis no inmune orienta a Wilson. La falla aguda y el riesgo familiar requieren acciones específicas.",
+          "why_not": "La alteración del metabolismo del cobre, el anillo corneal o la hemólisis no inmune apoyan Wilson. La hepatitis autoinmune se evalúa con IgG, autoanticuerpos e histología y no explica esos hallazgos específicos de cobre.",
           "facts": [
             {
               "field": "pattern",
@@ -1437,11 +1526,11 @@
           ]
         },
         "medium": {
-          "vignette": "Un joven con trastorno del cobre desarrolla falla hepática aguda. Se refiere de urgencia a un centro con trasplante.",
-          "discriminator": "Enfermedad por cobre con falla hepática aguda",
-          "explanation": "El dato decisivo es Enfermedad por cobre con falla hepática aguda. La quelación puede ser insuficiente ante deterioro grave. Referir urgente a centro con trasplante.",
+          "vignette": "Un joven presenta falla hepática aguda y hemólisis con Coombs negativo. La evaluación del metabolismo del cobre y el anillo corneal apoyan una alteración de depósito de cobre.",
+          "discriminator": "Presentación hepática aguda con hemólisis no inmune",
+          "explanation": "Presentación hepática aguda con hemólisis no inmune. Este patrón orienta a Enfermedad de Wilson. La alteración de ATP7B impide manejo y excreción biliar de cobre; su acumulación lesiona hígado, ganglios basales y otros tejidos y puede causar hemólisis.",
           "confusable_with": "Hepatitis autoinmune",
-          "why_not": "La afectación hepática y neurológica con anillo corneal o hemólisis no inmune orienta a Wilson. La falla aguda y el riesgo familiar requieren acciones específicas.",
+          "why_not": "La alteración del metabolismo del cobre, el anillo corneal o la hemólisis no inmune apoyan Wilson. La hepatitis autoinmune se evalúa con IgG, autoanticuerpos e histología y no explica esos hallazgos específicos de cobre.",
           "facts": [
             {
               "field": "pattern",
@@ -1522,11 +1611,11 @@
           ]
         },
         "contrast": {
-          "vignette": "Un familiar de un paciente con hepatitis, temblor y anillo corneal solicita estudio. Se organiza evaluación dirigida para detectar afectación antes de síntomas.",
-          "discriminator": "Riesgo familiar de alteración del cobre",
-          "explanation": "El dato decisivo es Riesgo familiar de alteración del cobre. La herencia recesiva permite detectar otros afectados. Organizar estudio dirigido.",
+          "vignette": "En un familiar de un paciente afectado se encuentran ceruloplasmina baja y excreción urinaria de cobre elevada. La evaluación dirigida confirma alteración del cobre antes de que predominen síntomas neurológicos.",
+          "discriminator": "Detección bioquímica por evaluación familiar",
+          "explanation": "Detección bioquímica por evaluación familiar. Este patrón orienta a Enfermedad de Wilson. La alteración de ATP7B impide manejo y excreción biliar de cobre; su acumulación lesiona hígado, ganglios basales y otros tejidos y puede causar hemólisis.",
           "confusable_with": "Hepatitis autoinmune",
-          "why_not": "La afectación hepática y neurológica con anillo corneal o hemólisis no inmune orienta a Wilson. La falla aguda y el riesgo familiar requieren acciones específicas.",
+          "why_not": "La alteración del metabolismo del cobre, el anillo corneal o la hemólisis no inmune apoyan Wilson. La hepatitis autoinmune se evalúa con IgG, autoanticuerpos e histología y no explica esos hallazgos específicos de cobre.",
           "facts": [
             {
               "field": "pattern",
@@ -1606,21 +1695,33 @@
             }
           ]
         }
-      }
+      },
+      "sources": [
+        {
+          "label": "Edwino.pdf",
+          "pages": [
+            347
+          ]
+        },
+        {
+          "label": "AASLD, Wilson disease guidance 2022, executive summary",
+          "url": "https://onlinelibrary.wiley.com/doi/10.1002/hep.32805"
+        }
+      ]
     },
     {
       "id": "12.06-02",
       "parent_topic_id": "12.06-02",
       "block_id": "12.06",
-      "name": "Tratar crisis y mantenimiento en síndrome de Dravet",
-      "answer_kind": "decision",
+      "name": "Síndrome de Dravet",
+      "answer_kind": "diagnosis",
       "variants": {
         "easy": {
-          "vignette": "Un lactante previamente sin alteraciones presenta convulsión hemiclónica prolongada con fiebre. En meses posteriores aparecen crisis de varios tipos y se enlentece el desarrollo, sin una causa estructural clara. ¿Qué acción o clasificación corresponde a este contexto?",
+          "vignette": "Un lactante previamente sin alteraciones presenta convulsión hemiclónica prolongada con fiebre. En meses posteriores aparecen crisis de varios tipos y se enlentece el desarrollo, sin una causa estructural clara.",
           "discriminator": "convulsión hemiclónica prolongada con fiebre",
           "explanation": "El dato decisivo es convulsión hemiclónica prolongada con fiebre. La disfunción de canales de sodio, frecuentemente por SCN1A, altera redes inhibitorias y favorece epilepsia temprana sensible a temperatura; la evolución incluye crisis múltiples y trastorno del desarrollo. Tratar la crisis prolongada con benzodiacepina según protocolo y solicitar atención urgente si persiste. Referir a neurología pediátrica para evaluación genética y plan individual de rescate y mantenimiento.",
           "confusable_with": "Convulsión febril simple",
-          "why_not": "La duración, el carácter hemiclónico, la aparición de varios tipos y el enlentecimiento del desarrollo exceden una convulsión febril simple. La urgencia y el mantenimiento no tienen la misma selección farmacológica.",
+          "why_not": "La duración, el carácter hemiclónico, los tipos múltiples y el enlentecimiento del desarrollo orientan a Dravet. La fiebre puede precipitar una crisis, pero eso no demuestra una encefalopatía causada por vacunación.",
           "facts": [
             {
               "field": "pattern",
@@ -1653,11 +1754,11 @@
           ]
         },
         "medium": {
-          "vignette": "Un niño con crisis febriles prolongadas y varios tipos de crisis necesita tratamiento de mantenimiento. Se evitan fármacos de sodio que pueden empeorar el síndrome, con neurología. ¿Qué acción o clasificación corresponde a este contexto?",
-          "discriminator": "Mantenimiento en epilepsia con crisis febriles prolongadas",
-          "explanation": "El dato decisivo es Mantenimiento en epilepsia con crisis febriles prolongadas. La selección de mantenimiento difiere de la medicación aguda para estado epiléptico. Evitar bloqueadores de sodio que empeoran este síndrome, como lamotrigina o carbamazepina, y seleccionar terapia con neurología.",
+          "vignette": "Un niño con crisis febriles hemiclónicas prolongadas desde la lactancia desarrolla varios tipos de crisis y enlentecimiento del desarrollo. La evaluación genética encuentra una alteración compatible de SCN1A.",
+          "discriminator": "Evolución epiléptica característica con apoyo genético",
+          "explanation": "Evolución epiléptica característica con apoyo genético. Este patrón orienta a Síndrome de Dravet. La disfunción de canales de sodio, frecuentemente por SCN1A, altera redes inhibitorias y favorece epilepsia temprana sensible a temperatura; la evolución incluye crisis múltiples y trastorno del desarrollo.",
           "confusable_with": "Convulsión febril simple",
-          "why_not": "La duración, el carácter hemiclónico, la aparición de varios tipos y el enlentecimiento del desarrollo exceden una convulsión febril simple. La urgencia y el mantenimiento no tienen la misma selección farmacológica.",
+          "why_not": "La duración, el carácter hemiclónico, los tipos múltiples y el enlentecimiento del desarrollo orientan a Dravet. La fiebre puede precipitar una crisis, pero eso no demuestra una encefalopatía causada por vacunación.",
           "facts": [
             {
               "field": "pattern",
@@ -1730,11 +1831,11 @@
           ]
         },
         "contrast": {
-          "vignette": "Un niño con esta epilepsia tiene fiebre después de vacunación. Se controla la fiebre, se aplica rescate si hay crisis y se mantiene vacunación rutinaria con plan individual. ¿Qué acción o clasificación corresponde a este contexto?",
-          "discriminator": "Fiebre posvacunal que requiere plan preventivo",
-          "explanation": "El dato decisivo es Fiebre posvacunal que requiere plan preventivo. La temperatura puede precipitar crisis, pero la asociación temporal no indica que la vacuna causó la enfermedad genética. Tratar la fiebre y aplicar el plan de rescate si hay crisis. Mantener vacunación rutinaria con un plan preventivo individual.",
+          "vignette": "Un lactante previamente sin alteraciones tiene una crisis hemiclónica prolongada desencadenada por fiebre tras vacunación. Después aparecen crisis de varios tipos y retraso del desarrollo; el conjunto muestra una epilepsia sensible a fiebre, sin atribuir la causa del síndrome a la vacuna.",
+          "discriminator": "Primer episodio precipitado por fiebre con evolución posterior característica",
+          "explanation": "Primer episodio precipitado por fiebre con evolución posterior característica. Este patrón orienta a Síndrome de Dravet. La disfunción de canales de sodio, frecuentemente por SCN1A, altera redes inhibitorias y favorece epilepsia temprana sensible a temperatura; la evolución incluye crisis múltiples y trastorno del desarrollo.",
           "confusable_with": "Convulsión febril simple",
-          "why_not": "La duración, el carácter hemiclónico, la aparición de varios tipos y el enlentecimiento del desarrollo exceden una convulsión febril simple. La urgencia y el mantenimiento no tienen la misma selección farmacológica.",
+          "why_not": "La duración, el carácter hemiclónico, los tipos múltiples y el enlentecimiento del desarrollo orientan a Dravet. La fiebre puede precipitar una crisis, pero eso no demuestra una encefalopatía causada por vacunación.",
           "facts": [
             {
               "field": "pattern",
@@ -1806,7 +1907,19 @@
             }
           ]
         }
-      }
+      },
+      "sources": [
+        {
+          "label": "Edwino.pdf",
+          "pages": [
+            350
+          ]
+        },
+        {
+          "label": "International consensus, Diagnosis and management of Dravet syndrome 2022",
+          "url": "https://onlinelibrary.wiley.com/doi/10.1111/epi.17274"
+        }
+      ]
     }
   ]
 }

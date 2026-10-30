@@ -166,21 +166,30 @@
             }
           ]
         }
-      }
+      },
+      "sources": [
+        {
+          "label": "Edwino.pdf",
+          "pages": [
+            23,
+            24
+          ]
+        }
+      ]
     },
     {
       "id": "02.01-02",
       "parent_topic_id": "02.01-02",
       "block_id": "02.01",
-      "name": "Evaluar insuficiencia venosa y descartar trombosis ante edema agudo",
-      "answer_kind": "decision",
+      "name": "Insuficiencia venosa",
+      "answer_kind": "diagnosis",
       "variants": {
         "easy": {
-          "vignette": "Una mujer que trabaja de pie presenta pesadez vespertina, edema de tobillos y várices. Tiene pigmentación ocre cerca del maléolo medial; mejora cuando eleva las piernas. ¿Qué acción o clasificación corresponde?",
+          "vignette": "Una mujer que trabaja de pie presenta pesadez vespertina, edema de tobillos y várices. Tiene pigmentación ocre cerca del maléolo medial; mejora cuando eleva las piernas.",
           "discriminator": "mejora cuando eleva las piernas",
           "explanation": "El dato decisivo es mejora cuando eleva las piernas. El reflujo o la obstrucción venosa elevan la presión distal; la salida de líquido y el depósito de hemosiderina producen edema y cambios cutáneos crónicos. Valorar piel y pulsos. Iniciar medidas posturales, ejercicio y compresión apropiada tras valorar la circulación arterial. Solicitar dúplex si se planea intervención.",
           "confusable_with": "Enfermedad arterial periférica",
-          "why_not": "La relación con la bipedestación y la mejoría con elevación indican hipertensión venosa. La claudicación y los pulsos débiles orientan a un mecanismo arterial.",
+          "why_not": "Los pulsos débiles y la claudicación orientan a déficit arterial. La pesadez de bipedestación, el edema y la mejoría al elevar la pierna favorecen insuficiencia venosa.",
           "facts": [
             {
               "field": "pattern",
@@ -209,11 +218,11 @@
           ]
         },
         "medium": {
-          "vignette": "Una persona con várices, edema vespertino y pigmentación ocre sigue sintomática pese al manejo conservador. ¿Qué acción o clasificación corresponde?",
-          "discriminator": "Várices sintomáticas con fracaso conservador",
-          "explanation": "El dato decisivo es Várices sintomáticas con fracaso conservador. Los síntomas o complicaciones pueden requerir corrección del reflujo. Enviar a valoración para tratamiento intervencionista.",
+          "vignette": "Una persona con várices y edema vespertino desarrolla una úlcera cutánea en la pierna. Hay pigmentación ocre y cambios tróficos crónicos, que señalan hipertensión venosa como mecanismo de la lesión.",
+          "discriminator": "Úlcera sobre cambios tróficos de hipertensión venosa",
+          "explanation": "La ulceración junto con várices, edema vespertino y pigmentación ocre apoya insuficiencia venosa crónica complicada. El reflujo o la obstrucción venosa elevan presión distal y producen daño cutáneo; la circulación arterial también debe valorarse.",
           "confusable_with": "Enfermedad arterial periférica",
-          "why_not": "La relación con la bipedestación y la mejoría con elevación indican hipertensión venosa. La claudicación y los pulsos débiles orientan a un mecanismo arterial.",
+          "why_not": "Los pulsos débiles y la claudicación orientan a déficit arterial. La pesadez de bipedestación, el edema y la mejoría al elevar la pierna favorecen insuficiencia venosa.",
           "facts": [
             {
               "field": "pattern",
@@ -267,14 +276,20 @@
               "field": "modifiers.0.reason",
               "text": "Los síntomas o complicaciones pueden requerir corrección del reflujo."
             }
+          ],
+          "source_evidence": [
+            {
+              "page": 25,
+              "quote": " decúbito, reposo y elevación de piernas. • Hiperpigmentación. • Úlceras. B Los cambios en el color y en la textura de la piel son el resultado de la destrucción de "
+            }
           ]
         },
         "contrast": {
-          "vignette": "Una persona con várices y cambios cutáneos crónicos presenta ahora edema unilateral agudo. Se debe descartar trombosis antes de atribuirlo al problema crónico. ¿Qué acción o clasificación corresponde?",
-          "discriminator": "Edema unilateral agudo sobre cambios venosos crónicos",
-          "explanation": "Una pierna con edema agudo unilateral requiere descartar trombosis; no se debe asumir una causa venosa crónica.",
+          "vignette": "En una persona con pierna edematosa crónica, el dúplex identifica reflujo u obstrucción venosa. La pesadez disminuye al elevar la extremidad y se comprueban pulsos antes de indicar compresión.",
+          "discriminator": "Reflujo venoso demostrado con alivio postural",
+          "explanation": "Reflujo venoso demostrado con alivio postural. Este patrón orienta a Insuficiencia venosa. El reflujo o la obstrucción venosa elevan la presión distal; la salida de líquido y el depósito de hemosiderina producen edema y cambios cutáneos crónicos.",
           "confusable_with": "Enfermedad arterial periférica",
-          "why_not": "La relación con la bipedestación y la mejoría con elevación indican hipertensión venosa. La claudicación y los pulsos débiles orientan a un mecanismo arterial.",
+          "why_not": "Los pulsos débiles y la claudicación orientan a déficit arterial. La pesadez de bipedestación, el edema y la mejoría al elevar la pierna favorecen insuficiencia venosa.",
           "facts": [
             {
               "field": "pattern",
@@ -330,7 +345,16 @@
             }
           ]
         }
-      }
+      },
+      "sources": [
+        {
+          "label": "Edwino.pdf",
+          "pages": [
+            25,
+            26
+          ]
+        }
+      ]
     },
     {
       "id": "02.02-01",
@@ -344,7 +368,7 @@
           "discriminator": "una sola pierna",
           "explanation": "El dato decisivo es una sola pierna. La estasis, la lesión endotelial y la hipercoagulabilidad favorecen un trombo venoso profundo; la obstrucción dificulta el retorno y puede originar embolia pulmonar. Estimar probabilidad clínica con Wells. Seleccionar dímero D o ultrasonido por compresión según probabilidad; si se confirma trombosis, iniciar anticoagulación tras valorar riesgo hemorrágico.",
           "confusable_with": "Insuficiencia venosa crónica",
-          "why_not": "El inicio unilateral doloroso en un contexto posoperatorio sugiere trombosis. La disnea nueva obliga a buscar una complicación embólica, no solo edema venoso crónico.",
+          "why_not": "El inicio unilateral doloroso y el trombo demostrado favorecen TVP. El edema vespertino crónico con várices y pigmentación ocre orienta a insuficiencia venosa, aunque pueden coexistir.",
           "facts": [
             {
               "field": "pattern",
@@ -373,11 +397,11 @@
           ]
         },
         "medium": {
-          "vignette": "Un paciente tiene probabilidad clínica alta de un trombo venoso en la pierna por dolor, calor y edema unilateral. Se decide el estudio para confirmarlo.",
-          "discriminator": "Probabilidad alta con edema unilateral",
-          "explanation": "El dato decisivo es Probabilidad alta con edema unilateral. Un resultado negativo de dímero D no basta en este contexto. Priorizar ultrasonido sin usar dímero D para excluir.",
+          "vignette": "Una persona con alta probabilidad clínica presenta dolor, calor y edema unilateral de pierna. El ultrasonido demuestra un trombo venoso y confirma la falta de compresibilidad del segmento afectado.",
+          "discriminator": "Trombosis de pierna demostrada por ultrasonido",
+          "explanation": "Trombosis de pierna demostrada por ultrasonido. Este patrón orienta a Trombosis venosa profunda. La estasis, la lesión endotelial y la hipercoagulabilidad favorecen un trombo venoso profundo; la obstrucción dificulta el retorno y puede originar embolia pulmonar.",
           "confusable_with": "Insuficiencia venosa crónica",
-          "why_not": "El inicio unilateral doloroso en un contexto posoperatorio sugiere trombosis. La disnea nueva obliga a buscar una complicación embólica, no solo edema venoso crónico.",
+          "why_not": "El inicio unilateral doloroso y el trombo demostrado favorecen TVP. El edema vespertino crónico con várices y pigmentación ocre orienta a insuficiencia venosa, aunque pueden coexistir.",
           "facts": [
             {
               "field": "pattern",
@@ -446,11 +470,11 @@
           ]
         },
         "contrast": {
-          "vignette": "Durante la evaluación de una pierna dolorosa y edematosa en un operado reciente aparece disnea nueva. El equipo amplía la evaluación urgente.",
-          "discriminator": "Síntomas de pierna seguidos de disnea",
-          "explanation": "El dato decisivo es Síntomas de pierna seguidos de disnea. El trombo puede embolizar. Evaluar embolia pulmonar.",
+          "vignette": "Una persona inmovilizada tiene aumento unilateral de volumen y dolor de pantorrilla. El estudio vascular demuestra obstrucción trombótica del retorno venoso, en vez del edema crónico con reflujo.",
+          "discriminator": "Obstrucción venosa trombótica tras inmovilidad",
+          "explanation": "Obstrucción venosa trombótica tras inmovilidad. Este patrón orienta a Trombosis venosa profunda. La estasis, la lesión endotelial y la hipercoagulabilidad favorecen un trombo venoso profundo; la obstrucción dificulta el retorno y puede originar embolia pulmonar.",
           "confusable_with": "Insuficiencia venosa crónica",
-          "why_not": "El inicio unilateral doloroso en un contexto posoperatorio sugiere trombosis. La disnea nueva obliga a buscar una complicación embólica, no solo edema venoso crónico.",
+          "why_not": "El inicio unilateral doloroso y el trombo demostrado favorecen TVP. El edema vespertino crónico con várices y pigmentación ocre orienta a insuficiencia venosa, aunque pueden coexistir.",
           "facts": [
             {
               "field": "pattern",
@@ -518,7 +542,15 @@
             }
           ]
         }
-      }
+      },
+      "sources": [
+        {
+          "label": "Edwino.pdf",
+          "pages": [
+            40
+          ]
+        }
+      ]
     },
     {
       "id": "02.02-02",
@@ -666,7 +698,15 @@
             }
           ]
         }
-      }
+      },
+      "sources": [
+        {
+          "label": "Edwino.pdf",
+          "pages": [
+            27
+          ]
+        }
+      ]
     },
     {
       "id": "02.03-01",
@@ -709,11 +749,11 @@
           ]
         },
         "medium": {
-          "vignette": "Un paciente tiene probabilidad clínica alta de un trombo venoso en la pierna por dolor, calor y edema unilateral. Se decide el estudio para confirmarlo.",
-          "discriminator": "Probabilidad alta con edema unilateral",
-          "explanation": "El dato decisivo es Probabilidad alta con edema unilateral. Un resultado negativo de dímero D no basta en este contexto. Priorizar ultrasonido sin usar dímero D para excluir.",
+          "vignette": "Una persona con alta probabilidad clínica presenta dolor, calor y edema unilateral de pierna. El ultrasonido demuestra un trombo venoso y confirma la falta de compresibilidad del segmento afectado.",
+          "discriminator": "Trombosis de pierna demostrada por ultrasonido",
+          "explanation": "Trombosis de pierna demostrada por ultrasonido. Este patrón orienta a Trombosis venosa profunda. La estasis, la lesión endotelial y la hipercoagulabilidad favorecen un trombo venoso profundo; la obstrucción dificulta el retorno y puede originar embolia pulmonar.",
           "confusable_with": "Insuficiencia venosa crónica",
-          "why_not": "El inicio unilateral doloroso en un contexto posoperatorio sugiere trombosis. La disnea nueva obliga a buscar una complicación embólica, no solo edema venoso crónico.",
+          "why_not": "El inicio unilateral doloroso y el trombo demostrado favorecen TVP. El edema vespertino crónico con várices y pigmentación ocre orienta a insuficiencia venosa, aunque pueden coexistir.",
           "facts": [
             {
               "field": "pattern",
@@ -782,11 +822,11 @@
           ]
         },
         "contrast": {
-          "vignette": "Durante la evaluación de una pierna dolorosa y edematosa en un operado reciente aparece disnea nueva. El equipo amplía la evaluación urgente.",
-          "discriminator": "Síntomas de pierna seguidos de disnea",
-          "explanation": "El dato decisivo es Síntomas de pierna seguidos de disnea. El trombo puede embolizar. Evaluar embolia pulmonar.",
+          "vignette": "Una persona inmovilizada tiene aumento unilateral de volumen y dolor de pantorrilla. El estudio vascular demuestra obstrucción trombótica del retorno venoso, en vez del edema crónico con reflujo.",
+          "discriminator": "Obstrucción venosa trombótica tras inmovilidad",
+          "explanation": "Obstrucción venosa trombótica tras inmovilidad. Este patrón orienta a Trombosis venosa profunda. La estasis, la lesión endotelial y la hipercoagulabilidad favorecen un trombo venoso profundo; la obstrucción dificulta el retorno y puede originar embolia pulmonar.",
           "confusable_with": "Insuficiencia venosa crónica",
-          "why_not": "El inicio unilateral doloroso en un contexto posoperatorio sugiere trombosis. La disnea nueva obliga a buscar una complicación embólica, no solo edema venoso crónico.",
+          "why_not": "El inicio unilateral doloroso y el trombo demostrado favorecen TVP. El edema vespertino crónico con várices y pigmentación ocre orienta a insuficiencia venosa, aunque pueden coexistir.",
           "facts": [
             {
               "field": "pattern",
@@ -854,7 +894,15 @@
             }
           ]
         }
-      }
+      },
+      "sources": [
+        {
+          "label": "Edwino.pdf",
+          "pages": [
+            40
+          ]
+        }
+      ]
     },
     {
       "id": "02.03-02",
@@ -1042,7 +1090,19 @@
             }
           ]
         }
-      }
+      },
+      "sources": [
+        {
+          "label": "Edwino.pdf",
+          "pages": [
+            33,
+            34,
+            35,
+            36,
+            37
+          ]
+        }
+      ]
     },
     {
       "id": "02.04-01",
@@ -1230,7 +1290,19 @@
             }
           ]
         }
-      }
+      },
+      "sources": [
+        {
+          "label": "Edwino.pdf",
+          "pages": [
+            33,
+            34,
+            35,
+            36,
+            37
+          ]
+        }
+      ]
     },
     {
       "id": "02.05-01",
@@ -1243,8 +1315,8 @@
           "vignette": "Una embarazada con inmovilidad reciente presenta dolor y edema de la pierna izquierda. Niega disnea, pero el aumento de volumen unilateral persiste durante la exploración.",
           "discriminator": "edema de la pierna izquierda",
           "explanation": "El dato decisivo es edema de la pierna izquierda. Los cambios gestacionales y la estasis aumentan el riesgo trombótico; el trombo profundo produce edema unilateral y puede embolizar hacia la circulación pulmonar. Solicitar ultrasonido con compresión. En trombosis confirmada, usar heparina de bajo peso molecular salvo contraindicación y coordinar el plan obstétrico.",
-          "confusable_with": "Edema habitual del embarazo",
-          "why_not": "El dolor y el edema unilateral, y sobre todo el compromiso respiratorio, requieren buscar tromboembolia. No se deben atribuir a un cambio fisiológico general del embarazo.",
+          "confusable_with": "Edema fisiológico del embarazo",
+          "why_not": "El trombo demostrado y la repercusión respiratoria apoyan tromboembolia venosa. El edema fisiológico no explica un trombo ni una embolia pulmonar confirmada.",
           "facts": [
             {
               "field": "pattern",
@@ -1273,11 +1345,11 @@
           ]
         },
         "medium": {
-          "vignette": "Una embarazada con edema doloroso unilateral presenta disnea nueva y deterioro circulatorio. Se solicita evaluación conjunta urgente.",
-          "discriminator": "Síntomas venosos durante embarazo con compromiso respiratorio",
-          "explanation": "El dato decisivo es Síntomas venosos durante embarazo con compromiso respiratorio. Puede representar embolia de alto riesgo. Evaluar TEP urgente con equipo obstétrico.",
-          "confusable_with": "Edema habitual del embarazo",
-          "why_not": "El dolor y el edema unilateral, y sobre todo el compromiso respiratorio, requieren buscar tromboembolia. No se deben atribuir a un cambio fisiológico general del embarazo.",
+          "vignette": "Una embarazada con trombo venoso demostrado en la pierna desarrolla disnea brusca y deterioro circulatorio. Se investiga embolización de esa fuente venosa al pulmón.",
+          "discriminator": "Enfermedad venosa trombótica con repercusión pulmonar en embarazo",
+          "explanation": "Enfermedad venosa trombótica con repercusión pulmonar en embarazo. Este patrón orienta a Tromboembolia venosa en obstetricia. Los cambios gestacionales y la estasis aumentan el riesgo trombótico; el trombo profundo produce edema unilateral y puede embolizar hacia la circulación pulmonar.",
+          "confusable_with": "Edema fisiológico del embarazo",
+          "why_not": "El trombo demostrado y la repercusión respiratoria apoyan tromboembolia venosa. El edema fisiológico no explica un trombo ni una embolia pulmonar confirmada.",
           "facts": [
             {
               "field": "pattern",
@@ -1338,11 +1410,11 @@
           ]
         },
         "contrast": {
-          "vignette": "En una embarazada con inmovilidad reciente se confirma un evento pulmonar grave. El equipo obstétrico debe elegir anticoagulación y valorar reperfusión.",
-          "discriminator": "Embarazo con tromboembolia pulmonar grave",
-          "explanation": "El dato decisivo es Embarazo con tromboembolia pulmonar grave. La inestabilidad modifica el tratamiento inicial. Valorar heparina no fraccionada intravenosa y reperfusión especializada.",
-          "confusable_with": "Edema habitual del embarazo",
-          "why_not": "El dolor y el edema unilateral, y sobre todo el compromiso respiratorio, requieren buscar tromboembolia. No se deben atribuir a un cambio fisiológico general del embarazo.",
+          "vignette": "Una embarazada con inmovilidad reciente tiene disnea y dolor torácico. La evaluación identifica un evento embólico pulmonar de origen venoso, además del contexto de alto riesgo gestacional.",
+          "discriminator": "Embolia pulmonar venosa confirmada durante gestación",
+          "explanation": "Embolia pulmonar venosa confirmada durante gestación. Este patrón orienta a Tromboembolia venosa en obstetricia. Los cambios gestacionales y la estasis aumentan el riesgo trombótico; el trombo profundo produce edema unilateral y puede embolizar hacia la circulación pulmonar.",
+          "confusable_with": "Edema fisiológico del embarazo",
+          "why_not": "El trombo demostrado y la repercusión respiratoria apoyan tromboembolia venosa. El edema fisiológico no explica un trombo ni una embolia pulmonar confirmada.",
           "facts": [
             {
               "field": "pattern",
@@ -1402,7 +1474,16 @@
             }
           ]
         }
-      }
+      },
+      "sources": [
+        {
+          "label": "Edwino.pdf",
+          "pages": [
+            38,
+            39
+          ]
+        }
+      ]
     },
     {
       "id": "02.06-01",
@@ -1590,7 +1671,19 @@
             }
           ]
         }
-      }
+      },
+      "sources": [
+        {
+          "label": "Edwino.pdf",
+          "pages": [
+            28,
+            29,
+            30,
+            31,
+            32
+          ]
+        }
+      ]
     },
     {
       "id": "02.07-01",
@@ -1778,17 +1871,25 @@
             }
           ]
         }
-      }
+      },
+      "sources": [
+        {
+          "label": "Edwino.pdf",
+          "pages": [
+            41
+          ]
+        }
+      ]
     },
     {
       "id": "02.07-02",
       "parent_topic_id": "02.07-02",
       "block_id": "02.07",
-      "name": "Evaluar insuficiencia venosa y descartar trombosis ante edema agudo",
-      "answer_kind": "decision",
+      "name": "Insuficiencia venosa",
+      "answer_kind": "diagnosis",
       "variants": {
         "easy": {
-          "vignette": "Una mujer que trabaja de pie presenta pesadez vespertina, edema de tobillos y várices. Tiene pigmentación ocre cerca del maléolo medial; mejora cuando eleva las piernas. ¿Qué acción o clasificación corresponde?",
+          "vignette": "Una mujer que trabaja de pie presenta pesadez vespertina, edema de tobillos y várices. Tiene pigmentación ocre cerca del maléolo medial; mejora cuando eleva las piernas.",
           "discriminator": "mejora cuando eleva las piernas",
           "explanation": "El dato decisivo es mejora cuando eleva las piernas. El reflujo o la obstrucción venosa elevan la presión distal; la salida de líquido y el depósito de hemosiderina producen edema y cambios cutáneos crónicos. Valorar piel y pulsos. Iniciar medidas posturales, ejercicio y compresión apropiada tras valorar la circulación arterial. Solicitar dúplex si se planea intervención.",
           "confusable_with": "Enfermedad arterial periférica",
@@ -1821,11 +1922,11 @@
           ]
         },
         "medium": {
-          "vignette": "Una persona con várices, edema vespertino y pigmentación ocre sigue sintomática pese al manejo conservador. ¿Qué acción o clasificación corresponde?",
-          "discriminator": "Várices sintomáticas con fracaso conservador",
-          "explanation": "El dato decisivo es Várices sintomáticas con fracaso conservador. Los síntomas o complicaciones pueden requerir corrección del reflujo. Enviar a valoración para tratamiento intervencionista.",
+          "vignette": "Una persona con várices y edema vespertino desarrolla una úlcera cutánea en la pierna. Hay pigmentación ocre y cambios tróficos crónicos, que señalan hipertensión venosa como mecanismo de la lesión.",
+          "discriminator": "Úlcera sobre cambios tróficos de hipertensión venosa",
+          "explanation": "La ulceración junto con várices, edema vespertino y pigmentación ocre apoya insuficiencia venosa crónica complicada. El reflujo o la obstrucción venosa elevan presión distal y producen daño cutáneo; la circulación arterial también debe valorarse.",
           "confusable_with": "Enfermedad arterial periférica",
-          "why_not": "La relación con la bipedestación y la mejoría con elevación indican hipertensión venosa. La claudicación y los pulsos débiles orientan a un mecanismo arterial.",
+          "why_not": "Los pulsos débiles y la claudicación orientan a déficit arterial. La pesadez de bipedestación, el edema y la mejoría al elevar la pierna favorecen insuficiencia venosa.",
           "facts": [
             {
               "field": "pattern",
@@ -1879,14 +1980,20 @@
               "field": "modifiers.0.reason",
               "text": "Los síntomas o complicaciones pueden requerir corrección del reflujo."
             }
+          ],
+          "source_evidence": [
+            {
+              "page": 25,
+              "quote": " decúbito, reposo y elevación de piernas. • Hiperpigmentación. • Úlceras. B Los cambios en el color y en la textura de la piel son el resultado de la destrucción de "
+            }
           ]
         },
         "contrast": {
-          "vignette": "Una persona con várices y cambios cutáneos crónicos presenta ahora edema unilateral agudo. Se debe descartar trombosis antes de atribuirlo al problema crónico. ¿Qué acción o clasificación corresponde?",
-          "discriminator": "Edema unilateral agudo sobre cambios venosos crónicos",
-          "explanation": "Una pierna con edema agudo unilateral requiere descartar trombosis; no se debe asumir una causa venosa crónica.",
+          "vignette": "En una persona con pierna edematosa crónica, el dúplex identifica reflujo u obstrucción venosa. La pesadez disminuye al elevar la extremidad y se comprueban pulsos antes de indicar compresión.",
+          "discriminator": "Reflujo venoso demostrado con alivio postural",
+          "explanation": "Reflujo venoso demostrado con alivio postural. Este patrón orienta a Insuficiencia venosa. El reflujo o la obstrucción venosa elevan la presión distal; la salida de líquido y el depósito de hemosiderina producen edema y cambios cutáneos crónicos.",
           "confusable_with": "Enfermedad arterial periférica",
-          "why_not": "La relación con la bipedestación y la mejoría con elevación indican hipertensión venosa. La claudicación y los pulsos débiles orientan a un mecanismo arterial.",
+          "why_not": "Los pulsos débiles y la claudicación orientan a déficit arterial. La pesadez de bipedestación, el edema y la mejoría al elevar la pierna favorecen insuficiencia venosa.",
           "facts": [
             {
               "field": "pattern",
@@ -1942,7 +2049,16 @@
             }
           ]
         }
-      }
+      },
+      "sources": [
+        {
+          "label": "Edwino.pdf",
+          "pages": [
+            25,
+            26
+          ]
+        }
+      ]
     },
     {
       "id": "02.07-03",
@@ -2106,7 +2222,16 @@
             }
           ]
         }
-      }
+      },
+      "sources": [
+        {
+          "label": "Edwino.pdf",
+          "pages": [
+            23,
+            24
+          ]
+        }
+      ]
     },
     {
       "id": "02.07-04",
@@ -2294,7 +2419,19 @@
             }
           ]
         }
-      }
+      },
+      "sources": [
+        {
+          "label": "Edwino.pdf",
+          "pages": [
+            28,
+            29,
+            30,
+            31,
+            32
+          ]
+        }
+      ]
     },
     {
       "id": "02.08-01",
@@ -2482,7 +2619,15 @@
             }
           ]
         }
-      }
+      },
+      "sources": [
+        {
+          "label": "Edwino.pdf",
+          "pages": [
+            41
+          ]
+        }
+      ]
     },
     {
       "id": "02.08-02",
@@ -2670,7 +2815,19 @@
             }
           ]
         }
-      }
+      },
+      "sources": [
+        {
+          "label": "Edwino.pdf",
+          "pages": [
+            28,
+            29,
+            30,
+            31,
+            32
+          ]
+        }
+      ]
     }
   ]
 }

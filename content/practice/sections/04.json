@@ -8,15 +8,15 @@
       "id": "04.01-01",
       "parent_topic_id": "04.01-01",
       "block_id": "04.01",
-      "name": "Reclasificar dolor coronario estable ante nuevos datos de lesión",
-      "answer_kind": "decision",
+      "name": "Enfermedad coronaria",
+      "answer_kind": "diagnosis",
       "variants": {
         "easy": {
-          "vignette": "Un adulto con tabaquismo presenta opresión retroesternal al subir escaleras. Cede en pocos minutos al detenerse y se reproduce con un esfuerzo similar, sin dolor actual en reposo. ¿Qué acción o clasificación corresponde?",
+          "vignette": "Un adulto con tabaquismo presenta opresión retroesternal al subir escaleras. Cede en pocos minutos al detenerse y se reproduce con un esfuerzo similar, sin dolor actual en reposo.",
           "discriminator": "se reproduce con un esfuerzo similar",
           "explanation": "El dato decisivo es se reproduce con un esfuerzo similar. La obstrucción coronaria limita la reserva de flujo; durante el esfuerzo la demanda de oxígeno supera el aporte y produce dolor que mejora al bajar la demanda. Caracterizar el dolor, obtener ECG y valorar riesgo cardiovascular. Si el patrón es estable, organizar estudio de isquemia y prevención; si cambia, evaluar síndrome coronario agudo.",
-          "confusable_with": "Infarto agudo de miocardio",
-          "why_not": "El dolor estable ligado al esfuerzo sugiere isquemia crónica. Un cambio a dolor nuevo o en reposo exige descartar síndrome agudo y no se maneja como patrón estable.",
+          "confusable_with": "Pericarditis",
+          "why_not": "La relación con demanda y el patrón de dolor isquémico orientan a enfermedad coronaria. El dolor pericárdico suele relacionarse con respiración y postura; los cambios agudos requieren evaluación urgente.",
           "facts": [
             {
               "field": "pattern",
@@ -45,11 +45,11 @@
           ]
         },
         "medium": {
-          "vignette": "Una persona con dolor retroesternal reproducible al esfuerzo ahora presenta un episodio nuevo, prolongado y en reposo. Se necesita reclasificar la urgencia. ¿Qué acción o clasificación corresponde?",
-          "discriminator": "Cambio de dolor de esfuerzo a dolor prolongado en reposo",
-          "explanation": "El dato decisivo es Cambio de dolor de esfuerzo a dolor prolongado en reposo. Puede existir una placa complicada. Enviar a evaluación urgente de síndrome coronario agudo.",
-          "confusable_with": "Infarto agudo de miocardio",
-          "why_not": "El dolor estable ligado al esfuerzo sugiere isquemia crónica. Un cambio a dolor nuevo o en reposo exige descartar síndrome agudo y no se maneja como patrón estable.",
+          "vignette": "Una persona con tabaquismo presenta opresión torácica al exponerse al frío o a una emoción intensa. El dolor cede al disminuir la demanda y se reproduce con esos estímulos.",
+          "discriminator": "Isquemia provocada por aumento de demanda distinto del ejercicio",
+          "explanation": "Isquemia provocada por aumento de demanda distinto del ejercicio. Este patrón orienta a Enfermedad coronaria. La obstrucción coronaria limita la reserva de flujo; durante el esfuerzo la demanda de oxígeno supera el aporte y produce dolor que mejora al bajar la demanda.",
+          "confusable_with": "Pericarditis",
+          "why_not": "La relación con demanda y el patrón de dolor isquémico orientan a enfermedad coronaria. El dolor pericárdico suele relacionarse con respiración y postura; los cambios agudos requieren evaluación urgente.",
           "facts": [
             {
               "field": "pattern",
@@ -103,14 +103,20 @@
               "field": "modifiers.0.reason",
               "text": "Puede existir una placa complicada."
             }
+          ],
+          "source_evidence": [
+            {
+              "page": 99,
+              "quote": "AM Aparece con esfuerzo, emociones o el frío. Aparece con o sin esfuerzo mínimo. Aparece súbitamente. Al estar en reposo el dolor se alivia"
+            }
           ]
         },
         "contrast": {
-          "vignette": "Una persona con dolor compatible con isquemia tiene troponina elevada atribuida a isquemia. Debe cambiarse la clasificación y organizar evaluación urgente en lugar de estudio ambulatorio de angina estable. ¿Qué acción o clasificación corresponde?",
-          "discriminator": "Lesión miocárdica isquémica que cambia la clasificación",
-          "explanation": "La elevación de troponina por isquemia cambia la clasificación. Se requiere evaluación de síndrome coronario agudo y no basta el plan del patrón estable.",
-          "confusable_with": "Angina estable sin lesión miocárdica",
-          "why_not": "La elevación de troponina atribuida a isquemia cambia la clasificación. Este paciente requiere evaluación aguda y no solo estudio ambulatorio del patrón estable.",
+          "vignette": "Una persona con factores ateroscleróticos tiene dolor torácico nuevo que persiste en reposo. El estudio encuentra lesión miocárdica atribuida a isquemia y se investiga una placa coronaria complicada.",
+          "discriminator": "Nuevo síndrome isquémico en una persona con riesgo aterosclerótico",
+          "explanation": "Nuevo síndrome isquémico en una persona con riesgo aterosclerótico. Este patrón orienta a Enfermedad coronaria. La obstrucción coronaria limita la reserva de flujo; durante el esfuerzo la demanda de oxígeno supera el aporte y produce dolor que mejora al bajar la demanda.",
+          "confusable_with": "Pericarditis",
+          "why_not": "La relación con demanda y el patrón de dolor isquémico orientan a enfermedad coronaria. El dolor pericárdico suele relacionarse con respiración y postura; los cambios agudos requieren evaluación urgente.",
           "facts": [
             {
               "field": "pattern",
@@ -166,7 +172,15 @@
             }
           ]
         }
-      }
+      },
+      "sources": [
+        {
+          "label": "Edwino.pdf",
+          "pages": [
+            99
+          ]
+        }
+      ]
     },
     {
       "id": "04.01-02",
@@ -354,7 +368,22 @@
             }
           ]
         }
-      }
+      },
+      "sources": [
+        {
+          "label": "Edwino.pdf",
+          "pages": [
+            111,
+            112,
+            113,
+            114,
+            115,
+            116,
+            117,
+            118
+          ]
+        }
+      ]
     },
     {
       "id": "04.02-01",
@@ -542,7 +571,16 @@
             }
           ]
         }
-      }
+      },
+      "sources": [
+        {
+          "label": "Edwino.pdf",
+          "pages": [
+            120,
+            121
+          ]
+        }
+      ]
     },
     {
       "id": "04.02-02",
@@ -555,8 +593,8 @@
           "vignette": "Un adulto presenta disnea intensa, ortopnea y tos con espuma rosada. Se auscultan estertores difusos y hay congestión yugular; la radiografía muestra opacidades perihiliares y cardiomegalia.",
           "discriminator": "tos con espuma rosada",
           "explanation": "El dato decisivo es tos con espuma rosada. El aumento de presión hidrostática pulmonar desplaza líquido al intersticio y alvéolos; el líquido reduce intercambio gaseoso y distensibilidad, con hipoxemia y trabajo respiratorio elevado. Iniciar soporte respiratorio según gravedad y tratar la causa. En origen cardiogénico, valorar diurético y vasodilatador según congestión y presión arterial.",
-          "confusable_with": "Insuficiencia cardíaca como causa universal",
-          "why_not": "La presencia de líquido alveolar no demuestra por sí sola un origen cardíaco. La causa y la gravedad respiratoria determinan el soporte y el uso de diuréticos.",
+          "confusable_with": "Derrame pleural",
+          "why_not": "El líquido alveolar produce hipoxemia y estertores difusos. El líquido limitado a pleura produce otro patrón de distribución y exploración; el mecanismo del edema puede ser cardíaco o no cardíaco.",
           "facts": [
             {
               "field": "pattern",
@@ -585,11 +623,11 @@
           ]
         },
         "medium": {
-          "vignette": "En un paciente con ortopnea y espuma rosada aparecen hipoxemia grave y fatiga respiratoria. Se necesita decidir soporte ventilatorio.",
-          "discriminator": "Inundación alveolar con fatiga e hipoxemia grave",
-          "explanation": "El dato decisivo es Inundación alveolar con fatiga e hipoxemia grave. El oxígeno aislado puede ser insuficiente. Valorar ventilación no invasiva o invasiva según condición.",
-          "confusable_with": "Insuficiencia cardíaca como causa universal",
-          "why_not": "La presencia de líquido alveolar no demuestra por sí sola un origen cardíaco. La causa y la gravedad respiratoria determinan el soporte y el uso de diuréticos.",
+          "vignette": "Una persona con ortopnea y espuma rosada presenta hipoxemia grave y fatiga. Los estertores y la imagen muestran ocupación alveolar difusa por líquido.",
+          "discriminator": "Ocupación alveolar con falla respiratoria",
+          "explanation": "Ocupación alveolar con falla respiratoria. Este patrón orienta a Edema pulmonar. El aumento de presión hidrostática pulmonar desplaza líquido al intersticio y alvéolos; el líquido reduce intercambio gaseoso y distensibilidad, con hipoxemia y trabajo respiratorio elevado.",
+          "confusable_with": "Derrame pleural",
+          "why_not": "El líquido alveolar produce hipoxemia y estertores difusos. El líquido limitado a pleura produce otro patrón de distribución y exploración; el mecanismo del edema puede ser cardíaco o no cardíaco.",
           "facts": [
             {
               "field": "pattern",
@@ -658,11 +696,11 @@
           ]
         },
         "contrast": {
-          "vignette": "Una persona presenta disnea intensa y estertores, pero la evaluación identifica un origen no cardiogénico. Se debe dirigir el tratamiento a la causa.",
-          "discriminator": "Edema de origen no cardiogénico",
-          "explanation": "El dato decisivo es Edema de origen no cardiogénico. La lesión de permeabilidad tiene un mecanismo diferente. Dirigir el manejo a la causa y evitar asumir beneficio de diuresis.",
-          "confusable_with": "Insuficiencia cardíaca como causa universal",
-          "why_not": "La presencia de líquido alveolar no demuestra por sí sola un origen cardíaco. La causa y la gravedad respiratoria determinan el soporte y el uso de diuréticos.",
+          "vignette": "Una persona con lesión alveolocapilar desarrolla disnea intensa e hipoxemia. La imagen demuestra líquido alveolar difuso y la evaluación identifica un mecanismo no cardiogénico.",
+          "discriminator": "Edema alveolar por mecanismo no cardiogénico",
+          "explanation": "Edema alveolar por mecanismo no cardiogénico. Este patrón orienta a Edema pulmonar. El aumento de presión hidrostática pulmonar desplaza líquido al intersticio y alvéolos; el líquido reduce intercambio gaseoso y distensibilidad, con hipoxemia y trabajo respiratorio elevado.",
+          "confusable_with": "Derrame pleural",
+          "why_not": "El líquido alveolar produce hipoxemia y estertores difusos. El líquido limitado a pleura produce otro patrón de distribución y exploración; el mecanismo del edema puede ser cardíaco o no cardíaco.",
           "facts": [
             {
               "field": "pattern",
@@ -730,7 +768,15 @@
             }
           ]
         }
-      }
+      },
+      "sources": [
+        {
+          "label": "Edwino.pdf",
+          "pages": [
+            95
+          ]
+        }
+      ]
     },
     {
       "id": "04.03-01",
@@ -930,7 +976,20 @@
             }
           ]
         }
-      }
+      },
+      "sources": [
+        {
+          "label": "Edwino.pdf",
+          "pages": [
+            122,
+            123
+          ]
+        },
+        {
+          "label": "AHA/ACC/HFSA 2022: insuficiencia cardíaca",
+          "url": "https://www.jacc.org/doi/10.1016/j.jacc.2021.12.011"
+        }
+      ]
     },
     {
       "id": "04.03-02",
@@ -1118,7 +1177,15 @@
             }
           ]
         }
-      }
+      },
+      "sources": [
+        {
+          "label": "Edwino.pdf",
+          "pages": [
+            128
+          ]
+        }
+      ]
     },
     {
       "id": "04.04-01",
@@ -1306,7 +1373,19 @@
             }
           ]
         }
-      }
+      },
+      "sources": [
+        {
+          "label": "Edwino.pdf",
+          "pages": [
+            104,
+            105,
+            106,
+            107,
+            108
+          ]
+        }
+      ]
     },
     {
       "id": "04.05-01",
@@ -1494,7 +1573,16 @@
             }
           ]
         }
-      }
+      },
+      "sources": [
+        {
+          "label": "Edwino.pdf",
+          "pages": [
+            92,
+            93
+          ]
+        }
+      ]
     },
     {
       "id": "04.06-01",
@@ -1682,21 +1770,29 @@
             }
           ]
         }
-      }
+      },
+      "sources": [
+        {
+          "label": "Edwino.pdf",
+          "pages": [
+            110
+          ]
+        }
+      ]
     },
     {
       "id": "04.07-01",
       "parent_topic_id": "04.07-01",
       "block_id": "04.07",
-      "name": "Evaluar estenosis aórtica e indicar intervención según gravedad",
-      "answer_kind": "decision",
+      "name": "Estenosis aórtica",
+      "answer_kind": "diagnosis",
       "variants": {
         "easy": {
-          "vignette": "Un adulto mayor tiene síncope de esfuerzo y angina. Se ausculta soplo sistólico de eyección en foco aórtico que irradia al cuello; el ascenso del pulso carotídeo es lento. ¿Qué acción o clasificación corresponde?",
+          "vignette": "Un adulto mayor tiene síncope de esfuerzo y angina. Se ausculta soplo sistólico de eyección en foco aórtico que irradia al cuello; el ascenso del pulso carotídeo es lento.",
           "discriminator": "irradia al cuello",
           "explanation": "El dato decisivo es irradia al cuello. El estrechamiento aórtico obstruye la eyección ventricular y aumenta la poscarga; la limitación de gasto durante ejercicio y la demanda miocárdica explican síncope y angina. Solicitar ecocardiograma y valoración por cardiología. Si la lesión es severa y sintomática, valorar intervención valvular de forma prioritaria.",
           "confusable_with": "Insuficiencia aórtica",
-          "why_not": "El soplo sistólico de eyección y el pulso tardío indican obstrucción. Un soplo diastólico con pulso amplio y colapsante sugiere regurgitación aórtica.",
+          "why_not": "El soplo de eyección y el pulso tardío orientan a obstrucción. La regurgitación aórtica produce soplo diastólico y puede generar pulso amplio y colapsante.",
           "facts": [
             {
               "field": "pattern",
@@ -1725,11 +1821,11 @@
           ]
         },
         "medium": {
-          "vignette": "En una persona sin síntomas se identifica soplo sistólico de eyección irradiado al cuello y pulso carotídeo tardío. Se establece vigilancia por gravedad y función ventricular. ¿Qué acción o clasificación corresponde?",
-          "discriminator": "Obstrucción valvular con ausencia de síntomas",
-          "explanation": "El dato decisivo es Obstrucción valvular con ausencia de síntomas. La ausencia de síntomas no elimina riesgo de progresión. Establecer vigilancia según gravedad y función ventricular.",
+          "vignette": "En una persona sin síntomas se detecta pulso carotídeo tardío y soplo sistólico irradiado al cuello. La ecocardiografía identifica reducción del área de la válvula de salida izquierda.",
+          "discriminator": "Obstrucción valvular aún asintomática",
+          "explanation": "Obstrucción valvular aún asintomática. Este patrón orienta a Estenosis aórtica. El estrechamiento aórtico obstruye la eyección ventricular y aumenta la poscarga; la limitación de gasto durante ejercicio y la demanda miocárdica explican síncope y angina.",
           "confusable_with": "Insuficiencia aórtica",
-          "why_not": "El soplo sistólico de eyección y el pulso tardío indican obstrucción. Un soplo diastólico con pulso amplio y colapsante sugiere regurgitación aórtica.",
+          "why_not": "El soplo de eyección y el pulso tardío orientan a obstrucción. La regurgitación aórtica produce soplo diastólico y puede generar pulso amplio y colapsante.",
           "facts": [
             {
               "field": "pattern",
@@ -1786,11 +1882,11 @@
           ]
         },
         "contrast": {
-          "vignette": "El ecocardiograma demuestra una obstrucción aórtica severa. El paciente desarrolla síncope y angina de esfuerzo y necesita definir prioridad de intervención valvular. ¿Qué acción o clasificación corresponde?",
-          "discriminator": "Lesión severa confirmada con síntomas de esfuerzo",
-          "explanation": "La lesión severa sintomática requiere valoración prioritaria de intervención. La intensidad del soplo por sí sola no cuantifica severidad; se integran ecocardiograma y función ventricular.",
+          "vignette": "Una persona mayor desarrolla insuficiencia cardíaca. Tiene soplo sistólico de eyección, pulso pequeño y tardío, y ecocardiografía con hipertrofia ventricular izquierda y reducción del área valvular aórtica.",
+          "discriminator": "Presentación con insuficiencia cardíaca y obstrucción en ecografía",
+          "explanation": "Presentación con insuficiencia cardíaca y obstrucción en ecografía. Este patrón orienta a Estenosis aórtica. El estrechamiento aórtico obstruye la eyección ventricular y aumenta la poscarga; la limitación de gasto durante ejercicio y la demanda miocárdica explican síncope y angina.",
           "confusable_with": "Insuficiencia aórtica",
-          "why_not": "El soplo sistólico de eyección y el pulso tardío indican obstrucción. Un soplo diastólico con pulso amplio y colapsante sugiere regurgitación aórtica.",
+          "why_not": "El soplo de eyección y el pulso tardío orientan a obstrucción. La regurgitación aórtica produce soplo diastólico y puede generar pulso amplio y colapsante.",
           "facts": [
             {
               "field": "pattern",
@@ -1844,9 +1940,23 @@
               "field": "modifiers.0.reason",
               "text": "La ausencia de síntomas no elimina riesgo de progresión."
             }
+          ],
+          "source_evidence": [
+            {
+              "page": 100,
+              "quote": "miento paradójico S2. 2. Insuficiencia cardiaca. • Fenómeno de Gallavardin {Desplazamiento del soplo hacia ápex). 3. Síncope. La aparición de "
+            }
           ]
         }
-      }
+      },
+      "sources": [
+        {
+          "label": "Edwino.pdf",
+          "pages": [
+            100
+          ]
+        }
+      ]
     },
     {
       "id": "04.07-02",
@@ -2046,7 +2156,15 @@
             }
           ]
         }
-      }
+      },
+      "sources": [
+        {
+          "label": "Edwino.pdf",
+          "pages": [
+            125
+          ]
+        }
+      ]
     },
     {
       "id": "04.08-01",
@@ -2060,7 +2178,7 @@
           "discriminator": "chasquido de apertura",
           "explanation": "El dato decisivo es chasquido de apertura. La válvula mitral estrecha dificulta el llenado ventricular y eleva presión auricular izquierda; la congestión pulmonar y la dilatación auricular favorecen disnea y fibrilación auricular. Realizar ecocardiograma para valorar área, anatomía y presión pulmonar. Tratar congestión y evaluar el ritmo; referir para intervención si la repercusión lo indica.",
           "confusable_with": "Insuficiencia mitral",
-          "why_not": "El chasquido y el soplo diastólico apical indican obstrucción de entrada. La regurgitación mitral suele producir un soplo sistólico apical.",
+          "why_not": "La obstrucción mitral se manifiesta en diástole. La regurgitación mitral produce flujo sistólico hacia la aurícula y un soplo apical sistólico.",
           "facts": [
             {
               "field": "pattern",
@@ -2089,11 +2207,11 @@
           ]
         },
         "medium": {
-          "vignette": "Una persona con chasquido de apertura y soplo diastólico apical desarrolla un ritmo auricular irregular. Se evalúan frecuencia y prevención embólica.",
-          "discriminator": "Obstrucción mitral con fibrilación auricular",
-          "explanation": "El dato decisivo es Obstrucción mitral con fibrilación auricular. Aumenta el riesgo embólico. Valorar control de frecuencia y anticoagulación apropiada para la valvulopatía.",
+          "vignette": "Una persona con disnea y un ritmo auricular irregular tiene chasquido de apertura y soplo diastólico en el ápex. La evaluación busca obstrucción de entrada al ventrículo izquierdo.",
+          "discriminator": "Soplo diastólico apical en paciente con arritmia auricular",
+          "explanation": "Soplo diastólico apical en paciente con arritmia auricular. Este patrón orienta a Estenosis mitral. La válvula mitral estrecha dificulta el llenado ventricular y eleva presión auricular izquierda; la congestión pulmonar y la dilatación auricular favorecen disnea y fibrilación auricular.",
           "confusable_with": "Insuficiencia mitral",
-          "why_not": "El chasquido y el soplo diastólico apical indican obstrucción de entrada. La regurgitación mitral suele producir un soplo sistólico apical.",
+          "why_not": "La obstrucción mitral se manifiesta en diástole. La regurgitación mitral produce flujo sistólico hacia la aurícula y un soplo apical sistólico.",
           "facts": [
             {
               "field": "pattern",
@@ -2162,11 +2280,11 @@
           ]
         },
         "contrast": {
-          "vignette": "Un paciente con disnea y lesión mitral obstructiva tiene anatomía desfavorable para tratamiento con balón. Se solicita evaluación quirúrgica.",
-          "discriminator": "Anatomía no favorable para balón",
-          "explanation": "El dato decisivo es Anatomía no favorable para balón. No toda obstrucción admite intervención percutánea. Valorar cirugía.",
+          "vignette": "La imagen de una persona con disnea y hemoptisis muestra una válvula mitral obstructiva con anatomía desfavorable para dilatación con balón. Se confirma el mecanismo de entrada dificultada.",
+          "discriminator": "Obstrucción mitral demostrada en la imagen",
+          "explanation": "Obstrucción mitral demostrada en la imagen. Este patrón orienta a Estenosis mitral. La válvula mitral estrecha dificulta el llenado ventricular y eleva presión auricular izquierda; la congestión pulmonar y la dilatación auricular favorecen disnea y fibrilación auricular.",
           "confusable_with": "Insuficiencia mitral",
-          "why_not": "El chasquido y el soplo diastólico apical indican obstrucción de entrada. La regurgitación mitral suele producir un soplo sistólico apical.",
+          "why_not": "La obstrucción mitral se manifiesta en diástole. La regurgitación mitral produce flujo sistólico hacia la aurícula y un soplo apical sistólico.",
           "facts": [
             {
               "field": "pattern",
@@ -2234,7 +2352,15 @@
             }
           ]
         }
-      }
+      },
+      "sources": [
+        {
+          "label": "Edwino.pdf",
+          "pages": [
+            101
+          ]
+        }
+      ]
     },
     {
       "id": "04.08-02",
@@ -2398,7 +2524,15 @@
             }
           ]
         }
-      }
+      },
+      "sources": [
+        {
+          "label": "Edwino.pdf",
+          "pages": [
+            119
+          ]
+        }
+      ]
     },
     {
       "id": "04.09-01",
@@ -2412,7 +2546,7 @@
           "discriminator": "irradiado a la axila",
           "explanation": "El dato decisivo es irradiado a la axila. La pérdida de cierre mitral permite flujo sistólico a la aurícula izquierda; una rotura papilar aguda eleva rápidamente la presión pulmonar sin adaptación previa. Solicitar ecocardiografía urgente y activar valoración cardiológica y quirúrgica. Tratar edema y perfusión mientras se define una posible rotura de músculo papilar.",
           "confusable_with": "Estenosis mitral",
-          "why_not": "El soplo sistólico apical irradiado a axila indica regurgitación. El contexto posterior a infarto puede representar lesión mecánica aguda y requiere atención urgente.",
+          "why_not": "El flujo sistólico retrógrado orienta a insuficiencia mitral. La falta de un soplo intenso no descarta una lesión aguda grave; la estenosis es una obstrucción diastólica.",
           "facts": [
             {
               "field": "pattern",
@@ -2441,11 +2575,11 @@
           ]
         },
         "medium": {
-          "vignette": "Una persona con soplo apical irradiado a axila mantiene un curso crónico estable. Se valoran síntomas, función ventricular y posibilidad de reparación.",
-          "discriminator": "Curso crónico de regurgitación apical",
-          "explanation": "El dato decisivo es Curso crónico de regurgitación apical. La adaptación ventricular permite evaluación programada. Valorar síntomas, función ventricular y posibilidad de reparación.",
+          "vignette": "Una persona tiene disnea de curso crónico y soplo sistólico apical irradiado a la axila. El ecocardiograma muestra flujo sistólico retrógrado desde el ventrículo hacia la aurícula izquierda.",
+          "discriminator": "Regurgitación sistólica de curso crónico",
+          "explanation": "Regurgitación sistólica de curso crónico. Este patrón orienta a Insuficiencia mitral. La pérdida de cierre mitral permite flujo sistólico a la aurícula izquierda; una rotura papilar aguda eleva rápidamente la presión pulmonar sin adaptación previa.",
           "confusable_with": "Estenosis mitral",
-          "why_not": "El soplo sistólico apical irradiado a axila indica regurgitación. El contexto posterior a infarto puede representar lesión mecánica aguda y requiere atención urgente.",
+          "why_not": "El flujo sistólico retrógrado orienta a insuficiencia mitral. La falta de un soplo intenso no descarta una lesión aguda grave; la estenosis es una obstrucción diastólica.",
           "facts": [
             {
               "field": "pattern",
@@ -2502,11 +2636,11 @@
           ]
         },
         "contrast": {
-          "vignette": "Después de un infarto aparece edema pulmonar brusco, pero no se oye un soplo intenso. La ecocardiografía busca rotura de músculo papilar y flujo sistólico hacia la aurícula izquierda.",
-          "discriminator": "Regurgitación aguda grave sin soplo intenso",
-          "explanation": "La ausencia de soplo intenso no excluye insuficiencia mitral aguda grave. Se solicita ecocardiografía urgente y valoración cardiológica y quirúrgica mientras se trata edema y perfusión.",
+          "vignette": "Después de un infarto aparece edema pulmonar brusco, pero el soplo no es intenso. La ecocardiografía muestra rotura papilar y flujo sistólico hacia la aurícula izquierda.",
+          "discriminator": "Complicación papilar aguda con soplo poco intenso",
+          "explanation": "Complicación papilar aguda con soplo poco intenso. Este patrón orienta a Insuficiencia mitral. La pérdida de cierre mitral permite flujo sistólico a la aurícula izquierda; una rotura papilar aguda eleva rápidamente la presión pulmonar sin adaptación previa.",
           "confusable_with": "Estenosis mitral",
-          "why_not": "El soplo sistólico apical irradiado a axila indica regurgitación. El contexto posterior a infarto puede representar lesión mecánica aguda y requiere atención urgente.",
+          "why_not": "El flujo sistólico retrógrado orienta a insuficiencia mitral. La falta de un soplo intenso no descarta una lesión aguda grave; la estenosis es una obstrucción diastólica.",
           "facts": [
             {
               "field": "pattern",
@@ -2562,7 +2696,15 @@
             }
           ]
         }
-      }
+      },
+      "sources": [
+        {
+          "label": "Edwino.pdf",
+          "pages": [
+            124
+          ]
+        }
+      ]
     },
     {
       "id": "04.10-01",
@@ -2766,7 +2908,17 @@
             }
           ]
         }
-      }
+      },
+      "sources": [
+        {
+          "label": "Edwino.pdf",
+          "pages": [
+            96,
+            97,
+            98
+          ]
+        }
+      ]
     },
     {
       "id": "04.10-02",
@@ -2954,7 +3106,16 @@
             }
           ]
         }
-      }
+      },
+      "sources": [
+        {
+          "label": "Edwino.pdf",
+          "pages": [
+            102,
+            103
+          ]
+        }
+      ]
     },
     {
       "id": "04.11-01",
@@ -3142,7 +3303,16 @@
             }
           ]
         }
-      }
+      },
+      "sources": [
+        {
+          "label": "Edwino.pdf",
+          "pages": [
+            126,
+            127
+          ]
+        }
+      ]
     },
     {
       "id": "04.12-01",
@@ -3155,8 +3325,8 @@
           "vignette": "Una adulta presenta disnea progresiva y síncope durante ejercicio. El ecocardiograma sugiere presión pulmonar elevada y crecimiento de cavidades derechas, sin una causa establecida todavía.",
           "discriminator": "síncope durante ejercicio",
           "explanation": "El dato decisivo es síncope durante ejercicio. La elevación de presión pulmonar aumenta la carga del ventrículo derecho; definir si procede de vasos, corazón izquierdo, pulmón o tromboembolia evita tratamientos inapropiados. Usar ecocardiograma para estimar probabilidad y buscar la causa. Referir a evaluación especializada y confirmar hemodinamia con cateterismo derecho cuando esté indicado.",
-          "confusable_with": "Cor pulmonar como explicación universal",
-          "why_not": "La presión pulmonar elevada tiene varios grupos causales. Se requiere clasificación hemodinámica y etiológica antes de extrapolar tratamiento específico.",
+          "confusable_with": "Cor pulmonar como diagnóstico universal",
+          "why_not": "La presión pulmonar elevada demuestra el problema hemodinámico, pero su causa requiere clasificación. El cor pulmonar es una repercusión cardíaca de enfermedad pulmonar y no explica todos los grupos de hipertensión pulmonar.",
           "facts": [
             {
               "field": "pattern",
@@ -3185,11 +3355,11 @@
           ]
         },
         "medium": {
-          "vignette": "En una persona con presión pulmonar elevada se identifica enfermedad del corazón izquierdo o del pulmón. Se clasifica la causa antes de elegir vasodilatadores específicos.",
-          "discriminator": "Hipertensión pulmonar con causa cardiopulmonar",
-          "explanation": "El dato decisivo es Hipertensión pulmonar con causa cardiopulmonar. No todos los grupos responden igual. Tratar la causa y clasificar antes de vasodilatadores específicos.",
-          "confusable_with": "Cor pulmonar como explicación universal",
-          "why_not": "La presión pulmonar elevada tiene varios grupos causales. Se requiere clasificación hemodinámica y etiológica antes de extrapolar tratamiento específico.",
+          "vignette": "Una persona con enfermedad de corazón izquierdo o del pulmón tiene presión elevada en la circulación pulmonar y crecimiento de cavidades derechas. Se estudia el grupo causal de ese aumento de presión.",
+          "discriminator": "Elevación pulmonar asociada con enfermedad cardiopulmonar",
+          "explanation": "Elevación pulmonar asociada con enfermedad cardiopulmonar. Este patrón orienta a Hipertensión pulmonar. La elevación de presión pulmonar aumenta la carga del ventrículo derecho; definir si procede de vasos, corazón izquierdo, pulmón o tromboembolia evita tratamientos inapropiados.",
+          "confusable_with": "Cor pulmonar como diagnóstico universal",
+          "why_not": "La presión pulmonar elevada demuestra el problema hemodinámico, pero su causa requiere clasificación. El cor pulmonar es una repercusión cardíaca de enfermedad pulmonar y no explica todos los grupos de hipertensión pulmonar.",
           "facts": [
             {
               "field": "pattern",
@@ -3258,11 +3428,11 @@
           ]
         },
         "contrast": {
-          "vignette": "Una persona con posible enfermedad arterial pulmonar idiopática es referida a un centro experto para valorar vasorreactividad.",
-          "discriminator": "Sospecha de forma arterial idiopática",
-          "explanation": "El dato decisivo es Sospecha de forma arterial idiopática. Solo algunos pacientes son candidatos a calcioantagonistas. Valorar prueba de vasorreactividad en centro experto.",
-          "confusable_with": "Cor pulmonar como explicación universal",
-          "why_not": "La presión pulmonar elevada tiene varios grupos causales. Se requiere clasificación hemodinámica y etiológica antes de extrapolar tratamiento específico.",
+          "vignette": "Una persona con disnea de esfuerzo y síncope tiene presión pulmonar elevada confirmada por evaluación hemodinámica. Se investiga una forma arterial idiopática y su respuesta vascular.",
+          "discriminator": "Confirmación hemodinámica de elevación pulmonar en un caso de esfuerzo",
+          "explanation": "Confirmación hemodinámica de elevación pulmonar en un caso de esfuerzo. Este patrón orienta a Hipertensión pulmonar. La elevación de presión pulmonar aumenta la carga del ventrículo derecho; definir si procede de vasos, corazón izquierdo, pulmón o tromboembolia evita tratamientos inapropiados.",
+          "confusable_with": "Cor pulmonar como diagnóstico universal",
+          "why_not": "La presión pulmonar elevada demuestra el problema hemodinámico, pero su causa requiere clasificación. El cor pulmonar es una repercusión cardíaca de enfermedad pulmonar y no explica todos los grupos de hipertensión pulmonar.",
           "facts": [
             {
               "field": "pattern",
@@ -3330,7 +3500,19 @@
             }
           ]
         }
-      }
+      },
+      "sources": [
+        {
+          "label": "Edwino.pdf",
+          "pages": [
+            109
+          ]
+        },
+        {
+          "label": "ESC/ERS 2022, Essential Messages",
+          "url": "https://www.escardio.org/static-file/Escardio/Guidelines/Products/Essential%20Messages/2022%20Gls%20EM/2022%20PH%20Guidelines_Essential%20messages.pdf"
+        }
+      ]
     },
     {
       "id": "04.12-02",
@@ -3518,7 +3700,15 @@
             }
           ]
         }
-      }
+      },
+      "sources": [
+        {
+          "label": "Edwino.pdf",
+          "pages": [
+            91
+          ]
+        }
+      ]
     },
     {
       "id": "04.13-01",
@@ -3531,8 +3721,8 @@
           "vignette": "Un adulto hipertenso presenta dolor torácico súbito que se extiende hacia la espalda. La radiografía muestra mediastino ancho y se prepara una prueba vascular urgente mientras se monitoriza la perfusión.",
           "discriminator": "dolor torácico súbito",
           "explanation": "El dato decisivo es dolor torácico súbito. Un desgarro intimal permite que sangre separe capas de pared aórtica y forme una falsa luz; puede comprometer ramas, válvula o integridad de la aorta. Activar atención especializada, obtener imagen aórtica urgente y controlar impulso con betabloqueo intravenoso si la perfusión lo permite, antes de añadir vasodilatador.",
-          "confusable_with": "Enfermedad coronaria estable",
-          "why_not": "El inicio súbito, la irradiación a espalda y la lesión de la aorta orientan a disección. La localización ascendente o la ruptura cambian la urgencia quirúrgica.",
+          "confusable_with": "Aneurisma aórtico sin disección",
+          "why_not": "La separación de la pared y la doble luz orientan a disección. Una dilatación aneurismática aislada no demuestra ese desgarro y puede tener otra evolución.",
           "facts": [
             {
               "field": "pattern",
@@ -3561,11 +3751,11 @@
           ]
         },
         "medium": {
-          "vignette": "Una persona con dolor torácico súbito hacia la espalda tiene imagen con compromiso de aorta ascendente. Se organiza cirugía urgente.",
-          "discriminator": "Compromiso de aorta ascendente",
-          "explanation": "El dato decisivo es Compromiso de aorta ascendente. La disección tipo A tiene complicaciones letales. Solicitar cirugía urgente.",
-          "confusable_with": "Enfermedad coronaria estable",
-          "why_not": "El inicio súbito, la irradiación a espalda y la lesión de la aorta orientan a disección. La localización ascendente o la ruptura cambian la urgencia quirúrgica.",
+          "vignette": "Una persona con dolor torácico súbito hacia espalda tiene una imagen con un colgajo que separa dos luces de la aorta ascendente.",
+          "discriminator": "Separación de luces aórticas en la aorta ascendente",
+          "explanation": "Separación de luces aórticas en la aorta ascendente. Este patrón orienta a Disección aórtica. Un desgarro intimal permite que sangre separe capas de pared aórtica y forme una falsa luz; puede comprometer ramas, válvula o integridad de la aorta.",
+          "confusable_with": "Aneurisma aórtico sin disección",
+          "why_not": "La separación de la pared y la doble luz orientan a disección. Una dilatación aneurismática aislada no demuestra ese desgarro y puede tener otra evolución.",
           "facts": [
             {
               "field": "pattern",
@@ -3634,11 +3824,11 @@
           ]
         },
         "contrast": {
-          "vignette": "Durante estudio de un dolor torácico súbito aparecen hipotensión y signos de ruptura aórtica. Se priorizan reanimación y cirugía.",
-          "discriminator": "Inestabilidad con sospecha de ruptura aórtica",
-          "explanation": "El dato decisivo es Inestabilidad con sospecha de ruptura aórtica. El descenso farmacológico no corresponde igual al shock. Priorizar reanimación y cirugía.",
-          "confusable_with": "Enfermedad coronaria estable",
-          "why_not": "El inicio súbito, la irradiación a espalda y la lesión de la aorta orientan a disección. La localización ascendente o la ruptura cambian la urgencia quirúrgica.",
+          "vignette": "Una persona con dolor torácico súbito desarrolla hipotensión. La imagen identifica separación de capas de la pared aórtica y datos de ruptura, explicando el deterioro.",
+          "discriminator": "Disrupción de la pared con falsa luz y complicación",
+          "explanation": "Disrupción de la pared con falsa luz y complicación. Este patrón orienta a Disección aórtica. Un desgarro intimal permite que sangre separe capas de pared aórtica y forme una falsa luz; puede comprometer ramas, válvula o integridad de la aorta.",
+          "confusable_with": "Aneurisma aórtico sin disección",
+          "why_not": "La separación de la pared y la doble luz orientan a disección. Una dilatación aneurismática aislada no demuestra ese desgarro y puede tener otra evolución.",
           "facts": [
             {
               "field": "pattern",
@@ -3706,7 +3896,15 @@
             }
           ]
         }
-      }
+      },
+      "sources": [
+        {
+          "label": "Edwino.pdf",
+          "pages": [
+            94
+          ]
+        }
+      ]
     },
     {
       "id": "04.13-02",
@@ -3894,7 +4092,15 @@
             }
           ]
         }
-      }
+      },
+      "sources": [
+        {
+          "label": "Edwino.pdf",
+          "pages": [
+            90
+          ]
+        }
+      ]
     }
   ]
 }

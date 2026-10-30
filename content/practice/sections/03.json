@@ -190,7 +190,18 @@
             }
           ]
         }
-      }
+      },
+      "sources": [
+        {
+          "label": "Edwino.pdf",
+          "pages": [
+            57,
+            58,
+            59,
+            60
+          ]
+        }
+      ]
     },
     {
       "id": "03.02-01",
@@ -378,7 +389,16 @@
             }
           ]
         }
-      }
+      },
+      "sources": [
+        {
+          "label": "Edwino.pdf",
+          "pages": [
+            74,
+            75
+          ]
+        }
+      ]
     },
     {
       "id": "03.02-02",
@@ -566,21 +586,29 @@
             }
           ]
         }
-      }
+      },
+      "sources": [
+        {
+          "label": "Edwino.pdf",
+          "pages": [
+            44
+          ]
+        }
+      ]
     },
     {
       "id": "03.02-03",
       "parent_topic_id": "03.02-03",
       "block_id": "03.02",
-      "name": "Distinguir choque neurogénico, hipovolemia y shock medular",
-      "answer_kind": "decision",
+      "name": "Shock neurogénico",
+      "answer_kind": "diagnosis",
       "variants": {
         "easy": {
-          "vignette": "Tras una caída con lesión cervical, un adulto presenta hipotensión, pulso lento y piel sin vasoconstricción marcada. El equipo busca hemorragia oculta antes de atribuir el patrón a la médula. ¿Qué acción o clasificación corresponde?",
+          "vignette": "Tras una caída con lesión cervical, un adulto presenta hipotensión, pulso lento y piel sin vasoconstricción marcada. El equipo busca hemorragia oculta antes de atribuir el patrón a la médula.",
           "discriminator": "hipotensión, pulso lento",
           "explanation": "El dato decisivo es hipotensión, pulso lento. La lesión de vías simpáticas descendentes reduce tono vascular y estimulación cardíaca; la vasodilatación y la ausencia de taquicardia compensadora disminuyen la perfusión. Descartar y tratar hipovolemia traumática. Si persiste el patrón tras evaluación, sostener perfusión con vasopresor y tratar bradicardia significativa según necesidad.",
           "confusable_with": "Choque hemorrágico",
-          "why_not": "La bradicardia y la falta de vasoconstricción sugieren pérdida del tono simpático. La lesión medular no permite omitir la búsqueda de hemorragia concurrente.",
+          "why_not": "La bradicardia o ausencia de taquicardia compensadora y la vasodilatación sugieren un componente neurogénico. Aun así, el trauma obliga a buscar hemorragia concurrente.",
           "facts": [
             {
               "field": "pattern",
@@ -609,11 +637,11 @@
           ]
         },
         "medium": {
-          "vignette": "Después de lesión cervical, una persona presenta presión baja y bradicardia. Durante la administración de líquidos aparecen datos de sobrecarga. ¿Qué acción o clasificación corresponde?",
-          "discriminator": "Hipotensión con bradicardia y límite a la expansión",
-          "explanation": "El dato decisivo es Hipotensión con bradicardia y límite a la expansión. Puede producir edema pulmonar sin corregir el tono vascular. Reevaluar y limitar expansión indiscriminada.",
+          "vignette": "Una persona con lesión cervical permanece hipotensa y bradicárdica. Durante expansión con líquidos aparece sobrecarga, sin que se corrija el patrón vasodilatado.",
+          "discriminator": "Hipotensión bradicárdica con límite a la expansión de volumen",
+          "explanation": "Hipotensión bradicárdica con límite a la expansión de volumen. Este patrón orienta a Shock neurogénico. La lesión de vías simpáticas descendentes reduce tono vascular y estimulación cardíaca; la vasodilatación y la ausencia de taquicardia compensadora disminuyen la perfusión.",
           "confusable_with": "Choque hemorrágico",
-          "why_not": "La bradicardia y la falta de vasoconstricción sugieren pérdida del tono simpático. La lesión medular no permite omitir la búsqueda de hemorragia concurrente.",
+          "why_not": "La bradicardia o ausencia de taquicardia compensadora y la vasodilatación sugieren un componente neurogénico. Aun así, el trauma obliga a buscar hemorragia concurrente.",
           "facts": [
             {
               "field": "pattern",
@@ -670,11 +698,11 @@
           ]
         },
         "contrast": {
-          "vignette": "Tras lesión medular se documenta pérdida transitoria de función y reflejos. Se necesita distinguir este fenómeno de un choque circulatorio por pérdida del tono simpático. ¿Qué acción o clasificación corresponde?",
-          "discriminator": "Pérdida de función y reflejos frente a pérdida de perfusión",
-          "explanation": "El shock medular describe pérdida transitoria de función y reflejos. El shock neurogénico es circulatorio, con vasodilatación e hipotensión; no son términos equivalentes.",
-          "confusable_with": "Choque circulatorio neurogénico",
-          "why_not": "La pérdida transitoria de función y reflejos define shock medular. No demuestra por sí sola pérdida de perfusión por vasodilatación.",
+          "vignette": "Después de una lesión de médula torácica alta aparece hipotensión sin taquicardia compensadora. La piel conserva vasodilatación y se evalúa también hemorragia oculta.",
+          "discriminator": "Lesión simpática torácica alta con falta de respuesta vasoconstrictora",
+          "explanation": "Lesión simpática torácica alta con falta de respuesta vasoconstrictora. Este patrón orienta a Shock neurogénico. La lesión de vías simpáticas descendentes reduce tono vascular y estimulación cardíaca; la vasodilatación y la ausencia de taquicardia compensadora disminuyen la perfusión.",
+          "confusable_with": "Choque hemorrágico",
+          "why_not": "La bradicardia o ausencia de taquicardia compensadora y la vasodilatación sugieren un componente neurogénico. Aun así, el trauma obliga a buscar hemorragia concurrente.",
           "facts": [
             {
               "field": "pattern",
@@ -728,9 +756,23 @@
               "field": "modifiers.0.reason",
               "text": "Puede producir edema pulmonar sin corregir el tono vascular."
             }
+          ],
+          "source_evidence": [
+            {
+              "page": 65,
+              "quote": " lesión cervical o de la médula torácica periférica, redistribución sanguínea y consecuente hipotensión. superior (T6 o superior) puede"
+            }
           ]
         }
-      }
+      },
+      "sources": [
+        {
+          "label": "Edwino.pdf",
+          "pages": [
+            65
+          ]
+        }
+      ]
     },
     {
       "id": "03.03-01",
@@ -918,21 +960,31 @@
             }
           ]
         }
-      }
+      },
+      "sources": [
+        {
+          "label": "Edwino.pdf",
+          "pages": [
+            87,
+            88,
+            89
+          ]
+        }
+      ]
     },
     {
       "id": "03.03-02",
       "parent_topic_id": "03.03-02",
       "block_id": "03.03",
-      "name": "Reconocer tensión pleural y completar descompresión y drenaje",
-      "answer_kind": "decision",
+      "name": "Neumotórax a tensión",
+      "answer_kind": "diagnosis",
       "variants": {
         "easy": {
-          "vignette": "Un traumatizado desarrolla disnea intensa, hipotensión y ausencia de ruidos respiratorios en un hemitórax. La percusión es hiperresonante y las venas del cuello están distendidas. ¿Qué acción o clasificación corresponde?",
+          "vignette": "Un traumatizado desarrolla disnea intensa, hipotensión y ausencia de ruidos respiratorios en un hemitórax. La percusión es hiperresonante y las venas del cuello están distendidas.",
           "discriminator": "percusión es hiperresonante",
           "explanation": "El dato decisivo es percusión es hiperresonante. El aire entra al espacio pleural sin poder salir; la presión creciente colapsa el pulmón y reduce retorno venoso, lo que genera choque obstructivo. Realizar descompresión torácica urgente según técnica disponible y continuar con drenaje pleural definitivo. No esperar radiografía cuando el cuadro clínico es compatible.",
           "confusable_with": "Hemotórax",
-          "why_not": "La hiperresonancia señala aire pleural a presión. La sangre pleural produce matidez y puede acompañarse de venas aplanadas por pérdida de volumen.",
+          "why_not": "La hiperresonancia con compromiso circulatorio sugiere tensión por aire. La sangre produce matidez; el deterioro tras cubrir una herida exige reevaluar tensión y funcionamiento del sello.",
           "facts": [
             {
               "field": "pattern",
@@ -961,11 +1013,11 @@
           ]
         },
         "medium": {
-          "vignette": "Un lesionado conectado a ventilación mecánica colapsa de forma súbita. Hay ausencia de ruidos de un lado, hiperresonancia y distensión yugular. ¿Qué acción o clasificación corresponde?",
-          "discriminator": "Colapso bajo ventilación con hiperresonancia unilateral",
-          "explanation": "El dato decisivo es Colapso bajo ventilación con hiperresonancia unilateral. La presión positiva puede precipitarla. Buscar y tratar tensión pleural de inmediato.",
+          "vignette": "Durante ventilación mecánica, un lesionado colapsa súbitamente. El murmullo desaparece de un lado y la percusión es hiperresonante.",
+          "discriminator": "Colapso bajo presión positiva con asimetría respiratoria",
+          "explanation": "Colapso bajo presión positiva con asimetría respiratoria. Este patrón orienta a Neumotórax a tensión. El aire entra al espacio pleural sin poder salir; la presión creciente colapsa el pulmón y reduce retorno venoso, lo que genera choque obstructivo.",
           "confusable_with": "Hemotórax",
-          "why_not": "La hiperresonancia señala aire pleural a presión. La sangre pleural produce matidez y puede acompañarse de venas aplanadas por pérdida de volumen.",
+          "why_not": "La hiperresonancia con compromiso circulatorio sugiere tensión por aire. La sangre produce matidez; el deterioro tras cubrir una herida exige reevaluar tensión y funcionamiento del sello.",
           "facts": [
             {
               "field": "pattern",
@@ -1022,11 +1074,11 @@
           ]
         },
         "contrast": {
-          "vignette": "Un paciente con colapso hemodinámico, hiperresonancia unilateral y ausencia de murmullo recibe descompresión torácica urgente. La respuesta inicial permite organizar el tratamiento pleural definitivo. ¿Qué acción o clasificación corresponde?",
-          "discriminator": "Después de descompresión urgente aún se necesita drenaje definitivo",
-          "explanation": "La descompresión inicial no termina el tratamiento. Se debe continuar con drenaje pleural definitivo y vigilancia según el protocolo vigente.",
+          "vignette": "Después de cubrir una herida torácica que intercambiaba aire, la persona desarrolla hipotensión y distensión yugular. El hemitórax afectado queda sin murmullo y con hiperresonancia, sugiriendo aire atrapado a presión.",
+          "discriminator": "Compromiso obstructivo tras un sello que puede impedir salida de aire",
+          "explanation": "Compromiso obstructivo tras un sello que puede impedir salida de aire. Este patrón orienta a Neumotórax a tensión. El aire entra al espacio pleural sin poder salir; la presión creciente colapsa el pulmón y reduce retorno venoso, lo que genera choque obstructivo.",
           "confusable_with": "Hemotórax",
-          "why_not": "La hiperresonancia señala aire pleural a presión. La sangre pleural produce matidez y puede acompañarse de venas aplanadas por pérdida de volumen.",
+          "why_not": "La hiperresonancia con compromiso circulatorio sugiere tensión por aire. La sangre produce matidez; el deterioro tras cubrir una herida exige reevaluar tensión y funcionamiento del sello.",
           "facts": [
             {
               "field": "pattern",
@@ -1082,21 +1134,29 @@
             }
           ]
         }
-      }
+      },
+      "sources": [
+        {
+          "label": "Edwino.pdf",
+          "pages": [
+            54
+          ]
+        }
+      ]
     },
     {
       "id": "03.03-03",
       "parent_topic_id": "03.03-03",
       "block_id": "03.03",
-      "name": "Cubrir herida torácica abierta y completar drenaje y reparación",
-      "answer_kind": "decision",
+      "name": "Neumotórax abierto",
+      "answer_kind": "diagnosis",
       "variants": {
         "easy": {
-          "vignette": "Un adulto tiene una herida penetrante del tórax por la que entra y sale aire con cada respiración. Presenta dolor, hipoxia y timpanismo del lado lesionado. ¿Qué acción o clasificación corresponde?",
+          "vignette": "Un adulto tiene una herida penetrante del tórax por la que entra y sale aire con cada respiración. Presenta dolor, hipoxia y timpanismo del lado lesionado.",
           "discriminator": "entra y sale aire",
           "explanation": "El dato decisivo es entra y sale aire. El defecto de pared comunica la cavidad pleural con la atmósfera; el flujo por la herida impide presión negativa eficaz y expansión pulmonar. Cubrir la herida con un sistema unidireccional apropiado y valorar ventilación. Colocar drenaje pleural alejado del defecto y solicitar reparación quirúrgica.",
           "confusable_with": "Neumotórax cerrado",
-          "why_not": "El paso de aire por la herida identifica la comunicación abierta. Si el paciente empeora tras el sello, debe reevaluarse tensión pleural y funcionamiento del sello.",
+          "why_not": "La entrada y salida de aire por el defecto de pared identifica la forma abierta. Un defecto ya cubierto requiere reevaluación, pero la lesión inicial se reconoce por esa comunicación.",
           "facts": [
             {
               "field": "pattern",
@@ -1125,11 +1185,11 @@
           ]
         },
         "medium": {
-          "vignette": "Una herida torácica intercambia aire con cada respiración. Tras cubrirla, el paciente empeora y se revisan el sello y la presión pleural. ¿Qué acción o clasificación corresponde?",
-          "discriminator": "Deterioro después de sellar una comunicación torácica",
-          "explanation": "El dato decisivo es Deterioro después de sellar una comunicación torácica. El aire atrapado puede aumentar la presión. Reevaluar tensión pleural y el funcionamiento del sello.",
+          "vignette": "Tras una herida penetrante lateral del tórax aparece hipoxia con retención de dióxido de carbono. Se observa intercambio de aire a través del defecto durante cada respiración.",
+          "discriminator": "Herida penetrante con intercambio aéreo e hipercapnia",
+          "explanation": "Herida penetrante con intercambio aéreo e hipercapnia. Este patrón orienta a Neumotórax abierto. El defecto de pared comunica la cavidad pleural con la atmósfera; el flujo por la herida impide presión negativa eficaz y expansión pulmonar.",
           "confusable_with": "Neumotórax cerrado",
-          "why_not": "El paso de aire por la herida identifica la comunicación abierta. Si el paciente empeora tras el sello, debe reevaluarse tensión pleural y funcionamiento del sello.",
+          "why_not": "La entrada y salida de aire por el defecto de pared identifica la forma abierta. Un defecto ya cubierto requiere reevaluación, pero la lesión inicial se reconoce por esa comunicación.",
           "facts": [
             {
               "field": "pattern",
@@ -1186,11 +1246,11 @@
           ]
         },
         "contrast": {
-          "vignette": "Una herida torácica que intercambiaba aire ya tiene sello temporal. Aunque no se ha descrito deterioro tras cubrirla, se necesita decidir si el sello basta como tratamiento definitivo. ¿Qué acción o clasificación corresponde?",
-          "discriminator": "Sello temporal de una comunicación pleural",
-          "explanation": "El sello no sustituye el drenaje ni la reparación. Se coloca drenaje pleural alejado del defecto y se solicita reparación quirúrgica, con vigilancia continua.",
+          "vignette": "Un lesionado tiene expansión pulmonar ineficaz. El aire entra desde el ambiente por una solución de continuidad de la pared torácica, que permite igualar la presión intratorácica con la atmosférica.",
+          "discriminator": "Comunicación directa de la pleura con la atmósfera",
+          "explanation": "Comunicación directa de la pleura con la atmósfera. Este patrón orienta a Neumotórax abierto. El defecto de pared comunica la cavidad pleural con la atmósfera; el flujo por la herida impide presión negativa eficaz y expansión pulmonar.",
           "confusable_with": "Neumotórax cerrado",
-          "why_not": "El paso de aire por la herida identifica la comunicación abierta. Si el paciente empeora tras el sello, debe reevaluarse tensión pleural y funcionamiento del sello.",
+          "why_not": "La entrada y salida de aire por el defecto de pared identifica la forma abierta. Un defecto ya cubierto requiere reevaluación, pero la lesión inicial se reconoce por esa comunicación.",
           "facts": [
             {
               "field": "pattern",
@@ -1246,21 +1306,29 @@
             }
           ]
         }
-      }
+      },
+      "sources": [
+        {
+          "label": "Edwino.pdf",
+          "pages": [
+            55
+          ]
+        }
+      ]
     },
     {
       "id": "03.03-04",
       "parent_topic_id": "03.03-04",
       "block_id": "03.03",
-      "name": "Clasificar el neumotórax y tratar el deterioro",
-      "answer_kind": "decision",
+      "name": "Neumotórax simple",
+      "answer_kind": "diagnosis",
       "variants": {
         "easy": {
-          "vignette": "Después de una fractura costal, un adulto estable tiene dolor y reducción de ruidos respiratorios de un lado. La presión es normal y la radiografía muestra aire pleural. ¿Qué acción o clasificación corresponde?",
+          "vignette": "Después de una fractura costal, un adulto estable tiene dolor y reducción de ruidos respiratorios de un lado. La presión es normal y la radiografía muestra aire pleural.",
           "discriminator": "La presión es normal",
           "explanation": "El dato decisivo es La presión es normal. La laceración pulmonar permite aire pleural y pérdida parcial de expansión; el deterioro ventilación-perfusión produce hipoxemia sin el compromiso circulatorio propio de tensión. Valorar extensión, síntomas y necesidad de ventilación. En un caso pequeño y estable, mantener vigilancia clínica e imagen; colocar drenaje cuando esté indicado por evolución o contexto.",
           "confusable_with": "Neumotórax a tensión",
-          "why_not": "La estabilidad permite considerar una lesión simple. La hipotensión o la distensión yugular nuevas exigen descartar tensión y cambian la prioridad terapéutica.",
+          "why_not": "La ausencia de compromiso circulatorio favorece la forma simple. Hipotensión o distensión yugular nuevas obligan a reevaluar tensión pleural.",
           "facts": [
             {
               "field": "pattern",
@@ -1289,11 +1357,11 @@
           ]
         },
         "medium": {
-          "vignette": "La imagen de un paciente estable muestra una pequeña colección de aire pleural sin deterioro. Se considera vigilancia supervisada. ¿Qué acción o clasificación corresponde?",
-          "discriminator": "Aire pleural pequeño con estabilidad",
-          "explanation": "El dato decisivo es Aire pleural pequeño con estabilidad. La página permite observación con vigilancia clínica y radiológica. Considerar manejo conservador supervisado.",
+          "vignette": "La imagen de un paciente estable tras trauma muestra una pequeña separación por aire entre pulmón y pared torácica. No aparece deterioro circulatorio durante la vigilancia.",
+          "discriminator": "Colección pleural aérea pequeña con estabilidad",
+          "explanation": "Colección pleural aérea pequeña con estabilidad. Este patrón orienta a Neumotórax simple. La laceración pulmonar permite aire pleural y pérdida parcial de expansión; el deterioro ventilación-perfusión produce hipoxemia sin el compromiso circulatorio propio de tensión.",
           "confusable_with": "Neumotórax a tensión",
-          "why_not": "La estabilidad permite considerar una lesión simple. La hipotensión o la distensión yugular nuevas exigen descartar tensión y cambian la prioridad terapéutica.",
+          "why_not": "La ausencia de compromiso circulatorio favorece la forma simple. Hipotensión o distensión yugular nuevas obligan a reevaluar tensión pleural.",
           "facts": [
             {
               "field": "pattern",
@@ -1362,11 +1430,11 @@
           ]
         },
         "contrast": {
-          "vignette": "Durante observación por aire pleural tras fractura costal aparece hipotensión y distensión yugular. Se debe reevaluar si la clasificación inicial sigue siendo válida. ¿Qué acción o clasificación corresponde?",
-          "discriminator": "Cambio de estabilidad a posible tensión",
-          "explanation": "El dato decisivo es Cambio de estabilidad a posible tensión. Cambió la repercusión circulatoria. Reevaluar tensión pleural urgente.",
+          "vignette": "Después de una lesión pulmonar, una persona tiene hipoxemia, hiperresonancia y menor murmullo de un lado. Conserva presión y no presenta distensión yugular; la imagen muestra aire pleural.",
+          "discriminator": "Alteración ventilatoria por aire pleural sin obstrucción circulatoria",
+          "explanation": "Alteración ventilatoria por aire pleural sin obstrucción circulatoria. Este patrón orienta a Neumotórax simple. La laceración pulmonar permite aire pleural y pérdida parcial de expansión; el deterioro ventilación-perfusión produce hipoxemia sin el compromiso circulatorio propio de tensión.",
           "confusable_with": "Neumotórax a tensión",
-          "why_not": "La estabilidad permite considerar una lesión simple. La hipotensión o la distensión yugular nuevas exigen descartar tensión y cambian la prioridad terapéutica.",
+          "why_not": "La ausencia de compromiso circulatorio favorece la forma simple. Hipotensión o distensión yugular nuevas obligan a reevaluar tensión pleural.",
           "facts": [
             {
               "field": "pattern",
@@ -1432,9 +1500,23 @@
               "field": "modifiers.1.reason",
               "text": "La página permite observación con vigilancia clínica y radiológica."
             }
+          ],
+          "source_evidence": [
+            {
+              "page": 56,
+              "quote": ", con alteración V/Q con hipoxia e hipercapnia. Causa más frecuente: Fractura costal. • Ausencia de ruidos respiratorios. • Timpanismo o hipe"
+            }
           ]
         }
-      }
+      },
+      "sources": [
+        {
+          "label": "Edwino.pdf",
+          "pages": [
+            56
+          ]
+        }
+      ]
     },
     {
       "id": "03.04-01",
@@ -1447,8 +1529,8 @@
           "vignette": "Un adulto con herida torácica tiene disnea, presión baja y ruidos respiratorios ausentes en un lado. La percusión es mate y las venas cervicales están aplanadas.",
           "discriminator": "percusión es mate",
           "explanation": "El dato decisivo es percusión es mate. La sangre acumulada en pleura comprime pulmón y reduce volumen circulante; el cuadro combina compromiso ventilatorio con shock hemorrágico cuando la pérdida es importante. Iniciar reanimación hemorrágica, drenaje pleural y evaluación quirúrgica urgente. Cuantificar el sangrado drenado y valorar toracotomía por pérdida inicial masiva o sangrado persistente.",
-          "confusable_with": "Neumotórax a tensión",
-          "why_not": "La matidez orienta a líquido pleural y las venas aplanadas a pérdida de volumen. La tensión por aire suele producir hiperresonancia y distensión yugular.",
+          "confusable_with": "Neumotórax",
+          "why_not": "La matidez y la obtención de sangre localizan un hemotórax. El neumotórax produce aire pleural e hiperresonancia, aunque ambas lesiones pueden coexistir.",
           "facts": [
             {
               "field": "pattern",
@@ -1477,11 +1559,11 @@
           ]
         },
         "medium": {
-          "vignette": "Tras colocar un drenaje por lesión torácica se evacuan más de 1500 ml de sangre inicialmente. El paciente presenta hipotensión.",
-          "discriminator": "Pérdida pleural inicial mayor de 1500 ml",
-          "explanation": "El dato decisivo es Pérdida pleural inicial mayor de 1500 ml. Sugiere lesión vascular o sangrado no controlado. Solicitar control quirúrgico.",
-          "confusable_with": "Neumotórax a tensión",
-          "why_not": "La matidez orienta a líquido pleural y las venas aplanadas a pérdida de volumen. La tensión por aire suele producir hiperresonancia y distensión yugular.",
+          "vignette": "Tras una herida de tórax se evacúan más de 1500 ml de sangre al colocar drenaje pleural. El paciente permanece hipotenso.",
+          "discriminator": "Sangre pleural masiva con pérdida circulatoria",
+          "explanation": "Sangre pleural masiva con pérdida circulatoria. Este patrón orienta a Hemotórax. La sangre acumulada en pleura comprime pulmón y reduce volumen circulante; el cuadro combina compromiso ventilatorio con shock hemorrágico cuando la pérdida es importante.",
+          "confusable_with": "Neumotórax",
+          "why_not": "La matidez y la obtención de sangre localizan un hemotórax. El neumotórax produce aire pleural e hiperresonancia, aunque ambas lesiones pueden coexistir.",
           "facts": [
             {
               "field": "pattern",
@@ -1538,11 +1620,11 @@
           ]
         },
         "contrast": {
-          "vignette": "Tras drenaje de sangre pleural por trauma, el sangrado importante continúa. El equipo reanima al paciente y solicita control quirúrgico de la fuente.",
-          "discriminator": "Sangrado pleural persistente tras drenaje",
-          "explanation": "El sangrado persistente importante requiere valoración quirúrgica y control de la fuente. La reanimación y la cuantificación del drenaje continúan durante esa evaluación.",
-          "confusable_with": "Neumotórax a tensión",
-          "why_not": "La matidez orienta a líquido pleural y las venas aplanadas a pérdida de volumen. La tensión por aire suele producir hiperresonancia y distensión yugular.",
+          "vignette": "Después de trauma cerrado se identifica una colección pleural. La percusión es mate y el drenaje obtiene sangre; el sangrado importante continúa durante la reanimación.",
+          "discriminator": "Colección pleural sanguínea por trauma cerrado",
+          "explanation": "Colección pleural sanguínea por trauma cerrado. Este patrón orienta a Hemotórax. La sangre acumulada en pleura comprime pulmón y reduce volumen circulante; el cuadro combina compromiso ventilatorio con shock hemorrágico cuando la pérdida es importante.",
+          "confusable_with": "Neumotórax",
+          "why_not": "La matidez y la obtención de sangre localizan un hemotórax. El neumotórax produce aire pleural e hiperresonancia, aunque ambas lesiones pueden coexistir.",
           "facts": [
             {
               "field": "pattern",
@@ -1598,21 +1680,29 @@
             }
           ]
         }
-      }
+      },
+      "sources": [
+        {
+          "label": "Edwino.pdf",
+          "pages": [
+            50
+          ]
+        }
+      ]
     },
     {
       "id": "03.04-02",
       "parent_topic_id": "03.04-02",
       "block_id": "03.04",
-      "name": "Descomprimir y reparar una lesión pericárdica traumática",
-      "answer_kind": "decision",
+      "name": "Taponamiento cardiaco",
+      "answer_kind": "diagnosis",
       "variants": {
         "easy": {
-          "vignette": "Tras una herida precordial, un adulto tiene hipotensión, venas yugulares distendidas y ruidos cardíacos apagados. Los ruidos respiratorios se conservan y el equipo dispone de ultrasonido. ¿Qué acción o clasificación corresponde?",
+          "vignette": "Tras una herida precordial, un adulto tiene hipotensión, venas yugulares distendidas y ruidos cardíacos apagados. Los ruidos respiratorios se conservan y el equipo dispone de ultrasonido.",
           "discriminator": "ruidos cardíacos apagados",
           "explanation": "El dato decisivo es ruidos cardíacos apagados. La sangre pericárdica comprime las cavidades e impide llenado diastólico; el gasto cae pese a actividad eléctrica y puede aparecer paro sin pulso. Realizar FAST inmediato si está disponible sin retrasar atención. Activar al equipo quirúrgico para descompresión y reparación; valorar drenaje de rescate según recursos y situación.",
           "confusable_with": "Neumotórax a tensión",
-          "why_not": "La conservación de ruidos respiratorios y los ruidos cardíacos apagados orientan al pericardio. La ausencia unilateral de murmullo orientaría a presión pleural.",
+          "why_not": "La compresión pericárdica en ultrasonido orienta a taponamiento. La ausencia unilateral de murmullo con hiperresonancia orientaría a tensión pleural.",
           "facts": [
             {
               "field": "pattern",
@@ -1641,11 +1731,11 @@
           ]
         },
         "medium": {
-          "vignette": "Un paciente con herida penetrante precordial presenta actividad eléctrica sin pulso. Se buscan causas reversibles y líquido pericárdico con ultrasonido. ¿Qué acción o clasificación corresponde?",
-          "discriminator": "AESP tras lesión precordial penetrante",
-          "explanation": "El dato decisivo es AESP tras lesión precordial penetrante. Puede existir actividad eléctrica sin llenado suficiente. Considerar taponamiento dentro de causas reversibles.",
+          "vignette": "Después de una herida penetrante precordial aparece actividad eléctrica sin pulso. El FAST identifica sangre en el pericardio que dificulta el llenado cardíaco.",
+          "discriminator": "AESP con sangre pericárdica tras lesión penetrante",
+          "explanation": "AESP con sangre pericárdica tras lesión penetrante. Este patrón orienta a Taponamiento cardiaco. La sangre pericárdica comprime las cavidades e impide llenado diastólico; el gasto cae pese a actividad eléctrica y puede aparecer paro sin pulso.",
           "confusable_with": "Neumotórax a tensión",
-          "why_not": "La conservación de ruidos respiratorios y los ruidos cardíacos apagados orientan al pericardio. La ausencia unilateral de murmullo orientaría a presión pleural.",
+          "why_not": "La compresión pericárdica en ultrasonido orienta a taponamiento. La ausencia unilateral de murmullo con hiperresonancia orientaría a tensión pleural.",
           "facts": [
             {
               "field": "pattern",
@@ -1702,11 +1792,11 @@
           ]
         },
         "contrast": {
-          "vignette": "Una persona con herida cardíaca penetrante recibió drenaje pericárdico de rescate por compromiso circulatorio. El equipo necesita decidir si debe organizar reparación quirúrgica definitiva. ¿Qué acción o clasificación corresponde?",
-          "discriminator": "Drenaje de rescate que no repara la lesión cardíaca",
-          "explanation": "El drenaje puede aliviar presión, pero no repara una lesión cardíaca traumática. Se activa al equipo quirúrgico para control y reparación.",
-          "confusable_with": "Drenaje de rescate como tratamiento definitivo",
-          "why_not": "El drenaje pericárdico puede aliviar presión, pero no repara la lesión cardíaca traumática. La reparación necesita control quirúrgico.",
+          "vignette": "Una persona con herida cardíaca tiene presión baja y distensión yugular. El ultrasonido muestra líquido pericárdico a presión; los ruidos respiratorios se conservan.",
+          "discriminator": "Compresión pericárdica con murmullo respiratorio conservado",
+          "explanation": "Compresión pericárdica con murmullo respiratorio conservado. Este patrón orienta a Taponamiento cardiaco. La sangre pericárdica comprime las cavidades e impide llenado diastólico; el gasto cae pese a actividad eléctrica y puede aparecer paro sin pulso.",
+          "confusable_with": "Neumotórax a tensión",
+          "why_not": "La compresión pericárdica en ultrasonido orienta a taponamiento. La ausencia unilateral de murmullo con hiperresonancia orientaría a tensión pleural.",
           "facts": [
             {
               "field": "pattern",
@@ -1762,7 +1852,15 @@
             }
           ]
         }
-      }
+      },
+      "sources": [
+        {
+          "label": "Edwino.pdf",
+          "pages": [
+            66
+          ]
+        }
+      ]
     },
     {
       "id": "03.05-01",
@@ -1926,21 +2024,29 @@
             }
           ]
         }
-      }
+      },
+      "sources": [
+        {
+          "label": "Edwino.pdf",
+          "pages": [
+            53
+          ]
+        }
+      ]
     },
     {
       "id": "03.05-02",
       "parent_topic_id": "03.05-02",
       "block_id": "03.05",
-      "name": "Evaluar y reparar ruptura diafragmática traumática",
-      "answer_kind": "decision",
+      "name": "Ruptura diafragmática",
+      "answer_kind": "diagnosis",
       "variants": {
         "easy": {
-          "vignette": "Un adulto tiene disnea después de un accidente vehicular. La radiografía muestra elevación del hemidiafragma izquierdo; la tomografía identifica asas abdominales dentro de la cavidad torácica. ¿Qué acción o clasificación corresponde?",
+          "vignette": "Un adulto tiene disnea después de un accidente vehicular. La radiografía muestra elevación del hemidiafragma izquierdo; la tomografía identifica asas abdominales dentro de la cavidad torácica.",
           "discriminator": "asas abdominales dentro de la cavidad torácica",
           "explanation": "El dato decisivo es asas abdominales dentro de la cavidad torácica. El desgarro diafragmático permite herniación de vísceras al tórax; altera la mecánica respiratoria y expone el intestino herniado a compromiso vascular o lesión. Estabilizar según ABCDE y solicitar valoración quirúrgica para reparación del defecto. Usar tomografía para definir lesión cuando la condición permite.",
           "confusable_with": "Hernia diafragmática congénita",
-          "why_not": "El contexto traumático orienta a una ruptura adquirida. La presencia de vísceras torácicas exige valorar compromiso respiratorio y lesiones abdominales asociadas.",
+          "why_not": "El mecanismo traumático y la solución de continuidad adquirida favorecen ruptura. Un defecto congénito se interpreta en otro contexto, aunque ambos pueden contener vísceras torácicas.",
           "facts": [
             {
               "field": "pattern",
@@ -1969,11 +2075,11 @@
           ]
         },
         "medium": {
-          "vignette": "Tras un accidente, la imagen identifica vísceras abdominales dentro del tórax. El paciente está inestable y tiene lesiones abdominales asociadas. ¿Qué acción o clasificación corresponde?",
-          "discriminator": "Herniación visceral traumática con inestabilidad",
-          "explanation": "El dato decisivo es Herniación visceral traumática con inestabilidad. La imagen no debe retrasar una intervención necesaria. Priorizar control urgente de lesiones.",
+          "vignette": "Después de un accidente aparecen disnea e inestabilidad con una lesión abdominal asociada. La imagen identifica vísceras abdominales dentro del tórax.",
+          "discriminator": "Herniación visceral traumática con lesión asociada",
+          "explanation": "Herniación visceral traumática con lesión asociada. Este patrón orienta a Ruptura diafragmática. El desgarro diafragmático permite herniación de vísceras al tórax; altera la mecánica respiratoria y expone el intestino herniado a compromiso vascular o lesión.",
           "confusable_with": "Hernia diafragmática congénita",
-          "why_not": "El contexto traumático orienta a una ruptura adquirida. La presencia de vísceras torácicas exige valorar compromiso respiratorio y lesiones abdominales asociadas.",
+          "why_not": "El mecanismo traumático y la solución de continuidad adquirida favorecen ruptura. Un defecto congénito se interpreta en otro contexto, aunque ambos pueden contener vísceras torácicas.",
           "facts": [
             {
               "field": "pattern",
@@ -2022,11 +2128,11 @@
           ]
         },
         "contrast": {
-          "vignette": "En una persona estable tras trauma, la imagen confirma asas abdominales en tórax. Se organiza reparación del defecto después de valorar las lesiones asociadas. ¿Qué acción o clasificación corresponde?",
-          "discriminator": "Defecto traumático confirmado con estabilidad para planificar reparación",
-          "explanation": "La herniación traumática de vísceras altera la ventilación y puede comprometer el intestino. La estabilidad permite completar evaluación y organizar la reparación.",
+          "vignette": "Tras una herida penetrante toracoabdominal, una persona desarrolla disnea. La tomografía identifica un defecto en el diafragma izquierdo con vísceras abdominales que han pasado al tórax.",
+          "discriminator": "Defecto adquirido tras lesión penetrante",
+          "explanation": "Defecto adquirido tras lesión penetrante. Este patrón orienta a Ruptura diafragmática. El desgarro diafragmático permite herniación de vísceras al tórax; altera la mecánica respiratoria y expone el intestino herniado a compromiso vascular o lesión.",
           "confusable_with": "Hernia diafragmática congénita",
-          "why_not": "El contexto traumático orienta a una ruptura adquirida. La presencia de vísceras torácicas exige valorar compromiso respiratorio y lesiones abdominales asociadas.",
+          "why_not": "El mecanismo traumático y la solución de continuidad adquirida favorecen ruptura. Un defecto congénito se interpreta en otro contexto, aunque ambos pueden contener vísceras torácicas.",
           "facts": [
             {
               "field": "pattern",
@@ -2072,9 +2178,23 @@
               "field": "modifiers.0.reason",
               "text": "La imagen no debe retrasar una intervención necesaria."
             }
+          ],
+          "source_evidence": [
+            {
+              "page": 64,
+              "quote": "idente automovilístico o lesión penetrante y lado más afectado es el izquierdo. Generalmente pasan desapercibidas se diagnostican con rad"
+            }
           ]
         }
-      }
+      },
+      "sources": [
+        {
+          "label": "Edwino.pdf",
+          "pages": [
+            64
+          ]
+        }
+      ]
     },
     {
       "id": "03.06-01",
@@ -2262,7 +2382,18 @@
             }
           ]
         }
-      }
+      },
+      "sources": [
+        {
+          "label": "Edwino.pdf",
+          "pages": [
+            76,
+            77,
+            78,
+            79
+          ]
+        }
+      ]
     },
     {
       "id": "03.06-02",
@@ -2450,7 +2581,15 @@
             }
           ]
         }
-      }
+      },
+      "sources": [
+        {
+          "label": "Edwino.pdf",
+          "pages": [
+            83
+          ]
+        }
+      ]
     },
     {
       "id": "03.07-01",
@@ -2638,7 +2777,15 @@
             }
           ]
         }
-      }
+      },
+      "sources": [
+        {
+          "label": "Edwino.pdf",
+          "pages": [
+            86
+          ]
+        }
+      ]
     },
     {
       "id": "03.07-02",
@@ -2826,7 +2973,16 @@
             }
           ]
         }
-      }
+      },
+      "sources": [
+        {
+          "label": "Edwino.pdf",
+          "pages": [
+            84,
+            85
+          ]
+        }
+      ]
     },
     {
       "id": "03.08-01",
@@ -3014,7 +3170,19 @@
             }
           ]
         }
-      }
+      },
+      "sources": [
+        {
+          "label": "Edwino.pdf",
+          "pages": [
+            67,
+            68,
+            69,
+            70,
+            71
+          ]
+        }
+      ]
     },
     {
       "id": "03.08-02",
@@ -3214,7 +3382,16 @@
             }
           ]
         }
-      }
+      },
+      "sources": [
+        {
+          "label": "Edwino.pdf",
+          "pages": [
+            72,
+            73
+          ]
+        }
+      ]
     },
     {
       "id": "03.08-03",
@@ -3378,7 +3555,15 @@
             }
           ]
         }
-      }
+      },
+      "sources": [
+        {
+          "label": "Edwino.pdf",
+          "pages": [
+            45
+          ]
+        }
+      ]
     },
     {
       "id": "03.09-01",
@@ -3566,7 +3751,17 @@
             }
           ]
         }
-      }
+      },
+      "sources": [
+        {
+          "label": "Edwino.pdf",
+          "pages": [
+            80,
+            81,
+            82
+          ]
+        }
+      ]
     },
     {
       "id": "03.10-01",
@@ -3754,7 +3949,16 @@
             }
           ]
         }
-      }
+      },
+      "sources": [
+        {
+          "label": "Edwino.pdf",
+          "pages": [
+            51,
+            52
+          ]
+        }
+      ]
     },
     {
       "id": "03.11-01",
@@ -3942,7 +4146,17 @@
             }
           ]
         }
-      }
+      },
+      "sources": [
+        {
+          "label": "Edwino.pdf",
+          "pages": [
+            61,
+            62,
+            63
+          ]
+        }
+      ]
     },
     {
       "id": "03.11-02",
@@ -4130,7 +4344,18 @@
             }
           ]
         }
-      }
+      },
+      "sources": [
+        {
+          "label": "Edwino.pdf",
+          "pages": [
+            46,
+            47,
+            48,
+            49
+          ]
+        }
+      ]
     },
     {
       "id": "03.12-01",
@@ -4318,7 +4543,16 @@
             }
           ]
         }
-      }
+      },
+      "sources": [
+        {
+          "label": "Edwino.pdf",
+          "pages": [
+            42,
+            43
+          ]
+        }
+      ]
     }
   ]
 }

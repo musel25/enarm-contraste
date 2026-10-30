@@ -166,7 +166,17 @@
             }
           ]
         }
-      }
+      },
+      "sources": [
+        {
+          "label": "Edwino.pdf",
+          "pages": [
+            15,
+            16,
+            17
+          ]
+        }
+      ]
     },
     {
       "id": "01.01-02",
@@ -366,7 +376,19 @@
             }
           ]
         }
-      }
+      },
+      "sources": [
+        {
+          "label": "Edwino.pdf",
+          "pages": [
+            17
+          ]
+        },
+        {
+          "label": "AHA y Cruz Roja, First Aid Guidelines 2024, sección 5.1",
+          "url": "https://cpr.heart.org/en/resuscitation-science/2024-first-aid-guidelines"
+        }
+      ]
     },
     {
       "id": "01.02-01",
@@ -590,7 +612,19 @@
             }
           ]
         }
-      }
+      },
+      "sources": [
+        {
+          "label": "Edwino.pdf",
+          "pages": [
+            8
+          ]
+        },
+        {
+          "label": "AHA y AAP, Pediatric Basic Life Support 2025",
+          "url": "https://cpr.heart.org/en/resuscitation-science/cpr-and-ecc-guidelines/pediatric-basic-life-support"
+        }
+      ]
     },
     {
       "id": "01.02-02",
@@ -754,7 +788,15 @@
             }
           ]
         }
-      }
+      },
+      "sources": [
+        {
+          "label": "Edwino.pdf",
+          "pages": [
+            7
+          ]
+        }
+      ]
     },
     {
       "id": "01.03-01",
@@ -926,7 +968,15 @@
             }
           ]
         }
-      }
+      },
+      "sources": [
+        {
+          "label": "Edwino.pdf",
+          "pages": [
+            4
+          ]
+        }
+      ]
     },
     {
       "id": "01.03-02",
@@ -1114,7 +1164,15 @@
             }
           ]
         }
-      }
+      },
+      "sources": [
+        {
+          "label": "Edwino.pdf",
+          "pages": [
+            3
+          ]
+        }
+      ]
     },
     {
       "id": "01.04-01",
@@ -1302,21 +1360,29 @@
             }
           ]
         }
-      }
+      },
+      "sources": [
+        {
+          "label": "Edwino.pdf",
+          "pages": [
+            18
+          ]
+        }
+      ]
     },
     {
       "id": "01.05-01",
       "parent_topic_id": "01.05-01",
       "block_id": "01.05",
-      "name": "Distinguir reentrada supraventricular de taquicardia sinusal y tratar",
-      "answer_kind": "decision",
+      "name": "Taquicardia supraventricular",
+      "answer_kind": "diagnosis",
       "variants": {
         "easy": {
-          "vignette": "Una mujer presenta palpitaciones de inicio y fin bruscos. Está alerta y normotensa. El ECG durante el episodio muestra una taquicardia regular de QRS estrecho a 180 latidos por minuto. ¿Qué acción o clasificación corresponde?",
+          "vignette": "Una mujer presenta palpitaciones de inicio y fin bruscos. Está alerta y normotensa. El ECG durante el episodio muestra una taquicardia regular de QRS estrecho a 180 latidos por minuto.",
           "discriminator": "inicio y fin bruscos",
           "explanation": "El dato decisivo es inicio y fin bruscos. Un circuito de reentrada en el nodo AV o mediante una vía accesoria mantiene la activación rápida; interrumpir la conducción nodal puede terminar ciertos circuitos. En una taquicardia regular estable, intentar maniobras vagales. Si persiste, administrar adenosina intravenosa con monitorización.",
           "confusable_with": "Fibrilación auricular",
-          "why_not": "La regularidad del episodio y su inicio brusco favorecen un circuito supraventricular paroxístico. La fibrilación auricular presenta RR irregularmente irregulares.",
+          "why_not": "La regularidad y el comportamiento paroxístico favorecen una reentrada supraventricular. La fibrilación auricular produce intervalos RR irregularmente irregulares.",
           "facts": [
             {
               "field": "pattern",
@@ -1345,11 +1411,11 @@
           ]
         },
         "medium": {
-          "vignette": "Una persona con episodios súbitos de palpitaciones presenta ritmo rápido, regular y estrecho. Ahora tiene hipotensión atribuible al episodio. ¿Qué acción o clasificación corresponde?",
-          "discriminator": "Regularidad y QRS estrecho con hipotensión",
-          "explanation": "El dato decisivo es Regularidad y QRS estrecho con hipotensión. La hipoperfusión requiere conversión urgente. Realizar cardioversión sincronizada.",
+          "vignette": "Una persona con palpitaciones de inicio brusco desarrolla hipotensión. El ECG durante el episodio conserva un ritmo regular de QRS estrecho.",
+          "discriminator": "Taquicardia regular estrecha que ahora compromete perfusión",
+          "explanation": "Taquicardia regular estrecha que ahora compromete perfusión. Este patrón orienta a Taquicardia supraventricular. Un circuito de reentrada en el nodo AV o mediante una vía accesoria mantiene la activación rápida; interrumpir la conducción nodal puede terminar ciertos circuitos.",
           "confusable_with": "Fibrilación auricular",
-          "why_not": "La regularidad del episodio y su inicio brusco favorecen un circuito supraventricular paroxístico. La fibrilación auricular presenta RR irregularmente irregulares.",
+          "why_not": "La regularidad y el comportamiento paroxístico favorecen una reentrada supraventricular. La fibrilación auricular produce intervalos RR irregularmente irregulares.",
           "facts": [
             {
               "field": "pattern",
@@ -1418,11 +1484,11 @@
           ]
         },
         "contrast": {
-          "vignette": "Una persona con fiebre o hipovolemia tiene taquicardia sinusal. El equipo debe decidir si tratar un circuito arrítmico o corregir el estímulo que acelera el ritmo. ¿Qué acción o clasificación corresponde?",
-          "discriminator": "Causa fisiológica de taquicardia sinusal",
-          "explanation": "La taquicardia sinusal por fiebre o hipovolemia requiere corregir la causa primaria. No se debe asumir que todo ritmo rápido de QRS estrecho es una reentrada que necesita adenosina.",
-          "confusable_with": "Taquicardia supraventricular por reentrada",
-          "why_not": "La fiebre o hipovolemia pueden producir taquicardia sinusal. Se corrige ese estímulo; no se asume una reentrada por encontrar un ritmo rápido de QRS estrecho.",
+          "vignette": "Durante palpitaciones recurrentes se registra un ritmo rápido de complejos estrechos y regulares. La maniobra vagal interrumpe el episodio y recupera el ritmo previo.",
+          "discriminator": "Terminación de un ritmo regular estrecho al interrumpir conducción nodal",
+          "explanation": "Terminación de un ritmo regular estrecho al interrumpir conducción nodal. Este patrón orienta a Taquicardia supraventricular. Un circuito de reentrada en el nodo AV o mediante una vía accesoria mantiene la activación rápida; interrumpir la conducción nodal puede terminar ciertos circuitos.",
+          "confusable_with": "Fibrilación auricular",
+          "why_not": "La regularidad y el comportamiento paroxístico favorecen una reentrada supraventricular. La fibrilación auricular produce intervalos RR irregularmente irregulares.",
           "facts": [
             {
               "field": "pattern",
@@ -1490,7 +1556,18 @@
             }
           ]
         }
-      }
+      },
+      "sources": [
+        {
+          "label": "Edwino.pdf",
+          "pages": [
+            19,
+            20,
+            21,
+            22
+          ]
+        }
+      ]
     },
     {
       "id": "01.06-01",
@@ -1678,7 +1755,16 @@
             }
           ]
         }
-      }
+      },
+      "sources": [
+        {
+          "label": "Edwino.pdf",
+          "pages": [
+            5,
+            6
+          ]
+        }
+      ]
     },
     {
       "id": "01.07-01",
@@ -1866,7 +1952,19 @@
             }
           ]
         }
-      }
+      },
+      "sources": [
+        {
+          "label": "Edwino.pdf",
+          "pages": [
+            14
+          ]
+        },
+        {
+          "label": "ACC/AHA/ACCP/HRS, guía de FA 2023, sección 10.6",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11095842/"
+        }
+      ]
     },
     {
       "id": "01.08-01",
@@ -2030,7 +2128,15 @@
             }
           ]
         }
-      }
+      },
+      "sources": [
+        {
+          "label": "Edwino.pdf",
+          "pages": [
+            7
+          ]
+        }
+      ]
     },
     {
       "id": "01.08-02",
@@ -2218,7 +2324,16 @@
             }
           ]
         }
-      }
+      },
+      "sources": [
+        {
+          "label": "Edwino.pdf",
+          "pages": [
+            5,
+            6
+          ]
+        }
+      ]
     },
     {
       "id": "01.09-01",
@@ -2406,7 +2521,16 @@
             }
           ]
         }
-      }
+      },
+      "sources": [
+        {
+          "label": "Edwino.pdf",
+          "pages": [
+            1,
+            2
+          ]
+        }
+      ]
     },
     {
       "id": "01.10-01",
@@ -2606,7 +2730,19 @@
             }
           ]
         }
-      }
+      },
+      "sources": [
+        {
+          "label": "Edwino.pdf",
+          "pages": [
+            17
+          ]
+        },
+        {
+          "label": "AHA y Cruz Roja, First Aid Guidelines 2024, sección 5.1",
+          "url": "https://cpr.heart.org/en/resuscitation-science/2024-first-aid-guidelines"
+        }
+      ]
     },
     {
       "id": "01.10-02",
@@ -2770,7 +2906,17 @@
             }
           ]
         }
-      }
+      },
+      "sources": [
+        {
+          "label": "Edwino.pdf",
+          "pages": [
+            15,
+            16,
+            17
+          ]
+        }
+      ]
     }
   ]
 }

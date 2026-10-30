@@ -202,7 +202,22 @@
             }
           ]
         }
-      }
+      },
+      "sources": [
+        {
+          "label": "Edwino.pdf",
+          "pages": [
+            129,
+            130,
+            131,
+            132
+          ]
+        },
+        {
+          "label": "WSES 2025, publicada en 2026: apendicitis",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/41604201/"
+        }
+      ]
     },
     {
       "id": "05.01-02",
@@ -390,21 +405,29 @@
             }
           ]
         }
-      }
+      },
+      "sources": [
+        {
+          "label": "Edwino.pdf",
+          "pages": [
+            133
+          ]
+        }
+      ]
     },
     {
       "id": "05.02-01",
       "parent_topic_id": "05.02-01",
       "block_id": "05.02",
-      "name": "Distinguir cólico biliar de complicación",
-      "answer_kind": "decision",
+      "name": "Cólico biliar",
+      "answer_kind": "diagnosis",
       "variants": {
         "easy": {
-          "vignette": "Una adulta presenta dolor continuo en hipocondrio derecho después de una comida grasa. Tiene náusea, pero no fiebre ni respuesta inflamatoria. El dolor cede durante la valoración. ¿Qué acción o clasificación corresponde a este contexto?",
+          "vignette": "Una adulta presenta dolor continuo en hipocondrio derecho después de una comida grasa. Tiene náusea, pero no fiebre ni respuesta inflamatoria. El dolor cede durante la valoración.",
           "discriminator": "no fiebre ni respuesta inflamatoria",
           "explanation": "El dato decisivo es no fiebre ni respuesta inflamatoria. La obstrucción transitoria del cístico eleva presión vesicular sin inflamación persistente; la contracción tras alimentos desencadena dolor mientras el cálculo impide vaciamiento. Dar analgesia apropiada y solicitar ultrasonido para documentar litiasis. Remitir a cirugía por enfermedad sintomática, sin asumir necesidad de operación urgente si el cuadro se resuelve.",
-          "confusable_with": "Colecistitis aguda o coledocolitiasis",
-          "why_not": "El dolor transitorio sin respuesta inflamatoria caracteriza el cólico no complicado. La fiebre, la persistencia o la ictericia obligan a buscar otra clasificación biliar.",
+          "confusable_with": "Colecistitis aguda",
+          "why_not": "El dolor transitorio sin respuesta inflamatoria sostenida favorece cólico biliar. La fiebre y el dolor persistente obligan a investigar colecistitis u otra complicación.",
           "facts": [
             {
               "field": "pattern",
@@ -433,11 +456,11 @@
           ]
         },
         "medium": {
-          "vignette": "Después de dolor posprandial en hipocondrio derecho que antes cedía, aparece fiebre y el episodio persiste. Se debe buscar una complicación. ¿Qué acción o clasificación corresponde a este contexto?",
-          "discriminator": "Cambio a dolor persistente con fiebre",
-          "explanation": "El dato decisivo es Cambio a dolor persistente con fiebre. Puede existir inflamación, obstrucción de colédoco o infección. Buscar complicación biliar.",
-          "confusable_with": "Colecistitis aguda o coledocolitiasis",
-          "why_not": "El dolor transitorio sin respuesta inflamatoria caracteriza el cólico no complicado. La fiebre, la persistencia o la ictericia obligan a buscar otra clasificación biliar.",
+          "vignette": "Una persona tiene dolor continuo en epigastrio que se irradia a espalda después de comer huevos o lácteos enteros. Hay náusea, pero no fiebre sistémica; el episodio cede.",
+          "discriminator": "Dolor epigástrico posprandial irradiado sin respuesta inflamatoria",
+          "explanation": "Dolor epigástrico posprandial irradiado sin respuesta inflamatoria. Este patrón orienta a Cólico biliar. La obstrucción transitoria del cístico eleva presión vesicular sin inflamación persistente; la contracción tras alimentos desencadena dolor mientras el cálculo impide vaciamiento.",
+          "confusable_with": "Colecistitis aguda",
+          "why_not": "El dolor transitorio sin respuesta inflamatoria sostenida favorece cólico biliar. La fiebre y el dolor persistente obligan a investigar colecistitis u otra complicación.",
           "facts": [
             {
               "field": "pattern",
@@ -491,14 +514,20 @@
               "field": "modifiers.0.reason",
               "text": "Puede existir inflamación, obstrucción de colédoco o infección."
             }
+          ],
+          "source_evidence": [
+            {
+              "page": 145,
+              "quote": "erecho o epigastrio, que puede irradiarse al flanco derecho y la espalda, y se acompaña de náuseas o vómitos. 1 \\ @ Diagnóstico Si el do"
+            }
           ]
         },
         "contrast": {
-          "vignette": "Una persona con episodios de dolor biliar después de comer desarrolla ictericia. Se necesita investigar si hay obstrucción en la vía principal. ¿Qué acción o clasificación corresponde a este contexto?",
-          "discriminator": "Ictericia nueva tras dolor biliar",
-          "explanation": "El dato decisivo es Ictericia nueva tras dolor biliar. Puede existir inflamación, obstrucción de colédoco o infección. Buscar complicación biliar.",
-          "confusable_with": "Colecistitis aguda o coledocolitiasis",
-          "why_not": "El dolor transitorio sin respuesta inflamatoria caracteriza el cólico no complicado. La fiebre, la persistencia o la ictericia obligan a buscar otra clasificación biliar.",
+          "vignette": "Una persona con cálculos vesiculares presenta episodios de opresión en hipocondrio derecho después de comer. Entre episodios vuelve a su estado habitual y no aparecen fiebre ni inflamación persistente.",
+          "discriminator": "Síntomas vesiculares transitorios con intervalos de recuperación",
+          "explanation": "Síntomas vesiculares transitorios con intervalos de recuperación. Este patrón orienta a Cólico biliar. La obstrucción transitoria del cístico eleva presión vesicular sin inflamación persistente; la contracción tras alimentos desencadena dolor mientras el cálculo impide vaciamiento.",
+          "confusable_with": "Colecistitis aguda",
+          "why_not": "El dolor transitorio sin respuesta inflamatoria sostenida favorece cólico biliar. La fiebre y el dolor persistente obligan a investigar colecistitis u otra complicación.",
           "facts": [
             {
               "field": "pattern",
@@ -554,21 +583,29 @@
             }
           ]
         }
-      }
+      },
+      "sources": [
+        {
+          "label": "Edwino.pdf",
+          "pages": [
+            145
+          ]
+        }
+      ]
     },
     {
       "id": "05.02-02",
       "parent_topic_id": "05.02-02",
       "block_id": "05.02",
-      "name": "Evaluar cálculos vesiculares y buscar complicaciones",
-      "answer_kind": "decision",
+      "name": "Colelitiasis",
+      "answer_kind": "diagnosis",
       "variants": {
         "easy": {
-          "vignette": "Durante un estudio de una adulta sin dolor actual se observan cálculos dentro de la vesícula. No tiene fiebre, ictericia ni datos de inflamación; se revisan antecedentes y síntomas previos. ¿Qué acción o clasificación corresponde a este contexto?",
+          "vignette": "Durante un estudio de una adulta sin dolor actual se observan cálculos dentro de la vesícula. No tiene fiebre, ictericia ni datos de inflamación; se revisan antecedentes y síntomas previos.",
           "discriminator": "cálculos dentro de la vesícula",
           "explanation": "El dato decisivo es cálculos dentro de la vesícula. La sobresaturación biliar y factores de nucleación favorecen cálculos; su presencia puede ser asintomática o producir obstrucción transitoria, inflamación o migración hacia la vía principal. Determinar si la litiasis es sintomática y buscar complicaciones. En asintomáticos, valorar seguimiento e indicaciones especiales; en sintomáticos, solicitar evaluación para colecistectomía.",
-          "confusable_with": "Colelitiasis incidental no complicada",
-          "why_not": "El hallazgo de cálculos no basta para asumir un cuadro incidental. La fiebre o la colestasis añaden complicaciones que requieren estudio específico.",
+          "confusable_with": "Coledocolitiasis",
+          "why_not": "La localización de los cálculos dentro de la vesícula define colelitiasis. La colestasis y un cálculo en la vía principal indicarían otro problema, que puede coexistir.",
           "facts": [
             {
               "field": "pattern",
@@ -597,11 +634,11 @@
           ]
         },
         "medium": {
-          "vignette": "Se identifican cálculos vesiculares en una persona que desarrolla fiebre y dolor persistente. Se evalúa inflamación de la vesícula. ¿Qué acción o clasificación corresponde a este contexto?",
-          "discriminator": "Litiasis con nuevo síndrome inflamatorio",
-          "explanation": "El dato decisivo es Litiasis con nuevo síndrome inflamatorio. Sugiere inflamación vesicular. Evaluar colecistitis.",
-          "confusable_with": "Colelitiasis incidental no complicada",
-          "why_not": "El hallazgo de cálculos no basta para asumir un cuadro incidental. La fiebre o la colestasis añaden complicaciones que requieren estudio específico.",
+          "vignette": "Una persona con hemólisis crónica tiene cálculos pigmentarios identificados dentro de la vesícula durante un ultrasonido. No presenta inflamación vesicular actual.",
+          "discriminator": "Cálculos vesiculares en contexto hemolítico",
+          "explanation": "Cálculos vesiculares en contexto hemolítico. Este patrón orienta a Colelitiasis. La sobresaturación biliar y factores de nucleación favorecen cálculos; su presencia puede ser asintomática o producir obstrucción transitoria, inflamación o migración hacia la vía principal.",
+          "confusable_with": "Coledocolitiasis",
+          "why_not": "La localización de los cálculos dentro de la vesícula define colelitiasis. La colestasis y un cálculo en la vía principal indicarían otro problema, que puede coexistir.",
           "facts": [
             {
               "field": "pattern",
@@ -666,15 +703,21 @@
             {
               "field": "modifiers.1.reason",
               "text": "Puede requerir extracción endoscópica."
+            }
+          ],
+          "source_evidence": [
+            {
+              "page": 139,
+              "quote": "do a una Se asocia n con hemólisis crónica, Se asocian a infecciones crónicas del sobresaturación de colesterol en la bilis. cirrosis hep"
             }
           ]
         },
         "contrast": {
-          "vignette": "Una persona con cálculos en vesícula presenta colestasis y dilatación del colédoco. Se investiga migración a la vía principal. ¿Qué acción o clasificación corresponde a este contexto?",
-          "discriminator": "Litiasis con dilatación de vía principal",
-          "explanation": "El dato decisivo es Litiasis con dilatación de vía principal. Puede requerir extracción endoscópica. Investigar cálculo en vía principal.",
-          "confusable_with": "Colelitiasis incidental no complicada",
-          "why_not": "El hallazgo de cálculos no basta para asumir un cuadro incidental. La fiebre o la colestasis añaden complicaciones que requieren estudio específico.",
+          "vignette": "Durante el embarazo, una paciente con obesidad presenta dolor biliar posprandial. El ultrasonido muestra cálculos confinados a la vesícula, sin datos actuales de inflamación ni obstrucción de la vía principal.",
+          "discriminator": "Litiasis vesicular sintomática en contexto hormonal y metabólico",
+          "explanation": "Litiasis vesicular sintomática en contexto hormonal y metabólico. Este patrón orienta a Colelitiasis. La sobresaturación biliar y factores de nucleación favorecen cálculos; su presencia puede ser asintomática o producir obstrucción transitoria, inflamación o migración hacia la vía principal.",
+          "confusable_with": "Coledocolitiasis",
+          "why_not": "La localización de los cálculos dentro de la vesícula define colelitiasis. La colestasis y un cálculo en la vía principal indicarían otro problema, que puede coexistir.",
           "facts": [
             {
               "field": "pattern",
@@ -740,9 +783,28 @@
               "field": "modifiers.1.reason",
               "text": "Puede requerir extracción endoscópica."
             }
+          ],
+          "source_evidence": [
+            {
+              "page": 139,
+              "quote": "avanzada . • Obesidad. • Embarazo (generalmente es transitorio). • Infecciones del t racto biliar. KeCuE'rda la mnemotecnia de l"
+            }
           ]
         }
-      }
+      },
+      "sources": [
+        {
+          "label": "Edwino.pdf",
+          "pages": [
+            139,
+            140,
+            141,
+            142,
+            143,
+            144
+          ]
+        }
+      ]
     },
     {
       "id": "05.03-01",
@@ -930,7 +992,16 @@
             }
           ]
         }
-      }
+      },
+      "sources": [
+        {
+          "label": "Edwino.pdf",
+          "pages": [
+            136,
+            137
+          ]
+        }
+      ]
     },
     {
       "id": "05.03-02",
@@ -943,8 +1014,8 @@
           "vignette": "Una persona con dolor biliar desarrolla ictericia y coluria. La bilirrubina directa y fosfatasa alcalina están elevadas; el ultrasonido muestra dilatación de la vía biliar principal.",
           "discriminator": "bilirrubina directa y fosfatasa alcalina",
           "explanation": "El dato decisivo es bilirrubina directa y fosfatasa alcalina. Un cálculo en el colédoco impide drenaje de bilis, produce colestasis y puede desencadenar infección ascendente o pancreatitis cuando afecta la salida pancreatobiliar. Estimar probabilidad con clínica, laboratorio y ultrasonido. Valorar colangiorresonancia o ecoendoscopia si se requiere confirmación y CPRE cuando hay indicación terapéutica.",
-          "confusable_with": "Colelitiasis limitada a vesícula",
-          "why_not": "La colestasis y la dilatación ductal orientan a obstrucción de la vía principal. Un cálculo limitado a la vesícula no explica por sí solo ese patrón.",
+          "confusable_with": "Colelitiasis confinada a la vesícula",
+          "why_not": "La localización del cálculo en el conducto principal define coledocolitiasis. La colestasis orienta a esa obstrucción, pero necesita distinguir cálculo de otras causas ductales.",
           "facts": [
             {
               "field": "pattern",
@@ -973,11 +1044,11 @@
           ]
         },
         "medium": {
-          "vignette": "Una persona con dilatación de vía biliar, ictericia y coluria desarrolla fiebre e hipotensión. Se considera infección sobre la obstrucción.",
-          "discriminator": "Obstrucción biliar con signos de infección grave",
-          "explanation": "El dato decisivo es Obstrucción biliar con signos de infección grave. La obstrucción infectada puede causar sepsis. Tratar como posible infección biliar y priorizar drenaje.",
-          "confusable_with": "Colelitiasis limitada a vesícula",
-          "why_not": "La colestasis y la dilatación ductal orientan a obstrucción de la vía principal. Un cálculo limitado a la vesícula no explica por sí solo ese patrón.",
+          "vignette": "Una persona con ictericia y coluria tiene dilatación de la vía biliar. La evaluación identifica un cálculo en el conducto principal y después aparecen fiebre e hipotensión por infección sobre la obstrucción.",
+          "discriminator": "Cálculo ductal demostrado con infección sobreañadida",
+          "explanation": "Cálculo ductal demostrado con infección sobreañadida. Este patrón orienta a Coledocolitiasis. Un cálculo en el colédoco impide drenaje de bilis, produce colestasis y puede desencadenar infección ascendente o pancreatitis cuando afecta la salida pancreatobiliar.",
+          "confusable_with": "Colelitiasis confinada a la vesícula",
+          "why_not": "La localización del cálculo en el conducto principal define coledocolitiasis. La colestasis orienta a esa obstrucción, pero necesita distinguir cálculo de otras causas ductales.",
           "facts": [
             {
               "field": "pattern",
@@ -1034,11 +1105,11 @@
           ]
         },
         "contrast": {
-          "vignette": "La evaluación de dolor biliar muestra bilirrubina directa y fosfatasa alcalina elevadas. Se necesitan pruebas para localizar un posible cálculo de la vía principal.",
-          "discriminator": "Colestasis bioquímica que requiere localización ductal",
-          "explanation": "El dato decisivo es Colestasis bioquímica que requiere localización ductal. Un cálculo en el colédoco impide drenaje de bilis, produce colestasis y puede desencadenar infección ascendente o pancreatitis cuando afecta la salida pancreatobiliar. Estimar probabilidad con clínica, laboratorio y ultrasonido. Valorar colangiorresonancia o ecoendoscopia si se requiere confirmación y CPRE cuando hay indicación terapéutica.",
-          "confusable_with": "Colelitiasis limitada a vesícula",
-          "why_not": "La colestasis y la dilatación ductal orientan a obstrucción de la vía principal. Un cálculo limitado a la vesícula no explica por sí solo ese patrón.",
+          "vignette": "Una persona con dolor biliar y elevación de bilirrubina directa y fosfatasa alcalina tiene un cálculo de la vía principal confirmado por imagen dirigida.",
+          "discriminator": "Obstrucción litiásica de la vía principal confirmada",
+          "explanation": "Obstrucción litiásica de la vía principal confirmada. Este patrón orienta a Coledocolitiasis. Un cálculo en el colédoco impide drenaje de bilis, produce colestasis y puede desencadenar infección ascendente o pancreatitis cuando afecta la salida pancreatobiliar.",
+          "confusable_with": "Colelitiasis confinada a la vesícula",
+          "why_not": "La localización del cálculo en el conducto principal define coledocolitiasis. La colestasis orienta a esa obstrucción, pero necesita distinguir cálculo de otras causas ductales.",
           "facts": [
             {
               "field": "pattern",
@@ -1094,7 +1165,15 @@
             }
           ]
         }
-      }
+      },
+      "sources": [
+        {
+          "label": "Edwino.pdf",
+          "pages": [
+            138
+          ]
+        }
+      ]
     },
     {
       "id": "05.03-03",
@@ -1274,7 +1353,15 @@
             }
           ]
         }
-      }
+      },
+      "sources": [
+        {
+          "label": "Edwino.pdf",
+          "pages": [
+            135
+          ]
+        }
+      ]
     },
     {
       "id": "05.04-01",
@@ -1438,7 +1525,15 @@
             }
           ]
         }
-      }
+      },
+      "sources": [
+        {
+          "label": "Edwino.pdf",
+          "pages": [
+            147
+          ]
+        }
+      ]
     },
     {
       "id": "05.04-02",
@@ -1452,7 +1547,7 @@
           "discriminator": "obstrucción hiliar",
           "explanation": "El dato decisivo es obstrucción hiliar. Una neoplasia del epitelio biliar estrecha los conductos y bloquea la salida de bilis; el patrón de obstrucción y extensión define posibilidad de resección o drenaje. Solicitar perfil hepático e imagen para definir el nivel de obstrucción; completar con estudio especializado y valoración hepatobiliar antes de decidir obtención de tejido o tratamiento.",
           "confusable_with": "Coledocolitiasis",
-          "why_not": "La obstrucción hiliar progresiva con pérdida de peso exige evaluar neoplasia. El estudio anatómico y de extensión decide resecabilidad; no debe asumirse litiasis.",
+          "why_not": "La lesión de la vía biliar y la progresión con pérdida de peso orientan a colangiocarcinoma. Una obstrucción por cálculo debe investigarse, pero no explica una masa ductal demostrada.",
           "facts": [
             {
               "field": "pattern",
@@ -1481,11 +1576,11 @@
           ]
         },
         "medium": {
-          "vignette": "Una persona con obstrucción hiliar progresiva y pérdida de peso desarrolla fiebre por infección biliar. Se priorizan antibióticos y drenaje indicado.",
-          "discriminator": "Obstrucción tumoral con colangitis",
-          "explanation": "El dato decisivo es Obstrucción tumoral con colangitis. La infección añade urgencia. Priorizar antibióticos y drenaje indicado.",
+          "vignette": "Una persona con ictericia progresiva, prurito y pérdida de peso tiene una lesión obstructiva hiliar. Desarrolla fiebre y una infección biliar sobre ese sitio de obstrucción.",
+          "discriminator": "Lesión hiliar progresiva con infección sobreañadida",
+          "explanation": "Lesión hiliar progresiva con infección sobreañadida. Este patrón orienta a Colangiocarcinoma. Una neoplasia del epitelio biliar estrecha los conductos y bloquea la salida de bilis; el patrón de obstrucción y extensión define posibilidad de resección o drenaje.",
           "confusable_with": "Coledocolitiasis",
-          "why_not": "La obstrucción hiliar progresiva con pérdida de peso exige evaluar neoplasia. El estudio anatómico y de extensión decide resecabilidad; no debe asumirse litiasis.",
+          "why_not": "La lesión de la vía biliar y la progresión con pérdida de peso orientan a colangiocarcinoma. Una obstrucción por cálculo debe investigarse, pero no explica una masa ductal demostrada.",
           "facts": [
             {
               "field": "pattern",
@@ -1554,11 +1649,11 @@
           ]
         },
         "contrast": {
-          "vignette": "El estudio de ictericia progresiva y prurito identifica enfermedad biliar maligna no resecable. Se valora tratamiento oncológico y alivio de la obstrucción.",
-          "discriminator": "Obstrucción biliar maligna no resecable",
-          "explanation": "El dato decisivo es Obstrucción biliar maligna no resecable. El objetivo cambia según extensión. Valorar tratamiento oncológico y alivio de obstrucción.",
+          "vignette": "La evaluación de ictericia y coluria identifica una neoplasia originada en la vía biliar que no es resecable. Predominan prurito y adelgazamiento, y no se identifica un cálculo que explique la obstrucción.",
+          "discriminator": "Neoplasia ductal con obstrucción progresiva",
+          "explanation": "Neoplasia ductal con obstrucción progresiva. Este patrón orienta a Colangiocarcinoma. Una neoplasia del epitelio biliar estrecha los conductos y bloquea la salida de bilis; el patrón de obstrucción y extensión define posibilidad de resección o drenaje.",
           "confusable_with": "Coledocolitiasis",
-          "why_not": "La obstrucción hiliar progresiva con pérdida de peso exige evaluar neoplasia. El estudio anatómico y de extensión decide resecabilidad; no debe asumirse litiasis.",
+          "why_not": "La lesión de la vía biliar y la progresión con pérdida de peso orientan a colangiocarcinoma. Una obstrucción por cálculo debe investigarse, pero no explica una masa ductal demostrada.",
           "facts": [
             {
               "field": "pattern",
@@ -1626,7 +1721,15 @@
             }
           ]
         }
-      }
+      },
+      "sources": [
+        {
+          "label": "Edwino.pdf",
+          "pages": [
+            134
+          ]
+        }
+      ]
     },
     {
       "id": "05.05-01",
@@ -1790,7 +1893,16 @@
             }
           ]
         }
-      }
+      },
+      "sources": [
+        {
+          "label": "Edwino.pdf",
+          "pages": [
+            155,
+            156
+          ]
+        }
+      ]
     },
     {
       "id": "05.05-02",
@@ -1804,7 +1916,7 @@
           "discriminator": "por encima del ligamento inguinal",
           "explanation": "El dato decisivo es por encima del ligamento inguinal. La debilidad posterior o persistencia de un trayecto peritoneal permite protrusión por la ingle; el esfuerzo aumenta presión abdominal y hace evidente el defecto. Confirmar clínicamente y valorar síntomas, reducibilidad y riesgo. Planear reparación en sintomáticos; considerar vigilancia informada en hombres con síntomas mínimos y sin complicación.",
           "confusable_with": "Hernia femoral",
-          "why_not": "La posición por encima del ligamento orienta a defecto inguinal. La femoral se localiza por debajo, y la irreductibilidad cambia la prioridad.",
+          "why_not": "La posición por encima del ligamento orienta a hernia inguinal. La femoral aparece por debajo; la reducibilidad y el dolor determinan complicación, no cambian la localización.",
           "facts": [
             {
               "field": "pattern",
@@ -1833,11 +1945,11 @@
           ]
         },
         "medium": {
-          "vignette": "Una persona tiene molestia y posible bulto sobre el ligamento inguinal, pero la exploración no aclara el defecto. Se solicita ultrasonido.",
-          "discriminator": "Exploración inguinal dudosa",
-          "explanation": "El dato decisivo es Exploración inguinal dudosa. Puede haber hernia oculta u otra causa de dolor. Solicitar ultrasonido y ampliar imagen si persiste duda.",
+          "vignette": "Una persona tiene una exploración inguinal dudosa. El ultrasonido demuestra protrusión de contenido por encima del ligamento inguinal durante esfuerzo y reducción al acostarse.",
+          "discriminator": "Defecto suprainguinal demostrado cuando la exploración era dudosa",
+          "explanation": "Defecto suprainguinal demostrado cuando la exploración era dudosa. Este patrón orienta a Hernia inguinal. La debilidad posterior o persistencia de un trayecto peritoneal permite protrusión por la ingle; el esfuerzo aumenta presión abdominal y hace evidente el defecto.",
           "confusable_with": "Hernia femoral",
-          "why_not": "La posición por encima del ligamento orienta a defecto inguinal. La femoral se localiza por debajo, y la irreductibilidad cambia la prioridad.",
+          "why_not": "La posición por encima del ligamento orienta a hernia inguinal. La femoral aparece por debajo; la reducibilidad y el dolor determinan complicación, no cambian la localización.",
           "facts": [
             {
               "field": "pattern",
@@ -1906,11 +2018,11 @@
           ]
         },
         "contrast": {
-          "vignette": "Un bulto inguinal por encima del ligamento deja de reducir y presenta dolor continuo. Se evalúa una complicación urgente.",
-          "discriminator": "Irreductibilidad nueva de bulto suprainguinal",
-          "explanation": "El dato decisivo es Irreductibilidad nueva de bulto suprainguinal. Puede existir incarceración o estrangulación. Evaluar complicación urgente.",
+          "vignette": "Un bulto previamente reducible situado por encima del ligamento inguinal deja de regresar. Aparece dolor continuo y se evalúa compromiso del contenido.",
+          "discriminator": "Defecto inguinal ahora irreductible",
+          "explanation": "Defecto inguinal ahora irreductible. Este patrón orienta a Hernia inguinal. La debilidad posterior o persistencia de un trayecto peritoneal permite protrusión por la ingle; el esfuerzo aumenta presión abdominal y hace evidente el defecto.",
           "confusable_with": "Hernia femoral",
-          "why_not": "La posición por encima del ligamento orienta a defecto inguinal. La femoral se localiza por debajo, y la irreductibilidad cambia la prioridad.",
+          "why_not": "La posición por encima del ligamento orienta a hernia inguinal. La femoral aparece por debajo; la reducibilidad y el dolor determinan complicación, no cambian la localización.",
           "facts": [
             {
               "field": "pattern",
@@ -1978,7 +2090,16 @@
             }
           ]
         }
-      }
+      },
+      "sources": [
+        {
+          "label": "Edwino.pdf",
+          "pages": [
+            151,
+            152
+          ]
+        }
+      ]
     },
     {
       "id": "05.05-03",
@@ -2142,7 +2263,15 @@
             }
           ]
         }
-      }
+      },
+      "sources": [
+        {
+          "label": "Edwino.pdf",
+          "pages": [
+            149
+          ]
+        }
+      ]
     },
     {
       "id": "05.06-01",
@@ -2314,21 +2443,29 @@
             }
           ]
         }
-      }
+      },
+      "sources": [
+        {
+          "label": "Edwino.pdf",
+          "pages": [
+            153
+          ]
+        }
+      ]
     },
     {
       "id": "05.06-02",
       "parent_topic_id": "05.06-02",
       "block_id": "05.06",
-      "name": "Distinguir defecto ventral de diástasis y tratar complicaciones",
-      "answer_kind": "decision",
+      "name": "Hernia ventral",
+      "answer_kind": "diagnosis",
       "variants": {
         "easy": {
-          "vignette": "Un adulto con laparotomía previa presenta un bulto sobre la cicatriz, mayor al hacer esfuerzo. La exploración identifica un anillo de pared por el que protruye contenido abdominal. ¿Qué acción o clasificación corresponde a este contexto?",
+          "vignette": "Un adulto con laparotomía previa presenta un bulto sobre la cicatriz, mayor al hacer esfuerzo. La exploración identifica un anillo de pared por el que protruye contenido abdominal.",
           "discriminator": "un anillo de pared",
           "explanation": "El dato decisivo es un anillo de pared. El fallo de continuidad fascial permite herniación anterolateral; la presión y los factores de mala cicatrización amplían el defecto y aumentan riesgo de recurrencia. Valorar complicaciones y definir el defecto clínicamente; solicitar imagen si hay duda o para planear reparación. Optimizar factores modificables y referir a cirugía.",
           "confusable_with": "Diástasis de rectos",
-          "why_not": "La hernia requiere un defecto o anillo por donde protruye contenido. La separación de rectos sin anillo corresponde a diástasis y no se clasifica igual.",
+          "why_not": "La hernia requiere un anillo o defecto fascial por el que protruye contenido. La separación de rectos sin anillo corresponde a diástasis.",
           "facts": [
             {
               "field": "pattern",
@@ -2357,11 +2494,11 @@
           ]
         },
         "medium": {
-          "vignette": "Después de laparotomía aparece un bulto en la cicatriz con dolor y obstrucción intestinal. Se estabiliza al paciente y se valora cirugía urgente. ¿Qué acción o clasificación corresponde a este contexto?",
-          "discriminator": "Defecto de cicatriz con obstrucción",
-          "explanation": "El dato decisivo es Defecto de cicatriz con obstrucción. Puede existir contenido comprometido. Estabilizar y evaluar cirugía urgente.",
+          "vignette": "Después de laparotomía, un paciente presenta dolor y obstrucción junto a un bulto sobre la cicatriz. Se identifica un anillo fascial por el que protruye contenido abdominal.",
+          "discriminator": "Defecto de cicatriz con contenido atrapado y obstrucción",
+          "explanation": "Defecto de cicatriz con contenido atrapado y obstrucción. Este patrón orienta a Hernia ventral. El fallo de continuidad fascial permite herniación anterolateral; la presión y los factores de mala cicatrización amplían el defecto y aumentan riesgo de recurrencia.",
           "confusable_with": "Diástasis de rectos",
-          "why_not": "La hernia requiere un defecto o anillo por donde protruye contenido. La separación de rectos sin anillo corresponde a diástasis y no se clasifica igual.",
+          "why_not": "La hernia requiere un anillo o defecto fascial por el que protruye contenido. La separación de rectos sin anillo corresponde a diástasis.",
           "facts": [
             {
               "field": "pattern",
@@ -2430,11 +2567,11 @@
           ]
         },
         "contrast": {
-          "vignette": "Un paciente presenta separación de los rectos, pero la exploración no identifica un anillo de pared. ¿Debe clasificarse como hernia?",
-          "discriminator": "Separación de rectos sin anillo",
-          "explanation": "El dato decisivo es Separación de rectos sin anillo. No hay el mismo defecto herniario. Reconocer diástasis.",
+          "vignette": "Una persona operada previamente de un defecto de pared vuelve a presentar una protrusión anterolateral con esfuerzo. La imagen demuestra un nuevo anillo de fascia y permite diferenciarlo de simple separación de rectos.",
+          "discriminator": "Recurrencia de protrusión a través de un defecto fascial",
+          "explanation": "Recurrencia de protrusión a través de un defecto fascial. Este patrón orienta a Hernia ventral. El fallo de continuidad fascial permite herniación anterolateral; la presión y los factores de mala cicatrización amplían el defecto y aumentan riesgo de recurrencia.",
           "confusable_with": "Diástasis de rectos",
-          "why_not": "La hernia requiere un defecto o anillo por donde protruye contenido. La separación de rectos sin anillo corresponde a diástasis y no se clasifica igual.",
+          "why_not": "La hernia requiere un anillo o defecto fascial por el que protruye contenido. La separación de rectos sin anillo corresponde a diástasis.",
           "facts": [
             {
               "field": "pattern",
@@ -2500,23 +2637,37 @@
               "field": "modifiers.1.reason",
               "text": "No hay el mismo defecto herniario."
             }
+          ],
+          "source_evidence": [
+            {
+              "page": 154,
+              "quote": "ías. • La posibilidad de recidiva posterior a reparación alcanza hasta el 54% sin material protésico y un 32% cuando se utiliza "
+            }
           ]
         }
-      }
+      },
+      "sources": [
+        {
+          "label": "Edwino.pdf",
+          "pages": [
+            154
+          ]
+        }
+      ]
     },
     {
       "id": "05.06-03",
       "parent_topic_id": "05.06-03",
       "block_id": "05.06",
-      "name": "Clasificar hernia hiatal y decidir evaluación según anatomía",
-      "answer_kind": "decision",
+      "name": "Hernia hiatal",
+      "answer_kind": "diagnosis",
       "variants": {
         "easy": {
-          "vignette": "Una adulta mayor presenta regurgitación, dolor torácico después de comer y disfagia. Un estudio contrastado muestra fondo gástrico intratorácico junto a una unión gastroesofágica que conserva posición. ¿Qué acción o clasificación corresponde?",
+          "vignette": "Una adulta mayor presenta regurgitación, dolor torácico después de comer y disfagia. Un estudio contrastado muestra fondo gástrico intratorácico junto a una unión gastroesofágica que conserva posición.",
           "discriminator": "fondo gástrico intratorácico",
           "explanation": "El dato decisivo es fondo gástrico intratorácico. El hiato dilatado permite herniación del estómago; la relación de la unión gastroesofágica con el diafragma distingue deslizamiento de una hernia paraesofágica y su repercusión. Definir anatomía con estudio contrastado y valorar endoscopia y evaluación quirúrgica en una hernia paraesofágica sintomática.",
-          "confusable_with": "ERGE sin defecto anatómico",
-          "why_not": "La posición del estómago demuestra una alteración anatómica hiatal. La regurgitación sola no define el tipo y los signos obstructivos requieren evaluación urgente.",
+          "confusable_with": "ERGE sin herniación anatómica",
+          "why_not": "La posición del estómago o de la unión por encima del diafragma demuestra hernia hiatal. La regurgitación sola no establece un defecto anatómico ni su tipo.",
           "facts": [
             {
               "field": "pattern",
@@ -2545,11 +2696,11 @@
           ]
         },
         "medium": {
-          "vignette": "Una persona con fondo gástrico intratorácico presenta dolor intenso persistente y vómitos. Se evalúa complicación obstructiva o vascular. ¿Qué acción o clasificación corresponde?",
-          "discriminator": "Estómago intratorácico con signos de complicación",
-          "explanation": "El dato decisivo es Estómago intratorácico con signos de complicación. El estómago herniado puede quedar comprometido. Evaluar complicación obstructiva o vascular urgente.",
-          "confusable_with": "ERGE sin defecto anatómico",
-          "why_not": "La posición del estómago demuestra una alteración anatómica hiatal. La regurgitación sola no define el tipo y los signos obstructivos requieren evaluación urgente.",
+          "vignette": "Una persona con fondo gástrico situado en tórax desarrolla dolor intenso persistente y vómitos. La imagen relaciona el estómago herniado con el hiato diafragmático.",
+          "discriminator": "Estómago intratorácico con manifestación obstructiva",
+          "explanation": "Estómago intratorácico con manifestación obstructiva. Este patrón orienta a Hernia hiatal. El hiato dilatado permite herniación del estómago; la relación de la unión gastroesofágica con el diafragma distingue deslizamiento de una hernia paraesofágica y su repercusión.",
+          "confusable_with": "ERGE sin herniación anatómica",
+          "why_not": "La posición del estómago o de la unión por encima del diafragma demuestra hernia hiatal. La regurgitación sola no establece un defecto anatómico ni su tipo.",
           "facts": [
             {
               "field": "pattern",
@@ -2606,11 +2757,11 @@
           ]
         },
         "contrast": {
-          "vignette": "En un estudio incidental, la unión gastroesofágica está desplazada sobre el diafragma por un defecto deslizante. Se debe distinguir este hallazgo de una lesión paraesofágica sintomática que requiere otra evaluación. ¿Qué acción o clasificación corresponde?",
-          "discriminator": "Desplazamiento de la unión en un defecto deslizante incidental",
-          "explanation": "La hernia deslizante incidental no implica cirugía automática. La anatomía y los síntomas distinguen su manejo de una hernia paraesofágica sintomática.",
-          "confusable_with": "ERGE sin defecto anatómico",
-          "why_not": "La posición del estómago demuestra una alteración anatómica hiatal. La regurgitación sola no define el tipo y los signos obstructivos requieren evaluación urgente.",
+          "vignette": "En un estudio incidental se observa la unión gastroesofágica desplazada por encima del diafragma. El estómago pasa por un hiato dilatado y el patrón es deslizante.",
+          "discriminator": "Migración de la unión gastroesofágica a través del hiato",
+          "explanation": "Migración de la unión gastroesofágica a través del hiato. Este patrón orienta a Hernia hiatal. El hiato dilatado permite herniación del estómago; la relación de la unión gastroesofágica con el diafragma distingue deslizamiento de una hernia paraesofágica y su repercusión.",
+          "confusable_with": "ERGE sin herniación anatómica",
+          "why_not": "La posición del estómago o de la unión por encima del diafragma demuestra hernia hiatal. La regurgitación sola no establece un defecto anatómico ni su tipo.",
           "facts": [
             {
               "field": "pattern",
@@ -2664,23 +2815,37 @@
               "field": "modifiers.0.reason",
               "text": "El estómago herniado puede quedar comprometido."
             }
+          ],
+          "source_evidence": [
+            {
+              "page": 150,
+              "quote": "os a la edad ENARM 2022. Deslizante 95% Hernias paraesofágicas 5-10% Tipol Tipo 11 Tipo 111 / Mixta Tipo IV Desplazamiento de la u"
+            }
           ]
         }
-      }
+      },
+      "sources": [
+        {
+          "label": "Edwino.pdf",
+          "pages": [
+            150
+          ]
+        }
+      ]
     },
     {
       "id": "05.07-01",
       "parent_topic_id": "05.07-01",
       "block_id": "05.07",
-      "name": "Distinguir obstrucción mecánica, isquemia e íleo",
-      "answer_kind": "decision",
+      "name": "Oclusión intestinal",
+      "answer_kind": "diagnosis",
       "variants": {
         "easy": {
-          "vignette": "Un adulto con cirugía abdominal previa presenta distensión, dolor cólico, vómitos y ausencia de gases. Tiene ruidos de lucha; se evalúa si existen peritonitis o datos de isquemia. ¿Qué acción o clasificación corresponde a este contexto?",
+          "vignette": "Un adulto con cirugía abdominal previa presenta distensión, dolor cólico, vómitos y ausencia de gases. Tiene ruidos de lucha; se evalúa si existen peritonitis o datos de isquemia.",
           "discriminator": "ausencia de gases",
           "explanation": "El dato decisivo es ausencia de gases. Un obstáculo impide tránsito y produce acumulación de gas y líquido proximal; la distensión y las pérdidas reducen volumen circulante y la estrangulación compromete perfusión intestinal. Reanimar, mantener ayuno y descomprimir según necesidad. Solicitar imagen y valoración quirúrgica; reservar manejo conservador para casos seleccionados sin peritonitis, estrangulación ni otras indicaciones urgentes.",
-          "confusable_with": "Íleo paralítico como sinónimo de obstrucción mecánica",
-          "why_not": "Los síntomas de detención del tránsito tienen causas distintas. El dolor continuo, la acidosis o la irritación peritoneal exigen descartar isquemia; el íleo requiere corregir su causa.",
+          "confusable_with": "Íleo paralítico",
+          "why_not": "Un obstáculo o punto de atrapamiento con acumulación proximal orienta a oclusión mecánica. El íleo paralítico no requiere ese obstáculo y obliga a investigar una causa funcional.",
           "facts": [
             {
               "field": "pattern",
@@ -2709,11 +2874,11 @@
           ]
         },
         "medium": {
-          "vignette": "Una persona con distensión, vómitos y falta de gases desarrolla dolor continuo, fiebre y acidosis. Se prioriza intervención urgente. ¿Qué acción o clasificación corresponde a este contexto?",
-          "discriminator": "Obstrucción con signos de isquemia",
-          "explanation": "El dato decisivo es Obstrucción con signos de isquemia. Sugiere estrangulación o perforación. Priorizar intervención urgente.",
-          "confusable_with": "Íleo paralítico como sinónimo de obstrucción mecánica",
-          "why_not": "Los síntomas de detención del tránsito tienen causas distintas. El dolor continuo, la acidosis o la irritación peritoneal exigen descartar isquemia; el íleo requiere corregir su causa.",
+          "vignette": "Una persona con distensión, vómitos y falta de gases desarrolla dolor continuo, fiebre y acidosis. La imagen identifica un obstáculo al tránsito y se sospecha compromiso vascular de la obstrucción.",
+          "discriminator": "Obstáculo intestinal complicado por signos de isquemia",
+          "explanation": "Obstáculo intestinal complicado por signos de isquemia. Este patrón orienta a Oclusión intestinal. Un obstáculo impide tránsito y produce acumulación de gas y líquido proximal; la distensión y las pérdidas reducen volumen circulante y la estrangulación compromete perfusión intestinal.",
+          "confusable_with": "Íleo paralítico",
+          "why_not": "Un obstáculo o punto de atrapamiento con acumulación proximal orienta a oclusión mecánica. El íleo paralítico no requiere ese obstáculo y obliga a investigar una causa funcional.",
           "facts": [
             {
               "field": "pattern",
@@ -2782,11 +2947,11 @@
           ]
         },
         "contrast": {
-          "vignette": "En un paciente con distensión y vómitos se determina un íleo paralítico. Se debe corregir la causa y los electrolitos en lugar de asumir un bloqueo mecánico. ¿Qué acción o clasificación corresponde a este contexto?",
-          "discriminator": "Trastorno de tránsito paralítico",
-          "explanation": "El dato decisivo es Trastorno de tránsito paralítico. No hay un obstáculo mecánico que deba liberarse. Corregir causa y electrolitos.",
-          "confusable_with": "Íleo paralítico como sinónimo de obstrucción mecánica",
-          "why_not": "Los síntomas de detención del tránsito tienen causas distintas. El dolor continuo, la acidosis o la irritación peritoneal exigen descartar isquemia; el íleo requiere corregir su causa.",
+          "vignette": "Una persona con un defecto herniario presenta distensión, vómitos y ausencia de evacuaciones. El contenido intestinal está atrapado en el defecto y existe acumulación de gas y líquido proximal.",
+          "discriminator": "Bloqueo mecánico por contenido atrapado en una hernia",
+          "explanation": "Bloqueo mecánico por contenido atrapado en una hernia. Este patrón orienta a Oclusión intestinal. Un obstáculo impide tránsito y produce acumulación de gas y líquido proximal; la distensión y las pérdidas reducen volumen circulante y la estrangulación compromete perfusión intestinal.",
+          "confusable_with": "Íleo paralítico",
+          "why_not": "Un obstáculo o punto de atrapamiento con acumulación proximal orienta a oclusión mecánica. El íleo paralítico no requiere ese obstáculo y obliga a investigar una causa funcional.",
           "facts": [
             {
               "field": "pattern",
@@ -2854,7 +3019,17 @@
             }
           ]
         }
-      }
+      },
+      "sources": [
+        {
+          "label": "Edwino.pdf",
+          "pages": [
+            159,
+            160,
+            161
+          ]
+        }
+      ]
     },
     {
       "id": "05.08-01",
@@ -3054,7 +3229,20 @@
             }
           ]
         }
-      }
+      },
+      "sources": [
+        {
+          "label": "Edwino.pdf",
+          "pages": [
+            157,
+            158
+          ]
+        },
+        {
+          "label": "WSES 2022: isquemia mesentérica aguda",
+          "url": "https://link.springer.com/article/10.1186/s13017-022-00443-x"
+        }
+      ]
     },
     {
       "id": "05.09-01",
@@ -3242,7 +3430,15 @@
             }
           ]
         }
-      }
+      },
+      "sources": [
+        {
+          "label": "Edwino.pdf",
+          "pages": [
+            148
+          ]
+        }
+      ]
     },
     {
       "id": "05.09-02",
@@ -3430,7 +3626,15 @@
             }
           ]
         }
-      }
+      },
+      "sources": [
+        {
+          "label": "Edwino.pdf",
+          "pages": [
+            146
+          ]
+        }
+      ]
     }
   ]
 }

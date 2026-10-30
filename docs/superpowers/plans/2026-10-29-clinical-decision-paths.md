@@ -21,6 +21,7 @@
 
 ## Review focus
 
+- Named diseases must retain diagnosis answers at all three levels. Check that action labels apply only to actual procedures or umbrella classifications.
 - A plausible distractor, diagnostic label, reused vignette or absent source fact must not teach a false distinction.
 - Primary/secondary amenorrhea, absent uterus, central/ovarian failure and pregnancy/outflow branches must remain reachable and consistent.
 - A skipped or retried item must not earn invented progress or duplicate a saved response.

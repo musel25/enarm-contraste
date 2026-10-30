@@ -8,15 +8,15 @@
       "id": "09.01-01",
       "parent_topic_id": "09.01-01",
       "block_id": "09.01",
-      "name": "Distinguir erisipela y celulitis y valorar gravedad",
-      "answer_kind": "decision",
+      "name": "Erisipela",
+      "answer_kind": "diagnosis",
       "variants": {
         "easy": {
-          "vignette": "Una adulta tiene fiebre y una placa roja, caliente y dolorosa en la pierna de inicio rápido. El borde está elevado y bien delimitado respecto a piel sana. ¿Qué acción o clasificación corresponde?",
+          "vignette": "Una adulta tiene fiebre y una placa roja, caliente y dolorosa en la pierna de inicio rápido. El borde está elevado y bien delimitado respecto a piel sana.",
           "discriminator": "bien delimitado",
           "explanation": "El dato decisivo es bien delimitado. La infección de dermis superficial y linfáticos produce inflamación aguda; su distribución más superficial favorece un borde definido frente a la extensión subcutánea de celulitis. Valorar gravedad, alergias y puerta de entrada e iniciar penicilina con cobertura estreptocócica si es apropiada para el contexto.",
           "confusable_with": "Celulitis",
-          "why_not": "El borde elevado y bien delimitado favorece erisipela. La celulitis afecta planos más profundos y sus bordes son menos definidos.",
+          "why_not": "El borde elevado y bien delimitado favorece erisipela. La celulitis afecta planos más profundos y sus bordes son menos definidos; la toxicidad exige buscar infección profunda concomitante.",
           "facts": [
             {
               "field": "pattern",
@@ -49,11 +49,11 @@
           ]
         },
         "medium": {
-          "vignette": "Una placa roja elevada y bien delimitada de una pierna progresa rápidamente y se acompaña de sepsis. Se requiere atención hospitalaria y descartar infección profunda. ¿Qué acción o clasificación corresponde?",
-          "discriminator": "Borde definido con sepsis o progresión rápida",
-          "explanation": "El dato decisivo es Borde definido con sepsis o progresión rápida. La gravedad cambia vía y alcance del tratamiento. Solicitar atención hospitalaria y descartar infección profunda.",
+          "vignette": "Una placa cutánea roja con borde elevado y bien definido progresa rápidamente. La paciente tiene fiebre y sepsis, con dolor y calor sobre la lesión superficial.",
+          "discriminator": "Infección de borde elevado con toxicidad sistémica",
+          "explanation": "Infección de borde elevado con toxicidad sistémica. Este patrón orienta a Erisipela. La infección de dermis superficial y linfáticos produce inflamación aguda; su distribución más superficial favorece un borde definido frente a la extensión subcutánea de celulitis.",
           "confusable_with": "Celulitis",
-          "why_not": "El borde elevado y bien delimitado favorece erisipela. La celulitis afecta planos más profundos y sus bordes son menos definidos.",
+          "why_not": "El borde elevado y bien delimitado favorece erisipela. La celulitis afecta planos más profundos y sus bordes son menos definidos; la toxicidad exige buscar infección profunda concomitante.",
           "facts": [
             {
               "field": "pattern",
@@ -106,11 +106,11 @@
           ]
         },
         "contrast": {
-          "vignette": "Una persona con placa eritematosa elevada de borde definido tiene alergias que requieren revisar la selección del antibiótico. La evaluación también busca toxicidad y puerta de entrada. ¿Qué acción o clasificación corresponde?",
-          "discriminator": "Alergias que modifican elección en infección cutánea superficial",
-          "explanation": "El borde orienta a erisipela, pero se revisan gravedad, alergias y puerta de entrada antes de elegir cobertura estreptocócica. El borde no descarta infección profunda si existe toxicidad.",
+          "vignette": "Una persona desarrolla una placa roja, caliente y dolorosa en la cara. El límite elevado permite distinguirla de la piel sana y aparece fiebre de inicio rápido.",
+          "discriminator": "Localización facial de una infección superficial bien delimitada",
+          "explanation": "Localización facial de una infección superficial bien delimitada. Este patrón orienta a Erisipela. La infección de dermis superficial y linfáticos produce inflamación aguda; su distribución más superficial favorece un borde definido frente a la extensión subcutánea de celulitis.",
           "confusable_with": "Celulitis",
-          "why_not": "El borde elevado y bien delimitado favorece erisipela. La celulitis afecta planos más profundos y sus bordes son menos definidos.",
+          "why_not": "El borde elevado y bien delimitado favorece erisipela. La celulitis afecta planos más profundos y sus bordes son menos definidos; la toxicidad exige buscar infección profunda concomitante.",
           "facts": [
             {
               "field": "pattern",
@@ -162,7 +162,15 @@
             }
           ]
         }
-      }
+      },
+      "sources": [
+        {
+          "label": "Edwino.pdf",
+          "pages": [
+            231
+          ]
+        }
+      ]
     },
     {
       "id": "09.01-02",
@@ -326,7 +334,16 @@
             }
           ]
         }
-      }
+      },
+      "sources": [
+        {
+          "label": "Edwino.pdf",
+          "pages": [
+            235,
+            236
+          ]
+        }
+      ]
     },
     {
       "id": "09.01-03",
@@ -340,7 +357,7 @@
           "discriminator": "costras de color miel",
           "explanation": "El dato decisivo es costras de color miel. La infección bacteriana superficial de epidermis produce vesículas o pústulas que se rompen y forman costras; toxinas estafilocócicas pueden generar una variante ampollosa. Limpiar suavemente y aplicar mupirocina tópica en este caso limitado. Valorar antibiótico oral si es extenso o tiene repercusión sistémica.",
           "confusable_with": "Síndrome de Ritter",
-          "why_not": "El impétigo puede ser costroso o ampolloso. La extensión y el deterioro obligan a descartar un síndrome exfoliativo por toxinas y cambian la conducta.",
+          "why_not": "El impétigo es una infección superficial localizada, costrosa o ampollosa. La exfoliación extensa, la toxicidad y el patrón generalizado exigen descartar Ritter u otra enfermedad grave.",
           "facts": [
             {
               "field": "pattern",
@@ -369,11 +386,11 @@
           ]
         },
         "medium": {
-          "vignette": "Un niño desarrolla ampollas flácidas extensas y deterioro general. Se reevalúa la gravedad y posible enfermedad mediada por toxinas.",
-          "discriminator": "Ampollas extensas con deterioro",
-          "explanation": "El dato decisivo es Ampollas extensas con deterioro. No corresponde al mismo cuadro limitado. Reevaluar gravedad y posible enfermedad por toxinas.",
+          "vignette": "Un niño presenta ampollas flácidas superficiales localizadas que, al romperse, dejan erosión y costra. Se identifica la forma ampollosa de la infección superficial, sin el patrón generalizado de exfoliación por toxinas.",
+          "discriminator": "Infección superficial ampollosa localizada",
+          "explanation": "Infección superficial ampollosa localizada. Este patrón orienta a Impétigo. La infección bacteriana superficial de epidermis produce vesículas o pústulas que se rompen y forman costras; toxinas estafilocócicas pueden generar una variante ampollosa.",
           "confusable_with": "Síndrome de Ritter",
-          "why_not": "El impétigo puede ser costroso o ampolloso. La extensión y el deterioro obligan a descartar un síndrome exfoliativo por toxinas y cambian la conducta.",
+          "why_not": "El impétigo es una infección superficial localizada, costrosa o ampollosa. La exfoliación extensa, la toxicidad y el patrón generalizado exigen descartar Ritter u otra enfermedad grave.",
           "facts": [
             {
               "field": "pattern",
@@ -430,11 +447,11 @@
           ]
         },
         "contrast": {
-          "vignette": "En un niño predominan ampollas flácidas superficiales en lugar de las pocas costras color miel del patrón localizado. Se decide si el tratamiento debe ser sistémico.",
-          "discriminator": "Presentación ampollosa extensa frente a costras localizadas",
-          "explanation": "El dato decisivo es Presentación ampollosa extensa frente a costras localizadas. La infección bacteriana superficial de epidermis produce vesículas o pústulas que se rompen y forman costras; toxinas estafilocócicas pueden generar una variante ampollosa. Limpiar suavemente y aplicar mupirocina tópica en este caso limitado. Valorar antibiótico oral si es extenso o tiene repercusión sistémica.",
+          "vignette": "Un niño con pocas lesiones superficiales alrededor de boca desarrolla nuevas costras color miel en zonas expuestas. La propagación se limita a la piel y conserva buen estado general.",
+          "discriminator": "Propagación de lesiones costrosas superficiales",
+          "explanation": "Propagación de lesiones costrosas superficiales. Este patrón orienta a Impétigo. La infección bacteriana superficial de epidermis produce vesículas o pústulas que se rompen y forman costras; toxinas estafilocócicas pueden generar una variante ampollosa.",
           "confusable_with": "Síndrome de Ritter",
-          "why_not": "El impétigo puede ser costroso o ampolloso. La extensión y el deterioro obligan a descartar un síndrome exfoliativo por toxinas y cambian la conducta.",
+          "why_not": "El impétigo es una infección superficial localizada, costrosa o ampollosa. La exfoliación extensa, la toxicidad y el patrón generalizado exigen descartar Ritter u otra enfermedad grave.",
           "facts": [
             {
               "field": "pattern",
@@ -490,7 +507,15 @@
             }
           ]
         }
-      }
+      },
+      "sources": [
+        {
+          "label": "Edwino.pdf",
+          "pages": [
+            234
+          ]
+        }
+      ]
     },
     {
       "id": "09.02-01",
@@ -654,7 +679,15 @@
             }
           ]
         }
-      }
+      },
+      "sources": [
+        {
+          "label": "Edwino.pdf",
+          "pages": [
+            237
+          ]
+        }
+      ]
     },
     {
       "id": "09.02-02",
@@ -667,8 +700,8 @@
           "vignette": "Un adulto tiene una placa pruriginosa que se expande con borde elevado y escamoso y centro menos inflamado. Empeoró después de aplicar una crema con esteroide.",
           "discriminator": "borde elevado y escamoso",
           "explanation": "El dato decisivo es borde elevado y escamoso. Los dermatofitos colonizan queratina de piel y anexos; la expansión periférica activa produce un borde escamoso, mientras el tratamiento esteroideo puede modificar y extender la infección. Confirmar morfología y usar KOH si se necesita. En tiña corporal localizada, iniciar antifúngico tópico como terbinafina y evitar esteroide aislado.",
-          "confusable_with": "Intertrigo candidiásico",
-          "why_not": "El sitio y el borde activo orientan a dermatofitosis. La afectación de pelo o uñas no se maneja igual que una placa húmeda con satélites en pliegues.",
+          "confusable_with": "Candidiasis de pliegues",
+          "why_not": "La afectación de pelo o uñas con dermatofitos apoya dermatofitosis. La placa húmeda con lesiones satélite corresponde a otro patrón micológico.",
           "facts": [
             {
               "field": "pattern",
@@ -701,11 +734,11 @@
           ]
         },
         "medium": {
-          "vignette": "Una infección con borde escamoso afecta el cuero cabelludo y forma un querion. Se solicita valoración especializada y tratamiento sistémico apropiado.",
-          "discriminator": "Afectación de cuero cabelludo con querion",
-          "explanation": "El dato decisivo es Afectación de cuero cabelludo con querion. La inflamación intensa puede dejar alopecia cicatricial. Solicitar atención especializada.",
-          "confusable_with": "Intertrigo candidiásico",
-          "why_not": "El sitio y el borde activo orientan a dermatofitosis. La afectación de pelo o uñas no se maneja igual que una placa húmeda con satélites en pliegues.",
+          "vignette": "Una persona tiene una placa inflamatoria del cuero cabelludo con borde escamoso y querion. El estudio micológico confirma infección de estructuras pilosas por dermatofitos.",
+          "discriminator": "Tiña de cuero cabelludo con reacción inflamatoria intensa",
+          "explanation": "Tiña de cuero cabelludo con reacción inflamatoria intensa. Este patrón orienta a Dermatofitosis. Los dermatofitos colonizan queratina de piel y anexos; la expansión periférica activa produce un borde escamoso, mientras el tratamiento esteroideo puede modificar y extender la infección.",
+          "confusable_with": "Candidiasis de pliegues",
+          "why_not": "La afectación de pelo o uñas con dermatofitos apoya dermatofitosis. La placa húmeda con lesiones satélite corresponde a otro patrón micológico.",
           "facts": [
             {
               "field": "pattern",
@@ -770,11 +803,11 @@
           ]
         },
         "contrast": {
-          "vignette": "Un paciente presenta lesiones en uñas o barba con sospecha de infección fúngica. Se valora confirmación del agente y tratamiento sistémico apropiado según la estructura afectada.",
-          "discriminator": "Afectación de uñas o barba",
-          "explanation": "La terapia tópica puede no alcanzar la estructura afectada. Se confirma el diagnóstico y se selecciona antifúngico sistémico según sitio y agente, sin ketoconazol oral rutinario.",
-          "confusable_with": "Intertrigo candidiásico",
-          "why_not": "El sitio y el borde activo orientan a dermatofitosis. La afectación de pelo o uñas no se maneja igual que una placa húmeda con satélites en pliegues.",
+          "vignette": "Una persona tiene alteración de uñas o barba y el estudio micológico demuestra dermatofitos en la estructura afectada. No se trata solo de una placa húmeda de un pliegue.",
+          "discriminator": "Infección confirmada en uñas o pelo",
+          "explanation": "Infección confirmada en uñas o pelo. Este patrón orienta a Dermatofitosis. Los dermatofitos colonizan queratina de piel y anexos; la expansión periférica activa produce un borde escamoso, mientras el tratamiento esteroideo puede modificar y extender la infección.",
+          "confusable_with": "Candidiasis de pliegues",
+          "why_not": "La afectación de pelo o uñas con dermatofitos apoya dermatofitosis. La placa húmeda con lesiones satélite corresponde a otro patrón micológico.",
           "facts": [
             {
               "field": "pattern",
@@ -838,21 +871,34 @@
             }
           ]
         }
-      }
+      },
+      "sources": [
+        {
+          "label": "Edwino.pdf",
+          "pages": [
+            229,
+            230
+          ]
+        },
+        {
+          "label": "Ketoconazol oral: ficha oficial DailyMed",
+          "url": "https://dailymed.nlm.nih.gov/dailymed/fda/fdaDrugXsl.cfm?setid=aae6c08a-8610-b833-e053-2a95a90a3e6b&type=display"
+        }
+      ]
     },
     {
       "id": "09.02-03",
       "parent_topic_id": "09.02-03",
       "block_id": "09.02",
-      "name": "Evaluar versicolor y distinguir pigmentación residual de actividad",
-      "answer_kind": "decision",
+      "name": "Pitiriasis versicolor",
+      "answer_kind": "diagnosis",
       "variants": {
         "easy": {
-          "vignette": "Un joven presenta manchas claras y marrones en la espalda que destacan después del verano. Al raspar aparece escama muy fina y la sensibilidad se conserva. ¿Qué acción o clasificación corresponde?",
+          "vignette": "Un joven presenta manchas claras y marrones en la espalda que destacan después del verano. Al raspar aparece escama muy fina y la sensibilidad se conserva.",
           "discriminator": "escama muy fina",
           "explanation": "El dato decisivo es escama muy fina. El sobrecrecimiento de Malassezia en zonas sebáceas altera pigmentación y produce descamación superficial; el calor y humedad favorecen recurrencia sin pérdida sensitiva. Valorar clínicamente y confirmar con KOH si hay duda. Usar antifúngico tópico en lesiones localizadas y explicar que la pigmentación puede tardar en recuperarse.",
           "confusable_with": "Vitíligo",
-          "why_not": "La descamación fina y el color variable favorecen versicolor. El vitíligo produce máculas acrómicas sin escama; no se debe recurrir a ketoconazol oral rutinario.",
+          "why_not": "La descamación fina y los elementos fúngicos favorecen versicolor. El vitíligo es una pérdida de pigmento sin descamación ni esa evidencia micológica.",
           "facts": [
             {
               "field": "pattern",
@@ -885,11 +931,11 @@
           ]
         },
         "medium": {
-          "vignette": "Una persona presenta numerosas máculas claras y oscuras con escama fina que recurren. Se valora tratamiento sistémico seguro por un clínico. ¿Qué acción o clasificación corresponde?",
-          "discriminator": "Extensión o recurrencia de máculas con escama",
-          "explanation": "El dato decisivo es Extensión o recurrencia de máculas con escama. Puede necesitar manejo más amplio. Valorar terapia sistémica segura por un clínico.",
+          "vignette": "Una persona inmunocomprometida tiene máculas claras y marrones extensas en el tronco, con escama fina al raspar. La sensibilidad está conservada y el cuadro recurre.",
+          "discriminator": "Micosis pigmentaria extensa en huésped de riesgo",
+          "explanation": "Micosis pigmentaria extensa en huésped de riesgo. Este patrón orienta a Pitiriasis versicolor. El sobrecrecimiento de Malassezia en zonas sebáceas altera pigmentación y produce descamación superficial; el calor y humedad favorecen recurrencia sin pérdida sensitiva.",
           "confusable_with": "Vitíligo",
-          "why_not": "La descamación fina y el color variable favorecen versicolor. El vitíligo produce máculas acrómicas sin escama; no se debe recurrir a ketoconazol oral rutinario.",
+          "why_not": "La descamación fina y los elementos fúngicos favorecen versicolor. El vitíligo es una pérdida de pigmento sin descamación ni esa evidencia micológica.",
           "facts": [
             {
               "field": "pattern",
@@ -950,11 +996,11 @@
           ]
         },
         "contrast": {
-          "vignette": "Tras tratamiento de máculas del tronco con escama fina, la pigmentación tarda en normalizarse. Se explica que la recuperación del color no es inmediata y se reevalúa el estado de las lesiones. ¿Qué acción o clasificación corresponde?",
-          "discriminator": "Persistencia de pigmentación después del tratamiento",
-          "explanation": "La pigmentación puede tardar en recuperarse tras tratar versicolor. El color aislado no demuestra actividad persistente; se reevalúa clínicamente y se usa KOH si hay duda.",
-          "confusable_with": "Infección fúngica necesariamente activa por persistencia del color",
-          "why_not": "La recuperación de la pigmentación puede ser lenta. El color persistente después del tratamiento no demuestra por sí solo actividad y se reevalúa si hay duda.",
+          "vignette": "Ante máculas del tronco con escama muy fina se realiza KOH. Se observan elementos fúngicos con apariencia de hifas cortas y esporas, en un paciente con sensibilidad conservada.",
+          "discriminator": "Evidencia micológica en lesiones pigmentarias descamativas",
+          "explanation": "Evidencia micológica en lesiones pigmentarias descamativas. Este patrón orienta a Pitiriasis versicolor. El sobrecrecimiento de Malassezia en zonas sebáceas altera pigmentación y produce descamación superficial; el calor y humedad favorecen recurrencia sin pérdida sensitiva.",
+          "confusable_with": "Vitíligo",
+          "why_not": "La descamación fina y los elementos fúngicos favorecen versicolor. El vitíligo es una pérdida de pigmento sin descamación ni esa evidencia micológica.",
           "facts": [
             {
               "field": "pattern",
@@ -1014,21 +1060,33 @@
             }
           ]
         }
-      }
+      },
+      "sources": [
+        {
+          "label": "Edwino.pdf",
+          "pages": [
+            247
+          ]
+        },
+        {
+          "label": "Ketoconazol oral: ficha oficial DailyMed",
+          "url": "https://dailymed.nlm.nih.gov/dailymed/fda/fdaDrugXsl.cfm?setid=aae6c08a-8610-b833-e053-2a95a90a3e6b&type=display"
+        }
+      ]
     },
     {
       "id": "09.03-01",
       "parent_topic_id": "09.03-01",
       "block_id": "09.03",
-      "name": "Tratar escabiosis y evaluar prurito persistente",
-      "answer_kind": "decision",
+      "name": "Escabiosis - Sarna",
+      "answer_kind": "diagnosis",
       "variants": {
         "easy": {
-          "vignette": "Un escolar tiene prurito intenso por la noche y pápulas excoriadas entre los dedos. Otros familiares comenzaron a rascarse y se observa un pequeño surco en la muñeca. ¿Qué acción o clasificación corresponde?",
+          "vignette": "Un escolar tiene prurito intenso por la noche y pápulas excoriadas entre los dedos. Otros familiares comenzaron a rascarse y se observa un pequeño surco en la muñeca.",
           "discriminator": "prurito intenso por la noche",
           "explanation": "El dato decisivo es prurito intenso por la noche. El ácaro excava túneles en estrato córneo y desencadena hipersensibilidad; el contacto estrecho facilita infestación familiar y explica el prurito y los surcos característicos. Aplicar permetrina al 5% según técnica corporal indicada, retirar después de 8–14 horas y repetir aproximadamente a la semana. Tratar contactos cercanos simultáneamente e indicar manejo de ropa y ropa de cama.",
           "confusable_with": "Pediculosis capitis",
-          "why_not": "Los surcos y la distribución interdigital favorecen escabiosis. Los piojos de la cabeza se buscan en cabello y se confirman por insectos vivos.",
+          "why_not": "Los surcos y la distribución corporal favorecen escabiosis. La pediculosis capitis se localiza en el cabello y se confirma por piojos vivos o hallazgos correspondientes.",
           "facts": [
             {
               "field": "pattern",
@@ -1061,11 +1119,11 @@
           ]
         },
         "medium": {
-          "vignette": "Una persona inmunocomprometida presenta costras extensas y se investiga infestación con alta carga. Se requiere manejo intensivo especializado. ¿Qué acción o clasificación corresponde?",
-          "discriminator": "Costras extensas en inmunocompromiso",
-          "explanation": "El dato decisivo es Costras extensas en inmunocompromiso. Tiene mayor carga parasitaria y contagiosidad. Valorar sarna costrosa y manejo intensivo especializado.",
+          "vignette": "Una persona inmunocomprometida tiene hiperqueratosis y costras generalizadas. Hay poco prurito, pero se identifican ácaros y múltiples contactos están afectados.",
+          "discriminator": "Forma costrosa de alta carga parasitaria",
+          "explanation": "Forma costrosa de alta carga parasitaria. Este patrón orienta a Escabiosis - Sarna. El ácaro excava túneles en estrato córneo y desencadena hipersensibilidad; el contacto estrecho facilita infestación familiar y explica el prurito y los surcos característicos.",
           "confusable_with": "Pediculosis capitis",
-          "why_not": "Los surcos y la distribución interdigital favorecen escabiosis. Los piojos de la cabeza se buscan en cabello y se confirman por insectos vivos.",
+          "why_not": "Los surcos y la distribución corporal favorecen escabiosis. La pediculosis capitis se localiza en el cabello y se confirma por piojos vivos o hallazgos correspondientes.",
           "facts": [
             {
               "field": "pattern",
@@ -1122,15 +1180,21 @@
             {
               "field": "source_corrections.0.reason",
               "text": "Se corrige la aplicación diaria de p233 para sarna clásica; el caso escolar requiere pauta intermitente y manejo simultáneo de contactos."
+            }
+          ],
+          "source_evidence": [
+            {
+              "page": 233,
+              "quote": "munodeprimidos, presenta hiperqueratosis generalizada y costras. Produce poco prurito, pero es muy contagiosa. • Debe tratarse a las pe"
             }
           ]
         },
         "contrast": {
-          "vignette": "Después de tratamiento corporal apropiado y manejo simultáneo de contactos, persiste prurito. Se debe evaluar evolución en vez de indicar permetrina diaria indefinida por asumir fracaso. ¿Qué acción o clasificación corresponde?",
-          "discriminator": "Prurito residual después de tratamiento",
-          "explanation": "El prurito puede persistir después de tratar escabiosis. Se revisan técnica y evolución; no se interpreta automáticamente como fracaso ni se usa permetrina diaria indefinida.",
-          "confusable_with": "Fracaso automático del tratamiento",
-          "why_not": "El prurito puede persistir después de tratar la infestación. Deben revisarse técnica y evolución antes de asumir fracaso o indicar aplicaciones indefinidas.",
+          "vignette": "Una persona mayor institucionalizada presenta prurito nocturno y pápulas en muñecas, axilas y genitales. Se observan túneles cutáneos y aparecen casos semejantes entre contactos cercanos.",
+          "discriminator": "Infestación en entorno institucional con surcos y prurito nocturno",
+          "explanation": "Infestación en entorno institucional con surcos y prurito nocturno. Este patrón orienta a Escabiosis - Sarna. El ácaro excava túneles en estrato córneo y desencadena hipersensibilidad; el contacto estrecho facilita infestación familiar y explica el prurito y los surcos característicos.",
+          "confusable_with": "Pediculosis capitis",
+          "why_not": "Los surcos y la distribución corporal favorecen escabiosis. La pediculosis capitis se localiza en el cabello y se confirma por piojos vivos o hallazgos correspondientes.",
           "facts": [
             {
               "field": "pattern",
@@ -1188,9 +1252,27 @@
               "field": "source_corrections.0.reason",
               "text": "Se corrige la aplicación diaria de p233 para sarna clásica; el caso escolar requiere pauta intermitente y manejo simultáneo de contactos."
             }
+          ],
+          "source_evidence": [
+            {
+              "page": 233,
+              "quote": "is en forma de túnel 2 - ancianos institucionalizados, inmunocomprometidos y 15mm de largo. adultos jóvenes con contacto sexual. o Clínica • Prurito"
+            }
           ]
         }
-      }
+      },
+      "sources": [
+        {
+          "label": "Edwino.pdf",
+          "pages": [
+            233
+          ]
+        },
+        {
+          "label": "CDC: atención clínica de escabiosis",
+          "url": "https://www.cdc.gov/scabies/hcp/clinical-care/"
+        }
+      ]
     },
     {
       "id": "09.03-02",
@@ -1204,7 +1286,7 @@
           "discriminator": "un insecto vivo",
           "explanation": "El dato decisivo es un insecto vivo. La infestación por piojos del cuero cabelludo produce irritación y prurito; los huevos se fijan al tallo y la identificación del parásito vivo demuestra infestación activa. Confirmar infestación activa e iniciar permetrina al 1% según instrucciones del producto, con eliminación mecánica y repetición indicada. Revisar contactos y posible resistencia si persiste.",
           "confusable_with": "Escabiosis",
-          "why_not": "La infestación se localiza en el cabello y se confirma mejor con un piojo vivo. Las liendres aisladas no equivalen siempre a infestación activa.",
+          "why_not": "El insecto vivo en cabello confirma pediculosis capitis. Las liendres aisladas pueden persistir después del tratamiento; los surcos corporales orientan a escabiosis.",
           "facts": [
             {
               "field": "pattern",
@@ -1233,11 +1315,11 @@
           ]
         },
         "medium": {
-          "vignette": "Una niña continúa con insectos vivos en el cabello después de un tratamiento con técnica correcta. Se valora resistencia y una alternativa.",
-          "discriminator": "Persistencia de infestación viva pese a técnica correcta",
-          "explanation": "El dato decisivo es Persistencia de infestación viva pese a técnica correcta. No todos los productos conservan eficacia local. Valorar resistencia y alternativa.",
+          "vignette": "Después de un tratamiento con técnica correcta, una niña sigue con prurito y se encuentran piojos vivos entre el cabello. La persistencia confirma infestación activa.",
+          "discriminator": "Parásitos vivos pese al tratamiento",
+          "explanation": "Parásitos vivos pese al tratamiento. Este patrón orienta a Pediculosis capitis. La infestación por piojos del cuero cabelludo produce irritación y prurito; los huevos se fijan al tallo y la identificación del parásito vivo demuestra infestación activa.",
           "confusable_with": "Escabiosis",
-          "why_not": "La infestación se localiza en el cabello y se confirma mejor con un piojo vivo. Las liendres aisladas no equivalen siempre a infestación activa.",
+          "why_not": "El insecto vivo en cabello confirma pediculosis capitis. Las liendres aisladas pueden persistir después del tratamiento; los surcos corporales orientan a escabiosis.",
           "facts": [
             {
               "field": "pattern",
@@ -1294,11 +1376,11 @@
           ]
         },
         "contrast": {
-          "vignette": "Se encuentran liendres adheridas al pelo durante una revisión escolar. Se busca un insecto vivo antes de decidir si existe infestación activa.",
-          "discriminator": "Necesidad de distinguir liendres de infestación activa",
-          "explanation": "El dato decisivo es Necesidad de distinguir liendres de infestación activa. La infestación por piojos del cuero cabelludo produce irritación y prurito; los huevos se fijan al tallo y la identificación del parásito vivo demuestra infestación activa. Confirmar infestación activa e iniciar permetrina al 1% según instrucciones del producto, con eliminación mecánica y repetición indicada. Revisar contactos y posible resistencia si persiste.",
+          "vignette": "En una revisión escolar se encuentran liendres firmemente adheridas. La exploración posterior identifica un insecto vivo y excoriaciones en nuca y región retroauricular.",
+          "discriminator": "Confirmación de actividad después de hallar liendres",
+          "explanation": "Confirmación de actividad después de hallar liendres. Este patrón orienta a Pediculosis capitis. La infestación por piojos del cuero cabelludo produce irritación y prurito; los huevos se fijan al tallo y la identificación del parásito vivo demuestra infestación activa.",
           "confusable_with": "Escabiosis",
-          "why_not": "La infestación se localiza en el cabello y se confirma mejor con un piojo vivo. Las liendres aisladas no equivalen siempre a infestación activa.",
+          "why_not": "El insecto vivo en cabello confirma pediculosis capitis. Las liendres aisladas pueden persistir después del tratamiento; los surcos corporales orientan a escabiosis.",
           "facts": [
             {
               "field": "pattern",
@@ -1354,21 +1436,29 @@
             }
           ]
         }
-      }
+      },
+      "sources": [
+        {
+          "label": "Edwino.pdf",
+          "pages": [
+            244
+          ]
+        }
+      ]
     },
     {
       "id": "09.04-01",
       "parent_topic_id": "09.04-01",
       "block_id": "09.04",
-      "name": "Reconocer molusco y elegir observación o tratamiento físico",
-      "answer_kind": "decision",
+      "name": "Molusco contagioso",
+      "answer_kind": "diagnosis",
       "variants": {
         "easy": {
-          "vignette": "Un escolar tiene pequeñas pápulas del color de la piel, brillantes y con depresión central en el tronco. No tiene dolor ni síntomas generales y algunas lesiones se multiplicaron al rascarse. ¿Qué acción o clasificación corresponde?",
+          "vignette": "Un escolar tiene pequeñas pápulas del color de la piel, brillantes y con depresión central en el tronco. No tiene dolor ni síntomas generales y algunas lesiones se multiplicaron al rascarse.",
           "discriminator": "con depresión central",
           "explanation": "El dato decisivo es con depresión central. La infección por poxvirus induce pápulas epidérmicas y puede propagarse por autoinoculación; la umbilicación central y el curso generalmente autolimitado permiten reconocer el patrón. Explicar el curso y evitar rascado y compartir objetos. Valorar observación o tratamiento físico según molestias, extensión, localización y preferencia.",
-          "confusable_with": "Acné vulgar",
-          "why_not": "La umbilicación central y el aspecto perlado favorecen molusco. Los comedones son un dato de acné y no la lesión característica aquí.",
+          "confusable_with": "Condilomas por VPH",
+          "why_not": "La umbilicación y las inclusiones de Henderson-Paterson favorecen molusco. Los condilomas por VPH son lesiones verrugosas exofíticas y tienen otra morfología.",
           "facts": [
             {
               "field": "pattern",
@@ -1401,11 +1491,11 @@
           ]
         },
         "medium": {
-          "vignette": "Un adulto presenta numerosas pápulas umbilicadas de aspecto atípico. Se evalúa inmunosupresión y diagnóstico diferencial. ¿Qué acción o clasificación corresponde?",
-          "discriminator": "Lesiones extensas o atípicas en adulto",
-          "explanation": "El dato decisivo es Lesiones extensas o atípicas en adulto. El patrón puede cambiar con déficit inmune. Valorar inmunosupresión y diagnóstico diferencial.",
-          "confusable_with": "Acné vulgar",
-          "why_not": "La umbilicación central y el aspecto perlado favorecen molusco. Los comedones son un dato de acné y no la lesión característica aquí.",
+          "vignette": "Un adulto inmunocomprometido tiene muchas pápulas brillantes con depresión central de aspecto variable. El estudio confirma cuerpos de inclusión de Henderson-Paterson.",
+          "discriminator": "Enfermedad extensa con inclusiones características",
+          "explanation": "Enfermedad extensa con inclusiones características. Este patrón orienta a Molusco contagioso. La infección por poxvirus induce pápulas epidérmicas y puede propagarse por autoinoculación; la umbilicación central y el curso generalmente autolimitado permiten reconocer el patrón.",
+          "confusable_with": "Condilomas por VPH",
+          "why_not": "La umbilicación y las inclusiones de Henderson-Paterson favorecen molusco. Los condilomas por VPH son lesiones verrugosas exofíticas y tienen otra morfología.",
           "facts": [
             {
               "field": "pattern",
@@ -1463,14 +1553,20 @@
               "field": "source_corrections.0.reason",
               "text": "Se corrige la indicación automática de imiquimod del resumen de p242 para el caso escolar."
             }
+          ],
+          "source_evidence": [
+            {
+              "page": 242,
+              "quote": "ca encuentran cuerpos de Henderson Paterson. por la presencia de cuerpos de inclusión de Henderson-Paterson, con lo que se corrob"
+            }
           ]
         },
         "contrast": {
-          "vignette": "Un niño con pocas pápulas umbilicadas y sin complicaciones tiene molestias mínimas. Su familia solicita imiquimod y se valora observación frente a intervención. ¿Qué acción o clasificación corresponde?",
-          "discriminator": "Enfermedad limitada con solicitud de imiquimod",
-          "explanation": "La observación es razonable en enfermedad limitada. En niños no se recomienda imiquimod por falta de eficacia demostrada y posibles efectos adversos; se decide con molestias, extensión y preferencia.",
-          "confusable_with": "Acné vulgar",
-          "why_not": "La umbilicación central y el aspecto perlado favorecen molusco. Los comedones son un dato de acné y no la lesión característica aquí.",
+          "vignette": "Un adulto desarrolla pápulas perladas umbilicadas después de contacto físico sexual. Las lesiones cutáneas se multiplican cerca de las primeras por autoinoculación.",
+          "discriminator": "Presentación adulta por contacto directo con autoinoculación",
+          "explanation": "Presentación adulta por contacto directo con autoinoculación. Este patrón orienta a Molusco contagioso. La infección por poxvirus induce pápulas epidérmicas y puede propagarse por autoinoculación; la umbilicación central y el curso generalmente autolimitado permiten reconocer el patrón.",
+          "confusable_with": "Condilomas por VPH",
+          "why_not": "La umbilicación y las inclusiones de Henderson-Paterson favorecen molusco. Los condilomas por VPH son lesiones verrugosas exofíticas y tienen otra morfología.",
           "facts": [
             {
               "field": "pattern",
@@ -1530,7 +1626,19 @@
             }
           ]
         }
-      }
+      },
+      "sources": [
+        {
+          "label": "Edwino.pdf",
+          "pages": [
+            242
+          ]
+        },
+        {
+          "label": "CDC: molusco contagioso",
+          "url": "https://www.cdc.gov/molluscum-contagiosum/hcp/clinical-overview/"
+        }
+      ]
     },
     {
       "id": "09.05-01",
@@ -1718,7 +1826,16 @@
             }
           ]
         }
-      }
+      },
+      "sources": [
+        {
+          "label": "Edwino.pdf",
+          "pages": [
+            225,
+            226
+          ]
+        }
+      ]
     },
     {
       "id": "09.05-02",
@@ -1866,7 +1983,15 @@
             }
           ]
         }
-      }
+      },
+      "sources": [
+        {
+          "label": "Edwino.pdf",
+          "pages": [
+            227
+          ]
+        }
+      ]
     },
     {
       "id": "09.05-03",
@@ -2014,21 +2139,29 @@
             }
           ]
         }
-      }
+      },
+      "sources": [
+        {
+          "label": "Edwino.pdf",
+          "pages": [
+            228
+          ]
+        }
+      ]
     },
     {
       "id": "09.06-01",
       "parent_topic_id": "09.06-01",
       "block_id": "09.06",
-      "name": "Distinguir habón simple, anafilaxia y lesión persistente",
-      "answer_kind": "decision",
+      "name": "Urticaria",
+      "answer_kind": "diagnosis",
       "variants": {
         "easy": {
-          "vignette": "Una adulta presenta ronchas elevadas muy pruriginosas que cambian de lugar y desaparecen sin marca en menos de un día. No tiene dificultad respiratoria ni hipotensión. ¿Qué acción o clasificación corresponde a este contexto?",
+          "vignette": "Una adulta presenta ronchas elevadas muy pruriginosas que cambian de lugar y desaparecen sin marca en menos de un día. No tiene dificultad respiratoria ni hipotensión.",
           "discriminator": "desaparecen sin marca",
           "explanation": "El dato decisivo es desaparecen sin marca. La activación de mastocitos libera mediadores que aumentan permeabilidad vascular dérmica; el edema transitorio forma habones pruriginosos que suelen desaparecer sin lesión residual. Valorar signos de anafilaxia y desencadenantes. Si es urticaria aislada, iniciar antihistamínico no sedante de segunda generación y seguimiento.",
-          "confusable_with": "Urticaria simple en toda lesión elevada",
-          "why_not": "El habón habitual es evanescente y no deja marca. El compromiso sistémico exige tratar anafilaxia; la lesión persistente y dolorosa requiere otro diagnóstico.",
+          "confusable_with": "Vasculitis urticarial",
+          "why_not": "La evanescencia sin dolor ni marca residual favorece urticaria. Una lesión que dura más de un día y deja marca o duele requiere investigar vasculitis u otra causa.",
           "facts": [
             {
               "field": "pattern",
@@ -2057,11 +2190,11 @@
           ]
         },
         "medium": {
-          "vignette": "Una persona con ronchas desarrolla dificultad respiratoria e hipotensión. Se activa tratamiento urgente por posible anafilaxia. ¿Qué acción o clasificación corresponde a este contexto?",
-          "discriminator": "Habones con compromiso respiratorio y circulatorio",
-          "explanation": "El dato decisivo es Habones con compromiso respiratorio y circulatorio. La roncha puede acompañar una reacción vital. Tratar como posible anafilaxia urgente.",
-          "confusable_with": "Urticaria simple en toda lesión elevada",
-          "why_not": "El habón habitual es evanescente y no deja marca. El compromiso sistémico exige tratar anafilaxia; la lesión persistente y dolorosa requiere otro diagnóstico.",
+          "vignette": "Después de exposición al frío aparecen habones pruriginosos que desaparecen sin marca. La aplicación local de hielo reproduce una roncha transitoria.",
+          "discriminator": "Habones inducibles por frío",
+          "explanation": "Habones inducibles por frío. Este patrón orienta a Urticaria. La activación de mastocitos libera mediadores que aumentan permeabilidad vascular dérmica; el edema transitorio forma habones pruriginosos que suelen desaparecer sin lesión residual.",
+          "confusable_with": "Vasculitis urticarial",
+          "why_not": "La evanescencia sin dolor ni marca residual favorece urticaria. Una lesión que dura más de un día y deja marca o duele requiere investigar vasculitis u otra causa.",
           "facts": [
             {
               "field": "pattern",
@@ -2118,15 +2251,21 @@
             {
               "field": "modifiers.1.reason",
               "text": "No sigue el patrón evanescente típico."
+            }
+          ],
+          "source_evidence": [
+            {
+              "page": 255,
+              "quote": "ico • Elección: Clínico+ Prueba de cubo de hielo desencadena urticaria. • Para etiología: Hemograma, función hepática, TSH y anticuerpos antiti"
             }
           ]
         },
         "contrast": {
-          "vignette": "Una lesión que parecía roncha dura más de veinticuatro horas, duele y deja marca. Se investiga vasculitis u otra causa. ¿Qué acción o clasificación corresponde a este contexto?",
-          "discriminator": "Persistencia y marca residual de una supuesta roncha",
-          "explanation": "El dato decisivo es Persistencia y marca residual de una supuesta roncha. No sigue el patrón evanescente típico. Investigar vasculitis u otro diagnóstico.",
-          "confusable_with": "Urticaria simple en toda lesión elevada",
-          "why_not": "El habón habitual es evanescente y no deja marca. El compromiso sistémico exige tratar anafilaxia; la lesión persistente y dolorosa requiere otro diagnóstico.",
+          "vignette": "Una persona tiene brotes repetidos durante más de seis semanas. Cada habón cambia de lugar y desaparece antes de un día sin lesión residual, aunque el problema general siga recurriendo.",
+          "discriminator": "Curso crónico con lesiones individuales evanescentes",
+          "explanation": "Curso crónico con lesiones individuales evanescentes. Este patrón orienta a Urticaria. La activación de mastocitos libera mediadores que aumentan permeabilidad vascular dérmica; el edema transitorio forma habones pruriginosos que suelen desaparecer sin lesión residual.",
+          "confusable_with": "Vasculitis urticarial",
+          "why_not": "La evanescencia sin dolor ni marca residual favorece urticaria. Una lesión que dura más de un día y deja marca o duele requiere investigar vasculitis u otra causa.",
           "facts": [
             {
               "field": "pattern",
@@ -2184,9 +2323,23 @@
               "field": "modifiers.1.reason",
               "text": "No sigue el patrón evanescente típico."
             }
+          ],
+          "source_evidence": [
+            {
+              "page": 255,
+              "quote": "ede persistir por más de 6 semanas, volviéndose urticaria crónica. Es una reacción de hipersensibilidad tipo l. La urticaria crón"
+            }
           ]
         }
-      }
+      },
+      "sources": [
+        {
+          "label": "Edwino.pdf",
+          "pages": [
+            255
+          ]
+        }
+      ]
     },
     {
       "id": "09.07-01",
@@ -2200,7 +2353,7 @@
           "discriminator": "escama plateada",
           "explanation": "El dato decisivo es escama plateada. La activación inmune acelera proliferación y recambio de queratinocitos; el engrosamiento y los vasos superficiales explican placas descamativas y sangrado puntiforme al retirar escama. Valorar extensión, impacto y articulaciones. En placas limitadas de codos y rodillas, usar corticoide tópico de potencia apropiada con análogo de vitamina D; referir para evaluación reumatológica por el dolor articular.",
           "confusable_with": "Dermatitis seborreica",
-          "why_not": "Las placas plateadas y la afectación articular orientan a psoriasis. La eritrodermia o las pústulas sistémicas indican gravedad y requieren otra prioridad de manejo.",
+          "why_not": "La escama plateada, las placas extensoras y la afectación articular favorecen psoriasis. Las formas pustulares o eritrodérmicas requieren valoración urgente y no se confunden con simple escama oleosa.",
           "facts": [
             {
               "field": "pattern",
@@ -2233,11 +2386,11 @@
           ]
         },
         "medium": {
-          "vignette": "Una persona con placas plateadas en superficies extensoras tiene dolor e inflamación articular. Se solicita evaluación reumatológica.",
-          "discriminator": "Placas típicas con inflamación articular",
-          "explanation": "El dato decisivo es Placas típicas con inflamación articular. Puede existir artritis asociada. Solicitar evaluación reumatológica.",
+          "vignette": "Una persona con placas plateadas bien delimitadas en codos y rodillas tiene dolor e inflamación articular. El patrón cutáneo y articular se evalúa como un proceso relacionado.",
+          "discriminator": "Placas típicas con artritis asociada",
+          "explanation": "Placas típicas con artritis asociada. Este patrón orienta a Psoriasis. La activación inmune acelera proliferación y recambio de queratinocitos; el engrosamiento y los vasos superficiales explican placas descamativas y sangrado puntiforme al retirar escama.",
           "confusable_with": "Dermatitis seborreica",
-          "why_not": "Las placas plateadas y la afectación articular orientan a psoriasis. La eritrodermia o las pústulas sistémicas indican gravedad y requieren otra prioridad de manejo.",
+          "why_not": "La escama plateada, las placas extensoras y la afectación articular favorecen psoriasis. Las formas pustulares o eritrodérmicas requieren valoración urgente y no se confunden con simple escama oleosa.",
           "facts": [
             {
               "field": "pattern",
@@ -2310,11 +2463,11 @@
           ]
         },
         "contrast": {
-          "vignette": "Un paciente con enfermedad cutánea escamosa desarrolla eritrodermia o forma pustular sistémica. Se valora hospitalización.",
-          "discriminator": "Cambio a eritrodermia o forma pustular sistémica",
-          "explanation": "El dato decisivo es Cambio a eritrodermia o forma pustular sistémica. Puede comprometer homeostasis y estado general. Valorar hospitalización.",
+          "vignette": "Una persona con placas escamosas crónicas típicas desarrolla pústulas generalizadas o eritrodermia con repercusión sistémica. El antecedente de placas y la nueva morfología apoyan una forma grave del mismo proceso.",
+          "discriminator": "Forma pustular o eritrodérmica sobre un fenotipo de placas",
+          "explanation": "Forma pustular o eritrodérmica sobre un fenotipo de placas. Este patrón orienta a Psoriasis. La activación inmune acelera proliferación y recambio de queratinocitos; el engrosamiento y los vasos superficiales explican placas descamativas y sangrado puntiforme al retirar escama.",
           "confusable_with": "Dermatitis seborreica",
-          "why_not": "Las placas plateadas y la afectación articular orientan a psoriasis. La eritrodermia o las pústulas sistémicas indican gravedad y requieren otra prioridad de manejo.",
+          "why_not": "La escama plateada, las placas extensoras y la afectación articular favorecen psoriasis. Las formas pustulares o eritrodérmicas requieren valoración urgente y no se confunden con simple escama oleosa.",
           "facts": [
             {
               "field": "pattern",
@@ -2386,7 +2539,21 @@
             }
           ]
         }
-      }
+      },
+      "sources": [
+        {
+          "label": "Edwino.pdf",
+          "pages": [
+            248,
+            249,
+            250
+          ]
+        },
+        {
+          "label": "Clobetasol: ficha oficial DailyMed",
+          "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=69794e0b-2a79-419e-844f-ed051be62249"
+        }
+      ]
     },
     {
       "id": "09.07-02",
@@ -2550,7 +2717,15 @@
             }
           ]
         }
-      }
+      },
+      "sources": [
+        {
+          "label": "Edwino.pdf",
+          "pages": [
+            238
+          ]
+        }
+      ]
     },
     {
       "id": "09.07-03",
@@ -2714,7 +2889,15 @@
             }
           ]
         }
-      }
+      },
+      "sources": [
+        {
+          "label": "Edwino.pdf",
+          "pages": [
+            246
+          ]
+        }
+      ]
     },
     {
       "id": "09.08-01",
@@ -2902,7 +3085,15 @@
             }
           ]
         }
-      }
+      },
+      "sources": [
+        {
+          "label": "Edwino.pdf",
+          "pages": [
+            222
+          ]
+        }
+      ]
     },
     {
       "id": "09.08-02",
@@ -3078,7 +3269,19 @@
             }
           ]
         }
-      }
+      },
+      "sources": [
+        {
+          "label": "Edwino.pdf",
+          "pages": [
+            251
+          ]
+        },
+        {
+          "label": "BAD: rosácea",
+          "url": "https://www.bad.org.uk/pils/rosacea"
+        }
+      ]
     },
     {
       "id": "09.09-01",
@@ -3226,7 +3429,15 @@
             }
           ]
         }
-      }
+      },
+      "sources": [
+        {
+          "label": "Edwino.pdf",
+          "pages": [
+            256
+          ]
+        }
+      ]
     },
     {
       "id": "09.09-02",
@@ -3374,21 +3585,29 @@
             }
           ]
         }
-      }
+      },
+      "sources": [
+        {
+          "label": "Edwino.pdf",
+          "pages": [
+            241
+          ]
+        }
+      ]
     },
     {
       "id": "09.09-03",
       "parent_topic_id": "09.09-03",
       "block_id": "09.09",
-      "name": "Clasificar el síndrome neurocutáneo y organizar vigilancia",
-      "answer_kind": "decision",
+      "name": "Neurofibromatosis tipo 1",
+      "answer_kind": "diagnosis",
       "variants": {
         "easy": {
-          "vignette": "Un escolar tiene múltiples manchas café con leche y pecas axilares. Su padre presenta nódulos cutáneos semejantes; se evalúan visión, crecimiento, presión y desarrollo. ¿Qué acción o clasificación corresponde a este contexto?",
+          "vignette": "Un escolar tiene múltiples manchas café con leche y pecas axilares. Su padre presenta nódulos cutáneos semejantes; se evalúan visión, crecimiento, presión y desarrollo.",
           "discriminator": "manchas café con leche y pecas axilares",
           "explanation": "El dato decisivo es manchas café con leche y pecas axilares. Una alteración genética de supresión tumoral favorece proliferación de tejidos neurales y signos pigmentarios; el fenotipo permite orientar vigilancia de complicaciones neurológicas, visuales y tumorales. Valorar probable neurofibromatosis tipo 1 con criterios clínicos actuales y estudio genético según contexto. Referir a genética y pediatría y establecer vigilancia de visión, desarrollo, presión y signos de tumor.",
-          "confusable_with": "Una sola forma de neurofibromatosis para todos los tumores nerviosos",
-          "why_not": "Las manchas y pecas axilares orientan a NF1, mientras que los schwannomas vestibulares bilaterales requieren otra clasificación. La evaluación molecular puede ayudar.",
+          "confusable_with": "Schwannomatosis relacionada con NF2",
+          "why_not": "Las manchas, las pecas axilares, los neurofibromas y la afectación óptica favorecen NF1. Los tumores vestibulares bilaterales requieren otra clasificación.",
           "facts": [
             {
               "field": "pattern",
@@ -3425,11 +3644,11 @@
           ]
         },
         "medium": {
-          "vignette": "Una persona con hipoacusia tiene tumores vestibulares bilaterales. Se debe valorar un síndrome de schwannomatosis en vez de atribuirlo automáticamente a NF1. ¿Qué acción o clasificación corresponde a este contexto?",
-          "discriminator": "Tumores vestibulares bilaterales con hipoacusia",
-          "explanation": "El dato decisivo es Tumores vestibulares bilaterales con hipoacusia. No corresponde al mismo patrón de NF1. Valorar otro síndrome de schwannomatosis.",
-          "confusable_with": "Una sola forma de neurofibromatosis para todos los tumores nerviosos",
-          "why_not": "Las manchas y pecas axilares orientan a NF1, mientras que los schwannomas vestibulares bilaterales requieren otra clasificación. La evaluación molecular puede ayudar.",
+          "vignette": "Un escolar con manchas café con leche y pecas axilares desarrolla un glioma de la vía óptica. La evaluación identifica nódulos de Lisch en el iris.",
+          "discriminator": "Fenotipo pigmentario con afectación óptica característica",
+          "explanation": "Fenotipo pigmentario con afectación óptica característica. Este patrón orienta a Neurofibromatosis tipo 1. Una alteración genética de supresión tumoral favorece proliferación de tejidos neurales y signos pigmentarios; el fenotipo permite orientar vigilancia de complicaciones neurológicas, visuales y tumorales.",
+          "confusable_with": "Schwannomatosis relacionada con NF2",
+          "why_not": "Las manchas, las pecas axilares, los neurofibromas y la afectación óptica favorecen NF1. Los tumores vestibulares bilaterales requieren otra clasificación.",
           "facts": [
             {
               "field": "pattern",
@@ -3490,15 +3709,21 @@
             {
               "field": "source_corrections.1.reason",
               "text": "Se verifica nomenclatura y evaluación actuales para el modificador de schwannomas vestibulares bilaterales; no se atribuye este fenotipo a NF1."
+            }
+          ],
+          "source_evidence": [
+            {
+              "page": 243,
+              "quote": "ensorial retrococlear. • Nódulos de Lisch (tumores l mm en iris). • Neurofibromas en SNC. • Glioma óptico y neurofibromas. Malignización"
             }
           ]
         },
         "contrast": {
-          "vignette": "Una familia solicita estudio molecular por manchas café con leche y pecas axilares en un niño. Se necesita integrar los criterios actuales y distinguir otros síndromes pigmentarios, sin depender solo de contar manchas. ¿Qué acción o clasificación corresponde?",
-          "discriminator": "Duda diagnóstica que requiere criterios y genética actuales",
-          "explanation": "El diagnóstico molecular sí es posible y puede ayudar a distinguir entidades como Legius. Se integran criterios actuales y vigilancia clínica; la tabla antigua no basta.",
-          "confusable_with": "Una sola forma de neurofibromatosis para todos los tumores nerviosos",
-          "why_not": "Las manchas y pecas axilares orientan a NF1, mientras que los schwannomas vestibulares bilaterales requieren otra clasificación. La evaluación molecular puede ayudar.",
+          "vignette": "Un niño sin antecedentes familiares tiene manchas café con leche, pecas axilares y neurofibromas. La evaluación genética confirma el defecto correspondiente al gen NF1.",
+          "discriminator": "Presentación de novo con confirmación molecular",
+          "explanation": "Presentación de novo con confirmación molecular. Este patrón orienta a Neurofibromatosis tipo 1. Una alteración genética de supresión tumoral favorece proliferación de tejidos neurales y signos pigmentarios; el fenotipo permite orientar vigilancia de complicaciones neurológicas, visuales y tumorales.",
+          "confusable_with": "Schwannomatosis relacionada con NF2",
+          "why_not": "Las manchas, las pecas axilares, los neurofibromas y la afectación óptica favorecen NF1. Los tumores vestibulares bilaterales requieren otra clasificación.",
           "facts": [
             {
               "field": "pattern",
@@ -3560,9 +3785,31 @@
               "field": "source_corrections.1.reason",
               "text": "Se verifica nomenclatura y evaluación actuales para el modificador de schwannomas vestibulares bilaterales; no se atribuye este fenotipo a NF1."
             }
+          ],
+          "source_evidence": [
+            {
+              "page": 243,
+              "quote": "ares y cerebro puede ser de novo sin antecedentes familiares. medio). • La longitud de este gen y la gran cantidad de mutacione"
+            }
           ]
         }
-      }
+      },
+      "sources": [
+        {
+          "label": "Edwino.pdf",
+          "pages": [
+            243
+          ]
+        },
+        {
+          "label": "Consenso internacional 2021: criterios NF1 y Legius",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8354850/"
+        },
+        {
+          "label": "Consenso internacional 2022: NF2 y schwannomatosis",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/35674741/"
+        }
+      ]
     },
     {
       "id": "09.10-01",
@@ -3726,21 +3973,29 @@
             }
           ]
         }
-      }
+      },
+      "sources": [
+        {
+          "label": "Edwino.pdf",
+          "pages": [
+            245
+          ]
+        }
+      ]
     },
     {
       "id": "09.10-02",
       "parent_topic_id": "09.10-02",
       "block_id": "09.10",
-      "name": "Clasificar SSJ/NET y priorizar retirada y soporte",
-      "answer_kind": "decision",
+      "name": "SSJ y NET",
+      "answer_kind": "diagnosis",
       "variants": {
         "easy": {
-          "vignette": "Una adulta inició un fármaco semanas antes y presenta fiebre, piel dolorosa, ampollas y erosiones en boca y ojos. Varias áreas se desprenden con facilidad durante la evaluación. ¿Qué acción o clasificación corresponde a este contexto?",
+          "vignette": "Una adulta inició un fármaco semanas antes y presenta fiebre, piel dolorosa, ampollas y erosiones en boca y ojos. Varias áreas se desprenden con facilidad durante la evaluación.",
           "discriminator": "piel dolorosa",
           "explanation": "El dato decisivo es piel dolorosa. Una reacción grave produce muerte de queratinocitos y pérdida de epidermis; la barrera cutánea y mucosas fallan, con pérdidas de líquido, dolor y riesgo sistémico. Suspender el fármaco sospechoso y referir de inmediato a atención hospitalaria especializada. Iniciar soporte de líquidos, temperatura y dolor y evaluación oftalmológica temprana.",
           "confusable_with": "Síndrome de Ritter",
-          "why_not": "La exposición farmacológica y el daño mucoso favorecen SSJ/NET. La clasificación depende de epidermis desprendida y no solo de la extensión del eritema.",
+          "why_not": "El daño mucoso y el contexto farmacológico favorecen SSJ/NET. Ritter suele respetar las mucosas y presenta exfoliación más superficial por toxinas estafilocócicas.",
           "facts": [
             {
               "field": "pattern",
@@ -3773,11 +4028,11 @@
           ]
         },
         "medium": {
-          "vignette": "Tras un fármaco sospechoso, un paciente tiene desprendimiento epidérmico extenso e inestabilidad. Se retira el fármaco y se valora unidad especializada. ¿Qué acción o clasificación corresponde a este contexto?",
-          "discriminator": "Toxicidad cutánea medicamentosa extensa",
-          "explanation": "El dato decisivo es Toxicidad cutánea medicamentosa extensa. Aumenta necesidad de soporte. Valorar cuidados intensivos o unidad especializada.",
+          "vignette": "Tras exposición farmacológica reciente aparece piel intensamente dolorosa con erosiones de boca y ojos. El desprendimiento epidérmico es extenso y se acompaña de inestabilidad.",
+          "discriminator": "Necrolisis medicamentosa extensa con daño de mucosas",
+          "explanation": "Necrolisis medicamentosa extensa con daño de mucosas. Este patrón orienta a SSJ y NET. Una reacción grave produce muerte de queratinocitos y pérdida de epidermis; la barrera cutánea y mucosas fallan, con pérdidas de líquido, dolor y riesgo sistémico.",
           "confusable_with": "Síndrome de Ritter",
-          "why_not": "La exposición farmacológica y el daño mucoso favorecen SSJ/NET. La clasificación depende de epidermis desprendida y no solo de la extensión del eritema.",
+          "why_not": "El daño mucoso y el contexto farmacológico favorecen SSJ/NET. Ritter suele respetar las mucosas y presenta exfoliación más superficial por toxinas estafilocócicas.",
           "facts": [
             {
               "field": "pattern",
@@ -3850,11 +4105,11 @@
           ]
         },
         "contrast": {
-          "vignette": "Una persona con erosiones de mucosas y piel dolorosa presenta desprendimiento que requiere medir superficie para clasificar el espectro clínico. ¿Qué acción o clasificación corresponde a este contexto?",
-          "discriminator": "Porcentaje de epidermis desprendida",
-          "explanation": "El dato decisivo es Porcentaje de epidermis desprendida. La extensión orienta severidad y denominación. Clasificar espectro por epidermis desprendida.",
+          "vignette": "Una persona presenta fiebre, erosiones orales y oculares y áreas de epidermis desprendida después de iniciar un fármaco. La extensión desprendida es menor que en la forma extensa, pero el patrón de lesión mucocutánea es el mismo.",
+          "discriminator": "Espectro de desprendimiento epidérmico con mucositis tras fármaco",
+          "explanation": "Espectro de desprendimiento epidérmico con mucositis tras fármaco. Este patrón orienta a SSJ y NET. Una reacción grave produce muerte de queratinocitos y pérdida de epidermis; la barrera cutánea y mucosas fallan, con pérdidas de líquido, dolor y riesgo sistémico.",
           "confusable_with": "Síndrome de Ritter",
-          "why_not": "La exposición farmacológica y el daño mucoso favorecen SSJ/NET. La clasificación depende de epidermis desprendida y no solo de la extensión del eritema.",
+          "why_not": "El daño mucoso y el contexto farmacológico favorecen SSJ/NET. Ritter suele respetar las mucosas y presenta exfoliación más superficial por toxinas estafilocócicas.",
           "facts": [
             {
               "field": "pattern",
@@ -3926,7 +4181,20 @@
             }
           ]
         }
-      }
+      },
+      "sources": [
+        {
+          "label": "Edwino.pdf",
+          "pages": [
+            253,
+            254
+          ]
+        },
+        {
+          "label": "Guía S3 2024: necrólisis epidérmica, parte 1",
+          "url": "https://onlinelibrary.wiley.com/doi/full/10.1111/ddg.15515"
+        }
+      ]
     },
     {
       "id": "09.10-03",
@@ -4090,21 +4358,29 @@
             }
           ]
         }
-      }
+      },
+      "sources": [
+        {
+          "label": "Edwino.pdf",
+          "pages": [
+            252
+          ]
+        }
+      ]
     },
     {
       "id": "09.10-04",
       "parent_topic_id": "09.10-04",
       "block_id": "09.10",
-      "name": "Distinguir eritema multiforme de desprendimiento grave",
-      "answer_kind": "decision",
+      "name": "Eritema multiforme",
+      "answer_kind": "diagnosis",
       "variants": {
         "easy": {
-          "vignette": "Un joven presenta lesiones simétricas en diana en manos y pies después de herpes labial. Tiene pocas molestias generales y no hay desprendimiento extenso de la epidermis. ¿Qué acción o clasificación corresponde a este contexto?",
+          "vignette": "Un joven presenta lesiones simétricas en diana en manos y pies después de herpes labial. Tiene pocas molestias generales y no hay desprendimiento extenso de la epidermis.",
           "discriminator": "lesiones simétricas en diana",
           "explanation": "El dato decisivo es lesiones simétricas en diana. La respuesta inflamatoria posterior a infección, con frecuencia herpética, produce lesiones acrales en diana; la afectación mucosa variable modifica gravedad sin equivaler automáticamente a necrólisis. Buscar el desencadenante y dar tratamiento sintomático en enfermedad limitada. Valorar hidratación y atención especializada si existe compromiso mucoso importante.",
-          "confusable_with": "SSJ/NET y eritema multiforme como una misma entidad",
-          "why_not": "Las dianas acrales tras herpes favorecen eritema multiforme. El dolor intenso y el desprendimiento obligan a buscar el espectro SSJ/NET y cambian el manejo.",
+          "confusable_with": "SSJ y NET",
+          "why_not": "Las dianas acrales típicas y la relación con herpes favorecen eritema multiforme. La necrolisis dolorosa extensa con afectación mucosa tras fármacos obliga a considerar SSJ/NET.",
           "facts": [
             {
               "field": "pattern",
@@ -4133,11 +4409,11 @@
           ]
         },
         "medium": {
-          "vignette": "Tras un fármaco sospechoso aparecen lesiones en diana. Se retira la exposición y se reevalúa el diagnóstico. ¿Qué acción o clasificación corresponde a este contexto?",
-          "discriminator": "Dianas con exposición farmacológica",
-          "explanation": "El dato decisivo es Dianas con exposición farmacológica. Puede corresponder a otra reacción. Retirarlo y reevaluar diagnóstico.",
-          "confusable_with": "SSJ/NET y eritema multiforme como una misma entidad",
-          "why_not": "Las dianas acrales tras herpes favorecen eritema multiforme. El dolor intenso y el desprendimiento obligan a buscar el espectro SSJ/NET y cambian el manejo.",
+          "vignette": "Una persona con exposición a un fármaco presenta lesiones simétricas en diana sobre manos y pies, con pocas molestias generales y sin desprendimiento epidérmico extenso.",
+          "discriminator": "Dianas acrales asociadas con exposición farmacológica",
+          "explanation": "Dianas acrales asociadas con exposición farmacológica. Este patrón orienta a Eritema multiforme. La respuesta inflamatoria posterior a infección, con frecuencia herpética, produce lesiones acrales en diana; la afectación mucosa variable modifica gravedad sin equivaler automáticamente a necrólisis.",
+          "confusable_with": "SSJ y NET",
+          "why_not": "Las dianas acrales típicas y la relación con herpes favorecen eritema multiforme. La necrolisis dolorosa extensa con afectación mucosa tras fármacos obliga a considerar SSJ/NET.",
           "facts": [
             {
               "field": "pattern",
@@ -4206,11 +4482,11 @@
           ]
         },
         "contrast": {
-          "vignette": "Una persona con lesiones en diana desarrolla dolor intenso y desprendimiento. Se descarta SSJ/NET antes de mantener la clasificación inicial. ¿Qué acción o clasificación corresponde a este contexto?",
-          "discriminator": "Dolor intenso o desprendimiento sobre dianas",
-          "explanation": "El dato decisivo es Dolor intenso o desprendimiento sobre dianas. Tiene gravedad y manejo diferentes. Descartar espectro SSJ/NET.",
-          "confusable_with": "SSJ/NET y eritema multiforme como una misma entidad",
-          "why_not": "Las dianas acrales tras herpes favorecen eritema multiforme. El dolor intenso y el desprendimiento obligan a buscar el espectro SSJ/NET y cambian el manejo.",
+          "vignette": "Después de herpes labial aparecen lesiones acrales en diana y úlceras orales. No hay desprendimiento extenso; el patrón combina afectación cutánea y mucosa de este proceso.",
+          "discriminator": "Forma con mucosa oral y dianas acrales",
+          "explanation": "Forma con mucosa oral y dianas acrales. Este patrón orienta a Eritema multiforme. La respuesta inflamatoria posterior a infección, con frecuencia herpética, produce lesiones acrales en diana; la afectación mucosa variable modifica gravedad sin equivaler automáticamente a necrólisis.",
+          "confusable_with": "SSJ y NET",
+          "why_not": "Las dianas acrales típicas y la relación con herpes favorecen eritema multiforme. La necrolisis dolorosa extensa con afectación mucosa tras fármacos obliga a considerar SSJ/NET.",
           "facts": [
             {
               "field": "pattern",
@@ -4278,21 +4554,29 @@
             }
           ]
         }
-      }
+      },
+      "sources": [
+        {
+          "label": "Edwino.pdf",
+          "pages": [
+            232
+          ]
+        }
+      ]
     },
     {
       "id": "09.11-01",
       "parent_topic_id": "09.11-01",
       "block_id": "09.11",
-      "name": "Clasificar carcinoma basocelular y tratar según riesgo",
-      "answer_kind": "decision",
+      "name": "Carcinoma basocelular",
+      "answer_kind": "diagnosis",
       "variants": {
         "easy": {
-          "vignette": "Un adulto mayor tiene una pápula perlada en la nariz que crece lentamente, sangra con roce y muestra pequeños vasos superficiales y depresión central. ¿Qué acción o clasificación corresponde?",
+          "vignette": "Un adulto mayor tiene una pápula perlada en la nariz que crece lentamente, sangra con roce y muestra pequeños vasos superficiales y depresión central.",
           "discriminator": "pápula perlada",
           "explanation": "El dato decisivo es pápula perlada. La proliferación maligna de células basales favorecida por radiación ultravioleta crece localmente; el borde perlado, vasos y ulceración reflejan el patrón clínico de la lesión. Referir a dermatología y confirmar histológicamente. Planear extirpación según localización, subtipo y riesgo de recurrencia.",
           "confusable_with": "Carcinoma espinocelular",
-          "why_not": "La superficie perlada con telangiectasias favorece basocelular. La queratosis prominente y el crecimiento de un nódulo ulcerado orientan a carcinoma espinocelular.",
+          "why_not": "El origen basal y los patrones perlado, superficial o morfeiforme orientan a basocelular. El espinocelular suele mostrar queratosis y requiere evaluar invasión y riesgo metastásico.",
           "facts": [
             {
               "field": "pattern",
@@ -4321,11 +4605,11 @@
           ]
         },
         "medium": {
-          "vignette": "La biopsia de una lesión cutánea confirma un subtipo morfeiforme o esclerosante. Se valora cirugía de Mohs por su riesgo, aunque la localización nasal no sea el dato que motivó la clasificación. ¿Qué acción o clasificación corresponde?",
-          "discriminator": "Subtipo histológico de alto riesgo",
-          "explanation": "El subtipo morfeiforme es de alto riesgo. Se planifica tratamiento por localización, subtipo y recurrencia; Mohs permite control de márgenes en contextos seleccionados.",
+          "vignette": "Una persona presenta una placa eritematosa persistente bien delimitada en el tronco. La biopsia demuestra una neoplasia de células basales, correspondiente al patrón superficial del tumor.",
+          "discriminator": "Variante superficial de placa en tronco",
+          "explanation": "Variante superficial de placa en tronco. Este patrón orienta a Carcinoma basocelular. La proliferación maligna de células basales favorecida por radiación ultravioleta crece localmente; el borde perlado, vasos y ulceración reflejan el patrón clínico de la lesión.",
           "confusable_with": "Carcinoma espinocelular",
-          "why_not": "La superficie perlada con telangiectasias favorece basocelular. La queratosis prominente y el crecimiento de un nódulo ulcerado orientan a carcinoma espinocelular.",
+          "why_not": "El origen basal y los patrones perlado, superficial o morfeiforme orientan a basocelular. El espinocelular suele mostrar queratosis y requiere evaluar invasión y riesgo metastásico.",
           "facts": [
             {
               "field": "pattern",
@@ -4378,15 +4662,21 @@
             {
               "field": "modifiers.0.reason",
               "text": "Permite control de márgenes en sitios críticos."
+            }
+          ],
+          "source_evidence": [
+            {
+              "page": 223,
+              "quote": "y quemaduras solares). • Superficial: Placa eritematosa, bien definida en tronco y cara. • Morfeiforme o esclerosante: Infiltra nervios cutáneos. ~ o "
             }
           ]
         },
         "contrast": {
-          "vignette": "Una pápula nasal persistente sangra con roce y crece lentamente. Se toma biopsia para clasificar el subtipo antes de elegir tratamiento por riesgo. ¿Qué acción o clasificación corresponde?",
-          "discriminator": "Pápula perlada persistente que exige biopsia y clasificación",
-          "explanation": "El dato decisivo es Pápula perlada persistente que exige biopsia y clasificación. La proliferación maligna de células basales favorecida por radiación ultravioleta crece localmente; el borde perlado, vasos y ulceración reflejan el patrón clínico de la lesión. Referir a dermatología y confirmar histológicamente. Planear extirpación según localización, subtipo y riesgo de recurrencia.",
+          "vignette": "La biopsia de una lesión cutánea esclerosante de crecimiento lento identifica un subtipo morfeiforme de origen basal epidérmico. Se valora su riesgo de extensión local.",
+          "discriminator": "Subtipo infiltrativo esclerosante de un tumor basal",
+          "explanation": "Subtipo infiltrativo esclerosante de un tumor basal. Este patrón orienta a Carcinoma basocelular. La proliferación maligna de células basales favorecida por radiación ultravioleta crece localmente; el borde perlado, vasos y ulceración reflejan el patrón clínico de la lesión.",
           "confusable_with": "Carcinoma espinocelular",
-          "why_not": "La superficie perlada con telangiectasias favorece basocelular. La queratosis prominente y el crecimiento de un nódulo ulcerado orientan a carcinoma espinocelular.",
+          "why_not": "El origen basal y los patrones perlado, superficial o morfeiforme orientan a basocelular. El espinocelular suele mostrar queratosis y requiere evaluar invasión y riesgo metastásico.",
           "facts": [
             {
               "field": "pattern",
@@ -4440,9 +4730,23 @@
               "field": "modifiers.0.reason",
               "text": "Permite control de márgenes en sitios críticos."
             }
+          ],
+          "source_evidence": [
+            {
+              "page": 223,
+              "quote": "nida en tronco y cara. • Morfeiforme o esclerosante: Infiltra nervios cutáneos. ~ o J Clínica Pápula rosada de brillo perlado o con"
+            }
           ]
         }
-      }
+      },
+      "sources": [
+        {
+          "label": "Edwino.pdf",
+          "pages": [
+            223
+          ]
+        }
+      ]
     },
     {
       "id": "09.11-02",
@@ -4456,7 +4760,7 @@
           "discriminator": "nódulo queratósico",
           "explanation": "El dato decisivo es nódulo queratósico. La transformación de queratinocitos epidérmicos puede surgir sobre daño actínico; la queratinización, invasión y ulceración producen una lesión con riesgo de extensión regional o distante. Solicitar evaluación dermatológica y biopsia para confirmar y estratificar riesgo. Planear resección y estudio de extensión cuando corresponda.",
           "confusable_with": "Carcinoma basocelular",
-          "why_not": "El nódulo o cuerno queratósico favorece carcinoma espinocelular. El borde perlado y las telangiectasias orientan a basocelular.",
+          "why_not": "La proliferación escamosa invasora y la queratosis favorecen carcinoma espinocelular. El basocelular suele presentar borde perlado o sus propios patrones histológicos.",
           "facts": [
             {
               "field": "pattern",
@@ -4485,11 +4789,11 @@
           ]
         },
         "medium": {
-          "vignette": "Un tumor queratósico del labio requiere evaluación de alto riesgo por localización y posible invasión profunda.",
-          "discriminator": "Tumor labial con riesgo de invasión",
-          "explanation": "El dato decisivo es Tumor labial con riesgo de invasión. Aumenta posibilidad de recurrencia o diseminación. Valorar tratamiento y estadificación de alto riesgo.",
+          "vignette": "Una lesión queratósica del labio se ulcera. La biopsia demuestra un tumor epitelial escamoso que invade, y la localización aumenta su riesgo.",
+          "discriminator": "Lesión labial escamosa invasora",
+          "explanation": "Lesión labial escamosa invasora. Este patrón orienta a Carcinoma espinocelular. La transformación de queratinocitos epidérmicos puede surgir sobre daño actínico; la queratinización, invasión y ulceración producen una lesión con riesgo de extensión regional o distante.",
           "confusable_with": "Carcinoma basocelular",
-          "why_not": "El nódulo o cuerno queratósico favorece carcinoma espinocelular. El borde perlado y las telangiectasias orientan a basocelular.",
+          "why_not": "La proliferación escamosa invasora y la queratosis favorecen carcinoma espinocelular. El basocelular suele presentar borde perlado o sus propios patrones histológicos.",
           "facts": [
             {
               "field": "pattern",
@@ -4546,11 +4850,11 @@
           ]
         },
         "contrast": {
-          "vignette": "Una persona con daño solar tiene un cuerno queratósico que sangra. Se realiza biopsia para determinar invasión y planear tratamiento.",
-          "discriminator": "Lesión queratósica que requiere demostrar invasión",
-          "explanation": "El dato decisivo es Lesión queratósica que requiere demostrar invasión. La transformación de queratinocitos epidérmicos puede surgir sobre daño actínico; la queratinización, invasión y ulceración producen una lesión con riesgo de extensión regional o distante. Solicitar evaluación dermatológica y biopsia para confirmar y estratificar riesgo. Planear resección y estudio de extensión cuando corresponda.",
+          "vignette": "Una persona con daño solar tiene un cuerno queratósico que sangra. La biopsia de su base muestra queratinocitos atípicos que invaden la dermis, en lugar de una proliferación limitada a la epidermis.",
+          "discriminator": "Invasión escamosa demostrada en la base de un cuerno",
+          "explanation": "Invasión escamosa demostrada en la base de un cuerno. Este patrón orienta a Carcinoma espinocelular. La transformación de queratinocitos epidérmicos puede surgir sobre daño actínico; la queratinización, invasión y ulceración producen una lesión con riesgo de extensión regional o distante.",
           "confusable_with": "Carcinoma basocelular",
-          "why_not": "El nódulo o cuerno queratósico favorece carcinoma espinocelular. El borde perlado y las telangiectasias orientan a basocelular.",
+          "why_not": "La proliferación escamosa invasora y la queratosis favorecen carcinoma espinocelular. El basocelular suele presentar borde perlado o sus propios patrones histológicos.",
           "facts": [
             {
               "field": "pattern",
@@ -4606,7 +4910,15 @@
             }
           ]
         }
-      }
+      },
+      "sources": [
+        {
+          "label": "Edwino.pdf",
+          "pages": [
+            224
+          ]
+        }
+      ]
     },
     {
       "id": "09.11-03",
@@ -4782,7 +5094,20 @@
             }
           ]
         }
-      }
+      },
+      "sources": [
+        {
+          "label": "Edwino.pdf",
+          "pages": [
+            239,
+            240
+          ]
+        },
+        {
+          "label": "AAD: guía clínica de melanoma",
+          "url": "https://www.aad.org/member/clinical-quality/guidelines/melanoma"
+        }
+      ]
     },
     {
       "id": "09.01-02-foliculitis",
@@ -4914,7 +5239,16 @@
             }
           ]
         }
-      }
+      },
+      "sources": [
+        {
+          "label": "Edwino.pdf",
+          "pages": [
+            235,
+            236
+          ]
+        }
+      ]
     },
     {
       "id": "09.01-02-forunculosis",
@@ -5058,7 +5392,134 @@
             }
           ]
         }
-      }
+      },
+      "sources": [
+        {
+          "label": "Edwino.pdf",
+          "pages": [
+            235,
+            236
+          ]
+        }
+      ]
+    },
+    {
+      "id": "09.09-03-schwannomatosis-nf2",
+      "parent_topic_id": "09.09-03",
+      "block_id": "09.09",
+      "name": "Schwannomatosis relacionada con NF2",
+      "answer_kind": "diagnosis",
+      "variants": {
+        "easy": {
+          "vignette": "Una persona presenta hipoacusia progresiva. La resonancia identifica tumores vestibulares en ambos lados y otros tumores del sistema nervioso central.",
+          "discriminator": "Tumores vestibulares bilaterales con pérdida auditiva",
+          "explanation": "Los tumores vestibulares bilaterales orientan al síndrome relacionado con NF2. No deben atribuirse al patrón pigmentario y óptico típico de NF1.",
+          "confusable_with": "Neurofibromatosis tipo 1",
+          "why_not": "NF1 se asocia con manchas café con leche, pecas axilares, neurofibromas y riesgo óptico. Los tumores vestibulares bilaterales corresponden a otra clasificación.",
+          "facts": [
+            {
+              "field": "modifiers.0.factor",
+              "text": "Hipoacusia con tumores vestibulares bilaterales"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Valorar otro síndrome de schwannomatosis."
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "No corresponde al mismo patrón de NF1."
+            },
+            {
+              "field": "limits",
+              "text": "El diagnóstico molecular sí es posible. La clasificación y criterios de la página son antiguos y no deben reducirse a contar manchas."
+            }
+          ],
+          "source_evidence": [
+            {
+              "page": 243,
+              "quote": "ares (Signo de Crowe). • Schwannoma vestibular bilateral. • Lesiones cafés con leche (Más de 6 lesiones). Clínica: • Sordera neurosensorial retrococlea"
+            }
+          ]
+        },
+        "medium": {
+          "vignette": "Una persona con un tumor medular y déficit motor tiene pérdida de audición. La evaluación demuestra además tumores en ambos nervios vestibulares.",
+          "discriminator": "Presentación medular acompañada de afectación vestibular bilateral",
+          "explanation": "El síndrome relacionado con NF2 puede afectar varias estructuras del sistema nervioso. La afectación vestibular bilateral es el dato que distingue este patrón.",
+          "confusable_with": "Neurofibromatosis tipo 1",
+          "why_not": "NF1 se asocia con manchas café con leche, pecas axilares, neurofibromas y riesgo óptico. Los tumores vestibulares bilaterales corresponden a otra clasificación.",
+          "facts": [
+            {
+              "field": "modifiers.0.factor",
+              "text": "Hipoacusia con tumores vestibulares bilaterales"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Valorar otro síndrome de schwannomatosis."
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "No corresponde al mismo patrón de NF1."
+            },
+            {
+              "field": "limits",
+              "text": "El diagnóstico molecular sí es posible. La clasificación y criterios de la página son antiguos y no deben reducirse a contar manchas."
+            }
+          ],
+          "source_evidence": [
+            {
+              "page": 243,
+              "quote": "ares (Signo de Crowe). • Schwannoma vestibular bilateral. • Lesiones cafés con leche (Más de 6 lesiones). Clínica: • Sordera neurosensorial retrococlea"
+            }
+          ]
+        },
+        "contrast": {
+          "vignette": "Durante evaluación familiar, una persona con expresión clínica poco llamativa tiene lesiones en ambos nervios vestibulares. Se encuentra pérdida auditiva de origen retrococlear y se investiga la predisposición hereditaria.",
+          "discriminator": "Detección familiar de afectación vestibular bilateral",
+          "explanation": "La expresión puede variar entre familiares. Los tumores vestibulares bilaterales y la hipoacusia orientan al síndrome relacionado con NF2, aunque el motivo inicial sea un estudio familiar.",
+          "confusable_with": "Neurofibromatosis tipo 1",
+          "why_not": "NF1 se asocia con manchas café con leche, pecas axilares, neurofibromas y riesgo óptico. Los tumores vestibulares bilaterales corresponden a otra clasificación.",
+          "facts": [
+            {
+              "field": "modifiers.0.factor",
+              "text": "Hipoacusia con tumores vestibulares bilaterales"
+            },
+            {
+              "field": "modifiers.0.action",
+              "text": "Valorar otro síndrome de schwannomatosis."
+            },
+            {
+              "field": "modifiers.0.reason",
+              "text": "No corresponde al mismo patrón de NF1."
+            },
+            {
+              "field": "limits",
+              "text": "El diagnóstico molecular sí es posible. La clasificación y criterios de la página son antiguos y no deben reducirse a contar manchas."
+            }
+          ],
+          "source_evidence": [
+            {
+              "page": 243,
+              "quote": "ares (Signo de Crowe). • Schwannoma vestibular bilateral. • Lesiones cafés con leche (Más de 6 lesiones). Clínica: • Sordera neurosensorial retrococlea"
+            }
+          ]
+        }
+      },
+      "sources": [
+        {
+          "label": "Edwino.pdf",
+          "pages": [
+            243
+          ]
+        },
+        {
+          "label": "Consenso internacional 2021: criterios NF1 y Legius",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8354850/"
+        },
+        {
+          "label": "Consenso internacional 2022: NF2 y schwannomatosis",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/35674741/"
+        }
+      ]
     }
   ]
 }

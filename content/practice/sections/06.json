@@ -8,15 +8,15 @@
       "id": "06.01-01",
       "parent_topic_id": "06.01-01",
       "block_id": "06.01",
-      "name": "Reconocer sospecha esofágica y estabilizar antes de reparación",
-      "answer_kind": "decision",
+      "name": "Atresia esofágica",
+      "answer_kind": "diagnosis",
       "variants": {
         "easy": {
-          "vignette": "Un recién nacido tiene salivación abundante y se atraganta al intentar alimentarse. Una sonda no avanza al estómago. El embarazo cursó con exceso de líquido amniótico. ¿Qué acción o clasificación corresponde?",
+          "vignette": "Un recién nacido tiene salivación abundante y se atraganta al intentar alimentarse. Una sonda no avanza al estómago. El embarazo cursó con exceso de líquido amniótico.",
           "discriminator": "Una sonda no avanza",
           "explanation": "El dato decisivo es Una sonda no avanza. La discontinuidad esofágica impide deglución y acumula secreciones en el cabo proximal; una fístula asociada permite comunicación respiratoria y riesgo de aspiración. Suspender alimentación, aspirar secreciones, mantener posición y soporte apropiados, y referir a cirugía neonatal para definir anatomía y reparación.",
           "confusable_with": "Atresia de coanas",
-          "why_not": "La detención de la sonda hacia el estómago y la sialorrea orientan al esófago. La imposibilidad de paso por las narinas con mejoría al llorar orienta a coanas.",
+          "why_not": "La detención de la sonda hacia estómago y la sialorrea orientan al esófago. El bloqueo coanal afecta el paso por las narinas y se asocia con cianosis que mejora al llorar.",
           "facts": [
             {
               "field": "pattern",
@@ -45,11 +45,11 @@
           ]
         },
         "medium": {
-          "vignette": "Un recién nacido con sonda que no alcanza el estómago y salivación abundante desarrolla dificultad respiratoria. Se prioriza estabilización de la vía aérea. ¿Qué acción o clasificación corresponde?",
-          "discriminator": "Obstrucción esofágica neonatal con compromiso respiratorio",
-          "explanation": "El dato decisivo es Obstrucción esofágica neonatal con compromiso respiratorio. La aspiración o comunicación traqueal puede comprometer ventilación. Priorizar estabilización y control experto de vía aérea.",
+          "vignette": "Un recién nacido con salivación abundante y sonda detenida antes de llegar al estómago desarrolla dificultad para ventilar y cianosis al intentar alimentarse.",
+          "discriminator": "Discontinuidad esofágica con compromiso respiratorio",
+          "explanation": "Discontinuidad esofágica con compromiso respiratorio. Este patrón orienta a Atresia esofágica. La discontinuidad esofágica impide deglución y acumula secreciones en el cabo proximal; una fístula asociada permite comunicación respiratoria y riesgo de aspiración.",
           "confusable_with": "Atresia de coanas",
-          "why_not": "La detención de la sonda hacia el estómago y la sialorrea orientan al esófago. La imposibilidad de paso por las narinas con mejoría al llorar orienta a coanas.",
+          "why_not": "La detención de la sonda hacia estómago y la sialorrea orientan al esófago. El bloqueo coanal afecta el paso por las narinas y se asocia con cianosis que mejora al llorar.",
           "facts": [
             {
               "field": "pattern",
@@ -106,11 +106,11 @@
           ]
         },
         "contrast": {
-          "vignette": "El ultrasonido prenatal muestra polihidramnios y un estómago sin líquido. Se investiga una posible interrupción de la deglución y se organiza confirmación neonatal cuidadosa. ¿Qué acción o clasificación corresponde?",
-          "discriminator": "Sospecha prenatal por polihidramnios y estómago sin líquido",
-          "explanation": "La ausencia de continuidad esofágica impide deglutir y puede producir estos hallazgos prenatales. Se prepara evaluación neonatal y no se fuerza una sonda ni se usa contraste rutinario sin indicación especializada.",
+          "vignette": "El control prenatal mostró polihidramnios y estómago sin líquido. Tras el nacimiento, antes de alimentarlo, la sonda no logra avanzar hacia el estómago y se acumulan secreciones.",
+          "discriminator": "Sospecha prenatal corroborada por falta de paso de sonda",
+          "explanation": "Sospecha prenatal corroborada por falta de paso de sonda. Este patrón orienta a Atresia esofágica. La discontinuidad esofágica impide deglución y acumula secreciones en el cabo proximal; una fístula asociada permite comunicación respiratoria y riesgo de aspiración.",
           "confusable_with": "Atresia de coanas",
-          "why_not": "La alteración de deglución prenatal con polihidramnios dirige la sospecha al esófago. Los hallazgos prenatales requieren confirmación neonatal; la obstrucción coanal se localiza en la vía nasal.",
+          "why_not": "La detención de la sonda hacia estómago y la sialorrea orientan al esófago. El bloqueo coanal afecta el paso por las narinas y se asocia con cianosis que mejora al llorar.",
           "facts": [
             {
               "field": "pattern",
@@ -164,9 +164,23 @@
               "field": "modifiers.0.reason",
               "text": "La aspiración o comunicación traqueal puede comprometer ventilación."
             }
+          ],
+          "source_evidence": [
+            {
+              "page": 165,
+              "quote": "con polihidramnios y con estómago sin líquido. ~ - Llti ~ o Clínica • Frecuente en masculinos y en gemelos. • Antecedente de USG prenatal co"
+            }
           ]
         }
-      }
+      },
+      "sources": [
+        {
+          "label": "Edwino.pdf",
+          "pages": [
+            165
+          ]
+        }
+      ]
     },
     {
       "id": "06.01-02",
@@ -180,7 +194,7 @@
           "discriminator": "mejora cuando llora",
           "explanation": "El dato decisivo es mejora cuando llora. La obstrucción posterior nasal bilateral dificulta respiración durante alimentación; el llanto abre la boca y permite flujo aéreo alternativo, con alivio transitorio de la hipoxemia. Asegurar una vía aérea oral apropiada y apoyo respiratorio. Suspender alimentación oral si no es segura y solicitar confirmación anatómica y reparación especializada.",
           "confusable_with": "Atresia esofágica",
-          "why_not": "La localización nasal del bloqueo y la mejoría al llorar orientan a coanas. La sialorrea con sonda detenida hacia el estómago sugiere un defecto esofágico.",
+          "why_not": "El sitio del bloqueo nasal y la mejoría al llorar orientan a coanas. La sonda detenida hacia estómago y la sialorrea localizan otro defecto.",
           "facts": [
             {
               "field": "pattern",
@@ -209,11 +223,11 @@
           ]
         },
         "medium": {
-          "vignette": "Un lactante presenta rinorrea unilateral persistente. Se evalúa permeabilidad nasal y se considera una obstrucción congénita de un lado.",
-          "discriminator": "Presentación nasal unilateral",
-          "explanation": "El dato decisivo es Presentación nasal unilateral. Puede no causar dificultad neonatal grave. Valorar rinorrea unilateral persistente y estudio dirigido.",
+          "vignette": "Un lactante tiene rinorrea unilateral persistente. La sonda no atraviesa una narina y el estudio anatómico demuestra obstrucción de la comunicación nasal posterior de ese lado.",
+          "discriminator": "Obstrucción posterior unilateral demostrada",
+          "explanation": "Obstrucción posterior unilateral demostrada. Este patrón orienta a Atresia de coanas. La obstrucción posterior nasal bilateral dificulta respiración durante alimentación; el llanto abre la boca y permite flujo aéreo alternativo, con alivio transitorio de la hipoxemia.",
           "confusable_with": "Atresia esofágica",
-          "why_not": "La localización nasal del bloqueo y la mejoría al llorar orientan a coanas. La sialorrea con sonda detenida hacia el estómago sugiere un defecto esofágico.",
+          "why_not": "El sitio del bloqueo nasal y la mejoría al llorar orientan a coanas. La sonda detenida hacia estómago y la sialorrea localizan otro defecto.",
           "facts": [
             {
               "field": "pattern",
@@ -282,11 +296,11 @@
           ]
         },
         "contrast": {
-          "vignette": "Un neonato tiene obstrucción de ambas narinas con cianosis que mejora al llorar. Se identifican otras malformaciones y se busca asociación CHARGE.",
-          "discriminator": "Obstrucción coanal con otras anomalías",
-          "explanation": "El dato decisivo es Obstrucción coanal con otras anomalías. La obstrucción puede formar parte de un síndrome. Buscar asociación CHARGE.",
+          "vignette": "Un neonato tiene bloqueo de ambas narinas y cianosis que mejora al llorar. Coexisten otras malformaciones que orientan a una asociación CHARGE.",
+          "discriminator": "Bloqueo coanal bilateral con anomalías asociadas",
+          "explanation": "Bloqueo coanal bilateral con anomalías asociadas. Este patrón orienta a Atresia de coanas. La obstrucción posterior nasal bilateral dificulta respiración durante alimentación; el llanto abre la boca y permite flujo aéreo alternativo, con alivio transitorio de la hipoxemia.",
           "confusable_with": "Atresia esofágica",
-          "why_not": "La localización nasal del bloqueo y la mejoría al llorar orientan a coanas. La sialorrea con sonda detenida hacia el estómago sugiere un defecto esofágico.",
+          "why_not": "El sitio del bloqueo nasal y la mejoría al llorar orientan a coanas. La sonda detenida hacia estómago y la sialorrea localizan otro defecto.",
           "facts": [
             {
               "field": "pattern",
@@ -354,21 +368,29 @@
             }
           ]
         }
-      }
+      },
+      "sources": [
+        {
+          "label": "Edwino.pdf",
+          "pages": [
+            163
+          ]
+        }
+      ]
     },
     {
       "id": "06.02-01",
       "parent_topic_id": "06.02-01",
       "block_id": "06.02",
-      "name": "Evaluar obstrucción duodenal y anomalías asociadas",
-      "answer_kind": "decision",
+      "name": "Atresia duodenal",
+      "answer_kind": "diagnosis",
       "variants": {
         "easy": {
-          "vignette": "Un recién nacido vomita contenido verde desde sus primeras tomas. La radiografía muestra dos burbujas gaseosas proximales. Hubo polihidramnios prenatal y aún no se ha completado la evaluación de malformaciones. ¿Qué acción o clasificación corresponde?",
+          "vignette": "Un recién nacido vomita contenido verde desde sus primeras tomas. La radiografía muestra dos burbujas gaseosas proximales. Hubo polihidramnios prenatal y aún no se ha completado la evaluación de malformaciones.",
           "discriminator": "dos burbujas gaseosas proximales",
           "explanation": "El dato decisivo es dos burbujas gaseosas proximales. La luz duodenal interrumpida impide el paso del contenido gástrico y duodenal; el segmento proximal se dilata y origina el patrón radiográfico de obstrucción alta. Mantener ayuno, descomprimir con sonda orogástrica y corregir líquidos y electrolitos. Referir a cirugía neonatal para reparación tras estabilización.",
           "confusable_with": "Atresia yeyunoileal",
-          "why_not": "La doble burbuja localiza una obstrucción proximal duodenal. Una interrupción más distal produce dilatación y burbujas intestinales adicionales.",
+          "why_not": "La doble burbuja y la localización duodenal orientan a atresia duodenal. Una interrupción distal produce dilatación de otros segmentos; la doble burbuja exige distinguir otras causas de obstrucción alta.",
           "facts": [
             {
               "field": "pattern",
@@ -397,11 +419,11 @@
           ]
         },
         "medium": {
-          "vignette": "Un neonato con dos burbujas proximales y vómito bilioso tiene datos de otras anomalías. Se completa la evaluación congénita antes de planear la corrección. ¿Qué acción o clasificación corresponde?",
-          "discriminator": "Doble burbuja con anomalías asociadas",
-          "explanation": "El dato decisivo es Doble burbuja con anomalías asociadas. La página describe asociación con trisomía 21. Completar evaluación congénita.",
+          "vignette": "Un neonato con trisomía 21 vomita bilis desde las primeras tomas. La radiografía muestra dos burbujas proximales y se investigan otras anomalías congénitas.",
+          "discriminator": "Doble burbuja en un neonato con trisomía 21",
+          "explanation": "Doble burbuja en un neonato con trisomía 21. Este patrón orienta a Atresia duodenal. La luz duodenal interrumpida impide el paso del contenido gástrico y duodenal; el segmento proximal se dilata y origina el patrón radiográfico de obstrucción alta.",
           "confusable_with": "Atresia yeyunoileal",
-          "why_not": "La doble burbuja localiza una obstrucción proximal duodenal. Una interrupción más distal produce dilatación y burbujas intestinales adicionales.",
+          "why_not": "La doble burbuja y la localización duodenal orientan a atresia duodenal. Una interrupción distal produce dilatación de otros segmentos; la doble burbuja exige distinguir otras causas de obstrucción alta.",
           "facts": [
             {
               "field": "pattern",
@@ -458,11 +480,11 @@
           ]
         },
         "contrast": {
-          "vignette": "Un recién nacido con trisomía 21 presenta vómito bilioso. Se busca un patrón de doble burbuja y se organiza evaluación de obstrucción congénita. ¿Qué acción o clasificación corresponde?",
-          "discriminator": "Vómito bilioso en neonato con trisomía 21",
-          "explanation": "La asociación con trisomía 21 orienta la búsqueda de atresia duodenal. La doble burbuja localiza obstrucción alta, pero requiere valorar otras causas y anomalías antes de planear la reparación.",
+          "vignette": "Hubo polihidramnios durante la gestación. Al nacer, el vómito verde y la dilatación limitada al estómago y duodeno orientan a interrupción congénita de ese segmento, confirmada durante la evaluación quirúrgica.",
+          "discriminator": "Interrupción congénita duodenal tras indicios prenatales",
+          "explanation": "Interrupción congénita duodenal tras indicios prenatales. Este patrón orienta a Atresia duodenal. La luz duodenal interrumpida impide el paso del contenido gástrico y duodenal; el segmento proximal se dilata y origina el patrón radiográfico de obstrucción alta.",
           "confusable_with": "Atresia yeyunoileal",
-          "why_not": "La doble burbuja localiza una obstrucción proximal duodenal. Una interrupción más distal produce dilatación y burbujas intestinales adicionales.",
+          "why_not": "La doble burbuja y la localización duodenal orientan a atresia duodenal. Una interrupción distal produce dilatación de otros segmentos; la doble burbuja exige distinguir otras causas de obstrucción alta.",
           "facts": [
             {
               "field": "pattern",
@@ -518,7 +540,15 @@
             }
           ]
         }
-      }
+      },
+      "sources": [
+        {
+          "label": "Edwino.pdf",
+          "pages": [
+            164
+          ]
+        }
+      ]
     },
     {
       "id": "06.02-02",
@@ -532,7 +562,7 @@
           "discriminator": "yeyuno proximal",
           "explanation": "El dato decisivo es yeyuno proximal. Una alteración vascular fetal puede interrumpir continuidad del intestino delgado; la obstrucción acumula contenido proximal y la imagen depende del nivel afectado. Iniciar ayuno, descompresión y corrección hidroelectrolítica. Referir a cirugía neonatal para definir nivel, viabilidad y reparación intestinal.",
           "confusable_with": "Atresia duodenal",
-          "why_not": "La dilatación que alcanza yeyuno proximal orienta a obstrucción más distal que una doble burbuja duodenal aislada.",
+          "why_not": "La interrupción y la dilatación que se extienden por debajo del duodeno favorecen atresia yeyunoileal. No se debe exigir ausencia de distensión como requisito.",
           "facts": [
             {
               "field": "pattern",
@@ -561,11 +591,11 @@
           ]
         },
         "medium": {
-          "vignette": "Un neonato con obstrucción más allá del duodeno tiene otra anomalía intestinal, incluida sospecha de malrotación. Se amplía la evaluación quirúrgica.",
-          "discriminator": "Interrupción distal con anomalía asociada",
-          "explanation": "El dato decisivo es Interrupción distal con anomalía asociada. Puede coexistir más de una causa obstructiva. Ampliar evaluación y plan quirúrgico.",
+          "vignette": "Un neonato con vómito bilioso presenta interrupción intestinal distal al duodeno. Coexiste una anomalía de rotación que modifica la anatomía del intestino y debe reconocerse.",
+          "discriminator": "Interrupción distal con otra anomalía intestinal asociada",
+          "explanation": "Interrupción distal con otra anomalía intestinal asociada. Este patrón orienta a Atresia yeyunoileal. Una alteración vascular fetal puede interrumpir continuidad del intestino delgado; la obstrucción acumula contenido proximal y la imagen depende del nivel afectado.",
           "confusable_with": "Atresia duodenal",
-          "why_not": "La dilatación que alcanza yeyuno proximal orienta a obstrucción más distal que una doble burbuja duodenal aislada.",
+          "why_not": "La interrupción y la dilatación que se extienden por debajo del duodeno favorecen atresia yeyunoileal. No se debe exigir ausencia de distensión como requisito.",
           "facts": [
             {
               "field": "pattern",
@@ -622,11 +652,11 @@
           ]
         },
         "contrast": {
-          "vignette": "Un neonato con vómito bilioso tiene distensión y dilatación que alcanza intestino delgado proximal. No debe descartarse una interrupción distal por exigir la frase del resumen 'sin distensión'.",
-          "discriminator": "Obstrucción distal cuya presentación incluye distensión",
-          "explanation": "La presentación depende del nivel. La ausencia de distensión no es un requisito universal para atresia yeyunoileal; se inicia ayuno, descompresión y corrección hidroelectrolítica con cirugía neonatal.",
+          "vignette": "Un recién nacido tiene vómito verde y distensión. La imagen muestra varias burbujas intestinales, y la evaluación confirma falta de continuidad del intestino delgado por debajo del duodeno, compatible con una alteración vascular fetal.",
+          "discriminator": "Obstrucción congénita distal con distensión y continuidad interrumpida",
+          "explanation": "Obstrucción congénita distal con distensión y continuidad interrumpida. Este patrón orienta a Atresia yeyunoileal. Una alteración vascular fetal puede interrumpir continuidad del intestino delgado; la obstrucción acumula contenido proximal y la imagen depende del nivel afectado.",
           "confusable_with": "Atresia duodenal",
-          "why_not": "La dilatación que alcanza yeyuno proximal orienta a obstrucción más distal que una doble burbuja duodenal aislada.",
+          "why_not": "La interrupción y la dilatación que se extienden por debajo del duodeno favorecen atresia yeyunoileal. No se debe exigir ausencia de distensión como requisito.",
           "facts": [
             {
               "field": "pattern",
@@ -682,7 +712,15 @@
             }
           ]
         }
-      }
+      },
+      "sources": [
+        {
+          "label": "Edwino.pdf",
+          "pages": [
+            166
+          ]
+        }
+      ]
     },
     {
       "id": "06.02-03",
@@ -696,7 +734,7 @@
           "discriminator": "vómitos verdes",
           "explanation": "El dato decisivo es vómitos verdes. La rotación y fijación anormales dejan una base mesentérica vulnerable al giro; el vólvulo puede obstruir lumen y vasos, con rápida pérdida de viabilidad intestinal. Suspender alimentación, estabilizar y solicitar evaluación quirúrgica urgente. En el estable, realizar estudio dirigido de rotación; no retrasar cirugía ante signos de catástrofe intestinal.",
           "confusable_with": "Estenosis pilórica",
-          "why_not": "El vómito bilioso obliga a buscar obstrucción distal y riesgo de vólvulo. La estenosis pilórica produce vómito no bilioso y no explica sangre rectal por compromiso vascular.",
+          "why_not": "La alteración de rotación y fijación con vómito bilioso orienta a malrotación. La obstrucción pilórica es proximal y produce vómito no bilioso, sin ese mecanismo de torsión vascular.",
           "facts": [
             {
               "field": "pattern",
@@ -725,11 +763,11 @@
           ]
         },
         "medium": {
-          "vignette": "Un lactante con vómito bilioso permanece estable y sin peritonitis. Se valora una serie gastrointestinal alta o ultrasonido experto para definir la anatomía.",
-          "discriminator": "Vómito bilioso con estabilidad para imagen",
-          "explanation": "El dato decisivo es Vómito bilioso con estabilidad para imagen. Permite definir anatomía. Valorar serie gastrointestinal alta o ultrasonido experto.",
+          "vignette": "Un lactante con vómito bilioso está estable. El estudio gastrointestinal identifica posición y fijación intestinal anómalas por rotación embrionaria incompleta, con una raíz mesentérica vulnerable a torsión.",
+          "discriminator": "Anatomía de rotación y fijación anómala",
+          "explanation": "Anatomía de rotación y fijación anómala. Este patrón orienta a Malrotación intestinal. La rotación y fijación anormales dejan una base mesentérica vulnerable al giro; el vólvulo puede obstruir lumen y vasos, con rápida pérdida de viabilidad intestinal.",
           "confusable_with": "Estenosis pilórica",
-          "why_not": "El vómito bilioso obliga a buscar obstrucción distal y riesgo de vólvulo. La estenosis pilórica produce vómito no bilioso y no explica sangre rectal por compromiso vascular.",
+          "why_not": "La alteración de rotación y fijación con vómito bilioso orienta a malrotación. La obstrucción pilórica es proximal y produce vómito no bilioso, sin ese mecanismo de torsión vascular.",
           "facts": [
             {
               "field": "pattern",
@@ -798,11 +836,11 @@
           ]
         },
         "contrast": {
-          "vignette": "Un lactante con vómito verde desarrolla sangrado rectal e irritación peritoneal. Se solicita exploración quirúrgica urgente.",
-          "discriminator": "Vómito bilioso con signos de compromiso vascular",
-          "explanation": "El dato decisivo es Vómito bilioso con signos de compromiso vascular. Sugiere isquemia avanzada. Priorizar exploración quirúrgica.",
+          "vignette": "Un lactante con vómito verde desarrolla sangre rectal e irritación peritoneal. La evaluación encuentra torsión sobre una raíz mesentérica estrecha originada por fijación intestinal anómala.",
+          "discriminator": "Vólvulo sobre un defecto congénito de rotación",
+          "explanation": "Vólvulo sobre un defecto congénito de rotación. Este patrón orienta a Malrotación intestinal. La rotación y fijación anormales dejan una base mesentérica vulnerable al giro; el vólvulo puede obstruir lumen y vasos, con rápida pérdida de viabilidad intestinal.",
           "confusable_with": "Estenosis pilórica",
-          "why_not": "El vómito bilioso obliga a buscar obstrucción distal y riesgo de vólvulo. La estenosis pilórica produce vómito no bilioso y no explica sangre rectal por compromiso vascular.",
+          "why_not": "La alteración de rotación y fijación con vómito bilioso orienta a malrotación. La obstrucción pilórica es proximal y produce vómito no bilioso, sin ese mecanismo de torsión vascular.",
           "facts": [
             {
               "field": "pattern",
@@ -870,7 +908,15 @@
             }
           ]
         }
-      }
+      },
+      "sources": [
+        {
+          "label": "Edwino.pdf",
+          "pages": [
+            175
+          ]
+        }
+      ]
     },
     {
       "id": "06.03-01",
@@ -1070,7 +1116,20 @@
             }
           ]
         }
-      }
+      },
+      "sources": [
+        {
+          "label": "Edwino.pdf",
+          "pages": [
+            170,
+            171
+          ]
+        },
+        {
+          "label": "Hall et al.: ensayo aleatorizado de piloromiotomía",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/19155060/"
+        }
+      ]
     },
     {
       "id": "06.04-01",
@@ -1258,7 +1317,15 @@
             }
           ]
         }
-      }
+      },
+      "sources": [
+        {
+          "label": "Edwino.pdf",
+          "pages": [
+            173
+          ]
+        }
+      ]
     },
     {
       "id": "06.04-02",
@@ -1272,7 +1339,7 @@
           "discriminator": "sangrado digestivo sin dolor importante",
           "explanation": "El dato decisivo es sangrado digestivo sin dolor importante. La persistencia del conducto vitelino forma un divertículo que puede contener mucosa gástrica; su secreción lesiona intestino adyacente y puede causar hemorragia u obstrucción. Valorar perfusión y hemoglobina y reponer volumen si se necesita. Investigar la fuente con estudios dirigidos y cirugía pediátrica; considerar gammagrafía según sospecha.",
           "confusable_with": "Fisura anal",
-          "why_not": "La fuente sospechada está en intestino delgado y puede contener mucosa ectópica. Una fisura suele producir dolor ligado a la evacuación y sangre roja escasa.",
+          "why_not": "La localización intestinal y la mucosa ectópica favorecen Meckel. Una fisura provoca un desgarro anal doloroso con sangre roja escasa, sin ese foco de intestino delgado.",
           "facts": [
             {
               "field": "pattern",
@@ -1301,11 +1368,11 @@
           ]
         },
         "medium": {
-          "vignette": "Un niño con una lesión diverticular de intestino delgado desarrolla obstrucción o inflamación. Se evalúa resección por la complicación.",
-          "discriminator": "Divertículo intestinal complicado",
-          "explanation": "El dato decisivo es Divertículo intestinal complicado. La complicación exige tratar el divertículo. Valorar resección quirúrgica.",
+          "vignette": "Un niño presenta obstrucción o inflamación de un divertículo ileal originado en un remanente del conducto vitelino. La lesión puede contener mucosa gástrica ectópica.",
+          "discriminator": "Divertículo ileal de origen vitelino complicado",
+          "explanation": "Divertículo ileal de origen vitelino complicado. Este patrón orienta a Divertículo de Meckel. La persistencia del conducto vitelino forma un divertículo que puede contener mucosa gástrica; su secreción lesiona intestino adyacente y puede causar hemorragia u obstrucción.",
           "confusable_with": "Fisura anal",
-          "why_not": "La fuente sospechada está en intestino delgado y puede contener mucosa ectópica. Una fisura suele producir dolor ligado a la evacuación y sangre roja escasa.",
+          "why_not": "La localización intestinal y la mucosa ectópica favorecen Meckel. Una fisura provoca un desgarro anal doloroso con sangre roja escasa, sin ese foco de intestino delgado.",
           "facts": [
             {
               "field": "pattern",
@@ -1362,11 +1429,11 @@
           ]
         },
         "contrast": {
-          "vignette": "En un niño con sangrado digestivo poco doloroso se investiga mucosa ectópica mediante gammagrafía, después de estabilizarlo.",
-          "discriminator": "Sangrado poco doloroso con búsqueda de mucosa ectópica",
-          "explanation": "El dato decisivo es Sangrado poco doloroso con búsqueda de mucosa ectópica. La persistencia del conducto vitelino forma un divertículo que puede contener mucosa gástrica; su secreción lesiona intestino adyacente y puede causar hemorragia u obstrucción. Valorar perfusión y hemoglobina y reponer volumen si se necesita. Investigar la fuente con estudios dirigidos y cirugía pediátrica; considerar gammagrafía según sospecha.",
+          "vignette": "Un niño tiene sangrado digestivo poco doloroso. El estudio dirigido identifica un foco de mucosa gástrica ectópica en intestino delgado, compatible con el remanente diverticular sospechado.",
+          "discriminator": "Fuente ileal de mucosa ectópica en un niño con sangrado",
+          "explanation": "Fuente ileal de mucosa ectópica en un niño con sangrado. Este patrón orienta a Divertículo de Meckel. La persistencia del conducto vitelino forma un divertículo que puede contener mucosa gástrica; su secreción lesiona intestino adyacente y puede causar hemorragia u obstrucción.",
           "confusable_with": "Fisura anal",
-          "why_not": "La fuente sospechada está en intestino delgado y puede contener mucosa ectópica. Una fisura suele producir dolor ligado a la evacuación y sangre roja escasa.",
+          "why_not": "La localización intestinal y la mucosa ectópica favorecen Meckel. Una fisura provoca un desgarro anal doloroso con sangre roja escasa, sin ese foco de intestino delgado.",
           "facts": [
             {
               "field": "pattern",
@@ -1422,7 +1489,15 @@
             }
           ]
         }
-      }
+      },
+      "sources": [
+        {
+          "label": "Edwino.pdf",
+          "pages": [
+            168
+          ]
+        }
+      ]
     },
     {
       "id": "06.05-01",
@@ -1586,7 +1661,15 @@
             }
           ]
         }
-      }
+      },
+      "sources": [
+        {
+          "label": "Edwino.pdf",
+          "pages": [
+            174
+          ]
+        }
+      ]
     },
     {
       "id": "06.05-02",
@@ -1786,7 +1869,15 @@
             }
           ]
         }
-      }
+      },
+      "sources": [
+        {
+          "label": "Edwino.pdf",
+          "pages": [
+            179
+          ]
+        }
+      ]
     },
     {
       "id": "06.06-01",
@@ -1962,7 +2053,19 @@
             }
           ]
         }
-      }
+      },
+      "sources": [
+        {
+          "label": "Edwino.pdf",
+          "pages": [
+            172
+          ]
+        },
+        {
+          "label": "ANZCOR: reanimación neonatal en circunstancias especiales",
+          "url": "https://www.anzcor.org/home/neonatal-resuscitation/guideline-13-8-the-resuscitation-of-the-newborn-in-special-circumstances"
+        }
+      ]
     },
     {
       "id": "06.07-01",
@@ -1976,7 +2079,7 @@
           "discriminator": "heces muy pálidas y orina oscura",
           "explanation": "El dato decisivo es heces muy pálidas y orina oscura. La obliteración progresiva de conductos extrahepáticos bloquea salida de bilis; la colestasis causa hiperbilirrubinemia conjugada y ausencia de pigmento fecal, con daño hepático progresivo. Solicitar evaluación urgente de colestasis y referir a hepatología y cirugía pediátrica sin esperar resolución espontánea.",
           "confusable_with": "Ictericia no conjugada del lactante",
-          "why_not": "La acolia y la bilirrubina directa elevada indican obstrucción o colestasis. La buena alimentación aparente no permite retrasar su estudio.",
+          "why_not": "La acolia, la coluria y la elevación directa indican colestasis, y la obstrucción extrahepática apoya atresia biliar. La buena alimentación inicial o una apariencia sana no excluyen el problema.",
           "facts": [
             {
               "field": "pattern",
@@ -2009,11 +2112,11 @@
           ]
         },
         "medium": {
-          "vignette": "Un lactante continúa ictérico después de dos semanas. Se fracciona bilirrubina y se pregunta por el color de las heces para no omitir colestasis.",
-          "discriminator": "Ictericia persistente que exige fraccionamiento",
-          "explanation": "El dato decisivo es Ictericia persistente que exige fraccionamiento. No toda ictericia prolongada es fisiológica. Fraccionar bilirrubina y valorar color de heces.",
+          "vignette": "Un lactante sigue ictérico después de dos semanas. La bilirrubina directa está elevada, las heces son pálidas y el ultrasonido muestra un cordón fibroso en la región de la vía biliar.",
+          "discriminator": "Colestasis persistente con cordón fibroso en imagen",
+          "explanation": "Colestasis persistente con cordón fibroso en imagen. Este patrón orienta a Atresia biliar. La obliteración progresiva de conductos extrahepáticos bloquea salida de bilis; la colestasis causa hiperbilirrubinemia conjugada y ausencia de pigmento fecal, con daño hepático progresivo.",
           "confusable_with": "Ictericia no conjugada del lactante",
-          "why_not": "La acolia y la bilirrubina directa elevada indican obstrucción o colestasis. La buena alimentación aparente no permite retrasar su estudio.",
+          "why_not": "La acolia, la coluria y la elevación directa indican colestasis, y la obstrucción extrahepática apoya atresia biliar. La buena alimentación inicial o una apariencia sana no excluyen el problema.",
           "facts": [
             {
               "field": "pattern",
@@ -2070,15 +2173,21 @@
             {
               "field": "source_corrections.0.reason",
               "text": "Se corrige el umbral antiguo de p162; se conserva la referencia urgente del caso con acolia y coluria."
+            }
+          ],
+          "source_evidence": [
+            {
+              "page": 162,
+              "quote": " muestra el signo de del cordón fibroso. --- • Coluria . • Desnutrición . Los niveles séricos de la enzima gamma-glutamil transpeptida"
             }
           ]
         },
         "contrast": {
-          "vignette": "Un lactante con colestasis persistente llega en etapa tardía con hepatosplenomegalia y ascitis. Se investiga obstrucción biliar y se refiere sin esperar resolución espontánea.",
-          "discriminator": "Colestasis con repercusión hepática tardía",
-          "explanation": "La obstrucción biliar progresiva puede causar repercusión hepática. Se requiere hepatología y cirugía pediátrica urgentes; no se usan umbrales antiguos para retrasar el estudio.",
+          "vignette": "Un lactante con heces acólicas y coluria llega en una etapa tardía con hepatosplenomegalia y ascitis. Se identifica obstrucción de conductos biliares extrahepáticos.",
+          "discriminator": "Colestasis obstructiva con repercusión hepática tardía",
+          "explanation": "Colestasis obstructiva con repercusión hepática tardía. Este patrón orienta a Atresia biliar. La obliteración progresiva de conductos extrahepáticos bloquea salida de bilis; la colestasis causa hiperbilirrubinemia conjugada y ausencia de pigmento fecal, con daño hepático progresivo.",
           "confusable_with": "Ictericia no conjugada del lactante",
-          "why_not": "La acolia y la bilirrubina directa elevada indican obstrucción o colestasis. La buena alimentación aparente no permite retrasar su estudio.",
+          "why_not": "La acolia, la coluria y la elevación directa indican colestasis, y la obstrucción extrahepática apoya atresia biliar. La buena alimentación inicial o una apariencia sana no excluyen el problema.",
           "facts": [
             {
               "field": "pattern",
@@ -2136,23 +2245,41 @@
               "field": "source_corrections.0.reason",
               "text": "Se corrige el umbral antiguo de p162; se conserva la referencia urgente del caso con acolia y coluria."
             }
+          ],
+          "source_evidence": [
+            {
+              "page": 162,
+              "quote": " lactante de menos de 60 hepatoesplenomegalia y ascitis. días de vida aparentemente sano. • Estudios de laboratorio e imagen: se realizan en 2do nivel"
+            }
           ]
         }
-      }
+      },
+      "sources": [
+        {
+          "label": "Edwino.pdf",
+          "pages": [
+            162
+          ]
+        },
+        {
+          "label": "AAP 2025: identificación temprana de atresia biliar",
+          "url": "https://publications.aap.org/pediatrics/article-pdf/155/3/e2024070077/1774919/pediatrics.2024070077.pdf"
+        }
+      ]
     },
     {
       "id": "06.08-01",
       "parent_topic_id": "06.08-01",
       "block_id": "06.08",
-      "name": "Evaluar posición testicular y realizar referencia oportuna",
-      "answer_kind": "decision",
+      "name": "Criptorquidia",
+      "answer_kind": "diagnosis",
       "variants": {
         "easy": {
-          "vignette": "En la exploración de un lactante de seis meses de edad corregida no se palpa un testículo dentro del escroto. No permanece allí al movilizarlo y el hallazgo persiste desde el nacimiento. ¿Qué acción o clasificación corresponde?",
+          "vignette": "En la exploración de un lactante de seis meses de edad corregida no se palpa un testículo dentro del escroto. No permanece allí al movilizarlo y el hallazgo persiste desde el nacimiento.",
           "discriminator": "seis meses de edad corregida",
           "explanation": "El dato decisivo es seis meses de edad corregida. El descenso testicular incompleto deja el testículo fuera de la bolsa escrotal; distinguir ausencia, localización ectópica y retracción evita retrasar evaluación de un testículo no descendido. Documentar palpabilidad con exploración cuidadosa y descartar testículo retráctil. Referir ahora a urología o cirugía pediátrica para orquidopexia, idealmente antes de 12 meses y como máximo a los 18 meses.",
           "confusable_with": "Testículo retráctil",
-          "why_not": "Un testículo que no permanece en el escroto no se debe considerar simplemente retráctil. La bilateralidad no palpable o genitales atípicos amplían la evaluación.",
+          "why_not": "La posición persistentemente extraescrotal o ectópica requiere valorar maldescenso. La exploración de movilidad y permanencia permite distinguir un testículo retráctil.",
           "facts": [
             {
               "field": "pattern",
@@ -2185,11 +2312,11 @@
           ]
         },
         "medium": {
-          "vignette": "En un lactante ninguno de los dos testículos es palpable. La presencia de genitales atípicos exige valoración especializada más amplia. ¿Qué acción o clasificación corresponde?",
-          "discriminator": "Testículos bilaterales no palpables o genitales atípicos",
-          "explanation": "El dato decisivo es Testículos bilaterales no palpables o genitales atípicos. Puede requerir estudio endocrino y genético. Ampliar valoración especializada.",
+          "vignette": "En un lactante no se palpan ambos testículos en el escroto ni en el trayecto habitual. Los genitales atípicos amplían la evaluación endocrina y genética de la falta de descenso.",
+          "discriminator": "Presentación bilateral no palpable",
+          "explanation": "Presentación bilateral no palpable. Este patrón orienta a Criptorquidia. El descenso testicular incompleto deja el testículo fuera de la bolsa escrotal; distinguir ausencia, localización ectópica y retracción evita retrasar evaluación de un testículo no descendido.",
           "confusable_with": "Testículo retráctil",
-          "why_not": "Un testículo que no permanece en el escroto no se debe considerar simplemente retráctil. La bilateralidad no palpable o genitales atípicos amplían la evaluación.",
+          "why_not": "La posición persistentemente extraescrotal o ectópica requiere valorar maldescenso. La exploración de movilidad y permanencia permite distinguir un testículo retráctil.",
           "facts": [
             {
               "field": "pattern",
@@ -2242,11 +2369,11 @@
           ]
         },
         "contrast": {
-          "vignette": "Un testículo es palpable fuera de la trayectoria habitual de descenso y no ocupa el escroto. Se diferencia un testículo ectópico de uno retráctil y se solicita valoración especializada. ¿Qué acción o clasificación corresponde?",
-          "discriminator": "Testículo ectópico palpable fuera del trayecto normal",
-          "explanation": "El testículo ectópico se encuentra fuera de su trayecto y requiere valoración. La palpabilidad y la exploración guían la referencia; no se necesita ultrasonido rutinario que retrase la atención.",
+          "vignette": "Un testículo es palpable fuera de su trayectoria normal y no ocupa el escroto. La exploración confirma una posición ectópica y lo distingue de un testículo que puede colocarse y permanecer transitoriamente en la bolsa.",
+          "discriminator": "Maldescenso palpable fuera de la trayectoria habitual",
+          "explanation": "Maldescenso palpable fuera de la trayectoria habitual. Este patrón orienta a Criptorquidia. El descenso testicular incompleto deja el testículo fuera de la bolsa escrotal; distinguir ausencia, localización ectópica y retracción evita retrasar evaluación de un testículo no descendido.",
           "confusable_with": "Testículo retráctil",
-          "why_not": "La ubicación fuera de la trayectoria normal corresponde a ectopia. La exploración de movilidad y posición distingue este contexto de un testículo retráctil.",
+          "why_not": "La posición persistentemente extraescrotal o ectópica requiere valorar maldescenso. La exploración de movilidad y permanencia permite distinguir un testículo retráctil.",
           "facts": [
             {
               "field": "pattern",
@@ -2298,21 +2425,33 @@
             }
           ]
         }
-      }
+      },
+      "sources": [
+        {
+          "label": "Edwino.pdf",
+          "pages": [
+            167
+          ]
+        },
+        {
+          "label": "EAU: testículo no descendido",
+          "url": "https://uroweb.org/guidelines/paediatric-urology/chapter/management-of-undescended-testes"
+        }
+      ]
     },
     {
       "id": "06.08-02",
       "parent_topic_id": "06.08-02",
       "block_id": "06.08",
-      "name": "Proteger defecto neural y evaluar según cobertura",
-      "answer_kind": "decision",
+      "name": "Espina bífida",
+      "answer_kind": "diagnosis",
       "variants": {
         "easy": {
-          "vignette": "Un recién nacido presenta un saco abierto en la región lumbar con tejido neural visible. Se evita presión sobre la lesión mientras se valoran respiración, movimiento de piernas y perímetro cefálico. ¿Qué acción o clasificación corresponde a este contexto?",
+          "vignette": "Un recién nacido presenta un saco abierto en la región lumbar con tejido neural visible. Se evita presión sobre la lesión mientras se valoran respiración, movimiento de piernas y perímetro cefálico.",
           "discriminator": "tejido neural visible",
           "explanation": "El dato decisivo es tejido neural visible. El fallo de cierre del tubo neural deja un defecto vertebral con protrusión variable de meninges y tejido nervioso; la exposición aumenta riesgo de lesión e infección. Colocar en prono o lateral, proteger la lesión con técnica estéril y mantener evaluación neonatal. Solicitar neurocirugía y valorar hidrocefalia y déficits asociados.",
-          "confusable_with": "Cuidados idénticos para defectos abiertos y cerrados",
-          "why_not": "La exposición del tejido neural determina el riesgo de contaminación y los cuidados locales. Un defecto cerrado también requiere evaluación, con necesidades distintas.",
+          "confusable_with": "Trauma espinal adquirido",
+          "why_not": "Un defecto congénito de cierre, abierto o cerrado, orienta a espina bífida. La cobertura cambia el riesgo de contaminación; el contexto no corresponde a una lesión traumática adquirida.",
           "facts": [
             {
               "field": "pattern",
@@ -2341,11 +2480,11 @@
           ]
         },
         "medium": {
-          "vignette": "Un recién nacido con defecto lumbar abierto presenta ruptura del saco. Se protegen los tejidos y se valora infección y antimicrobianos según el contexto. ¿Qué acción o clasificación corresponde a este contexto?",
-          "discriminator": "Saco neural roto",
-          "explanation": "El dato decisivo es Saco neural roto. Hay mayor exposición infecciosa. Valorar cultivos y antimicrobianos según contexto.",
-          "confusable_with": "Cuidados idénticos para defectos abiertos y cerrados",
-          "why_not": "La exposición del tejido neural determina el riesgo de contaminación y los cuidados locales. Un defecto cerrado también requiere evaluación, con necesidades distintas.",
+          "vignette": "Un recién nacido con un saco lumbar abierto presenta ruptura de la cubierta. Se observa tejido neural y existen alteraciones motoras o sensitivas en las piernas.",
+          "discriminator": "Defecto neural abierto con saco roto",
+          "explanation": "Defecto neural abierto con saco roto. Este patrón orienta a Espina bífida. El fallo de cierre del tubo neural deja un defecto vertebral con protrusión variable de meninges y tejido nervioso; la exposición aumenta riesgo de lesión e infección.",
+          "confusable_with": "Trauma espinal adquirido",
+          "why_not": "Un defecto congénito de cierre, abierto o cerrado, orienta a espina bífida. La cobertura cambia el riesgo de contaminación; el contexto no corresponde a una lesión traumática adquirida.",
           "facts": [
             {
               "field": "pattern",
@@ -2414,11 +2553,11 @@
           ]
         },
         "contrast": {
-          "vignette": "Se identifica un defecto espinal cerrado en un recién nacido. Aunque no requiere los mismos cuidados de un saco abierto, se organiza evaluación especializada. ¿Qué acción o clasificación corresponde a este contexto?",
-          "discriminator": "Defecto espinal cerrado",
-          "explanation": "El dato decisivo es Defecto espinal cerrado. El riesgo y la anatomía difieren. Referir para evaluación aunque no necesite los mismos cuidados del saco abierto.",
-          "confusable_with": "Cuidados idénticos para defectos abiertos y cerrados",
-          "why_not": "La exposición del tejido neural determina el riesgo de contaminación y los cuidados locales. Un defecto cerrado también requiere evaluación, con necesidades distintas.",
+          "vignette": "La evaluación de un recién nacido identifica un defecto espinal cerrado. El estudio de la columna demuestra una alteración de cierre y se busca su repercusión motora y sensitiva, aunque no exista un saco neural expuesto.",
+          "discriminator": "Defecto de cierre espinal con cubierta conservada",
+          "explanation": "Defecto de cierre espinal con cubierta conservada. Este patrón orienta a Espina bífida. El fallo de cierre del tubo neural deja un defecto vertebral con protrusión variable de meninges y tejido nervioso; la exposición aumenta riesgo de lesión e infección.",
+          "confusable_with": "Trauma espinal adquirido",
+          "why_not": "Un defecto congénito de cierre, abierto o cerrado, orienta a espina bífida. La cobertura cambia el riesgo de contaminación; el contexto no corresponde a una lesión traumática adquirida.",
           "facts": [
             {
               "field": "pattern",
@@ -2486,7 +2625,15 @@
             }
           ]
         }
-      }
+      },
+      "sources": [
+        {
+          "label": "Edwino.pdf",
+          "pages": [
+            169
+          ]
+        }
+      ]
     },
     {
       "id": "06.09-01",
@@ -2674,7 +2821,15 @@
             }
           ]
         }
-      }
+      },
+      "sources": [
+        {
+          "label": "Edwino.pdf",
+          "pages": [
+            181
+          ]
+        }
+      ]
     },
     {
       "id": "06.09-02",
@@ -2862,7 +3017,15 @@
             }
           ]
         }
-      }
+      },
+      "sources": [
+        {
+          "label": "Edwino.pdf",
+          "pages": [
+            176
+          ]
+        }
+      ]
     },
     {
       "id": "06.09-03",
@@ -3050,7 +3213,16 @@
             }
           ]
         }
-      }
+      },
+      "sources": [
+        {
+          "label": "Edwino.pdf",
+          "pages": [
+            177,
+            178
+          ]
+        }
+      ]
     },
     {
       "id": "06.10-01",
@@ -3063,8 +3235,8 @@
           "vignette": "La familia observa un reflejo blanco en la pupila de un niño pequeño en fotografías. En la consulta el reflejo rojo es anormal y hay estrabismo reciente.",
           "discriminator": "reflejo blanco en la pupila",
           "explanation": "El dato decisivo es reflejo blanco en la pupila. Una neoplasia de retina altera el reflejo luminoso y puede comprometer visión y extenderse fuera del ojo; reconocer leucocoria permite valoración urgente antes de progresión. Solicitar evaluación oftalmológica urgente con exploración especializada y estudios de extensión apropiados. No realizar punción diagnóstica del ojo.",
-          "confusable_with": "Estrabismo aislado",
-          "why_not": "El reflejo blanco o rojo anormal indica una lesión ocular que requiere evaluación urgente. La bilateralidad o el antecedente familiar añade la evaluación genética.",
+          "confusable_with": "Catarata",
+          "why_not": "Una masa retiniana orienta a retinoblastoma. La catarata es una opacidad del cristalino; ambas pueden producir leucocoria y necesitan valoración oftalmológica urgente.",
           "facts": [
             {
               "field": "pattern",
@@ -3093,11 +3265,11 @@
           ]
         },
         "medium": {
-          "vignette": "Un niño con reflejo rojo anormal tiene afectación de ambos ojos. Se valora asesoría genética y estudio de RB1.",
-          "discriminator": "Afectación ocular bilateral",
-          "explanation": "El dato decisivo es Afectación ocular bilateral. Puede existir predisposición hereditaria. Valorar asesoría genética y estudio de RB1.",
-          "confusable_with": "Estrabismo aislado",
-          "why_not": "El reflejo blanco o rojo anormal indica una lesión ocular que requiere evaluación urgente. La bilateralidad o el antecedente familiar añade la evaluación genética.",
+          "vignette": "Un niño tiene reflejo rojo anormal bilateral. La evaluación especializada identifica lesiones tumorales retinianas y se estudia una predisposición por RB1.",
+          "discriminator": "Tumor retiniano bilateral",
+          "explanation": "Tumor retiniano bilateral. Este patrón orienta a Retinoblastoma. Una neoplasia de retina altera el reflejo luminoso y puede comprometer visión y extenderse fuera del ojo; reconocer leucocoria permite valoración urgente antes de progresión.",
+          "confusable_with": "Catarata",
+          "why_not": "Una masa retiniana orienta a retinoblastoma. La catarata es una opacidad del cristalino; ambas pueden producir leucocoria y necesitan valoración oftalmológica urgente.",
           "facts": [
             {
               "field": "pattern",
@@ -3154,11 +3326,11 @@
           ]
         },
         "contrast": {
-          "vignette": "En una familia con antecedente de tumor retiniano, un niño desarrolla leucocoria y estrabismo. Se organiza evaluación oftalmológica y genética urgente.",
-          "discriminator": "Leucocoria con antecedente familiar",
-          "explanation": "El dato decisivo es Leucocoria con antecedente familiar. Puede existir predisposición hereditaria. Valorar asesoría genética y estudio de RB1.",
-          "confusable_with": "Estrabismo aislado",
-          "why_not": "El reflejo blanco o rojo anormal indica una lesión ocular que requiere evaluación urgente. La bilateralidad o el antecedente familiar añade la evaluación genética.",
+          "vignette": "Un niño de una familia con tumor retiniano desarrolla leucocoria y estrabismo. La exploración del fondo ocular identifica una lesión de retina que explica el reflejo anormal.",
+          "discriminator": "Lesión retiniana en un contexto familiar",
+          "explanation": "Lesión retiniana en un contexto familiar. Este patrón orienta a Retinoblastoma. Una neoplasia de retina altera el reflejo luminoso y puede comprometer visión y extenderse fuera del ojo; reconocer leucocoria permite valoración urgente antes de progresión.",
+          "confusable_with": "Catarata",
+          "why_not": "Una masa retiniana orienta a retinoblastoma. La catarata es una opacidad del cristalino; ambas pueden producir leucocoria y necesitan valoración oftalmológica urgente.",
           "facts": [
             {
               "field": "pattern",
@@ -3214,7 +3386,15 @@
             }
           ]
         }
-      }
+      },
+      "sources": [
+        {
+          "label": "Edwino.pdf",
+          "pages": [
+            180
+          ]
+        }
+      ]
     },
     {
       "id": "06.05-02-gastrosquisis",
@@ -3334,7 +3514,15 @@
             }
           ]
         }
-      }
+      },
+      "sources": [
+        {
+          "label": "Edwino.pdf",
+          "pages": [
+            179
+          ]
+        }
+      ]
     },
     {
       "id": "06.05-02-onfalocele",
@@ -3454,7 +3642,15 @@
             }
           ]
         }
-      }
+      },
+      "sources": [
+        {
+          "label": "Edwino.pdf",
+          "pages": [
+            179
+          ]
+        }
+      ]
     }
   ]
 }

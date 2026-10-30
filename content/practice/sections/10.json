@@ -8,15 +8,15 @@
       "id": "10.01-01",
       "parent_topic_id": "10.01-01",
       "block_id": "10.01",
-      "name": "Prevenir progresión de glucosa intermedia según riesgo",
-      "answer_kind": "decision",
+      "name": "Prediabetes",
+      "answer_kind": "diagnosis",
       "variants": {
         "easy": {
-          "vignette": "Un adulto con sobrepeso está asintomático. Su glucosa de ayuno es de 112 mg/dl y una evaluación adicional no alcanza criterios de diabetes; se revisan antecedentes familiares y hábitos. ¿Qué acción o clasificación corresponde?",
+          "vignette": "Un adulto con sobrepeso está asintomático. Su glucosa de ayuno es de 112 mg/dl y una evaluación adicional no alcanza criterios de diabetes; se revisan antecedentes familiares y hábitos.",
           "discriminator": "112 mg/dl",
           "explanation": "El dato decisivo es 112 mg/dl. La resistencia a insulina y el deterioro temprano de secreción elevan glucosa sin alcanzar criterios de diabetes; este estado señala mayor riesgo de progresión y enfermedad cardiovascular. Confirmar clasificación y establecer un plan de alimentación, reducción de peso y actividad física con seguimiento. Valorar metformina solo en perfiles de mayor riesgo según contexto.",
-          "confusable_with": "Diabetes mellitus establecida",
-          "why_not": "El rango intermedio requiere prevención y seguimiento, pero no cumple por sí mismo criterios de diabetes. La progresión y otros factores pueden aumentar la intensidad preventiva.",
+          "confusable_with": "Diabetes mellitus",
+          "why_not": "Los resultados intermedios sin criterios de diabetes orientan a prediabetes. El método de detección puede ser ayuno, HbA1c o respuesta a carga, y cada prueba se interpreta con sus criterios.",
           "facts": [
             {
               "field": "pattern",
@@ -45,11 +45,11 @@
           ]
         },
         "medium": {
-          "vignette": "Una persona con glucosa en rango intermedio acumula varios factores de riesgo y muestra progresión de las cifras. Se intensifica prevención y seguimiento. ¿Qué acción o clasificación corresponde?",
-          "discriminator": "Glucosa intermedia en progresión",
-          "explanation": "El dato decisivo es Glucosa intermedia en progresión. El riesgo individual no es uniforme. Intensificar seguimiento y valorar prevención farmacológica.",
-          "confusable_with": "Diabetes mellitus establecida",
-          "why_not": "El rango intermedio requiere prevención y seguimiento, pero no cumple por sí mismo criterios de diabetes. La progresión y otros factores pueden aumentar la intensidad preventiva.",
+          "vignette": "Una persona asintomática con adiposidad central tiene HbA1c en el intervalo intermedio. Los estudios no alcanzan criterios de diabetes y se evalúa su riesgo futuro.",
+          "discriminator": "Alteración de HbA1c sin llegar al rango diabético",
+          "explanation": "Alteración de HbA1c sin llegar al rango diabético. Este patrón orienta a Prediabetes. La resistencia a insulina y el deterioro temprano de secreción elevan glucosa sin alcanzar criterios de diabetes; este estado señala mayor riesgo de progresión y enfermedad cardiovascular.",
+          "confusable_with": "Diabetes mellitus",
+          "why_not": "Los resultados intermedios sin criterios de diabetes orientan a prediabetes. El método de detección puede ser ayuno, HbA1c o respuesta a carga, y cada prueba se interpreta con sus criterios.",
           "facts": [
             {
               "field": "pattern",
@@ -94,15 +94,21 @@
             {
               "field": "modifiers.0.reason",
               "text": "El riesgo individual no es uniforme."
+            }
+          ],
+          "source_evidence": [
+            {
+              "page": 300,
+              "quote": "on una carga de 75 gr. • Hemoglobina glucosilada (AlC) 5.7 a 6.4%. Utilizar para descartar diabete. Se recomienda usar la curva de tolerancia a"
             }
           ]
         },
         "contrast": {
-          "vignette": "En una persona con alteración glucémica intermedia se revisa prevención farmacológica por la combinación de factores de riesgo, en vez de tratarla como hiperglucemia sintomática establecida. ¿Qué acción o clasificación corresponde?",
-          "discriminator": "Selección preventiva según riesgo acumulado",
-          "explanation": "La alteración intermedia requiere estilo de vida y seguimiento. Los factores múltiples o la progresión permiten valorar prevención farmacológica; no se usa el mismo enfoque que en hiperglucemia sintomática con catabolismo.",
-          "confusable_with": "Diabetes mellitus establecida",
-          "why_not": "El rango intermedio requiere prevención y seguimiento, pero no cumple por sí mismo criterios de diabetes. La progresión y otros factores pueden aumentar la intensidad preventiva.",
+          "vignette": "En una persona con factores de riesgo, la glucosa después de una carga oral está alterada, pero permanece por debajo del umbral diagnóstico de diabetes. La glucosa de ayuno no había mostrado una elevación diagnóstica.",
+          "discriminator": "Intolerancia a la carga oral con hiperglucemia intermedia",
+          "explanation": "Intolerancia a la carga oral con hiperglucemia intermedia. Este patrón orienta a Prediabetes. La resistencia a insulina y el deterioro temprano de secreción elevan glucosa sin alcanzar criterios de diabetes; este estado señala mayor riesgo de progresión y enfermedad cardiovascular.",
+          "confusable_with": "Diabetes mellitus",
+          "why_not": "Los resultados intermedios sin criterios de diabetes orientan a prediabetes. El método de detección puede ser ayuno, HbA1c o respuesta a carga, y cada prueba se interpreta con sus criterios.",
           "facts": [
             {
               "field": "pattern",
@@ -148,23 +154,37 @@
               "field": "modifiers.0.reason",
               "text": "El riesgo individual no es uniforme."
             }
+          ],
+          "source_evidence": [
+            {
+              "page": 300,
+              "quote": "s con pre-diabetes por • Glucosa plasmática a las 2 horas 140 a 199 mg/dL duranta una prueba oral de su baja sensibilidad y especificidad. tolerancia a "
+            }
           ]
         }
-      }
+      },
+      "sources": [
+        {
+          "label": "Edwino.pdf",
+          "pages": [
+            300
+          ]
+        }
+      ]
     },
     {
       "id": "10.01-02",
       "parent_topic_id": "10.01-02",
       "block_id": "10.01",
-      "name": "Confirmar alteración glucémica y tratar hiperglucemia según gravedad",
-      "answer_kind": "decision",
+      "name": "Diabetes mellitus",
+      "answer_kind": "diagnosis",
       "variants": {
         "easy": {
-          "vignette": "Un adulto presenta sed, mucha orina y pérdida de peso. La glucosa plasmática al azar es de 260 mg/dl; se evalúan cetonas, hidratación y posibles complicaciones. ¿Qué acción o clasificación corresponde?",
+          "vignette": "Un adulto presenta sed, mucha orina y pérdida de peso. La glucosa plasmática al azar es de 260 mg/dl; se evalúan cetonas, hidratación y posibles complicaciones.",
           "discriminator": "260 mg/dl",
           "explanation": "El dato decisivo es 260 mg/dl. La secreción o acción insuficiente de insulina eleva glucosa y causa diuresis osmótica; el déficit energético produce pérdida de peso y puede acompañarse de cetosis si es intenso. La glucosa al azar y síntomas clásicos cumplen criterios de diabetes. Buscar crisis y considerar iniciar insulina por síntomas y pérdida de peso mientras se define el tipo. Dar educación y evaluar riñón, retina, neuropatía y riesgo cardiovascular.",
           "confusable_with": "Prediabetes",
-          "why_not": "La hiperglucemia sintomática y el catabolismo requieren valorar déficit de insulina y crisis. Una alteración aislada sin síntomas exige confirmación según criterios.",
+          "why_not": "La hiperglucemia diagnóstica confirmada o la combinación de síntomas clásicos con elevación diagnóstica favorecen diabetes. Un rango solo intermedio no explica ese patrón catabólico.",
           "facts": [
             {
               "field": "pattern",
@@ -197,11 +217,11 @@
           ]
         },
         "medium": {
-          "vignette": "Una persona con hiperglucemia presenta cetosis, deshidratación y pérdida de peso. Se valora insulina y atención urgente. ¿Qué acción o clasificación corresponde?",
-          "discriminator": "Hiperglucemia con catabolismo o cetosis",
-          "explanation": "El dato decisivo es Hiperglucemia con catabolismo o cetosis. Puede existir déficit grave de insulina. Valorar insulina y atención urgente.",
+          "vignette": "Una persona sin síntomas tiene hiperglucemia en ayuno confirmada en evaluaciones independientes. Una prueba adicional también alcanza el rango diagnóstico, por lo que ya no se trata de un resultado aislado por confirmar.",
+          "discriminator": "Hiperglucemia diagnóstica confirmada en una persona asintomática",
+          "explanation": "Hiperglucemia diagnóstica confirmada en una persona asintomática. Este patrón orienta a Diabetes mellitus. La secreción o acción insuficiente de insulina eleva glucosa y causa diuresis osmótica; el déficit energético produce pérdida de peso y puede acompañarse de cetosis si es intenso.",
           "confusable_with": "Prediabetes",
-          "why_not": "La hiperglucemia sintomática y el catabolismo requieren valorar déficit de insulina y crisis. Una alteración aislada sin síntomas exige confirmación según criterios.",
+          "why_not": "La hiperglucemia diagnóstica confirmada o la combinación de síntomas clásicos con elevación diagnóstica favorecen diabetes. Un rango solo intermedio no explica ese patrón catabólico.",
           "facts": [
             {
               "field": "pattern",
@@ -274,11 +294,11 @@
           ]
         },
         "contrast": {
-          "vignette": "Una persona sin síntomas tiene una prueba glucémica alterada. Se necesita confirmarla según criterios antes de establecer el diagnóstico. ¿Qué acción o clasificación corresponde?",
-          "discriminator": "Prueba alterada aislada sin síntomas",
-          "explanation": "El dato decisivo es Prueba alterada aislada sin síntomas. Una sola medición puede no bastar. Confirmar el resultado según criterios.",
+          "vignette": "Una persona tiene poliuria, polidipsia y pérdida de peso con glucosa plasmática claramente elevada. Se documentan deshidratación y cetonas como datos de déficit de insulina.",
+          "discriminator": "Hiperglucemia sintomática con catabolismo",
+          "explanation": "Hiperglucemia sintomática con catabolismo. Este patrón orienta a Diabetes mellitus. La secreción o acción insuficiente de insulina eleva glucosa y causa diuresis osmótica; el déficit energético produce pérdida de peso y puede acompañarse de cetosis si es intenso.",
           "confusable_with": "Prediabetes",
-          "why_not": "La hiperglucemia sintomática y el catabolismo requieren valorar déficit de insulina y crisis. Una alteración aislada sin síntomas exige confirmación según criterios.",
+          "why_not": "La hiperglucemia diagnóstica confirmada o la combinación de síntomas clásicos con elevación diagnóstica favorecen diabetes. Un rango solo intermedio no explica ese patrón catabólico.",
           "facts": [
             {
               "field": "pattern",
@@ -350,21 +370,38 @@
             }
           ]
         }
-      }
+      },
+      "sources": [
+        {
+          "label": "Edwino.pdf",
+          "pages": [
+            271,
+            272,
+            273,
+            274,
+            275,
+            276
+          ]
+        },
+        {
+          "label": "ADA 2026: tratamiento farmacológico de diabetes",
+          "url": "https://doi.org/10.2337/dc26-s009"
+        }
+      ]
     },
     {
       "id": "10.02-01",
       "parent_topic_id": "10.02-01",
       "block_id": "10.02",
-      "name": "Evaluar crisis y tipo de diabetes pediátrica",
-      "answer_kind": "decision",
+      "name": "Diabetes en pediatría",
+      "answer_kind": "diagnosis",
       "variants": {
         "easy": {
-          "vignette": "Un escolar presenta sed intensa, poliuria y pérdida de peso. Sus padres notan cansancio y glucosa elevada; se busca de inmediato cetosis antes de definir el tipo de diabetes. ¿Qué acción o clasificación corresponde a este contexto?",
+          "vignette": "Un escolar presenta sed intensa, poliuria y pérdida de peso. Sus padres notan cansancio y glucosa elevada; se busca de inmediato cetosis antes de definir el tipo de diabetes.",
           "discriminator": "pérdida de peso",
           "explanation": "El dato decisivo es pérdida de peso. La deficiencia de insulina o resistencia intensa altera utilización energética y produce hiperglucemia; en niños el déficit absoluto puede debutar con cetosis y deshidratación rápida. Medir glucosa, cetonas y estado ácido-base según síntomas; estabilizar si existe crisis y coordinar atención pediátrica especializada. En déficit absoluto, iniciar un plan de insulina y educación familiar.",
-          "confusable_with": "Clasificación automática como diabetes tipo 2 por obesidad",
-          "why_not": "La obesidad no excluye autoinmunidad. La evaluación pediátrica debe detectar crisis y usar los antecedentes y el curso para definir el tipo.",
+          "confusable_with": "Polidipsia primaria",
+          "why_not": "La hiperglucemia confirmada explica la diuresis osmótica. La obesidad o el antecedente familiar modifican la clasificación, pero no eliminan el diagnóstico de diabetes.",
           "facts": [
             {
               "field": "pattern",
@@ -397,11 +434,11 @@
           ]
         },
         "medium": {
-          "vignette": "Un escolar con hiperglucemia tiene obesidad y acantosis. Se valora resistencia a insulina sin excluir autoinmunidad ni omitir la búsqueda de cetosis. ¿Qué acción o clasificación corresponde a este contexto?",
-          "discriminator": "Obesidad y acantosis en un niño hiperglucémico",
-          "explanation": "El dato decisivo es Obesidad y acantosis en un niño hiperglucémico. Ambos mecanismos pueden coexistir. Valorar resistencia sin excluir autoinmunidad.",
-          "confusable_with": "Clasificación automática como diabetes tipo 2 por obesidad",
-          "why_not": "La obesidad no excluye autoinmunidad. La evaluación pediátrica debe detectar crisis y usar los antecedentes y el curso para definir el tipo.",
+          "vignette": "Un escolar con obesidad y acantosis presenta poliuria y polidipsia. Las mediciones confirman hiperglucemia diagnóstica; se investiga su mecanismo sin excluir autoinmunidad por el aspecto corporal.",
+          "discriminator": "Hiperglucemia pediátrica en un fenotipo de resistencia a insulina",
+          "explanation": "Hiperglucemia pediátrica en un fenotipo de resistencia a insulina. Este patrón orienta a Diabetes en pediatría. La deficiencia de insulina o resistencia intensa altera utilización energética y produce hiperglucemia; en niños el déficit absoluto puede debutar con cetosis y deshidratación rápida.",
+          "confusable_with": "Polidipsia primaria",
+          "why_not": "La hiperglucemia confirmada explica la diuresis osmótica. La obesidad o el antecedente familiar modifican la clasificación, pero no eliminan el diagnóstico de diabetes.",
           "facts": [
             {
               "field": "pattern",
@@ -474,11 +511,11 @@
           ]
         },
         "contrast": {
-          "vignette": "Un paciente pediátrico con hiperglucemia presenta historia familiar y curso atípico. Se considera una forma monogénica junto con las otras causas. ¿Qué acción o clasificación corresponde a este contexto?",
-          "discriminator": "Curso atípico e historia familiar",
-          "explanation": "El dato decisivo es Curso atípico e historia familiar. Puede cambiar tratamiento y asesoría. Considerar diabetes monogénica.",
-          "confusable_with": "Clasificación automática como diabetes tipo 2 por obesidad",
-          "why_not": "La obesidad no excluye autoinmunidad. La evaluación pediátrica debe detectar crisis y usar los antecedentes y el curso para definir el tipo.",
+          "vignette": "Un niño con varios familiares afectados presenta hiperglucemia persistente confirmada y un curso distinto al catabolismo rápido habitual. La historia orienta a estudiar una forma monogénica.",
+          "discriminator": "Diabetes pediátrica con curso familiar atípico",
+          "explanation": "Diabetes pediátrica con curso familiar atípico. Este patrón orienta a Diabetes en pediatría. La deficiencia de insulina o resistencia intensa altera utilización energética y produce hiperglucemia; en niños el déficit absoluto puede debutar con cetosis y deshidratación rápida.",
+          "confusable_with": "Polidipsia primaria",
+          "why_not": "La hiperglucemia confirmada explica la diuresis osmótica. La obesidad o el antecedente familiar modifican la clasificación, pero no eliminan el diagnóstico de diabetes.",
           "facts": [
             {
               "field": "pattern",
@@ -550,21 +587,36 @@
             }
           ]
         }
-      }
+      },
+      "sources": [
+        {
+          "label": "Edwino.pdf",
+          "pages": [
+            267,
+            268,
+            269,
+            270
+          ]
+        },
+        {
+          "label": "ISPAD 2024: diabetes tipo 2 pediátrica",
+          "url": "https://www.ispad.org/static/af2eab1f-01ab-4709-a6eb1ff978a1fa2f/ICPCG-Chapter-3-2024.pdf"
+        }
+      ]
     },
     {
       "id": "10.02-02",
       "parent_topic_id": "10.02-02",
       "block_id": "10.02",
-      "name": "Individualizar tratamiento de diabetes en adulto mayor",
-      "answer_kind": "decision",
+      "name": "Diabetes en el adulto mayor",
+      "answer_kind": "diagnosis",
       "variants": {
         "easy": {
-          "vignette": "Una adulta mayor con diabetes tiene caídas y episodios de sudoración antes de comer. Vive sola, toma varios fármacos y su función cognitiva ha disminuido. ¿Qué acción o clasificación corresponde a este contexto?",
-          "discriminator": "caídas y episodios de sudoración",
-          "explanation": "El dato decisivo es caídas y episodios de sudoración. La edad, comorbilidad y dependencia cambian reconocimiento de hipoglucemia y capacidad de autocuidado; una terapia intensa puede causar daño aunque reduzca la glucosa media. Evaluar hipoglucemia, función renal, cognición y apoyo. Revisar y simplificar el tratamiento y fijar metas individuales que eviten hipoglucemia y síntomas de hiperglucemia.",
-          "confusable_with": "Meta glucémica uniforme para todos los adultos",
-          "why_not": "La función, la cognición y el riesgo de hipoglucemia determinan objetivos y complejidad. La HbA1c puede ser menos fiable en determinadas condiciones.",
+          "vignette": "Una persona mayor tiene poliuria, sed y glucosa plasmática elevada en rango diagnóstico. La confirmación demuestra hiperglucemia persistente; vive sola y los cambios cognitivos dificultan reconocer los síntomas.",
+          "discriminator": "Hiperglucemia confirmada en el adulto mayor",
+          "explanation": "Hiperglucemia confirmada en el adulto mayor. La edad, comorbilidad y dependencia cambian reconocimiento de hipoglucemia y capacidad de autocuidado; una terapia intensa puede causar daño aunque reduzca la glucosa media.",
+          "confusable_with": "Cambios funcionales propios de la edad",
+          "why_not": "La hiperglucemia confirmada identifica diabetes en el adulto mayor. La edad y la comorbilidad cambian presentación y valoración, pero no justifican atribuir poliuria o pérdida de peso al envejecimiento.",
           "facts": [
             {
               "field": "pattern",
@@ -593,11 +645,11 @@
           ]
         },
         "medium": {
-          "vignette": "Una persona mayor con diabetes y fragilidad presenta episodios compatibles con hipoglucemia. Se revisa la necesidad de simplificar o reducir intensidad. ¿Qué acción o clasificación corresponde a este contexto?",
-          "discriminator": "Fragilidad y riesgo de hipoglucemia",
-          "explanation": "El dato decisivo es Fragilidad y riesgo de hipoglucemia. El riesgo de eventos adversos aumenta. Reducir complejidad e intensidad si procede.",
-          "confusable_with": "Meta glucémica uniforme para todos los adultos",
-          "why_not": "La función, la cognición y el riesgo de hipoglucemia determinan objetivos y complejidad. La HbA1c puede ser menos fiable en determinadas condiciones.",
+          "vignette": "Una persona mayor presenta sed, poliuria y pérdida de peso. Las mediciones repetidas confirman hiperglucemia, aunque inicialmente sus cambios funcionales se atribuyeron a la edad.",
+          "discriminator": "Presentación catabólica en una persona mayor",
+          "explanation": "Presentación catabólica en una persona mayor. Este patrón orienta a Diabetes en el adulto mayor. La edad, comorbilidad y dependencia cambian reconocimiento de hipoglucemia y capacidad de autocuidado; una terapia intensa puede causar daño aunque reduzca la glucosa media.",
+          "confusable_with": "Cambios funcionales propios de la edad",
+          "why_not": "La hiperglucemia confirmada identifica diabetes en el adulto mayor. La edad y la comorbilidad cambian presentación y valoración, pero no justifican atribuir poliuria o pérdida de peso al envejecimiento.",
           "facts": [
             {
               "field": "pattern",
@@ -666,11 +718,11 @@
           ]
         },
         "contrast": {
-          "vignette": "En un adulto mayor con diabetes, anemia, uremia o transfusión modifican la interpretación de HbA1c. Se revisa la valoración glucémica en su contexto. ¿Qué acción o clasificación corresponde a este contexto?",
-          "discriminator": "Condiciones que alteran la interpretación de HbA1c",
-          "explanation": "El dato decisivo es Condiciones que alteran la interpretación de HbA1c. Puede no reflejar la glucosa real. Interpretar HbA1c con cautela.",
-          "confusable_with": "Meta glucémica uniforme para todos los adultos",
-          "why_not": "La función, la cognición y el riesgo de hipoglucemia determinan objetivos y complejidad. La HbA1c puede ser menos fiable en determinadas condiciones.",
+          "vignette": "En una persona mayor con anemia y función renal reducida, la HbA1c resulta difícil de interpretar. Las mediciones plasmáticas repetidas confirman hiperglucemia diagnóstica y explican poliuria y deshidratación.",
+          "discriminator": "Confirmación plasmática cuando HbA1c tiene limitaciones",
+          "explanation": "Confirmación plasmática cuando HbA1c tiene limitaciones. Este patrón orienta a Diabetes en el adulto mayor. La edad, comorbilidad y dependencia cambian reconocimiento de hipoglucemia y capacidad de autocuidado; una terapia intensa puede causar daño aunque reduzca la glucosa media.",
+          "confusable_with": "Cambios funcionales propios de la edad",
+          "why_not": "La hiperglucemia confirmada identifica diabetes en el adulto mayor. La edad y la comorbilidad cambian presentación y valoración, pero no justifican atribuir poliuria o pérdida de peso al envejecimiento.",
           "facts": [
             {
               "field": "pattern",
@@ -738,7 +790,17 @@
             }
           ]
         }
-      }
+      },
+      "sources": [
+        {
+          "label": "Edwino.pdf",
+          "pages": [
+            264,
+            265,
+            266
+          ]
+        }
+      ]
     },
     {
       "id": "10.03-01",
@@ -926,21 +988,29 @@
             }
           ]
         }
-      }
+      },
+      "sources": [
+        {
+          "label": "Edwino.pdf",
+          "pages": [
+            292
+          ]
+        }
+      ]
     },
     {
       "id": "10.03-02",
       "parent_topic_id": "10.03-02",
       "block_id": "10.03",
-      "name": "Tratar crisis cetósica según potasio y contexto",
-      "answer_kind": "decision",
+      "name": "Cetoacidosis diabética",
+      "answer_kind": "diagnosis",
       "variants": {
         "easy": {
-          "vignette": "Una persona con diabetes omitió insulina y presenta vómitos, dolor abdominal y respiración profunda. Tiene deshidratación, cetonas elevadas y acidosis; la glucosa no es el único dato decisivo. ¿Qué acción o clasificación corresponde a este contexto?",
+          "vignette": "Una persona con diabetes omitió insulina y presenta vómitos, dolor abdominal y respiración profunda. Tiene deshidratación, cetonas elevadas y acidosis; la glucosa no es el único dato decisivo.",
           "discriminator": "cetonas elevadas y acidosis",
           "explanation": "El dato decisivo es cetonas elevadas y acidosis. El déficit insulínico y hormonas contrarreguladoras aumentan glucosa y cetogénesis; la diuresis osmótica pierde agua y electrolitos y la acumulación de cetoácidos causa acidosis. Iniciar líquidos ajustados, medir potasio antes de insulina y monitorizar glucosa, cetonas y electrolitos. Tratar el desencadenante y administrar insulina cuando el potasio permita hacerlo.",
-          "confusable_with": "Estado hiperglucémico hiperosmolar aislado",
-          "why_not": "La acidosis y las cetonas son decisivas para cetoacidosis. La glucosa no necesita ser extremadamente alta, y el potasio modifica el momento de la insulina.",
+          "confusable_with": "Estado hiperglucémico hiperosmolar",
+          "why_not": "La cetosis y la acidosis definen el componente cetoacidótico. El estado hiperosmolar puro tiene cetosis escasa; una glucosa menos alta no excluye cetoacidosis en el contexto adecuado.",
           "facts": [
             {
               "field": "pattern",
@@ -973,11 +1043,11 @@
           ]
         },
         "medium": {
-          "vignette": "Una persona con cetonas elevadas y acidosis tiene potasio bajo. Se repone antes de iniciar insulina hasta un nivel seguro. ¿Qué acción o clasificación corresponde a este contexto?",
-          "discriminator": "Déficit de potasio en crisis cetósica",
-          "explanation": "El dato decisivo es Déficit de potasio en crisis cetósica. El desplazamiento intracelular aumenta riesgo de arritmia. Reponer y diferir insulina hasta nivel seguro.",
-          "confusable_with": "Estado hiperglucémico hiperosmolar aislado",
-          "why_not": "La acidosis y las cetonas son decisivas para cetoacidosis. La glucosa no necesita ser extremadamente alta, y el potasio modifica el momento de la insulina.",
+          "vignette": "Una persona que omitió insulina tiene vómitos, deshidratación, glucosa elevada y respiración profunda. Se demuestran cetonas y acidosis, con potasio bajo que modifica el tratamiento.",
+          "discriminator": "Cetonas y acidosis con hiperglucemia y déficit de potasio",
+          "explanation": "Cetonas y acidosis con hiperglucemia y déficit de potasio. Este patrón orienta a Cetoacidosis diabética. El déficit insulínico y hormonas contrarreguladoras aumentan glucosa y cetogénesis; la diuresis osmótica pierde agua y electrolitos y la acumulación de cetoácidos causa acidosis.",
+          "confusable_with": "Estado hiperglucémico hiperosmolar",
+          "why_not": "La cetosis y la acidosis definen el componente cetoacidótico. El estado hiperosmolar puro tiene cetosis escasa; una glucosa menos alta no excluye cetoacidosis en el contexto adecuado.",
           "facts": [
             {
               "field": "pattern",
@@ -1050,11 +1120,11 @@
           ]
         },
         "contrast": {
-          "vignette": "Una persona que usa iSGLT2 y come poco desarrolla vómitos, cetosis y acidosis, aunque la glucosa sea menos alta de lo esperado. ¿Qué acción o clasificación corresponde a este contexto?",
-          "discriminator": "Cetosis y acidosis con glucosa menos alta",
-          "explanation": "El dato decisivo es Cetosis y acidosis con glucosa menos alta. La crisis puede ser euglucémica. Considerar cetosis aunque glucosa sea menos alta.",
-          "confusable_with": "Estado hiperglucémico hiperosmolar aislado",
-          "why_not": "La acidosis y las cetonas son decisivas para cetoacidosis. La glucosa no necesita ser extremadamente alta, y el potasio modifica el momento de la insulina.",
+          "vignette": "Una persona que usa iSGLT2 y ha reducido la ingesta tiene dolor abdominal y vómitos. La glucosa es menos alta de lo esperado, pero hay cetonas elevadas y acidosis metabólica.",
+          "discriminator": "Crisis cetósica con glucosa menos elevada",
+          "explanation": "Crisis cetósica con glucosa menos elevada. Este patrón orienta a Cetoacidosis diabética. El déficit insulínico y hormonas contrarreguladoras aumentan glucosa y cetogénesis; la diuresis osmótica pierde agua y electrolitos y la acumulación de cetoácidos causa acidosis.",
+          "confusable_with": "Estado hiperglucémico hiperosmolar",
+          "why_not": "La cetosis y la acidosis definen el componente cetoacidótico. El estado hiperosmolar puro tiene cetosis escasa; una glucosa menos alta no excluye cetoacidosis en el contexto adecuado.",
           "facts": [
             {
               "field": "pattern",
@@ -1126,21 +1196,36 @@
             }
           ]
         }
-      }
+      },
+      "sources": [
+        {
+          "label": "Edwino.pdf",
+          "pages": [
+            260,
+            261,
+            262,
+            263
+          ]
+        },
+        {
+          "label": "ADA/EASD y sociedades, consenso de crisis hiperglucémicas 2024",
+          "url": "https://doi.org/10.2337/dci24-0032"
+        }
+      ]
     },
     {
       "id": "10.03-03",
       "parent_topic_id": "10.03-03",
       "block_id": "10.03",
-      "name": "Tratar hiperosmolaridad y reconocer crisis mixta",
-      "answer_kind": "decision",
+      "name": "Estado hiperglucémico hiperosmolar",
+      "answer_kind": "diagnosis",
       "variants": {
         "easy": {
-          "vignette": "Una adulta mayor con infección urinaria tiene días de sed, poca ingesta y confusión progresiva. La glucosa es muy elevada y existe hiperosmolaridad, con cetosis escasa. ¿Qué acción o clasificación corresponde a este contexto?",
+          "vignette": "Una adulta mayor con infección urinaria tiene días de sed, poca ingesta y confusión progresiva. La glucosa es muy elevada y existe hiperosmolaridad, con cetosis escasa.",
           "discriminator": "hiperosmolaridad, con cetosis escasa",
           "explanation": "El dato decisivo es hiperosmolaridad, con cetosis escasa. La deficiencia relativa de insulina permite hiperglucemia y diuresis osmótica intensa sin cetogénesis marcada; la pérdida de agua eleva osmolaridad y altera estado neurológico. Iniciar reposición de volumen individualizada y controles de osmolaridad y electrolitos. Valorar potasio antes de insulina y tratar infección u otro desencadenante.",
-          "confusable_with": "Cetoacidosis como única forma de crisis",
-          "why_not": "La hiperosmolaridad y la deshidratación definen el componente hiperosmolar. La cetosis y la acidosis importantes indican superposición y cambian la clasificación.",
+          "confusable_with": "Cetoacidosis diabética",
+          "why_not": "La hiperosmolaridad y la deshidratación con cetosis escasa favorecen EHH. Si existen cetosis y acidosis relevantes debe considerarse superposición, en lugar de llamar puro a ese cuadro.",
           "facts": [
             {
               "field": "pattern",
@@ -1169,11 +1254,11 @@
           ]
         },
         "medium": {
-          "vignette": "Una persona mayor con hiperosmolaridad y deshidratación intensa tiene insuficiencia cardíaca o renal. El volumen se ajusta y se vigila sobrecarga. ¿Qué acción o clasificación corresponde a este contexto?",
-          "discriminator": "Crisis hiperosmolar con límite a líquidos",
-          "explanation": "El dato decisivo es Crisis hiperosmolar con límite a líquidos. No tolera la misma velocidad que un adulto sin comorbilidad. Ajustar volumen y vigilar sobrecarga.",
-          "confusable_with": "Cetoacidosis como única forma de crisis",
-          "why_not": "La hiperosmolaridad y la deshidratación definen el componente hiperosmolar. La cetosis y la acidosis importantes indican superposición y cambian la clasificación.",
+          "vignette": "Una persona mayor con insuficiencia cardíaca o renal desarrolla glucosa muy elevada, hiperosmolaridad y deshidratación intensa. La cetosis es escasa y predomina confusión.",
+          "discriminator": "Crisis hiperosmolar con comorbilidad que limita reposición",
+          "explanation": "Crisis hiperosmolar con comorbilidad que limita reposición. Este patrón orienta a Estado hiperglucémico hiperosmolar. La deficiencia relativa de insulina permite hiperglucemia y diuresis osmótica intensa sin cetogénesis marcada; la pérdida de agua eleva osmolaridad y altera estado neurológico.",
+          "confusable_with": "Cetoacidosis diabética",
+          "why_not": "La hiperosmolaridad y la deshidratación con cetosis escasa favorecen EHH. Si existen cetosis y acidosis relevantes debe considerarse superposición, en lugar de llamar puro a ese cuadro.",
           "facts": [
             {
               "field": "pattern",
@@ -1242,11 +1327,11 @@
           ]
         },
         "contrast": {
-          "vignette": "Una persona con hiperosmolaridad y glucosa muy elevada también presenta cetosis y acidosis importantes. Se reconoce una crisis mixta. ¿Qué acción o clasificación corresponde a este contexto?",
-          "discriminator": "Hiperosmolaridad con cetosis y acidosis relevantes",
-          "explanation": "El dato decisivo es Hiperosmolaridad con cetosis y acidosis relevantes. Requiere manejo de ambos componentes. Reconocer crisis mixta.",
-          "confusable_with": "Cetoacidosis como única forma de crisis",
-          "why_not": "La hiperosmolaridad y la deshidratación definen el componente hiperosmolar. La cetosis y la acidosis importantes indican superposición y cambian la clasificación.",
+          "vignette": "Una persona ingresada por neumonía desarrolla poliuria y después marcada disminución del estado de alerta. La glucosa y la osmolaridad sérica son muy elevadas, con cetonas escasas y sin acidosis cetósica importante.",
+          "discriminator": "Deterioro neurológico hiperosmolar precipitado por neumonía",
+          "explanation": "La neumonía puede precipitar EHH. La hiperglucemia intensa y la hiperosmolaridad con cetosis escasa explican el deterioro de conciencia y distinguen este patrón de una crisis predominantemente cetoacidótica.",
+          "confusable_with": "Cetoacidosis diabética",
+          "why_not": "La hiperosmolaridad y la deshidratación con cetosis escasa favorecen EHH. Si existen cetosis y acidosis relevantes debe considerarse superposición, en lugar de llamar puro a ese cuadro.",
           "facts": [
             {
               "field": "pattern",
@@ -1312,23 +1397,40 @@
               "field": "modifiers.1.reason",
               "text": "Requiere manejo de ambos componentes."
             }
+          ],
+          "source_evidence": [
+            {
+              "page": 281,
+              "quote": "Las infecciones urinarias y la neumonía son las causas precipitantes más comunes para el EH H. • Depresión y desór"
+            }
           ]
         }
-      }
+      },
+      "sources": [
+        {
+          "label": "Edwino.pdf",
+          "pages": [
+            281,
+            282,
+            283,
+            284
+          ]
+        }
+      ]
     },
     {
       "id": "10.04-01",
       "parent_topic_id": "10.04-01",
       "block_id": "10.04",
-      "name": "Evaluar adiposidad y seleccionar tratamiento por complicaciones",
-      "answer_kind": "decision",
+      "name": "Obesidad en adultos",
+      "answer_kind": "diagnosis",
       "variants": {
         "easy": {
-          "vignette": "Un adulto tiene aumento sostenido de peso y cintura, hipertensión y dificultad para mantener actividad. Se evalúan alimentación, sueño, fármacos y complicaciones antes de definir objetivos de tratamiento. ¿Qué acción o clasificación corresponde a este contexto?",
-          "discriminator": "aumento sostenido de peso y cintura",
-          "explanation": "El dato decisivo es aumento sostenido de peso y cintura. El exceso de adiposidad altera metabolismo y función orgánica; IMC y cintura estiman riesgo, pero deben complementarse con complicaciones, composición corporal y contexto clínico. Valorar adiposidad y complicaciones y acordar un plan nutricional y de actividad sostenibles. Considerar farmacoterapia o cirugía según indicaciones y respuesta con atención integral.",
-          "confusable_with": "Clasificación por IMC sin evaluación clínica",
-          "why_not": "El IMC debe interpretarse con el contexto corporal. La distribución de adiposidad, las complicaciones y la función ayudan a seleccionar el tratamiento.",
+          "vignette": "En una consulta de detección, una persona adulta presenta aumento sostenido de grasa corporal y un IMC de 31 kg/m². La exploración confirma que el peso corresponde a tejido adiposo.",
+          "discriminator": "Exceso adiposo con IMC de clase I",
+          "explanation": "El exceso de tejido adiposo y el IMC de 31 kg/m² apoyan obesidad de clase I. La interpretación integra composición corporal y contexto, en vez de usar solo el peso.",
+          "confusable_with": "Aumento de IMC por masa muscular",
+          "why_not": "La distribución y el exceso de tejido adiposo, junto con antropometría, apoyan obesidad. Un IMC alto por musculatura o embarazo no basta por sí solo para el mismo diagnóstico.",
           "facts": [
             {
               "field": "pattern",
@@ -1361,15 +1463,21 @@
             {
               "field": "source_corrections.1.reason",
               "text": "Se verifica corrección de los criterios quirúrgicos antiguos de p299 para IMC ≥35; el caso mantiene evaluación integral como primera acción."
+            }
+          ],
+          "source_evidence": [
+            {
+              "page": 299,
+              "quote": "en periodo de lactancia. IMC~40 Se recomienda medir además la circunferencia de cintura en aquellos pacientes con un IMC entre"
             }
           ]
         },
         "medium": {
-          "vignette": "Una persona con masa muscular elevada o embarazo tiene IMC alto. Se interpreta con cautela y se evalúa el contexto antes de clasificar adiposidad. ¿Qué acción o clasificación corresponde a este contexto?",
-          "discriminator": "Limitaciones del IMC por contexto corporal",
-          "explanation": "El dato decisivo es Limitaciones del IMC por contexto corporal. No refleja adiposidad igual en todos los contextos. Interpretar IMC con cautela.",
-          "confusable_with": "Clasificación por IMC sin evaluación clínica",
-          "why_not": "El IMC debe interpretarse con el contexto corporal. La distribución de adiposidad, las complicaciones y la función ayudan a seleccionar el tratamiento.",
+          "vignette": "Una persona adulta tiene IMC de 36 kg/m² y adiposidad central marcada. La presión arterial está elevada y predomina la repercusión cardiometabólica del aumento de grasa.",
+          "discriminator": "Fenotipo central y cardiometabólico con IMC de clase II",
+          "explanation": "El IMC de 36 kg/m² y la adiposidad central apoyan obesidad de clase II. La distribución de grasa y la presión ayudan a valorar repercusión, pero no sustituyen la confirmación antropométrica.",
+          "confusable_with": "Aumento de IMC por masa muscular",
+          "why_not": "La distribución y el exceso de tejido adiposo, junto con antropometría, apoyan obesidad. Un IMC alto por musculatura o embarazo no basta por sí solo para el mismo diagnóstico.",
           "facts": [
             {
               "field": "pattern",
@@ -1442,15 +1550,21 @@
             {
               "field": "source_corrections.1.reason",
               "text": "Se verifica corrección de los criterios quirúrgicos antiguos de p299 para IMC ≥35; el caso mantiene evaluación integral como primera acción."
+            }
+          ],
+          "source_evidence": [
+            {
+              "page": 299,
+              "quote": "en periodo de lactancia. IMC~40 Se recomienda medir además la circunferencia de cintura en aquellos pacientes con un IMC entre"
             }
           ]
         },
         "contrast": {
-          "vignette": "Una persona con adiposidad y limitación funcional tiene comorbilidad importante. Se valoran opciones adicionales según elegibilidad actual. ¿Qué acción o clasificación corresponde a este contexto?",
-          "discriminator": "Comorbilidad que justifica intensificar tratamiento",
-          "explanation": "El dato decisivo es Comorbilidad que justifica intensificar tratamiento. El beneficio potencial puede ser mayor. Intensificar opciones según criterios actuales.",
-          "confusable_with": "Clasificación por IMC sin evaluación clínica",
-          "why_not": "El IMC debe interpretarse con el contexto corporal. La distribución de adiposidad, las complicaciones y la función ayudan a seleccionar el tratamiento.",
+          "vignette": "Una persona adulta con IMC de 42 kg/m² presenta exceso de tejido adiposo que limita la marcha y las actividades cotidianas. La limitación funcional es el motivo principal de consulta.",
+          "discriminator": "Predominio funcional con IMC de clase III",
+          "explanation": "El exceso adiposo con IMC de 42 kg/m² apoya obesidad de clase III. La expresión clínica puede predominar en función física o riesgo metabólico; la masa muscular aislada no explica este caso.",
+          "confusable_with": "Aumento de IMC por masa muscular",
+          "why_not": "La distribución y el exceso de tejido adiposo, junto con antropometría, apoyan obesidad. Un IMC alto por musculatura o embarazo no basta por sí solo para el mismo diagnóstico.",
           "facts": [
             {
               "field": "pattern",
@@ -1524,23 +1638,53 @@
               "field": "source_corrections.1.reason",
               "text": "Se verifica corrección de los criterios quirúrgicos antiguos de p299 para IMC ≥35; el caso mantiene evaluación integral como primera acción."
             }
+          ],
+          "source_evidence": [
+            {
+              "page": 299,
+              "quote": "en periodo de lactancia. IMC~40 Se recomienda medir además la circunferencia de cintura en aquellos pacientes con un IMC entre"
+            }
           ]
         }
-      }
+      },
+      "sources": [
+        {
+          "label": "Edwino.pdf",
+          "pages": [
+            299
+          ]
+        },
+        {
+          "label": "WHO 2025: terapias GLP-1 para obesidad adulta",
+          "url": "https://doi.org/10.1001/jama.2025.24288"
+        },
+        {
+          "label": "ASMBS/IFSO 2022: indicaciones de cirugía metabólica",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9834364/"
+        },
+        {
+          "label": "NICE NG246: clasificación y valoración de adiposidad en adultos",
+          "url": "https://www.nice.org.uk/guidance/ng246/chapter/Identifying-and-assessing-overweight-obesity-and-central-adiposity"
+        },
+        {
+          "label": "NICE: evidencia de clasificación por IMC, clases I, II y III",
+          "url": "https://www.nice.org.uk/guidance/ng246/evidence/full-guideline-section-2-identification-and-classification-evidence-statements-and-reviews-pdf-195027230"
+        }
+      ]
     },
     {
       "id": "10.04-02",
       "parent_topic_id": "10.04-02",
       "block_id": "10.04",
-      "name": "Reconocer agrupación metabólica y tratar riesgo cardiovascular",
-      "answer_kind": "decision",
+      "name": "Síndrome metabólico",
+      "answer_kind": "diagnosis",
       "variants": {
         "easy": {
-          "vignette": "Un adulto tiene cintura aumentada, triglicéridos altos, HDL bajo y presión arterial elevada. La glucosa también está en un rango intermedio; no presenta síntomas de una complicación aguda. ¿Qué acción o clasificación corresponde?",
+          "vignette": "Un adulto tiene cintura aumentada, triglicéridos altos, HDL bajo y presión arterial elevada. La glucosa también está en un rango intermedio; no presenta síntomas de una complicación aguda.",
           "discriminator": "triglicéridos altos, HDL bajo",
           "explanation": "El dato decisivo es triglicéridos altos, HDL bajo. La adiposidad visceral y resistencia insulínica agrupan alteraciones de glucosa, lípidos y presión; su coexistencia señala riesgo aumentado de diabetes y enfermedad cardiovascular. Medir los componentes con criterios apropiados y evaluar riesgo global. Tratar hábitos y cada alteración según su indicación, con seguimiento de glucosa y presión.",
           "confusable_with": "Dislipidemia aislada",
-          "why_not": "La asociación de varios componentes implica un síndrome de riesgo cardiometabólico. Un lípido alterado aislado no demuestra toda la agrupación.",
+          "why_not": "La concurrencia de varios componentes cardiometabólicos favorece síndrome metabólico. Un único lípido alterado no demuestra la agrupación y los puntos de corte dependen del criterio y población.",
           "facts": [
             {
               "field": "pattern",
@@ -1573,11 +1717,11 @@
           ]
         },
         "medium": {
-          "vignette": "Una persona con cintura aumentada, triglicéridos altos y presión elevada tiene alto riesgo cardiovascular. Se valora estatina y control de factores. ¿Qué acción o clasificación corresponde?",
-          "discriminator": "Agrupación metabólica con alto riesgo cardiovascular",
-          "explanation": "El dato decisivo es Agrupación metabólica con alto riesgo cardiovascular. La prevención debe basarse en riesgo total. Valorar estatina y control intensivo de factores.",
+          "vignette": "Una persona presenta adiposidad abdominal, triglicéridos elevados y HDL bajo. La combinación reúne componentes de riesgo relacionados y se interpreta con criterios para su población.",
+          "discriminator": "Adiposidad central junto con ambas alteraciones lipídicas",
+          "explanation": "Adiposidad central junto con ambas alteraciones lipídicas. Este patrón orienta a Síndrome metabólico. La adiposidad visceral y resistencia insulínica agrupan alteraciones de glucosa, lípidos y presión; su coexistencia señala riesgo aumentado de diabetes y enfermedad cardiovascular.",
           "confusable_with": "Dislipidemia aislada",
-          "why_not": "La asociación de varios componentes implica un síndrome de riesgo cardiometabólico. Un lípido alterado aislado no demuestra toda la agrupación.",
+          "why_not": "La concurrencia de varios componentes cardiometabólicos favorece síndrome metabólico. Un único lípido alterado no demuestra la agrupación y los puntos de corte dependen del criterio y población.",
           "facts": [
             {
               "field": "pattern",
@@ -1638,11 +1782,11 @@
           ]
         },
         "contrast": {
-          "vignette": "Una persona tiene tres componentes metabólicos y se discute si hacen falta más de tres para reconocer la agrupación. Deben aplicarse criterios y puntos de corte apropiados para la población. ¿Qué acción o clasificación corresponde?",
-          "discriminator": "Tres componentes bastan según el criterio usado",
-          "explanation": "La corrección del libro establece tres o más componentes, no más de tres. Los puntos de corte dependen del criterio y de la población; se tratan todos los riesgos.",
+          "vignette": "Una persona tiene cintura aumentada, presión arterial elevada y glucosa intermedia. Aunque no se describan todos los componentes posibles, esa agrupación alcanza el número requerido por el criterio usado.",
+          "discriminator": "Agrupación de componentes centrales, tensionales y glucémicos",
+          "explanation": "Agrupación de componentes centrales, tensionales y glucémicos. Este patrón orienta a Síndrome metabólico. La adiposidad visceral y resistencia insulínica agrupan alteraciones de glucosa, lípidos y presión; su coexistencia señala riesgo aumentado de diabetes y enfermedad cardiovascular.",
           "confusable_with": "Dislipidemia aislada",
-          "why_not": "La asociación de varios componentes implica un síndrome de riesgo cardiometabólico. Un lípido alterado aislado no demuestra toda la agrupación.",
+          "why_not": "La concurrencia de varios componentes cardiometabólicos favorece síndrome metabólico. Un único lípido alterado no demuestra la agrupación y los puntos de corte dependen del criterio y población.",
           "facts": [
             {
               "field": "pattern",
@@ -1702,7 +1846,19 @@
             }
           ]
         }
-      }
+      },
+      "sources": [
+        {
+          "label": "Edwino.pdf",
+          "pages": [
+            302
+          ]
+        },
+        {
+          "label": "NHLBI: informe ATP III",
+          "url": "https://www.nhlbi.nih.gov/files/docs/guidelines/atp3xsum.pdf"
+        }
+      ]
     },
     {
       "id": "10.04-03",
@@ -1890,7 +2046,16 @@
             }
           ]
         }
-      }
+      },
+      "sources": [
+        {
+          "label": "Edwino.pdf",
+          "pages": [
+            277,
+            278
+          ]
+        }
+      ]
     },
     {
       "id": "10.05-01",
@@ -2078,7 +2243,16 @@
             }
           ]
         }
-      }
+      },
+      "sources": [
+        {
+          "label": "Edwino.pdf",
+          "pages": [
+            293,
+            294
+          ]
+        }
+      ]
     },
     {
       "id": "10.05-02",
@@ -2278,21 +2452,34 @@
             }
           ]
         }
-      }
+      },
+      "sources": [
+        {
+          "label": "Edwino.pdf",
+          "pages": [
+            290,
+            291
+          ]
+        },
+        {
+          "label": "ATA 2016: hipertiroidismo y otras causas de tirotoxicosis",
+          "url": "https://journals.sagepub.com/doi/epdf/10.1089/thy.2016.0229"
+        }
+      ]
     },
     {
       "id": "10.06-01",
       "parent_topic_id": "10.06-01",
       "block_id": "10.06",
-      "name": "Estudiar nódulo tiroideo según riesgo y contexto",
-      "answer_kind": "decision",
+      "name": "Nódulo tiroideo",
+      "answer_kind": "diagnosis",
       "variants": {
         "easy": {
-          "vignette": "Una adulta tiene un nódulo palpable en cuello sin síntomas hormonales. El ultrasonido describe microcalcificaciones y forma más alta que ancha; se dispone de una medición inicial de TSH. ¿Qué acción o clasificación corresponde a este contexto?",
+          "vignette": "Una adulta tiene un nódulo palpable en cuello sin síntomas hormonales. El ultrasonido describe microcalcificaciones y forma más alta que ancha; se dispone de una medición inicial de TSH.",
           "discriminator": "microcalcificaciones",
           "explanation": "El dato decisivo es microcalcificaciones. Una lesión focal puede ser hiperfuncionante, quística o neoplásica; función y patrón ecográfico estiman riesgo y determinan si corresponde gammagrafía, punción o vigilancia. Medir TSH y realizar ultrasonido con estratificación de riesgo. Decidir BAAF por patrón y tamaño, y valorar función si TSH está baja.",
-          "confusable_with": "Punción universal por un único tamaño",
-          "why_not": "El patrón ecográfico, el tamaño, la función y el contexto determinan el estudio. La compresión o citología sospechosa cambian la prioridad.",
+          "confusable_with": "Bocio difuso",
+          "why_not": "Una lesión focal identificada por palpación e imagen orienta a nódulo tiroideo. El bocio difuso afecta globalmente la glándula; la sospecha de malignidad requiere estudio adicional y no se decide solo por tamaño.",
           "facts": [
             {
               "field": "pattern",
@@ -2325,11 +2512,11 @@
           ]
         },
         "medium": {
-          "vignette": "Una embarazada tiene un nódulo tiroideo que requiere estudio. Se evitan radionúclidos y se planifica evaluación apropiada. ¿Qué acción o clasificación corresponde a este contexto?",
-          "discriminator": "Embarazo que limita el estudio funcional",
-          "explanation": "El dato decisivo es Embarazo que limita el estudio funcional. Los agentes radiactivos están contraindicados. Evitar radionúclidos y planear estudio apropiado.",
-          "confusable_with": "Punción universal por un único tamaño",
-          "why_not": "El patrón ecográfico, el tamaño, la función y el contexto determinan el estudio. La compresión o citología sospechosa cambian la prioridad.",
+          "vignette": "Una embarazada tiene un nódulo palpable en la tiroides y el ultrasonido confirma una lesión focal. Se describen sus características y función, sin usar radionúclidos durante la gestación.",
+          "discriminator": "Lesión tiroidea focal confirmada en embarazo",
+          "explanation": "Lesión tiroidea focal confirmada en embarazo. Este patrón orienta a Nódulo tiroideo. Una lesión focal puede ser hiperfuncionante, quística o neoplásica; función y patrón ecográfico estiman riesgo y determinan si corresponde gammagrafía, punción o vigilancia.",
+          "confusable_with": "Bocio difuso",
+          "why_not": "Una lesión focal identificada por palpación e imagen orienta a nódulo tiroideo. El bocio difuso afecta globalmente la glándula; la sospecha de malignidad requiere estudio adicional y no se decide solo por tamaño.",
           "facts": [
             {
               "field": "pattern",
@@ -2402,11 +2589,11 @@
           ]
         },
         "contrast": {
-          "vignette": "Un nódulo tiroideo produce síntomas compresivos o tiene citología sospechosa. Se solicita valoración especializada. ¿Qué acción o clasificación corresponde a este contexto?",
-          "discriminator": "Compresión o citología de riesgo",
-          "explanation": "El dato decisivo es Compresión o citología de riesgo. Puede requerir intervención. Solicitar valoración especializada.",
-          "confusable_with": "Punción universal por un único tamaño",
-          "why_not": "El patrón ecográfico, el tamaño, la función y el contexto determinan el estudio. La compresión o citología sospechosa cambian la prioridad.",
+          "vignette": "Una persona presenta compresión cervical y una lesión focal tiroidea con citología sospechosa. La evaluación debe definir su naturaleza, pero el hallazgo anatómico de nódulo está demostrado.",
+          "discriminator": "Nódulo con síntomas compresivos o citología de riesgo",
+          "explanation": "Nódulo con síntomas compresivos o citología de riesgo. Este patrón orienta a Nódulo tiroideo. Una lesión focal puede ser hiperfuncionante, quística o neoplásica; función y patrón ecográfico estiman riesgo y determinan si corresponde gammagrafía, punción o vigilancia.",
+          "confusable_with": "Bocio difuso",
+          "why_not": "Una lesión focal identificada por palpación e imagen orienta a nódulo tiroideo. El bocio difuso afecta globalmente la glándula; la sospecha de malignidad requiere estudio adicional y no se decide solo por tamaño.",
           "facts": [
             {
               "field": "pattern",
@@ -2478,7 +2665,21 @@
             }
           ]
         }
-      }
+      },
+      "sources": [
+        {
+          "label": "Edwino.pdf",
+          "pages": [
+            296,
+            297,
+            298
+          ]
+        },
+        {
+          "label": "ETA 2023: manejo de nódulos tiroideos",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10448590/"
+        }
+      ]
     },
     {
       "id": "10.06-02",
@@ -2491,8 +2692,8 @@
           "vignette": "Un adulto tiene una masa tiroidea que crece rápidamente, ronquera y ganglios cervicales. Se requiere definir tipo tumoral y extensión antes de seleccionar una intervención.",
           "discriminator": "crece rápidamente, ronquera",
           "explanation": "El dato decisivo es crece rápidamente, ronquera. Las neoplasias tiroideas tienen linajes y agresividad diferentes; invasión local produce compresión o disfonía y el tipo celular determina marcadores, extensión y respuesta terapéutica. Evaluar vía aérea si hay compresión y completar ultrasonido, citología y estadificación con equipo tiroideo. Seleccionar tratamiento por histología y riesgo.",
-          "confusable_with": "Nódulo tiroideo benigno sin evaluación histológica",
-          "why_not": "El tipo tumoral y la extensión determinan el plan. Una masa con compresión o ganglios no debe tratarse como un nódulo benigno sin caracterización.",
+          "confusable_with": "Nódulo tiroideo benigno",
+          "why_not": "La evidencia tumoral citológica y de invasión o el linaje C con marcador apropiado orientan a cáncer de tiroides. La presencia de un nódulo por sí sola no establece malignidad.",
           "facts": [
             {
               "field": "pattern",
@@ -2521,11 +2722,11 @@
           ]
         },
         "medium": {
-          "vignette": "En una masa tiroidea se sospecha tipo medular. Se valoran calcitonina, genética y lesiones asociadas.",
-          "discriminator": "Sospecha de tumor medular",
-          "explanation": "El dato decisivo es Sospecha de tumor medular. Puede formar parte de MEN2. Valorar calcitonina, genética y lesiones asociadas.",
-          "confusable_with": "Nódulo tiroideo benigno sin evaluación histológica",
-          "why_not": "El tipo tumoral y la extensión determinan el plan. Una masa con compresión o ganglios no debe tratarse como un nódulo benigno sin caracterización.",
+          "vignette": "Una persona tiene masa tiroidea y calcitonina elevada. El estudio celular demuestra un tumor de células C y se investiga una asociación hereditaria.",
+          "discriminator": "Neoplasia de linaje C con marcador correspondiente",
+          "explanation": "Neoplasia de linaje C con marcador correspondiente. Este patrón orienta a Cáncer de tiroides. Las neoplasias tiroideas tienen linajes y agresividad diferentes; invasión local produce compresión o disfonía y el tipo celular determina marcadores, extensión y respuesta terapéutica.",
+          "confusable_with": "Nódulo tiroideo benigno",
+          "why_not": "La evidencia tumoral citológica y de invasión o el linaje C con marcador apropiado orientan a cáncer de tiroides. La presencia de un nódulo por sí sola no establece malignidad.",
           "facts": [
             {
               "field": "pattern",
@@ -2594,11 +2795,11 @@
           ]
         },
         "contrast": {
-          "vignette": "Se identifica un tumor tiroideo diferenciado de bajo riesgo. Se individualizan extensión del tratamiento y vigilancia.",
-          "discriminator": "Tumor diferenciado de bajo riesgo",
-          "explanation": "El dato decisivo es Tumor diferenciado de bajo riesgo. La conducta no es siempre tiroidectomía total. Individualizar extensión y vigilancia.",
-          "confusable_with": "Nódulo tiroideo benigno sin evaluación histológica",
-          "why_not": "El tipo tumoral y la extensión determinan el plan. Una masa con compresión o ganglios no debe tratarse como un nódulo benigno sin caracterización.",
+          "vignette": "Una persona tiene nódulo tiroideo y ganglios cervicales. La citología muestra células tumorales diferenciadas y la evaluación confirma invasión, aunque no exista crecimiento explosivo ni choque compresivo.",
+          "discriminator": "Tumor tiroideo diferenciado confirmado",
+          "explanation": "Tumor tiroideo diferenciado confirmado. Este patrón orienta a Cáncer de tiroides. Las neoplasias tiroideas tienen linajes y agresividad diferentes; invasión local produce compresión o disfonía y el tipo celular determina marcadores, extensión y respuesta terapéutica.",
+          "confusable_with": "Nódulo tiroideo benigno",
+          "why_not": "La evidencia tumoral citológica y de invasión o el linaje C con marcador apropiado orientan a cáncer de tiroides. La presencia de un nódulo por sí sola no establece malignidad.",
           "facts": [
             {
               "field": "pattern",
@@ -2666,21 +2867,30 @@
             }
           ]
         }
-      }
+      },
+      "sources": [
+        {
+          "label": "Edwino.pdf",
+          "pages": [
+            258,
+            259
+          ]
+        }
+      ]
     },
     {
       "id": "10.07-01",
       "parent_topic_id": "10.07-01",
       "block_id": "10.07",
-      "name": "Distinguir origen suprarrenal y tratar crisis",
-      "answer_kind": "decision",
+      "name": "Enfermedad de Addison",
+      "answer_kind": "diagnosis",
       "variants": {
         "easy": {
-          "vignette": "Una adulta presenta pérdida de peso, hiperpigmentación oral, mareo al ponerse de pie y debilidad. Hay hiponatremia e hiperpotasemia y se evalúa función suprarrenal. ¿Qué acción o clasificación corresponde a este contexto?",
+          "vignette": "Una adulta presenta pérdida de peso, hiperpigmentación oral, mareo al ponerse de pie y debilidad. Hay hiponatremia e hiperpotasemia y se evalúa función suprarrenal.",
           "discriminator": "hiperpigmentación oral",
           "explanation": "El dato decisivo es hiperpigmentación oral. La insuficiencia cortical primaria reduce cortisol y aldosterona; la pérdida de volumen causa hipotensión y el aumento de ACTH asociado estimula pigmentación de piel y mucosas. Medir cortisol, ACTH, renina y aldosterona y confirmar según contexto. Si hay crisis, administrar hidrocortisona IV y reanimar sin esperar pruebas. En enfermedad estable confirmada, reponer glucocorticoide y añadir fludrocortisona si hay déficit de aldosterona.",
-          "confusable_with": "Fallo suprarrenal primario como único mecanismo",
-          "why_not": "La hiperpigmentación y la hiperpotasemia apoyan origen primario. El fallo secundario puede carecer de ellas y la crisis exige tratamiento inmediato.",
+          "confusable_with": "Insuficiencia suprarrenal central",
+          "why_not": "La ACTH alta y la hiperpigmentación, junto con pérdida mineralocorticoide, favorecen Addison. El fallo central tiene ACTH baja o inapropiadamente normal y no requiere hiperpotasemia ni hiperpigmentación.",
           "facts": [
             {
               "field": "pattern",
@@ -2713,11 +2923,11 @@
           ]
         },
         "medium": {
-          "vignette": "Una persona con sospecha de fallo suprarrenal desarrolla choque y vómitos persistentes. Se trata la posible crisis sin esperar confirmación. ¿Qué acción o clasificación corresponde a este contexto?",
-          "discriminator": "Sospecha suprarrenal con choque",
-          "explanation": "El dato decisivo es Sospecha suprarrenal con choque. La vía oral puede no ser viable. Tratar de inmediato como posible crisis.",
-          "confusable_with": "Fallo suprarrenal primario como único mecanismo",
-          "why_not": "La hiperpigmentación y la hiperpotasemia apoyan origen primario. El fallo secundario puede carecer de ellas y la crisis exige tratamiento inmediato.",
+          "vignette": "Una persona con hiperpigmentación presenta vómitos, choque, hiponatremia e hiperpotasemia. Se sospecha déficit agudo sobre una falla de la corteza suprarrenal.",
+          "discriminator": "Crisis con datos de pérdida glucocorticoide y mineralocorticoide",
+          "explanation": "Crisis con datos de pérdida glucocorticoide y mineralocorticoide. Este patrón orienta a Enfermedad de Addison. La insuficiencia cortical primaria reduce cortisol y aldosterona; la pérdida de volumen causa hipotensión y el aumento de ACTH asociado estimula pigmentación de piel y mucosas.",
+          "confusable_with": "Insuficiencia suprarrenal central",
+          "why_not": "La ACTH alta y la hiperpigmentación, junto con pérdida mineralocorticoide, favorecen Addison. El fallo central tiene ACTH baja o inapropiadamente normal y no requiere hiperpotasemia ni hiperpigmentación.",
           "facts": [
             {
               "field": "pattern",
@@ -2790,11 +3000,11 @@
           ]
         },
         "contrast": {
-          "vignette": "Se evalúa insuficiencia suprarrenal secundaria. La ausencia de hiperpigmentación o hiperpotasemia no elimina la sospecha de déficit de cortisol. ¿Qué acción o clasificación corresponde a este contexto?",
-          "discriminator": "Déficit secundario sin exigir signos de pérdida mineralocorticoide",
-          "explanation": "El dato decisivo es Déficit secundario sin exigir signos de pérdida mineralocorticoide. La aldosterona y ACTH se comportan diferente. No exigir hiperpigmentación ni hiperpotasemia.",
-          "confusable_with": "Fallo suprarrenal primario como único mecanismo",
-          "why_not": "La hiperpigmentación y la hiperpotasemia apoyan origen primario. El fallo secundario puede carecer de ellas y la crisis exige tratamiento inmediato.",
+          "vignette": "Una persona tiene debilidad, pérdida de peso y pigmentación de mucosas. El cortisol está bajo, la ACTH elevada y la respuesta a cosintropina es insuficiente.",
+          "discriminator": "Fallo suprarrenal demostrado con ACTH elevada",
+          "explanation": "Fallo suprarrenal demostrado con ACTH elevada. Este patrón orienta a Enfermedad de Addison. La insuficiencia cortical primaria reduce cortisol y aldosterona; la pérdida de volumen causa hipotensión y el aumento de ACTH asociado estimula pigmentación de piel y mucosas.",
+          "confusable_with": "Insuficiencia suprarrenal central",
+          "why_not": "La ACTH alta y la hiperpigmentación, junto con pérdida mineralocorticoide, favorecen Addison. El fallo central tiene ACTH baja o inapropiadamente normal y no requiere hiperpotasemia ni hiperpigmentación.",
           "facts": [
             {
               "field": "pattern",
@@ -2864,23 +3074,41 @@
               "field": "source_corrections.0.reason",
               "text": "Se precisa la reposición crónica del caso de p279 y se conserva tratamiento inmediato de crisis sin esperar confirmación."
             }
+          ],
+          "source_evidence": [
+            {
+              "page": 279,
+              "quote": "ón cutánea y mucosas. 2. ACTH sérico: En una insuficiencia primaria el ACTH está en> • La deficiencia de aldosterona produce una 10"
+            }
           ]
         }
-      }
+      },
+      "sources": [
+        {
+          "label": "Edwino.pdf",
+          "pages": [
+            279
+          ]
+        },
+        {
+          "label": "Endocrine Society: insuficiencia suprarrenal primaria",
+          "url": "https://www.endocrine.org/clinical-practice-guidelines/primary-adrenal-insufficiency"
+        }
+      ]
     },
     {
       "id": "10.08-01",
       "parent_topic_id": "10.08-01",
       "block_id": "10.08",
-      "name": "Demostrar origen hipofisario de un hipercortisolismo dependiente",
-      "answer_kind": "decision",
+      "name": "Enfermedad de Cushing",
+      "answer_kind": "diagnosis",
       "variants": {
         "easy": {
-          "vignette": "Una adulta con hipercortisolismo confirmado tiene ACTH no suprimida. La imagen muestra una lesión hipofisaria pequeña; se necesita demostrar que esa lesión explica la secreción hormonal. ¿Qué acción o clasificación corresponde?",
-          "discriminator": "ACTH no suprimida",
-          "explanation": "El dato decisivo es ACTH no suprimida. Un adenoma hipofisario secretor de ACTH estimula ambas suprarrenales y produce cortisol en exceso; demostrar el origen evita atribuir causalidad a un incidentaloma hipofisario. Confirmar origen dependiente de ACTH con endocrinología y estudios dirigidos; valorar cirugía transesfenoidal cuando se establece origen hipofisario.",
-          "confusable_with": "Síndrome de Cushing por cualquier causa",
-          "why_not": "La enfermedad de Cushing exige origen hipofisario de ACTH. La imagen aislada no prueba causalidad ni excluye otras fuentes del exceso hormonal.",
+          "vignette": "Una persona tiene estrías violáceas, debilidad proximal e hipercortisolismo dependiente de ACTH. El estudio de localización demuestra fuente hipofisaria y el tumor resecado confirma un adenoma secretor de ACTH.",
+          "discriminator": "Adenoma hipofisario secretor de ACTH demostrado",
+          "explanation": "Adenoma hipofisario secretor de ACTH demostrado. Un adenoma hipofisario secretor de ACTH estimula ambas suprarrenales y produce cortisol en exceso; demostrar el origen evita atribuir causalidad a un incidentaloma hipofisario.",
+          "confusable_with": "Síndrome de Cushing de otra fuente",
+          "why_not": "La enfermedad de Cushing exige origen hipofisario de ACTH, no solo una imagen incidental. El contexto y los estudios de localización deben concordar y una prueba aislada no demuestra causalidad.",
           "facts": [
             {
               "field": "pattern",
@@ -2913,11 +3141,11 @@
           ]
         },
         "medium": {
-          "vignette": "Una persona con hipercortisolismo dependiente de ACTH tiene imagen hipofisaria pequeña y resultados discordantes. Se amplía la evaluación antes de atribuirle la causa. ¿Qué acción o clasificación corresponde?",
-          "discriminator": "Lesión pequeña con pruebas discordantes",
-          "explanation": "El dato decisivo es Lesión pequeña con pruebas discordantes. Una lesión visible no siempre es la fuente. Ampliar pruebas especializadas.",
-          "confusable_with": "Síndrome de Cushing por cualquier causa",
-          "why_not": "La enfermedad de Cushing exige origen hipofisario de ACTH. La imagen aislada no prueba causalidad ni excluye otras fuentes del exceso hormonal.",
+          "vignette": "Una persona con hipercortisolismo confirmado y ACTH no suprimida tiene una lesión hipofisaria pequeña. El muestreo especializado demuestra origen central de ACTH, concordante con el resto de la evaluación.",
+          "discriminator": "Origen hipofisario demostrado en hipercortisolismo dependiente de ACTH",
+          "explanation": "Origen hipofisario demostrado en hipercortisolismo dependiente de ACTH. Este patrón orienta a Enfermedad de Cushing. Un adenoma hipofisario secretor de ACTH estimula ambas suprarrenales y produce cortisol en exceso; demostrar el origen evita atribuir causalidad a un incidentaloma hipofisario.",
+          "confusable_with": "Síndrome de Cushing de otra fuente",
+          "why_not": "La enfermedad de Cushing exige origen hipofisario de ACTH, no solo una imagen incidental. El contexto y los estudios de localización deben concordar y una prueba aislada no demuestra causalidad.",
           "facts": [
             {
               "field": "pattern",
@@ -2978,11 +3206,11 @@
           ]
         },
         "contrast": {
-          "vignette": "Se confirma hipercortisolismo dependiente de ACTH y una lesión hipofisaria pequeña. El equipo debe decidir si una respuesta a dexametasona en dosis altas y la imagen bastan para atribuir el origen. ¿Qué acción o clasificación corresponde?",
-          "discriminator": "Prueba de localización que no demuestra causalidad por sí sola",
-          "explanation": "La imagen pequeña y las pruebas de localización no bastan siempre para demostrar origen hipofisario. Se amplían pruebas especializadas si los resultados son discordantes; no se aplica la conclusión automática del resumen.",
-          "confusable_with": "Síndrome de Cushing por cualquier causa",
-          "why_not": "La enfermedad de Cushing exige origen hipofisario de ACTH. La imagen aislada no prueba causalidad ni excluye otras fuentes del exceso hormonal.",
+          "vignette": "Después de una remisión tras resecar un adenoma hipofisario secretor de ACTH reaparecen debilidad proximal, estrías y exceso bioquímico de cortisol. La reevaluación confirma recurrencia de la secreción hipofisaria.",
+          "discriminator": "Recurrencia clínica y bioquímica de una fuente hipofisaria establecida",
+          "explanation": "Recurrencia clínica y bioquímica de una fuente hipofisaria establecida. Este patrón orienta a Enfermedad de Cushing. Un adenoma hipofisario secretor de ACTH estimula ambas suprarrenales y produce cortisol en exceso; demostrar el origen evita atribuir causalidad a un incidentaloma hipofisario.",
+          "confusable_with": "Síndrome de Cushing de otra fuente",
+          "why_not": "La enfermedad de Cushing exige origen hipofisario de ACTH, no solo una imagen incidental. El contexto y los estudios de localización deben concordar y una prueba aislada no demuestra causalidad.",
           "facts": [
             {
               "field": "pattern",
@@ -3042,7 +3270,19 @@
             }
           ]
         }
-      }
+      },
+      "sources": [
+        {
+          "label": "Edwino.pdf",
+          "pages": [
+            280
+          ]
+        },
+        {
+          "label": "Pituitary Society 2021: enfermedad de Cushing",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8743006/"
+        }
+      ]
     },
     {
       "id": "10.08-02",
@@ -3230,7 +3470,15 @@
             }
           ]
         }
-      }
+      },
+      "sources": [
+        {
+          "label": "Edwino.pdf",
+          "pages": [
+            301
+          ]
+        }
+      ]
     },
     {
       "id": "10.09-01",
@@ -3244,7 +3492,7 @@
           "discriminator": "renina está suprimida",
           "explanation": "El dato decisivo es renina está suprimida. La secreción autónoma de aldosterona retiene sodio y aumenta pérdida renal de potasio; la expansión suprime renina y mantiene hipertensión aunque no siempre haya hipopotasemia. Revisar fármacos y condiciones de muestreo, medir relación aldosterona-renina e indicar confirmación y estudio de lateralidad con endocrinología según hallazgos.",
           "confusable_with": "Feocromocitoma",
-          "why_not": "La aldosterona alta con renina suprimida y posible hipopotasemia orienta a hiperaldosteronismo. La lateralidad y la operabilidad deciden el tratamiento.",
+          "why_not": "La renina suprimida con aldosterona alta y posible hipopotasemia orienta a hiperaldosteronismo. Las crisis de cefalea, sudoración y taquicardia orientan a catecolaminas.",
           "facts": [
             {
               "field": "pattern",
@@ -3281,11 +3529,11 @@
           ]
         },
         "medium": {
-          "vignette": "Se demuestra producción unilateral de aldosterona en una persona candidata a cirugía. Se valora adrenalectomía.",
-          "discriminator": "Origen unilateral demostrado",
-          "explanation": "El dato decisivo es Origen unilateral demostrado. Puede corregir secreción autónoma. Valorar adrenalectomía.",
+          "vignette": "Una persona con hipertensión resistente e hipopotasemia tiene renina suprimida y aldosterona inapropiadamente alta. El estudio demuestra producción unilateral.",
+          "discriminator": "Exceso autónomo de aldosterona localizado en un lado",
+          "explanation": "Exceso autónomo de aldosterona localizado en un lado. Este patrón orienta a Hiperaldosteronismo. La secreción autónoma de aldosterona retiene sodio y aumenta pérdida renal de potasio; la expansión suprime renina y mantiene hipertensión aunque no siempre haya hipopotasemia.",
           "confusable_with": "Feocromocitoma",
-          "why_not": "La aldosterona alta con renina suprimida y posible hipopotasemia orienta a hiperaldosteronismo. La lateralidad y la operabilidad deciden el tratamiento.",
+          "why_not": "La renina suprimida con aldosterona alta y posible hipopotasemia orienta a hiperaldosteronismo. Las crisis de cefalea, sudoración y taquicardia orientan a catecolaminas.",
           "facts": [
             {
               "field": "pattern",
@@ -3362,11 +3610,11 @@
           ]
         },
         "contrast": {
-          "vignette": "Una persona con exceso de aldosterona tiene enfermedad bilateral o no es operable. Se valora antagonista mineralocorticoide.",
-          "discriminator": "Enfermedad bilateral o sin opción quirúrgica",
-          "explanation": "El dato decisivo es Enfermedad bilateral o sin opción quirúrgica. Bloquea el efecto de aldosterona. Valorar antagonista mineralocorticoide.",
+          "vignette": "Una persona tiene hipertensión, debilidad e hipopotasemia. La aldosterona es alta con renina suprimida y se demuestra enfermedad bilateral, en vez de una única fuente lateralizada.",
+          "discriminator": "Exceso de aldosterona bilateral",
+          "explanation": "Exceso de aldosterona bilateral. Este patrón orienta a Hiperaldosteronismo. La secreción autónoma de aldosterona retiene sodio y aumenta pérdida renal de potasio; la expansión suprime renina y mantiene hipertensión aunque no siempre haya hipopotasemia.",
           "confusable_with": "Feocromocitoma",
-          "why_not": "La aldosterona alta con renina suprimida y posible hipopotasemia orienta a hiperaldosteronismo. La lateralidad y la operabilidad deciden el tratamiento.",
+          "why_not": "La renina suprimida con aldosterona alta y posible hipopotasemia orienta a hiperaldosteronismo. Las crisis de cefalea, sudoración y taquicardia orientan a catecolaminas.",
           "facts": [
             {
               "field": "pattern",
@@ -3442,7 +3690,23 @@
             }
           ]
         }
-      }
+      },
+      "sources": [
+        {
+          "label": "Edwino.pdf",
+          "pages": [
+            286
+          ]
+        },
+        {
+          "label": "Endocrine Society 2025: aldosteronismo primario",
+          "url": "https://www.endocrine.org/clinical-practice-guidelines/primary-aldosteronism-2"
+        },
+        {
+          "label": "Consenso 2021: progresión corticotropa tras adrenalectomía bilateral",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8060870/"
+        }
+      ]
     },
     {
       "id": "10.09-02",
@@ -3456,7 +3720,7 @@
           "discriminator": "cefalea, palpitaciones y sudoración",
           "explanation": "El dato decisivo es cefalea, palpitaciones y sudoración. La secreción excesiva de catecolaminas por células cromafines genera vasoconstricción y estimulación cardíaca episódicas; la manipulación del tumor puede desencadenar una crisis grave. Medir metanefrinas apropiadas y, si apoyan el diagnóstico, localizar con imagen. Preparar tratamiento con bloqueo alfa y reposición de volumen antes de cirugía especializada.",
           "confusable_with": "Hiperaldosteronismo",
-          "why_not": "La tríada episódica y los picos de presión orientan a catecolaminas. La renina suprimida con aldosterona alta plantea un mecanismo diferente.",
+          "why_not": "Las crisis autonómicas y las metanefrinas orientan a feocromocitoma. El exceso de aldosterona se reconoce por renina suprimida y alteraciones de potasio, no por ese patrón catecolaminérgico.",
           "facts": [
             {
               "field": "pattern",
@@ -3489,11 +3753,11 @@
           ]
         },
         "medium": {
-          "vignette": "Una persona con exceso catecolaminérgico necesita betabloqueo por taquicardia. Se verifica antes un bloqueo alfa adecuado.",
-          "discriminator": "Secuencia alfa antes de beta",
-          "explanation": "El dato decisivo es Secuencia alfa antes de beta. El bloqueo beta inicial deja vasoconstricción alfa sin oposición. Añadirlo solo después de bloqueo alfa adecuado.",
+          "vignette": "Una persona joven con familiares afectados tiene crisis de cefalea, sudoración y palpitaciones. Las metanefrinas están elevadas y la imagen localiza un tumor suprarrenal.",
+          "discriminator": "Síndrome catecolaminérgico con evidencia bioquímica y adrenal",
+          "explanation": "Síndrome catecolaminérgico con evidencia bioquímica y adrenal. Este patrón orienta a Feocromocitoma. La secreción excesiva de catecolaminas por células cromafines genera vasoconstricción y estimulación cardíaca episódicas; la manipulación del tumor puede desencadenar una crisis grave.",
           "confusable_with": "Hiperaldosteronismo",
-          "why_not": "La tríada episódica y los picos de presión orientan a catecolaminas. La renina suprimida con aldosterona alta plantea un mecanismo diferente.",
+          "why_not": "Las crisis autonómicas y las metanefrinas orientan a feocromocitoma. El exceso de aldosterona se reconoce por renina suprimida y alteraciones de potasio, no por ese patrón catecolaminérgico.",
           "facts": [
             {
               "field": "pattern",
@@ -3566,11 +3830,11 @@
           ]
         },
         "contrast": {
-          "vignette": "Una persona joven con episodios de cefalea, sudoración y picos de presión tiene historia familiar. Se valora estudio genético.",
-          "discriminator": "Crisis catecolaminérgicas con riesgo hereditario",
-          "explanation": "El dato decisivo es Crisis catecolaminérgicas con riesgo hereditario. Puede existir síndrome hereditario. Valorar estudio genético.",
+          "vignette": "Una persona con hipertensión difícil de controlar y taquicardia tiene episodios de sudoración intensa. Se encuentran metanefrinas elevadas y una masa suprarrenal antes de planear una intervención.",
+          "discriminator": "Tumor adrenal productor de catecolaminas",
+          "explanation": "Tumor adrenal productor de catecolaminas. Este patrón orienta a Feocromocitoma. La secreción excesiva de catecolaminas por células cromafines genera vasoconstricción y estimulación cardíaca episódicas; la manipulación del tumor puede desencadenar una crisis grave.",
           "confusable_with": "Hiperaldosteronismo",
-          "why_not": "La tríada episódica y los picos de presión orientan a catecolaminas. La renina suprimida con aldosterona alta plantea un mecanismo diferente.",
+          "why_not": "Las crisis autonómicas y las metanefrinas orientan a feocromocitoma. El exceso de aldosterona se reconoce por renina suprimida y alteraciones de potasio, no por ese patrón catecolaminérgico.",
           "facts": [
             {
               "field": "pattern",
@@ -3642,7 +3906,19 @@
             }
           ]
         }
-      }
+      },
+      "sources": [
+        {
+          "label": "Edwino.pdf",
+          "pages": [
+            285
+          ]
+        },
+        {
+          "label": "NCI, Pheochromocytoma and Paraganglioma Treatment PDQ",
+          "url": "https://www.cancer.gov/types/pheochromocytoma/hp/pheochromocytoma-treatment-pdq"
+        }
+      ]
     },
     {
       "id": "10.10-01",
@@ -3655,8 +3931,8 @@
           "vignette": "Una adulta presenta amenorrea y secreción láctea fuera de lactancia. Se revisa embarazo, función tiroidea y medicamentos; además refiere cefalea sin pérdida visual documentada.",
           "discriminator": "amenorrea y secreción láctea",
           "explanation": "El dato decisivo es amenorrea y secreción láctea. La prolactina elevada inhibe GnRH y reduce función gonadal; puede resultar de embarazo, fármacos, alteración sistémica o lesión hipofisaria, con riesgo compresivo en tumores grandes. Descartar embarazo y causas farmacológicas o sistémicas, repetir prolactina según contexto y valorar macroprolactina. Solicitar resonancia cuando esté indicada por elevación persistente o síntomas.",
-          "confusable_with": "Amenorrea atribuida automáticamente a embarazo",
-          "why_not": "La prolactina elevada puede suprimir el eje reproductivo. Embarazo, tiroides y fármacos deben revisarse; los síntomas visuales añaden urgencia.",
+          "confusable_with": "Amenorrea hipotalámica funcional",
+          "why_not": "La prolactina elevada puede suprimir el eje gonadal y producir galactorrea. Una causa hipotalámica funcional requiere otro contexto y no explica por sí sola esa elevación confirmada.",
           "facts": [
             {
               "field": "pattern",
@@ -3689,11 +3965,11 @@
           ]
         },
         "medium": {
-          "vignette": "Una persona con prolactina elevada y amenorrea desarrolla alteración campimétrica o sospecha de apoplejía. Se refiere de urgencia.",
-          "discriminator": "Hiperprolactinemia con compromiso visual",
-          "explanation": "El dato decisivo es Hiperprolactinemia con compromiso visual. Puede haber compromiso quiasmático o agudo. Referir urgente.",
-          "confusable_with": "Amenorrea atribuida automáticamente a embarazo",
-          "why_not": "La prolactina elevada puede suprimir el eje reproductivo. Embarazo, tiroides y fármacos deben revisarse; los síntomas visuales añaden urgencia.",
+          "vignette": "Una persona presenta amenorrea, galactorrea y alteración del campo visual. La prolactina permanece elevada en pruebas confirmatorias y se investiga una lesión hipofisaria.",
+          "discriminator": "Elevación confirmada con manifestaciones compresivas",
+          "explanation": "Elevación confirmada con manifestaciones compresivas. Este patrón orienta a Hiperprolactinemia. La prolactina elevada inhibe GnRH y reduce función gonadal; puede resultar de embarazo, fármacos, alteración sistémica o lesión hipofisaria, con riesgo compresivo en tumores grandes.",
+          "confusable_with": "Amenorrea hipotalámica funcional",
+          "why_not": "La prolactina elevada puede suprimir el eje gonadal y producir galactorrea. Una causa hipotalámica funcional requiere otro contexto y no explica por sí sola esa elevación confirmada.",
           "facts": [
             {
               "field": "pattern",
@@ -3766,11 +4042,11 @@
           ]
         },
         "contrast": {
-          "vignette": "Se confirma un prolactinoma con indicación terapéutica. Se valora agonista dopaminérgico después de revisar causas y extensión.",
-          "discriminator": "Prolactinoma confirmado con indicación de tratamiento",
-          "explanation": "El dato decisivo es Prolactinoma confirmado con indicación de tratamiento. Puede reducir hormona y tamaño. Valorar agonista dopaminérgico.",
-          "confusable_with": "Amenorrea atribuida automáticamente a embarazo",
-          "why_not": "La prolactina elevada puede suprimir el eje reproductivo. Embarazo, tiroides y fármacos deben revisarse; los síntomas visuales añaden urgencia.",
+          "vignette": "Después de iniciar un fármaco que interfiere con dopamina, una persona desarrolla ausencia de ciclos y secreción láctea. Se confirma prolactina elevada y se revisan otras causas reversibles.",
+          "discriminator": "Elevación de prolactina asociada a exposición farmacológica",
+          "explanation": "Elevación de prolactina asociada a exposición farmacológica. Este patrón orienta a Hiperprolactinemia. La prolactina elevada inhibe GnRH y reduce función gonadal; puede resultar de embarazo, fármacos, alteración sistémica o lesión hipofisaria, con riesgo compresivo en tumores grandes.",
+          "confusable_with": "Amenorrea hipotalámica funcional",
+          "why_not": "La prolactina elevada puede suprimir el eje gonadal y producir galactorrea. Una causa hipotalámica funcional requiere otro contexto y no explica por sí sola esa elevación confirmada.",
           "facts": [
             {
               "field": "pattern",
@@ -3842,7 +4118,20 @@
             }
           ]
         }
-      }
+      },
+      "sources": [
+        {
+          "label": "Edwino.pdf",
+          "pages": [
+            288,
+            289
+          ]
+        },
+        {
+          "label": "Pituitary Society 2023: prolactinoma",
+          "url": "https://www.nature.com/articles/s41574-023-00886-5"
+        }
+      ]
     },
     {
       "id": "10.11-01",
@@ -3855,8 +4144,8 @@
           "vignette": "Un adulto nota que sus anillos y zapatos ya no le quedan. Tiene prognatismo, sudoración y voz más grave; se investigan cambios graduales y posibles síntomas visuales.",
           "discriminator": "anillos y zapatos ya no le quedan",
           "explanation": "El dato decisivo es anillos y zapatos ya no le quedan. El exceso de GH después del cierre epifisario eleva IGF-1 y estimula crecimiento de tejidos blandos y hueso acral; también induce resistencia insulínica y complicaciones sistémicas. Medir IGF-1 e indicar confirmación bioquímica y resonancia hipofisaria según resultados. Referir para valorar cirugía y control de comorbilidades.",
-          "confusable_with": "Gigantismo como término para cualquier exceso de GH",
-          "why_not": "El crecimiento acral del adulto orienta a acromegalia. La confirmación hormonal y el estado del tumor determinan tratamiento, y la visión requiere prioridad.",
+          "confusable_with": "Gigantismo",
+          "why_not": "El crecimiento acral del adulto y la evidencia de exceso de GH orientan a acromegalia. El gigantismo se relaciona con exceso antes de cierre de crecimiento longitudinal y no es un sinónimo de todos los casos.",
           "facts": [
             {
               "field": "pattern",
@@ -3889,11 +4178,11 @@
           ]
         },
         "medium": {
-          "vignette": "Una persona con crecimiento de manos y pies desarrolla alteración visual. Se prioriza evaluación de posible compresión del quiasma.",
-          "discriminator": "Fenotipo acral con alteración visual",
-          "explanation": "El dato decisivo es Fenotipo acral con alteración visual. Un macroadenoma puede afectar visión. Valorar compresión del quiasma de forma prioritaria.",
-          "confusable_with": "Gigantismo como término para cualquier exceso de GH",
-          "why_not": "El crecimiento acral del adulto orienta a acromegalia. La confirmación hormonal y el estado del tumor determinan tratamiento, y la visión requiere prioridad.",
+          "vignette": "Una persona con macroglosia y voz progresivamente grave presenta alteración visual. Se reconocen crecimiento de manos y pies y evidencia de exceso de GH en evaluación endocrina.",
+          "discriminator": "Fenotipo acral con posible compresión quiasmática",
+          "explanation": "Fenotipo acral con posible compresión quiasmática. Este patrón orienta a Acromegalia. El exceso de GH después del cierre epifisario eleva IGF-1 y estimula crecimiento de tejidos blandos y hueso acral; también induce resistencia insulínica y complicaciones sistémicas.",
+          "confusable_with": "Gigantismo",
+          "why_not": "El crecimiento acral del adulto y la evidencia de exceso de GH orientan a acromegalia. El gigantismo se relaciona con exceso antes de cierre de crecimiento longitudinal y no es un sinónimo de todos los casos.",
           "facts": [
             {
               "field": "pattern",
@@ -3966,11 +4255,11 @@
           ]
         },
         "contrast": {
-          "vignette": "Después de cirugía persiste exceso hormonal con rasgos acrales. Se valora tratamiento médico específico.",
-          "discriminator": "Persistencia tras cirugía",
-          "explanation": "El dato decisivo es Persistencia tras cirugía. La resección no siempre normaliza secreción. Valorar tratamiento médico específico.",
-          "confusable_with": "Gigantismo como término para cualquier exceso de GH",
-          "why_not": "El crecimiento acral del adulto orienta a acromegalia. La confirmación hormonal y el estado del tumor determinan tratamiento, y la visión requiere prioridad.",
+          "vignette": "Una persona tiene hiperglucemia y cambios graduales del rostro y tejidos blandos. La IGF-1 está elevada y la GH no se suprime de forma apropiada durante evaluación confirmatoria.",
+          "discriminator": "Confirmación hormonal en presentación con repercusión metabólica",
+          "explanation": "Confirmación hormonal en presentación con repercusión metabólica. Este patrón orienta a Acromegalia. El exceso de GH después del cierre epifisario eleva IGF-1 y estimula crecimiento de tejidos blandos y hueso acral; también induce resistencia insulínica y complicaciones sistémicas.",
+          "confusable_with": "Gigantismo",
+          "why_not": "El crecimiento acral del adulto y la evidencia de exceso de GH orientan a acromegalia. El gigantismo se relaciona con exceso antes de cierre de crecimiento longitudinal y no es un sinónimo de todos los casos.",
           "facts": [
             {
               "field": "pattern",
@@ -4042,7 +4331,19 @@
             }
           ]
         }
-      }
+      },
+      "sources": [
+        {
+          "label": "Edwino.pdf",
+          "pages": [
+            257
+          ]
+        },
+        {
+          "label": "Endocrine Society: acromegalia",
+          "url": "https://www.endocrine.org/clinical-practice-guidelines/acromegaly"
+        }
+      ]
     },
     {
       "id": "10.11-02",
@@ -4055,8 +4356,8 @@
           "vignette": "Un adulto con cálculos renales repetidos presenta calcio elevado de forma persistente y PTH que no está suprimida. Se revisan función renal, vitamina D y afectación ósea.",
           "discriminator": "PTH que no está suprimida",
           "explanation": "El dato decisivo es PTH que no está suprimida. La secreción paratiroidea inapropiada eleva calcio mediante efectos óseos y renales; el exceso puede causar litiasis y pérdida ósea, mientras PTH debería suprimirse ante hipercalcemia. Confirmar hipercalcemia con PTH inapropiada y excluir causas alternativas; valorar riñón y hueso. Referir para paratiroidectomía por litiasis renal recurrente, si se confirma hiperparatiroidismo primario y es candidato.",
-          "confusable_with": "Hipercalcemia con PTH suprimida",
-          "why_not": "La PTH inapropiadamente no suprimida durante hipercalcemia orienta a hiperparatiroidismo. La gravedad y la elegibilidad quirúrgica cambian el manejo.",
+          "confusable_with": "Hipercalcemia no mediada por PTH",
+          "why_not": "La falta de supresión de PTH durante hipercalcemia orienta a hiperparatiroidismo. En muchas causas no paratiroideas la PTH debe estar suprimida.",
           "facts": [
             {
               "field": "pattern",
@@ -4097,11 +4398,11 @@
           ]
         },
         "medium": {
-          "vignette": "Una persona con calcio alto y PTH no suprimida presenta hipercalcemia sintomática importante. Se corrige deshidratación con tratamiento según gravedad.",
-          "discriminator": "Hipercalcemia sintomática con PTH no suprimida",
-          "explanation": "El dato decisivo es Hipercalcemia sintomática con PTH no suprimida. Puede causar alteración neurológica o renal. Corregir deshidratación y tratar de forma urgente según gravedad.",
-          "confusable_with": "Hipercalcemia con PTH suprimida",
-          "why_not": "La PTH inapropiadamente no suprimida durante hipercalcemia orienta a hiperparatiroidismo. La gravedad y la elegibilidad quirúrgica cambian el manejo.",
+          "vignette": "Una persona presenta deshidratación y síntomas por calcio muy elevado. La PTH no está suprimida, pese al estímulo que debería inhibirla.",
+          "discriminator": "Hipercalcemia sintomática con PTH inapropiadamente conservada",
+          "explanation": "Hipercalcemia sintomática con PTH inapropiadamente conservada. Este patrón orienta a Hiperparatiroidismo. La secreción paratiroidea inapropiada eleva calcio mediante efectos óseos y renales; el exceso puede causar litiasis y pérdida ósea, mientras PTH debería suprimirse ante hipercalcemia.",
+          "confusable_with": "Hipercalcemia no mediada por PTH",
+          "why_not": "La falta de supresión de PTH durante hipercalcemia orienta a hiperparatiroidismo. En muchas causas no paratiroideas la PTH debe estar suprimida.",
           "facts": [
             {
               "field": "pattern",
@@ -4182,11 +4483,11 @@
           ]
         },
         "contrast": {
-          "vignette": "Una persona con enfermedad paratiroidea no se somete a cirugía. Se mantiene vigilancia y nutrición apropiada de calcio, sin restricción indiscriminada.",
-          "discriminator": "Seguimiento sin cirugía",
-          "explanation": "El dato decisivo es Seguimiento sin cirugía. No se recomienda restricción indiscriminada de calcio. Mantener vigilancia y nutrición de calcio apropiada.",
-          "confusable_with": "Hipercalcemia con PTH suprimida",
-          "why_not": "La PTH inapropiadamente no suprimida durante hipercalcemia orienta a hiperparatiroidismo. La gravedad y la elegibilidad quirúrgica cambian el manejo.",
+          "vignette": "Una persona tiene pérdida de densidad ósea y calcio persistentemente elevado. La PTH permanece alta o inapropiadamente normal y se evalúan también riñón y vitamina D.",
+          "discriminator": "Presentación ósea del exceso de PTH",
+          "explanation": "Presentación ósea del exceso de PTH. Este patrón orienta a Hiperparatiroidismo. La secreción paratiroidea inapropiada eleva calcio mediante efectos óseos y renales; el exceso puede causar litiasis y pérdida ósea, mientras PTH debería suprimirse ante hipercalcemia.",
+          "confusable_with": "Hipercalcemia no mediada por PTH",
+          "why_not": "La falta de supresión de PTH durante hipercalcemia orienta a hiperparatiroidismo. En muchas causas no paratiroideas la PTH debe estar suprimida.",
           "facts": [
             {
               "field": "pattern",
@@ -4266,21 +4567,45 @@
             }
           ]
         }
-      }
+      },
+      "sources": [
+        {
+          "label": "Edwino.pdf",
+          "pages": [
+            287
+          ]
+        },
+        {
+          "label": "Endocrine Society, Primary Hyperparathyroidism",
+          "url": "https://www.endocrine.org/patient-engagement/endocrine-library/primary-hyperparathyroidism"
+        },
+        {
+          "label": "Quinto taller internacional 2022: hiperparatiroidismo primario",
+          "url": "https://onlinelibrary.wiley.com/doi/full/10.1002/jbmr.4677"
+        },
+        {
+          "label": "Estudio de QTc en hiperparatiroidismo primario",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8947224/"
+        },
+        {
+          "label": "Society for Endocrinology: hipercalcemia aguda",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5314807/"
+        }
+      ]
     },
     {
       "id": "10.11-03",
       "parent_topic_id": "10.11-03",
       "block_id": "10.11",
-      "name": "Clasificar neoplasia endocrina múltiple y prevenir crisis",
-      "answer_kind": "decision",
+      "name": "Neoplasia endocrina múltiple",
+      "answer_kind": "diagnosis",
       "variants": {
         "easy": {
-          "vignette": "Una adulta tiene calcio elevado con PTH no suprimida y un tumor hipofisario. Un familiar presentó un tumor pancreático; se investiga una predisposición hereditaria común. ¿Qué acción o clasificación corresponde a este contexto?",
+          "vignette": "Una adulta tiene calcio elevado con PTH no suprimida y un tumor hipofisario. Un familiar presentó un tumor pancreático; se investiga una predisposición hereditaria común.",
           "discriminator": "PTH no suprimida y un tumor hipofisario",
           "explanation": "El dato decisivo es PTH no suprimida y un tumor hipofisario. Variantes germinales predisponen a tumores endocrinos múltiples con herencia dominante; el conjunto de órganos afectados orienta el síndrome y determina vigilancia preventiva del paciente y familia. Reconocer un patrón compatible con MEN1 y referir a endocrinología y genética. Confirmar predisposición y buscar de forma dirigida lesiones paratiroideas, hipofisarias y duodenopancreáticas y familiares en riesgo.",
-          "confusable_with": "Un único subtipo de MEN para toda combinación tumoral",
-          "why_not": "Los órganos y rasgos asociados distinguen los subtipos. MEN1 y MEN2 tienen mecanismos y prioridades diferentes; la secreción catecolaminérgica modifica la seguridad quirúrgica.",
+          "confusable_with": "Tumor endocrino esporádico aislado",
+          "why_not": "La combinación de tumores y rasgos heredables de órganos distintos orienta a MEN. Un tumor esporádico aislado no explica el patrón multiorgánico; los subtipos se distinguen por los órganos y rasgos asociados.",
           "facts": [
             {
               "field": "pattern",
@@ -4313,11 +4638,11 @@
           ]
         },
         "medium": {
-          "vignette": "Una persona con carcinoma medular tiroideo y riesgo de feocromocitoma va a cirugía. Se descarta y trata secreción catecolaminérgica antes de operar tiroides. ¿Qué acción o clasificación corresponde a este contexto?",
-          "discriminator": "Riesgo catecolaminérgico antes de cirugía tiroidea",
-          "explanation": "El dato decisivo es Riesgo catecolaminérgico antes de cirugía tiroidea. La cirugía puede precipitar crisis. Descartar y tratar secreción catecolaminérgica antes de cirugía tiroidea.",
-          "confusable_with": "Un único subtipo de MEN para toda combinación tumoral",
-          "why_not": "Los órganos y rasgos asociados distinguen los subtipos. MEN1 y MEN2 tienen mecanismos y prioridades diferentes; la secreción catecolaminérgica modifica la seguridad quirúrgica.",
+          "vignette": "Una persona tiene tumor tiroideo medular y feocromocitoma, con otro trastorno paratiroideo en la evaluación familiar. Se investiga una predisposición endocrina hereditaria común.",
+          "discriminator": "Combinación de neoplasias endocrinas de varios órganos",
+          "explanation": "Combinación de neoplasias endocrinas de varios órganos. Este patrón orienta a Neoplasia endocrina múltiple. Variantes germinales predisponen a tumores endocrinos múltiples con herencia dominante; el conjunto de órganos afectados orienta el síndrome y determina vigilancia preventiva del paciente y familia.",
+          "confusable_with": "Tumor endocrino esporádico aislado",
+          "why_not": "La combinación de tumores y rasgos heredables de órganos distintos orienta a MEN. Un tumor esporádico aislado no explica el patrón multiorgánico; los subtipos se distinguen por los órganos y rasgos asociados.",
           "facts": [
             {
               "field": "pattern",
@@ -4390,11 +4715,11 @@
           ]
         },
         "contrast": {
-          "vignette": "Una persona con tumores endocrinos presenta neuromas mucosos y hábito marfanoide. Se evalúa el subtipo MEN2B. ¿Qué acción o clasificación corresponde a este contexto?",
-          "discriminator": "Neuromas mucosos y hábito marfanoide",
-          "explanation": "El dato decisivo es Neuromas mucosos y hábito marfanoide. El patrón cambia riesgos y vigilancia. Valorar MEN2B.",
-          "confusable_with": "Un único subtipo de MEN para toda combinación tumoral",
-          "why_not": "Los órganos y rasgos asociados distinguen los subtipos. MEN1 y MEN2 tienen mecanismos y prioridades diferentes; la secreción catecolaminérgica modifica la seguridad quirúrgica.",
+          "vignette": "Una persona presenta neuromas mucosos y hábito marfanoide junto con tumor tiroideo medular y secreción catecolaminérgica. El conjunto orienta a un subtipo hereditario distinto al de tumores paratiroideos, hipofisarios y pancreáticos.",
+          "discriminator": "Fenotipo de MEN2B dentro de la neoplasia endocrina múltiple",
+          "explanation": "Fenotipo de MEN2B dentro de la neoplasia endocrina múltiple. Este patrón orienta a Neoplasia endocrina múltiple. Variantes germinales predisponen a tumores endocrinos múltiples con herencia dominante; el conjunto de órganos afectados orienta el síndrome y determina vigilancia preventiva del paciente y familia.",
+          "confusable_with": "Tumor endocrino esporádico aislado",
+          "why_not": "La combinación de tumores y rasgos heredables de órganos distintos orienta a MEN. Un tumor esporádico aislado no explica el patrón multiorgánico; los subtipos se distinguen por los órganos y rasgos asociados.",
           "facts": [
             {
               "field": "pattern",
@@ -4466,7 +4791,136 @@
             }
           ]
         }
-      }
+      },
+      "sources": [
+        {
+          "label": "Edwino.pdf",
+          "pages": [
+            295
+          ]
+        },
+        {
+          "label": "NCI PDQ: MEN2",
+          "url": "https://www.cancer.gov/publications/pdq/information-summaries/genetics/men2-hp-pdq"
+        }
+      ]
+    },
+    {
+      "id": "10.07-01-insuficiencia-suprarrenal-central",
+      "parent_topic_id": "10.07-01",
+      "block_id": "10.07",
+      "name": "Insuficiencia suprarrenal central",
+      "answer_kind": "diagnosis",
+      "variants": {
+        "easy": {
+          "vignette": "Después de una hemorragia obstétrica intensa, una persona no establece lactancia y presenta debilidad e hipotensión. El cortisol está bajo y la ACTH baja, con otros déficits hipofisarios.",
+          "discriminator": "Déficit de cortisol con falta de estímulo hipofisario posparto",
+          "explanation": "La falta de ACTH con cortisol bajo localiza el fallo en el eje central. La hemorragia y los déficits hipofisarios orientan a la causa adquirida; no corresponde al patrón de ACTH alta de Addison.",
+          "confusable_with": "Enfermedad de Addison",
+          "why_not": "Addison presenta ACTH elevada por pérdida de retroalimentación y puede causar hiperpigmentación e hiperpotasemia. El fallo central tiene ACTH baja o inapropiadamente normal.",
+          "facts": [
+            {
+              "field": "modifiers.1.factor",
+              "text": "Insuficiencia secundaria"
+            },
+            {
+              "field": "modifiers.1.action",
+              "text": "No exigir hiperpigmentación ni hiperpotasemia."
+            },
+            {
+              "field": "modifiers.1.reason",
+              "text": "La aldosterona y ACTH se comportan diferente."
+            },
+            {
+              "field": "limits",
+              "text": "Los umbrales de cortisol dependen de hora y ensayo; no aplicar una cifra universal."
+            }
+          ],
+          "source_evidence": [
+            {
+              "page": 382,
+              "quote": "de hemorragia postparto. Ausencia de lactancia. • Caída completa o parcial del vello pubiano y axilar. rn Clínico+ demostración de deficienci"
+            }
+          ]
+        },
+        "medium": {
+          "vignette": "Una persona con una lesión hipofisaria presenta cansancio, debilidad e hipotensión. Se demuestran cortisol bajo y ACTH inapropiadamente baja, en vez de la elevación esperada ante falla de la corteza.",
+          "discriminator": "Déficit de cortisol con ACTH inapropiadamente baja",
+          "explanation": "La ACTH baja pese al déficit de cortisol indica insuficiencia central. El contexto hipofisario y la evaluación de otros ejes ayudan a definir la causa.",
+          "confusable_with": "Enfermedad de Addison",
+          "why_not": "Addison presenta ACTH elevada por pérdida de retroalimentación y puede causar hiperpigmentación e hiperpotasemia. El fallo central tiene ACTH baja o inapropiadamente normal.",
+          "facts": [
+            {
+              "field": "modifiers.1.factor",
+              "text": "Insuficiencia secundaria"
+            },
+            {
+              "field": "modifiers.1.action",
+              "text": "No exigir hiperpigmentación ni hiperpotasemia."
+            },
+            {
+              "field": "modifiers.1.reason",
+              "text": "La aldosterona y ACTH se comportan diferente."
+            },
+            {
+              "field": "limits",
+              "text": "Los umbrales de cortisol dependen de hora y ensayo; no aplicar una cifra universal."
+            }
+          ],
+          "source_evidence": [
+            {
+              "page": 279,
+              "quote": "ce una 100 pg/ml, si hay disminución del ACTH es secundaria. hiponatremia junto con sintomatología. • Hipotensión ortostática por depleción de volumen. 3."
+            }
+          ]
+        },
+        "contrast": {
+          "vignette": "Después de uso prolongado de glucocorticoides, una persona desarrolla debilidad y síntomas de déficit de cortisol durante su retirada. El estudio demuestra cortisol bajo con supresión de ACTH.",
+          "discriminator": "Supresión del eje tras glucocorticoide exógeno",
+          "explanation": "Los glucocorticoides pueden suprimir el eje hipotálamo-hipófisis-suprarrenal. El déficit con ACTH suprimida es central; la recuperación y el tratamiento requieren valoración, sin atribuirlo a destrucción suprarrenal primaria.",
+          "confusable_with": "Enfermedad de Addison",
+          "why_not": "Addison presenta ACTH elevada por pérdida de retroalimentación y puede causar hiperpigmentación e hiperpotasemia. El fallo central tiene ACTH baja o inapropiadamente normal.",
+          "facts": [
+            {
+              "field": "modifiers.1.factor",
+              "text": "Insuficiencia secundaria"
+            },
+            {
+              "field": "modifiers.1.action",
+              "text": "No exigir hiperpigmentación ni hiperpotasemia."
+            },
+            {
+              "field": "modifiers.1.reason",
+              "text": "La aldosterona y ACTH se comportan diferente."
+            },
+            {
+              "field": "limits",
+              "text": "Los umbrales de cortisol dependen de hora y ensayo; no aplicar una cifra universal."
+            }
+          ]
+        }
+      },
+      "sources": [
+        {
+          "label": "Edwino.pdf",
+          "pages": [
+            279,
+            382
+          ]
+        },
+        {
+          "label": "Endocrine Society: insuficiencia suprarrenal primaria",
+          "url": "https://www.endocrine.org/clinical-practice-guidelines/primary-adrenal-insufficiency"
+        },
+        {
+          "label": "ESE y Endocrine Society: insuficiencia suprarrenal inducida por glucocorticoides (2024)",
+          "url": "https://www.endocrine.org/clinical-practice-guidelines/glucocorticoid-induced-adrenal-insufficiency"
+        },
+        {
+          "label": "NICE: insuficiencia suprarrenal secundaria y terciaria (2024)",
+          "url": "https://www.ncbi.nlm.nih.gov/books/NBK609085/"
+        }
+      ]
     }
   ]
 }
