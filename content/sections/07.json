@@ -1,0 +1,532 @@
+{
+  "id": "07",
+  "title": "Coloproctología",
+  "blocks": [
+    {
+      "id": "07.01",
+      "title": "Dolor perianal agudo",
+      "topics": [
+        {
+          "id": "07.01-01",
+          "name": "Absceso anal",
+          "source_pages": [
+            182,
+            183
+          ],
+          "pattern": "Un adulto presenta dolor anal continuo y progresivo con fiebre. Hay una zona perianal roja, edematosa y muy sensible; la defecación aumenta el dolor.",
+          "key_discriminator": "dolor anal continuo y progresivo",
+          "mechanism": "La obstrucción de una glándula anal favorece infección y acumulación de pus; la presión y extensión por espacios perianales producen dolor, inflamación y posible sepsis.",
+          "findings": [
+            {
+              "mechanism": "Colección purulenta",
+              "finding": "Dolor y tumefacción"
+            },
+            {
+              "mechanism": "Infección sistémica",
+              "finding": "Fiebre"
+            }
+          ],
+          "initial_action": "Realizar exploración dirigida y solicitar drenaje oportuno. Valorar imagen en lesiones profundas o complejas y antibiótico cuando exista sepsis, celulitis extensa o inmunocompromiso.",
+          "action_reason": "El control de la colección es el objetivo principal; el antibiótico no sustituye drenaje.",
+          "modifiers": [
+            {
+              "factor": "Sin lesión externa clara y dolor profundo",
+              "action": "Buscar absceso alto con imagen y evaluación especializada.",
+              "reason": "Puede no dar signos superficiales."
+            },
+            {
+              "factor": "Lactante",
+              "action": "Individualizar manejo con cirugía pediátrica.",
+              "reason": "La conducta puede diferir del adulto."
+            }
+          ],
+          "limits": "No forzar anoscopia dolorosa. La recomendación conservadora pediátrica del resumen no debe extrapolarse a toda edad o gravedad.",
+          "evidence": [
+            {
+              "page": 182,
+              "quote": "Dolor intenso, continuo y progresivo"
+            },
+            {
+              "page": 183,
+              "quote": "El objetivo principal del tratamiento es el drenaje inmediato"
+            }
+          ],
+          "source_gaps": []
+        },
+        {
+          "id": "07.01-02",
+          "name": "Quiste pilonidal",
+          "source_pages": [
+            196,
+            197
+          ],
+          "pattern": "Un joven con mucho vello presenta dolor y secreción en el surco interglúteo, por encima del ano. Se observan pequeñas fosetas y una tumefacción sensible.",
+          "key_discriminator": "surco interglúteo, por encima del ano",
+          "mechanism": "La enfermedad de folículos del surco natal genera un seno inflamatorio que puede drenar de forma crónica o formar absceso; la localización lo separa del origen anal.",
+          "findings": [
+            {
+              "mechanism": "Tracto sinusal inflamado",
+              "finding": "Secreción recurrente"
+            },
+            {
+              "mechanism": "Absceso",
+              "finding": "Dolor y edema"
+            }
+          ],
+          "initial_action": "Confirmar la localización clínicamente y drenar si hay absceso. Valorar tratamiento definitivo del seno, higiene y reducción de factores locales tras resolver la fase aguda.",
+          "action_reason": "El absceso requiere control y la enfermedad crónica puede recurrir.",
+          "modifiers": [
+            {
+              "factor": "Orificio cercano al ano o duda de comunicación",
+              "action": "Investigar fístula o absceso anorrectal.",
+              "reason": "El trayecto cambia el tratamiento."
+            }
+          ],
+          "limits": "No asumir que toda secreción sacra es pilonidal; excluir hidradenitis y fístulas. Los antibióticos se seleccionan por contexto.",
+          "evidence": [
+            {
+              "page": 196,
+              "quote": "secreción crónica y dolorosa"
+            },
+            {
+              "page": 197,
+              "quote": "En caso de ir acompañado de absceso: Drenaje"
+            }
+          ],
+          "source_gaps": []
+        }
+      ],
+      "common_problem": "Dolor y tumefacción perianal o sacra.",
+      "mother": {
+        "cue": "La localización permite diferenciar colección anal de enfermedad del surco natal.",
+        "answer": "Supuración anorrectal o pilonidal",
+        "explanation": "La presencia de absceso requiere control del pus y estudio de su origen."
+      }
+    },
+    {
+      "id": "07.02",
+      "title": "Supuración recurrente",
+      "topics": [
+        {
+          "id": "07.02-01",
+          "name": "Fístula anal",
+          "source_pages": [
+            191,
+            192
+          ],
+          "pattern": "Un adulto tuvo un absceso perianal drenado meses atrás. Ahora presenta salida intermitente de pus por un pequeño orificio cutáneo y episodios de dolor cuando se cierra.",
+          "key_discriminator": "salida intermitente de pus",
+          "mechanism": "Un trayecto persistente comunica una cripta o lumen anal con piel después de infección; la relación con esfínteres determina riesgo de recurrencia e incontinencia al tratarlo.",
+          "findings": [
+            {
+              "mechanism": "Comunicación persistente",
+              "finding": "Supuración por orificio externo"
+            },
+            {
+              "mechanism": "Retención en el trayecto",
+              "finding": "Dolor recurrente"
+            }
+          ],
+          "initial_action": "Identificar orificios y valorar trayecto con coloproctología. Usar imagen si es compleja o recurrente y planear tratamiento que controle infección y preserve continencia.",
+          "action_reason": "La anatomía esfinteriana define la técnica segura.",
+          "modifiers": [
+            {
+              "factor": "Fístula simple baja",
+              "action": "Valorar fistulotomía.",
+              "reason": "Puede resolverse sin dividir una proporción importante del esfínter."
+            },
+            {
+              "factor": "Compleja o enfermedad de Crohn",
+              "action": "Individualizar drenaje, setón y tratamiento de base.",
+              "reason": "La sección indiscriminada amenaza continencia."
+            }
+          ],
+          "limits": "La regla de Goodsall orienta, pero no sustituye el estudio de anatomía real.",
+          "evidence": [
+            {
+              "page": 191,
+              "quote": "Supuración crónica a través del orificio secundario"
+            },
+            {
+              "page": 192,
+              "quote": "preservar función del esfínter anal."
+            }
+          ],
+          "source_gaps": []
+        }
+      ],
+      "common_problem": "Orificio perianal con secreción recurrente.",
+      "mother": {
+        "cue": "Un trayecto persistente une el canal anal y la piel.",
+        "answer": "Fístula perianal",
+        "explanation": "La anatomía del esfínter determina tratamiento y riesgo de incontinencia."
+      }
+    },
+    {
+      "id": "07.03",
+      "title": "Sangrado rojo al evacuar",
+      "topics": [
+        {
+          "id": "07.03-01",
+          "name": "Fisura anal",
+          "source_pages": [
+            193,
+            194
+          ],
+          "pattern": "Un adulto estreñido describe dolor cortante durante la evacuación que continúa después. Observa pocas gotas rojas en el papel y un desgarro lineal posterior al inspeccionar el ano.",
+          "key_discriminator": "dolor cortante durante la evacuación",
+          "mechanism": "El desgarro del anodermo causa dolor y espasmo esfinteriano; el espasmo favorece retención de heces y reduce cicatrización, manteniendo un ciclo de traumatismo y dolor.",
+          "findings": [
+            {
+              "mechanism": "Desgarro superficial",
+              "finding": "Sangre roja escasa"
+            },
+            {
+              "mechanism": "Espasmo por dolor",
+              "finding": "Dolor trans y posdefecatorio"
+            }
+          ],
+          "initial_action": "Iniciar fibra, líquidos, ablandamiento de heces y analgesia; valorar baños de asiento. En lesión crónica, considerar relajante tópico antes de intervención.",
+          "action_reason": "Reduce traumatismo y espasmo para permitir cicatrización.",
+          "modifiers": [
+            {
+              "factor": "Fisura lateral o múltiple",
+              "action": "Buscar enfermedad inflamatoria, infección u otra causa.",
+              "reason": "Es un patrón menos típico."
+            },
+            {
+              "factor": "Fracaso médico",
+              "action": "Valorar tratamiento especializado y riesgo de continencia.",
+              "reason": "La esfinterotomía puede curar, pero tiene riesgos."
+            }
+          ],
+          "limits": "Evitar exploraciones instrumentales forzadas cuando el dolor es intenso; no atribuir toda rectorragia a la fisura.",
+          "evidence": [
+            {
+              "page": 193,
+              "quote": "trans y post defecatorio"
+            },
+            {
+              "page": 194,
+              "quote": "iniciar con tratamiento conservador"
+            }
+          ],
+          "source_gaps": []
+        },
+        {
+          "id": "07.03-02",
+          "name": "Enfermedad hemorroidal",
+          "source_pages": [
+            189,
+            190
+          ],
+          "pattern": "Un adulto presenta gotas de sangre roja al final de evacuar, sin dolor importante. Refiere tejido que sale con el esfuerzo y vuelve espontáneamente a su lugar.",
+          "key_discriminator": "vuelve espontáneamente",
+          "mechanism": "El desplazamiento de cojinetes vasculares y la congestión producen sangrado y prolapso; la localización respecto a la línea dentada y reducibilidad determinan síntomas y grado.",
+          "findings": [
+            {
+              "mechanism": "Congestión de cojinetes internos",
+              "finding": "Sangrado indoloro"
+            },
+            {
+              "mechanism": "Soporte alterado",
+              "finding": "Prolapso al evacuar"
+            }
+          ],
+          "initial_action": "Realizar historia y exploración para confirmar origen del sangrado. Iniciar fibra, líquidos y corrección del esfuerzo; valorar procedimiento según grado y respuesta.",
+          "action_reason": "Mejora consistencia de heces y reduce traumatismo y congestión.",
+          "modifiers": [
+            {
+              "factor": "Trombosis externa dolorosa reciente",
+              "action": "Valorar escisión según intensidad y tiempo.",
+              "reason": "El dolor agudo corresponde a un mecanismo distinto."
+            },
+            {
+              "factor": "Prolapso irreductible o fracaso conservador",
+              "action": "Solicitar evaluación para intervención.",
+              "reason": "La enfermedad avanzada puede requerir cirugía."
+            }
+          ],
+          "limits": "No asumir que todo sangrado rectal proviene de hemorroides; edad, anemia y cambios de hábito requieren estudio.",
+          "evidence": [
+            {
+              "page": 189,
+              "quote": "El sangrado es indoloro."
+            },
+            {
+              "page": 190,
+              "quote": "la fibra y los líquidos"
+            }
+          ],
+          "source_gaps": []
+        }
+      ],
+      "common_problem": "Sangrado rojo relacionado con evacuación.",
+      "mother": {
+        "cue": "El dolor y el prolapso orientan lesión del anodermo o cojinetes vasculares.",
+        "answer": "Sangrado anal por causas locales",
+        "explanation": "Se confirma el origen y se buscan datos de alarma antes de atribuirlo a una causa benigna."
+      }
+    },
+    {
+      "id": "07.04",
+      "title": "Dolor abdominal bajo y fiebre",
+      "topics": [
+        {
+          "id": "07.04-01",
+          "name": "Enfermedad diverticular",
+          "source_pages": [
+            187,
+            188
+          ],
+          "pattern": "Un adulto mayor presenta dolor en fosa ilíaca izquierda y fiebre con cambio del hábito intestinal. Hay sensibilidad local; se busca si existe absceso, perforación o solo inflamación pericólica.",
+          "key_discriminator": "fosa ilíaca izquierda y fiebre",
+          "mechanism": "La obstrucción de un divertículo favorece inflamación de pared colónica y puede perforar; la extensión local o libre determina si el cuadro admite manejo conservador o control invasivo.",
+          "findings": [
+            {
+              "mechanism": "Inflamación sigmoidea",
+              "finding": "Dolor izquierdo y fiebre"
+            },
+            {
+              "mechanism": "Perforación contenida",
+              "finding": "Absceso"
+            }
+          ],
+          "initial_action": "Valorar estabilidad y realizar TAC cuando se requiere confirmar o clasificar. Seleccionar manejo ambulatorio u hospitalario por tolerancia, comorbilidad y complicación.",
+          "action_reason": "La extensión por imagen y repercusión sistémica guían tratamiento.",
+          "modifiers": [
+            {
+              "factor": "Absceso relevante",
+              "action": "Valorar drenaje y antibióticos.",
+              "reason": "Se necesita controlar una colección."
+            },
+            {
+              "factor": "Peritonitis o sepsis no controlada",
+              "action": "Solicitar cirugía urgente.",
+              "reason": "Puede existir perforación libre."
+            }
+          ],
+          "limits": "No realizar colonoscopia durante inflamación aguda. Rifaximina, mesalazina y probióticos no son un paquete universal para todos los casos.",
+          "evidence": [
+            {
+              "page": 187,
+              "quote": "Dolor en epigastrio o fosa ilíaca izquierda."
+            },
+            {
+              "page": 188,
+              "quote": "Diverticulitis: Realizar TAC de abdomen"
+            }
+          ],
+          "source_gaps": []
+        }
+      ],
+      "common_problem": "Dolor abdominal izquierdo y fiebre.",
+      "mother": {
+        "cue": "La inflamación de divertículos puede quedar localizada o formar absceso y peritonitis.",
+        "answer": "Diverticulitis y sus complicaciones",
+        "explanation": "La gravedad y la TAC orientan manejo y control del foco."
+      }
+    },
+    {
+      "id": "07.05",
+      "title": "Obstrucción colónica",
+      "topics": [
+        {
+          "id": "07.05-01",
+          "name": "Vólvulo de ciego",
+          "source_pages": [
+            198
+          ],
+          "pattern": "Una adulta presenta distensión y vómitos con dolor progresivo. La imagen muestra un ciego muy dilatado y desplazado con colapso del colon distal; se sospecha torsión intestinal.",
+          "key_discriminator": "ciego muy dilatado y desplazado",
+          "mechanism": "La torsión cecal crea una obstrucción en asa cerrada y puede comprometer pedículo vascular; la isquemia progresa si no se corrige la torsión y el segmento lesionado.",
+          "findings": [
+            {
+              "mechanism": "Asa cerrada",
+              "finding": "Distensión y vómitos"
+            },
+            {
+              "mechanism": "Compromiso vascular",
+              "finding": "Dolor creciente y posible peritonitis"
+            }
+          ],
+          "initial_action": "Iniciar reanimación y solicitar cirugía urgente para definir resección o estrategia apropiada. No usar descompresión endoscópica como manejo habitual del ciego.",
+          "action_reason": "La destorsión endoscópica es difícil y puede retrasar el control definitivo.",
+          "modifiers": [
+            {
+              "factor": "Alto riesgo quirúrgico sin necrosis",
+              "action": "Individualizar técnica de fijación o resección.",
+              "reason": "La condición y viabilidad modifican el procedimiento."
+            }
+          ],
+          "limits": "No extrapolar el algoritmo del sigmoides al ciego; la anatomía y éxito de reducción difieren.",
+          "evidence": [
+            {
+              "page": 198,
+              "quote": "obstrucción intestinal en asa cerrada"
+            },
+            {
+              "page": 198,
+              "quote": "Inicial: Manejo quirúrgico"
+            }
+          ],
+          "source_gaps": []
+        },
+        {
+          "id": "07.05-02",
+          "name": "Vólvulo de sigmoides",
+          "source_pages": [
+            199,
+            200
+          ],
+          "pattern": "Un hombre mayor estreñido presenta gran distensión, dolor y ausencia de evacuaciones. La radiografía muestra un asa en grano de café; no hay peritonitis ni shock inicial.",
+          "key_discriminator": "asa en grano de café",
+          "mechanism": "La torsión del sigmoides sobre su mesenterio bloquea tránsito y drenaje vascular; la descompresión puede resolver la fase aguda si no existe isquemia o perforación.",
+          "findings": [
+            {
+              "mechanism": "Obstrucción en asa cerrada",
+              "finding": "Distensión y falta de heces"
+            },
+            {
+              "mechanism": "Torsión mesentérica",
+              "finding": "Riesgo de isquemia"
+            }
+          ],
+          "initial_action": "Reanimar y valorar destorsión y descompresión endoscópica urgente si no hay signos de isquemia o perforación. Planear tratamiento definitivo para reducir recurrencia.",
+          "action_reason": "La reducción descomprime, pero no elimina el riesgo anatómico.",
+          "modifiers": [
+            {
+              "factor": "Peritonitis, isquemia o reducción fallida",
+              "action": "Realizar evaluación quirúrgica urgente.",
+              "reason": "La endoscopia ya no es suficiente o segura."
+            }
+          ],
+          "limits": "La cirugía posterior depende de viabilidad y condición; las opciones del diagrama no deben aplicarse como regla aislada.",
+          "evidence": [
+            {
+              "page": 199,
+              "quote": "grano de café"
+            },
+            {
+              "page": 200,
+              "quote": "Destorsión y descompresión con sigmoidoscopia"
+            }
+          ],
+          "source_gaps": []
+        }
+      ],
+      "common_problem": "Obstrucción colónica con asa muy dilatada.",
+      "mother": {
+        "cue": "La torsión de un segmento puede comprometer tránsito y perfusión.",
+        "answer": "Vólvulo colónico",
+        "explanation": "El ciego y el sigmoides difieren en la utilidad de reducción endoscópica."
+      }
+    },
+    {
+      "id": "07.06",
+      "title": "Sangrado crónico/cambio del hábito",
+      "topics": [
+        {
+          "id": "07.06-01",
+          "name": "Cáncer colo-rectal",
+          "source_pages": [
+            184,
+            185,
+            186
+          ],
+          "pattern": "Un adulto presenta anemia microcítica sin causa, pérdida de peso y un cambio persistente del hábito intestinal. No atribuye el cuadro a un episodio agudo y requiere estudio del colon.",
+          "key_discriminator": "anemia microcítica sin causa",
+          "mechanism": "La neoplasia colónica puede sangrar de forma oculta o estrechar el lumen; localización y extensión producen anemia, cambios de tránsito, obstrucción y síntomas constitucionales.",
+          "findings": [
+            {
+              "mechanism": "Sangrado crónico",
+              "finding": "Anemia ferropénica"
+            },
+            {
+              "mechanism": "Crecimiento luminal",
+              "finding": "Cambio de hábito u obstrucción"
+            }
+          ],
+          "initial_action": "Solicitar colonoscopia con toma de biopsia y valoración especializada; completar estadificación si se confirma.",
+          "action_reason": "Los síntomas de alarma requieren diagnóstico, no solo tamizaje fecal.",
+          "modifiers": [
+            {
+              "factor": "Obstrucción o sangrado importante",
+              "action": "Priorizar estabilización y atención urgente.",
+              "reason": "Existe una complicación inmediata."
+            },
+            {
+              "factor": "Historia familiar o poliposis",
+              "action": "Valorar riesgo hereditario y familiares.",
+              "reason": "Cambia vigilancia y edad de estudio."
+            }
+          ],
+          "limits": "Una prueba fecal negativa no descarta cáncer sintomático. La radioterapia depende especialmente de localización rectal y no corresponde a toda etapa II de colon.",
+          "evidence": [
+            {
+              "page": 185,
+              "quote": "Anemia (sangrado microscópico)."
+            },
+            {
+              "page": 185,
+              "quote": "Colonoscopía + toma de biopsia"
+            }
+          ],
+          "source_gaps": []
+        },
+        {
+          "id": "07.06-02",
+          "name": "Poliposis adematosa familiar PAF",
+          "source_pages": [
+            195
+          ],
+          "pattern": "Un adolescente con familiares que tuvieron cáncer colorrectal temprano presenta numerosos pólipos adenomatosos en colon. Se necesita confirmar predisposición hereditaria y establecer prevención antes de que aparezca un tumor.",
+          "key_discriminator": "numerosos pólipos adenomatosos",
+          "mechanism": "Una variante patógena de APC altera supresión tumoral y favorece múltiples adenomas; el riesgo acumulado de cáncer exige vigilancia temprana y evaluación de cirugía preventiva.",
+          "findings": [
+            {
+              "mechanism": "Alteración de APC",
+              "finding": "Poliposis adenomatosa extensa"
+            },
+            {
+              "mechanism": "Progresión de adenomas",
+              "finding": "Riesgo de cáncer precoz"
+            }
+          ],
+          "initial_action": "Referir a genética y equipo digestivo especializado para confirmación, vigilancia de colon y tracto superior, evaluación familiar y planificación de colectomía según carga y riesgo.",
+          "action_reason": "La prevención puede actuar antes del desarrollo de cáncer.",
+          "modifiers": [
+            {
+              "factor": "Familiares en riesgo",
+              "action": "Organizar asesoría y estudio dirigido.",
+              "reason": "La herencia autosómica dominante afecta decisiones familiares."
+            },
+            {
+              "factor": "Carga polipoide no controlable",
+              "action": "Valorar cirugía profiláctica.",
+              "reason": "La vigilancia sola puede no prevenir progresión."
+            }
+          ],
+          "limits": "No esperar a los dieciocho años de forma automática; el inicio y calendario de vigilancia dependen de variante, familia y guía vigente.",
+          "evidence": [
+            {
+              "page": 195,
+              "quote": "tumores APC (en el cromosoma 5"
+            },
+            {
+              "page": 195,
+              "quote": "Colectomía profiláctica"
+            }
+          ],
+          "source_gaps": []
+        }
+      ],
+      "common_problem": "Sangrado crónico, anemia o riesgo familiar de cáncer.",
+      "mother": {
+        "cue": "Identificar neoplasia o predisposición antes de complicaciones.",
+        "answer": "Cáncer colorrectal y poliposis hereditaria",
+        "explanation": "La colonoscopia diagnóstica y la evaluación genética tienen objetivos complementarios."
+      }
+    }
+  ]
+}
