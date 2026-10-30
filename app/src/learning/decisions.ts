@@ -43,6 +43,10 @@ const paths: Path[] = [
     ['result','¿Qué rama sigue con este resultado?','La hCG es positiva.','Evaluar embarazo según síntomas y localización.','La hCG positiva cambia la evaluación. El dolor o sangrado requieren valorar complicaciones.'],
     ['next','¿Conviene pasar directamente a una causa endocrina?','La paciente tiene amenorrea y prueba de embarazo positiva.','No. La evaluación inicial se dirige al embarazo.','No interpretar la amenorrea como anovulación sin resolver el estado gestacional.'],
   ]},
+  {id:'secondary-functional-hypothalamic',name:'Amenorrea hipotalámica funcional secundaria',primary:false,steps:[
+    hormone('Embarazo excluido. Tras una restricción de ingesta o ejercicio excesivo, el estradiol es bajo y la FSH no está elevada.',central),
+    ['cause','¿Qué datos apoyan la causa funcional y qué falta resolver?','Los ciclos cesaron tras un déficit energético o estrés.','Investigar el contexto adquirido y excluir causas orgánicas.','La supresión central funcional no se confirma solo por el peso o la actividad física.'],
+  ]},
   {id:'poi',name:'Insuficiencia ovárica primaria',primary:false,steps:[
     hormone('Con embarazo excluido, la FSH está elevada y el estradiol bajo.',gonadal),
     ['cause','¿Qué localización explica el patrón?','Había menstruado antes y ahora tiene fallo gonadal.','Insuficiencia ovárica; confirmar y estudiar su causa.','La FSH elevada distingue esta rama de la supresión central.'],

@@ -8,7 +8,7 @@ test('amenorrhea paths reach every named cause through separate decisions', () =
   const questions = amenorrheaDecisions();
   assert.ok(questions.length > 60);
   assert.equal(new Set(questions.map(q => q.id)).size, questions.length);
-  for (const cause of ['turner','mrkh','cais','imperforate-hymen','transverse-septum','kallmann','functional-hypothalamic','swyer','pregnancy','pcos','poi','hyperprolactinemia','thyroid','asherman','sheehan']) {
+  for (const cause of ['turner','mrkh','cais','imperforate-hymen','transverse-septum','kallmann','functional-hypothalamic','swyer','pregnancy','pcos','poi','hyperprolactinemia','thyroid','asherman','sheehan','secondary-functional-hypothalamic']) {
     const path = questions.filter(q => q.path_id === cause);
     assert.ok(path.length >= 4, cause);
     assert.match(path[0].prompt, /menstruado/);
