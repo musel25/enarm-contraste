@@ -17,9 +17,10 @@ class PracticeTests(unittest.TestCase):
         self.source = json.loads((ROOT / 'content/sections/01.json').read_text())
         self.topic = self.source['blocks'][0]['topics'][0]
         self.source['blocks'] = [dict(self.source['blocks'][0], topics=[self.topic])]
-        variant = lambda text: dict(vignette=text, discriminator=self.topic['key_discriminator'], explanation=self.topic['mechanism'], confusable_with='Otro problema', why_not=self.topic['limits'], facts=[dict(field='pattern', text=self.topic['pattern'])])
+        variant = lambda text: dict(vignette=text, discriminator=self.topic['key_discriminator'], explanation=self.topic['mechanism'], confusable_with='Otro problema', why_not=self.topic['limits'], distractors=[], facts=[dict(field='pattern', text=self.topic['pattern'])])
         self.bank = dict(schema_version=1, section_id='01', author='author', source_sha256='source', groups=[dict(id=self.topic['id'], parent_topic_id=self.topic['id'], block_id=self.source['blocks'][0]['id'], name=self.topic['name'], answer_kind='decision', variants={k:variant(text) for k,text in zip(['easy','medium','contrast'], ['Una persona colapsa y no responde.', 'Durante una valoración se identifica respiración anormal.', 'Se debe decidir si la ausencia de respuesta requiere reanimación.'])})])
         self.review = dict(section_id='01', author='author', reviewer='other', content_sha256='bank', source_sha256='source', status='source-checked', professional_review='pending')
+        self.review['case_checks'] = {self.topic['id']:{k:dict(evidence=v['vignette'],difference=f'Contexto clínico distinto para {k}.',options_checked=True) for k,v in self.bank['groups'][0]['variants'].items()}}
 
     def validate(self):
         self.module.validate_bank(self.source, self.bank, self.review, 'source', 'bank')
@@ -127,6 +128,30 @@ class PracticeTests(unittest.TestCase):
     def test_decision_labels_use_the_corrected_clinical_name(self):
         self.topic['answer_name']='Nombre clínico corregido'
         self.assertTrue(all(q['path_label']=='Nombre clínico corregido' for q in self.module.decision_steps(self.source)))
+
+    def test_case_choices_must_be_explicit_and_cannot_repeat_the_answer(self):
+        self.bank['groups'][0]['variants']['easy'].pop('distractors')
+        with self.assertRaisesRegex(ValueError,'distractor'):
+            self.validate()
+        self.setUp()
+        self.bank['groups'][0]['variants']['easy']['distractors']=[self.bank['groups'][0]['name']]
+        with self.assertRaisesRegex(ValueError,'distractor'):
+            self.validate()
+
+    def test_every_case_needs_a_semantic_review_with_actual_distinctive_evidence(self):
+        self.review.pop('case_checks')
+        with self.assertRaisesRegex(ValueError,'semantic'):
+            self.validate()
+        self.setUp()
+        self.review['case_checks'][self.topic['id']]['easy']['evidence']='No aparece en el caso.'
+        with self.assertRaisesRegex(ValueError,'evidence'):
+            self.validate()
+        self.setUp()
+        self.bank['groups'][0]['variants']['medium']['vignette']='Una persona conserva respiración anormal.'
+        self.review['case_checks'][self.topic['id']]['easy']['evidence']='Una persona'
+        self.review['case_checks'][self.topic['id']]['medium']['evidence']='conserva respiración anormal'
+        with self.assertRaisesRegex(ValueError,'evidence'):
+            self.validate()
 
 
 if __name__ == '__main__':

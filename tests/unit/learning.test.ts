@@ -84,7 +84,7 @@ test('primary amenorrhea adds eight diagnoses with three distinct source-linked 
     for (const item of variants) {
       assert.ok(item.sources.some(source => source.url?.startsWith('https://')));
       assert.ok(item.discriminator && item.explanation);
-      assert.ok(item.options.includes(item.diagnosis));
+      assert.deepEqual(item.options,[]); // Legacy cases require recall without curated options.
       assert.ok(caseMeta(item.id));
     }
   }
@@ -98,7 +98,7 @@ test('every Eje case supports three difficulty modes without losing original fac
 });
 
 test('reviewed supplemental cases replace duplicated source vignettes and preserve IDs', () => {
-  const variants = Object.fromEntries(['easy','medium','contrast'].map((difficulty,i) => [difficulty,{vignette:`Caso distinto ${i}`, discriminator:'Dato decisivo', explanation:'Mecanismo', confusable_with:'Otra causa',why_not:'Un dato la distingue'}]));
+  const variants = Object.fromEntries(['easy','medium','contrast'].map((difficulty,i) => [difficulty,{vignette:`Caso distinto ${i}`, discriminator:'Dato decisivo', explanation:'Mecanismo', confusable_with:'Amenorrea secundaria',why_not:'Un dato la distingue',distractors:['Amenorrea secundaria']}]));
   const bank = {schema_version:1,section_id:'14',groups:[{id:'14.01-01',parent_topic_id:'14.01-01',block_id:'14.01',name:'Amenorrea primaria',answer_kind:'diagnosis',variants,sources:[{label:'Libro'}]}],decisions:[]} as any;
   const cases = clinicalCases(clinicalSection,bank);
   assert.equal(cases.length,3);
@@ -115,4 +115,14 @@ test('supplemental block milestones need every case and do not change course tot
   const after=recordPractice(before,caseMeta(items[1].id)!,3,5,day,'b');
   assert.deepEqual(supplementalNotices(before,after,items),[{kind:'block',id:'14.01'},{kind:'section',id:'14'}]);
   assert.equal(progressRows(after,index,day).sections[0].practiced,0);
+});
+
+test('clinical options use only reviewed case contrasts and never infer a valid parent diagnosis', () => {
+  const variant={vignette:'La paciente dejó de menstruar tras un déficit energético.',discriminator:'FSH no elevada',explanation:'Supresión central',confusable_with:'Insuficiencia ovárica primaria',why_not:'La FSH no está elevada.',distractors:['Insuficiencia ovárica primaria']};
+  const groups=[['general','Amenorrea hipotalámica funcional'],['secondary','Amenorrea hipotalámica funcional secundaria'],['ovarian','Insuficiencia ovárica primaria']].map(([id,name])=>({id,parent_topic_id:'14.01-02',block_id:'14.01',name,answer_kind:'diagnosis',variants:{easy:{...variant},medium:{...variant},contrast:{...variant}},sources:[{label:'Libro'}]}));
+  const cases=clinicalCases(clinicalSection,{schema_version:1,section_id:'14',groups,decisions:[]} as any);
+  const item=cases.find(c=>c.topic_id==='secondary'&&c.difficulty==='easy')!;
+  assert.deepEqual(new Set(item.options),new Set(['Amenorrea hipotalámica funcional secundaria','Insuficiencia ovárica primaria']));
+  groups[1].variants.easy.distractors=[];
+  assert.deepEqual(clinicalCases(clinicalSection,{schema_version:1,section_id:'14',groups,decisions:[]} as any).find(c=>c.id===item.id)!.options,[]);
 });

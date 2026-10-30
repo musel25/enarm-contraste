@@ -17,6 +17,7 @@ export default function TestSession({ questions, disabled, onAnswer, onClose, on
   onClose: () => void; onReview: (question: TestQuestion) => void;
 }) {
   const [queue, setQueue] = useState(questions), [position, setPosition] = useState(0);
+  const [reviewable, setReviewable] = useState<Result[]>([]);
   const [results, setResults] = useState<Result[]>([]), [finished, setFinished] = useState(false);
   const [skipped, setSkipped] = useState<TestQuestion[]>([]);
   const [repeats, setRepeats] = useState<Set<string>>(new Set());
@@ -37,7 +38,6 @@ export default function TestSession({ questions, disabled, onAnswer, onClose, on
   }, [position, queue, finished]);
   useEffect(() => {
     elapsed.current = 0;
-    setAnswer(null); setNotices([]); setRevealed(false); setDraft(''); setRetry(null);
   }, [position, queue]);
   useEffect(() => {
     let active = document.visibilityState === 'visible' && !disabled && !busy && !answer;
@@ -60,17 +60,32 @@ export default function TestSession({ questions, disabled, onAnswer, onClose, on
       const saved = await onAnswer(question, attempt.grade, attempt.seconds, attempt.id);
       if (!saved) { setRetry(attempt); return; }
       setRetry(null); setAnswer({ grade: attempt.grade, due: saved.due }); setNotices(saved.notices);
-      setResults(old => [...old, { question, grade: attempt.grade, due: saved.due }]);
+      const result = { question, grade: attempt.grade, due: saved.due };
+      setResults(old => [...old, result]);
+      setReviewable(old => old.some(item => item.question.id === question.id) ? old.map(item => item.question.id === question.id ? result : item) : [...old, result]);
       if (attempt.grade <= 2) setRepeats(old => new Set(old).add(question.id));
     } finally { setBusy(false); lock.current = false; }
   }
+  function resetQuestion() {
+    setAnswer(null); setNotices([]); setRevealed(false); setDraft(''); setRetry(null);
+  }
   function startRound(next: TestQuestion[]) {
-    setQueue(next); setPosition(0); setResults([]); setRepeats(new Set()); setSkipped([]); setFinished(false);
+    const entering = new Set(next.map(item => item.id));
+    resetQuestion();
+    setQueue([...next]); setPosition(0); setResults([]);
+    setRepeats(old => new Set([...old].filter(id => !entering.has(id))));
+    setSkipped(old => old.filter(item => !entering.has(item.id)));
+    setFinished(false);
+  }
+  function advance() {
+    if(busy || disabled || retry || !answer) return;
+    if(position + 1 === queue.length) setFinished(true);
+    else { resetQuestion(); setPosition(old => old + 1); }
   }
   function skip() {
     if(busy || disabled || retry || answer) return;
-    setSkipped(old => [...old, question]);
-    if(position + 1 === queue.length) setFinished(true); else setPosition(old=>old+1);
+    setSkipped(old => old.some(item => item.id === question.id) ? old : [...old, question]);
+    if(position + 1 === queue.length) setFinished(true); else { resetQuestion(); setPosition(old=>old+1); }
   }
   function finish() {
     if(busy || disabled || retry) return;
@@ -78,7 +93,7 @@ export default function TestSession({ questions, disabled, onAnswer, onClose, on
     setFinished(true);
   }
   function repeatSelected() {
-    const next = queue.filter(item => repeats.has(item.id));
+    const next = questions.filter(item => repeats.has(item.id));
     if (!next.length) return;
     startRound(next);
   }
@@ -86,11 +101,11 @@ export default function TestSession({ questions, disabled, onAnswer, onClose, on
   if (finished) return <section ref={root} className="learning-results">
     <h2 tabIndex={-1}>Resultado del subtest</h2>
     {bankProgress}
-    <p>{results.length} respuestas guardadas · {results.filter(item => item.grade >= 3).length} aciertos · {results.filter(item => item.grade === 1).length} errores</p>
+    <p>{results.length} respuestas guardadas en esta ronda · {results.filter(item => item.grade >= 3).length} aciertos · {results.filter(item => item.grade === 1).length} errores</p>
     <p>Elige las preguntas que quieres repetir en esta sesión.</p>
-    <div className="learning-question-list">{results.map(result => <label key={result.question.id}><input type="checkbox" checked={repeats.has(result.question.id)} onChange={event => setRepeats(old => { const next = new Set(old); if (event.target.checked) next.add(result.question.id); else next.delete(result.question.id); return next; })} /><span><strong>{result.question.label}</strong><small>{result.grade === 1 ? 'Error' : result.grade === 2 ? 'Difícil' : 'Acierto'} · Próximo repaso: {dateLabel(result.due)}</small></span></label>)}</div>
+    <div className="learning-question-list">{reviewable.map(result => <label key={result.question.id}><input type="checkbox" checked={repeats.has(result.question.id)} onChange={event => setRepeats(old => { const next = new Set(old); if (event.target.checked) next.add(result.question.id); else next.delete(result.question.id); return next; })} /><span><strong>{result.question.label}</strong><small>{result.grade === 1 ? 'Error' : result.grade === 2 ? 'Difícil' : 'Acierto'} · Próximo repaso: {dateLabel(result.due)}</small></span></label>)}</div>
     {skipped.length > 0 && <div className="learning-skipped"><p>{skipped.length} preguntas omitidas. No cuentan como practicadas.</p><ul>{skipped.map(item=><li key={item.id}>{item.label}</li>)}</ul><button disabled={disabled} onClick={()=>startRound(skipped)}>Volver a las omitidas</button></div>}
-    {!results.length && <p>No respondiste preguntas. Vuelve para preparar otro subtest.</p>}
+    {!reviewable.length && <p>No hay respuestas guardadas todavía. Puedes volver a las preguntas omitidas.</p>}
     <div className="learning-actions"><button className="coach-primary" disabled={!repeats.size || disabled} onClick={repeatSelected}>Repetir seleccionadas</button><button onClick={onClose}>Volver a mi avance</button></div>
   </section>;
   const clinical = question.clinical;
@@ -106,7 +121,7 @@ export default function TestSession({ questions, disabled, onAnswer, onClose, on
       <div className="library-card-bar"><span>{difficultyLabels[clinical.difficulty]} · {clinical.expanded ? 'Caso ampliado' : 'Caso de la biblioteca'}</span><span>Bloque {clinical.block_id}</span></div>
       <div className="library-front"><h2 tabIndex={-1}>{clinical.answer_kind === 'decision' ? '¿Qué acción o clasificación corresponde?' : '¿Cuál es el diagnóstico?'}</h2><p className="learning-vignette">{clinical.vignette}</p>
         {clinical.difficulty === 'easy' && clinical.discriminator && <p className="learning-hint"><strong>Pista para empezar</strong> {clinical.discriminator}</p>}
-        {clinical.difficulty === 'contrast' ? <><label className="learning-recall">Escribe tu diagnóstico y el dato que lo distingue<textarea value={draft} disabled={!!answer || revealed} onChange={event => setDraft(event.target.value)} rows={3} /></label>{!revealed && <button className="coach-primary" disabled={!draft.trim() || disabled} onClick={() => setRevealed(true)}>Comparar diagnóstico</button>}</> : !answer && <div className="learning-diagnoses">{clinical.options.map(option => <button key={option} disabled={busy || disabled || !!retry} onClick={() => void rate(option === clinical.diagnosis ? 3 : 1)}>{option}</button>)}</div>}
+        {(clinical.difficulty === 'contrast' || clinical.options.length === 0) ? <><label className="learning-recall">{clinical.answer_kind === 'decision' ? 'Escribe la acción o clasificación y el dato que la orienta' : 'Escribe tu diagnóstico y el dato que lo distingue'}<textarea value={draft} disabled={!!answer || revealed} onChange={event => setDraft(event.target.value)} rows={3} /></label>{!revealed && <button className="coach-primary" disabled={!draft.trim() || disabled} onClick={() => setRevealed(true)}>{clinical.answer_kind === 'decision' ? 'Comparar respuesta' : 'Comparar diagnóstico'}</button>}</> : !answer && <div className="learning-diagnoses">{clinical.options.map(option => <button key={option} disabled={busy || disabled || !!retry} onClick={() => void rate(option === clinical.diagnosis ? 3 : 1)}>{option}</button>)}</div>}
       </div>
       {(answer || revealed) && <div className="library-answer"><h3>{clinical.diagnosis}</h3><p>{clinical.explanation}</p><p className="learning-hint"><strong>Dato que distingue</strong> {clinical.discriminator}</p>{clinical.contrast && <p>{clinical.contrast}</p>}
         {revealed && !answer && selfRating}
@@ -128,7 +143,7 @@ export default function TestSession({ questions, disabled, onAnswer, onClose, on
     </article>}
     {(clinical || decision) && (answer || revealed) && <div className="learning-actions"><button disabled={busy || disabled} onClick={() => onReview(question)}>Comentar esta pregunta</button></div>}
     {retry && <div role="alert"><p>No se guardó la respuesta. Conservamos esta pregunta.</p><button disabled={busy || disabled} onClick={() => void rate(retry.grade)}>Reintentar respuesta</button></div>}
-    {answer && <div className="learning-answer-result" role="status"><strong>{answer.grade === 1 ? 'Error registrado.' : answer.grade === 2 ? 'Dificultad registrada.' : 'Respuesta correcta.'}</strong><p>Próximo repaso: {dateLabel(answer.due)}. Puedes repetirla hoy.</p><label><input type="checkbox" checked={repeats.has(question.id)} onChange={event => setRepeats(old => { const next = new Set(old); if (event.target.checked) next.add(question.id); else next.delete(question.id); return next; })} />Repetir esta pregunta al terminar</label><button className="coach-primary" disabled={disabled} onClick={() => position + 1 === queue.length ? setFinished(true) : setPosition(old => old + 1)}>{position + 1 === queue.length ? 'Ver resultado' : 'Siguiente pregunta'}</button></div>}
+    {answer && <div className="learning-answer-result" role="status"><strong>{answer.grade === 1 ? 'Error registrado.' : answer.grade === 2 ? 'Dificultad registrada.' : 'Respuesta correcta.'}</strong><p>Próximo repaso: {dateLabel(answer.due)}. Puedes repetirla hoy.</p><label><input type="checkbox" checked={repeats.has(question.id)} onChange={event => setRepeats(old => { const next = new Set(old); if (event.target.checked) next.add(question.id); else next.delete(question.id); return next; })} />Repetir esta pregunta al terminar</label><button className="coach-primary" disabled={disabled} onClick={advance}>{position + 1 === queue.length ? 'Ver resultado' : 'Siguiente pregunta'}</button></div>}
     {notices.map(notice => <p className="learning-milestone" role="status" key={notice}>{notice}</p>)}
   </section>;
 }

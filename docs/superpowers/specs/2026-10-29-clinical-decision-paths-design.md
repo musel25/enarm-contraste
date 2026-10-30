@@ -25,14 +25,16 @@ Authors own only `content/practice/sections/NN.json`. Each file:
 ```
 {schema_version:1,section_id:"NN",author:"name",source_sha256:"raw source file SHA256",groups:[
  {id:"stable topic or expanded slug",parent_topic_id:"NN.BB-TT",block_id:"NN.BB",name:"answer",answer_kind:"diagnosis"|"decision",variants:{
-   easy:{vignette,discriminator,explanation,confusable_with,why_not,facts:[{field:"pattern",text:"exact source field text"}]},
+   easy:{vignette,discriminator,explanation,confusable_with,why_not,distractors:[],facts:[{field:"pattern",text:"exact source field text"}]},
    medium:{...},contrast:{...}
  }}]}
 ```
 
 Every original topic has a group with its original ID. Expanded etiologies use additional stable IDs; the existing eight primary-amenorrhea IDs remain stable. Facts refer to exact fields of the group's parent topic, including findings/modifiers/limits/corrections. Do not invent doses, cutoffs, negative tests or clinical facts not supported by the provided content/book or explicitly cited primary evidence. Variants must be clinically distinct in presentation or source-supported modifying context, not just differently prefixed duplicates. The confusable diagnosis must be justified by data. Avoid putting the answer name in the vignette unless the learning target is an action.
 
-Independent cross-review writes `content/practice/reviews/NN.json` with section_id, author, reviewer (different), content_sha256 of the practice file, source_sha256, status:"source-checked", professional_review:"pending", notes. The application and coverage audit reject missing/stale reviews. New vignettes remain labeled teaching material with professional review pending.
+Each variant has zero to three reviewed false alternatives in `distractors`. The application never infers choices from other group names. Do not offer a valid synonym, parent diagnosis or child diagnosis as a false answer. An empty list uses written recall and self-rating.
+
+Independent cross-review writes `content/practice/reviews/NN.json` with section_id, author, reviewer (different), content_sha256 of the practice file, source_sha256, status:"source-checked", professional_review:"pending", notes. It also records `case_checks[group_id][difficulty]` for every case. Each check includes `evidence`, an exact distinctive clinical snippet of 8–180 characters; `difference`, the clinical change from the other variants; and `options_checked:true`. The evidence must not appear in either sibling case. The reviewer must compare all three cases and all answer choices. These structural checks support the semantic review; they cannot replace it. The application and coverage audit reject missing or stale reviews. New vignettes remain labeled teaching material with professional review pending.
 
 ## Data and safety
 

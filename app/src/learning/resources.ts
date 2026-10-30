@@ -1,7 +1,7 @@
 import type { CardSource, StudyManifest } from '../library-types';
 import { type DecisionQuestion } from './decisions';
 import type { Difficulty } from './cases';
-export type PracticeVariant = { vignette:string; discriminator:string; explanation:string; confusable_with:string; why_not:string };
+export type PracticeVariant = { distractors:string[]; vignette:string; discriminator:string; explanation:string; confusable_with:string; why_not:string };
 export type PracticeGroup = { id:string;parent_topic_id:string;block_id:string;name:string;answer_kind:'diagnosis'|'decision';variants:Record<Difficulty,PracticeVariant>;sources:CardSource[];corrections?:string[] };
 export type PracticeSection = {schema_version:number;section_id:string;groups:PracticeGroup[];decisions:DecisionQuestion[]};
 const root = `${import.meta.env.BASE_URL}study/`;
@@ -27,7 +27,7 @@ export function loadPractice(id:string,manifest:StudyManifest):Promise<PracticeS
       const bank=await checkedJson(`practice/${id}.json`,entry.sha256) as PracticeSection;
       if(bank.schema_version!==1 || bank.section_id!==id || !Array.isArray(bank.groups) || !bank.groups.length || !Array.isArray(bank.decisions)) throw new Error('La práctica no es válida.');
       for(const group of bank.groups) {
-        if(!group.name || !group.id || !group.block_id.startsWith(`${id}.`) || !['easy','medium','contrast'].every(d=>group.variants?.[d as Difficulty]?.vignette) || !Array.isArray(group.sources) || !group.sources.length) throw new Error('Hay un caso incompleto.');
+        if(!group.name || !group.id || !group.block_id.startsWith(`${id}.`) || !['easy','medium','contrast'].every(d=>group.variants?.[d as Difficulty]?.vignette && Array.isArray(group.variants[d as Difficulty].distractors) && group.variants[d as Difficulty].distractors.every(item=>typeof item==='string')) || !Array.isArray(group.sources) || !group.sources.length) throw new Error('Hay un caso incompleto.');
       }
       return bank;
     })().catch(error=>{cache.delete(key);throw error;});

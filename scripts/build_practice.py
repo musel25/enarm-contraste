@@ -5,6 +5,7 @@ import json
 import re
 import subprocess
 import sys
+import unicodedata
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -31,6 +32,11 @@ def field_value(topic, path):
 def normalize(text):
     return re.sub(r'\W+', ' ', text.casefold()).strip()
 
+def label_key(text):
+    plain = ''.join(c for c in unicodedata.normalize('NFKD',text) if not unicodedata.combining(c))
+    return normalize(plain)
+
+
 def validate_bank(source, bank, review, source_hash, bank_hash):
     sid = source['id']
     require(bank.get('schema_version') == 1 and bank.get('section_id') == sid and bank.get('source_sha256') == source_hash, f'{sid}: stale source')
@@ -39,6 +45,8 @@ def validate_bank(source, bank, review, source_hash, bank_hash):
     ids = [g['id'] for g in groups]
     require(len(ids) == len(set(ids)) and set(topics) <= set(ids), f'{sid}: incomplete/duplicate coverage')
     require(review.get('section_id') == sid and review.get('author') == bank.get('author') and review.get('reviewer') and review['reviewer'] != bank.get('author') and review.get('content_sha256') == bank_hash and review.get('source_sha256') == source_hash and review.get('status') == 'source-checked' and review.get('professional_review') == 'pending', f'{sid}: missing/stale independent review')
+    checks = review.get('case_checks')
+    require(isinstance(checks,dict), f'{sid}: missing semantic case review')
     for group in groups:
         label = f'{sid}/{group["id"]}'
         require(group.get('parent_topic_id') in topics, label + ': unknown parent')
@@ -49,12 +57,23 @@ def validate_bank(source, bank, review, source_hash, bank_hash):
         variants = group.get('variants', {})
         require(set(variants) == set(DIFFICULTIES), label + ': missing difficulty')
         require(len({normalize(v.get('vignette', '')) for v in variants.values()}) == 3, label + ': variants must be distinct')
+        group_checks = checks.get(group['id'])
+        require(isinstance(group_checks,dict) and set(group_checks) == set(DIFFICULTIES), label + ': missing semantic case review')
         for key, variant in variants.items():
             require(all(isinstance(variant.get(f), str) and variant[f].strip() for f in ('vignette','discriminator','explanation','confusable_with','why_not')), label + '/' + key + ': missing content')
             facts = variant.get('facts', [])
             require(facts and all(isinstance(f.get('text'), str) and f['text'] and field_value(topic, f.get('field','')) == f['text'] for f in facts), label + ': unsupported source fact')
+            distractors = variant.get('distractors')
+            require(isinstance(distractors,list) and len(distractors) <= 3 and all(isinstance(item,str) and item.strip() for item in distractors), label + ': invalid distractors')
+            choice_keys = [label_key(item) for item in distractors]
+            require(len(set(choice_keys)) == len(choice_keys) and label_key(group['name']) not in choice_keys and not set(choice_keys) & {'otro diagnostico','otra causa','otro problema','otra posibilidad'}, label + ': unsafe distractors')
+            proof = group_checks[key]
+            require(isinstance(proof,dict) and proof.get('options_checked') is True and isinstance(proof.get('difference'),str) and len(proof['difference'].strip()) >= 16, label + ': incomplete semantic case review')
+            evidence = proof.get('evidence','')
+            require(isinstance(evidence,str) and 8 <= len(evidence.strip()) <= 180 and normalize(evidence) in normalize(variant['vignette']) and all(normalize(evidence) not in normalize(other['vignette']) for level,other in variants.items() if level != key), label + '/' + key + ': clinical review evidence is absent or shared')
             if group['answer_kind'] == 'diagnosis':
                 require(normalize(group['name']) not in normalize(variant['vignette']), label + ': answer visible in vignette')
+    require(set(checks) == set(ids), f'{sid}: semantic review coverage mismatch')
 
 def sources(topic):
     result = [{'label':'Edwino.pdf', 'pages':book_reference_pages(topic)}]
@@ -124,7 +143,7 @@ def build(root=ROOT):
         bank = json.loads(bank_path.read_text())
         validate_bank(source, bank, json.loads(review_path.read_text()), raw_hash(path), raw_hash(bank_path))
         topic_map = {t['id']:t for b in source['blocks'] for t in b['topics']}
-        groups = [{**{key:g[key] for key in ('id','parent_topic_id','block_id','name','answer_kind')}, 'variants':{difficulty:{key:value[key] for key in ('vignette','discriminator','explanation','confusable_with','why_not')} for difficulty,value in g['variants'].items()}, 'sources':practice_sources(topic_map[g['parent_topic_id']],g), 'corrections':correction_notes(topic_map[g['parent_topic_id']])} for g in bank['groups']]
+        groups = [{**{key:g[key] for key in ('id','parent_topic_id','block_id','name','answer_kind')}, 'variants':{difficulty:{key:value[key] for key in ('vignette','discriminator','explanation','confusable_with','why_not','distractors')} for difficulty,value in g['variants'].items()}, 'sources':practice_sources(topic_map[g['parent_topic_id']],g), 'corrections':correction_notes(topic_map[g['parent_topic_id']])} for g in bank['groups']]
         data = dict(schema_version=1,section_id=source['id'],groups=groups,decisions=compiled_decisions(source),professional_review='pending')
         target = output / f'{source["id"]}.json'
         write_json(target, data)

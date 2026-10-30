@@ -3,7 +3,7 @@ import {createHash} from 'node:crypto';
 import {mockCoach,coachManifest} from './coach-fixtures';
 const hash=(s:string)=>createHash('sha256').update(s).digest('hex');
 const sources=[{label:'Libro de prueba',pages:[1]}];
-const bank={schema_version:1,section_id:'01',groups:[{id:'01.01-01',parent_topic_id:'01.01-01',block_id:'01.01',name:'Respuesta alfa',answer_kind:'diagnosis',sources,variants:Object.fromEntries(['easy','medium','contrast'].map((d,i)=>[d,{vignette:`Un caso diferente ${i}.`,discriminator:'La pista cambia.',explanation:'Una explicación.',confusable_with:'Otra causa',why_not:'Tiene otro dato.'}]))}],decisions:[1,2].map((n)=>({id:`decision/01.01/01.01-01/step-${n}`,section_id:'01',block_id:'01.01',topic_id:'01.01-01',node_id:`step-${n}`,path_id:'01.01-01',path_label:'Ruta alfa',step:n,steps:2,prompt:n===1?'¿Cuál es la primera bifurcación?':'¿Cuál es la segunda bifurcación?',context:n===1?'Situación inicial.':'Nuevo dato reservado.',answer:n===1?'Respuesta correcta':'Evaluar el nuevo dato',explanation:'La pista cambia la decisión.',discriminator:'Pista',options:n===1?['Respuesta incorrecta','Respuesta correcta']:[],sources}))};
+const bank={schema_version:1,section_id:'01',groups:[{id:'01.01-01',parent_topic_id:'01.01-01',block_id:'01.01',name:'Respuesta alfa',answer_kind:'diagnosis',sources,variants:Object.fromEntries(['easy','medium','contrast'].map((d,i)=>[d,{vignette:`Un caso diferente ${i}.`,discriminator:'La pista cambia.',explanation:'Una explicación.',confusable_with:'Respuesta beta',why_not:'Tiene otro dato.',distractors:['Respuesta beta']}]))}],decisions:[1,2].map((n)=>({id:`decision/01.01/01.01-01/step-${n}`,section_id:'01',block_id:'01.01',topic_id:'01.01-01',node_id:`step-${n}`,path_id:'01.01-01',path_label:'Ruta alfa',step:n,steps:2,prompt:n===1?'¿Cuál es la primera bifurcación?':'¿Cuál es la segunda bifurcación?',context:n===1?'Situación inicial.':'Nuevo dato reservado.',answer:n===1?'Respuesta correcta':'Evaluar el nuevo dato',explanation:'La pista cambia la decisión.',discriminator:'Pista',options:n===1?['Respuesta incorrecta','Respuesta correcta']:[],sources}))};
 const bankBody=JSON.stringify(bank);
 const indexBody=JSON.stringify({schema_version:1,sections:[{id:'01',sha256:hash(bankBody)}]});
 test.beforeEach(async({page})=>{
@@ -144,4 +144,93 @@ test('individual practice shows both its subtest goal and whole-bank progress',a
  await expect(page.getByRole('progressbar',{name:'Preguntas respondidas',exact:true})).toHaveAttribute('value','1');
  await page.getByRole('button',{name:'Ver resultado',exact:true}).click();
  await expect(page.getByRole('progressbar',{name:'Casos de todo el temario',exact:true})).toHaveAttribute('aria-valuenow','1');
+});
+
+test('a delayed server profile selects due questions after the plan timezone is ready',async({page})=>{
+ const {emptyState,recordPractice}=await import('../app/src/coach/engine');
+ const {practiceMeta}=await import('../app/src/learning/model');
+ const state=recordPractice(emptyState(),practiceMeta('decision/01.01/01.01-01/step-1')!,1,12,'2026-10-29','remote-due');
+ state.revision=7;
+ state.plan={id:'remote-plan',revision:1,mode:'time',start_day:'2026-10-29',deadline_day:null,minutes_per_day:5,section_ids:['01'],families:['eje','madre'],timezone:'Pacific/Kiritimati'};
+ await page.clock.install({time:new Date('2026-10-29T20:00:00Z')});
+ await page.route('**/api/progress',async route=>{
+  if(route.request().method()==='GET'){await new Promise(resolve=>setTimeout(resolve,2000));await route.fulfill({json:{state}});}else await route.fallback();
+ });
+ await page.goto('./#avance?section=01&mode=decisions&due=1');
+ await expect(page.getByRole('heading',{name:'Mi avance',exact:true})).toBeVisible();
+ await expect(page.getByRole('button',{name:'Empezar subtest (1)',exact:true})).toBeEnabled();
+ await expect(page.getByRole('checkbox').filter({visible:true}).first()).toBeChecked();
+});
+
+async function wrongThenSkip(page: import('@playwright/test').Page){
+ await page.goto('./#avance?section=01&mode=decisions');
+ await page.getByRole('button',{name:'Seleccionar todas',exact:true}).click();
+ await page.getByRole('button',{name:/Empezar subtest/}).click();
+ await page.getByRole('button',{name:'Respuesta incorrecta',exact:true}).click();
+ await page.getByRole('button',{name:'Siguiente pregunta',exact:true}).click();
+ await page.getByRole('button',{name:'Omitir por ahora',exact:true}).click();
+}
+
+test('skipped questions remain available after repeating an error',async({page})=>{
+ await wrongThenSkip(page);
+ await page.getByRole('button',{name:'Repetir seleccionadas',exact:true}).click();
+ await page.getByRole('button',{name:'Respuesta correcta',exact:true}).click();
+ await page.getByRole('button',{name:'Ver resultado',exact:true}).click();
+ await expect(page.getByRole('button',{name:'Volver a las omitidas',exact:true})).toBeVisible();
+ await page.getByRole('button',{name:'Volver a las omitidas',exact:true}).click();
+ await expect(page.getByRole('heading',{name:'¿Cuál es la segunda bifurcación?',exact:true})).toBeVisible();
+});
+
+test('returning to omitted questions preserves pending repeat selections',async({page})=>{
+ await wrongThenSkip(page);
+ await page.getByRole('button',{name:'Volver a las omitidas',exact:true}).click();
+ await page.getByLabel('Escribe tu siguiente decisión').fill('Evaluar el nuevo dato');
+ await page.getByRole('button',{name:'Comparar decisión',exact:true}).click();
+ await page.getByRole('button',{name:'Acerté',exact:true}).click();
+ await page.getByRole('button',{name:'Ver resultado',exact:true}).click();
+ await expect(page.getByRole('button',{name:'Repetir seleccionadas',exact:true})).toBeEnabled();
+ await expect(page.locator('.learning-question-list label').filter({hasText:'¿Cuál es la primera bifurcación?'}).getByRole('checkbox')).toBeChecked();
+ await page.getByRole('button',{name:'Repetir seleccionadas',exact:true}).click();
+ await expect(page.getByRole('heading',{name:'¿Cuál es la primera bifurcación?',exact:true})).toBeVisible();
+});
+
+test('the next answer never enters the DOM before that question is answered',async({page})=>{
+ await page.goto('./#avance?section=01&mode=decisions');
+ await page.getByRole('button',{name:'Seleccionar todas',exact:true}).click();
+ await page.getByRole('button',{name:/Empezar subtest/}).click();
+ await page.getByRole('button',{name:'Respuesta correcta',exact:true}).click();
+ await page.evaluate(()=>{
+  const target='Evaluar el nuevo dato';
+  (window as any).__answerLeaks=[];
+  const observer=new MutationObserver(records=>{
+   for(const record of records){
+    const nodes=record.type==='characterData'?[record.target]:[...record.addedNodes];
+    for(const node of nodes){const element=node instanceof Element?node:node.parentElement;if(element?.closest('.library-answer')&&node.textContent?.includes(target))(window as any).__answerLeaks.push(node.textContent);}
+   }
+  });
+  observer.observe(document.querySelector('.learning-test')!,{subtree:true,childList:true,characterData:true});
+ });
+ await page.getByRole('button',{name:'Siguiente pregunta',exact:true}).click();
+ await expect(page.getByRole('heading',{name:'¿Cuál es la segunda bifurcación?',exact:true})).toBeVisible();
+ expect(await page.evaluate(()=>(window as any).__answerLeaks)).toEqual([]);
+});
+
+test('a case without reviewed false alternatives uses recall and saves its self-rating',async({page})=>{
+ const recallBank=structuredClone(bank);
+ for(const variant of Object.values(recallBank.groups[0].variants))variant.distractors=[];
+ const body=JSON.stringify(recallBank);
+ const index=JSON.stringify({schema_version:1,sections:[{id:'01',sha256:hash(body)}]});
+ await page.route('**/study/manifest.json',route=>route.fulfill({json:{...coachManifest,practice:{url:'practice/index.json',sha256:hash(index),cases:3,decisions:2}}}));
+ await page.route('**/study/practice/index.json*',route=>route.fulfill({body:index,contentType:'application/json'}));
+ await page.route('**/study/practice/01.json*',route=>route.fulfill({body,contentType:'application/json'}));
+ await page.goto('./#avance?section=01&mode=cases');
+ await page.getByRole('button',{name:'Seleccionar todas',exact:true}).click();
+ await page.getByRole('button',{name:/Empezar subtest/}).click();
+ await expect(page.getByRole('heading',{name:'Respuesta alfa',exact:true})).toHaveCount(0);
+ await expect(page.getByRole('button',{name:'Comparar diagnóstico',exact:true})).toBeDisabled();
+ await page.getByLabel('Escribe tu diagnóstico y el dato que lo distingue').fill('Respuesta alfa por la pista.');
+ await page.getByRole('button',{name:'Comparar diagnóstico',exact:true}).click();
+ await expect(page.getByRole('heading',{name:'Respuesta alfa',exact:true})).toBeVisible();
+ await page.getByRole('button',{name:'Me equivoqué',exact:true}).click();
+ await expect(page.getByText('Error registrado.',{exact:true})).toBeVisible();
 });

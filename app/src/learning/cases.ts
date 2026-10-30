@@ -10,7 +10,7 @@ export type DiagnosticCase = {
 };
 function orderedOptions(names: string[], seed: string) {
   const unique = [...new Set(names)];
-  if (unique.length === 1) unique.push('Otro diagnóstico');
+  if (unique.length < 2) return [];
   // Stable ordering avoids showing the correct diagnosis in the same position.
   const offset = [...seed].reduce((sum, char) => sum + char.charCodeAt(0), 0) % unique.length;
   return [...unique.slice(offset), ...unique.slice(0, offset)];
@@ -22,7 +22,7 @@ export function clinicalCases(section: StudySection, bank?: PracticeSection | nu
     return { id, section_id:section.id, block_id:group.block_id, topic_id:group.id, difficulty,
       diagnosis:group.name, vignette:variant.vignette, discriminator:variant.discriminator,
       explanation:variant.explanation, contrast:`${variant.confusable_with}: ${variant.why_not}`,
-      sources:group.sources, options:orderedOptions(bank.groups.filter(g=>g.block_id===group.block_id && g.answer_kind===group.answer_kind).map(g=>g.name),id),
+      sources:group.sources, options:variant.distractors?.length ? orderedOptions([group.name,...variant.distractors],id) : [],
       expanded:true, answer_kind:group.answer_kind, corrections:group.corrections };
   }));
   const cases: DiagnosticCase[] = [];
@@ -37,7 +37,7 @@ export function clinicalCases(section: StudySection, bank?: PracticeSection | nu
         cases.push({ id, section_id: section.id, block_id: card.block_id, topic_id, difficulty,
           diagnosis: answer.title, vignette: row.text, discriminator: answer.discriminator || row.highlight || '',
           explanation: answer.text, contrast: answer.limits || '', sources: answer.sources || card.sources,
-          options: orderedOptions(card.back.map(a => a.title).filter(Boolean), id), expanded: false });
+          options: [], expanded: false });
       }
     });
   }
@@ -47,7 +47,7 @@ export function clinicalCases(section: StudySection, bank?: PracticeSection | nu
       cases.push({ id, section_id: '14', block_id: '14.01', topic_id: diagnosis.id, difficulty,
         diagnosis: diagnosis.name, vignette: diagnosis.cases[i], discriminator: diagnosis.discriminator,
         explanation: diagnosis.explanation, contrast: diagnosis.contrast, sources: diagnosis.sources,
-        options: orderedOptions(amenorrheaDiagnoses.map(item => item.name), id), expanded: true });
+        options: [], expanded: true });
     });
   }
   return cases;
