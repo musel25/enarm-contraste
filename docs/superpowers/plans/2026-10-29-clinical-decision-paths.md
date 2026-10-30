@@ -28,28 +28,28 @@
 - New decision IDs must survive analytics, backup validation and paired-device restoration.
 - Existing daily assignments, course completion and clinical-source attestations must remain valid.
 
-## Task1: Supplemental bank and audit
+## Task 1: Supplemental bank and audit
 
-- [ ] Authors01–12,13–23,24–34 write disjoint JSON files under the shared contract; no code edits or commits.
-- [ ] Cross-review source facts, variant distinctions and clinical ambiguity. Write independent review hashes; fix findings before approval.
-- [ ] Add Python validation/generation tests RED→GREEN for full coverage, reviewed content, facts, variants and identity stability. Generate private-source-free public section JSON/index.
-- [ ] Commit/push each complete content cohort and the audit/build integration.
+- [x] Authors01–12,13–23,24–34 write disjoint JSON files under the shared contract; no code edits or commits.
+- [x] Cross-review source facts, variant distinctions and clinical ambiguity. Write independent review hashes; fix findings before approval.
+- [x] Add Python validation/generation tests RED→GREEN for full coverage, reviewed content, facts, variants and identity stability. Generate private-source-free public section JSON/index.
+- [x] Commit/push each complete content cohort and the audit/build integration.
 
-## Task2: Guided decisions
+## Task 2: Guided decisions
 
-- [ ] RED tests for all-topic step generation and amenorrhea branch reachability, hidden later facts, wrong-answer handling and stable node IDs.
-- [ ] Implement typed decision questions and the source-derived case/action progression, with a separately authored amenorrhea graph and cited sources.
-- [ ] Extend practice metadata, progress/error rows and backup validation for decisions. Verify no schema/denominator migration damage.
-- [ ] Commit/push.
+- [x] RED tests for all-topic step generation and amenorrhea branch reachability, hidden later facts, wrong-answer handling and stable node IDs.
+- [x] Implement typed decision questions and the source-derived case/action progression, with a separately authored amenorrhea graph and cited sources.
+- [x] Extend practice metadata, progress/error rows and backup validation for decisions. Verify no schema/denominator migration damage.
+- [x] Commit/push.
 
-## Task3: Study interaction
+## Task 3: Study interaction
 
-- [ ] RED browser checks for Eje case launch, Mother decision launch, answer-per-node, wrong answers, skip/no-credit/return, repeat selection, due dates, loading failure and mobile layout.
-- [ ] Add decision runner, new builder mode and explicit Library routes. Add skip/return to the existing subtest and preserve the progress feedback.
-- [ ] Verify device pairing/backup retains both new memory kinds. Commit/push.
+- [x] RED browser checks for Eje case launch, Mother decision launch, answer-per-node, wrong answers, skip/no-credit/return, repeat selection, due dates, loading failure and mobile layout.
+- [x] Add decision runner, new builder mode and explicit Library routes. Add skip/return to the existing subtest and preserve the progress feedback.
+- [x] Verify device pairing/backup retains both new memory kinds. Commit/push.
 
-## Task4: Verify and deploy
+## Task 4: Verify and deploy
 
-- [ ] Run supplemental audits, all original content audits, full Node/Python and production-browser suites.
+- [x] Run supplemental audits, all original content audits, full Node/Python and production-browser suites.
 - [ ] Fresh whole-branch review; fix Important findings with RED→GREEN tests. Report scope honestly.
 - [ ] Integrate latest main, push, deploy and verify public routes, expanded cases/branches, skipped counts, VPS persistence and existing timer health.
