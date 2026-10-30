@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { Modal } from "../ui";
-import { downloadBackup, parseBackup, readBeforeImport } from "./storage";
+import { downloadBackup, parseBackup } from "./storage";
+import { readBeforeImport } from "./repository";
 import type { CoachIndex, CoachState } from "./types";
 
 export default function BackupPanel({ state, index, saving, onImport, onClose }: {
@@ -23,11 +24,11 @@ export default function BackupPanel({ state, index, saving, onImport, onClose }:
     } catch (failure) { setError((failure as Error).message); }
   }
   return <Modal title="Tu progreso, contigo" onClose={onClose}>
-    <p>El progreso se guarda en este dispositivo. Exporta una copia para conservarlo o llevarlo a otro navegador.</p>
+    <p>El progreso se guarda en el VPS. También puedes exportar una copia del plan y las respuestas. Tu código privado permite continuar en otro dispositivo.</p>
     <button className="coach-primary" onClick={() => downloadBackup(state)}>Exportar mi progreso</button>
     <div className="coach-import"><label className="coach-field">Importar una copia<input type="file" accept=".json,application/json" onChange={e => void choose(e.target.files?.[0])} disabled={saving} /></label>
       {error && <p role="alert">{error}</p>}
-      {candidate && <div className="coach-import-preview"><strong>Copia comprobada</strong><p>{candidate.history.length} respuestas · {Object.keys(candidate.progress).length} tarjetas practicadas.</p><p>Reemplazará el plan de este dispositivo. Guardaremos una copia del estado anterior.</p><button className="coach-primary" disabled={saving} onClick={() => void onImport(candidate).then(saved => { if (saved) onClose(); })}>Reemplazar con esta copia</button></div>}
+      {candidate && <div className="coach-import-preview"><strong>Copia comprobada</strong><p>{candidate.history.length} respuestas · {Object.keys(candidate.progress).length} tarjetas practicadas.</p><p>Reemplazará el plan de este perfil en todos tus dispositivos. Guardaremos una copia del estado anterior en el VPS.</p><button className="coach-primary" disabled={saving} onClick={() => void onImport(candidate).then(saved => { if (saved) onClose(); })}>Reemplazar con esta copia</button></div>}
     </div>
     {previous && <button className="text-button" onClick={() => downloadBackup(previous)}>Exportar la copia anterior a la última importación</button>}
   </Modal>;

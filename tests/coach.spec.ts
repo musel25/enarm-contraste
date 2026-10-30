@@ -85,11 +85,9 @@ test("pause preserves the answer and blocks ratings until resumed", async ({ pag
   await expect(page.getByRole("progressbar", { name: "Meta diaria" })).toHaveAttribute("aria-valuenow", "1");
 });
 
-test("failed storage does not advance or grant progress and keeps an exportable attempt", async ({ page }) => {
+test("failed server storage does not advance or grant progress and keeps an exportable attempt", async ({ page }) => {
   await startTimePlan(page);
-  await page.evaluate(() => {
-    IDBObjectStore.prototype.put = function () { throw new DOMException("Test disk failure", "QuotaExceededError"); };
-  });
+  await page.route("**/api/progress", route => route.request().method() === "PUT" ? route.abort("failed") : route.fallback());
   await page.getByRole("button", { name: "Mostrar respuesta", exact: true }).click();
   await page.getByRole("button", { name: /^Bien/ }).click();
   await expect(page.getByRole("alert")).toContainText("no se pudo guardar");
@@ -110,7 +108,7 @@ test("a stale tab cannot replace newer saved progress", async ({ page, context }
   await expect(page.getByRole("progressbar", { name: "Meta diaria" })).toHaveAttribute("aria-valuenow", "1");
   await other.getByRole("button", { name: "Mostrar respuesta", exact: true }).click();
   await other.getByRole("button", { name: /^Fácil/ }).click();
-  await expect(other.getByRole("alert")).toContainText("Otra pestaña");
+  await expect(other.getByRole("alert")).toContainText("Otro dispositivo o pestaña");
   await expect(other.getByRole("progressbar", { name: "Meta diaria" })).toHaveAttribute("aria-valuenow", "0");
   await other.getByRole("button", { name: "Cargar progreso más reciente" }).click();
   await expect(other.getByRole("progressbar", { name: "Meta diaria" })).toHaveAttribute("aria-valuenow", "1");
@@ -172,9 +170,10 @@ test("retrying a failed import still preserves the previous progress", async ({ 
   await expect(page.getByRole("heading", { name: "Tu meta de hoy está completa.", exact: true })).toBeVisible();
   await page.getByRole("button", { name: "Copia de mi progreso" }).click();
   await page.getByLabel("Importar una copia").setInputFiles({ name: "progress.json", mimeType: "application/json", buffer: Buffer.from(JSON.stringify({ format: "enarm-coach", state: backup })) });
-  await page.evaluate(() => {
-    const put = IDBObjectStore.prototype.put;
-    IDBObjectStore.prototype.put = function (value, key) { if (key === "current") { IDBObjectStore.prototype.put = put; throw new DOMException("Test disk failure", "QuotaExceededError"); } return put.call(this, value, key); };
+  let fail = true;
+  await page.route("**/api/progress", route => {
+    if (route.request().method() === "PUT" && fail) { fail = false; return route.abort("failed"); }
+    return route.fallback();
   });
   await page.getByRole("button", { name: "Reemplazar con esta copia" }).click();
   await expect(page.getByRole("alert")).toContainText("no se pudo guardar");

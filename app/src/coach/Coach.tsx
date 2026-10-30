@@ -4,6 +4,7 @@ import type { ReviewContext } from "../storage";
 import "../library.css";
 import "./coach.css";
 import BackupPanel from "./BackupPanel";
+import CloudPanel from "./CloudPanel";
 import { createAssignment } from "./engine";
 import { timezone } from "./format";
 import { useCoachStore, useForecast, useStudyDay } from "./hooks";
@@ -19,6 +20,7 @@ function ReadyCoach({ manifest, index, suspended, onReview }: { manifest: StudyM
   const day = useStudyDay(state.plan?.timezone || timezone());
   const forecast = useForecast(state, index, day);
   const [editing, setEditing] = useState(false), [backup, setBackup] = useState(false);
+  const [cloud, setCloud] = useState(false);
   useEffect(() => {
     if (loading || !state.plan || state.days[day] || saving || error || forecast.pending || !forecast.result) return;
     void commit(previous => ({ ...previous, days: { ...previous.days, [day]: createAssignment(previous, index, day, forecast.result!.feasible ? forecast.result!.daily_minutes : previous.plan!.minutes_per_day) } }));
@@ -35,8 +37,10 @@ function ReadyCoach({ manifest, index, suspended, onReview }: { manifest: StudyM
   }
   if (loading) return <main className="coach-main coach-loading" id="study" role="status">Abriendo tu progreso…</main>;
   return <>
-    {error && <div className="coach-save-error" role="alert"><strong>{latest ? "Otra pestaña guardó progreso nuevo." : "Tu progreso no se pudo guardar."}</strong><p>{error} No avances hasta resolverlo.</p><div>{latest ? <button onClick={() => void reload()}>Cargar progreso más reciente</button> : <button onClick={() => void store.retry()}>Reintentar guardado</button>}<button onClick={() => downloadBackup(pending || state)}>Exportar copia de este intento</button></div></div>}
-    {!state.plan || editing ? <PlanSetup state={state} manifest={manifest} index={index} saving={saving} disabled={!!error || backup} onSave={savePlan} onBackup={() => setBackup(true)} onCancel={state.plan ? () => setEditing(false) : undefined} /> : !state.days[day] ? <main id="study" className="coach-main coach-loading" role="status">Preparando la meta de hoy…</main> : <Today state={state} index={index} day={day} saving={saving} paused={suspended || backup || !!error} forecast={forecast.result} calculating={forecast.pending} commit={commit} onEdit={() => setEditing(true)} onBackup={() => setBackup(true)} onReview={onReview} />}
+    <div className="coach-cloud-bar"><span className={error ? "cloud-disconnected" : ""}><i />{error ? "Conexión con el VPS pendiente" : "Progreso protegido en el VPS"}</span><button className="text-button" disabled={saving} onClick={() => setCloud(true)}>Mi progreso en el VPS ↗</button></div>
+    {error && <div className="coach-save-error" role="alert"><strong>{latest ? "Otro dispositivo o pestaña guardó progreso nuevo." : "Tu progreso no se pudo guardar."}</strong><p>{error} No avances hasta resolverlo.</p><div>{latest ? <button onClick={() => void reload()}>Cargar progreso más reciente</button> : <button onClick={() => void store.retry()}>Reintentar guardado</button>}<button onClick={() => downloadBackup(pending || state)}>Exportar copia de este intento</button></div></div>}
+    {!state.plan || editing ? <PlanSetup state={state} manifest={manifest} index={index} saving={saving} disabled={!!error || backup || cloud} onSave={savePlan} onBackup={() => setBackup(true)} onCancel={state.plan ? () => setEditing(false) : undefined} /> : !state.days[day] ? <main id="study" className="coach-main coach-loading" role="status">Preparando la meta de hoy…</main> : <Today state={state} index={index} day={day} saving={saving} paused={suspended || backup || cloud || !!error} forecast={forecast.result} calculating={forecast.pending} connected={!error} commit={commit} onEdit={() => setEditing(true)} onBackup={() => setBackup(true)} onReview={onReview} />}
+    {cloud && <CloudPanel onClose={() => setCloud(false)} onConnected={reload} />}
     {backup && <BackupPanel state={pending || state} index={index} saving={saving || !!error} onClose={() => setBackup(false)} onImport={async candidate => { const saved = await commit(() => candidate, true); return !!saved; }} />}
   </>;
 }

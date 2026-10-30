@@ -69,6 +69,58 @@ export async function readBeforeImport(): Promise<CoachState | null> {
   });
 }
 
+export const validCode = (value: unknown): value is string => typeof value === "string" && /^[A-Za-z0-9_-]{43}$/.test(value);
+export async function getProgressCode(): Promise<string> {
+  const db = await open();
+  return new Promise((resolve, reject) => {
+    const tx = db.transaction("state", "readwrite"), store = tx.objectStore("state");
+    let code = "";
+    const request = store.get("progress-code");
+    request.onsuccess = () => {
+      try {
+        if (request.result !== undefined && !validCode(request.result)) throw new Error("Código guardado no válido.");
+        code = request.result || btoa(String.fromCharCode(...crypto.getRandomValues(new Uint8Array(32)))).replace(/\+/g, "-").replace(/\//g, "_").replace(/=+$/, "");
+        if (request.result === undefined) store.put(code, "progress-code");
+      } catch { tx.abort(); }
+    };
+    tx.oncomplete = () => resolve(code);
+    tx.onabort = () => reject(new Error("No se pudo conservar el código de progreso en este navegador."));
+    tx.onerror = () => {};
+  });
+}
+
+export async function cacheServerState(code: string, state: CoachState, switchFrom?: string): Promise<void> {
+  if (!validCode(code) || !validateState(state)) throw new Error("Progreso no válido.");
+  const db = await open();
+  return new Promise((resolve, reject) => {
+    const tx = db.transaction("state", "readwrite"), store = tx.objectStore("state");
+    const request = store.get("progress-code");
+    let failure: Error | null = null;
+    request.onsuccess = () => {
+      if (request.result !== (switchFrom || code)) { failure = new Error("Cambió el perfil en otra pestaña. Recarga antes de continuar."); tx.abort(); return; }
+      const current = store.get("current");
+      current.onsuccess = () => {
+        try {
+          if (switchFrom) { store.put(switchFrom, "previous-code"); store.put(code, "progress-code"); }
+          if (switchFrom || !validateState(current.result) || current.result.revision <= state.revision) store.put(state, "current");
+        } catch { tx.abort(); }
+      };
+    };
+    tx.oncomplete = () => resolve();
+    tx.onabort = () => reject(failure || new Error("No se pudo guardar la copia de este navegador."));
+    tx.onerror = () => {};
+  });
+}
+
+export async function previousProgressCode(): Promise<string | null> {
+  const db = await open();
+  return new Promise((resolve, reject) => {
+    const request = db.transaction("state").objectStore("state").get("previous-code");
+    request.onsuccess = () => resolve(validCode(request.result) ? request.result : null);
+    request.onerror = () => reject(new Error("No se pudo leer el perfil anterior."));
+  });
+}
+
 export function downloadBackup(state: CoachState) {
   const blob = new Blob([JSON.stringify({ format: "enarm-coach", exported_at: new Date().toISOString(), state }, null, 2)], { type: "application/json" });
   const url = URL.createObjectURL(blob);

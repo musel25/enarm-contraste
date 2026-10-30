@@ -1,6 +1,7 @@
 import { useCallback, useEffect, useRef, useState } from "react";
 import { dayKey, emptyState } from "./engine";
-import { readCoach, SaveConflict, writeCoach } from "./storage";
+import { SaveConflict } from "./storage";
+import { CloudUnavailable, readCoach, writeCoach } from "./repository";
 import type { CoachIndex, CoachState, Forecast } from "./types";
 
 export function useCoachStore() {
@@ -15,7 +16,7 @@ export function useCoachStore() {
   const [latest, setLatest] = useState<CoachState | null>(null);
   const reload = useCallback(async () => {
     try { const saved = await readCoach(); ref.current = saved; setState(saved); setError(""); setPending(null); setLatest(null); preservePending.current = false; }
-    catch (failure) { setError((failure as Error).message); }
+    catch (failure) { if (failure instanceof CloudUnavailable && failure.cached) { ref.current = failure.cached; setState(failure.cached); } setError((failure as Error).message); }
     finally { setLoading(false); }
   }, []);
   useEffect(() => { void reload(); }, [reload]);
