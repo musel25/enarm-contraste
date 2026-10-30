@@ -1,0 +1,850 @@
+{
+  "id": "01",
+  "title": "ACLS",
+  "blocks": [
+    {
+      "id": "01.01",
+      "title": "Paciente colapsado: primer árbol",
+      "topics": [
+        {
+          "id": "01.01-01",
+          "name": "Soporte vital básico",
+          "source_pages": [
+            15,
+            16,
+            17
+          ],
+          "pattern": "Un adulto cae al suelo. No responde a la voz, solo jadea y el profesional no detecta pulso en diez segundos. Otra persona puede traer el desfibrilador.",
+          "key_discriminator": "solo jadea",
+          "mechanism": "La ausencia de circulación eficaz interrumpe el aporte cerebral y coronario de oxígeno; las compresiones mantienen flujo parcial hasta revertir la causa.",
+          "findings": [
+            {
+              "mechanism": "Ausencia de flujo",
+              "finding": "Inconsciencia y ausencia de pulso"
+            },
+            {
+              "mechanism": "Respiración agónica",
+              "finding": "Jadeos sin ventilación eficaz"
+            }
+          ],
+          "initial_action": "Asegurar la escena, activar emergencias e iniciar RCP de calidad con 30 compresiones y dos ventilaciones. Utilizar el DEA en cuanto llegue.",
+          "action_reason": "Reduce el tiempo sin perfusión y permite descargar un ritmo desfibrilable.",
+          "modifiers": [
+            {
+              "factor": "Pulso presente y respiración anormal",
+              "action": "Dar ventilación de rescate y reevaluar el pulso.",
+              "reason": "Existe paro respiratorio sin paro circulatorio."
+            }
+          ],
+          "limits": "Los reanimadores no profesionales no deben retrasar las compresiones para buscar pulso.",
+          "evidence": [
+            {
+              "page": 15,
+              "quote": "un paciente inconsciente que no respira y no tiene pulso."
+            },
+            {
+              "page": 16,
+              "quote": "Si no hay respuesta pedir ayuda y activar sistema de emergencia"
+            }
+          ],
+          "source_gaps": []
+        },
+        {
+          "id": "01.01-02",
+          "name": "PLS",
+          "source_pages": [
+            8
+          ],
+          "pattern": "Un adulto tiene alerta reducida después de una crisis ya terminada. Respira de forma normal y conserva circulación. No hay trauma aparente; una persona permanece a su lado.",
+          "key_discriminator": "Respira de forma normal",
+          "mechanism": "La pérdida de alerta reduce la protección de vía aérea; la posición lateral puede facilitar su permeabilidad y salida de secreciones cuando se conserva respiración normal.",
+          "findings": [
+            {
+              "mechanism": "Alerta reducida",
+              "finding": "Riesgo de obstrucción o aspiración"
+            },
+            {
+              "mechanism": "Ventilación espontánea conservada",
+              "finding": "Respiración normal"
+            }
+          ],
+          "initial_action": "Activar ayuda. Considerar posición lateral de seguridad en una causa no traumática con respiración normal y mantener vigilancia continua de respiración y respuesta.",
+          "action_reason": "Puede ayudar a mantener vía aérea permeable mientras se espera atención.",
+          "modifiers": [
+            {
+              "factor": "Respiración ausente o anormal",
+              "action": "Colocar en decúbito supino y seguir el algoritmo de RCP o ventilación.",
+              "reason": "La posición lateral no permite dar reanimación eficaz."
+            },
+            {
+              "factor": "Sospecha de lesión de columna o pelvis",
+              "action": "Evitar cambios innecesarios de posición y solicitar ayuda.",
+              "reason": "El movimiento puede agravar lesiones."
+            }
+          ],
+          "limits": "La posición lateral no sustituye la vigilancia. La página 8 declarada por el inventario trata RCP pediátrica; se corrige con la guía primaria de primeros auxilios.",
+          "evidence": [
+            {
+              "page": 17,
+              "quote": "Controlar hasta que"
+            }
+          ],
+          "source_gaps": [],
+          "verified_source_pages": [
+            17
+          ],
+          "source_corrections": [
+            "La página 8 asignada por la guía no describe PLS. La página 17 respalda la vigilancia con respiración normal y pulso; AHA 2024 aporta la postura y límites."
+          ],
+          "external_sources": [
+            {
+              "label": "AHA y Cruz Roja, First Aid Guidelines 2024, sección 5.1",
+              "url": "https://cpr.heart.org/en/resuscitation-science/2024-first-aid-guidelines",
+              "quote": "It is reasonable to position a person with decreased alertness of nontraumatic cause",
+              "checked_at": "2026-10-29"
+            }
+          ]
+        }
+      ],
+      "common_problem": "Persona colapsada sin respuesta. Se deben valorar respiración y circulación.",
+      "mother": {
+        "cue": "La ausencia de respuesta exige distinguir fallo respiratorio de fallo circulatorio.",
+        "answer": "Reconocimiento inicial del colapso",
+        "explanation": "Pulso y respiración determinan si se requiere ventilación, compresiones o vigilancia."
+      }
+    },
+    {
+      "id": "01.02",
+      "title": "Paro: decidir descarga",
+      "topics": [
+        {
+          "id": "01.02-01",
+          "name": "RCP",
+          "source_pages": [
+            9,
+            10,
+            11,
+            12,
+            13
+          ],
+          "pattern": "Un adulto está inconsciente, sin respiración efectiva ni pulso. El equipo inicia compresiones y conecta el monitor; debe decidir la siguiente acción según el ritmo registrado.",
+          "key_discriminator": "sin respiración efectiva ni pulso",
+          "mechanism": "La reanimación aporta flujo y ventilación durante la ausencia de circulación espontánea; el ritmo determina si una descarga puede interrumpir actividad ventricular desorganizada.",
+          "findings": [
+            {
+              "mechanism": "Ausencia de gasto",
+              "finding": "Pulso ausente"
+            },
+            {
+              "mechanism": "Perfusión cerebral insuficiente",
+              "finding": "Pérdida de conciencia"
+            }
+          ],
+          "initial_action": "Iniciar compresiones de calidad, ventilación y monitorización. Desfibrilar FV o TV sin pulso; en asistolia o AESP continuar RCP y administrar adrenalina cuanto antes.",
+          "action_reason": "La descarga solo trata ritmos desfibrilables; todos requieren perfusión y búsqueda de causas reversibles.",
+          "modifiers": [
+            {
+              "factor": "Vía aérea avanzada",
+              "action": "Mantener compresiones continuas y una ventilación cada seis segundos.",
+              "reason": "Ya no se necesita pausar para una relación 30:2."
+            },
+            {
+              "factor": "Retorno de circulación",
+              "action": "Iniciar cuidados posparo.",
+              "reason": "Cambian las metas de oxigenación, ventilación y perfusión."
+            }
+          ],
+          "limits": "No suspender RCP por un valor aislado de CO2 espirado; el propio texto exige reevaluar su calidad.",
+          "evidence": [
+            {
+              "page": 9,
+              "quote": "Comprimir rápido (entre 100 y 120 contracciones"
+            },
+            {
+              "page": 12,
+              "quote": "Adrenalina lo antes posible"
+            },
+            {
+              "page": 13,
+              "quote": "Realice un ECG de 12 derivaciones."
+            }
+          ],
+          "source_gaps": []
+        },
+        {
+          "id": "01.02-02",
+          "name": "Fibrilación ventricular",
+          "source_pages": [
+            7
+          ],
+          "pattern": "Un hombre colapsa tras dolor torácico. No tiene pulso y el monitor muestra actividad eléctrica caótica, sin complejos QRS identificables. El equipo dispone de desfibrilador.",
+          "key_discriminator": "sin complejos QRS identificables",
+          "mechanism": "La activación ventricular desorganizada impide contracciones coordinadas y elimina el gasto cardíaco; la descarga permite terminar la actividad eléctrica que sostiene el paro.",
+          "findings": [
+            {
+              "mechanism": "Desorganización ventricular",
+              "finding": "Trazado caótico sin QRS reconocible"
+            },
+            {
+              "mechanism": "Ausencia de gasto",
+              "finding": "Colapso sin pulso"
+            }
+          ],
+          "initial_action": "Iniciar RCP y desfibrilar en cuanto sea posible. Reanudar compresiones de inmediato y seguir el algoritmo de paro.",
+          "action_reason": "La RCP mantiene flujo parcial; la desfibrilación trata el ritmo causal.",
+          "modifiers": [
+            {
+              "factor": "Persistencia tras descargas",
+              "action": "Añadir los fármacos del algoritmo y corregir causas reversibles.",
+              "reason": "La arritmia puede persistir por isquemia o alteraciones electrolíticas."
+            }
+          ],
+          "limits": "La energía depende del tipo y fabricante del desfibrilador; la cifra de 200 J de esta ficha no es universal.",
+          "evidence": [
+            {
+              "page": 7,
+              "quote": "Complejos QRS indiscernibles."
+            },
+            {
+              "page": 7,
+              "quote": "RCP para mantener el"
+            }
+          ],
+          "source_gaps": []
+        }
+      ],
+      "common_problem": "Paciente sin pulso con un ritmo registrado en el monitor.",
+      "mother": {
+        "cue": "El ritmo durante el paro define si una descarga puede ser útil.",
+        "answer": "Paro con ritmo desfibrilable o no desfibrilable",
+        "explanation": "La RCP mantiene perfusión mientras el monitor determina la indicación de descarga."
+      }
+    },
+    {
+      "id": "01.03",
+      "title": "Pulso lento",
+      "topics": [
+        {
+          "id": "01.03-01",
+          "name": "Bradicardia",
+          "source_pages": [
+            4
+          ],
+          "pattern": "Una mujer con frecuencia de 38 latidos por minuto presenta mareo, presión baja y piel fría. El monitor muestra ritmo lento persistente y se sospecha efecto farmacológico.",
+          "key_discriminator": "presión baja y piel fría",
+          "mechanism": "Una frecuencia ventricular insuficiente reduce el gasto cardíaco cuando el volumen sistólico no compensa; los síntomas indican hipoperfusión y necesidad de tratamiento inmediato.",
+          "findings": [
+            {
+              "mechanism": "Gasto reducido",
+              "finding": "Hipotensión y mareo"
+            }
+          ],
+          "initial_action": "Mantener vía aérea, monitorizar y retirar precipitantes. En bradicardia que causa hipoperfusión, administrar atropina; preparar estimulación transcutánea o infusión vasoactiva si no responde.",
+          "action_reason": "La intervención aumenta la frecuencia o sostiene la perfusión mientras se corrige la causa.",
+          "modifiers": [
+            {
+              "factor": "Sin datos de hipoperfusión",
+              "action": "Observar y monitorizar.",
+              "reason": "La frecuencia aislada no define inestabilidad."
+            },
+            {
+              "factor": "Atropina ineficaz",
+              "action": "Usar marcapasos transcutáneo y/o infusión indicada.",
+              "reason": "El bloqueo o la disfunción pueden persistir pese al fármaco."
+            }
+          ],
+          "limits": "No toda bradicardia sintomática equivale a enfermedad del nodo sinusal; identificar el ritmo y la causa.",
+          "evidence": [
+            {
+              "page": 4,
+              "quote": "El tratamiento siempre debe incluir el retiro de factores"
+            },
+            {
+              "page": 4,
+              "quote": "Si la atropina es inefectiva:"
+            }
+          ],
+          "source_gaps": []
+        },
+        {
+          "id": "01.03-02",
+          "name": "Bloqueos AV",
+          "source_pages": [
+            3
+          ],
+          "pattern": "Un adulto presenta síncope y pulso lento. El electrocardiograma muestra ondas P y complejos QRS que siguen ritmos independientes, sin una relación constante entre ambos.",
+          "key_discriminator": "ritmos independientes",
+          "mechanism": "La conducción auriculoventricular interrumpida separa la activación auricular de la ventricular; el ritmo de escape puede ser demasiado lento para mantener perfusión.",
+          "findings": [
+            {
+              "mechanism": "Disociación auriculoventricular",
+              "finding": "Ondas P sin relación fija con QRS"
+            },
+            {
+              "mechanism": "Escape lento",
+              "finding": "Síncope"
+            }
+          ],
+          "initial_action": "Obtener ECG de doce derivaciones y valorar estabilidad. Tratar la bradicardia con hipoperfusión y solicitar valoración para estimulación definitiva en bloqueo avanzado sintomático.",
+          "action_reason": "El ECG localiza el patrón; la estimulación evita depender de un escape insuficiente.",
+          "modifiers": [
+            {
+              "factor": "PR progresivamente largo antes de una P bloqueada",
+              "action": "Reconocer Mobitz I.",
+              "reason": "La conducción se retrasa antes de fallar."
+            },
+            {
+              "factor": "PR constante con P bloqueada",
+              "action": "Reconocer Mobitz II y valorar bloqueo avanzado.",
+              "reason": "La interrupción aparece sin alargamiento progresivo."
+            }
+          ],
+          "limits": "Un BAV de primer grado asintomático no requiere marcapasos por ese hallazgo aislado.",
+          "evidence": [
+            {
+              "page": 3,
+              "quote": "Disociación Aurícula-Ventricular cada quien conduce"
+            },
+            {
+              "page": 3,
+              "quote": "Elección: Electrocardiograma de 12 derivaciones."
+            }
+          ],
+          "source_gaps": []
+        }
+      ],
+      "common_problem": "Paciente con pulso lento, mareo o síncope.",
+      "mother": {
+        "cue": "La lentitud del ritmo puede alterar la perfusión o reflejar fallo de conducción.",
+        "answer": "Bradiarritmia y conducción auriculoventricular",
+        "explanation": "El ECG identifica el mecanismo y la estabilidad define la urgencia."
+      }
+    },
+    {
+      "id": "01.04",
+      "title": "Pulso rápido: primer mapa",
+      "topics": [
+        {
+          "id": "01.04-01",
+          "name": "Taquicardia ACLS",
+          "source_pages": [
+            18
+          ],
+          "pattern": "Un adulto con pulso presenta frecuencia de 180 latidos por minuto, dolor torácico y presión baja. El monitor registra una taquicardia persistente mientras se obtiene acceso venoso.",
+          "key_discriminator": "dolor torácico y presión baja",
+          "mechanism": "Una frecuencia excesiva acorta el llenado ventricular y puede comprometer el gasto y la perfusión coronaria; la estabilidad define la urgencia de conversión eléctrica.",
+          "findings": [
+            {
+              "mechanism": "Llenado reducido",
+              "finding": "Hipotensión"
+            },
+            {
+              "mechanism": "Demanda miocárdica elevada",
+              "finding": "Dolor isquémico"
+            }
+          ],
+          "initial_action": "Valorar vía aérea, oxigenación y monitor. Si la taquiarritmia causa inestabilidad, realizar cardioversión sincronizada; considerar sedación sin retrasar el tratamiento.",
+          "action_reason": "La conversión rápida corrige una arritmia que compromete perfusión.",
+          "modifiers": [
+            {
+              "factor": "Paciente estable con QRS estrecho regular",
+              "action": "Intentar maniobras vagales y adenosina según el algoritmo.",
+              "reason": "Puede depender del nodo AV."
+            },
+            {
+              "factor": "QRS ancho regular y monomórfico",
+              "action": "Considerar adenosina o antiarrítmico con apoyo experto.",
+              "reason": "No aplicar el mismo manejo a un ritmo ancho irregular."
+            }
+          ],
+          "limits": "La taquicardia sinusal exige tratar la causa; no se cardioverte solo por superar una frecuencia.",
+          "evidence": [
+            {
+              "page": 18,
+              "quote": "Taquiarritmia persistente que cause:"
+            },
+            {
+              "page": 18,
+              "quote": "Cardioversión sincronizada"
+            }
+          ],
+          "source_gaps": []
+        }
+      ],
+      "common_problem": "Paciente con pulso rápido y síntomas variables.",
+      "mother": {
+        "cue": "Primero valorar perfusión; después describir anchura y regularidad del QRS.",
+        "answer": "Taquiarritmia con pulso",
+        "explanation": "La inestabilidad determina cardioversión urgente y el ECG orienta el manejo estable."
+      }
+    },
+    {
+      "id": "01.05",
+      "title": "Taquicardia estrecha",
+      "topics": [
+        {
+          "id": "01.05-01",
+          "name": "Taquicardia supraventricular",
+          "source_pages": [
+            19,
+            20,
+            21,
+            22
+          ],
+          "pattern": "Una mujer presenta palpitaciones de inicio y fin bruscos. Está alerta y normotensa. El ECG durante el episodio muestra una taquicardia regular de QRS estrecho a 180 latidos por minuto.",
+          "key_discriminator": "inicio y fin bruscos",
+          "mechanism": "Un circuito de reentrada en el nodo AV o mediante una vía accesoria mantiene la activación rápida; interrumpir la conducción nodal puede terminar ciertos circuitos.",
+          "findings": [
+            {
+              "mechanism": "Reentrada sostenida",
+              "finding": "Taquicardia paroxística regular"
+            },
+            {
+              "mechanism": "Gasto reducido durante el episodio",
+              "finding": "Mareo o disnea"
+            }
+          ],
+          "initial_action": "En una taquicardia regular estable, intentar maniobras vagales. Si persiste, administrar adenosina intravenosa con monitorización.",
+          "action_reason": "La reducción transitoria de conducción nodal puede interrumpir la reentrada.",
+          "modifiers": [
+            {
+              "factor": "Hipotensión o signos de choque atribuibles al ritmo",
+              "action": "Realizar cardioversión sincronizada.",
+              "reason": "La hipoperfusión requiere conversión urgente."
+            },
+            {
+              "factor": "Taquicardia sinusal por fiebre o hipovolemia",
+              "action": "Corregir la causa primaria.",
+              "reason": "El aumento de frecuencia es una respuesta al estrés."
+            }
+          ],
+          "limits": "TSV incluye varios mecanismos; la respuesta a adenosina y el ECG deben orientar el subtipo.",
+          "evidence": [
+            {
+              "page": 22,
+              "quote": "En la TRNAV las palpitaciones son de inicio y fin brusco"
+            },
+            {
+              "page": 22,
+              "quote": "Farmacológico de primera elección"
+            },
+            {
+              "page": 20,
+              "quote": "Identificar la causa primaria y corregirla."
+            }
+          ],
+          "source_gaps": []
+        }
+      ],
+      "common_problem": "Palpitaciones rápidas con posible QRS estrecho.",
+      "mother": {
+        "cue": "Un ritmo rápido puede depender de reentrada o responder a un estímulo fisiológico.",
+        "answer": "Mecanismos supraventriculares de taquicardia",
+        "explanation": "Inicio, regularidad y ondas P separan circuitos que requieren decisiones distintas."
+      }
+    },
+    {
+      "id": "01.06",
+      "title": "Arritmia irregular",
+      "topics": [
+        {
+          "id": "01.06-01",
+          "name": "Fibrilación auricular",
+          "source_pages": [
+            5,
+            6
+          ],
+          "pattern": "Un adulto mayor hipertenso consulta por palpitaciones y disnea. Conserva presión arterial. El ECG muestra intervalos RR irregularmente irregulares, ausencia de ondas P y complejos QRS estrechos.",
+          "key_discriminator": "ausencia de ondas P",
+          "mechanism": "La activación auricular desorganizada produce conducción ventricular irregular y estasis auricular; se deben valorar tanto la frecuencia ventricular como el riesgo de embolia.",
+          "findings": [
+            {
+              "mechanism": "Activación auricular desorganizada",
+              "finding": "Ausencia de ondas P"
+            },
+            {
+              "mechanism": "Conducción variable por nodo AV",
+              "finding": "Intervalos RR irregulares"
+            }
+          ],
+          "initial_action": "Confirmar el ritmo y valorar estabilidad. En el paciente estable, controlar la frecuencia según función ventricular y valorar anticoagulación por riesgo tromboembólico.",
+          "action_reason": "El control de frecuencia mejora síntomas; la prevención embólica atiende un riesgo independiente.",
+          "modifiers": [
+            {
+              "factor": "Inestabilidad por la arritmia",
+              "action": "Realizar cardioversión eléctrica urgente.",
+              "reason": "La perfusión está comprometida."
+            },
+            {
+              "factor": "Cardiopatía estructural o FEVI reducida",
+              "action": "Ajustar la selección farmacológica.",
+              "reason": "Los antiarrítmicos no son intercambiables en estos contextos."
+            }
+          ],
+          "limits": "La puntuación de riesgo y la selección del anticoagulante requieren guía vigente; el sexo aislado no basta para indicar anticoagulación.",
+          "evidence": [
+            {
+              "page": 5,
+              "quote": "Patrón irregular con ausencia de ondas P"
+            },
+            {
+              "page": 5,
+              "quote": "Paciente inestable: Cardioversión eléctrica."
+            },
+            {
+              "page": 6,
+              "quote": "La prevención del riesgo tromboembólico es la estrategia de"
+            }
+          ],
+          "source_gaps": []
+        }
+      ],
+      "common_problem": "Palpitaciones con ritmo irregular.",
+      "mother": {
+        "cue": "La desorganización auricular cambia el ritmo ventricular y el riesgo embólico.",
+        "answer": "Activación auricular desorganizada",
+        "explanation": "Además de síntomas y frecuencia, se debe valorar prevención tromboembólica."
+      }
+    },
+    {
+      "id": "01.07",
+      "title": "Preexcitación",
+      "topics": [
+        {
+          "id": "01.07-01",
+          "name": "Síndrome de WPW",
+          "source_pages": [
+            14
+          ],
+          "pattern": "Un joven tiene episodios de palpitaciones rápidas. Entre episodios, el ECG muestra PR corto, ascenso inicial empastado del QRS y complejo ventricular ancho. Se solicita valoración del ritmo.",
+          "key_discriminator": "PR corto",
+          "mechanism": "Una vía accesoria comunica aurícula y ventrículo fuera del nodo AV; la activación ventricular precoz genera onda delta y permite circuitos de reentrada.",
+          "findings": [
+            {
+              "mechanism": "Conducción por vía accesoria",
+              "finding": "PR corto y onda delta"
+            },
+            {
+              "mechanism": "Activación ventricular precoz",
+              "finding": "QRS ancho"
+            }
+          ],
+          "initial_action": "Obtener ECG de doce derivaciones y definir el ritmo del episodio. Solicitar valoración especializada; la ablación de la vía accesoria es el tratamiento curativo descrito.",
+          "action_reason": "El tratamiento agudo depende del mecanismo de taquicardia y de la estabilidad.",
+          "modifiers": [
+            {
+              "factor": "FA preexcitada estable",
+              "action": "Valorar procainamida o ibutilida intravenosa con monitorización y apoyo experto.",
+              "reason": "Actúan sobre el ritmo sin depender de bloqueo aislado del nodo AV."
+            },
+            {
+              "factor": "FA preexcitada inestable",
+              "action": "Realizar cardioversión eléctrica urgente.",
+              "reason": "La conducción rápida por la vía accesoria amenaza la perfusión y puede precipitar FV."
+            }
+          ],
+          "limits": "En FA preexcitada evitar verapamilo, diltiazem, amiodarona, digoxina, adenosina y betabloqueadores: pueden precipitar FV o deterioro. Este complemento procede de la guía primaria ACC/AHA 2023.",
+          "evidence": [
+            {
+              "page": 14,
+              "quote": "Onda delta con PR corto menor de 0,12"
+            },
+            {
+              "page": 14,
+              "quote": "Curativo: Ablación de la vía accesoria por cateterismo."
+            }
+          ],
+          "source_gaps": [],
+          "external_sources": [
+            {
+              "label": "ACC/AHA/ACCP/HRS, guía de FA 2023, sección 10.6",
+              "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11095842/",
+              "quote": "pharmacological cardioversion with intravenous ibutilide or intravenous procainamide is recommended",
+              "checked_at": "2026-10-29"
+            }
+          ]
+        }
+      ],
+      "common_problem": "Paciente joven con palpitaciones y alteraciones basales del ECG.",
+      "mother": {
+        "cue": "Una conexión eléctrica adicional permite activación ventricular antes de la conducción habitual.",
+        "answer": "Preexcitación por vía accesoria",
+        "explanation": "El ECG basal y el ritmo del episodio condicionan la decisión."
+      }
+    },
+    {
+      "id": "01.08",
+      "title": "REVISIÓN: FV vs FA",
+      "topics": [
+        {
+          "id": "01.08-01",
+          "name": "Fibrilación ventricular",
+          "source_pages": [
+            7
+          ],
+          "pattern": "Un hombre colapsa tras dolor torácico. No tiene pulso y el monitor muestra actividad eléctrica caótica, sin complejos QRS identificables. El equipo dispone de desfibrilador.",
+          "key_discriminator": "sin complejos QRS identificables",
+          "mechanism": "La activación ventricular desorganizada impide contracciones coordinadas y elimina el gasto cardíaco; la descarga permite terminar la actividad eléctrica que sostiene el paro.",
+          "findings": [
+            {
+              "mechanism": "Desorganización ventricular",
+              "finding": "Trazado caótico sin QRS reconocible"
+            },
+            {
+              "mechanism": "Ausencia de gasto",
+              "finding": "Colapso sin pulso"
+            }
+          ],
+          "initial_action": "Iniciar RCP y desfibrilar en cuanto sea posible. Reanudar compresiones de inmediato y seguir el algoritmo de paro.",
+          "action_reason": "La RCP mantiene flujo parcial; la desfibrilación trata el ritmo causal.",
+          "modifiers": [
+            {
+              "factor": "Persistencia tras descargas",
+              "action": "Añadir los fármacos del algoritmo y corregir causas reversibles.",
+              "reason": "La arritmia puede persistir por isquemia o alteraciones electrolíticas."
+            }
+          ],
+          "limits": "La energía depende del tipo y fabricante del desfibrilador; la cifra de 200 J de esta ficha no es universal.",
+          "evidence": [
+            {
+              "page": 7,
+              "quote": "Complejos QRS indiscernibles."
+            },
+            {
+              "page": 7,
+              "quote": "RCP para mantener el"
+            }
+          ],
+          "source_gaps": []
+        },
+        {
+          "id": "01.08-02",
+          "name": "Fibrilación auricular",
+          "source_pages": [
+            5,
+            6
+          ],
+          "pattern": "Un adulto mayor hipertenso consulta por palpitaciones y disnea. Conserva presión arterial. El ECG muestra intervalos RR irregularmente irregulares, ausencia de ondas P y complejos QRS estrechos.",
+          "key_discriminator": "ausencia de ondas P",
+          "mechanism": "La activación auricular desorganizada produce conducción ventricular irregular y estasis auricular; se deben valorar tanto la frecuencia ventricular como el riesgo de embolia.",
+          "findings": [
+            {
+              "mechanism": "Activación auricular desorganizada",
+              "finding": "Ausencia de ondas P"
+            },
+            {
+              "mechanism": "Conducción variable por nodo AV",
+              "finding": "Intervalos RR irregulares"
+            }
+          ],
+          "initial_action": "Confirmar el ritmo y valorar estabilidad. En el paciente estable, controlar la frecuencia según función ventricular y valorar anticoagulación por riesgo tromboembólico.",
+          "action_reason": "El control de frecuencia mejora síntomas; la prevención embólica atiende un riesgo independiente.",
+          "modifiers": [
+            {
+              "factor": "Inestabilidad por la arritmia",
+              "action": "Realizar cardioversión eléctrica urgente.",
+              "reason": "La perfusión está comprometida."
+            },
+            {
+              "factor": "Cardiopatía estructural o FEVI reducida",
+              "action": "Ajustar la selección farmacológica.",
+              "reason": "Los antiarrítmicos no son intercambiables en estos contextos."
+            }
+          ],
+          "limits": "La puntuación de riesgo y la selección del anticoagulante requieren guía vigente; el sexo aislado no basta para indicar anticoagulación.",
+          "evidence": [
+            {
+              "page": 5,
+              "quote": "Patrón irregular con ausencia de ondas P"
+            },
+            {
+              "page": 5,
+              "quote": "Paciente inestable: Cardioversión eléctrica."
+            },
+            {
+              "page": 6,
+              "quote": "La prevención del riesgo tromboembólico es la estrategia de"
+            }
+          ],
+          "source_gaps": []
+        }
+      ],
+      "common_problem": "Monitor con actividad irregular en un paciente sintomático.",
+      "mother": {
+        "cue": "La actividad irregular debe localizarse en aurículas o ventrículos y relacionarse con el pulso.",
+        "answer": "Desorganización eléctrica auricular o ventricular",
+        "explanation": "La presencia de circulación separa una taquiarritmia con pulso de un paro desfibrilable."
+      }
+    },
+    {
+      "id": "01.09",
+      "title": "Hipoxia y paro",
+      "topics": [
+        {
+          "id": "01.09-01",
+          "name": "Ahogamiento",
+          "source_pages": [
+            1,
+            2
+          ],
+          "pattern": "Un niño es retirado de una piscina. Está inconsciente y no respira. El rescate ocurrió con seguridad, pero aún no se dispone de equipo avanzado de ventilación.",
+          "key_discriminator": "retirado de una piscina",
+          "mechanism": "La aspiración de líquido altera surfactante y membrana alveolocapilar; la hipoxemia precede con frecuencia a la bradicardia y al paro por inmersión.",
+          "findings": [
+            {
+              "mechanism": "Lesión alveolocapilar",
+              "finding": "Edema pulmonar e hipoxemia"
+            },
+            {
+              "mechanism": "Hipoxia sostenida",
+              "finding": "Bradicardia y pérdida de conciencia"
+            }
+          ],
+          "initial_action": "Activar ayuda e iniciar ventilaciones de rescate tras extracción segura. Añadir compresiones si no hay pulso y usar DEA cuando esté disponible.",
+          "action_reason": "El paro por inmersión suele ser hipóxico; la ventilación es esencial.",
+          "modifiers": [
+            {
+              "factor": "Ritmo desfibrilable",
+              "action": "Secar el tórax y aplicar la descarga indicada.",
+              "reason": "El agua sobre el tórax dificulta el uso seguro del DEA."
+            },
+            {
+              "factor": "Hipotermia",
+              "action": "Evitar más pérdida de calor e iniciar recalentamiento indicado.",
+              "reason": "La exposición favorece hipotermia concomitante."
+            }
+          ],
+          "limits": "No retrasar ventilación para intentar expulsar agua con maniobras abdominales o drenaje postural.",
+          "evidence": [
+            {
+              "page": 1,
+              "quote": "El paro cardíaco es secundario a la"
+            },
+            {
+              "page": 2,
+              "quote": "La ventilación se considera el"
+            }
+          ],
+          "source_gaps": []
+        }
+      ],
+      "common_problem": "Persona rescatada de líquido con alteración de conciencia o respiración.",
+      "mother": {
+        "cue": "La falta de oxígeno antecede al deterioro circulatorio tras inmersión.",
+        "answer": "Lesión respiratoria hipóxica por inmersión",
+        "explanation": "La ventilación temprana atiende el mecanismo que suele conducir al paro."
+      }
+    },
+    {
+      "id": "01.10",
+      "title": "REVISIÓN: inconsciente con pulso",
+      "topics": [
+        {
+          "id": "01.10-01",
+          "name": "PLS",
+          "source_pages": [
+            8
+          ],
+          "pattern": "Un adulto tiene alerta reducida después de una crisis ya terminada. Respira de forma normal y conserva circulación. No hay trauma aparente; una persona permanece a su lado.",
+          "key_discriminator": "Respira de forma normal",
+          "mechanism": "La pérdida de alerta reduce la protección de vía aérea; la posición lateral puede facilitar su permeabilidad y salida de secreciones cuando se conserva respiración normal.",
+          "findings": [
+            {
+              "mechanism": "Alerta reducida",
+              "finding": "Riesgo de obstrucción o aspiración"
+            },
+            {
+              "mechanism": "Ventilación espontánea conservada",
+              "finding": "Respiración normal"
+            }
+          ],
+          "initial_action": "Activar ayuda. Considerar posición lateral de seguridad en una causa no traumática con respiración normal y mantener vigilancia continua de respiración y respuesta.",
+          "action_reason": "Puede ayudar a mantener vía aérea permeable mientras se espera atención.",
+          "modifiers": [
+            {
+              "factor": "Respiración ausente o anormal",
+              "action": "Colocar en decúbito supino y seguir el algoritmo de RCP o ventilación.",
+              "reason": "La posición lateral no permite dar reanimación eficaz."
+            },
+            {
+              "factor": "Sospecha de lesión de columna o pelvis",
+              "action": "Evitar cambios innecesarios de posición y solicitar ayuda.",
+              "reason": "El movimiento puede agravar lesiones."
+            }
+          ],
+          "limits": "La posición lateral no sustituye la vigilancia. La página 8 declarada por el inventario trata RCP pediátrica; se corrige con la guía primaria de primeros auxilios.",
+          "evidence": [
+            {
+              "page": 17,
+              "quote": "Controlar hasta que"
+            }
+          ],
+          "source_gaps": [],
+          "verified_source_pages": [
+            17
+          ],
+          "source_corrections": [
+            "La página 8 asignada por la guía no describe PLS. La página 17 respalda la vigilancia con respiración normal y pulso; AHA 2024 aporta la postura y límites."
+          ],
+          "external_sources": [
+            {
+              "label": "AHA y Cruz Roja, First Aid Guidelines 2024, sección 5.1",
+              "url": "https://cpr.heart.org/en/resuscitation-science/2024-first-aid-guidelines",
+              "quote": "It is reasonable to position a person with decreased alertness of nontraumatic cause",
+              "checked_at": "2026-10-29"
+            }
+          ]
+        },
+        {
+          "id": "01.10-02",
+          "name": "Soporte vital básico",
+          "source_pages": [
+            15,
+            16,
+            17
+          ],
+          "pattern": "Un adulto cae al suelo. No responde a la voz, solo jadea y el profesional no detecta pulso en diez segundos. Otra persona puede traer el desfibrilador.",
+          "key_discriminator": "solo jadea",
+          "mechanism": "La ausencia de circulación eficaz interrumpe el aporte cerebral y coronario de oxígeno; las compresiones mantienen flujo parcial hasta revertir la causa.",
+          "findings": [
+            {
+              "mechanism": "Ausencia de flujo",
+              "finding": "Inconsciencia y ausencia de pulso"
+            },
+            {
+              "mechanism": "Respiración agónica",
+              "finding": "Jadeos sin ventilación eficaz"
+            }
+          ],
+          "initial_action": "Asegurar la escena, activar emergencias e iniciar RCP de calidad con 30 compresiones y dos ventilaciones. Utilizar el DEA en cuanto llegue.",
+          "action_reason": "Reduce el tiempo sin perfusión y permite descargar un ritmo desfibrilable.",
+          "modifiers": [
+            {
+              "factor": "Pulso presente y respiración anormal",
+              "action": "Dar ventilación de rescate y reevaluar el pulso.",
+              "reason": "Existe paro respiratorio sin paro circulatorio."
+            }
+          ],
+          "limits": "Los reanimadores no profesionales no deben retrasar las compresiones para buscar pulso.",
+          "evidence": [
+            {
+              "page": 15,
+              "quote": "un paciente inconsciente que no respira y no tiene pulso."
+            },
+            {
+              "page": 16,
+              "quote": "Si no hay respuesta pedir ayuda y activar sistema de emergencia"
+            }
+          ],
+          "source_gaps": []
+        }
+      ],
+      "common_problem": "Persona inconsciente en quien se busca pulso y respiración.",
+      "mother": {
+        "cue": "Conservar circulación no garantiza ventilación eficaz.",
+        "answer": "Clasificación inicial del inconsciente",
+        "explanation": "La respiración y el pulso determinan vigilancia, ventilación o compresiones; la postura depende también de trauma y alerta."
+      }
+    }
+  ]
+}
