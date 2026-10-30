@@ -1,0 +1,1226 @@
+{
+  "id": "20",
+  "title": "Neonatología",
+  "blocks": [
+    {
+      "id": "20.01",
+      "title": "Recepción del RN",
+      "topics": [
+        {
+          "id": "20.01-01",
+          "name": "Reanimación neonatal",
+          "source_pages": [
+            668,
+            669
+          ],
+          "pattern": "Al nacer, un bebé tiene apnea y frecuencia cardíaca baja pese a secado y estimulación. El equipo debe establecer ventilación eficaz y reevaluar el pulso antes de escalar intervenciones.",
+          "key_discriminator": "apnea y frecuencia cardíaca baja",
+          "mechanism": "La transición falla principalmente por ventilación insuficiente; restaurar entrada de aire mejora oxigenación y frecuencia cardíaca antes de requerir compresiones o fármacos.",
+          "findings": [
+            {
+              "mechanism": "Falla ventilatoria neonatal",
+              "finding": "Apnea y bradicardia"
+            }
+          ],
+          "initial_action": "Iniciar ventilación a presión positiva cuando corresponda, comprobar movimiento torácico y reevaluar frecuencia cardíaca.",
+          "action_reason": "La ventilación eficaz es la intervención central.",
+          "modifiers": [
+            {
+              "factor": "Frecuencia muy baja pese a ventilación efectiva",
+              "action": "Escalar a compresiones y protocolo de reanimación.",
+              "reason": "La circulación requiere soporte adicional."
+            }
+          ],
+          "limits": "No retrasar ventilación para aspiración rutinaria por meconio.",
+          "evidence": [
+            {
+              "page": 668,
+              "quote": "suele ser un problema respiratorio"
+            },
+            {
+              "page": 669,
+              "quote": "Ventilación a presión"
+            }
+          ],
+          "source_gaps": [],
+          "verified_source_pages": [
+            668,
+            669
+          ],
+          "external_sources": [
+            {
+              "label": "AHA/AAP: reanimación neonatal 2025",
+              "url": "https://cpr.heart.org/en/resuscitation-science/cpr-and-ecc-guidelines/neonatal-resuscitation",
+              "quote": "suctioning of newborn infants is not recommended",
+              "checked_at": "2026-10-29"
+            }
+          ],
+          "source_corrections": [
+            "Se corrige aspiración rutinaria del neonato no vigoroso con meconio. Priorizar ventilación; aspirar si obstrucción impide ventilación eficaz."
+          ]
+        },
+        {
+          "id": "20.01-02",
+          "name": "APGAR",
+          "source_pages": [
+            648
+          ],
+          "pattern": "Un recién nacido ya recibió las intervenciones necesarias y se documentan frecuencia cardíaca, respiración, tono, respuesta a estímulo y color al minuto y a los cinco minutos.",
+          "key_discriminator": "tono, respuesta a estímulo y color",
+          "mechanism": "La escala integra cinco signos de adaptación neonatal para registrar el estado y su cambio tras nacimiento, sin determinar por sí sola causa de depresión.",
+          "findings": [
+            {
+              "mechanism": "Evaluación de cinco signos",
+              "finding": "Puntuación de adaptación neonatal"
+            }
+          ],
+          "initial_action": "Calcular y registrar la puntuación en los tiempos indicados sin retrasar atención.",
+          "action_reason": "Documenta adaptación y respuesta.",
+          "modifiers": [
+            {
+              "factor": "Prematurez o exposición a fármacos maternos",
+              "action": "Interpretar con contexto.",
+              "reason": "Pueden reducir puntaje sin establecer asfixia."
+            }
+          ],
+          "limits": "No usar Apgar para decidir el inicio de reanimación ni diagnosticar asfixia aislada.",
+          "evidence": [
+            {
+              "page": 648,
+              "quote": "5 variables clínicas"
+            },
+            {
+              "page": 648,
+              "quote": "al primer minuto de vida y a los 5 minutos"
+            }
+          ],
+          "source_gaps": [],
+          "verified_source_pages": [
+            648
+          ],
+          "external_sources": [
+            {
+              "label": "ACOG/AAP: Apgar",
+              "url": "https://www.acog.org/clinical/clinical-guidance/committee-opinion/articles/2015/10/the-apgar-score",
+              "quote": "The Apgar score alone cannot be considered to be evidence",
+              "checked_at": "2026-10-29"
+            }
+          ],
+          "source_corrections": [
+            "Apgar documenta adaptación; no establece asfixia aislada ni debe retrasar reanimación."
+          ]
+        },
+        {
+          "id": "20.01-03",
+          "name": "Silverman Anderson",
+          "source_pages": [
+            675
+          ],
+          "pattern": "Un recién nacido tiene tiraje, retracción xifoidea y quejido. Se evalúan sincronía toracoabdominal y aleteo nasal para cuantificar esfuerzo respiratorio y seguir su respuesta al soporte.",
+          "key_discriminator": "tiraje, retracción xifoidea y quejido",
+          "mechanism": "El aumento de trabajo respiratorio produce retracciones y asincronía; la escala suma signos observables de esfuerzo para graduar dificultad y seguir evolución clínica.",
+          "findings": [
+            {
+              "mechanism": "Trabajo respiratorio aumentado",
+              "finding": "Retracciones, aleteo y quejido"
+            }
+          ],
+          "initial_action": "Valorar los cinco componentes y combinar resultado con oxigenación y estado clínico para elegir soporte.",
+          "action_reason": "La escala mide esfuerzo y no etiología.",
+          "modifiers": [
+            {
+              "factor": "Fatiga, apnea o hipoxemia",
+              "action": "Escalar soporte sin esperar otra puntuación.",
+              "reason": "Indica riesgo de insuficiencia."
+            }
+          ],
+          "limits": "No convertir un puntaje en una modalidad de ventilación obligatoria sin contexto.",
+          "evidence": [
+            {
+              "page": 675,
+              "quote": "valora el esfuerzo respiratorio neonatal"
+            },
+            {
+              "page": 675,
+              "quote": "movimientos toraco- abdominales"
+            }
+          ],
+          "source_gaps": [],
+          "verified_source_pages": [
+            675
+          ]
+        }
+      ],
+      "common_problem": "Un recién nacido requiere evaluación inmediata tras nacimiento.",
+      "mother": {
+        "cue": "La respiración, el pulso y el esfuerzo definen soporte y permiten registrar adaptación.",
+        "answer": "Transición neonatal y reanimación",
+        "explanation": "Las escalas documentan estado sin retrasar intervenciones."
+      }
+    },
+    {
+      "id": "20.02",
+      "title": "RN sano: término o prematuro",
+      "topics": [
+        {
+          "id": "20.02-01",
+          "name": "Recien nacido de término",
+          "source_pages": [
+            670,
+            671,
+            672,
+            673
+          ],
+          "pattern": "Un recién nacido de término respira bien y se alimenta. Antes del alta se revisan exploración completa, temperatura, eliminación, tamices y capacidad familiar para seguimiento y retorno por alarma.",
+          "key_discriminator": "Antes del alta",
+          "mechanism": "La adaptación puede parecer normal mientras persisten riesgos de alimentación, ictericia o anomalías no detectadas; evaluación integral y seguimiento reducen reingreso y daño.",
+          "findings": [
+            {
+              "mechanism": "Transición con riesgos ocultos",
+              "finding": "Problemas detectables antes de egreso"
+            }
+          ],
+          "initial_action": "Realizar evaluación completa, comprobar alimentación y estabilidad y programar control temprano con educación a la familia.",
+          "action_reason": "El cuidado no termina en sala de parto.",
+          "modifiers": [
+            {
+              "factor": "Egreso temprano",
+              "action": "Asegurar criterios y seguimiento oportuno.",
+              "reason": "Aumenta riesgo de problemas no detectados."
+            }
+          ],
+          "limits": "Los tamices tienen tiempos y algoritmos propios.",
+          "evidence": [
+            {
+              "page": 670,
+              "quote": "antes de su egreso."
+            },
+            {
+              "page": 673,
+              "quote": "Capacidad del recién nacido para alimentarse"
+            }
+          ],
+          "source_gaps": [],
+          "verified_source_pages": [
+            670,
+            671,
+            672,
+            673
+          ]
+        },
+        {
+          "id": "20.02-02",
+          "name": "Prematuro sano",
+          "source_pages": [
+            667
+          ],
+          "pattern": "Un recién nacido de 34 semanas está estable, sin enfermedad aparente. Requiere vigilancia de temperatura, alimentación y crecimiento acorde con madurez, aunque no necesite un tratamiento por una lesión específica.",
+          "key_discriminator": "34 semanas está estable",
+          "mechanism": "La inmadurez fisiológica reduce reserva térmica, nutricional y respiratoria aun sin enfermedad, por lo que el prematuro sano necesita apoyo y seguimiento adaptados.",
+          "findings": [
+            {
+              "mechanism": "Madurez funcional incompleta",
+              "finding": "Mayor necesidad de vigilancia y soporte térmico"
+            }
+          ],
+          "initial_action": "Valorar edad gestacional y función; asegurar termorregulación, leche materna y seguimiento del crecimiento.",
+          "action_reason": "La ausencia de lesión no elimina necesidades por inmadurez.",
+          "modifiers": [
+            {
+              "factor": "Menor capacidad para mantener temperatura",
+              "action": "Utilizar entorno térmico adecuado.",
+              "reason": "Previene gasto energético y enfriamiento."
+            }
+          ],
+          "limits": "La edad gestacional no sustituye evaluación individual de estabilidad.",
+          "evidence": [
+            {
+              "page": 667,
+              "quote": "funciones propias de su edad gestacional."
+            },
+            {
+              "page": 667,
+              "quote": "Peso diario: Se espera ganancia promedio"
+            }
+          ],
+          "source_gaps": [],
+          "verified_source_pages": [
+            667
+          ]
+        }
+      ],
+      "common_problem": "Un recién nacido parece sano al nacimiento.",
+      "mother": {
+        "cue": "La edad gestacional y la capacidad funcional determinan vigilancia, alimentación y egreso.",
+        "answer": "Cuidado del recién nacido según madurez",
+        "explanation": "La estabilidad debe comprobarse antes de salir."
+      }
+    },
+    {
+      "id": "20.03",
+      "title": "Taquipnea neonatal precoz",
+      "topics": [
+        {
+          "id": "20.03-01",
+          "name": "Taquipnea transitoria del recien nacido",
+          "source_pages": [
+            682
+          ],
+          "pattern": "Un recién nacido de término por cesárea presenta taquipnea pocas horas después. La radiografía muestra líquido en cisuras e hiperinsuflación y el cuadro mejora gradualmente durante los siguientes días.",
+          "key_discriminator": "líquido en cisuras",
+          "mechanism": "El retraso en absorción del líquido pulmonar fetal dificulta ventilación durante transición y causa taquipnea transitoria, generalmente sin una lesión infecciosa primaria.",
+          "findings": [
+            {
+              "mechanism": "Retención de líquido pulmonar",
+              "finding": "Taquipnea precoz y cisuritis"
+            }
+          ],
+          "initial_action": "Dar soporte respiratorio según necesidad y elegir alimentación segura según esfuerzo; vigilar evolución.",
+          "action_reason": "El cuadro suele mejorar al eliminar líquido.",
+          "modifiers": [
+            {
+              "factor": "Persistencia o empeoramiento después del curso esperado",
+              "action": "Buscar otra causa.",
+              "reason": "Puede no ser un trastorno transitorio."
+            }
+          ],
+          "limits": "No asumir diagnóstico sin excluir infección u otras causas si hay datos de alarma.",
+          "evidence": [
+            {
+              "page": 682,
+              "quote": "retraso de absorción de líquido"
+            },
+            {
+              "page": 682,
+              "quote": "Oxígeno suplementario"
+            }
+          ],
+          "source_gaps": [],
+          "verified_source_pages": [
+            682
+          ]
+        },
+        {
+          "id": "20.03-02",
+          "name": "Síndrome de dificultad respiratoria",
+          "source_pages": [
+            677,
+            678,
+            679
+          ],
+          "pattern": "Un prematuro presenta dificultad respiratoria desde nacimiento, requiere oxígeno y tiene baja expansión pulmonar con patrón reticulogranular y broncograma aéreo. Se evalúa necesidad de soporte y reposición de una sustancia alveolar.",
+          "key_discriminator": "baja expansión pulmonar",
+          "mechanism": "El déficit de surfactante aumenta tensión superficial y favorece colapso alveolar, reduciendo distensibilidad y capacidad de intercambio gaseoso en el pulmón inmaduro.",
+          "findings": [
+            {
+              "mechanism": "Déficit de surfactante",
+              "finding": "Atelectasia y trabajo respiratorio"
+            }
+          ],
+          "initial_action": "Iniciar soporte con CPAP si respira y valorar surfactante temprano según necesidad y protocolo.",
+          "action_reason": "Mantener alvéolos abiertos mejora ventilación.",
+          "modifiers": [
+            {
+              "factor": "Apnea o fracaso de soporte no invasivo",
+              "action": "Valorar intubación y ventilación.",
+              "reason": "El esfuerzo espontáneo puede ser insuficiente."
+            }
+          ],
+          "limits": "El tratamiento no requiere esperar imagen clásica si la clínica exige intervención.",
+          "evidence": [
+            {
+              "page": 677,
+              "quote": "colapso alveolar"
+            },
+            {
+              "page": 679,
+              "quote": "inicio temprano con surfactante"
+            }
+          ],
+          "source_gaps": [],
+          "verified_source_pages": [
+            677,
+            678,
+            679
+          ]
+        }
+      ],
+      "common_problem": "Un recién nacido tiene taquipnea desde las primeras horas.",
+      "mother": {
+        "cue": "La retención de líquido o la falta de surfactante alteran ventilación con patrones distintos.",
+        "answer": "Dificultad respiratoria neonatal precoz",
+        "explanation": "La madurez y el curso orientan la causa."
+      }
+    },
+    {
+      "id": "20.04",
+      "title": "Dificultad respiratoria distinta",
+      "topics": [
+        {
+          "id": "20.04-01",
+          "name": "Síndrome de aspiración de meconio",
+          "source_pages": [
+            676
+          ],
+          "pattern": "Un recién nacido de postérmino nace con líquido meconial y dificultad respiratoria. Tiene infiltrados pulmonares en parches e hipoxemia; se evalúan fuga de aire e hipertensión pulmonar.",
+          "key_discriminator": "líquido meconial y dificultad respiratoria",
+          "mechanism": "El material aspirado obstruye vías aéreas e inflama pulmón, altera surfactante y favorece hipoxemia, fuga de aire e hipertensión pulmonar persistente.",
+          "findings": [
+            {
+              "mechanism": "Obstrucción e inflamación por aspiración",
+              "finding": "Hipoxemia e infiltrados heterogéneos"
+            }
+          ],
+          "initial_action": "Priorizar ventilación y soporte de oxigenación; evaluar complicaciones y nivel de atención.",
+          "action_reason": "La insuficiencia respiratoria determina urgencia.",
+          "modifiers": [
+            {
+              "factor": "Obstrucción que impide ventilación",
+              "action": "Valorar aspiración de vía aérea por equipo experto.",
+              "reason": "La obstrucción cambia la intervención."
+            }
+          ],
+          "limits": "No se indica aspiración traqueal rutinaria por ser no vigoroso.",
+          "evidence": [
+            {
+              "page": 676,
+              "quote": "obstrucción, inflamación e hipertensión pulmonar."
+            },
+            {
+              "page": 676,
+              "quote": "Ventilación mecánica"
+            }
+          ],
+          "source_gaps": [],
+          "verified_source_pages": [
+            676
+          ],
+          "external_sources": [
+            {
+              "label": "AHA/AAP: reanimación neonatal 2025",
+              "url": "https://cpr.heart.org/en/resuscitation-science/cpr-and-ecc-guidelines/neonatal-resuscitation",
+              "quote": "suctioning of newborn infants is not recommended",
+              "checked_at": "2026-10-29"
+            }
+          ],
+          "source_corrections": [
+            "Se corrige aspiración rutinaria del neonato no vigoroso con meconio. Priorizar ventilación; aspirar si obstrucción impide ventilación eficaz."
+          ]
+        },
+        {
+          "id": "20.04-02",
+          "name": "Displasia broncopulmonar",
+          "source_pages": [
+            651
+          ],
+          "pattern": "Un prematuro que recibió soporte respiratorio prolongado sigue necesitando oxígeno semanas después de nacer. Presenta dependencia de soporte y requiere evaluación de enfermedad pulmonar crónica y crecimiento.",
+          "key_discriminator": "sigue necesitando oxígeno semanas después",
+          "mechanism": "La inmadurez y lesión inflamatoria interrumpen desarrollo alveolar y vascular, dejando menos superficie de intercambio y necesidad respiratoria persistente tras el período neonatal inicial.",
+          "findings": [
+            {
+              "mechanism": "Desarrollo pulmonar alterado",
+              "finding": "Necesidad prolongada de oxígeno"
+            }
+          ],
+          "initial_action": "Ajustar soporte, nutrición y seguimiento pulmonar y vigilar complicaciones según gravedad.",
+          "action_reason": "El objetivo es sostener crecimiento y oxigenación con mínima lesión adicional.",
+          "modifiers": [
+            {
+              "factor": "Necesidad de ventilación persistente",
+              "action": "Valorar estrategia especializada de destete.",
+              "reason": "La exposición prolongada puede agravar lesión."
+            }
+          ],
+          "limits": "Fibroplasia retrolenticular no es sinónimo de displasia broncopulmonar.",
+          "evidence": [
+            {
+              "page": 651,
+              "quote": "Se interrumpe el desarrollo"
+            },
+            {
+              "page": 651,
+              "quote": "oxigeno suplementario por más de 28 días"
+            }
+          ],
+          "source_gaps": [],
+          "verified_source_pages": [
+            651
+          ]
+        }
+      ],
+      "common_problem": "Un recién nacido tiene dificultad respiratoria con antecedentes específicos.",
+      "mother": {
+        "cue": "La aspiración o el daño pulmonar crónico cambian mecanismo y soporte.",
+        "answer": "Daño pulmonar neonatal",
+        "explanation": "El antecedente perinatal y el tiempo distinguen procesos."
+      }
+    },
+    {
+      "id": "20.05",
+      "title": "Apnea/hipoxia",
+      "topics": [
+        {
+          "id": "20.05-01",
+          "name": "Apnea del prematuro",
+          "source_pages": [
+            649
+          ],
+          "pattern": "Un prematuro presenta pausas respiratorias acompañadas de bradicardia durante el sueño. Entre episodios vuelve a su estado habitual; se deben excluir infección y causas metabólicas antes de atribuirlas a inmadurez.",
+          "key_discriminator": "pausas respiratorias acompañadas de bradicardia",
+          "mechanism": "La inmadurez del control respiratorio y del tono de vía aérea provoca pausas que pueden reducir oxigenación y pulso, una vez excluidas causas secundarias.",
+          "findings": [
+            {
+              "mechanism": "Control respiratorio inmaduro",
+              "finding": "Apnea con bradicardia o cianosis"
+            }
+          ],
+          "initial_action": "Monitorizar, atender el episodio y excluir causas; considerar cafeína en apnea de prematuridad.",
+          "action_reason": "El diagnóstico no debe ocultar una causa tratable secundaria.",
+          "modifiers": [
+            {
+              "factor": "Persistencia pese a cafeína",
+              "action": "Valorar soporte no invasivo.",
+              "reason": "Puede requerir apoyo ventilatorio."
+            }
+          ],
+          "limits": "La suspensión de cafeína se individualiza; no fijar una edad universal del libro.",
+          "evidence": [
+            {
+              "page": 649,
+              "quote": "inmadurez del centro respiratorio."
+            },
+            {
+              "page": 649,
+              "quote": "Citrato de cafeína"
+            }
+          ],
+          "source_gaps": [],
+          "verified_source_pages": [
+            649
+          ]
+        },
+        {
+          "id": "20.05-02",
+          "name": "Asfixia neonatal 1",
+          "source_pages": [
+            650
+          ],
+          "pattern": "Un recién nacido tuvo un evento intraparto con compromiso de intercambio gaseoso. Presenta depresión persistente, acidosis y disfunción de varios órganos; se evalúan daño neurológico y necesidad de soporte intensivo.",
+          "key_discriminator": "acidosis y disfunción de varios órganos",
+          "mechanism": "La reducción de intercambio gaseoso o perfusión perinatal causa hipoxia e hipercapnia y puede lesionar cerebro y otros órganos, con repercusión variable.",
+          "findings": [
+            {
+              "mechanism": "Hipoxia e hipoperfusión perinatal",
+              "finding": "Depresión y disfunción orgánica"
+            }
+          ],
+          "initial_action": "Estabilizar ventilación y perfusión y evaluar encefalopatía y elegibilidad para neuroprotección.",
+          "action_reason": "La lesión orgánica requiere atención temprana.",
+          "modifiers": [
+            {
+              "factor": "Encefalopatía compatible",
+              "action": "Valorar hipotermia en ventana y criterios adecuados.",
+              "reason": "El beneficio depende de selección y tiempo."
+            }
+          ],
+          "limits": "Apgar bajo aislado no demuestra asfixia.",
+          "evidence": [
+            {
+              "page": 650,
+              "quote": "inadecuado intercambio gaseoso"
+            },
+            {
+              "page": 650,
+              "quote": "hipotermia terapéutica"
+            }
+          ],
+          "source_gaps": [],
+          "verified_source_pages": [
+            650
+          ]
+        },
+        {
+          "id": "20.05-03",
+          "name": "Encefalopatá hipóxica",
+          "source_pages": [
+            653
+          ],
+          "pattern": "Un recién nacido de término tras un evento hipóxico presenta letargia, hipotonía y convulsiones en las primeras horas. El equipo valora gravedad neurológica y criterios para enfriamiento controlado.",
+          "key_discriminator": "letargia, hipotonía y convulsiones",
+          "mechanism": "La hipoxia e isquemia perinatal desencadenan lesión cerebral primaria y secundaria; la evaluación neurológica precoz identifica pacientes que pueden beneficiarse de hipotermia terapéutica.",
+          "findings": [
+            {
+              "mechanism": "Lesión cerebral hipóxico-isquémica",
+              "finding": "Alteración de alerta, tono y crisis"
+            }
+          ],
+          "initial_action": "Evaluar con examen neurológico y monitorización y activar hipotermia controlada temprana si cumple criterios.",
+          "action_reason": "La ventana terapéutica es limitada.",
+          "modifiers": [
+            {
+              "factor": "Otra causa de encefalopatía",
+              "action": "Investigar y ajustar manejo.",
+              "reason": "El diagnóstico requiere excluir explicaciones alternativas."
+            }
+          ],
+          "limits": "La hipotermia requiere un centro con protocolo y vigilancia.",
+          "evidence": [
+            {
+              "page": 653,
+              "quote": "Estado de alerta."
+            },
+            {
+              "page": 653,
+              "quote": "primeras 6 horas de vida"
+            }
+          ],
+          "source_gaps": [],
+          "verified_source_pages": [
+            653
+          ]
+        }
+      ],
+      "common_problem": "Un recién nacido presenta pausas respiratorias o alteración neurológica.",
+      "mother": {
+        "cue": "La inmadurez o una lesión hipóxica puede afectar respiración y función cerebral.",
+        "answer": "Alteración del control respiratorio o lesión hipóxica",
+        "explanation": "La causa y gravedad determinan soporte y neuroprotección."
+      }
+    },
+    {
+      "id": "20.06",
+      "title": "Prevención de SDR",
+      "topics": [
+        {
+          "id": "20.06-01",
+          "name": "Maduración pulmonar",
+          "source_pages": [
+            665
+          ],
+          "pattern": "Una embarazada con riesgo alto de parto prematuro en los próximos días requiere una intervención para reducir dificultad respiratoria del recién nacido. Se revisan edad gestacional, infección y necesidad inmediata de nacimiento.",
+          "key_discriminator": "riesgo alto de parto prematuro",
+          "mechanism": "Los corticoesteroides antenatales aceleran maduración funcional del pulmón fetal y producción de surfactante, reduciendo riesgo de enfermedad respiratoria en nacimientos prematuros seleccionados.",
+          "findings": [
+            {
+              "mechanism": "Maduración pulmonar acelerada",
+              "finding": "Menor riesgo de déficit de surfactante"
+            }
+          ],
+          "initial_action": "Valorar un curso de corticoesteroide antenatal según edad y probabilidad de parto próximo.",
+          "action_reason": "El beneficio depende de indicación y oportunidad.",
+          "modifiers": [
+            {
+              "factor": "Necesidad de nacimiento urgente por enfermedad materna o fetal",
+              "action": "No retrasar resolución para completar esquema.",
+              "reason": "La seguridad tiene prioridad."
+            }
+          ],
+          "limits": "El rescate no es universal y requiere criterios vigentes.",
+          "evidence": [
+            {
+              "page": 665,
+              "quote": "acelerar la maduración pulmonar"
+            },
+            {
+              "page": 665,
+              "quote": "No se debe posponer el parto"
+            }
+          ],
+          "source_gaps": [],
+          "verified_source_pages": [
+            665
+          ]
+        }
+      ],
+      "common_problem": "Una embarazada tiene riesgo de nacimiento prematuro.",
+      "mother": {
+        "cue": "Acelerar maduración pulmonar fetal reduce enfermedad respiratoria del prematuro.",
+        "answer": "Prevención antenatal de inmadurez pulmonar",
+        "explanation": "El beneficio depende del contexto y tiempo previsto de parto."
+      }
+    },
+    {
+      "id": "20.07",
+      "title": "Ictericia neonatal",
+      "topics": [
+        {
+          "id": "20.07-01",
+          "name": "Ictericia neonatal",
+          "source_pages": [
+            660,
+            661,
+            662
+          ],
+          "pattern": "Un recién nacido presenta ictericia visible durante el primer día. Se mide bilirrubina y se consideran horas de vida, edad gestacional y factores de neurotoxicidad antes de decidir fototerapia.",
+          "key_discriminator": "durante el primer día",
+          "mechanism": "La bilirrubina aumenta por producción elevada o depuración insuficiente; su toxicidad depende de concentración, edad y vulnerabilidad, y la aparición precoz exige buscar enfermedad.",
+          "findings": [
+            {
+              "mechanism": "Balance de bilirrubina alterado",
+              "finding": "Ictericia neonatal precoz o progresiva"
+            }
+          ],
+          "initial_action": "Medir bilirrubina, evaluar causa y aplicar umbrales por edad en horas y riesgo.",
+          "action_reason": "La inspección visual no determina un umbral seguro.",
+          "modifiers": [
+            {
+              "factor": "Encefalopatía o nivel cercano a intercambio",
+              "action": "Escalar atención de urgencia.",
+              "reason": "Existe riesgo neurológico grave."
+            }
+          ],
+          "limits": "No usar exposición solar como tratamiento ni un valor visual de Kramer para decidir.",
+          "evidence": [
+            {
+              "page": 660,
+              "quote": "Primeras 24 horas."
+            },
+            {
+              "page": 662,
+              "quote": "No se recomienda la exposición a la luz del sol"
+            }
+          ],
+          "source_gaps": [],
+          "verified_source_pages": [
+            660,
+            661,
+            662
+          ]
+        }
+      ],
+      "common_problem": "Un recién nacido presenta color amarillo en piel.",
+      "mother": {
+        "cue": "La producción y depuración de bilirrubina cambian con edad y factores de riesgo.",
+        "answer": "Hiperbilirrubinemia neonatal",
+        "explanation": "La edad en horas y la madurez definen intervención."
+      }
+    },
+    {
+      "id": "20.08",
+      "title": "Letargo neonatal",
+      "topics": [
+        {
+          "id": "20.08-01",
+          "name": "Hipoglucemia neonatal",
+          "source_pages": [
+            658
+          ],
+          "pattern": "Un recién nacido hijo de madre diabética presenta temblores, letargo y mala alimentación. Se obtiene glucosa de inmediato y se inicia atención sin esperar a que el cuadro se resuelva solo.",
+          "key_discriminator": "hijo de madre diabética",
+          "mechanism": "El cambio de aporte energético tras nacimiento puede superar reservas y regulación metabólica; la glucosa baja sintomática compromete disponibilidad de energía cerebral.",
+          "findings": [
+            {
+              "mechanism": "Disponibilidad reducida de glucosa",
+              "finding": "Letargo, temblores o convulsiones"
+            }
+          ],
+          "initial_action": "Medir glucosa y tratar de inmediato al paciente sintomático con aporte de glucosa y monitorización según protocolo.",
+          "action_reason": "Previene lesión neurológica por déficit energético.",
+          "modifiers": [
+            {
+              "factor": "Persistencia más allá de transición esperada",
+              "action": "Investigar trastorno endocrino o metabólico.",
+              "reason": "Puede no ser un episodio transitorio."
+            }
+          ],
+          "limits": "Los umbrales operativos dependen de horas de vida y contexto.",
+          "evidence": [
+            {
+              "page": 658,
+              "quote": "Hijo de madre diabética."
+            },
+            {
+              "page": 658,
+              "quote": "Paciente sintomático"
+            }
+          ],
+          "source_gaps": [],
+          "verified_source_pages": [
+            658
+          ]
+        },
+        {
+          "id": "20.08-02",
+          "name": "Sepsis neonatal",
+          "source_pages": [
+            674
+          ],
+          "pattern": "Un neonato presenta mala alimentación, cambio de actividad y temperatura inestable. Tiene antecedente de ruptura prolongada de membranas; se sospecha infección sistémica y se necesitan cultivos y antibióticos oportunos.",
+          "key_discriminator": "temperatura inestable",
+          "mechanism": "La infección neonatal puede diseminarse con pocos signos específicos por inmadurez inmunitaria; la respuesta sistémica produce compromiso respiratorio, circulatorio o neurológico.",
+          "findings": [
+            {
+              "mechanism": "Infección sistémica neonatal",
+              "finding": "Mala ingesta y alteración térmica"
+            }
+          ],
+          "initial_action": "Obtener hemocultivo sin retrasar antibióticos e iniciar soporte; seleccionar cobertura según inicio y epidemiología.",
+          "action_reason": "El deterioro puede ser rápido.",
+          "modifiers": [
+            {
+              "factor": "Infección temprana",
+              "action": "Valorar ampicilina más aminoglucósido según protocolo local.",
+              "reason": "Cubre agentes frecuentes del período perinatal."
+            }
+          ],
+          "limits": "No retrasar tratamiento por punción lumbar en un paciente inestable.",
+          "evidence": [
+            {
+              "page": 674,
+              "quote": "Cambio en nivel de actividad."
+            },
+            {
+              "page": 674,
+              "quote": "ampicilina más un aminoglucósido"
+            }
+          ],
+          "source_gaps": [],
+          "verified_source_pages": [
+            674
+          ]
+        }
+      ],
+      "common_problem": "Un recién nacido está letárgico o come mal.",
+      "mother": {
+        "cue": "Los trastornos metabólicos y la infección pueden producir síntomas inespecíficos.",
+        "answer": "Alteración sistémica neonatal",
+        "explanation": "Se evalúan causas urgentes en paralelo."
+      }
+    },
+    {
+      "id": "20.09",
+      "title": "Tamiz y coagulopatía",
+      "topics": [
+        {
+          "id": "20.09-01",
+          "name": "Tamiz neonatal",
+          "source_pages": [
+            680,
+            681
+          ],
+          "pattern": "Un recién nacido aparentemente sano requiere una muestra de talón para detectar enfermedades tratables antes de síntomas. La familia necesita conocer cómo se comunica el resultado y cuándo se exige confirmación urgente.",
+          "key_discriminator": "enfermedades tratables antes de síntomas",
+          "mechanism": "El tamiz detecta metabolitos u hormonas alterados en enfermedades congénitas; la confirmación y tratamiento temprano previenen daño aunque el niño parezca sano.",
+          "findings": [
+            {
+              "mechanism": "Detección bioquímica precoz",
+              "finding": "Resultado de tamiz antes de manifestaciones"
+            }
+          ],
+          "initial_action": "Tomar muestra en tiempo y técnica del programa y asegurar recepción y seguimiento de resultados.",
+          "action_reason": "Un tamiz sin seguimiento pierde su beneficio.",
+          "modifiers": [
+            {
+              "factor": "Resultado anormal",
+              "action": "Confirmar y referir de forma oportuna.",
+              "reason": "Los puntos de corte dependen de método y edad."
+            }
+          ],
+          "limits": "La lactancia en fenilcetonuria requiere manejo especializado; no está prohibida de forma absoluta.",
+          "evidence": [
+            {
+              "page": 680,
+              "quote": "tratamiento efectivo y prueba barata."
+            },
+            {
+              "page": 681,
+              "quote": "momento del diagnóstico de fenilcetonuria"
+            }
+          ],
+          "source_gaps": [],
+          "verified_source_pages": [
+            680,
+            681
+          ],
+          "external_sources": [
+            {
+              "label": "Gobierno del Reino Unido: fenilcetonuria neonatal",
+              "url": "https://www.gov.uk/government/publications/pku-suspected-description-in-brief/phenylketonuria-pku-detailed-information",
+              "quote": "you can continue to breastfeed",
+              "checked_at": "2026-10-29"
+            }
+          ],
+          "source_corrections": [
+            "La lactancia no está absolutamente contraindicada en fenilcetonuria; se combina con plan restringido en fenilalanina y monitorización por equipo metabólico. La galactosemia clásica es una situación distinta."
+          ]
+        },
+        {
+          "id": "20.09-02",
+          "name": "Enfermedad hemorrágica del recien nacido",
+          "source_pages": [
+            654
+          ],
+          "pattern": "Un lactante que no recibió profilaxis al nacer presenta sangrado en sitios de punción y del tubo digestivo. Se evalúa coagulopatía por déficit de factores dependientes de una vitamina.",
+          "key_discriminator": "no recibió profilaxis al nacer",
+          "mechanism": "La baja disponibilidad de vitamina K reduce actividad de factores de coagulación dependientes de ella, aumentando riesgo de hemorragia digestiva, cutánea o intracraneal.",
+          "findings": [
+            {
+              "mechanism": "Factores dependientes de vitamina K reducidos",
+              "finding": "Sangrado neonatal"
+            }
+          ],
+          "initial_action": "Evaluar gravedad y administrar vitamina K con soporte hemostático si existe hemorragia grave.",
+          "action_reason": "La vitamina corrige el déficit causal.",
+          "modifiers": [
+            {
+              "factor": "Hemorragia intracraneal o compromiso circulatorio",
+              "action": "Dar atención urgente y reposición de factores según protocolo.",
+              "reason": "La corrección vitamínica sola puede no ser inmediata."
+            }
+          ],
+          "limits": "Dosis profiláctica en prematuros debe seguir peso y guía local.",
+          "evidence": [
+            {
+              "page": 654,
+              "quote": "No haber recibido profilaxis de vitamina K"
+            },
+            {
+              "page": 654,
+              "quote": "Plasma fresco"
+            }
+          ],
+          "source_gaps": [],
+          "verified_source_pages": [
+            654
+          ]
+        }
+      ],
+      "common_problem": "Un recién nacido requiere prevención y detección de trastornos ocultos.",
+      "mother": {
+        "cue": "Las pruebas y profilaxis detectan o previenen daño antes de síntomas graves.",
+        "answer": "Tamizaje y prevención neonatal",
+        "explanation": "Un tamiz positivo requiere confirmación oportuna."
+      }
+    },
+    {
+      "id": "20.10",
+      "title": "Distensión abdominal y no meconio",
+      "topics": [
+        {
+          "id": "20.10-01",
+          "name": "Enterocolitis necrotizante",
+          "source_pages": [
+            655,
+            656
+          ],
+          "pattern": "Un prematuro de bajo peso desarrolla distensión abdominal, intolerancia a alimento y sangre en heces. La imagen muestra gas en la pared intestinal; se evalúan sepsis y perforación.",
+          "key_discriminator": "gas en la pared intestinal",
+          "mechanism": "La inmadurez intestinal, isquemia y respuesta inflamatoria favorecen necrosis de mucosa y pared, con riesgo de perforación, peritonitis y compromiso sistémico.",
+          "findings": [
+            {
+              "mechanism": "Necrosis intestinal inflamatoria",
+              "finding": "Distensión, rectorragia y neumatosis"
+            }
+          ],
+          "initial_action": "Suspender alimentación, descomprimir, iniciar soporte y antibióticos y solicitar evaluación quirúrgica según gravedad.",
+          "action_reason": "Se busca limitar lesión y detectar perforación.",
+          "modifiers": [
+            {
+              "factor": "Neumoperitoneo o peritonitis",
+              "action": "Solicitar cirugía urgente.",
+              "reason": "Indican complicación que requiere control."
+            }
+          ],
+          "limits": "No toda alimentación enteral temprana causa la enfermedad.",
+          "evidence": [
+            {
+              "page": 656,
+              "quote": "Neumatosis intestinal"
+            },
+            {
+              "page": 655,
+              "quote": "Ayuno y antibióticos empíricos"
+            }
+          ],
+          "source_gaps": [],
+          "verified_source_pages": [
+            655,
+            656
+          ]
+        },
+        {
+          "id": "20.10-02",
+          "name": "Hirschsprung",
+          "source_pages": [
+            659
+          ],
+          "pattern": "Un recién nacido no ha expulsado meconio y presenta distensión con vómito biliar. El recto está vacío y el esfínter tiene tono alto; se sospecha una obstrucción funcional distal.",
+          "key_discriminator": "no ha expulsado meconio",
+          "mechanism": "La falta de células ganglionares en un segmento impide relajación y propulsión coordinada, generando obstrucción funcional y dilatación del intestino proximal.",
+          "findings": [
+            {
+              "mechanism": "Aganglionosis distal",
+              "finding": "Retención de meconio y distensión"
+            }
+          ],
+          "initial_action": "Estabilizar, descomprimir y referir a cirugía pediátrica; confirmar con biopsia rectal según estudio.",
+          "action_reason": "El diagnóstico y resolución requieren evaluación anatómica y funcional.",
+          "modifiers": [
+            {
+              "factor": "Fiebre, toxicidad o diarrea explosiva",
+              "action": "Valorar enterocolitis asociada.",
+              "reason": "Puede ser una complicación grave."
+            }
+          ],
+          "limits": "No todos los pacientes requieren colostomía como tratamiento definitivo.",
+          "evidence": [
+            {
+              "page": 659,
+              "quote": "segmento intestinal agangliónico"
+            },
+            {
+              "page": 659,
+              "quote": "Biopsia de pared rectal"
+            }
+          ],
+          "source_gaps": [],
+          "verified_source_pages": [
+            659
+          ]
+        }
+      ],
+      "common_problem": "Un recién nacido tiene distensión y alteración de evacuaciones.",
+      "mother": {
+        "cue": "La inflamación intestinal o un defecto de inervación puede causar obstrucción o necrosis.",
+        "answer": "Compromiso intestinal neonatal",
+        "explanation": "La urgencia depende de isquemia, perforación y sepsis."
+      }
+    },
+    {
+      "id": "20.11",
+      "title": "Traumatismo obstétrico",
+      "topics": [
+        {
+          "id": "20.11-01",
+          "name": "Lesiones de plexo baquial obstétrico",
+          "source_pages": [
+            663
+          ],
+          "pattern": "Un recién nacido después de distocia de hombros mueve poco un brazo. Mantiene el hombro en aducción y rotación interna y el codo extendido; se evalúan nervios y posibles fracturas.",
+          "key_discriminator": "hombro en aducción y rotación interna",
+          "mechanism": "La tracción o compresión perinatal daña raíces del plexo braquial; el territorio afectado determina postura y debilidad y puede asociarse a lesión ósea.",
+          "findings": [
+            {
+              "mechanism": "Daño de plexo superior",
+              "finding": "Postura característica y debilidad de brazo"
+            }
+          ],
+          "initial_action": "Explorar función y descartar fractura y lesión asociada; iniciar referencia y rehabilitación tempranas.",
+          "action_reason": "La evolución motora guía necesidad de intervención adicional.",
+          "modifiers": [
+            {
+              "factor": "Compromiso diafragmático o lesión extensa",
+              "action": "Ampliar evaluación.",
+              "reason": "Puede existir daño neurológico asociado."
+            }
+          ],
+          "limits": "La atribución al mecanismo obstétrico requiere valorar todos los factores.",
+          "evidence": [
+            {
+              "page": 663,
+              "quote": "Aducción y rotación interna del hombro"
+            },
+            {
+              "page": 663,
+              "quote": "rehabilitación es el tratamiento inicial"
+            }
+          ],
+          "source_gaps": [],
+          "verified_source_pages": [
+            663
+          ]
+        },
+        {
+          "id": "20.11-02",
+          "name": "Lesiones extracraneales",
+          "source_pages": [
+            664
+          ],
+          "pattern": "Un recién nacido tras parto instrumentado presenta tumefacción fluctuante del cuero cabelludo que aumenta y cruza suturas. Se vuelve pálido y taquicárdico; se debe valorar hemorragia significativa.",
+          "key_discriminator": "aumenta y cruza suturas",
+          "mechanism": "El sangrado en el espacio subaponeurótico puede extenderse ampliamente y acumular volumen importante, causando anemia y choque; los otros planos tienen límites y evolución distintos.",
+          "findings": [
+            {
+              "mechanism": "Hemorragia subaponeurótica expansiva",
+              "finding": "Tumefacción progresiva y compromiso circulatorio"
+            }
+          ],
+          "initial_action": "Monitorizar perímetro, hemoglobina y perfusión e iniciar soporte urgente ante sospecha de hemorragia subgaleal.",
+          "action_reason": "La pérdida puede ser importante sin sangrado externo.",
+          "modifiers": [
+            {
+              "factor": "Masa limitada por suturas sin deterioro",
+              "action": "Considerar un hematoma subperióstico y vigilar ictericia.",
+              "reason": "El plano cambia riesgo."
+            }
+          ],
+          "limits": "No confundir caput, cefalohematoma y hemorragia subgaleal.",
+          "evidence": [
+            {
+              "page": 664,
+              "quote": "choque por hemorragia."
+            },
+            {
+              "page": 664,
+              "quote": "caso de choque reponer volumen."
+            }
+          ],
+          "source_gaps": [],
+          "verified_source_pages": [
+            664
+          ]
+        }
+      ],
+      "common_problem": "Un recién nacido tiene debilidad de brazo o lesión del cuero cabelludo.",
+      "mother": {
+        "cue": "El daño mecánico del nacimiento puede afectar nervios o vasos en planos distintos.",
+        "answer": "Traumatismo del nacimiento",
+        "explanation": "El territorio y la progresión definen riesgo."
+      }
+    },
+    {
+      "id": "20.12",
+      "title": "Tamiz físico y sensorial",
+      "topics": [
+        {
+          "id": "20.12-01",
+          "name": "Displasia del desarrollo de la cadera DDC",
+          "source_pages": [
+            652
+          ],
+          "pattern": "Una recién nacida en presentación pélvica tiene una maniobra de cadera anormal. Se requiere evaluar estabilidad y obtener imagen apropiada para la edad antes de decidir seguimiento o tratamiento ortopédico.",
+          "key_discriminator": "presentación pélvica",
+          "mechanism": "El desarrollo acetabular y la posición femoral pueden ser anormales, permitiendo inestabilidad, subluxación o luxación que afecta la maduración articular si no se corrige.",
+          "findings": [
+            {
+              "mechanism": "Inestabilidad coxofemoral",
+              "finding": "Maniobras clínicas anormales"
+            }
+          ],
+          "initial_action": "Referir a ortopedia pediátrica y seleccionar ultrasonido o radiografía según edad.",
+          "action_reason": "La detección temprana permite tratamiento apropiado.",
+          "modifiers": [
+            {
+              "factor": "Menor de seis meses con indicación terapéutica",
+              "action": "Valorar arnés de abducción supervisado.",
+              "reason": "La edad modifica opciones."
+            }
+          ],
+          "limits": "Doble pañal no es tratamiento de reducción.",
+          "evidence": [
+            {
+              "page": 652,
+              "quote": "presentación pélvica"
+            },
+            {
+              "page": 652,
+              "quote": "referidos al segundo nivel"
+            }
+          ],
+          "source_gaps": [],
+          "verified_source_pages": [
+            652
+          ]
+        },
+        {
+          "id": "20.12-02",
+          "name": "Hipoacusia neonatal",
+          "source_pages": [
+            657
+          ],
+          "pattern": "Un recién nacido no supera el tamiz auditivo. Tiene antecedente de cuidados intensivos; se debe coordinar estudio confirmatorio y evitar que el resultado se pierda después del egreso.",
+          "key_discriminator": "no supera el tamiz auditivo",
+          "mechanism": "La pérdida auditiva puede pasar inadvertida al nacimiento y afectar desarrollo del lenguaje; detectar y confirmar temprano permite iniciar intervención antes de retrasos.",
+          "findings": [
+            {
+              "mechanism": "Déficit auditivo no evidente",
+              "finding": "Tamiz alterado sin signos externos"
+            }
+          ],
+          "initial_action": "Programar evaluación audiológica con potenciales de tronco según riesgo y resultado; asegurar seguimiento.",
+          "action_reason": "Un tamiz anormal necesita confirmación.",
+          "modifiers": [
+            {
+              "factor": "Factores de riesgo o tamiz persistentemente anormal",
+              "action": "Priorizar estudio diagnóstico.",
+              "reason": "El riesgo de hipoacusia es mayor."
+            }
+          ],
+          "limits": "No esperar a retraso del lenguaje para evaluar.",
+          "evidence": [
+            {
+              "page": 657,
+              "quote": "antes de su egreso hospitalario o antes del mes de vida."
+            },
+            {
+              "page": 657,
+              "quote": "emisiones otacústicas (EOA)"
+            }
+          ],
+          "source_gaps": [],
+          "verified_source_pages": [
+            657
+          ]
+        }
+      ],
+      "common_problem": "Un recién nacido requiere tamiz físico y sensorial.",
+      "mother": {
+        "cue": "La evaluación temprana busca alteraciones estructurales o de audición antes de discapacidad.",
+        "answer": "Detección neonatal de desarrollo o función",
+        "explanation": "La referencia oportuna permite intervención."
+      }
+    },
+    {
+      "id": "20.13",
+      "title": "Prevención del daño súbito",
+      "topics": [
+        {
+          "id": "20.13-01",
+          "name": "Muerte súbita del lactante",
+          "source_pages": [
+            666
+          ],
+          "pattern": "Una familia prepara la cuna de un lactante sano. Desea saber la posición para dormir y si puede usar almohadas, superficies blandas o compartir la cama con adultos.",
+          "key_discriminator": "posición para dormir",
+          "mechanism": "La posición y el entorno pueden obstruir ventilación o favorecer reinhalación y sobrecalentamiento; un espacio de sueño seguro reduce riesgo de muerte inesperada.",
+          "findings": [
+            {
+              "mechanism": "Entorno de sueño inseguro",
+              "finding": "Mayor riesgo durante descanso"
+            }
+          ],
+          "initial_action": "Indicar sueño en decúbito supino sobre superficie plana y firme, sin objetos sueltos ni compartir cama.",
+          "action_reason": "Reduce exposición a factores modificables.",
+          "modifiers": [
+            {
+              "factor": "Reflujo gastroesofágico habitual",
+              "action": "Mantener posición supina para dormir.",
+              "reason": "La fuente no indica mayor aspiración por esa postura."
+            }
+          ],
+          "limits": "La prevención reduce riesgo sin garantizar eliminación absoluta.",
+          "evidence": [
+            {
+              "page": 666,
+              "quote": "decúbito supino"
+            },
+            {
+              "page": 666,
+              "quote": "colchón plano y firme"
+            }
+          ],
+          "source_gaps": [],
+          "verified_source_pages": [
+            666
+          ]
+        }
+      ],
+      "common_problem": "Una familia solicita prevenir daño durante el sueño del lactante.",
+      "mother": {
+        "cue": "El entorno y la posición de sueño modifican riesgo de muerte inesperada.",
+        "answer": "Sueño seguro del lactante",
+        "explanation": "Las medidas preventivas se aplican desde nacimiento."
+      }
+    }
+  ]
+}
