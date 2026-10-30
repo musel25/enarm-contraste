@@ -14,7 +14,7 @@
             1111,
             1112
           ],
-          "pattern": "Un hombre mayor presenta chorro débil, demora al iniciar y sensación de vaciado incompleto. La próstata es aumentada y elástica. Se evalúan síntomas, orina y repercusión renal antes de tratar.",
+          "pattern": "Un hombre mayor presenta chorro débil, demora al iniciar y sensación de vaciado incompleto. La próstata es aumentada y elástica.",
           "key_discriminator": "chorro débil",
           "mechanism": "La proliferación estromal y epitelial en zona transicional comprime salida vesical y aumenta resistencia, genera síntomas de vaciamiento y, en algunos pacientes, retención o daño urinario.",
           "findings": [
@@ -23,13 +23,18 @@
               "finding": "Chorro débil y vaciado incompleto"
             }
           ],
-          "initial_action": "Caracterizar síntomas con IPSS, explorar y revisar orina y complicaciones; seleccionar vigilancia o tratamiento según molestia y riesgo.",
+          "initial_action": "Caracterizar con IPSS, explorar y revisar orina y complicaciones. Si los síntomas son leves y poco molestos, vigilar; si son molestos moderados/graves, ofrecer alfabloqueante como tamsulosina tras valorar presión, interacciones y preferencias.",
           "action_reason": "No todos los síntomas bajos son por próstata.",
           "modifiers": [
             {
               "factor": "Retención recurrente o daño renal",
               "action": "Referir para intervención",
               "reason": "Hay complicación de obstrucción"
+            },
+            {
+              "factor": "Crecimiento prostático importante con riesgo de progresión",
+              "action": "Valorar finasterida o dutasterida, sola o combinada, y explicar el inicio de efecto lento y descenso del PSA.",
+              "reason": "Reducen volumen y progresión, mientras el alfabloqueante alivia antes sin reducir tamaño."
             }
           ],
           "limits": "El volumen prostático no determina por sí solo intensidad de síntomas.",
@@ -51,7 +56,7 @@
           "source_pages": [
             1108
           ],
-          "pattern": "Un varón con antecedente de instrumentación presenta flujo urinario muy delgado y episodios de infección. La exploración identifica un meato estrecho. Se sospecha obstrucción distal y se evalúa residuo.",
+          "pattern": "Un varón con antecedente de instrumentación presenta flujo urinario muy delgado y episodios de infección. La exploración identifica un meato estrecho.",
           "key_discriminator": "meato estrecho",
           "mechanism": "La cicatrización o inflamación reduce luz meatal o uretral, aumenta resistencia al flujo y puede ocasionar infecciones, retención y vaciamiento incompleto según extensión de estenosis.",
           "findings": [
@@ -100,7 +105,7 @@
           "source_pages": [
             1119
           ],
-          "pattern": "Un hombre mayor presenta dolor suprapúbico e incapacidad súbita para orinar. Se palpa vejiga distendida. No hay antecedente de trauma uretral. Se necesita aliviar obstrucción y buscar causa.",
+          "pattern": "Un hombre mayor presenta dolor suprapúbico e incapacidad súbita para orinar. Se palpa vejiga distendida; está inquieto y solo elimina algunas gotas, sin antecedente de traumatismo uretral.",
           "key_discriminator": "incapacidad súbita para orinar",
           "mechanism": "La obstrucción de salida o falla del detrusor impide vaciar una vejiga llena, eleva presión y produce dolor, con riesgo de lesión renal y diuresis posterior al drenaje.",
           "findings": [
@@ -200,7 +205,7 @@
           "source_pages": [
             1115
           ],
-          "pattern": "Una mujer no embarazada presenta disuria, frecuencia y urgencia sin fiebre ni dolor lumbar. No tiene síntomas vaginales. Se evalúa si el cuadro es localizado y no complicado.",
+          "pattern": "Una mujer no embarazada presenta disuria, frecuencia y urgencia sin fiebre ni dolor lumbar. No tiene síntomas vaginales y la molestia comenzó desde el día anterior, sin vómito ni deterioro general.",
           "key_discriminator": "sin fiebre ni dolor lumbar",
           "mechanism": "La infección e inflamación de mucosa vesical produce síntomas irritativos; fiebre o dolor costovertebral sugieren extensión renal y cambian pruebas y tratamiento necesarios.",
           "findings": [
@@ -209,7 +214,7 @@
               "finding": "Disuria y urgencia"
             }
           ],
-          "initial_action": "Valorar cuadro clínico y necesidad de estudios; elegir antibiótico para cistitis según resistencia, alergias y función renal.",
+          "initial_action": "En cistitis localizada de mujer no embarazada elegible, usar nitrofurantoína monohidrato/macrocristales 100 mg VO cada doce horas por cinco días, o fosfomicina 3 g única dosis, según función renal, alergias y resistencia local. Reevaluar si no mejora.",
           "action_reason": "El tratamiento debe ajustarse al contexto.",
           "modifiers": [
             {
@@ -222,7 +227,7 @@
           "evidence": [
             {
               "page": 1115,
-              "quote": "infección de vías urinarias) son: disuria, es negativa. polaquiuria y urgencia"
+              "quote": "polaquiuria y urgencia miccional."
             },
             {
               "page": 1115,
@@ -236,11 +241,20 @@
               "url": "https://www.idsociety.org/practice-guideline/asymptomatic-bacteriuria/",
               "quote": "In infants and children, we recommend against screening for or treating asymptomatic bacteriuria",
               "checked_at": "2026-10-29"
+            },
+            {
+              "label": "EAU 2026: antimicrobianos para cistitis",
+              "url": "https://uroweb.org/guidelines/urological-infections/chapter/the-guideline",
+              "quote": "Nitrofurantoin monohydrate/macrocrystals",
+              "checked_at": "2026-10-29"
             }
           ],
           "source_corrections": [
             {
               "reason": "No tratar bacteriuria asintomática en niños de rutina. Tampoco tras trasplante renal de más de un mes; para el primer mes la evidencia es insuficiente. Embarazo y procedimientos urológicos seleccionados sí cambian indicación."
+            },
+            {
+              "reason": "La tabla EAU de cistitis en mujeres indica nitrofurantoína monohidrato/macrocristales 100 mg dos veces al día por cinco días; se evita elegir TMP-SMX sin considerar resistencia local."
             }
           ]
         },
@@ -259,7 +273,7 @@
               "finding": "Fiebre y dolor costovertebral"
             }
           ],
-          "initial_action": "Obtener urocultivo antes de antibiótico si no retrasa atención y tratar según gravedad y resistencia local.",
+          "initial_action": "Obtener urocultivo sin retrasar tratamiento y valorar sepsis u obstrucción. Si requiere manejo IV, ceftriaxona es una opción según resistencia y alergias; en estable con vía oral, seleccionar un agente activo y ajustar a cultivo.",
           "action_reason": "El cultivo orienta ajuste posterior.",
           "modifiers": [
             {
@@ -272,7 +286,7 @@
           "evidence": [
             {
               "page": 1117,
-              "quote": "infeccioso que se corrobora con un urocultivo con al menos 10,000 UFC /mm3 y síntomas"
+              "quote": "fiebre, náusea, vómito, dolor lumbar"
             },
             {
               "page": 1117,
@@ -287,7 +301,7 @@
           "source_pages": [
             1118
           ],
-          "pattern": "Un hombre presenta fiebre, disuria y dolor perineal después de instrumentación urinaria. La próstata es muy dolorosa al examen suave. Se evalúan sepsis y retención sin realizar masaje.",
+          "pattern": "Un hombre presenta fiebre, disuria y dolor perineal después de instrumentación urinaria. La próstata es muy dolorosa al examen suave y tiene escalofríos, malestar general y dificultad para iniciar la micción.",
           "key_discriminator": "dolor perineal",
           "mechanism": "La infección bacteriana prostática induce inflamación local y respuesta sistémica, puede obstruir salida y formar absceso; la manipulación intensa puede favorecer bacteriemia y complicaciones.",
           "findings": [
@@ -296,7 +310,7 @@
               "finding": "Fiebre y dolor perineal"
             }
           ],
-          "initial_action": "Obtener orina y cultivos, valorar gravedad e iniciar antibiótico con penetración apropiada; evitar masaje prostático.",
+          "initial_action": "Obtener urocultivo y hemocultivos, valorar sepsis y comenzar antibiótico. Si hay enfermedad sistémica, usar terapia IV como ceftriaxona según resistencia, alergias e instrumentación previa; ajustar al cultivo y evolución. Evitar masaje prostático.",
           "action_reason": "Reduce riesgo de diseminación y trata foco.",
           "modifiers": [
             {
@@ -313,10 +327,18 @@
             },
             {
               "page": 1118,
-              "quote": "urocultivo y"
+              "quote": "cefalosporinas de amplio espectro"
             }
           ],
-          "source_gaps": []
+          "source_gaps": [],
+          "external_sources": [
+            {
+              "label": "EAU 2026: prostatitis bacteriana aguda",
+              "url": "https://uroweb.org/guidelines/urological-infections/chapter/the-guideline",
+              "quote": "a third-generation cephalosporin or fluoroquinolones",
+              "checked_at": "2026-10-29"
+            }
+          ]
         }
       ],
       "common_problem": "Paciente con disuria, fiebre o dolor urológico.",
@@ -438,7 +460,7 @@
           "source_pages": [
             1120
           ],
-          "pattern": "Un adolescente se despierta con dolor testicular intenso y vómitos. El testículo está horizontal y elevado. No tiene disuria. Se solicita atención quirúrgica sin esperar que el dolor mejore.",
+          "pattern": "Un adolescente se despierta con dolor testicular intenso y vómitos. El testículo está horizontal y elevado, el reflejo cremastérico está ausente y no tiene disuria ni secreción uretral.",
           "key_discriminator": "horizontal y elevado",
           "mechanism": "El giro del cordón espermático obstruye drenaje venoso y luego aporte arterial, produce isquemia testicular y necrosis potencial; la viabilidad depende de duración y grado de torsión.",
           "findings": [
@@ -488,7 +510,7 @@
           "source_pages": [
             1116
           ],
-          "pattern": "Un joven sexualmente activo tiene dolor escrotal gradual, edema, disuria y secreción uretral. Se evalúa infección, pero primero se descarta torsión. Se requieren estudios etiológicos y tratamiento dirigido.",
+          "pattern": "Un joven sexualmente activo tiene dolor escrotal gradual, edema, disuria y secreción uretral. El dolor progresa durante varios días y el epidídimo está sensible, con fiebre y reflejo cremastérico presente.",
           "key_discriminator": "dolor escrotal gradual",
           "mechanism": "La infección o inflamación del epidídimo puede extenderse al testículo, causa dolor y edema; en personas sexualmente activas deben considerarse gonococo y clamidia y tratar posibles parejas.",
           "findings": [
@@ -497,7 +519,7 @@
               "finding": "Dolor gradual y síntomas uretrales"
             }
           ],
-          "initial_action": "Excluir torsión, obtener NAAT y cultivo urinario e iniciar ceftriaxona más doxiciclina si se sospecha gonococo o clamidia; ajustar a riesgo entérico y resultados.",
+          "initial_action": "Excluir torsión, obtener NAAT para gonococo/clamidia y cultivo urinario; si son probables, dar ceftriaxona 500 mg IM única dosis (1 g si ≥150 kg) más doxiciclina 100 mg VO cada doce horas por diez días. Ajustar a riesgo entérico.",
           "action_reason": "La etiología determina antibiótico y atención de contactos.",
           "modifiers": [
             {
@@ -587,7 +609,7 @@
           "source_pages": [
             1124
           ],
-          "pattern": "Un adolescente nota masa blanda sobre el testículo izquierdo, más evidente al estar de pie. La palpación parece una bolsa de gusanos. Se evalúan tamaño testicular, dolor y función reproductiva.",
+          "pattern": "Un adolescente nota masa blanda sobre el testículo izquierdo, más evidente al estar de pie. La palpación parece una bolsa de gusanos.",
           "key_discriminator": "bolsa de gusanos",
           "mechanism": "El reflujo y dilatación del plexo pampiniforme alteran drenaje y entorno testicular, pueden causar molestia o afectar crecimiento y espermatogénesis, aunque muchas personas permanecen asintomáticas.",
           "findings": [
@@ -613,7 +635,7 @@
             },
             {
               "page": 1124,
-              "quote": "aspecto de gusano~. • Elección: USG doppler o convencional: Estructuras anecoicas,"
+              "quote": "USG doppler o convencional: Estructuras anecoicas,"
             }
           ],
           "source_gaps": []
@@ -636,7 +658,7 @@
           "source_pages": [
             1105
           ],
-          "pattern": "Un hombre presenta dificultad recurrente para mantener una erección. Tiene diabetes y tabaquismo. Se revisan fármacos, función sexual, estado emocional y síntomas cardiovasculares antes de elegir tratamiento.",
+          "pattern": "Un hombre presenta dificultad recurrente para mantener una erección durante varios meses. Tiene diabetes y tabaquismo, pero conserva deseo sexual; la rigidez matutina es menor y los episodios le causan preocupación.",
           "key_discriminator": "Tiene diabetes y tabaquismo",
           "mechanism": "La erección requiere integración vascular, neural, hormonal y psicológica; alteraciones del flujo o señalización y fármacos pueden impedir rigidez y también señalar riesgo cardiovascular compartido.",
           "findings": [
@@ -645,27 +667,40 @@
               "finding": "Erección insuficiente"
             }
           ],
-          "initial_action": "Realizar historia y examen, evaluar factores cardiometabólicos y causas reversibles y acordar tratamiento según seguridad y preferencias.",
+          "initial_action": "Evaluar causas reversibles, riesgo cardiovascular y medicamentos, y corregir factores cardiometabólicos. Considerar inhibidor PDE5 como sildenafil si es apropiado, tras revisar contraindicaciones, interacciones y preferencias.",
           "action_reason": "La terapia debe considerar etiología y riesgo.",
           "modifiers": [
             {
               "factor": "Uso de fármacos causales",
               "action": "Revisar ajuste con prescriptor",
               "reason": "Puede contribuir a síntomas"
+            },
+            {
+              "factor": "Uso de nitratos o nitritos, aunque sea intermitente",
+              "action": "No combinar con sildenafil ni otro inhibidor PDE5; seleccionar alternativa clínica.",
+              "reason": "La combinación puede provocar hipotensión grave."
             }
           ],
           "limits": "El inhibidor PDE5 requiere revisión de contraindicaciones e interacciones.",
           "evidence": [
             {
               "page": 1105,
-              "quote": "antecedentes"
+              "quote": "antecedentes (pregunta de antecedentes) y la exploración física."
             },
             {
               "page": 1105,
               "quote": "Reducir los factores de riesgo cardiaco."
             }
           ],
-          "source_gaps": []
+          "source_gaps": [],
+          "external_sources": [
+            {
+              "label": "FDA: sildenafil y nitratos",
+              "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=dc1c1ddb-f16b-4d7a-aabe-cf8bdf8b7998",
+              "quote": "potentiate the hypotensive effects of nitrates",
+              "checked_at": "2026-10-29"
+            }
+          ]
         }
       ],
       "common_problem": "Varón con dificultad persistente de erección.",
@@ -709,7 +744,7 @@
           "evidence": [
             {
               "page": 1098,
-              "quote": "positivo) y tacto rectal anormal (nódulos, del vaciado y hematuria. induraciones,"
+              "quote": "induraciones, surco borrado y consistencia pétrea)."
             },
             {
               "page": 1099,
@@ -759,7 +794,7 @@
             1100,
             1101
           ],
-          "pattern": "Un fumador mayor presenta hematuria indolora intermitente. No hay infección evidente. Se requiere evaluar vejiga y vía urinaria aunque el sangrado desaparezca entre episodios.",
+          "pattern": "Un fumador mayor presenta hematuria indolora intermitente durante varias semanas. No hay infección evidente ni cólico renal; el sangrado desaparece por días y luego vuelve sin relación con esfuerzo.",
           "key_discriminator": "hematuria indolora intermitente",
           "mechanism": "La neoplasia urotelial altera mucosa y produce sangrado; grado y profundidad de invasión separan enfermedad no muscular de formas que requieren manejo local y sistémico más intenso.",
           "findings": [
@@ -796,7 +831,7 @@
           "source_pages": [
             1102
           ],
-          "pattern": "Una persona tiene una masa renal sólida detectada por imagen durante otro estudio. No presenta la tríada clásica completa. Se requieren caracterización, función renal y evaluación de extensión.",
+          "pattern": "Una persona tiene una masa renal sólida detectada por imagen durante otro estudio. No presenta dolor, hematuria ni masa palpable y mantiene función renal conservada, sin síntomas sistémicos evidentes.",
           "key_discriminator": "masa renal sólida",
           "mechanism": "La proliferación maligna del parénquima renal puede permanecer asintomática hasta hallazgo incidental, crecer localmente o diseminarse; la función y anatomía renal condicionan opciones de preservación y tratamiento.",
           "findings": [
@@ -846,7 +881,7 @@
             1103,
             1104
           ],
-          "pattern": "Un joven presenta aumento de volumen testicular firme e indoloro. La ecografía muestra masa sólida intratesticular. Se solicitan marcadores y se coordina valoración urológica para un abordaje adecuado.",
+          "pattern": "Un joven presenta aumento de volumen testicular firme e indoloro desde hace semanas. La ecografía muestra masa sólida intratesticular, sin fiebre, disuria ni signos inflamatorios de la piel escrotal.",
           "key_discriminator": "masa sólida intratesticular",
           "mechanism": "Los tumores testiculares suelen surgir de células germinales y pueden secretar marcadores; el estudio histológico y extensión distinguen seminoma y otros tipos y determinan tratamiento posterior.",
           "findings": [
