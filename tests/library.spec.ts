@@ -137,3 +137,15 @@ test("shows source corrections after the answer is revealed", async ({ page }) =
   await page.getByText("Precisiones de las fuentes", { exact: true }).click();
   await expect(page.getByRole("region", { name: "Respuesta de la tarjeta" })).toContainText("La fuente actual lo corrige.");
 });
+
+test('expanded practice is offered before the comparison card', async ({ page }) => {
+  await mockLibrary(page);
+  await page.goto('./#biblioteca');
+  await page.getByRole('button', { name: /Sección de prueba/ }).click();
+  const link=page.getByRole('link',{name:'Ampliar casos diagnósticos',exact:true});
+  await expect(link).toBeVisible();
+  const beforeCard=await link.evaluate(el=>!!(el.compareDocumentPosition(document.querySelector('.library-card')!)&Node.DOCUMENT_POSITION_FOLLOWING));
+  expect(beforeCard).toBe(true);
+  await page.getByRole('button',{name:'Patrones Madre',exact:true}).click();
+  await expect(page.getByRole('link',{name:'Practicar decisiones paso a paso',exact:true})).toBeVisible();
+});

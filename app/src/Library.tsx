@@ -126,6 +126,11 @@ export default function Library({ onReview }: { onReview: (context: ReviewContex
     {sectionId ? <>
       <div className="library-breadcrumb"><button onClick={() => selectSection(null)}>‹ Todas las secciones</button><span>{manifest.sections.find(s => s.id === sectionId)?.title}</span></div>
       <div className="library-reader-heading"><div><h1>Una pista cambia la decisión.</h1><p>Lee, compara y explica tu respuesta.</p></div><span className="library-progress"><Icon name="check" size={15} />{recognized} {recognized === 1 ? "tarjeta reconocida" : "tarjetas reconocidas"}</span></div>
+      {card && !store.loading && <div className="library-practice-links" aria-label="Practicar este bloque">
+        {card.family === 'eje' ? <a className="library-practice-primary" href={`#avance?section=${sectionId}&block=${card.block_id}&mode=cases`}>Ampliar casos diagnósticos</a> : <a className="library-practice-primary" href={`#avance?section=${sectionId}&block=${card.block_id}&mode=decisions`}>Practicar decisiones paso a paso</a>}
+        <a href={`#avance?section=${sectionId}&block=${card.block_id}`}>Crear subtest de este bloque</a>
+        {card.family === 'madre' && <a href={`#avance?section=${sectionId}&block=${card.block_id}&mode=cases`}>Ampliar casos diagnósticos</a>}
+      </div>}
       <div className="library-reader">
         <aside className="library-controls" aria-label="Configurar tarjetas">
           <div className="library-family-switch" aria-label="Formato de tarjetas"><button aria-pressed={family === "eje"} onClick={() => changeFamily("eje")}>Eje Clínico</button><button aria-pressed={family === "madre"} onClick={() => changeFamily("madre")}>Patrones Madre</button></div>
@@ -139,7 +144,7 @@ export default function Library({ onReview }: { onReview: (context: ReviewContex
             <div className="library-card-pagination"><span>Tarjeta {index + 1} de {cards.length}</span><div><button aria-label="Tarjeta anterior" disabled={index === 0} onClick={() => setIndex(i => i - 1)}>‹</button><button aria-label="Tarjeta siguiente" disabled={index >= cards.length - 1} onClick={() => setIndex(i => i + 1)}>›</button></div></div>
             <StudyCard key={`${store.generation}/${card.id}`} card={card} status={combined[card.id]} ratingDisabled={store.loading || store.saving || !!store.error} onFollow={followCase} onRate={value => void rate(value)} onReview={() => onReview({ axisId: `libro-${sectionId}`, section: "library", caseId: card.id, label: `${section.title} · ${card.id}` })} />
             {store.state.progress[card.id] && <p role="status">Próximo repaso: {dateLabel(store.state.progress[card.id].due_day)}</p>}
-            <div className="library-practice-links"><a href={`#avance?section=${sectionId}&block=${card.block_id}`}>Crear subtest de este bloque</a><a href={`#avance?section=${sectionId}&block=${card.block_id}&mode=cases`}>Ampliar casos diagnósticos</a>{card.family === 'madre' && <a href={`#avance?section=${sectionId}&block=${card.block_id}&mode=decisions`}>Practicar decisiones paso a paso</a>}</div>
+
             <div className="library-bottom-next"><button disabled={index === 0} onClick={() => { setIndex(i => i - 1); document.getElementById("study")?.scrollIntoView(); }}>Anterior</button><button disabled={index >= cards.length - 1} onClick={() => { setIndex(i => i + 1); document.getElementById("study")?.scrollIntoView(); }}>Siguiente tarjeta <Icon name="arrow" size={16} /></button></div>
           </> : <p role="status">No hay tarjetas para esta selección. Elige otro bloque o nivel.</p>}
         </div>
