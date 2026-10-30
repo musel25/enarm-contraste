@@ -143,6 +143,12 @@ class FullDeckTests(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, 'correspondence'):
             self.audit()
 
+    def test_rejects_answer_name_in_mother_front(self):
+        self.section['blocks'][0]['mother']['cue'] = 'El caso presenta un Patrón circulatorio.'
+        self.write_section()
+        with self.assertRaisesRegex(ValueError, 'Answer leaked'):
+            self.build()
+
 
 if __name__ == '__main__':
     unittest.main()

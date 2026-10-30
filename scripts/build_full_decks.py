@@ -146,12 +146,16 @@ def check_coverage(section: dict, expected: dict) -> None:
         raise ValueError(f'Block coverage mismatch: {section["id"]}')
     for block in expected['blocks']:
         authored = actual[block['id']]
+        if authored['mother']['answer'].casefold() in authored['mother']['cue'].casefold():
+            raise ValueError(f'Answer leaked on mother front: {block["id"]}')
         if Counter(t['id'] for t in authored['topics']) != Counter(t['id'] for t in block['topics']):
             raise ValueError(f'Topic coverage mismatch: {block["id"]}')
         names = {t['id']: t['name'] for t in block['topics']}
         for topic in authored['topics']:
             if topic['name'] != names[topic['id']] or topic.get('source_gaps') != []:
                 raise ValueError(f'Incomplete coverage: {topic["id"]}')
+            if topic['name'].casefold() in topic['pattern'].casefold():
+                raise ValueError(f'Answer leaked on recognition front: {topic["id"]}')
             for field in ['pattern', 'key_discriminator', 'mechanism', 'initial_action', 'action_reason', 'limits']:
                 if not isinstance(topic.get(field), str) or not topic[field].strip():
                     raise ValueError(f'Incomplete coverage: {topic["id"]} {field}')
