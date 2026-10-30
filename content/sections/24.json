@@ -1,0 +1,1399 @@
+{
+  "id": "24",
+  "title": "Obstetricia",
+  "blocks": [
+    {
+      "id": "24.01",
+      "title": "Primera consulta prenatal",
+      "topics": [
+        {
+          "id": "24.01-01",
+          "name": "Control prenatal",
+          "source_pages": [
+            789,
+            790,
+            791,
+            792,
+            793,
+            794,
+            795,
+            796,
+            797
+          ],
+          "pattern": "Una mujer con prueba de embarazo positiva acude por primera vez. No conoce su grupo sanguíneo y no tiene estudios previos. Se requiere planificar vigilancia y prevención individualizadas.",
+          "key_discriminator": "primera vez",
+          "mechanism": "La vigilancia programada identifica riesgos modificables y enfermedades maternas, estima edad gestacional y permite prevenir daño fetal mediante intervenciones oportunas.",
+          "findings": [
+            {
+              "mechanism": "Detección de riesgos",
+              "finding": "Necesidad de seguimiento individual"
+            }
+          ],
+          "initial_action": "Realizar historia clínica, presión arterial, antropometría, estudios prenatales iniciales y estimación de edad gestacional.",
+          "action_reason": "Define riesgo y medidas preventivas.",
+          "modifiers": [
+            {
+              "factor": "Antecedente de preeclampsia",
+              "action": "Valorar prevención y seguimiento especializado",
+              "reason": "Aumenta riesgo de recurrencia"
+            }
+          ],
+          "limits": "Una consulta normal no excluye complicaciones posteriores.",
+          "evidence": [
+            {
+              "page": 789,
+              "quote": "identificar factores de riesgo"
+            },
+            {
+              "page": 795,
+              "quote": "Urocultivo (en busca de BA)."
+            }
+          ],
+          "source_gaps": []
+        }
+      ],
+      "common_problem": "Embarazo recién identificado sin valoración de riesgos.",
+      "mother": {
+        "cue": "Seguimiento programado que detecta riesgos maternos y fetales antes de complicaciones.",
+        "answer": "Vigilancia prenatal.",
+        "explanation": "La evaluación inicial determina estudios, prevención y seguimiento."
+      }
+    },
+    {
+      "id": "24.02",
+      "title": "Presentación y pelvis",
+      "topics": [
+        {
+          "id": "24.02-01",
+          "name": "Estática fetal",
+          "source_pages": [
+            817
+          ],
+          "pattern": "Una gestante a término tiene dorso fetal hacia la izquierda. En el polo inferior se palpa la cabeza flexionada. Se requiere describir su relación con el eje materno.",
+          "key_discriminator": "cabeza flexionada",
+          "mechanism": "La relación entre ejes materno y fetal, dorso y partes fetales determina situación, posición, presentación y actitud para describir el nacimiento.",
+          "findings": [
+            {
+              "mechanism": "Flexión de cabeza",
+              "finding": "Presentación cefálica habitual"
+            }
+          ],
+          "initial_action": "Identificar situación, posición, presentación y actitud; usar ecografía si la exploración es dudosa.",
+          "action_reason": "Precisa la descripción obstétrica.",
+          "modifiers": [
+            {
+              "factor": "Cabeza al nivel de espinas ciáticas",
+              "action": "Describir estación fetal",
+              "reason": "Permite valorar descenso"
+            }
+          ],
+          "limits": "La descripción anatómica no determina sola la vía del parto.",
+          "evidence": [
+            {
+              "page": 817,
+              "quote": "Situación fetal"
+            },
+            {
+              "page": 817,
+              "quote": "Relación con eje longitudinal de madre:"
+            }
+          ],
+          "source_gaps": []
+        },
+        {
+          "id": "24.02-02",
+          "name": "Tipos de pelvis",
+          "source_pages": [
+            844
+          ],
+          "pattern": "En una consulta obstétrica se revisa un esquema pélvico. El diámetro transverso es amplio y el anteroposterior está reducido. Se pide identificar cómo esta forma puede dificultar el nacimiento.",
+          "key_discriminator": "anteroposterior está reducido",
+          "mechanism": "La forma del canal óseo modifica los diámetros disponibles para el paso fetal, aunque el resultado depende también del feto y dinámica uterina.",
+          "findings": [
+            {
+              "mechanism": "Aplanamiento pélvico",
+              "finding": "Dificultad mecánica para el paso fetal"
+            }
+          ],
+          "initial_action": "Reconocer la morfología pélvica y valorar su relación con la presentación fetal durante la evaluación obstétrica.",
+          "action_reason": "El canal óseo condiciona el descenso.",
+          "modifiers": [
+            {
+              "factor": "Pelvis ginecoide",
+              "action": "Reconocer configuración favorable",
+              "reason": "Ofrece mejor adaptación al paso fetal"
+            }
+          ],
+          "limits": "La morfología no equivale a una indicación automática de cesárea.",
+          "evidence": [
+            {
+              "page": 844,
+              "quote": "Diámetro transverso amplio y anteroposterior"
+            },
+            {
+              "page": 844,
+              "quote": "La pelvis es ideal para el paso del feto."
+            }
+          ],
+          "source_gaps": []
+        },
+        {
+          "id": "24.02-03",
+          "name": "Líquido amniótico",
+          "source_pages": [
+            822
+          ],
+          "pattern": "Una gestante tiene altura uterina menor de la esperada y partes fetales fácilmente palpables. La ecografía muestra poco líquido alrededor del feto. Se requiere buscar una causa maternofetal.",
+          "key_discriminator": "poco líquido",
+          "mechanism": "El volumen depende del equilibrio entre producción y eliminación fetal; la alteración renal, pérdida por membranas o deglución anormal cambia ese equilibrio.",
+          "findings": [
+            {
+              "mechanism": "Disminución del líquido",
+              "finding": "Partes fetales palpables"
+            }
+          ],
+          "initial_action": "Confirmar volumen por ecografía y buscar rotura de membranas, alteraciones renales y restricción del crecimiento.",
+          "action_reason": "La causa determina la conducta.",
+          "modifiers": [
+            {
+              "factor": "Exceso de líquido",
+              "action": "Buscar diabetes y anomalías de deglución",
+              "reason": "Se asocian con mayor volumen"
+            }
+          ],
+          "limits": "El caso evalúa volumen y causa. La página no permite indicar amnioinfusión ni amnioreducción rutinarias; las intervenciones requieren selección obstétrica especializada.",
+          "evidence": [
+            {
+              "page": 822,
+              "quote": "Se palpan partes fetales."
+            },
+            {
+              "page": 822,
+              "quote": "Malformaciones renales, RCIU, RPM"
+            }
+          ],
+          "source_gaps": []
+        }
+      ],
+      "common_problem": "Gestante con dudas sobre presentación, canal del parto o volumen de líquido.",
+      "mother": {
+        "cue": "Relación entre feto, pelvis y ambiente líquido que condiciona el nacimiento.",
+        "answer": "Condiciones mecánicas y ambientales del embarazo.",
+        "explanation": "La exploración y la ecografía precisan qué componente altera el parto."
+      }
+    },
+    {
+      "id": "24.03",
+      "title": "Hiperglucemia durante gestación",
+      "topics": [
+        {
+          "id": "24.03-01",
+          "name": "Diabetes gestacional",
+          "source_pages": [
+            801,
+            802,
+            803,
+            804
+          ],
+          "pattern": "Una mujer sin diabetes conocida presenta prueba de tolerancia a la glucosa alterada durante el segundo trimestre. Está estable y no tiene síntomas de descompensación metabólica.",
+          "key_discriminator": "segundo trimestre",
+          "mechanism": "La resistencia a la insulina del embarazo supera la capacidad de compensación pancreática y produce hiperglucemia con riesgo de crecimiento fetal excesivo.",
+          "findings": [
+            {
+              "mechanism": "Hiperglucemia materna",
+              "finding": "Riesgo de macrosomía"
+            }
+          ],
+          "initial_action": "Iniciar terapia nutricional, ejercicio adecuado y control de glucosa; valorar tratamiento farmacológico si no alcanza las metas.",
+          "action_reason": "Reduce exposición fetal a hiperglucemia.",
+          "modifiers": [
+            {
+              "factor": "Persistencia fuera de metas",
+              "action": "Considerar insulina",
+              "reason": "La dieta y ejercicio pueden ser insuficientes"
+            }
+          ],
+          "limits": "Excluir diabetes manifiesta previa y reclasificar después del parto.",
+          "evidence": [
+            {
+              "page": 801,
+              "quote": "por primera vez durante el 2do o 3er diagnóstican antes de 13 semanas de"
+            },
+            {
+              "page": 804,
+              "quote": "Inicial: Terapia nutricional"
+            }
+          ],
+          "source_gaps": []
+        }
+      ],
+      "common_problem": "Gestante con elevación de glucosa detectada en seguimiento.",
+      "mother": {
+        "cue": "Adaptación metabólica insuficiente frente a las demandas del embarazo.",
+        "answer": "Hiperglucemia en el embarazo.",
+        "explanation": "El momento del diagnóstico y las pruebas permiten clasificarla."
+      }
+    },
+    {
+      "id": "24.04",
+      "title": "Fiebre/disuria o vómitos",
+      "topics": [
+        {
+          "id": "24.04-01",
+          "name": "IVU en el embarazo",
+          "source_pages": [
+            820,
+            821
+          ],
+          "pattern": "Una embarazada presenta disuria, urgencia y dolor suprapúbico sin fiebre ni dolor lumbar. Se obtiene una muestra de orina antes de iniciar tratamiento.",
+          "key_discriminator": "sin fiebre ni dolor lumbar",
+          "mechanism": "La colonización bacteriana invade la mucosa vesical; durante el embarazo puede ascender al riñón y aumentar riesgo materno y de nacimiento pretérmino.",
+          "findings": [
+            {
+              "mechanism": "Inflamación vesical",
+              "finding": "Disuria y urgencia"
+            }
+          ],
+          "initial_action": "Solicitar urocultivo e iniciar antibiótico compatible con el embarazo según cuadro y resistencia local; ajustar al resultado.",
+          "action_reason": "La susceptibilidad permite dirigir tratamiento.",
+          "modifiers": [
+            {
+              "factor": "Fiebre y dolor costovertebral",
+              "action": "Hospitalizar y tratar como pielonefritis",
+              "reason": "Sugieren infección renal"
+            }
+          ],
+          "limits": "No usar fosfomicina o nitrofurantoína para infección renal. Seleccionar antibiótico según susceptibilidad y contexto.",
+          "evidence": [
+            {
+              "page": 820,
+              "quote": "frecuencia urinaria."
+            },
+            {
+              "page": 821,
+              "quote": "siempre se ajusta con susceptibilidad reportada por el cultivo."
+            }
+          ],
+          "source_gaps": [],
+          "external_sources": [
+            {
+              "label": "ACOG: urinary tract infections in pregnancy (2023)",
+              "url": "https://www.acog.org/clinical/clinical-guidance/clinical-consensus/articles/2023/08/urinary-tract-infections-in-pregnant-individuals",
+              "quote": "adequate renal tissue penetration",
+              "checked_at": "2026-10-29"
+            }
+          ],
+          "source_corrections": [
+            {
+              "reason": "La pielonefritis se atiende inicialmente hospitalizada, con antibiótico de penetración renal y ajuste por susceptibilidad. Ertapenem no es elección universal."
+            }
+          ]
+        },
+        {
+          "id": "24.04-02",
+          "name": "Hiperémesis gravídica",
+          "source_pages": [
+            818
+          ],
+          "pattern": "Una gestante tiene vómitos incoercibles, pérdida de peso y signos de deshidratación. No tolera alimentos ni líquidos. Se requieren estudios para evaluar gravedad y causas alternativas.",
+          "key_discriminator": "vómitos incoercibles",
+          "mechanism": "El vómito persistente reduce aporte energético y produce deshidratación, alteraciones electrolíticas y depleción de tiamina, que puede causar lesión neurológica.",
+          "findings": [
+            {
+              "mechanism": "Pérdidas gastrointestinales",
+              "finding": "Deshidratación y alteraciones electrolíticas"
+            }
+          ],
+          "initial_action": "Valorar hidratación y electrolitos; tratar náusea y vómito. En enfermedad grave hospitalizada, administrar tiamina antes de dextrosa.",
+          "action_reason": "Evita deterioro hidroelectrolítico y daño por déficit de tiamina.",
+          "modifiers": [
+            {
+              "factor": "Fracaso de primera línea",
+              "action": "Escalar antiemético y vía de administración",
+              "reason": "La intolerancia oral limita tratamiento"
+            }
+          ],
+          "limits": "No atribuir todos los vómitos del embarazo a este cuadro.",
+          "evidence": [
+            {
+              "page": 818,
+              "quote": "náuseas y vómitos incoercibles"
+            },
+            {
+              "page": 818,
+              "quote": "previo a la administración de dextrosa"
+            }
+          ],
+          "source_gaps": []
+        }
+      ],
+      "common_problem": "Gestante con síntomas que impiden bienestar o ingesta.",
+      "mother": {
+        "cue": "Enfermedad intercurrente con riesgo de deshidratación o infección ascendente.",
+        "answer": "Complicación infecciosa o digestiva del embarazo.",
+        "explanation": "La fiebre, el dolor y la tolerancia oral orientan la primera decisión."
+      }
+    },
+    {
+      "id": "24.05",
+      "title": "Incompatibilidad sanguínea",
+      "topics": [
+        {
+          "id": "24.05-01",
+          "name": "Aloinmunización materna",
+          "source_pages": [
+            782
+          ],
+          "pattern": "Una mujer embarazada es Rh negativa y su pareja Rh positiva. El estudio de anticuerpos maternos es negativo. Acude antes del tercer trimestre para planificar prevención.",
+          "key_discriminator": "anticuerpos maternos es negativo",
+          "mechanism": "La exposición a eritrocitos fetales con antígeno D puede sensibilizar a la madre; los anticuerpos posteriores atraviesan placenta y dañan eritrocitos fetales.",
+          "findings": [
+            {
+              "mechanism": "Respuesta contra antígeno fetal",
+              "finding": "Riesgo de anemia fetal en sensibilización"
+            }
+          ],
+          "initial_action": "Confirmar grupo, Rh y anticuerpos; ofrecer inmunoglobulina anti-D antenatal a las 28 semanas si no está sensibilizada.",
+          "action_reason": "Previene sensibilización materna.",
+          "modifiers": [
+            {
+              "factor": "Recién nacido Rh positivo",
+              "action": "Administrar anti-D dentro de 72 horas",
+              "reason": "Reduce aloinmunización posterior"
+            }
+          ],
+          "limits": "La profilaxis no trata la sensibilización ya establecida.",
+          "evidence": [
+            {
+              "page": 782,
+              "quote": "Coombs indirecto"
+            },
+            {
+              "page": 782,
+              "quote": "..,.._.....__. lnmunoglobulina anti-D (28 SDG) 1 1 Tratamiento de elección: lnmunoglobulina"
+            }
+          ],
+          "source_gaps": []
+        }
+      ],
+      "common_problem": "Gestante con diferencia antigénica sanguínea respecto al feto.",
+      "mother": {
+        "cue": "Anticuerpos maternos capaces de afectar eritrocitos fetales.",
+        "answer": "Aloinmunización eritrocitaria.",
+        "explanation": "La sensibilización determina prevención o vigilancia fetal."
+      }
+    },
+    {
+      "id": "24.06",
+      "title": "TA elevada gestacional",
+      "topics": [
+        {
+          "id": "24.06-01",
+          "name": "Enfermedades hipertensivas del embarazo",
+          "source_pages": [
+            809,
+            810,
+            811,
+            812,
+            813,
+            814,
+            815,
+            816
+          ],
+          "pattern": "Una gestante con presión arterial previamente normal desarrolla hipertensión después de la mitad del embarazo. Refiere cefalea intensa y visión borrosa. Se requiere determinar lesión orgánica y urgencia.",
+          "key_discriminator": "cefalea intensa y visión borrosa",
+          "mechanism": "La placentación anormal favorece desequilibrio angiogénico y disfunción endotelial sistémica, con vasoconstricción y lesión renal, hepática, hematológica o cerebral.",
+          "findings": [
+            {
+              "mechanism": "Disfunción endotelial",
+              "finding": "Hipertensión con daño orgánico"
+            }
+          ],
+          "initial_action": "Evaluar presión y daño orgánico con urgencia; si hay hipertensión grave, controlar presión y administrar sulfato de magnesio cuando corresponda.",
+          "action_reason": "Reduce riesgo vascular y convulsivo.",
+          "modifiers": [
+            {
+              "factor": "Convulsión",
+              "action": "Proteger vía aérea y administrar magnesio",
+              "reason": "Sugiere fase eclámptica"
+            }
+          ],
+          "limits": "La proteinuria puede faltar si existe lesión orgánica compatible.",
+          "evidence": [
+            {
+              "page": 810,
+              "quote": "Disfunción endotelial sistémica"
+            },
+            {
+              "page": 814,
+              "quote": "El tratamiento inicial de una emergencia hipertensiva"
+            }
+          ],
+          "source_gaps": []
+        },
+        {
+          "id": "24.06-02",
+          "name": "Preeclampsia sin datos de severidad",
+          "source_pages": [
+            829,
+            830,
+            831,
+            832,
+            833,
+            834,
+            835,
+            836
+          ],
+          "pattern": "Una gestante después de las 20 semanas tiene hipertensión nueva y proteinuria. No presenta síntomas neurológicos, alteraciones hepáticas ni deterioro renal o hematológico. El bienestar fetal es conservado.",
+          "key_discriminator": "hipertensión nueva y proteinuria",
+          "mechanism": "La disfunción endotelial placentaria produce vasoconstricción y alteración glomerular con proteinuria, pero en esta presentación todavía no hay datos clínicos de severidad.",
+          "findings": [
+            {
+              "mechanism": "Lesión glomerular",
+              "finding": "Proteinuria"
+            }
+          ],
+          "initial_action": "Confirmar diagnóstico y ausencia de severidad; establecer vigilancia maternofetal y tratamiento de presión según valoración obstétrica.",
+          "action_reason": "Puede progresar a daño orgánico.",
+          "modifiers": [
+            {
+              "factor": "Cefalea persistente o lesión orgánica",
+              "action": "Reclasificar y atender con urgencia",
+              "reason": "Indica progresión"
+            }
+          ],
+          "limits": "La vigilancia y fecha de nacimiento dependen de edad gestacional y evolución. Desde 37 semanas se recomienda resolución oportuna según guía.",
+          "evidence": [
+            {
+              "page": 829,
+              "quote": "hipertensión y proteinuria significativa"
+            },
+            {
+              "page": 835,
+              "quote": "Revaloración del uso de antihipertensivos."
+            }
+          ],
+          "source_gaps": [],
+          "external_sources": [
+            {
+              "label": "NICE NG133: pre-eclampsia timing of birth",
+              "url": "https://www.nice.org.uk/guidance/ng133/chapter/recommendations",
+              "quote": "Initiate birth within 24 to 48 hours.",
+              "checked_at": "2026-10-29"
+            }
+          ],
+          "source_corrections": [
+            {
+              "reason": "No extrapolar 38–39 semanas de hipertensión crónica. NICE indica iniciar nacimiento en 24–48 horas desde las 37 semanas para preeclampsia."
+            }
+          ]
+        },
+        {
+          "id": "24.06-03",
+          "name": "Síndrome de HELLP",
+          "source_pages": [
+            842
+          ],
+          "pattern": "Una gestante con hipertensión presenta dolor en cuadrante superior derecho. La biometría muestra plaquetas bajas y hemólisis. Las enzimas hepáticas están elevadas. Requiere atención obstétrica inmediata.",
+          "key_discriminator": "plaquetas bajas y hemólisis",
+          "mechanism": "La disfunción endotelial sistémica causa daño microvascular, destrucción eritrocitaria y consumo plaquetario; la lesión hepática añade dolor y elevación de enzimas.",
+          "findings": [
+            {
+              "mechanism": "Microangiopatía y consumo",
+              "finding": "Hemólisis y trombocitopenia"
+            }
+          ],
+          "initial_action": "Hospitalizar, estabilizar, prevenir convulsiones y coordinar resolución obstétrica según estado maternofetal.",
+          "action_reason": "El deterioro puede ser rápido.",
+          "modifiers": [
+            {
+              "factor": "Dolor hepático intenso o inestabilidad",
+              "action": "Buscar hematoma o rotura hepática",
+              "reason": "Puede causar hemoperitoneo"
+            }
+          ],
+          "limits": "El corticoide antenatal puede tener indicación fetal; no se usa como tratamiento materno rutinario del HELLP.",
+          "evidence": [
+            {
+              "page": 842,
+              "quote": "hemolisis, elevación de las enzimas hepáticas y disminución de plaquetas"
+            },
+            {
+              "page": 842,
+              "quote": "interrupción del embarazo."
+            }
+          ],
+          "source_gaps": [],
+          "external_sources": [
+            {
+              "label": "NICE NG133: HELLP",
+              "url": "https://www.nice.org.uk/guidance/ng133/chapter/recommendations",
+              "quote": "Do not use dexamethasone or betamethasone",
+              "checked_at": "2026-10-29"
+            }
+          ],
+          "source_corrections": [
+            {
+              "reason": "No usar dexametasona o betametasona para tratar HELLP materno. Distinguir corticoide para maduración fetal de tratamiento del síndrome."
+            }
+          ]
+        }
+      ],
+      "common_problem": "Gestante con presión arterial elevada y posible lesión orgánica.",
+      "mother": {
+        "cue": "Alteración vascular materna con posible disfunción placentaria y orgánica.",
+        "answer": "Trastornos hipertensivos del embarazo.",
+        "explanation": "La edad gestacional, proteinuria y lesión orgánica determinan urgencia."
+      }
+    },
+    {
+      "id": "24.07",
+      "title": "Dolor/contracciones antes de término",
+      "topics": [
+        {
+          "id": "24.07-01",
+          "name": "Parto pretérmino",
+          "source_pages": [
+            826,
+            827,
+            828
+          ],
+          "pattern": "Una gestante antes de las 37 semanas tiene contracciones regulares y cambios cervicales documentados. Las membranas parecen íntegras y no hay fiebre. Se evalúa riesgo de nacimiento próximo.",
+          "key_discriminator": "contracciones regulares y cambios cervicales",
+          "mechanism": "La activación uterina y remodelación cervical antes del término pueden culminar en nacimiento con órganos fetales inmaduros, especialmente pulmón y sistema nervioso.",
+          "findings": [
+            {
+              "mechanism": "Contracciones con cambio cervical",
+              "finding": "Riesgo de nacimiento prematuro"
+            }
+          ],
+          "initial_action": "Valorar edad gestacional, infección, membranas y bienestar fetal; considerar corticoide antenatal y traslado según riesgo de parto próximo.",
+          "action_reason": "Permite preparar atención neonatal y reducir complicaciones.",
+          "modifiers": [
+            {
+              "factor": "Nacimiento inminente antes de 32 semanas",
+              "action": "Valorar magnesio para neuroprotección",
+              "reason": "Reduce lesión neurológica neonatal"
+            }
+          ],
+          "limits": "Tocólisis y repetición de corticoide dependen de membranas, edad, infección, riesgo de parto y protocolo. No usar cursos prolongados universales.",
+          "evidence": [
+            {
+              "page": 826,
+              "quote": "cambios cervicales documentados"
+            },
+            {
+              "page": 828,
+              "quote": "Neuroprotección fetal"
+            }
+          ],
+          "source_gaps": [],
+          "external_sources": [
+            {
+              "label": "NICE NG25: preterm labour and birth",
+              "url": "https://www.nice.org.uk/guidance/ng25/chapter/Recommendations",
+              "quote": "less than 34+0 weeks",
+              "checked_at": "2026-10-29"
+            }
+          ],
+          "source_corrections": [
+            {
+              "reason": "El rescate de corticoide se limita a selección antes de 34 semanas con riesgo muy alto de parto y curso previo; no adoptar rescate tardío ni tocólisis de mantenimiento automática."
+            }
+          ]
+        },
+        {
+          "id": "24.07-02",
+          "name": "Insuficiencia cervical",
+          "source_pages": [
+            819
+          ],
+          "pattern": "Una mujer con pérdidas gestacionales tardías presenta dilatación cervical indolora durante el segundo trimestre. Se observan membranas expuestas y no tiene contracciones, fiebre ni sangrado activo.",
+          "key_discriminator": "dilatación cervical indolora",
+          "mechanism": "El cuello uterino pierde rigidez y capacidad de cierre antes del término, permitiendo dilatación y exposición de membranas sin actividad uterina suficiente.",
+          "findings": [
+            {
+              "mechanism": "Falla de sostén cervical",
+              "finding": "Dilatación sin contracciones"
+            }
+          ],
+          "initial_action": "Valorar por obstetricia, medir longitud cervical y evaluar posible cerclaje tras excluir infección, trabajo de parto y rotura de membranas.",
+          "action_reason": "La sutura puede conservar el cierre cervical en casos seleccionados.",
+          "modifiers": [
+            {
+              "factor": "Corioamnionitis o trabajo activo",
+              "action": "No colocar o retirar cerclaje",
+              "reason": "Incrementa riesgo y no corrige la causa"
+            }
+          ],
+          "limits": "Las indicaciones dependen de antecedentes, longitud y edad gestacional.",
+          "evidence": [
+            {
+              "page": 819,
+              "quote": "incapacidad del cuello uterino"
+            },
+            {
+              "page": 819,
+              "quote": "Trabajo de parto activo."
+            }
+          ],
+          "source_gaps": []
+        }
+      ],
+      "common_problem": "Gestante antes del término con cambios cervicales.",
+      "mother": {
+        "cue": "El cuello uterino pierde su capacidad de mantener la gestación antes de tiempo.",
+        "answer": "Riesgo de nacimiento pretérmino.",
+        "explanation": "La presencia de contracciones distingue mecanismos y tratamiento."
+      }
+    },
+    {
+      "id": "24.08",
+      "title": "Salida de líquido o fiebre",
+      "topics": [
+        {
+          "id": "24.08-01",
+          "name": "Ruptura prematura de membranas",
+          "source_pages": [
+            839,
+            840
+          ],
+          "pattern": "Una embarazada refiere salida continua de líquido claro antes de tener contracciones. La especuloscopia muestra líquido por el cuello uterino. No presenta fiebre ni taquicardia fetal.",
+          "key_discriminator": "antes de tener contracciones",
+          "mechanism": "La discontinuidad de membranas elimina la barrera frente a infección ascendente y permite pérdida de líquido, con riesgo de compresión del cordón y prematuridad.",
+          "findings": [
+            {
+              "mechanism": "Pérdida de barrera amniótica",
+              "finding": "Salida de líquido e infección potencial"
+            }
+          ],
+          "initial_action": "Confirmar rotura con especuloscopia y pruebas auxiliares si hay duda; evaluar edad gestacional, infección y bienestar fetal.",
+          "action_reason": "Estos datos determinan vigilancia o nacimiento.",
+          "modifiers": [
+            {
+              "factor": "Fiebre con descarga fétida",
+              "action": "Iniciar antibiótico y coordinar nacimiento",
+              "reason": "Sugiere infección intraamniótica"
+            }
+          ],
+          "limits": "Individualizar nacimiento según infección, bienestar, edad gestacional y guía local. No aplicar interrupción automática a toda RPM después de 34 semanas.",
+          "evidence": [
+            {
+              "page": 839,
+              "quote": "antes del inicio del trabajo de parto"
+            },
+            {
+              "page": 840,
+              "quote": "debe limitarse"
+            }
+          ],
+          "source_gaps": [],
+          "external_sources": [
+            {
+              "label": "RCOG Green-top 73: PPROM",
+              "url": "https://www-preview.rcog.org.uk/guidance/browse-all-guidance/green-top-guidelines/care-of-women-presenting-with-suspected-preterm-prelabour-rupture-of-membranes-from-24plus0-weeks-of-gestation-green-top-guideline-no-73/",
+              "quote": "offered expectant management until 37+0 weeks",
+              "checked_at": "2026-10-29"
+            }
+          ],
+          "source_corrections": [
+            {
+              "reason": "RCOG permite manejo expectante hasta 37 semanas cuando no hay contraindicación; después de 34 semanas no existe una regla universal de resolución inmediata."
+            }
+          ]
+        },
+        {
+          "id": "24.08-02",
+          "name": "Corioamnionitis",
+          "source_pages": [
+            798
+          ],
+          "pattern": "Una gestante con membranas rotas desarrolla fiebre, dolor uterino y taquicardia fetal. El líquido tiene olor fétido. Se sospecha una infección que afecta la unidad maternofetal.",
+          "key_discriminator": "fiebre, dolor uterino y taquicardia fetal",
+          "mechanism": "Los microorganismos suelen ascender desde vagina hacia membranas y cavidad amniótica, desencadenando inflamación materna y fetal con riesgo de sepsis y atonía.",
+          "findings": [
+            {
+              "mechanism": "Inflamación intraamniótica",
+              "finding": "Fiebre y taquicardia fetal"
+            }
+          ],
+          "initial_action": "Iniciar antibióticos intravenosos y valoración obstétrica para resolver el embarazo cuando el cuadro es clínico.",
+          "action_reason": "Controla infección y reduce exposición fetal.",
+          "modifiers": [
+            {
+              "factor": "Solo sospecha subclínica",
+              "action": "Completar evaluación antes de decidir resolución",
+              "reason": "No equivale a infección clínica confirmada"
+            }
+          ],
+          "limits": "La vía del nacimiento depende de indicaciones obstétricas.",
+          "evidence": [
+            {
+              "page": 798,
+              "quote": "La mayoría de los gérmenes llegan"
+            },
+            {
+              "page": 798,
+              "quote": "Realizar Interrupción del embarazo en corioamnionitis clínica."
+            }
+          ],
+          "source_gaps": []
+        }
+      ],
+      "common_problem": "Gestante con salida de líquido o fiebre.",
+      "mother": {
+        "cue": "Pérdida de barrera amniótica con posible infección ascendente.",
+        "answer": "Rotura de membranas e infección intraamniótica.",
+        "explanation": "La infección cambia una vigilancia expectante por resolución del embarazo."
+      }
+    },
+    {
+      "id": "24.09",
+      "title": "Feto pequeño o gestación múltiple",
+      "topics": [
+        {
+          "id": "24.09-01",
+          "name": "Restricción del crecimiento intrauterino",
+          "source_pages": [
+            838
+          ],
+          "pattern": "Una gestante con enfermedad vascular tiene altura uterina menor de la esperada. La ecografía muestra peso fetal bajo y Doppler anormal. La edad gestacional está bien establecida.",
+          "key_discriminator": "peso fetal bajo y Doppler anormal",
+          "mechanism": "El intercambio placentario insuficiente reduce aporte de oxígeno y nutrientes, limita el crecimiento fetal y puede alterar la distribución del flujo sanguíneo.",
+          "findings": [
+            {
+              "mechanism": "Insuficiencia placentaria",
+              "finding": "Crecimiento bajo y Doppler anormal"
+            }
+          ],
+          "initial_action": "Referir para evaluación hemodinámica fetoplacentaria, causa y vigilancia de bienestar fetal.",
+          "action_reason": "Distingue pequeño constitucional de restricción patológica.",
+          "modifiers": [
+            {
+              "factor": "Doppler y bienestar deteriorados",
+              "action": "Valorar momento de nacimiento en unidad especializada",
+              "reason": "Aumenta riesgo de hipoxia y muerte"
+            }
+          ],
+          "limits": "Un peso menor del percentil diez no basta para definir la causa.",
+          "evidence": [
+            {
+              "page": 838,
+              "quote": "crecimiento intrauterino (RCIU) : Incapacidad Feto pequeño para edad gestacional"
+            },
+            {
+              "page": 838,
+              "quote": "enviar al siguiente nivel"
+            }
+          ],
+          "source_gaps": []
+        },
+        {
+          "id": "24.09-02",
+          "name": "Embarazo múltiple",
+          "source_pages": [
+            806,
+            807
+          ],
+          "pattern": "La ecografía del primer trimestre muestra dos fetos. Se requiere determinar si comparten placenta y saco amniótico para establecer el tipo de seguimiento y plan de nacimiento.",
+          "key_discriminator": "comparten placenta y saco amniótico",
+          "mechanism": "El momento de división embrionaria determina corionicidad y amnionicidad; compartir placenta o cavidad añade riesgos de circulación compartida y entrecruzamiento de cordones.",
+          "findings": [
+            {
+              "mechanism": "Placenta compartida",
+              "finding": "Riesgo de transfusión entre fetos"
+            }
+          ],
+          "initial_action": "Definir corionicidad y amnionicidad por ecografía temprana y organizar vigilancia obstétrica.",
+          "action_reason": "Los riesgos y el nacimiento dependen de estas características.",
+          "modifiers": [
+            {
+              "factor": "Primer feto no cefálico",
+              "action": "Valorar cesárea",
+              "reason": "La presentación modifica seguridad del parto"
+            }
+          ],
+          "limits": "No aplicar un mismo calendario de resolución a todos los embarazos múltiples.",
+          "evidence": [
+            {
+              "page": 806,
+              "quote": "Una placenta y dos bolsas"
+            },
+            {
+              "page": 807,
+              "quote": "Determinar la corionicidad"
+            }
+          ],
+          "source_gaps": []
+        },
+        {
+          "id": "24.09-03",
+          "name": "Muerte fetal",
+          "source_pages": [
+            825
+          ],
+          "pattern": "Una gestante refiere ausencia reciente de movimientos fetales. No se detecta frecuencia cardiaca con el equipo inicial. Se requiere confirmar vitalidad antes de plantear cualquier intervención.",
+          "key_discriminator": "No se detecta frecuencia cardiaca",
+          "mechanism": "La pérdida de función vital fetal elimina actividad cardiaca y movimientos; su retención puede acompañarse de complicaciones maternas y requiere investigar causas placentarias o fetales.",
+          "findings": [
+            {
+              "mechanism": "Ausencia de actividad cardiaca",
+              "finding": "Falta de vitalidad fetal"
+            }
+          ],
+          "initial_action": "Confirmar por ultrasonido en tiempo real; ofrecer apoyo y valoración obstétrica del nacimiento y estudio causal.",
+          "action_reason": "Evita una decisión basada solo en auscultación.",
+          "modifiers": [
+            {
+              "factor": "Elección de manejo expectante",
+              "action": "Acordar seguimiento clínico y de coagulación",
+              "reason": "La retención prolongada puede complicarse"
+            }
+          ],
+          "limits": "La cesárea necesita indicación obstétrica adicional.",
+          "evidence": [
+            {
+              "page": 825,
+              "quote": "Ausencia de movimientos fetales"
+            },
+            {
+              "page": 825,
+              "quote": "Ultrasonido en tiempo real."
+            }
+          ],
+          "source_gaps": []
+        }
+      ],
+      "common_problem": "Gestación con crecimiento, número fetal o vitalidad anormales.",
+      "mother": {
+        "cue": "Evaluación del número, crecimiento y vida fetal por ecografía.",
+        "answer": "Alteración del desarrollo o bienestar fetal.",
+        "explanation": "La ecografía organiza vigilancia y decisiones de nacimiento."
+      }
+    },
+    {
+      "id": "24.10",
+      "title": "Trabajo de parto y progresión",
+      "topics": [
+        {
+          "id": "24.10-01",
+          "name": "Atención del parto",
+          "source_pages": [
+            783,
+            784,
+            785,
+            786,
+            787
+          ],
+          "pattern": "Una mujer con embarazo a término presenta contracciones dolorosas y modificaciones cervicales progresivas. El registro fetal es tranquilizador. Solicita acompañamiento y opciones de analgesia durante el nacimiento.",
+          "key_discriminator": "modificaciones cervicales progresivas",
+          "mechanism": "La actividad uterina dilata el cuello y favorece descenso y rotación fetal; luego la contracción uterina facilita separación placentaria y hemostasia del alumbramiento.",
+          "findings": [
+            {
+              "mechanism": "Contracción y cambio cervical",
+              "finding": "Progresión del parto"
+            }
+          ],
+          "initial_action": "Valorar fase, vigilar frecuencia fetal y dinámica uterina, ofrecer analgesia y atención respetuosa.",
+          "action_reason": "Detecta alteraciones y apoya un proceso seguro.",
+          "modifiers": [
+            {
+              "factor": "Falta de progresión",
+              "action": "Reevaluar dinámica, presentación y bienestar",
+              "reason": "El tiempo aislado no define detención"
+            }
+          ],
+          "limits": "Las tasas históricas de dilatación no deben convertirse en reglas rígidas.",
+          "evidence": [
+            {
+              "page": 784,
+              "quote": "No enema evacuante."
+            },
+            {
+              "page": 784,
+              "quote": "no se sugiere"
+            }
+          ],
+          "source_gaps": []
+        },
+        {
+          "id": "24.10-02",
+          "name": "Manejo activo del parto",
+          "source_pages": [
+            823,
+            824
+          ],
+          "pattern": "Una gestante con indicación de finalizar embarazo aún no inicia contracciones. El cuello es firme y posterior. El feto está cefálico y el registro es tranquilizador.",
+          "key_discriminator": "cuello es firme y posterior",
+          "mechanism": "La maduración cervical mejora condiciones del cuello para iniciar el parto; los uterotónicos estimulan contracciones cuando se decide inducción o conducción bajo vigilancia.",
+          "findings": [
+            {
+              "mechanism": "Cuello desfavorable",
+              "finding": "Menor probabilidad de inducción eficaz"
+            }
+          ],
+          "initial_action": "Evaluar Bishop, indicación, contraindicaciones y bienestar fetal; seleccionar maduración cervical antes de inducir si el cuello es desfavorable.",
+          "action_reason": "Adecua el método a las condiciones cervicales.",
+          "modifiers": [
+            {
+              "factor": "Placenta previa o situación transversa",
+              "action": "Evitar inducción vaginal",
+              "reason": "Existe obstrucción o riesgo hemorrágico"
+            }
+          ],
+          "limits": "El misoprostol no se limita a muerte fetal. El balón puede ser opción seleccionada; cicatriz uterina modifica elección y contraindicaciones.",
+          "evidence": [
+            {
+              "page": 823,
+              "quote": "Las condiciones cervicales son un factor clave"
+            },
+            {
+              "page": 824,
+              "quote": "Evaluar con Bishop y registro cardiotocográfico."
+            }
+          ],
+          "source_gaps": [],
+          "external_sources": [
+            {
+              "label": "NICE NG207: methods for induction",
+              "url": "https://www.nice.org.uk/guidance/ng207/chapter/Recommendations",
+              "quote": "consider a mechanical method",
+              "checked_at": "2026-10-29"
+            }
+          ],
+          "source_corrections": [
+            {
+              "reason": "El misoprostol tiene usos de inducción con feto vivo y existen métodos mecánicos apropiados; la elección depende de cuello, cicatriz y riesgos, no de exclusiones universales."
+            }
+          ]
+        },
+        {
+          "id": "24.10-03",
+          "name": "Distocias",
+          "source_pages": [
+            805
+          ],
+          "pattern": "Después de salir la cabeza fetal, los hombros no avanzan con las medidas habituales. El equipo identifica una obstrucción y necesita iniciar maniobras coordinadas de inmediato.",
+          "key_discriminator": "los hombros no avanzan",
+          "mechanism": "El hombro fetal queda impactado en el canal pélvico después de la salida de la cabeza, impidiendo el nacimiento y comprometiendo oxigenación fetal.",
+          "findings": [
+            {
+              "mechanism": "Impactación de hombro",
+              "finding": "Detención tras salida de cabeza"
+            }
+          ],
+          "initial_action": "Pedir ayuda e iniciar maniobra de McRoberts con presión suprapúbica por personal entrenado.",
+          "action_reason": "Modifica relación de hombros y pelvis.",
+          "modifiers": [
+            {
+              "factor": "Fracaso de maniobras iniciales",
+              "action": "Escalar a maniobras internas entrenadas",
+              "reason": "Se necesita liberar el hombro impactado"
+            }
+          ],
+          "limits": "Evitar tracción excesiva; las maniobras de rescate requieren equipo experto.",
+          "evidence": [
+            {
+              "page": 805,
+              "quote": "Solicitar ayuda"
+            },
+            {
+              "page": 805,
+              "quote": "Presión suprapúbica"
+            }
+          ],
+          "source_gaps": []
+        }
+      ],
+      "common_problem": "Gestante con contracciones y progresión del nacimiento.",
+      "mother": {
+        "cue": "Contracciones, dilatación y descenso deben coordinarse para el parto.",
+        "answer": "Progresión del trabajo de parto.",
+        "explanation": "La vigilancia identifica progresión fisiológica y obstrucción."
+      }
+    },
+    {
+      "id": "24.11",
+      "title": "Parto quirúrgico",
+      "topics": [
+        {
+          "id": "24.11-01",
+          "name": "Cesárea",
+          "source_pages": [
+            788
+          ],
+          "pattern": "Una gestante tiene antecedente de incisión uterina corporal y llega para planificar el nacimiento. Está estable y no tiene trabajo de parto. Se revisan riesgos de la vía vaginal.",
+          "key_discriminator": "incisión uterina corporal",
+          "mechanism": "La extracción por incisión abdominal y uterina evita el paso vaginal cuando existe contraindicación, pero añade riesgos quirúrgicos que requieren indicación y prevención de infección.",
+          "findings": [
+            {
+              "mechanism": "Cicatriz corporal",
+              "finding": "Riesgo uterino durante trabajo de parto"
+            }
+          ],
+          "initial_action": "Planificar cesárea por obstetricia y dar profilaxis antibiótica perioperatoria según protocolo.",
+          "action_reason": "La cicatriz corporal modifica seguridad del trabajo de parto.",
+          "modifiers": [
+            {
+              "factor": "Cesárea transversal previa",
+              "action": "Evaluar elegibilidad individual para parto vaginal",
+              "reason": "No toda cicatriz tiene el mismo riesgo"
+            }
+          ],
+          "limits": "La lista del libro mezcla indicaciones relativas y absolutas. Valorar vía según indicación específica y riesgo maternofetal.",
+          "evidence": [
+            {
+              "page": 788,
+              "quote": "Cesárea previa clásica"
+            },
+            {
+              "page": 788,
+              "quote": "Profilaxis antibiótica"
+            }
+          ],
+          "source_gaps": [],
+          "external_sources": [
+            {
+              "label": "RCOG: Birth after previous caesarean",
+              "url": "https://www.rcog.org.uk/media/kpkjwd5h/gtg_45.pdf",
+              "quote": "previous uterine rupture or classical caesarean scar",
+              "checked_at": "2026-10-29"
+            }
+          ],
+          "source_corrections": [
+            {
+              "reason": "La cicatriz clásica contraindica parto vaginal planificado; una cesárea segmentaria previa aislada no lo contraindica universalmente. Se conserva el caso de cicatriz corporal."
+            }
+          ]
+        }
+      ],
+      "common_problem": "Gestante en quien se considera nacimiento abdominal.",
+      "mother": {
+        "cue": "Extracción fetal por incisión uterina cuando la vía vaginal no es adecuada.",
+        "answer": "Nacimiento por cesárea.",
+        "explanation": "La indicación depende del riesgo materno y fetal."
+      }
+    },
+    {
+      "id": "24.12",
+      "title": "Puerperio con fiebre",
+      "topics": [
+        {
+          "id": "24.12-01",
+          "name": "Puerperio fisiológico",
+          "source_pages": [
+            837
+          ],
+          "pattern": "Una mujer en los primeros días después de un parto presenta cólicos leves y loquios que cambian de rojo a seroso. Está afebril y hemodinámicamente estable.",
+          "key_discriminator": "Está afebril",
+          "mechanism": "Tras expulsión placentaria el útero involuciona y el endometrio se recupera; cambian los loquios y se revierten adaptaciones hemodinámicas del embarazo.",
+          "findings": [
+            {
+              "mechanism": "Involución y recuperación endometrial",
+              "finding": "Cambio progresivo de loquios"
+            }
+          ],
+          "initial_action": "Vigilar sangrado, signos vitales e involución y programar consultas puerperales.",
+          "action_reason": "Permite detectar desviaciones de la recuperación.",
+          "modifiers": [
+            {
+              "factor": "Fiebre o loquios fétidos",
+              "action": "Buscar infección",
+              "reason": "No son cambios fisiológicos esperados"
+            }
+          ],
+          "limits": "Sangrado abundante requiere evaluación urgente aunque ocurra tardíamente.",
+          "evidence": [
+            {
+              "page": 837,
+              "quote": "duración de 6 semanas o 42 días"
+            },
+            {
+              "page": 837,
+              "quote": "Proporcionar 2 consultas"
+            }
+          ],
+          "source_gaps": []
+        },
+        {
+          "id": "24.12-02",
+          "name": "Endometritis puerperal",
+          "source_pages": [
+            808
+          ],
+          "pattern": "Una mujer pocos días después de una cesárea tiene fiebre, loquios malolientes y dolor uterino a la palpación. Se busca un foco infeccioso en el puerperio.",
+          "key_discriminator": "dolor uterino a la palpación",
+          "mechanism": "La flora vaginal asciende al endometrio lesionado después del parto, causa infección polimicrobiana y puede extenderse a sangre o tejidos pélvicos.",
+          "findings": [
+            {
+              "mechanism": "Infección endometrial",
+              "finding": "Fiebre y sensibilidad uterina"
+            }
+          ],
+          "initial_action": "Evaluar gravedad e iniciar antibióticos intravenosos apropiados, como clindamicina más gentamicina según protocolo; buscar restos o absceso si se sospechan.",
+          "action_reason": "Trata un foco con riesgo de sepsis.",
+          "modifiers": [
+            {
+              "factor": "Inestabilidad o disfunción orgánica",
+              "action": "Tratar como sepsis y controlar foco",
+              "reason": "Indica infección sistémica grave"
+            }
+          ],
+          "limits": "La ecografía se usa cuando se sospechan restos o complicaciones; la selección antibiótica requiere revisar alergias y función renal.",
+          "evidence": [
+            {
+              "page": 808,
+              "quote": "sensibilidad a la palpación"
+            },
+            {
+              "page": 808,
+              "quote": "_Q Endometritis Organismos Gentamicina 1 dosis inicial y < 3 7 SDG: Ampicilina"
+            }
+          ],
+          "source_gaps": [],
+          "external_sources": [
+            {
+              "label": "WHO maternal health recommendations, second edition (2025)",
+              "url": "https://www.ncbi.nlm.nih.gov/books/NBK615643/table/part2.tab65/?report=objectonly",
+              "quote": "A combination of clindamycin and gentamicin",
+              "checked_at": "2026-10-29"
+            }
+          ],
+          "source_corrections": [
+            {
+              "reason": "La OMS recomienda clindamicina más gentamicina para endometritis posparto, con alternativas según disponibilidad y contexto. No combinar indiscriminadamente las tablas del libro."
+            }
+          ]
+        },
+        {
+          "id": "24.12-03",
+          "name": "Sepsis puerperal",
+          "source_pages": [
+            841
+          ],
+          "pattern": "Una puérpera con fiebre y loquios purulentos presenta taquicardia y deterioro general. Se sospecha foco uterino con repercusión sistémica. La atención requiere hospitalización y estabilización.",
+          "key_discriminator": "deterioro general",
+          "mechanism": "Una infección genital posparto puede desencadenar respuesta sistémica y disfunción orgánica; el control del foco y tratamiento temprano limitan progresión a choque.",
+          "findings": [
+            {
+              "mechanism": "Infección uterina diseminada",
+              "finding": "Deterioro sistémico"
+            }
+          ],
+          "initial_action": "Hospitalizar y estabilizar. En alta sospecha de sepsis o choque, dar antibióticos de amplio espectro idealmente dentro de una hora; obtener cultivos sin retrasar y evaluar control del foco.",
+          "action_reason": "La infección puede progresar rápidamente.",
+          "modifiers": [
+            {
+              "factor": "Datos de choque",
+              "action": "Escalar soporte y atención crítica",
+              "reason": "La perfusión orgánica está amenazada"
+            }
+          ],
+          "limits": "La fiebre puede faltar. Los criterios inflamatorios aislados no definen sepsis; valorar disfunción orgánica y perfusión.",
+          "evidence": [
+            {
+              "page": 841,
+              "quote": "Loquios fétidos o purulenta."
+            },
+            {
+              "page": 841,
+              "quote": "Hospitalización y estabilizar."
+            }
+          ],
+          "source_gaps": [],
+          "external_sources": [
+            {
+              "label": "SMFM Consult 67: maternal sepsis, reaffirmed 2025",
+              "url": "https://publications.smfm.org/publications/507-society-for-maternal-fetal-medicine-consult-series-67/",
+              "quote": "ideally within 1 hour of recognition",
+              "checked_at": "2026-10-29"
+            }
+          ],
+          "source_corrections": [
+            {
+              "reason": "Sepsis requiere sospecha de infección y disfunción orgánica, no SIRS aislado. En alta sospecha o choque, antibiótico inmediato y control urgente de foco; no esperar seis horas."
+            }
+          ]
+        }
+      ],
+      "common_problem": "Mujer después del parto con dolor, loquios o fiebre.",
+      "mother": {
+        "cue": "Recuperación del aparato reproductor que puede complicarse por infección ascendente.",
+        "answer": "Vigilancia del puerperio.",
+        "explanation": "El dolor uterino, fiebre y repercusión sistémica distinguen infección de recuperación."
+      }
+    },
+    {
+      "id": "24.13",
+      "title": "Complicación materna posparto",
+      "topics": [
+        {
+          "id": "24.13-01",
+          "name": "Desgarro perineal",
+          "source_pages": [
+            800
+          ],
+          "pattern": "Después de un parto vaginal se observa lesión perineal que alcanza el esfínter anal. La paciente tiene dolor local. Se debe precisar extensión antes de reparar.",
+          "key_discriminator": "alcanza el esfínter anal",
+          "mechanism": "La distensión y trauma del canal del parto pueden romper piel, músculos y complejo esfinteriano; su extensión determina riesgo de infección e incontinencia anal.",
+          "findings": [
+            {
+              "mechanism": "Lesión esfinteriana",
+              "finding": "Riesgo de incontinencia anal"
+            }
+          ],
+          "initial_action": "Inspeccionar el canal y clasificar la extensión; solicitar reparación por personal capacitado cuando hay lesión muscular o esfinteriana.",
+          "action_reason": "La reparación depende de las estructuras lesionadas.",
+          "modifiers": [
+            {
+              "factor": "Lesión de primer grado sin sangrado y bordes juntos",
+              "action": "Puede no necesitar sutura",
+              "reason": "No hay separación significativa"
+            }
+          ],
+          "limits": "Los grados tercero y cuarto requieren evaluación y reparación especializada.",
+          "evidence": [
+            {
+              "page": 800,
+              "quote": "El diagnóstico de los desgarros se hace por inspección directa"
+            },
+            {
+              "page": 800,
+              "quote": "reparación quirúrgica."
+            }
+          ],
+          "source_gaps": []
+        },
+        {
+          "id": "24.13-02",
+          "name": "Síndrome de Sheehan",
+          "source_pages": [
+            843
+          ],
+          "pattern": "Una mujer que sufrió hemorragia obstétrica grave presenta incapacidad para lactar y amenorrea persistente. También tiene fatiga y pérdida de peso. Se sospecha déficit hormonal después del parto.",
+          "key_discriminator": "incapacidad para lactar y amenorrea",
+          "mechanism": "La hipoperfusión por hemorragia posparto puede infartar la hipófisis y reducir múltiples hormonas tróficas, con falla de lactancia y deficiencias endocrinas periféricas.",
+          "findings": [
+            {
+              "mechanism": "Infarto hipofisario",
+              "finding": "Agalactia y amenorrea"
+            }
+          ],
+          "initial_action": "Medir prolactina y evaluar ejes tiroideo y suprarrenal; referir para reposición hormonal dirigida.",
+          "action_reason": "Identifica déficit endocrino tratable.",
+          "modifiers": [
+            {
+              "factor": "Hipotensión o compromiso agudo",
+              "action": "Evaluar insuficiencia suprarrenal con urgencia",
+              "reason": "La falta de cortisol puede comprometer estabilidad"
+            }
+          ],
+          "limits": "La presentación puede ser tardía tras una hemorragia antigua.",
+          "evidence": [
+            {
+              "page": 843,
+              "quote": "infarto de la glándula pituitaria"
+            },
+            {
+              "page": 843,
+              "quote": "TSH y T4, ACTH-cortiso"
+            }
+          ],
+          "source_gaps": []
+        },
+        {
+          "id": "24.13-03",
+          "name": "Depresión posparto",
+          "source_pages": [
+            799
+          ],
+          "pattern": "Una madre tiene tristeza persistente, pérdida de interés y dificultad para vincularse con su hijo durante varias semanas después del parto. Los síntomas afectan su funcionamiento cotidiano.",
+          "key_discriminator": "Los síntomas afectan su funcionamiento",
+          "mechanism": "Un episodio depresivo relacionado temporalmente con el parto altera estado de ánimo, interés y funcionamiento; antecedentes depresivos y apoyo insuficiente aumentan vulnerabilidad clínica.",
+          "findings": [
+            {
+              "mechanism": "Alteración afectiva persistente",
+              "finding": "Pérdida de interés y deterioro funcional"
+            }
+          ],
+          "initial_action": "Evaluar seguridad y realizar entrevista diagnóstica; utilizar Edimburgo como tamizaje y ofrecer intervención psicológica según gravedad.",
+          "action_reason": "El tamizaje no establece el diagnóstico.",
+          "modifiers": [
+            {
+              "factor": "Respuesta insuficiente a intervención no farmacológica",
+              "action": "Valorar antidepresivo individualizado",
+              "reason": "Requiere revisar antecedentes y contexto"
+            }
+          ],
+          "limits": "Investigar ideación suicida o síntomas psicóticos de forma urgente.",
+          "evidence": [
+            {
+              "page": 799,
+              "quote": "al menos 2 semanas"
+            },
+            {
+              "page": 799,
+              "quote": "no es diagnóstica"
+            }
+          ],
+          "source_gaps": []
+        }
+      ],
+      "common_problem": "Mujer después del parto con lesión local, falla hormonal o síntomas afectivos.",
+      "mother": {
+        "cue": "Complicaciones posparto que afectan estructuras, función endocrina o salud mental.",
+        "answer": "Morbilidad materna posparto.",
+        "explanation": "El antecedente y el sistema afectado orientan la evaluación."
+      }
+    },
+    {
+      "id": "24.14",
+      "title": "Atención respetuosa",
+      "topics": [
+        {
+          "id": "24.14-01",
+          "name": "Violencia obstétrica",
+          "source_pages": [
+            845
+          ],
+          "pattern": "Durante el parto se propone una intervención sin explicar su objetivo ni solicitar consentimiento. La mujer expresa que no desea el procedimiento y se ignora su decisión.",
+          "key_discriminator": "se ignora su decisión",
+          "mechanism": "La imposición de procedimientos y el trato degradante reducen autonomía y dignidad; la atención debe integrar información, consentimiento y oportunidad clínica durante la reproducción.",
+          "findings": [
+            {
+              "mechanism": "Procedimiento autoritario",
+              "finding": "Pérdida de capacidad de decisión"
+            }
+          ],
+          "initial_action": "Explicar indicación, alternativas y riesgos; obtener consentimiento voluntario y respetar decisiones conforme al contexto clínico.",
+          "action_reason": "Protege autonomía y calidad de atención.",
+          "modifiers": [
+            {
+              "factor": "Emergencia obstétrica",
+              "action": "Dar atención oportuna y comunicar",
+              "reason": "La omisión también causa daño"
+            }
+          ],
+          "limits": "La urgencia no elimina el deber de trato digno.",
+          "evidence": [
+            {
+              "page": 845,
+              "quote": "Pérdida de capacidad de decisión"
+            },
+            {
+              "page": 845,
+              "quote": "sin consentimiento voluntario."
+            }
+          ],
+          "source_gaps": []
+        }
+      ],
+      "common_problem": "Mujer que recibe procedimientos o trato durante embarazo y parto.",
+      "mother": {
+        "cue": "Protección de autonomía, dignidad y consentimiento durante la atención reproductiva.",
+        "answer": "Atención obstétrica respetuosa.",
+        "explanation": "La calidad incluye decisiones informadas y ausencia de maltrato."
+      }
+    }
+  ]
+}
