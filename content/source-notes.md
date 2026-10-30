@@ -4,7 +4,7 @@
 
 El usuario añadió `Edwino.pdf`, de 1,150 páginas, con SHA-256 `c6540ab02b29b941f4f8aff3d793a21988f35ad8f6cf963f0292bb0a64835703`. La agrupación procede de `ENARM_Capa1_Completo.pdf`, de 143 páginas. El inventario conserva 34 secciones, 355 bloques, 730 apariciones y 719 combinaciones únicas de tema y páginas. Sus referencias cubren las 1,150 páginas físicas del libro.
 
-La autoría se conserva en `content/sections/`. Cada tema tiene viñeta, discriminador, mecanismo, hallazgos, primera acción, modificadores, límites y evidencia. Las citas se cotejan con el texto de la página. Las páginas 164, 166 y 203 requieren inspección visual por falta de texto extraíble. La página 579 requiere inspección del diagrama de medios de cultivo.
+La autoría se conserva en `content/sections/`. Cada tema tiene viñeta, discriminador, mecanismo, hallazgos, primera acción, modificadores, límites y evidencia. Las citas se cotejan con el texto de la página. Las páginas 164, 166 y 203 requieren inspección visual por falta de texto extraíble. Las páginas 579 y 872 requieren inspección de los diagramas de medios de cultivo y ojo rojo. Autor y revisor comprobaron visualmente esos diagramas.
 
 La guía tiene referencias incorrectas y el libro contiene afirmaciones antiguas o contradictorias. Las secciones registran las correcciones. Las precisiones clínicas actuales usan fuentes primarias identificadas en cada tema. La referencia externa se distingue de las páginas del libro.
 
