@@ -1,0 +1,497 @@
+{
+  "id": "12",
+  "title": "Genética",
+  "blocks": [
+    {
+      "id": "12.01",
+      "title": "Fenotipo sexual discordante",
+      "topics": [
+        {
+          "id": "12.01-01",
+          "name": "Síndrome de Turner",
+          "source_pages": [
+            355
+          ],
+          "pattern": "Una adolescente tiene talla baja, cuello alado y ausencia de desarrollo puberal con amenorrea primaria. Se detecta presión elevada y se revisan pulsos y posibles lesiones aórticas.",
+          "key_discriminator": "talla baja, cuello alado",
+          "mechanism": "La ausencia completa o parcial de material del cromosoma X altera desarrollo gonadal y crecimiento; la disgenesia ovárica produce hipogonadismo y coexiste riesgo cardiovascular y renal.",
+          "findings": [
+            {
+              "mechanism": "Disgenesia gonadal",
+              "finding": "Amenorrea e hipogonadismo hipergonadotrópico"
+            },
+            {
+              "mechanism": "Alteración del crecimiento",
+              "finding": "Talla baja"
+            }
+          ],
+          "initial_action": "Confirmar con cariotipo y coordinar evaluación endocrina, cardíaca y renal. Valorar crecimiento e inducción puberal según edad y situación clínica.",
+          "action_reason": "El diagnóstico permite tratar déficit y detectar lesiones de alto riesgo.",
+          "modifiers": [
+            {
+              "factor": "Coartación o válvula bicúspide",
+              "action": "Establecer vigilancia aórtica individualizada.",
+              "reason": "Aumenta riesgo cardiovascular."
+            },
+            {
+              "factor": "Sospecha de mosaicismo",
+              "action": "Completar estudio citogenético apropiado.",
+              "reason": "La alteración puede no ser una monosomía uniforme."
+            }
+          ],
+          "limits": "No limitar la vigilancia aórtica a un intervalo fijo para todas; anatomía, presión y crecimiento cambian la frecuencia.",
+          "evidence": [
+            {
+              "page": 355,
+              "quote": "hipogonadismo hipergonadotrópico"
+            },
+            {
+              "page": 355,
+              "quote": "Cariotipo para confirmar diagnóstico."
+            }
+          ],
+          "source_gaps": []
+        },
+        {
+          "id": "12.01-02",
+          "name": "Síndrome de Klinefelter",
+          "source_pages": [
+            351
+          ],
+          "pattern": "Un adulto alto consulta por infertilidad. Tiene testículos pequeños, ginecomastia y testosterona baja con LH y FSH elevadas; se considera una alteración cromosómica del desarrollo testicular.",
+          "key_discriminator": "testículos pequeños",
+          "mechanism": "Un cromosoma X adicional puede alterar función testicular y producir fallo gonadal primario; la testosterona disminuye y las gonadotropinas aumentan por pérdida de retroalimentación.",
+          "findings": [
+            {
+              "mechanism": "Fallo testicular",
+              "finding": "Testosterona baja y LH/FSH altas"
+            },
+            {
+              "mechanism": "Alteración de espermatogénesis",
+              "finding": "Infertilidad"
+            }
+          ],
+          "initial_action": "Solicitar cariotipo y evaluación endocrina y reproductiva. Valorar reemplazo hormonal, salud ósea y opciones de fertilidad según contexto.",
+          "action_reason": "Confirma la causa y aborda consecuencias de hipogonadismo.",
+          "modifiers": [
+            {
+              "factor": "Dificultades de aprendizaje",
+              "action": "Ofrecer evaluación y apoyo.",
+              "reason": "Puede coexistir afectación del desarrollo."
+            },
+            {
+              "factor": "Masa mamaria sospechosa",
+              "action": "Estudiar de forma dirigida.",
+              "reason": "Existe riesgo mamario aumentado."
+            }
+          ],
+          "limits": "El cariotipo más común es 47,XXY; las letras V del resumen corresponden a errores de texto. No asumir infertilidad absoluta en todos los casos.",
+          "evidence": [
+            {
+              "page": 351,
+              "quote": "Testículos pequeños"
+            },
+            {
+              "page": 351,
+              "quote": "FSH y LH estarán elevadas"
+            }
+          ],
+          "source_gaps": []
+        }
+      ],
+      "common_problem": "Alteración de pubertad, talla o función gonadal.",
+      "mother": {
+        "cue": "Un cambio de cromosomas sexuales puede causar fallo gonadal primario.",
+        "answer": "Aneuploidías sexuales",
+        "explanation": "El cariotipo y los riesgos asociados guían atención endocrina y reproductiva."
+      }
+    },
+    {
+      "id": "12.02",
+      "title": "Retraso y anomalías congénitas",
+      "topics": [
+        {
+          "id": "12.02-01",
+          "name": "Síndrome de Down",
+          "source_pages": [
+            348,
+            349
+          ],
+          "pattern": "Un recién nacido tiene hipotonía, perfil facial plano y pliegue palmar único. Se escucha un soplo; la familia solicita confirmación y una evaluación de problemas asociados.",
+          "key_discriminator": "hipotonía, perfil facial plano",
+          "mechanism": "El material adicional del cromosoma 21 altera desarrollo de varios órganos; el patrón clínico orienta, pero el cariotipo define la alteración y ayuda a valorar recurrencia familiar.",
+          "findings": [
+            {
+              "mechanism": "Desarrollo cromosómico alterado",
+              "finding": "Hipotonía y rasgos físicos"
+            },
+            {
+              "mechanism": "Defecto cardíaco asociado",
+              "finding": "Soplo"
+            }
+          ],
+          "initial_action": "Confirmar citogenéticamente y realizar evaluación neonatal de cardiopatía y otras comorbilidades. Coordinar seguimiento del desarrollo y asesoría genética.",
+          "action_reason": "El fenotipo no define si hay trisomía libre, translocación o mosaicismo.",
+          "modifiers": [
+            {
+              "factor": "Translocación",
+              "action": "Valorar cariotipos y asesoría familiar según indicación.",
+              "reason": "El riesgo de recurrencia puede cambiar."
+            },
+            {
+              "factor": "Hallazgo prenatal de riesgo",
+              "action": "Ofrecer confirmación diagnóstica y orientación.",
+              "reason": "Tamizaje positivo no equivale a diagnóstico."
+            }
+          ],
+          "limits": "No usar los tiempos de procedimientos invasivos del resumen sin protocolo vigente; el tamiz prenatal no es una prueba definitiva.",
+          "evidence": [
+            {
+              "page": 348,
+              "quote": "alteración del cromosoma 21"
+            },
+            {
+              "page": 349,
+              "quote": "Defectos del canal"
+            }
+          ],
+          "source_gaps": []
+        }
+      ],
+      "common_problem": "Hipotonía y anomalías congénitas en un niño.",
+      "mother": {
+        "cue": "Un exceso de material cromosómico produce un patrón multiorgánico.",
+        "answer": "Trisomía 21 y evaluación integral",
+        "explanation": "La confirmación citogenética también informa asesoría familiar."
+      }
+    },
+    {
+      "id": "12.03",
+      "title": "Hábito marfanoide",
+      "topics": [
+        {
+          "id": "12.03-01",
+          "name": "Síndrome de Marfan",
+          "source_pages": [
+            353
+          ],
+          "pattern": "Un adolescente alto y delgado tiene dedos largos, deformidad esternal y desplazamiento del cristalino. Se solicita estudio de raíz aórtica aunque no refiere dolor torácico.",
+          "key_discriminator": "desplazamiento del cristalino",
+          "mechanism": "La alteración de fibrilina compromete microfibrillas del tejido conectivo; la debilidad estructural afecta esqueleto, soporte del cristalino y pared aórtica, con riesgo de dilatación y disección.",
+          "findings": [
+            {
+              "mechanism": "Tejido conectivo alterado",
+              "finding": "Aracnodactilia y ectopia lentis"
+            },
+            {
+              "mechanism": "Pared aórtica vulnerable",
+              "finding": "Dilatación de raíz"
+            }
+          ],
+          "initial_action": "Evaluar criterios de Ghent y antecedentes, solicitar valoración cardiológica con imagen aórtica y oftalmología, y considerar genética.",
+          "action_reason": "La amenaza aórtica puede ser silenciosa y requiere vigilancia.",
+          "modifiers": [
+            {
+              "factor": "Dolor torácico súbito",
+              "action": "Descartar síndrome aórtico urgente.",
+              "reason": "Puede existir disección."
+            },
+            {
+              "factor": "Familiares afectados",
+              "action": "Ofrecer evaluación familiar.",
+              "reason": "La herencia es autosómica dominante."
+            }
+          ],
+          "limits": "El hábito alto aislado no confirma el síndrome; integrar aorta, ojos, historia y genética.",
+          "evidence": [
+            {
+              "page": 353,
+              "quote": "mutación del gen FBNl"
+            },
+            {
+              "page": 353,
+              "quote": "dilatación de raíz aórtica."
+            }
+          ],
+          "source_gaps": []
+        }
+      ],
+      "common_problem": "Hábito alto con signos oculares o aórticos.",
+      "mother": {
+        "cue": "La alteración del tejido conectivo puede comprometer pared aórtica y soporte ocular.",
+        "answer": "Trastorno por fibrilina",
+        "explanation": "El riesgo vital puede existir sin síntomas y requiere imagen."
+      }
+    },
+    {
+      "id": "12.04",
+      "title": "Cáncer hereditario digestivo",
+      "topics": [
+        {
+          "id": "12.04-01",
+          "name": "Síndrome de Lynch",
+          "source_pages": [
+            352
+          ],
+          "pattern": "Una adulta tiene familiares de dos generaciones con cáncer colorrectal y endometrial a edades tempranas, sin poliposis extensa. Se considera una predisposición por reparación defectuosa del ADN.",
+          "key_discriminator": "sin poliposis extensa",
+          "mechanism": "Las variantes de reparación de errores de apareamiento favorecen inestabilidad genómica y tumores colorrectales y extracolónicos; la historia familiar y estudio tumoral orientan evaluación germinal.",
+          "findings": [
+            {
+              "mechanism": "Reparación defectuosa",
+              "finding": "Cánceres tempranos"
+            },
+            {
+              "mechanism": "Predisposición multiorgánica",
+              "finding": "Tumores de colon y endometrio"
+            }
+          ],
+          "initial_action": "Referir a asesoría genética y evaluación especializada de tejido y variantes; establecer vigilancia de colon y órganos de riesgo según gen e historia.",
+          "action_reason": "La confirmación permite prevención y estudio de familiares.",
+          "modifiers": [
+            {
+              "factor": "Tumor con pérdida de proteínas reparadoras",
+              "action": "Completar interpretación molecular.",
+              "reason": "La inmunohistoquímica detecta expresión, no directamente la mutación germinal."
+            },
+            {
+              "factor": "Plan reproductivo completo y riesgo ginecológico",
+              "action": "Discutir medidas preventivas individualizadas.",
+              "reason": "La decisión depende de riesgo y preferencias."
+            }
+          ],
+          "limits": "Ámsterdam y Bethesda no son requisitos únicos actuales. Colectomía no equivale a colostomía ni se indica automáticamente a todo portador.",
+          "evidence": [
+            {
+              "page": 352,
+              "quote": "herencia autosómica dominante."
+            },
+            {
+              "page": 352,
+              "quote": "referir a centro especializado"
+            }
+          ],
+          "source_gaps": []
+        },
+        {
+          "id": "12.04-02",
+          "name": "Síndrome de Peutz Jegher",
+          "source_pages": [
+            354
+          ],
+          "pattern": "Un joven presenta manchas oscuras en labios y mucosa oral, episodios de dolor abdominal y pólipos hamartomatosos intestinales. Hay antecedentes familiares de hallazgos similares.",
+          "key_discriminator": "manchas oscuras en labios y mucosa oral",
+          "mechanism": "Una variante de STK11 predispone a pólipos hamartomatosos y pigmentación mucocutánea; los pólipos pueden sangrar o causar invaginación y el síndrome aumenta riesgo de varios cánceres.",
+          "findings": [
+            {
+              "mechanism": "Pólipos hamartomatosos",
+              "finding": "Sangrado u obstrucción"
+            },
+            {
+              "mechanism": "Pigmentación mucocutánea",
+              "finding": "Máculas periorales y orales"
+            }
+          ],
+          "initial_action": "Referir a genética y gastroenterología para confirmar, definir carga polipoide, realizar polipectomía indicada y establecer vigilancia de tumores por edad y órgano.",
+          "action_reason": "La prevención aborda complicaciones mecánicas y riesgo oncológico.",
+          "modifiers": [
+            {
+              "factor": "Dolor agudo con vómitos",
+              "action": "Buscar invaginación u obstrucción.",
+              "reason": "Un pólipo puede actuar como punto guía."
+            },
+            {
+              "factor": "Familiares en riesgo",
+              "action": "Ofrecer evaluación dirigida.",
+              "reason": "La herencia es dominante."
+            }
+          ],
+          "limits": "No todo pólipo requiere la misma intervención; tamaño, síntomas y localización condicionan tratamiento.",
+          "evidence": [
+            {
+              "page": 354,
+              "quote": "mutación de gen LKBl o STKll"
+            },
+            {
+              "page": 354,
+              "quote": "polipectomía endoscópica."
+            }
+          ],
+          "source_gaps": []
+        }
+      ],
+      "common_problem": "Cáncer digestivo familiar o poliposis con pigmentación.",
+      "mother": {
+        "cue": "Mecanismos hereditarios distintos producen patrones de tumores y pólipos.",
+        "answer": "Predisposición hereditaria digestiva",
+        "explanation": "La genética y el fenotipo determinan vigilancia del paciente y familia."
+      }
+    },
+    {
+      "id": "12.05",
+      "title": "Tumores múltiples tempranos",
+      "topics": [
+        {
+          "id": "12.05-01",
+          "name": "Von Hippel Lindau",
+          "source_pages": [
+            356
+          ],
+          "pattern": "Un adulto joven tiene un tumor vascular de retina y lesiones renales múltiples. Un familiar tuvo un tumor de sistema nervioso central; se investiga predisposición tumoral hereditaria.",
+          "key_discriminator": "tumor vascular de retina",
+          "mechanism": "La pérdida de función del gen VHL favorece tumores y quistes en varios órganos; el patrón familiar y multiorgánico exige vigilancia coordinada más allá de la lesión que inició el estudio.",
+          "findings": [
+            {
+              "mechanism": "Predisposición vascular tumoral",
+              "finding": "Hemangioblastomas retinianos o de SNC"
+            },
+            {
+              "mechanism": "Tumores renales",
+              "finding": "Lesiones múltiples"
+            }
+          ],
+          "initial_action": "Solicitar genética y evaluación multiorgánica especializada, con vigilancia de retina, SNC, riñones y otros órganos según protocolo y hallazgos.",
+          "action_reason": "La detección temprana permite tratar lesiones antes de daño o extensión.",
+          "modifiers": [
+            {
+              "factor": "Sospecha de feocromocitoma",
+              "action": "Realizar evaluación bioquímica antes de procedimientos.",
+              "reason": "La secreción catecolaminérgica cambia preparación."
+            },
+            {
+              "factor": "Lesión sintomática o creciente",
+              "action": "Valorar intervención por ubicación y tamaño.",
+              "reason": "No todas las lesiones se operan al detectarlas."
+            }
+          ],
+          "limits": "La penetrancia de cada tumor varía por variante y tipo; no aplicar el porcentaje de feocromocitoma del resumen a todos.",
+          "evidence": [
+            {
+              "page": 356,
+              "quote": "mutación del gen VHL"
+            },
+            {
+              "page": 356,
+              "quote": "ubicación y el tamaño de las lesiones"
+            }
+          ],
+          "source_gaps": []
+        }
+      ],
+      "common_problem": "Tumores múltiples en un adulto joven.",
+      "mother": {
+        "cue": "Un síndrome supresor tumoral puede afectar retina, SNC y riñón.",
+        "answer": "Predisposición por VHL",
+        "explanation": "La vigilancia debe cubrir órganos y secreción hormonal relevante."
+      }
+    },
+    {
+      "id": "12.06",
+      "title": "Síntomas neurológicos y órgano blanco",
+      "topics": [
+        {
+          "id": "12.06-01",
+          "name": "Enfermedad de Wilson",
+          "source_pages": [
+            347
+          ],
+          "pattern": "Un joven presenta hepatitis sin causa clara, temblor y cambios de conducta. La exploración ocular encuentra un anillo corneal; también hay anemia hemolítica con prueba de Coombs negativa.",
+          "key_discriminator": "anemia hemolítica con prueba de Coombs negativa",
+          "mechanism": "La alteración de ATP7B impide manejo y excreción biliar de cobre; su acumulación lesiona hígado, ganglios basales y otros tejidos y puede causar hemólisis.",
+          "findings": [
+            {
+              "mechanism": "Cobre hepático acumulado",
+              "finding": "Hepatitis o cirrosis"
+            },
+            {
+              "mechanism": "Depósito corneal",
+              "finding": "Anillo de Kayser-Fleischer"
+            },
+            {
+              "mechanism": "Daño eritrocitario",
+              "finding": "Hemólisis no inmune"
+            }
+          ],
+          "initial_action": "Integrar ceruloplasmina, cobre urinario, evaluación ocular y genética o estudio hepático según contexto; referir para tratamiento quelante o estrategia apropiada.",
+          "action_reason": "No hay un hallazgo aislado suficiente en todas las presentaciones.",
+          "modifiers": [
+            {
+              "factor": "Falla hepática aguda",
+              "action": "Referir urgente a centro con trasplante.",
+              "reason": "La quelación puede ser insuficiente ante deterioro grave."
+            },
+            {
+              "factor": "Familiares en riesgo",
+              "action": "Organizar estudio dirigido.",
+              "reason": "La herencia recesiva permite detectar otros afectados."
+            }
+          ],
+          "limits": "El cobre sérico total puede estar bajo y no descarta. Revisar unidades del cobre hepático; la cifra en mcg/dl de la página no es la unidad tisular correcta.",
+          "evidence": [
+            {
+              "page": 347,
+              "quote": "mutación del gen ATP7B."
+            },
+            {
+              "page": 347,
+              "quote": "Quelación con penicilamina"
+            }
+          ],
+          "source_gaps": []
+        },
+        {
+          "id": "12.06-02",
+          "name": "Síndrome de Dravet",
+          "source_pages": [
+            350
+          ],
+          "pattern": "Un lactante previamente sin alteraciones presenta convulsión hemiclónica prolongada con fiebre. En meses posteriores aparecen crisis de varios tipos y se enlentece el desarrollo, sin una causa estructural clara.",
+          "key_discriminator": "convulsión hemiclónica prolongada con fiebre",
+          "mechanism": "La disfunción de canales de sodio, frecuentemente por SCN1A, altera redes inhibitorias y favorece epilepsia temprana sensible a temperatura; la evolución incluye crisis múltiples y trastorno del desarrollo.",
+          "findings": [
+            {
+              "mechanism": "Excitabilidad alterada",
+              "finding": "Crisis febriles prolongadas"
+            },
+            {
+              "mechanism": "Encefalopatía epiléptica",
+              "finding": "Dificultades del desarrollo"
+            }
+          ],
+          "initial_action": "Tratar de inmediato una crisis prolongada según protocolo y referir a neurología pediátrica; solicitar evaluación genética y plan de rescate y mantenimiento especializado.",
+          "action_reason": "La evolución requiere identificar el síndrome y prevenir estados prolongados.",
+          "modifiers": [
+            {
+              "factor": "Tratamiento de mantenimiento",
+              "action": "Evitar bloqueadores de sodio que pueden empeorar crisis según el síndrome.",
+              "reason": "La selección difiere de otras epilepsias."
+            },
+            {
+              "factor": "Fiebre tras vacunación",
+              "action": "Evaluar predisposición sin atribuir causalidad estructural a la vacuna.",
+              "reason": "La temperatura puede precipitar una primera crisis."
+            }
+          ],
+          "limits": "El contexto de fiebre o vacunación no demuestra una encefalopatía vacunal. La decisión aguda durante un estado epiléptico exige protocolo experto.",
+          "evidence": [
+            {
+              "page": 350,
+              "quote": "convulsión hemiclónica o generalizada"
+            },
+            {
+              "page": 350,
+              "quote": "genéticas para lactantes con convulsión hemiclónica"
+            }
+          ],
+          "source_gaps": []
+        }
+      ],
+      "common_problem": "Síntomas neurológicos con datos sistémicos o inicio infantil.",
+      "mother": {
+        "cue": "El mecanismo puede ser acumulación tóxica de metal o alteración de excitabilidad neuronal.",
+        "answer": "Enfermedad genética tratable por mecanismo",
+        "explanation": "La edad y los órganos implicados orientan pruebas y tratamiento."
+      }
+    }
+  ]
+}
