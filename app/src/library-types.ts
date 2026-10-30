@@ -20,6 +20,7 @@ export interface StudySection {
   cards: StudyCardData[];
 }
 export interface StudyManifest {
+  practice?: {url:string;sha256:string;cases:number;decisions:number};
   schema_version: number;
   content_sha256: string;
   review_status: string;

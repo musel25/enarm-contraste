@@ -1,11 +1,12 @@
 import type { CardSource, StudySection } from '../library-types';
+import type { PracticeSection } from './resources';
 import { amenorrheaDiagnoses } from './amenorrhea';
 export type Difficulty = 'easy' | 'medium' | 'contrast';
 export const difficultyLabels: Record<Difficulty, string> = { easy: 'Fácil', medium: 'Medio', contrast: 'Se puede confundir' };
 export type DiagnosticCase = {
   id: string; section_id: string; block_id: string; topic_id: string; difficulty: Difficulty;
   diagnosis: string; vignette: string; discriminator: string; explanation: string;
-  contrast: string; sources: CardSource[]; options: string[]; expanded: boolean;
+  contrast: string; sources: CardSource[]; options: string[]; expanded: boolean; answer_kind?: 'diagnosis' | 'decision'; corrections?: string[];
 };
 function orderedOptions(names: string[], seed: string) {
   const unique = [...new Set(names)];
@@ -14,7 +15,16 @@ function orderedOptions(names: string[], seed: string) {
   const offset = [...seed].reduce((sum, char) => sum + char.charCodeAt(0), 0) % unique.length;
   return [...unique.slice(offset), ...unique.slice(0, offset)];
 }
-export function clinicalCases(section: StudySection): DiagnosticCase[] {
+export function clinicalCases(section: StudySection, bank?: PracticeSection | null): DiagnosticCase[] {
+  if(bank) return bank.groups.flatMap(group => (['easy','medium','contrast'] as Difficulty[]).map(difficulty => {
+    const variant = group.variants[difficulty];
+    const id = `clinical/${group.block_id}/${group.id}/${difficulty}`;
+    return { id, section_id:section.id, block_id:group.block_id, topic_id:group.id, difficulty,
+      diagnosis:group.name, vignette:variant.vignette, discriminator:variant.discriminator,
+      explanation:variant.explanation, contrast:`${variant.confusable_with}: ${variant.why_not}`,
+      sources:group.sources, options:orderedOptions(bank.groups.filter(g=>g.block_id===group.block_id && g.answer_kind===group.answer_kind).map(g=>g.name),id),
+      expanded:true, answer_kind:group.answer_kind, corrections:group.corrections };
+  }));
   const cases: DiagnosticCase[] = [];
   const difficulties: Difficulty[] = ['easy', 'medium', 'contrast'];
   for (const card of section.cards.filter(card => card.family === 'eje')) {

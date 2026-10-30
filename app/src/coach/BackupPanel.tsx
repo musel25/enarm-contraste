@@ -3,9 +3,10 @@ import { Modal } from "../ui";
 import { downloadBackup, parseBackup } from "./storage";
 import { readBeforeImport } from "./repository";
 import type { CoachIndex, CoachState } from "./types";
-import { caseMeta } from "../learning/model";
+import { practiceMeta } from "../learning/model";
 import { clinicalCases } from "../learning/cases";
-import { loadSection } from "./resources";
+import { decisionQuestions, loadPractice } from "../learning/resources";
+import { loadResources, loadSection } from "./resources";
 
 export default function BackupPanel({ state, index, saving, onImport, onClose }: {
   state: CoachState; index: CoachIndex; saving: boolean;
@@ -28,12 +29,18 @@ export default function BackupPanel({ state, index, saving, onImport, onClose }:
       const extra = [...referenced].filter(id => !ids.has(id));
       const clinicalSections = new Set<string>();
       for (const id of extra) {
-        const meta = caseMeta(id);
+        const meta = practiceMeta(id);
         if (!meta || !sections.has(meta.section_id)) throw new Error("Esta copia usa otro temario. Tu progreso sigue intacto.");
         clinicalSections.add(meta.section_id);
       }
-      const loaded = await Promise.all([...clinicalSections].map(id => loadSection(id, index.content_sha256)));
-      for (const section of loaded) for (const item of clinicalCases(section)) ids.add(item.id);
+      if (clinicalSections.size) {
+        const { manifest } = await loadResources();
+        const loaded = await Promise.all([...clinicalSections].map(async id => ({section:await loadSection(id,index.content_sha256),bank:await loadPractice(id,manifest)})));
+        for (const {section,bank} of loaded) {
+          for(const item of clinicalCases(section,bank)) ids.add(item.id);
+          for(const item of decisionQuestions(bank)) ids.add(item.id);
+        }
+      }
       if ([...referenced].some(id => !ids.has(id)) || next.plan?.section_ids.some(id => !sections.has(id))) throw new Error("Esta copia usa otro temario. Tu progreso sigue intacto.");
       if (request === validation.current) setCandidate(next);
     } catch (failure) { if (request === validation.current) setError((failure as Error).message); }

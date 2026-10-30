@@ -75,3 +75,15 @@
   .learning-start .coach-primary { width: 100%; }
   .learning-test-bar { font-size: 13px; }
 }
+.decision-track { display:flex; gap:8px; list-style:none; padding:22px 26px 0; flex-wrap:wrap; }
+.decision-track li { display:grid; place-items:center; width:30px; height:30px; border:1px solid #d9d0ee; border-radius:50%; color:#73638e; font-size:12px; }
+.decision-track li.past { background:#e4f3ed; border-color:#92c8af; color:#245e49; }
+.decision-track li[aria-current] { background:#6550ce; color:white; box-shadow:0 0 0 5px #efebfc; }
+.decision-context { white-space:pre-line; }
+.learning-skipped { padding:20px; background:#f7f3e9; border-radius:12px; margin:18px 0; }
+.learning-skipped ul { max-height:180px; overflow:auto; padding-left:20px; margin:12px 0; }
+.learning-skipped button { padding:10px 16px; border:1px solid #b6a57d; border-radius:8px; }
+.learning-answer-result { animation: answer-arrived .35s ease-out; }
+@keyframes answer-arrived { from { transform:translateY(8px) scale(.98); opacity:.3; } to { transform:none; opacity:1; } }
+@media(prefers-reduced-motion:reduce) { .learning-answer-result { animation:none; } }
+.coach-low-motion .learning-answer-result { animation:none; }

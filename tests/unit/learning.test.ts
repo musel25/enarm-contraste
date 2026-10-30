@@ -96,3 +96,23 @@ test('every Eje case supports three difficulty modes without losing original fac
   assert.ok(cases.every(c => c.vignette === section.cards[0].front[0].text));
   assert.ok(cases.every(c => !c.expanded));
 });
+
+test('reviewed supplemental cases replace duplicated source vignettes and preserve IDs', () => {
+  const variants = Object.fromEntries(['easy','medium','contrast'].map((difficulty,i) => [difficulty,{vignette:`Caso distinto ${i}`, discriminator:'Dato decisivo', explanation:'Mecanismo', confusable_with:'Otra causa',why_not:'Un dato la distingue'}]));
+  const bank = {schema_version:1,section_id:'14',groups:[{id:'14.01-01',parent_topic_id:'14.01-01',block_id:'14.01',name:'Amenorrea primaria',answer_kind:'diagnosis',variants,sources:[{label:'Libro'}]}],decisions:[]} as any;
+  const cases = clinicalCases(clinicalSection,bank);
+  assert.equal(cases.length,3);
+  assert.equal(new Set(cases.map(c => c.vignette)).size,3);
+  assert.equal(cases[0].id,'clinical/14.01/14.01-01/easy');
+  assert.ok(cases.every(c => c.expanded));
+});
+
+import { supplementalNotices } from '../../app/src/learning/model';
+test('supplemental block milestones need every case and do not change course totals', () => {
+  const items=['a','b'].map(id=>({id:`clinical/14.01/${id}/easy`,section_id:'14',block_id:'14.01'}));
+  const before=recordPractice(emptyState(),caseMeta(items[0].id)!,3,5,day,'a');
+  assert.deepEqual(supplementalNotices(emptyState(),before,items),[]);
+  const after=recordPractice(before,caseMeta(items[1].id)!,3,5,day,'b');
+  assert.deepEqual(supplementalNotices(before,after,items),[{kind:'block',id:'14.01'},{kind:'section',id:'14'}]);
+  assert.equal(progressRows(after,index,day).sections[0].practiced,0);
+});

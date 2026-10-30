@@ -5,7 +5,7 @@ import { addDays, addExtra, dayKey, recordReview, summary, undoReview } from "./
 import { CardFeedback, Confetti, playReward } from "./Feedback";
 import { dateLabel, duration } from "./format";
 import Session from "./Session";
-import { completionNotices } from "../learning/model";
+import { completionNotices, practiceMeta } from "../learning/model";
 import type { CoachIndex, CoachState, Forecast, Grade } from "./types";
 
 type Commit = (change: (previous: CoachState) => CoachState) => Promise<CoachState | null>;
@@ -22,6 +22,15 @@ export default function Today({ state, index, day, saving, paused, forecast, cal
   const stats = useMemo(() => summary(state, index, day), [state, index, day]);
   const done = new Set(state.history.filter(a => a.day === day).map(a => a.card_id));
   const eligible = new Set(index.cards.filter(card => state.plan!.section_ids.includes(card.section_id) && state.plan!.families.includes(card.family)).map(card => card.id));
+  const supplementalDue = new Map<string,{section:string;mode:string;count:number}>();
+  for(const [id,memory] of Object.entries(state.progress)) {
+    const card=practiceMeta(id);
+    if(!card || memory.due_day>day || done.has(id) || !state.plan!.section_ids.includes(card.section_id) || !state.plan!.families.includes(card.family)) continue;
+    const mode=id.startsWith('decision/')?'decisions':'cases';
+    const key=`${card.section_id}/${mode}`;
+    const row=supplementalDue.get(key)||{section:card.section_id,mode,count:0};
+    row.count++; supplementalDue.set(key,row);
+  }
   const pending = [...stats.pending_ids, ...(state.days[day]?.extra_ids || []).filter(id => eligible.has(id) && !done.has(id))];
   const [feedback, setFeedback] = useState<{ id: string; grade: Grade; daily: boolean; course: boolean } | null>(null);
   const [celebrate, setCelebrate] = useState(false);
@@ -68,6 +77,7 @@ export default function Today({ state, index, day, saving, paused, forecast, cal
     <section className="coach-daily-banner" aria-label="Tu meta de hoy"><div className="coach-daily-count"><span className="coach-orbit" aria-hidden="true">{complete ? "✓" : "↗"}</span><div><span className="coach-overline">META DE HOY</span><strong>{stats.today_done}<span> / {stats.today_goal}</span><small> tarjetas</small></strong></div></div><div className="coach-daily-meter"><div><span>{complete ? "Tu esfuerzo de hoy ya cuenta." : stats.today_done ? "Una tarjeta a la vez. Ya avanzaste." : "Empieza con una. El resto viene después."}</span><strong>{stats.today_goal ? Math.round(stats.today_done / stats.today_goal * 100) : 0}%</strong></div><Progress label="Meta diaria" done={stats.today_done} goal={stats.today_goal} /><div className="coach-daily-detail"><span>{stats.remaining_seconds ? `≈ ${duration(stats.remaining_seconds)} pendientes` : complete ? "Objetivo cumplido" : "Sin tarjetas asignadas"}</span><span>{state.days[day]?.new_ids.length || 0} nuevas · {Math.max(0, stats.today_goal - (state.days[day]?.new_ids.length || 0))} repasos</span></div></div></section>
     <div className="coach-mobile-course" aria-hidden="true"><span>Primera vuelta <strong>{stats.covered.toLocaleString("es-MX")} / {stats.total.toLocaleString("es-MX")}</strong></span><div><i style={{ width: `${stats.coverage_percent}%` }} /></div></div>
     <div className="coach-today-layout"><div className="coach-focus-column">
+      {supplementalDue.size>0 && <section className="coach-backlog" aria-label="Repasos de casos y decisiones"><strong>Tus casos y decisiones tienen repaso hoy.</strong><p>Estos repasos son adicionales a la meta de flashcards de tu plan.</p>{[...supplementalDue.values()].map(row=><p key={`${row.section}/${row.mode}`}><a href={`#avance?section=${row.section}&mode=${row.mode}&due=1`}>Repasar {row.count} {row.mode==='decisions'?'decisiones':'casos'} de la sección {row.section}</a></p>)}</section>}
       {notice && <p role="status">{notice}</p>}
       {feedback && <CardFeedback grade={feedback.grade} done={stats.today_done} goal={stats.today_goal} />}
       {meta ? <Session key={`${day}/${meta.id}`} meta={meta} index={index} state={state} day={day} paused={paused} busy={saving || !!feedback} onRate={rate} onReview={onReview} /> : <section className="coach-daily-finish" aria-live="polite">

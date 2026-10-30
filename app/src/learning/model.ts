@@ -2,7 +2,7 @@ import type { CoachCard, CoachIndex, CoachState } from '../coach/types';
 
 export type ProgressRow = {
   id: string; total: number; practiced: number; remaining: number;
-  clinical_practiced: number; attempts: number; errors: number; difficult: number;
+  clinical_practiced: number; decision_practiced: number; attempts: number; errors: number; difficult: number;
   started: string | null; next_due: string | null; due: number;
 };
 export function caseMeta(id: string, order = 0): CoachCard | null {
@@ -11,7 +11,7 @@ export function caseMeta(id: string, order = 0): CoachCard | null {
     order, new_seconds: 90, review_seconds: 35 } : null;
 }
 function blank(id: string): ProgressRow {
-  return { id, total: 0, practiced: 0, remaining: 0, clinical_practiced: 0, attempts: 0,
+  return { id, total: 0, practiced: 0, remaining: 0, clinical_practiced: 0, decision_practiced: 0, attempts: 0,
     errors: 0, difficult: 0, started: null, next_due: null, due: 0 };
 }
 export function progressRows(state: CoachState, index: CoachIndex, day: string) {
@@ -24,17 +24,18 @@ export function progressRows(state: CoachState, index: CoachIndex, day: string) 
   };
   for (const card of index.cards) for (const row of rowsFor(card)) row.total++;
   for (const [id, memory] of Object.entries(state.progress)) {
-    const card = cards.get(id) || caseMeta(id);
+    const card = cards.get(id) || practiceMeta(id);
     if (!card) continue;
     for (const row of rowsFor(card)) {
-      if (id.startsWith('clinical/')) row.clinical_practiced++;
+      if (id.startsWith('decision/')) row.decision_practiced++;
+      else if (id.startsWith('clinical/')) row.clinical_practiced++;
       else row.practiced++;
       if (memory.due_day <= day) row.due++;
       if (!row.next_due || memory.due_day < row.next_due) row.next_due = memory.due_day;
     }
   }
   for (const attempt of state.history) {
-    const card = cards.get(attempt.card_id) || caseMeta(attempt.card_id);
+    const card = cards.get(attempt.card_id) || practiceMeta(attempt.card_id);
     if (!card) continue;
     for (const row of rowsFor(card)) {
       row.attempts++;
@@ -58,13 +59,33 @@ export function topicErrors(state: CoachState, index: CoachIndex) {
   const errors = new Map<string, { id: string; block_id: string; section_id: string; errors: number }>();
   for (const attempt of state.history) {
     if (attempt.rating !== 1) continue;
-    const card = cards.get(attempt.card_id) || caseMeta(attempt.card_id);
+    const card = cards.get(attempt.card_id) || practiceMeta(attempt.card_id);
     if (!card) continue;
     // An Eje answer covers several diagnoses. Do not invent topic-level results.
-    const id = attempt.card_id.startsWith('clinical/') ? attempt.card_id.split('/')[2]
+    const id = attempt.card_id.startsWith('decision/') ? `decision:${attempt.card_id.split('/')[2]}:${attempt.card_id.split('/')[3]}`
+      : attempt.card_id.startsWith('clinical/') ? attempt.card_id.split('/')[2]
       : card.family === 'madre' && card.level >= 2 ? attempt.card_id.split('/')[2] : `block:${card.block_id}`;
     const row = errors.get(id) || { id, block_id: card.block_id, section_id: card.section_id, errors: 0 };
     row.errors++; errors.set(id, row);
   }
   return [...errors.values()].sort((a, b) => b.errors - a.errors || a.id.localeCompare(b.id));
+}
+
+export function practiceMeta(id: string, order = 0): CoachCard | null {
+  const existing = caseMeta(id, order);
+  if (existing) return existing;
+  const parts = /^decision\/(\d{2}\.\d{2})\/([^/]+)\/([a-z0-9-]+)$/.exec(id);
+  return parts ? { id, section_id: parts[1].slice(0, 2), block_id: parts[1], family: 'madre', level: 4,
+    order, new_seconds: 60, review_seconds: 25 } : null;
+}
+
+export function supplementalNotices(before:CoachState,after:CoachState,items:{id:string;block_id:string;section_id:string}[]) {
+  return (['block','section'] as const).flatMap(kind=>{
+    const groups = new Map<string,string[]>();
+    for(const item of items) {
+      const key=kind==='block'?item.block_id:item.section_id;
+      groups.set(key,[...(groups.get(key)||[]),item.id]);
+    }
+    return [...groups].filter(([,ids])=>ids.length>0 && ids.every(id=>after.progress[id]) && !ids.every(id=>before.progress[id])).map(([id])=>({kind,id}));
+  });
 }
