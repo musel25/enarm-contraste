@@ -28,6 +28,11 @@
               "factor": "Dolor intenso o inestabilidad",
               "action": "Atender de urgencia y descartar otras causas.",
               "reason": "Puede indicar complicación hemorrágica."
+            },
+            {
+              "factor": "Sangrado con gestación intrauterina y aborto previo",
+              "action": "Ofrecer progesterona micronizada vaginal 400 mg cada 12 horas; con latido confirmado, continuar hasta 16 semanas completas.",
+              "reason": "NICE recomienda esta pauta en el subgrupo con pérdida previa."
             }
           ],
           "limits": "No se adopta reposo absoluto ni hCG o tocolíticos rutinarios del libro.",
@@ -49,7 +54,7 @@
             {
               "label": "NICE NG126: amenaza de aborto",
               "url": "https://www.nice.org.uk/guidance/ng126/chapter/management-of-miscarriage",
-              "quote": "if her bleeding gets worse, or persists beyond 14 days, she should return for further assessment",
+              "quote": "Offer vaginal micronised progesterone 400 mg twice daily",
               "checked_at": "2026-10-29"
             }
           ],
@@ -426,7 +431,7 @@
               "finding": "Sangrado y posible inestabilidad"
             }
           ],
-          "initial_action": "Activar respuesta obstétrica, cuantificar pérdida y perfusión y buscar las cuatro T mientras se controla el sangrado.",
+          "initial_action": "Activar respuesta obstétrica, reanimar y cuantificar pérdida; iniciar masaje uterino, oxitocina y tranexámico temprano si es elegible, mientras se buscan y tratan las cuatro T.",
           "action_reason": "La evaluación causal y la estabilización deben ser simultáneas.",
           "modifiers": [
             {
@@ -449,6 +454,17 @@
           "source_gaps": [],
           "verified_source_pages": [
             500
+          ],
+          "external_sources": [
+            {
+              "label": "OMS: recomendaciones consolidadas de hemorragia posparto",
+              "url": "https://www.ncbi.nlm.nih.gov/books/NBK619233/",
+              "quote": "first-response treatment bundle",
+              "checked_at": "2026-10-29"
+            }
+          ],
+          "source_corrections": [
+            "Se concreta el paquete inicial de respuesta con la recomendación OMS vigente."
           ]
         },
         {
@@ -467,16 +483,21 @@
               "finding": "Útero blando y sangrado posparto"
             }
           ],
-          "initial_action": "Activar respuesta obstétrica, iniciar masaje o compresión uterina y uterotónico apropiado mientras se reanima y busca otra causa.",
+          "initial_action": "Activar respuesta obstétrica; dar masaje uterino, oxitocina y reanimación con líquidos o hemoderivados según perfusión. Añadir tranexámico 1 g IV en 10 minutos dentro de las tres horas del nacimiento, si no está contraindicado.",
           "action_reason": "La contracción comprime los vasos del lecho placentario.",
           "modifiers": [
             {
               "factor": "Trastorno hipertensivo",
               "action": "Evitar ergonovina.",
               "reason": "La fuente la contraindica en este contexto."
+            },
+            {
+              "factor": "Sangrado que persiste 30 minutos tras tranexámico",
+              "action": "Repetir 1 g IV y escalar control del foco.",
+              "reason": "La OMS permite una segunda dosis cuando continúa la hemorragia."
             }
           ],
-          "limits": "El ácido tranexámico debe administrarse temprano según protocolo; el libro tiene un intervalo de repetición discordante.",
+          "limits": "El tranexámico es parte del tratamiento inicial; no debe retrasar control mecánico o quirúrgico si persiste la hemorragia.",
           "evidence": [
             {
               "page": 483,
@@ -566,7 +587,7 @@
             485,
             486
           ],
-          "pattern": "Una puérpera con sangrado activo tiene taquicardia, extremidades frías y oliguria. La presión comienza a bajar; no se espera la hemoglobina para iniciar reanimación y control de la causa.",
+          "pattern": "Una puérpera con sangrado activo tiene taquicardia, extremidades frías y oliguria. La presión comienza a bajar y presenta somnolencia; la hemoglobina de control todavía está pendiente.",
           "key_discriminator": "taquicardia, extremidades frías y oliguria",
           "mechanism": "La pérdida sanguínea reduce volumen circulante y entrega de oxígeno; la compensación del embarazo puede ocultar la gravedad hasta que la perfusión empeora.",
           "findings": [
