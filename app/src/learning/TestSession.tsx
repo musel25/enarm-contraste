@@ -11,8 +11,8 @@ export type TestQuestion = { id: string; label: string; card?: StudyCardData; cl
 export type AnswerResult = { due: string; notices: string[] };
 type Result = { question: TestQuestion; grade: Grade; due: string };
 
-export default function TestSession({ questions, disabled, onAnswer, onClose, onReview }: {
-  questions: TestQuestion[]; disabled: boolean;
+export default function TestSession({ questions, disabled, onAnswer, onClose, onReview, scopeProgress }: {
+  questions: TestQuestion[]; disabled: boolean; scopeProgress?: {label:string;done:number;total:number};
   onAnswer: (question: TestQuestion, grade: Grade, seconds: number, attemptId: string) => Promise<AnswerResult | null>;
   onClose: () => void; onReview: (question: TestQuestion) => void;
 }) {
@@ -82,8 +82,10 @@ export default function TestSession({ questions, disabled, onAnswer, onClose, on
     if (!next.length) return;
     startRound(next);
   }
+  const bankProgress = scopeProgress && <div className="learning-bank-progress"><div><span>{scopeProgress.label}</span><strong>{scopeProgress.done} / {scopeProgress.total}</strong></div><div role="progressbar" aria-label={scopeProgress.label} aria-valuemin={0} aria-valuemax={scopeProgress.total} aria-valuenow={scopeProgress.done}><i style={{width:`${Math.min(100,scopeProgress.done/Math.max(1,scopeProgress.total)*100)}%`}} /></div><small>Primera práctica: cada pregunta cuenta una vez. Los repasos suman respuestas.</small></div>;
   if (finished) return <section ref={root} className="learning-results">
     <h2 tabIndex={-1}>Resultado del subtest</h2>
+    {bankProgress}
     <p>{results.length} respuestas guardadas · {results.filter(item => item.grade >= 3).length} aciertos · {results.filter(item => item.grade === 1).length} errores</p>
     <p>Elige las preguntas que quieres repetir en esta sesión.</p>
     <div className="learning-question-list">{results.map(result => <label key={result.question.id}><input type="checkbox" checked={repeats.has(result.question.id)} onChange={event => setRepeats(old => { const next = new Set(old); if (event.target.checked) next.add(result.question.id); else next.delete(result.question.id); return next; })} /><span><strong>{result.question.label}</strong><small>{result.grade === 1 ? 'Error' : result.grade === 2 ? 'Difícil' : 'Acierto'} · Próximo repaso: {dateLabel(result.due)}</small></span></label>)}</div>
@@ -97,6 +99,7 @@ export default function TestSession({ questions, disabled, onAnswer, onClose, on
   return <section ref={root} className="learning-test" aria-label="Subtest en curso">
     <div className="learning-test-bar"><strong>Pregunta {position + 1} de {queue.length}</strong><button disabled={busy || disabled || !!retry} onClick={finish}>Terminar subtest</button></div>
     <progress aria-label="Preguntas respondidas" value={results.length} max={queue.length} />
+    {bankProgress}
     {!answer && <div className="learning-actions"><button disabled={busy || disabled || !!retry} onClick={skip}>Omitir por ahora</button><small>Sin calificación ni avance. Puedes volver al terminar.</small></div>}
     {question.card && <StudyCard key={`${question.id}/${position}`} card={question.card} initialHighlight={false} onRate={() => {}} onReview={() => onReview(question)} ratingArea={answer ? <p>Respuesta guardada.</p> : selfRating} />}
     {clinical && <article className="library-card learning-case">

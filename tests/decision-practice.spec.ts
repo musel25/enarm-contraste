@@ -132,3 +132,16 @@ test('a comment on a new decision retains its question context and saved answer'
  await page.getByRole('button',{name:'Cerrar',exact:true}).click();
  await expect(page.getByText('Respuesta correcta.',{exact:true})).toBeVisible();
 });
+
+test('individual practice shows both its subtest goal and whole-bank progress',async({page})=>{
+ await page.goto('./#avance?section=01&mode=cases');
+ await page.getByRole('button',{name:'Seleccionar todas',exact:true}).click();
+ await page.getByRole('button',{name:/Empezar subtest/}).click();
+ await expect(page.getByRole('progressbar',{name:'Casos de todo el temario',exact:true})).toHaveAttribute('aria-valuenow','0');
+ await page.getByRole('button',{name:'Respuesta alfa',exact:true}).click();
+ await expect(page.getByRole('progressbar',{name:'Casos de todo el temario',exact:true})).toHaveAttribute('aria-valuenow','1');
+ await expect(page.getByRole('progressbar',{name:'Casos de todo el temario',exact:true})).toHaveAttribute('aria-valuemax','3');
+ await expect(page.getByRole('progressbar',{name:'Preguntas respondidas',exact:true})).toHaveAttribute('value','1');
+ await page.getByRole('button',{name:'Ver resultado',exact:true}).click();
+ await expect(page.getByRole('progressbar',{name:'Casos de todo el temario',exact:true})).toHaveAttribute('aria-valuenow','1');
+});

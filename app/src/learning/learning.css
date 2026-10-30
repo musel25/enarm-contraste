@@ -86,3 +86,10 @@
 @keyframes answer-arrived { from { transform:translateY(8px) scale(.98); opacity:.3; } to { transform:none; opacity:1; } }
 @media(prefers-reduced-motion:reduce) { .learning-answer-result { animation:none; } }
 .coach-low-motion .learning-answer-result { animation:none; }
+.learning-bank-progress { border:1px solid #d9d1eb; border-radius:12px; padding:16px 18px; margin:0 0 20px; background:white; }
+.learning-bank-progress > div:first-child { display:flex; align-items:center; justify-content:space-between; gap:16px; font-size:13px; margin-bottom:10px; }
+.learning-bank-progress strong { color:#5742bb; font-variant-numeric:tabular-nums; white-space:nowrap; }
+.learning-bank-progress [role=progressbar] { height:7px; background:#eeeafa; border-radius:20px; overflow:hidden; margin-bottom:8px; }
+.learning-bank-progress i { height:100%; display:block; background:#7560cf; border-radius:20px; transition:width .3s ease; }
+@media(prefers-reduced-motion:reduce) { .learning-bank-progress i { transition:none; } }
+.coach-low-motion .learning-bank-progress i { transition:none; }
