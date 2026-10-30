@@ -31,7 +31,7 @@ export default function StudyCard({ card, status, onRate, onReview, onFollow }: 
       {hasClue && <label className="clue-toggle"><input type="checkbox" checked={highlight} onChange={e => setHighlight(e.target.checked)} />Resaltar el dato clave</label>}
     </div>
     <section className="library-front" aria-label="Frente de la tarjeta">
-      <h2>{card.prompt}</h2>
+      <h2 id="library-card-question" tabIndex={-1}>{card.prompt}</h2>
       {card.context && <p className="library-context">{card.context}</p>}
       <ol className="library-case-rows">{card.front.map((row, i) => <li key={i}><span className="row-number" aria-hidden="true">{i + 1}</span><p><Clue text={row.text} clue={row.highlight} enabled={highlight} /></p></li>)}</ol>
     </section>

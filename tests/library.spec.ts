@@ -96,6 +96,7 @@ test("follows the chosen differential into management and keeps the case between
   await page.getByRole("button", { name: "Mostrar respuesta", exact: true }).click();
   await page.getByRole("button", { name: "Ver manejo y variantes", exact: true }).nth(1).click();
   await expect(page.getByLabel("Nivel de Patrones Madre")).toHaveValue("4");
+  await expect(page.getByRole("heading", { name: "¿Qué haces primero y cómo cambia la decisión?", exact: true })).toBeFocused();
   await expect(page.getByRole("region", { name: "Frente de la tarjeta" })).toContainText("pista beta");
   await page.getByRole("button", { name: "Mostrar respuesta", exact: true }).click();
   await expect(page.getByRole("region", { name: "Respuesta de la tarjeta" })).toContainText("Acción B");

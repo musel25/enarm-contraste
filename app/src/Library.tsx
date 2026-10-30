@@ -74,7 +74,10 @@ export default function Library({ onReview }: { onReview: (context: ReviewContex
   const followCase = (topicId: string) => {
     const next = section?.cards.filter(c => c.family === "madre" && c.level === 4 && (block === "all" || c.block_id === block)) || [];
     const target = next.findIndex(c => c.topic_id === topicId);
-    if (target >= 0) { setFamily("madre"); setLevel("4"); setIndex(target); }
+    if (target >= 0) {
+      setFamily("madre"); setLevel("4"); setIndex(target);
+      requestAnimationFrame(() => document.getElementById("library-card-question")?.focus());
+    }
   };
   if (manifestError) return <main className="library-main" id="study"><LoadError onRetry={() => setAttempt(a => a + 1)} /></main>;
   if (!manifest) return <main className="library-main" id="study"><p role="status" className="library-loading">Cargando el temario…</p></main>;
