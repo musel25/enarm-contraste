@@ -50,7 +50,20 @@
               "quote": "Cariotipo para confirmar diagnóstico."
             }
           ],
-          "source_gaps": []
+          "source_gaps": [],
+          "external_sources": [
+            {
+              "label": "International Turner Syndrome Consensus Group, guideline 2024",
+              "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11759048/",
+              "quote": "at a frequency that should be determined by their risk factors for aortic dissection",
+              "checked_at": "2026-10-29"
+            }
+          ],
+          "source_corrections": [
+            {
+              "reason": "El intervalo aórtico fijo de cinco a diez años del libro no aplica a todos los pacientes. La guía internacional 2024 determina la frecuencia por factores de riesgo, incluido tamaño aórtico, hipertensión, válvula bicúspide y coartación."
+            }
+          ]
         },
         {
           "id": "12.01-02",
@@ -71,7 +84,7 @@
               "finding": "Infertilidad"
             }
           ],
-          "initial_action": "Solicitar cariotipo y evaluación endocrina y reproductiva. Valorar reemplazo hormonal, salud ósea y opciones de fertilidad según contexto.",
+          "initial_action": "Solicitar cariotipo y evaluación endocrina y reproductiva. Abordar opciones de fertilidad antes de iniciar testosterona cuando sea posible; valorar reemplazo por hipogonadismo y salud ósea con seguimiento.",
           "action_reason": "Confirma la causa y aborda consecuencias de hipogonadismo.",
           "modifiers": [
             {
@@ -85,7 +98,7 @@
               "reason": "Existe riesgo mamario aumentado."
             }
           ],
-          "limits": "El cariotipo más común es 47,XXY; las letras V del resumen corresponden a errores de texto. No asumir infertilidad absoluta en todos los casos.",
+          "limits": "El cariotipo más común es 47,XXY, correctamente visible en la página original. No asumir infertilidad absoluta; si se planea extracción testicular de espermatozoides, no iniciar testosterona sin coordinar el plan reproductivo.",
           "evidence": [
             {
               "page": 351,
@@ -96,7 +109,20 @@
               "quote": "FSH y LH estarán elevadas"
             }
           ],
-          "source_gaps": []
+          "source_gaps": [],
+          "external_sources": [
+            {
+              "label": "EAA y ESE, Klinefelter syndrome guideline 2021",
+              "url": "https://onlinelibrary.wiley.com/doi/10.1111/andr.12909",
+              "quote": "Assessment of the fertility status should ideally be performed before the start of testosterone substitution.",
+              "checked_at": "2026-10-29"
+            }
+          ],
+          "source_corrections": [
+            {
+              "reason": "La imagen de página 351 muestra 47,XXY; las V son errores de extracción y no del cariotipo impreso. EAA/ESE indica abordar fertilidad antes de testosterona y evitar iniciarla cuando se planea extracción testicular de espermatozoides."
+            }
+          ]
         }
       ],
       "common_problem": "Alteración de pubertad, talla o función gonadal.",
@@ -130,7 +156,7 @@
               "finding": "Soplo"
             }
           ],
-          "initial_action": "Confirmar citogenéticamente y realizar evaluación neonatal de cardiopatía y otras comorbilidades. Coordinar seguimiento del desarrollo y asesoría genética.",
+          "initial_action": "Confirmar citogenéticamente y solicitar ecocardiograma neonatal, aunque exista estudio fetal; evaluar alimentación y otras comorbilidades. Coordinar seguimiento del desarrollo y asesoría genética.",
           "action_reason": "El fenotipo no define si hay trisomía libre, translocación o mosaicismo.",
           "modifiers": [
             {
@@ -140,11 +166,11 @@
             },
             {
               "factor": "Hallazgo prenatal de riesgo",
-              "action": "Ofrecer confirmación diagnóstica y orientación.",
-              "reason": "Tamizaje positivo no equivale a diagnóstico."
+              "action": "Ofrecer asesoría y confirmación diagnóstica. Según RCOG, programar biopsia corial habitualmente a las 11+0–13+6 semanas, nunca antes de 10+0, o amniocentesis desde 15+0 semanas.",
+              "reason": "El tamizaje no es diagnóstico y hacer una prueba invasiva demasiado pronto aumenta riesgos."
             }
           ],
-          "limits": "No usar los tiempos de procedimientos invasivos del resumen sin protocolo vigente; el tamiz prenatal no es una prueba definitiva.",
+          "limits": "El tamiz prenatal positivo no confirma el diagnóstico. La edad gestacional para una prueba invasiva sigue el protocolo vigente; los límites de ocho semanas para biopsia corial y doce para amniocentesis del libro no son adecuados.",
           "evidence": [
             {
               "page": 348,
@@ -152,10 +178,29 @@
             },
             {
               "page": 349,
-              "quote": "Defectos del canal"
+              "quote": "Cardiopatías más frecuentes: Defectos del canal"
             }
           ],
-          "source_gaps": []
+          "source_gaps": [],
+          "external_sources": [
+            {
+              "label": "AAP, Health supervision in Down syndrome 2022",
+              "url": "https://publications.aap.org/pediatrics/article/149/5/e2022057010/186778/Health-Supervision-for-Children-and-Adolescents",
+              "quote": "Perform an echocardiogram, to be read by a pediatric cardiologist",
+              "checked_at": "2026-10-29"
+            },
+            {
+              "label": "RCOG, Amniocentesis and CVS, Green-top guideline 8, reviewed 2024",
+              "url": "https://www.rcog.org.uk/guidance/browse-all-guidance/green-top-guidelines/amniocentesis-and-chorionic-villus-sampling-green-top-guideline-no-8/",
+              "quote": "Amniocentesis should not be performed prior to",
+              "checked_at": "2026-10-29"
+            }
+          ],
+          "source_corrections": [
+            {
+              "reason": "La página 348 propone biopsia corial después de ocho semanas y amniocentesis después de doce. RCOG establece ventanas posteriores y la tarjeta las corrige. AAP recomienda ecocardiograma neonatal aunque se haya realizado uno fetal."
+            }
+          ]
         }
       ],
       "common_problem": "Hipotonía y anomalías congénitas en un niño.",
@@ -271,7 +316,26 @@
               "quote": "referir a centro especializado"
             }
           ],
-          "source_gaps": []
+          "source_gaps": [],
+          "external_sources": [
+            {
+              "label": "NCI PDQ, Genetics of colorectal cancer",
+              "url": "https://www.cancer.gov/types/colorectal/hp/colorectal-genetics-pdq",
+              "quote": "Molecular testing with MSI and/or IHC has been adopted as a universal screen",
+              "checked_at": "2026-10-29"
+            },
+            {
+              "label": "BSG, ACPGBI y UKCGG, Hereditary colorectal cancer guideline 2020",
+              "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7034349/",
+              "quote": "the decision to perform segmental versus total/near total colectomy should balance the risks of metachronous cancer",
+              "checked_at": "2026-10-29"
+            }
+          ],
+          "source_corrections": [
+            {
+              "reason": "La IHC detecta expresión de proteínas y no demuestra por sí misma una variante germinal. El estudio actual no depende solo de Ámsterdam/Bethesda. La colectomía se selecciona por neoplasia, gen y riesgos; no corresponde a colostomía automática de todo portador."
+            }
+          ]
         },
         {
           "id": "12.04-02",
@@ -310,14 +374,28 @@
           "evidence": [
             {
               "page": 354,
-              "quote": "mutación de gen LKBl o STKll"
+              "quote": "múltiples pólipos hamartomatosos"
             },
             {
               "page": 354,
               "quote": "polipectomía endoscópica."
             }
           ],
-          "source_gaps": []
+          "source_gaps": [],
+          "answer_name": "Síndrome de Peutz-Jeghers",
+          "external_sources": [
+            {
+              "label": "EHTG, Peutz-Jeghers syndrome guideline 2021",
+              "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7865862/",
+              "quote": "elective polypectomy should be performed for small-bowel polyps > 15–20 mm to prevent intussusception.",
+              "checked_at": "2026-10-29"
+            }
+          ],
+          "source_corrections": [
+            {
+              "reason": "Se conserva el nombre original del inventario y se corrige la respuesta a Peutz-Jeghers. La guía EHTG precisa que la polipectomía se indica según tamaño y síntomas; no requiere resección idéntica de todos los pólipos."
+            }
+          ]
         }
       ],
       "common_problem": "Cáncer digestivo familiar o poliposis con pigmentación.",
@@ -375,7 +453,20 @@
               "quote": "ubicación y el tamaño de las lesiones"
             }
           ],
-          "source_gaps": []
+          "source_gaps": [],
+          "external_sources": [
+            {
+              "label": "NCI PDQ, Von Hippel-Lindau disease",
+              "url": "https://www.cancer.gov/publications/pdq/information-summaries/genetics/vhl-syndrome-hp-pdq",
+              "quote": "Patients with a partial loss of VHL function (type 2 disease) are at a higher risk of developing PHEOs",
+              "checked_at": "2026-10-29"
+            }
+          ],
+          "source_corrections": [
+            {
+              "reason": "El 60% de feocromocitoma de página 356 no se usa como riesgo general. NCI describe fuerte variación por genotipo, con mayor riesgo en tipo 2; se conserva vigilancia multiorgánica y evaluación bioquímica dirigida."
+            }
+          ]
         }
       ],
       "common_problem": "Tumores múltiples en un adulto joven.",
@@ -412,7 +503,7 @@
               "finding": "Hemólisis no inmune"
             }
           ],
-          "initial_action": "Integrar ceruloplasmina, cobre urinario, evaluación ocular y genética o estudio hepático según contexto; referir para tratamiento quelante o estrategia apropiada.",
+          "initial_action": "Integrar ceruloplasmina, cobre urinario de 24 horas, evaluación ocular y genética o estudio hepático según contexto. Si se confirma enfermedad sintomática, iniciar quelación con D-penicilamina o trientina bajo supervisión especializada.",
           "action_reason": "No hay un hallazgo aislado suficiente en todas las presentaciones.",
           "modifiers": [
             {
@@ -426,7 +517,7 @@
               "reason": "La herencia recesiva permite detectar otros afectados."
             }
           ],
-          "limits": "El cobre sérico total puede estar bajo y no descarta. Revisar unidades del cobre hepático; la cifra en mcg/dl de la página no es la unidad tisular correcta.",
+          "limits": "El cobre sérico total puede estar bajo y no descarta. El cobre hepático se informa en μg/g de peso seco, no en μg/dl; valores y otras pruebas deben interpretarse juntos.",
           "evidence": [
             {
               "page": 347,
@@ -437,7 +528,20 @@
               "quote": "Quelación con penicilamina"
             }
           ],
-          "source_gaps": []
+          "source_gaps": [],
+          "external_sources": [
+            {
+              "label": "AASLD, Wilson disease guidance 2022, executive summary",
+              "url": "https://onlinelibrary.wiley.com/doi/10.1002/hep.32805",
+              "quote": "Hepatic parenchymal copper content >250 μg/g dry weight provides critical diagnostic information",
+              "checked_at": "2026-10-29"
+            }
+          ],
+          "source_corrections": [
+            {
+              "reason": "La imagen original 347 confirma que el libro imprime cobre hepático en mcg/dl, unidad incorrecta para tejido. AASLD lo expresa por gramo de peso seco. La guía también aclara que el cobre sérico total suele estar bajo y que el cuadro sintomático requiere quelante."
+            }
+          ]
         },
         {
           "id": "12.06-02",
@@ -458,21 +562,21 @@
               "finding": "Dificultades del desarrollo"
             }
           ],
-          "initial_action": "Tratar de inmediato una crisis prolongada según protocolo y referir a neurología pediátrica; solicitar evaluación genética y plan de rescate y mantenimiento especializado.",
+          "initial_action": "Tratar la crisis prolongada con benzodiacepina según protocolo y solicitar atención urgente si persiste. Referir a neurología pediátrica para evaluación genética y plan individual de rescate y mantenimiento.",
           "action_reason": "La evolución requiere identificar el síndrome y prevenir estados prolongados.",
           "modifiers": [
             {
               "factor": "Tratamiento de mantenimiento",
-              "action": "Evitar bloqueadores de sodio que pueden empeorar crisis según el síndrome.",
-              "reason": "La selección difiere de otras epilepsias."
+              "action": "Evitar bloqueadores de sodio que empeoran este síndrome, como lamotrigina o carbamazepina, y seleccionar terapia con neurología.",
+              "reason": "La selección de mantenimiento difiere de la medicación aguda para estado epiléptico."
             },
             {
               "factor": "Fiebre tras vacunación",
-              "action": "Evaluar predisposición sin atribuir causalidad estructural a la vacuna.",
-              "reason": "La temperatura puede precipitar una primera crisis."
+              "action": "Tratar la fiebre y aplicar el plan de rescate si hay crisis. Mantener vacunación rutinaria con un plan preventivo individual.",
+              "reason": "La temperatura puede precipitar crisis, pero la asociación temporal no indica que la vacuna causó la enfermedad genética."
             }
           ],
-          "limits": "El contexto de fiebre o vacunación no demuestra una encefalopatía vacunal. La decisión aguda durante un estado epiléptico exige protocolo experto.",
+          "limits": "La fiebre tras una vacuna puede precipitar una crisis en una predisposición genética; no demuestra daño cerebral causado por la vacuna. La recomendación de evitar ciertos fármacos de mantenimiento no prohíbe fenitoína o fosfenitoína para estado epiléptico bajo protocolo experto.",
           "evidence": [
             {
               "page": 350,
@@ -483,7 +587,20 @@
               "quote": "genéticas para lactantes con convulsión hemiclónica"
             }
           ],
-          "source_gaps": []
+          "source_gaps": [],
+          "external_sources": [
+            {
+              "label": "International consensus, Diagnosis and management of Dravet syndrome 2022",
+              "url": "https://onlinelibrary.wiley.com/doi/10.1111/epi.17274",
+              "quote": "phenytoin/fosphenytoin is not contraindicated as a treatment for status epilepticus.",
+              "checked_at": "2026-10-29"
+            }
+          ],
+          "source_corrections": [
+            {
+              "reason": "La prohibición farmacológica del libro requiere distinguir mantenimiento de urgencia. El consenso 2022 permite fenitoína/fosfenitoína en estado epiléptico, recomienda plan de rescate y todas las vacunas rutinarias; no equipara crisis precipitada por fiebre con encefalopatía causada por vacuna."
+            }
+          ]
         }
       ],
       "common_problem": "Síntomas neurológicos con datos sistémicos o inicio infantil.",
