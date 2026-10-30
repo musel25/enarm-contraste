@@ -1,0 +1,1531 @@
+{
+  "id": "32",
+  "title": "TyO",
+  "blocks": [
+    {
+      "id": "32.01",
+      "title": "Trauma óseo: primer filtro",
+      "topics": [
+        {
+          "id": "32.01-01",
+          "name": "Fracturas expuestas",
+          "source_pages": [
+            1071
+          ],
+          "pattern": "Un paciente tiene fractura con herida que comunica con el foco óseo. Hay contaminación y lesión importante de tejidos blandos. Se evalúan perfusión, sensibilidad y gravedad general del trauma.",
+          "key_discriminator": "herida que comunica con el foco óseo",
+          "mechanism": "La comunicación del foco con exterior facilita contaminación y lesión de partes blandas, aumenta riesgo infeccioso y puede comprometer perfusión, consolidación y viabilidad del miembro.",
+          "findings": [
+            {
+              "mechanism": "Contaminación y daño de cobertura",
+              "finding": "Riesgo de infección y necrosis"
+            }
+          ],
+          "initial_action": "Evaluar trauma y estado neurovascular, cubrir con apósito estéril, inmovilizar e iniciar antibiótico temprano y profilaxis tetánica según indicación; referir.",
+          "action_reason": "Requiere tratamiento quirúrgico y prevención infecciosa.",
+          "modifiers": [
+            {
+              "factor": "Lesión vascular",
+              "action": "Priorizar valoración y reparación urgente",
+              "reason": "La perfusión del miembro está amenazada"
+            }
+          ],
+          "limits": "Antibiótico inmediato. Escisión y fijación dependen de contaminación, energía, partes blandas y perfusión; no existe un único plazo o fijador para todo grado.",
+          "evidence": [
+            {
+              "page": 1071,
+              "quote": "apósito estéril"
+            },
+            {
+              "page": 1071,
+              "quote": "Lesión vascular que"
+            }
+          ],
+          "source_gaps": [],
+          "external_sources": [
+            {
+              "label": "NICE NG37: fracturas complejas",
+              "url": "https://www.nice.org.uk/guidance/ng37/chapter/recommendations",
+              "quote": "administer prophylactic intravenous antibiotics immediately",
+              "checked_at": "2026-10-29"
+            }
+          ],
+          "source_corrections": [
+            {
+              "reason": "La escisión se programa por contaminación y energía, no por una regla universal de seis horas. La fijación depende de lesión y cobertura, con decisión ortoplástica."
+            }
+          ]
+        },
+        {
+          "id": "32.01-02",
+          "name": "Embolia grasa",
+          "source_pages": [
+            1055
+          ],
+          "pattern": "Un paciente con fractura de fémur presenta después hipoxemia, confusión y petequias en tórax y conjuntivas. Se evalúan otras causas de deterioro respiratorio y neurológico posterior al trauma.",
+          "key_discriminator": "hipoxemia, confusión y petequias",
+          "mechanism": "La liberación de grasa medular tras trauma puede generar obstrucción e inflamación microvascular, principalmente pulmonar y cerebral, con hipoxemia y alteraciones neurológicas y cutáneas.",
+          "findings": [
+            {
+              "mechanism": "Lesión microvascular",
+              "finding": "Hipoxemia y petequias"
+            }
+          ],
+          "initial_action": "Dar soporte respiratorio y hemodinámico y evaluar diagnósticos alternativos; coordinar estabilización de fractura.",
+          "action_reason": "El tratamiento es principalmente de soporte.",
+          "modifiers": [
+            {
+              "factor": "Deterioro grave",
+              "action": "Trasladar a cuidados críticos",
+              "reason": "Puede evolucionar a falla respiratoria"
+            }
+          ],
+          "limits": "Los corticoides no tienen indicación rutinaria establecida.",
+          "evidence": [
+            {
+              "page": 1055,
+              "quote": "hipoxemia, anomalías neurológicas y erupción petequial."
+            },
+            {
+              "page": 1055,
+              "quote": "manejo es en gran medida"
+            }
+          ],
+          "source_gaps": []
+        }
+      ],
+      "common_problem": "Paciente con trauma óseo y posible complicación sistémica.",
+      "mother": {
+        "cue": "El daño óseo puede comunicar con exterior o causar lesión pulmonar y neurológica diferida.",
+        "answer": "Fractura con riesgo mayor.",
+        "explanation": "El estado general y tejidos blandos determinan prioridad."
+      }
+    },
+    {
+      "id": "32.02",
+      "title": "Hombro doloroso traumático",
+      "topics": [
+        {
+          "id": "32.02-01",
+          "name": "Luxación glenohumeral",
+          "source_pages": [
+            1082,
+            1083
+          ],
+          "pattern": "Un joven cae con el brazo en abducción y rotación externa. Presenta hombro deformado, acromion prominente y dolor intenso. Se revisan pulso y sensibilidad lateral del hombro.",
+          "key_discriminator": "abducción y rotación externa",
+          "mechanism": "La salida de la cabeza humeral de glenoides rompe congruencia y tensa cápsula y tejidos, puede lesionar nervio axilar y favorecer inestabilidad recurrente según edad y daño asociado.",
+          "findings": [
+            {
+              "mechanism": "Pérdida de congruencia glenohumeral",
+              "finding": "Deformidad y limitación dolorosa"
+            }
+          ],
+          "initial_action": "Evaluar estado neurovascular, confirmar con imagen apropiada y realizar reducción por personal entrenado con analgesia y control posterior.",
+          "action_reason": "La reducción y evaluación evitan daño persistente.",
+          "modifiers": [
+            {
+              "factor": "Convulsión con hombro bloqueado en rotación interna",
+              "action": "Investigar luxación posterior",
+              "reason": "Puede pasar inadvertida en proyección frontal"
+            }
+          ],
+          "limits": "No aplicar una maniobra única sin valorar fractura asociada.",
+          "evidence": [
+            {
+              "page": 1082,
+              "quote": "Acromion prominente"
+            },
+            {
+              "page": 1083,
+              "quote": "Reducción cerrada"
+            }
+          ],
+          "source_gaps": []
+        },
+        {
+          "id": "32.02-02",
+          "name": "Fractura de humero proximal",
+          "source_pages": [
+            1064
+          ],
+          "pattern": "Una mujer mayor cae desde su altura y presenta dolor, edema y limitación del hombro. Sostiene el brazo con la otra mano. Se sospecha lesión del extremo proximal del húmero.",
+          "key_discriminator": "cae desde su altura",
+          "mechanism": "La carga sobre hueso proximal humeral, a menudo frágil, puede fracturar cabeza, cuello o tuberosidades y comprometer función, perfusión o nervio axilar según desplazamiento y fragmentación.",
+          "findings": [
+            {
+              "mechanism": "Fractura proximal",
+              "finding": "Dolor y pérdida funcional del hombro"
+            }
+          ],
+          "initial_action": "Explorar estado neurovascular, obtener radiografías e inmovilizar con analgesia; referir según desplazamiento, estabilidad y paciente.",
+          "action_reason": "El patrón y función guían tratamiento.",
+          "modifiers": [
+            {
+              "factor": "Fragmentación o desplazamiento incierto",
+              "action": "Valorar tomografía",
+              "reason": "Ayuda a planificar tratamiento"
+            }
+          ],
+          "limits": "Una equimosis tardía puede extenderse por brazo y tórax.",
+          "evidence": [
+            {
+              "page": 1064,
+              "quote": "dolor, edema, crepitación"
+            },
+            {
+              "page": 1064,
+              "quote": "Desplazamiento mínimo."
+            }
+          ],
+          "source_gaps": []
+        },
+        {
+          "id": "32.02-03",
+          "name": "Fractura de clavícula",
+          "source_pages": [
+            1062
+          ],
+          "pattern": "Un deportista recibe un golpe en el hombro y presenta dolor y prominencia en la clavícula. La piel está tensa sobre el fragmento. Se revisan pulsos y síntomas respiratorios.",
+          "key_discriminator": "piel está tensa sobre el fragmento",
+          "mechanism": "La fractura clavicular interrumpe soporte de cintura escapular y puede amenazar piel o estructuras neurovasculares y pleuropulmonares; la mayoría sin desplazamiento importante admite inmovilización simple.",
+          "findings": [
+            {
+              "mechanism": "Fragmento clavicular desplazado",
+              "finding": "Prominencia y amenaza de piel"
+            }
+          ],
+          "initial_action": "Examinar piel y estado neurovascular y obtener radiografía; inmovilizar con cabestrillo y referir con prioridad si amenaza exposición.",
+          "action_reason": "La piel y estructuras profundas modifican urgencia.",
+          "modifiers": [
+            {
+              "factor": "Fractura abierta o lesión vascular",
+              "action": "Valorar cirugía urgente",
+              "reason": "Existe complicación mayor"
+            }
+          ],
+          "limits": "No usar vendaje en ocho de rutina.",
+          "evidence": [
+            {
+              "page": 1062,
+              "quote": "Fractura con inminencia de exposición."
+            },
+            {
+              "page": 1062,
+              "quote": "y lateral no desplazadas: Cabestrillo simple para inmovilizar con control"
+            }
+          ],
+          "source_gaps": []
+        }
+      ],
+      "common_problem": "Paciente con dolor y deformidad del hombro tras caída o golpe.",
+      "mother": {
+        "cue": "Pérdida de congruencia o continuidad ósea de cintura escapular.",
+        "answer": "Trauma de hombro.",
+        "explanation": "La exploración neurovascular e imagen preceden tratamiento definitivo."
+      }
+    },
+    {
+      "id": "32.03",
+      "title": "Dolor de hombro crónico",
+      "topics": [
+        {
+          "id": "32.03-01",
+          "name": "Síndrome de hombro doloroso",
+          "source_pages": [
+            1092,
+            1093
+          ],
+          "pattern": "Una persona con trabajo por encima de la cabeza presenta dolor deltoideo y limitación al elevar el brazo. No hubo trauma mayor. Se evalúan fuerza, movilidad y pruebas de tendones.",
+          "key_discriminator": "dolor deltoideo y limitación",
+          "mechanism": "Las estructuras periarticulares como tendones y bursas generan dolor con carga y movimiento; distinguir limitación activa, pasiva y debilidad permite orientar causa y necesidad de imagen o referencia.",
+          "findings": [
+            {
+              "mechanism": "Lesión tendinosa o bursal",
+              "finding": "Dolor al elevar brazo"
+            }
+          ],
+          "initial_action": "Evaluar causas locales y referidas; comenzar analgesia y ejercicios de movilidad adaptados y revisar respuesta.",
+          "action_reason": "Busca conservar función y localizar lesión.",
+          "modifiers": [
+            {
+              "factor": "Debilidad tras trauma o sospecha de rotura completa",
+              "action": "Referir y obtener imagen indicada",
+              "reason": "Puede requerir reparación"
+            }
+          ],
+          "limits": "El dolor de hombro es un síndrome, no un diagnóstico anatómico único.",
+          "evidence": [
+            {
+              "page": 1093,
+              "quote": "lesiones periarticulares"
+            },
+            {
+              "page": 1092,
+              "quote": "Fisioterapia con ejercicios"
+            }
+          ],
+          "source_gaps": []
+        }
+      ],
+      "common_problem": "Paciente con dolor de hombro y movimiento limitado.",
+      "mother": {
+        "cue": "Lesión periarticular o articular que limita función.",
+        "answer": "Síndrome de hombro doloroso.",
+        "explanation": "La exploración dirige el diagnóstico anatómico."
+      }
+    },
+    {
+      "id": "32.04",
+      "title": "Codo lesionado",
+      "topics": [
+        {
+          "id": "32.04-01",
+          "name": "Luxación de codo",
+          "source_pages": [
+            1081
+          ],
+          "pattern": "Un adolescente cae sobre la mano y presenta deformidad posterior del codo con incapacidad para moverlo. Se evalúa sensibilidad cubital y perfusión. La imagen busca fractura asociada.",
+          "key_discriminator": "deformidad posterior del codo",
+          "mechanism": "La pérdida de congruencia del codo rompe estabilidad capsuloligamentaria y puede acompañarse de fractura o lesión neurovascular; las formas complejas requieren tratamiento de ambos componentes.",
+          "findings": [
+            {
+              "mechanism": "Luxación del codo",
+              "finding": "Deformidad y bloqueo funcional"
+            }
+          ],
+          "initial_action": "Inmovilizar sin tracción, evaluar estado neurovascular y referir para reducción y valoración de estabilidad.",
+          "action_reason": "Evita lesión adicional y detecta complicaciones.",
+          "modifiers": [
+            {
+              "factor": "Fractura asociada",
+              "action": "Tratar como luxación compleja",
+              "reason": "Puede requerir fijación además de reducción"
+            }
+          ],
+          "limits": "Vigilar síndrome compartimental durante evolución inicial.",
+          "evidence": [
+            {
+              "page": 1081,
+              "quote": "sin ejercer ningún tipo de tracción."
+            },
+            {
+              "page": 1081,
+              "quote": "reducción cerrada"
+            }
+          ],
+          "source_gaps": []
+        },
+        {
+          "id": "32.04-02",
+          "name": "Fracturas de codo",
+          "source_pages": [
+            1070
+          ],
+          "pattern": "Un niño cae sobre la palma con el codo extendido y presenta dolor, edema y deformidad. Se revisan pulsos, perfusión de dedos y función nerviosa antes y después de inmovilizar.",
+          "key_discriminator": "Se revisan pulsos",
+          "mechanism": "La fractura alrededor del codo infantil puede alterar alineación y dañar vasos o nervios cercanos; desplazamiento y perfusión determinan reducción y urgencia del tratamiento ortopédico.",
+          "findings": [
+            {
+              "mechanism": "Fractura periarticular infantil",
+              "finding": "Dolor, edema y deformidad"
+            }
+          ],
+          "initial_action": "Examinar estado neurovascular, obtener radiografías e inmovilizar; referir urgentemente si hay desplazamiento o compromiso circulatorio.",
+          "action_reason": "La lesión vascular puede amenazar el miembro.",
+          "modifiers": [
+            {
+              "factor": "Dolor creciente o alteración de perfusión",
+              "action": "Reevaluar de urgencia",
+              "reason": "Puede haber isquemia o síndrome compartimental"
+            }
+          ],
+          "limits": "No interpretar una frecuencia de neuropraxia como permiso para omitir evaluación.",
+          "evidence": [
+            {
+              "page": 1070,
+              "quote": "lesiones neurovasculares"
+            },
+            {
+              "page": 1070,
+              "quote": "férula de yeso"
+            }
+          ],
+          "source_gaps": []
+        },
+        {
+          "id": "32.04-03",
+          "name": "Codo de niñera",
+          "source_pages": [
+            1052
+          ],
+          "pattern": "Un niño pequeño deja de usar el brazo después de que un adulto tiró de su mano para evitar una caída. Lo mantiene pegado al cuerpo, sin deformidad ni edema importante.",
+          "key_discriminator": "tiró de su mano",
+          "mechanism": "La tracción longitudinal puede interponer el ligamento anular en la articulación radiocapitelar, limita uso del brazo y produce dolor sin los signos habituales de una fractura desplazada.",
+          "findings": [
+            {
+              "mechanism": "Interposición del ligamento anular",
+              "finding": "Rechazo a usar brazo"
+            }
+          ],
+          "initial_action": "Confirmar mecanismo y ausencia de datos de fractura; realizar reducción entrenada y comprobar recuperación del uso.",
+          "action_reason": "La función suele volver después de reducción.",
+          "modifiers": [
+            {
+              "factor": "Trauma atípico, edema o dolor óseo",
+              "action": "Investigar fractura antes de maniobra",
+              "reason": "No corresponde al patrón típico"
+            }
+          ],
+          "limits": "No repetir maniobras sin reevaluar si persiste limitación.",
+          "evidence": [
+            {
+              "page": 1052,
+              "quote": "tracción brusca"
+            },
+            {
+              "page": 1052,
+              "quote": "Reducción cerrada"
+            }
+          ],
+          "source_gaps": []
+        }
+      ],
+      "common_problem": "Paciente con dolor y limitación del codo después de lesión.",
+      "mother": {
+        "cue": "Alteración de congruencia o estructura ósea y ligamentaria del codo.",
+        "answer": "Trauma de codo.",
+        "explanation": "La edad y mecanismo distinguen subluxación de fractura o luxación."
+      }
+    },
+    {
+      "id": "32.05",
+      "title": "Antebrazo y muñeca",
+      "topics": [
+        {
+          "id": "32.05-01",
+          "name": "Fracturas de antebrazo",
+          "source_pages": [
+            1068,
+            1069
+          ],
+          "pattern": "Un adulto cae y presenta dolor y deformidad del antebrazo. La radiografía muestra fractura del cúbito proximal y pérdida de relación de la cabeza radial. Se exploran muñeca y codo.",
+          "key_discriminator": "fractura del cúbito proximal",
+          "mechanism": "La fractura de radio o cúbito puede alterar longitud y alineación del antebrazo y asociarse a luxación proximal o distal, afectando pronosupinación y estabilidad articular.",
+          "findings": [
+            {
+              "mechanism": "Fractura con luxación asociada",
+              "finding": "Incongruencia radiocubital"
+            }
+          ],
+          "initial_action": "Examinar nervios y perfusión, obtener imagen del antebrazo y articulaciones vecinas, inmovilizar y referir.",
+          "action_reason": "Debe reconocerse lesión combinada para restaurar función.",
+          "modifiers": [
+            {
+              "factor": "Dolor al estiramiento y déficit progresivo",
+              "action": "Descartar síndrome compartimental",
+              "reason": "Puede causar lesión irreversible"
+            }
+          ],
+          "limits": "La lesión de Monteggia es proximal; Galeazzi compromete radiocubital distal.",
+          "evidence": [
+            {
+              "page": 1068,
+              "quote": "evaluación del estado neurológico"
+            },
+            {
+              "page": 1069,
+              "quote": "Colocar férula"
+            }
+          ],
+          "source_gaps": []
+        },
+        {
+          "id": "32.05-02",
+          "name": "Fractura de radio distal",
+          "source_pages": [
+            1065
+          ],
+          "pattern": "Una mujer mayor cae sobre la mano extendida y presenta dolor de muñeca con deformidad dorsal. La radiografía muestra desplazamiento dorsal del fragmento distal del radio. Se revisa sensibilidad y perfusión.",
+          "key_discriminator": "desplazamiento dorsal",
+          "mechanism": "La carga sobre muñeca extendida fractura radio distal y puede desplazar su fragmento dorsalmente, altera congruencia y alineación y puede comprometer nervios o función articular.",
+          "findings": [
+            {
+              "mechanism": "Desplazamiento distal dorsal",
+              "finding": "Deformidad en dorso de tenedor"
+            }
+          ],
+          "initial_action": "Explorar estado neurovascular, dar analgesia, inmovilizar y valorar reducción según desplazamiento y estabilidad.",
+          "action_reason": "Busca restaurar alineación y prevenir disfunción.",
+          "modifiers": [
+            {
+              "factor": "Inestabilidad o escalón articular",
+              "action": "Referir para valoración quirúrgica",
+              "reason": "Aumenta riesgo de pérdida de reducción y artrosis"
+            }
+          ],
+          "limits": "El tratamiento depende también de edad y demanda funcional.",
+          "evidence": [
+            {
+              "page": 1065,
+              "quote": "Desplazamiento dorsal"
+            },
+            {
+              "page": 1065,
+              "quote": "fracturas estables"
+            }
+          ],
+          "source_gaps": []
+        }
+      ],
+      "common_problem": "Paciente con dolor y deformidad del antebrazo o muñeca.",
+      "mother": {
+        "cue": "Interrupción ósea que puede asociarse a lesión radiocubital y nerviosa.",
+        "answer": "Fractura de antebrazo y radio distal.",
+        "explanation": "Deben examinarse articulaciones vecinas y estado neurovascular."
+      }
+    },
+    {
+      "id": "32.06",
+      "title": "Cadera dolorosa en mayores",
+      "topics": [
+        {
+          "id": "32.06-01",
+          "name": "Fractura de cadera",
+          "source_pages": [
+            1060,
+            1061
+          ],
+          "pattern": "Una persona mayor cae y no puede caminar por dolor inguinal. La pierna está acortada y en rotación externa. Se sospecha lesión proximal femoral y se evalúa estabilidad general.",
+          "key_discriminator": "acortada y en rotación externa",
+          "mechanism": "La fractura proximal femoral interrumpe soporte de carga y puede afectar irrigación de cabeza femoral si es intracapsular; la inmovilidad añade riesgos sistémicos en el adulto mayor.",
+          "findings": [
+            {
+              "mechanism": "Fractura proximal femoral",
+              "finding": "Impotencia funcional y acortamiento"
+            }
+          ],
+          "initial_action": "Dar analgesia e inmovilización para traslado, confirmar con imagen y coordinar cirugía y manejo geriátrico temprano.",
+          "action_reason": "Reduce dolor y complicaciones de inmovilidad.",
+          "modifiers": [
+            {
+              "factor": "Radiografía normal con alta sospecha",
+              "action": "Solicitar imagen de fractura oculta",
+              "reason": "Una placa normal no excluye lesión"
+            }
+          ],
+          "limits": "La elección de fijación o artroplastia depende de tipo y paciente.",
+          "evidence": [
+            {
+              "page": 1060,
+              "quote": "Rotación externa del miembro afectado"
+            },
+            {
+              "page": 1061,
+              "quote": "fracturas ocultas."
+            }
+          ],
+          "source_gaps": []
+        },
+        {
+          "id": "32.06-02",
+          "name": "Luxación coxofemoral",
+          "source_pages": [
+            1080
+          ],
+          "pattern": "Un ocupante de automóvil tiene dolor intenso de cadera tras impacto. La pierna está acortada, en aducción y rotación interna. No puede caminar. Se revisa función del nervio ciático.",
+          "key_discriminator": "aducción y rotación interna",
+          "mechanism": "La fuerza axial puede desplazar cabeza femoral fuera de acetábulo, compromete perfusión y nervio ciático y requiere reducción urgente para limitar riesgo de osteonecrosis y daño neurológico.",
+          "findings": [
+            {
+              "mechanism": "Luxación posterior de cadera",
+              "finding": "Acortamiento y rotación interna"
+            }
+          ],
+          "initial_action": "Atender trauma, evaluar estado neurovascular, obtener imagen y coordinar reducción urgente por equipo capacitado.",
+          "action_reason": "El tiempo y lesiones asociadas afectan pronóstico.",
+          "modifiers": [
+            {
+              "factor": "Fractura acetabular o fragmento bloqueante",
+              "action": "Valorar cirugía e imagen adicional",
+              "reason": "Puede impedir reducción segura"
+            }
+          ],
+          "limits": "No realizar reducción sin evaluar trauma y fracturas asociadas.",
+          "evidence": [
+            {
+              "page": 1080,
+              "quote": "aducción y en"
+            },
+            {
+              "page": 1080,
+              "quote": "tratamiento inmediato."
+            }
+          ],
+          "source_gaps": []
+        }
+      ],
+      "common_problem": "Paciente con incapacidad para caminar tras trauma.",
+      "mother": {
+        "cue": "Fractura o luxación proximal femoral que compromete función y perfusión.",
+        "answer": "Trauma de cadera.",
+        "explanation": "La postura y radiografía orientan urgencia y reducción o fijación."
+      }
+    },
+    {
+      "id": "32.07",
+      "title": "Cojera en niño/adolescente",
+      "topics": [
+        {
+          "id": "32.07-01",
+          "name": "Legg calvé perthes",
+          "source_pages": [
+            1074
+          ],
+          "pattern": "Un niño en edad escolar presenta cojera y dolor de muslo o rodilla sin trauma claro. La cadera tiene abducción y rotación interna limitadas. Se busca lesión de cabeza femoral.",
+          "key_discriminator": "abducción y rotación interna limitadas",
+          "mechanism": "La interrupción transitoria del aporte sanguíneo causa necrosis de cabeza femoral infantil y posterior remodelación, con riesgo de deformidad que depende de edad y extensión del colapso.",
+          "findings": [
+            {
+              "mechanism": "Necrosis epifisaria femoral",
+              "finding": "Cojera y movilidad limitada"
+            }
+          ],
+          "initial_action": "Obtener radiografías de cadera y referir a ortopedia para valorar contención y manejo según edad y extensión.",
+          "action_reason": "Busca preservar forma y congruencia.",
+          "modifiers": [
+            {
+              "factor": "Imagen inicial normal con sospecha",
+              "action": "Valorar resonancia",
+              "reason": "Puede detectar cambios antes de radiografía"
+            }
+          ],
+          "limits": "No decidir cirugía solo por una letra de clasificación sin edad y contexto.",
+          "evidence": [
+            {
+              "page": 1074,
+              "quote": "necrosis aséptica de la cabeza"
+            },
+            {
+              "page": 1074,
+              "quote": "resonancia magnética"
+            }
+          ],
+          "source_gaps": []
+        },
+        {
+          "id": "32.07-02",
+          "name": "Epifisiolistesis femoral",
+          "source_pages": [
+            1056
+          ],
+          "pattern": "Un adolescente con obesidad presenta dolor de rodilla y cojera. Al flexionar la cadera esta gira hacia fuera. Hoy ya no puede apoyar. Se sospecha lesión de la fisis proximal femoral.",
+          "key_discriminator": "ya no puede apoyar",
+          "mechanism": "La epífisis femoral proximal pierde relación con metáfisis a través de fisis vulnerable durante crecimiento, causa rotación externa y dolor referido y puede comprometer irrigación si es inestable.",
+          "findings": [
+            {
+              "mechanism": "Deslizamiento fisiario proximal",
+              "finding": "Rotación externa y dolor referido"
+            }
+          ],
+          "initial_action": "Suspender apoyo y referir urgentemente a ortopedia para imagen segura y fijación según estabilidad.",
+          "action_reason": "El retraso aumenta riesgo de necrosis y deformidad.",
+          "modifiers": [
+            {
+              "factor": "Incapacidad de caminar",
+              "action": "Tratar como forma inestable",
+              "reason": "La manipulación y carga pueden empeorar lesión"
+            }
+          ],
+          "limits": "No forzar posición de rana en una cadera inestable.",
+          "evidence": [
+            {
+              "page": 1056,
+              "quote": "no puede realizar bipedestación"
+            },
+            {
+              "page": 1056,
+              "quote": "intervención quirúrgica urgente"
+            }
+          ],
+          "source_gaps": []
+        }
+      ],
+      "common_problem": "Niño o adolescente con cojera y dolor de cadera o rodilla.",
+      "mother": {
+        "cue": "Alteración de cabeza femoral o fisis que amenaza congruencia y crecimiento.",
+        "answer": "Enfermedad de cadera pediátrica.",
+        "explanation": "La edad y estabilidad de apoyo orientan diagnóstico y urgencia."
+      }
+    },
+    {
+      "id": "32.08",
+      "title": "Rodilla lesionada",
+      "topics": [
+        {
+          "id": "32.08-01",
+          "name": "Lesiones de rodilla",
+          "source_pages": [
+            1075,
+            1076
+          ],
+          "pattern": "Un deportista gira con el pie fijo y presenta dolor, derrame rápido e inestabilidad de rodilla. La prueba de Lachman sugiere traslación anterior anormal. Se buscan lesiones asociadas.",
+          "key_discriminator": "derrame rápido e inestabilidad",
+          "mechanism": "La ruptura ligamentaria reduce control de traslación o rotación y puede producir hemartrosis, con daño meniscal o condral asociado que modifica recuperación y elección terapéutica.",
+          "findings": [
+            {
+              "mechanism": "Falla de ligamento cruzado",
+              "finding": "Inestabilidad anterior"
+            }
+          ],
+          "initial_action": "Evaluar examen neurovascular y estabilidad, descartar fractura e indicar imagen y referencia según sospecha; iniciar protección y rehabilitación dirigida.",
+          "action_reason": "El tratamiento depende de lesión y demanda funcional.",
+          "modifiers": [
+            {
+              "factor": "Lesión compleja o inestabilidad importante",
+              "action": "Valorar cirugía",
+              "reason": "Puede no recuperar estabilidad con manejo conservador"
+            }
+          ],
+          "limits": "No toda ruptura del cruzado anterior requiere cirugía automática.",
+          "evidence": [
+            {
+              "page": 1075,
+              "quote": "hemartrosis de rodilla"
+            },
+            {
+              "page": 1076,
+              "quote": "debe referirse al segundo nivel"
+            }
+          ],
+          "source_gaps": [],
+          "external_sources": [
+            {
+              "label": "AAOS: tratamiento de lesión del LCA",
+              "url": "https://www.orthoinfo.org/treatment/acl-injury-does-it-require-surgery",
+              "quote": "Deciding against surgery is reasonable for certain patients.",
+              "checked_at": "2026-10-29"
+            }
+          ],
+          "source_corrections": [
+            {
+              "reason": "La decisión depende de inestabilidad, actividad, lesiones asociadas y objetivos. Lesiones seleccionadas pueden manejarse con rehabilitación sin reconstrucción automática."
+            }
+          ]
+        },
+        {
+          "id": "32.08-02",
+          "name": "Osteoartritis",
+          "source_pages": [
+            1084,
+            1085
+          ],
+          "pattern": "Una mujer mayor tiene dolor de rodilla que aumenta al caminar y mejora con descanso. Presenta crepitación y rigidez breve al despertar. No hay calor importante ni síntomas sistémicos.",
+          "key_discriminator": "rigidez breve al despertar",
+          "mechanism": "La pérdida de cartílago y cambios en hueso subcondral y márgenes articulares alteran distribución de cargas, causan dolor mecánico y limitación progresiva sin inflamación sistémica dominante.",
+          "findings": [
+            {
+              "mechanism": "Degeneración y carga articular",
+              "finding": "Dolor mecánico y crepitación"
+            }
+          ],
+          "initial_action": "Evaluar función e iniciar ejercicio terapéutico, educación y manejo del peso si corresponde; seleccionar analgesia según riesgo.",
+          "action_reason": "Mejora función y reduce carga y dolor.",
+          "modifiers": [
+            {
+              "factor": "Limitación grave pese a tratamiento",
+              "action": "Valorar artroplastia",
+              "reason": "Puede requerir reemplazo por repercusión clínica"
+            }
+          ],
+          "limits": "No ofrecer lavado artroscópico ni hialuronano para osteoartritis. La radiografía sola no determina necesidad de artroplastia.",
+          "evidence": [
+            {
+              "page": 1084,
+              "quote": "aumenta a la movilización y crepita. • Rigidez articular matutina dura <"
+            },
+            {
+              "page": 1085,
+              "quote": "reemplazo articular"
+            }
+          ],
+          "source_gaps": [],
+          "external_sources": [
+            {
+              "label": "NICE NG226: osteoartritis",
+              "url": "https://www.nice.org.uk/guidance/ng226/chapter/Recommendations",
+              "quote": "Do not offer arthroscopic lavage or debridement",
+              "checked_at": "2026-10-29"
+            }
+          ],
+          "source_corrections": [
+            {
+              "reason": "No se ofrece lavado/desbridamiento artroscópico ni inyección de hialuronano para osteoartritis. La tarjeta prioriza ejercicio, peso y analgesia seleccionada."
+            }
+          ]
+        }
+      ],
+      "common_problem": "Paciente con rodilla dolorosa e inestabilidad o desgaste.",
+      "mother": {
+        "cue": "Lesión ligamentaria o degeneración articular con limitación funcional.",
+        "answer": "Dolor e inestabilidad de rodilla.",
+        "explanation": "El mecanismo y patrón inflamatorio orientan estudio."
+      }
+    },
+    {
+      "id": "32.09",
+      "title": "Tobillo después de torcedura",
+      "topics": [
+        {
+          "id": "32.09-01",
+          "name": "Esguince de tobillo",
+          "source_pages": [
+            1058,
+            1059
+          ],
+          "pattern": "Una persona tuerce el tobillo en inversión y presenta dolor lateral y edema. Puede apoyar con dificultad. Se examinan maléolos, navicular y base del quinto metatarsiano para seleccionar imagen.",
+          "key_discriminator": "tuerce el tobillo en inversión",
+          "mechanism": "El estiramiento o rotura del complejo ligamentario lateral reduce estabilidad y provoca dolor y edema; los hallazgos óseos y capacidad de marcha ayudan a descartar fractura.",
+          "findings": [
+            {
+              "mechanism": "Lesión ligamentaria lateral",
+              "finding": "Dolor y edema tras inversión"
+            }
+          ],
+          "initial_action": "Evaluar reglas de Ottawa, proteger articulación y comenzar soporte funcional y rehabilitación progresiva según gravedad.",
+          "action_reason": "Distingue fractura y favorece recuperación funcional.",
+          "modifiers": [
+            {
+              "factor": "Inestabilidad grave o sindesmosis",
+              "action": "Referir para evaluación",
+              "reason": "Puede necesitar manejo específico"
+            }
+          ],
+          "limits": "La carga se adapta a dolor y lesión, no a un plazo rígido universal.",
+          "evidence": [
+            {
+              "page": 1058,
+              "quote": "reglas de Ottawa"
+            },
+            {
+              "page": 1059,
+              "quote": "ejercicios de propiocepción"
+            }
+          ],
+          "source_gaps": []
+        },
+        {
+          "id": "32.09-02",
+          "name": "Fractura de tobillo",
+          "source_pages": [
+            1066,
+            1067
+          ],
+          "pattern": "Una persona tiene dolor maleolar e incapacidad para apoyar tras torsión de tobillo. La imagen muestra fractura del peroné y posible lesión de la sindesmosis. Se evalúa estabilidad de mortaja.",
+          "key_discriminator": "posible lesión de la sindesmosis",
+          "mechanism": "La fractura maleolar y lesión ligamentaria pueden alterar congruencia de mortaja, producen inestabilidad y riesgo de artrosis; la lesión proximal del peroné puede acompañar rotura sindesmal.",
+          "findings": [
+            {
+              "mechanism": "Incongruencia de mortaja",
+              "finding": "Dolor e incapacidad para apoyo"
+            }
+          ],
+          "initial_action": "Explorar piel y neurovasculatura, inmovilizar, dar analgesia y obtener radiografías adecuadas; referir según desplazamiento e inestabilidad.",
+          "action_reason": "La estabilidad guía tratamiento conservador o quirúrgico.",
+          "modifiers": [
+            {
+              "factor": "Dolor de peroné proximal",
+              "action": "Investigar lesión de Maisonneuve",
+              "reason": "La fractura puede estar fuera del tobillo"
+            }
+          ],
+          "limits": "El texto que dice sindesmosis sin lesión para buscar Maisonneuve contiene un error de redacción.",
+          "evidence": [
+            {
+              "page": 1066,
+              "quote": "de tobillo A-P, lateral y Mortaja con inhabilidad para realizar apoyo"
+            },
+            {
+              "page": 1067,
+              "quote": "inestabilidad del tobillo."
+            }
+          ],
+          "source_gaps": []
+        }
+      ],
+      "common_problem": "Paciente con dolor y edema de tobillo después de torcedura.",
+      "mother": {
+        "cue": "Lesión ligamentaria u ósea con posible inestabilidad de mortaja.",
+        "answer": "Trauma de tobillo.",
+        "explanation": "La exploración y reglas clínicas seleccionan imagen."
+      }
+    },
+    {
+      "id": "32.10",
+      "title": "Pierna y tendón lesionados",
+      "topics": [
+        {
+          "id": "32.10-01",
+          "name": "Fractura de diáfisis de tibia",
+          "source_pages": [
+            1063
+          ],
+          "pattern": "Un motociclista presenta deformidad y herida en la pierna después de impacto. Tiene dolor creciente y dolor con estiramiento pasivo de los dedos. Se revisa perfusión y compartimentos.",
+          "key_discriminator": "dolor con estiramiento pasivo",
+          "mechanism": "La fractura tibial lesiona un hueso con cobertura limitada y puede aumentar presión de compartimentos, compromete perfusión muscular y nerviosa y aumenta riesgo de infección si es abierta.",
+          "findings": [
+            {
+              "mechanism": "Presión compartimental elevada",
+              "finding": "Dolor desproporcionado y al estirar"
+            }
+          ],
+          "initial_action": "Inmovilizar y tratar como trauma con fractura expuesta; solicitar valoración quirúrgica urgente por posible síndrome compartimental.",
+          "action_reason": "La isquemia necesita descompresión oportuna.",
+          "modifiers": [
+            {
+              "factor": "Lesión vascular",
+              "action": "Priorizar reparación especializada",
+              "reason": "Amenaza viabilidad del miembro"
+            }
+          ],
+          "limits": "No esperar pérdida de pulso para sospechar síndrome compartimental.",
+          "evidence": [
+            {
+              "page": 1063,
+              "quote": "síndrome compartimenta!"
+            },
+            {
+              "page": 1063,
+              "quote": "Inmovilizar temporalmente"
+            }
+          ],
+          "source_gaps": []
+        },
+        {
+          "id": "32.10-02",
+          "name": "Rotura de talón de aquiles",
+          "source_pages": [
+            1090
+          ],
+          "pattern": "Un jugador siente un golpe súbito detrás del tobillo al acelerar. Tiene dificultad para impulsarse. La compresión de la pantorrilla no produce flexión plantar. Se sospecha interrupción tendinosa.",
+          "key_discriminator": "no produce flexión plantar",
+          "mechanism": "La rotura de Aquiles interrumpe transmisión de fuerza del tríceps sural al calcáneo, reduce impulso y flexión plantar pese a que algunos pacientes aún pueden caminar.",
+          "findings": [
+            {
+              "mechanism": "Discontinuidad del tendón",
+              "finding": "Thompson positivo"
+            }
+          ],
+          "initial_action": "Proteger e inmovilizar en posición apropiada y referir para confirmar y elegir reparación o manejo funcional con rehabilitación.",
+          "action_reason": "La estrategia busca restaurar fuerza y continuidad.",
+          "modifiers": [
+            {
+              "factor": "Examen dudoso",
+              "action": "Valorar ultrasonido o resonancia",
+              "reason": "Puede aclarar rotura parcial o completa"
+            }
+          ],
+          "limits": "Poder caminar no excluye rotura completa.",
+          "evidence": [
+            {
+              "page": 1090,
+              "quote": "ausencia de flexión plantar"
+            },
+            {
+              "page": 1090,
+              "quote": "programa de fisioterapia"
+            }
+          ],
+          "source_gaps": []
+        }
+      ],
+      "common_problem": "Paciente con lesión de pierna o pérdida de fuerza de impulso.",
+      "mother": {
+        "cue": "La tibia y tendón de Aquiles transmiten carga y permiten función de marcha.",
+        "answer": "Lesión estructural de pierna y tobillo.",
+        "explanation": "Se valora soporte óseo, tendón y complicaciones de tejidos."
+      }
+    },
+    {
+      "id": "32.11",
+      "title": "Deformidad del pie infantil",
+      "topics": [
+        {
+          "id": "32.11-01",
+          "name": "Pie plano",
+          "source_pages": [
+            1089
+          ],
+          "pattern": "Un niño tiene arcos plantares bajos al estar de pie. El arco reaparece al ponerse de puntillas y no presenta dolor ni limitación. La familia consulta por necesidad de plantillas.",
+          "key_discriminator": "El arco reaparece",
+          "mechanism": "La laxitud y carga reducen arco medial en pie flexible, pero el arco se recupera sin apoyo o en puntillas; rigidez o dolor sugieren una causa estructural diferente.",
+          "findings": [
+            {
+              "mechanism": "Flexibilidad conservada",
+              "finding": "Arco que aparece en puntillas"
+            }
+          ],
+          "initial_action": "Confirmar flexibilidad, tranquilizar y observar si es asintomático, sin imagen ni tratamiento rutinario.",
+          "action_reason": "Es frecuente y puede ser variante del desarrollo.",
+          "modifiers": [
+            {
+              "factor": "Pie rígido o doloroso",
+              "action": "Referir y obtener imagen indicada",
+              "reason": "Puede existir coalición u otra enfermedad"
+            }
+          ],
+          "limits": "No extrapolar esta conducta a un pie rígido.",
+          "evidence": [
+            {
+              "page": 1089,
+              "quote": "No requiere valoración radiológica."
+            },
+            {
+              "page": 1089,
+              "quote": "No requiere valoración radiológica."
+            }
+          ],
+          "source_gaps": []
+        },
+        {
+          "id": "32.11-02",
+          "name": "Pie equino varo",
+          "source_pages": [
+            1088
+          ],
+          "pattern": "Un recién nacido presenta pie en flexión plantar, inversión y aducción. No se corrige completamente con movilidad suave. Se requiere valorar rigidez y comenzar un plan ortopédico temprano.",
+          "key_discriminator": "inversión y aducción",
+          "mechanism": "La deformidad congénita combina equino, varo y aducción con alteración de tejidos y alineación; la rigidez distingue deformidad estructural de postura corregible y condiciona tratamiento.",
+          "findings": [
+            {
+              "mechanism": "Desalineación estructural congénita",
+              "finding": "Equino, varo y aducción"
+            }
+          ],
+          "initial_action": "Referir pronto a ortopedia pediátrica para método de Ponseti y seguimiento con férula según protocolo.",
+          "action_reason": "El tratamiento temprano corrige progresivamente la deformidad.",
+          "modifiers": [
+            {
+              "factor": "Deformidad asociada a otra enfermedad",
+              "action": "Evaluar causa y pronóstico",
+              "reason": "Puede requerir manejo diferente"
+            }
+          ],
+          "limits": "No esperar a nueve meses para valorar tenotomía.",
+          "evidence": [
+            {
+              "page": 1088,
+              "quote": "Método de Ponseti"
+            },
+            {
+              "page": 1088,
+              "quote": "oro: Método de Ponseti: l. Yesos (escayolas) correctoras durante primeros"
+            }
+          ],
+          "source_gaps": [],
+          "external_sources": [
+            {
+              "label": "AAOS: pie equinovaro y método Ponseti",
+              "url": "https://www.orthoinfo.org/diseases--conditions/clubfoot",
+              "quote": "Treatment should ideally begin shortly after birth",
+              "checked_at": "2026-10-29"
+            }
+          ],
+          "source_corrections": [
+            {
+              "reason": "Ponseti comienza poco después del nacimiento. La tenotomía se valora tras corrección con yesos, habitualmente en lactantes pequeños; no se prohíbe universalmente antes de ocho meses."
+            }
+          ]
+        }
+      ],
+      "common_problem": "Niño con forma anormal del pie.",
+      "mother": {
+        "cue": "La flexibilidad y alineación distinguen variante fisiológica de deformidad estructural.",
+        "answer": "Deformidad del pie pediátrico.",
+        "explanation": "La exploración orienta necesidad de referencia y tratamiento."
+      }
+    },
+    {
+      "id": "32.12",
+      "title": "Dolor cervical/lumbar",
+      "topics": [
+        {
+          "id": "32.12-01",
+          "name": "Esguince cervical",
+          "source_pages": [
+            1057
+          ],
+          "pattern": "Una persona tiene dolor cervical y espasmo después de una colisión por alcance. Está alerta y no tiene déficit neurológico. Se evalúan criterios de lesión cervical antes de permitir movilización.",
+          "key_discriminator": "no tiene déficit neurológico",
+          "mechanism": "La aceleración y desaceleración estiran tejidos blandos y ligamentos cervicales, provocan dolor y espasmo; antes de clasificar como esguince debe excluirse fractura o lesión neurológica.",
+          "findings": [
+            {
+              "mechanism": "Lesión de tejidos blandos",
+              "finding": "Dolor y limitación cervical"
+            }
+          ],
+          "initial_action": "Evaluar reglas clínicas de imagen y signos neurológicos; si no hay lesión grave, dar analgesia y movilización progresiva.",
+          "action_reason": "La actividad adaptada favorece recuperación.",
+          "modifiers": [
+            {
+              "factor": "Déficit o riesgo de lesión ósea",
+              "action": "Proteger columna y obtener imagen",
+              "reason": "No es un esguince simple"
+            }
+          ],
+          "limits": "No usar collarín de rutina en lesión simple.",
+          "evidence": [
+            {
+              "page": 1057,
+              "quote": "reglas canadienses"
+            },
+            {
+              "page": 1057,
+              "quote": "movilización activa de cuello"
+            }
+          ],
+          "source_gaps": []
+        },
+        {
+          "id": "32.12-02",
+          "name": "Lumbalgia",
+          "source_pages": [
+            1078,
+            1079
+          ],
+          "pattern": "Un adulto tiene dolor lumbar después de esfuerzo, sin fiebre, pérdida de peso, déficit ni alteración de esfínteres. El dolor cambia con movimientos. Se necesita valorar un cuadro no complicado.",
+          "key_discriminator": "sin fiebre, pérdida de peso, déficit",
+          "mechanism": "El dolor lumbar puede surgir de estructuras musculares, ligamentosas o degenerativas sin una lesión específica demostrable; la búsqueda de signos de alarma identifica causas que requieren estudio dirigido.",
+          "findings": [
+            {
+              "mechanism": "Dolor musculoesquelético",
+              "finding": "Dolor lumbar con movimiento"
+            }
+          ],
+          "initial_action": "Evaluar signos de alarma y función neurológica; explicar evolución y mantener actividad adaptada con analgesia y ejercicio según tolerancia.",
+          "action_reason": "Evita inmovilidad y estudios sin indicación.",
+          "modifiers": [
+            {
+              "factor": "Anestesia perineal o retención urinaria",
+              "action": "Referir de urgencia",
+              "reason": "Sugiere compresión neural grave"
+            }
+          ],
+          "limits": "No pedir imagen de rutina sin sospecha específica. Evitar reposo prolongado y paracetamol solo como tratamiento universal.",
+          "evidence": [
+            {
+              "page": 1079,
+              "quote": "exploración neurológica"
+            },
+            {
+              "page": 1079,
+              "quote": "no son útiles en lumbalgia aguda"
+            }
+          ],
+          "source_gaps": [],
+          "external_sources": [
+            {
+              "label": "NICE NG59: lumbalgia",
+              "url": "https://www.nice.org.uk/guidance/ng59/chapter/recommendations",
+              "quote": "Do not offer paracetamol alone",
+              "checked_at": "2026-10-29"
+            }
+          ],
+          "source_corrections": [
+            {
+              "reason": "Se recomienda continuar actividad adaptada, no reposo rutinario. Paracetamol solo no es primera línea universal; seleccionar analgesia según riesgo."
+            }
+          ]
+        },
+        {
+          "id": "32.12-03",
+          "name": "Hernia de disco",
+          "source_pages": [
+            1072,
+            1073
+          ],
+          "pattern": "Una persona tiene dolor lumbar que irradia por una pierna con parestesias. La elevación de la pierna reproduce dolor radicular. Se exploran fuerza, reflejos y sensibilidad para detectar compresión.",
+          "key_discriminator": "dolor radicular",
+          "mechanism": "La salida del núcleo pulposo a través del anillo puede irritar o comprimir raíz nerviosa, produce dolor dermatomal y, si hay lesión funcional, déficit motor o reflejo.",
+          "findings": [
+            {
+              "mechanism": "Compresión e inflamación radicular",
+              "finding": "Dolor irradiado y parestesias"
+            }
+          ],
+          "initial_action": "Examinar neurología y signos de alarma; iniciar manejo conservador si es estable y reservar imagen para indicación clínica.",
+          "action_reason": "La mayoría sin déficit progresivo puede manejarse inicialmente sin cirugía.",
+          "modifiers": [
+            {
+              "factor": "Anestesia en silla de montar o déficit progresivo",
+              "action": "Solicitar valoración urgente e imagen",
+              "reason": "Puede existir compresión que requiere intervención"
+            }
+          ],
+          "limits": "No atribuir todo dolor irradiado a una imagen incidental.",
+          "evidence": [
+            {
+              "page": 1072,
+              "quote": "perforación en el anillo fibroso"
+            },
+            {
+              "page": 1073,
+              "quote": "déficits neurológicos"
+            }
+          ],
+          "source_gaps": []
+        }
+      ],
+      "common_problem": "Paciente con dolor de columna con o sin irradiación.",
+      "mother": {
+        "cue": "Lesión de tejidos o compresión neural que puede requerir evaluación urgente.",
+        "answer": "Dolor vertebral y radicular.",
+        "explanation": "Los signos neurológicos y de alarma determinan estudios."
+      }
+    },
+    {
+      "id": "32.13",
+      "title": "Parestesia de mano/brazo",
+      "topics": [
+        {
+          "id": "32.13-01",
+          "name": "Túnel del carpo",
+          "source_pages": [
+            1096
+          ],
+          "pattern": "Una persona despierta con hormigueo de pulgar, índice y medio que mejora al sacudir la mano. Tiene dificultad para tareas finas. Se evalúan fuerza tenar y distribución sensitiva.",
+          "key_discriminator": "mejora al sacudir la mano",
+          "mechanism": "La presión elevada en túnel carpiano comprime nervio mediano, altera sensibilidad digital y puede dañar fibras motoras tenar, causando parestesias nocturnas y pérdida de destreza.",
+          "findings": [
+            {
+              "mechanism": "Compresión del nervio mediano",
+              "finding": "Parestesia en primeros dedos"
+            }
+          ],
+          "initial_action": "Confirmar distribución y gravedad; usar férula nocturna neutra y modificar factores provocadores, con evaluación especializada si hay déficit o persistencia.",
+          "action_reason": "Disminuye presión y detecta daño funcional.",
+          "modifiers": [
+            {
+              "factor": "Atrofia o debilidad progresiva",
+              "action": "Referir para valorar descompresión",
+              "reason": "Sugiere lesión avanzada"
+            }
+          ],
+          "limits": "No administrar piridoxina en dosis altas de rutina.",
+          "evidence": [
+            {
+              "page": 1096,
+              "quote": "Signo de Flick"
+            },
+            {
+              "page": 1096,
+              "quote": "Muñequera de uso nocturno"
+            }
+          ],
+          "source_gaps": [],
+          "external_sources": [
+            {
+              "label": "ACOEM 2025: trastornos de mano y muñeca",
+              "url": "https://www.dir.ca.gov/dwc/dwcpropregs/2025/MTUS-Evidence-Based-Update-August/Hand-Wrist-Forearm-Disorders-Guideline.pdf",
+              "quote": "Pyridoxine is not recommended for routine treatment",
+              "checked_at": "2026-10-29"
+            },
+            {
+              "label": "TGA: neuropatía por vitamina B6",
+              "url": "https://www.tga.gov.au/safety/safety-monitoring-and-information/safety-alerts/health-supplements-containing-vitamin-b6-can-cause-peripheral-neuropathy",
+              "quote": "vitamin B6 can cause peripheral neuropathy",
+              "checked_at": "2026-10-29"
+            }
+          ],
+          "source_corrections": [
+            {
+              "reason": "La piridoxina no se recomienda de rutina en túnel del carpo sin déficit vitamínico. No se extrapola el régimen prolongado del libro."
+            },
+            {
+              "reason": "La suplementación puede producir neuropatía periférica; el riesgo refuerza evitar dosis altas o prolongadas de rutina."
+            }
+          ]
+        },
+        {
+          "id": "32.13-02",
+          "name": "Costilla cervical",
+          "source_pages": [
+            1053,
+            1054
+          ],
+          "pattern": "Una persona presenta parestesias del borde medial del brazo al mantenerlo elevado. También puede haber hinchazón o frialdad según la estructura afectada. Se investiga compresión proximal neurovascular.",
+          "key_discriminator": "borde medial del brazo",
+          "mechanism": "La compresión del plexo braquial o vasos subclavios entre escalenos, clavícula y costilla altera función nerviosa o flujo, produce síntomas distintos según estructura y posible costilla cervical.",
+          "findings": [
+            {
+              "mechanism": "Compresión en salida torácica",
+              "finding": "Parestesias o cambios vasculares"
+            }
+          ],
+          "initial_action": "Definir patrón neurogénico o vascular y explorar; seleccionar imagen y referencia según hallazgos y empezar medidas posturales en casos adecuados.",
+          "action_reason": "El tipo vascular puede requerir atención urgente.",
+          "modifiers": [
+            {
+              "factor": "Edema y cianosis de brazo",
+              "action": "Descartar trombosis venosa",
+              "reason": "Puede existir obstrucción axilosubclavia"
+            }
+          ],
+          "limits": "Una prueba provocativa aislada no confirma síndrome.",
+          "evidence": [
+            {
+              "page": 1053,
+              "quote": "compresión o irritación"
+            },
+            {
+              "page": 1054,
+              "quote": "Mejoría de la postura"
+            }
+          ],
+          "source_gaps": []
+        }
+      ],
+      "common_problem": "Paciente con parestesias o síntomas vasculares del brazo.",
+      "mother": {
+        "cue": "Compresión nerviosa o vascular en muñeca o salida torácica.",
+        "answer": "Síndrome de atrapamiento de miembro superior.",
+        "explanation": "La distribución y signos vasculares localizan lesión."
+      }
+    },
+    {
+      "id": "32.14",
+      "title": "Lesión fisaria",
+      "topics": [
+        {
+          "id": "32.14-01",
+          "name": "Lesiones fisiarias",
+          "source_pages": [
+            1077
+          ],
+          "pattern": "Un niño tiene dolor cerca de la muñeca después de una caída. La radiografía muestra fractura que atraviesa la fisis y deja un fragmento metafisario unido a la epífisis.",
+          "key_discriminator": "fragmento metafisario unido a la epífisis",
+          "mechanism": "La lesión del cartílago de crecimiento puede interrumpir crecimiento longitudinal o afectar superficie articular; su recorrido, desplazamiento y compresión determinan riesgo de detención o deformidad futura.",
+          "findings": [
+            {
+              "mechanism": "Fractura fisaria con metáfisis",
+              "finding": "Patrón Salter-Harris II"
+            }
+          ],
+          "initial_action": "Clasificar extensión, evaluar desplazamiento y referir para reducción e inmovilización según lesión; planificar seguimiento del crecimiento.",
+          "action_reason": "El daño puede tener consecuencias tardías.",
+          "modifiers": [
+            {
+              "factor": "Afectación articular o desplazamiento",
+              "action": "Valorar reducción anatómica por especialista",
+              "reason": "Busca conservar congruencia y crecimiento"
+            }
+          ],
+          "limits": "La compresión tipo V no implica fijación abierta universal.",
+          "evidence": [
+            {
+              "page": 1077,
+              "quote": "fragmento metafisario"
+            },
+            {
+              "page": 1077,
+              "quote": "reducción cerrada"
+            }
+          ],
+          "source_gaps": [],
+          "external_sources": [
+            {
+              "label": "AAOS: fracturas de placa de crecimiento",
+              "url": "https://www.orthoinfo.org/diseases--conditions/growth-plate-fractures/",
+              "quote": "If the bone fragments are displaced and the fracture is unstable",
+              "checked_at": "2026-10-29"
+            }
+          ],
+          "source_corrections": [
+            {
+              "reason": "La cirugía se selecciona por desplazamiento, estabilidad, articulación y complicaciones. El tipo V es compresión de la fisis y exige vigilancia de crecimiento, no fijación abierta universal."
+            }
+          ]
+        }
+      ],
+      "common_problem": "Niño con trauma que afecta cartílago de crecimiento.",
+      "mother": {
+        "cue": "Lesión de fisis con riesgo de alteración del crecimiento y congruencia.",
+        "answer": "Lesión fisiaria.",
+        "explanation": "La extensión y desplazamiento determinan reducción y seguimiento."
+      }
+    },
+    {
+      "id": "32.15",
+      "title": "Fiebre y dolor óseo",
+      "topics": [
+        {
+          "id": "32.15-01",
+          "name": "Osteomielitis",
+          "source_pages": [
+            1086
+          ],
+          "pattern": "Un niño presenta fiebre y dolor localizado en un hueso largo con rechazo a usar la extremidad. La radiografía inicial es poco llamativa. Se considera infección ósea temprana.",
+          "key_discriminator": "rechazo a usar la extremidad",
+          "mechanism": "La siembra bacteriana ósea, por sangre u otra vía, provoca inflamación y necrosis y puede formar abscesos; los cambios radiográficos pueden tardar mientras la infección progresa.",
+          "findings": [
+            {
+              "mechanism": "Infección del hueso",
+              "finding": "Fiebre y dolor localizado"
+            }
+          ],
+          "initial_action": "Obtener cultivos cuando sea posible y evaluar imagen temprana apropiada; iniciar antibiótico según gravedad y coordinar evaluación ortopédica.",
+          "action_reason": "El tratamiento temprano limita destrucción y diseminación.",
+          "modifiers": [
+            {
+              "factor": "Absceso o mala evolución",
+              "action": "Valorar drenaje y control del foco",
+              "reason": "El antibiótico solo puede ser insuficiente"
+            }
+          ],
+          "limits": "Una radiografía normal temprana no excluye infección.",
+          "evidence": [
+            {
+              "page": 1086,
+              "quote": "RM con gadolinio"
+            },
+            {
+              "page": 1086,
+              "quote": "Drenaje quirúrgico"
+            }
+          ],
+          "source_gaps": []
+        }
+      ],
+      "common_problem": "Paciente con dolor óseo y fiebre.",
+      "mother": {
+        "cue": "Infección ósea que puede diseminarse o formar absceso.",
+        "answer": "Osteomielitis.",
+        "explanation": "El diagnóstico temprano y cultivos orientan tratamiento."
+      }
+    },
+    {
+      "id": "32.16",
+      "title": "Tumor óseo doloroso",
+      "topics": [
+        {
+          "id": "32.16-01",
+          "name": "Osteosarcoma",
+          "source_pages": [
+            1087
+          ],
+          "pattern": "Un adolescente presenta dolor nocturno persistente alrededor de la rodilla y aumento de volumen. La radiografía muestra lesión agresiva metafisaria con formación ósea. Se requiere estudio tumoral especializado.",
+          "key_discriminator": "lesión agresiva metafisaria",
+          "mechanism": "La proliferación maligna mesenquimal produce osteoide y destruye hueso, suele afectar metáfisis de huesos largos y puede diseminarse, especialmente a pulmón, con riesgo de fractura.",
+          "findings": [
+            {
+              "mechanism": "Tumor productor de osteoide",
+              "finding": "Dolor y masa metafisaria"
+            }
+          ],
+          "initial_action": "Obtener radiografías y referir a centro de tumores óseos antes de biopsia o cirugía no planificada.",
+          "action_reason": "El trayecto de biopsia afecta tratamiento definitivo.",
+          "modifiers": [
+            {
+              "factor": "Lesión con fractura",
+              "action": "Proteger e inmovilizar y coordinar equipo oncológico",
+              "reason": "La manipulación puede complicar resección"
+            }
+          ],
+          "limits": "El dolor sin respuesta no es exclusivo de malignidad.",
+          "evidence": [
+            {
+              "page": 1087,
+              "quote": "formación directa de hueso inmaduro u osteoide"
+            },
+            {
+              "page": 1087,
+              "quote": "referir a un centro"
+            }
+          ],
+          "source_gaps": []
+        },
+        {
+          "id": "32.16-02",
+          "name": "Sarcoma de Ewing",
+          "source_pages": [
+            1091
+          ],
+          "pattern": "Un adolescente presenta dolor óseo, masa diafisaria y fiebre intermitente. La radiografía muestra destrucción permeativa y reacción perióstica laminada. Se requiere distinguir tumor de infección y confirmar con tejido.",
+          "key_discriminator": "masa diafisaria",
+          "mechanism": "La neoplasia de células pequeñas asociada a alteraciones de EWSR1 crece en hueso o tejidos, produce lesión agresiva y síntomas constitucionales y requiere tratamiento sistémico y local.",
+          "findings": [
+            {
+              "mechanism": "Tumor óseo agresivo",
+              "finding": "Dolor, masa y síntomas constitucionales"
+            }
+          ],
+          "initial_action": "Referir a centro especializado para imagen de extensión y biopsia planificada.",
+          "action_reason": "La histología y genética guían tratamiento.",
+          "modifiers": [
+            {
+              "factor": "Sospecha de metástasis",
+              "action": "Completar estadificación",
+              "reason": "Cambia riesgo y plan terapéutico"
+            }
+          ],
+          "limits": "Los números de cromosomas defectuosos en extracción no se usan como evidencia genética.",
+          "evidence": [
+            {
+              "page": 1091,
+              "quote": "confirmación histológica"
+            },
+            {
+              "page": 1091,
+              "quote": "sensibles a la radioterapia."
+            }
+          ],
+          "source_gaps": []
+        },
+        {
+          "id": "32.16-03",
+          "name": "Tumores óseos malignos",
+          "source_pages": [
+            1094,
+            1095
+          ],
+          "pattern": "Una persona tiene dolor óseo progresivo y una lesión radiográfica agresiva. La edad y localización sugieren varias neoplasias. Se requiere planificar biopsia y estudio de extensión antes de tratar.",
+          "key_discriminator": "lesión radiográfica agresiva",
+          "mechanism": "Las neoplasias óseas malignas difieren en célula de origen y matriz producida, pero destruyen hueso y pueden diseminarse; edad, sitio e imagen orientan sin sustituir histología.",
+          "findings": [
+            {
+              "mechanism": "Crecimiento tumoral destructivo",
+              "finding": "Dolor y lesión agresiva"
+            }
+          ],
+          "initial_action": "Solicitar radiografías y referir para resonancia, estadificación y biopsia en centro con experiencia.",
+          "action_reason": "Evita procedimientos que comprometan resección futura.",
+          "modifiers": [
+            {
+              "factor": "Matriz cartilaginosa en adulto",
+              "action": "Considerar condrosarcoma en diferencial",
+              "reason": "La estirpe modifica tratamiento"
+            }
+          ],
+          "limits": "La imagen orienta, pero no confirma tipo tumoral.",
+          "evidence": [
+            {
+              "page": 1094,
+              "quote": "confirmación histológica"
+            },
+            {
+              "page": 1094,
+              "quote": "Radiografía AP y lateral"
+            }
+          ],
+          "source_gaps": []
+        }
+      ],
+      "common_problem": "Paciente con dolor óseo persistente o masa.",
+      "mother": {
+        "cue": "Proliferación tumoral ósea que requiere estudio y biopsia planificada.",
+        "answer": "Sospecha de tumor óseo maligno.",
+        "explanation": "La imagen inicial y referencia preceden a procedimientos no planificados."
+      }
+    }
+  ]
+}
