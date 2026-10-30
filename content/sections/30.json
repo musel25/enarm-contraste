@@ -51,8 +51,8 @@
             1004,
             1005
           ],
-          "pattern": "Un adulto tiene dolor súbito muy intenso, eritema y calor en la primera articulación del dedo gordo. Ha tenido ataques similares. Se considera estudio del líquido para excluir infección.",
-          "key_discriminator": "primera articulación del dedo gordo",
+          "pattern": "Un adulto tiene dolor súbito muy intenso, eritema y calor en la primera metatarsofalángica. Ha tenido ataques similares. Se considera estudio del líquido para excluir infección.",
+          "key_discriminator": "primera metatarsofalángica",
           "mechanism": "La cristalización de urato monosódico en articulaciones activa inflamación aguda intensa; la carga persistente puede formar tofos, pero el urato sérico aislado no define un ataque.",
           "findings": [
             {
@@ -78,6 +78,10 @@
             {
               "page": 1004,
               "quote": "colchicina oral y los AINES"
+            },
+            {
+              "page": 1005,
+              "quote": "birrefringentes negativamente."
             }
           ],
           "source_gaps": [],
@@ -92,6 +96,9 @@
           "source_corrections": [
             {
               "reason": "El objetivo terapéutico es urato menor de 6 mg/dl. Si está indicado, el hipouricemiante puede iniciarse durante el ataque con manejo antiinflamatorio; no requiere demora universal."
+            },
+            {
+              "reason": "La página 1003 dice sin birrefringencia, pero la tabla de la página 1005 describe correctamente birrefringencia negativa de los cristales de urato."
             }
           ]
         }
@@ -123,7 +130,7 @@
               "finding": "Poliartritis simétrica y rigidez"
             }
           ],
-          "initial_action": "Solicitar evaluación de actividad y estudios basales y referir pronto para iniciar fármaco modificador de enfermedad.",
+          "initial_action": "Solicitar factor reumatoide, anti-CCP y estudios basales; referir pronto para iniciar fármaco modificador, habitualmente metotrexato si no hay contraindicación.",
           "action_reason": "La analgesia sola no previene daño.",
           "modifiers": [
             {
@@ -160,7 +167,7 @@
               "finding": "Dactilitis"
             }
           ],
-          "initial_action": "Referir a reumatología para definir dominios afectados y tratamiento; usar alivio sintomático según riesgo.",
+          "initial_action": "Referir a reumatología para definir dominios afectados y tratamiento modificador; valorar AINE para alivio sintomático breve según riesgo.",
           "action_reason": "El manejo debe cubrir piel y estructuras musculoesqueléticas.",
           "modifiers": [
             {
@@ -177,7 +184,7 @@
             },
             {
               "page": 994,
-              "quote": "Metotrexato."
+              "quote": "Sin respuesta a Al N Es o cutáneas: Metotrexato."
             }
           ],
           "source_gaps": []
@@ -197,7 +204,7 @@
               "finding": "Oligoartritis y entesitis"
             }
           ],
-          "initial_action": "Excluir artritis séptica y tratar dolor e inflamación; investigar y tratar infección activa cuando corresponda.",
+          "initial_action": "Excluir artritis séptica y tratar inflamación con AINE si es seguro; investigar y tratar infección activa cuando corresponda.",
           "action_reason": "La inflamación articular y foco activo son decisiones distintas.",
           "modifiers": [
             {
@@ -214,10 +221,15 @@
             },
             {
               "page": 995,
-              "quote": "inicial y de primera elección: AINEs. recurrencia del síndrome agudo. • Si"
+              "quote": "Manejo inicial y de primera elección: AINEs."
             }
           ],
-          "source_gaps": []
+          "source_gaps": [],
+          "source_corrections": [
+            {
+              "reason": "La página describe evolución habitual de tres a cinco meses y también etiqueta como crónica la falta de respuesta al mes. No se enseña esta etiqueta temporal contradictoria como criterio diagnóstico."
+            }
+          ]
         }
       ],
       "common_problem": "Paciente con artritis periférica inflamatoria.",
@@ -295,7 +307,7 @@
               "finding": "Inflamación y pérdida de movimiento"
             }
           ],
-          "initial_action": "Referir a reumatología pediátrica para excluir causas alternativas y tratar actividad; coordinar evaluación ocular.",
+          "initial_action": "Referir a reumatología pediátrica para excluir causas alternativas y tratar actividad; coordinar evaluación ocular y valorar AINE para alivio según seguridad.",
           "action_reason": "El daño articular y uveítis requieren detección.",
           "modifiers": [
             {
@@ -308,11 +320,11 @@
           "evidence": [
             {
               "page": 993,
-              "quote": "Uveítis, fiebre,"
+              "quote": "artritis crónica inflamatoria que inicia antes de los 16 años"
             },
             {
               "page": 993,
-              "quote": "articulaciones de manos y pies • Metotrexato se debe iniciar a una dosis de 10 a"
+              "quote": "dolor o inflamación articular por más de 6 semanas"
             }
           ],
           "source_gaps": []
@@ -358,14 +370,27 @@
           "evidence": [
             {
               "page": 1007,
-              "quote": "Hipocomplementemia"
+              "quote": "Hipocomplementemia (C3, C4 o CH50 bajos)."
             },
             {
               "page": 1008,
-              "quote": "Hidroxicloroquina"
+              "quote": "Hidroxicloroquina (HCQ) todos los pacientes deben tenerlo en su esquema, previene exacerbaciones y prolongan la sobrevida."
             }
           ],
-          "source_gaps": []
+          "source_gaps": [],
+          "external_sources": [
+            {
+              "label": "EULAR 2023: tratamiento del lupus sistémico",
+              "url": "https://ard.bmj.com/content/83/1/15",
+              "quote": "and, when possible, withdrawn",
+              "checked_at": "2026-10-29"
+            }
+          ],
+          "source_corrections": [
+            {
+              "reason": "Se limita la exposición a glucocorticoides según actividad y órgano. EULAR recomienda reducirlos al mínimo y retirarlos cuando sea posible, en lugar de cursos prolongados universales."
+            }
+          ]
         },
         {
           "id": "30.05-02",
@@ -383,7 +408,7 @@
               "finding": "Trombosis y morbilidad obstétrica"
             }
           ],
-          "initial_action": "Tratar evento trombótico y referir para anticoagulación y valoración del perfil de riesgo.",
+          "initial_action": "Tratar trombosis venosa con heparina y planificar anticoagulación con antagonista de vitamina K si no hay embarazo u otra contraindicación; referir.",
           "action_reason": "Previene recurrencias y adapta manejo obstétrico.",
           "modifiers": [
             {
@@ -399,8 +424,8 @@
               "quote": "separados por al menos 12 semanas."
             },
             {
-              "page": 1015,
-              "quote": "heparina de bajo"
+              "page": 1014,
+              "quote": "heparina de bajo peso molecular o no fraccionada"
             }
           ],
           "source_gaps": [],
@@ -465,7 +490,13 @@
               "quote": "Lágrimas artificiales"
             }
           ],
-          "source_gaps": []
+          "source_gaps": [],
+          "answer_name": "Síndrome de Sjögren",
+          "source_corrections": [
+            {
+              "reason": "Se corrige la errata del título del inventario, Síndome de Sjörgren. El libro describe el síndrome de Sjögren con hiposecreción de glándulas exocrinas."
+            }
+          ]
         },
         {
           "id": "30.06-02",
@@ -558,7 +589,7 @@
           "evidence": [
             {
               "page": 991,
-              "quote": "hipersensibilidad de"
+              "quote": "Cefalea de nuevo inicio: Generalmente temporal."
             },
             {
               "page": 991,
@@ -694,11 +725,11 @@
           "evidence": [
             {
               "page": 1017,
-              "quote": "asma, a menudo"
+              "quote": "asma, a menudo de comienzo en la edad adulta"
             },
             {
               "page": 1017,
-              "quote": "Ciclofosfamida"
+              "quote": "con prednisona +/- Ciclofosfamida."
             }
           ],
           "source_gaps": []
@@ -739,7 +770,7 @@
               "reason": "Puede existir complicación importante"
             }
           ],
-          "limits": "La IgA sérica aislada no confirma diagnóstico.",
+          "limits": "La IgA sérica aislada no confirma diagnóstico. Mantener vigilancia de presión arterial y orina durante 12 meses según RCH, aunque mejore la púrpura.",
           "evidence": [
             {
               "page": 1011,
@@ -750,7 +781,24 @@
               "quote": "vigilar la función renal."
             }
           ],
-          "source_gaps": []
+          "source_gaps": [],
+          "answer_name": "Vasculitis por IgA (púrpura de Henoch-Schönlein)",
+          "source_corrections": [
+            {
+              "reason": "Se corrige la errata del título del inventario, Purpura de Henoch Shönlein, y se añade vasculitis por IgA. La página 1011 describe explícitamente este mecanismo."
+            },
+            {
+              "reason": "Se hace explícita la vigilancia renal diferida de 12 meses de la guía RCH 2026, separada de la descripción breve del libro."
+            }
+          ],
+          "external_sources": [
+            {
+              "label": "RCH 2026: vasculitis por IgA",
+              "url": "https://www.rch.org.au/clinicalguide/guideline_index/HenochSchonlein_Purpura/",
+              "quote": "Routine blood pressure and urinalysis monitoring for 12 months is required",
+              "checked_at": "2026-10-29"
+            }
+          ]
         },
         {
           "id": "30.09-02",
@@ -878,7 +926,7 @@
             {
               "label": "EULAR 2017: fibromialgia",
               "url": "https://ard.bmj.com/content/76/2/318",
-              "quote": "strong against",
+              "quote": "strong opioids and corticosteroids in patients with fibromyalgia",
               "checked_at": "2026-10-29"
             }
           ],
