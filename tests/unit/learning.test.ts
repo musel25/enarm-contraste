@@ -30,7 +30,9 @@ test('repetition counts attempts once per response and exposure once per card', 
   assert.equal(row.practiced, 1);
   assert.equal(row.remaining, 1);
   assert.equal(row.attempts, 2);
-  assert.equal(row.errors, 1);
+  // «Otra vez» on the first reading is not an error.
+  assert.equal(row.errors, 0);
+  assert.equal(row.first_reads, 1);
   assert.equal(row.started, day);
   assert.equal(row.next_due, state.progress[index.cards[0].id].due_day);
 });
@@ -47,8 +49,12 @@ test('block and section notices require all cards and return after undo and a ne
 });
 
 test('clinical results are separate from library coverage and errors have precise topic IDs', () => {
-  let state = recordPractice(emptyState(), index.cards[0], 1, 20, day, 'multi');
-  state = recordPractice(state, { ...index.cards[0], id: 'clinical/14.01/turner/easy' }, 1, 20, day, 'diagnosis');
+  const turner = { ...index.cards[0], id: 'clinical/14.01/turner/easy' };
+  let state = recordPractice(emptyState(), index.cards[0], 3, 20, day, 'seen');
+  state = recordPractice(state, index.cards[0], 1, 20, day, 'multi');
+  state = recordPractice(state, turner, 1, 20, day, 'first-read');
+  assert.deepEqual(topicErrors(state, index).map(t => t.id), ['block:14.01'], 'a first reading is not a topic error');
+  state = recordPractice(state, turner, 1, 20, day, 'diagnosis');
   state = recordPractice(state, index.cards[1], 2, 20, day, 'hard');
   const row = progressRows(state, index, day).sections[0];
   assert.equal(row.practiced, 2);

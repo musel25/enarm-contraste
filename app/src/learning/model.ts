@@ -1,8 +1,9 @@
+import { isError } from '../coach/engine';
 import type { CoachCard, CoachIndex, CoachState } from '../coach/types';
 
 export type ProgressRow = {
   id: string; total: number; practiced: number; remaining: number;
-  clinical_practiced: number; attempts: number; errors: number; difficult: number;
+  clinical_practiced: number; attempts: number; errors: number; difficult: number; first_reads: number;
   started: string | null; next_due: string | null; due: number;
 };
 export function caseMeta(id: string, order = 0): CoachCard | null {
@@ -12,7 +13,7 @@ export function caseMeta(id: string, order = 0): CoachCard | null {
 }
 function blank(id: string): ProgressRow {
   return { id, total: 0, practiced: 0, remaining: 0, clinical_practiced: 0, attempts: 0,
-    errors: 0, difficult: 0, started: null, next_due: null, due: 0 };
+    errors: 0, difficult: 0, first_reads: 0, started: null, next_due: null, due: 0 };
 }
 export function progressRows(state: CoachState, index: CoachIndex, day: string) {
   const sections = new Map<string, ProgressRow>(), blocks = new Map<string, ProgressRow>();
@@ -38,7 +39,9 @@ export function progressRows(state: CoachState, index: CoachIndex, day: string) 
     if (!card) continue;
     for (const row of rowsFor(card)) {
       row.attempts++;
-      if (attempt.rating === 1) row.errors++;
+      // A first reading is not an error. It is counted on its own.
+      if (isError(attempt)) row.errors++;
+      else if (attempt.rating === 1) row.first_reads++;
       if (attempt.rating === 2) row.difficult++;
       if (!row.started || attempt.day < row.started) row.started = attempt.day;
     }
@@ -57,7 +60,7 @@ export function topicErrors(state: CoachState, index: CoachIndex) {
   const cards = new Map(index.cards.map(card => [card.id, card]));
   const errors = new Map<string, { id: string; block_id: string; section_id: string; errors: number }>();
   for (const attempt of state.history) {
-    if (attempt.rating !== 1) continue;
+    if (!isError(attempt)) continue;
     const card = cards.get(attempt.card_id) || caseMeta(attempt.card_id);
     if (!card) continue;
     // An Eje answer covers several diagnoses. Do not invent topic-level results.

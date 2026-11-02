@@ -11,6 +11,7 @@ test('selects a block subtest, records an error, repeats it, and keeps progress 
   await expect(page.getByText('Pregunta 1 de 5', { exact: true })).toBeVisible();
   await page.getByRole('button', { name: 'Mostrar respuesta', exact: true }).click();
   await page.getByRole('button', { name: 'Me equivoqué', exact: true }).click();
+  await expect(page.getByText('Primera lectura registrada. No cuenta como error.', { exact: true })).toBeVisible();
   await expect(page.getByText(/Próximo repaso:/)).toBeVisible();
   await page.getByRole('button', { name: 'Siguiente pregunta', exact: true }).click();
   await page.getByRole('button', { name: 'Terminar subtest', exact: true }).click();
@@ -23,7 +24,9 @@ test('selects a block subtest, records an error, repeats it, and keeps progress 
   await page.getByRole('button', { name: 'Volver a mi avance', exact: true }).click();
   await expect(page.getByTestId('section-progress-01')).toContainText('1 de 5');
   await expect(page.getByTestId('section-progress-01')).toContainText('2 respuestas');
-  await expect(page.getByTestId('section-progress-01')).toContainText('1 error');
+  // «Me equivoqué» on a first reading is not an error.
+  await expect(page.getByTestId('section-progress-01')).toContainText('0 errores');
+  await expect(page.getByTestId('section-progress-01')).toContainText('1 primera lectura');
   await page.reload();
   await expect(page.getByTestId('section-progress-01')).toContainText('1 de 5');
 });

@@ -1,24 +1,25 @@
 import { useEffect, useRef, useState } from 'react';
 import StudyCard from '../StudyCard';
 import type { StudyCardData } from '../library-types';
-import type { Grade } from '../coach/types';
+import type { CardTag, Grade } from '../coach/types';
+import CardTags from '../coach/CardTags';
 import { dateLabel } from '../coach/format';
 import type { DiagnosticCase } from './cases';
 import { difficultyLabels } from './cases';
 
 export type TestQuestion = { id: string; label: string; card?: StudyCardData; clinical?: DiagnosticCase };
-export type AnswerResult = { due: string; notices: string[] };
-type Result = { question: TestQuestion; grade: Grade; due: string };
+export type AnswerResult = { due: string; notices: string[]; fresh?: boolean };
+type Result = { question: TestQuestion; grade: Grade; due: string; fresh: boolean };
 
-export default function TestSession({ questions, disabled, onAnswer, onClose, onReview }: {
-  questions: TestQuestion[]; disabled: boolean;
+export default function TestSession({ questions, disabled, onAnswer, onClose, onReview, tags, onTag }: {
+  questions: TestQuestion[]; disabled: boolean; tags?: Record<string, CardTag>; onTag?: (id: string, change: Partial<CardTag>) => void;
   onAnswer: (question: TestQuestion, grade: Grade, seconds: number, attemptId: string) => Promise<AnswerResult | null>;
   onClose: () => void; onReview: (question: TestQuestion) => void;
 }) {
   const [queue, setQueue] = useState(questions), [position, setPosition] = useState(0);
   const [results, setResults] = useState<Result[]>([]), [finished, setFinished] = useState(false);
   const [repeats, setRepeats] = useState<Set<string>>(new Set());
-  const [answer, setAnswer] = useState<{ grade: Grade; due: string } | null>(null);
+  const [answer, setAnswer] = useState<{ grade: Grade; due: string; fresh: boolean } | null>(null);
   const [notices, setNotices] = useState<string[]>([]), [busy, setBusy] = useState(false);
   const [revealed, setRevealed] = useState(false), [draft, setDraft] = useState('');
   const [retry, setRetry] = useState<{ grade: Grade; id: string; seconds: number } | null>(null);
@@ -57,8 +58,8 @@ export default function TestSession({ questions, disabled, onAnswer, onClose, on
     try {
       const saved = await onAnswer(question, attempt.grade, attempt.seconds, attempt.id);
       if (!saved) { setRetry(attempt); return; }
-      setRetry(null); setAnswer({ grade: attempt.grade, due: saved.due }); setNotices(saved.notices);
-      setResults(old => [...old, { question, grade: attempt.grade, due: saved.due }]);
+      setRetry(null); setAnswer({ grade: attempt.grade, due: saved.due, fresh: !!saved.fresh }); setNotices(saved.notices);
+      setResults(old => [...old, { question, grade: attempt.grade, due: saved.due, fresh: !!saved.fresh }]);
       if (attempt.grade <= 2) setRepeats(old => new Set(old).add(question.id));
     } finally { setBusy(false); lock.current = false; }
   }
@@ -69,9 +70,9 @@ export default function TestSession({ questions, disabled, onAnswer, onClose, on
   }
   if (finished) return <section ref={root} className="learning-results">
     <h2 tabIndex={-1}>Resultado del subtest</h2>
-    <p>{results.length} respuestas guardadas · {results.filter(item => item.grade >= 3).length} aciertos · {results.filter(item => item.grade === 1).length} errores</p>
+    <p>{results.length} respuestas guardadas · {results.filter(item => item.grade >= 3).length} aciertos · {results.filter(item => item.grade === 1 && !item.fresh).length} errores{results.some(item => item.grade === 1 && item.fresh) ? ` · ${results.filter(item => item.grade === 1 && item.fresh).length} primeras lecturas` : ''}</p>
     <p>Elige las preguntas que quieres repetir en esta sesión.</p>
-    <div className="learning-question-list">{results.map(result => <label key={result.question.id}><input type="checkbox" checked={repeats.has(result.question.id)} onChange={event => setRepeats(old => { const next = new Set(old); if (event.target.checked) next.add(result.question.id); else next.delete(result.question.id); return next; })} /><span><strong>{result.question.label}</strong><small>{result.grade === 1 ? 'Error' : result.grade === 2 ? 'Difícil' : 'Acierto'} · Próximo repaso: {dateLabel(result.due)}</small></span></label>)}</div>
+    <div className="learning-question-list">{results.map(result => <label key={result.question.id}><input type="checkbox" checked={repeats.has(result.question.id)} onChange={event => setRepeats(old => { const next = new Set(old); if (event.target.checked) next.add(result.question.id); else next.delete(result.question.id); return next; })} /><span><strong>{result.question.label}</strong><small>{result.grade === 1 ? result.fresh ? 'Primera lectura' : 'Error' : result.grade === 2 ? 'Difícil' : 'Acierto'} · Próximo repaso: {dateLabel(result.due)}</small></span></label>)}</div>
     {!results.length && <p>No respondiste preguntas. Vuelve para preparar otro subtest.</p>}
     <div className="learning-actions"><button className="coach-primary" disabled={!repeats.size || disabled} onClick={repeatSelected}>Repetir seleccionadas</button><button onClick={onClose}>Volver a mi avance</button></div>
   </section>;
@@ -94,7 +95,12 @@ export default function TestSession({ questions, disabled, onAnswer, onClose, on
       </div>}
     </article>}
     {retry && <div role="alert"><p>No se guardó la respuesta. Conservamos esta pregunta.</p><button disabled={busy || disabled} onClick={() => void rate(retry.grade)}>Reintentar respuesta</button></div>}
-    {answer && <div className="learning-answer-result" role="status"><strong>{answer.grade === 1 ? 'Error registrado.' : answer.grade === 2 ? 'Dificultad registrada.' : 'Respuesta correcta.'}</strong><p>Próximo repaso: {dateLabel(answer.due)}. Puedes repetirla hoy.</p><label><input type="checkbox" checked={repeats.has(question.id)} onChange={event => setRepeats(old => { const next = new Set(old); if (event.target.checked) next.add(question.id); else next.delete(question.id); return next; })} />Repetir esta pregunta al terminar</label><button className="coach-primary" disabled={disabled} onClick={() => position + 1 === queue.length ? setFinished(true) : setPosition(old => old + 1)}>{position + 1 === queue.length ? 'Ver resultado' : 'Siguiente pregunta'}</button></div>}
+    {answer && <div className="learning-answer-result" role="status"><strong>{answer.grade === 1 ? answer.fresh ? 'Primera lectura registrada. No cuenta como error.' : 'Error registrado.' : answer.grade === 2 ? 'Dificultad registrada.' : 'Respuesta correcta.'}</strong><p>Próximo repaso: {dateLabel(answer.due)}. Puedes repetirla hoy.</p><label><input type="checkbox" checked={repeats.has(question.id)} onChange={event => setRepeats(old => { const next = new Set(old); if (event.target.checked) next.add(question.id); else next.delete(question.id); return next; })} />Repetir esta pregunta al terminar</label><button className="coach-primary" disabled={disabled} onClick={() => position + 1 === queue.length ? setFinished(true) : setPosition(old => old + 1)}>{position + 1 === queue.length ? 'Ver resultado' : 'Siguiente pregunta'}</button></div>}
+    {onTag && <CardTags tag={tags?.[question.id]} disabled={busy || disabled} laterLabel="Al final del subtest" onChange={change => {
+      onTag(question.id, change);
+      // «Al final» moves an unanswered question behind the rest of this subtest.
+      if (change.later && !answer && position < queue.length - 1) setQueue(old => [...old.slice(0, position), ...old.slice(position + 1), old[position]]);
+    }} />}
     {notices.map(notice => <p className="learning-milestone" role="status" key={notice}>{notice}</p>)}
   </section>;
 }
