@@ -8,6 +8,7 @@ import Practice from "./Practice";
 import Review from "./Review";
 import Library from "./Library";
 import Coach from "./coach/Coach";
+import AccountGate from "./coach/AccountGate";
 import Learning from "./learning/Learning";
 import {
   REVIEW_KEY,
@@ -197,7 +198,7 @@ export default function App() {
           </nav>
         </div>
       </header>
-      {view === "today" ? <Coach suspended={!!review || method} onReview={setReview} /> : view === "learning" ? <Learning suspended={!!review || method} onReview={setReview} /> : view === "library" ? <Library onReview={setReview} /> : <div className="workspace">
+      {view === "today" ? <AccountGate><Coach suspended={!!review || method} onReview={setReview} /></AccountGate> : view === "learning" ? <AccountGate><Learning suspended={!!review || method} onReview={setReview} /></AccountGate> : view === "library" ? <Library onReview={setReview} /> : <div className="workspace">
         <nav className="axis-nav" aria-label="Ejes clínicos">
           <span className="axis-nav-label">Elige un eje clínico</span>
           <div>

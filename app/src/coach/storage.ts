@@ -143,3 +143,63 @@ export async function parseBackup(file: File): Promise<CoachState> {
   if (!value || value.format !== "enarm-coach" || !validateState(value.state)) throw new Error("La copia no contiene un plan válido. Tu progreso sigue intacto.");
   return value.state;
 }
+
+/** True when this browser already holds a progress profile. It never creates one. */
+export async function hasProgressCode(): Promise<boolean> {
+  const db = await open();
+  return new Promise((resolve, reject) => {
+    const request = db.transaction("state").objectStore("state").get("progress-code");
+    request.onsuccess = () => resolve(validCode(request.result));
+    request.onerror = () => reject(new Error("No se pudo leer el perfil de este navegador."));
+  });
+}
+
+/** Uses the progress of a signed-in account on this browser. The old code stays recoverable. */
+export async function adoptCode(code: string, state: CoachState | null, username: string): Promise<void> {
+  if (!validCode(code) || (state && !validateState(state))) throw new Error("Progreso no válido.");
+  const db = await open();
+  return new Promise((resolve, reject) => {
+    const tx = db.transaction("state", "readwrite"), store = tx.objectStore("state");
+    const request = store.get("progress-code");
+    request.onsuccess = () => {
+      if (validCode(request.result) && request.result !== code) store.put(request.result, "previous-code");
+      store.put(code, "progress-code");
+      store.put(username, "account-username");
+      if (state) store.put(state, "current"); else store.delete("current");
+    };
+    tx.oncomplete = () => resolve();
+    tx.onabort = () => reject(new Error("No se pudo guardar la sesión en este navegador."));
+    tx.onerror = () => {};
+  });
+}
+
+export async function setAccountName(username: string | null): Promise<void> {
+  const db = await open();
+  return new Promise((resolve, reject) => {
+    const tx = db.transaction("state", "readwrite"), store = tx.objectStore("state");
+    if (username) store.put(username, "account-username"); else store.delete("account-username");
+    tx.oncomplete = () => resolve();
+    tx.onabort = () => reject(new Error("No se pudo guardar el usuario en este navegador."));
+  });
+}
+
+export async function getAccountName(): Promise<string | null> {
+  const db = await open();
+  return new Promise(resolve => {
+    const request = db.transaction("state").objectStore("state").get("account-username");
+    request.onsuccess = () => resolve(typeof request.result === "string" ? request.result : null);
+    request.onerror = () => resolve(null);
+  });
+}
+
+/** Removes the account and its cached progress from this browser. The VPS keeps everything. */
+export async function signOut(): Promise<void> {
+  const db = await open();
+  return new Promise((resolve, reject) => {
+    const tx = db.transaction("state", "readwrite"), store = tx.objectStore("state");
+    for (const key of ["progress-code", "account-username", "current", "previous-code", "before-import", "legacy-recovery-code"]) store.delete(key);
+    tx.oncomplete = () => { localStorage.removeItem(GUEST_KEY); resolve(); };
+    tx.onabort = () => reject(new Error("No se pudo cerrar la sesión en este navegador."));
+  });
+}
+export const GUEST_KEY = "enarm-contraste-guest";

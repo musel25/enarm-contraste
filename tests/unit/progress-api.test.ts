@@ -23,6 +23,7 @@ async function fixture() {
       assert.ok(address && typeof address === "object");
       return fetch(`http://127.0.0.1:${address.port}/api/progress${suffix}`, { method, headers: { Authorization: `Bearer ${token}`, "Content-Type": "application/json", ...(origin ? { Origin: origin } : {}) }, ...(body === undefined ? {} : { body: JSON.stringify(body) }) });
     },
+    server: () => app.server,
     async restart() { await stop(); app = createProgressServer({ database: path, origin: "https://enarm.musel.dev", maxBytes: 20_000 }); await start(); },
     async close() { await stop(); await rm(dir, { recursive: true, force: true }); },
   };
@@ -116,5 +117,50 @@ test("invalid states and oversized bodies cannot replace saved progress", async 
     assert.equal((await api.request(token, "PUT", { expected_revision: -1, state: emptyState(), preserve: false })).status, 422);
     assert.equal((await api.request(token, "PUT", { padding: "x".repeat(21_000) })).status, 413);
     assert.equal((await api.request(token)).status, 404);
+  } finally { await api.close(); }
+});
+
+test("an account links a username and password to the same private progress", async () => {
+  const api = await fixture();
+  try {
+    const token = code(), other = code();
+    const call = (path: string, body: unknown, bearer?: string) => {
+      const address = api.server().address();
+      assert.ok(address && typeof address === "object");
+      return fetch(`http://127.0.0.1:${address.port}${path}`, { method: "POST", headers: { "Content-Type": "application/json", ...(bearer ? { Authorization: `Bearer ${bearer}` } : {}) }, body: JSON.stringify(body) });
+    };
+    assert.equal((await api.request(token, "PUT", { expected_revision: 0, state: { ...emptyState(), revision: 3 }, preserve: false })).status, 200);
+    assert.equal((await call("/api/account", { username: "x", password: "longenough" }, token)).status, 422);
+    assert.equal((await call("/api/account", { username: "alessa", password: "short" }, token)).status, 422);
+    assert.equal((await call("/api/account", { username: "Alessa", password: "secreto-largo" }, token)).status, 201);
+    assert.equal((await call("/api/account", { username: "otra", password: "secreto-largo" }, token)).status, 409);
+    assert.equal((await call("/api/account", { username: "alessa", password: "secreto-largo" }, other)).status, 409);
+    const status = await fetch(`http://127.0.0.1:${(api.server().address() as { port: number }).port}/api/account`, { headers: { Authorization: `Bearer ${token}` } });
+    assert.deepEqual(await status.json(), { username: "alessa" });
+    assert.equal((await call("/api/account/login", { username: "alessa", password: "incorrecta" })).status, 401);
+    assert.equal((await call("/api/account/login", { username: "nadie", password: "secreto-largo" })).status, 401);
+    const login = await call("/api/account/login", { username: " ALESSA ", password: "secreto-largo" });
+    assert.equal(login.status, 200);
+    assert.deepEqual(await login.json(), { username: "alessa", code: token });
+    assert.equal((await call("/api/account/password", { password: "incorrecta", new_password: "nueva-clave-1" }, token)).status, 401);
+    assert.equal((await call("/api/account/password", { password: "secreto-largo", new_password: "nueva-clave-1" }, token)).status, 200);
+    assert.equal((await call("/api/account/login", { username: "alessa", password: "secreto-largo" })).status, 401);
+    await api.restart();
+    const again = await call("/api/account/login", { username: "alessa", password: "nueva-clave-1" });
+    assert.deepEqual(await again.json(), { username: "alessa", code: token });
+    const raw = new (await import("node:sqlite")).DatabaseSync(api.path);
+    const stored = JSON.stringify(raw.prepare("SELECT * FROM accounts").all());
+    raw.close();
+    assert.ok(!stored.includes(token) && !stored.includes("nueva-clave-1"), "the code and the password are never stored in clear text");
+  } finally { await api.close(); }
+});
+
+test("login attempts are limited per username", async () => {
+  const api = await fixture();
+  try {
+    const port = (api.server().address() as { port: number }).port;
+    const login = (password: string) => fetch(`http://127.0.0.1:${port}/api/account/login`, { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ username: "alguien", password }) });
+    for (let n = 0; n < 10; n++) assert.equal((await login("incorrecta")).status, 401);
+    assert.equal((await login("incorrecta")).status, 429);
   } finally { await api.close(); }
 });

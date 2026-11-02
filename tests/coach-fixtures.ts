@@ -12,7 +12,12 @@ export const coachCards: StudyCardData[] = [
 export const coachIndex = { schema_version: 1, content_sha256: "coach-fixture", cards: coachCards.map((c, order) => ({ id: c.id, section_id: c.section_id, block_id: c.block_id, family: c.family, level: c.level, order, new_seconds: 120, review_seconds: 45 })) };
 const body = JSON.stringify(coachIndex);
 export const coachManifest = { schema_version: 1, content_sha256: "coach-fixture", review_status: "cross-reviewed", professional_review: "pending", counts: { sections: 1, blocks: 1, topic_occurrences: 1, cards: 5, eje: 1, madre: 4 }, sections: [{ id: "01", title: "Sección de prueba", blocks: 1, cards: 5, url: "sections/01.json" }], downloads: [{ family: "eje", label: "Eje Clínico", url: "enarm-eje.apkg", cards: 1 }, { family: "madre", label: "Patrones Madre", url: "enarm-madre.apkg", cards: 4 }], planner: { url: "index.json", cards: 5, sha256: createHash("sha256").update(body).digest("hex") } };
+/** Existing tests use a browser without an account, as before the sign-in screen. */
+export async function asGuest(page: Page) {
+  await page.addInitScript(() => localStorage.setItem("enarm-contraste-guest", "1"));
+}
 export async function mockCoach(page: Page) {
+  await asGuest(page);
   await page.route("**/study/manifest.json", route => route.fulfill({ json: coachManifest }));
   await page.route("**/study/index.json*", route => route.fulfill({ body, contentType: "application/json" }));
   await page.route("**/study/sections/*.json*", route => route.fulfill({ json: { id: "01", title: "Sección de prueba", blocks: [{ id: "01.01", title: "Un problema", topics: 1 }], cards: coachCards } }));

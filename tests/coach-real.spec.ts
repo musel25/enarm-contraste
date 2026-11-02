@@ -1,7 +1,9 @@
 import { test, expect } from "@playwright/test";
+import { asGuest } from "./coach-fixtures";
 
 test("plans the verified full course and opens its assigned cards", async ({ page }) => {
   const loaded: string[] = [];
+  await asGuest(page);
   page.on("request", r => { if (r.url().includes("/study/sections/")) loaded.push(r.url()); });
   await page.goto("./");
   await expect(page.getByRole("region", { name: "Estimación del plan" })).toContainText("2,900 tarjetas");
