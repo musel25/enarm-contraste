@@ -116,3 +116,23 @@ test('tags and session logs validate and stay compact', () => {
   assert.equal(validateState({ ...s, tags: { c1: { order: 4 } } }), false);
   assert.equal(validateState({ ...s, preferences: { ...s.preferences, motivation_every: 1000 } }), false);
 });
+
+test('a session scope limits new and review queues to chosen sections, blocks and formats', () => {
+  const cards: CoachCard[] = [
+    { ...card('e1', 0), section_id: 's1', block_id: 'b1', family: 'eje' },
+    { ...card('m1', 1), section_id: 's1', block_id: 'b1', family: 'madre' },
+    { ...card('m2', 2), section_id: 's1', block_id: 'b2', family: 'madre' },
+    { ...card('m3', 3), section_id: 's2', block_id: 'b3', family: 'madre' },
+  ];
+  const i: CoachIndex = { schema_version: 1, content_sha256: 'a'.repeat(64), cards };
+  let s = assign(plan({ section_ids: ['s1', 's2'], families: ['eje', 'madre'], minutes_per_day: 30 }), i);
+  const scoped = (scope: NonNullable<CoachState['preferences']['session_scope']>) => ({ ...s, preferences: { ...s.preferences, session_scope: scope } });
+  assert.deepEqual(studyQueue(scoped({ section_ids: ['s1'], block_ids: [], families: ['madre'] }), i, day, 'new').ids, ['m1', 'm2']);
+  assert.deepEqual(studyQueue(scoped({ section_ids: ['s1'], block_ids: ['b2'], families: [] }), i, day, 'new').ids, ['m2']);
+  assert.equal(studyQueue(scoped({ section_ids: [], block_ids: [], families: ['eje'] }), i, day, 'new').recommended, 1);
+  for (const id of ['e1', 'm1', 'm2', 'm3']) s = recordStudy(s, i, id, 3, 20, day, id);
+  const later = addDays(day, 30);
+  assert.deepEqual(studyQueue(scoped({ section_ids: ['s2'], block_ids: [], families: [] }), i, later, 'review').ids, ['m3']);
+  assert.ok(validateState(scoped({ section_ids: ['s2'], block_ids: [], families: ['madre'] })));
+  assert.equal(validateState(scoped({ section_ids: [], block_ids: [], families: ['otro' as 'eje'] })), false);
+});

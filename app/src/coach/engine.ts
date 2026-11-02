@@ -1,6 +1,6 @@
 import { createEmptyCard, fsrs, type Card, type Grade as FSRSGrade } from 'ts-fsrs';
 import type { Assignment, Attempt, CardTag, CoachCard, CoachIndex, CoachState, Forecast, Grade,
-  Memory, SerializedFSRS, SessionLog, StudyPlan, StudySummary } from './types';
+  Memory, SerializedFSRS, SessionLog, SessionScope, StudyPlan, StudySummary } from './types';
 
 const DAY = 86_400_000;
 const HORIZON = 730;
@@ -343,16 +343,27 @@ export function laterLast(ids: string[], tags: CoachState['tags']): string[] {
  * for today and continue with the next unseen cards. Reviews include every due
  * card, including overdue ones.
  */
+export function inScope(card: CoachCard, scope: SessionScope | undefined): boolean {
+  if (!scope) return true;
+  return (!scope.section_ids.length || scope.section_ids.includes(card.section_id)) &&
+    (!scope.block_ids.length || scope.block_ids.includes(card.block_id)) &&
+    (!scope.families.length || scope.families.includes(card.family));
+}
+export function scopeActive(scope: SessionScope | undefined): boolean {
+  return !!scope && (scope.section_ids.length > 0 || scope.block_ids.length > 0 || scope.families.length > 0);
+}
 export function studyQueue(state: CoachState, index: CoachIndex, day: string, kind: StudyKind): { ids: string[]; recommended: number } {
   if (!state.plan) return { ids: [], recommended: 0 };
-  const cards = selectedCards(index, state.plan);
+  const scope = state.preferences.session_scope;
+  const cards = selectedCards(index, state.plan).filter(card => inScope(card, scope));
+  const allowed = new Set(cards.map(card => card.id));
   const done = new Set(state.history.filter(a => a.day === day).map(a => a.card_id));
   if (kind === 'review') {
     const ids = dueCards(cards, state.progress, day, done).map(c => c.id);
     return { ids: laterLast(ids, state.tags), recommended: ids.length };
   }
   const assignment = state.days[day];
-  const goal = (assignment?.new_ids ?? []).filter(id => !done.has(id) && !state.progress[id]);
+  const goal = (assignment?.new_ids ?? []).filter(id => allowed.has(id) && !done.has(id) && !state.progress[id]);
   const inGoal = new Set(goal);
   const more = cards.filter(c => !state.progress[c.id] && !done.has(c.id) && !inGoal.has(c.id)).map(c => c.id);
   return { ids: [...laterLast(goal, state.tags), ...laterLast(more, state.tags)], recommended: goal.length };
@@ -576,7 +587,13 @@ function optionalInteger(value: unknown, min: number, max: number) { return valu
 function validPreferences(value: unknown): boolean {
   return object(value) && typeof value.sound === 'boolean' && typeof value.low_motion === 'boolean' &&
     optionalInteger(value.motivation_every, 0, 500) && optionalInteger(value.session_size, 0, 500) &&
-    optionalInteger(value.timer_minutes, 0, 600) && optionalInteger(value.break_minutes, 1, 120);
+    optionalInteger(value.timer_minutes, 0, 600) && optionalInteger(value.break_minutes, 1, 120) &&
+    (value.session_scope === undefined || validScope(value.session_scope));
+}
+function validScope(value: unknown): value is SessionScope {
+  return object(value) && Object.keys(value).every(key => ['section_ids', 'block_ids', 'families'].includes(key)) &&
+    strings(value.section_ids) && strings(value.block_ids) && strings(value.families) &&
+    value.families.every(f => f === 'eje' || f === 'madre');
 }
 function validPlan(value: unknown): value is StudyPlan {
   if (!object(value) || !textId(value.id) || !integer(value.revision) ||

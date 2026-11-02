@@ -49,7 +49,10 @@ export type Preferences = {
   session_size?: number;
   timer_minutes?: number;
   break_minutes?: number;
+  /** Limits study sessions to some sections, blocks or formats. Empty lists mean all. */
+  session_scope?: SessionScope;
 };
+export type SessionScope = { section_ids: string[]; block_ids: string[]; families: ('eje' | 'madre')[] };
 export type Memory = {
   card: SerializedFSRS | null;
   due_day: string;
