@@ -14,13 +14,31 @@ La **primera vuelta** cuenta tarjetas practicadas al menos una vez. No indica do
 
 El plan, las respuestas, los repasos y las metas se guardan en una base SQLite privada en el VPS. La primera visita después de la actualización sube el progreso previo del navegador. Cada respuesta avanza solo cuando el servidor confirma el guardado. Si no hay conexión, la copia local permanece visible y el estudio se pausa hasta reconectar.
 
+**Tu cuenta.** Un navegador sin progreso pide usuario y contraseña. **Crear cuenta** abre un perfil nuevo. **Entrar** abre el mismo progreso en la laptop o el celular. En un dispositivo que ya tiene progreso, **Crear usuario y contraseña** vincula una cuenta a ese progreso sin cambiarlo. El VPS guarda la contraseña como derivación scrypt y el código privado cifrado con una clave que solo deriva la contraseña correcta. Los intentos fallidos se limitan por IP y por usuario. **Mi cuenta** cambia la contraseña o cierra la sesión del dispositivo.
+
 **Mi progreso en el VPS** muestra un código privado. Guárdalo. En otro dispositivo, introduce ese código y conecta el progreso encontrado. Quien tenga el código puede ver y modificar el plan. El enlace normal del sitio no lo contiene. Cada estudiante recibe un código distinto.
 
 **Copia de mi progreso** conserva la exportación e importación JSON. Una importación respalda el estado anterior en el VPS. El servicio también genera copias nocturnas de SQLite y conserva las 14 más recientes. Las publicaciones conservan la base fuera del directorio web. Las respuestas de Biblioteca y Mi avance usan el mismo registro que Hoy y se guardan en el VPS. Anki conserva su propio progreso.
 
+## Sesiones de estudio
+
+Hoy separa dos sesiones. **Temas nuevos** muestra las tarjetas recomendadas para la meta del día. Al terminarlas, puedes seguir con más temas nuevos. **Repasos** muestra todos los repasos pendientes, incluso los atrasados. Los repasos sin terminar pasan al día siguiente. **Repartir** los distribuye en 2, 3, 5 o 7 días según el tiempo de cada día.
+
+**Personalizar** fija las tarjetas por sesión, los minutos del temporizador, los minutos de descanso y cada cuántas respuestas aparece una frase motivadora (50 al inicio). Puedes hacer todas las sesiones que quieras. El temporizador aparece en una esquina, avisa con sonido y con una notificación al llegar a cero. **Descanso** pausa la sesión y cronometra la pausa. La configuración muestra tu ritmo real: segundos por tarjeta y cuántas tarjetas caben en tu tiempo.
+
+**¿Cómo está tu día?** cambia la carga de hoy: normal, menos carga (mitad del tiempo) o descanso. **Tu semana**, en el plan, marca días ligeros o de descanso. La estimación y las metas usan estos días. Los repasos nuevos se acomodan en el día menos cargado de una ventana cercana a su intervalo y evitan los días de descanso.
+
+La primera vez que ves una tarjeta, «Otra vez» guarda una **primera lectura**. No cuenta como error. Los errores cuentan solo en repasos.
+
+Debajo de cada tarjeta puedes marcar su **orden** (1º básica, 2º intermedia, 3º integradora), **Profundizar** y **Al final de la sesión**. Las tarjetas marcadas al final aparecen después de las demás.
+
+**Tu constancia** muestra los últimos 30 días. El verde brilla más con cada 50 respuestas. Toca un día para ver sus respuestas, nuevas, repasos, errores, tiempo, sesiones, descansos y bloques. **Tu meta grande** indica bloques y secciones completas, empezadas y por empezar.
+
 ## Avance y subtests
 
 **Mi avance** muestra la primera vuelta por sección y bloque. Indica flashcards practicadas y pendientes, fecha de inicio, respuestas, errores, dificultades y próximo repaso. Una respuesta «Difícil» se cuenta por separado de un error. Los avisos de bloque y sección completos aparecen después de guardar la respuesta. Deshacer restaura el avance.
+
+Un subtest puede combinar varias secciones o todos sus bloques. Filtra por tipo de pregunta: comparar casos, reconocer el patrón, decir el diagnóstico, explicar los hallazgos o decidir el manejo. También filtra por orden, por errores, repasos pendientes, preguntas para profundizar o sin practicar. Puedes limitar el número de preguntas y mezclar el orden. **Para profundizar** y **Preguntas que más tiempo te toman** crean un subtest directo. **Todo tu camino** muestra cada día desde que empezaste.
 
 Elige una sección y un bloque para preparar un subtest. Selecciona preguntas concretas, todos los errores registrados o los repasos de hoy. Puedes combinar Eje Clínico y Patrones Madre. Después de responder, elige las preguntas que quieres repetir en la misma sesión. El resultado muestra la fecha del próximo repaso. Repetir una pregunta aumenta las respuestas, pero no el número de tarjetas únicas.
 
@@ -62,7 +80,7 @@ npm run prepare:study
 npm run dev
 ```
 
-Abre `http://127.0.0.1:4178/`. `/#hoy` abre el plan. `/#biblioteca` abre la biblioteca. `/#avance` abre los avances y subtests. `/#avance?section=14&block=14.01&mode=cases` abre los casos de amenorrea. `/#amenorrea` y `/#ictericia` abren la muestra anterior.
+Abre `http://127.0.0.1:4178/`. `/#hoy` abre el plan. `/#biblioteca` abre la biblioteca. `/#avance` abre los avances y subtests. Un navegador nuevo muestra la pantalla de cuenta. **Seguir sin cuenta en este dispositivo** conserva el modo anterior. Las pruebas de navegador usan ese modo. `/#avance?section=14&block=14.01&mode=cases` abre los casos de amenorrea. `/#amenorrea` y `/#ictericia` abren la muestra anterior.
 
 ```sh
 uv run python -m unittest discover -s tests -p 'test_*.py'

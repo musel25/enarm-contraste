@@ -26,6 +26,8 @@ Las comprobaciones validan el commit desde el origen y la URL pública, la pági
 
 `api-current` apunta a la versión del servidor, fuera del directorio público. El servicio se ejecuta como `enarm-progress`, escucha solo en 127.0.0.1:4187 y recibe solicitudes mediante `/api/` de nginx. `GET /api/health` comprueba su salud. Las rutas de progreso requieren un código privado en la cabecera Authorization. SQLite conserva solo el hash del código.
 
+Las cuentas viven en la tabla `accounts` de la misma base. Cada fila guarda el usuario, la sal, el verificador scrypt de la contraseña, el código privado cifrado con AES-GCM y el hash del código. No guarda la contraseña ni el código en claro. `POST /api/account/login` devuelve el código solo con la contraseña correcta. El servicio crea la tabla al iniciar y no modifica la tabla `profiles`.
+
 La base vive en `/var/lib/enarm-contraste/progress.sqlite`, con permisos privados. Las publicaciones y sus recuperaciones nunca reemplazan esta base. Cada escritura usa una transacción con revisión esperada. La repetición de una solicitud confirmada devuelve el mismo resultado. Los conflictos devuelven 409. Las importaciones conservan una instantánea previa por perfil.
 
 `enarm-progress-backup.timer` ejecuta una copia en línea cada noche. El despliegue hace otra copia antes de cambiar el servicio. Se conservan las 14 instantáneas más recientes, con fecha y hora distintas, bajo `/var/lib/enarm-contraste/backups/`. Incluyen el contenido confirmado del WAL. No copies solo el archivo SQLite mientras el servicio está activo.
