@@ -164,3 +164,15 @@ test("login attempts are limited per username", async () => {
     assert.equal((await login("incorrecta")).status, 429);
   } finally { await api.close(); }
 });
+
+test("the per-IP request limit is configurable and defaults stay strict", async () => {
+  const dir = await mkdtemp(join(tmpdir(), "enarm-limit-test-"));
+  const app = createProgressServer({ database: join(dir, "p.sqlite"), origin: "https://enarm.musel.dev", requestLimit: 3 });
+  await new Promise<void>(resolve => app.server.listen(0, "127.0.0.1", resolve));
+  try {
+    const port = (app.server.address() as { port: number }).port, token = code();
+    const statuses = [];
+    for (let n = 0; n < 4; n++) statuses.push((await fetch(`http://127.0.0.1:${port}/api/progress`, { headers: { Authorization: `Bearer ${token}` } })).status);
+    assert.deepEqual(statuses, [404, 404, 404, 429]);
+  } finally { app.server.closeAllConnections(); await new Promise<void>(resolve => app.server.close(() => resolve())); app.database.close(); await rm(dir, { recursive: true, force: true }); }
+});

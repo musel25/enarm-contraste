@@ -45,7 +45,7 @@ function readBody(request: IncomingMessage, maxBytes: number): Promise<unknown> 
   });
 }
 
-export function createProgressServer({ database: path, origin, maxBytes = 20_000_000 }: { database: string; origin: string; maxBytes?: number }) {
+export function createProgressServer({ database: path, origin, maxBytes = 20_000_000, requestLimit = 400, createLimit = 100 }: { database: string; origin: string; maxBytes?: number; requestLimit?: number; createLimit?: number }) {
   const database = new DatabaseSync(path);
   database.exec("PRAGMA journal_mode=WAL; PRAGMA synchronous=FULL; PRAGMA busy_timeout=5000;");
   database.exec("CREATE TABLE IF NOT EXISTS profiles (code_hash TEXT PRIMARY KEY, revision INTEGER NOT NULL, state TEXT NOT NULL, previous TEXT, fingerprint TEXT NOT NULL, updated_at TEXT NOT NULL)");
@@ -137,7 +137,7 @@ export function createProgressServer({ database: path, origin, maxBytes = 20_000
       if (limit.minute !== minute) { limit.minute = minute; limit.requests = 0; }
       if (limit.hour !== hour) { limit.hour = hour; limit.creates = 0; }
       limits.set(ip, limit);
-      if (++limit.requests > 400) throw new HttpError(429, "Demasiadas solicitudes. Inténtalo más tarde.");
+      if (++limit.requests > requestLimit) throw new HttpError(429, "Demasiadas solicitudes. Inténtalo más tarde.");
       if (request.method === "GET") {
         const row = find.get(digest) as Row | undefined;
         if (!row) throw new HttpError(404, "No encontramos progreso con este código.");
@@ -157,7 +157,7 @@ export function createProgressServer({ database: path, origin, maxBytes = 20_000
         if ((row && row.revision !== expected) || (!row && expected !== 0)) {
           database.exec("COMMIT"); reply(response, 409, { error: "Otro dispositivo guardó progreso nuevo.", state: row ? JSON.parse(row.state) : null }); return;
         }
-        if (!row && ++limit.creates > 100) { database.exec("ROLLBACK"); throw new HttpError(429, "Demasiados perfiles nuevos. Inténtalo más tarde."); }
+        if (!row && ++limit.creates > createLimit) { database.exec("ROLLBACK"); throw new HttpError(429, "Demasiados perfiles nuevos. Inténtalo más tarde."); }
         const revision = row ? row.revision + 1 : Math.max(1, body.state.revision + 1);
         if (!Number.isSafeInteger(revision)) { database.exec("ROLLBACK"); throw new HttpError(422, "Revisión no válida."); }
         const saved = { ...body.state, revision };

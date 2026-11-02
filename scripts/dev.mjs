@@ -2,7 +2,7 @@ import { spawn } from "node:child_process";
 
 const preview = process.argv.includes("--preview");
 const children = [
-  spawn(process.execPath, preview ? ["dist-server/server.mjs"] : ["--import", "tsx", "server/main.ts"], { stdio: "inherit" }),
+  spawn(process.execPath, preview ? ["dist-server/server.mjs"] : ["--import", "tsx", "server/main.ts"], { stdio: "inherit", env: { ENARM_REQUEST_LIMIT: "100000", ENARM_CREATE_LIMIT: "100000", ...process.env } }),
   spawn(process.execPath, ["node_modules/vite/bin/vite.js", ...(preview ? ["preview"] : []), "--config", "app/vite.config.ts"], { stdio: "inherit" }),
 ];
 let stopping = false;
