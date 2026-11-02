@@ -143,3 +143,25 @@ test("the corner timer alerts when the time is over", async ({ page }) => {
   await page.getByRole("button", { name: "Volver a estudiar" }).click();
   await expect(page.getByRole("region", { name: "Frente de la tarjeta" })).toBeVisible();
 });
+
+test("a session can be limited to chosen sections and to one format", async ({ page }) => {
+  await mockCoach(page);
+  await page.goto("./");
+  await page.getByRole("button", { name: "Tiempo diario", exact: true }).click();
+  await page.getByLabel("Minutos por día", { exact: true }).fill("20");
+  await page.getByRole("button", { name: "Empezar mi plan", exact: true }).click();
+  await expect(page.getByRole("heading", { name: "¿Qué diagnóstico corresponde a cada caso?" })).toBeVisible();
+  await page.getByRole("button", { name: "Personalizar" }).click();
+  await page.getByRole("group", { name: "Formato de la sesión" }).getByRole("button", { name: "Patrones madre" }).click();
+  await page.getByRole("group", { name: "Secciones de la sesión" }).getByRole("button", { name: "Sección de prueba" }).click();
+  await expect(page.getByRole("group", { name: "Bloques de la sesión" }).getByRole("button", { name: /01\.01/ })).toBeVisible();
+  await page.getByRole("button", { name: "Guardar", exact: true }).click();
+  await expect(page.getByRole("status").filter({ hasText: "Solo:" })).toContainText("Sección de prueba · Patrones madre");
+  await expect(page.getByRole("heading", { name: "¿Qué patrón organiza este problema?" })).toBeVisible();
+  for (let n = 0; n < 4; n++) await answer(page);
+  await expect(page.getByRole("heading", { name: /No quedan tarjetas .* en tu selección\./ })).toBeVisible();
+  await page.reload();
+  await expect(page.getByRole("status").filter({ hasText: "Solo:" })).toBeVisible();
+  await page.getByRole("button", { name: "Quitar filtro" }).click();
+  await expect(page.getByRole("heading", { name: "¿Qué diagnóstico corresponde a cada caso?" })).toBeVisible();
+});

@@ -1,7 +1,7 @@
 import { useEffect, useMemo, useRef, useState, type ReactNode } from "react";
 import type { ReviewContext } from "../storage";
 import { Icon } from "../ui";
-import { addDays, dayKey, dayLoad, logSession, recordStudy, redistributeBacklog, setDayLoad, setTag, studyQueue, summary, undoReview, type StudyKind } from "./engine";
+import { addDays, dayKey, dayLoad, logSession, scopeActive, recordStudy, redistributeBacklog, setDayLoad, setTag, studyQueue, summary, undoReview, type StudyKind } from "./engine";
 import { CardFeedback, Confetti, playReward } from "./Feedback";
 import { dateLabel, duration } from "./format";
 import Session from "./Session";
@@ -9,8 +9,10 @@ import { completionNotices } from "../learning/model";
 import { DayDetail, HeatLegend, Heatmap } from "./Calendar";
 import { coverage, motivationFor, secondsPerCard } from "./insights";
 import { BREAK_KEY, TIMER_KEY, TimerDock, elapsedSeconds, notify, pauseTimer, playAlarm, readTimer, saveTimer, startTimer, useNow, type TimerState } from "./Timer";
-import type { CardTag, CoachIndex, CoachState, Forecast, Grade, Preferences } from "./types";
+import type { CardTag, CoachIndex, CoachState, Forecast, Grade, Preferences, SessionScope } from "./types";
 import "./today.css";
+import type { StudyManifest } from "../library-types";
+import SessionScopePicker, { emptyScope, scopeLabel } from "./SessionScope";
 
 type Commit = (change: (previous: CoachState) => CoachState) => Promise<CoachState | null>;
 type ActiveSession = { id: string; kind: StudyKind; day: string; started: number; answered: number; active: number };
@@ -29,8 +31,8 @@ function readSession(day: string): ActiveSession | null {
   catch { return null; }
 }
 
-export default function Today({ state, index, day, saving, paused, forecast, calculating, connected, commit, onEdit, onBackup, onReview }: {
-  state: CoachState; index: CoachIndex; day: string; saving: boolean; paused: boolean;
+export default function Today({ state, index, manifest, day, saving, paused, forecast, calculating, connected, commit, onEdit, onBackup, onReview }: {
+  state: CoachState; index: CoachIndex; manifest: StudyManifest; day: string; saving: boolean; paused: boolean;
   forecast: Forecast | null; calculating: boolean; connected: boolean; commit: Commit;
   onEdit: () => void; onBackup: () => void; onReview: (context: ReviewContext) => void;
 }) {
@@ -46,6 +48,7 @@ export default function Today({ state, index, day, saving, paused, forecast, cal
   const [pause, setPauseState] = useState<TimerState | null>(() => readTimer(BREAK_KEY));
   const [selectedDay, setSelectedDay] = useState(day);
   const [settings, setSettings] = useState(false);
+  const [scopeDraft, setScopeDraft] = useState<SessionScope>(emptyScope);
   const [spread, setSpread] = useState(3);
   const [feedback, setFeedback] = useState<{ id: string; grade: Grade; fresh: boolean } | null>(null);
   const [celebrate, setCelebrate] = useState(false);
@@ -74,6 +77,9 @@ export default function Today({ state, index, day, saving, paused, forecast, cal
   });
 
   const queue = useMemo(() => studyQueue(state, index, day, kind), [state, index, day, kind]);
+  const scope = prefs.session_scope, scoped = scopeActive(scope);
+  const scopedCounts = useMemo(() => scoped ? { fresh: studyQueue(state, index, day, "new").recommended, reviews: studyQueue(state, index, day, "review").ids.length } : null, [scoped, state, index, day]);
+  const clearScope = () => void commit(previous => ({ ...previous, preferences: { ...previous.preferences, session_scope: undefined } }));
   const ids = kind === "new" ? queue.ids.slice(0, queue.recommended + extra) : queue.ids;
   const full = size > 0 && session.answered >= size;
   const onBreak = !!pause;
@@ -174,9 +180,19 @@ export default function Today({ state, index, day, saving, paused, forecast, cal
   } else if (meta) focus = <Session key={`${day}/${meta.id}`} meta={meta} index={index} state={state} day={day} paused={paused} busy={saving || !!feedback} onRate={rate} onReview={onReview} tag={state.tags?.[meta.id]} onTag={tagChange(meta.id)} />;
   else if (kind === "review") focus = <section className="coach-daily-finish" aria-live="polite">
     <div className="coach-finish-seal" aria-hidden="true"><Icon name="check" size={38} /></div>
-    <span className="coach-kicker">REPASOS AL DÍA</span><h2>No quedan repasos para hoy.</h2>
+    <span className="coach-kicker">REPASOS AL DÍA</span><h2>{scoped && stats.reviews_pending ? "No quedan repasos en tu selección." : "No quedan repasos para hoy."}</h2>
+    {scoped && stats.reviews_pending > 0 && <p>Hay {stats.reviews_pending} repasos en otras secciones o formatos. <button className="text-button" disabled={saving} onClick={clearScope}>Usar todo mi plan</button></p>}
     <p>{stats.due_tomorrow} tarjetas tienen repaso mañana. {stats.new_goal > stats.new_goal_done ? `Aún tienes ${stats.new_goal - stats.new_goal_done} temas nuevos recomendados.` : ""}</p>
     {stats.new_goal > stats.new_goal_done && <button className="coach-primary" onClick={() => switchKind("new")}>Ir a temas nuevos <Icon name="arrow" size={17} /></button>}
+  </section>;
+  else if (kind === "new" && scoped && !complete && !(load === 0 && !extra && stats.today_goal === 0)) focus = <section className="coach-daily-finish" aria-live="polite">
+    <div className="coach-finish-seal" aria-hidden="true"><Icon name="check" size={38} /></div>
+    <span className="coach-kicker">TU SELECCIÓN</span><h2>{extra ? "No quedan tarjetas nuevas en tu selección." : "No quedan tarjetas recomendadas hoy en tu selección."}</h2>
+    <p>{stats.new_goal > stats.new_goal_done ? `Tu meta de hoy tiene ${stats.new_goal - stats.new_goal_done} temas nuevos en otras secciones o formatos.` : "Tu selección está al día."}</p>
+    <div className="today-summary-actions">
+      {!extra && queue.ids.length > 0 && <button className="coach-primary" onClick={() => setExtra(Infinity)}>Seguir con temas nuevos de tu selección <Icon name="arrow" size={17} /></button>}
+      <button className="coach-edit-button" disabled={saving} onClick={clearScope}>Usar todo mi plan</button>
+    </div>
   </section>;
   else if (load === 0 && !extra && stats.today_goal === 0 && !stats.today_done) focus = <section className="coach-daily-finish today-rest" aria-live="polite">
     <span aria-hidden="true" className="today-rest-mark">☾</span><span className="coach-kicker">DÍA DE DESCANSO</span><h2>Hoy descansas. También es parte del plan.</h2>
@@ -207,8 +223,8 @@ export default function Today({ state, index, day, saving, paused, forecast, cal
     <div className="coach-mobile-course" aria-hidden="true"><span>Primera vuelta <strong>{stats.covered.toLocaleString("es-MX")} / {stats.total.toLocaleString("es-MX")}</strong></span><div><i style={{ width: `${stats.coverage_percent}%` }} /></div></div>
     <div className="coach-today-layout"><div className="coach-focus-column">
       <div className="today-tabs" role="tablist" aria-label="Tipo de sesión">
-        <button role="tab" aria-selected={kind === "new"} onClick={() => switchKind("new")}><strong>Temas nuevos</strong><small>{stats.new_goal_done} de {stats.new_goal} recomendadas hoy</small></button>
-        <button role="tab" aria-selected={kind === "review"} onClick={() => switchKind("review")}><strong>Repasos</strong><small>{stats.reviews_pending ? `${stats.reviews_pending} pendientes` : "Al día"} · {stats.reviews_done_today} hechos</small></button>
+        <button role="tab" aria-selected={kind === "new"} onClick={() => switchKind("new")}><strong>Temas nuevos</strong><small>{stats.new_goal_done} de {stats.new_goal} recomendadas hoy{scopedCounts ? ` · ${scopedCounts.fresh} en tu selección` : ""}</small></button>
+        <button role="tab" aria-selected={kind === "review"} onClick={() => switchKind("review")}><strong>Repasos</strong><small>{stats.reviews_pending ? `${stats.reviews_pending} pendientes` : "Al día"}{scopedCounts ? ` · ${scopedCounts.reviews} en tu selección` : ` · ${stats.reviews_done_today} hechos`}</small></button>
       </div>
       <div className="today-session-bar">
         <span>{kind === "new" ? "Sesión de temas nuevos" : "Sesión de repaso"} · <strong>{session.answered}{size ? ` de ${size}` : ""}</strong> {size ? "tarjetas" : session.answered === 1 ? "tarjeta" : "tarjetas"}</span>
@@ -216,14 +232,16 @@ export default function Today({ state, index, day, saving, paused, forecast, cal
           {!timer && <button onClick={startStudyTimer}>⏱ {prefs.timer_minutes ? `Temporizador ${prefs.timer_minutes} min` : "Cronometrar sesión"}</button>}
           {!onBreak && <button onClick={takeBreak}>☕ Descanso</button>}
           {session.answered > 0 && !summaryOpen && <button onClick={() => setSummaryOpen(session)}>Terminar sesión</button>}
-          <button aria-expanded={settings} onClick={() => setSettings(open => !open)}>Personalizar</button>
+          <button aria-expanded={settings} onClick={() => { setScopeDraft(scope ?? emptyScope); setSettings(open => !open); }}>Personalizar</button>
         </div>
       </div>
-      {settings && <form className="today-settings" aria-label="Personalizar sesión" onSubmit={event => { event.preventDefault(); const data = new FormData(event.currentTarget); const read = (name: string, min: number, max: number) => Math.max(min, Math.min(max, Math.round(Number(data.get(name)) || 0))); savePreferences({ session_size: read("size", 0, 500), timer_minutes: read("timer", 0, 600), break_minutes: Math.max(1, read("break", 1, 120)), motivation_every: read("cheer", 0, 500) }); setSettings(false); }}>
+      {scoped && <div className="today-scope" role="status"><span>Solo: <strong>{scopeLabel(scope!, manifest)}</strong></span><button className="text-button" disabled={saving} onClick={clearScope}>Quitar filtro</button></div>}
+      {settings && <form className="today-settings" aria-label="Personalizar sesión" onSubmit={event => { event.preventDefault(); const data = new FormData(event.currentTarget); const read = (name: string, min: number, max: number) => Math.max(min, Math.min(max, Math.round(Number(data.get(name)) || 0))); savePreferences({ session_size: read("size", 0, 500), timer_minutes: read("timer", 0, 600), break_minutes: Math.max(1, read("break", 1, 120)), motivation_every: read("cheer", 0, 500), session_scope: scopeActive(scopeDraft) ? scopeDraft : undefined }); setExtra(0); setSettings(false); }}>
         <label>Tarjetas por sesión<input name="size" type="number" min={0} max={500} defaultValue={size} /><small>0 = sin límite</small></label>
         <label>Temporizador (min)<input name="timer" type="number" min={0} max={600} defaultValue={prefs.timer_minutes ?? 25} /><small>0 = solo cronómetro</small></label>
         <label>Descanso (min)<input name="break" type="number" min={1} max={120} defaultValue={prefs.break_minutes ?? 5} /></label>
         <label>Frase motivadora cada<input name="cheer" type="number" min={0} max={500} defaultValue={prefs.motivation_every ?? 50} /><small>tarjetas · 0 = nunca</small></label>
+        <SessionScopePicker value={scopeDraft} onChange={setScopeDraft} manifest={manifest} index={index} sectionIds={plan.section_ids} planFamilies={plan.families} />
         <p className="today-pace">{pace ? <>Tu ritmo: <strong>≈ {Math.round(pace)} s</strong> por tarjeta. En {prefs.timer_minutes || 25} min haces ≈ <strong>{sessionPace}</strong> tarjetas.{size ? ` ${size} tarjetas toman ≈ ${duration(size * pace)}.` : ""}{stats.today_goal > stats.today_done ? ` Lo que falta de tu meta toma ≈ ${duration((stats.today_goal - stats.today_done) * pace)}.` : ""}</> : "Responde unas tarjetas más para calcular tu ritmo."}</p>
         <button className="coach-primary" type="submit" disabled={saving}>Guardar</button>
       </form>}
