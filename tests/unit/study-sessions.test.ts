@@ -114,5 +114,5 @@ test('tags and session logs validate and stay compact', () => {
   assert.equal(s.sessions?.length, 1);
   assert.ok(validateState(s));
   assert.equal(validateState({ ...s, tags: { c1: { order: 4 } } }), false);
-  assert.equal(validateState({ ...s, preferences: { ...s.preferences, motivation_every: 1 } }), false);
+  assert.equal(validateState({ ...s, preferences: { ...s.preferences, motivation_every: 1000 } }), false);
 });

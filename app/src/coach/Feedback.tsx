@@ -9,8 +9,8 @@ export function playReward() {
   } catch { /* Sound is optional. A browser without audio still saves progress. */ }
 }
 
-export function CardFeedback({ grade, done, goal }: { grade: Grade; done: number; goal: number }) {
-  return <div className={`coach-feedback ${grade === 1 ? "try-again" : "recalled"}`} role="status"><span className="feedback-mark" aria-hidden="true">{grade === 1 ? "↻" : "✓"}</span><div><strong>{grade === 1 ? "Guardada para volver a practicar." : grade === 2 ? "Recordada, aunque costó." : "La recordaste."}</strong><span>{done} de {goal} para hoy · +10 de constancia</span></div></div>;
+export function CardFeedback({ grade, done, goal, fresh = false }: { grade: Grade; done: number; goal: number; fresh?: boolean }) {
+  return <div className={`coach-feedback ${grade === 1 ? "try-again" : "recalled"}`} role="status"><span className="feedback-mark" aria-hidden="true">{grade === 1 ? "↻" : "✓"}</span><div><strong>{grade === 1 ? fresh ? "Primera lectura guardada. Vuelve pronto." : "Guardada para volver a practicar." : grade === 2 ? "Recordada, aunque costó." : "La recordaste."}</strong><span>{done} de {goal} para hoy · +10 de constancia</span></div></div>;
 }
 
 export function Confetti() {

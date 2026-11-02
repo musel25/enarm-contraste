@@ -575,7 +575,7 @@ function validTag(value: unknown): value is CardTag {
 function optionalInteger(value: unknown, min: number, max: number) { return value === undefined || integer(value, min, max); }
 function validPreferences(value: unknown): boolean {
   return object(value) && typeof value.sound === 'boolean' && typeof value.low_motion === 'boolean' &&
-    optionalInteger(value.motivation_every, 10, 500) && optionalInteger(value.session_size, 0, 500) &&
+    optionalInteger(value.motivation_every, 0, 500) && optionalInteger(value.session_size, 0, 500) &&
     optionalInteger(value.timer_minutes, 0, 600) && optionalInteger(value.break_minutes, 1, 120);
 }
 function validPlan(value: unknown): value is StudyPlan {
