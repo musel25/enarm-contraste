@@ -26,6 +26,29 @@ export type StudyPlan = {
   section_ids: string[];
   families: ('eje' | 'madre')[];
   timezone: string;
+  /** Share of the daily time for each weekday, Sunday first. 0 is a rest day. */
+  weekly_load?: number[];
+};
+export type QuestionOrder = 1 | 2 | 3;
+export type CardTag = { order?: QuestionOrder; deepen?: boolean; later?: boolean };
+export type SessionKind = 'new' | 'review' | 'subtest' | 'break';
+export type SessionLog = {
+  id: string;
+  day: string;
+  kind: SessionKind;
+  started_at: string;
+  wall_seconds: number;
+  active_seconds: number;
+  cards: number;
+  target_seconds: number | null;
+};
+export type Preferences = {
+  sound: boolean;
+  low_motion: boolean;
+  motivation_every?: number;
+  session_size?: number;
+  timer_minutes?: number;
+  break_minutes?: number;
 };
 export type Memory = {
   card: SerializedFSRS | null;
@@ -61,8 +84,12 @@ export type CoachState = {
   days: Record<string, Assignment>;
   celebrated_days: string[];
   celebrated_plans: string[];
-  preferences: { sound: boolean; low_motion: boolean };
+  preferences: Preferences;
   undo: { attempt_id: string; previous: Memory | null } | null;
+  /** Share of the daily time for one calendar day. It overrides the weekly pattern. */
+  day_loads?: Record<string, number>;
+  tags?: Record<string, CardTag>;
+  sessions?: SessionLog[];
 };
 export type Forecast = {
   feasible: boolean;
@@ -88,4 +115,10 @@ export type StudySummary = {
   correct_today: number;
   attempts_today: number;
   due_tomorrow: number;
+  new_goal: number;
+  new_goal_done: number;
+  reviews_pending: number;
+  reviews_done_today: number;
+  first_reads_today: number;
+  errors_today: number;
 };

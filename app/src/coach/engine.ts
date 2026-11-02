@@ -1,6 +1,6 @@
 import { createEmptyCard, fsrs, type Card, type Grade as FSRSGrade } from 'ts-fsrs';
-import type { Assignment, Attempt, CoachCard, CoachIndex, CoachState, Forecast, Grade,
-  Memory, SerializedFSRS, StudyPlan, StudySummary } from './types';
+import type { Assignment, Attempt, CardTag, CoachCard, CoachIndex, CoachState, Forecast, Grade,
+  Memory, SerializedFSRS, SessionLog, StudyPlan, StudySummary } from './types';
 
 const DAY = 86_400_000;
 const HORIZON = 730;
@@ -58,6 +58,18 @@ export function selectedCards(index: CoachIndex, plan: StudyPlan): CoachCard[] {
     .sort((a, b) => a.order - b.order || a.id.localeCompare(b.id));
 }
 export function planKey(plan: StudyPlan): string { return `${plan.id}:${plan.revision}`; }
+
+/** Share of the daily study time for a calendar day: 0 rests, 1 is a full day. */
+export function dayLoad(state: Pick<CoachState, 'plan' | 'day_loads'>, day: string): number {
+  const override = state.day_loads?.[day];
+  if (override !== undefined) return override;
+  const weekly = state.plan?.weekly_load;
+  return weekly ? weekly[new Date(dayTime(day)).getUTCDay()] : 1;
+}
+/** A first reading of a new card is never an error, even when rated «Otra vez». */
+export function isError(attempt: Pick<Attempt, 'rating' | 'was_new'>): boolean {
+  return attempt.rating === 1 && !attempt.was_new;
+}
 function validBudget(minutes: number): boolean {
   return Number.isFinite(minutes) && minutes >= 5 && minutes <= 720;
 }
@@ -108,14 +120,15 @@ function selectQueue(cards: CoachCard[], progress: CoachState['progress'], day: 
   return { ids, new_ids, costs };
 }
 
-export function createAssignment(state: CoachState, index: CoachIndex, day: string, budgetMinutes?: number): Assignment {
+export function createAssignment(state: CoachState, index: CoachIndex, day: string, budgetMinutes?: number, rebuild = false): Assignment {
   requireDay(day);
   const plan = state.plan;
   if (!plan) throw new Error('A study plan is required');
   const key = planKey(plan), saved = state.days[day];
-  if (saved?.plan_key === key) return saved;
-  const minutes = budgetMinutes ?? plan.minutes_per_day;
-  if (!validBudget(minutes)) throw new Error('Daily time must be 5–720 minutes');
+  if (saved?.plan_key === key && !rebuild) return saved;
+  const base = budgetMinutes ?? plan.minutes_per_day;
+  if (!validBudget(base)) throw new Error('Daily time must be 5–720 minutes');
+  const minutes = base * dayLoad(state, day);
   const cards = selectedCards(index, plan), selected = new Set(cards.map(c => c.id));
   const factors = calibration(state, index);
   const todays = state.history.filter(a => a.day === day && selected.has(a.card_id));
@@ -136,7 +149,7 @@ export function createAssignment(state: CoachState, index: CoachIndex, day: stri
   const queue = day < plan.start_day ? { ids: [], new_ids: [], costs: {} }
     : selectQueue(cards, state.progress, day, minutes * 60 - spent, factors, done, new Set(extras));
   return { day, plan_key: key, ids: [...retained, ...queue.ids], new_ids: [...retainedNew, ...queue.new_ids],
-    costs: { ...retainedCosts, ...queue.costs }, budget_seconds: minutes * 60, extra_ids: extras };
+    costs: { ...retainedCosts, ...queue.costs }, budget_seconds: Math.round(minutes * 60), extra_ids: extras };
 }
 
 type Transition = Omit<SerializedFSRS, 'due' | 'last_review'>;
@@ -171,6 +184,47 @@ function nextMemory(previous: Memory | undefined, rating: Grade, day: string): M
     due_day, introduced_day: previous?.introduced_day ?? day, last_rating: rating, imported: previous?.imported ?? false };
 }
 
+/**
+ * Moves a review inside a small window around its FSRS interval. It picks the day
+ * with the fewest due cards per unit of study time and never picks a rest day if
+ * another day is available. This keeps reviews from piling up on one day.
+ */
+type LoadSource = Pick<CoachState, 'plan' | 'day_loads'>;
+function dueCounts(progress: CoachState['progress'], skip?: string): Map<string, number> {
+  const counts = new Map<string, number>();
+  for (const [id, other] of Object.entries(progress)) if (id !== skip) counts.set(other.due_day, (counts.get(other.due_day) || 0) + 1);
+  return counts;
+}
+function balancedWith(loads: LoadSource, memory: Memory, day: string, counts: Map<string, number>): Memory {
+  const card = memory.card;
+  if (!card) return memory;
+  const interval = card.scheduled_days;
+  const spread = interval >= 3 ? Math.max(1, Math.round(interval * 0.12)) : 0;
+  const candidates: number[] = [];
+  for (let n = Math.max(1, interval - spread); n <= Math.min(365, interval + spread); n++) candidates.push(n);
+  const open = (n: number) => dayLoad(loads, addDays(day, n)) > 0;
+  let usable = candidates.filter(open);
+  // Never land on a rest day when a nearby study day exists.
+  for (let n = interval + spread + 1; !usable.length && n <= Math.min(365, interval + spread + 7); n++) if (open(n)) usable = [n];
+  if (!usable.length || (usable.length === 1 && usable[0] === interval)) return memory;
+  const score = (n: number) => { const date = addDays(day, n); return (counts.get(date) || 0) / Math.max(0.25, dayLoad(loads, date)); };
+  const chosen = usable.reduce((best, n) => {
+    const a = score(n), b = score(best);
+    return a < b || (a === b && (Math.abs(n - interval) < Math.abs(best - interval) || (Math.abs(n - interval) === Math.abs(best - interval) && n < best))) ? n : best;
+  });
+  if (chosen === interval) return memory;
+  const due_day = addDays(day, chosen);
+  return { ...memory, due_day, card: { ...card, scheduled_days: chosen, due: `${due_day}T12:00:00.000Z` } };
+}
+/**
+ * Moves a review inside a small window around its FSRS interval. It picks the day
+ * with the fewest due cards per unit of study time and never picks a rest day if
+ * another day is available. This keeps reviews from piling up on one day.
+ */
+function balanced(state: CoachState, cardId: string, memory: Memory, day: string): Memory {
+  return memory.card ? balancedWith(state, memory, day, dueCounts(state.progress, cardId)) : memory;
+}
+
 export function recordReview(state: CoachState, index: CoachIndex, cardId: string, rating: Grade,
   elapsedSeconds: number, day: string, attemptId: string): CoachState {
   if (state.history.some(a => a.id === attemptId)) return state;
@@ -186,7 +240,7 @@ export function recordReview(state: CoachState, index: CoachIndex, cardId: strin
   if (previous?.card?.last_review && previous.card.last_review.slice(0, 10) > day) throw new Error('Review predates saved progress');
   const attempt: Attempt = { id: attemptId, card_id: cardId, day, rating, elapsed_seconds: elapsedSeconds,
     was_new: !previous, estimated_seconds: assignment.costs[cardId] };
-  let result: CoachState = { ...state, progress: { ...state.progress, [cardId]: nextMemory(previous, rating, day) },
+  let result: CoachState = { ...state, progress: { ...state.progress, [cardId]: balanced(state, cardId, nextMemory(previous, rating, day), day) },
     history: [...state.history, attempt], undo: { attempt_id: attemptId, previous: previous ?? null } };
   const today = summary(result, index, day);
   if (today.today_goal > 0 && today.today_done === today.today_goal && !state.celebrated_days.includes(day)) {
@@ -225,7 +279,7 @@ export function recordPractice(state: CoachState, card: CoachCard, rating: Grade
   return { ...state,
     days: { ...state.days, [day]: assigned ? assignment : { ...assignment,
       extra_ids: [...assignment.extra_ids, card.id], costs: { ...assignment.costs, [card.id]: cost } } },
-    progress: { ...state.progress, [card.id]: nextMemory(previous, rating, day) },
+    progress: { ...state.progress, [card.id]: balanced(state, card.id, nextMemory(previous, rating, day), day) },
     history: [...state.history, { id: attemptId, card_id: card.id, day, rating,
       elapsed_seconds: elapsedSeconds, was_new: !previous, estimated_seconds: cost }],
     undo: { attempt_id: attemptId, previous: previous ?? null },
@@ -270,7 +324,107 @@ export function summary(state: CoachState, index: CoachIndex, day: string): Stud
     remaining_seconds: pending_ids.reduce((total, id) => total + (assignment?.costs[id] ?? 0), 0),
     backlog_due: due.filter(c => !eligible.has(c.id)).length,
     correct_today: attempts.filter(a => a.rating >= 3).length, attempts_today: attempts.length,
-    due_tomorrow: cards.filter(c => state.progress[c.id]?.due_day === tomorrow).length };
+    due_tomorrow: cards.filter(c => state.progress[c.id]?.due_day === tomorrow).length,
+    new_goal: assignment?.new_ids.filter(id => selected.has(id)).length ?? 0,
+    new_goal_done: assignment?.new_ids.filter(id => selected.has(id) && done.has(id)).length ?? 0,
+    reviews_pending: due.length,
+    reviews_done_today: [...done].filter(id => attempts.find(a => a.card_id === id)?.was_new === false).length,
+    first_reads_today: attempts.filter(a => a.was_new && a.rating === 1).length,
+    errors_today: attempts.filter(isError).length };
+}
+
+export type StudyKind = 'new' | 'review';
+/** Moves cards marked «al final» behind the others and keeps the rest in order. */
+export function laterLast(ids: string[], tags: CoachState['tags']): string[] {
+  return [...ids.filter(id => !tags?.[id]?.later), ...ids.filter(id => tags?.[id]?.later)];
+}
+/**
+ * The queue for a study session. New topics start with the cards recommended
+ * for today and continue with the next unseen cards. Reviews include every due
+ * card, including overdue ones.
+ */
+export function studyQueue(state: CoachState, index: CoachIndex, day: string, kind: StudyKind): { ids: string[]; recommended: number } {
+  if (!state.plan) return { ids: [], recommended: 0 };
+  const cards = selectedCards(index, state.plan);
+  const done = new Set(state.history.filter(a => a.day === day).map(a => a.card_id));
+  if (kind === 'review') {
+    const ids = dueCards(cards, state.progress, day, done).map(c => c.id);
+    return { ids: laterLast(ids, state.tags), recommended: ids.length };
+  }
+  const assignment = state.days[day];
+  const goal = (assignment?.new_ids ?? []).filter(id => !done.has(id) && !state.progress[id]);
+  const inGoal = new Set(goal);
+  const more = cards.filter(c => !state.progress[c.id] && !done.has(c.id) && !inGoal.has(c.id)).map(c => c.id);
+  return { ids: [...laterLast(goal, state.tags), ...laterLast(more, state.tags)], recommended: goal.length };
+}
+/** Records any card of the plan. A card outside today's goal is saved as extra work. */
+export function recordStudy(state: CoachState, index: CoachIndex, cardId: string, rating: Grade,
+  elapsedSeconds: number, day: string, attemptId: string): CoachState {
+  if (state.history.some(a => a.id === attemptId)) return state;
+  const plan = state.plan;
+  const card = plan && selectedCards(index, plan).find(c => c.id === cardId);
+  if (!card) throw new Error('Card is not in the selected course');
+  let assignment = state.days[day];
+  if (!assignment || assignment.plan_key !== planKey(plan!)) assignment = createAssignment(state, index, day);
+  if (![...assignment.ids, ...assignment.extra_ids].includes(cardId)) {
+    assignment = { ...assignment, extra_ids: [...assignment.extra_ids, cardId],
+      costs: { ...assignment.costs, [cardId]: cost(card, !state.progress[cardId], calibration(state, index)) } };
+  }
+  return recordReview({ ...state, days: { ...state.days, [day]: assignment } }, index, cardId, rating, elapsedSeconds, day, attemptId);
+}
+/**
+ * Spreads unanswered due reviews over the next days. Each day receives a share
+ * that matches its study time. Rest days receive nothing.
+ */
+export function redistributeBacklog(state: CoachState, index: CoachIndex, day: string, span: number): CoachState {
+  requireDay(day);
+  if (!state.plan || !Number.isSafeInteger(span) || span < 2 || span > 14) return state;
+  const cards = selectedCards(index, state.plan);
+  const done = new Set(state.history.filter(a => a.day === day).map(a => a.card_id));
+  const due = dueCards(cards, state.progress, day, done);
+  if (!due.length) return state;
+  const days = Array.from({ length: span }, (_, n) => addDays(day, n)).filter(date => dayLoad(state, date) > 0);
+  if (!days.length) return state;
+  const moving = new Set(due.map(c => c.id));
+  const counts = new Map(days.map(date => [date, 0]));
+  for (const [id, memory] of Object.entries(state.progress)) if (!moving.has(id) && counts.has(memory.due_day)) counts.set(memory.due_day, counts.get(memory.due_day)! + 1);
+  const progress = { ...state.progress };
+  for (const card of due) {
+    const date = days.reduce((best, d) => (counts.get(d)! + 1) / dayLoad(state, d) < (counts.get(best)! + 1) / dayLoad(state, best) ? d : best);
+    counts.set(date, counts.get(date)! + 1);
+    const memory = progress[card.id];
+    const last = memory.card?.last_review?.slice(0, 10);
+    const target = last && dayDiff(last, date) > 365 ? addDays(last, 365) : date;
+    progress[card.id] = memory.card ? { ...memory, due_day: target,
+      card: { ...memory.card, due: `${target}T12:00:00.000Z`, scheduled_days: dayDiff(last!, target) } } : { ...memory, due_day: target };
+  }
+  return { ...state, progress };
+}
+/** Changes the share of study time for one day and rebuilds that day's goal. */
+export function setDayLoad(state: CoachState, index: CoachIndex, day: string, load: number | null, budgetMinutes?: number): CoachState {
+  requireDay(day);
+  const day_loads = { ...state.day_loads };
+  if (load === null) delete day_loads[day];
+  else if (finite(load, 0, 1)) day_loads[day] = load;
+  else throw new Error('Invalid day load');
+  const next = { ...state, day_loads };
+  if (!next.plan || day < next.plan.start_day) return next;
+  return { ...next, days: { ...next.days, [day]: createAssignment(next, index, day, budgetMinutes, true) } };
+}
+export function setTag(state: CoachState, cardId: string, change: Partial<CardTag>): CoachState {
+  if (!textId(cardId)) throw new Error('Invalid card');
+  const merged: CardTag = { ...state.tags?.[cardId], ...change };
+  const clean: CardTag = {};
+  if (merged.order) clean.order = merged.order;
+  if (merged.deepen) clean.deepen = true;
+  if (merged.later) clean.later = true;
+  const tags = { ...state.tags };
+  if (Object.keys(clean).length) tags[cardId] = clean; else delete tags[cardId];
+  return { ...state, tags };
+}
+export function logSession(state: CoachState, entry: SessionLog): CoachState {
+  if (!validSession(entry) || state.sessions?.some(s => s.id === entry.id)) return state;
+  return { ...state, sessions: [...(state.sessions ?? []), entry].slice(-5_000) };
 }
 
 type Projection = { finish_day: string | null; total_seconds: number };
@@ -283,16 +437,25 @@ function simulate(state: CoachState, cards: CoachCard[], day: string, minutes: n
   let total_seconds = 0;
   const selected = new Set(cards.map(c => c.id));
   const todayDone = new Set(state.history.filter(a => a.day === day && selected.has(a.card_id)).map(a => a.card_id));
+  let idle = 0;
+  const counts = dueCounts(progress);
   for (let n = 0; n < limit; n++) {
     const date = addDays(start, n);
+    const load = dayLoad(state, date);
     // Rebuilding an edited plan must reserve the same completed work as real study.
     const saved = date === day ? createAssignment(state, index, date, minutes) : undefined;
+    if (!saved && load === 0) continue;
     const queue = saved ? { ids: [...saved.ids, ...saved.extra_ids].filter(id => selected.has(id) && !todayDone.has(id)), costs: saved.costs }
-      : selectQueue(cards, progress, date, minutes * 60, factors, date === day ? todayDone : undefined);
-    if (!queue.ids.length && !saved) return { finish_day: null, total_seconds };
+      : selectQueue(cards, progress, date, minutes * 60 * load, factors, date === day ? todayDone : undefined);
+    // A light day may not fit the next card. A full week without progress cannot finish.
+    if (!queue.ids.length && !saved) { if (++idle >= 7) return { finish_day: null, total_seconds }; continue; }
+    idle = 0;
     for (const id of queue.ids) {
       total_seconds += queue.costs[id];
-      progress[id] = nextMemory(progress[id], 3, date);
+      const old = progress[id]?.due_day;
+      if (old) counts.set(old, counts.get(old)! - 1);
+      progress[id] = balancedWith(state, nextMemory(progress[id], 3, date), date, counts);
+      counts.set(progress[id].due_day, (counts.get(progress[id].due_day) || 0) + 1);
       remainingIds.delete(id);
     }
     if (!remainingIds.size) return { finish_day: date, total_seconds };
@@ -394,8 +557,30 @@ function validMemory(value: unknown): value is Memory {
   if (!validFSRS(value.card) || !isGrade(value.last_rating) || value.card.due.slice(0, 10) !== value.due_day) return false;
   return value.introduced_day === '' || (value.card.last_review !== undefined && value.introduced_day <= value.card.last_review.slice(0, 10));
 }
+function validLoads(value: unknown): value is number[] {
+  return Array.isArray(value) && value.length === 7 && value.every(load => finite(load, 0, 1)) && value.some(load => load > 0);
+}
+function validSession(value: unknown): value is SessionLog {
+  return object(value) && textId(value.id) && isDay(value.day) &&
+    ['new', 'review', 'subtest', 'break'].includes(String(value.kind)) && iso(value.started_at) &&
+    finite(value.wall_seconds, 0, 86_400) && finite(value.active_seconds, 0, 86_400) && integer(value.cards, 0, 10_000) &&
+    (value.target_seconds === null || finite(value.target_seconds, 1, 86_400)) &&
+    Object.keys(value).every(key => ['id', 'day', 'kind', 'started_at', 'wall_seconds', 'active_seconds', 'cards', 'target_seconds'].includes(key));
+}
+function validTag(value: unknown): value is CardTag {
+  return object(value) && Object.keys(value).every(key => ['order', 'deepen', 'later'].includes(key)) &&
+    (value.order === undefined || [1, 2, 3].includes(value.order as number)) &&
+    (value.deepen === undefined || value.deepen === true) && (value.later === undefined || value.later === true);
+}
+function optionalInteger(value: unknown, min: number, max: number) { return value === undefined || integer(value, min, max); }
+function validPreferences(value: unknown): boolean {
+  return object(value) && typeof value.sound === 'boolean' && typeof value.low_motion === 'boolean' &&
+    optionalInteger(value.motivation_every, 10, 500) && optionalInteger(value.session_size, 0, 500) &&
+    optionalInteger(value.timer_minutes, 0, 600) && optionalInteger(value.break_minutes, 1, 120);
+}
 function validPlan(value: unknown): value is StudyPlan {
   if (!object(value) || !textId(value.id) || !integer(value.revision) ||
+      (value.weekly_load !== undefined && !validLoads(value.weekly_load)) ||
       !['deadline', 'time'].includes(String(value.mode)) || !isDay(value.start_day) ||
       !(value.deadline_day === null || isDay(value.deadline_day)) ||
       (value.mode === 'deadline' && value.deadline_day === null) ||
@@ -409,8 +594,13 @@ export function validateState(value: unknown): value is CoachState {
     if (!object(value) || value.version !== 1 || !integer(value.revision) ||
         !(value.plan === null || validPlan(value.plan)) || !object(value.progress) || !object(value.days) ||
         !Array.isArray(value.history) || !strings(value.celebrated_days) || !value.celebrated_days.every(isDay) ||
-        !strings(value.celebrated_plans) || !object(value.preferences) ||
-        typeof value.preferences.sound !== 'boolean' || typeof value.preferences.low_motion !== 'boolean') return false;
+        !strings(value.celebrated_plans) || !validPreferences(value.preferences)) return false;
+    if (value.day_loads !== undefined && (!object(value.day_loads) ||
+        !Object.entries(value.day_loads).every(([day, load]) => isDay(day) && finite(load, 0, 1)))) return false;
+    if (value.tags !== undefined && (!object(value.tags) ||
+        !Object.entries(value.tags).every(([id, tag]) => textId(id) && validTag(tag)))) return false;
+    if (value.sessions !== undefined && (!Array.isArray(value.sessions) || value.sessions.length > 5_000 ||
+        !value.sessions.every(validSession) || new Set(value.sessions.map(s => (s as SessionLog).id)).size !== value.sessions.length)) return false;
     for (const [id, memory] of Object.entries(value.progress)) if (!textId(id) || !validMemory(memory)) return false;
     const attemptIds = new Set<string>();
     const latest = new Map<string, Attempt>();
@@ -434,7 +624,7 @@ export function validateState(value: unknown): value is CoachState {
     for (const [day, assignment] of Object.entries(value.days)) {
       if (!isDay(day) || !object(assignment) || assignment.day !== day || !textId(assignment.plan_key) ||
           !strings(assignment.ids) || !strings(assignment.new_ids) || !strings(assignment.extra_ids) ||
-          !finite(assignment.budget_seconds, 300, 43_200) || !object(assignment.costs)) return false;
+          !finite(assignment.budget_seconds, 0, 43_200) || !object(assignment.costs)) return false;
       const originalIds = assignment.ids;
       if (assignment.new_ids.some(id => !originalIds.includes(id)) ||
           assignment.extra_ids.some(id => originalIds.includes(id))) return false;
