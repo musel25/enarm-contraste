@@ -158,8 +158,13 @@ test("a session can be limited to chosen sections and to one format", async ({ p
   await page.getByRole("button", { name: "Guardar", exact: true }).click();
   await expect(page.getByRole("status").filter({ hasText: "Solo:" })).toContainText("Sección de prueba · Patrones madre");
   await expect(page.getByRole("heading", { name: "¿Qué patrón organiza este problema?" })).toBeVisible();
-  for (let n = 0; n < 4; n++) await answer(page);
+  const newTab = page.getByRole("tab", { name: /Temas nuevos/ });
+  await expect(newTab).toContainText("Faltan 4 de 4 para terminar tu selección");
+  await answer(page);
+  await expect(newTab).toContainText("Faltan 3 de 4 para terminar tu selección");
+  for (let n = 0; n < 3; n++) await answer(page);
   await expect(page.getByRole("heading", { name: /No quedan tarjetas .* en tu selección\./ })).toBeVisible();
+  await expect(newTab).toContainText("✓ Terminaste tu selección");
   await page.reload();
   await expect(page.getByRole("status").filter({ hasText: "Solo:" })).toBeVisible();
   await page.getByRole("button", { name: "Quitar filtro" }).click();

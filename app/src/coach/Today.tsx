@@ -1,7 +1,7 @@
 import { useEffect, useMemo, useRef, useState, type ReactNode } from "react";
 import type { ReviewContext } from "../storage";
 import { Icon } from "../ui";
-import { addDays, dayKey, dayLoad, logSession, scopeActive, recordStudy, redistributeBacklog, setDayLoad, setTag, studyQueue, summary, undoReview, type StudyKind } from "./engine";
+import { addDays, dayKey, dayLoad, logSession, scopeActive, scopeRemaining, recordStudy, redistributeBacklog, setDayLoad, setTag, studyQueue, summary, undoReview, type StudyKind } from "./engine";
 import { CardFeedback, Confetti, playReward } from "./Feedback";
 import { dateLabel, duration } from "./format";
 import Session from "./Session";
@@ -78,7 +78,7 @@ export default function Today({ state, index, manifest, day, saving, paused, for
 
   const queue = useMemo(() => studyQueue(state, index, day, kind), [state, index, day, kind]);
   const scope = prefs.session_scope, scoped = scopeActive(scope);
-  const scopedCounts = useMemo(() => scoped ? { fresh: studyQueue(state, index, day, "new").recommended, reviews: studyQueue(state, index, day, "review").ids.length } : null, [scoped, state, index, day]);
+  const scopedCounts = useMemo(() => scoped ? { fresh: studyQueue(state, index, day, "new").recommended, reviews: studyQueue(state, index, day, "review").ids.length, ...scopeRemaining(state, index) } : null, [scoped, state, index, day]);
   const clearScope = () => void commit(previous => ({ ...previous, preferences: { ...previous.preferences, session_scope: undefined } }));
   const ids = kind === "new" ? queue.ids.slice(0, queue.recommended + extra) : queue.ids;
   const full = size > 0 && session.answered >= size;
@@ -188,6 +188,7 @@ export default function Today({ state, index, manifest, day, saving, paused, for
   else if (kind === "new" && scoped && !complete && !(load === 0 && !extra && stats.today_goal === 0)) focus = <section className="coach-daily-finish" aria-live="polite">
     <div className="coach-finish-seal" aria-hidden="true"><Icon name="check" size={38} /></div>
     <span className="coach-kicker">TU SELECCIÓN</span><h2>{extra ? "No quedan tarjetas nuevas en tu selección." : "No quedan tarjetas recomendadas hoy en tu selección."}</h2>
+    {scopedCounts && scopedCounts.left > 0 && <p><strong>Faltan {scopedCounts.left.toLocaleString("es-MX")} de {scopedCounts.total.toLocaleString("es-MX")} tarjetas</strong> para terminar tu selección.</p>}
     <p>{stats.new_goal > stats.new_goal_done ? `Tu meta de hoy tiene ${stats.new_goal - stats.new_goal_done} temas nuevos en otras secciones o formatos.` : "Tu selección está al día."}</p>
     <div className="today-summary-actions">
       {!extra && queue.ids.length > 0 && <button className="coach-primary" onClick={() => setExtra(Infinity)}>Seguir con temas nuevos de tu selección <Icon name="arrow" size={17} /></button>}
@@ -223,7 +224,7 @@ export default function Today({ state, index, manifest, day, saving, paused, for
     <div className="coach-mobile-course" aria-hidden="true"><span>Primera vuelta <strong>{stats.covered.toLocaleString("es-MX")} / {stats.total.toLocaleString("es-MX")}</strong></span><div><i style={{ width: `${stats.coverage_percent}%` }} /></div></div>
     <div className="coach-today-layout"><div className="coach-focus-column">
       <div className="today-tabs" role="tablist" aria-label="Tipo de sesión">
-        <button role="tab" aria-selected={kind === "new"} onClick={() => switchKind("new")}><strong>Temas nuevos</strong><small>{stats.new_goal_done} de {stats.new_goal} recomendadas hoy{scopedCounts ? ` · ${scopedCounts.fresh} en tu selección` : ""}</small></button>
+        <button role="tab" aria-selected={kind === "new"} onClick={() => switchKind("new")}><strong>Temas nuevos</strong><small>{stats.new_goal_done} de {stats.new_goal} recomendadas hoy{scopedCounts ? ` · ${scopedCounts.fresh} en tu selección` : ""}</small>{scopedCounts && <small className="today-scope-left">{scopedCounts.left ? `Faltan ${scopedCounts.left.toLocaleString("es-MX")} de ${scopedCounts.total.toLocaleString("es-MX")} para terminar tu selección` : "✓ Terminaste tu selección"}</small>}</button>
         <button role="tab" aria-selected={kind === "review"} onClick={() => switchKind("review")}><strong>Repasos</strong><small>{stats.reviews_pending ? `${stats.reviews_pending} pendientes` : "Al día"}{scopedCounts ? ` · ${scopedCounts.reviews} en tu selección` : ` · ${stats.reviews_done_today} hechos`}</small></button>
       </div>
       <div className="today-session-bar">
