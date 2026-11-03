@@ -352,6 +352,12 @@ export function inScope(card: CoachCard, scope: SessionScope | undefined): boole
 export function scopeActive(scope: SessionScope | undefined): boolean {
   return !!scope && (scope.section_ids.length > 0 || scope.block_ids.length > 0 || scope.families.length > 0);
 }
+/** First-pass cards of the session scope: all of them and the ones never answered. Ignores today's schedule. */
+export function scopeRemaining(state: CoachState, index: CoachIndex): { total: number; left: number } {
+  if (!state.plan) return { total: 0, left: 0 };
+  const cards = selectedCards(index, state.plan).filter(card => inScope(card, state.preferences.session_scope));
+  return { total: cards.length, left: cards.filter(card => !state.progress[card.id]).length };
+}
 export function studyQueue(state: CoachState, index: CoachIndex, day: string, kind: StudyKind): { ids: string[]; recommended: number } {
   if (!state.plan) return { ids: [], recommended: 0 };
   const scope = state.preferences.session_scope;

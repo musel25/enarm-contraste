@@ -1,7 +1,7 @@
 import assert from 'node:assert/strict';
 import test from 'node:test';
 import { addDays, createAssignment, dayLoad, emptyState, estimatePlan, isError, logSession, recordReview,
-  recordStudy, redistributeBacklog, setDayLoad, setTag, studyQueue, summary, validateState } from '../../app/src/coach/engine';
+  recordStudy, redistributeBacklog, scopeRemaining, setDayLoad, setTag, studyQueue, summary, validateState } from '../../app/src/coach/engine';
 import type { CoachCard, CoachIndex, CoachState, StudyPlan } from '../../app/src/coach/types';
 
 const day = '2026-11-02'; // Monday
@@ -135,4 +135,25 @@ test('a session scope limits new and review queues to chosen sections, blocks an
   assert.deepEqual(studyQueue(scoped({ section_ids: ['s2'], block_ids: [], families: [] }), i, later, 'review').ids, ['m3']);
   assert.ok(validateState(scoped({ section_ids: ['s2'], block_ids: [], families: ['madre'] })));
   assert.equal(validateState(scoped({ section_ids: [], block_ids: [], families: ['otro' as 'eje'] })), false);
+});
+
+test('scope remaining counts first-pass cards left in the chosen sections or blocks, even on days they are not scheduled', () => {
+  const cards: CoachCard[] = [
+    { ...card('a1', 0, 290), section_id: 's1', block_id: 'b1', family: 'eje' },
+    { ...card('a2', 1, 290), section_id: 's1', block_id: 'b1', family: 'madre' },
+    { ...card('b1', 2, 290), section_id: 's2', block_id: 'b2', family: 'eje' },
+    { ...card('b2', 3, 290), section_id: 's2', block_id: 'b2', family: 'eje' },
+    { ...card('b3', 4, 290), section_id: 's2', block_id: 'b3', family: 'eje' },
+  ];
+  const i: CoachIndex = { schema_version: 1, content_sha256: 'a'.repeat(64), cards };
+  let s = assign(plan({ section_ids: ['s1', 's2'], families: ['eje', 'madre'], minutes_per_day: 5 }), i);
+  const scoped = (scope: NonNullable<CoachState['preferences']['session_scope']>) => ({ ...s, preferences: { ...s.preferences, session_scope: scope } });
+  const s2 = { section_ids: ['s2'], block_ids: [], families: [] as ('eje' | 'madre')[] };
+  assert.equal(studyQueue(scoped(s2), i, day, 'new').recommended, 0);
+  assert.deepEqual(scopeRemaining(scoped(s2), i), { total: 3, left: 3 });
+  s = recordStudy(s, i, 'b1', 1, 20, day, 'b1');
+  assert.deepEqual(scopeRemaining(scoped(s2), i), { total: 3, left: 2 });
+  assert.deepEqual(scopeRemaining(scoped({ section_ids: ['s2'], block_ids: ['b3'], families: [] }), i), { total: 1, left: 1 });
+  assert.deepEqual(scopeRemaining(scoped({ section_ids: ['s1'], block_ids: [], families: ['madre'] }), i), { total: 1, left: 1 });
+  assert.deepEqual(scopeRemaining({ ...s, plan: null }, i), { total: 0, left: 0 });
 });
