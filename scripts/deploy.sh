@@ -15,7 +15,11 @@ npm run build
 uv run python -m unittest discover -s tests -p 'test_*.py'
 npm test
 printf '%s\n' "$commit" > dist/version.txt
-asset=$(basename "$(rg --files dist/assets -g 'index-*.js')")
+asset=$(find dist/assets -maxdepth 1 -name 'index-*.js' -printf '%f\n' | head -n 1)
+if [[ -z "$asset" ]]; then
+  echo 'No dist/assets/index-*.js found after the build.' >&2
+  exit 1
+fi
 release="/var/www/enarm-contraste/releases/${commit:0:12}-$(date -u +%Y%m%dT%H%M%S)-standalone"
 api_release="${release%-standalone}-api"
 config_upload="/tmp/enarm-nginx-${commit:0:12}.conf"
