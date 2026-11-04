@@ -579,7 +579,7 @@ function validLoads(value: unknown): value is number[] {
 }
 function validSession(value: unknown): value is SessionLog {
   return object(value) && textId(value.id) && isDay(value.day) &&
-    ['new', 'review', 'subtest', 'break'].includes(String(value.kind)) && iso(value.started_at) &&
+    (value.kind === 'new' || value.kind === 'review' || value.kind === 'subtest' || value.kind === 'break') && iso(value.started_at) &&
     finite(value.wall_seconds, 0, 86_400) && finite(value.active_seconds, 0, 86_400) && integer(value.cards, 0, 10_000) &&
     (value.target_seconds === null || finite(value.target_seconds, 1, 86_400)) &&
     Object.keys(value).every(key => ['id', 'day', 'kind', 'started_at', 'wall_seconds', 'active_seconds', 'cards', 'target_seconds'].includes(key));
@@ -604,7 +604,7 @@ function validScope(value: unknown): value is SessionScope {
 function validPlan(value: unknown): value is StudyPlan {
   if (!object(value) || !textId(value.id) || !integer(value.revision) ||
       (value.weekly_load !== undefined && !validLoads(value.weekly_load)) ||
-      !['deadline', 'time'].includes(String(value.mode)) || !isDay(value.start_day) ||
+      (value.mode !== 'deadline' && value.mode !== 'time') || !isDay(value.start_day) ||
       !(value.deadline_day === null || isDay(value.deadline_day)) ||
       (value.mode === 'deadline' && value.deadline_day === null) ||
       !finite(value.minutes_per_day, 5, 720) || !strings(value.section_ids, false) ||

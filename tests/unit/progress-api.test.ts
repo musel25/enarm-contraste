@@ -207,3 +207,16 @@ test("the per-IP request limit is configurable and defaults stay strict", async 
     assert.deepEqual(statuses, [404, 404, 404, 429]);
   } finally { app.server.closeAllConnections(); await new Promise<void>(resolve => app.server.close(() => resolve())); app.database.close(); await rm(dir, { recursive: true, force: true }); }
 });
+
+test("malformed enum types cannot replace saved progress", async () => {
+  const api = await fixture();
+  try {
+    const token = code();
+    const saved = await (await api.request(token, "PUT", { expected_revision: 0, state: emptyState(), preserve: false })).json();
+    const malformed = { ...saved.state, plan: { id: "plan", revision: 1, mode: ["deadline"],
+      start_day: "2026-11-04", deadline_day: null, minutes_per_day: 5,
+      section_ids: ["01"], families: ["eje"], timezone: "UTC" } };
+    assert.equal((await api.request(token, "PUT", { expected_revision: 1, state: malformed, preserve: false })).status, 422);
+    assert.deepEqual(await (await api.request(token)).json(), saved);
+  } finally { await api.close(); }
+});

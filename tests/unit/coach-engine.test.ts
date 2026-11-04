@@ -21,6 +21,24 @@ function assigned(s: CoachState, i: CoachIndex, date = day): CoachState {
   return { ...s, days: { ...s.days, [date]: createAssignment(s, i, date) } };
 }
 
+test('backup validation requires a string plan mode', () => {
+  const valid = state();
+  assert.equal(validateState(valid), true);
+  for (const mode of [['time'], ['deadline'], [['time']], {}, null, 0]) {
+    assert.equal(validateState({ ...valid, plan: { ...valid.plan, mode } }), false, JSON.stringify(mode));
+  }
+  assert.equal(validateState(state({ mode: 'deadline', deadline_day: day })), true);
+});
+
+test('backup validation requires a string session kind', () => {
+  const session = { id: 'session', day, kind: 'review', started_at: `${day}T12:00:00.000Z`,
+    wall_seconds: 60, active_seconds: 30, cards: 1, target_seconds: null };
+  assert.equal(validateState({ ...state(), sessions: [session] }), true);
+  for (const kind of [['review'], ['break'], [['new']], {}, null, 0]) {
+    assert.equal(validateState({ ...state(), sessions: [{ ...session, kind }] }), false, JSON.stringify(kind));
+  }
+});
+
 test('a plan-edit forecast includes completed work in the daily budget', () => {
   const i = index([card('a', 1, 300), card('b', 2, 300)]);
   let s = assigned(state(), i);

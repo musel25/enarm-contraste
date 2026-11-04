@@ -36,9 +36,9 @@ Files: `server/api.ts`, `server/rate-limit.ts`, `tests/unit/progress-api.test.ts
 
 Files: `app/src/coach/engine.ts`, engine and API unit tests.
 
-- [ ] Add malformed mode/kind tests and rejected API-write tests. Observe failures.
-- [ ] Require exact enum values. Run Node tests and type checks.
-- [ ] Commit and push `fix: reject non-string study state enum values`.
+- [x] Add malformed mode/kind tests and rejected API-write tests. Observe failures.
+- [x] Require exact enum values. Run Node tests and type checks.
+- [x] Commit and push `fix: reject non-string study state enum values`.
 
 ## Task 3: Isolated browser tests
 
