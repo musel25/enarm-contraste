@@ -68,6 +68,14 @@ Files: runtime pins, package scripts, CI workflow, `AGENTS.md`, `README.md`, `do
 
 ## Task 6: Final review
 
-- [ ] Request one fresh read-only review of the full branch.
-- [ ] Fix material findings with regression tests. Run the complete checks after fixes.
-- [ ] Push all commits. Create a pull request with results. Record completed tasks and any remaining limits.
+- [x] Request one fresh read-only review of the full branch.
+- [x] Fix material findings with regression tests. Run the complete checks after fixes.
+- [x] Push all commits. Create a pull request with results. Record completed tasks and any remaining limits.
+
+## Verification record
+
+- `npm run check` passed with Playwright Chromium: 56 Node tests, 33 Python tests, 72 browser tests, formatting, lint, TypeScript, content/deck audits, and web/server builds.
+- A fresh read-only reviewer found no Critical, Important, or Minor defects in `404a7f4..3f978bd`. Compiler syntax trees and clinical content differences were checked.
+- [Pull request and current CI checks](https://github.com/musel25/enarm-contraste/pull/1).
+- Global instructions were backed up and updated. The Bluetooth runbook link now points to the existing `Unactive/Notes/Tech` location.
+- Production settings, clinical accuracy, sustained attack load, and live deployment are outside this maintenance validation. Clinical JSON and saved progress formats did not change. No deployment was performed.
