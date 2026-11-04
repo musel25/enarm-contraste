@@ -105,6 +105,9 @@ test("section Creadas and Suspendidas preserve cards and restore both card types
     1,
   );
   await page.getByRole("button", { name: "Reintegrar flashcard", exact: true }).click();
+  await expect(
+    page.getByText("No hay flashcards suspendidas en esta sección.", { exact: true }),
+  ).toBeVisible();
   await page.getByRole("button", { name: "Creadas", exact: true }).click();
   await expect(page.getByRole("heading", { name: "Pregunta personal", exact: true })).toBeVisible();
   await page.getByText("Elegir un bloque", { exact: true }).click();
