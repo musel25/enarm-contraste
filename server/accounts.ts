@@ -34,12 +34,14 @@ export function createAccountRoutes(
     "UPDATE accounts SET salt=?,verifier=?,wrapped=?,updated_at=? WHERE username=?",
   );
   const failures = new Map<string, { window: number; count: number }>();
+  const inFlight = new Map<string, number>();
   const tooMany = (key: string, limit: number) => {
     const window = Math.floor(Date.now() / 900_000),
       entry = failures.get(key);
     if (failures.size > 10_000)
       for (const [k, v] of failures) if (v.window !== window) failures.delete(k);
-    return !!entry && entry.window === window && entry.count >= limit;
+    const failed = entry?.window === window ? entry.count : 0;
+    return failed + (inFlight.get(key) ?? 0) >= limit;
   };
   const fail = (key: string) => {
     const window = Math.floor(Date.now() / 900_000),
@@ -70,26 +72,36 @@ export function createAccountRoutes(
       const username = normalizeUser(body?.username);
       if (tooMany(`ip:${ip}`, 30) || tooMany(`user:${username}`, 10))
         throw new HttpError(429, "Demasiados intentos. Espera 15 minutos.");
-      const account = USERNAME.test(username)
-        ? (findAccount.get(username) as Account | undefined)
-        : undefined;
-      const password = validPassword(body?.password) ? (body!.password as string) : "";
-      // Derive keys even for unknown users so the response time does not reveal accounts.
-      const keys = await deriveKeys(
-        password || "-",
-        account ? Buffer.from(account.salt, "base64") : randomBytes(16),
-      );
-      if (
-        !account ||
-        !password ||
-        !timingSafeEqual(keys.verifier, Buffer.from(account.verifier, "base64"))
-      ) {
-        fail(`ip:${ip}`);
-        fail(`user:${username}`);
-        throw new HttpError(401, "Usuario o contraseña incorrectos.");
+      const attemptKeys = [`ip:${ip}`, `user:${username}`];
+      for (const key of attemptKeys) inFlight.set(key, (inFlight.get(key) ?? 0) + 1);
+      try {
+        const account = USERNAME.test(username)
+          ? (findAccount.get(username) as Account | undefined)
+          : undefined;
+        const password = validPassword(body?.password) ? (body!.password as string) : "";
+        // Derive keys even for unknown users so the response time does not reveal accounts.
+        const keys = await deriveKeys(
+          password || "-",
+          account ? Buffer.from(account.salt, "base64") : randomBytes(16),
+        );
+        if (
+          !account ||
+          !password ||
+          !timingSafeEqual(keys.verifier, Buffer.from(account.verifier, "base64"))
+        ) {
+          fail(`ip:${ip}`);
+          fail(`user:${username}`);
+          throw new HttpError(401, "Usuario o contraseña incorrectos.");
+        }
+        reply(response, 200, { username, code: unwrap(account.wrapped, keys.key) });
+        return true;
+      } finally {
+        for (const key of attemptKeys) {
+          const remaining = (inFlight.get(key) ?? 1) - 1;
+          if (remaining) inFlight.set(key, remaining);
+          else inFlight.delete(key);
+        }
       }
-      reply(response, 200, { username, code: unwrap(account.wrapped, keys.key) });
-      return true;
     }
     const code = progressCode(request);
     const digest = hash(code);

@@ -341,6 +341,28 @@ test("login attempts are limited per username", async () => {
   }
 });
 
+test("concurrent login failures cannot bypass the username limit", async () => {
+  const api = await fixture();
+  try {
+    const port = (api.server().address() as { port: number }).port;
+    const responses = await Promise.all(
+      Array.from({ length: 12 }, () =>
+        fetch(`http://127.0.0.1:${port}/api/account/login`, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ username: "unknown_student", password: "wrong-password" }),
+        }),
+      ),
+    );
+    assert.deepEqual(
+      responses.map((response) => response.status).sort(),
+      [401, 401, 401, 401, 401, 401, 401, 401, 401, 401, 429, 429],
+    );
+  } finally {
+    await api.close();
+  }
+});
+
 test("account routes share the IP request budget", async () => {
   const api = await fixture({ requestLimit: 2 });
   try {
