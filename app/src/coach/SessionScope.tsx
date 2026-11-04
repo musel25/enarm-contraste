@@ -1,7 +1,7 @@
 import { useEffect, useMemo, useState } from "react";
 import type { StudyManifest, StudySection } from "../library-types";
 import { loadSection } from "./resources";
-import type { CoachIndex, SessionScope } from "./types";
+import type { CardFamily, CoachIndex, SessionScope } from "./types";
 
 export const emptyScope: SessionScope = { section_ids: [], block_ids: [], families: [] };
 const families = [
@@ -39,7 +39,7 @@ export default function SessionScopePicker({
   manifest: StudyManifest;
   index: CoachIndex;
   sectionIds: string[];
-  planFamilies: ("eje" | "madre")[];
+  planFamilies: CardFamily[];
 }) {
   const [loaded, setLoaded] = useState<Record<string, StudySection>>({});
   const available = manifest.sections.filter((s) => sectionIds.includes(s.id));

@@ -1,3 +1,4 @@
+import { personalIndex } from "../coach/personal";
 import { isError } from "../coach/engine";
 import type { CoachCard, CoachIndex, CoachState } from "../coach/types";
 
@@ -47,6 +48,8 @@ function blank(id: string): ProgressRow {
   };
 }
 export function progressRows(state: CoachState, index: CoachIndex, day: string) {
+  index = personalIndex(index, state);
+  const suspended = new Set(state.suspended_cards ?? []);
   const sections = new Map<string, ProgressRow>(),
     blocks = new Map<string, ProgressRow>();
   const cards = new Map(index.cards.map((card) => [card.id, card]));
@@ -55,8 +58,10 @@ export function progressRows(state: CoachState, index: CoachIndex, day: string) 
     if (!blocks.has(card.block_id)) blocks.set(card.block_id, blank(card.block_id));
     return [sections.get(card.section_id)!, blocks.get(card.block_id)!];
   };
-  for (const card of index.cards) for (const row of rowsFor(card)) row.total++;
+  for (const card of index.cards)
+    for (const row of rowsFor(card)) if (!suspended.has(card.id)) row.total++;
   for (const [id, memory] of Object.entries(state.progress)) {
+    if (suspended.has(id)) continue;
     const card = cards.get(id) || caseMeta(id);
     if (!card) continue;
     for (const row of rowsFor(card)) {

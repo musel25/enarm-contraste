@@ -1,8 +1,8 @@
 # Personal flashcards and suspension
 
-Status: proposed design. Product implementation waits for user approval.
+Status: approved by the user on 2026-11-04. Proceed with implementation and routine builder decisions without further design approval.
 
-Builder check: an independent software-engineer reviewer found no important questions left before planning. User approval is still pending.
+Builder check: an independent software-engineer reviewer found no important questions left before planning.
 
 ## Purpose
 

@@ -9,6 +9,52 @@ import { backupDatabase } from "../../server/backup";
 import { emptyState } from "../../app/src/coach/engine";
 
 const code = () => randomBytes(32).toString("base64url");
+
+test("private card payloads reject malformed data and persist through retries and recovery", async () => {
+  const api = await fixture();
+  try {
+    const token = code();
+    const invalid = await api.request(token, "PUT", {
+      expected_revision: 0,
+      state: { ...emptyState(), created_cards: { x: { front: 1 } } },
+      preserve: false,
+    });
+    assert.equal(invalid.status, 422);
+    const id = "created/6a9121c5-fc78-453b-90a7-d265eed8a90e";
+    const state = {
+      ...emptyState(),
+      created_cards: {
+        [id]: {
+          id,
+          section_id: "01",
+          source_card_id: "eje/01.01",
+          source_block_id: "01.01",
+          front: "Question",
+          back: "Answer",
+          created_at: "2026-11-04T12:00:00.000Z",
+        },
+      },
+      suspended_cards: [id],
+    };
+    const body = { expected_revision: 0, state, preserve: false };
+    const first = await api.request(token, "PUT", body);
+    assert.equal(first.status, 200);
+    const saved = await first.json();
+    assert.deepEqual(await (await api.request(token, "PUT", body)).json(), saved);
+    assert.equal((await api.request(code())).status, 404);
+    await api.restart();
+    assert.deepEqual(await (await api.request(token)).json(), saved);
+    const replace = await api.request(token, "PUT", {
+      expected_revision: saved.state.revision,
+      state: emptyState(),
+      preserve: true,
+    });
+    assert.equal(replace.status, 200);
+    assert.deepEqual(await (await api.request(token, "GET", undefined, "/previous")).json(), saved);
+  } finally {
+    await api.close();
+  }
+});
 async function fixture(limits: { requestLimit?: number; createLimit?: number } = {}) {
   const dir = await mkdtemp(join(tmpdir(), "enarm-api-test-"));
   const path = join(dir, "progress.sqlite");

@@ -5,7 +5,7 @@ export interface CardSource {
 }
 export interface StudyCardData {
   id: string;
-  family: "eje" | "madre";
+  family: "eje" | "madre" | "creadas";
   level: number;
   section_id: string;
   block_id: string;

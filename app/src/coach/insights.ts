@@ -88,7 +88,7 @@ export type Coverage = {
 };
 /** First-pass coverage of the plan by block and by section. */
 export function coverage(state: CoachState, index: CoachIndex): Coverage {
-  const cards = state.plan ? selectedCards(index, state.plan) : index.cards;
+  const cards = state.plan ? selectedCards(index, state.plan, state) : index.cards;
   const blocks = new Map<string, { section: string; total: number; done: number }>();
   for (const card of cards) {
     const row = blocks.get(card.block_id) ?? { section: card.section_id, total: 0, done: 0 };
