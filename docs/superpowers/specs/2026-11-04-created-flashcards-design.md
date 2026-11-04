@@ -89,6 +89,6 @@ Add browser coverage that creates a card during a new-card session, uses selecte
 
 Run affected tests per completed implementation unit. Run `npm run check` before final review. Commit each self-contained unit with a Conventional Commit and push each commit. Keep the pull request description current. Report checks and limits.
 
-## Approval needed
+## Approved interpretation
 
-Confirm that selected text is copied into the new card editor. Persistent underlining of the original card is not included in this proposal. All other unspecified UI and data details can be resolved by the builder within the behavior above.
+Selected text is copied into the new card editor. Persistent underlining of the original card is not included. The user approved this design and authorized routine builder decisions.

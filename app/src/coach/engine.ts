@@ -91,7 +91,8 @@ export function selectedCards(index: CoachIndex, plan: StudyPlan, state?: CoachS
     .filter(
       (c) =>
         sections.has(c.section_id) &&
-        (families.has(c.family) || c.family === "creadas") &&
+        (families.has(c.family) ||
+          (c.family === "creadas" && families.size > 0 && plan.created_cards_enabled !== false)) &&
         !state?.suspended_cards?.includes(c.id),
     )
     .sort((a, b) => a.order - b.order || a.id.localeCompare(b.id));
@@ -543,6 +544,17 @@ export function summary(state: CoachState, index: CoachIndex, day: string): Stud
   const cards = state.plan ? selectedCards(index, state.plan, state) : [];
   const selected = new Set(cards.map((c) => c.id)),
     assignment = state.days[day];
+  // Suspension removes pending work, but never removes a completed answer from today's record.
+  const course = state.plan
+    ? new Set(selectedCards(personalIndex(index, state), state.plan).map((c) => c.id))
+    : new Set<string>();
+  for (const attempt of state.history)
+    if (
+      attempt.day === day &&
+      state.suspended_cards?.includes(attempt.card_id) &&
+      course.has(attempt.card_id)
+    )
+      selected.add(attempt.card_id);
   const ids = assignment?.ids.filter((id) => selected.has(id)) ?? [];
   const extras = assignment?.extra_ids.filter((id) => selected.has(id)) ?? [];
   const eligible = new Set([...ids, ...extras]);
@@ -1101,6 +1113,8 @@ function validPlan(value: unknown): value is StudyPlan {
     !strings(value.section_ids, false) ||
     !strings(value.families, false) ||
     !value.families.every((f) => f === "eje" || f === "madre" || f === "creadas") ||
+    (value.created_cards_enabled !== undefined &&
+      typeof value.created_cards_enabled !== "boolean") ||
     typeof value.timezone !== "string"
   )
     return false;

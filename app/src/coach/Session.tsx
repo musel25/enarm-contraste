@@ -249,7 +249,7 @@ export default function Session({
           }
         />
       </div>
-      {onTag && <CardTags tag={tag} disabled={busy || paused} onChange={onTag} />}
+      {onTag && <CardTags tag={tag} disabled={busy || paused || editing} onChange={onTag} />}
     </div>
   );
 }

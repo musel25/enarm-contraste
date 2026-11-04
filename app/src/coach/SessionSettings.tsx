@@ -90,7 +90,10 @@ export default function SessionSettings({
         manifest={manifest}
         index={index}
         sectionIds={plan.section_ids}
-        planFamilies={plan.families}
+        planFamilies={[
+          ...plan.families,
+          ...(plan.created_cards_enabled !== false ? ["creadas" as const] : []),
+        ]}
       />
       <p className="today-pace">
         {pace ? (

@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import StudyCard from "../StudyCard";
 import type { StudyCardData } from "../library-types";
 import type { CardTag, Grade } from "../coach/types";
+import type { PersonalToolsOptions } from "../coach/PersonalCardTools";
 import CardTags from "../coach/CardTags";
 import { dateLabel } from "../coach/format";
 import type { DiagnosticCase } from "./cases";
@@ -24,7 +25,9 @@ export default function TestSession({
   onReview,
   tags,
   onTag,
+  personal,
 }: {
+  personal?: PersonalToolsOptions;
   questions: TestQuestion[];
   disabled: boolean;
   tags?: Record<string, CardTag>;
@@ -53,6 +56,16 @@ export default function TestSession({
     elapsed = useRef(0);
   const root = useRef<HTMLElement>(null);
   const question = queue[position];
+  const [editing, setEditing] = useState(false);
+  const suspendedIds = personal?.state.suspended_cards;
+  useEffect(() => {
+    if (!suspendedIds?.length) return;
+    const filtered = queue.filter((q, i) => i < position || !suspendedIds.includes(q.id));
+    if (filtered.length === queue.length) return;
+    setQueue(filtered);
+    setRepeats((old) => new Set([...old].filter((id) => !suspendedIds.includes(id))));
+    if (filtered.length <= position) setFinished(true);
+  }, [suspendedIds, queue, position]);
   useEffect(() => {
     const frame = requestAnimationFrame(() => {
       const heading = root.current?.querySelector<HTMLHeadingElement>("h2");
@@ -70,13 +83,14 @@ export default function TestSession({
     setRetry(null);
   }, [position, queue]);
   useEffect(() => {
-    let active = document.visibilityState === "visible" && !disabled && !busy && !answer;
+    let active =
+      document.visibilityState === "visible" && !disabled && !busy && !answer && !editing;
     let last = performance.now();
     const tick = () => {
       const now = performance.now();
       if (active) elapsed.current += now - last;
       last = now;
-      active = document.visibilityState === "visible" && !disabled && !busy && !answer;
+      active = document.visibilityState === "visible" && !disabled && !busy && !answer && !editing;
     };
     const timer = setInterval(tick, 1000);
     document.addEventListener("visibilitychange", tick);
@@ -85,9 +99,9 @@ export default function TestSession({
       clearInterval(timer);
       document.removeEventListener("visibilitychange", tick);
     };
-  }, [position, queue, disabled, busy, answer]);
+  }, [position, queue, disabled, busy, answer, editing]);
   async function rate(grade: Grade) {
-    if (lock.current || disabled || answer) return;
+    if (lock.current || disabled || answer || editing) return;
     lock.current = true;
     setBusy(true);
     const attempt = retry || {
@@ -115,7 +129,7 @@ export default function TestSession({
     }
   }
   function repeatSelected() {
-    const next = queue.filter((item) => repeats.has(item.id));
+    const next = queue.filter((item) => repeats.has(item.id) && !suspendedIds?.includes(item.id));
     if (!next.length) return;
     setQueue(next);
     setPosition(0);
@@ -209,6 +223,15 @@ export default function TestSession({
         <StudyCard
           key={`${question.id}/${position}`}
           card={question.card}
+          personal={
+            personal
+              ? {
+                  ...personal,
+                  disabled: personal.disabled || busy || !!retry,
+                  onEditingChange: setEditing,
+                }
+              : undefined
+          }
           initialHighlight={false}
           onRate={() => {}}
           onReview={() => onReview(question)}
@@ -351,7 +374,7 @@ export default function TestSession({
       {onTag && (
         <CardTags
           tag={tags?.[question.id]}
-          disabled={busy || disabled}
+          disabled={busy || disabled || editing}
           laterLabel="Al final del subtest"
           onChange={(change) => {
             onTag(question.id, change);

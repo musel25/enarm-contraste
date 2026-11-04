@@ -32,6 +32,12 @@ La primera vez que ves una tarjeta, «Otra vez» guarda una **primera lectura**.
 
 Debajo de cada tarjeta puedes marcar su **orden** (1º básica, 2º intermedia, 3º integradora), **Profundizar** y **Al final de la sesión**. Las tarjetas marcadas al final aparecen después de las demás.
 
+**Tus flashcards.** Durante temas nuevos, repasos, Biblioteca o un subtest de flashcards, usa **Añadir flashcard**. Escribe o pega texto en **Frente** y **Reverso**. También puedes seleccionar texto visible de la tarjeta y usar **Usar en el frente** o **Usar en el reverso**. La selección se copia al borrador. No guarda subrayados en la tarjeta original. El editor pausa el tiempo activo de esa pregunta. Guardar la flashcard no responde ni avanza la tarjeta original.
+
+Las flashcards personales se guardan en tu perfil del VPS y en sus copias JSON. Heredan la sección de origen y aparecen en un bloque extra **Creadas**. Elige **Creadas** en Biblioteca, Personalizar o los tipos de pregunta del subtest para estudiar solo tus flashcards. También puedes incluirlas en tu plan. Las tarjetas creadas durante el día están disponibles al seguir con más temas nuevos. No cambian la meta que ya estaba asignada. Después de calificarlas, usan los mismos repasos y la misma opción de deshacer. El contenido personal conserva el texto pegado; no interpreta HTML. Los mazos Anki descargables conservan el contenido de la biblioteca.
+
+**Suspender flashcard** retira una tarjeta de las sesiones sin borrar su contenido ni su historial. En Biblioteca, abre su sección y elige **Suspendidas**. **Reintegrar flashcard** la devuelve con su fecha de repaso anterior. Una tarjeta que nunca estudiaste vuelve a temas nuevos. No hay borrado permanente ni edición de flashcards personales guardadas en esta versión. Puedes suspender una tarjeta y crear su reemplazo.
+
 **Tu constancia** muestra los últimos 30 días. El verde brilla más con cada 50 respuestas. Toca un día para ver sus respuestas, nuevas, repasos, errores, tiempo, sesiones, descansos y bloques. **Tu meta grande** indica bloques y secciones completas, empezadas y por empezar.
 
 ## Avance y subtests
@@ -48,10 +54,11 @@ El bloque de amenorreas de Ginecología añade **24 viñetas distintas**, tres p
 
 Los casos diagnósticos tienen memoria de repaso propia. Se cuentan aparte de las 2,900 flashcards. Una respuesta conjunta de Eje Clínico se atribuye al bloque; un caso individual permite identificar el tema del error. Las marcas antiguas de Biblioteca se conservan, pero no inventan respuestas históricas ni fechas de estudio.
 
-## Dos formatos
+## Formatos
 
 - **Eje Clínico:** casos del mismo grupo en el frente. Diagnósticos, discriminadores y primera decisión en el reverso.
 - **Patrones Madre:** cuatro niveles. Reconocer el patrón, nombrar el diagnóstico, explicar los hallazgos y decidir el manejo según los factores del caso.
+- **Creadas:** tus flashcards personales, agrupadas por sección. Puedes escribirlas durante el estudio. Se guardan en tu perfil y se cuentan aparte del inventario publicado.
 
 El inventario contiene 34 secciones, 355 grupos y 730 apariciones de temas. Conserva 719 combinaciones únicas de tema y referencia. Los formatos producen 355 tarjetas Eje Clínico y 2,545 Patrones Madre: 2,900 tarjetas en total.
 

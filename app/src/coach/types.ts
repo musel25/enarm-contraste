@@ -35,6 +35,8 @@ export type StudyPlan = {
   minutes_per_day: number;
   section_ids: string[];
   families: CardFamily[];
+  /** Missing on legacy plans, which include personal cards by default. */
+  created_cards_enabled?: boolean;
   timezone: string;
   /** Share of the daily time for each weekday, Sunday first. 0 is a rest day. */
   weekly_load?: number[];

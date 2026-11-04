@@ -8,7 +8,8 @@ import { useCoachStore, useStudyDay } from "./coach/hooks";
 import { recordPractice } from "./coach/engine";
 import { dateLabel, timezone } from "./coach/format";
 import { completionNotices } from "./learning/model";
-import type { CoachIndex } from "./coach/types";
+import { personalSection } from "./coach/personal";
+import type { CardFamily, CoachIndex } from "./coach/types";
 
 const root = `${import.meta.env.BASE_URL}study/`;
 const levels = [
@@ -42,16 +43,21 @@ export default function Library({ onReview }: { onReview: (context: ReviewContex
   const [manifestError, setManifestError] = useState(false);
   const [attempt, setAttempt] = useState(0);
   const [sectionId, setSectionId] = useState<string | null>(null);
-  const [section, setSection] = useState<StudySection | null>(null);
+  const [loadedSection, setSection] = useState<StudySection | null>(null);
   const [sectionError, setSectionError] = useState(false);
   const [sectionAttempt, setSectionAttempt] = useState(0);
   const [query, setQuery] = useState("");
-  const [family, setFamily] = useState<"eje" | "madre">("eje");
+  const [family, setFamily] = useState<CardFamily>("eje");
   const [level, setLevel] = useState("1");
   const [block, setBlock] = useState("all");
   const [index, setIndex] = useState(0);
   const [progress] = useState(() => readState("enarm-full-library-progress-v1", validPractice, {}));
   const store = useCoachStore();
+  const section = useMemo(
+    () => (loadedSection ? personalSection(loadedSection, store.state) : null),
+    [loadedSection, store.state.created_cards],
+  );
+  const [showSuspended, setShowSuspended] = useState(false);
   const day = useStudyDay(store.state.plan?.timezone || timezone());
   const [notice, setNotice] = useState("");
   const [pendingNotice, setPendingNotice] = useState("");
@@ -97,11 +103,15 @@ export default function Library({ onReview }: { onReview: (context: ReviewContex
       section?.cards.filter(
         (c) =>
           c.family === family &&
-          (family === "eje" || c.level === Number(level)) &&
+          (family !== "madre" || c.level === Number(level)) &&
+          !store.state.suspended_cards?.includes(c.id) &&
           (block === "all" || c.block_id === block),
       ) || [],
-    [section, family, level, block],
+    [section, family, level, block, store.state.suspended_cards],
   );
+  useEffect(() => {
+    setIndex((old) => Math.min(old, Math.max(0, cards.length - 1)));
+  }, [cards.length]);
   const card = cards[index];
   const combined = { ...progress };
   for (const [id, memory] of Object.entries(store.state.progress))
@@ -159,6 +169,7 @@ export default function Library({ onReview }: { onReview: (context: ReviewContex
   }
   const selectSection = (id: string | null, blockId = "all") => {
     setSectionId(id);
+    setShowSuspended(false);
     setSection(null);
     setBlock(blockId);
     setIndex(0);
@@ -169,16 +180,29 @@ export default function Library({ onReview }: { onReview: (context: ReviewContex
       window.scrollTo({ top: 0 });
     });
   };
-  const changeFamily = (value: "eje" | "madre") => {
+  const changeFamily = (value: CardFamily) => {
+    setShowSuspended(false);
+    if (value === "creadas" || block.endsWith(".creadas")) setBlock("all");
     setFamily(value);
     setIndex(0);
   };
   const changeLevel = (value: string) => {
+    const destination =
+      card?.topic_id &&
+      section?.cards.find(
+        (c) => c.family === "madre" && c.level === Number(value) && c.topic_id === card.topic_id,
+      );
+    if (destination && store.state.suspended_cards?.includes(destination.id)) {
+      setNotice("Esta flashcard está suspendida. Reintégrala desde Suspendidas para abrirla.");
+      return;
+    }
+    setNotice("");
     const next =
       section?.cards.filter(
         (c) =>
           c.family === "madre" &&
           c.level === Number(value) &&
+          !store.state.suspended_cards?.includes(c.id) &&
           (block === "all" || c.block_id === block),
       ) || [];
     const target = next.findIndex((c) =>
@@ -188,9 +212,21 @@ export default function Library({ onReview }: { onReview: (context: ReviewContex
     setIndex(Math.max(0, target));
   };
   const followCase = (topicId: string) => {
+    const destination = section?.cards.find(
+      (c) => c.family === "madre" && c.level === 4 && c.topic_id === topicId,
+    );
+    if (destination && store.state.suspended_cards?.includes(destination.id)) {
+      setNotice("Esta flashcard está suspendida. Reintégrala desde Suspendidas para abrirla.");
+      return;
+    }
+    setNotice("");
     const next =
       section?.cards.filter(
-        (c) => c.family === "madre" && c.level === 4 && (block === "all" || c.block_id === block),
+        (c) =>
+          c.family === "madre" &&
+          c.level === 4 &&
+          !store.state.suspended_cards?.includes(c.id) &&
+          (block === "all" || c.block_id === block),
       ) || [];
     const target = next.findIndex((c) => c.topic_id === topicId);
     if (target >= 0) {
@@ -258,17 +294,37 @@ export default function Library({ onReview }: { onReview: (context: ReviewContex
           <div className="library-reader">
             <aside className="library-controls" aria-label="Configurar tarjetas">
               <div className="library-family-switch" aria-label="Formato de tarjetas">
-                <button aria-pressed={family === "eje"} onClick={() => changeFamily("eje")}>
+                <button
+                  aria-pressed={!showSuspended && family === "eje"}
+                  onClick={() => changeFamily("eje")}
+                >
                   Eje Clínico
                 </button>
-                <button aria-pressed={family === "madre"} onClick={() => changeFamily("madre")}>
+                <button
+                  aria-pressed={!showSuspended && family === "madre"}
+                  onClick={() => changeFamily("madre")}
+                >
                   Patrones Madre
+                </button>
+                <button
+                  aria-pressed={!showSuspended && family === "creadas"}
+                  onClick={() => changeFamily("creadas")}
+                >
+                  Creadas
+                </button>
+                <button aria-pressed={showSuspended} onClick={() => setShowSuspended(true)}>
+                  Suspendidas (
+                  {section?.cards.filter((c) => store.state.suspended_cards?.includes(c.id))
+                    .length ?? 0}
+                  )
                 </button>
               </div>
               <p className="family-explanation">
-                {family === "eje"
-                  ? "Compara casos del mismo grupo. Relaciona sus pistas con los diagnósticos."
-                  : "Conecta el patrón con su nombre, sus hallazgos y su manejo."}
+                {family === "creadas"
+                  ? "Tus flashcards personales de esta sección."
+                  : family === "eje"
+                    ? "Compara casos del mismo grupo. Relaciona sus pistas con los diagnósticos."
+                    : "Conecta el patrón con su nombre, sus hallazgos y su manejo."}
               </p>
               {family === "madre" && (
                 <label className="library-field">
@@ -320,6 +376,37 @@ export default function Library({ onReview }: { onReview: (context: ReviewContex
                 <p role="status" className="library-loading">
                   Cargando tarjetas…
                 </p>
+              ) : showSuspended ? (
+                <section className="suspended-cards" aria-label="Flashcards suspendidas">
+                  <h2>Suspendidas</h2>
+                  {section.cards
+                    .filter((c) => store.state.suspended_cards?.includes(c.id))
+                    .map((item) => (
+                      <StudyCard
+                        key={`${store.generation}/${item.id}`}
+                        card={item}
+                        onRate={() => {}}
+                        onReview={() =>
+                          onReview({
+                            axisId: `libro-${sectionId}`,
+                            section: "library",
+                            caseId: item.id,
+                            label: `${section.title} · ${item.id}`,
+                          })
+                        }
+                        ratingArea={<p>Reintegra esta flashcard para estudiarla.</p>}
+                        personal={{
+                          state: store.state,
+                          commit: store.commit,
+                          disabled: store.loading || store.saving || !!store.error,
+                          sectionTitle: section.title,
+                        }}
+                      />
+                    ))}
+                  {!section.cards.some((c) => store.state.suspended_cards?.includes(c.id)) && (
+                    <p>No hay flashcards suspendidas en esta sección.</p>
+                  )}
+                </section>
               ) : card ? (
                 <>
                   <div className="library-card-pagination">
@@ -346,6 +433,12 @@ export default function Library({ onReview }: { onReview: (context: ReviewContex
                   <StudyCard
                     key={`${store.generation}/${card.id}`}
                     card={card}
+                    personal={{
+                      state: store.state,
+                      commit: store.commit,
+                      disabled: store.loading || store.saving || !!store.error,
+                      sectionTitle: section.title,
+                    }}
                     status={combined[card.id]}
                     ratingDisabled={store.loading || store.saving || !!store.error}
                     onFollow={followCase}
@@ -394,7 +487,11 @@ export default function Library({ onReview }: { onReview: (context: ReviewContex
                   </div>
                 </>
               ) : (
-                <p role="status">No hay tarjetas para esta selección. Elige otro bloque o nivel.</p>
+                <p role="status">
+                  {family === "creadas"
+                    ? "No hay flashcards creadas en esta selección."
+                    : "No hay tarjetas para esta selección. Elige otro bloque o nivel."}
+                </p>
               )}
             </div>
           </div>

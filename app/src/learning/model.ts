@@ -1,4 +1,3 @@
-import { personalIndex } from "../coach/personal";
 import { isError } from "../coach/engine";
 import type { CoachCard, CoachIndex, CoachState } from "../coach/types";
 
@@ -48,7 +47,6 @@ function blank(id: string): ProgressRow {
   };
 }
 export function progressRows(state: CoachState, index: CoachIndex, day: string) {
-  index = personalIndex(index, state);
   const suspended = new Set(state.suspended_cards ?? []);
   const sections = new Map<string, ProgressRow>(),
     blocks = new Map<string, ProgressRow>();

@@ -5,6 +5,7 @@ import {
   logSession,
   scopeActive,
   scopeRemaining,
+  selectedCards,
   recordStudy,
   setDayLoad,
   setTag,
@@ -202,9 +203,7 @@ export function useTodayStudy({
     }
     const milestones = completionNotices(state, saved, {
       ...index,
-      cards: index.cards.filter(
-        (card) => plan.section_ids.includes(card.section_id) && plan.families.includes(card.family),
-      ),
+      cards: selectedCards(index, plan, state),
     });
     setNotice(
       milestones.length

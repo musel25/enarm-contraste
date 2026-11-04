@@ -9,6 +9,7 @@ import {
   studyQueue,
   summary,
   undoReview,
+  selectedCards,
   validateState,
 } from "../../app/src/coach/engine";
 import {
@@ -18,9 +19,54 @@ import {
   setSuspended,
 } from "../../app/src/coach/personal";
 import type { CoachIndex, CoachState, PersonalCard } from "../../app/src/coach/types";
-import { progressRows } from "../../app/src/learning/model";
+import { completionNotices, progressRows } from "../../app/src/learning/model";
 
 const day = "2026-11-04";
+
+test("explicit format choices exclude personal cards while legacy plans retain them", () => {
+  const state = addPersonalCard(initial(), card);
+  assert.equal(selectedCards(index, state.plan!, state).length, 2);
+  const excluded = { ...state.plan!, created_cards_enabled: false };
+  assert.deepEqual(
+    selectedCards(index, excluded, state).map((c) => c.id),
+    ["eje/01.01"],
+  );
+  assert.deepEqual(selectedCards(index, { ...excluded, families: [] }, state), []);
+  assert.equal(validateState({ ...state, plan: excluded }), true);
+  assert.equal(
+    validateState({ ...state, plan: { ...excluded, created_cards_enabled: "false" } }),
+    false,
+  );
+});
+
+test("suspending an answered target preserves today's completed work and time", () => {
+  let state = initial();
+  state = recordStudy(state, index, "eje/01.01", 3, 20, day, "done");
+  state = setSuspended(state, "eje/01.01", true);
+  const stats = summary(state, index, day);
+  assert.equal(stats.today_done, 1);
+  assert.equal(stats.today_goal, 1);
+  assert.equal(stats.attempts_today, 1);
+  assert.equal(stats.today_seconds, 20);
+  assert.equal(stats.new_goal_done, 1);
+  assert.deepEqual(stats.pending_ids, []);
+  assert.equal(stats.total, 0);
+});
+
+test("progress analysis and milestones respect an explicitly filtered index", () => {
+  const before = addPersonalCard(initial(), card);
+  before.plan = { ...before.plan!, created_cards_enabled: false };
+  const after = recordStudy(before, index, "eje/01.01", 3, 20, day, "finish");
+  const scoped = {
+    ...index,
+    cards: selectedCards(personalIndex(index, before), before.plan!, before),
+  };
+  assert.equal(progressRows(after, scoped, day).sections[0].total, 1);
+  assert.deepEqual(completionNotices(before, after, scoped), [
+    { kind: "block", id: "01.01" },
+    { kind: "section", id: "01" },
+  ]);
+});
 const card: PersonalCard = {
   id: "created/6a9121c5-fc78-453b-90a7-d265eed8a90e",
   section_id: "01",
@@ -101,7 +147,7 @@ test("suspension removes targets and due reviews while retaining history and res
   assert.equal(validateState(state), true);
   assert.deepEqual(studyQueue(state, index, addDays(day, 365), "review").ids, []);
   assert.throws(() => recordStudy(state, index, card.id, 3, 10, day, "b"));
-  const row = progressRows(state, index, day).sections[0];
+  const row = progressRows(state, personalIndex(index, state), day).sections[0];
   assert.equal(row.total, 0);
   assert.equal(row.practiced, 0);
   assert.equal(row.attempts, 1);
