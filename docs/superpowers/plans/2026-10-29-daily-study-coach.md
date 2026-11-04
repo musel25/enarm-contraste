@@ -1,5 +1,8 @@
 # Daily Study Coach Implementation Plan
 
+> Status: historical plan, archived on 2026-11-04. The checkboxes are original planning notes, not a current backlog. Architecture descriptions can be superseded. See [current development guidance](../../development.md). Deployment permissions recorded here applied only to the original task.
+
+
 > **For agentic workers:** Use superpowers:executing-plans for integration. Delegate the isolated pure engine with its unit tests; the coordinator owns data generation, persistence and UI. All writers have disjoint files. Steps use TDD. One fresh whole-branch review precedes publication.
 
 **Goal:** Open ENARM directly into a paced daily recall session with deadline/time planning and satisfying, honest progress feedback.

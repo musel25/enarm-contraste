@@ -71,11 +71,12 @@ Los PDF, los mazos originales y la extracción bruta no se publican. La [nota de
 
 ## Desarrollo
 
-Requisitos: Node compatible con Vite 8, npm, uv y Google Chrome.
+Requisitos: las versiones de Node y Python indicadas en `.node-version` y `.python-version`, npm y uv 0.8.22. La [guía de desarrollo](docs/development.md) explica la arquitectura, las pruebas aisladas y el flujo para agentes.
 
 ```sh
 npm ci
-uv sync
+uv sync --locked
+npx playwright install chromium
 npm run prepare:study
 npm run dev
 ```
@@ -90,7 +91,9 @@ npm run build
 
 `npm run build` genera los mazos y audita sus bases SQLite antes de compilar la web. Requiere todas las secciones, la validación de fuentes y las revisiones vigentes. Los archivos generados quedan en `app/public/study/` y se copian a `dist/study/`. Se excluyen de Git.
 
-Chrome debe estar en `/usr/bin/google-chrome`. Usa `CHROME_PATH` para indicar otra ruta.
+Playwright usa su propia instalación de Chromium. Usa `CHROME_PATH=/usr/bin/google-chrome` para probar con Chrome instalado. Las pruebas locales usan puertos propios y una base de datos temporal. No reutilizan el servidor de desarrollo.
+
+`npm run check` ejecuta formato, lint, pruebas de Python, compilación auditada, pruebas de Node y pruebas de navegador sobre la versión compilada. GitHub Actions ejecuta el mismo comando en cada push y pull request. `npm run format` aplica el formato al código; no modifica los archivos clínicos de `content/`.
 
 ## Cambios de contenido
 

@@ -1,5 +1,8 @@
 # VPS progress
 
+> Status: historical design. See [current development guidance](../../development.md) for the implemented architecture. Authorization statements below record the original task only.
+
+
 The user requires study progress to be saved on the VPS. The existing daily coach saves only in IndexedDB. Continue through deployment. Preserve existing progress and independent ENARM hosting.
 
 ## Builder choices

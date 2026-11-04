@@ -3,7 +3,11 @@
   "private": true,
   "version": "0.1.0",
   "type": "module",
+  "engines": {
+    "node": ">=22.21.0"
+  },
   "scripts": {
+    "check": "npm run format:check && npm run lint && npm run test:python && npm run build && npm run test:unit && npm run test:browser:preview",
     "format": "biome format --write . && uv run ruff format scripts tests",
     "format:check": "biome format . && uv run ruff format --check scripts tests",
     "lint": "biome lint . && uv run ruff check scripts tests",

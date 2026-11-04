@@ -1,5 +1,8 @@
 # Full Book Flashcards Implementation Plan
 
+> Status: historical plan, archived on 2026-11-04. The checkboxes are original planning notes, not a current backlog. Architecture descriptions can be superseded. See [current development guidance](../../development.md). Deployment permissions recorded here applied only to the original task.
+
+
 > **For agentic workers:** REQUIRED SUB-SKILL: Use superpowers:executing-plans. La autoría de secciones usa superpowers:dispatching-parallel-agents con archivos independientes.
 
 **Goal:** Cubrir el PDF completo con los formatos Eje Clínico y Patrones Madre, comprobar toda la cobertura y publicar los mazos y la biblioteca web.

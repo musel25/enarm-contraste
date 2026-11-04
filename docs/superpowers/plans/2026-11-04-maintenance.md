@@ -60,11 +60,11 @@ Files: account HTTP/database/crypto modules, Today presentation/hooks modules, J
 
 Files: runtime pins, package scripts, CI workflow, `AGENTS.md`, `README.md`, `docs/development.md`, historical plan/spec headers, global instructions.
 
-- [ ] Pin runtimes. Add one full check command and a matching CI workflow.
-- [ ] Document setup, disposable tests, current architecture, invariants, branch policy, and validation requirements.
-- [ ] Mark historical plans and superseded architecture. Clarify historical authorization.
-- [ ] Update global branch/validation guidance and shorten Bluetooth guidance to its runbook link.
-- [ ] Run the full check command. Commit and push `chore: enforce repeatable development and agent checks`.
+- [x] Pin runtimes. Add one full check command and a matching CI workflow.
+- [x] Document setup, disposable tests, current architecture, invariants, branch policy, and validation requirements.
+- [x] Mark historical plans and superseded architecture. Clarify historical authorization.
+- [x] Update global branch/validation guidance and shorten Bluetooth guidance to its runbook link.
+- [x] Run the full check command. Commit and push `chore: enforce repeatable development and agent checks`.
 
 ## Task 6: Final review
 

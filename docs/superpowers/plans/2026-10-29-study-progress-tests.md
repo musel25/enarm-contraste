@@ -1,5 +1,8 @@
 # Study Progress and Tests Implementation Plan
 
+> Status: historical plan, archived on 2026-11-04. The checkboxes are original planning notes, not a current backlog. Architecture descriptions can be superseded. See [current development guidance](../../development.md). Deployment permissions recorded here applied only to the original task.
+
+
 > **For agentic workers:** Use superpowers:executing-plans to implement this plan task by task.
 
 **Goal:** Make study progress, selected subtests, and diagnostic practice available across the library.

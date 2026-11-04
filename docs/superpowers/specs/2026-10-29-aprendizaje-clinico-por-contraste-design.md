@@ -1,5 +1,8 @@
 # Aprendizaje clínico por contraste
 
+> Status: historical design. See [current development guidance](../../development.md) for the implemented architecture. Authorization statements below record the original task only.
+
+
 Fecha: 2026-10-29.
 Estado: diseño aprobado por el usuario. Se autorizó implementar una muestra y desplegarla en el VPS.
 
