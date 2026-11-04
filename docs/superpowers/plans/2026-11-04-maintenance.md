@@ -42,11 +42,11 @@ Files: `app/src/coach/engine.ts`, engine and API unit tests.
 
 ## Task 3: Isolated browser tests
 
-Files: `playwright.config.ts`, `scripts/test-server.mjs`, `scripts/dev.mjs`, Vite config, runner tests.
+Files: `playwright.config.ts`, `scripts/dev.mjs`, Vite config, runner tests.
 
-- [ ] Add a real runner test for disposable database isolation and cleanup. Observe failure.
-- [ ] Use dedicated test ports and a temporary database. Disable existing-server reuse. Keep preview and explicit remote tests supported.
-- [ ] Run runner and browser tests. Commit and push `test: isolate browser servers and progress databases`.
+- [x] Add a real runner test for disposable database isolation and cleanup. Observe failure.
+- [x] Use dedicated test ports and a temporary database. Disable existing-server reuse. Keep preview and explicit remote tests supported.
+- [x] Run runner and browser tests. Commit and push `test: isolate browser servers and progress databases`.
 
 ## Task 4: Readable, focused modules
 
