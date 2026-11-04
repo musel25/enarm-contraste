@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import type { StudyManifest } from "../library-types";
 import type { ReviewContext } from "../storage";
 import "../library.css";
@@ -8,6 +8,7 @@ import AccountPanel from "./AccountPanel";
 import { accountName } from "./account";
 import BackupPanel from "./BackupPanel";
 import CloudPanel from "./CloudPanel";
+import { personalIndex } from "./personal";
 import { createAssignment, planKey } from "./engine";
 import { timezone } from "./format";
 import { useCoachStore, useForecast, useStudyDay } from "./hooks";
@@ -19,7 +20,7 @@ import type { CoachIndex, CoachState, Forecast } from "./types";
 
 function ReadyCoach({
   manifest,
-  index,
+  index: baseIndex,
   suspended,
   onReview,
 }: {
@@ -30,6 +31,7 @@ function ReadyCoach({
 }) {
   const store = useCoachStore();
   const { state, loading, saving, error, pending, latest, commit, reload } = store;
+  const index = useMemo(() => personalIndex(baseIndex, state), [baseIndex, state.created_cards]);
   const day = useStudyDay(state.plan?.timezone || timezone());
   const forecast = useForecast(state, index, day);
   const [editing, setEditing] = useState(false),

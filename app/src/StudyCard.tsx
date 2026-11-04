@@ -1,6 +1,7 @@
-import { useEffect, useRef, useState, type ReactNode } from "react";
+import { useCallback, useEffect, useRef, useState, type ReactNode } from "react";
 import type { CardSource, StudyCardData } from "./library-types";
 import { Icon } from "./ui";
+import PersonalCardTools, { type PersonalToolsOptions } from "./coach/PersonalCardTools";
 
 function Clue({ text, clue, enabled }: { text: string; clue?: string; enabled: boolean }) {
   if (!enabled || !clue || !text.includes(clue)) return <>{text}</>;
@@ -57,6 +58,7 @@ export default function StudyCard({
   onReveal,
   initialHighlight = true,
   ratingDisabled = false,
+  personal,
 }: {
   card: StudyCardData;
   status?: "known" | "again";
@@ -67,19 +69,37 @@ export default function StudyCard({
   onReveal?: () => void;
   initialHighlight?: boolean;
   ratingDisabled?: boolean;
+  personal?: PersonalToolsOptions;
 }) {
   const [revealed, setRevealed] = useState(false);
   const [highlight, setHighlight] = useState(initialHighlight);
   const answer = useRef<HTMLHeadingElement>(null);
+  const root = useRef<HTMLElement>(null);
+  const [editing, setEditing] = useState(false);
+  const onEditorChange = personal?.onEditingChange;
+  const editingChanged = useCallback(
+    (open: boolean) => {
+      setEditing(open);
+      onEditorChange?.(open);
+    },
+    [onEditorChange],
+  );
   useEffect(() => {
     if (revealed) answer.current?.focus();
   }, [revealed]);
   const hasClue = card.front.some((row) => row.highlight);
   return (
-    <article className="library-card">
+    <article
+      ref={root}
+      className={`library-card ${card.family === "creadas" ? "personal-card" : ""}`}
+    >
       <div className="library-card-bar">
         <span>
-          {card.family === "eje" ? "Eje Clínico" : `Patrones Madre · Nivel ${card.level}`}
+          {card.family === "creadas"
+            ? "Creadas · Flashcard personal"
+            : card.family === "eje"
+              ? "Eje Clínico"
+              : `Patrones Madre · Nivel ${card.level}`}
         </span>
         {hasClue && (
           <label className="clue-toggle">
@@ -178,28 +198,34 @@ export default function StudyCard({
             ))}
           </ol>
           <Corrections notes={card.corrections} />
-          {ratingArea ?? (
-            <div className="library-rating">
-              <p>¿Lo reconociste?</p>
-              <div>
-                <button
-                  disabled={ratingDisabled}
-                  aria-pressed={status === "again"}
-                  onClick={() => onRate("again")}
-                >
-                  Quiero repetirlo
-                </button>
-                <button
-                  disabled={ratingDisabled}
-                  aria-pressed={status === "known"}
-                  onClick={() => onRate("known")}
-                >
-                  <Icon name="check" size={16} />
-                  Lo reconocí
-                </button>
+          <fieldset
+            className="card-rating-fieldset"
+            disabled={editing || ratingDisabled}
+            hidden={editing}
+          >
+            {ratingArea ?? (
+              <div className="library-rating">
+                <p>¿Lo reconociste?</p>
+                <div>
+                  <button
+                    disabled={ratingDisabled}
+                    aria-pressed={status === "again"}
+                    onClick={() => onRate("again")}
+                  >
+                    Quiero repetirlo
+                  </button>
+                  <button
+                    disabled={ratingDisabled}
+                    aria-pressed={status === "known"}
+                    onClick={() => onRate("known")}
+                  >
+                    <Icon name="check" size={16} />
+                    Lo reconocí
+                  </button>
+                </div>
               </div>
-            </div>
-          )}
+            )}
+          </fieldset>
           <details className="library-reference-details">
             <summary>Fuentes de la tarjeta</summary>
             <References sources={card.sources} />
@@ -213,6 +239,16 @@ export default function StudyCard({
           Comentar esta tarjeta
         </button>
       </div>
+      {personal && (
+        <PersonalCardTools
+          card={card}
+          root={root}
+          options={{
+            ...personal,
+            onEditingChange: editingChanged,
+          }}
+        />
+      )}
     </article>
   );
 }

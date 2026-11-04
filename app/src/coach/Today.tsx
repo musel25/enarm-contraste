@@ -152,6 +152,7 @@ export default function Today({
     focus = (
       <Session
         key={`${day}/${meta.id}`}
+        commit={commit}
         meta={meta}
         index={index}
         state={state}
