@@ -1,0 +1,53 @@
+{
+  "$schema": "https://biomejs.dev/schemas/2.6.5/schema.json",
+  "vcs": {
+    "enabled": true,
+    "clientKind": "git",
+    "useIgnoreFile": true
+  },
+  "files": {
+    "ignoreUnknown": true,
+    "includes": [
+      "app/src/**",
+      "app/vite.config.ts",
+      "server/**",
+      "scripts/*.mjs",
+      "tests/**/*.ts",
+      "playwright.config.ts",
+      "tsconfig.json",
+      "package.json",
+      "biome.json"
+    ]
+  },
+  "formatter": {
+    "enabled": true,
+    "indentStyle": "space",
+    "lineWidth": 100
+  },
+  "linter": {
+    "enabled": true,
+    "includes": ["**/*.ts", "**/*.tsx", "**/*.mjs", "**/*.json"],
+    "rules": {
+      "preset": "none",
+      "correctness": {
+        "noUnusedImports": "error",
+        "noUnusedVariables": "error",
+        "noUnreachable": "error",
+        "noConstAssign": "error",
+        "noInvalidUseBeforeDeclaration": "error",
+        "noUnreachableSuper": "error",
+        "useHookAtTopLevel": "error"
+      },
+      "suspicious": {
+        "noExplicitAny": "error",
+        "noDuplicateParameters": "error",
+        "noDuplicateObjectKeys": "error",
+        "noDoubleEquals": "error",
+        "noDebugger": "error"
+      }
+    }
+  },
+  "assist": {
+    "enabled": false
+  }
+}

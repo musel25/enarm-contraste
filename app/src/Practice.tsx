@@ -21,11 +21,7 @@ export default function Practice({
   const [index, setIndex] = useState(0);
   const [revealed, setRevealed] = useState(false);
   const [highlight, setHighlight] = useState(true);
-  const [done, setDone, persisted] = useLocalData(
-    PRACTICE_KEY,
-    validPractice,
-    {},
-  );
+  const [done, setDone, persisted] = useLocalData(PRACTICE_KEY, validPractice, {});
   const card = axis.practice[index];
   const count = axis.practice.filter((item) => done[item.id]).length;
   const changeCard = (next: number) => {
@@ -69,10 +65,7 @@ export default function Practice({
         <h3 className="practice-question">{card.question}</h3>
         {!revealed ? (
           <div className="practice-reveal">
-            <button
-              className="primary-button"
-              onClick={() => setRevealed(true)}
-            >
+            <button className="primary-button" onClick={() => setRevealed(true)}>
               Mostrar respuesta <Icon name="arrow" size={17} />
             </button>
             <label className="highlight-toggle">
@@ -96,16 +89,10 @@ export default function Practice({
             <p className="answer-limit">{card.limit}</p>
             <div className="self-grade">
               <span>¿Cómo te fue?</span>
-              <button
-                aria-pressed={done[card.id] === "again"}
-                onClick={() => grade("again")}
-              >
+              <button aria-pressed={done[card.id] === "again"} onClick={() => grade("again")}>
                 Volver a estudiar
               </button>
-              <button
-                aria-pressed={done[card.id] === "known"}
-                onClick={() => grade("known")}
-              >
+              <button aria-pressed={done[card.id] === "known"} onClick={() => grade("known")}>
                 <Icon name="check" size={16} /> Lo reconocí
               </button>
             </div>
@@ -141,13 +128,12 @@ export default function Practice({
       </div>
       {!persisted && (
         <p className="storage-warning" role="status">
-          El navegador no permite guardar el progreso. Puedes continuar con la
-          práctica durante esta sesión.
+          El navegador no permite guardar el progreso. Puedes continuar con la práctica durante esta
+          sesión.
         </p>
       )}
       <p className="practice-note">
-        La muestra no programa repasos futuros. Marcar una respuesta registra
-        que la practicaste.
+        La muestra no programa repasos futuros. Marcar una respuesta registra que la practicaste.
       </p>
     </section>
   );

@@ -55,13 +55,7 @@ export function Icon({ name, size = 20 }: { name: string; size?: number }) {
   );
 }
 
-export function MarkedText({
-  text,
-  highlight = true,
-}: {
-  text: string;
-  highlight?: boolean;
-}) {
+export function MarkedText({ text, highlight = true }: { text: string; highlight?: boolean }) {
   return (
     <>
       {text
@@ -117,10 +111,7 @@ export function Modal({
   const ref = useRef<HTMLDialogElement>(null);
   useEffect(() => {
     const dialog = ref.current!;
-    const opener =
-      document.activeElement instanceof HTMLElement
-        ? document.activeElement
-        : null;
+    const opener = document.activeElement instanceof HTMLElement ? document.activeElement : null;
     dialog.showModal();
     const overflow = document.body.style.overflow;
     document.body.style.overflow = "hidden";

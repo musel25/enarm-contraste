@@ -16,23 +16,13 @@ export default function Variants({
     <section className="variants" aria-label="Variantes del caso">
       <div className="mode-intro">
         <h2>¿Qué cambia tu decisión?</h2>
-        <p>
-          Parte de un caso. Cambia un factor y sigue su efecto en el manejo.
-        </p>
+        <p>Parte de un caso. Cambia un factor y sigue su efecto en el manejo.</p>
       </div>
       <div className="scenario-picker" aria-label="Elegir variante">
         {axis.variants.map((item, i) => (
-          <button
-            key={item.id}
-            aria-pressed={i === index}
-            onClick={() => setIndex(i)}
-          >
+          <button key={item.id} aria-pressed={i === index} onClick={() => setIndex(i)}>
             <span>
-              {i === 0 ? (
-                <Icon name="book" size={17} />
-              ) : (
-                <Icon name="branch" size={17} />
-              )}
+              {i === 0 ? <Icon name="book" size={17} /> : <Icon name="branch" size={17} />}
             </span>
             {item.title}
           </button>
@@ -99,9 +89,7 @@ export default function Variants({
             </div>
           )}
           <div className="new-decision">
-            <h3>
-              {previous ? "Decisión con este cambio" : "Primera decisión"}
-            </h3>
+            <h3>{previous ? "Decisión con este cambio" : "Primera decisión"}</h3>
             <p>{scenario.decision}</p>
           </div>
         </div>
@@ -114,13 +102,9 @@ export default function Variants({
         </div>
         <div className="workbench-footer">
           <p>
-            Las variantes son ramas didácticas. No son etapas por las que toda
-            persona debe pasar.
+            Las variantes son ramas didácticas. No son etapas por las que toda persona debe pasar.
           </p>
-          <button
-            className="text-button"
-            onClick={() => onReview(scenario.title)}
-          >
+          <button className="text-button" onClick={() => onReview(scenario.title)}>
             <Icon name="comment" size={16} /> Comentar variante
           </button>
         </div>

@@ -12,18 +12,33 @@ const env = {
   ...process.env,
   ENARM_WEB_PORT: webPort,
   ENARM_PORT: apiPort,
-  ...(testing ? {
-    ENARM_TEST_MODE: "1",
-    ENARM_DATABASE: join(directory, "progress.sqlite"),
-    ENARM_ORIGIN: `http://127.0.0.1:${webPort}`,
-    ENARM_REQUEST_LIMIT: "100000",
-    ENARM_CREATE_LIMIT: "100000",
-  } : {}),
+  ...(testing
+    ? {
+        ENARM_TEST_MODE: "1",
+        ENARM_DATABASE: join(directory, "progress.sqlite"),
+        ENARM_ORIGIN: `http://127.0.0.1:${webPort}`,
+        ENARM_REQUEST_LIMIT: "100000",
+        ENARM_CREATE_LIMIT: "100000",
+      }
+    : {}),
 };
 if (testing) console.log(`ENARM test database: ${env.ENARM_DATABASE}`);
 const children = [
-  spawn(process.execPath, preview ? ["dist-server/server.mjs"] : ["--import", "tsx", "server/main.ts"], { stdio: "inherit", env }),
-  spawn(process.execPath, ["node_modules/vite/bin/vite.js", ...(preview ? ["preview"] : []), "--config", "app/vite.config.ts"], { stdio: "inherit", env }),
+  spawn(
+    process.execPath,
+    preview ? ["dist-server/server.mjs"] : ["--import", "tsx", "server/main.ts"],
+    { stdio: "inherit", env },
+  ),
+  spawn(
+    process.execPath,
+    [
+      "node_modules/vite/bin/vite.js",
+      ...(preview ? ["preview"] : []),
+      "--config",
+      "app/vite.config.ts",
+    ],
+    { stdio: "inherit", env },
+  ),
 ];
 let stopping = false;
 let remaining = children.length;
@@ -38,8 +53,11 @@ function stop(code = 0) {
   }, 5000).unref();
 }
 for (const child of children) {
-  child.on("error", error => { console.error(error); stop(1); });
-  child.on("exit", code => stop(code ?? 1));
+  child.on("error", (error) => {
+    console.error(error);
+    stop(1);
+  });
+  child.on("exit", (code) => stop(code ?? 1));
   child.on("close", () => {
     if (--remaining !== 0) return;
     clearTimeout(deadline);

@@ -9,6 +9,12 @@ export default defineConfig({
   base: "/",
   plugins: [react()],
   build: { outDir: "../dist", emptyOutDir: true },
-  server: { host: "127.0.0.1", port, strictPort: true, hmr: process.env.ENARM_TEST_MODE === "1" ? false : undefined, proxy: { "/api": api } },
+  server: {
+    host: "127.0.0.1",
+    port,
+    strictPort: true,
+    hmr: process.env.ENARM_TEST_MODE === "1" ? false : undefined,
+    proxy: { "/api": api },
+  },
   preview: { host: "127.0.0.1", port, strictPort: true, proxy: { "/api": api } },
 });
