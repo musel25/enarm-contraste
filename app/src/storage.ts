@@ -35,26 +35,18 @@ export function validReviews(value: unknown): value is ReviewNote[] {
         typeof note.context.axisId === "string" &&
         typeof note.context.section === "string" &&
         typeof note.context.label === "string" &&
-        (note.context.caseId === undefined ||
-          typeof note.context.caseId === "string"),
+        (note.context.caseId === undefined || typeof note.context.caseId === "string"),
     )
   );
 }
 
-export function validPractice(
-  value: unknown,
-): value is Record<string, "known" | "again"> {
+export function validPractice(value: unknown): value is Record<string, "known" | "again"> {
   return (
-    record(value) &&
-    Object.values(value).every((item) => item === "known" || item === "again")
+    record(value) && Object.values(value).every((item) => item === "known" || item === "again")
   );
 }
 
-export function readState<T>(
-  key: string,
-  valid: (value: unknown) => value is T,
-  fallback: T,
-): T {
+export function readState<T>(key: string, valid: (value: unknown) => value is T, fallback: T): T {
   try {
     const raw = localStorage.getItem(key);
     if (raw === null) return fallback;
@@ -65,11 +57,7 @@ export function readState<T>(
   }
 }
 
-export function useLocalData<T>(
-  key: string,
-  valid: (value: unknown) => value is T,
-  fallback: T,
-) {
+export function useLocalData<T>(key: string, valid: (value: unknown) => value is T, fallback: T) {
   const [data, setData] = useState<T>(() => readState(key, valid, fallback));
   const [persisted, setPersisted] = useState(true);
   useEffect(() => {

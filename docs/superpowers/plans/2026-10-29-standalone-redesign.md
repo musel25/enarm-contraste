@@ -1,5 +1,8 @@
 # Standalone ENARM Redesign Implementation Plan
 
+> Status: historical plan, archived on 2026-11-04. The checkboxes are original planning notes, not a current backlog. Architecture descriptions can be superseded. See [current development guidance](../../development.md). Deployment permissions recorded here applied only to the original task.
+
+
 > **For agentic workers:** REQUIRED SUB-SKILL: Use superpowers:executing-plans to implement this plan task-by-task. Steps use checkbox (`- [ ]`) syntax for tracking.
 
 **Goal:** Publicar una interfaz nueva en https://enarm.musel.dev y aplicar la estructura pedagógica de los mazos que compartió el usuario.

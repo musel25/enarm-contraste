@@ -12,8 +12,7 @@ export const amenorrheaVariants: Scenario[] = [
     diagnosis: "Amenorrea hipotalámica funcional",
     decision:
       "Corregir el déficit energético y organizar seguimiento con apoyo nutricional y psicológico según la evaluación.",
-    reason:
-      "El abordaje se dirige al factor que suprime la señal reproductiva.",
+    reason: "El abordaje se dirige al factor que suprime la señal reproductiva.",
     severity: "Sin inestabilidad en la viñeta",
     sources: ["fha"],
   },
@@ -23,9 +22,7 @@ export const amenorrheaVariants: Scenario[] = [
     from: 0,
     vignette:
       "Se conserva el caso base y cambia únicamente la frecuencia cardíaca: ahora es de [[38 lpm]].",
-    changes: [
-      { field: "Frecuencia cardíaca", before: "75 lpm", after: "38 lpm" },
-    ],
+    changes: [{ field: "Frecuencia cardíaca", before: "75 lpm", after: "38 lpm" }],
     unchanged: [
       "Déficit energético",
       "Embarazo y otras causas excluidos",
@@ -52,11 +49,7 @@ export const amenorrheaVariants: Scenario[] = [
         after: "Deseo de embarazo",
       },
     ],
-    unchanged: [
-      "Estabilidad clínica",
-      "Déficit energético",
-      "Patrón hormonal y diagnóstico",
-    ],
+    unchanged: ["Estabilidad clínica", "Déficit energético", "Patrón hormonal y diagnóstico"],
     diagnosis: "Amenorrea hipotalámica funcional",
     decision:
       "Mantener la recuperación energética y añadir valoración reproductiva antes de decidir tratamiento para fertilidad.",
@@ -76,10 +69,8 @@ export const biliaryVariants: Scenario[] = [
       "Persona con ictericia, colestasis y cálculo confirmado en colédoco, temperatura de 37 °C, leucocitos de 7,500/µL y presión de 110/70 mmHg.",
     changes: [],
     unchanged: [],
-    diagnosis:
-      "Coledocolitiasis; sin datos suficientes de infección en esta evaluación",
-    decision:
-      "Evaluar infección y planear la resolución de la obstrucción según el contexto.",
+    diagnosis: "Coledocolitiasis; sin datos suficientes de infección en esta evaluación",
+    decision: "Evaluar infección y planear la resolución de la obstrucción según el contexto.",
     reason:
       "El cálculo explica el drenaje alterado. Es necesario vigilar datos de infección, incluso si no hay fiebre.",
     severity: "Estable en los datos aportados",
@@ -95,11 +86,7 @@ export const biliaryVariants: Scenario[] = [
       { field: "Temperatura", before: "37 °C", after: "39 °C" },
       { field: "Leucocitos", before: "7,500/µL", after: "16,000/µL" },
     ],
-    unchanged: [
-      "Cálculo demostrado",
-      "Ictericia y colestasis",
-      "Presión de 110/70 mmHg",
-    ],
+    unchanged: ["Cálculo demostrado", "Ictericia y colestasis", "Presión de 110/70 mmHg"],
     diagnosis: "Colangitis aguda sobre coledocolitiasis",
     decision:
       "Evaluar disfunción orgánica, iniciar el manejo de la infección y valorar drenaje según gravedad y respuesta.",
@@ -114,21 +101,14 @@ export const biliaryVariants: Scenario[] = [
     from: 1,
     vignette:
       "Se conserva el cuadro previo de colangitis y cambia únicamente la presión arterial: de 110/70 mmHg pasa a [[80/50 mmHg]].",
-    changes: [
-      { field: "Presión arterial", before: "110/70 mmHg", after: "80/50 mmHg" },
-    ],
-    unchanged: [
-      "Cálculo e ictericia",
-      "Temperatura de 39 °C",
-      "Leucocitos de 16,000/µL",
-    ],
+    changes: [{ field: "Presión arterial", before: "110/70 mmHg", after: "80/50 mmHg" }],
+    unchanged: ["Cálculo e ictericia", "Temperatura de 39 °C", "Leucocitos de 16,000/µL"],
     diagnosis: "Colangitis con inestabilidad hemodinámica",
     decision:
       "Priorizar evaluación y estabilización inmediata; coordinar atención urgente y control de la fuente de infección.",
     reason:
       "La alteración circulatoria cambia la prioridad. No se debe esperar a completar todos los estudios para atender la inestabilidad.",
-    severity:
-      "Inestabilidad; no se asigna un grado completo con una sola cifra",
+    severity: "Inestabilidad; no se asigna un grado completo con una sola cifra",
     sources: ["book-biliar", "tg18_initial"],
   },
 ];
@@ -139,15 +119,12 @@ export const amenorrheaPractice: PracticeCard[] = [
     type: "ancla",
     vignette:
       "Una mujer con ciclos antes regulares consulta por retraso menstrual y tiene [[β-hCG positiva]].",
-    question:
-      "¿Qué causa de la ausencia de menstruación debes valorar primero?",
+    question: "¿Qué causa de la ausencia de menstruación debes valorar primero?",
     answer: "Embarazo",
     explanation:
       "Una prueba positiva cambia la ruta de evaluación. No establece por sí sola la localización ni la viabilidad.",
-    decision:
-      "Valorar el embarazo y buscar datos de complicación según el contexto.",
-    limit:
-      "No corresponde asumir una causa funcional antes de considerar embarazo.",
+    decision: "Valorar el embarazo y buscar datos de complicación según el contexto.",
+    limit: "No corresponde asumir una causa funcional antes de considerar embarazo.",
     sources: ["capa-gine", "asrm", "nice"],
   },
   {
@@ -159,8 +136,7 @@ export const amenorrheaPractice: PracticeCard[] = [
     answer: "Amenorrea hipotalámica funcional",
     explanation:
       "La señal central es insuficiente para estimular la función ovárica. El diagnóstico exige excluir otras causas.",
-    decision:
-      "Recuperar el equilibrio energético y valorar la estabilidad clínica.",
+    decision: "Recuperar el equilibrio energético y valorar la estabilidad clínica.",
     limit: "El ejercicio aislado no confirma el diagnóstico.",
     sources: ["capa-gine", "fha"],
   },
@@ -169,13 +145,10 @@ export const amenorrheaPractice: PracticeCard[] = [
     type: "contraste",
     vignette:
       "Una mujer de 32 años, con cinco meses de amenorrea y embarazo excluido, tiene estradiol bajo y [[FSH elevada]].",
-    question:
-      "¿Qué alternativa debes distinguir de una supresión hipotalámica?",
+    question: "¿Qué alternativa debes distinguir de una supresión hipotalámica?",
     answer: "Insuficiencia ovárica primaria",
-    explanation:
-      "La FSH elevada, junto con el contexto, orienta a función ovárica reducida.",
-    decision:
-      "Aplicar los criterios completos y confirmar cuando exista incertidumbre.",
+    explanation: "La FSH elevada, junto con el contexto, orienta a función ovárica reducida.",
+    decision: "Aplicar los criterios completos y confirmar cuando exista incertidumbre.",
     limit: "El estradiol bajo solo no confirma el diagnóstico.",
     sources: ["capa-gine", "poi"],
   },
@@ -184,8 +157,7 @@ export const amenorrheaPractice: PracticeCard[] = [
     type: "discriminador",
     vignette:
       "Una mujer con amenorrea, embarazo excluido y secreción láctea tiene [[prolactina persistentemente elevada]].",
-    question:
-      "¿Qué mecanismo debe investigarse sin asumir todavía que existe un tumor?",
+    question: "¿Qué mecanismo debe investigarse sin asumir todavía que existe un tumor?",
     answer: "Hiperprolactinemia",
     explanation:
       "La prolactina elevada puede alterar la función reproductiva. Hay causas farmacológicas, tiroideas e hipofisarias.",
@@ -202,8 +174,7 @@ export const amenorrheaPractice: PracticeCard[] = [
     answer: "Insuficiencia ovárica primaria",
     explanation:
       "La FSH ahora elevada orienta hacia una respuesta ovárica reducida. Se conservan edad, tiempo de amenorrea, estradiol y prueba de embarazo.",
-    decision:
-      "Comprobar los criterios diagnósticos y el contexto de las mediciones.",
+    decision: "Comprobar los criterios diagnósticos y el contexto de las mediciones.",
     limit:
       "Es un cambio didáctico de un solo campo; no describe la evolución esperada de una paciente.",
     sources: ["asrm", "poi"],
@@ -213,15 +184,13 @@ export const amenorrheaPractice: PracticeCard[] = [
     type: "primera_decision",
     vignette:
       "Una mujer estable con amenorrea, embarazo excluido y sin síntomas neurológicos tiene [[prolactina levemente elevada en una sola medición]].",
-    question:
-      "¿Qué debes hacer antes de atribuir el resultado a una lesión hipofisaria?",
+    question: "¿Qué debes hacer antes de atribuir el resultado a una lesión hipofisaria?",
     answer: "Confirmar la elevación y revisar causas secundarias",
     explanation:
       "Una elevación leve aislada requiere interpretación y confirmación antes de atribuirle una causa.",
     decision:
       "Revisar la toma, los fármacos, la función tiroidea y repetir el estudio según la evaluación.",
-    limit:
-      "Una elevación persistente sin explicación requiere otra ruta de investigación.",
+    limit: "Una elevación persistente sin explicación requiere otra ruta de investigación.",
     sources: ["asrm", "prol"],
   },
 ];

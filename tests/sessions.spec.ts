@@ -15,13 +15,18 @@ async function answer(page: Page, grade: RegExp = /^Bien/) {
   await page.getByRole("button", { name: grade }).click();
 }
 
-test("a new browser asks for an account and another browser opens the same progress", async ({ page, browser }) => {
+test("a new browser asks for an account and another browser opens the same progress", async ({
+  page,
+  browser,
+}) => {
   const user = `prueba-${Date.now().toString(36)}`;
-  await page.route("**/study/**", route => route.fallback());
+  await page.route("**/study/**", (route) => route.fallback());
   await mockCoach(page);
   await page.addInitScript(() => localStorage.removeItem("enarm-contraste-guest"));
   await page.goto("./");
-  await expect(page.getByRole("heading", { name: "Entra para seguir donde te quedaste." })).toBeVisible();
+  await expect(
+    page.getByRole("heading", { name: "Entra para seguir donde te quedaste." }),
+  ).toBeVisible();
   await page.getByRole("tab", { name: "Crear cuenta" }).click();
   await page.getByLabel("Usuario", { exact: true }).fill(user);
   await page.getByLabel("Contraseña", { exact: true }).fill("clave-segura-1");
@@ -31,12 +36,16 @@ test("a new browser asks for an account and another browser opens the same progr
   await page.getByLabel("Minutos por día", { exact: true }).fill("5");
   await page.getByRole("button", { name: "Empezar mi plan", exact: true }).click();
   await answer(page);
-  await expect(page.getByRole("progressbar", { name: "Meta diaria" })).toHaveAttribute("aria-valuenow", "1");
+  await expect(page.getByRole("progressbar", { name: "Meta diaria" })).toHaveAttribute(
+    "aria-valuenow",
+    "1",
+  );
   await expect(page.getByText(`Progreso protegido en el VPS · ${user}`)).toBeVisible();
 
   const context = await browser.newContext({ timezoneId: "UTC", reducedMotion: "reduce" });
   try {
-    const phone = await context.newPage(); await mockCoach(phone);
+    const phone = await context.newPage();
+    await mockCoach(phone);
     await phone.addInitScript(() => localStorage.removeItem("enarm-contraste-guest"));
     await phone.goto("./");
     await phone.getByLabel("Usuario", { exact: true }).fill(user);
@@ -45,14 +54,20 @@ test("a new browser asks for an account and another browser opens the same progr
     await expect(phone.getByRole("alert")).toContainText("Usuario o contraseña incorrectos");
     await phone.getByLabel("Contraseña", { exact: true }).fill("clave-segura-1");
     await phone.getByRole("button", { name: "Entrar" }).click();
-    await expect(phone.getByRole("progressbar", { name: "Meta diaria" })).toHaveAttribute("aria-valuenow", "1");
-  } finally { await context.close(); }
+    await expect(phone.getByRole("progressbar", { name: "Meta diaria" })).toHaveAttribute(
+      "aria-valuenow",
+      "1",
+    );
+  } finally {
+    await context.close();
+  }
 });
 
 test("an existing device links a username without losing progress", async ({ page }) => {
   const user = `vinculo-${Date.now().toString(36)}`;
   await mockCoach(page);
-  await start(page); await answer(page);
+  await start(page);
+  await answer(page);
   await page.getByRole("button", { name: "Crear usuario y contraseña" }).click();
   await page.getByLabel("Usuario", { exact: true }).fill(user);
   await page.getByLabel("Contraseña", { exact: true }).fill("clave-segura-2");
@@ -60,13 +75,21 @@ test("an existing device links a username without losing progress", async ({ pag
   await page.getByRole("button", { name: "Crear mi cuenta" }).click();
   await expect(page.getByText(`Entraste como ${user}`)).toBeVisible();
   await page.getByRole("button", { name: "Cerrar", exact: true }).click();
-  await expect(page.getByRole("progressbar", { name: "Meta diaria" })).toHaveAttribute("aria-valuenow", "1");
+  await expect(page.getByRole("progressbar", { name: "Meta diaria" })).toHaveAttribute(
+    "aria-valuenow",
+    "1",
+  );
 });
 
-test("new topics and reviews are separate sessions and a first reading is not an error", async ({ page }) => {
+test("new topics and reviews are separate sessions and a first reading is not an error", async ({
+  page,
+}) => {
   await mockCoach(page);
   await start(page);
-  await expect(page.getByRole("tab", { name: /Temas nuevos/ })).toHaveAttribute("aria-selected", "true");
+  await expect(page.getByRole("tab", { name: /Temas nuevos/ })).toHaveAttribute(
+    "aria-selected",
+    "true",
+  );
   await page.getByRole("button", { name: "Mostrar respuesta", exact: true }).click();
   await expect(page.getByText(/no cuenta como error/)).toBeVisible();
   await page.getByRole("button", { name: /^Otra vez/ }).click();
@@ -88,7 +111,8 @@ test("custom session size, motivation and a finished session summary", async ({ 
   await page.getByLabel("Tarjetas por sesión").fill("2");
   await page.getByLabel("Frase motivadora cada").fill("2");
   await page.getByRole("button", { name: "Guardar", exact: true }).click();
-  await answer(page); await answer(page);
+  await answer(page);
+  await answer(page);
   await expect(page.getByText("2 tarjetas hoy")).toBeVisible();
   await expect(page.getByRole("heading", { name: "Terminaste 2 tarjetas." })).toBeVisible();
   await page.getByRole("button", { name: /Otra sesión de 2/ }).click();
@@ -99,15 +123,33 @@ test("custom session size, motivation and a finished session summary", async ({ 
 test("a rest day empties today's goal and the calendar shows each day", async ({ page }) => {
   await mockCoach(page);
   await start(page);
-  await page.getByRole("group", { name: "Carga de hoy" }).getByRole("button", { name: "Descanso" }).click();
-  await expect(page.getByRole("heading", { name: "Hoy descansas. También es parte del plan." })).toBeVisible();
-  await expect(page.getByRole("progressbar", { name: "Meta diaria" })).toHaveAttribute("aria-valuemax", "1");
+  await page
+    .getByRole("group", { name: "Carga de hoy" })
+    .getByRole("button", { name: "Descanso" })
+    .click();
+  await expect(
+    page.getByRole("heading", { name: "Hoy descansas. También es parte del plan." }),
+  ).toBeVisible();
+  await expect(page.getByRole("progressbar", { name: "Meta diaria" })).toHaveAttribute(
+    "aria-valuemax",
+    "1",
+  );
   await page.getByRole("button", { name: "Estudiar de todos modos" }).click();
   await answer(page);
-  await page.getByRole("group", { name: "Actividad de los últimos 30 días" }).getByRole("button").last().click();
+  await page
+    .getByRole("group", { name: "Actividad de los últimos 30 días" })
+    .getByRole("button")
+    .last()
+    .click();
   await expect(page.getByRole("region", { name: /Progreso del/ })).toContainText("Respuestas1");
-  await page.getByRole("group", { name: "Actividad de los últimos 30 días" }).getByRole("button").first().click();
-  await expect(page.getByRole("region", { name: /Progreso del/ })).toContainText("No estudiaste este día");
+  await page
+    .getByRole("group", { name: "Actividad de los últimos 30 días" })
+    .getByRole("button")
+    .first()
+    .click();
+  await expect(page.getByRole("region", { name: /Progreso del/ })).toContainText(
+    "No estudiaste este día",
+  );
 });
 
 test("question tags reach Mi avance and the subtest filters by question type", async ({ page }) => {
@@ -115,14 +157,22 @@ test("question tags reach Mi avance and the subtest filters by question type", a
   await start(page);
   await page.getByRole("button", { name: "☆ Profundizar" }).click();
   await expect(page.getByRole("button", { name: "★ Profundizar" })).toBeVisible();
-  await page.getByRole("group", { name: "Orden de la pregunta" }).getByRole("button", { name: "2º" }).click();
-  await expect(page.getByRole("group", { name: "Orden de la pregunta" }).getByRole("button", { name: "2º" })).toHaveAttribute("aria-pressed", "true");
+  await page
+    .getByRole("group", { name: "Orden de la pregunta" })
+    .getByRole("button", { name: "2º" })
+    .click();
+  await expect(
+    page.getByRole("group", { name: "Orden de la pregunta" }).getByRole("button", { name: "2º" }),
+  ).toHaveAttribute("aria-pressed", "true");
   await page.getByRole("button", { name: "Mi avance", exact: true }).click();
   await expect(page.locator(".learning-deepen")).toContainText("Eje Clínico · 01.01");
   await page.getByLabel("Orden de la pregunta").selectOption("2");
   await expect(page.getByText("1 preguntas coinciden con tu selección.")).toBeVisible();
   await page.getByLabel("Orden de la pregunta").selectOption("all");
-  await page.getByRole("group", { name: "Tipo de pregunta" }).getByRole("button", { name: "Decir el diagnóstico" }).click();
+  await page
+    .getByRole("group", { name: "Tipo de pregunta" })
+    .getByRole("button", { name: "Decir el diagnóstico" })
+    .click();
   await page.getByRole("button", { name: "Seleccionar todas", exact: true }).click();
   await page.getByRole("button", { name: /Empezar subtest/ }).click();
   await expect(page.getByText("Pregunta 1 de 1", { exact: true })).toBeVisible();
@@ -131,7 +181,19 @@ test("question tags reach Mi avance and the subtest filters by question type", a
 
 test("the corner timer alerts when the time is over", async ({ page }) => {
   await mockCoach(page);
-  await page.addInitScript(() => localStorage.setItem("enarm-contraste-timer", JSON.stringify({ mode: "study", target: 60, started: Date.now() - 61_000, paused_at: null, paused_ms: 0, alerted: false })));
+  await page.addInitScript(() =>
+    localStorage.setItem(
+      "enarm-contraste-timer",
+      JSON.stringify({
+        mode: "study",
+        target: 60,
+        started: Date.now() - 61_000,
+        paused_at: null,
+        paused_ms: 0,
+        alerted: false,
+      }),
+    ),
+  );
   await start(page);
   const dock = page.getByRole("complementary", { name: "Temporizador de sesión" });
   await expect(dock).toContainText("¡Tiempo!");
@@ -150,23 +212,43 @@ test("a session can be limited to chosen sections and to one format", async ({ p
   await page.getByRole("button", { name: "Tiempo diario", exact: true }).click();
   await page.getByLabel("Minutos por día", { exact: true }).fill("20");
   await page.getByRole("button", { name: "Empezar mi plan", exact: true }).click();
-  await expect(page.getByRole("heading", { name: "¿Qué diagnóstico corresponde a cada caso?" })).toBeVisible();
+  await expect(
+    page.getByRole("heading", { name: "¿Qué diagnóstico corresponde a cada caso?" }),
+  ).toBeVisible();
   await page.getByRole("button", { name: "Personalizar" }).click();
-  await page.getByRole("group", { name: "Formato de la sesión" }).getByRole("button", { name: "Patrones madre" }).click();
-  await page.getByRole("group", { name: "Secciones de la sesión" }).getByRole("button", { name: "Sección de prueba" }).click();
-  await expect(page.getByRole("group", { name: "Bloques de la sesión" }).getByRole("button", { name: /01\.01/ })).toBeVisible();
+  await page
+    .getByRole("group", { name: "Formato de la sesión" })
+    .getByRole("button", { name: "Patrones madre" })
+    .click();
+  await page
+    .getByRole("group", { name: "Secciones de la sesión" })
+    .getByRole("button", { name: "Sección de prueba" })
+    .click();
+  await expect(
+    page
+      .getByRole("group", { name: "Bloques de la sesión" })
+      .getByRole("button", { name: /01\.01/ }),
+  ).toBeVisible();
   await page.getByRole("button", { name: "Guardar", exact: true }).click();
-  await expect(page.getByRole("status").filter({ hasText: "Solo:" })).toContainText("Sección de prueba · Patrones madre");
-  await expect(page.getByRole("heading", { name: "¿Qué patrón organiza este problema?" })).toBeVisible();
+  await expect(page.getByRole("status").filter({ hasText: "Solo:" })).toContainText(
+    "Sección de prueba · Patrones madre",
+  );
+  await expect(
+    page.getByRole("heading", { name: "¿Qué patrón organiza este problema?" }),
+  ).toBeVisible();
   const newTab = page.getByRole("tab", { name: /Temas nuevos/ });
   await expect(newTab).toContainText("Faltan 4 de 4 para terminar tu selección");
   await answer(page);
   await expect(newTab).toContainText("Faltan 3 de 4 para terminar tu selección");
   for (let n = 0; n < 3; n++) await answer(page);
-  await expect(page.getByRole("heading", { name: /No quedan tarjetas .* en tu selección\./ })).toBeVisible();
+  await expect(
+    page.getByRole("heading", { name: /No quedan tarjetas .* en tu selección\./ }),
+  ).toBeVisible();
   await expect(newTab).toContainText("✓ Terminaste tu selección");
   await page.reload();
   await expect(page.getByRole("status").filter({ hasText: "Solo:" })).toBeVisible();
   await page.getByRole("button", { name: "Quitar filtro" }).click();
-  await expect(page.getByRole("heading", { name: "¿Qué diagnóstico corresponde a cada caso?" })).toBeVisible();
+  await expect(
+    page.getByRole("heading", { name: "¿Qué diagnóstico corresponde a cada caso?" }),
+  ).toBeVisible();
 });

@@ -38,9 +38,7 @@ export default function Comparison({
           {axis.cases.map((item, index) => (
             <article className="clinical-card" key={item.id}>
               <div className="card-heading">
-                <span className="case-number">
-                  Caso {String.fromCharCode(65 + index)}
-                </span>
+                <span className="case-number">Caso {String.fromCharCode(65 + index)}</span>
                 <span className="case-category">{item.category}</span>
               </div>
               <h2>{item.diagnosis}</h2>
@@ -84,9 +82,7 @@ export default function Comparison({
                 <button className="text-button" onClick={() => onDetail(item)}>
                   Profundizar <Icon name="arrow" size={16} />
                 </button>
-                <span className="source-count">
-                  {item.sources.length} fuentes
-                </span>
+                <span className="source-count">{item.sources.length} fuentes</span>
                 <button
                   className="comment-case"
                   aria-label="Comentar este caso"
@@ -100,10 +96,7 @@ export default function Comparison({
           ))}
         </div>
         <aside className="contrast-map" aria-label="Mapa de contraste">
-          <details
-            open={mapOpen}
-            onToggle={(event) => setMapOpen(event.currentTarget.open)}
-          >
+          <details open={mapOpen} onToggle={(event) => setMapOpen(event.currentTarget.open)}>
             <summary>
               <span>
                 <Icon name="branch" size={19} />
@@ -122,10 +115,7 @@ export default function Comparison({
                   onClick={() => onDetail(item)}
                   aria-label={`Ver caso de ${item.diagnosis}`}
                 >
-                  <span>
-                    {item.vignette.match(/\[\[(.*?)\]\]/)?.[1] ||
-                      item.discriminator}
-                  </span>
+                  <span>{item.vignette.match(/\[\[(.*?)\]\]/)?.[1] || item.discriminator}</span>
                   <strong>
                     {item.diagnosis}
                     <Icon name="arrow" size={14} />
@@ -134,10 +124,7 @@ export default function Comparison({
               ))}
               <div className="map-note">
                 <Icon name="book" size={18} />
-                <p>
-                  El dato orienta. El contexto y los criterios completan el
-                  diagnóstico.
-                </p>
+                <p>El dato orienta. El contexto y los criterios completan el diagnóstico.</p>
               </div>
             </div>
           </details>

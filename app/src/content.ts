@@ -1,10 +1,6 @@
 import type { ClinicalAxis, Source } from "./types";
 import biliaryPilot from "../../content/piloto-biliar.json";
-import {
-  amenorrheaPractice,
-  amenorrheaVariants,
-  biliaryVariants,
-} from "./samples";
+import { amenorrheaPractice, amenorrheaVariants, biliaryVariants } from "./samples";
 
 export const sources: Source[] = [
   {
@@ -47,15 +43,13 @@ export const sources: Source[] = [
   {
     id: "poi",
     label: "Guía de insuficiencia ovárica · ESHRE/ASRM, 2025",
-    detail:
-      "Fuente externa: confirmación diagnóstica y tratamiento hormonal individualizado.",
+    detail: "Fuente externa: confirmación diagnóstica y tratamiento hormonal individualizado.",
     href: "https://www.asrm.org/practice-guidance/practice-committee-documents/evidence-based-guideline-premature-ovarian-insufficiency--2024/",
   },
   {
     id: "prol",
     label: "Pituitary Society · Consenso sobre prolactinomas, 2023",
-    detail:
-      "Fuente externa: evaluación de prolactina y manejo según la causa y los síntomas.",
+    detail: "Fuente externa: evaluación de prolactina y manejo según la causa y los síntomas.",
     href: "https://www.nature.com/articles/s41574-023-00886-5",
   },
   {
@@ -93,8 +87,7 @@ export const axes: ClinicalAxis[] = [
     id: "amenorrea",
     title: "Amenorrea secundaria",
     area: "Ginecología y endocrinología",
-    question:
-      "La menstruación se detuvo. ¿Qué dato te ayuda a encontrar la causa?",
+    question: "La menstruación se detuvo. ¿Qué dato te ayuda a encontrar la causa?",
     shared:
       "Una mujer que antes menstruaba consulta porque dejó de hacerlo. El síntoma se comparte; la explicación cambia.",
     takeaway:
@@ -139,8 +132,7 @@ export const axes: ClinicalAxis[] = [
           "Una mujer de 23 años deja de menstruar tras restringir su alimentación y aumentar el ejercicio; con embarazo excluido, tiene [[estradiol bajo y FSH baja o normal]].",
         discriminator:
           "Falta estrógeno, pero la FSH no aumenta como se esperaría ante una falla ovárica.",
-        mechanism:
-          "La supresión funcional de la señal central reduce la estimulación del ovario.",
+        mechanism: "La supresión funcional de la señal central reduce la estimulación del ovario.",
         decision:
           "Excluir otras causas y corregir el déficit energético con apoyo nutricional y psicológico, según la evaluación.",
         contrast:
@@ -195,8 +187,7 @@ export const axes: ClinicalAxis[] = [
           "El exceso de prolactina puede inhibir la señal reproductiva y alterar la ovulación.",
         decision:
           "Revisar embarazo, fármacos, función tiroidea y otras causas antes de decidir el tratamiento o la imagen.",
-        contrast:
-          "Hiperprolactinemia no equivale a prolactinoma. La causa determina la conducta.",
+        contrast: "Hiperprolactinemia no equivale a prolactinoma. La causa determina la conducta.",
         detail: {
           confirm:
             "Confirmar elevaciones leves y valorar macroprolactina cuando corresponda. Revisar fármacos y causas secundarias; investigar una elevación persistente sin explicación.",
@@ -217,8 +208,7 @@ export const axes: ClinicalAxis[] = [
     id: "ictericia",
     title: "Ictericia obstructiva",
     area: "Cirugía y gastroenterología",
-    question:
-      "Hay obstrucción biliar. ¿Qué cambia si también aparece infección?",
+    question: "Hay obstrucción biliar. ¿Qué cambia si también aparece infección?",
     shared:
       "Una persona presenta ictericia y un cálculo en el colédoco. Compara el drenaje alterado con la infección sobre esa obstrucción.",
     takeaway:
@@ -235,11 +225,9 @@ export const axes: ClinicalAxis[] = [
         category: "Obstrucción del conducto",
         vignette:
           "Una persona con ictericia y fosfatasa alcalina elevada tiene [[un cálculo demostrado dentro del colédoco]]; está estable y esta evaluación no aporta datos suficientes de infección.",
-        discriminator:
-          "La imagen identifica la causa y la localización de la obstrucción.",
+        discriminator: "La imagen identifica la causa y la localización de la obstrucción.",
         mechanism: "Un cálculo dificulta el paso de la bilis por el colédoco.",
-        decision:
-          "Buscar infección e inestabilidad y valorar la resolución de la obstrucción.",
+        decision: "Buscar infección e inestabilidad y valorar la resolución de la obstrucción.",
         contrast:
           "La colangitis agrega infección. La presencia del cálculo por sí sola no la demuestra.",
         detail: {
@@ -262,8 +250,7 @@ export const axes: ClinicalAxis[] = [
           "Una persona con ictericia y cálculo obstructivo presenta [[fiebre con escalofríos y leucocitosis]], además de alteraciones de colestasis e imagen biliar compatible.",
         discriminator:
           "La inflamación sistémica se integra con la colestasis y la imagen; no se interpreta la fiebre de forma aislada.",
-        mechanism:
-          "A la alteración del drenaje se suma una infección de la vía biliar.",
+        mechanism: "A la alteración del drenaje se suma una infección de la vía biliar.",
         decision:
           "Valorar estabilidad y disfunción orgánica. Iniciar atención de la infección y valorar el drenaje según el cuadro.",
         contrast:

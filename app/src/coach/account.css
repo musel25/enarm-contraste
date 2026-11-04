@@ -1,3 +1,92 @@
-.account-gate{display:grid;place-items:center;min-height:70vh}.account-card{width:min(440px,100%);background:#fff;border:1px solid #e5dfea;border-radius:20px;padding:34px;box-shadow:0 10px 40px #3e285208}.account-card h1{font-size:clamp(26px,3vw,34px)!important}.account-card>p{font-size:14px;line-height:1.8;color:#797180;margin:0 0 22px}.account-tabs{display:grid;grid-template-columns:1fr 1fr;gap:6px;background:#f3eff8;border-radius:12px;padding:5px;margin-bottom:22px}.account-tabs button{border:0;background:none;border-radius:9px;padding:10px;font-weight:700;color:#7a6890;cursor:pointer;font:inherit}.account-tabs button[aria-selected=true]{background:#fff;color:#5d448e;box-shadow:0 1px 4px #3e285214}.account-form .coach-field input{width:100%}.account-form .coach-field{margin-bottom:16px}.account-form h3{font-size:14px;color:#6c557f;margin:22px 0 12px}.account-hint{font-size:11px!important;color:#8d7f99;line-height:1.7!important}.account-error{color:#a0522d;font-size:13px}.account-guest,.account-signout,.account-code-link{margin-top:18px;font-size:11px}.account-form .coach-primary{width:100%}
-.coach-account-button{font-weight:750}.coach-account-button.needs-account{background:#fff4dc;border:1px solid #ead9ad!important;color:#8b6a2f!important;border-radius:8px;padding:5px 9px}
-.coach-cloud-actions{display:flex;gap:12px;align-items:center;flex-wrap:wrap;justify-content:flex-end}
+.account-gate {
+  display: grid;
+  place-items: center;
+  min-height: 70vh;
+}
+.account-card {
+  width: min(440px, 100%);
+  background: #fff;
+  border: 1px solid #e5dfea;
+  border-radius: 20px;
+  padding: 34px;
+  box-shadow: 0 10px 40px #3e285208;
+}
+.account-card h1 {
+  font-size: clamp(26px, 3vw, 34px) !important;
+}
+.account-card > p {
+  font-size: 14px;
+  line-height: 1.8;
+  color: #797180;
+  margin: 0 0 22px;
+}
+.account-tabs {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6px;
+  background: #f3eff8;
+  border-radius: 12px;
+  padding: 5px;
+  margin-bottom: 22px;
+}
+.account-tabs button {
+  border: 0;
+  background: none;
+  border-radius: 9px;
+  padding: 10px;
+  font-weight: 700;
+  color: #7a6890;
+  cursor: pointer;
+  font: inherit;
+}
+.account-tabs button[aria-selected="true"] {
+  background: #fff;
+  color: #5d448e;
+  box-shadow: 0 1px 4px #3e285214;
+}
+.account-form .coach-field input {
+  width: 100%;
+}
+.account-form .coach-field {
+  margin-bottom: 16px;
+}
+.account-form h3 {
+  font-size: 14px;
+  color: #6c557f;
+  margin: 22px 0 12px;
+}
+.account-hint {
+  font-size: 11px !important;
+  color: #8d7f99;
+  line-height: 1.7 !important;
+}
+.account-error {
+  color: #a0522d;
+  font-size: 13px;
+}
+.account-guest,
+.account-signout,
+.account-code-link {
+  margin-top: 18px;
+  font-size: 11px;
+}
+.account-form .coach-primary {
+  width: 100%;
+}
+.coach-account-button {
+  font-weight: 750;
+}
+.coach-account-button.needs-account {
+  background: #fff4dc;
+  border: 1px solid #ead9ad !important;
+  color: #8b6a2f !important;
+  border-radius: 8px;
+  padding: 5px 9px;
+}
+.coach-cloud-actions {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}

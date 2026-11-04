@@ -1,7 +1,7 @@
-import type { Card } from 'ts-fsrs';
+import type { Card } from "ts-fsrs";
 
 export type Grade = 1 | 2 | 3 | 4;
-export type SerializedFSRS = Omit<Card, 'due' | 'last_review'> & {
+export type SerializedFSRS = Omit<Card, "due" | "last_review"> & {
   due: string;
   last_review?: string;
 };
@@ -9,7 +9,7 @@ export type CoachCard = {
   id: string;
   section_id: string;
   block_id: string;
-  family: 'eje' | 'madre';
+  family: "eje" | "madre";
   level: number;
   order: number;
   new_seconds: number;
@@ -19,19 +19,19 @@ export type CoachIndex = { schema_version: 1; content_sha256: string; cards: Coa
 export type StudyPlan = {
   id: string;
   revision: number;
-  mode: 'deadline' | 'time';
+  mode: "deadline" | "time";
   start_day: string;
   deadline_day: string | null;
   minutes_per_day: number;
   section_ids: string[];
-  families: ('eje' | 'madre')[];
+  families: ("eje" | "madre")[];
   timezone: string;
   /** Share of the daily time for each weekday, Sunday first. 0 is a rest day. */
   weekly_load?: number[];
 };
 export type QuestionOrder = 1 | 2 | 3;
 export type CardTag = { order?: QuestionOrder; deepen?: boolean; later?: boolean };
-export type SessionKind = 'new' | 'review' | 'subtest' | 'break';
+export type SessionKind = "new" | "review" | "subtest" | "break";
 export type SessionLog = {
   id: string;
   day: string;
@@ -52,7 +52,11 @@ export type Preferences = {
   /** Limits study sessions to some sections, blocks or formats. Empty lists mean all. */
   session_scope?: SessionScope;
 };
-export type SessionScope = { section_ids: string[]; block_ids: string[]; families: ('eje' | 'madre')[] };
+export type SessionScope = {
+  section_ids: string[];
+  block_ids: string[];
+  families: ("eje" | "madre")[];
+};
 export type Memory = {
   card: SerializedFSRS | null;
   due_day: string;
@@ -125,3 +129,7 @@ export type StudySummary = {
   first_reads_today: number;
   errors_today: number;
 };
+
+export type CoachCommit = (
+  change: (previous: CoachState) => CoachState,
+) => Promise<CoachState | null>;

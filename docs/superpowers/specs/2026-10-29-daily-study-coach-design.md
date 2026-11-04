@@ -1,5 +1,8 @@
 # Daily study coach
 
+> Status: historical design. See [current development guidance](../../development.md) for the implemented architecture. Authorization statements below record the original task only.
+
+
 The user wants the ENARM site to work like Grind Recall for daily planning. A student chooses a finish date or daily study time. Opening the site presents today's cards, with clear daily and course progress. Each rated card gives useful, satisfying feedback. Finishing the daily assignment gives a larger celebration.
 
 The user has authorized autonomous work through deployment. This continues the existing application and stack. Builder choices below are defaults, not preferences the user explicitly selected.

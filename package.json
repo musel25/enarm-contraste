@@ -3,7 +3,18 @@
   "private": true,
   "version": "0.1.0",
   "type": "module",
+  "engines": {
+    "node": ">=22.21.0"
+  },
   "scripts": {
+    "check": "npm run format:check && npm run lint && npm run test:python && npm run build && npm run test:unit && npm run test:browser:preview",
+    "format": "biome format --write . && uv run ruff format scripts tests",
+    "format:check": "biome format . && uv run ruff format --check scripts tests",
+    "lint": "biome lint . && uv run ruff check scripts tests",
+    "typecheck": "tsc --noEmit",
+    "test:python": "uv run python -m unittest discover -s tests -p 'test_*.py'",
+    "test:browser": "playwright test",
+    "test:browser:preview": "PLAYWRIGHT_PREVIEW=1 playwright test",
     "dev": "node scripts/dev.mjs",
     "prepare:study": "uv run python scripts/build_full_decks.py && uv run python scripts/verify_full_library.py",
     "prebuild": "npm run prepare:study",
@@ -21,6 +32,7 @@
     "ts-fsrs": "5.4.2"
   },
   "devDependencies": {
+    "@biomejs/biome": "2.6.5",
     "@playwright/test": "1.64.1",
     "@types/node": "^22.0.0",
     "@types/react": "^19.0.0",

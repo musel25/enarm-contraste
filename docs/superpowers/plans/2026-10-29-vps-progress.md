@@ -1,5 +1,8 @@
 # VPS Progress Implementation Plan
 
+> Status: historical plan, archived on 2026-11-04. The checkboxes are original planning notes, not a current backlog. Architecture descriptions can be superseded. See [current development guidance](../../development.md). Deployment permissions recorded here applied only to the original task.
+
+
 > **For agentic workers:** Use superpowers:executing-plans inline. Steps use TDD. One fresh whole-branch reviewer precedes deployment. The user's standing instruction authorizes autonomous completion through VPS deployment.
 
 **Goal:** Save each student's daily coach progress on the VPS and restore it on another device with a private code.

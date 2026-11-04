@@ -1,5 +1,8 @@
 # Study progress and diagnostic practice
 
+> Status: historical design. See [current development guidance](../../development.md) for the implemented architecture. Authorization statements below record the original task only.
+
+
 Implement the user's requested study workflow in the existing Spanish React app.
 
 - Show cards practiced, remaining cards, start dates, attempts, errors, and next review dates by section and block. A first pass is exposure, not mastery.

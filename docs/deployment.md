@@ -8,7 +8,7 @@ El registro DNS `enarm A 145.241.168.188`, TTL 60, se añadió con Chrome MCP en
 
 ## Publicar
 
-Requisitos locales: Node 22.12 o posterior compatible, npm, uv, Chrome, SSH, rsync y ripgrep. El usuario SSH debe poder ejecutar nginx, instalar archivos en `/var/www` y recargar nginx con `sudo -n`.
+Requisitos locales: las versiones de Node y Python fijadas en el repositorio, npm, uv 0.8.22, Chromium de Playwright, SSH y rsync. Se puede usar Chrome mediante `CHROME_PATH`. El usuario SSH debe poder ejecutar nginx, instalar archivos en `/var/www` y recargar nginx con `sudo -n`.
 
 ```sh
 npm ci

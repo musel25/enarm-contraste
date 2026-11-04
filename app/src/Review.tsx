@@ -55,11 +55,7 @@ export default function Review({
   const copy = async () => {
     try {
       await navigator.clipboard.writeText(
-        notes
-          .map(
-            (note) => `${note.context.label}\n${note.category}\n${note.text}`,
-          )
-          .join("\n\n"),
+        notes.map((note) => `${note.context.label}\n${note.category}\n${note.text}`).join("\n\n"),
       );
       setStatus("Comentarios copiados. Puedes pegarlos en un mensaje.");
     } catch {
@@ -69,8 +65,7 @@ export default function Review({
   return (
     <Modal title="Tu revisión" onClose={onClose} wide>
       <p className="review-intro">
-        Señala qué cambiarías del contenido, del contraste o de la forma de
-        estudiar.
+        Señala qué cambiarías del contenido, del contraste o de la forma de estudiar.
       </p>
       <div className="review-context">
         <span>Estás comentando</span>
@@ -106,20 +101,13 @@ export default function Review({
           placeholder="Por ejemplo: quiero comparar primero estos dos casos…"
         />
         <div className="review-save">
-          <button
-            className="primary-button"
-            type="submit"
-            disabled={!text.trim()}
-          >
+          <button className="primary-button" type="submit" disabled={!text.trim()}>
             Guardar comentario
           </button>
           <span aria-live="polite">{status}</span>
         </div>
       </form>
-      <p
-        className={persisted ? "local-notice" : "storage-warning"}
-        role="status"
-      >
+      <p className={persisted ? "local-notice" : "storage-warning"} role="status">
         {persisted
           ? "Se guardan solo en este navegador. Descarga o copia los comentarios para enviarlos. No se envían de forma automática."
           : "El navegador no permite guardar los datos. Descarga los comentarios antes de cerrar esta página."}
@@ -132,8 +120,7 @@ export default function Review({
         </div>
         {notes.length === 0 ? (
           <p className="empty-reviews">
-            Todavía no hay comentarios. Elige un caso o escribe aquí una
-            observación general.
+            Todavía no hay comentarios. Elige un caso o escribe aquí una observación general.
           </p>
         ) : (
           <>
