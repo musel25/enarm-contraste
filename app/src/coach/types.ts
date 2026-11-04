@@ -1,6 +1,16 @@
 import type { Card } from "ts-fsrs";
 
 export type Grade = 1 | 2 | 3 | 4;
+export type CardFamily = "eje" | "madre" | "creadas";
+export type PersonalCard = {
+  id: string;
+  section_id: string;
+  source_card_id: string;
+  source_block_id: string;
+  front: string;
+  back: string;
+  created_at: string;
+};
 export type SerializedFSRS = Omit<Card, "due" | "last_review"> & {
   due: string;
   last_review?: string;
@@ -9,7 +19,7 @@ export type CoachCard = {
   id: string;
   section_id: string;
   block_id: string;
-  family: "eje" | "madre";
+  family: CardFamily;
   level: number;
   order: number;
   new_seconds: number;
@@ -24,7 +34,9 @@ export type StudyPlan = {
   deadline_day: string | null;
   minutes_per_day: number;
   section_ids: string[];
-  families: ("eje" | "madre")[];
+  families: CardFamily[];
+  /** Missing on legacy plans, which include personal cards by default. */
+  created_cards_enabled?: boolean;
   timezone: string;
   /** Share of the daily time for each weekday, Sunday first. 0 is a rest day. */
   weekly_load?: number[];
@@ -55,7 +67,7 @@ export type Preferences = {
 export type SessionScope = {
   section_ids: string[];
   block_ids: string[];
-  families: ("eje" | "madre")[];
+  families: CardFamily[];
 };
 export type Memory = {
   card: SerializedFSRS | null;
@@ -97,6 +109,8 @@ export type CoachState = {
   day_loads?: Record<string, number>;
   tags?: Record<string, CardTag>;
   sessions?: SessionLog[];
+  created_cards?: Record<string, PersonalCard>;
+  suspended_cards?: string[];
 };
 export type Forecast = {
   feasible: boolean;

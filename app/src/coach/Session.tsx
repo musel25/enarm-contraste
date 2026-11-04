@@ -4,8 +4,9 @@ import type { StudyCardData } from "../library-types";
 import type { ReviewContext } from "../storage";
 import { recordStudy, dayDiff } from "./engine";
 import CardTags from "./CardTags";
+import { personalData } from "./personal";
 import { loadSection } from "./resources";
-import type { CardTag, CoachCard, CoachIndex, CoachState, Grade } from "./types";
+import type { CardTag, CoachCard, CoachIndex, CoachState, Grade, CoachCommit } from "./types";
 
 function useActiveTimer(key: string, paused: boolean) {
   const total = useRef(0),
@@ -65,7 +66,9 @@ export default function Session({
   onReview,
   tag,
   onTag,
+  commit,
 }: {
+  commit: CoachCommit;
   meta: CoachCard;
   index: CoachIndex;
   state: CoachState;
@@ -83,6 +86,7 @@ export default function Session({
   const [attempt, setAttempt] = useState(0),
     [manualPause, setManualPause] = useState(false),
     [revealed, setRevealed] = useState(false);
+  const [editing, setEditing] = useState(false);
   const valid = data?.id === meta.id ? data : null;
   useEffect(() => {
     let current = true;
@@ -90,6 +94,11 @@ export default function Session({
     setData(null);
     setRevealed(false);
     setManualPause(false);
+    const personal = state.created_cards?.[meta.id];
+    if (personal) {
+      setData(personalData(personal));
+      return;
+    }
     loadSection(meta.section_id, index.content_sha256)
       .then((section) => {
         const card = section.cards.find((card) => card.id === meta.id);
@@ -103,7 +112,10 @@ export default function Session({
       current = false;
     };
   }, [meta.id, meta.section_id, index.content_sha256, attempt]);
-  const timer = useActiveTimer(`${day}/${meta.id}`, paused || busy || manualPause || !valid);
+  const timer = useActiveTimer(
+    `${day}/${meta.id}`,
+    paused || busy || manualPause || editing || !valid,
+  );
   const previews = useMemo(
     () =>
       ratings.map((rating) => {
@@ -132,6 +144,7 @@ export default function Session({
         paused ||
         busy ||
         manualPause ||
+        editing ||
         !valid ||
         event.target instanceof HTMLInputElement ||
         event.target instanceof HTMLTextAreaElement ||
@@ -169,7 +182,11 @@ export default function Session({
         <span>
           {fresh ? "Nueva" : "Repaso"}
           {tag?.later ? " · al final" : ""} ·{" "}
-          {meta.family === "eje" ? "Eje Clínico" : `Patrones Madre ${meta.level}`}
+          {meta.family === "creadas"
+            ? "Creadas"
+            : meta.family === "eje"
+              ? "Eje Clínico"
+              : `Patrones Madre ${meta.level}`}
         </span>
         <div>
           <span className="coach-clock" aria-label="Tiempo activo">
@@ -195,6 +212,7 @@ export default function Session({
           key={valid.id}
           card={valid}
           initialHighlight={false}
+          personal={{ state, commit, disabled: busy || paused, onEditingChange: setEditing }}
           onRate={() => {}}
           onReveal={() => setRevealed(true)}
           onReview={() =>
@@ -231,7 +249,7 @@ export default function Session({
           }
         />
       </div>
-      {onTag && <CardTags tag={tag} disabled={busy || paused} onChange={onTag} />}
+      {onTag && <CardTags tag={tag} disabled={busy || paused || editing} onChange={onTag} />}
     </div>
   );
 }

@@ -36,10 +36,17 @@ export default function BackupPanel({
     if (!file) return;
     try {
       const next = await parseBackup(file);
-      const ids = new Set(index.cards.map((c) => c.id));
-      const sections = new Set(index.cards.map((c) => c.section_id));
+      const published = index.cards.filter((c) => c.family !== "creadas");
+      const ids = new Set(published.map((c) => c.id));
+      const sections = new Set(published.map((c) => c.section_id));
+      for (const card of Object.values(next.created_cards ?? {})) {
+        if (!sections.has(card.section_id))
+          throw new Error("Esta copia usa otro temario. Tu progreso sigue intacto.");
+        ids.add(card.id);
+      }
       const referenced = new Set([
         ...Object.keys(next.progress),
+        ...(next.suspended_cards ?? []),
         ...next.history.map((a) => a.card_id),
         ...Object.values(next.days).flatMap((day) => [...day.ids, ...day.extra_ids]),
       ]);

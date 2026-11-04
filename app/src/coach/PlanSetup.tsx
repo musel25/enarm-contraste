@@ -36,7 +36,14 @@ export default function PlanSetup({
     state.plan?.section_ids || manifest.sections.map((s) => s.id),
   );
   const [families, setFamilies] = useState<StudyPlan["families"]>(
-    state.plan?.families || ["eje", "madre"],
+    state.plan
+      ? [
+          ...new Set([
+            ...state.plan.families,
+            ...(state.plan.created_cards_enabled !== false ? ["creadas" as const] : []),
+          ]),
+        ]
+      : ["eje", "madre", "creadas"],
   );
   const [legacy] = useState(() =>
     readState<Record<string, "known" | "again">>(
@@ -57,6 +64,7 @@ export default function PlanSetup({
       minutes_per_day: Number(minutes),
       section_ids: sections,
       families,
+      created_cards_enabled: families.includes("creadas"),
       timezone: zone,
       ...(weekly.some((load) => load !== 1) ? { weekly_load: weekly } : {}),
     };
@@ -79,7 +87,7 @@ export default function PlanSetup({
     weekly,
   ]);
   const forecast = useForecast(draft, index, today);
-  const count = selectedCards(index, draft.plan!).length;
+  const count = selectedCards(index, draft.plan!, draft).length;
   const valid = count > 0 && !forecast.pending && forecast.result?.feasible && !forecast.error;
   function toggleSection(id: string) {
     setSections((current) =>
@@ -163,6 +171,7 @@ export default function PlanSetup({
               [
                 ["eje", "Eje Clínico", "Comparar y distinguir"],
                 ["madre", "Patrones Madre", "Reconocer, explicar y decidir"],
+                ["creadas", "Creadas", "Tus flashcards personales"],
               ] as const
             ).map(([value, title, detail]) => (
               <label key={value}>

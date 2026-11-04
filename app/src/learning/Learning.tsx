@@ -2,6 +2,7 @@ import { useEffect, useMemo, useState } from "react";
 import type { StudyCardData, StudyManifest, StudySection } from "../library-types";
 import type { ReviewContext } from "../storage";
 import { createAssignment, estimatePlan, isError, recordPractice, setTag } from "../coach/engine";
+import { personalIndex, personalSection } from "../coach/personal";
 import { dateLabel, duration, timezone } from "../coach/format";
 import { useCoachStore, useStudyDay } from "../coach/hooks";
 import { loadResources, loadSection } from "../coach/resources";
@@ -19,8 +20,9 @@ import "../coach/today.css";
 import "./learning.css";
 
 const date = (value: string | null) => (value ? dateLabel(value) : "Sin iniciar");
-type Pattern = "eje" | "m1" | "m2" | "m3" | "m4";
+type Pattern = "creadas" | "eje" | "m1" | "m2" | "m3" | "m4";
 const patterns: { id: Pattern; label: string }[] = [
+  { id: "creadas", label: "Creadas" },
   { id: "eje", label: "Comparar casos (Eje Clínico)" },
   { id: "m1", label: "Reconocer el patrón" },
   { id: "m2", label: "Decir el diagnóstico" },
@@ -28,9 +30,17 @@ const patterns: { id: Pattern; label: string }[] = [
   { id: "m4", label: "Decidir el manejo" },
 ];
 const patternOf = (card: Pick<StudyCardData, "family" | "level">): Pattern =>
-  card.family === "eje" ? "eje" : (`m${card.level}` as Pattern);
+  card.family === "creadas"
+    ? "creadas"
+    : card.family === "eje"
+      ? "eje"
+      : (`m${card.level}` as Pattern);
 const patternName = (card: Pick<StudyCardData, "family" | "level">) =>
-  card.family === "eje" ? "Eje Clínico" : `Patrones Madre ${card.level}`;
+  card.family === "creadas"
+    ? "Creadas"
+    : card.family === "eje"
+      ? "Eje Clínico"
+      : `Patrones Madre ${card.level}`;
 type Status = "all" | "errors" | "due" | "deepen" | "new" | "practiced";
 const statuses: { id: Status; label: string }[] = [
   { id: "all", label: "Todas" },
@@ -101,8 +111,14 @@ export default function Learning({
   const store = useCoachStore();
   const { state } = store;
   const day = useStudyDay(state.plan?.timezone || timezone());
-  const [resources, setResources] = useState<{ manifest: StudyManifest; index: CoachIndex } | null>(
-    null,
+  const [baseResources, setResources] = useState<{
+    manifest: StudyManifest;
+    index: CoachIndex;
+  } | null>(null);
+  const resources = useMemo(
+    () =>
+      baseResources ? { ...baseResources, index: personalIndex(baseResources.index, state) } : null,
+    [baseResources, state.created_cards],
   );
   const [loadError, setLoadError] = useState(""),
     [attempt, setAttempt] = useState(0);
@@ -121,7 +137,17 @@ export default function Learning({
   const [status, setStatus] = useState<Status>("all");
   const [limit, setLimit] = useState(0),
     [mixed, setMixed] = useState(false);
-  const [sections, setSections] = useState<Record<string, StudySection>>({});
+  const [loadedSections, setSections] = useState<Record<string, StudySection>>({});
+  const sections = useMemo(
+    () =>
+      Object.fromEntries(
+        Object.entries(loadedSections).map(([id, section]) => [
+          id,
+          personalSection(section, state),
+        ]),
+      ),
+    [loadedSections, state.created_cards],
+  );
   const [sectionError, setSectionError] = useState(""),
     [sectionAttempt, setSectionAttempt] = useState(0);
   const [selected, setSelected] = useState<Set<string>>(new Set());
@@ -209,6 +235,7 @@ export default function Learning({
   const questions = useMemo<TestQuestion[]>(() => {
     if (!ready) return [];
     const keep = (id: string) => {
+      if (state.suspended_cards?.includes(id)) return false;
       const tag = state.tags?.[id];
       if (order === "none" ? tag?.order : order !== "all" && tag?.order !== Number(order))
         return false;
@@ -302,6 +329,7 @@ export default function Learning({
     clear();
   };
   const questionFor = (id: string): TestQuestion | null => {
+    if (state.suspended_cards?.includes(id)) return null;
     const meta = index.cards.find((card) => card.id === id) || caseMeta(id);
     const data = meta && sections[meta.section_id];
     if (!meta || !data) return null;
@@ -344,13 +372,19 @@ export default function Learning({
         </div>
         <p>
           <strong>{analytics.sections.reduce((sum, row) => sum + row.practiced, 0)}</strong> de{" "}
-          {index.cards.length} flashcards practicadas
+          {index.cards.filter((c) => !state.suspended_cards?.includes(c.id)).length} flashcards
+          practicadas
         </p>
       </div>
       {store.error && (
         <div className="coach-save-error" role="alert">
           <strong>No se pudo guardar el progreso.</strong>
           <p>{store.error}</p>
+          {!store.latest && (
+            <button disabled={store.saving} onClick={() => void store.retry()}>
+              Reintentar guardado
+            </button>
+          )}
           <button onClick={() => void store.reload()}>Cargar progreso guardado</button>
           <button onClick={() => downloadBackup(store.pending || state)}>Exportar copia</button>
         </div>
@@ -359,6 +393,7 @@ export default function Learning({
         <TestSession
           key={store.generation}
           questions={test}
+          personal={{ state, commit: store.commit, disabled: disabled || !!store.error }}
           disabled={disabled}
           tags={state.tags}
           onTag={(id, change) => void store.commit((previous) => setTag(previous, id, change))}
@@ -442,7 +477,8 @@ export default function Learning({
                     <summary>Ver avances por bloque</summary>
                     <div className="learning-blocks">
                       {section.blocks.map((info) => {
-                        const row = analytics.blocks.find((row) => row.id === info.id)!;
+                        const row = analytics.blocks.find((row) => row.id === info.id);
+                        if (!row) return null;
                         return (
                           <button
                             key={info.id}

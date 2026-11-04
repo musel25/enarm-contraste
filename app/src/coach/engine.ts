@@ -1,3 +1,4 @@
+import { personalIndex, validPersonalFields } from "./personal";
 import { createEmptyCard, fsrs, type Card, type Grade as FSRSGrade } from "ts-fsrs";
 import type {
   Assignment,
@@ -83,11 +84,17 @@ export function emptyState(): CoachState {
     undo: null,
   };
 }
-export function selectedCards(index: CoachIndex, plan: StudyPlan): CoachCard[] {
+export function selectedCards(index: CoachIndex, plan: StudyPlan, state?: CoachState): CoachCard[] {
   const sections = new Set(plan.section_ids);
   const families = new Set(plan.families);
-  return index.cards
-    .filter((c) => sections.has(c.section_id) && families.has(c.family))
+  return (state ? personalIndex(index, state) : index).cards
+    .filter(
+      (c) =>
+        sections.has(c.section_id) &&
+        (families.has(c.family) ||
+          (c.family === "creadas" && families.size > 0 && plan.created_cards_enabled !== false)) &&
+        !state?.suspended_cards?.includes(c.id),
+    )
     .sort((a, b) => a.order - b.order || a.id.localeCompare(b.id));
 }
 export function planKey(plan: StudyPlan): string {
@@ -200,7 +207,7 @@ export function createAssignment(
   const base = budgetMinutes ?? plan.minutes_per_day;
   if (!validBudget(base)) throw new Error("Daily time must be 5–720 minutes");
   const minutes = base * dayLoad(state, day);
-  const cards = selectedCards(index, plan),
+  const cards = selectedCards(index, plan, state),
     selected = new Set(cards.map((c) => c.id));
   const factors = calibration(state, index);
   const todays = state.history.filter((a) => a.day === day && selected.has(a.card_id));
@@ -387,7 +394,7 @@ export function recordReview(
   if (!textId(attemptId) || !isGrade(rating) || !finite(elapsedSeconds, 0, 86_400))
     throw new Error("Invalid review");
   const plan = state.plan;
-  const card = plan && selectedCards(index, plan).find((c) => c.id === cardId);
+  const card = plan && selectedCards(index, plan, state).find((c) => c.id === cardId);
   if (!card) throw new Error("Card is not in the selected course");
   const assignment = state.days[day];
   if (
@@ -457,6 +464,7 @@ export function recordPractice(
   if (state.history.some((attempt) => attempt.id === attemptId)) return state;
   requireDay(day);
   if (
+    state.suspended_cards?.includes(card.id) ||
     !textId(card.id) ||
     !textId(attemptId) ||
     !isGrade(rating) ||
@@ -514,7 +522,7 @@ export function addExtra(state: CoachState, index: CoachIndex, day: string): Coa
   requireDay(day);
   if (!state.plan || day < state.plan.start_day) return state;
   const assignment = createAssignment(state, index, day);
-  const cards = selectedCards(index, state.plan);
+  const cards = selectedCards(index, state.plan, state);
   const excluded = new Set([...assignment.ids, ...assignment.extra_ids]);
   const done = new Set(state.history.filter((a) => a.day === day).map((a) => a.card_id));
   const candidate =
@@ -533,9 +541,20 @@ export function addExtra(state: CoachState, index: CoachIndex, day: string): Coa
 }
 export function summary(state: CoachState, index: CoachIndex, day: string): StudySummary {
   requireDay(day);
-  const cards = state.plan ? selectedCards(index, state.plan) : [];
+  const cards = state.plan ? selectedCards(index, state.plan, state) : [];
   const selected = new Set(cards.map((c) => c.id)),
     assignment = state.days[day];
+  // Suspension removes pending work, but never removes a completed answer from today's record.
+  const course = state.plan
+    ? new Set(selectedCards(personalIndex(index, state), state.plan).map((c) => c.id))
+    : new Set<string>();
+  for (const attempt of state.history)
+    if (
+      attempt.day === day &&
+      state.suspended_cards?.includes(attempt.card_id) &&
+      course.has(attempt.card_id)
+    )
+      selected.add(attempt.card_id);
   const ids = assignment?.ids.filter((id) => selected.has(id)) ?? [];
   const extras = assignment?.extra_ids.filter((id) => selected.has(id)) ?? [];
   const eligible = new Set([...ids, ...extras]);
@@ -607,7 +626,7 @@ export function scopeRemaining(
   index: CoachIndex,
 ): { total: number; left: number } {
   if (!state.plan) return { total: 0, left: 0 };
-  const cards = selectedCards(index, state.plan).filter((card) =>
+  const cards = selectedCards(index, state.plan, state).filter((card) =>
     inScope(card, state.preferences.session_scope),
   );
   return { total: cards.length, left: cards.filter((card) => !state.progress[card.id]).length };
@@ -620,7 +639,7 @@ export function studyQueue(
 ): { ids: string[]; recommended: number } {
   if (!state.plan) return { ids: [], recommended: 0 };
   const scope = state.preferences.session_scope;
-  const cards = selectedCards(index, state.plan).filter((card) => inScope(card, scope));
+  const cards = selectedCards(index, state.plan, state).filter((card) => inScope(card, scope));
   const allowed = new Set(cards.map((card) => card.id));
   const done = new Set(state.history.filter((a) => a.day === day).map((a) => a.card_id));
   if (kind === "review") {
@@ -652,7 +671,7 @@ export function recordStudy(
 ): CoachState {
   if (state.history.some((a) => a.id === attemptId)) return state;
   const plan = state.plan;
-  const card = plan && selectedCards(index, plan).find((c) => c.id === cardId);
+  const card = plan && selectedCards(index, plan, state).find((c) => c.id === cardId);
   if (!card) throw new Error("Card is not in the selected course");
   let assignment = state.days[day];
   if (!assignment || assignment.plan_key !== planKey(plan!))
@@ -689,7 +708,7 @@ export function redistributeBacklog(
 ): CoachState {
   requireDay(day);
   if (!state.plan || !Number.isSafeInteger(span) || span < 2 || span > 14) return state;
-  const cards = selectedCards(index, state.plan);
+  const cards = selectedCards(index, state.plan, state);
   const done = new Set(state.history.filter((a) => a.day === day).map((a) => a.card_id));
   const due = dueCards(cards, state.progress, day, done);
   if (!due.length) return state;
@@ -841,7 +860,7 @@ export function estimatePlan(state: CoachState, index: CoachIndex, day: string):
     reason,
   });
   if (!plan) return failure("Elige un plan de estudio.");
-  const cards = selectedCards(index, plan);
+  const cards = selectedCards(index, plan, state);
   const remaining_new = cards.filter((c) => !state.progress[c.id]).length;
   if (!cards.length) return failure("Selecciona al menos una tarjeta.");
   if (!validBudget(plan.minutes_per_day))
@@ -1077,7 +1096,7 @@ function validScope(value: unknown): value is SessionScope {
     strings(value.section_ids) &&
     strings(value.block_ids) &&
     strings(value.families) &&
-    value.families.every((f) => f === "eje" || f === "madre")
+    value.families.every((f) => f === "eje" || f === "madre" || f === "creadas")
   );
 }
 function validPlan(value: unknown): value is StudyPlan {
@@ -1093,7 +1112,9 @@ function validPlan(value: unknown): value is StudyPlan {
     !finite(value.minutes_per_day, 5, 720) ||
     !strings(value.section_ids, false) ||
     !strings(value.families, false) ||
-    !value.families.every((f) => f === "eje" || f === "madre") ||
+    !value.families.every((f) => f === "eje" || f === "madre" || f === "creadas") ||
+    (value.created_cards_enabled !== undefined &&
+      typeof value.created_cards_enabled !== "boolean") ||
     typeof value.timezone !== "string"
   )
     return false;
@@ -1117,7 +1138,8 @@ export function validateState(value: unknown): value is CoachState {
       !strings(value.celebrated_days) ||
       !value.celebrated_days.every(isDay) ||
       !strings(value.celebrated_plans) ||
-      !validPreferences(value.preferences)
+      !validPreferences(value.preferences) ||
+      !validPersonalFields(value)
     )
       return false;
     if (

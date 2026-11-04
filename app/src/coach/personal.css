@@ -1,0 +1,125 @@
+.personal-tools {
+  border-top: 1px solid var(--line, #e4dcec);
+  padding: 20px 24px;
+  font-family: "Manrope Variable", sans-serif;
+}
+.personal-actions {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+.personal-actions button,
+.personal-excerpt button {
+  min-height: 42px;
+  padding: 9px 14px;
+  border: 1px solid var(--line, #e4dcec);
+  border-radius: 8px;
+  background: var(--paper, #fff);
+  color: inherit;
+  font: inherit;
+  cursor: pointer;
+}
+.personal-actions small {
+  flex-basis: 100%;
+  color: var(--muted, #72677e);
+}
+.personal-editor {
+  display: grid;
+  gap: 16px;
+}
+.personal-editor-heading h3 {
+  margin: 0 0 6px;
+  font-size: 1.15rem;
+}
+.personal-editor p {
+  margin: 0;
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+.personal-editor-heading p {
+  color: var(--muted, #72677e);
+}
+.personal-fields {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+}
+.personal-fields label {
+  display: grid;
+  gap: 8px;
+  font-size: 0.9rem;
+  font-weight: 700;
+  min-width: 0;
+}
+.personal-fields textarea {
+  width: 100%;
+  box-sizing: border-box;
+  min-height: 130px;
+  resize: vertical;
+  border: 1px solid var(--line, #e4dcec);
+  border-radius: 8px;
+  padding: 12px;
+  font: inherit;
+  font-weight: 400;
+  line-height: 1.6;
+  background: var(--paper, #fff);
+  color: inherit;
+}
+.personal-excerpt {
+  border-left: 3px solid var(--green, #8c6bb1);
+  padding: 10px 14px;
+  background: #f6f2fb;
+}
+.personal-excerpt blockquote {
+  margin: 0 0 12px;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  max-height: 160px;
+  overflow-y: auto;
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+.personal-excerpt > div {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.personal-tools button:disabled {
+  opacity: 0.5;
+  cursor: default;
+}
+.personal-tools :focus-visible {
+  outline: 3px solid #6850a0;
+  outline-offset: 3px;
+}
+.library-card.personal-card .library-front h2,
+.library-card.personal-card .library-answer p {
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+.suspended-cards {
+  display: grid;
+  gap: 20px;
+}
+@media (max-width: 640px) {
+  .personal-tools {
+    padding: 18px 16px;
+  }
+  .personal-fields {
+    grid-template-columns: 1fr;
+  }
+}
+
+.card-rating-fieldset {
+  border: 0;
+  padding: 0;
+  margin: 0;
+  min-width: 0;
+}
+
+.personal-actions .coach-primary {
+  background: #6850a0;
+  color: #fff;
+  border-color: #6850a0;
+}

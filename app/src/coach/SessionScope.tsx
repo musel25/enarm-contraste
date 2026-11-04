@@ -1,12 +1,13 @@
 import { useEffect, useMemo, useState } from "react";
 import type { StudyManifest, StudySection } from "../library-types";
 import { loadSection } from "./resources";
-import type { CoachIndex, SessionScope } from "./types";
+import type { CardFamily, CoachIndex, SessionScope } from "./types";
 
 export const emptyScope: SessionScope = { section_ids: [], block_ids: [], families: [] };
 const families = [
   ["eje", "Ejes clínicos"],
   ["madre", "Patrones madre"],
+  ["creadas", "Creadas"],
 ] as const;
 
 /** A short text for the active session filter, for example «Cardiología · Patrones madre». */
@@ -20,8 +21,10 @@ export function scopeLabel(scope: SessionScope, manifest: StudyManifest): string
     );
   if (scope.block_ids.length)
     parts.push(`${scope.block_ids.length} ${scope.block_ids.length === 1 ? "bloque" : "bloques"}`);
-  if (scope.families.length === 1)
-    parts.push(scope.families[0] === "eje" ? "Ejes clínicos" : "Patrones madre");
+  if (scope.families.length)
+    parts.push(
+      scope.families.map((id) => families.find(([key]) => key === id)?.[1] || id).join(", "),
+    );
   return parts.join(" · ");
 }
 
@@ -39,7 +42,7 @@ export default function SessionScopePicker({
   manifest: StudyManifest;
   index: CoachIndex;
   sectionIds: string[];
-  planFamilies: ("eje" | "madre")[];
+  planFamilies: CardFamily[];
 }) {
   const [loaded, setLoaded] = useState<Record<string, StudySection>>({});
   const available = manifest.sections.filter((s) => sectionIds.includes(s.id));
@@ -71,6 +74,15 @@ export default function SessionScopePicker({
       ),
     [blockSections.join(","), loaded, index],
   ); // eslint-disable-line react-hooks/exhaustive-deps
+  const scopeBlocks = [
+    ...blocks.filter((b) => !b.id.endsWith(".creadas")),
+    ...blockSections.map((id) => ({
+      id: `${id}.creadas`,
+      title: "Creadas",
+      topics: 0,
+      section_id: id,
+    })),
+  ];
   const toggle = <T extends string>(list: T[], item: T) =>
     list.includes(item) ? list.filter((x) => x !== item) : [...list, item];
   return (
@@ -130,7 +142,7 @@ export default function SessionScopePicker({
             </small>
           </span>
           <div className="session-scope-chips">
-            {blocks.map((b) => (
+            {scopeBlocks.map((b) => (
               <button
                 key={b.id}
                 type="button"
