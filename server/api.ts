@@ -2,9 +2,10 @@ import { createCipheriv, createDecipheriv, createHash, randomBytes, scrypt, timi
 import { createServer, type IncomingMessage, type ServerResponse } from "node:http";
 import { DatabaseSync } from "node:sqlite";
 import { validateState } from "../app/src/coach/engine";
+import { HttpError } from "./http";
+import { createRateLimits } from "./rate-limit";
 
 type Row = { revision: number; state: string; previous: string | null; fingerprint: string };
-class HttpError extends Error { constructor(public status: number, message: string) { super(message); } }
 const hash = (value: string) => createHash("sha256").update(value).digest("hex");
 type Account = { username: string; salt: string; verifier: string; wrapped: string; code_hash: string };
 const USERNAME = /^[a-z0-9._-]{3,40}$/;
@@ -67,7 +68,7 @@ export function createProgressServer({ database: path, origin, maxBytes = 20_000
   const find = database.prepare("SELECT revision,state,previous,fingerprint FROM profiles WHERE code_hash=?");
   const insert = database.prepare("INSERT INTO profiles VALUES (?,?,?,?,?,?)");
   const update = database.prepare("UPDATE profiles SET revision=?,state=?,previous=?,fingerprint=?,updated_at=? WHERE code_hash=?");
-  const limits = new Map<string, { minute: number; requests: number; hour: number; creates: number }>();
+  const limits = createRateLimits(requestLimit, createLimit);
   const reply = (response: ServerResponse, status: number, value: unknown) => {
     response.writeHead(status, { "Content-Type": "application/json; charset=utf-8", "Cache-Control": "no-store", "X-Content-Type-Options": "nosniff" });
     response.end(JSON.stringify(value));
@@ -77,6 +78,7 @@ export function createProgressServer({ database: path, origin, maxBytes = 20_000
       if (request.headers.origin && request.headers.origin !== origin) throw new HttpError(403, "Origen no permitido.");
       if (request.url === "/api/health" && request.method === "GET") { reply(response, 200, { ok: true }); return; }
       const ip = String(request.headers["x-real-ip"] || request.socket.remoteAddress);
+      limits.request(ip);
       if (request.url === "/api/account/login") {
         if (request.method !== "POST") throw new HttpError(405, "Método no permitido.");
         if (!request.headers["content-type"]?.startsWith("application/json")) throw new HttpError(415, "Se necesita JSON.");
@@ -113,6 +115,7 @@ export function createProgressServer({ database: path, origin, maxBytes = 20_000
           if (!validPassword(body?.password)) throw new HttpError(422, "La contraseña debe tener al menos 8 caracteres.");
           if (accountForCode.get(digest)) throw new HttpError(409, "Este progreso ya tiene un usuario.");
           if (findAccount.get(username)) throw new HttpError(409, "Ese usuario ya existe. Elige otro.");
+          limits.createAccount(ip);
           const salt = randomBytes(16), keys = await deriveKeys(body!.password as string, salt);
           try { insertAccount.run(username, salt.toString("base64"), keys.verifier.toString("base64"), wrap(match[1], keys.key), digest, now, now); }
           catch { throw new HttpError(409, "Ese usuario ya existe. Elige otro."); }
@@ -128,16 +131,6 @@ export function createProgressServer({ database: path, origin, maxBytes = 20_000
         updateAccount.run(salt.toString("base64"), keys.verifier.toString("base64"), wrap(match[1], keys.key), now, account.username);
         reply(response, 200, { username: account.username }); return;
       }
-      const minute = Math.floor(Date.now() / 60_000), hour = Math.floor(minute / 60);
-      if (!limits.has(ip) && limits.size >= 10_000) {
-        for (const [key, value] of limits) if (value.hour !== hour) limits.delete(key);
-        if (limits.size >= 10_000) throw new HttpError(429, "Inténtalo más tarde.");
-      }
-      const limit = limits.get(ip) || { minute, requests: 0, hour, creates: 0 };
-      if (limit.minute !== minute) { limit.minute = minute; limit.requests = 0; }
-      if (limit.hour !== hour) { limit.hour = hour; limit.creates = 0; }
-      limits.set(ip, limit);
-      if (++limit.requests > requestLimit) throw new HttpError(429, "Demasiadas solicitudes. Inténtalo más tarde.");
       if (request.method === "GET") {
         const row = find.get(digest) as Row | undefined;
         if (!row) throw new HttpError(404, "No encontramos progreso con este código.");
@@ -157,7 +150,7 @@ export function createProgressServer({ database: path, origin, maxBytes = 20_000
         if ((row && row.revision !== expected) || (!row && expected !== 0)) {
           database.exec("COMMIT"); reply(response, 409, { error: "Otro dispositivo guardó progreso nuevo.", state: row ? JSON.parse(row.state) : null }); return;
         }
-        if (!row && ++limit.creates > createLimit) { database.exec("ROLLBACK"); throw new HttpError(429, "Demasiados perfiles nuevos. Inténtalo más tarde."); }
+        if (!row) limits.createProfile(ip);
         const revision = row ? row.revision + 1 : Math.max(1, body.state.revision + 1);
         if (!Number.isSafeInteger(revision)) { database.exec("ROLLBACK"); throw new HttpError(422, "Revisión no válida."); }
         const saved = { ...body.state, revision };

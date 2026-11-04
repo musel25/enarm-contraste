@@ -9,10 +9,10 @@ import { backupDatabase } from "../../server/backup";
 import { emptyState } from "../../app/src/coach/engine";
 
 const code = () => randomBytes(32).toString("base64url");
-async function fixture() {
+async function fixture(limits: { requestLimit?: number; createLimit?: number } = {}) {
   const dir = await mkdtemp(join(tmpdir(), "enarm-api-test-"));
   const path = join(dir, "progress.sqlite");
-  let app = createProgressServer({ database: path, origin: "https://enarm.musel.dev", maxBytes: 20_000 });
+  let app = createProgressServer({ database: path, origin: "https://enarm.musel.dev", maxBytes: 20_000, ...limits });
   async function start() { await new Promise<void>(resolve => app.server.listen(0, "127.0.0.1", resolve)); }
   async function stop() { app.server.closeAllConnections(); await new Promise<void>(resolve => app.server.close(() => resolve())); app.database.close(); }
   await start();
@@ -120,6 +120,7 @@ test("invalid states and oversized bodies cannot replace saved progress", async 
   } finally { await api.close(); }
 });
 
+
 test("an account links a username and password to the same private progress", async () => {
   const api = await fixture();
   try {
@@ -162,6 +163,36 @@ test("login attempts are limited per username", async () => {
     const login = (password: string) => fetch(`http://127.0.0.1:${port}/api/account/login`, { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ username: "alguien", password }) });
     for (let n = 0; n < 10; n++) assert.equal((await login("incorrecta")).status, 401);
     assert.equal((await login("incorrecta")).status, 429);
+  } finally { await api.close(); }
+});
+
+test("account routes share the IP request budget", async () => {
+  const api = await fixture({ requestLimit: 2 });
+  try {
+    const port = (api.server().address() as { port: number }).port;
+    const headers = { Authorization: `Bearer ${code()}` };
+    assert.equal((await fetch(`http://127.0.0.1:${port}/api/account`, { headers })).status, 200);
+    assert.equal((await api.request(code())).status, 404);
+    const response = await fetch(`http://127.0.0.1:${port}/api/account/login`, {
+      method: "POST", headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ username: "unknown", password: "long-password" }),
+    });
+    assert.equal(response.status, 429);
+  } finally { await api.close(); }
+});
+
+test("registration reserves creation capacity before concurrent password work", async () => {
+  const api = await fixture({ createLimit: 2 });
+  try {
+    const port = (api.server().address() as { port: number }).port;
+    const responses = await Promise.all(Array.from({ length: 5 }, (_, i) =>
+      fetch(`http://127.0.0.1:${port}/api/account`, {
+        method: "POST", headers: { Authorization: `Bearer ${code()}`, "Content-Type": "application/json" },
+        body: JSON.stringify({ username: `new_student_${i}`, password: "long-password" }),
+      })));
+    assert.deepEqual(responses.map(r => r.status).sort(), [201, 201, 429, 429, 429]);
+    // Registration and initial progress use separate budgets, so onboarding still works.
+    assert.equal((await api.request(code(), "PUT", { expected_revision: 0, state: emptyState(), preserve: false })).status, 200);
   } finally { await api.close(); }
 });
 

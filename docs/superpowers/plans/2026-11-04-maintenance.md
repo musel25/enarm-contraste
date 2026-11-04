@@ -28,9 +28,9 @@
 
 Files: `server/api.ts`, `server/rate-limit.ts`, `tests/unit/progress-api.test.ts`.
 
-- [ ] Add real HTTP regressions for account request limits, registration limits, and concurrent bursts. Run them and observe failures.
-- [ ] Apply request limits before account routes. Reserve registration capacity before password derivation. Keep existing login failure limits.
-- [ ] Run Node tests. Commit and push `fix: enforce account request and registration limits`.
+- [x] Add real HTTP regressions for account request limits, registration limits, and concurrent bursts. Run them and observe failures.
+- [x] Apply request limits before account routes. Reserve registration capacity before password derivation. Keep existing login failure limits.
+- [x] Run Node tests. Commit and push `fix: enforce account request and registration limits`.
 
 ## Task 2: Strict state validation
 
