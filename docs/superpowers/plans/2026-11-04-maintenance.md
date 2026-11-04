@@ -52,9 +52,9 @@ Files: `playwright.config.ts`, `scripts/dev.mjs`, Vite config, runner tests.
 
 Files: account HTTP/database/crypto modules, Today presentation/hooks modules, JavaScript and Python tooling/configuration.
 
-- [ ] Add formatting and lint tools with explicit configuration. Format maintained source, tests, and configuration.
-- [ ] Extract account handling and Today responsibilities. Preserve behavior under existing tests.
-- [ ] Run format, lint, type, Python, and browser checks. Commit and push `refactor: separate account and daily study responsibilities`.
+- [x] Add formatting and lint tools with explicit configuration. Format maintained source, tests, and configuration.
+- [x] Extract account handling and Today responsibilities. Preserve behavior under existing tests.
+- [x] Run format, lint, type, Python, and browser checks. Commit and push separate tooling, account extraction, and Today extraction units.
 
 ## Task 5: Repeatable checks and instructions
 
