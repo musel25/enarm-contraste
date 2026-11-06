@@ -49,6 +49,8 @@ Archivo: `content/layers/capa2/NN.json`. El suplemento de capa 1 usa `content/la
 
 Cada escenario tiene identidad única. La viñeta, la pregunta y la respuesta son originales. Dos escenarios no pueden usar la misma viñeta. Cambiar solo la edad, el nombre o el orden de frases no crea un escenario nuevo.
 
+El compilador usa `scenario/<id>` en el suplemento de capa 1 y `capa2/scenario/<id>` en capa 2. La familia y el objetivo son metadatos. Cambiarlos no cambia el identificador de estudio. Una vez publicado, el identificador del escenario es inmutable, aunque su nombre contenga una función educativa anterior.
+
 Para las secciones 01–34, cubrir todos los conceptos de los bloques originales mediante `anchor_topic_ids`. Los contrastes pueden enlazar varios conceptos. Cada sección debe superar el número original de apariciones de temas con escenarios clínicos distintos. No generar esta ampliación a partir de sustituciones automáticas del texto de capa 1.
 
 El nuevo tema usa los bloques 35.01 a 35.10 definidos en el diseño. Sus conceptos ancla se definen en capa 1 y se conservan en capa 2. Incluir por lo menos dos escenarios diferentes por bloque en capa 1 y más escenarios en capa 2. La cantidad debe responder a decisiones clínicas distintas.

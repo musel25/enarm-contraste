@@ -243,6 +243,17 @@ class LayerTests(unittest.TestCase):
         self.assertEqual(compiled["cards"][0]["family"], "eje")
         self.assertEqual(compiled["cards"][1]["level"], 4)
 
+    def test_objective_edits_preserve_scheduled_identity_in_both_layers(self):
+        for layer in (1, 2):
+            section, _, _ = fixture()
+            section["layer"] = layer
+            first = compile_section(section)["cards"][0]
+            section["blocks"][0]["scenarios"][0]["objective"] = "variante"
+            changed = compile_section(section)["cards"][0]
+            self.assertNotEqual(first["family"], changed["family"])
+            self.assertNotEqual(first["objective"], changed["objective"])
+            self.assertEqual(first["id"], changed["id"])
+
 
 if __name__ == "__main__":
     unittest.main()

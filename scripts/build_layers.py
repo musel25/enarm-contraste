@@ -231,7 +231,7 @@ def compile_section(section):
             prefix = "capa2/" if section["layer"] == 2 else ""
             cards.append(
                 {
-                    "id": f"{prefix}{family}/{case['id']}",
+                    "id": f"{prefix}scenario/{case['id']}",
                     "family": family,
                     "level": level,
                     "section_id": section["section_id"],
