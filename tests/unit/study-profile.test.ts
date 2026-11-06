@@ -176,6 +176,62 @@ test("migration retains unknown historic IDs and does not invent a new plan", ()
   assert.equal(profile.workspaces.capa2.plan, null);
 });
 
+test("migration removes private-only session filters from the published space", () => {
+  for (const scope of [
+    { section_ids: ["01"], block_ids: ["01.creadas"], families: ["creadas" as const] },
+    {
+      section_ids: ["01"],
+      block_ids: ["01.01", "01.creadas"],
+      families: ["eje" as const, "creadas" as const],
+    },
+  ]) {
+    const before = legacy();
+    before.preferences.session_scope = scope;
+    const profile = migrateProfile(before);
+    assert.deepEqual(profile.workspaces.capa1.preferences.session_scope, {
+      section_ids: ["01"],
+      block_ids: scope.block_ids.filter((id) => !id.endsWith(".creadas")),
+      families: scope.families.filter((family) => family !== "creadas"),
+    });
+    assert.deepEqual(profile.workspaces.creadas1.preferences.session_scope, {
+      section_ids: ["01"],
+      block_ids: [],
+      families: ["creadas"],
+    });
+    assert.deepEqual(profile.legacy?.preferences.session_scope, scope);
+    assert.deepEqual(profile.workspaces.capa1.progress["eje/01.01"], before.progress["eje/01.01"]);
+  }
+});
+
+test("migration keeps legacy IDs that match inherited object property names", () => {
+  const state = legacy();
+  state.progress = {
+    ...state.progress,
+    ...Object.fromEntries([
+      [
+        "toString",
+        { card: null, due_day: day, introduced_day: "", last_rating: null, imported: true },
+      ],
+    ]),
+  };
+  state.created_cards![personal.id].source_card_id = "toString";
+  assert.equal(validateState(state), true);
+  const profile = migrateProfile(state);
+  assert.deepEqual(profile.workspaces.capa1.progress.toString, state.progress.toString);
+  assert.equal(Object.hasOwn(profile.workspaces.creadas1.progress, "toString"), false);
+  assert.equal(isStudyProfile(profile), true);
+});
+
+test("a legacy personal-only plan moves to created cards without an empty published plan", () => {
+  const state = legacy();
+  state.plan!.families = ["creadas"];
+  const profile = migrateProfile(state);
+  assert.equal(profile.workspaces.capa1.plan, null);
+  assert.deepEqual(profile.workspaces.creadas1.plan?.families, ["creadas"]);
+  assert.deepEqual(profile.legacy?.plan, state.plan);
+  assert.deepEqual(profile.workspaces.capa1.progress, { "eje/01.01": state.progress["eje/01.01"] });
+});
+
 test("newly reserved layer-2 prefixes do not erase unknown version-1 history", () => {
   const id = "capa2/unknown-legacy-card";
   const extended: CoachIndex = {

@@ -23,7 +23,7 @@ export function ownerOf(
   catalog: Record<string, PersonalCard>,
   legacy?: ReadonlySet<string>,
 ): StudySpace {
-  const card = catalog[id];
+  const card = Object.hasOwn(catalog, id) ? catalog[id] : undefined;
   if (card) return card.layer === 2 ? "creadas2" : "creadas1";
   if (legacy?.has(id)) return "capa1";
   return id.startsWith("capa2/") ? "capa2" : "capa1";
@@ -34,7 +34,9 @@ function validOrigin(
   catalog: Record<string, PersonalCard>,
   legacy?: ReadonlySet<string>,
 ) {
-  const source = catalog[card.source_card_id];
+  const source = Object.hasOwn(catalog, card.source_card_id)
+    ? catalog[card.source_card_id]
+    : undefined;
   const layer =
     source?.layer ??
     (legacy?.has(card.source_card_id) ? 1 : card.source_card_id.startsWith("capa2/") ? 2 : 1);
@@ -130,27 +132,27 @@ export function migrateProfile(input: StoredStudyState): StudyProfile {
   ) as StudyProfile["workspaces"];
   const legacy = new Set(
     [...references(original), ...Object.values(catalog).map((card) => card.source_card_id)].filter(
-      (id) => !catalog[id],
+      (id) => !Object.hasOwn(catalog, id),
     ),
   );
   for (const space of ["capa1", "creadas1"] as const) {
     const own = (id: string) => ownerOf(id, catalog, legacy) === space;
     const personal = isPersonalSpace(space);
     const derivedId = `creadas1/${original.plan?.id.slice(0, 128) || "plan"}`;
-    const plan = original.plan
-      ? {
-          ...original.plan,
-          id: personal
-            ? derivedId === original.plan.id
-              ? `${derivedId}/migrado`
-              : derivedId
-            : original.plan.id,
-          families: personal
-            ? ["creadas" as const]
-            : original.plan.families.filter((f) => f !== "creadas"),
-          created_cards_enabled: personal,
-        }
-      : null;
+    const publishedFamilies = original.plan?.families.filter((f) => f !== "creadas") ?? [];
+    const plan =
+      original.plan && (personal || publishedFamilies.length)
+        ? {
+            ...original.plan,
+            id: personal
+              ? derivedId === original.plan.id
+                ? `${derivedId}/migrado`
+                : derivedId
+              : original.plan.id,
+            families: personal ? ["creadas" as const] : publishedFamilies,
+            created_cards_enabled: personal,
+          }
+        : null;
     const state: CoachState = {
       ...emptyState(),
       plan,
@@ -168,7 +170,19 @@ export function migrateProfile(input: StoredStudyState): StudyProfile {
                 families: ["creadas" as const],
               },
             }
-          : {}),
+          : original.preferences.session_scope
+            ? {
+                session_scope: {
+                  ...original.preferences.session_scope,
+                  block_ids: original.preferences.session_scope.block_ids.filter(
+                    (id) => !id.endsWith(".creadas"),
+                  ),
+                  families: original.preferences.session_scope.families.filter(
+                    (family) => family !== "creadas",
+                  ),
+                },
+              }
+            : {}),
       },
       day_loads: original.day_loads,
       sessions: [],
