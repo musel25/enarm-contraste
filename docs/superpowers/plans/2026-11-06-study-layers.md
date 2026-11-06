@@ -70,7 +70,7 @@
 - [x] Implement source and review validation, unique scenario coverage, the compiler and manifest/index hashing.
 - [x] Compile each scenario as one independently scheduled card. Use family `eje` for explicit contrasts; use `madre` and a compatible level for other objectives. Do not duplicate the same vignette just to create cards.
 - [x] Make `prepare:study` run the original compiler and audit before the supplemental compiler. Load layer 2 by its own root and hash.
-- [ ] Run Python tests and `npm run prepare:study` after reviewed authoring exists. Python checks pass; strict full compilation waits for the complete reviewed corpus.
+- [x] Run Python tests and `npm run prepare:study` after reviewed authoring exists. All 41 Python tests and strict full compilation pass for all 35 reviewed sections.
 - [x] Commit `feat: compile independently reviewed clinical layers`; push.
 
 ## Task 4: Clinical authoring and independent review
@@ -80,18 +80,18 @@
 **Interfaces:** Exact schema is in `docs/layer-content-contract.md`. Every section covers its source anchors and has more distinct scenarios than its original vignette count. Source references include actual document version and check date. Review approval is tied to the exact canonical JSON hash.
 
 - [x] Assign disjoint section ranges to independent clinical authors. Each author researches primary Mexican and international references and writes only their assigned files.
-- [ ] Write genuine variants, neighboring differentials, incomplete presentations, missing-data decisions and severity-dependent initial actions. Use the user's eight functions as a guide, not a quota.
+- [x] Write genuine variants, neighboring differentials, incomplete presentations, missing-data decisions and severity-dependent initial actions. Use the user's eight functions as a guide, not a quota.
 - [x] Author all ten electrolyte blocks in both layers. Use adult guidance only for adult cases. Record national-source limitations rather than claiming an old guide is recent.
-- [ ] Rotate authors for independent review of other ranges. Review source support, every vignette, the discriminating data, uncertainty and initial action. Fix issues before recording approval.
-- [ ] Run compiler coverage validation. Missing sections, missing anchors, stale reviews or insufficient unique cases must fail.
-- [ ] Commit reviewed sections in self-contained batches and push every commit.
+- [x] Rotate authors for independent review of other ranges. Review source support, every vignette, the discriminating data, uncertainty and initial action. Fix issues before recording approval.
+- [x] Run compiler coverage validation. Missing sections, missing anchors, stale reviews or insufficient unique cases must fail.
+- [x] Commit reviewed sections in self-contained batches and push every commit.
 
 ## Task 5: Complete verification and review
 
 **Files:** Update `README.md`, `docs/development.md`, the current PR and this plan's checked steps.
 
-- [ ] Run `env -u PLAYWRIGHT_BASE_URL npm run check` using disposable local resources. Confirm all checks pass.
-- [ ] Inspect desktop and phone screenshots of all four daily tabs and the library selector.
+- [x] Run `env -u PLAYWRIGHT_BASE_URL npm run check` using disposable local resources. Confirm all checks pass.
+- [x] Inspect desktop and phone screenshots of all four daily tabs and the library selector.
 - [x] Compare original authored section hashes and Anki IDs with the branch base. Original34 section bytes and2,900 planner entries match the original compiler output. Both packages retain identical GUIDs, model/deck IDs, fields and card relationships.
-- [ ] Request an independent whole-branch review. Resolve important findings with regression tests.
-- [ ] Update the PR with actual section/case counts, checks and remaining clinical-review limits. Mark it ready for review when the complete scope is verified. Do not merge or deploy.
+- [x] Request an independent whole-branch review. Resolve important findings with regression tests. A second independent review found no remaining code issues; final integrated verification also passes.
+- [x] Update the PR with actual section/case counts, checks and remaining clinical-review limits. Mark it ready for review when the complete scope is verified. Do not merge or deploy.

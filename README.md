@@ -79,7 +79,7 @@ El inventario original conserva 34 secciones, 355 grupos y 730 apariciones de te
 
 La sección **Trastornos hidroelectrolíticos** añade diez bloques en ambas capas: volumen y tonicidad, hiponatremia, hipernatremia, hipopotasemia, hiperpotasemia, hipocalcemia, hipercalcemia, magnesio, fosfato y realimentación, y problemas combinados. Sus 20 tarjetas de capa 1 elevan el inventario web de esa capa a 35 secciones y 2,920 tarjetas. El suplemento y la capa 2 se estudian en la web.
 
-Capa 2 cubre las mismas 35 secciones con escenarios independientes. Cada sección tiene más escenarios que las apariciones de temas de capa 1. Cada caso entrena una distinción clínica concreta. Los bloques pueden enlazar secciones que comparten un diagnóstico diferencial. Estos enlaces no duplican tarjetas ni su memoria de repaso.
+Capa 2 cubre las mismas 35 secciones con 843 escenarios independientes. Cada sección tiene más escenarios que las apariciones de temas de capa 1. Cada caso entrena una distinción clínica concreta. Los bloques pueden enlazar secciones que comparten un diagnóstico diferencial. Estos enlaces no duplican tarjetas ni su memoria de repaso.
 
 La biblioteca carga una sección a la vez. Permite buscar por síntoma o sección, abrir un grupo diferencial, ocultar las respuestas y las pistas, elegir un nivel, guardar el progreso y comentar una tarjeta. Cada diagnóstico enlaza con su manejo y variantes. Los dos mazos completos se descargan como archivos `.apkg` para importar en Anki.
 
