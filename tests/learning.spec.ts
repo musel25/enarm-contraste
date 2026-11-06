@@ -290,13 +290,20 @@ test("retrying the final Library answer announces block and section completion",
 test("a slow diagnostic backup cannot replace a more recent file selection", async ({ page }) => {
   const { emptyState, recordPractice } = await import("../app/src/coach/engine");
   const { caseMeta } = await import("../app/src/learning/model");
-  const stateA = recordPractice(
-    emptyState(),
-    caseMeta("clinical/01.01/01.01-1/easy")!,
-    3,
-    10,
-    "2026-10-29",
-    "backup-a",
+  const { migrateProfile, spaceState, updateSpace } = await import("../app/src/coach/profile");
+  const profile = migrateProfile(emptyState());
+  // A native profile must resolve the diagnostic card. Migrated legacy IDs are retained offline.
+  const stateA = updateSpace(
+    profile,
+    "capa1",
+    recordPractice(
+      spaceState(profile, "capa1"),
+      caseMeta("clinical/01.01/01.01-1/easy")!,
+      3,
+      10,
+      "2026-10-29",
+      "backup-a",
+    ),
   );
   let release!: () => void;
   const held = new Promise<void>((resolve) => {
