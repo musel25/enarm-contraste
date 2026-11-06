@@ -1,0 +1,893 @@
+{
+  "schema_version": 1,
+  "layer": 2,
+  "section_id": "27",
+  "title": "ORL",
+  "author": "clinical-author-25-35",
+  "sources": [
+    {
+      "id": "girft-ent",
+      "label": "NHS England GIRFT: Ear, Nose and Throat referral guidelines (adult)",
+      "url": "https://gettingitrightfirsttime.co.uk/wp-content/uploads/2025/07/ENT-Referral-Guidelines-Adult-combined-August-2025.pdf",
+      "version": "Julio 2025; archivo combinado agosto 2025",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Ear pain, hearing loss, vertigo, facial weakness, nasal symptoms, epistaxis, voice and sleep pathways"
+    },
+    {
+      "id": "mx-iras",
+      "label": "Secretaría de Salud: Recomendaciones para el Manejo de Infecciones Respiratorias Agudas",
+      "url": "https://ram.salud.gob.mx/consenso.html",
+      "version": "Consenso web sin fecha editorial visible",
+      "checked_at": "2026-11-06",
+      "region": "mexico",
+      "access": "checked",
+      "locator": "Vías respiratorias superiores: otitis, sinusitis y faringitis"
+    },
+    {
+      "id": "rch-airway",
+      "label": "Royal Children’s Hospital: Clinical Practice Guideline, Acute upper airway obstruction",
+      "url": "https://www.rch.org.au/clinicalguide/guideline_index/Acute_upper_airway_obstruction/",
+      "version": "Actualizada marzo2021, fecha visible al final del HTML completo",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Assessment of severity; minimal handling; early specialist airway support"
+    },
+    {
+      "id": "rch-otitis",
+      "label": "Royal Children’s Hospital: Clinical Practice Guideline, Acute otitis media",
+      "url": "https://www.rch.org.au/clinicalguide/guideline_index/Acute_otitis_media/",
+      "version": "Página: junio2021; algoritmo de manejo ilustrado febrero2025",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Diagnosis; complications, mastoiditis; perforation; Otitis media with effusion"
+    },
+    {
+      "id": "rch-throat",
+      "label": "Royal Children’s Hospital: Clinical Practice Guideline, Sore throat",
+      "url": "https://www.rch.org.au/clinicalguide/guideline_index/Sore_throat/",
+      "version": "Actualizada octubre2024, fecha visible al final del HTML completo",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Red flags; peritonsillar and retropharyngeal abscess; airway obstruction"
+    },
+    {
+      "id": "rcs-trigeminal",
+      "label": "Royal College of Surgeons of England: Guidelines for management of trigeminal neuralgia",
+      "url": "https://www.rcseng.ac.uk/-/media/Files/RCS/FDS/Guidelines/Trigemina-Neuralgia-Guidelines_2021_V4.pdf",
+      "version": "2021, versión 4 del archivo",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Diagnosis; red flags; referral and neuroimaging"
+    },
+    {
+      "id": "esr-infection",
+      "label": "European Society of Head and Neck Radiology: ESR Essentials acute infections of head and neck",
+      "url": "https://link.springer.com/article/10.1007/s00330-025-11818-4",
+      "version": "Publicación en línea23julio2025; volumen36(2026),pp334–343",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Texto completo: diagnóstico clínico vs hallazgo aislado, mastoides, CT de cuello/tórax; no dosis"
+    },
+    {
+      "id": "nidcd-otosclerosis",
+      "label": "NIDCD: Otosclerosis",
+      "url": "https://www.nidcd.nih.gov/health/otosclerosis",
+      "version": "Publicación actualizada septiembre2013; fecha web16marzo2022",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "How is otosclerosis treated?: riesgos y límites; información institucional, no GPC"
+    },
+    {
+      "id": "nidcd-aids",
+      "label": "NIDCD: Hearing Aids",
+      "url": "https://www.nidcd.nih.gov/health/hearing-aids",
+      "version": "Publicación actualizada septiembre2013; fecha web11octubre2022",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Which hearing aid will work best for me?: adaptación bilateral; información institucional"
+    },
+    {
+      "id": "aao-sudden",
+      "label": "AAO-HNS: recomendaciones de Clinical Practice Guideline Sudden Hearing Loss Update",
+      "url": "https://www.entnet.org/resource/aao-hnsf-updated-cpg-shl-press-release-fact-sheet/",
+      "version": "1agosto2019",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Recomendaciones oficiales abiertas: KAS10 rescate intratimpánico2–6semanas; adultos"
+    },
+    {
+      "id": "rch-nasal",
+      "label": "RCH: Nasal fracture",
+      "url": "https://www.rch.org.au/clinicalguide/guideline_index/Nasal_fracture/",
+      "version": "Octubre2025",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Key points2–4: revisión tras edema y ventana de reducción pediátrica"
+    },
+    {
+      "id": "cdc-mono",
+      "label": "CDC: About Infectious Mononucleosis",
+      "url": "https://www.cdc.gov/epstein-barr/about/mononucleosis.html",
+      "version": "9mayo2024",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Treatment and recovery: evitar deporte de contacto; información oficial, no GPC"
+    },
+    {
+      "id": "nidcd-rrp",
+      "label": "NIDCD: Recurrent Respiratory Papillomatosis",
+      "url": "https://www.nidcd.nih.gov/health/recurrent-respiratory-papillomatosis",
+      "version": "Publicación septiembre2017; fecha web28noviembre2017",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "What causes RRP? y prevención: VPH6/11. Solo etiología y cobertura, no terapias actuales"
+    },
+    {
+      "id": "aao-tonsil",
+      "label": "AAO-HNS: recomendaciones de Tonsillectomy in Children Update",
+      "url": "https://www.entnet.org/resource/aao-hnsf-updated-cpg-tonsillectomy-press-release-fact-sheet/",
+      "version": "5febrero2019",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "KAS13–14, recomendaciones oficiales completas sobre analgesia y codeína"
+    },
+    {
+      "id": "aao-bell",
+      "label": "AAO-HNS: recomendaciones de Bell’s Palsy guideline",
+      "url": "https://www.entnet.org/resource/aao-hnsf-clinical-practice-guideline-bells-palsy-press-release-fact-sheet/",
+      "version": "4noviembre2013",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Significant points4–5 y11: tratamiento, antiviral aislado y seguimiento; fuente antigua explícita"
+    },
+    {
+      "id": "cdc-zoster",
+      "label": "CDC: Clinical Features of Shingles",
+      "url": "https://www.cdc.gov/shingles/hcp/clinical-signs/index.html",
+      "version": "10mayo2024",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Postherpetic neuralgia: persistencia de dolor>90días; información clínica oficial"
+    },
+    {
+      "id": "aao-epistaxis",
+      "label": "AAO-HNSF2020: Clinical Practice Guideline Nosebleed, Executive Summary íntegro",
+      "url": "https://ern-ithaca.eu/wp-content/uploads/2020/12/Tunkel_HHT_nosebleeds_OtolaryngolHeadNeckSurg2020.pdf",
+      "version": "Enero2020,OtolaryngologyHeadNeckSurgery162(1),8–25;doi10.1177/0194599819889955",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "KAS12,p22impresa(PDF15):identificación deHHT;PDFprimario18pabiertoyapartadoleído"
+    },
+    {
+      "id": "nhs-apnoea-driving",
+      "label": "NHS: Sleep apnoea, información institucional para pacientes",
+      "url": "https://www.nhs.uk/conditions/sleep-apnoea/",
+      "version": "Revisada11mayo2026",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Sleep apnoea can cause other problems; Driving and sleep apnoea: somnolencia y accidentes; no se trasladan reglas DVLA a México"
+    }
+  ],
+  "mexico_source_note": "Se abrió el consenso oficial de Secretaría de Salud sobre infecciones respiratorias en ram.salud.gob.mx; no muestra fecha editorial. El enlace IMSS-261GRR para rinosinusitis devolvió error y no se considera revisado. No se comprobó una guía mexicana reciente e integrada para todas las decisiones vestibulares, auditivas y laríngeas. GIRFT corresponde a adultos; las decisiones pediátricas se limitan a evaluación y urgencia respaldadas por RCH. La decisión definitiva de amigdalectomía requiere una guía pediátrica local y ORL; aquí se entrena reconocer datos faltantes, no indicar cirugía. Revisión clínica profesional pendiente. La reautoría usa recomendaciones de imagen ESR publicadas en2025, guías AAO-HNS2013/2019 y RCH nasal octubre2025; se abrieron sus apartados reales. No se comprobó una GPC mexicana reciente completa para todos estos contrastes. NIDCD y CDC son información institucional y se usan para límites de audición, etiología y secuelas, no para pautas quirúrgicas, calendarios o dosis. No se aplican rutas administrativas británicas ni guías adultas a niños. El contraste de epistaxis familiar se comprobó en KAS12 de AAO-HNSF2020, ExecutiveSummaryprimario completo18p; no se atribuye al consenso mexicano sin fecha.",
+  "blocks": [
+    {
+      "id": "27.01",
+      "title": "Otalgia aguda",
+      "related_sections": [],
+      "scenarios": [
+        {
+          "anchor_topic_ids": [
+            "27.01-01"
+          ],
+          "objective": "cambio",
+          "vignette": "Un adulto con otitis externa recibe gotas apropiadas, pero el conducto está completamente cerrado por edema y la secreción no puede retirarse en consulta.",
+          "question": "¿Qué problema debe resolverse antes de atribuir el fracaso a resistencia?",
+          "answer": "La llegada del tratamiento tópico al conducto afectado.",
+          "discriminator": "conducto está completamente cerrado por edema",
+          "reason": "La obstrucción impide una administración tópica adecuada y puede requerir limpieza y una técnica especializada.",
+          "initial_action": "Solicitar valoración otorrinolaringológica pronta para despejar el conducto y asegurar tratamiento local.",
+          "limits": "No introducir instrumentos a ciegas ni cambiar automáticamente a un antibiótico sistémico; buscar extensión y enfermedad sistémica.",
+          "evidence": [
+            {
+              "source_id": "girft-ent",
+              "locator": "Acute and chronic otitis externa, pp12–13: canal ocluido por edema y secreción",
+              "support": "La obstrucción impide una administración tópica adecuada y puede requerir limpieza y una técnica especializada."
+            }
+          ],
+          "id": "27.01-01-gravedad"
+        },
+        {
+          "anchor_topic_ids": [
+            "27.01-02"
+          ],
+          "objective": "contraste",
+          "vignette": "Un niño ya no tiene fiebre ni dolor después de una otitis media. Dos semanas después persiste líquido detrás del tímpano, sin abombamiento inflamatorio ni síntomas nuevos.",
+          "question": "¿El derrame aislado obliga a otro antibiótico?",
+          "answer": "No; puede ser una efusión residual sin infección aguda.",
+          "discriminator": "sin abombamiento inflamatorio ni síntomas nuevos",
+          "reason": "La efusión puede persistir tras una otitis y no demuestra infección activa.",
+          "initial_action": "Vigilar evolución y audición; estudiar y referir si persiste o afecta función.",
+          "limits": "RCH señala que puede durar hasta12semanas y recomienda evaluar audición si supera3meses; síntomas nuevos requieren reevaluación.",
+          "evidence": [
+            {
+              "source_id": "rch-otitis",
+              "locator": "Complications: Otitis media with effusion",
+              "support": "La efusión puede persistir tras una otitis y no demuestra infección activa."
+            }
+          ],
+          "id": "27.01-02-incompleta"
+        }
+      ]
+    },
+    {
+      "id": "27.02",
+      "title": "Dolor retroauricular y otorrea",
+      "related_sections": [],
+      "scenarios": [
+        {
+          "anchor_topic_ids": [
+            "27.02-01"
+          ],
+          "objective": "contraste",
+          "vignette": "Un escolar con catarro en recuperación se hizo una TC por otra indicación. Informa opacificación mastoidea aislada, sin erosión ósea. Está afebril, sin dolor retroauricular, edema ni desplazamiento del pabellón.",
+          "question": "¿La imagen aislada confirma mastoiditis aguda complicada?",
+          "answer": "No; debe correlacionarse con la clínica.",
+          "discriminator": "opacificación mastoidea aislada, sin erosión ósea",
+          "reason": "La opacificación subclínica puede acompañar una otitis y tiene poco valor aislada.",
+          "initial_action": "Revisar oído y región mastoidea antes de decidir tratamiento o cirugía.",
+          "limits": "La aparición de fiebre, inflamación retroauricular o signos neurológicos cambia la prioridad; la ausencia de erosión no descarta por sí sola toda infección.",
+          "evidence": [
+            {
+              "source_id": "esr-infection",
+              "locator": "Temporal bone and skull base infections: subclinical mastoid opacification",
+              "support": "La opacificación subclínica puede acompañar una otitis y tiene poco valor aislada."
+            }
+          ],
+          "id": "27.02-01-gravedad"
+        },
+        {
+          "anchor_topic_ids": [
+            "27.02-02"
+          ],
+          "objective": "cambio",
+          "vignette": "Un niño con dolor de oído presenta salida de pus y alivio súbito del dolor. La otoscopia muestra una perforación reciente.",
+          "question": "¿El alivio significa que terminó la infección?",
+          "answer": "No. Puede indicar perforación de una otitis media.",
+          "discriminator": "perforación reciente",
+          "reason": "El drenaje puede reducir presión sin resolver la infección.",
+          "initial_action": "Evaluar gravedad y tratamiento, y proteger el oído del agua.",
+          "limits": "No indicar gotas potencialmente ototóxicas sin comprobar su seguridad.",
+          "evidence": [
+            {
+              "source_id": "rch-otitis",
+              "locator": "Complications: tympanic membrane perforation",
+              "support": "El drenaje puede reducir presión sin resolver la infección."
+            }
+          ],
+          "id": "27.02-02-cambio"
+        }
+      ]
+    },
+    {
+      "id": "27.03",
+      "title": "Oído tapado/pérdida conductiva",
+      "related_sections": [],
+      "scenarios": [
+        {
+          "anchor_topic_ids": [
+            "27.03-01"
+          ],
+          "objective": "cambio",
+          "vignette": "Un adulto tiene cerumen que obstruye el único oído con audición útil. El oído contrario tiene sordera completa. No hay cirugía ni perforación previas.",
+          "question": "¿Qué dato exige elegir con especial cuidado el método de extracción?",
+          "answer": "Se trata de su único oído con audición útil.",
+          "discriminator": "único oído con audición útil",
+          "reason": "Una complicación de la extracción tendría mayor repercusión funcional.",
+          "initial_action": "Derivar a un servicio con experiencia para extracción segura y revisión del oído.",
+          "limits": "No basta la ausencia de perforación para indicar irrigación comunitaria; GIRFT incluye sordera contralateral completa como motivo de valoración especializada.",
+          "evidence": [
+            {
+              "source_id": "girft-ent",
+              "locator": "Ear wax referral guideline, p9: complete unilateral deafness of contralateral ear",
+              "support": "Una complicación de la extracción tendría mayor repercusión funcional."
+            }
+          ],
+          "id": "27.03-01-dato_faltante"
+        },
+        {
+          "anchor_topic_ids": [
+            "27.03-02"
+          ],
+          "objective": "cambio",
+          "vignette": "Una adulta con otosclerosis confirmada considera cirugía del estribo. Su principal condición es que se le garantice recuperar toda la audición sin riesgo de empeorar.",
+          "question": "¿Puede ofrecerse esa garantía?",
+          "answer": "No; puede persistir pérdida auditiva y existe riesgo de empeoramiento.",
+          "discriminator": "garantice recuperar toda la audición sin riesgo de empeorar",
+          "reason": "La cirugía tiene beneficios y límites que deben compararse con la rehabilitación auditiva.",
+          "initial_action": "Discutir riesgos, audición residual y alternativas con el especialista antes de consentir.",
+          "limits": "No se estima un riesgo individual ni se indica cirugía por este dato aislado. NIDCD es información institucional, no una GPC quirúrgica.",
+          "evidence": [
+            {
+              "source_id": "nidcd-otosclerosis",
+              "locator": "How is otosclerosis treated?: persistent or worse hearing after stapedectomy",
+              "support": "La cirugía tiene beneficios y límites que deben compararse con la rehabilitación auditiva."
+            }
+          ],
+          "id": "27.03-02-contraste"
+        }
+      ]
+    },
+    {
+      "id": "27.04",
+      "title": "Hipoacusia neurosensorial",
+      "related_sections": [],
+      "scenarios": [
+        {
+          "anchor_topic_ids": [
+            "27.04-01"
+          ],
+          "objective": "cambio",
+          "vignette": "Un adulto mayor con pérdida bilateral evaluada puede usar auxiliares en ambos oídos. Cree que uno solo ofrece exactamente la misma orientación de sonidos que dos.",
+          "question": "¿Qué beneficio puede aportar la adaptación bilateral?",
+          "answer": "Mejorar comprensión del habla y localización de sonidos.",
+          "discriminator": "puede usar auxiliares en ambos oídos",
+          "reason": "La entrada auditiva bilateral aporta información espacial y ayuda a comprender el habla.",
+          "initial_action": "Discutir prueba y ajuste de ambos auxiliares con audiología según función y preferencias.",
+          "limits": "No todos los oídos son adaptables ni se recupera audición normal; individualizar tolerancia y beneficio.",
+          "evidence": [
+            {
+              "source_id": "nidcd-aids",
+              "locator": "Which hearing aid will work best for me?: two aids for bilateral loss",
+              "support": "La entrada auditiva bilateral aporta información espacial y ayuda a comprender el habla."
+            }
+          ],
+          "id": "27.04-01-contraste"
+        },
+        {
+          "anchor_topic_ids": [
+            "27.04-02"
+          ],
+          "objective": "cambio",
+          "vignette": "Una adulta con hipoacusia neurosensorial súbita confirmada fue atendida al inicio. A las tres semanas conserva recuperación incompleta en la audiometría.",
+          "question": "¿Qué opción de rescate debe discutir pronto con otorrinolaringología?",
+          "answer": "Corticoide intratimpánico si es candidata.",
+          "discriminator": "A las tres semanas conserva recuperación incompleta",
+          "reason": "AAO-HNS2019 recomienda ofrecer o referir para rescate intratimpánico entre2y6semanas desde el inicio.",
+          "initial_action": "Contactar al equipo tratante para valorar rescate y seguimiento audiométrico.",
+          "limits": "No garantiza recuperación; no sustituye estudio etiológico ni se extrapola a niños o a pérdida conductiva.",
+          "evidence": [
+            {
+              "source_id": "aao-sudden",
+              "locator": "KAS10: intratympanic steroids for salvage, 2–6weeks",
+              "support": "AAO-HNS2019 recomienda ofrecer o referir para rescate intratimpánico entre2y6semanas desde el inicio."
+            }
+          ],
+          "id": "27.04-02-gravedad"
+        },
+        {
+          "anchor_topic_ids": [
+            "27.04-02",
+            "27.03-01"
+          ],
+          "objective": "contraste",
+          "vignette": "Un adulto con pérdida auditiva súbita tiene un pequeño tapón que no ocluye el conducto. Tras retirarlo la audición no mejora.",
+          "question": "¿Qué conclusión sería incorrecta?",
+          "answer": "Atribuir toda la pérdida al cerumen.",
+          "discriminator": "la audición no mejora",
+          "reason": "Una causa externa insuficiente no descarta pérdida neurosensorial súbita.",
+          "initial_action": "Referir de inmediato para evaluación auditiva.",
+          "limits": "No demorar por esperar resolución espontánea.",
+          "evidence": [
+            {
+              "source_id": "girft-ent",
+              "locator": "Hearing loss: sudden loss unexplained by external/middle ear causes",
+              "support": "Una causa externa insuficiente no descarta pérdida neurosensorial súbita."
+            }
+          ],
+          "id": "27.04-03-contraste"
+        }
+      ]
+    },
+    {
+      "id": "27.05",
+      "title": "Vértigo breve posicional",
+      "related_sections": [],
+      "scenarios": [
+        {
+          "anchor_topic_ids": [
+            "27.05-01"
+          ],
+          "objective": "contraste",
+          "vignette": "Una adulta refiere mareo de segundos al levantarse de la cama. Describe visión oscura y sensación de desmayo, sin giro del entorno; girarse acostada no lo provoca.",
+          "question": "¿Qué evaluación distingue mejor este cuadro de VPPB?",
+          "answer": "Presión acostada y de pie, junto con revisión de medicamentos y causas de presíncope.",
+          "discriminator": "visión oscura y sensación de desmayo, sin giro del entorno",
+          "reason": "El desencadenante ortostático y la cualidad presincopal orientan fuera del vértigo posicional típico.",
+          "initial_action": "Valorar estabilidad y medir respuesta ortostática de forma segura.",
+          "limits": "No confirmar hipotensión ortostática sin medirla; síncope, dolor torácico o arritmia requieren otro circuito.",
+          "evidence": [
+            {
+              "source_id": "girft-ent",
+              "locator": "Vertigo and dizziness, p10: character, triggers and lying/standing BP",
+              "support": "El desencadenante ortostático y la cualidad presincopal orientan fuera del vértigo posicional típico."
+            }
+          ],
+          "id": "27.05-01-dato_faltante"
+        }
+      ]
+    },
+    {
+      "id": "27.06",
+      "title": "Vértigo persistente/recidivante",
+      "related_sections": [],
+      "scenarios": [
+        {
+          "anchor_topic_ids": [
+            "27.06-01"
+          ],
+          "objective": "contraste",
+          "vignette": "Una adulta tiene episodios repetidos de vértigo con fotofobia y cefalea migrañosa. Entre episodios la exploración es normal; no refiere hipoacusia fluctuante, acúfeno ni plenitud ótica.",
+          "question": "¿Qué alternativa a Ménière debe considerarse?",
+          "answer": "Migraña vestibular.",
+          "discriminator": "vértigo con fotofobia y cefalea migrañosa",
+          "reason": "La asociación migrañosa y la ausencia de síntomas auditivos característicos orientan otro diagnóstico.",
+          "initial_action": "Caracterizar los episodios y coordinar evaluación si el diagnóstico no es seguro.",
+          "limits": "La viñeta orienta, pero no completa por sí sola todos los criterios; signos neurológicos agudos no se atribuyen automáticamente a migraña.",
+          "evidence": [
+            {
+              "source_id": "girft-ent",
+              "locator": "Vertigo referral guideline, p11: recurrent vertigo plus migraine and normal examination",
+              "support": "La asociación migrañosa y la ausencia de síntomas auditivos característicos orientan otro diagnóstico."
+            }
+          ],
+          "id": "27.06-01-subtipo"
+        },
+        {
+          "anchor_topic_ids": [
+            "27.06-02"
+          ],
+          "objective": "contraste",
+          "vignette": "Un adulto tiene vértigo continuo con vómitos e incapacidad para mantenerse de pie sin ayuda. No hay una exploración vestibular experta disponible.",
+          "question": "¿Es seguro asumir neuritis vestibular por ausencia de debilidad?",
+          "answer": "No. Debe descartarse causa central.",
+          "discriminator": "incapacidad para mantenerse de pie sin ayuda",
+          "reason": "La ataxia intensa puede indicar enfermedad cerebelosa.",
+          "initial_action": "Activar evaluación urgente neurológica o de ictus.",
+          "limits": "No aplicar HINTS sin formación ni a episodios breves posicionales.",
+          "evidence": [
+            {
+              "source_id": "girft-ent",
+              "locator": "Vertigo: unable to stand unaided and stroke pathway",
+              "support": "La ataxia intensa puede indicar enfermedad cerebelosa."
+            }
+          ],
+          "id": "27.06-02-contraste"
+        },
+        {
+          "anchor_topic_ids": [
+            "27.06-01",
+            "27.06-02"
+          ],
+          "objective": "gravedad",
+          "vignette": "Una adulta con episodios previos de vértigo desarrolla un episodio continuo con diplopía y dificultad para tragar.",
+          "question": "¿Qué cambio debe activar evaluación de ictus?",
+          "answer": "Los signos neurológicos nuevos.",
+          "discriminator": "diplopía y dificultad para tragar",
+          "reason": "Los déficits de tronco encefálico no se explican por vértigo periférico simple.",
+          "initial_action": "Activar atención neurológica urgente.",
+          "limits": "El antecedente de vértigo no protege frente a una causa central nueva.",
+          "evidence": [
+            {
+              "source_id": "girft-ent",
+              "locator": "Vertigo: associated neurological symptoms",
+              "support": "Los déficits de tronco encefálico no se explican por vértigo periférico simple."
+            }
+          ],
+          "id": "27.06-03-gravedad"
+        }
+      ]
+    },
+    {
+      "id": "27.07",
+      "title": "Epistaxis y traumatismo",
+      "related_sections": [],
+      "scenarios": [
+        {
+          "anchor_topic_ids": [
+            "27.07-01"
+          ],
+          "objective": "dato_faltante",
+          "vignette": "Un adulto tiene epistaxis bilateral recurrente desde hace años. Su madre y un hermano también sangran con frecuencia. Hoy está estable y el episodio ya cedió; no se han buscado telangiectasias.",
+          "question": "¿Qué evaluación etiológica específica falta?",
+          "answer": "Buscar telangiectasias nasales y de mucosa oral y valorar telangiectasia hemorrágica hereditaria.",
+          "discriminator": "Su madre y un hermano también sangran con frecuencia",
+          "reason": "La recurrencia bilateral y familiar orienta una enfermedad vascular hereditaria que puede pasar por alto si solo se trata cada sangrado local.",
+          "initial_action": "Explorar mucosas o referir a quien pueda hacerlo y coordinar evaluación del posible síndrome.",
+          "limits": "La historia familiar no confirma el diagnóstico ni descarta otras causas; si aparece sangrado intenso se controla primero la urgencia. La guía incluye pacientes de al menos tres años.",
+          "evidence": [
+            {
+              "source_id": "aao-epistaxis",
+              "locator": "KAS12,ExecutiveSummary,p22impresa(PDF15): recurrentbilateralnosebleedsorfamilyhistory,assessnasal/oraltelangiectasias",
+              "support": "La recomendación específica identifica sospecha de HHT por patrón recurrente bilateral o familiar y evaluación de telangiectasias."
+            }
+          ],
+          "id": "27.07-01-cambio"
+        },
+        {
+          "anchor_topic_ids": [
+            "27.07-02"
+          ],
+          "objective": "cambio",
+          "vignette": "Un niño recibe un golpe nasal. Se excluyeron hematoma septal y otras lesiones urgentes, pero el edema impide valorar bien la deformidad externa.",
+          "question": "¿Cuándo debe revisarse la forma de la nariz?",
+          "answer": "Cuando disminuya el edema, habitualmente a los3–7días, con otorrinolaringología si se sospecha deformidad.",
+          "discriminator": "edema impide valorar bien la deformidad externa",
+          "reason": "La inflamación inicial puede ocultar una deformidad que requiere decidir reducción a tiempo.",
+          "initial_action": "Organizar revisión concreta y dar signos de alarma.",
+          "limits": "RCH recomienda reducir deformidades antes de14días; hematoma septal o deterioro no esperan a esa revisión.",
+          "evidence": [
+            {
+              "source_id": "rch-nasal",
+              "locator": "Key points2–4; Assessment: prior photographs; octubre2025",
+              "support": "La inflamación inicial puede ocultar una deformidad que requiere decidir reducción a tiempo."
+            }
+          ],
+          "id": "27.07-02-gravedad"
+        }
+      ]
+    },
+    {
+      "id": "27.08",
+      "title": "Nariz obstruida",
+      "related_sections": [],
+      "scenarios": [
+        {
+          "anchor_topic_ids": [
+            "27.08-01"
+          ],
+          "objective": "contraste",
+          "vignette": "Una adulta tiene rinorrea acuosa y congestión de tres días con tos leve. No hay fiebre persistente, deterioro ni signos orbitarios.",
+          "question": "¿La congestión indica antibiótico de inmediato?",
+          "answer": "No. Es compatible con infección viral no complicada.",
+          "discriminator": "de tres días",
+          "reason": "La evolución corta sin gravedad favorece manejo sintomático.",
+          "initial_action": "Ofrecer medidas de alivio y criterios de reevaluación.",
+          "limits": "Reevaluar si persiste, empeora o aparecen signos de complicación.",
+          "evidence": [
+            {
+              "source_id": "mx-iras",
+              "locator": "Vías superiores: distinguir síndromes virales y bacterianos",
+              "support": "La evolución corta sin gravedad favorece manejo sintomático."
+            }
+          ],
+          "id": "27.08-01-contraste"
+        },
+        {
+          "anchor_topic_ids": [
+            "27.08-02"
+          ],
+          "objective": "contraste",
+          "vignette": "Una adulta sin obstrucción, rinorrea ni dolor sinusal se hizo TC por traumatismo menor. El informe menciona engrosamiento de mucosa de un seno.",
+          "question": "¿Ese hallazgo basta para diagnosticar rinosinusitis aguda y dar antibiótico?",
+          "answer": "No. El diagnóstico requiere correlación clínica.",
+          "discriminator": "sin obstrucción, rinorrea ni dolor sinusal",
+          "reason": "El engrosamiento mucoso incidental no demuestra rinosinusitis aguda.",
+          "initial_action": "Revisar síntomas y exploración antes de decidir tratamiento.",
+          "limits": "La imagen sí tiene un papel ante complicaciones sospechadas; no se indica repetirla por este hallazgo aislado.",
+          "evidence": [
+            {
+              "source_id": "esr-infection",
+              "locator": "Background/Sinonasal infections: no diagnóstico solo por thickening or fluid collections",
+              "support": "El engrosamiento mucoso incidental no demuestra rinosinusitis aguda."
+            }
+          ],
+          "id": "27.08-02-gravedad"
+        },
+        {
+          "anchor_topic_ids": [
+            "27.08-03"
+          ],
+          "objective": "dato_faltante",
+          "vignette": "Un adulto con pólipos bilaterales solicita cirugía porque el corticoide nasal no sirvió. Al revisar su uso, aplica el spray solo una vez por semana y no conoce la técnica.",
+          "question": "¿Qué debe corregirse antes de concluir fracaso del tratamiento médico?",
+          "answer": "Adherencia y técnica del corticoide intranasal.",
+          "discriminator": "aplica el spray solo una vez por semana y no conoce la técnica",
+          "reason": "Una exposición insuficiente o una técnica incorrecta pueden simular resistencia al manejo.",
+          "initial_action": "Revisar la prescripción, enseñar la técnica y planear reevaluación con su equipo.",
+          "limits": "No retrasar estudio de una lesión atípica o una complicación; no se aumenta dosis sin revisar el preparado.",
+          "evidence": [
+            {
+              "source_id": "girft-ent",
+              "locator": "Chronic rhinosinusitis, p28: ensure compliance and technique before failure/referral",
+              "support": "Una exposición insuficiente o una técnica incorrecta pueden simular resistencia al manejo."
+            }
+          ],
+          "id": "27.08-03-cambio"
+        },
+        {
+          "anchor_topic_ids": [
+            "27.08-02",
+            "27.12-01"
+          ],
+          "objective": "contraste",
+          "vignette": "Un adulto tiene dolor facial unilateral intenso, pero no refiere congestión, rinorrea ni pérdida de olfato.",
+          "question": "¿Basta el dolor para diagnosticar sinusitis?",
+          "answer": "No.",
+          "discriminator": "no refiere congestión, rinorrea ni pérdida de olfato",
+          "reason": "La ausencia de síntomas nasales exige buscar otras causas de dolor facial.",
+          "initial_action": "Caracterizar el dolor y explorar causas dentales y neurológicas.",
+          "limits": "Una imagen incidental de senos no necesariamente explica el dolor.",
+          "evidence": [
+            {
+              "source_id": "girft-ent",
+              "locator": "Sinusitis: facial pain without nasal symptoms",
+              "support": "La ausencia de síntomas nasales exige buscar otras causas de dolor facial."
+            }
+          ],
+          "id": "27.08-04-contraste"
+        }
+      ]
+    },
+    {
+      "id": "27.09",
+      "title": "Dolor faríngeo y absceso",
+      "related_sections": [],
+      "scenarios": [
+        {
+          "anchor_topic_ids": [
+            "27.09-01"
+          ],
+          "objective": "cambio",
+          "vignette": "Un adolescente con faringitis tuvo confirmación de mononucleosis y presenta esplenomegalia. Ya no tiene fiebre y quiere volver hoy al rugby.",
+          "question": "¿La desaparición de la fiebre permite autorizar deporte de contacto?",
+          "answer": "No; debe evitarlo hasta recuperación y valoración por riesgo esplénico.",
+          "discriminator": "mononucleosis y presenta esplenomegalia",
+          "reason": "El bazo aumentado puede romperse con actividades de contacto aunque haya mejoría de otros síntomas.",
+          "initial_action": "Indicar restricción de contacto y coordinar retorno individual con el equipo tratante.",
+          "limits": "No se fija un plazo universal ni se atribuye todo dolor faríngeo a EBV; dolor abdominal agudo o síncope requieren atención urgente.",
+          "evidence": [
+            {
+              "source_id": "cdc-mono",
+              "locator": "Treatment and recovery: Avoid contact sports",
+              "support": "El bazo aumentado puede romperse con actividades de contacto aunque haya mejoría de otros síntomas."
+            }
+          ],
+          "id": "27.09-01-contraste"
+        },
+        {
+          "anchor_topic_ids": [
+            "27.09-02"
+          ],
+          "objective": "gravedad",
+          "vignette": "Un niño tiene fiebre, rigidez cervical, babeo y voz apagada. Rechaza acostarse.",
+          "question": "¿Qué prioridad antecede a una exploración faríngea forzada?",
+          "answer": "Seguridad de la vía aérea y ayuda especializada.",
+          "discriminator": "babeo y voz apagada",
+          "reason": "Una infección profunda puede obstruir la vía aérea.",
+          "initial_action": "Mantenerlo cómodo, minimizar manipulación y derivar urgentemente.",
+          "limits": "La imagen no debe retrasar el control de una vía aérea amenazada.",
+          "evidence": [
+            {
+              "source_id": "rch-throat",
+              "locator": "Red flags; deep neck abscess; airway management",
+              "support": "Una infección profunda puede obstruir la vía aérea."
+            }
+          ],
+          "id": "27.09-02-gravedad"
+        },
+        {
+          "anchor_topic_ids": [
+            "27.09-03"
+          ],
+          "objective": "cambio",
+          "vignette": "Un adulto hospitalizado por angina de Ludwig ya tiene vía aérea protegida y antibióticos. La TC muestra infección que llega a la entrada torácica; aparece edema en cuello bajo.",
+          "question": "¿Qué extensión debe buscarse además del foco cervical?",
+          "answer": "Mediastinitis descendente.",
+          "discriminator": "infección que llega a la entrada torácica",
+          "reason": "La infección profunda cervical puede extenderse al mediastino y requerir un plan de drenaje más amplio.",
+          "initial_action": "Coordinar imagen torácica y evaluación quirúrgica urgente del alcance de la infección.",
+          "limits": "Primero estabilizar vía aérea y hemodinamia; la extensión se confirma con estudio, no por edema aislado.",
+          "evidence": [
+            {
+              "source_id": "esr-infection",
+              "locator": "CT imaging: abscess reaching thoracic inlet/low neck swelling; Neck soft tissue infections: descending mediastinitis",
+              "support": "La infección profunda cervical puede extenderse al mediastino y requerir un plan de drenaje más amplio."
+            }
+          ],
+          "id": "27.09-03-gravedad"
+        }
+      ]
+    },
+    {
+      "id": "27.10",
+      "title": "Ronquido/disfonía",
+      "related_sections": [],
+      "scenarios": [
+        {
+          "anchor_topic_ids": [
+            "27.10-01"
+          ],
+          "objective": "dato_faltante",
+          "vignette": "Un adulto con ronquidos presenta pausas respiratorias observadas y somnolencia al conducir. Nunca se ha estudiado su sueño.",
+          "question": "¿Qué cambia la prioridad frente a ronquido simple?",
+          "answer": "La somnolencia peligrosa y apneas observadas.",
+          "discriminator": "somnolencia al conducir",
+          "reason": "La sospecha de apnea con riesgo funcional requiere evaluación.",
+          "initial_action": "Referir a estudio de sueño y aconsejar evitar conducir mientras haya somnolencia.",
+          "limits": "El ronquido aislado no confirma apnea obstructiva. No se trasladan reglas de notificación DVLA ni requisitos legales británicos a México.",
+          "evidence": [
+            {
+              "source_id": "girft-ent",
+              "locator": "Snoring and obstructive sleep apnoea pathway",
+              "support": "La sospecha de apnea con riesgo funcional requiere evaluación."
+            },
+            {
+              "source_id": "nhs-apnoea-driving",
+              "locator": "Sleep apnoea can cause other problems/Driving and sleep apnoea",
+              "support": "La somnolencia aumenta riesgo de accidente; se aconseja evitar conducción mientras se estudia y controla. La página no constituye normativa mexicana."
+            }
+          ],
+          "id": "27.10-01-dato_faltante"
+        },
+        {
+          "anchor_topic_ids": [
+            "27.10-02"
+          ],
+          "objective": "mecanismo",
+          "vignette": "Un niño tiene papilomatosis laríngea confirmada. Su familia cree que una vacuna que cubre únicamente VPH16y18 protege también contra los tipos que causan habitualmente su enfermedad.",
+          "question": "¿Qué cobertura viral debe comprobarse al orientar sobre prevención?",
+          "answer": "Cobertura de VPH6y11.",
+          "discriminator": "cubre únicamente VPH16y18",
+          "reason": "La papilomatosis respiratoria se asocia sobre todo con VPH6y11, distintos de16y18.",
+          "initial_action": "Revisar el producto y las recomendaciones nacionales de vacunación con su equipo.",
+          "limits": "No usar vacunación preventiva como sustituto del tratamiento de lesiones existentes. NIDCD2017 sustenta etiología y cobertura; no define calendario mexicano2026.",
+          "evidence": [
+            {
+              "source_id": "nidcd-rrp",
+              "locator": "What causes RRP?; How is RRP prevented or treated?: HPV6/11 and vaccine type",
+              "support": "La papilomatosis respiratoria se asocia sobre todo con VPH6y11, distintos de16y18."
+            }
+          ],
+          "id": "27.10-02-gravedad"
+        },
+        {
+          "anchor_topic_ids": [
+            "27.10-03"
+          ],
+          "objective": "cambio",
+          "vignette": "Un niño de8años acaba de tener amigdalectomía. Su cuidador tiene un jarabe con codeína y pregunta si puede usarlo para el dolor posoperatorio.",
+          "question": "¿Debe utilizar ese jarabe?",
+          "answer": "No. Debe evitarse codeína después de amigdalectomía en este niño.",
+          "discriminator": "8años acaba de tener amigdalectomía",
+          "reason": "La codeína puede causar depresión respiratoria grave en niños; la guía prohíbe su uso en menores de12años tras esta cirugía.",
+          "initial_action": "Revisar la pauta analgésica prescrita y usar alternativas apropiadas con el equipo quirúrgico.",
+          "limits": "No sustituir por otro opioide por cuenta propia; ajustar cualquier analgésico por peso, contraindicaciones y valoración clínica.",
+          "evidence": [
+            {
+              "source_id": "aao-tonsil",
+              "locator": "KAS13–14: analgesia y prohibición de codeína posoperatoria en menores de12años",
+              "support": "La codeína puede causar depresión respiratoria grave en niños; la guía prohíbe su uso en menores de12años tras esta cirugía."
+            }
+          ],
+          "id": "27.10-03-dato_faltante"
+        }
+      ]
+    },
+    {
+      "id": "27.11",
+      "title": "Parálisis facial unilateral",
+      "related_sections": [],
+      "scenarios": [
+        {
+          "anchor_topic_ids": [
+            "27.11-01"
+          ],
+          "objective": "cambio",
+          "vignette": "Un adulto con parálisis de Bell típica de24horas, sin contraindicaciones para corticoide, recibe una propuesta de aciclovir como único tratamiento farmacológico.",
+          "question": "¿El antiviral solo sustituye el tratamiento recomendado?",
+          "answer": "No. El antiviral aislado no se recomienda para Bell.",
+          "discriminator": "aciclovir como único tratamiento farmacológico",
+          "reason": "AAO-HNS recomienda corticoide temprano en elegibles; un antiviral puede ser complemento, no sustituto aislado.",
+          "initial_action": "Revisar el tratamiento y ofrecer corticoide dentro de la ventana indicada tras valorar riesgos.",
+          "limits": "Esta recomendación no se aplica automáticamente a Ramsay Hunt; mantener cuidado ocular según cierre palpebral.",
+          "evidence": [
+            {
+              "source_id": "aao-bell",
+              "locator": "Significant points4,5A–5B: steroids within72h; no antiviral alone",
+              "support": "AAO-HNS recomienda corticoide temprano en elegibles; un antiviral puede ser complemento, no sustituto aislado."
+            }
+          ],
+          "id": "27.11-01-cambio"
+        },
+        {
+          "anchor_topic_ids": [
+            "27.11-02"
+          ],
+          "objective": "cambio",
+          "vignette": "Un adulto mayor fue tratado por zóster ótico con parálisis facial. Cuatro meses después no tiene vesículas nuevas ni inflamación del conducto, pero persiste dolor quemante en la zona afectada.",
+          "question": "¿Qué secuela debe considerarse antes de atribuir el dolor a infección activa persistente?",
+          "answer": "Neuralgia posherpética.",
+          "discriminator": "Cuatro meses después no tiene vesículas nuevas",
+          "reason": "El dolor puede continuar más de90días en la distribución previa del zóster sin demostrar replicación activa.",
+          "initial_action": "Reevaluar oído y dolor neuropático para un plan de tratamiento y seguimiento.",
+          "limits": "La ausencia de lesiones no excluye toda causa de dolor; no confirmar recurrencia ni reiniciar antiviral solo por dolor persistente.",
+          "evidence": [
+            {
+              "source_id": "cdc-zoster",
+              "locator": "Postherpetic neuralgia: dolor en el área previa por más de90días",
+              "support": "El dolor puede continuar más de90días en la distribución previa del zóster sin demostrar replicación activa."
+            }
+          ],
+          "id": "27.11-02-contraste"
+        },
+        {
+          "anchor_topic_ids": [
+            "27.11-01"
+          ],
+          "objective": "contraste",
+          "vignette": "Un adulto presenta debilidad facial que progresa durante un mes. Se palpa una masa firme en la parótida del mismo lado. No hubo inicio súbito.",
+          "question": "¿Debe tratarse como Bell típica sin más estudio?",
+          "answer": "No; investigar una causa estructural, incluida neoplasia parotídea.",
+          "discriminator": "masa firme en la parótida del mismo lado",
+          "reason": "El curso gradual con masa parotídea orienta una causa distinta de la parálisis idiopática aguda.",
+          "initial_action": "Referir con prioridad a otorrinolaringología para estudio dirigido.",
+          "limits": "La masa no confirma malignidad; la evaluación determina imagen y tejido.",
+          "evidence": [
+            {
+              "source_id": "girft-ent",
+              "locator": "Facial weakness, pp21–22: gradual onset, parotid mass, suspected cancer",
+              "support": "El curso gradual con masa parotídea orienta una causa distinta de la parálisis idiopática aguda."
+            }
+          ],
+          "id": "27.11-03-contraste"
+        }
+      ]
+    },
+    {
+      "id": "27.12",
+      "title": "Dolor facial eléctrico",
+      "related_sections": [],
+      "scenarios": [
+        {
+          "anchor_topic_ids": [
+            "27.12-01"
+          ],
+          "objective": "cambio",
+          "vignette": "Un adulto de ascendencia tailandesa tiene neuralgia trigeminal confirmada. Nunca ha recibido carbamazepina y se planea iniciarla.",
+          "question": "¿Qué factor farmacogenético debe comprobarse antes?",
+          "answer": "HLA-B*1502 por riesgo de síndrome de Stevens-Johnson.",
+          "discriminator": "ascendencia tailandesa",
+          "reason": "El alelo se asocia con reacciones cutáneas graves a carbamazepina en poblaciones de riesgo.",
+          "initial_action": "Coordinar la prueba y la selección del fármaco con el prescriptor.",
+          "limits": "No inferir el resultado por nacionalidad ni iniciar o cambiar dosis sin revisar interacciones y seguridad.",
+          "evidence": [
+            {
+              "source_id": "rcs-trigeminal",
+              "locator": "First line medications, p6: HLA-B*1502 testing in Han Chinese or Thai origin",
+              "support": "El alelo se asocia con reacciones cutáneas graves a carbamazepina en poblaciones de riesgo."
+            }
+          ],
+          "id": "27.12-01-cambio"
+        }
+      ]
+    }
+  ]
+}

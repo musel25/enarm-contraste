@@ -1,0 +1,954 @@
+{
+  "schema_version": 1,
+  "layer": 2,
+  "section_id": "15",
+  "title": "Hematología",
+  "author": "clinical-author-13-24",
+  "sources": [
+    {
+      "id": "imss-iron-2010",
+      "label": "IMSS. Prevención, diagnóstico y tratamiento de anemia por deficiencia de hierro en niños y adultos. IMSS-415-10",
+      "url": "https://www.imss.gob.mx/sites/all/statics/guiasclinicas/415GER.pdf",
+      "version": "2010",
+      "checked_at": "2026-11-06",
+      "region": "mexico",
+      "access": "checked",
+      "locator": "Diagnóstico de ferropenia; causas; respuesta y falta de respuesta al hierro"
+    },
+    {
+      "id": "imss-aiha-2010",
+      "label": "IMSS. Diagnóstico y tratamiento de anemia hemolítica autoinmune. IMSS-389-10",
+      "url": "https://imss.gob.mx/sites/all/statics/guiasclinicas/389GER.pdf",
+      "version": "2010",
+      "checked_at": "2026-11-06",
+      "region": "mexico",
+      "access": "checked",
+      "locator": "Diagnóstico: hemólisis y Coombs; diagnóstico diferencial"
+    },
+    {
+      "id": "imss-hemolysis-2015",
+      "label": "IMSS. Abordaje diagnóstico de anemias hemolíticas adquiridas Coombs negativo. IMSS-750-15",
+      "url": "https://imss.gob.mx/sites/all/statics/guiasclinicas/750GRR.pdf",
+      "version": "2015",
+      "checked_at": "2026-11-06",
+      "region": "mexico",
+      "access": "checked",
+      "locator": "Diagnóstico: PTT, SHU y HPN; citometría de flujo; diagramas"
+    },
+    {
+      "id": "nhlbi-scd-2014",
+      "label": "NHLBI. Evidence-Based Management of Sickle Cell Disease: Expert Panel Report",
+      "url": "https://www.nhlbi.nih.gov/sites/default/files/publications/56-364NFULL.pdf",
+      "version": "2014",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Acute chest syndrome; acute complications"
+    },
+    {
+      "id": "wfh-2020",
+      "label": "World Federation of Hemophilia. Guidelines for the Management of Hemophilia, 3 rd edition",
+      "url": "https://www1.wfh.org/publication/files/pdf-1863.pdf",
+      "version": "2020",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Chapter 3 laboratory diagnosis; chapter 7 treatment of specific hemorrhages"
+    },
+    {
+      "id": "nci-all-2025",
+      "label": "NCI. Acute Lymphoblastic Leukemia Treatment (PDQ), Health Professional",
+      "url": "https://www.cancer.gov/types/leukemia/hp/adult-all-treatment-pdq",
+      "version": "2025-03-17",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Treatment of newly diagnosed ALL: Philadelphia chromosome-positive ALL; recurso profesional PDQ, no GPC formal"
+    },
+    {
+      "id": "nci-cll-2025",
+      "label": "NCI. Chronic Lymphocytic Leukemia Treatment (PDQ), Health Professional",
+      "url": "https://www.cancer.gov/types/leukemia/hp/cll-treatment-pdq",
+      "version": "2025-04-25",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Adverse Sequelae of the Disease and Therapy: infecciones, hipogammaglobulinemia e inmunoglobulina; recurso PDQ"
+    },
+    {
+      "id": "nci-hl-2025",
+      "label": "NCI. Hodgkin Lymphoma Treatment (PDQ), Health Professional",
+      "url": "https://www.cancer.gov/types/lymphoma/hp/adult-hodgkin-treatment-pdq",
+      "version": "2025-02-12",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "General Information / Adverse effects: infertility and cryopreservation; recurso profesionalPDQ, noGPC formal"
+    },
+    {
+      "id": "nci-nhl-2025",
+      "label": "NCI. Indolent B-Cell Non-Hodgkin Lymphoma Treatment (PDQ), Health Professional",
+      "url": "https://www.cancer.gov/types/lymphoma/hp/indolent-b-cell-lymphoma-treatment-pdq",
+      "version": "2025-05-14",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Marginal Zone Lymphoma / Gastric MALT; recurso profesional PDQ, no GPC formal"
+    },
+    {
+      "id": "nci-mm-2025",
+      "label": "NCI. Plasma Cell Neoplasms (Including Multiple Myeloma) Treatment (PDQ), Health Professional",
+      "url": "https://www.cancer.gov/types/myeloma/hp/myeloma-treatment-pdq",
+      "version": "2025-04-25",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Diagnostic evaluation; MGUS versus active myeloma"
+    },
+    {
+      "id": "aabb-rbc-2023",
+      "label": "AABB. Red Blood Cell Transfusion: 2023 International Guidelines; publicación primaria completa, copia institucional",
+      "url": "https://emergencymed.org.il/wp-content/uploads/2023/11/Red-Blood-Cell-Transfusion-2023-AABB-International-Guidelines.pdf",
+      "version": "2023-10-12; DOI 10.1001/jama.2023.12914",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Recommendation 1: adultos hospitalizados hemodinámicamente estables; excepciones y contexto clínico"
+    },
+    {
+      "id": "bsg-iron-2021",
+      "label": "British Society of Gastroenterology guidelines for management of iron deficiency anaemia in adults; PDF completo",
+      "url": "https://www.bsg.org.uk/getmedia/3e13dd5c-8e7b-4110-87c5-dcc1feee495d/Iron-Deficiency-Anaemia-in-Adults.pdf",
+      "version": "2021-09-08; DOI 10.1136/gutjnl-2021-325210",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Recomendación 20 y Treatment of IDA: continuar hierro después de normalizar Hb para reponer depósitos"
+    },
+    {
+      "id": "cdc-thal-2024",
+      "label": "CDC. Living with Thalassemia; recurso institucional",
+      "url": "https://www.cdc.gov/thalassemia/living-with/index.html",
+      "version": "2024-05-15",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Relationships / Romantic relationships: asesoramiento genético antes del embarazo en talasemia o rasgo"
+    },
+    {
+      "id": "nice239-2024",
+      "label": "NICE NG239. Vitamin B12 deficiency in over 16 s; texto completo primario consultado mediante copia HTML Deja Vu",
+      "url": "https://www.dejavu.org/cgi-bin/get.cgi?url=https%3A%2F%2Fwww.nice.org.uk%2Fguidance%2Fng239%2Fchapter%2FRecommendations%23when-to-test&ver=95",
+      "version": "2024-03-06",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "1.3.3; 1.4.3–1.4.5; 1.5.3: óxido nitroso, anticuerpo anti-factor intrínseco negativo y gastrectomía total"
+    },
+    {
+      "id": "aha-methem-2025",
+      "label": "AHA. Adult and Pediatric Special Circumstances of Resuscitation; guía 2025 completa",
+      "url": "https://cpr.heart.org/en/resuscitation-science/cpr-and-ecc-guidelines/adult-and-pediatric-special-circumstances-of-resuscitation/",
+      "version": "2025",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Methemoglobinemia; recommendation-specific supportive text 1: deficiencia G6PD, respuesta insuficiente y hemólisis por azul de metileno"
+    },
+    {
+      "id": "bsh-hs-2011",
+      "label": "BSH. Guidelines for diagnosis and management of hereditary spherocytosis, 2011 update; publicación primaria completa",
+      "url": "https://onlinelibrary.wiley.com/doi/10.1111/j.1365-2141.2011.08921.x",
+      "version": "2011; DOI 10.1111/j.1365-2141.2011.08921.x",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Routine follow-up: advertir sobre anemia súbita asociada a parvovirus; guía antigua, sin pautas nuevas de esplenectomía"
+    },
+    {
+      "id": "cdc-parvo-2025",
+      "label": "CDC. Parvovirus B19; Infection Control in Healthcare Personnel; recurso institucional",
+      "url": "https://www.cdc.gov/infection-control/hcp/healthcare-personnel-epidemiology-control/parvovirus.html",
+      "version": "2025-12-23",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Clinical Features: anemias crónicas y crisis aplásica transitoria; no se extrapolan recomendaciones laborales al tratamiento"
+    },
+    {
+      "id": "cdc-complement-2026",
+      "label": "CDC. Clinical Guidance for Managing Meningococcal Disease Risk in Patients Receiving Complement Inhibitor Therapy",
+      "url": "https://www.cdc.gov/meningococcal/hcp/clinical-guidance/complement-inhibitor.html",
+      "version": "2026-03-06",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "High index of suspicion y Risk remains despite vaccination: protección incompleta bajo inhibidores del complemento"
+    },
+    {
+      "id": "fcf-fanconi-web",
+      "label": "Fanconi Cancer Foundation. Clinical Care Guidelines: Diagnosis of Fanconi Anemia, Testing and Genetic Counseling; capítulo experto completo",
+      "url": "https://fanconi.org/clinical-care-guidelines/diagnosis-of-fanconi-anemia-testing-and-genetic-counseling/",
+      "version": "Capítulo web sin fecha de actualización visible; consultado 2026-11-06",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Chromosome breakage testing: sospecha clínica alta con sangre negativa y mosaicismo; estudio en fibroblastos de piel"
+    },
+    {
+      "id": "bsh-erythro-2018",
+      "label": "BSH. Management of specific situations in polycythaemia vera and secondary erythrocytosis; publicación primaria completa",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6519221/",
+      "version": "2018-11-13; DOI 10.1111/bjh.15647",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Hypoxic pulmonary disease: apnea obstructiva, desaturación nocturna y derivación para estudio"
+    },
+    {
+      "id": "ash-vwd-pocket-2022",
+      "label": "ASH. Diagnosis and Management of von Willebrand Disease; guía de bolsillo oficial basada en recomendaciones 2021, no texto completo de 2021",
+      "url": "https://edge.sitecorecloud.io/americansocea2e-hematology76c5-prod2c48-3de5/media/Project/ash/hematology/PDFs/ASH-VWD-Treatment-Pocket-Guide-0902-WEB-WATERMARK.pdf",
+      "version": "2022-09",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "p.2: Diagnostic Assays, nota 3; VWF reactante de fase aguda y evaluación en salud basal"
+    },
+    {
+      "id": "isth-ttp-dx-2020",
+      "label": "ISTH guidelines for diagnosis of thrombotic thrombocytopenic purpura; texto primario completo",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8146131/",
+      "version": "2020-09-11; DOI 10.1111/jth.15006",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "3.1–3.2; recomendación 1 paso 4 y figura 1; actividad ADAMTS13>20% y diagnósticos alternativos"
+    },
+    {
+      "id": "isth-ttp-update-2025",
+      "label": "ISTH. Focused update 2025; publicación primaria completa, PDF de reimpresión",
+      "url": "https://pro.campus.sanofi/dam/Portal/Spain/articulos/trombosis/guias-isth-diagnostico-tratamiento-ptt-2025/jth-junio-2025.pdf",
+      "version": "2025-06-17; DOI 10.1016/j.jtha.2025.06.002",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Resumen y marco diagnóstico pp.2–3: deficiencia severa ADAMTS13 y actualización de tratamiento; no sustituye el algoritmo diagnóstico 2020"
+    },
+    {
+      "id": "idsa-diarrhea-2017",
+      "label": "IDSA. Clinical Practice Guidelines for Diagnosis and Management of Infectious Diarrhea; texto completo",
+      "url": "https://www.idsociety.org/practice-guideline/infectious-diarrhea/",
+      "version": "2017-10-19",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Recomendación 35: evitar antimicrobianos en STEC O157 y productores de toxina Shiga 2"
+    },
+    {
+      "id": "ahs-apl-2025",
+      "label": "Alberta Health Services. Acute Promyelocytic Leukemia, LYHE008; guía primaria provincial completa",
+      "url": "https://www.albertahealthservices.ca/assets/info/hp/cancer/if-hp-cancer-guide-lyhe008-apl.pdf",
+      "version": "Revisión 2025-10",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Supportive Treatment 3, p.5 del PDF: síndrome de diferenciación, síntomas no específicos y corticoide terapéutico ante sospecha"
+    },
+    {
+      "id": "eviq-tls-2025",
+      "label": "Cancer Institute NSW, evi Q. Prevention of tumour lysis syndrome; recurso clínico profesional primario",
+      "url": "https://www.eviq.org.au/clinical-resources/side-effect-and-toxicity-management/prophylaxis-and-treatment/108-prevention-of-tumour-lysis-syndrome",
+      "version": "Versión 6; revisión 2025-08-20; cambio menor 2025-10-22",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Background / Pathophysiology / Clinical manifestations: lisis tumoral espontánea antes del tratamiento"
+    },
+    {
+      "id": "eln-cml-2025",
+      "label": "European Leukemia Net recommendations for management of chronic myeloid leukemia; publicación completa",
+      "url": "https://www.leukemia-net.org/sites/leukemia-net/content/e58/e495/e496/e11522/Apperley_J.etal_Leukemia2025.2025EuropeanLeukemiaNetrecommendationsforthemanagementofchronicmyeloidleukemia.pdf",
+      "version": "2025-07-11; DOI 10.1038/s 41375-025-02664-w",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Treatment-free remission; tabla 6: respuesta molecular profunda sostenida y acceso a vigilancia frecuente para considerar suspensión"
+    },
+    {
+      "id": "bsh-aiha-2016",
+      "label": "British Society for Haematology. Diagnosis and management of primary autoimmune haemolytic anaemia; guía primaria completa",
+      "url": "https://onlinelibrary.wiley.com/doi/10.1111/bjh.14478",
+      "version": "2016-12-22; DOI 10.1111/bjh.14478",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Emergency management / Blood transfusion y recomendaciones: no retrasar transfusión vital por estudio serológico completo"
+    }
+  ],
+  "mexico_source_note": "Se comprobaron las GPC IMSS-415-10, IMSS-389-10 e IMSS-750-15. Son documentos de 2010 y 2015. La búsqueda en el catálogo IMSS no identificó una guía nacional reciente y accesible que cubra toda esta sección. Para hemofilia se abrió WFH 2020; para drepanocitosis, el informe primario NHLBI 2014. NCI PDQ y páginas institucionales NHLBI complementan evaluación y clasificación; no se presentan como protocolos mexicanos ni justifican disponibilidad de terapias. Para las sustituciones se consultaron AABB2023, BSG2021, NICE2392024, AHA2025, BSH2011/2018, ISTH2020 y actualización 2025, IDSA2017, Alberta 2025 y ELN2025. BSH2011 es antiguo y solo respalda el riesgo de anemia súbita por parvovirus, complementado por CDC2025. El capítulo Fanconi no muestra fecha de actualización y se declara como guía experta web. La guía de bolsillo oficial ASH es septiembre 2022 y respalda de forma explícita VWF como reactante; no se declara haber abierto el artículo completo ASH2021, cuyo PMC devolvió CAPTCHA. NICE se leyó mediante copia HTML completa porque el sitio directo bloqueó acceso. La reimpresión ISTH2025 se descargó íntegra; no se cuenta como lectura una página PMC bloqueada. No se fijan dosis ni disponibilidad de fármacos en México. La corrección final deAIHA usa BSH22-diciembre-2016 para seguridad transfusional urgente, con su antigüedad explícita. La preservación de fertilidad enHodgkin usa NCI12-febrero-2025; no se presenta como leída la guíaASCO2025 que respondió403.",
+  "blocks": [
+    {
+      "id": "15.01",
+      "title": "Interpretar una anemia",
+      "related_sections": [],
+      "scenarios": [
+        {
+          "id": "15.01-c2-01",
+          "anchor_topic_ids": [
+            "15.01-01"
+          ],
+          "objective": "cambio",
+          "vignette": "Un adulto hospitalizado tiene Hb de 9 g/d L, perfusión normal y signos vitales estables. No hay sangrado activo, isquemia, cardiopatía ni síntomas atribuibles a anemia. Se propone transfundir solo porque la Hb está bajo el intervalo de referencia.",
+          "question": "¿La Hb baja obliga a transfundir en este caso?",
+          "answer": "No; no hay indicación automática de transfusión.",
+          "discriminator": "Se propone transfundir solo porque la Hb está bajo el intervalo de referencia",
+          "reason": "La guía favorece una estrategia restrictiva en adultos estables, integrada con síntomas y contexto.",
+          "initial_action": "Investigar y tratar la anemia; reevaluar si cambian síntomas, perfusión o sangrado.",
+          "limits": "Este caso no define el umbral para síndrome coronario, hemoglobinopatías, sangrado activo o pediatría.",
+          "evidence": [
+            {
+              "source_id": "aabb-rbc-2023",
+              "locator": "Recommendation 1: adulto hospitalizado hemodinámicamente estable",
+              "support": "La guía favorece una estrategia restrictiva en adultos estables, integrada con síntomas y contexto."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "15.02",
+      "title": "Anemia microcítica",
+      "related_sections": [],
+      "scenarios": [
+        {
+          "id": "15.02-c2-01",
+          "anchor_topic_ids": [
+            "15.02-01"
+          ],
+          "objective": "cambio",
+          "vignette": "Una adulta con ferropenia responde al hierro oral. La Hb ya es normal, pero los depósitos de hierro aún están bajos. Tolera el tratamiento y la causa se encuentra en estudio.",
+          "question": "¿Debe suspender el hierro solo porque se normalizó la Hb?",
+          "answer": "No; continuar para reponer depósitos.",
+          "discriminator": "La Hb ya es normal, pero los depósitos de hierro aún están bajos",
+          "reason": "La recuperación de Hb puede preceder a la reposición de depósitos.",
+          "initial_action": "Acordar la continuación y el seguimiento de hierro según respuesta y causa.",
+          "limits": "No se fija una duración universal; se investigan pérdidas persistentes y se evita hierro indefinido sin control.",
+          "evidence": [
+            {
+              "source_id": "bsg-iron-2021",
+              "locator": "Recomendación 20; Treatment of IDA",
+              "support": "La recuperación de Hb puede preceder a la reposición de depósitos."
+            }
+          ]
+        },
+        {
+          "id": "15.02-c2-02",
+          "anchor_topic_ids": [
+            "15.02-02"
+          ],
+          "objective": "dato_faltante",
+          "vignette": "Un niño con ferropenia no mejora con hierro prescrito. Su familia no conoce la cantidad administrada ni cómo lo toma.",
+          "question": "¿Qué debe comprobarse primero?",
+          "answer": "Adherencia y administración efectiva.",
+          "discriminator": "no conoce la cantidad administrada",
+          "reason": "Una exposición insuficiente puede explicar la falta de respuesta.",
+          "initial_action": "Revisar el producto y la administración con el cuidador.",
+          "limits": "También considerar pérdida persistente y diagnósticos alternativos.",
+          "evidence": [
+            {
+              "source_id": "imss-iron-2010",
+              "locator": "Tratamiento pediátrico: respuesta y falla terapéutica",
+              "support": "Una exposición insuficiente puede explicar la falta de respuesta."
+            }
+          ]
+        },
+        {
+          "id": "15.02-c2-03",
+          "anchor_topic_ids": [
+            "15.02-03"
+          ],
+          "objective": "cambio",
+          "vignette": "Una mujer con rasgo beta-talasémico y su pareja, también portadora, planean embarazo. Ambos están asintomáticos y sin ferropenia.",
+          "question": "¿Qué intervención previa al embarazo resulta útil?",
+          "answer": "Asesoramiento genético de la pareja.",
+          "discriminator": "su pareja, también portadora, planean embarazo",
+          "reason": "Un rasgo leve en cada progenitor puede tener implicaciones reproductivas importantes.",
+          "initial_action": "Derivar para explicar herencia y opciones de evaluación reproductiva.",
+          "limits": "No se deduce el genotipo fetal ni se prescribe hierro por la microcitosis; el riesgo concreto exige caracterizar variantes.",
+          "evidence": [
+            {
+              "source_id": "cdc-thal-2024",
+              "locator": "Relationships / Romantic relationships",
+              "support": "Un rasgo leve en cada progenitor puede tener implicaciones reproductivas importantes."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "15.03",
+      "title": "Anemia macrocítica",
+      "related_sections": [],
+      "scenarios": [
+        {
+          "id": "15.03-c2-01",
+          "anchor_topic_ids": [
+            "15.03-01"
+          ],
+          "objective": "dato_faltante",
+          "vignette": "Un adulto que consume óxido nitroso presenta parestesias y dificultad para caminar. La B12 sérica está dentro del intervalo de referencia.",
+          "question": "¿Qué evaluación ayuda a detectar deficiencia funcional?",
+          "answer": "Ácido metilmalónico u homocisteína.",
+          "discriminator": "consume óxido nitroso",
+          "reason": "En este contexto la B12 sérica aislada puede no detectar el problema funcional.",
+          "initial_action": "Obtener la muestra, suspender exposición y organizar atención pronta sin retrasar tratamiento indicado por el cuadro neurológico.",
+          "limits": "Los metabolitos requieren interpretación clínica; esta recomendación es para mayores de 16 años.",
+          "evidence": [
+            {
+              "source_id": "nice239-2024",
+              "locator": "1.3.3 y 1.3.6; 1.5.8–1.5.10",
+              "support": "En este contexto la B12 sérica aislada puede no detectar el problema funcional."
+            }
+          ]
+        },
+        {
+          "id": "15.03-c2-02",
+          "anchor_topic_ids": [
+            "15.03-02"
+          ],
+          "objective": "incompleta",
+          "vignette": "Una adulta tiene deficiencia de B12 y sospecha clínica de gastritis autoinmune. El anticuerpo anti-factor intrínseco es negativo.",
+          "question": "¿Ese resultado excluye la causa autoinmune?",
+          "answer": "No; considerar evaluación adicional.",
+          "discriminator": "El anticuerpo anti-factor intrínseco es negativo",
+          "reason": "Un anticuerpo negativo no descarta gastritis autoinmune.",
+          "initial_action": "Mantener reposición indicada y coordinar estudios adicionales según sospecha clínica.",
+          "limits": "No se diagnostica gastritis autoinmune con este caso; la selección de anticuerpos, gastrina o endoscopia es individual.",
+          "evidence": [
+            {
+              "source_id": "nice239-2024",
+              "locator": "1.4.3–1.4.5",
+              "support": "Un anticuerpo negativo no descarta gastritis autoinmune."
+            }
+          ]
+        },
+        {
+          "id": "15.03-c2-03",
+          "anchor_topic_ids": [
+            "15.03-01",
+            "15.01-01"
+          ],
+          "objective": "cambio",
+          "vignette": "Un adulto con antecedente de gastrectomía total desarrolló anemia por deficiencia de B12. La Hb se normalizó con reposición intramuscular y pregunta si puede terminar el tratamiento.",
+          "question": "¿La normalización de Hb permite retirar la reposición?",
+          "answer": "No; necesita reposición intramuscular de por vida.",
+          "discriminator": "antecedente de gastrectomía total",
+          "reason": "La causa irreversible de malabsorción persiste después de corregir la anemia.",
+          "initial_action": "Explicar continuidad y organizar reposición y seguimiento.",
+          "limits": "No trasladar esta duración a toda deficiencia dietética ni a toda gastrectomía parcial.",
+          "evidence": [
+            {
+              "source_id": "nice239-2024",
+              "locator": "1.5.3",
+              "support": "La causa irreversible de malabsorción persiste después de corregir la anemia."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "15.04",
+      "title": "Anemia hemolítica",
+      "related_sections": [],
+      "scenarios": [
+        {
+          "id": "15.04-c2-01",
+          "anchor_topic_ids": [
+            "15.04-01"
+          ],
+          "objective": "gravedad",
+          "vignette": "Una adulta con anemia hemolítica autoinmune por anticuerpos calientes tiene anemia que amenaza la vida, mala perfusión y dolor torácico. El banco de sangre informa que completar los estudios de compatibilidad tardará varias horas por el autoanticuerpo.",
+          "question": "¿Debe retrasarse una transfusión vital hasta terminar toda la compatibilidad?",
+          "answer": "No; coordinar transfusión urgente con medicina transfusional.",
+          "discriminator": "completar los estudios de compatibilidad tardará varias horas",
+          "reason": "En anemia vitalmente amenazante, esperar el estudio serológico completo puede causar más daño que una transfusión urgente seleccionada por el banco.",
+          "initial_action": "Activar medicina transfusional y hematología para seleccionar eritrocitos compatibles en ABO, Rh y K y transfundir bajo vigilancia sin una espera peligrosa.",
+          "limits": "No se omiten controles disponibles ni evaluación de aloanticuerpos; esta excepción exige una amenaza vital y coordinación experta. La recomendación BSH es de 2016.",
+          "evidence": [
+            {
+              "source_id": "bsh-aiha-2016",
+              "locator": "Emergency management / Blood transfusion; Transfusion recommendations1",
+              "support": "Ante anemia que amenaza la vida durante el tiempo necesario para completar compatibilidad, BSH recomienda eritrocitos compatibles en ABO, Rh y K sin esperar toda la serología."
+            }
+          ]
+        },
+        {
+          "id": "15.04-c2-02",
+          "anchor_topic_ids": [
+            "15.04-02"
+          ],
+          "objective": "cambio",
+          "vignette": "Un adulto con deficiencia G6PD conocida presenta metahemoglobinemia grave tras exposición oxidante. Se propone azul de metileno como en un paciente sin esa deficiencia.",
+          "question": "¿Qué problema cambia la selección del antídoto?",
+          "answer": "Puede ser ineficaz y causar hemólisis.",
+          "discriminator": "deficiencia G6PD conocida",
+          "reason": "La reducción del azul de metileno depende de una vía que puede fallar en G6PD y agravar hemólisis.",
+          "initial_action": "Suspender el oxidante, dar soporte y consultar de inmediato toxicología para tratamiento alternativo especializado.",
+          "limits": "No se fija una alternativa universal ni dosis; la evidencia de algunas alternativas se limita a series de casos.",
+          "evidence": [
+            {
+              "source_id": "aha-methem-2025",
+              "locator": "Methemoglobinemia; recommendation-specific supportive text 1",
+              "support": "La reducción del azul de metileno depende de una vía que puede fallar en G6PD y agravar hemólisis."
+            }
+          ]
+        },
+        {
+          "id": "15.04-c2-03",
+          "anchor_topic_ids": [
+            "15.04-03"
+          ],
+          "objective": "gravedad",
+          "vignette": "Un niño con esferocitosis hereditaria estable desarrolla palidez intensa y descenso brusco de Hb tras convivir con un hermano que tuvo eritema infeccioso por parvovirus B19.",
+          "question": "¿Qué complicación debe considerarse además de la hemólisis habitual?",
+          "answer": "Crisis aplásica transitoria.",
+          "discriminator": "descenso brusco de Hb tras convivir con un hermano que tuvo eritema infeccioso por parvovirus B19",
+          "reason": "El parvovirus puede provocar anemia súbita grave en una persona con anemia hemolítica crónica.",
+          "initial_action": "Realizar evaluación hospitalaria pronta, hemograma y reticulocitos; decidir soporte según gravedad.",
+          "limits": "La exposición no confirma infección; comprobar evolución y considerar otras causas de caída de Hb.",
+          "evidence": [
+            {
+              "source_id": "bsh-hs-2011",
+              "locator": "Routine follow-up: anemia súbita por parvovirus",
+              "support": "El parvovirus puede provocar anemia súbita grave en una persona con anemia hemolítica crónica."
+            },
+            {
+              "source_id": "cdc-parvo-2025",
+              "locator": "Clinical Features: anemias crónicas y crisis aplásica transitoria",
+              "support": "La infección por parvovirus B19 puede producir crisis aplásica transitoria en anemias crónicas."
+            }
+          ]
+        },
+        {
+          "id": "15.04-c2-04",
+          "anchor_topic_ids": [
+            "15.04-04"
+          ],
+          "objective": "gravedad",
+          "vignette": "Una persona con drepanocitosis presenta dolor torácico, fiebre, hipoxemia e infiltrado pulmonar nuevo.",
+          "question": "¿Qué complicación cambia la prioridad?",
+          "answer": "Síndrome torácico agudo.",
+          "discriminator": "hipoxemia e infiltrado pulmonar nuevo",
+          "reason": "El compromiso pulmonar requiere atención urgente.",
+          "initial_action": "Hospitalizar y tratar hipoxemia e infección posible.",
+          "limits": "La transfusión se decide según gravedad y evolución.",
+          "evidence": [
+            {
+              "source_id": "nhlbi-scd-2014",
+              "locator": "Acute chest syndrome",
+              "support": "El compromiso pulmonar requiere atención urgente."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "15.05",
+      "title": "Hemólisis intravascular especial",
+      "related_sections": [],
+      "scenarios": [
+        {
+          "id": "15.05-c2-01",
+          "anchor_topic_ids": [
+            "15.05-01"
+          ],
+          "objective": "gravedad",
+          "vignette": "Una adulta con HPN tratada con eculizumab presenta fiebre, cefalea y rigidez de cuello. Tiene vacunación antimeningocócica al día.",
+          "question": "¿La vacunación permite descartar infección meningocócica?",
+          "answer": "No; necesita evaluación y tratamiento urgentes.",
+          "discriminator": "tratada con eculizumab",
+          "reason": "La inhibición del complemento mantiene un riesgo importante aunque la vacunación esté completa.",
+          "initial_action": "Activar atención urgente por posible infección invasiva y administrar tratamiento indicado sin demora.",
+          "limits": "No atribuir todos los cuadros febriles a meningococo; la vacunación sigue siendo necesaria y no ofrece protección completa.",
+          "evidence": [
+            {
+              "source_id": "cdc-complement-2026",
+              "locator": "High index of suspicion; Risk remains despite vaccination",
+              "support": "La inhibición del complemento mantiene un riesgo importante aunque la vacunación esté completa."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "15.06",
+      "title": "Pancitopenia o hiperviscosidad",
+      "related_sections": [],
+      "scenarios": [
+        {
+          "id": "15.06-c2-01",
+          "anchor_topic_ids": [
+            "15.06-01"
+          ],
+          "objective": "dato_faltante",
+          "vignette": "Un joven con falla medular y anomalías congénitas de pulgares tiene alta sospecha de anemia de Fanconi. La prueba de rotura cromosómica en linfocitos sanguíneos es negativa.",
+          "question": "¿Qué estudio puede aclarar un posible mosaicismo?",
+          "answer": "Prueba de rotura cromosómica en fibroblastos de piel.",
+          "discriminator": "alta sospecha de anemia de Fanconi",
+          "reason": "El mosaicismo puede hacer que la sangre no muestre la anomalía presente en otros tejidos.",
+          "initial_action": "Coordinar con genética y hematología el estudio en fibroblastos antes de descartar una causa hereditaria.",
+          "limits": "La sospecha no confirma Fanconi; se considera también el diagnóstico diferencial de falla medular congénita.",
+          "evidence": [
+            {
+              "source_id": "fcf-fanconi-web",
+              "locator": "Chromosome breakage testing: sangre negativa y sospecha clínica alta",
+              "support": "El mosaicismo puede hacer que la sangre no muestre la anomalía presente en otros tejidos."
+            }
+          ]
+        },
+        {
+          "id": "15.06-c2-02",
+          "anchor_topic_ids": [
+            "15.06-02"
+          ],
+          "objective": "dato_faltante",
+          "vignette": "Un adulto con eritrocitosis tiene ronquidos intensos, pausas respiratorias durante el sueño y somnolencia. La saturación diurna en consulta es normal.",
+          "question": "¿La saturación diurna descarta una causa hipóxica nocturna?",
+          "answer": "No; estudiar apnea obstructiva del sueño.",
+          "discriminator": "pausas respiratorias durante el sueño",
+          "reason": "La desaturación asociada a apnea puede ocurrir de noche y acompañar eritrocitosis.",
+          "initial_action": "Derivar para evaluación del sueño y continuar estudio de eritrocitosis.",
+          "limits": "La apnea no queda confirmada ni excluye causas concomitantes como PV; no se indica flebotomía automática.",
+          "evidence": [
+            {
+              "source_id": "bsh-erythro-2018",
+              "locator": "Hypoxic pulmonary disease: obstructive sleep apnoea",
+              "support": "La desaturación asociada a apnea puede ocurrir de noche y acompañar eritrocitosis."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "15.07",
+      "title": "Púrpura o sangrado",
+      "related_sections": [],
+      "scenarios": [
+        {
+          "id": "15.07-c2-01",
+          "anchor_topic_ids": [
+            "15.07-01"
+          ],
+          "objective": "contraste",
+          "vignette": "Una mujer tiene plaquetas bajas, esquistocitos, anemia hemolítica y confusión. Alguien propone clasificarla como PTI.",
+          "question": "¿Qué diagnóstico urgente debe priorizarse?",
+          "answer": "Microangiopatía trombótica, incluida PTT.",
+          "discriminator": "esquistocitos, anemia hemolítica y confusión",
+          "reason": "La PTI aislada no explica hemólisis microangiopática.",
+          "initial_action": "Activar evaluación hematológica urgente.",
+          "limits": "No esperar la pentada completa de PTT.",
+          "evidence": [
+            {
+              "source_id": "imss-hemolysis-2015",
+              "locator": "Diagnóstico de PTT y SHU",
+              "support": "La PTI aislada no explica hemólisis microangiopática."
+            }
+          ]
+        },
+        {
+          "id": "15.07-c2-02",
+          "anchor_topic_ids": [
+            "15.07-02"
+          ],
+          "objective": "gravedad",
+          "vignette": "Una persona con hemofilia presenta cefalea y vómitos tras traumatismo craneal. La tomografía aún no está disponible.",
+          "question": "¿Qué debe priorizarse?",
+          "answer": "Tratamiento hemostático urgente y evaluación de hemorragia intracraneal.",
+          "discriminator": "tras traumatismo craneal",
+          "reason": "La sospecha de sangrado crítico no debe esperar imagen.",
+          "initial_action": "Contactar el centro tratante e iniciar hemostasia indicada.",
+          "limits": "El producto depende de tipo, inhibidores y tratamiento actual.",
+          "evidence": [
+            {
+              "source_id": "wfh-2020",
+              "locator": "Chapter 7: CNS hemorrhage and head trauma",
+              "support": "La sospecha de sangrado crítico no debe esperar imagen."
+            }
+          ]
+        },
+        {
+          "id": "15.07-c2-03",
+          "anchor_topic_ids": [
+            "15.07-03"
+          ],
+          "objective": "incompleta",
+          "vignette": "Una mujer con sangrado mucoso desde joven y familiar con enfermedad de von Willebrand se estudia durante el tercer trimestre del embarazo. La actividad de VWF resulta normal.",
+          "question": "¿Este resultado descarta el trastorno hereditario?",
+          "answer": "No; reevaluar en estado basal de salud.",
+          "discriminator": "durante el tercer trimestre del embarazo",
+          "reason": "VWF aumenta con embarazo, sangrado y otros estímulos y puede ocultar un valor basal bajo.",
+          "initial_action": "Coordinar evaluación hematológica y repetir las pruebas en un momento basal apropiado.",
+          "limits": "No posponer el plan hemostático del parto si existe riesgo; este dato no confirma ni determina el subtipo.",
+          "evidence": [
+            {
+              "source_id": "ash-vwd-pocket-2022",
+              "locator": "p.2 Diagnostic Assays, nota 3",
+              "support": "VWF aumenta con embarazo, sangrado y otros estímulos y puede ocultar un valor basal bajo."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "15.08",
+      "title": "Trombocitopenia con daño orgánico",
+      "related_sections": [],
+      "scenarios": [
+        {
+          "id": "15.08-c2-01",
+          "anchor_topic_ids": [
+            "15.08-01"
+          ],
+          "objective": "cambio",
+          "vignette": "Una adulta presenta anemia hemolítica microangiopática y trombocitopenia. La muestra obtenida antes de plasma informa actividad ADAMTS13 de 30%.",
+          "question": "¿El resultado respalda la deficiencia grave típica de PTT?",
+          "answer": "No; obliga a buscar otras causas de microangiopatía.",
+          "discriminator": "actividad ADAMTS13 de 30%",
+          "reason": "El algoritmo ISTH considera actividad superior a 20% como resultado que debe reorientar el diagnóstico.",
+          "initial_action": "Reevaluar urgentemente con hematología la causa y el tratamiento específico.",
+          "limits": "No suspender todo soporte por un valor aislado; las decisiones dependen de la validez de la muestra y del contexto.",
+          "evidence": [
+            {
+              "source_id": "isth-ttp-dx-2020",
+              "locator": "3.1 recomendación 1 paso 4; figura 1",
+              "support": "El algoritmo ISTH considera actividad superior a 20% como resultado que debe reorientar el diagnóstico."
+            },
+            {
+              "source_id": "isth-ttp-update-2025",
+              "locator": "Resumen; marco diagnóstico pp.2–3",
+              "support": "La actualización 2025 mantiene la relación de PTT con deficiencia severa de ADAMTS13; no presenta una revisión sustitutiva del algoritmo diagnóstico 2020."
+            }
+          ]
+        },
+        {
+          "id": "15.08-c2-02",
+          "anchor_topic_ids": [
+            "15.08-02"
+          ],
+          "objective": "cambio",
+          "vignette": "Un niño con diarrea sanguinolenta tiene STEC productor de toxina Shiga 2 confirmado. Está hidratado y no tiene sepsis ni otra infección que requiera antibiótico. Aún no presenta SHU.",
+          "question": "¿Debe recibir antibiótico para prevenir SHU?",
+          "answer": "No; evitar antibióticos para esta infección.",
+          "discriminator": "STEC productor de toxina Shiga 2 confirmado",
+          "reason": "Los antimicrobianos en este contexto pueden aumentar el riesgo de SHU y no constituyen prevención.",
+          "initial_action": "Dar soporte, vigilar hidratación, diuresis y datos de SHU, y explicar signos de alarma.",
+          "limits": "No extrapolar a toda diarrea bacteriana ni omitir tratamiento de una infección concomitante que sí lo requiera.",
+          "evidence": [
+            {
+              "source_id": "idsa-diarrhea-2017",
+              "locator": "Recomendación 35",
+              "support": "Los antimicrobianos en este contexto pueden aumentar el riesgo de SHU y no constituyen prevención."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "15.09",
+      "title": "Blastos y leucemia aguda",
+      "related_sections": [],
+      "scenarios": [
+        {
+          "id": "15.09-c2-01",
+          "anchor_topic_ids": [
+            "15.09-01"
+          ],
+          "objective": "subtipo",
+          "vignette": "Un adulto tiene LLA confirmada. Los estudios detectan BCR::ABL1 y cromosoma Filadelfia.",
+          "question": "¿Qué resultado cambia la estrategia farmacológica?",
+          "answer": "La positividad Filadelfia orienta a incorporar un inhibidor de tirosina cinasa.",
+          "discriminator": "detectan BCR::ABL1 y cromosoma Filadelfia",
+          "reason": "La alteración molecular identifica una diana terapéutica además del linaje.",
+          "initial_action": "Planificar con hematología una estrategia para LLA Filadelfia positiva.",
+          "limits": "No se selecciona un fármaco, dosis o combinación universal; no es un protocolo pediátrico.",
+          "evidence": [
+            {
+              "source_id": "nci-all-2025",
+              "locator": "Treatment of newly diagnosed ALL: Philadelphia chromosome-positive ALL",
+              "support": "La alteración molecular identifica una diana terapéutica además del linaje."
+            }
+          ]
+        },
+        {
+          "id": "15.09-c2-02",
+          "anchor_topic_ids": [
+            "15.09-02"
+          ],
+          "objective": "gravedad",
+          "vignette": "Un adulto con LPA inicia ATRA y arsénico. Días después aparece disnea con infiltrados pulmonares, edema y aumento rápido de peso.",
+          "question": "¿Qué complicación del tratamiento requiere actuación inmediata?",
+          "answer": "Sospecha de síndrome de diferenciación.",
+          "discriminator": "inicia ATRA y arsénico",
+          "reason": "Los hallazgos pueden reflejar síndrome de diferenciación y requieren tratamiento temprano mientras se evalúan otras causas.",
+          "initial_action": "Avisar urgentemente al equipo e iniciar corticoide terapéutico indicado por protocolo, con soporte y evaluación paralela.",
+          "limits": "Sepsis, hemorragia pulmonar y toxicidad cardíaca pueden parecerse; no se suspende ATRA/arsénico automáticamente en todo caso.",
+          "evidence": [
+            {
+              "source_id": "ahs-apl-2025",
+              "locator": "Supportive Treatment 3: Differentiation Syndrome, p.5PDF",
+              "support": "Los hallazgos pueden reflejar síndrome de diferenciación y requieren tratamiento temprano mientras se evalúan otras causas."
+            }
+          ]
+        },
+        {
+          "id": "15.09-c2-03",
+          "anchor_topic_ids": [
+            "15.09-03"
+          ],
+          "objective": "variante",
+          "vignette": "Un adulto con leucemia de alta carga tumoral presenta hiperpotasemia, hiperfosfatemia, hiperuricemia y lesión renal aguda antes de recibir quimioterapia.",
+          "question": "¿No haber iniciado quimioterapia excluye lisis tumoral?",
+          "answer": "No; puede ser espontánea.",
+          "discriminator": "antes de recibir quimioterapia",
+          "reason": "La liberación celular masiva puede preceder al tratamiento antineoplásico.",
+          "initial_action": "Activar atención urgente con ECG, vigilancia metabólica y renal, y manejo individualizado de líquidos y urato.",
+          "limits": "Los hallazgos necesitan valoración integral; no toda lesión renal de una leucemia es lisis y no se fijan dosis.",
+          "evidence": [
+            {
+              "source_id": "eviq-tls-2025",
+              "locator": "Background / Pathophysiology / Clinical manifestations",
+              "support": "La liberación celular masiva puede preceder al tratamiento antineoplásico."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "15.10",
+      "title": "Leucocitosis crónica",
+      "related_sections": [],
+      "scenarios": [
+        {
+          "id": "15.10-c2-01",
+          "anchor_topic_ids": [
+            "15.10-01"
+          ],
+          "objective": "cambio",
+          "vignette": "Una adulta con LLC tiene infecciones bacterianas graves repetidas y marcada hipogammaglobulinemia. Se propone inmunoglobulina intravenosa para todas las personas con LLC.",
+          "question": "¿Debe indicarse de forma rutinaria a toda LLC?",
+          "answer": "No; valorar reposición de forma selectiva.",
+          "discriminator": "infecciones bacterianas graves repetidas y marcada hipogammaglobulinemia",
+          "reason": "La reposición puede reducir infecciones en pacientes seleccionados; no se ha demostrado beneficio de supervivencia ni utilidad de administración crónica universal.",
+          "initial_action": "Coordinar con hematología la evaluación de las infecciones, prevención y posible reposición.",
+          "limits": "Se atiende primero la infección activa; no se fija umbral, dosis ni duración universal.",
+          "evidence": [
+            {
+              "source_id": "nci-cll-2025",
+              "locator": "Adverse Sequelae of the Disease and Therapy: inmunoglobulina intravenosa",
+              "support": "La reposición puede reducir infecciones en pacientes seleccionados; no se ha demostrado beneficio de supervivencia ni utilidad de administración crónica universal."
+            }
+          ]
+        },
+        {
+          "id": "15.10-c2-02",
+          "anchor_topic_ids": [
+            "15.10-02"
+          ],
+          "objective": "cambio",
+          "vignette": "Un adulto con LMC en fase crónica obtiene por primera vez una PCR indetectable durante su inhibidor de tirosina cinasa. Quiere suspenderlo sin controles posteriores.",
+          "question": "¿Este único resultado permite suspender el tratamiento?",
+          "answer": "No; se exige respuesta profunda sostenida y vigilancia apropiada.",
+          "discriminator": "por primera vez una PCR indetectable",
+          "reason": "La remisión sin tratamiento solo se considera con criterios de duración, respuesta y acceso a monitorización frecuente.",
+          "initial_action": "Mantener el plan y discutir los criterios de suspensión supervisada con hematología.",
+          "limits": "PCR indetectable depende de sensibilidad de la prueba; no equivale a curación ni a autorización para suspender solo.",
+          "evidence": [
+            {
+              "source_id": "eln-cml-2025",
+              "locator": "Treatment-free remission; tabla 6",
+              "support": "La remisión sin tratamiento solo se considera con criterios de duración, respuesta y acceso a monitorización frecuente."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "15.11",
+      "title": "Adenopatía persistente",
+      "related_sections": [],
+      "scenarios": [
+        {
+          "id": "15.11-c2-01",
+          "anchor_topic_ids": [
+            "15.11-01"
+          ],
+          "objective": "cambio",
+          "vignette": "Una adulta joven con Hodgkin confirmado iniciará tratamiento con riesgo gonadal. Desea conservar fertilidad y se propone un agonista de GnRH como sustituto garantizado de la criopreservación de ovocitos.",
+          "question": "¿Puede darse por equivalente esa protección hormonal?",
+          "answer": "No; la eficacia en Hodgkin no está confirmada.",
+          "discriminator": "sustituto garantizado de la criopreservación de ovocitos",
+          "reason": "NCI identifica criopreservación de ovocitos o espermatozoides como primera opción; no está confirmada la eficacia gonadoprotectora de agonistas de GnRH en Hodgkin.",
+          "initial_action": "Coordinar asesoramiento rápido de preservación de fertilidad con el equipo oncológico y reproductivo antes de fijar el plan.",
+          "limits": "No prometer fertilidad futura ni retrasar tratamiento oncológico urgente de forma indefinida; la elección depende de riesgo, tiempo, situación clínica y preferencias.",
+          "evidence": [
+            {
+              "source_id": "nci-hl-2025",
+              "locator": "General Information / Adverse effects: infertility and cryopreservation",
+              "support": "La criopreservación es primera opción de preservación; la eficacia de agonistas de GnRH en Hodgkin no está confirmada como en cáncer de mama."
+            }
+          ]
+        },
+        {
+          "id": "15.11-c2-02",
+          "anchor_topic_ids": [
+            "15.11-02"
+          ],
+          "objective": "subtipo",
+          "vignette": "Un adulto tiene linfoma MALT gástrico de bajo grado localizado y Helicobacter pylori confirmado. No hay transformación a células grandes ni enfermedad diseminada.",
+          "question": "¿Qué tratamiento dirigido a la causa puede ser parte de la estrategia inicial?",
+          "answer": "Erradicación de H.pylori con seguimiento del linfoma.",
+          "discriminator": "linfoma MALT gástrico de bajo grado localizado y Helicobacter pylori confirmado",
+          "reason": "En este subtipo localizado el tratamiento de la infección puede inducir regresión del linfoma.",
+          "initial_action": "Coordinar erradicación y evaluación de respuesta con gastroenterología y hematología.",
+          "limits": "La respuesta no es universal ni inmediata; no extrapolar a linfoma transformado o a todo linfoma no Hodgkin.",
+          "evidence": [
+            {
+              "source_id": "nci-nhl-2025",
+              "locator": "Marginal Zone Lymphoma / Gastric MALT",
+              "support": "En este subtipo localizado el tratamiento de la infección puede inducir regresión del linfoma."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "15.12",
+      "title": "Dolor óseo y anemia",
+      "related_sections": [],
+      "scenarios": [
+        {
+          "id": "15.12-c2-01",
+          "anchor_topic_ids": [
+            "15.12-01"
+          ],
+          "objective": "contraste",
+          "vignette": "Una persona tiene proteína monoclonal pequeña sin anemia, daño renal, hipercalcemia ni lesiones óseas.",
+          "question": "¿La proteína basta para diagnosticar mieloma activo?",
+          "answer": "No; considerar MGUS tras evaluación completa.",
+          "discriminator": "sin anemia, daño renal, hipercalcemia ni lesiones óseas",
+          "reason": "La actividad del mieloma requiere criterios adicionales.",
+          "initial_action": "Cuantificar proteína y evaluar médula y daño orgánico según riesgo.",
+          "limits": "También existen biomarcadores definitorios sin síntomas.",
+          "evidence": [
+            {
+              "source_id": "nci-mm-2025",
+              "locator": "Diagnostic evaluation: MGUS and active myeloma",
+              "support": "La actividad del mieloma requiere criterios adicionales."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

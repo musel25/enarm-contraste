@@ -1,0 +1,796 @@
+{
+  "schema_version": 1,
+  "layer": 2,
+  "section_id": "34",
+  "title": "Vacunas",
+  "author": "clinical-author-25-35",
+  "sources": [
+    {
+      "id": "cdc-hbvoccup",
+      "label": "CDC: Responding to HBV Exposures in Health Care Settings",
+      "url": "https://www.cdc.gov/hepatitis-b/hcp/infection-control/index.html",
+      "version": "16 mayo 2024",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Occupational exposures; vaccine records; anti-HBs and source HBsAg"
+    },
+    {
+      "id": "cdc-polio",
+      "label": "CDC: Polio Vaccine Recommendations",
+      "url": "https://www.cdc.gov/polio/hcp/vaccine-considerations/",
+      "version": "6 septiembre 2024",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Children/adults vaccinated outside United States; notes about OPV"
+    },
+    {
+      "id": "cdc-pregvax",
+      "label": "CDC: Guidelines for Vaccinating Pregnant Women",
+      "url": "https://www.cdc.gov/vaccines-pregnancy/hcp/vaccination-guidelines/index.html",
+      "version": "22 agosto 2025",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Influenza; HPV; MMR and varicella; Tdap"
+    },
+    {
+      "id": "cdc-tetanus",
+      "label": "CDC: Wound Management to Prevent Tetanus",
+      "url": "https://www.cdc.gov/tetanus/hcp/clinical-guidance/index.html",
+      "version": "Actualización y revisión experta 8 septiembre 2026",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Wound assessment; vaccination status; TIG prophylaxis indications"
+    },
+    {
+      "id": "cdc-vaxadmin",
+      "label": "CDC: Vaccine Administration, General Best Practices",
+      "url": "https://www.cdc.gov/vaccines/hcp/imz-best-practices/vaccine-administration.html",
+      "version": "18 junio 2024",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Preparation; safe needles; route of administration"
+    },
+    {
+      "id": "cdc-vaxcontra",
+      "label": "CDC: General Best Practices, Contraindications and Precautions",
+      "url": "https://www.cdc.gov/vaccines/hcp/imz-best-practices/contraindications-precautions.html",
+      "version": "25 julio 2024",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "General Principles; contraindications; precautions; tables 4-1 and 4-2"
+    },
+    {
+      "id": "cdc-vaxreaction",
+      "label": "CDC: Preventing and Managing Adverse Reactions",
+      "url": "https://www.cdc.gov/vaccines/hcp/imz-best-practices/preventing-managing-adverse-reactions.html",
+      "version": "25 julio 2024",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Adverse event reporting; causal inference; anaphylaxis"
+    },
+    {
+      "id": "cdc-vaxstorage",
+      "label": "CDC: Storage and Handling of Immunobiologics",
+      "url": "https://www.cdc.gov/vaccines/hcp/imz-best-practices/storage-handling-immunobiologics.html",
+      "version": "18 junio 2024",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Response to out-of-range temperature reading"
+    },
+    {
+      "id": "mx-vac2021",
+      "label": "Secretaría de Salud/CENSIA: Manual de Vacunación 2021",
+      "url": "https://transparenciadocs.hidalgo.gob.mx/ENTIDADES/ServSaludH/articulo69/fracc33/2023/3er-t-2023/conv/Manual_de_Vacunacion_2021.pdf",
+      "version": "México 2021; copia íntegra en portal oficial de Hidalgo",
+      "checked_at": "2026-11-06",
+      "region": "mexico",
+      "access": "checked",
+      "locator": "Cap. 7, pp. 105–109; BCG p. 132; composición hexavalente p. 106"
+    },
+    {
+      "id": "mx-vac2025",
+      "label": "IMSS-BIENESTAR: Guía rápida de bolsillo para el Programa de Vacunación Universal",
+      "url": "https://www.imssbienestar.gob.mx/assets/doc/transparencia/coordinaciones/epidemiologia/Gu%C3%ADa%20bolsillo%20Programa%20de%20Vacunaci%C3%B3n%20Universal%20IMSS-BIENESTAR.pdf",
+      "version": "2025; PDF escaneado de 71 páginas, lectura visual de páginas indicadas",
+      "checked_at": "2026-11-06",
+      "region": "mexico",
+      "access": "checked",
+      "locator": "pp. 13, 16, 19, 20, 25, 34 y 54–56; versión institucional 2025, no calendario 2026"
+    },
+    {
+      "id": "cdc-immunocomp",
+      "label": "CDC General Best Practices: Altered immunocompetence",
+      "url": "https://www.cdc.gov/vaccines/hcp/imz-best-practices/altered-immunocompetence.html",
+      "version": "Página26junio2024;contenidoactualizadoagosto2023segúnencabezado",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "HealthyhouseholdcontactsandMMR;Non-livevaccineseffectiveness/antiBcelltherapy. No se toman sus tablas antiguas de productos como calendario2026"
+    },
+    {
+      "id": "aus-vax-vasovagal",
+      "label": "Australian Immunisation Handbook: vasovagal episode versus anaphylaxis",
+      "url": "https://immunisationhandbook.health.gov.au/resources/tables/table-clinical-features-that-may-help-differentiate-between-a-vasovagal-episode-and-anaphylaxis",
+      "version": "Actualizadayrevisada30junio2023",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Tabla clínica completa:respiración,bradicardia,palidezyrecuperaciónendecúbito"
+    },
+    {
+      "id": "cdc-hbv-perinatal",
+      "label": "CDC: HepatitisB Perinatal Vaccine Information",
+      "url": "https://www.cdc.gov/hepatitis-b/hcp/perinatal-provider-overview/vaccine-administration.html",
+      "version": "27agosto2025",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Birthdose,tablaynota2:madreinicialmentedesconocida,luegopositiva;HBIGcuantoantesyhasta7días"
+    },
+    {
+      "id": "cdc-bcg-testing",
+      "label": "CDC: BCG vaccine for tuberculosis and TB testing",
+      "url": "https://www.cdc.gov/tb/hcp/vaccines/index.html",
+      "version": "31enero2025",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "BCGVaccineandTBTesting:IGRAnoafectadoporBCG;no se usa programaBCGestadounidenseparaMéxico"
+    },
+    {
+      "id": "cdc-rotavirus-safety",
+      "label": "CDC: Rotavirus vaccination, safety and intussusception",
+      "url": "https://www.cdc.gov/rotavirus/vaccines/",
+      "version": "19julio2024",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Risks/Intussusception:riesgopequeñoprimerasemana,signosdealarma"
+    },
+    {
+      "id": "cdc-cochlear",
+      "label": "CDC: Cochlear implants and vaccine recommendations",
+      "url": "https://www.cdc.gov/pneumococcal/vaccines/cochlear-implants.html",
+      "version": "25febrero2026",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Commonquestions:completardosisneumocócicasindicadasalmenos2semanasantesdelimplante;noextrasiestáaldía"
+    },
+    {
+      "id": "cdc-measles-questions",
+      "label": "CDC: Clinical questions about measles",
+      "url": "https://www.cdc.gov/measles/hcp/clinical-overview/questions.html",
+      "version": "5agosto2026",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Protectionagainstmeasles:IgGnegativacon2dosisdocumentadas;excepcionesrubéolaeinmunocompromiso"
+    },
+    {
+      "id": "nci-hpv-screening",
+      "label": "NCI: Human papillomavirus vaccine fact sheet",
+      "url": "https://www.cancer.gov/about-cancer/causes-prevention/risk/infectious-agents/hpv-vaccine-fact-sheet",
+      "version": "Actualizada1junio2026",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "WomenvaccinatedagainstHPVstillneedcervicalscreening;fichaoficial,noGPCnacionaldetamizaje"
+    },
+    {
+      "id": "cdc-hav-pep",
+      "label": "CDC YellowBook: HepatitisA, post-exposure prophylaxis",
+      "url": "https://www.cdc.gov/yellow-book/hcp/travel-associated-infections-diseases/hepatitis-a.html",
+      "version": "Edición2026,página23abril2025",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Post-exposureprophylaxis:hepatopatíacrónica,IGmásvacunamonovalentedentrode2semanas;noTwinrix"
+    },
+    {
+      "id": "cdc-typhoid-interaction",
+      "label": "CDC YellowBook: Typhoid and paratyphoid fever",
+      "url": "https://www.cdc.gov/yellow-book/hcp/travel-associated-infections-diseases/typhoid-and-paratyphoid-fever.html",
+      "version": "Edición2026,página23abril2025",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Precautionsandcontraindications:Ty21avivayantimicrobianos,intervalos>72h"
+    }
+  ],
+  "mexico_source_note": "Se abrió el Manual deVacunación2021 íntegro en portal oficial deHidalgo y la Guía debolsilloIMSS-BIENESTAR2025 escaneada71p. Se leyeron visualmentepp13,16,19,20,25,34,54–56. En2025,p34incluye niñosy niñas paraVPH,mientrasp55mantiene una tabla antigua solo niñas/mujeres; p19omite antígenos en su lista de hexavalente, aunquep55sí muestraDTPa+VIP+Hib+HB. No se usa ese esquema global como calendario mexicano2026 ni se resuelven discrepancias inventando una actualización. ParaBCG,p16indica≥2000g y posponer conpeso<2000g; coincide conManual2021pp126–127. ParaDPT y trastorno neurológico progresivo se comprobóManual2021p165. CDC2024–2026 y AustralianHandbook2023 aportan contrastes específicos sobre errores,tipo de reacción,interacciones,inmunosupresión,pruebas y profilaxis; sus edades,productos e intervalos de calendarios no se trasladan automáticamente aMéxico. La fichaNCI2026 solo apoya mantener tamizaje trasVPH,no define calendario mexicano. No se comprobó un lineamiento mexicano2026 íntegro y coherente para todas estas decisiones. Se respetan condiciones de embarazo,pediatría y exposición urgente; revisión profesional pendiente.",
+  "blocks": [
+    {
+      "id": "34.01",
+      "title": "Entender la cartilla",
+      "related_sections": [],
+      "scenarios": [
+        {
+          "anchor_topic_ids": [
+            "34.01-01"
+          ],
+          "objective": "cambio",
+          "vignette": "Un niño sano tiene indicada SRP y vive con una persona inmunodeprimida. Se propone omitir su vacuna solo por la condición del conviviente.",
+          "question": "¿La inmunosupresión del conviviente contraindica SRP al niño sano?",
+          "answer": "No; vacunar a contactos susceptibles ayuda a proteger al hogar.",
+          "discriminator": "solo por la condición del conviviente",
+          "reason": "CDC recomienda SRP cuando está indicada en contactos sanos de personas inmunocomprometidas; no se confunden receptor y conviviente.",
+          "initial_action": "Revisar elegibilidad propia del niño y completar vacunación indicada.",
+          "limits": "No se generaliza a todas las vacunas vivas ni se aplica a un niño inmunodeprimido; cada producto tiene precauciones específicas.",
+          "evidence": [
+            {
+              "source_id": "cdc-immunocomp",
+              "locator": "VaccinationofContactsofPersonswithAlteredImmunocompetence:MMRinhealthyhouseholdcontacts",
+              "support": "CDC recomienda SRP cuando está indicada en contactos sanos de personas inmunocomprometidas; no se confunden receptor y conviviente."
+            }
+          ],
+          "id": "34.01-01-cambio"
+        },
+        {
+          "anchor_topic_ids": [
+            "34.01-02"
+          ],
+          "objective": "contraste",
+          "vignette": "Un adolescente palidece y pierde brevemente el conocimiento durante una inyección. Tiene bradicardia, respiración sin dificultad y se recupera rápido al acostarlo, sin ronchas ni edema.",
+          "question": "¿Qué patrón es más compatible con estos datos?",
+          "answer": "Episodio vasovagal, sin omitir vigilancia de otra causa.",
+          "discriminator": "se recupera rápido al acostarlo",
+          "reason": "La recuperación en decúbito con palidez y bradicardia favorece síncope vasovagal frente a anafilaxia con compromiso persistente.",
+          "initial_action": "Mantenerlo acostado, vigilar signos vitales y prevenir una caída; reevaluar si no se recupera por completo.",
+          "limits": "La ausencia de ronchas no excluye anafilaxia. Dificultad respiratoria o hipotensión persistente requieren tratamiento urgente, no solo observación.",
+          "evidence": [
+            {
+              "source_id": "aus-vax-vasovagal",
+              "locator": "Table:clinicalfeaturesvasovagalvsanaphylaxis,onset,bradycardia,recoveryinsupineposition",
+              "support": "La recuperación en decúbito con palidez y bradicardia favorece síncope vasovagal frente a anafilaxia con compromiso persistente."
+            }
+          ],
+          "id": "34.01-02-contraste"
+        },
+        {
+          "anchor_topic_ids": [
+            "34.01-03"
+          ],
+          "objective": "cambio",
+          "vignette": "Un adulto terminó rituximab hace dos semanas. Se planea vacuna no viva contra hepatitisB sin exposición urgente y se afirma que su respuesta será normal porque el producto no se replica.",
+          "question": "¿Seguridad por inactivación equivale a eficacia inmunológica normal?",
+          "answer": "No; la depleción de célulasB puede reducir respuesta y exige planear oportunidad.",
+          "discriminator": "terminó rituximab hace dos semanas",
+          "reason": "La ausencia de replicación reduce un riesgo, pero no corrige inmunosupresión; CDC recomienda esperar al menos seis meses tras antiB para vacunas no vivas cuando es posible.",
+          "initial_action": "Coordinar con el especialista la fecha y necesidad de dosis posteriores según recuperación y riesgo.",
+          "limits": "No se retrasa profilaxis urgente por exposición aplicando este intervalo de forma automática; vacunas y situaciones específicas pueden requerir otro plan.",
+          "evidence": [
+            {
+              "source_id": "cdc-immunocomp",
+              "locator": "Non-liveVaccines/Effectiveness;antiBcellantibodies:atleast6monthsaftertherapy,possiblelonger",
+              "support": "La ausencia de replicación reduce un riesgo, pero no corrige inmunosupresión; CDC recomienda esperar al menos seis meses tras antiB para vacunas no vivas cuando es posible."
+            }
+          ],
+          "id": "34.01-03-subtipo"
+        },
+        {
+          "anchor_topic_ids": [
+            "34.01-04"
+          ],
+          "objective": "cambio",
+          "vignette": "Durante una vacuna inyectable se desprende la aguja y se pierde parte importante del contenido. Solo se administró una fracción de la dosis recomendada. La familia quiere contarla como completa.",
+          "question": "¿Debe contarse automáticamente como dosis válida?",
+          "answer": "No; una dosis incompleta por fuga requiere repetición adecuada.",
+          "discriminator": "Solo se administró una fracción",
+          "reason": "Un volumen menor puede no proteger; CDC indica repetir cuando se perdió parte de la dosis por fuga del dispositivo.",
+          "initial_action": "Documentar el error y administrar una dosis válida según producto y protocolo.",
+          "limits": "No aplicar esta regla a regurgitación de vacuna oral contra rotavirus; no sumar fracciones en visitas distintas como si fueran una dosis completa.",
+          "evidence": [
+            {
+              "source_id": "cdc-vaxadmin",
+              "locator": "Nonstandardvaccinationpractices:lessthanstandarddose;leakage,doseshouldberepeated",
+              "support": "Un volumen menor puede no proteger; CDC indica repetir cuando se perdió parte de la dosis por fuga del dispositivo."
+            }
+          ],
+          "id": "34.01-04-contraste"
+        },
+        {
+          "anchor_topic_ids": [
+            "34.01-05"
+          ],
+          "objective": "cambio",
+          "vignette": "Un lactante recibirá una vacuna intramuscular en el sitio anterolateral del muslo correctamente identificado. Se propone aspirar siempre antes de inyectar para verificar sangre.",
+          "question": "¿Es necesario ese paso en la técnica vacunal recomendada?",
+          "answer": "No; la aspiración no se requiere en los sitios recomendados para vacunas.",
+          "discriminator": "aspirar siempre antes de inyectar",
+          "reason": "CDC señala ausencia de grandes vasos en esos sitios y posible aumento del dolor infantil con aspiración.",
+          "initial_action": "Usar técnica, aguja y sitio adecuados para el producto y edad, sin aspiración rutinaria.",
+          "limits": "No es una regla universal para todo medicamento o sitio intramuscular; confirmar que realmente sea una vacuna indicada para esa vía.",
+          "evidence": [
+            {
+              "source_id": "cdc-vaxadmin",
+              "locator": "Intramuscularinjections:aspirationnotnecessaryatrecommendedsites,mayincreaseinfantpain",
+              "support": "CDC señala ausencia de grandes vasos en esos sitios y posible aumento del dolor infantil con aspiración."
+            }
+          ],
+          "id": "34.01-05-dato_faltante"
+        },
+        {
+          "anchor_topic_ids": [
+            "34.01-05"
+          ],
+          "objective": "cambio",
+          "vignette": "Un refrigerador de vacunas registró temperatura fuera de rango durante la noche. Los frascos se ven normales.",
+          "question": "¿El aspecto normal permite utilizarlos?",
+          "answer": "No.",
+          "discriminator": "temperatura fuera de rango",
+          "reason": "La pérdida de potencia puede ser invisible.",
+          "initial_action": "Identificar como no usar, conservar correctamente y consultar al programa/fabricante con tiempo y temperatura de exposición.",
+          "limits": "No desechar ni aplicar sin la evaluación de viabilidad correspondiente.",
+          "evidence": [
+            {
+              "source_id": "cdc-vaxstorage",
+              "locator": "Response to out-of-range temperature reading",
+              "support": "La pérdida de potencia puede ser invisible."
+            }
+          ],
+          "id": "34.01-06-cambio"
+        },
+        {
+          "anchor_topic_ids": [
+            "34.01-02"
+          ],
+          "objective": "contraste",
+          "vignette": "Una adulta tuvo dermatitis de contacto tardía por crema con neomicina. Nunca presentó anafilaxia. Necesita una vacuna que contiene trazas de ese antibiótico.",
+          "question": "¿La dermatitis de contacto equivale a contraindicación por anafilaxia?",
+          "answer": "No; esa reacción tardía no contraindica por sí sola una vacuna con neomicina.",
+          "discriminator": "dermatitis de contacto tardía",
+          "reason": "CDC diferencia hipersensibilidad de contacto de reacción inmediata grave al componente.",
+          "initial_action": "Confirmar el tipo de reacción y revisar los demás criterios de elegibilidad antes de vacunar.",
+          "limits": "Un antecedente de anafilaxia a neomicina requiere evaluación de alergología; no se toma la ausencia de recuerdo como prueba de seguridad.",
+          "evidence": [
+            {
+              "source_id": "cdc-vaxreaction",
+              "locator": "Neomycinallergy:delayed-typehypersensitivitynotcontraindication;anaphylaxisrequiresallergist",
+              "support": "CDC diferencia hipersensibilidad de contacto de reacción inmediata grave al componente."
+            }
+          ],
+          "id": "34.01-07-contraste"
+        }
+      ]
+    },
+    {
+      "id": "34.02",
+      "title": "Vacunas del nacimiento",
+      "related_sections": [],
+      "scenarios": [
+        {
+          "anchor_topic_ids": [
+            "34.02-01"
+          ],
+          "objective": "cambio",
+          "vignette": "Un recién nacido estable aún pesa1800g. Se plantea BCG antes de egresar porque ya está clínicamente bien.",
+          "question": "¿La estabilidad elimina el límite de peso de las fuentes mexicanas comprobadas?",
+          "answer": "No; posponer BCG hasta alcanzar al menos2000g.",
+          "discriminator": "aún pesa1800g",
+          "reason": "Manual mexicano2021 e IMSS-BIENESTAR2025 indican ese peso mínimo y lo distinguen de estabilidad clínica.",
+          "initial_action": "Acordar seguimiento para aplicar cuando alcance el peso y cumpla los otros criterios.",
+          "limits": "No posponer automáticamente todas las demás vacunas por esta precaución específica; hepatitisB perinatal exige su propia ruta urgente.",
+          "evidence": [
+            {
+              "source_id": "mx-vac2025",
+              "locator": "p16,Cuadro8,IndicacionesyPrecauciones:BCG≥2000g,posponerconpeso<2000g;lecturavisual",
+              "support": "Manual mexicano2021 e IMSS-BIENESTAR2025 indican ese peso mínimo y lo distinguen de estabilidad clínica."
+            },
+            {
+              "source_id": "mx-vac2021",
+              "locator": "BCG,pp126–127impresas(PDF127–128),esquemayprecauciones:peso≥2000g",
+              "support": "La fuente nacional completa coincide con la tabla2025 en posponer hasta alcanzar2000g."
+            }
+          ],
+          "id": "34.02-01-contraste"
+        },
+        {
+          "anchor_topic_ids": [
+            "34.02-02"
+          ],
+          "objective": "cambio",
+          "vignette": "Un bebé de tres días, de3200g al nacer, recibió hepatitisB al nacimiento. El HBsAg materno era desconocido y hoy resulta positivo; aún no recibió inmunoglobulina.",
+          "question": "¿Haber pasado doce horas vuelve inútil toda intervención adicional?",
+          "answer": "No; administrar inmunoglobulina cuanto antes, sin rebasar siete días de vida.",
+          "discriminator": "hoy resulta positivo",
+          "reason": "Cuando se conoce después un HBsAg materno positivo, CDC indica HBIG urgente y no más tarde del séptimo día.",
+          "initial_action": "Coordinar la aplicación inmediata y seguimiento de la serie y serología del bebé.",
+          "limits": "No convertir siete días en la meta normal: con infección materna conocida la profilaxis se indica dentro de doce horas. Este caso pesa más de2000g.",
+          "evidence": [
+            {
+              "source_id": "cdc-hbv-perinatal",
+              "locator": "Birthdose/Tablefootnote2:motherinitiallyunknownthenpositive,HBIGassoonaspossible,nolaterthanage7days",
+              "support": "Cuando se conoce después un HBsAg materno positivo, CDC indica HBIG urgente y no más tarde del séptimo día."
+            }
+          ],
+          "id": "34.02-02-gravedad"
+        },
+        {
+          "anchor_topic_ids": [
+            "34.02-01"
+          ],
+          "objective": "contraste",
+          "vignette": "Un adulto vacunado con BCG en la infancia tiene IGRA positivo durante estudio de contacto tuberculoso. Se propone ignorarlo porque la vacuna puede alterar pruebas de tuberculosis.",
+          "question": "¿BCG explica por sí sola un IGRA positivo?",
+          "answer": "No; BCG no induce positividad de IGRA.",
+          "discriminator": "IGRA positivo",
+          "reason": "La interferencia de BCG en prueba cutánea no se traslada al análisis de liberación de interferón; el resultado requiere evaluación clínica.",
+          "initial_action": "Evaluar infección y descartar tuberculosis activa según síntomas, exposición e imagen indicada.",
+          "limits": "IGRA no distingue enfermedad activa de infección latente ni elimina falsos resultados; no iniciar tratamiento de enfermedad por el análisis aislado.",
+          "evidence": [
+            {
+              "source_id": "cdc-bcg-testing",
+              "locator": "BCGVaccineandTBTesting:BCGdoesnotinducepositiveTBbloodtests/IGRA",
+              "support": "La interferencia de BCG en prueba cutánea no se traslada al análisis de liberación de interferón; el resultado requiere evaluación clínica."
+            }
+          ],
+          "id": "34.02-03-contraste"
+        }
+      ]
+    },
+    {
+      "id": "34.03",
+      "title": "Calendario del lactante",
+      "related_sections": [],
+      "scenarios": [
+        {
+          "anchor_topic_ids": [
+            "34.03-01"
+          ],
+          "objective": "contraste",
+          "vignette": "Para obtener una supuesta hexavalente, un vacunador propone mezclar productos separados de DTPa,VIP,Hib y hepatitisB en la misma jeringa. No es una combinación autorizada por el fabricante.",
+          "question": "¿Equivale a usar una vacuna combinada autorizada?",
+          "answer": "No; no se mezclan componentes por cuenta propia.",
+          "discriminator": "No es una combinación autorizada",
+          "reason": "La mezcla improvisada no tiene la validación del producto combinado y puede alterar seguridad o respuesta.",
+          "initial_action": "Usar productos y reconstitución autorizados, con administración y registro propios.",
+          "limits": "Una combinación comercial puede requerir reconstitución específica; seguir exactamente ese procedimiento, sin generalizar prohibición a un kit autorizado.",
+          "evidence": [
+            {
+              "source_id": "cdc-vaxadmin",
+              "locator": "Infectioncontrol:singlecomponentsofcombinationvaccinesshouldnotbemixedunlessspecificallylicensed",
+              "support": "La mezcla improvisada no tiene la validación del producto combinado y puede alterar seguridad o respuesta."
+            }
+          ],
+          "id": "34.03-01-dato_faltante"
+        },
+        {
+          "anchor_topic_ids": [
+            "34.03-02"
+          ],
+          "objective": "gravedad",
+          "vignette": "Un lactante vacunado contra rotavirus hace tres días presenta episodios de llanto intenso, encoge las piernas y evacúa sangre. Entre episodios parece menos dolorido.",
+          "question": "¿Debe considerarse solo una reacción leve esperada?",
+          "answer": "No; descartar invaginación intestinal de urgencia.",
+          "discriminator": "episodios de llanto intenso, encoge las piernas y evacúa sangre",
+          "reason": "CDC describe un pequeño riesgo de invaginación en la primera semana y signos que requieren atención inmediata.",
+          "initial_action": "Enviar a urgencias para evaluación pediátrica y tratamiento según hallazgos.",
+          "limits": "La temporalidad no demuestra causalidad vacunal; no esperar todos los signos ni asumir que haber recibido vacuna impide otra causa abdominal.",
+          "evidence": [
+            {
+              "source_id": "cdc-rotavirus-safety",
+              "locator": "Risks/Intussusception:firstweekafterfirstorsecond dose,episodicpain,legpulling,vomiting,bloodinstool",
+              "support": "CDC describe un pequeño riesgo de invaginación en la primera semana y signos que requieren atención inmediata."
+            }
+          ],
+          "id": "34.03-02-contraste"
+        },
+        {
+          "anchor_topic_ids": [
+            "34.03-03"
+          ],
+          "objective": "cambio",
+          "vignette": "Un niño tendrá implante coclear programado y tiene dosis neumocócicas pendientes según su indicación. El equipo planea revisarlas solo después de la cirugía.",
+          "question": "¿Qué oportunidad preventiva conviene priorizar?",
+          "answer": "Completar las dosis indicadas antes del implante, idealmente al menos dos semanas antes.",
+          "discriminator": "implante coclear programado",
+          "reason": "El implante aumenta riesgo de meningitis neumocócica; CDC aconseja completar protección indicada con anticipación.",
+          "initial_action": "Revisar antecedentes con pediatría y otorrinolaringología y coordinar vacunas según producto y programa aplicable.",
+          "limits": "No añadir dosis extras si ya está al día ni sustituir evaluación quirúrgica; las formulaciones y calendario estadounidenses no se importan como programa mexicano.",
+          "evidence": [
+            {
+              "source_id": "cdc-cochlear",
+              "locator": "Commonquestions:recommendedpneumococcaldoses≥2weeksbeforeimplant;noextradosesifuptodate",
+              "support": "El implante aumenta riesgo de meningitis neumocócica; CDC aconseja completar protección indicada con anticipación."
+            }
+          ],
+          "id": "34.03-03-dato_faltante"
+        },
+        {
+          "anchor_topic_ids": [
+            "34.03-04"
+          ],
+          "objective": "contraste",
+          "vignette": "Un niño tiene constancia de vacuna oral bivalente contra polio aplicada después de 2016. No se documenta vacuna inactivada.",
+          "question": "¿Esa constancia demuestra protección vacunal contra los tres tipos de polio?",
+          "answer": "No.",
+          "discriminator": "vacuna oral bivalente",
+          "reason": "La bivalente no incluye el tipo 2.",
+          "initial_action": "Revisar documentación y completar protección con vacuna inactivada según programa aplicable.",
+          "limits": "No contar toda anotación Sabin como trivalente sin comprobar producto y fecha.",
+          "evidence": [
+            {
+              "source_id": "cdc-polio",
+              "locator": "Notes about OPV doses: bOPV and type 2",
+              "support": "La bivalente no incluye el tipo 2."
+            }
+          ],
+          "id": "34.03-04-contraste"
+        }
+      ]
+    },
+    {
+      "id": "34.04",
+      "title": "Exantemáticas prevenibles",
+      "related_sections": [],
+      "scenarios": [
+        {
+          "anchor_topic_ids": [
+            "34.04-01"
+          ],
+          "objective": "contraste",
+          "vignette": "Un adulto inmunocompetente tiene dos dosis válidas documentadas de SRP después de los doce meses y separadas adecuadamente. Un tamiz posterior informa IgG de sarampión negativa. No tiene síntomas ni exposición reciente.",
+          "question": "¿Ese tamiz obliga por sí solo a otra dosis contra sarampión?",
+          "answer": "No; la documentación válida prevalece sobre esa serología según CDC.",
+          "discriminator": "dos dosis válidas documentadas",
+          "reason": "CDC no recomienda una dosis adicional por IgG negativa o equívoca si existen dos dosis válidas documentadas.",
+          "initial_action": "Verificar el registro y evitar revacunación solo por el resultado aislado.",
+          "limits": "No se aplica al título de rubéola de una mujer que podría embarazarse ni a revacunación tras trasplante o quimioterapia; tampoco descarta sarampión en un paciente sintomático expuesto.",
+          "evidence": [
+            {
+              "source_id": "cdc-measles-questions",
+              "locator": "Protectionagainstmeasles/QnegativeIgGdespite2doses:documentedageappropriatevaccinationsupersedesserology",
+              "support": "CDC no recomienda una dosis adicional por IgG negativa o equívoca si existen dos dosis válidas documentadas."
+            }
+          ],
+          "id": "34.04-01-dato_faltante"
+        },
+        {
+          "anchor_topic_ids": [
+            "34.04-02"
+          ],
+          "objective": "cambio",
+          "vignette": "Una adulta susceptible a varicela está tomando aciclovir por una indicación activa. Planea recibir vacuna viva hoy y continuar el antiviral sin revisar su oportunidad.",
+          "question": "¿Qué interacción puede reducir la respuesta esperada?",
+          "answer": "El antiviral puede interferir con el virus vacunal.",
+          "discriminator": "está tomando aciclovir",
+          "reason": "CDC considera la recepción de estos antivirales alrededor de vacuna contra varicela una precaución que requiere ajustar oportunidad.",
+          "initial_action": "Coordinar con el prescriptor y vacunación una fecha compatible con el tratamiento necesario.",
+          "limits": "La tabla señala24horas antes y evitar14días después si es clínicamente posible; no suspender tratamiento esencial por cuenta propia ni aplicarlo a vacunas no vivas.",
+          "evidence": [
+            {
+              "source_id": "cdc-vaxcontra",
+              "locator": "Table4-1Varicella:acyclovir/famciclovir/valacyclovir24hbefore;avoid14daysafter",
+              "support": "CDC considera la recepción de estos antivirales alrededor de vacuna contra varicela una precaución que requiere ajustar oportunidad."
+            }
+          ],
+          "id": "34.04-02-contraste"
+        },
+        {
+          "anchor_topic_ids": [
+            "34.04-03"
+          ],
+          "objective": "cambio",
+          "vignette": "Una adulta recibió esquema completo de VPH antes de iniciar vida sexual. Cree que puede omitir en adelante todo tamizaje cervical porque ya se vacunó.",
+          "question": "¿La vacunación elimina esa necesidad?",
+          "answer": "No; debe continuar tamizaje cervical conforme a la recomendación aplicable.",
+          "discriminator": "omitir en adelante todo tamizaje cervical",
+          "reason": "La vacuna no protege frente a todos los tipos oncogénicos; prevención vacunal y tamizaje son medidas complementarias.",
+          "initial_action": "Revisar edad, antecedentes y programa local para planear el tamizaje indicado.",
+          "limits": "No se impone una edad o intervalo estadounidense como norma mexicana ni se pide prueba deVPH antes de toda vacuna.",
+          "evidence": [
+            {
+              "source_id": "nci-hpv-screening",
+              "locator": "Do womenvaccinatedagainstHPVstillneedcervicalscreening?Yes,doesnotcoverallcancer-causingtypes",
+              "support": "La vacuna no protege frente a todos los tipos oncogénicos; prevención vacunal y tamizaje son medidas complementarias."
+            }
+          ],
+          "id": "34.04-03-cambio"
+        },
+        {
+          "anchor_topic_ids": [
+            "34.04-01"
+          ],
+          "objective": "cambio",
+          "vignette": "Un niño recibió SRP hace dos semanas. Ahora se propone una vacuna viva contra varicela en una visita distinta.",
+          "question": "¿Qué debe revisarse antes de administrarla?",
+          "answer": "Intervalo entre vacunas vivas inyectables no simultáneas.",
+          "discriminator": "SRP hace dos semanas",
+          "reason": "Un intervalo corto puede interferir con la respuesta de la segunda vacuna.",
+          "initial_action": "Respetar el intervalo recomendado de al menos cuatro semanas entre ambas.",
+          "limits": "Esta regla no se aplica igual a todas las vacunas orales ni a inactivadas.",
+          "evidence": [
+            {
+              "source_id": "mx-vac2025",
+              "locator": "p. 13, cuadro 4: vacunas vivas inyectables no simultáneas",
+              "support": "Un intervalo corto puede interferir con la respuesta de la segunda vacuna."
+            }
+          ],
+          "id": "34.04-04-cambio"
+        }
+      ]
+    },
+    {
+      "id": "34.05",
+      "title": "Respiratorias y adolescencia",
+      "related_sections": [],
+      "scenarios": [
+        {
+          "anchor_topic_ids": [
+            "34.05-01"
+          ],
+          "objective": "cambio",
+          "vignette": "Un adulto con alto riesgo de influenza grave tuvo Guillain-Barré cinco semanas después de una vacuna antigripal previa. No tuvo anafilaxia. Se considera la vacuna de esta temporada.",
+          "question": "¿Ese antecedente se maneja como contraindicación absoluta por alergia?",
+          "answer": "No; es una precaución que requiere valorar beneficio y riesgo individual.",
+          "discriminator": "Guillain-Barré cinco semanas después",
+          "reason": "CDC clasifica GBS dentro de seis semanas como precaución; una precaución exige decisión clínica, distinta de anafilaxia al producto.",
+          "initial_action": "Revisar el episodio con el equipo tratante y acordar prevención y vacunación según riesgo.",
+          "limits": "No indica vacunar automáticamente ni garantiza que no habrá recurrencia; confirmar temporalidad y diagnóstico.",
+          "evidence": [
+            {
+              "source_id": "cdc-vaxcontra",
+              "locator": "Table4-1IIV:GBS<6weeksisprecaution;footnote(a):individualrisk-benefit",
+              "support": "CDC clasifica GBS dentro de seis semanas como precaución; una precaución exige decisión clínica, distinta de anafilaxia al producto."
+            }
+          ],
+          "id": "34.05-01-subtipo"
+        },
+        {
+          "anchor_topic_ids": [
+            "34.05-02"
+          ],
+          "objective": "cambio",
+          "vignette": "Un niño de cinco años tiene pendiente refuerzo con DPT. Está en estudio por epilepsia no controlada y deterioro neurológico progresivo, sin encefalopatía atribuida a una vacuna anterior.",
+          "question": "¿Debe aplicarse hoy sin aclarar ese cambio clínico?",
+          "answer": "No; diferir mientras se diagnostica y estabiliza el estado neurológico.",
+          "discriminator": "epilepsia no controlada y deterioro neurológico progresivo",
+          "reason": "El Manual mexicano distingue un trastorno neurológico progresivo, que exige diferir, de daño cerebral previo estable.",
+          "initial_action": "Coordinar pediatría y neurología y revisar después la vacunación apropiada para edad.",
+          "limits": "No es una exclusión permanente por cualquier diagnóstico neurológico ni se usa para posponer indefinidamente sin seguimiento.",
+          "evidence": [
+            {
+              "source_id": "mx-vac2021",
+              "locator": "9.4DPT,p165impresa(PDF166):desordenneurológicoprogresivo,diferirhastadiagnóstico/estabilización",
+              "support": "El Manual mexicano distingue un trastorno neurológico progresivo, que exige diferir, de daño cerebral previo estable."
+            },
+            {
+              "source_id": "cdc-vaxcontra",
+              "locator": "Table4-1DTaP:progressiveneurologicdisorder/uncontrolledepilepsy,deferuntilclarifiedandstable",
+              "support": "La guía internacional coincide en diferir el componente pertussis durante trastorno neurológico progresivo no estabilizado; la aplicación DPT mexicana se sostiene en su manual."
+            }
+          ],
+          "id": "34.05-02-contraste"
+        },
+        {
+          "anchor_topic_ids": [
+            "34.05-03"
+          ],
+          "objective": "contraste",
+          "vignette": "Un adulto tiene una cortadura superficial limpia y menor, sin tejido desvitalizado ni material contaminante. Su antecedente de vacunación antitetánica es desconocido.",
+          "question": "¿Necesita inmunoglobulina además de iniciar vacunación?",
+          "answer": "No para esta herida limpia y menor; sí requiere vacunación por historia desconocida.",
+          "discriminator": "cortadura superficial limpia y menor",
+          "reason": "CDC no indica inmunoglobulina en heridas limpias menores, aunque la historia desconocida sí obliga a iniciar o completar vacunación.",
+          "initial_action": "Limpiar la herida e iniciar vacunación apropiada con seguimiento del esquema.",
+          "limits": "No aplicar esta conducta a heridas punzantes, contaminadas o mayores; una valoración errónea de la herida cambia la profilaxis.",
+          "evidence": [
+            {
+              "source_id": "cdc-tetanus",
+              "locator": "Vaccinationforallwounds/unknownhistory;TIGassessment:neverindicatedincleanminorwounds",
+              "support": "CDC no indica inmunoglobulina en heridas limpias menores, aunque la historia desconocida sí obliga a iniciar o completar vacunación."
+            }
+          ],
+          "id": "34.05-03-gravedad"
+        }
+      ]
+    },
+    {
+      "id": "34.06",
+      "title": "Vacunas especiales",
+      "related_sections": [],
+      "scenarios": [
+        {
+          "anchor_topic_ids": [
+            "34.06-01"
+          ],
+          "objective": "cambio",
+          "vignette": "Un adulto no vacunado contra hepatitisA tiene hepatopatía crónica y contacto estrecho con un caso confirmado hace diez días. Está asintomático.",
+          "question": "¿Qué profilaxis debe valorarse además de la vacuna?",
+          "answer": "Inmunoglobulina junto con vacuna monovalente contra hepatitisA.",
+          "discriminator": "hepatopatía crónica y contacto estrecho",
+          "reason": "La enfermedad hepática aumenta riesgo de desenlace grave; CDC recomienda protección pasiva adicional tras exposición dentro de dos semanas.",
+          "initial_action": "Organizar profilaxis cuanto antes, con vacuna e inmunoglobulina en sitios distintos según disponibilidad y evaluación.",
+          "limits": "No esperar hasta cumplir dos semanas ni usar vacuna combinada hepatitisA/B como sustituto de esta profilaxis; la pauta se individualiza.",
+          "evidence": [
+            {
+              "source_id": "cdc-hav-pep",
+              "locator": "YellowBook2026/Post-exposureprophylaxis:chronicliverdisease,addIGtovaccinewithin2weeks;notTwinrix",
+              "support": "La enfermedad hepática aumenta riesgo de desenlace grave; CDC recomienda protección pasiva adicional tras exposición dentro de dos semanas."
+            }
+          ],
+          "id": "34.06-01-cambio"
+        },
+        {
+          "anchor_topic_ids": [
+            "34.06-02"
+          ],
+          "objective": "cambio",
+          "vignette": "Un viajero aún toma antibiótico por infección bacteriana. Le ofrecen vacuna oral viva Ty21a contra tifoidea para comenzar hoy sin revisar el medicamento.",
+          "question": "¿Qué interacción obliga a revisar la oportunidad?",
+          "answer": "El antibiótico puede reducir la respuesta al microorganismo vacunal vivo.",
+          "discriminator": "aún toma antibiótico",
+          "reason": "CDC recomienda separar Ty21a de antimicrobianos; la eficacia de una vacuna oral viva puede comprometerse con tratamiento antibacteriano.",
+          "initial_action": "Consultar medicina de viaje para ajustar fecha o seleccionar presentación no viva si procede.",
+          "limits": "No suspender un antibiótico necesario por cuenta propia. El intervalo y la presentación dependen del producto; esta guía indica más de72horas después del antimicrobiano y evitarlo durante72horas tras la última dosis oral.",
+          "evidence": [
+            {
+              "source_id": "cdc-typhoid-interaction",
+              "locator": "YellowBook2026/Precautionsandcontraindications:Ty21aandantimicrobials,separate>72h",
+              "support": "CDC recomienda separar Ty21a de antimicrobianos; la eficacia de una vacuna oral viva puede comprometerse con tratamiento antibacteriano."
+            }
+          ],
+          "id": "34.06-02-contraste"
+        }
+      ]
+    },
+    {
+      "id": "34.07",
+      "title": "Gestación y personal de salud",
+      "related_sections": [],
+      "scenarios": [
+        {
+          "anchor_topic_ids": [
+            "34.07-01"
+          ],
+          "objective": "cambio",
+          "vignette": "Una mujer recibió SRP sin saber que cursaba un embarazo temprano. Después confirma gestación y cree que la vacuna obliga a interrumpirla.",
+          "question": "¿La exposición vacunal aislada es una indicación de interrupción?",
+          "answer": "No; ofrecer orientación sobre riesgo teórico y seguimiento obstétrico.",
+          "discriminator": "recibió SRP sin saber",
+          "reason": "CDC no considera la administración inadvertida de SRP una razón para interrumpir embarazo, aunque la vacuna no se administra de forma programada durante gestación.",
+          "initial_action": "Documentar exposición y coordinar consejo clínico y seguimiento, respetando decisiones de la paciente.",
+          "limits": "No garantiza ausencia de cualquier problema fetal ni convierte la exposición accidental en indicación de nuevas vacunas vivas durante embarazo.",
+          "evidence": [
+            {
+              "source_id": "cdc-pregvax",
+              "locator": "Measles,Mumps,Rubella:inadvertentvaccinationnotareasontoterminatepregnancy",
+              "support": "CDC no considera la administración inadvertida de SRP una razón para interrumpir embarazo, aunque la vacuna no se administra de forma programada durante gestación."
+            }
+          ],
+          "id": "34.07-01-cambio"
+        },
+        {
+          "anchor_topic_ids": [
+            "34.07-02"
+          ],
+          "objective": "dato_faltante",
+          "vignette": "Una médica con serie de hepatitis B documentada sufre punción con sangre. No tiene resultado previo de anti-HBs y se desconoce HBsAg de la fuente.",
+          "question": "¿Qué datos deben obtenerse sin demora para dirigir profilaxis?",
+          "answer": "Anti-HBs de la médica y HBsAg de la fuente.",
+          "discriminator": "No tiene resultado previo de anti-HBs",
+          "reason": "La conducta posexposición depende de respuesta vacunal y fuente.",
+          "initial_action": "Lavar el sitio, notificar salud laboral y medir ambas pruebas para indicar profilaxis oportuna.",
+          "limits": "La historia verbal de vacunación no sustituye documentación ni respuesta cuando son necesarias.",
+          "evidence": [
+            {
+              "source_id": "cdc-hbvoccup",
+              "locator": "Vaccinated clinicians without anti-HBs documentation",
+              "support": "La conducta posexposición depende de respuesta vacunal y fuente."
+            }
+          ],
+          "id": "34.07-02-dato_faltante"
+        }
+      ]
+    }
+  ]
+}
