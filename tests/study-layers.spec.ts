@@ -377,3 +377,17 @@ test("a native profile backup rejects an invented source in an existing section"
   await expect(page.getByText("Copia comprobada", { exact: true })).toHaveCount(0);
   expect(Object.keys((await saved(page)).created_cards)).toHaveLength(0);
 });
+
+test("an unavailable section link returns to the selected layer's available sections", async ({
+  page,
+}) => {
+  await fixture(page);
+  await page.goto("./#biblioteca?space=capa2&section=02");
+  await expect(page.getByRole("button", { name: /Sección de prueba/ })).toBeVisible();
+  await expect(
+    page.getByRole("status").filter({ hasText: "Esta sección no está disponible" }),
+  ).toBeVisible();
+  await expect(page.getByLabel("Espacio de estudio", { exact: true })).toHaveValue("capa2");
+  await page.getByRole("button", { name: /Sección de prueba/ }).click();
+  await expect(page.getByRole("region", { name: "Frente de la tarjeta" })).toContainText("Capa 2:");
+});

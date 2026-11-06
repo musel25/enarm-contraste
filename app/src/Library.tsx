@@ -99,7 +99,11 @@ export default function Library({ onReview }: { onReview: (context: ReviewContex
     setSection(null);
     setSectionError(false);
     const info = manifest.sections.find((s) => s.id === sectionId);
-    if (!info) return;
+    if (!info) {
+      setSectionId(null);
+      setNotice("Esta sección no está disponible en este espacio.");
+      return;
+    }
     loadSection(sectionId, manifest.content_sha256)
       .then((data) => {
         if (!abort.signal.aborted) setSection(data);
