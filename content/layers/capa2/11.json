@@ -1,0 +1,1110 @@
+{
+  "schema_version": 1,
+  "layer": 2,
+  "section_id": "11",
+  "title": "Gastroenterología",
+  "author": "clinical-author-01-12",
+  "sources": [
+    {
+      "id": "acg-achalasia-2020",
+      "label": "ACG: diagnóstico y tratamiento de acalasia",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9896940/",
+      "version": "Septiembre 2020",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Recommendations3 and9: typeIII requires a more extensive myotomy; tailored POEM or LHM"
+    },
+    {
+      "id": "acg-alf-2023",
+      "label": "ACG: Acute Liver Failure Guidelines",
+      "url": "https://www.icuguideline.com/wp-content/uploads/2024/02/2023ACG%E6%8C%87%E5%8D%97%EF%BC%9A%E6%80%A5%E6%80%A7%E8%82%9D%E8%A1%B0%E7%AB%AD.pdf",
+      "version": "Publicación electrónica2023-03-20; volumen julio2023",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Tablas 7–8: encefalopatía, UCI y contacto con centro de trasplante"
+    },
+    {
+      "id": "acg-gerd-2022",
+      "label": "ACG: diagnóstico y tratamiento de ERGE",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8754510/",
+      "version": "Enero 2022",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Refractory GERD: confirmar diagnóstico y estudio de reflujo fuera de IBP si ERGE no demostrada"
+    },
+    {
+      "id": "acg-he-2026",
+      "label": "ACG: Hepatic Encephalopathy, hoja oficial de recomendaciones",
+      "url": "https://webfiles.gi.org/GuidelineHighlights/ACGHepaticEncephGH.pdf",
+      "version": "Marzo 2026",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Inpatient management: asterixis aislada y evaluación de precipitantes"
+    },
+    {
+      "id": "acg-hp-2024",
+      "label": "ACG: Treatment of Helicobacter pylori, hoja oficial revisada por autores de la guía",
+      "url": "https://gi.org/wp-content/uploads/2025/01/ACG-Hpylori-Guidelines-Highlights-2024-FINAL.pdf.pdf",
+      "version": "Guía septiembre 2024; hoja alojada enero 2025",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Treatment pearls: prueba de erradicación y fármacos que interfieren"
+    },
+    {
+      "id": "acg-pancreatitis-2024",
+      "label": "ACG: Management of Acute Pancreatitis",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13221274/",
+      "version": "Publicación electrónica noviembre 2023; volumen marzo 2024",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "The role of surgery in AP: concepto clave 21 y Cholecystectomy"
+    },
+    {
+      "id": "acg-ugib-2021",
+      "label": "ACG: hemorragia digestiva alta y por úlcera",
+      "url": "https://socgastro.org.br/novo/wp-content/uploads/2021/08/ACG_Clinical_Guideline__Upper_Gastrointestinal_and.14-1.pdf",
+      "version": "Mayo 2021",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Introduction; recurrent bleeding; estabilización y manejo tras endoscopia"
+    },
+    {
+      "id": "bsg-ascites-2021",
+      "label": "BSG/BASL: ascitis en cirrosis",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7788190/?report=classic",
+      "version": "Publicación electrónica 2020; volumen enero 2021",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Secondary bacterial peritonitis, recomendación 2.6; recomendación 5.3: paracentesis y productos sanguíneos"
+    },
+    {
+      "id": "bsg-dyspepsia-2022",
+      "label": "BSG: dispepsia funcional",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9380508/",
+      "version": "2022-07-07",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Recomendaciones: explicación positiva de trastorno de interacción intestino-cerebro"
+    },
+    {
+      "id": "cdc-amoebiasis-dpdx",
+      "label": "CDC DPDx: amebiasis",
+      "url": "https://www.cdc.gov/dpdx/amebiasis/index.html",
+      "version": "Página consultada sin nueva fecha de edición declarada",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Laboratory diagnosis: absceso extraintestinal y serología"
+    },
+    {
+      "id": "cdc-hav-2026",
+      "label": "CDC: Clinical Screening and Diagnosis for Hepatitis A",
+      "url": "https://www.cdc.gov/hepatitis-a/hcp/diagnosis-testing/index.html",
+      "version": "2026-10-27",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Interpretación de IgG, anticuerpos totales e IgM"
+    },
+    {
+      "id": "cdc-hcv-2026",
+      "label": "CDC: Clinical Screening and Diagnosis for Hepatitis C",
+      "url": "https://www.cdc.gov/hepatitis-c/hcp/diagnosis-testing/index.html",
+      "version": "2026-11-02",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Interpretación: anticuerpo reactivo con ARN no detectado; exposición reciente"
+    },
+    {
+      "id": "easl-aih-2025",
+      "label": "EASL: hepatitis autoinmune",
+      "url": "https://easlcampus.eu/sites/default/files/2025-08/EASL_CPGs_on_the_management_of_AIH.pdf",
+      "version": "Publicación electrónica 2025-05-09; volumen agosto 2025",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Budesonide, p469: contraindicated in cirrhosis and not recommended as first-line treatment"
+    },
+    {
+      "id": "easl-he-2022",
+      "label": "EASL: encefalopatía hepática",
+      "url": "https://apef.com.pt/wp-content/uploads/2021/07/EH-EASL-2022.pdf",
+      "version": "2022-06-17; volumen septiembre 2022",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Diagnóstico diferencial; neuroimagen con sospecha alternativa; precipitantes"
+    },
+    {
+      "id": "enets-functioning-2023",
+      "label": "ENETS: síndromes neuroendocrinos pancreáticos funcionantes",
+      "url": "https://pure.eur.nl/ws/files/98950138/European_Neuroendocrine_Tumor_Society_2023_guidance_paper_for_functioning_pancreatic_neuroendocrine_tumour_syndromes.pdf",
+      "version": "2023-08-01; J Neuroendocrinol 35:e13318",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Tabla 3 y apartado VIPoma: diagnóstico diferencial de síndromes funcionales"
+    },
+    {
+      "id": "esge-barrett-2023",
+      "label": "ESGE: diagnóstico y manejo del esófago de Barrett",
+      "url": "https://www.esge.com/assets/downloads/pdfs/guidelines/2023_a-2176-2440.pdf",
+      "version": "2023-10-09",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Main recommendation2: surveillance by length; maximum extent≥1cm and<3cm, interval5years"
+    },
+    {
+      "id": "imss-varices-2017",
+      "label": "IMSS: várices esofágicas en el adulto, GRR",
+      "url": "https://www.imss.gob.mx/sites/all/statics/guiasclinicas/087GRR.pdf",
+      "version": "Actualización 2017",
+      "checked_at": "2026-11-06",
+      "region": "mexico",
+      "access": "checked",
+      "locator": "Algoritmo 2: tratamiento inicial de hemorragia variceal"
+    },
+    {
+      "id": "nci-esophageal-2025",
+      "label": "NCI PDQ: Esophageal Cancer Treatment, versión profesional",
+      "url": "https://www.cancer.gov/types/esophageal/hp/esophageal-treatment-pdq",
+      "version": "2025-03-21; recurso experto, no guía formal",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Stage IV disease; planificación por extensión"
+    },
+    {
+      "id": "nci-gastric-2025",
+      "label": "NCI PDQ: Gastric Cancer Treatment, versión profesional",
+      "url": "https://www.cancer.gov/types/stomach/hp/stomach-treatment-pdq",
+      "version": "2025-02-21; recurso experto, no guía formal",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Stage IV: pruebas HER2 y biomarcadores para selección sistémica"
+    },
+    {
+      "id": "nci-hcc-2025",
+      "label": "NCI PDQ: Primary Liver Cancer Treatment, versión profesional",
+      "url": "https://www.cancer.gov/types/liver/hp/adult-liver-treatment-pdq",
+      "version": "2025-04-17; recurso experto, no guía formal",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Diagnostic evaluation: AFP y estudio radiológico de nódulo"
+    },
+    {
+      "id": "nci-pancreatic-2025",
+      "label": "NCI PDQ: Pancreatic Cancer Treatment, versión profesional",
+      "url": "https://www.cancer.gov/types/pancreatic/hp/pancreatic-treatment-pdq",
+      "version": "2025-02-12; recurso experto, no guía formal",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Diagnostic and Staging Evaluation: CA 19-9"
+    },
+    {
+      "id": "wgo-celiac-2016",
+      "label": "World Gastroenterology Organisation: enfermedad celíaca",
+      "url": "https://www.worldgastroenterology.org/guidelines/celiac-disease/celiac-disease-english",
+      "version": "Julio 2016",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "§3: IgA, pruebas IgG y diagnóstico; §6.4: respuesta insuficiente a dieta"
+    },
+    {
+      "id": "wgo-ibd-2015",
+      "label": "World Gastroenterology Organisation: enfermedad inflamatoria intestinal",
+      "url": "https://www.worldgastroenterology.org/guidelines/inflammatory-bowel-disease-ibd/inflammatory-bowel-disease-ibd-english",
+      "version": "Agosto 2015",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Diagnostic evaluation: infección, C. difficile, ileocolonoscopia y biopsias"
+    },
+    {
+      "id": "baveno-vii-2022",
+      "label": "Baveno VII: consenso de hipertensión portal",
+      "url": "https://webaigo.it/download/20220205090758.pdf",
+      "version": "2022; J Hepatol 76:959–974",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Recomendación 6.27: TIPS preventivo temprano y selección por riesgo"
+    },
+    {
+      "id": "cameron-cohort-2015",
+      "label": "Gray y col.: lesiones de Cameron en hernia hiatal, cohorte retrospectiva",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/24758713/",
+      "version": "2014-04-24; edición 2015-07",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Resumen y figura 1 abiertos: definición anatómica y sangrado; no se usa como guía de tratamiento"
+    },
+    {
+      "id": "esge-lgib-2021",
+      "label": "ESGE: guía de hemorragia digestiva baja aguda",
+      "url": "https://www.esge.com/assets/downloads/pdfs/guidelines/2021_a_1496_8969.pdf",
+      "version": "2021-06-01",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Recomendación 9 y §7.3: aspirina y prevención cardiovascular secundaria"
+    },
+    {
+      "id": "aga-ibs-diet-2022",
+      "label": "AGA: actualización de práctica clínica sobre dieta e intestino irritable, revisión de expertos",
+      "url": "https://socgastro.org.br/novo/wp-content/uploads/2022/05/SII-2022.pdf",
+      "version": "2022; Gastroenterology 162:1737–1745",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Best Practice Advice 7, pp.1740–1741: fases de dieta baja en FODMAP"
+    },
+    {
+      "id": "bsg-ibd-2025",
+      "label": "BSG: guía de enfermedad inflamatoria intestinal en adultos",
+      "url": "https://discovery.ucl.ac.uk/10210552/1/gut%20bsg.pdf",
+      "version": "2025-06-23; Gut 74:s1–s101",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Clinical scoring systems, p.s16: síntomas, inflamación y diagnósticos alternativos; PDF completo descargado y leído"
+    },
+    {
+      "id": "paho-hvkp-2024",
+      "label": "OPS/OMS: evaluación regional de riesgo de Klebsiella pneumoniae hipervirulenta",
+      "url": "https://www.paho.org/sites/default/files/2026/02/2024marchrisk-assessmenthvkppheengfinal.pdf",
+      "version": "2024-03-20; datos hasta 2024-03-05",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Clinical characteristics: absceso hepático y diseminación ocular; evaluación de salud pública, no pauta clínica"
+    },
+    {
+      "id": "hvkp-ocular-case-2026",
+      "label": "Veinberga y col.: absceso hepático por Klebsiella hipervirulenta con endoftalmitis, caso primario",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13544743/",
+      "version": "2026-08-19",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Case presentation y Conclusion: complicación ocular durante tratamiento del absceso; evidencia descriptiva aislada"
+    },
+    {
+      "id": "easl-hbv-2025",
+      "label": "EASL: guía clínica de infección por VHB",
+      "url": "https://www.hepb.org/assets/Uploads/EASL-guidelines-May-2025.pdf",
+      "version": "2025; volumen agosto 2025; registro NLM: publicación electrónica 2025-05-10",
+      "locator": "PDF completo: Prophylaxis of HBV reactivation p.40 y tabla 14 p.42",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked"
+    },
+    {
+      "id": "aasld-nafld-2023",
+      "label": "AASLD: orientación de evaluación y manejo de NAFLD en adultos",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10735173/",
+      "version": "2023-03-17; volumen mayo 2023; nomenclatura anterior a MASLD",
+      "locator": "Figura 2 y tabla 5: FIB-4 poco exacto en menores de 35 años; no incluye población pediátrica",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked"
+    },
+    {
+      "id": "aga-epi-2023",
+      "label": "AGA: actualización de práctica clínica de insuficiencia pancreática exocrina, revisión experta",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/37737818/",
+      "version": "2023-09-20; volumen noviembre 2023",
+      "locator": "Resumen primario abierto: Best Practice Advice 4 completo; no se afirma lectura de texto completo bloqueado",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked"
+    }
+  ],
+  "mexico_source_note": "Se abrió IMSS-087-08 (várices, actualización 2017), aplicable a hemorragia variceal, sin extrapolarlo a otras decisiones. No se encontró una actualización mexicana reciente que cubra las distinciones de esta sección. Las nuevas relaciones de reactivación de VHB con rituximab, exactitud de FIB-4 antes de los 35 años, peritonitis secundaria, colecistectomía en pancreatitis biliar leve y muestra para elastasa fecal se apoyan en fuentes internacionales abiertas. EASL 2025 no implica profilaxis universal para toda inmunosupresión; AASLD 2023 se limita a evaluación adulta y conserva nomenclatura NAFLD. AGA 2023 es revisión de expertos sin graduación formal: se abrió su resumen primario NLM con el consejo 4 completo; las páginas de texto completo devolvieron bloqueo y no se cuentan como leídas. WGO 2015–2016 se limita a diagnóstico diferencial y pruebas iniciales, sin emplear sus tratamientos inmunológicos antiguos. Se abrió el PDF completo BSG de EII 2025. NCI PDQ es recurso experto, no guía formal. OPS 2024 aporta contexto regional para diseminación por Klebsiella hipervirulenta, no una pauta intravítrea. Las lesiones de Cameron se contrastan con una cohorte primaria limitada al reconocimiento anatómico.",
+  "blocks": [
+    {
+      "id": "11.01",
+      "title": "Ardor retroesternal/dispepsia",
+      "related_sections": [],
+      "scenarios": [
+        {
+          "id": "11.01-c2-01",
+          "anchor_topic_ids": [
+            "11.01-01"
+          ],
+          "objective": "dato_faltante",
+          "vignette": "Un adulto mantiene pirosis pese a IBP bien usado. Nunca tuvo esofagitis ni una prueba objetiva de reflujo y la endoscopia actual es normal.",
+          "question": "¿Debe confirmarse reflujo antes de escalar a cirugía?",
+          "answer": "Sí.",
+          "discriminator": "Nunca tuvo esofagitis ni una prueba objetiva",
+          "reason": "Los síntomas persistentes pueden tener otra causa.",
+          "initial_action": "Solicitar monitorización de reflujo fuera del IBP según protocolo diagnóstico.",
+          "limits": "La estrategia cambia si ERGE ya está demostrada; no suspender fármacos sin plan.",
+          "evidence": [
+            {
+              "source_id": "acg-gerd-2022",
+              "locator": "Refractory GERD: reflux monitoring OFF PPI si diagnóstico no establecido",
+              "support": "Los síntomas persistentes pueden tener otra causa."
+            }
+          ]
+        },
+        {
+          "id": "11.01-c2-02",
+          "anchor_topic_ids": [
+            "11.01-02"
+          ],
+          "objective": "variante",
+          "vignette": "Tras evaluación apropiada sin lesión explicativa, una persona con dispepsia funcional cree que un examen normal significa que sus síntomas son imaginarios.",
+          "question": "¿Cómo debe explicarse el diagnóstico?",
+          "answer": "Como un trastorno de interacción intestino-cerebro con síntomas reales.",
+          "discriminator": "sin lesión explicativa",
+          "reason": "El diagnóstico positivo permite explicar mecanismos y acordar tratamiento.",
+          "initial_action": "Dar una explicación clara y un plan de seguimiento compartido.",
+          "limits": "Reevaluar si aparecen datos de alarma o cambia el patrón.",
+          "evidence": [
+            {
+              "source_id": "bsg-dyspepsia-2022",
+              "locator": "Recomendaciones: explicación de dispepsia funcional como DGBI",
+              "support": "El diagnóstico positivo permite explicar mecanismos y acordar tratamiento."
+            }
+          ]
+        },
+        {
+          "id": "11.01-c2-03",
+          "anchor_topic_ids": [
+            "11.01-03"
+          ],
+          "objective": "cambio",
+          "vignette": "Una úlcera por H. pylori fue tratada y el dolor desapareció. Se propone confirmar curación con anticuerpos séricos.",
+          "question": "¿Qué prueba debe elegirse en su lugar?",
+          "answer": "Aliento con urea, antígeno fecal o prueba basada en biopsia apropiada.",
+          "discriminator": "anticuerpos séricos",
+          "reason": "La serología puede seguir positiva tras erradicar la infección.",
+          "initial_action": "Programar prueba de erradicación con intervalo y suspensión de interferentes adecuados.",
+          "limits": "La desaparición de dolor no demuestra erradicación.",
+          "evidence": [
+            {
+              "source_id": "acg-hp-2024",
+              "locator": "Treatment pearls: test of cure",
+              "support": "La serología puede seguir positiva tras erradicar la infección."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "11.02",
+      "title": "Disfagia progresiva",
+      "related_sections": [],
+      "scenarios": [
+        {
+          "id": "11.02-c2-01",
+          "anchor_topic_ids": [
+            "11.02-01"
+          ],
+          "objective": "subtipo",
+          "vignette": "La endoscopia excluye una lesión obstructiva en una persona con disfagia. La manometría confirma acalasia tipo III con segmento espástico extenso. Es candidata a tratamiento definitivo.",
+          "question": "¿Qué característica del tratamiento cobra importancia en este subtipo?",
+          "answer": "Una miotomía más extensa y adaptada al espasmo.",
+          "discriminator": "acalasia tipo III con segmento espástico extenso",
+          "reason": "El tipo III responde peor a tratamientos limitados al esfínter; ACG favorece POEM o miotomía de Heller adaptadas sobre dilatación neumática.",
+          "initial_action": "Discutir la técnica con un centro experto y considerar riesgo de reflujo y preferencias.",
+          "limits": "No elegir solo por una imagen en pico de pájaro; anatomía, comorbilidad y experiencia condicionan el procedimiento.",
+          "evidence": [
+            {
+              "source_id": "acg-achalasia-2020",
+              "locator": "Recomendaciones 3 y 9: subtipo III y tailored POEM/LHM frente a dilatación neumática",
+              "support": "El tipo III responde peor a tratamientos limitados al esfínter; ACG favorece POEM o miotomía de Heller adaptadas sobre dilatación neumática."
+            }
+          ]
+        },
+        {
+          "id": "11.02-c2-02",
+          "anchor_topic_ids": [
+            "11.02-02"
+          ],
+          "objective": "subtipo",
+          "vignette": "Una endoscopia de calidad confirma Barrett de 2 cm, con metaplasia intestinal y sin displasia en biopsias suficientes. No hubo tratamiento de erradicación previo ni nueva alarma.",
+          "question": "¿Qué intervalo de vigilancia propone ESGE para esta longitud?",
+          "answer": "Cinco años, si sigue siendo candidato a vigilancia.",
+          "discriminator": "Barrett de 2 cm",
+          "reason": "ESGE diferencia vigilancia por longitud: un segmento de al menos 1 cm y menor de 3 cm sin displasia tiene intervalo de cinco años.",
+          "initial_action": "Registrar extensión y calidad basal y acordar vigilancia según guía y contexto clínico.",
+          "limits": "No aplicar este intervalo si aparece displasia, alarma o si cambian expectativa de vida y aptitud.",
+          "evidence": [
+            {
+              "source_id": "esge-barrett-2023",
+              "locator": "Main recommendation 2: segmento ≥1 cm y <3 cm, vigilancia cada 5 años",
+              "support": "ESGE diferencia vigilancia por longitud: un segmento de al menos 1 cm y menor de 3 cm sin displasia tiene intervalo de cinco años."
+            }
+          ]
+        },
+        {
+          "id": "11.02-c2-03",
+          "anchor_topic_ids": [
+            "11.02-03"
+          ],
+          "objective": "cambio",
+          "vignette": "Un carcinoma esofágico parecía operable, pero antes de planear resección se confirman metástasis hepáticas.",
+          "question": "¿Puede mantenerse el plan de enfermedad localizada sin nueva valoración?",
+          "answer": "No.",
+          "discriminator": "se confirman metástasis hepáticas",
+          "reason": "La extensión distante modifica el objetivo y las opciones de tratamiento.",
+          "initial_action": "Revisar estadificación con oncología y discutir tratamiento sistémico y paliación de síntomas.",
+          "limits": "La decisión depende de histología, biomarcadores y estado funcional.",
+          "evidence": [
+            {
+              "source_id": "nci-esophageal-2025",
+              "locator": "Treatment of stage IV esophageal cancer",
+              "support": "La extensión distante modifica el objetivo y las opciones de tratamiento."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "11.03",
+      "title": "Úlcera recurrente",
+      "related_sections": [],
+      "scenarios": [
+        {
+          "id": "11.03-c2-01",
+          "anchor_topic_ids": [
+            "11.03-01"
+          ],
+          "objective": "contraste",
+          "vignette": "Un adulto tiene diarrea acuosa de gran volumen que persiste en ayuno y causa hipopotasemia. La evaluación demuestra baja acidez gástrica y no hay úlceras. Se investiga un síndrome neuroendocrino funcional.",
+          "question": "¿Qué hormona dirige la evaluación de este patrón frente a un gastrinoma?",
+          "answer": "Péptido intestinal vasoactivo, VIP.",
+          "discriminator": "baja acidez gástrica y no hay úlceras",
+          "reason": "La combinación secretora con hipopotasemia e hipoclorhidria orienta a síndrome por VIP, diferente del exceso ácido del gastrinoma.",
+          "initial_action": "Corregir volumen y electrolitos y coordinar medición e interpretación hormonal y estudio especializado.",
+          "limits": "La diarrea secretora tiene muchas causas; el patrón no confirma por sí solo un tumor ni su localización.",
+          "evidence": [
+            {
+              "source_id": "enets-functioning-2023",
+              "locator": "Tabla 3 y apartado VIPoma: diarrea secretora, hipopotasemia e hipoclorhidria",
+              "support": "La combinación secretora con hipopotasemia e hipoclorhidria orienta a síndrome por VIP, diferente del exceso ácido del gastrinoma."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "11.04",
+      "title": "Hematemesis o melena",
+      "related_sections": [],
+      "scenarios": [
+        {
+          "id": "11.04-c2-01",
+          "anchor_topic_ids": [
+            "11.04-01"
+          ],
+          "objective": "cambio",
+          "vignette": "Después de una hemostasia endoscópica por úlcera, un adulto vuelve a presentar hematemesis y deterioro de perfusión.",
+          "question": "¿Qué paso endoscópico debe valorarse antes de asumir fracaso definitivo?",
+          "answer": "Nueva endoscopia terapéutica.",
+          "discriminator": "vuelve a presentar hematemesis",
+          "reason": "El resangrado puede responder a un segundo tratamiento endoscópico.",
+          "initial_action": "Reanimar y organizar endoscopia; preparar radiología intervencionista o cirugía si fracasa.",
+          "limits": "No retrasar control del sangrado en deterioro mientras se coordinan recursos.",
+          "evidence": [
+            {
+              "source_id": "acg-ugib-2021",
+              "locator": "Recurrent bleeding after endoscopic therapy",
+              "support": "El resangrado puede responder a un segundo tratamiento endoscópico."
+            }
+          ]
+        },
+        {
+          "id": "11.04-c2-02",
+          "anchor_topic_ids": [
+            "11.04-02"
+          ],
+          "objective": "cambio",
+          "vignette": "Una persona con cirrosis Child-Pugh C de 10 puntos tuvo hemorragia esofágica variceal controlada mediante ligadura y tratamiento médico. Está estabilizada y se evalúa una estrategia para disminuir fracaso temprano.",
+          "question": "¿Debe considerarse TIPS solo si vuelve a sangrar?",
+          "answer": "No. Valorar TIPS preventivo temprano por su riesgo.",
+          "discriminator": "Child-Pugh C de 10 puntos",
+          "reason": "Baveno VII indica TIPS preventivo en pacientes seleccionados Child C menores de 14 puntos, aun tras control inicial de la hemorragia.",
+          "initial_action": "Contactar al centro experto para evaluación de TIPS dentro de 72 horas, idealmente antes, y revisar contraindicaciones.",
+          "limits": "No aplicar a todo sangrado variceal; función cardiopulmonar, anatomía y situación global condicionan elegibilidad.",
+          "evidence": [
+            {
+              "source_id": "baveno-vii-2022",
+              "locator": "Recomendación 6.27: pre-emptive TIPS, Child C <14 y ventana≤72 h",
+              "support": "Baveno VII indica TIPS preventivo en pacientes seleccionados Child C menores de 14 puntos, aun tras control inicial de la hemorragia."
+            }
+          ]
+        },
+        {
+          "id": "11.04-c2-03",
+          "anchor_topic_ids": [
+            "11.04-03"
+          ],
+          "objective": "contraste",
+          "vignette": "Una persona con anemia ferropénica crónica no tiene antecedente de arcadas. La endoscopia muestra una hernia hiatal grande con erosiones lineales justo en la impresión diafragmática.",
+          "question": "¿Qué lesión explica mejor este patrón que un desgarro por vómito?",
+          "answer": "Lesiones de Cameron.",
+          "discriminator": "erosiones lineales justo en la impresión diafragmática",
+          "reason": "Las erosiones o úlceras en el hiato dentro de una hernia pueden producir sangrado oculto o manifiesto; el sitio difiere de Mallory-Weiss.",
+          "initial_action": "Valorar la fuente endoscópica, anemia, fármacos y tratamiento con gastroenterología.",
+          "limits": "La investigación citada es una cohorte retrospectiva; identificar estas lesiones no excluye otras causas de ferropenia.",
+          "evidence": [
+            {
+              "source_id": "cameron-cohort-2015",
+              "locator": "Resumen y figura 1 de investigación primaria: erosiones/úlceras en hiato y sangrado asociado a hernia",
+              "support": "Las erosiones o úlceras en el hiato dentro de una hernia pueden producir sangrado oculto o manifiesto; el sitio difiere de Mallory-Weiss."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "11.05",
+      "title": "Sangre roja por recto",
+      "related_sections": [],
+      "scenarios": [
+        {
+          "id": "11.05-c2-01",
+          "anchor_topic_ids": [
+            "11.05-01"
+          ],
+          "objective": "cambio",
+          "vignette": "Un adulto tuvo hemorragia digestiva baja ya controlada. Usaba aspirina en dosis baja después de un infarto; se propone suspenderla de manera permanente.",
+          "question": "¿Corresponde suspenderla de rutina por este antecedente de sangrado?",
+          "answer": "No. Preservar o reanudar la prevención secundaria indicada.",
+          "discriminator": "después de un infarto",
+          "reason": "ESGE desaconseja retirar de rutina aspirina para prevención secundaria porque la decisión también debe considerar riesgo trombótico.",
+          "initial_action": "Coordinar reinicio temprano si se suspendió, una vez controlado el sangrado y según evaluación conjunta.",
+          "limits": "No extrapolar a prevención primaria ni a otros antiagregantes; valorar gravedad, hemostasia y riesgo cardiovascular.",
+          "evidence": [
+            {
+              "source_id": "esge-lgib-2021",
+              "locator": "Main recommendation 9 y §7.3: aspirin for secondary cardiovascular prevention",
+              "support": "ESGE desaconseja retirar de rutina aspirina para prevención secundaria porque la decisión también debe considerar riesgo trombótico."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "11.06",
+      "title": "Diarrea crónica sin alarmas",
+      "related_sections": [],
+      "scenarios": [
+        {
+          "id": "11.06-c2-01",
+          "anchor_topic_ids": [
+            "11.06-01"
+          ],
+          "objective": "cambio",
+          "vignette": "Un adulto con intestino irritable bien evaluado mejora tras cuatro semanas de dieta baja en FODMAP guiada por nutrición. Pregunta si debe eliminar todos esos alimentos indefinidamente.",
+          "question": "¿Qué fase sigue a una restricción que fue eficaz?",
+          "answer": "Reintroducción gradual y personalización.",
+          "discriminator": "mejora tras cuatro semanas",
+          "reason": "La dieta comprende restricción breve, reintroducción y personalización; la fase restrictiva no se prescribe como eliminación universal permanente.",
+          "initial_action": "Coordinar pruebas de tolerancia y mantener variedad y suficiencia nutricional.",
+          "limits": "Si no mejora, no prolongar la restricción por inercia; no extrapolar una pauta adulta sin evaluación a niños o trastornos alimentarios.",
+          "evidence": [
+            {
+              "source_id": "aga-ibs-diet-2022",
+              "locator": "Best Practice Advice 7, pp.1740–1741: tres fases y restricción no mayor de 4–6 semanas",
+              "support": "La dieta comprende restricción breve, reintroducción y personalización; la fase restrictiva no se prescribe como eliminación universal permanente."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "11.07",
+      "title": "Diarrea inflamatoria",
+      "related_sections": [],
+      "scenarios": [
+        {
+          "id": "11.07-c2-01",
+          "anchor_topic_ids": [
+            "11.07-01"
+          ],
+          "objective": "contraste",
+          "vignette": "Una persona con Crohn mantiene diarrea, pero la calprotectina es baja y una evaluación endoscópica reciente no muestra actividad. Se propone aumentar inmunosupresión solo por frecuencia de las deposiciones.",
+          "question": "¿La diarrea sola demuestra un brote inflamatorio?",
+          "answer": "No. Contrastar actividad objetiva y causas alternativas.",
+          "discriminator": "evaluación endoscópica reciente no muestra actividad",
+          "reason": "Los síntomas pueden no corresponder a inflamación; en IBD también ocurren malabsorción de sales biliares, sobrecrecimiento bacteriano o intestino irritable.",
+          "initial_action": "Revisar infección, medicación y mecanismos no inflamatorios antes de escalar tratamiento.",
+          "limits": "Ninguna prueba aislada excluye toda actividad; considerar intestino delgado y calidad y fecha de los estudios según el caso.",
+          "evidence": [
+            {
+              "source_id": "bsg-ibd-2025",
+              "locator": "Disease monitoring, Clinical scoring systems, p.s16: discordancia síntomas/inflamación y diagnósticos alternativos",
+              "support": "Los síntomas pueden no corresponder a inflamación; en IBD también ocurren malabsorción de sales biliares, sobrecrecimiento bacteriano o intestino irritable."
+            }
+          ]
+        },
+        {
+          "id": "11.07-c2-02",
+          "anchor_topic_ids": [
+            "11.07-02"
+          ],
+          "objective": "contraste",
+          "vignette": "Una persona con colitis ulcerosa tiene más diarrea y sangre. No tomó antibióticos recientemente y se propone omitir estudio de C. difficile.",
+          "question": "¿La ausencia de antibióticos elimina esa prueba?",
+          "answer": "No.",
+          "discriminator": "No tomó antibióticos recientemente",
+          "reason": "C. difficile puede complicar EII sin exposición antibiótica previa.",
+          "initial_action": "Obtener prueba apropiada y valorar gravedad antes de escalar inmunosupresión.",
+          "limits": "Un resultado debe interpretarse con síntomas y método de laboratorio.",
+          "evidence": [
+            {
+              "source_id": "wgo-ibd-2015",
+              "locator": "Laboratory tests: C. difficile aun sin antecedente antibiótico",
+              "support": "C. difficile puede complicar EII sin exposición antibiótica previa."
+            }
+          ]
+        },
+        {
+          "id": "11.07-c2-03",
+          "anchor_topic_ids": [
+            "11.07-03"
+          ],
+          "objective": "incompleta",
+          "vignette": "Una persona retiró gluten antes de completar el estudio de celiaquía. La serología negativa es difícil de interpretar, pero la tipificación no detecta HLA-DQ2 ni DQ8.",
+          "question": "¿Cómo cambia ese genotipo la sospecha de celiaquía?",
+          "answer": "La vuelve muy improbable.",
+          "discriminator": "no detecta HLA-DQ2 ni DQ8",
+          "reason": "El tipado tiene alto valor predictivo negativo; su utilidad para excluir es mayor que para confirmar porque muchas personas sanas portan los alelos.",
+          "initial_action": "Revisar pruebas y diagnóstico diferencial con gastroenterología antes de indicar una provocación con gluten.",
+          "limits": "No diagnosticar celiaquía solo por HLA positivo ni por mejoría dietética; revisar la calidad del tipado si el cuadro es discordante.",
+          "evidence": [
+            {
+              "source_id": "wgo-celiac-2016",
+              "locator": "Genetics y HLA typing: alto valor predictivo negativo de ausencia DQ2/DQ8",
+              "support": "El tipado tiene alto valor predictivo negativo; su utilidad para excluir es mayor que para confirmar porque muchas personas sanas portan los alelos."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "11.08",
+      "title": "Ictericia con transaminasas",
+      "related_sections": [],
+      "scenarios": [
+        {
+          "id": "11.08-c2-01",
+          "anchor_topic_ids": [
+            "11.08-01"
+          ],
+          "objective": "contraste",
+          "vignette": "Un paciente con ictericia tiene anti-HAV IgG positiva, pero no se ha medido IgM.",
+          "question": "¿La IgG aislada confirma hepatitis A aguda?",
+          "answer": "No.",
+          "discriminator": "anti-HAV IgG positiva",
+          "reason": "La IgG puede reflejar infección previa o vacunación.",
+          "initial_action": "Buscar IgM o prueba apropiada si el cuadro hace sospechar infección aguda.",
+          "limits": "No pedir IgM como tamiz indiscriminado en personas sin sospecha clínica.",
+          "evidence": [
+            {
+              "source_id": "cdc-hav-2026",
+              "locator": "How to interpret test results",
+              "support": "La IgG puede reflejar infección previa o vacunación."
+            }
+          ]
+        },
+        {
+          "id": "11.08-c2-02",
+          "anchor_topic_ids": [
+            "11.08-02"
+          ],
+          "objective": "cambio",
+          "vignette": "Un adulto con linfoma va a recibir rituximab. Tiene HBsAg negativa, anti-HBc positiva y ADN de VHB no detectable. Se propone solo vigilar porque no hay viremia.",
+          "question": "¿El ADN no detectable permite omitir profilaxis antiviral en este contexto?",
+          "answer": "No. La depleción de células B exige profilaxis frente a reactivación.",
+          "discriminator": "va a recibir rituximab",
+          "reason": "La infección resuelta conserva riesgo de reactivación durante terapias que agotan células B.",
+          "initial_action": "Coordinar profilaxis con un antiviral de alta barrera a resistencia y seguimiento especializado antes del tratamiento oncológico.",
+          "limits": "Caso adulto de alto riesgo; no implica profilaxis universal para toda inmunosupresión ni define dosis o duración individual.",
+          "evidence": [
+            {
+              "source_id": "easl-hbv-2025",
+              "locator": "Prophylaxis of HBV reactivation, p.40 del PDF; tabla 14, p.42 del PDF: terapias depletoras de células B",
+              "support": "La infección resuelta conserva riesgo de reactivación durante terapias que agotan células B."
+            }
+          ]
+        },
+        {
+          "id": "11.08-c2-03",
+          "anchor_topic_ids": [
+            "11.08-03"
+          ],
+          "objective": "incompleta",
+          "vignette": "Una persona sin exposición reciente tiene anticuerpo anti-VHC reactivo y ARN de VHC no detectado.",
+          "question": "¿Se demuestra infección activa actual?",
+          "answer": "No.",
+          "discriminator": "ARN de VHC no detectado",
+          "reason": "El anticuerpo puede persistir tras resolución o ser falso reactivo.",
+          "initial_action": "Explicar el resultado y valorar repetición si hay una nueva exposición o duda de muestra.",
+          "limits": "Una exposición reciente cambia la necesidad de repetir ARN.",
+          "evidence": [
+            {
+              "source_id": "cdc-hcv-2026",
+              "locator": "Antibody reactive, HCV RNA not detected",
+              "support": "El anticuerpo puede persistir tras resolución o ser falso reactivo."
+            }
+          ]
+        },
+        {
+          "id": "11.08-c2-04",
+          "anchor_topic_ids": [
+            "11.08-04"
+          ],
+          "objective": "cambio",
+          "vignette": "Una persona con hepatitis autoinmune activa tiene cirrosis confirmada. Se propone budesonida para evitar efectos sistémicos del corticoide.",
+          "question": "¿La cirrosis permite elegir budesonida con ese objetivo?",
+          "answer": "No. Está contraindicada en cirrosis.",
+          "discriminator": "cirrosis confirmada",
+          "reason": "EASL 2025 contraindica budesonida en cirrosis y no la recomienda como primera línea de hepatitis autoinmune.",
+          "initial_action": "Seleccionar tratamiento con hepatología según actividad, función hepática y tolerancia.",
+          "limits": "No significa omitir inmunosupresión indicada; el tratamiento de enfermedad descompensada requiere evaluación específica.",
+          "evidence": [
+            {
+              "source_id": "easl-aih-2025",
+              "locator": "Budesonide, p.469 y tabla de recomendaciones: no primera línea y contraindicación en cirrosis",
+              "support": "EASL 2025 contraindica budesonida en cirrosis y no la recomienda como primera línea de hepatitis autoinmune."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "11.09",
+      "title": "Hígado graso y fallo hepático",
+      "related_sections": [],
+      "scenarios": [
+        {
+          "id": "11.09-c2-01",
+          "anchor_topic_ids": [
+            "11.09-01"
+          ],
+          "objective": "incompleta",
+          "vignette": "Una persona de 28 años con diabetes, obesidad y esteatosis tiene FIB-4 informado como bajo. Se propone cerrar la valoración de fibrosis por ese resultado.",
+          "question": "¿El FIB-4 bajo basta para cerrar la valoración a esta edad?",
+          "answer": "No. Debe considerarse una evaluación secundaria de fibrosis.",
+          "discriminator": "28 años",
+          "reason": "FIB-4 tiene baja exactitud antes de los 35 años; el riesgo metabólico alto limita la tranquilidad que ofrece un valor bajo.",
+          "initial_action": "Considerar elastografía u otra prueba secundaria apropiada y mantener el manejo del riesgo metabólico.",
+          "limits": "No demuestra fibrosis avanzada ni exige biopsia automática. La orientación citada es para adultos, no un algoritmo pediátrico.",
+          "evidence": [
+            {
+              "source_id": "aasld-nafld-2023",
+              "locator": "Figura 2 y tabla 5: exactitud de FIB-4 en menores de 35 años",
+              "support": "FIB-4 tiene baja exactitud antes de los 35 años; el riesgo metabólico alto limita la tranquilidad que ofrece un valor bajo."
+            }
+          ]
+        },
+        {
+          "id": "11.09-c2-02",
+          "anchor_topic_ids": [
+            "11.09-02"
+          ],
+          "objective": "gravedad",
+          "vignette": "Una persona sin cirrosis previa desarrolla lesión hepática aguda, coagulopatía y desorientación.",
+          "question": "¿Qué recurso debe contactarse temprano?",
+          "answer": "Un centro con capacidad de trasplante hepático.",
+          "discriminator": "coagulopatía y desorientación",
+          "reason": "La insuficiencia hepática aguda puede progresar con rapidez.",
+          "initial_action": "Ingresar, evaluar causa y coordinar atención crítica y traslado.",
+          "limits": "No esperar a coma ni a una etiología completa para consultar.",
+          "evidence": [
+            {
+              "source_id": "acg-alf-2023",
+              "locator": "Tablas 7–8: manejo por grado de encefalopatía y consultas",
+              "support": "La insuficiencia hepática aguda puede progresar con rapidez."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "11.10",
+      "title": "Ascitis/confusión en hepatópata",
+      "related_sections": [],
+      "scenarios": [
+        {
+          "id": "11.10-c2-01",
+          "anchor_topic_ids": [
+            "11.10-01"
+          ],
+          "objective": "contraste",
+          "vignette": "Un adulto con cirrosis recibe tratamiento por infección ascítica. Persiste el dolor focal y el cultivo del líquido identifica múltiples microorganismos, pese a antibióticos.",
+          "question": "¿Qué alternativa a peritonitis bacteriana espontánea requiere búsqueda urgente?",
+          "answer": "Peritonitis secundaria por un foco abdominal tratable.",
+          "discriminator": "múltiples microorganismos",
+          "reason": "El cultivo polimicrobiano y la respuesta inadecuada obligan a buscar perforación o inflamación de un órgano abdominal.",
+          "initial_action": "Mantener tratamiento de la infección, obtener imagen abdominal y solicitar valoración temprana para control del foco.",
+          "limits": "Estos datos aumentan la sospecha, pero no demuestran perforación ni indican cirugía automática. Revisar también resistencia antimicrobiana.",
+          "evidence": [
+            {
+              "source_id": "bsg-ascites-2021",
+              "locator": "Secondary bacterial peritonitis; recomendación 2.6",
+              "support": "El cultivo polimicrobiano y la respuesta inadecuada obligan a buscar perforación o inflamación de un órgano abdominal."
+            }
+          ]
+        },
+        {
+          "id": "11.10-c2-02",
+          "anchor_topic_ids": [
+            "11.10-02"
+          ],
+          "objective": "cambio",
+          "vignette": "Una persona con ascitis necesita paracentesis. Tiene INR prolongado por cirrosis, sin sangrado activo ni otra contraindicación.",
+          "question": "¿Se exige plasma de rutina solo para normalizar INR?",
+          "answer": "No.",
+          "discriminator": "sin sangrado activo",
+          "reason": "El INR aislado no describe de forma completa el riesgo del procedimiento.",
+          "initial_action": "Realizar evaluación clínica y seguir técnica y protocolo apropiados.",
+          "limits": "La coagulación intravascular diseminada u otro trastorno añadido requiere valoración distinta.",
+          "evidence": [
+            {
+              "source_id": "bsg-ascites-2021",
+              "locator": "Recomendación 5.3: no corrección rutinaria de coagulación antes de paracentesis",
+              "support": "El INR aislado no describe de forma completa el riesgo del procedimiento."
+            }
+          ]
+        },
+        {
+          "id": "11.10-c2-03",
+          "anchor_topic_ids": [
+            "11.10-03"
+          ],
+          "objective": "contraste",
+          "vignette": "Una persona con cirrosis y confusión desarrolla además debilidad focal de un brazo de inicio brusco.",
+          "question": "¿Puede atribuirse todo a encefalopatía hepática sin estudiar otra causa?",
+          "answer": "No.",
+          "discriminator": "debilidad focal de un brazo",
+          "reason": "Un déficit focal exige buscar una lesión neurológica alternativa.",
+          "initial_action": "Activar evaluación neurológica y neuroimagen urgente.",
+          "limits": "La encefalopatía hepática puede coexistir con un evento neurológico.",
+          "evidence": [
+            {
+              "source_id": "easl-he-2022",
+              "locator": "Diagnóstico diferencial; imagen cerebral si existe duda diagnóstica o focalidad",
+              "support": "Un déficit focal exige buscar una lesión neurológica alternativa."
+            }
+          ]
+        },
+        {
+          "id": "11.10-c2-04",
+          "anchor_topic_ids": [
+            "11.10-03"
+          ],
+          "objective": "variante",
+          "vignette": "Una persona con cirrosis tiene asterixis aislada, pero está alerta y no muestra cambios de conducta.",
+          "question": "¿La asterixis sola basta para diagnosticar encefalopatía hepática manifiesta?",
+          "answer": "No.",
+          "discriminator": "asterixis aislada",
+          "reason": "El diagnóstico manifiesto requiere integrar estado mental y otras causas.",
+          "initial_action": "Buscar causas de asterixis y evaluar función cognitiva y precipitantes.",
+          "limits": "No omitir seguimiento si aparece confusión o somnolencia.",
+          "evidence": [
+            {
+              "source_id": "acg-he-2026",
+              "locator": "Inpatient management: isolated asterixis",
+              "support": "El diagnóstico manifiesto requiere integrar estado mental y otras causas."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "11.11",
+      "title": "Fiebre y masa hepática",
+      "related_sections": [],
+      "scenarios": [
+        {
+          "id": "11.11-c2-01",
+          "anchor_topic_ids": [
+            "11.11-01"
+          ],
+          "objective": "incompleta",
+          "vignette": "Un adulto tiene dolor en hipocondrio derecho y una imagen de absceso hepático. No presenta diarrea y el estudio fecal inicial es negativo.",
+          "question": "¿Eso excluye un absceso amebiano?",
+          "answer": "No.",
+          "discriminator": "No presenta diarrea",
+          "reason": "La infección extraintestinal puede aparecer sin evidencia fecal de infección activa.",
+          "initial_action": "Integrar serología, exposición e imagen y descartar origen piógeno.",
+          "limits": "La serología puede persistir y no define reinfección por sí sola.",
+          "evidence": [
+            {
+              "source_id": "cdc-amoebiasis-dpdx",
+              "locator": "Laboratory diagnosis: extraintestinal disease",
+              "support": "La infección extraintestinal puede aparecer sin evidencia fecal de infección activa."
+            }
+          ]
+        },
+        {
+          "id": "11.11-c2-02",
+          "anchor_topic_ids": [
+            "11.11-02"
+          ],
+          "objective": "gravedad",
+          "vignette": "Un adulto con absceso hepático por Klebsiella pneumoniae y bacteriemia mejora del dolor abdominal tras drenaje. Ahora aparece pérdida visual aguda con ojo rojo.",
+          "question": "¿Qué foco metastásico debe descartarse de urgencia?",
+          "answer": "Endoftalmitis endógena.",
+          "discriminator": "pérdida visual aguda con ojo rojo",
+          "reason": "Las variantes hipervirulentas pueden causar absceso hepático y diseminación ocular; la mejoría abdominal no excluye esta complicación.",
+          "initial_action": "Solicitar valoración oftalmológica urgente y coordinar control microbiológico y sistémico.",
+          "limits": "No toda infección por Klebsiella es hipervirulenta ni toda alteración visual es infecciosa; no derivar de este caso un cribado universal o una pauta intravítrea.",
+          "evidence": [
+            {
+              "source_id": "paho-hvkp-2024",
+              "locator": "Clinical characteristics: absceso hepático, infección invasiva y endoftalmitis; evaluación de riesgo regional",
+              "support": "Las variantes hipervirulentas pueden causar absceso hepático y diseminación ocular; la mejoría abdominal no excluye esta complicación."
+            },
+            {
+              "source_id": "hvkp-ocular-case-2026",
+              "locator": "Case presentation y Conclusion: pérdida visual aguda durante tratamiento de absceso y evaluación oftalmológica",
+              "support": "El caso primario documenta diseminación ocular pese a drenaje y antibióticos; respalda reconocimiento y evaluación urgente, no un régimen universal."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "11.12",
+      "title": "Dolor epigástrico hacia espalda",
+      "related_sections": [],
+      "scenarios": [
+        {
+          "id": "11.12-c2-01",
+          "anchor_topic_ids": [
+            "11.12-01"
+          ],
+          "objective": "cambio",
+          "vignette": "Un adulto recuperado de pancreatitis biliar leve tiene cálculos vesiculares y es candidato quirúrgico. No presenta necrosis ni falla orgánica. Se planea alta sin abordar la vesícula.",
+          "question": "¿Cuándo se prefiere realizar la colecistectomía en este cuadro leve?",
+          "answer": "Durante el mismo ingreso, preferentemente antes del alta.",
+          "discriminator": "pancreatitis biliar leve",
+          "reason": "La colecistectomía en el mismo ingreso reduce nuevos eventos biliares.",
+          "initial_action": "Coordinar la valoración quirúrgica antes del alta.",
+          "limits": "La necrosis, enfermedad grave o contraindicación quirúrgica requieren otro plan. No propone cirugía inmediata para toda pancreatitis.",
+          "evidence": [
+            {
+              "source_id": "acg-pancreatitis-2024",
+              "locator": "The role of surgery in AP, concepto clave 21 y apartado Cholecystectomy",
+              "support": "La colecistectomía en el mismo ingreso reduce nuevos eventos biliares."
+            }
+          ]
+        },
+        {
+          "id": "11.12-c2-02",
+          "anchor_topic_ids": [
+            "11.12-02"
+          ],
+          "objective": "incompleta",
+          "vignette": "Un adulto con sospecha de insuficiencia pancreática exocrina entrega una muestra de heces completamente líquidas. La elastasa fecal sale baja y se propone confirmar el diagnóstico solo con ella.",
+          "question": "¿Es adecuada esa muestra para interpretar la elastasa fecal?",
+          "answer": "No. La prueba requiere heces semisólidas o sólidas.",
+          "discriminator": "heces completamente líquidas",
+          "reason": "La recomendación de elastasa fecal exige una muestra semisólida o sólida; este resultado no cumple esa condición.",
+          "initial_action": "Obtener una muestra adecuada e integrar el resultado con clínica y riesgo pancreático.",
+          "limits": "No excluye insuficiencia exocrina ni justifica retrasar soporte nutricional necesario. Se leyó el consejo primario reproducido íntegramente en el resumen NLM, no el texto completo bloqueado.",
+          "evidence": [
+            {
+              "source_id": "aga-epi-2023",
+              "locator": "Resumen primario NLM: Best Practice Advice 4",
+              "support": "La recomendación de elastasa fecal exige una muestra semisólida o sólida; este resultado no cumple esa condición."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "11.13",
+      "title": "Adelgazamiento y síntomas progresivos",
+      "related_sections": [],
+      "scenarios": [
+        {
+          "id": "11.13-c2-01",
+          "anchor_topic_ids": [
+            "11.13-01"
+          ],
+          "objective": "cambio",
+          "vignette": "Un adulto con cáncer gástrico metastásico necesita elegir tratamiento sistémico. Aún no hay resultado HER2.",
+          "question": "¿Qué dato tumoral puede modificar la selección?",
+          "answer": "La expresión o amplificación de HER2.",
+          "discriminator": "Aún no hay resultado HER2",
+          "reason": "Algunos tratamientos dirigidos dependen del biomarcador.",
+          "initial_action": "Completar biomarcadores apropiados con oncología.",
+          "limits": "HER2 no es el único marcador; influyen PD-L1, reparación de ADN y otros según disponibilidad.",
+          "evidence": [
+            {
+              "source_id": "nci-gastric-2025",
+              "locator": "Treatment of stage IV disease: biomarker testing",
+              "support": "Algunos tratamientos dirigidos dependen del biomarcador."
+            }
+          ]
+        },
+        {
+          "id": "11.13-c2-02",
+          "anchor_topic_ids": [
+            "11.13-02"
+          ],
+          "objective": "incompleta",
+          "vignette": "Una persona tiene masa pancreática sospechosa en imagen, pero CA 19-9 normal.",
+          "question": "¿El marcador normal excluye cáncer pancreático?",
+          "answer": "No.",
+          "discriminator": "CA 19-9 normal",
+          "reason": "La sensibilidad y especificidad del marcador no permiten usarlo para excluir la lesión.",
+          "initial_action": "Completar evaluación de imagen y tejido según plan oncológico.",
+          "limits": "El marcador tampoco confirma por sí solo malignidad si está elevado.",
+          "evidence": [
+            {
+              "source_id": "nci-pancreatic-2025",
+              "locator": "Diagnostic and staging evaluation: tumor markers",
+              "support": "La sensibilidad y especificidad del marcador no permiten usarlo para excluir la lesión."
+            }
+          ]
+        },
+        {
+          "id": "11.13-c2-03",
+          "anchor_topic_ids": [
+            "11.13-03"
+          ],
+          "objective": "incompleta",
+          "vignette": "Un adulto con cirrosis presenta un nuevo nódulo hepático sospechoso, con alfa-fetoproteína normal.",
+          "question": "¿La AFP normal descarta hepatocarcinoma?",
+          "answer": "No.",
+          "discriminator": "alfa-fetoproteína normal",
+          "reason": "El marcador puede ser normal en enfermedad presente.",
+          "initial_action": "Obtener caracterización por imagen multifásica y valoración especializada.",
+          "limits": "El diagnóstico no se establece con AFP aislada ni con cualquier nódulo.",
+          "evidence": [
+            {
+              "source_id": "nci-hcc-2025",
+              "locator": "Diagnostic evaluation: AFP y radiología",
+              "support": "El marcador puede ser normal en enfermedad presente."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
