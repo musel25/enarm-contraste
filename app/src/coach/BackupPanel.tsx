@@ -3,7 +3,7 @@ import { Modal } from "../ui";
 import { downloadBackup, parseBackup } from "./storage";
 import { readBeforeImport } from "./repository";
 import type { StoredStudyState, StudyProfile } from "./types";
-import { layerOf, migrateProfile, studySpaces } from "./profile";
+import { layerOf, migrateProfile, personalOriginsMatchIndex, studySpaces } from "./profile";
 import { caseMeta } from "../learning/model";
 import { clinicalCases } from "../learning/cases";
 import { loadResources, loadSection } from "./resources";
@@ -46,6 +46,10 @@ export default function BackupPanel({
         )
           continue;
         const layerIndex = (await loadResources(undefined, layerOf(space))).index;
+        if (!personalOriginsMatchIndex(next, layerOf(space), layerIndex))
+          throw new Error(
+            "El origen de una flashcard no coincide con el temario. Tu progreso sigue intacto.",
+          );
         const published = layerIndex.cards.filter((c) => c.family !== "creadas");
         const ids = new Set(published.map((c) => c.id));
         if (space === "capa1") for (const id of next.legacy_layer1_ids ?? []) ids.add(id);

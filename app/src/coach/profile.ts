@@ -1,6 +1,13 @@
 import { emptyState, planKey, validateState } from "./engine";
 import { validPersonalFields } from "./personal";
-import type { CoachState, PersonalCard, StoredStudyState, StudyProfile, StudySpace } from "./types";
+import type {
+  CoachIndex,
+  CoachState,
+  PersonalCard,
+  StoredStudyState,
+  StudyProfile,
+  StudySpace,
+} from "./types";
 
 export const studySpaces: StudySpace[] = ["capa1", "capa2", "creadas1", "creadas2"];
 export const spaceLabels: Record<StudySpace, string> = {
@@ -34,13 +41,64 @@ function validOrigin(
   catalog: Record<string, PersonalCard>,
   legacy?: ReadonlySet<string>,
 ) {
+  if (legacy?.has(card.id)) return card.layer === 1;
   const source = Object.hasOwn(catalog, card.source_card_id)
     ? catalog[card.source_card_id]
     : undefined;
   const layer =
     source?.layer ??
     (legacy?.has(card.source_card_id) ? 1 : card.source_card_id.startsWith("capa2/") ? 2 : 1);
-  return card.layer === layer && (!source || source.section_id === card.section_id);
+  if (card.layer !== layer) return false;
+  if (source)
+    return (
+      source.section_id === card.section_id &&
+      card.source_block_id === `${source.section_id}.creadas`
+    );
+  if (legacy?.has(card.source_card_id)) return true;
+  const prefix = card.layer === 2 ? "capa2/" : "";
+  const match = /^(?:eje\/|madre\/[1-4]\/|scenario\/)(\d{2}\.\d{2})(?:$|-[^/]+$)/.exec(
+    card.source_card_id.slice(prefix.length),
+  );
+  return !!match && match[1] === card.source_block_id && match[1].startsWith(`${card.section_id}.`);
+}
+
+function acyclicOrigins(catalog: Record<string, PersonalCard>, legacy: ReadonlySet<string>) {
+  const complete = new Set<string>();
+  for (const card of Object.values(catalog)) {
+    const path = new Set<string>();
+    let current: PersonalCard | undefined = card;
+    while (current && !complete.has(current.id) && !legacy.has(current.id)) {
+      if (path.has(current.id)) return false;
+      path.add(current.id);
+      current = Object.hasOwn(catalog, current.source_card_id)
+        ? catalog[current.source_card_id]
+        : undefined;
+    }
+    for (const id of path) complete.add(id);
+  }
+  return true;
+}
+
+/** Inventory validation for native cards. Explicit migrated origins remain recoverable. */
+export function personalOriginsMatchIndex(
+  profile: StudyProfile,
+  layer: 1 | 2,
+  index: CoachIndex,
+): boolean {
+  const legacy = new Set(profile.legacy_layer1_ids);
+  const published = new Map(index.cards.map((card) => [card.id, card]));
+  return Object.values(profile.created_cards)
+    .filter((card) => card.layer === layer)
+    .every((card) => {
+      if (layer === 1 && (legacy.has(card.id) || legacy.has(card.source_card_id))) return true;
+      if (Object.hasOwn(profile.created_cards, card.source_card_id)) return true;
+      const source = published.get(card.source_card_id);
+      return (
+        !!source &&
+        source.section_id === card.section_id &&
+        source.block_id === card.source_block_id
+      );
+    });
 }
 
 function references(state: CoachState): string[] {
@@ -88,7 +146,8 @@ export function isStudyProfile(value: unknown): value is StudyProfile {
   if (
     !Object.values(catalog).every(
       (card) => (card.layer === 1 || card.layer === 2) && validOrigin(card, catalog, legacy),
-    )
+    ) ||
+    !acyclicOrigins(catalog, legacy)
   )
     return false;
   const attempts = new Set<string>();
@@ -130,11 +189,11 @@ export function migrateProfile(input: StoredStudyState): StudyProfile {
   const workspaces = Object.fromEntries(
     studySpaces.map((space) => [space, emptyState()]),
   ) as StudyProfile["workspaces"];
-  const legacy = new Set(
-    [...references(original), ...Object.values(catalog).map((card) => card.source_card_id)].filter(
-      (id) => !Object.hasOwn(catalog, id),
-    ),
-  );
+  const legacy = new Set([
+    ...references(original),
+    ...Object.keys(catalog),
+    ...Object.values(catalog).map((card) => card.source_card_id),
+  ]);
   for (const space of ["capa1", "creadas1"] as const) {
     const own = (id: string) => ownerOf(id, catalog, legacy) === space;
     const personal = isPersonalSpace(space);

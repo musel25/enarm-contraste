@@ -5,6 +5,7 @@ import { addPersonalCard, personalIndex } from "../../app/src/coach/personal";
 import {
   isStudyProfile,
   migrateProfile,
+  personalOriginsMatchIndex,
   spaceState,
   updateSpace,
 } from "../../app/src/coach/profile";
@@ -281,4 +282,68 @@ test("profile validation rejects malformed types, workspace mixing and incorrect
     { ...profile, workspaces: { ...profile.workspaces, capa2: profile.workspaces.capa1 } },
   ])
     assert.equal(isStudyProfile(bad), false);
+});
+
+test("native personal origins reject missing parents, cross-block sources and cycles", () => {
+  const base = migrateProfile(emptyState());
+  const first = { ...personal, layer: 1 as const };
+  const second = {
+    ...first,
+    id: "created/1a9121c5-fc78-453b-90a7-d265eed8a90e",
+    source_card_id: first.id,
+    source_block_id: "01.creadas",
+  };
+  assert.equal(
+    isStudyProfile({ ...base, created_cards: { [first.id]: first, [second.id]: second } }),
+    true,
+  );
+  for (const change of [
+    { source_card_id: "eje/does-not-exist" },
+    { source_block_id: "01.99" },
+    { source_card_id: "eje/02.01" },
+    { source_card_id: second.id, source_block_id: "01.creadas" },
+  ]) {
+    const profile = { ...base, created_cards: { [first.id]: { ...first, ...change } } };
+    assert.equal(isStudyProfile(profile), false);
+  }
+  const cycle = {
+    ...base,
+    created_cards: {
+      [first.id]: { ...first, source_card_id: second.id, source_block_id: "01.creadas" },
+      [second.id]: second,
+    },
+  };
+  assert.equal(isStudyProfile(cycle), false);
+});
+
+test("migration preserves pre-existing personal source relationships accepted by version one", () => {
+  const before = legacy();
+  before.created_cards![personal.id].source_block_id = "01.99";
+  assert.equal(validateState(before), true);
+  const profile = migrateProfile(before);
+  assert.equal(isStudyProfile(profile), true);
+  assert.equal(profile.created_cards[personal.id].source_block_id, "01.99");
+});
+
+test("native origins resolve to the published inventory through personal parent chains", () => {
+  const profile = migrateProfile(emptyState());
+  const first = { ...personal, layer: 1 as const };
+  const second = {
+    ...first,
+    id: "created/1a9121c5-fc78-453b-90a7-d265eed8a90e",
+    source_card_id: first.id,
+    source_block_id: "01.creadas",
+  };
+  profile.created_cards = { [first.id]: first, [second.id]: second };
+  assert.equal(isStudyProfile(profile), true);
+  assert.equal(personalOriginsMatchIndex(profile, 1, index), true);
+  profile.created_cards[first.id] = {
+    ...first,
+    source_card_id: "eje/01.99",
+    source_block_id: "01.99",
+  };
+  assert.equal(isStudyProfile(profile), true);
+  assert.equal(personalOriginsMatchIndex(profile, 1, index), false);
+  const migrated = migrateProfile(legacy());
+  assert.equal(personalOriginsMatchIndex(migrated, 1, { ...index, cards: [] }), true);
 });

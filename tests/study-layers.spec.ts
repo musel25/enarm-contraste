@@ -345,3 +345,35 @@ for (const space of ["capa1", "capa2"]) {
     await expect(page.getByRole("region", { name: "Frente de la tarjeta" })).toHaveCount(0);
   });
 }
+
+test("a native profile backup rejects an invented source in an existing section", async ({
+  page,
+}) => {
+  const { emptyState } = await import("../app/src/coach/engine");
+  const { migrateProfile } = await import("../app/src/coach/profile");
+  const candidate = migrateProfile(emptyState());
+  const id = "created/6a9121c5-fc78-453b-90a7-d265eed8a90e";
+  candidate.created_cards[id] = {
+    id,
+    layer: 1,
+    section_id: "01",
+    source_card_id: "eje/01.99",
+    source_block_id: "01.99",
+    front: "Pregunta",
+    back: "Respuesta",
+    created_at: "2026-11-06T12:00:00.000Z",
+  };
+  await fixture(page);
+  await page.goto("./#hoy-capa-1");
+  await page
+    .getByRole("button", { name: "Ya tengo una copia de mi progreso", exact: true })
+    .click();
+  await page.getByLabel("Importar una copia").setInputFiles({
+    name: "invented-origin.json",
+    mimeType: "application/json",
+    buffer: Buffer.from(JSON.stringify({ format: "enarm-coach", state: candidate })),
+  });
+  await expect(page.getByRole("alert")).toContainText("origen");
+  await expect(page.getByText("Copia comprobada", { exact: true })).toHaveCount(0);
+  expect(Object.keys((await saved(page)).created_cards)).toHaveLength(0);
+});
