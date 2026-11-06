@@ -1,0 +1,547 @@
+{
+  "schema_version": 1,
+  "layer": 2,
+  "section_id": "08",
+  "title": "Congénitas",
+  "author": "clinical-author-01-12",
+  "sources": [
+    {
+      "id": "cdc-congenital-syphilis-2021",
+      "label": "CDC: Congenital Syphilis, STI Treatment Guidelines",
+      "url": "https://www.cdc.gov/std/treatment-guidelines/congenital-syphilis.htm",
+      "version": "2021-07-22",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Escenarios 1–4: examen, títulos y tratamiento materno"
+    },
+    {
+      "id": "cdc-rubella-2026",
+      "label": "CDC: Congenital Rubella Syndrome, Surveillance Manual capítulo 15",
+      "url": "https://www.cdc.gov/surv-manual/php/table-of-contents/chapter-15-congenital-rubella-syndrome.html",
+      "version": "2026-02-10",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Clinical presentation; Laboratory testing; Case definition; Prevent Transmission from Infants with CRS"
+    },
+    {
+      "id": "cdc-toxo-dpdx",
+      "label": "CDC DPDx: Toxoplasmosis",
+      "url": "https://www.cdc.gov/dpdx/toxoplasmosis/index.html",
+      "version": "Página consultada sin fecha de edición declarada",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Laboratory Diagnosis: serología materna y neonatal"
+    },
+    {
+      "id": "cdc-varicella-2024",
+      "label": "CDC: Clinical Guidance for People at Risk for Severe Varicella",
+      "url": "https://www.cdc.gov/chickenpox/hcp/clinical-guidance/",
+      "version": "2024-04-24",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Pregnant women; newborns; VariZIG"
+    },
+    {
+      "id": "cff-diagnosis-2017",
+      "label": "Cystic Fibrosis Foundation: diagnóstico de fibrosis quística",
+      "url": "https://www.cff.org/medical-professionals/cf-diagnosis-clinical-care-guidelines",
+      "version": "2017; revisión de vigencia julio 2025 sin cambios",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Recomendaciones 1–14: cloro en sudor, fenotipo y pruebas CFTR"
+    },
+    {
+      "id": "dge-congenital-syphilis-2021",
+      "label": "DGE: Manual de procedimientos estandarizados para la vigilancia epidemiológica de la sífilis congénita",
+      "url": "https://www.ssm.gob.mx/portal/descargables/vigilancia/2022/Manuales%20y%20Lineamientos/31_Manual_SIFILIS.pdf",
+      "version": "2021",
+      "checked_at": "2026-11-06",
+      "region": "mexico",
+      "access": "checked",
+      "locator": "pp. 22–23: caso probable asintomático y acciones de vigilancia"
+    },
+    {
+      "id": "galnet-2017",
+      "label": "GalNet: guía internacional de galactosemia clásica",
+      "url": "https://link.springer.com/article/10.1007/s10545-016-9990-5",
+      "version": "Publicación electrónica 2016; volumen 2017",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Endocrinology and fertility follow-up: pubertad y función ovárica; guía internacional completa"
+    },
+    {
+      "id": "qld-neonatal-2023",
+      "label": "Queensland Clinical Guidelines: Stabilisation for retrieval–neonatal",
+      "url": "https://www.health.qld.gov.au/__data/assets/pdf_file/0017/144026/g-stabil.pdf",
+      "version": "Noviembre 2023; MN23.18-V5-R28",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Tablas 28, 30–38: anomalías quirúrgicas, cardiacas y tubo neural"
+    },
+    {
+      "id": "acc-coa-2023",
+      "label": "ACC: algoritmo clínico de seguimiento de coartación reparada",
+      "url": "https://www.acc.org/Latest-in-Cardiology/Articles/2023/02/16/17/09/Clinical-Practice-Algorithm-For-the-Follow-Up-of-Repaired-Coarctation-of-the-Aorta",
+      "version": "2023-02-16",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Quick takes y algoritmo: vigilancia de hipertensión sistémica y enmascarada; consenso práctico"
+    },
+    {
+      "id": "fda-neoprofen-2023",
+      "label": "FDA: ficha oficial NeoProfen, ibuprofeno lisina neonatal",
+      "url": "https://www.accessdata.fda.gov/drugsatfda_docs/label/2023/021903s014lbl.pdf",
+      "version": "Revisión 2023-10",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "§4 Contraindications: deterioro renal significativo; se usa para seguridad, no para pauta de cierre"
+    },
+    {
+      "id": "cdc-cmv-lab-2024",
+      "label": "CDC: pruebas de laboratorio para CMV congénito",
+      "url": "https://www.cdc.gov/cytomegalovirus/php/laboratories/index.html",
+      "version": "2024-04-15",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Tests for congenital CMV in newborns; Specimen collection: contaminación por leche materna"
+    },
+    {
+      "id": "qld-alprostadil-2026",
+      "label": "Queensland NeoMedQ: Alprostadil neonatal monograph",
+      "url": "https://www.health.qld.gov.au/__data/assets/pdf_file/0016/1025071/nmq-alprostadil.pdf",
+      "version": "NMedQ26.058-V2-R31; efectiva 29 mayo 2026",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "PDF completo de 3 páginas: Monitoring, Special considerations y Side effects. Se usa para vigilancia, no para copiar dosis."
+    },
+    {
+      "id": "intd-bh4-2020",
+      "label": "iNTD: Consensus guideline for diagnosis and treatment of tetrahydrobiopterin deficiencies",
+      "url": "https://link.springer.com/article/10.1186/s13023-020-01379-8",
+      "version": "26 mayo 2020; corrección 5 agosto 2020 abierta",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Treatment / First-line treatment / Phe-reduced diet, R#30–32; síntomas neurológicos y monoterapia dietética en PTPSD. Texto completo abierto; evidencia global baja o muy baja."
+    },
+    {
+      "id": "cps-neonatal-hsv-2025",
+      "label": "Canadian Paediatric Society: Prevention and management of neonatal herpes simplex virus infections",
+      "url": "https://cps.ca/en/documents/position/prevention-management-neonatal-herpes-simplex-virus-infections",
+      "version": "Publicada 6 marzo 2020; actualizada 10 octubre 2025; reafirmada 12 enero 2026",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Recommendations / Treatment and follow-up: PCR de LCR al final del tratamiento de enfermedad del SNC, prolongación si positiva."
+    },
+    {
+      "id": "cdc-pregvax-2025",
+      "label": "CDC: Guidelines for Vaccinating Pregnant Women",
+      "url": "https://www.cdc.gov/vaccines-pregnancy/hcp/vaccination-guidelines/index.html",
+      "version": "22 agosto 2025",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Measles, Mumps, Rubella: contraindicación gestacional y vacunación posterior de susceptibles. No se importa calendario estadounidense."
+    }
+  ],
+  "mexico_source_note": "Se abrió la NOM-034-SSA2-2013 (publicada en 2014) y el manual DGE de sífilis congénita de 2021, alojado por la Secretaría de Salud de Michoacán. No se encontró una actualización mexicana reciente que cubra todos los defectos e infecciones del apartado. Los algoritmos infecciosos usan fuentes CDC con su fecha real. Para fenilcetonuria se verificó la guía europea 2017 para confirmación, no para metas terapéuticas actuales; el texto completo ACMG y su corrección 2026 no fueron accesibles y no se presentan como revisados. Las sustituciones finales usan NeoMedQ alprostadil vigente 29 mayo 2026, consenso iNTD BH4 2020 con su corrección abierta, CPS herpes neonatal actualizada octubre 2025/reafirmada enero 2026 y CDC rubéola febrero 2026 para transmisión. No se comprobó una guía mexicana reciente accesible para estas relaciones específicas; no se importan dosis ni reglas administrativas de aislamiento de otros países. La relación final de exposición de una cuidadora embarazada usa CDC vacunación en embarazo, 22 agosto 2025, y evaluación de embarazadas expuestas del manual CRS2026, abiertos. No se fija norma mexicana de notificación ni calendario; la gestión clínica y epidemiológica debe seguir el programa local.",
+  "blocks": [
+    {
+      "id": "08.01",
+      "title": "RN con soplo o cianosis",
+      "related_sections": [],
+      "scenarios": [
+        {
+          "id": "08.01-c2-01",
+          "anchor_topic_ids": [
+            "08.01-01"
+          ],
+          "objective": "cambio",
+          "vignette": "Un neonato con cardiopatía ductodependiente recibe infusión de alprostadil antes del traslado. Se propone transportarlo sin monitorización cardiorrespiratoria continua porque su saturación ya mejoró.",
+          "question": "¿Qué riesgo del tratamiento impide omitir esa monitorización?",
+          "answer": "Apnea asociada a alprostadil, que puede requerir apoyo ventilatorio.",
+          "discriminator": "infusión de alprostadil",
+          "reason": "La mejoría del flujo ductal no elimina efectos adversos respiratorios; la monografía neonatal exige monitorización continua.",
+          "initial_action": "Acordar traslado neonatal con vigilancia continua y capacidad de responder a apnea y deterioro, según el equipo especializado.",
+          "limits": "No indica intubar preventivamente a todo neonato ni suspender por cuenta propia el soporte ductal. La vía aérea y la infusión se individualizan con cardiología y neonatología.",
+          "evidence": [
+            {
+              "source_id": "qld-alprostadil-2026",
+              "locator": "p. 1 Monitoring / Special considerations; p. 2 Side effects: apnoea",
+              "support": "La monografía identifica apnea como efecto frecuente y exige vigilancia cardiorrespiratoria continua, con posible necesidad de intubación según contexto."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "08.02",
+      "title": "Cianosis con crisis",
+      "related_sections": [],
+      "scenarios": [
+        {
+          "id": "08.02-c2-01",
+          "anchor_topic_ids": [
+            "08.02-01"
+          ],
+          "objective": "subtipo",
+          "vignette": "Un recién nacido con anatomía de Fallot tiene obstrucción pulmonar crítica y el ecocardiograma confirma flujo pulmonar dependiente del conducto.",
+          "question": "¿Debe tratarse como toda tetralogía estable sin dependencia ductal?",
+          "answer": "No. Necesita mantener el flujo ductal.",
+          "discriminator": "flujo pulmonar dependiente del conducto",
+          "reason": "La fisiología específica modifica la estabilización.",
+          "initial_action": "Coordinar prostaglandina y traslado con neonatología y cardiología.",
+          "limits": "No todas las tetralogías son ductodependientes; vigilar apnea durante tratamiento.",
+          "evidence": [
+            {
+              "source_id": "qld-neonatal-2023",
+              "locator": "Tablas 35–36: lesiones ductodependientes frente a no dependientes",
+              "support": "La fisiología específica modifica la estabilización."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "08.03",
+      "title": "Pulsos anormales y soplo",
+      "related_sections": [],
+      "scenarios": [
+        {
+          "id": "08.03-c2-01",
+          "anchor_topic_ids": [
+            "08.03-01"
+          ],
+          "objective": "cambio",
+          "vignette": "Un adolescente tuvo reparación de coartación y conserva un arco sin obstrucción residual importante. Su presión en consulta suele ser normal.",
+          "question": "¿La buena reparación permite suspender vigilancia de hipertensión?",
+          "answer": "No. Mantener vigilancia de hipertensión sistémica y enmascarada.",
+          "discriminator": "sin obstrucción residual importante",
+          "reason": "Las alteraciones vasculares y la hipertensión pueden persistir o aparecer después de una reparación anatómica satisfactoria.",
+          "initial_action": "Mantener seguimiento cardiológico con presión de extremidades y evaluación ambulatoria según indicación.",
+          "limits": "Una presión de consulta normal no excluye hipertensión enmascarada; el algoritmo se aplica a coartación reparada relativamente aislada.",
+          "evidence": [
+            {
+              "source_id": "acc-coa-2023",
+              "locator": "Clinical Practice Algorithm for Repaired CoA: seguimiento de presión y masked hypertension",
+              "support": "Las alteraciones vasculares y la hipertensión pueden persistir o aparecer después de una reparación anatómica satisfactoria."
+            }
+          ]
+        },
+        {
+          "id": "08.03-c2-02",
+          "anchor_topic_ids": [
+            "08.03-02"
+          ],
+          "objective": "cambio",
+          "vignette": "Un prematuro con conducto hemodinámicamente significativo tiene lesión renal importante con oliguria marcada. Se considera ibuprofeno lisina para cierre farmacológico.",
+          "question": "¿Es apropiado iniciar ese fármaco con estos datos?",
+          "answer": "No. El deterioro renal importante lo contraindica.",
+          "discriminator": "lesión renal importante con oliguria marcada",
+          "reason": "La ficha de ibuprofeno lisina contraindica su uso en prematuros con deterioro renal significativo.",
+          "initial_action": "Revisar función renal y estrategia del conducto con neonatología y cardiología.",
+          "limits": "No significa cierre por otro método automático; valorar repercusión, anatomía y alternativas según protocolo local.",
+          "evidence": [
+            {
+              "source_id": "fda-neoprofen-2023",
+              "locator": "§4 Contraindications: significant impairment of renal function",
+              "support": "La ficha de ibuprofeno lisina contraindica su uso en prematuros con deterioro renal significativo."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "08.04",
+      "title": "Deterioro al iniciar alimentación",
+      "related_sections": [],
+      "scenarios": [
+        {
+          "id": "08.04-c2-01",
+          "anchor_topic_ids": [
+            "08.04-01"
+          ],
+          "objective": "cambio",
+          "vignette": "Una adolescente de quince años con galactosemia clásica mantiene la dieta indicada desde lactante. Consulta porque no progresa la pubertad y no ha presentado menstruación.",
+          "question": "¿El buen control dietético excluye insuficiencia ovárica?",
+          "answer": "No. Necesita valoración endocrina dirigida.",
+          "discriminator": "no progresa la pubertad",
+          "reason": "Las complicaciones gonadales pueden aparecer pese al tratamiento; la guía recomienda estudiar pubertad retrasada y vigilar función reproductiva.",
+          "initial_action": "Derivar a endocrinología para valoración puberal y hormonal con el equipo metabólico.",
+          "limits": "No atribuir toda amenorrea a galactosemia sin evaluación; no retirar ni intensificar la dieta sin indicación.",
+          "evidence": [
+            {
+              "source_id": "galnet-2017",
+              "locator": "Endocrinology/Fertility, recomendaciones24–29: pubertad retrasada, FSH/estradiol y POI",
+              "support": "Las complicaciones gonadales pueden aparecer pese al tratamiento; la guía recomienda estudiar pubertad retrasada y vigilar función reproductiva."
+            }
+          ]
+        },
+        {
+          "id": "08.04-c2-02",
+          "anchor_topic_ids": [
+            "08.04-02"
+          ],
+          "objective": "subtipo",
+          "vignette": "Un lactante tiene deficiencia de síntesis de BH4 por PTPS confirmada. La dieta redujo su fenilalanina, pero persisten hipotonía y movimientos distónicos. Se propone continuar solo dieta porque la fenilalanina ya se controló.",
+          "question": "¿Por qué ese control no demuestra tratamiento suficiente del problema neurológico?",
+          "answer": "También puede existir déficit de dopamina y serotonina que la dieta sola no corrige.",
+          "discriminator": "persisten hipotonía y movimientos distónicos",
+          "reason": "BH4 participa en síntesis de monoaminas además del metabolismo de fenilalanina; la monoterapia dietética puede dejar sin tratar esa vía.",
+          "initial_action": "Coordinar revisión metabólica y neurológica para tratamiento específico del subtipo y seguimiento del desarrollo.",
+          "limits": "No extrapolar el plan a todos los defectos de BH4 ni añadir precursores sin equipo experto. La guía reconoce evidencia global baja o muy baja y exige nutrición suficiente.",
+          "evidence": [
+            {
+              "source_id": "intd-bh4-2020",
+              "locator": "Treatment / Phe-reduced diet, R#30–32; first-line treatment: PTPSD and monoamine deficiency",
+              "support": "La guía desaconseja dieta reducida en fenilalanina como monoterapia para síntomas neurológicos en deficiencias de BH4 y describe fracaso en PTPSD pese a bajar fenilalanina."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "08.05",
+      "title": "Infecciones respiratorias y malabsorción",
+      "related_sections": [],
+      "scenarios": [
+        {
+          "id": "08.05-c2-01",
+          "anchor_topic_ids": [
+            "08.05-01"
+          ],
+          "objective": "incompleta",
+          "vignette": "Un niño con infecciones respiratorias recurrentes y mala ganancia de peso tuvo tamiz neonatal negativo para fibrosis quística.",
+          "question": "¿El tamiz negativo cierra el diagnóstico?",
+          "answer": "No.",
+          "discriminator": "infecciones respiratorias recurrentes y mala ganancia de peso",
+          "reason": "El fenotipo compatible exige evaluación diagnóstica aunque el tamiz sea negativo.",
+          "initial_action": "Solicitar cloro en sudor en un centro competente y valoración especializada.",
+          "limits": "Una prueba aislada intermedia requiere estudio adicional; no confirma ni excluye sola.",
+          "evidence": [
+            {
+              "source_id": "cff-diagnosis-2017",
+              "locator": "Recomendaciones 1, 5 y 7",
+              "support": "El fenotipo compatible exige evaluación diagnóstica aunque el tamiz sea negativo."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "08.06",
+      "title": "Infección congénita: enfoque",
+      "related_sections": [
+        "34"
+      ],
+      "scenarios": [
+        {
+          "id": "08.06-c2-01",
+          "anchor_topic_ids": [
+            "08.06-01"
+          ],
+          "objective": "cambio",
+          "vignette": "Una cuidadora embarazada tuvo contacto estrecho con un lactante con rubéola congénita confirmada. No tiene evidencia de inmunidad; su evaluación documenta susceptibilidad. Se propone vacunarla con SRP hoy para proteger la gestación.",
+          "question": "¿Debe administrarse SRP durante este embarazo por la exposición?",
+          "answer": "No; la vacuna viva está contraindicada durante el embarazo.",
+          "discriminator": "cuidadora embarazada",
+          "reason": "La exposición exige evaluación obstétrica y epidemiológica; no elimina la contraindicación gestacional de SRP.",
+          "initial_action": "Coordinar valoración urgente de la exposición con obstetricia y salud pública, evitar nuevas exposiciones y planear vacunación cuando termine el embarazo.",
+          "limits": "No equivale a negar otras medidas o seguimiento ni a asegurar infección fetal. La evaluación de infección materna y riesgo fetal es específica; no se atribuye protección inmediata a una vacuna contraindicada.",
+          "evidence": [
+            {
+              "source_id": "cdc-pregvax-2025",
+              "locator": "Measles, Mumps, Rubella: contraindicated in pregnancy; rubella-susceptible women and vaccination when no longer pregnant",
+              "support": "CDC contraindica SRP en embarazadas y aconseja orientación y vacunación posterior a gestación para susceptibles."
+            },
+            {
+              "source_id": "cdc-rubella-2026",
+              "locator": "Conduct laboratory evaluation of exposed pregnant women; Prevent Transmission from Infants with CRS",
+              "support": "La exposición a un caso de rubéola o CRS exige evaluar a embarazadas y considerar riesgo de lactantes infectados para cuidadoras susceptibles."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "08.07",
+      "title": "Exantema/tamiz fetal materno",
+      "related_sections": [],
+      "scenarios": [
+        {
+          "id": "08.07-c2-01",
+          "anchor_topic_ids": [
+            "08.07-01"
+          ],
+          "objective": "incompleta",
+          "vignette": "Un lactante tiene hipoacusia y antecedente de exantema materno en el embarazo, pero no tiene cataratas ni soplo.",
+          "question": "¿La ausencia de la tríada completa excluye rubéola congénita?",
+          "answer": "No.",
+          "discriminator": "no tiene cataratas ni soplo",
+          "reason": "La rubéola congénita puede presentar manifestaciones aisladas.",
+          "initial_action": "Coordinar confirmación específica y notificación según el sistema local.",
+          "limits": "La hipoacusia aislada tiene otras causas; no confirma rubéola.",
+          "evidence": [
+            {
+              "source_id": "cdc-rubella-2026",
+              "locator": "Clinical presentation; Laboratory testing",
+              "support": "La rubéola congénita puede presentar manifestaciones aisladas."
+            }
+          ]
+        },
+        {
+          "id": "08.07-c2-02",
+          "anchor_topic_ids": [
+            "08.07-02"
+          ],
+          "objective": "subtipo",
+          "vignette": "Un prematuro nacido a las 26 semanas sigue hospitalizado y tiene una exposición significativa a varicela. La madre tiene evidencia de inmunidad. El niño aún está asintomático.",
+          "question": "¿La inmunidad materna elimina la indicación de valorar inmunoglobulina específica?",
+          "answer": "No. La prematuridad extrema mantiene el riesgo.",
+          "discriminator": "nacido a las 26 semanas",
+          "reason": "CDC considera de alto riesgo a los prematuros hospitalizados de menos de 28 semanas independientemente de la inmunidad materna.",
+          "initial_action": "Consultar de inmediato neonatología e infectología para inmunoglobulina lo antes posible y medidas de exposición.",
+          "limits": "Confirmar que la exposición puede causar infección y aplicar el producto disponible; no esperar exantema para valorar profilaxis.",
+          "evidence": [
+            {
+              "source_id": "cdc-varicella-2024",
+              "locator": "Premature babies; Varicella-zoster immune globulin: <28 weeks regardless of maternal immunity",
+              "support": "CDC considera de alto riesgo a los prematuros hospitalizados de menos de 28 semanas independientemente de la inmunidad materna."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "08.08",
+      "title": "Lesiones de SNC y ojos",
+      "related_sections": [],
+      "scenarios": [
+        {
+          "id": "08.08-c2-01",
+          "anchor_topic_ids": [
+            "08.08-01"
+          ],
+          "objective": "mecanismo",
+          "vignette": "Un neonato de diez días tiene PCR salival para CMV positiva en una muestra tomada inmediatamente después de lactar. Una muestra de orina correctamente obtenida resulta negativa.",
+          "question": "¿Qué causa de falsa positividad salival debe considerarse?",
+          "answer": "Contaminación por CMV de la leche materna.",
+          "discriminator": "inmediatamente después de lactar",
+          "reason": "Las madres seropositivas pueden eliminar CMV en leche y contaminar la saliva; la discordancia exige verificar toma y confirmación.",
+          "initial_action": "Revisar calidad de ambas muestras con el equipo y repetir la evaluación indicada dentro de la ventana neonatal.",
+          "limits": "La discordancia no confirma ni excluye sola infección; una muestra posterior a tres semanas limita atribuir origen congénito.",
+          "evidence": [
+            {
+              "source_id": "cdc-cmv-lab-2024",
+              "locator": "Tests for congenital CMV in newborns; Specimen collection: leche materna y saliva >1h tras lactancia",
+              "support": "Las madres seropositivas pueden eliminar CMV en leche y contaminar la saliva; la discordancia exige verificar toma y confirmación."
+            }
+          ]
+        },
+        {
+          "id": "08.08-c2-02",
+          "anchor_topic_ids": [
+            "08.08-02"
+          ],
+          "objective": "incompleta",
+          "vignette": "La madre tiene IgG positiva para toxoplasma. El niño tiene IgG neonatal aislada, sin otra prueba específica ni hallazgos confirmatorios.",
+          "question": "¿La IgG neonatal aislada demuestra toxoplasmosis congénita?",
+          "answer": "No.",
+          "discriminator": "IgG neonatal aislada",
+          "reason": "La IgG materna cruza la placenta.",
+          "initial_action": "Solicitar interpretación especializada y pruebas neonatales dirigidas.",
+          "limits": "IgM o IgA negativas tampoco excluyen todos los casos; importa el seguimiento.",
+          "evidence": [
+            {
+              "source_id": "cdc-toxo-dpdx",
+              "locator": "Laboratory Diagnosis: serología en recién nacidos",
+              "support": "La IgG materna cruza la placenta."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "08.09",
+      "title": "Sífilis o herpes del RN",
+      "related_sections": [],
+      "scenarios": [
+        {
+          "id": "08.09-c2-01",
+          "anchor_topic_ids": [
+            "08.09-01"
+          ],
+          "objective": "cambio",
+          "vignette": "Un recién nacido tiene examen normal y título no mayor de cuatro veces el materno. Su madre tuvo sífilis sin tratamiento documentado.",
+          "question": "¿El examen normal permite descartar sífilis congénita?",
+          "answer": "No.",
+          "discriminator": "sin tratamiento documentado",
+          "reason": "La evaluación depende también del tratamiento materno y del riesgo de infección.",
+          "initial_action": "Aplicar el escenario de posible sífilis congénita y completar evaluación y tratamiento indicado.",
+          "limits": "Un esquema abreviado exige evaluación normal completa y seguimiento asegurado.",
+          "evidence": [
+            {
+              "source_id": "cdc-congenital-syphilis-2021",
+              "locator": "Scenario 2: Possible Congenital Syphilis",
+              "support": "La evaluación depende también del tratamiento materno y del riesgo de infección."
+            }
+          ]
+        },
+        {
+          "id": "08.09-c2-02",
+          "anchor_topic_ids": [
+            "08.09-02"
+          ],
+          "objective": "cambio",
+          "vignette": "Un neonato con herpes del sistema nervioso central recibe aciclovir intravenoso. Cerca del final de veintiún días mejora clínicamente, pero la PCR de herpes en LCR sigue positiva.",
+          "question": "¿La mejoría permite terminar el tratamiento intravenoso en la fecha prevista?",
+          "answer": "No; prolongar tratamiento y repetir estudio del LCR con el equipo especialista.",
+          "discriminator": "PCR de herpes en LCR sigue positiva",
+          "reason": "La persistencia de PCR positiva al final del curso exige continuar y comprobar negativización; no basta la apariencia clínica.",
+          "initial_action": "Mantener atención neonatal e infectológica y planear controles de LCR y tratamiento hasta criterio de finalización.",
+          "limits": "No extiende automáticamente todos los cursos neonatales ni convierte un resultado aislado de otra muestra en prueba de SNC. Ajustar seguridad renal y plan con el equipo; no sustituir fase aguda IV por supresión oral.",
+          "evidence": [
+            {
+              "source_id": "cps-neonatal-hsv-2025",
+              "locator": "Recommendations / Treatment and follow-up: CNS disease, CSF near end of 21-day course, positive PCR and extension",
+              "support": "CPS indica tomar LCR cerca del final de veintiún días; si PCR persiste positiva, prolongar aciclovir y repetir semanalmente hasta resultado negativo."
+            }
+          ]
+        },
+        {
+          "id": "08.09-c2-03",
+          "anchor_topic_ids": [
+            "08.09-01"
+          ],
+          "objective": "variante",
+          "vignette": "Una unidad identifica un recién nacido asintomático de madre con sífilis no tratada. El médico planea omitir la vigilancia porque el niño luce sano.",
+          "question": "¿Debe excluirse del sistema por estar asintomático?",
+          "answer": "No. Cumple evaluación de caso probable asintomático.",
+          "discriminator": "madre con sífilis no tratada",
+          "reason": "La vigilancia mexicana incluye riesgo materno aun sin signos neonatales.",
+          "initial_action": "Aplicar el manual DGE y coordinar evaluación y notificación.",
+          "limits": "La clasificación epidemiológica no sustituye el algoritmo clínico de tratamiento.",
+          "evidence": [
+            {
+              "source_id": "dge-congenital-syphilis-2021",
+              "locator": "pp. 22–23: definiciones operacionales y acciones",
+              "support": "La vigilancia mexicana incluye riesgo materno aun sin signos neonatales."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
