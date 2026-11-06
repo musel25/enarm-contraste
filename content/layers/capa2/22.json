@@ -1,0 +1,790 @@
+{
+  "schema_version": 1,
+  "layer": 2,
+  "section_id": "22",
+  "title": "Neurología",
+  "author": "clinical-author-13-24",
+  "sources": [
+    {
+      "id": "imss-cerebro",
+      "label": "IMSS. Código Cerebro. Protocolo de Atención Integral",
+      "url": "https://www.imss.gob.mx/sites/all/statics/profesionalesSalud/investigacionSalud/historico/programas/05-pai-codigo-cerebro.pdf",
+      "version": "edición institucional sin fecha explícita en portada; cita GPC-IMSS-102-22",
+      "checked_at": "2026-11-06",
+      "region": "mexico",
+      "access": "checked",
+      "locator": "Evaluación inicial; glucosa; última vez sin déficit; tomografía; activación del código"
+    },
+    {
+      "id": "aha-ich-2022",
+      "label": "AHA/ASA. Spontaneous Intracerebral Hemorrhage guideline: official key recommendations",
+      "url": "https://professional.heart.org/en/science-news/2022-guideline-for-the-management-of-patients-with-spontaneous-intracerebral-hemorrhage/top-things-to-know",
+      "version": "2022-05-17",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "TopThingsToKnow,punto11:riesgos de transfusiónplaquetaria; resumen oficial"
+    },
+    {
+      "id": "aha-sah-2023",
+      "label": "AHA/ASA. Aneurysmal Subarachnoid Hemorrhage guideline: official key recommendations",
+      "url": "https://professional.heart.org/en/science-news/2023-guideline-for-the-management-of-patients-with-aneurysmal-subarachnoid-hemorrhage/top-things-to-know",
+      "version": "2023-05-22",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Transfer to expert centers; delayed cerebral ischemia; deterioration"
+    },
+    {
+      "id": "ichd-moh-2018",
+      "label": "International Headache Society. ICHD-3: Medication-overuse headache",
+      "url": "https://ichd-3.org/8-headache-attributed-to-a-substance-or-its-withdrawal/8-2-medication-overuse-headache-moh/",
+      "version": "ICHD-3, 2018",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "8.2 Diagnostic criteria and coexistence with primary headache"
+    },
+    {
+      "id": "ichd-aura-2018",
+      "label": "International Headache Society. ICHD-3: Migraine with aura",
+      "url": "https://ichd-3.org/1-migraine/1-2-migraine-with-aura/",
+      "version": "ICHD-3, 2018",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "1.2 Diagnostic criteria: gradual spread and positive symptoms"
+    },
+    {
+      "id": "ichd-tension-2018",
+      "label": "International Headache Society. ICHD-3: Tension-type headache",
+      "url": "https://ichd-3.org/2-tension-type-headache/",
+      "version": "ICHD-3, 2018",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "General comment: secondary tension-type-like headache"
+    },
+    {
+      "id": "aes-status-2016",
+      "label": "American Epilepsy Society. Evidence-based guideline: Convulsive Status Epilepticus in Children and Adults",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4749120/",
+      "version": "2016",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Treatment algorithm; initial therapy; persistent altered consciousness"
+    },
+    {
+      "id": "ilae-cae",
+      "label": "ILAE. EpilepsyDiagnosis.org: Childhood Absence Epilepsy",
+      "url": "https://www.epilepsydiagnosis.org/syndrome/cae-diagcriteria.html",
+      "version": "2024-06-30",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "DiagnosticCriteria:alertas,EEG,MRIy límites diagnósticos"
+    },
+    {
+      "id": "nsw-jme",
+      "label": "Sydney Children’s Hospitals Network. Epilepsy clinician handbook: Juvenile Myoclonic Epilepsy",
+      "url": "https://www.schn.health.nsw.gov.au/epilepsy-clinician-handbook/syndromes/juvenile-myoclonic-epilepsy-jme-epilepsy-clinician-handbook",
+      "version": "versión web sin edición numerada",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Clinical presentation; myoclonus; sleep deprivation; EEG"
+    },
+    {
+      "id": "rch-febrile",
+      "label": "Royal Children’s Hospital Melbourne. Febrile seizure",
+      "url": "https://www.rch.org.au/clinicalguide/guideline_index/Febrile_seizure/",
+      "version": "2026-02",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Simple versus complex febrile seizure; assessment of cause"
+    },
+    {
+      "id": "rch-meningitis",
+      "label": "Royal Children’s Hospital Melbourne. Meningitis and encephalitis",
+      "url": "https://www.rch.org.au/clinicalguide/guideline_index/Meningitis_encephalitis/",
+      "version": "2024-10",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Empiric treatment; lumbar puncture contraindications; encephalitis"
+    },
+    {
+      "id": "mgfa-emergency",
+      "label": "MGFA. Emergency Management of Myasthenia Gravis: First Responders",
+      "url": "https://myasthenia.org/ar/wp-content/uploads/2024/09/MGFA-brochure-Emergency-Mgt-First-Responders.pdf",
+      "version": "documento institucional alojado 2024; sin edición numerada",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Respiratory assessment; pulse oximetry limitations; crisis"
+    },
+    {
+      "id": "aan-pd-2021",
+      "label": "AAN. Dopaminergic Therapy for Motor Symptoms in Early Parkinson Disease: Practice Guideline Summary",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8672433/",
+      "version": "2021",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Counseling on dopamine agonists; impulse-control disorders"
+    },
+    {
+      "id": "asam-2020",
+      "label": "ASAM. Clinical Practice Guideline on Alcohol Withdrawal Management",
+      "url": "https://www.asam.org/docs/default-source/quality-science/the_asam_clinical_practice_guideline_on_alcohol-1.pdf",
+      "version": "2020",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Thiamine; Wernicke risk; parenteral administration in malnutrition; glucose"
+    },
+    {
+      "id": "aha-ais-2026-key",
+      "label": "AHA/ASA. Acute ischemic stroke guideline: recomendaciones clave oficiales",
+      "url": "https://professional.heart.org/en/science-news/2026-guideline-for-the-early-management-of-patients-with-acute-ischemic-stroke/top-things-to-know",
+      "version": "2026-01-26; resumen oficial, no texto completo",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Punto10: no descenso intensivo dePAS<140tras reperfusión, incluso completa"
+    },
+    {
+      "id": "fosphenytoin-label-2024",
+      "label": "Fosfenitoína sódica/Hikma: información de prescripción primaria en DailyMed",
+      "url": "https://dailymed.nlm.nih.gov/dailymed/getFile.cfm?setid=519a44e3-8a93-456c-b71c-894513810d45&type=pdf",
+      "version": "2024-04; revisión declarada en portada",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "§4: bloqueoAVsegundo/tercergrado; §5.2 riesgo cardiovascular"
+    },
+    {
+      "id": "rch-csf-2024",
+      "label": "Royal Children’s Hospital. CSF interpretation",
+      "url": "https://www.rch.org.au/clinicalguide/guideline_index/csf/",
+      "version": "2024-10",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Additional tests/PCR: HSVPCRnegativa temprana y repetición con sospecha alta"
+    },
+    {
+      "id": "escmid-brainabscess-2024",
+      "label": "ESCMID. Brain abscess in children and adults: guía completa primaria, copia institucional del autor",
+      "url": "https://vbn.aau.dk/ws/portalfiles/portal/649326266/Bodilsen_et_al._2024_._European_society_of_Clinical_Microbiology_and_Infectious_Diseases_guidelines_on_diagnosis_and_treatment_of_brain_abscess_in_children_and_adults.pdf",
+      "version": "Publicación electrónica2023-08-29; ClinMicrobiolInfect2024;30:66–89",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Pregunta5, texto de recomendación y tabla4: absceso posneuroquirúrgico, meropenem+vancomicina o linezolid"
+    },
+    {
+      "id": "ean-pns-gbs-2023",
+      "label": "EAN/PNS. Guideline on diagnosis and treatment of Guillain–Barré syndrome: texto completo primario",
+      "url": "https://www.uems-neuroboard.org/web/images/docs/exam/2026/4-EAN--Guideline-GuillainBarre-syndrome2023.pdf",
+      "version": "2023; EurJNeurol30:3646–3674; DOI10.1111/ene.16073",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "IVIg, PICO14: contra un segundo curso solo por mal pronóstico"
+    },
+    {
+      "id": "firdapse-label-2026",
+      "label": "Amifampridina/Firdapse: información de prescripción primaria en DailyMed",
+      "url": "https://dailymed.nlm.nih.gov/dailymed/fda/fdaDrugXsl.cfm?setid=f015fe60-3128-4a43-8c31-19fc6b5def3f",
+      "version": "Registro DailyMed2026-04-16, versión15; información de prescripción revisada2024-05",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "§4 Contraindications: antecedente de crisis; §5.1 Seizures"
+    },
+    {
+      "id": "sno-eano-aed-2021",
+      "label": "SNO/EANO. Anticonvulsant prophylaxis in newly diagnosed brain tumors: resumen primario NLM",
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&id=34174071&retmode=xml",
+      "version": "2021-06-26; NeuroOncology23:1835–1844; DOI10.1093/neuonc/noab152",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Abstract/Recommendations: nivelA, no profilaxis primaria sin crisis; se leyó resumen primario por efetch, no artículo completo"
+    },
+    {
+      "id": "erbp-hypona-2014",
+      "label": "ESICM/ESE/ERA-EDTA. Hyponatraemia guideline: official ERBP short version",
+      "url": "https://www.european-renal-best-practice.org/sites/default/files/u33/short%20version%20hyponatraemia%20English%20FINAL.pdf",
+      "version": "2014-02-25; versión resumida oficialERBP",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "2.2 hiponatremia hiperglucémica; 2.3 diagnóstico diferencial; 3.1 síntomas graves"
+    },
+    {
+      "id": "nemos-diagnosis-2023",
+      "label": "NEMOS. Revised recommendations for NMOSD, Part I: Diagnosis and differential diagnosis; texto primario completo",
+      "url": "https://link.springer.com/article/10.1007/s00415-023-11634-0",
+      "version": "2023-04-06; J Neurol270:3341–3368",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Antibody testing: AQP4/MOG en suero y CBA; MRI: localización posterior, extensión y compromiso del quiasma; recomendaciones de grupo experto"
+    },
+    {
+      "id": "ilae-definition-2014",
+      "label": "ILAE Official Report. A practical clinical definition of epilepsy; texto primario completo",
+      "url": "https://www.ilae.org/guidelines/guidelines-and-reports/a-practical-clinical-definition-of-epilepsy",
+      "version": "2014; Epilepsia55(4):475–482; doi10.1111/epi.12550",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Tabla2; Two unprovoked seizures, pp.476–477: crisis provocada por factor transitorio no cuenta por sí sola para diagnóstico de epilepsia"
+    }
+  ],
+  "mexico_source_note": "Se abrió el Protocolo IMSS Código Cerebro; la portada consultada no imprime una fecha de edición y el texto cita GPC-IMSS-102-22. No se inventa una fecha a partir de la consulta. La búsqueda nacional no encontró una guía reciente y accesible para todos los temas. Se abrieron guías AES, AHA/ASA y AAN; ICHD-3 se comprobó por descarga temporal de las páginas cuando el visor falló. La guía pediátrica de meningitis solo respalda casos pediátricos. NHS aporta información institucional de diagnóstico y referencia, no pautas farmacológicas especializadas. Las sustituciones añaden recomendaciones oficialesAHA2026/2022 cuyo resumen sí contiene el punto probado; el artículoAIScompleto devolvió403 y no se declara consultado. Se abrieron EAN/PNS2023completo y ESCMID2024completo en copias institucionales, RCH2024/2026, ILAE2024 y fichas primarias de fosfenitoína2024/amifampridinaabril2026. La guíaSNO/EANO2021solo se leyó en resumen primario obtenido porNLMefetch; el texto completo no fue accesible. Su recomendación de profilaxis es explícita en dicho resumen. Las fichas estadounidenses no establecen autorización ni disponibilidad mexicana. Para el diferencial de neuritis óptica atípica no se comprobó una GPC mexicana reciente completa. Se abrió y leyó la recomendación primaria NEMOS2023 completa, apartados de RM y serología, y se declara como recomendación de grupo experto.",
+  "blocks": [
+    {
+      "id": "22.01",
+      "title": "Déficit neurológico brusco",
+      "related_sections": [],
+      "scenarios": [
+        {
+          "id": "22.01-c2-01",
+          "anchor_topic_ids": [
+            "22.01-01"
+          ],
+          "objective": "cambio",
+          "vignette": "Un adulto con ictus isquémico tuvo trombectomía con reperfusión completa y permanece monitorizado. El equipo propone bajar intensivamente la presión sistólica por debajo de140mmHg solo porque ya se abrió la arteria.",
+          "question": "¿La reperfusión completa justifica esa meta intensiva de rutina?",
+          "answer": "No.",
+          "discriminator": "por debajo de140mmHg solo porque ya se abrió la arteria",
+          "reason": "El descenso intensivo tras trombectomía puede causar daño y no se justifica por reperfusión completa.",
+          "initial_action": "Usar control de presión protocolizado y reevaluación neurológica con el equipo de ictus.",
+          "limits": "La respuesta no establece una meta universal ni permite ignorar presión extrema u otra indicación concurrente. El respaldo consultado es el resumen oficialAHA2026.",
+          "evidence": [
+            {
+              "source_id": "aha-ais-2026-key",
+              "locator": "TopThingsToKnow,punto10",
+              "support": "El descenso intensivo tras trombectomía puede causar daño y no se justifica por reperfusión completa."
+            }
+          ]
+        },
+        {
+          "id": "22.01-c2-02",
+          "anchor_topic_ids": [
+            "22.01-02"
+          ],
+          "objective": "cambio",
+          "vignette": "Un adulto con hemorragia intracerebral espontánea tomaba aspirina. Tiene recuento plaquetario normal y no requiere neurocirugía de emergencia. Se propone transfundir plaquetas de rutina por la aspirina.",
+          "question": "¿Está justificada esa transfusión rutinaria?",
+          "answer": "No; puede empeorar el desenlace.",
+          "discriminator": "recuento plaquetario normal y no requiere neurocirugía de emergencia",
+          "reason": "El beneficio de transfusión no se presume por uso de antiagregante y existe evidencia de daño fuera de situaciones seleccionadas.",
+          "initial_action": "Revisar tratamiento antitrombótico y mantener manejo neurocrítico sin transfusión plaquetaria automática.",
+          "limits": "No extrapolar a trombocitopenia grave o cirugía urgente; decidir esas situaciones con el equipo especialista.",
+          "evidence": [
+            {
+              "source_id": "aha-ich-2022",
+              "locator": "TopThingsToKnow,punto11: transfusión plaquetaria fuera de cirugía urgente o trombocitopenia grave",
+              "support": "El beneficio de transfusión no se presume por uso de antiagregante y existe evidencia de daño fuera de situaciones seleccionadas."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "22.02",
+      "title": "Cefalea en trueno",
+      "related_sections": [],
+      "scenarios": [
+        {
+          "id": "22.02-c2-01",
+          "anchor_topic_ids": [
+            "22.02-01"
+          ],
+          "objective": "gravedad",
+          "vignette": "Una paciente con hemorragia subaracnoidea confirmada desarrolla déficit focal nuevo varios días después del sangrado.",
+          "question": "¿Qué complicación debe investigarse con urgencia?",
+          "answer": "Isquemia cerebral tardía.",
+          "discriminator": "déficit focal nuevo varios días después",
+          "reason": "El deterioro posterior puede reflejar una complicación tratable.",
+          "initial_action": "Reevaluar con equipo neurovascular e imagen.",
+          "limits": "También excluir hidrocefalia, resangrado y alteraciones metabólicas.",
+          "evidence": [
+            {
+              "source_id": "aha-sah-2023",
+              "locator": "Detection and treatment of delayed cerebral ischemia",
+              "support": "El deterioro posterior puede reflejar una complicación tratable."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "22.03",
+      "title": "Cefalea recurrente",
+      "related_sections": [],
+      "scenarios": [
+        {
+          "id": "22.03-c2-01",
+          "anchor_topic_ids": [
+            "22.03-01"
+          ],
+          "objective": "cambio",
+          "vignette": "Una persona con migraña pasa de episodios aislados a cefalea casi diaria. Usa analgésicos con mucha frecuencia desde hace meses.",
+          "question": "¿Qué factor perpetuante debe evaluarse?",
+          "answer": "Sobreuso de medicación aguda.",
+          "discriminator": "Usa analgésicos con mucha frecuencia",
+          "reason": "El sobreuso puede coexistir con la cefalea primaria.",
+          "initial_action": "Cuantificar días y tipos de medicación en un diario.",
+          "limits": "Los criterios dependen de frecuencia y clase de fármaco.",
+          "evidence": [
+            {
+              "source_id": "ichd-moh-2018",
+              "locator": "8.2 Medication-overuse headache",
+              "support": "El sobreuso puede coexistir con la cefalea primaria."
+            }
+          ]
+        },
+        {
+          "id": "22.03-c2-02",
+          "anchor_topic_ids": [
+            "22.03-02"
+          ],
+          "objective": "contraste",
+          "vignette": "Una paciente tiene episodios repetidos de destellos que se expanden gradualmente, seguidos de hormigueo y luego cefalea. Se recupera por completo.",
+          "question": "¿Qué evolución favorece aura migrañosa?",
+          "answer": "Propagación gradual y síntomas positivos sucesivos.",
+          "discriminator": "se expanden gradualmente",
+          "reason": "La secuencia es más compatible con aura que un déficit súbito fijo.",
+          "initial_action": "Documentar patrón y evaluar si hay cambios o signos de alarma.",
+          "limits": "Un primer déficit atípico requiere excluir causas vasculares.",
+          "evidence": [
+            {
+              "source_id": "ichd-aura-2018",
+              "locator": "1.2 Diagnostic criteria",
+              "support": "La secuencia es más compatible con aura que un déficit súbito fijo."
+            }
+          ]
+        },
+        {
+          "id": "22.03-c2-03",
+          "anchor_topic_ids": [
+            "22.03-03"
+          ],
+          "objective": "cambio",
+          "vignette": "Un adulto sin cefalea previa tiene dolor opresivo bilateral nuevo después de traumatismo craneal.",
+          "question": "¿Debe clasificarse automáticamente como cefalea tensional primaria?",
+          "answer": "No; evaluar cefalea secundaria al traumatismo.",
+          "discriminator": "después de traumatismo craneal",
+          "reason": "El fenotipo tensional no elimina una causa secundaria.",
+          "initial_action": "Buscar signos de alarma y relación causal.",
+          "limits": "La intensidad leve no excluye lesión relevante.",
+          "evidence": [
+            {
+              "source_id": "ichd-tension-2018",
+              "locator": "General comment: primary or secondary headache",
+              "support": "El fenotipo tensional no elimina una causa secundaria."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "22.04",
+      "title": "Crisis de movimientos",
+      "related_sections": [],
+      "scenarios": [
+        {
+          "id": "22.04-c2-01",
+          "anchor_topic_ids": [
+            "22.04-01"
+          ],
+          "objective": "dato_faltante",
+          "vignette": "Un adulto convulsiona durante una hipoglucemia documentada. No tiene crisis previas no provocadas.",
+          "question": "¿Se demuestra epilepsia crónica?",
+          "answer": "No; primero valorar crisis aguda sintomática.",
+          "discriminator": "hipoglucemia documentada",
+          "reason": "Una causa reversible puede provocar la crisis.",
+          "initial_action": "Corregir glucosa y evaluar recuperación.",
+          "limits": "Una crisis provocada no establece por sí sola epilepsia.",
+          "evidence": [
+            {
+              "source_id": "aes-status-2016",
+              "locator": "Initial stabilization: glucose and reversible causes",
+              "support": "Una causa reversible puede provocar la crisis."
+            },
+            {
+              "source_id": "ilae-definition-2014",
+              "locator": "Two unprovoked seizures, pp.476–477: crisis por factor transitorio; tabla2 y definición operacional",
+              "support": "Una crisis por un factor transitorio reversible no establece por sí sola una predisposición duradera a crisis."
+            }
+          ]
+        },
+        {
+          "id": "22.04-c2-02",
+          "anchor_topic_ids": [
+            "22.04-02"
+          ],
+          "objective": "cambio",
+          "vignette": "Una niña tiene ausencias típicas breves, desarrollo y exploración normales y EEG con punta-onda generalizada durante los episodios. No hay signos de alerta del síndrome. Se solicita RM solo para confirmar la epilepsia de ausencia infantil.",
+          "question": "¿La RM es obligatoria para esa confirmación?",
+          "answer": "No, en un cuadro típico sin alertas.",
+          "discriminator": "No hay signos de alerta del síndrome",
+          "reason": "La clasificaciónILAE no exige RM para el diagnóstico típico de ausencia infantil.",
+          "initial_action": "Integrar clínica yEEG; reservar imagen para datos atípicos o indicación específica.",
+          "limits": "Focalidad, regresión, alteración de exploración u otras alertas obligan a reconsiderar el síndrome y sus estudios.",
+          "evidence": [
+            {
+              "source_id": "ilae-cae",
+              "locator": "DiagnosticCriteria: AreMRIorictalEEGrequired? MRIisnotrequired",
+              "support": "La clasificaciónILAE no exige RM para el diagnóstico típico de ausencia infantil."
+            }
+          ]
+        },
+        {
+          "id": "22.04-c2-03",
+          "anchor_topic_ids": [
+            "22.04-03"
+          ],
+          "objective": "cambio",
+          "vignette": "Un adolescente con epilepsia mioclónica juvenil confirmada presenta más sacudidas matutinas después de iniciar carbamazepina. Antes se habían controlado con otra pauta.",
+          "question": "¿Qué explicación farmacológica debe revisarse antes de atribuirlo solo a progresión?",
+          "answer": "La carbamazepina puede agravar este síndrome.",
+          "discriminator": "más sacudidas matutinas después de iniciar carbamazepina",
+          "reason": "Algunos antiepilépticos eficaces en crisis focales empeoran las mioclonías de este síndrome generalizado.",
+          "initial_action": "Contactar a neurología para revisar el fármaco y planificar una alternativa segura.",
+          "limits": "No suspender bruscamente el medicamento sin un plan; confirmar adherencia, sueño y otros desencadenantes.",
+          "evidence": [
+            {
+              "source_id": "nsw-jme",
+              "locator": "Management: carbamazepine not recommended; listado de fármacos que pueden exacerbar crisis",
+              "support": "Algunos antiepilépticos eficaces en crisis focales empeoran las mioclonías de este síndrome generalizado."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "22.05",
+      "title": "Convulsión con fiebre o duración larga",
+      "related_sections": [],
+      "scenarios": [
+        {
+          "id": "22.05-c2-01",
+          "anchor_topic_ids": [
+            "22.05-01"
+          ],
+          "objective": "cambio",
+          "vignette": "Los padres de un niño que tuvo una crisis febril simple quieren darle antitérmicos de forma programada en toda infección futura, aunque esté cómodo, para evitar otra convulsión.",
+          "question": "¿Se ha demostrado que esa estrategia prevenga las crisis febriles?",
+          "answer": "No.",
+          "discriminator": "para evitar otra convulsión",
+          "reason": "Los antitérmicos pueden aliviar malestar, pero no previenen las crisis febriles.",
+          "initial_action": "Explicar su uso para confort y enseñar primeros auxilios y cuándo solicitar ayuda.",
+          "limits": "Una nueva crisis prolongada o con rasgos de alarma requiere evaluación; no confundir prevención de recurrencia con tratamiento de una crisis en curso.",
+          "evidence": [
+            {
+              "source_id": "rch-febrile",
+              "locator": "Keypoints3: antipyreticsdonotpreventfebrileconvulsions",
+              "support": "Los antitérmicos pueden aliviar malestar, pero no previenen las crisis febriles."
+            }
+          ]
+        },
+        {
+          "id": "22.05-c2-02",
+          "anchor_topic_ids": [
+            "22.05-02"
+          ],
+          "objective": "cambio",
+          "vignette": "Un adulto continúa en estatus convulsivo pese a benzodiacepinas adecuadas. Su ECG documenta bloqueoAVde segundo grado. Se propone fosfenitoína como segunda línea.",
+          "question": "¿Qué dato modifica la seguridad de esa elección?",
+          "answer": "El bloqueoAV, contraindicación de fosfenitoína.",
+          "discriminator": "bloqueoAVde segundo grado",
+          "reason": "La fosfenitoína puede comprometer la conducción y está contraindicada en bloqueoAVde segundo o tercer grado.",
+          "initial_action": "Continuar reanimación y elegir otra segunda línea protocolizada con el equipo experto.",
+          "limits": "No retrasar el control del estatus; las alternativas dependen de función orgánica y otras contraindicaciones. No se fija dosis.",
+          "evidence": [
+            {
+              "source_id": "fosphenytoin-label-2024",
+              "locator": "§4 Contraindications;§5.2 cardiovascularrisk",
+              "support": "La fosfenitoína puede comprometer la conducción y está contraindicada en bloqueoAVde segundo o tercer grado."
+            }
+          ]
+        },
+        {
+          "id": "22.05-c2-03",
+          "anchor_topic_ids": [
+            "22.05-02",
+            "22.04-01"
+          ],
+          "objective": "cambio",
+          "vignette": "Tras controlar convulsiones prolongadas en un adulto, se documenta hiponatremia hipotónica grave como causa probable. Persiste alteración neurológica y aún no se ha tratado el trastorno de sodio.",
+          "question": "¿Qué tratamiento causal no debe omitirse además del control de crisis?",
+          "answer": "Corrección urgente y vigilada con solución salina hipertónica.",
+          "discriminator": "hiponatremia hipotónica grave como causa probable",
+          "reason": "Detener las sacudidas no corrige el edema cerebral asociado a hiponatremia sintomática grave.",
+          "initial_action": "Activar manejo hospitalario protocolizado con monitorización estrecha de sodio y neurología.",
+          "limits": "Evitar sobrecorrección; confirmar mecanismo y duración. El caso no establece un volumen, velocidad ni meta de corrección individual.",
+          "evidence": [
+            {
+              "source_id": "erbp-hypona-2014",
+              "locator": "3.1:síntomasgraves y tratamiento inicial con salina hipertónica",
+              "support": "Detener las sacudidas no corrige el edema cerebral asociado a hiponatremia sintomática grave."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "22.06",
+      "title": "Fiebre, cefalea y alteración mental",
+      "related_sections": [],
+      "scenarios": [
+        {
+          "id": "22.06-c2-01",
+          "anchor_topic_ids": [
+            "22.06-01"
+          ],
+          "objective": "subtipo",
+          "vignette": "Un recién nacido de tres semanas recibe antibióticos adecuados por meningitis bacteriana sospechada. Se propone añadir dexametasona de rutina porque se usa en pacientes mayores.",
+          "question": "¿Debe extrapolarse esa pauta a todo neonato?",
+          "answer": "No; no se recomienda esteroide rutinario en neonatos.",
+          "discriminator": "recién nacido de tres semanas",
+          "reason": "La evidencia y las recomendaciones de esteroides cambian con la edad neonatal.",
+          "initial_action": "Mantener antimicrobianos y cuidados neonatales; discutir adjuntos con infectología y neonatología.",
+          "limits": "No retrasar antibióticos; una indicación independiente de esteroide requiere valoración propia.",
+          "evidence": [
+            {
+              "source_id": "rch-meningitis",
+              "locator": "Suggestedantibioticregimen0–2months;Steroids:notrecommendedinneonates",
+              "support": "La evidencia y las recomendaciones de esteroides cambian con la edad neonatal."
+            }
+          ]
+        },
+        {
+          "id": "22.06-c2-02",
+          "anchor_topic_ids": [
+            "22.06-02"
+          ],
+          "objective": "incompleta",
+          "vignette": "Un niño tiene encefalitis sospechada por fiebre, cambio conductual y crisis focales. La PCRdeHSVdelLCRtomada en el primer día es negativa. La sospecha herpética sigue alta.",
+          "question": "¿Ese resultado temprano basta para suspender la evaluación y cobertura contraHSV?",
+          "answer": "No; puede ser un falso negativo temprano.",
+          "discriminator": "tomada en el primer día es negativa",
+          "reason": "La PCRpuede ser negativa en las primeras36–72horas de encefalitis herpética.",
+          "initial_action": "Mantener manejo empírico indicado y coordinar repetición deLCR/PCRcuando sea seguro.",
+          "limits": "Reevaluar diagnósticos alternativos y función renal durante aciclovir; la nueva punción depende de seguridad clínica.",
+          "evidence": [
+            {
+              "source_id": "rch-csf-2024",
+              "locator": "Additionaltests/PCR:HSVearlynegative;repeatLPandPCRwithhighsuspicion",
+              "support": "La PCRpuede ser negativa en las primeras36–72horas de encefalitis herpética."
+            }
+          ]
+        },
+        {
+          "id": "22.06-c2-03",
+          "anchor_topic_ids": [
+            "22.06-03"
+          ],
+          "objective": "subtipo",
+          "vignette": "Un adulto desarrolla absceso cerebral después de una neurocirugía reciente. Aún no hay cultivo y se propone el mismo esquema empírico de un absceso comunitario sin factores especiales.",
+          "question": "¿Qué antecedente cambia la selección antimicrobiana?",
+          "answer": "La neurocirugía reciente.",
+          "discriminator": "después de una neurocirugía reciente",
+          "reason": "El contexto posneuroquirúrgico cambia el espectro esperado, incluidos estafilococos y bacilos gramnegativos.",
+          "initial_action": "Coordinar drenaje y cultivos; seleccionar cobertura posneuroquirúrgica, como meropenem con vancomicina o linezolid, según especialista y epidemiología local.",
+          "limits": "La recomendaciónESCMIDes condicional y de certeza muy baja en el texto; ajustar a cultivo, alergias y función orgánica. No extrapolar a todo absceso comunitario.",
+          "evidence": [
+            {
+              "source_id": "escmid-brainabscess-2024",
+              "locator": "Pregunta5, recomendación del texto y tabla4:post-neurosurgicalbrainabscess",
+              "support": "El contexto posneuroquirúrgico cambia el espectro esperado, incluidos estafilococos y bacilos gramnegativos."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "22.07",
+      "title": "Debilidad progresiva",
+      "related_sections": [],
+      "scenarios": [
+        {
+          "id": "22.07-c2-01",
+          "anchor_topic_ids": [
+            "22.07-01"
+          ],
+          "objective": "cambio",
+          "vignette": "Un adulto con Guillain-Barré ya completó un curso estándar deIVIG. Tiene mal pronóstico y recuperación lenta, sin una mejoría seguida de nueva recaída. Se propone otro curso solo para acelerar recuperación.",
+          "question": "¿El mal pronóstico justifica un segundo curso rutinario deIVIG?",
+          "answer": "No.",
+          "discriminator": "sin una mejoría seguida de nueva recaída",
+          "reason": "La guíaEAN/PNSrecomienda no añadir un segundo curso solo por mal pronóstico.",
+          "initial_action": "Reevaluar curso, complicaciones y diagnóstico; mantener soporte y rehabilitación con neurología.",
+          "limits": "Una fluctuación relacionada con tratamiento o evolución compatible con otra neuropatía requiere una valoración distinta.",
+          "evidence": [
+            {
+              "source_id": "ean-pns-gbs-2023",
+              "locator": "IVIg/PICO14:recomendación fuerte contra segundo curso por poorprognosis",
+              "support": "La guíaEAN/PNSrecomienda no añadir un segundo curso solo por mal pronóstico."
+            }
+          ]
+        },
+        {
+          "id": "22.07-c2-02",
+          "anchor_topic_ids": [
+            "22.07-02"
+          ],
+          "objective": "gravedad",
+          "vignette": "Una persona con miastenia tiene voz débil, disfagia y dificultad para contar en una espiración. La saturación es normal.",
+          "question": "¿La saturación permite excluir crisis?",
+          "answer": "No.",
+          "discriminator": "dificultad para contar en una espiración",
+          "reason": "La hipoventilación neuromuscular puede preceder desaturación.",
+          "initial_action": "Solicitar evaluación urgente de fuerza respiratoria y vía aérea.",
+          "limits": "No esperar hipoxemia para escalar atención.",
+          "evidence": [
+            {
+              "source_id": "mgfa-emergency",
+              "locator": "Respiratory assessment and pulse oximetry limitations",
+              "support": "La hipoventilación neuromuscular puede preceder desaturación."
+            }
+          ]
+        },
+        {
+          "id": "22.07-c2-03",
+          "anchor_topic_ids": [
+            "22.07-03"
+          ],
+          "objective": "cambio",
+          "vignette": "Un adulto con Lambert-Eaton requiere tratamiento sintomático. Tiene antecedente confirmado de crisis epilépticas y se propone amifampridina.",
+          "question": "¿Qué antecedente impide esa elección rutinaria?",
+          "answer": "El antecedente de crisis, contraindicación de amifampridina.",
+          "discriminator": "antecedente confirmado de crisis epilépticas",
+          "reason": "La amifampridina puede causar crisis y su ficha primaria contraindica uso con ese antecedente.",
+          "initial_action": "Revisar opciones con neurología y tratar la causa asociada según el caso.",
+          "limits": "La ficha consultada es estadounidense; verificar producto y disponibilidad local. El caso no indica dosis ni sustituye vigilancia oncológica.",
+          "evidence": [
+            {
+              "source_id": "firdapse-label-2026",
+              "locator": "§4Contraindications;§5.1Seizures",
+              "support": "La amifampridina puede causar crisis y su ficha primaria contraindica uso con ese antecedente."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "22.08",
+      "title": "Temblor, rigidez o brotes",
+      "related_sections": [],
+      "scenarios": [
+        {
+          "id": "22.08-c2-01",
+          "anchor_topic_ids": [
+            "22.08-01"
+          ],
+          "objective": "cambio",
+          "vignette": "Un paciente con Parkinson tratado con agonista dopaminérgico empieza a apostar de forma compulsiva.",
+          "question": "¿Qué efecto adverso debe considerarse?",
+          "answer": "Trastorno de control de impulsos.",
+          "discriminator": "empieza a apostar de forma compulsiva",
+          "reason": "Los agonistas dopaminérgicos pueden modificar conducta impulsiva.",
+          "initial_action": "Informar al equipo tratante y revisar tratamiento.",
+          "limits": "No suspender de forma brusca sin plan supervisado.",
+          "evidence": [
+            {
+              "source_id": "aan-pd-2021",
+              "locator": "Counseling on impulse-control disorders",
+              "support": "Los agonistas dopaminérgicos pueden modificar conducta impulsiva."
+            }
+          ]
+        },
+        {
+          "id": "22.08-c2-02",
+          "anchor_topic_ids": [
+            "22.08-02"
+          ],
+          "objective": "contraste",
+          "vignette": "Una adulta presenta neuritis óptica bilateral grave. La resonancia muestra afectación extensa de la porción posterior de los nervios ópticos y del quiasma.",
+          "question": "¿Qué alternativas desmielinizantes requieren estudio antes de atribuirlo a esclerosis múltiple?",
+          "answer": "Neuromielitis óptica y enfermedad asociada a MOG.",
+          "discriminator": "afectación extensa de la porción posterior de los nervios ópticos y del quiasma",
+          "reason": "El compromiso posterior y quiasmático es más característico de NMOSD que de esclerosis múltiple; MOGAD también puede afectar el quiasma.",
+          "initial_action": "Solicitar valoración neurooftalmológica urgente, imagen dirigida y anticuerpos séricos AQP4-IgG y MOG-IgG mediante ensayos basados en células según valoración especializada.",
+          "limits": "Ni la imagen ni la bilateralidad confirman por sí solas NMOSD o MOGAD; interpretar serología y criterios clínicos en conjunto. No fijar tratamiento modificador antes de aclarar el diagnóstico.",
+          "evidence": [
+            {
+              "source_id": "nemos-diagnosis-2023",
+              "locator": "Secciones Antibody testing y MRI: optic nerve lesion location, extension and chiasmal involvement",
+              "support": "El compromiso posterior y quiasmático es más característico de NMOSD que de esclerosis múltiple; MOGAD también puede afectar el quiasma."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "22.09",
+      "title": "Cefalea con focalidad progresiva",
+      "related_sections": [],
+      "scenarios": [
+        {
+          "id": "22.09-c2-01",
+          "anchor_topic_ids": [
+            "22.09-01"
+          ],
+          "objective": "cambio",
+          "vignette": "Un adulto tiene un tumor cerebral recién diagnosticado y nunca ha presentado crisis. No está en un contexto perioperatorio inmediato. Se propone iniciar antiepiléptico solo para prevenir una primera crisis.",
+          "question": "¿Se recomienda esa profilaxis primaria de rutina?",
+          "answer": "No.",
+          "discriminator": "nunca ha presentado crisis",
+          "reason": "La guíaSNO/EANOrecomienda no prescribir antiepilépticos de forma primaria en pacientes con tumor sin crisis previas.",
+          "initial_action": "Individualizar cuidados neurooncológicos y tratar crisis si ocurren.",
+          "limits": "No extrapolar a crisis documentadas ni equiparar con profilaxis perioperatoria, donde la evidencia es distinta. Solo se comprobó el resumen primario de la guía, que contiene esta recomendación explícita.",
+          "evidence": [
+            {
+              "source_id": "sno-eano-aed-2021",
+              "locator": "Abstract/Recommendations,levelA:noAEDsforprimaryprophylaxiswithoutseizures",
+              "support": "La guíaSNO/EANOrecomienda no prescribir antiepilépticos de forma primaria en pacientes con tumor sin crisis previas."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "22.10",
+      "title": "Confusión por malnutrición",
+      "related_sections": [],
+      "scenarios": [
+        {
+          "id": "22.10-c2-01",
+          "anchor_topic_ids": [
+            "22.10-01"
+          ],
+          "objective": "cambio",
+          "vignette": "Un adulto con malnutrición, abstinencia alcohólica y Wernicke sospechada ya recibe tiamina parenteral. El laboratorio demuestra hipomagnesemia. Se propone no corregirla porque ya se dio la vitamina.",
+          "question": "¿La tiamina sustituye la corrección de ese déficit electrolítico?",
+          "answer": "No; la hipomagnesemia requiere reposición indicada.",
+          "discriminator": "El laboratorio demuestra hipomagnesemia",
+          "reason": "El tratamiento vitamínico no corrige una deficiencia de magnesio documentada.",
+          "initial_action": "Corregir magnesio según función renal y protocolo, junto con tiamina y tratamiento integral.",
+          "limits": "No indicar magnesio profiláctico a todo paciente sin evaluar la indicación; vigilar función renal y otros electrolitos.",
+          "evidence": [
+            {
+              "source_id": "asam-2020",
+              "locator": "RecommendationV.9:administrarmagnesio en hipomagnesemia y situaciones seleccionadas",
+              "support": "El tratamiento vitamínico no corrige una deficiencia de magnesio documentada."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

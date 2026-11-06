@@ -1,0 +1,575 @@
+{
+  "schema_version": 1,
+  "layer": 2,
+  "section_id": "19",
+  "title": "Nefrología",
+  "author": "clinical-author-13-24",
+  "sources": [
+    {
+      "id": "kdigo-aki-2012",
+      "label": "KDIGO. Acute Kidney Injury guideline",
+      "url": "https://kdigo.org/wp-content/uploads/2016/10/KDIGO-2012-AKI-Guideline-English.pdf",
+      "version": "2012",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "2.3 evaluation; 3.1 hemodynamic support; 5.1 renal replacement therapy"
+    },
+    {
+      "id": "kdigo-ckd-2024",
+      "label": "KDIGO. Evaluation and Management of CKD guideline",
+      "url": "https://kdigo.org/wp-content/uploads/2024/03/KDIGO-2024-CKD-Guideline.pdf",
+      "version": "2024",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "1 evaluation and chronicity; 3 diabetes and renoprotective therapy"
+    },
+    {
+      "id": "kdigo-gd-2021",
+      "label": "KDIGO. Glomerular Diseases guideline: executive summary",
+      "url": "https://kdigo.org/wp-content/uploads/2017/02/KDIGO-2021-GD-Guideline-Executive-Summary.pdf",
+      "version": "2021",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "General principles; IgA; infection-related GN; anti-GBM; rapidly progressive GN"
+    },
+    {
+      "id": "kdigo-ln-2024",
+      "label": "KDIGO. Lupus Nephritis guideline",
+      "url": "https://kdigo.org/wp-content/uploads/2024/01/KDIGO-2024-Lupus-Nephritis-Guideline.pdf",
+      "version": "2024",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Diagnosis; kidney biopsy; clinical-histologic discordance"
+    },
+    {
+      "id": "kdigo-adpkd-2025",
+      "label": "KDIGO. ADPKD guideline",
+      "url": "https://kdigo.org/wp-content/uploads/2025/01/KDIGO-2025-ADPKD-Guideline.pdf",
+      "version": "2025",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Diagnosis; extrarenal manifestations; intracranial aneurysm risk"
+    },
+    {
+      "id": "sfe-di-2018",
+      "label": "Society for Endocrinology. Inpatient management of cranial diabetes insipidus",
+      "url": "https://www.gloshospitals.nhs.uk/documents/7559/SOCIETY_FOR_ENDOCRINOLOGY_CLINICAL_GUIDANCE__Inpatient_management_of_cranial_d_GSYw5eC.pdf",
+      "version": "2018",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Risk of omitted desmopressin; hypernatremia; fluid and sodium monitoring"
+    },
+    {
+      "id": "erbp-hypona-2014",
+      "label": "ESICM/ESE/ERA-EDTA. Hyponatraemia guideline: official ERBP short version",
+      "url": "https://www.european-renal-best-practice.org/sites/default/files/u33/short%20version%20hyponatraemia%20English%20FINAL.pdf",
+      "version": "2014-02-25; versión resumida oficialERBP",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "2.2 hiponatremia hiperglucémica; 2.3 diagnóstico diferencial; 3.1 síntomas graves"
+    },
+    {
+      "id": "erknet-rta-2021",
+      "label": "ERKNet/ESPN. Distal renal tubular acidosis: clinical practice points",
+      "url": "https://spnp-spp.pt/media/k3xpwerk/distal-renal-tubular-acidosis-erknet-espn-clinical-practice-points-2021-_compressed.pdf",
+      "version": "2021",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Diagnosis: normal anion gap acidosis; urine acidification; exclude gastrointestinal loss"
+    },
+    {
+      "id": "aast-rhabdo-2022",
+      "label": "AAST. Rhabdomyolysis Clinical Consensus Document",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8804685/",
+      "version": "2022-01-27",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Electrolyte abnormalities; hyperkalemia; fluid management"
+    },
+    {
+      "id": "imss-dialysis-2013",
+      "label": "IMSS. Manejo ambulatorio del adulto con diálisis peritoneal. IMSS-642-13",
+      "url": "https://www.imss.gob.mx/sites/all/statics/guiasclinicas/642GER.pdf",
+      "version": "2013",
+      "checked_at": "2026-11-06",
+      "region": "mexico",
+      "access": "checked",
+      "locator": "Prevención y detección de peritonitis; líquido turbio y dolor abdominal"
+    },
+    {
+      "id": "gina-2026",
+      "label": "GINA. Global Strategy for Asthma Management and Prevention",
+      "url": "https://ginasthma.org/wp-content/uploads/2026/05/GINA-2026-Strategy-Report-WMS.pdf",
+      "version": "2026",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Diagnosis in children; assessment before step-up; severe exacerbations and silent chest"
+    },
+    {
+      "id": "ispd-peritonitis-2022",
+      "label": "ISPD. Peritonitis guideline recommendations:2022update on prevention and treatment",
+      "url": "https://journals.sagepub.com/doi/pdf/10.1177/08968608221080586",
+      "version": "2022-03-10",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Polymicrobial peritonitis, p25PDF y figura8: organismos entéricos y evaluación de causa quirúrgica"
+    },
+    {
+      "id": "asn-rvt-case-2020",
+      "label": "Perazella MA. A Patient with Nephrotic Syndrome and Acute Flank Pain. Kidney360; caso docente primario",
+      "url": "https://pdfs.semanticscholar.org/3aa2/eb1431abb5aa313b328181ee2cb5e71973c8.pdf",
+      "version": "2020-01; Kidney360 1:74–75; DOI10.34067/KID.0000482019",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "p74: Case Answer y discusión; p75: Teaching Points, diagnóstico por imagen venosa"
+    }
+  ],
+  "mexico_source_note": "Se abrió IMSS-642-13 para diálisis peritoneal. La búsqueda nacional encontró la ficha IMSS-727-24 y la GPC renal de 2019, pero no se pudo comprobar todo su texto clínico durante esta consulta; no se usan como respaldo comprobado. Las decisiones se apoyan en documentos KDIGO abiertos de 2012, 2021, 2024 y 2025, y guías específicas. No se presenta el borrador de actualización KDIGO 2027 como una guía definitiva.",
+  "blocks": [
+    {
+      "id": "19.01",
+      "title": "Creatinina elevada",
+      "related_sections": [],
+      "scenarios": [
+        {
+          "id": "19.01-c2-01",
+          "anchor_topic_ids": [
+            "19.01-01"
+          ],
+          "objective": "variante",
+          "vignette": "Un adulto mantiene una diuresis aparentemente normal después de cirugía, pero su creatinina se duplicó respecto al valor preoperatorio en dos días.",
+          "question": "¿La diuresis conservada permite excluir lesión renal aguda?",
+          "answer": "No; el cambio de creatinina cumple un criterio independiente.",
+          "discriminator": "su creatinina se duplicó respecto al valor preoperatorio en dos días",
+          "reason": "La lesión renal aguda puede ser no oligúrica.",
+          "initial_action": "Confirmar tendencia y evaluar perfusión, nefrotóxicos y causas reversibles.",
+          "limits": "La creatinina requiere contexto y mediciones fiables; la diuresis conservada tampoco identifica la causa.",
+          "evidence": [
+            {
+              "source_id": "kdigo-aki-2012",
+              "locator": "2.1.1: criterios alternativos de creatinina o volumen urinario",
+              "support": "La lesión renal aguda puede ser no oligúrica."
+            }
+          ]
+        },
+        {
+          "id": "19.01-c2-02",
+          "anchor_topic_ids": [
+            "19.01-02"
+          ],
+          "objective": "incompleta",
+          "vignette": "Una mujer tiene eGFR disminuida en una sola prueba durante deshidratación. No hay estudios anteriores.",
+          "question": "¿Se demuestra enfermedad renal crónica?",
+          "answer": "No; debe establecerse cronicidad.",
+          "discriminator": "en una sola prueba",
+          "reason": "La persistencia o evidencia estructural define cronicidad.",
+          "initial_action": "Corregir causa aguda y revisar o repetir estudios.",
+          "limits": "No demorar atención de complicaciones actuales.",
+          "evidence": [
+            {
+              "source_id": "kdigo-ckd-2024",
+              "locator": "1.1 Establishing chronicity",
+              "support": "La persistencia o evidencia estructural define cronicidad."
+            }
+          ]
+        },
+        {
+          "id": "19.01-c2-03",
+          "anchor_topic_ids": [
+            "19.01-01",
+            "19.06-03"
+          ],
+          "objective": "cambio",
+          "vignette": "Un paciente con lesión renal aguda tiene edema y congestión pulmonar. Sigue recibiendo líquidos por creatinina alta pese a perfusión adecuada.",
+          "question": "¿Qué debe cambiar?",
+          "answer": "Detener aporte indiscriminado y reevaluar sobrecarga.",
+          "discriminator": "congestión pulmonar",
+          "reason": "La creatinina alta no demuestra déficit de volumen.",
+          "initial_action": "Reevaluar balance y necesidad de diurético o diálisis.",
+          "limits": "La decisión usa estado clínico, no creatinina aislada.",
+          "evidence": [
+            {
+              "source_id": "kdigo-aki-2012",
+              "locator": "3.1 Hemodynamic support; fluid overload",
+              "support": "La creatinina alta no demuestra déficit de volumen."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "19.02",
+      "title": "Diabetes con albuminuria",
+      "related_sections": [],
+      "scenarios": [
+        {
+          "id": "19.02-c2-01",
+          "anchor_topic_ids": [
+            "19.02-01"
+          ],
+          "objective": "cambio",
+          "vignette": "Una persona con diabetes tipo2 y enfermedad renal crónica recibe un inhibidorSGLT2. Será sometida a cirugía abdominal con ayuno prolongado; se propone mantenerlo por su beneficio renal.",
+          "question": "¿Ese beneficio justifica continuarlo durante el ayuno quirúrgico?",
+          "answer": "No; corresponde suspensión temporal según el plan perioperatorio.",
+          "discriminator": "cirugía abdominal con ayuno prolongado",
+          "reason": "El ayuno, la cirugía y la enfermedad crítica aumentan el riesgo de cetosis durante el uso deSGLT2.",
+          "initial_action": "Coordinar suspensión y reinicio con el equipo, con un plan de control glucémico.",
+          "limits": "La suspensión es temporal; el calendario y el reinicio dependen del fármaco, la ingesta y la evolución.",
+          "evidence": [
+            {
+              "source_id": "kdigo-ckd-2024",
+              "locator": "Práctica3.7.2: suspender temporalmenteSGLT2 durante ayuno prolongado, cirugía o enfermedad crítica",
+              "support": "El ayuno, la cirugía y la enfermedad crítica aumentan el riesgo de cetosis durante el uso deSGLT2."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "19.03",
+      "title": "Poliuria con hipernatremia",
+      "related_sections": [],
+      "scenarios": [
+        {
+          "id": "19.03-c2-01",
+          "anchor_topic_ids": [
+            "19.03-01"
+          ],
+          "objective": "gravedad",
+          "vignette": "Un adulto con diabetes insípida central conocida está somnoliento y no puede beber. Omitió desmopresina y presenta hipernatremia.",
+          "question": "¿Qué cambio lo vuelve de alto riesgo?",
+          "answer": "Pérdida de acceso a agua y omisión de desmopresina.",
+          "discriminator": "no puede beber",
+          "reason": "La compensación por sed ya no protege el balance de agua.",
+          "initial_action": "Hospitalizar y controlar volumen, sodio y desmopresina.",
+          "limits": "La corrección requiere vigilancia; no reiniciar sin plan de líquidos.",
+          "evidence": [
+            {
+              "source_id": "sfe-di-2018",
+              "locator": "Patients with impaired consciousness and decompensated CDI",
+              "support": "La compensación por sed ya no protege el balance de agua."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "19.04",
+      "title": "Hiponatremia euvolémica",
+      "related_sections": [],
+      "scenarios": [
+        {
+          "id": "19.04-c2-01",
+          "anchor_topic_ids": [
+            "19.04-01"
+          ],
+          "objective": "contraste",
+          "vignette": "Un adulto tiene sodio bajo, hiperglucemia marcada y osmolalidad plasmática medida elevada. Parece euvolémico y se propone diagnosticarSIADH.",
+          "question": "¿La euvolemia basta para clasificarlo comoSIADH hipotónico?",
+          "answer": "No; primero interpretar la hiponatremia asociada a hiperglucemia.",
+          "discriminator": "hiperglucemia marcada y osmolalidad plasmática medida elevada",
+          "reason": "La glucosa puede producir hiponatremia no hipotónica; la apariencia euvolémica no defineSIADH.",
+          "initial_action": "Evaluar la crisis metabólica y calcular el sodio corregido por glucosa según protocolo.",
+          "limits": "Pueden coexistir pérdidas de sodio u otros procesos; no indicar solución hipertónica solo por el sodio sin integrar síntomas y tonicidad.",
+          "evidence": [
+            {
+              "source_id": "erbp-hypona-2014",
+              "locator": "2.2: excluir hiponatremia hiperglucémica y corregir sodio por glucosa",
+              "support": "La glucosa puede producir hiponatremia no hipotónica; la apariencia euvolémica no defineSIADH."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "19.05",
+      "title": "Acidosis o alcalosis",
+      "related_sections": [],
+      "scenarios": [
+        {
+          "id": "19.05-c2-01",
+          "anchor_topic_ids": [
+            "19.05-01"
+          ],
+          "objective": "mecanismo",
+          "vignette": "Tras dosis repetidas altas de salbutamol por una crisis, un adulto tiene mejor entrada de aire y menos sibilancias, pero continúa hiperventilando. La gasometría muestra acidosis metabólica y lactato elevado.",
+          "question": "¿La hiperventilación demuestra que necesita aún más broncodilatador?",
+          "answer": "No; valorar acidosis láctica asociada al tratamiento y otras causas.",
+          "discriminator": "mejor entrada de aire y menos sibilancias",
+          "reason": "Las dosis altas deSABA pueden elevar lactato y causar hiperventilación compensatoria que simula empeoramiento asmático.",
+          "initial_action": "Reevaluar obstrucción, perfusión y exposición al fármaco antes de escalarlo.",
+          "limits": "No atribuir automáticamente el lactato al medicamento; deben excluirse hipoxia, choque y otros desencadenantes.",
+          "evidence": [
+            {
+              "source_id": "gina-2026",
+              "locator": "Manejo de exacerbaciones: SABAtoxicity; acidosis láctica e hiperventilación que pueden confundirse con asma peor",
+              "support": "Las dosis altas deSABA pueden elevar lactato y causar hiperventilación compensatoria que simula empeoramiento asmático."
+            }
+          ]
+        },
+        {
+          "id": "19.05-c2-02",
+          "anchor_topic_ids": [
+            "19.05-02"
+          ],
+          "objective": "contraste",
+          "vignette": "Una persona tiene acidosis metabólica hiperclorémica, cálculos renales e incapacidad para acidificar la orina. No tiene diarrea.",
+          "question": "¿Qué defecto tubular es probable?",
+          "answer": "Acidosis tubular renal distal.",
+          "discriminator": "incapacidad para acidificar la orina",
+          "reason": "La acidificación distal alterada con cálculos apoya este subtipo.",
+          "initial_action": "Evaluar potasio, causas secundarias y nefrocalcinosis.",
+          "limits": "Descartar infección urinaria que altere el pH.",
+          "evidence": [
+            {
+              "source_id": "erknet-rta-2021",
+              "locator": "Diagnosis and differential diagnosis",
+              "support": "La acidificación distal alterada con cálculos apoya este subtipo."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "19.06",
+      "title": "Hematuria vs proteinuria",
+      "related_sections": [],
+      "scenarios": [
+        {
+          "id": "19.06-c2-01",
+          "anchor_topic_ids": [
+            "19.06-01"
+          ],
+          "objective": "dato_faltante",
+          "vignette": "Un adulto tiene hematuria con eritrocitos dismórficos y cilindros hemáticos después de una infección.",
+          "question": "¿Qué localización orienta el sedimento?",
+          "answer": "Glomerular.",
+          "discriminator": "cilindros hemáticos",
+          "reason": "Los cilindros y dismorfismo apoyan origen glomerular.",
+          "initial_action": "Cuantificar proteína, función renal y evaluar causa.",
+          "limits": "El sedimento no identifica el subtipo histológico.",
+          "evidence": [
+            {
+              "source_id": "kdigo-gd-2021",
+              "locator": "General principles: urine sediment",
+              "support": "Los cilindros y dismorfismo apoyan origen glomerular."
+            }
+          ]
+        },
+        {
+          "id": "19.06-c2-02",
+          "anchor_topic_ids": [
+            "19.06-02"
+          ],
+          "objective": "gravedad",
+          "vignette": "Un paciente con hematuria glomerular desarrolla disnea, edema pulmonar e hipertensión marcada.",
+          "question": "¿Qué prioridad antecede a definir etiología?",
+          "answer": "Estabilizar sobrecarga y compromiso respiratorio.",
+          "discriminator": "edema pulmonar",
+          "reason": "El síndrome nefrítico puede causar complicaciones urgentes de volumen.",
+          "initial_action": "Administrar soporte respiratorio y evaluar tratamiento renal urgente.",
+          "limits": "La biopsia no debe retrasar estabilización.",
+          "evidence": [
+            {
+              "source_id": "kdigo-aki-2012",
+              "locator": "5.1 Emergent renal replacement for life-threatening changes",
+              "support": "El síndrome nefrítico puede causar complicaciones urgentes de volumen."
+            }
+          ]
+        },
+        {
+          "id": "19.06-c2-03",
+          "anchor_topic_ids": [
+            "19.06-03"
+          ],
+          "objective": "contraste",
+          "vignette": "Un adulto con proteinuria intensa y edema presenta dolor súbito en flanco y hematuria.",
+          "question": "¿Qué complicación trombótica debe buscarse?",
+          "answer": "Trombosis venosa renal.",
+          "discriminator": "dolor súbito en flanco y hematuria",
+          "reason": "El estado nefrótico aumenta riesgo trombótico.",
+          "initial_action": "Solicitar evaluación urgente e imagen vascular apropiada.",
+          "limits": "También excluir cálculo e infección.",
+          "evidence": [
+            {
+              "source_id": "kdigo-gd-2021",
+              "locator": "General principles: thromboembolic complications",
+              "support": "El estado nefrótico aumenta riesgo trombótico."
+            },
+            {
+              "source_id": "asn-rvt-case-2020",
+              "locator": "p74: Case Answer y discusión; p75: Teaching Points, diagnóstico",
+              "support": "El caso primario vincula síndrome nefrótico, dolor agudo de flanco y hematuria con trombosis venosa renal confirmada por imagen venosa; apoya la sospecha, no una pauta universal de tratamiento."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "19.07",
+      "title": "Glomerulonefritis rápidamente evolutiva",
+      "related_sections": [],
+      "scenarios": [
+        {
+          "id": "19.07-c2-01",
+          "anchor_topic_ids": [
+            "19.07-01"
+          ],
+          "objective": "subtipo",
+          "vignette": "Un adulto se recupera del tratamiento inicial de glomerulonefritis antiMBG. También tieneANCA positivo. Se propone omitir mantenimiento porque la enfermedad antiMBG aislada rara vez recae.",
+          "question": "¿Es equivalente al caso antiMBG aislado?",
+          "answer": "No; la doble positividad cambia el plan de mantenimiento.",
+          "discriminator": "También tieneANCA positivo",
+          "reason": "La superposición antiMBG/ANCA conserva un riesgo de recaída que requiere considerar mantenimiento como en vasculitisANCA.",
+          "initial_action": "Planear mantenimiento y seguimiento con nefrología según evolución y riesgos.",
+          "limits": "No se aplica un esquema uniforme a toda glomerulonefritis; infección, función renal y toxicidad modifican la selección.",
+          "evidence": [
+            {
+              "source_id": "kdigo-gd-2021",
+              "locator": "Capítulo11, Anti-GBMantibodyGN: doble positividadantiMBG/ANCA y mantenimiento comoAAV",
+              "support": "La superposición antiMBG/ANCA conserva un riesgo de recaída que requiere considerar mantenimiento como en vasculitisANCA."
+            }
+          ]
+        },
+        {
+          "id": "19.07-c2-02",
+          "anchor_topic_ids": [
+            "19.07-02"
+          ],
+          "objective": "cambio",
+          "vignette": "Un paciente tiene hemoptisis, caída de hemoglobina y lesión renal con sedimento activo.",
+          "question": "¿Qué síndrome obliga a evaluación conjunta urgente?",
+          "answer": "Síndrome pulmón-riñón.",
+          "discriminator": "hemoptisis, caída de hemoglobina",
+          "reason": "La hemorragia alveolar puede coexistir con glomerulonefritis.",
+          "initial_action": "Estabilizar respiración y obtener anti-GBM y ANCA.",
+          "limits": "Anti-GBM es una causa; no es la única.",
+          "evidence": [
+            {
+              "source_id": "kdigo-gd-2021",
+              "locator": "Anti-GBM disease: prompt diagnosis and treatment",
+              "support": "La hemorragia alveolar puede coexistir con glomerulonefritis."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "19.08",
+      "title": "LES con lesión renal",
+      "related_sections": [],
+      "scenarios": [
+        {
+          "id": "19.08-c2-01",
+          "anchor_topic_ids": [
+            "19.08-01"
+          ],
+          "objective": "dato_faltante",
+          "vignette": "Una paciente con lupus tiene proteinuria nueva y sedimento activo, pero creatinina conservada.",
+          "question": "¿La función conservada excluye nefritis importante?",
+          "answer": "No; valorar biopsia según hallazgos.",
+          "discriminator": "sedimento activo",
+          "reason": "La actividad histológica puede no reflejarse en creatinina.",
+          "initial_action": "Cuantificar proteína y referir a nefrología.",
+          "limits": "La clase histológica orienta tratamiento.",
+          "evidence": [
+            {
+              "source_id": "kdigo-ln-2024",
+              "locator": "Diagnosis and kidney biopsy",
+              "support": "La actividad histológica puede no reflejarse en creatinina."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "19.09",
+      "title": "Músculo lesionado y riñón",
+      "related_sections": [],
+      "scenarios": [
+        {
+          "id": "19.09-c2-01",
+          "anchor_topic_ids": [
+            "19.09-01"
+          ],
+          "objective": "gravedad",
+          "vignette": "Después de aplastamiento, un paciente tiene CK elevada, oliguria y cambios electrocardiográficos de hiperpotasemia.",
+          "question": "¿Qué amenaza requiere tratamiento inmediato?",
+          "answer": "Toxicidad cardíaca por hiperpotasemia.",
+          "discriminator": "cambios electrocardiográficos",
+          "reason": "La alteración de potasio amenaza antes que conocer el pico de CK.",
+          "initial_action": "Monitorizar ECG y tratar hiperpotasemia de urgencia.",
+          "limits": "Ajustar líquidos a perfusión y diuresis; evitar sobrecarga.",
+          "evidence": [
+            {
+              "source_id": "aast-rhabdo-2022",
+              "locator": "Electrolyte abnormalities: hyperkalemia",
+              "support": "La alteración de potasio amenaza antes que conocer el pico de CK."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "19.10",
+      "title": "Riñones grandes/diálisis",
+      "related_sections": [],
+      "scenarios": [
+        {
+          "id": "19.10-c2-01",
+          "anchor_topic_ids": [
+            "19.10-01"
+          ],
+          "objective": "cambio",
+          "vignette": "Una persona con riñones poliquísticos desarrolla cefalea súbita máxima desde el inicio y rigidez de nuca.",
+          "question": "¿Qué complicación extrarrenal debe excluirse urgentemente?",
+          "answer": "Hemorragia subaracnoidea por aneurisma.",
+          "discriminator": "cefalea súbita máxima desde el inicio",
+          "reason": "ADPKD aumenta riesgo de aneurisma intracraneal.",
+          "initial_action": "Enviar a urgencias para evaluación neurológica e imagen.",
+          "limits": "No tratarla como cefalea renal inespecífica.",
+          "evidence": [
+            {
+              "source_id": "kdigo-adpkd-2025",
+              "locator": "Intracranial aneurysms and warning symptoms",
+              "support": "ADPKD aumenta riesgo de aneurisma intracraneal."
+            }
+          ]
+        },
+        {
+          "id": "19.10-c2-02",
+          "anchor_topic_ids": [
+            "19.10-02"
+          ],
+          "objective": "cambio",
+          "vignette": "Un adulto en diálisis peritoneal recibe tratamiento por peritonitis. El cultivo del efluente informa varios microorganismos entéricos y presenta dolor que aumenta e hipotensión.",
+          "question": "¿Puede asumirse contaminación simple del sistema?",
+          "answer": "No; investigar una causa abdominal quirúrgica urgente.",
+          "discriminator": "varios microorganismos entéricos y presenta dolor que aumenta e hipotensión",
+          "reason": "El aislamiento de múltiples organismos entéricos puede indicar patología intraabdominal, especialmente con deterioro sistémico.",
+          "initial_action": "Reanimar y solicitar valoración quirúrgica urgente junto con nefrología y tratamiento antimicrobiano indicado.",
+          "limits": "El cultivo no demuestra por sí solo perforación; la estabilidad y la evaluación clínica e imagen determinan el control del foco.",
+          "evidence": [
+            {
+              "source_id": "ispd-peritonitis-2022",
+              "locator": "Polymicrobial peritonitis y figura8: múltiples organismos entéricos, hipotensión y evaluación quirúrgica",
+              "support": "El aislamiento de múltiples organismos entéricos puede indicar patología intraabdominal, especialmente con deterioro sistémico."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

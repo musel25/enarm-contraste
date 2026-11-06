@@ -1,0 +1,706 @@
+{
+  "schema_version": 1,
+  "layer": 2,
+  "section_id": "04",
+  "title": "Cardiología",
+  "author": "clinical-author-01-12",
+  "sources": [
+    {
+      "id": "acc-pericarditis-2025",
+      "label": "ACC: consenso sobre diagnóstico y manejo de pericarditis",
+      "url": "https://www.myocarditisfoundation.org/wp-content/uploads/2025/08/2025-Clinical-Guidance-on-the-Diagnosis-and-Management-of-Pericarditis.pdf",
+      "version": "2025; aprobado mayo 2025",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "§4.2, pp. 14–15 y figura 8: pericarditis inflamatoria recurrente, anti-IL-1 y cribado previo"
+    },
+    {
+      "id": "acs-2025",
+      "label": "ACC/AHA/ACEP/NAEMSP/SCAI: síndrome coronario agudo",
+      "url": "https://accga.org/wp-content/uploads/2025-acc-aha-acep-naemsp-scai-guideline-for-the-management-of-patients-with-acute-coronary-syndromes.pdf",
+      "version": "2025",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "§3.1; tabla 14; §§9.1 y 10.2: estudio inicial, fibrinólisis, complicaciones mecánicas y rehabilitación"
+    },
+    {
+      "id": "aorta-2022",
+      "label": "ACC/AHA: diagnóstico y manejo de enfermedad aórtica",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9876736/",
+      "version": "2022-11-02",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "§§6.5.6.2 y 7.2–7.4; tabla 21: vigilancia EVAR y síndrome aórtico agudo"
+    },
+    {
+      "id": "cdc-rheumatic-2025",
+      "label": "CDC: Diagnosing Acute Rheumatic Fever",
+      "url": "https://www.cdc.gov/group-a-strep/hcp/clinical-guidance/diagnosing-acute-rheumatic-fever.html",
+      "version": "2025-08-06; criterios Jones 2015",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Jones criteria; Recommended supplemental tests"
+    },
+    {
+      "id": "esc-htn-2024",
+      "label": "ESC: guía completa de presión arterial elevada e hipertensión",
+      "url": "https://repisalud.isciii.es/bitstreams/4fe1933e-3844-454d-9cef-4a64b5debafe/download",
+      "version": "2024-08-30; edición Eur Heart J 2024-10-07",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "§§5.1–5.4: medición y diagnóstico fuera de consulta; §10.1: emergencia e hipertensión maligna"
+    },
+    {
+      "id": "esc-ie-2023",
+      "label": "ESC: guía completa de endocarditis; traducción revisada por SEC con correcciones de 2025",
+      "url": "https://secardiologia.es/images/2023/Gu%C3%ADas/Corrigendum_2025__Endocarditis.pdf",
+      "version": "Original 2023-08-25; traducción SEC 2025 con corrigendum 2025-01-18",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "§5.4 y figura 6, p. 28; §12.1.2: imagen en endocarditis protésica"
+    },
+    {
+      "id": "esc-ph-2022",
+      "label": "ESC/ERS: guía completa de hipertensión pulmonar; versión publicada",
+      "url": "https://pure.rug.nl/ws/files/258895003/ehac237.pdf",
+      "version": "2022-08-26",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "§5.1.6: gammagrafía V/Q; §9.2.2 y tabla 23: tratamiento en enfermedad intersticial"
+    },
+    {
+      "id": "esc-valve-2025",
+      "label": "ESC/EACTS: valvulopatías",
+      "url": "https://academic.oup.com/eurheartj/article/46/44/4635/8234488",
+      "version": "2025",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "§§4, 7–11: imagen, estenosis aórtica y mitral, regurgitaciones"
+    },
+    {
+      "id": "hf-2022",
+      "label": "AHA/ACC/HFSA: insuficiencia cardiaca, conjunto oficial de recomendaciones",
+      "url": "https://www.heart.org/-/media/PHD-Files-2/Science-News/2/2022/2022-Heart-Failure-Guideline-Slide-Set.pdf",
+      "version": "2022-04-01",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Diagnóstico, diuréticos, tratamiento de HFrEF y rehabilitación"
+    },
+    {
+      "id": "imss-htn-2014",
+      "label": "IMSS: diagnóstico y tratamiento de hipertensión arterial, GER",
+      "url": "https://imss.gob.mx/sites/all/statics/guiasclinicas/076GER.pdf",
+      "version": "Actualización 2014",
+      "checked_at": "2026-11-06",
+      "region": "mexico",
+      "access": "checked",
+      "locator": "Diagnóstico y medición de presión; no se usan sus metas como actualización actual"
+    },
+    {
+      "id": "efas-tilt-2021",
+      "label": "EFAS/AAS/EAN: consenso de expertos sobre mesa basculante y pruebas autonómicas",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8184725/",
+      "version": "2021-03-19; Clin Auton Res31:369–384",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "§§3 y5.1.2; tablas1y3: hipotensión ortostática tardía; publicación primaria paralela del consenso EFAS/AAS/EAN"
+    },
+    {
+      "id": "nsw-niv-2023",
+      "label": "NSW Agency for Clinical Innovation: ventilación no invasiva en insuficiencia respiratoria aguda",
+      "url": "https://aci.health.nsw.gov.au/__data/assets/pdf_file/0004/820372/ACI-Non-invasive-ventilation-for-patients-with-acute-respiratory-failure.pdf",
+      "version": "2023-02; revisión2023-03",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Contraindications for NIV, p.5: incapacidad para proteger vía aérea y necesidad de intubación de emergencia"
+    }
+  ],
+  "mexico_source_note": "Se abrió IMSS-076-08, actualización 2014, para medición y diagnóstico de hipertensión. La GRR devolvió error; se abrió la GER. La búsqueda en IMSS no identificó una guía mexicana reciente para todos los subtemas. Se usan documentos de sociedades 2022–2025. Los blancos de presión y la disponibilidad de intervenciones requieren adaptación local; no se incluyen cifras de metas ni dosis.",
+  "blocks": [
+    {
+      "id": "04.01",
+      "title": "Dolor torácico isquémico",
+      "related_sections": [],
+      "scenarios": [
+        {
+          "id": "04.01-c2-01",
+          "anchor_topic_ids": [
+            "04.01-01"
+          ],
+          "objective": "cambio",
+          "vignette": "Un adulto tiene un IAM con elevación persistente del ST y no dispone de angioplastia inmediata. Tuvo una hemorragia intracraneal espontánea hace años.",
+          "question": "¿Ese antecedente permite fibrinólisis por haber ocurrido hace años?",
+          "answer": "No. Es una contraindicación absoluta.",
+          "discriminator": "hemorragia intracraneal espontánea",
+          "reason": "Cualquier hemorragia intracraneal previa figura como contraindicación absoluta de fibrinólisis en IAM con elevación del ST.",
+          "initial_action": "Activar traslado y estrategia de angioplastia urgente con el equipo de infarto.",
+          "limits": "La demora de acceso no elimina esta contraindicación; elegir la estrategia según tiempo, estabilidad y recursos.",
+          "evidence": [
+            {
+              "source_id": "acs-2025",
+              "locator": "Tabla 14, p. 41: contraindicaciones absolutas de fibrinólisis en STEMI, any prior ICH",
+              "support": "Cualquier hemorragia intracraneal previa figura como contraindicación absoluta de fibrinólisis en IAM con elevación del ST."
+            }
+          ]
+        },
+        {
+          "id": "04.01-c2-02",
+          "anchor_topic_ids": [
+            "04.01-02"
+          ],
+          "objective": "incompleta",
+          "vignette": "Un paciente consulta pronto por dolor torácico persistente. El primer ECG no es diagnóstico y la troponina inicial no está elevada.",
+          "question": "¿Puede excluirse infarto con esos dos resultados iniciales?",
+          "answer": "No.",
+          "discriminator": "consulta pronto",
+          "reason": "Los cambios pueden aparecer después de la primera muestra.",
+          "initial_action": "Repetir ECG y troponina con un protocolo validado.",
+          "limits": "Interpretar el intervalo desde el dolor y el ensayo utilizado.",
+          "evidence": [
+            {
+              "source_id": "acs-2025",
+              "locator": "§3.1.2: evaluación hospitalaria inicial",
+              "support": "Los cambios pueden aparecer después de la primera muestra."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "04.02",
+      "title": "Disnea con estertores",
+      "related_sections": [],
+      "scenarios": [
+        {
+          "id": "04.02-c2-01",
+          "anchor_topic_ids": [
+            "04.02-01"
+          ],
+          "objective": "cambio",
+          "vignette": "Una persona hospitalizada por insuficiencia cardiaca conserva congestión, pero mejora con diuréticos y mantiene perfusión y presión estables. La creatinina aumenta levemente sin otra señal de lesión renal progresiva.",
+          "question": "¿Ese cambio aislado obliga a suspender la descongestión?",
+          "answer": "No. Reevaluar y continuar si sigue indicada.",
+          "discriminator": "aumenta levemente sin otra señal de lesión renal progresiva",
+          "reason": "Un descenso leve de función renal durante el ingreso no exige suspender de forma rutinaria diuresis ni tratamiento recomendado.",
+          "initial_action": "Revisar volumen, perfusión, electrolitos y tendencia renal mientras se ajusta la descongestión.",
+          "limits": "No extrapolar a choque, hipovolemia, alteraciones graves de electrolitos o deterioro renal progresivo.",
+          "evidence": [
+            {
+              "source_id": "hf-2022",
+              "locator": "Diapositiva 141, Maintenance or Optimization of GDMT During Hospitalization, recomendación 2",
+              "support": "Un descenso leve de función renal durante el ingreso no exige suspender de forma rutinaria diuresis ni tratamiento recomendado."
+            }
+          ]
+        },
+        {
+          "id": "04.02-c2-02",
+          "anchor_topic_ids": [
+            "04.02-02"
+          ],
+          "objective": "cambio",
+          "vignette": "Un adulto con edema pulmonar agudo está somnoliento y ya no protege su vía aérea.",
+          "question": "¿Es suficiente mantener ventilación no invasiva?",
+          "answer": "No. Valorar vía aérea avanzada urgente.",
+          "discriminator": "ya no protege su vía aérea",
+          "reason": "La pérdida de protección limita la seguridad del soporte no invasivo.",
+          "initial_action": "Pedir equipo experto y sostener oxigenación mientras se asegura la vía aérea.",
+          "limits": "El procedimiento necesita monitorización y personal capacitado.",
+          "evidence": [
+            {
+              "source_id": "nsw-niv-2023",
+              "locator": "Contraindications for NIV, p.5: inability to protect airway",
+              "support": "La incapacidad para proteger la vía aérea es una contraindicación absoluta para iniciar NIV y exige control experto de la vía aérea."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "04.03",
+      "title": "Disnea crónica y edema",
+      "related_sections": [],
+      "scenarios": [
+        {
+          "id": "04.03-c2-01",
+          "anchor_topic_ids": [
+            "04.03-01"
+          ],
+          "objective": "cambio",
+          "vignette": "Una persona con insuficiencia cardiaca de fracción reducida mejora y su fracción de eyección se normaliza con tratamiento.",
+          "question": "¿Debe suspenderse todo el tratamiento por la mejoría ecográfica?",
+          "answer": "No. Mantener el tratamiento indicado si lo tolera.",
+          "discriminator": "se normaliza con tratamiento",
+          "reason": "La recuperación de fracción no elimina el riesgo de recaída.",
+          "initial_action": "Revisar tolerancia, función renal y continuidad terapéutica.",
+          "limits": "Los ajustes por efectos adversos requieren evaluación individual.",
+          "evidence": [
+            {
+              "source_id": "hf-2022",
+              "locator": "HF with improved EF; Top 10, punto 4",
+              "support": "La recuperación de fracción no elimina el riesgo de recaída."
+            }
+          ]
+        },
+        {
+          "id": "04.03-c2-02",
+          "anchor_topic_ids": [
+            "04.03-02"
+          ],
+          "objective": "cambio",
+          "vignette": "Una persona está clínicamente estable después de un síndrome coronario agudo y fue considerada apta para rehabilitación. Vive lejos y no puede acudir a un centro presencial.",
+          "question": "¿Qué alternativa permite ofrecer rehabilitación estructurada?",
+          "answer": "Un programa domiciliario o híbrido supervisado.",
+          "discriminator": "no puede acudir a un centro presencial",
+          "reason": "La rehabilitación domiciliaria estructurada puede ser una alternativa a la presencial en pacientes seleccionados.",
+          "initial_action": "Coordinar evaluación de riesgo y un programa con seguimiento, ejercicio y prevención secundaria.",
+          "limits": "No equivale a ejercicio sin evaluación; la evidencia es más limitada en pacientes de alto riesgo.",
+          "evidence": [
+            {
+              "source_id": "acs-2025",
+              "locator": "§10.2, p. 63, recomendación 2 y texto de apoyo: home-based cardiac rehabilitation",
+              "support": "La rehabilitación domiciliaria estructurada puede ser una alternativa a la presencial en pacientes seleccionados."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "04.04",
+      "title": "Presión alta persistente",
+      "related_sections": [],
+      "scenarios": [
+        {
+          "id": "04.04-c2-01",
+          "anchor_topic_ids": [
+            "04.04-01"
+          ],
+          "objective": "dato_faltante",
+          "vignette": "Una persona tiene presión alta en varias consultas y registros normales en casa con un equipo validado.",
+          "question": "¿Qué estudio ayuda a separar hipertensión sostenida de efecto de bata blanca?",
+          "answer": "Monitoreo ambulatorio de presión arterial.",
+          "discriminator": "registros normales en casa",
+          "reason": "Las mediciones fuera de consulta aclaran la discordancia.",
+          "initial_action": "Confirmar técnica y organizar monitoreo ambulatorio.",
+          "limits": "No diagnosticar solo por una medición mal tomada.",
+          "evidence": [
+            {
+              "source_id": "esc-htn-2024",
+              "locator": "§§5.1 y 5.4: white-coat hypertension y diagnóstico fuera de consulta",
+              "support": "Las mediciones fuera de consulta aclaran la discordancia."
+            }
+          ]
+        },
+        {
+          "id": "04.04-c2-02",
+          "anchor_topic_ids": [
+            "04.04-01"
+          ],
+          "objective": "mecanismo",
+          "vignette": "Se mide la presión inmediatamente después de subir escaleras, con el brazo sin apoyo y un manguito pequeño.",
+          "question": "¿Qué debe hacerse antes de clasificar hipertensión?",
+          "answer": "Repetir con reposo y técnica correcta.",
+          "discriminator": "un manguito pequeño",
+          "reason": "La técnica incorrecta puede alterar la presión registrada.",
+          "initial_action": "Usar manguito adecuado, brazo apoyado y mediciones repetidas.",
+          "limits": "Una toma aislada no define el patrón crónico.",
+          "evidence": [
+            {
+              "source_id": "imss-htn-2014",
+              "locator": "Diagnóstico: técnica de medición de presión arterial",
+              "support": "La técnica incorrecta puede alterar la presión registrada."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "04.05",
+      "title": "Presión extrema",
+      "related_sections": [],
+      "scenarios": [
+        {
+          "id": "04.05-c2-01",
+          "anchor_topic_ids": [
+            "04.05-01"
+          ],
+          "objective": "subtipo",
+          "vignette": "Un adulto tiene presión muy elevada sin dolor, disnea ni síntomas neurológicos. El fondo de ojo muestra hemorragias en llama y papiledema recientes.",
+          "question": "¿La ausencia de síntomas permite descartar una emergencia hipertensiva?",
+          "answer": "No. Existe daño microvascular agudo.",
+          "discriminator": "hemorragias en llama y papiledema recientes",
+          "reason": "La retinopatía aguda caracteriza hipertensión maligna; la emergencia depende del daño orgánico y puede presentarse sin síntomas llamativos.",
+          "initial_action": "Derivar a atención hospitalaria monitorizada para confirmar daño y reducir la presión de forma controlada.",
+          "limits": "Confirmar la naturaleza aguda de los hallazgos y evaluar riñón, corazón y cerebro; no normalizar la presión bruscamente.",
+          "evidence": [
+            {
+              "source_id": "esc-htn-2024",
+              "locator": "§10.1.1: definición de emergencia y malignant hypertension; retinopatía con flame haemorrhages y papilloedema",
+              "support": "La retinopatía aguda caracteriza hipertensión maligna; la emergencia depende del daño orgánico y puede presentarse sin síntomas llamativos."
+            }
+          ]
+        },
+        {
+          "id": "04.05-c2-02",
+          "anchor_topic_ids": [
+            "04.05-01"
+          ],
+          "objective": "gravedad",
+          "vignette": "Una persona con presión muy elevada tiene confusión nueva, convulsiones y alteración visual.",
+          "question": "¿Qué dato convierte el caso en una posible emergencia?",
+          "answer": "El daño neurológico agudo.",
+          "discriminator": "confusión nueva, convulsiones",
+          "reason": "La afectación neurológica requiere evaluación y tratamiento monitorizado.",
+          "initial_action": "Hospitalizar y estudiar causas neurológicas mientras se controla la presión.",
+          "limits": "No atribuir todos los déficits a encefalopatía sin excluir ictus y otras causas.",
+          "evidence": [
+            {
+              "source_id": "esc-htn-2024",
+              "locator": "§10.1.1: síntomas de encefalopatía hipertensiva y exclusión de ictus",
+              "support": "La afectación neurológica requiere evaluación y tratamiento monitorizado."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "04.06",
+      "title": "Mareo al ponerse de pie",
+      "related_sections": [],
+      "scenarios": [
+        {
+          "id": "04.06-c2-01",
+          "anchor_topic_ids": [
+            "04.06-01"
+          ],
+          "objective": "incompleta",
+          "vignette": "Una persona mayor se marea después de permanecer de pie ocho a diez minutos. La presión acostada y a uno y tres minutos de pie es normal; no se reprodujeron los síntomas.",
+          "question": "¿Ese registro breve excluye hipotensión ortostática tardía?",
+          "answer": "No. Puede requerir una prueba más prolongada.",
+          "discriminator": "después de permanecer de pie ocho a diez minutos",
+          "reason": "La hipotensión ortostática tardía ocurre después de los tres minutos y puede escapar al registro inicial.",
+          "initial_action": "Revisar fármacos y causas alternativas; solicitar evaluación postural prolongada o mesa basculante según el contexto.",
+          "limits": "Correlacionar síntomas y presión; una prueba negativa aislada no establece otra causa ni descarta toda hipotensión intermitente.",
+          "evidence": [
+            {
+              "source_id": "efas-tilt-2021",
+              "locator": "§§3 y 5.1.2, tablas 1 y 3: delayed OH y duración de evaluación; consenso de expertos",
+              "support": "La hipotensión ortostática tardía ocurre después de los tres minutos y puede escapar al registro inicial."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "04.07",
+      "title": "Soplo sistólico",
+      "related_sections": [],
+      "scenarios": [
+        {
+          "id": "04.07-c2-01",
+          "anchor_topic_ids": [
+            "04.07-01"
+          ],
+          "objective": "subtipo",
+          "vignette": "Un adulto tiene válvula aórtica muy calcificada, área pequeña y gradiente bajo. La fracción de eyección está reducida.",
+          "question": "¿Qué prueba puede separar estenosis verdaderamente grave de pseudograve?",
+          "answer": "Ecocardiograma con dobutamina, si es apropiado.",
+          "discriminator": "gradiente bajo",
+          "reason": "El bajo flujo puede reducir el gradiente pese a estenosis importante.",
+          "initial_action": "Solicitar evaluación valvular integrada.",
+          "limits": "La TC de calcio puede aportar información complementaria.",
+          "evidence": [
+            {
+              "source_id": "esc-valve-2025",
+              "locator": "§8.2.1: low-flow low-gradient AS",
+              "support": "El bajo flujo puede reducir el gradiente pese a estenosis importante."
+            }
+          ]
+        },
+        {
+          "id": "04.07-c2-02",
+          "anchor_topic_ids": [
+            "04.07-02"
+          ],
+          "objective": "mecanismo",
+          "vignette": "Una persona con FA permanente tiene regurgitación tricuspídea. El eco muestra aurícula derecha y anillo muy dilatados, valvas sin lesión primaria y función ventricular derecha conservada, sin hipertensión pulmonar ni enfermedad izquierda significativa.",
+          "question": "¿Qué mecanismo de regurgitación es más compatible?",
+          "answer": "Regurgitación tricuspídea secundaria de tipo auricular.",
+          "discriminator": "aurícula derecha y anillo muy dilatados",
+          "reason": "La FA puede producir dilatación auricular y anular con regurgitación secundaria aun sin lesión de valvas ni enfermedad ventricular predominante.",
+          "initial_action": "Integrar mecanismo, gravedad y repercusión en una valoración valvular.",
+          "limits": "Los fenotipos pueden mezclarse; no deducir indicación de intervención solo por el mecanismo.",
+          "evidence": [
+            {
+              "source_id": "esc-valve-2025",
+              "locator": "§11.1: atrial secondary tricuspid regurgitation",
+              "support": "La FA puede producir dilatación auricular y anular con regurgitación secundaria aun sin lesión de valvas ni enfermedad ventricular predominante."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "04.08",
+      "title": "Soplo diastólico",
+      "related_sections": [],
+      "scenarios": [
+        {
+          "id": "04.08-c2-01",
+          "anchor_topic_ids": [
+            "04.08-01"
+          ],
+          "objective": "cambio",
+          "vignette": "Una persona con estenosis mitral reumática desarrolla FA. Se prepara valvuloplastia y todavía no se ha evaluado la aurícula izquierda.",
+          "question": "¿Qué hallazgo debe excluirse antes de intervenir?",
+          "answer": "Trombo auricular izquierdo.",
+          "discriminator": "desarrolla FA",
+          "reason": "El trombo cambia la seguridad de la intervención percutánea.",
+          "initial_action": "Solicitar imagen dirigida, usualmente ecocardiografía transesofágica.",
+          "limits": "La selección también depende de anatomía y regurgitación asociada.",
+          "evidence": [
+            {
+              "source_id": "esc-valve-2025",
+              "locator": "§10.2.1–10.2.3: evaluación y contraindicaciones de comisurotomía",
+              "support": "El trombo cambia la seguridad de la intervención percutánea."
+            }
+          ]
+        },
+        {
+          "id": "04.08-c2-02",
+          "anchor_topic_ids": [
+            "04.08-02"
+          ],
+          "objective": "gravedad",
+          "vignette": "Un paciente con soplo diastólico nuevo desarrolla edema pulmonar rápidamente tras una infección. El ventrículo izquierdo aún no está dilatado.",
+          "question": "¿La ausencia de dilatación excluye regurgitación aórtica grave?",
+          "answer": "No. Considerar regurgitación aguda.",
+          "discriminator": "aún no está dilatado",
+          "reason": "En una lesión aguda no ha ocurrido remodelado compensador.",
+          "initial_action": "Obtener ecocardiograma urgente y valoración valvular.",
+          "limits": "Buscar endocarditis o enfermedad de la raíz aórtica.",
+          "evidence": [
+            {
+              "source_id": "esc-valve-2025",
+              "locator": "§7: Aortic regurgitation; evaluación de presentación aguda",
+              "support": "En una lesión aguda no ha ocurrido remodelado compensador."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "04.09",
+      "title": "Soplo holosistólico",
+      "related_sections": [],
+      "scenarios": [
+        {
+          "id": "04.09-c2-01",
+          "anchor_topic_ids": [
+            "04.09-01"
+          ],
+          "objective": "contraste",
+          "vignette": "Después de un infarto, un adulto desarrolla choque y un soplo sistólico nuevo. El Doppler demuestra una comunicación nueva a través del tabique ventricular con cortocircuito de izquierda a derecha.",
+          "question": "¿Qué complicación mecánica explica estos datos?",
+          "answer": "Rotura del tabique ventricular posinfarto.",
+          "discriminator": "comunicación nueva a través del tabique ventricular",
+          "reason": "El cortocircuito septal distingue esta rotura de la regurgitación mitral por rotura papilar.",
+          "initial_action": "Activar al equipo de choque y cirugía cardiaca; sostener perfusión y planear reparación.",
+          "limits": "El soporte y el momento de reparación dependen de estabilidad, anatomía y riesgo; no retrasar la consulta.",
+          "evidence": [
+            {
+              "source_id": "acs-2025",
+              "locator": "§9.1, pp. 54–56: mechanical complications, ventricular septal rupture",
+              "support": "El cortocircuito septal distingue esta rotura de la regurgitación mitral por rotura papilar."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "04.10",
+      "title": "Fiebre con soplo",
+      "related_sections": [],
+      "scenarios": [
+        {
+          "id": "04.10-c2-01",
+          "anchor_topic_ids": [
+            "04.10-01"
+          ],
+          "objective": "dato_faltante",
+          "vignette": "Una persona con prótesis valvular tiene fiebre persistente. El ecocardiograma transtorácico es negativo, pero la sospecha de infección sigue alta.",
+          "question": "¿Qué evaluación adicional corresponde?",
+          "answer": "Ecocardiograma transesofágico y evaluación por el equipo de endocarditis.",
+          "discriminator": "la sospecha de infección sigue alta",
+          "reason": "La prueba inicial negativa no excluye infección de una prótesis.",
+          "initial_action": "Obtener hemocultivos y solicitar ecocardiografía transesofágica; añadir otras técnicas según sus resultados.",
+          "limits": "La técnica se elige según prótesis, calidad de imagen y complicaciones.",
+          "evidence": [
+            {
+              "source_id": "esc-ie-2023",
+              "locator": "Figura 6, p. 28, y §12.1.2: algoritmo protésico, ETE y técnicas complementarias",
+              "support": "La prueba inicial negativa no excluye infección de una prótesis."
+            }
+          ]
+        },
+        {
+          "id": "04.10-c2-02",
+          "anchor_topic_ids": [
+            "04.10-02"
+          ],
+          "objective": "incompleta",
+          "vignette": "Un adolescente tiene sospecha clínica de fiebre reumática y no se ausculta soplo.",
+          "question": "¿Debe omitirse el ecocardiograma por esa ausencia?",
+          "answer": "No. Evaluar carditis subclínica con Doppler.",
+          "discriminator": "no se ausculta soplo",
+          "reason": "La carditis puede ser subclínica.",
+          "initial_action": "Solicitar ecocardiograma e integrar criterios de Jones y evidencia estreptocócica.",
+          "limits": "Ninguna prueba aislada confirma toda fiebre reumática.",
+          "evidence": [
+            {
+              "source_id": "cdc-rheumatic-2025",
+              "locator": "Recommended supplemental tests",
+              "support": "La carditis puede ser subclínica."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "04.11",
+      "title": "Dolor pleurítico torácico",
+      "related_sections": [],
+      "scenarios": [
+        {
+          "id": "04.11-c2-01",
+          "anchor_topic_ids": [
+            "04.11-01"
+          ],
+          "objective": "cambio",
+          "vignette": "Una persona adulta tiene pericarditis recurrente confirmada, PCR elevada e inflamación pericárdica en resonancia. Recae pese a colchicina y depende de corticosteroides para controlar los síntomas.",
+          "question": "¿Qué tratamiento dirigido puede valorar un equipo experto?",
+          "answer": "Bloqueo de interleucina 1.",
+          "discriminator": "Recae pese a colchicina y depende de corticosteroides",
+          "reason": "El fenotipo inflamatorio recurrente y dependiente de esteroides puede beneficiarse de anti-IL-1 tras evaluación especializada.",
+          "initial_action": "Confirmar el fenotipo, revisar infección y contraindicaciones y derivar para selección del tratamiento.",
+          "limits": "No aplicarlo automáticamente a dolor sin inflamación ni iniciar sin evaluar infecciones, incluidas hepatitis, VIH y tuberculosis.",
+          "evidence": [
+            {
+              "source_id": "acc-pericarditis-2025",
+              "locator": "§4.2, pp. 14–15 y figura 8: anti-IL-1 en pericarditis inflamatoria recurrente y cribado previo",
+              "support": "El fenotipo inflamatorio recurrente y dependiente de esteroides puede beneficiarse de anti-IL-1 tras evaluación especializada."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "04.12",
+      "title": "Disnea y signos derechos",
+      "related_sections": [],
+      "scenarios": [
+        {
+          "id": "04.12-c2-01",
+          "anchor_topic_ids": [
+            "04.12-01"
+          ],
+          "objective": "dato_faltante",
+          "vignette": "Un adulto tuvo embolia pulmonar y sigue con disnea. El eco sugiere hipertensión pulmonar; una angio-TC actual no muestra embolia aguda. No se ha estudiado la perfusión pulmonar.",
+          "question": "¿Qué prueba busca enfermedad tromboembólica crónica en este estudio?",
+          "answer": "Gammagrafía pulmonar de ventilación/perfusión.",
+          "discriminator": "No se ha estudiado la perfusión pulmonar",
+          "reason": "La gammagrafía V/Q forma parte del estudio de hipertensión pulmonar para detectar o excluir enfermedad tromboembólica crónica.",
+          "initial_action": "Solicitar V/Q y coordinar la clasificación y confirmación hemodinámica indicadas en un centro especializado.",
+          "limits": "Una TC informada sin embolia aguda no excluye por sí sola enfermedad crónica; interpretar V/Q según enfermedad parenquimatosa y calidad.",
+          "evidence": [
+            {
+              "source_id": "esc-ph-2022",
+              "locator": "§5.1.6: ventilation/perfusion lung scan",
+              "support": "La gammagrafía V/Q forma parte del estudio de hipertensión pulmonar para detectar o excluir enfermedad tromboembólica crónica."
+            }
+          ]
+        },
+        {
+          "id": "04.12-c2-02",
+          "anchor_topic_ids": [
+            "04.12-02"
+          ],
+          "objective": "subtipo",
+          "vignette": "Un adulto con enfermedad pulmonar intersticial fibrosante sigue limitado pese a optimizar su enfermedad y oxigenación. Un centro de hipertensión pulmonar confirma mediante cateterismo hipertensión asociada a esta enfermedad.",
+          "question": "¿Qué tratamiento inhalado puede considerarse en este subtipo?",
+          "answer": "Treprostinilo inhalado, tras selección especializada.",
+          "discriminator": "enfermedad pulmonar intersticial fibrosante",
+          "reason": "La guía permite considerar treprostinilo inhalado en hipertensión pulmonar asociada a enfermedad intersticial; no extiende esta opción a todos los grupos pulmonares.",
+          "initial_action": "Discutir beneficios, riesgos y disponibilidad con el centro especializado.",
+          "limits": "Es una recomendación condicional; no demuestra beneficio de supervivencia ni autoriza vasodilatadores orales de rutina.",
+          "evidence": [
+            {
+              "source_id": "esc-ph-2022",
+              "locator": "§9.2.2 y tabla de recomendaciones 23: inhaled treprostinil may be considered in PH associated with ILD, IIb B",
+              "support": "La guía permite considerar treprostinilo inhalado en hipertensión pulmonar asociada a enfermedad intersticial; no extiende esta opción a todos los grupos pulmonares."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "04.13",
+      "title": "Dolor desgarrante/síncope",
+      "related_sections": [],
+      "scenarios": [
+        {
+          "id": "04.13-c2-01",
+          "anchor_topic_ids": [
+            "04.13-01"
+          ],
+          "objective": "contraste",
+          "vignette": "Un adulto tiene dolor torácico súbito y déficit de pulso en un brazo. El ECG muestra cambios isquémicos.",
+          "question": "¿Qué diagnóstico peligroso debe excluirse antes de fibrinólisis?",
+          "answer": "Síndrome aórtico agudo.",
+          "discriminator": "déficit de pulso",
+          "reason": "La disección puede comprometer coronarias y simular infarto.",
+          "initial_action": "Activar imagen aórtica y valoración urgente según estabilidad.",
+          "limits": "El ECG isquémico no excluye disección.",
+          "evidence": [
+            {
+              "source_id": "aorta-2022",
+              "locator": "§7.2: presentación y evaluación diagnóstica",
+              "support": "La disección puede comprometer coronarias y simular infarto."
+            }
+          ]
+        },
+        {
+          "id": "04.13-c2-02",
+          "anchor_topic_ids": [
+            "04.13-02"
+          ],
+          "objective": "cambio",
+          "vignette": "Una persona fue tratada por aneurisma abdominal con endoprótesis. Está asintomática, pero el ultrasonido de vigilancia muestra crecimiento nuevo del saco aneurismático.",
+          "question": "¿Debe conservarse el control rutinario sin otra imagen?",
+          "answer": "No. Ampliar con TC o RM y revisión vascular.",
+          "discriminator": "crecimiento nuevo del saco aneurismático",
+          "reason": "El crecimiento del saco tras reparación endovascular es un hallazgo anormal que justifica imagen transversal adicional.",
+          "initial_action": "Coordinar estudio con cirugía vascular y seleccionar TC o RM según función renal y prótesis.",
+          "limits": "El crecimiento exige estudiar fuga o fallo del dispositivo; no determina por sí solo el tipo de reintervención.",
+          "evidence": [
+            {
+              "source_id": "aorta-2022",
+              "locator": "§6.5.6.2, recomendación 3 y tabla 21: anomalías en dúplex tras EVAR",
+              "support": "El crecimiento del saco tras reparación endovascular es un hallazgo anormal que justifica imagen transversal adicional."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

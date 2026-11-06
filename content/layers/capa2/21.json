@@ -1,0 +1,583 @@
+{
+  "schema_version": 1,
+  "layer": 2,
+  "section_id": "21",
+  "title": "Neumología",
+  "author": "clinical-author-13-24",
+  "sources": [
+    {
+      "id": "gina-2026",
+      "label": "GINA. Global Strategy for Asthma Management and Prevention",
+      "url": "https://ginasthma.org/wp-content/uploads/2026/05/GINA-2026-Strategy-Report-WMS.pdf",
+      "version": "2026",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Box1-3 diagnóstico diferencial; seguridad LABA sin ICS; exacerbaciones/antibióticos; pautas por edad"
+    },
+    {
+      "id": "gold-2026",
+      "label": "GOLD. Pocket Guide to COPD Diagnosis, Management, and Prevention",
+      "url": "https://goldcopd.org/wp-content/uploads/2026/01/GOLD-Pocket-Guide-2026-v1.1-20Nov2025_WMV2.pdf",
+      "version": "2026; v1.1 de 2025-11-20",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Non-pharmacological treatment: oxygen therapy; LTOT and moderate desaturation"
+    },
+    {
+      "id": "imss-cap-2017",
+      "label": "IMSS. Prevención, diagnóstico y tratamiento de neumonía adquirida en la comunidad. IMSS-234-09",
+      "url": "https://www.imss.gob.mx/sites/all/statics/guiasclinicas/234GER.pdf",
+      "version": "actualización 2017",
+      "checked_at": "2026-11-06",
+      "region": "mexico",
+      "access": "checked",
+      "locator": "Diagnóstico; valoración de gravedad; tratamiento empírico"
+    },
+    {
+      "id": "rch-cap",
+      "label": "Royal Children’s Hospital Melbourne. Community acquired pneumonia",
+      "url": "https://www.rch.org.au/clinicalguide/guideline_index/Community_acquired_pneumonia/",
+      "version": "2023-10",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Assessment; admission; respiratory support and feeding"
+    },
+    {
+      "id": "bts-pleural-2023",
+      "label": "BTS. Guideline for Pleural Disease and Clinical Statement on Pleural Procedures",
+      "url": "https://www.brit-thoracic.org.uk/document-library/guidelines/pleural-disease/pleural-disease-full-supplement/",
+      "version": "2023-07",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Undiagnosed unilateral effusion; image-guided aspiration; infection"
+    },
+    {
+      "id": "alpha1-2016",
+      "label": "Alpha-1 Foundation. Diagnosis and Management of Alpha-1 Antitrypsin Deficiency in the Adult",
+      "url": "https://journal.copdfoundation.org/jcopdf/id/1115",
+      "version": "2016",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Who should be tested; adult COPD; family evaluation"
+    },
+    {
+      "id": "cdc-flu-2026",
+      "label": "CDC. Influenza Antiviral Medications: Summary for Clinicians",
+      "url": "https://www.cdc.gov/flu/hcp/antivirals/summary-clinicians.html",
+      "version": "2026-03-10",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Priority treatment groups; hospitalized patients; do not wait for confirmation"
+    },
+    {
+      "id": "cdc-covid-2026",
+      "label": "CDC. COVID-19 Treatment Clinical Care for Outpatients",
+      "url": "https://www.cdc.gov/covid/hcp/clinical-care/outpatient-treatment.html",
+      "version": "2026-10-08",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Risk factors; antiviral timing; interactions and renal function"
+    },
+    {
+      "id": "cdc-covid-preg-2026",
+      "label": "CDC. Clinical Considerations for Special Populations",
+      "url": "https://www.cdc.gov/covid/hcp/clinical-care/considerations-special-groups.html",
+      "version": "2026-10-08",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Pregnancy: risk and treatment considerations"
+    },
+    {
+      "id": "niosh-silica-2026",
+      "label": "NIOSH. Silica and Worker Health",
+      "url": "https://www.cdc.gov/niosh/silica/about/index.html",
+      "version": "2026-07-07",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Exposure from engineered stone; silicosis; prevention and medical surveillance"
+    },
+    {
+      "id": "nci-lung-2025",
+      "label": "NCI. Non-Small Cell Lung Cancer Treatment(PDQ): recurso profesional, no GPC formal",
+      "url": "https://www.cancer.gov/types/lung/hp/non-small-cell-lung-treatment-pdq",
+      "version": "2025-05-15",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Diagnostic evaluation; tissue and molecular features"
+    },
+    {
+      "id": "nci-meso-2025",
+      "label": "NCI. Malignant Mesothelioma Treatment (PDQ), Health Professional",
+      "url": "https://www.cancer.gov/types/mesothelioma/hp/mesothelioma-treatment-pdq",
+      "version": "2025-05-12",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Diagnosis; pleural biopsy; asbestos exposure"
+    },
+    {
+      "id": "nih-pcp",
+      "label": "NIH. Guidelines for Adult and Adolescent Opportunistic Infections: Pneumocystis Pneumonia",
+      "url": "https://clinicalinfo.hiv.gov/en/guidelines/hiv-clinical-guidelines-adult-and-adolescent-opportunistic-infections/pneumocystis",
+      "version": "2026-05-27",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Clinical manifestations; diagnosis; treatment and limits of testing"
+    },
+    {
+      "id": "nice-smoking-clozapine-2014",
+      "label": "NICE CG178. Psychosis and schizophrenia in adults: guía primaria, copia del documento completo",
+      "url": "https://lampardinquiry.org.uk/wp-content/uploads/2025/04/20250320-CG178-NICE-guideline-LIVE.pdf",
+      "version": "2014-03-18; copia del documento NICE con copyright2025",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "1.1.2.3, p6: reducción del tabaco y metabolismo de clozapina/olanzapina"
+    },
+    {
+      "id": "ats-idsa-cap-2019",
+      "label": "ATS/IDSA. Diagnosis and Treatment of Adults with Community-acquired Pneumonia",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6812437/",
+      "version": "2019-10-01",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Question5: procalcitonina e inicio de antibióticos en NAC confirmada por imagen"
+    }
+  ],
+  "mexico_source_note": "Se abrió la actualización 2017 de IMSS-234-09 para neumonía. La búsqueda nacional no identificó una guía reciente accesible que cubra todos los temas de esta sección. GINA y GOLD se comprobaron en sus informes 2026 completos mediante descarga temporal privada por límites de tamaño del visor web. No se conservan esos PDF en el repositorio. Los antivirales y pruebas se condicionan a disponibilidad y protocolos mexicanos. Para las sustituciones se comprobó GINA2026, GOLD2026, CDC2026, RCH y la GPC primaria ATS/IDSA2019 en su pregunta5. La referencia NICE conserva su versión2014 y se abrió una copia íntegra; no se presenta como actualización2025. El PDQNCI es un recurso profesional con actualización15-mayo-2025, no una guía formal.",
+  "blocks": [
+    {
+      "id": "21.01",
+      "title": "Sibilancias episódicas",
+      "related_sections": [],
+      "scenarios": [
+        {
+          "id": "21.01-c2-01",
+          "anchor_topic_ids": [
+            "21.01-01"
+          ],
+          "objective": "contraste",
+          "vignette": "Una adolescente presenta dificultad respiratoria al correr, con ruido agudo al inspirar y sensación de cierre en la garganta. Los episodios ceden al parar y no mejoran con su broncodilatador.",
+          "question": "¿Qué diagnóstico vecino conviene evaluar antes de aumentar tratamiento de asma?",
+          "answer": "Obstrucción laríngea inducible.",
+          "discriminator": "ruido agudo al inspirar y sensación de cierre en la garganta",
+          "reason": "El ruido inspiratorio orienta a vía aérea superior y no equivale a sibilancia espiratoria.",
+          "initial_action": "Revisar el diagnóstico y coordinar evaluación funcional laríngea según disponibilidad.",
+          "limits": "Puede coexistir con asma; estos datos no confirman por sí solos una causa única.",
+          "evidence": [
+            {
+              "source_id": "gina-2026",
+              "locator": "Box1-3, diagnóstico diferencial12–39años: estridor y obstrucción laríngea inducible; apartado atletas",
+              "support": "El ruido inspiratorio orienta a vía aérea superior y no equivale a sibilancia espiratoria."
+            }
+          ]
+        },
+        {
+          "id": "21.01-c2-02",
+          "anchor_topic_ids": [
+            "21.01-02"
+          ],
+          "objective": "cambio",
+          "vignette": "Un adulto con exacerbación de asma mejora con broncodilatador y corticoide. Está afebril y no tiene datos clínicos ni radiográficos de neumonía. Solicita antibiótico para acelerar la recuperación.",
+          "question": "¿Debe añadirse un antibiótico de rutina?",
+          "answer": "No, sin evidencia de infección pulmonar.",
+          "discriminator": "no tiene datos clínicos ni radiográficos de neumonía",
+          "reason": "La exacerbación asmática aislada no demuestra una infección que se beneficie de antibiótico.",
+          "initial_action": "Continuar tratamiento de la exacerbación y reevaluar respuesta y signos de infección.",
+          "limits": "La sospecha de neumonía u otra infección bacteriana cambia la evaluación.",
+          "evidence": [
+            {
+              "source_id": "gina-2026",
+              "locator": "Management of exacerbations: Antibiotics(not recommended), p188impresa/p189PDF",
+              "support": "La exacerbación asmática aislada no demuestra una infección que se beneficie de antibiótico."
+            }
+          ]
+        },
+        {
+          "id": "21.01-c2-03",
+          "anchor_topic_ids": [
+            "21.01-01",
+            "21.01-02"
+          ],
+          "objective": "cambio",
+          "vignette": "Un adolescente con asma usa formoterol solo para aliviar síntomas. El inhalador no contiene corticoide y no usa otro controlador.",
+          "question": "¿Qué riesgo obliga a revisar esa pauta?",
+          "answer": "Uso de LABA sin corticoide inhalado.",
+          "discriminator": "El inhalador no contiene corticoide",
+          "reason": "El LABA aislado deja sin tratar la inflamación y aumenta el riesgo de exacerbaciones.",
+          "initial_action": "Cambiar con el prescriptor a una estrategia que contenga corticoide inhalado y comprobar el plan de rescate.",
+          "limits": "No confundir formoterol solo con combinaciones ICS-formoterol indicadas para edades y pautas específicas.",
+          "evidence": [
+            {
+              "source_id": "gina-2026",
+              "locator": "Formoterol without ICS, p100impresa/p101PDF",
+              "support": "El LABA aislado deja sin tratar la inflamación y aumenta el riesgo de exacerbaciones."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "21.02",
+      "title": "Disnea crónica y tabaco",
+      "related_sections": [],
+      "scenarios": [
+        {
+          "id": "21.02-c2-01",
+          "anchor_topic_ids": [
+            "21.02-01"
+          ],
+          "objective": "cambio",
+          "vignette": "Un adulto con EPOC estable tiene disnea crónica. La evaluación muestra solo desaturación moderada con esfuerzo, sin hipoxemia crónica grave en reposo. Pide oxígeno domiciliario permanente.",
+          "question": "¿La disnea con esa desaturación justifica oxígeno prolongado de rutina?",
+          "answer": "No.",
+          "discriminator": "sin hipoxemia crónica grave en reposo",
+          "reason": "El beneficio de oxígeno prolongado no se extiende automáticamente a la desaturación moderada.",
+          "initial_action": "Optimizar tratamiento y rehabilitación; evaluar indicación de oxígeno con mediciones y criterios formales.",
+          "limits": "No extrapolar esta respuesta a una exacerbación aguda o hipoxemia grave.",
+          "evidence": [
+            {
+              "source_id": "gold-2026",
+              "locator": "Non-pharmacological treatment: LTOT should not be prescribed routinely in moderate resting/exercise desaturation",
+              "support": "El beneficio de oxígeno prolongado no se extiende automáticamente a la desaturación moderada."
+            }
+          ]
+        },
+        {
+          "id": "21.02-c2-02",
+          "anchor_topic_ids": [
+            "21.02-02"
+          ],
+          "objective": "cambio",
+          "vignette": "Un fumador con esquizofrenia estable recibe clozapina. Planea dejar por completo los cigarrillos al ingresar a un programa de cesación.",
+          "question": "¿Qué tratamiento concomitante requiere coordinación al dejar de fumar?",
+          "answer": "La clozapina, por posible aumento de exposición al reducir el tabaco.",
+          "discriminator": "recibe clozapina",
+          "reason": "El cambio del consumo de cigarrillos puede alterar el metabolismo del antipsicótico.",
+          "initial_action": "Apoyar la cesación y avisar al prescriptor para vigilancia clínica, niveles y ajuste si procede.",
+          "limits": "No suspender clozapina ni cambiar su dosis sin supervisión; la guía citada es de2014, no2026.",
+          "evidence": [
+            {
+              "source_id": "nice-smoking-clozapine-2014",
+              "locator": "Recomendación1.1.2.3, p6",
+              "support": "El cambio del consumo de cigarrillos puede alterar el metabolismo del antipsicótico."
+            }
+          ]
+        },
+        {
+          "id": "21.02-c2-03",
+          "anchor_topic_ids": [
+            "21.02-03"
+          ],
+          "objective": "dato_faltante",
+          "vignette": "La hermana adulta de una persona con deficiencia genética confirmada de alfa1-antitripsina tiene un nivel sérico aislado informado normal. Se propone cerrar su estudio familiar.",
+          "question": "¿Ese nivel aislado caracteriza por completo su riesgo hereditario?",
+          "answer": "No; el estudio familiar requiere caracterización genética apropiada.",
+          "discriminator": "un nivel sérico aislado informado normal",
+          "reason": "Los niveles se superponen entre genotipos y varían con inflamación y otras condiciones.",
+          "initial_action": "Ofrecer asesoría y estudio familiar con genotipificación o pruebas confirmatorias indicadas.",
+          "limits": "Un nivel normal no permite inferir genotipo; la selección de pruebas depende de la variante familiar.",
+          "evidence": [
+            {
+              "source_id": "alpha1-2016",
+              "locator": "Recommendation1f y párrafos previos: AAT level alone is not recommended for family testing",
+              "support": "Los niveles se superponen entre genotipos y varían con inflamación y otras condiciones."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "21.03",
+      "title": "Tos febril con infiltrados",
+      "related_sections": [],
+      "scenarios": [
+        {
+          "id": "21.03-c2-01",
+          "anchor_topic_ids": [
+            "21.03-01"
+          ],
+          "objective": "incompleta",
+          "vignette": "Un adulto hospitalizado tiene neumonía adquirida en comunidad compatible por clínica y consolidación nueva. La procalcitonina inicial es baja y aún no hay diagnóstico etiológico. Se propone omitir antibióticos solo por ese resultado.",
+          "question": "¿La procalcitonina baja permite esa decisión aislada?",
+          "answer": "No.",
+          "discriminator": "Se propone omitir antibióticos solo por ese resultado",
+          "reason": "La sensibilidad de procalcitonina no permite excluir por sí sola neumonía bacteriana.",
+          "initial_action": "Iniciar tratamiento antibacteriano indicado y ajustar al conjunto de estudios y evolución.",
+          "limits": "Este punto de la guía2019 se aplica a adultos con NAC confirmada por imagen; no define por sí solo la duración ni todo escenario con virus identificado.",
+          "evidence": [
+            {
+              "source_id": "ats-idsa-cap-2019",
+              "locator": "Question5: strong recommendation, moderate-quality evidence; sensibilidad insuficiente",
+              "support": "La sensibilidad de procalcitonina no permite excluir por sí sola neumonía bacteriana."
+            }
+          ]
+        },
+        {
+          "id": "21.03-c2-02",
+          "anchor_topic_ids": [
+            "21.03-02"
+          ],
+          "objective": "incompleta",
+          "vignette": "Un adulto tiene tos seca e infiltrados intersticiales. No hay prueba etiológica y se propone identificar un germen atípico por la radiografía.",
+          "question": "¿Puede definirse el agente así?",
+          "answer": "No.",
+          "discriminator": "No hay prueba etiológica",
+          "reason": "Los patrones clínicos y radiológicos se superponen.",
+          "initial_action": "Evaluar gravedad y elegir pruebas según contexto.",
+          "limits": "La etiqueta atípica no demuestra un microorganismo.",
+          "evidence": [
+            {
+              "source_id": "imss-cap-2017",
+              "locator": "Diagnóstico clínico, radiológico y microbiológico",
+              "support": "Los patrones clínicos y radiológicos se superponen."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "21.04",
+      "title": "Niño con neumonía",
+      "related_sections": [],
+      "scenarios": [
+        {
+          "id": "21.04-c2-01",
+          "anchor_topic_ids": [
+            "21.04-01"
+          ],
+          "objective": "cambio",
+          "vignette": "Un escolar fue tratado por neumonía no complicada. Ya no tiene fiebre ni dificultad respiratoria, come y juega como antes. La familia solicita una radiografía de control para confirmar curación. La recuperación es completa y sin complicaciones.",
+          "question": "¿Es necesaria la radiografía de control de rutina?",
+          "answer": "No, si la recuperación es completa y sin complicaciones.",
+          "discriminator": "La recuperación es completa y sin complicaciones",
+          "reason": "La resolución clínica de neumonía no complicada no requiere comprobarse siempre con radiografía.",
+          "initial_action": "Mantener seguimiento y explicar signos que obligan a reevaluar.",
+          "limits": "Sí reconsiderar imagen si hay mala evolución, complicación, recurrencia en el mismo lóbulo o sospecha de masa o cuerpo extraño.",
+          "evidence": [
+            {
+              "source_id": "rch-cap",
+              "locator": "Management/Investigations/CXR: follow-up CXR not required after uncomplicated pneumonia and uneventful recovery",
+              "support": "La resolución clínica de neumonía no complicada no requiere comprobarse siempre con radiografía."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "21.05",
+      "title": "Virosis respiratoria",
+      "related_sections": [],
+      "scenarios": [
+        {
+          "id": "21.05-c2-01",
+          "anchor_topic_ids": [
+            "21.05-01"
+          ],
+          "objective": "cambio",
+          "vignette": "Un adulto con asma e influenza requiere antiviral. Se propone zanamivir inhalado por preferencia de vía.",
+          "question": "¿Qué antecedente hace inadecuada esa elección?",
+          "answer": "El asma, por riesgo de broncoespasmo.",
+          "discriminator": "asma e influenza",
+          "reason": "Zanamivir inhalado está contraindicado en enfermedad de la vía aérea como asma o EPOC.",
+          "initial_action": "Seleccionar otra opción indicada según gravedad, edad y función orgánica.",
+          "limits": "La contraindicación corresponde al producto inhalado; no implica negar todo tratamiento antiviral.",
+          "evidence": [
+            {
+              "source_id": "cdc-flu-2026",
+              "locator": "Table1 y nota3: zanamivir inhalado y enfermedad de vía aérea",
+              "support": "Zanamivir inhalado está contraindicado en enfermedad de la vía aérea como asma o EPOC."
+            }
+          ]
+        },
+        {
+          "id": "21.05-c2-02",
+          "anchor_topic_ids": [
+            "21.05-02"
+          ],
+          "objective": "variante",
+          "vignette": "Un adulto de alto riesgo completó tratamiento para COVID19 y mejoró. Días después reaparecen síntomas leves y una prueba positiva, sin hipoxemia. Pregunta si eso demuestra que el antiviral fue inútil.",
+          "question": "¿El rebote invalida el beneficio esperado del tratamiento?",
+          "answer": "No.",
+          "discriminator": "reaparecen síntomas leves y una prueba positiva, sin hipoxemia",
+          "reason": "El rebote también ocurre sin antivirales y no elimina su beneficio en personas de alto riesgo.",
+          "initial_action": "Reevaluar gravedad y prevenir transmisión según la recomendación local.",
+          "limits": "No atribuir todo empeoramiento a rebote; hipoxemia, deterioro o inmunosupresión requieren valoración específica.",
+          "evidence": [
+            {
+              "source_id": "cdc-covid-2026",
+              "locator": "COVID-19 Rebound: recurrencia con o sin antiviral y beneficios mayores que riesgo de rebote",
+              "support": "El rebote también ocurre sin antivirales y no elimina su beneficio en personas de alto riesgo."
+            }
+          ]
+        },
+        {
+          "id": "21.05-c2-03",
+          "anchor_topic_ids": [
+            "21.05-03"
+          ],
+          "objective": "cambio",
+          "vignette": "Una embarazada de alto riesgo con COVID19 temprano no puede recibir nirmatrelvir/ritonavir por una interacción importante. Se propone molnupiravir solo porque también es oral.",
+          "question": "¿Es apropiado ese reemplazo automático durante el embarazo?",
+          "answer": "No; debe evitarse molnupiravir en embarazadas.",
+          "discriminator": "Se propone molnupiravir solo porque también es oral",
+          "reason": "Los antivirales no comparten las mismas condiciones de seguridad gestacional.",
+          "initial_action": "Coordinar con obstetricia una alternativa apropiada, como remdesivir si es elegible y está disponible.",
+          "limits": "Revisar ventana, función orgánica y acceso local; esta restricción no equivale a excluir todo tratamiento por embarazo.",
+          "evidence": [
+            {
+              "source_id": "cdc-covid-2026",
+              "locator": "Treatment options/table: molnupiravir, avoid in pregnant women; remdesivir alternativa",
+              "support": "Los antivirales no comparten las mismas condiciones de seguridad gestacional."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "21.06",
+      "title": "Disnea con matidez",
+      "related_sections": [],
+      "scenarios": [
+        {
+          "id": "21.06-c2-01",
+          "anchor_topic_ids": [
+            "21.06-01"
+          ],
+          "objective": "dato_faltante",
+          "vignette": "Un adulto tiene derrame pleural unilateral nuevo sin causa conocida. Se planea toracocentesis sin ultrasonido.",
+          "question": "¿Qué medida mejora la seguridad?",
+          "answer": "Guía ecográfica del procedimiento.",
+          "discriminator": "sin ultrasonido",
+          "reason": "La imagen identifica un sitio seguro y reduce complicaciones.",
+          "initial_action": "Realizar ultrasonido y estudio dirigido del líquido.",
+          "limits": "La indicación y factibilidad dependen de volumen y estabilidad.",
+          "evidence": [
+            {
+              "source_id": "bts-pleural-2023",
+              "locator": "Image-guided thoracentesis",
+              "support": "La imagen identifica un sitio seguro y reduce complicaciones."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "21.07",
+      "title": "Inmunosupresión con hipoxemia",
+      "related_sections": [],
+      "scenarios": [
+        {
+          "id": "21.07-c2-01",
+          "anchor_topic_ids": [
+            "21.07-01"
+          ],
+          "objective": "incompleta",
+          "vignette": "Un adulto con VIH avanzado tiene disnea e hipoxemia, pero radiografía de tórax normal.",
+          "question": "¿Esto descarta neumocistosis?",
+          "answer": "No.",
+          "discriminator": "radiografía de tórax normal",
+          "reason": "La imagen simple puede ser normal al inicio.",
+          "initial_action": "Evaluar oxigenación, tomografía y muestra respiratoria.",
+          "limits": "También considerar otras causas de hipoxemia.",
+          "evidence": [
+            {
+              "source_id": "nih-pcp",
+              "locator": "Clinical manifestations and diagnosis",
+              "support": "La imagen simple puede ser normal al inicio."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "21.08",
+      "title": "Fibrosis con exposición laboral",
+      "related_sections": [],
+      "scenarios": [
+        {
+          "id": "21.08-c2-01",
+          "anchor_topic_ids": [
+            "21.08-01"
+          ],
+          "objective": "mecanismo",
+          "vignette": "Un cortador de piedra con exposición intensa a sílice tiene alteración persistente de función renal. Su familia considera que esa exposición solo puede afectar pulmón.",
+          "question": "¿La evaluación ocupacional debe limitarse al pulmón?",
+          "answer": "No; la sílice también se asocia con enfermedad renal y otros daños.",
+          "discriminator": "alteración persistente de función renal",
+          "reason": "La exposición a sílice respirable se asocia también con insuficiencia renal crónica y enfermedad autoinmune.",
+          "initial_action": "Evaluar causas renales y exposición con nefrología y salud ocupacional.",
+          "limits": "La asociación no demuestra que la sílice sea la causa de cada lesión renal; mantener diagnóstico diferencial.",
+          "evidence": [
+            {
+              "source_id": "niosh-silica-2026",
+              "locator": "Overview: other serious diseases, autoimmune diseases and chronic renal failure",
+              "support": "La exposición a sílice respirable se asocia también con insuficiencia renal crónica y enfermedad autoinmune."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "21.09",
+      "title": "Masa torácica y pérdida de peso",
+      "related_sections": [],
+      "scenarios": [
+        {
+          "id": "21.09-c2-01",
+          "anchor_topic_ids": [
+            "21.09-01"
+          ],
+          "objective": "dato_faltante",
+          "vignette": "Una biopsia ya confirmó adenocarcinoma pulmonar metastásico. La muestra fue escasa y no permitió evaluar características moleculares; todavía no se eligió tratamiento sistémico.",
+          "question": "¿La histología sola completa la información necesaria para seleccionar terapia?",
+          "answer": "No; deben valorarse biomarcadores relevantes.",
+          "discriminator": "no permitió evaluar características moleculares",
+          "reason": "Las alteraciones moleculares pueden cambiar la sensibilidad y permitir tratamiento dirigido.",
+          "initial_action": "Coordinar estudio molecular con oncología y patología y decidir cómo obtener material adecuado.",
+          "limits": "No toda alteración tiene tratamiento dirigido; no retrasar soporte de una complicación urgente por esperar biomarcadores.",
+          "evidence": [
+            {
+              "source_id": "nci-lung-2025",
+              "locator": "Treatment Option Overview: histological type and molecular features; Molecular Features y terapias dirigidas",
+              "support": "Las alteraciones moleculares pueden cambiar la sensibilidad y permitir tratamiento dirigido."
+            }
+          ]
+        },
+        {
+          "id": "21.09-c2-02",
+          "anchor_topic_ids": [
+            "21.09-02"
+          ],
+          "objective": "incompleta",
+          "vignette": "Un trabajador con exposición antigua a asbesto presenta derrame y engrosamiento pleural. La citología del líquido es negativa.",
+          "question": "¿Queda excluido mesotelioma?",
+          "answer": "No; puede necesitar biopsia pleural.",
+          "discriminator": "citología del líquido es negativa",
+          "reason": "El líquido puede no aportar tejido suficiente para diagnóstico.",
+          "initial_action": "Referir para evaluación pleural y muestra.",
+          "limits": "La exposición a asbesto no demuestra malignidad.",
+          "evidence": [
+            {
+              "source_id": "nci-meso-2025",
+              "locator": "Diagnostic evaluation of pleural disease",
+              "support": "El líquido puede no aportar tejido suficiente para diagnóstico."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

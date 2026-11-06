@@ -1,0 +1,802 @@
+{
+  "schema_version": 1,
+  "layer": 2,
+  "section_id": "03",
+  "title": "ATLS",
+  "author": "clinical-author-01-12",
+  "sources": [
+    {
+      "id": "aba-referral",
+      "label": "American Burn Association: Guidelines for Burn Patient Referral",
+      "url": "https://www.ameriburn.org/storyblok-asset/x/b7f8f5d4e8/one-page-guidelines-for-burn-patient-referral-1.pdf",
+      "version": "Criterios ABA, copyright 2022; PDF oficial de una página",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Advice on Transfer and Consultation; Burn Severity Determination"
+    },
+    {
+      "id": "cdc-catheter-2011",
+      "label": "CDC: prevención de infecciones relacionadas con catéteres intravasculares",
+      "url": "https://www.cdc.gov/infection-control/hcp/intravascular-catheter-related-infections/summary-recommendations.html",
+      "version": "Guía 2011; actualización de apósitos 2017; página 2024",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "§2.2 recomendaciones5,7,11: sitio renal, ultrasonido y reemplazo tras asepsia incierta; §§3–5"
+    },
+    {
+      "id": "east-pregnancy-2010",
+      "label": "EAST: Pregnancy and Trauma",
+      "url": "https://www.east.org/education-resources/practice-management-guidelines/details/pregnancy-and-trauma",
+      "version": "2010",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Recomendaciones Level II y III; no se usa para fármacos ni umbrales de parto"
+    },
+    {
+      "id": "imss-tbi-2018",
+      "label": "IMSS: atención inicial de adultos con TCE grave, GER",
+      "url": "https://www.imss.gob.mx/sites/all/statics/guiasclinicas/604GER.pdf",
+      "version": "2018",
+      "checked_at": "2026-11-06",
+      "region": "mexico",
+      "access": "checked",
+      "locator": "pp. 17–21: evaluación, imagen y prioridad de referencia"
+    },
+    {
+      "id": "rch-cervical",
+      "label": "Royal Children’s Hospital: Cervical spine assessment",
+      "url": "https://www.rch.org.au/clinicalguide/guideline_index/Cervical_spine_assessment/",
+      "version": "2026-07",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Red flags; síntomas neurológicos persistentes e imagen"
+    },
+    {
+      "id": "rch-head-2026",
+      "label": "Royal Children’s Hospital: Head injury",
+      "url": "https://www.rch.org.au/clinicalguide/guideline_index/Head_injury/",
+      "version": "Actualización agosto 2026",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Risk factors; neuroimaging; tratamiento y observación pediátrica"
+    },
+    {
+      "id": "trauma-bleeding-2023",
+      "label": "Task Force for Advanced Bleeding Care: guía europea de hemorragia traumática, sexta edición",
+      "url": "https://link.springer.com/article/10.1186/s13054-023-04327-7",
+      "version": "2023-03-01",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Recomendaciones1–2,8–10,13,18–19,24–25; rec18, temperatura y limitaciones de TP/TTPa"
+    },
+    {
+      "id": "wses-bowel-2022",
+      "label": "WSES: lesiones intestinales contusas y penetrantes",
+      "url": "https://link.springer.com/article/10.1186/s13017-022-00418-y",
+      "version": "2022-03-04",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Recomendaciones de diagnóstico y observación tras trauma contuso"
+    },
+    {
+      "id": "wses-pelvis-2017",
+      "label": "WSES: Pelvic trauma classification and guidelines",
+      "url": "https://link.springer.com/article/10.1186/s13017-017-0117-6",
+      "version": "2017-01-18",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Compresión pélvica; diagnóstico y control de hemorragia"
+    },
+    {
+      "id": "wses-spleen-2017",
+      "label": "WSES: trauma esplénico en adultos y niños",
+      "url": "https://link.springer.com/article/10.1186/s13017-017-0151-4",
+      "version": "2017-08-18",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Manejo no operatorio; estabilidad y recursos necesarios"
+    },
+    {
+      "id": "wses-thorax-2025",
+      "label": "WSES-AAST: Thoracic trauma guidelines",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12522690/",
+      "version": "2025-10-15",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Thoracic wall injuries; Pleural injuries, Treatment; Airways: fijación, drenaje, complicaciones y selección conservadora"
+    },
+    {
+      "id": "wses-spleen-2022",
+      "label": "WSES: seguimiento del trauma esplénico tratado sin cirugía, consenso2022",
+      "url": "https://wjes.biomedcentral.com/counter/pdf/10.1186/s13017-022-00457-5",
+      "version": "2022, World Journal of Emergency Surgery17:52",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Research Question5, tabla2: extravasación arterial, embolización y diferencias pediátricas"
+    },
+    {
+      "id": "car-pregnant-trauma-2024",
+      "label": "CETARS/Canadian Association of Radiologists: imagen en gestante con trauma mayor",
+      "url": "https://car.ca/wp-content/uploads/2025/05/CETARS_CAR-Practice-Guidelines-on-Imaging-the-Pregnant-Trauma-Patient_2024.pdf",
+      "version": "2024, DOI10.1177/08465371241254966; fecha2025 de alojamiento no es publicación",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Key Recommendations y General Principles: TC justificada y contraste yodado"
+    },
+    {
+      "id": "btf-severe-4th",
+      "label": "Brain Trauma Foundation: manejo del TCE grave, cuarta edición",
+      "url": "https://braintrauma.org/coma/guidelines/severe-tbi",
+      "version": "Cuarta edición2016; resumen oficial incluye las recomendaciones originales y no se presenta como actualización2026",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "§7 Steroids, LevelI; resumen ejecutivo2016 verificado"
+    },
+    {
+      "id": "idsa-cns-2017",
+      "label": "IDSA: ventriculitis y meningitis asociadas a atención sanitaria",
+      "url": "https://www.idsociety.org/practice-guideline/healthcare-associated-ventriculitis-and-meningitis/",
+      "version": "2017",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Recomendaciones81–83: fractura de base, fugaLCR, profilaxis, reparación y vacunación"
+    },
+    {
+      "id": "sci-autonomic-2021",
+      "label": "Consortium for Spinal Cord Medicine/PVA: disreflexia y otras disfunciones autonómicas",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8288133/",
+      "version": "2021-07-16; guía PVA 2020, evidencia hasta2019",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "§2, recomendaciones 2.1–2.10: reconocimiento y medidas iniciales de disreflexia autonómica"
+    }
+  ],
+  "mexico_source_note": "Se abrieron IMSS-428-10 (fracturas costales, 2010) e IMSS-604-18 (atención inicial del TCE grave, 2018). No se encontró una GPC mexicana reciente que cubriera todo el politrauma. Las fuentes internacionales especifican adultos, niños o gestación. La guía EAST de gestación es de 2010; solo respalda prioridades generales, sin asumir actualización reciente. Para las nuevas variantes se comprobó también el consenso esplénicoWSES2022, CETARS/CAR2024 para TC en trauma mayor durante embarazo, la recomendación original de esteroidesBTF2016 y la guíaIDSA2017 de fugaLCR; no se presentan como actualizaciones2026.",
+  "blocks": [
+    {
+      "id": "03.01",
+      "title": "Entrada de paciente politraumatizado",
+      "related_sections": [],
+      "scenarios": [
+        {
+          "id": "03.01-c2-01",
+          "anchor_topic_ids": [
+            "03.01-01"
+          ],
+          "objective": "cambio",
+          "vignette": "Un motociclista llega con sangre que sale a presión de una herida del muslo. Puede hablar con claridad.",
+          "question": "¿Qué amenaza exige control inmediato?",
+          "answer": "La hemorragia externa masiva.",
+          "discriminator": "sangre que sale a presión",
+          "reason": "La exanguinación puede preceder a la pérdida de vía aérea.",
+          "initial_action": "Aplicar presión directa y escalar al torniquete si no se controla.",
+          "limits": "No omitir después la evaluación completa.",
+          "evidence": [
+            {
+              "source_id": "trauma-bleeding-2023",
+              "locator": "Recomendación 2: compresión local y torniquetes",
+              "support": "La exanguinación puede preceder a la pérdida de vía aérea."
+            }
+          ]
+        },
+        {
+          "id": "03.01-c2-02",
+          "anchor_topic_ids": [
+            "03.01-01"
+          ],
+          "objective": "contraste",
+          "vignette": "Un adulto con fractura pélvica tras colisión permanece hipotenso pese a reanimación inicial. El E-FAST no muestra líquido intraperitoneal. No se identifica otro sangrado externo.",
+          "question": "¿El E-FAST negativo excluye una fuente pélvica?",
+          "answer": "No. Puede existir hemorragia pélvica no detectada por ese estudio.",
+          "discriminator": "no muestra líquido intraperitoneal",
+          "reason": "La ausencia de líquido intraperitoneal no excluye sangrado pélvico, que puede ser retroperitoneal.",
+          "initial_action": "Continuar control de hemorragia y estabilización pélvica con el equipo de trauma; no cerrar la búsqueda por el E-FAST.",
+          "limits": "El resultado tampoco excluye todas las lesiones abdominales; la estabilidad y la respuesta determinan los siguientes estudios.",
+          "evidence": [
+            {
+              "source_id": "wses-pelvis-2017",
+              "locator": "Recommendations for diagnostic tools use; texto sobre E-FAST",
+              "support": "La guía indica que E-FAST no tiene sensibilidad suficiente para excluir hemorragia pélvica."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "03.02",
+      "title": "Hipotensión traumática",
+      "related_sections": [],
+      "scenarios": [
+        {
+          "id": "03.02-c2-01",
+          "anchor_topic_ids": [
+            "03.02-01"
+          ],
+          "objective": "incompleta",
+          "vignette": "Tras un choque, un adulto está hipotenso. Tiene fractura de pelvis y lesión cervical sospechada; la frecuencia no está elevada.",
+          "question": "¿Puede atribuirse el choque a la médula por la frecuencia aislada?",
+          "answer": "No. Hay que buscar hemorragia y otras causas.",
+          "discriminator": "fractura de pelvis",
+          "reason": "Las lesiones pueden coexistir; la frecuencia no excluye sangrado.",
+          "initial_action": "Controlar hemorragia y evaluar tórax, abdomen y pelvis.",
+          "limits": "No clasificar choque con un signo aislado.",
+          "evidence": [
+            {
+              "source_id": "trauma-bleeding-2023",
+              "locator": "Recomendaciones 1 y 8–10: evaluación de hemorragia",
+              "support": "Las lesiones pueden coexistir; la frecuencia no excluye sangrado."
+            }
+          ]
+        },
+        {
+          "id": "03.02-c2-02",
+          "anchor_topic_ids": [
+            "03.02-02"
+          ],
+          "objective": "dato_faltante",
+          "vignette": "Un adulto con trauma cerrado tiene piel fría y lactato elevado. Su hemoglobina inicial está dentro del intervalo normal.",
+          "question": "¿La hemoglobina descarta hemorragia aguda?",
+          "answer": "No.",
+          "discriminator": "hemoglobina inicial",
+          "reason": "La concentración inicial puede no reflejar la pérdida sanguínea reciente.",
+          "initial_action": "Evaluar perfusión y buscar sangrado; repetir mediciones.",
+          "limits": "Interpretar tendencias junto con clínica e imagen.",
+          "evidence": [
+            {
+              "source_id": "trauma-bleeding-2023",
+              "locator": "Recomendación 9: hemoglobina seriada",
+              "support": "La concentración inicial puede no reflejar la pérdida sanguínea reciente."
+            }
+          ]
+        },
+        {
+          "id": "03.02-c2-03",
+          "anchor_topic_ids": [
+            "03.02-03"
+          ],
+          "objective": "contraste",
+          "vignette": "Un adulto con lesión medular T4 de hace meses presenta cefalea, sudoración y presión muy superior a su basal con bradicardia. Su sonda urinaria dejó de drenar y la vejiga está distendida.",
+          "question": "¿Qué complicación autonómica debe sospecharse?",
+          "answer": "Disreflexia autonómica.",
+          "discriminator": "presión muy superior a su basal con bradicardia",
+          "reason": "Una lesión alta establecida permite una respuesta hipertensiva a estímulos como distensión vesical; este patrón difiere del choque neurogénico hipotensivo.",
+          "initial_action": "Incorporar al paciente si es seguro, monitorizar presión y pulso y buscar y resolver el desencadenante con atención urgente.",
+          "limits": "Valorar otras causas de cefalea e hipertensión; el tratamiento requiere controlar presión mientras se corrige el estímulo, sin manipulación vesical indiscriminada.",
+          "evidence": [
+            {
+              "source_id": "sci-autonomic-2021",
+              "locator": "§2, recomendaciones 2.1–2.10: signos, posición, vigilancia y desencadenante urinario",
+              "support": "La lesión T6 o superior puede causar hipertensión episódica con bradicardia, cefalea y sudoración; la distensión vesical es un desencadenante frecuente."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "03.03",
+      "title": "Disnea unilateral aguda tras trauma",
+      "related_sections": [],
+      "scenarios": [
+        {
+          "id": "03.03-c2-01",
+          "anchor_topic_ids": [
+            "03.03-01"
+          ],
+          "objective": "cambio",
+          "vignette": "Un adulto con tórax inestable por fracturas costales está hemodinámicamente estable después de la reanimación. Pese a analgesia y soporte adecuados, no logra separarse de la ventilación mecánica.",
+          "question": "¿Qué intervención sobre la pared torácica debe valorarse?",
+          "answer": "Estabilización quirúrgica de las fracturas costales.",
+          "discriminator": "no logra separarse de la ventilación mecánica",
+          "reason": "El fracaso para retirar ventilación puede hacer útil la fijación, además del soporte respiratorio.",
+          "initial_action": "Solicitar evaluación del equipo torácico para selección y momento de fijación.",
+          "limits": "No es una indicación automática: lesiones asociadas y comorbilidades cambian el balance. La inestabilidad hemodinámica contraindica esta fijación inicial.",
+          "evidence": [
+            {
+              "source_id": "wses-thorax-2025",
+              "locator": "Thoracic wall injuries: flail chest y dificultad de destete",
+              "support": "Se debe considerar fijación en tórax inestable estable y ante imposibilidad de destete en fracturas seleccionadas."
+            }
+          ]
+        },
+        {
+          "id": "03.03-c2-02",
+          "anchor_topic_ids": [
+            "03.03-02"
+          ],
+          "objective": "cambio",
+          "vignette": "Un adulto estable tiene neumotórax traumático pequeño confirmado por TC y aún respira espontáneamente. Debe recibir ventilación con presión positiva por otra lesión durante una cirugía próxima.",
+          "question": "¿El plan ventilatorio cambia la valoración de drenaje?",
+          "answer": "Sí. La presión positiva aumenta la necesidad de valorar drenaje pleural.",
+          "discriminator": "Debe recibir ventilación con presión positiva",
+          "reason": "El tamaño pequeño no es el único criterio cuando cambia la forma de ventilación.",
+          "initial_action": "Reevaluar con trauma y anestesia la colocación de drenaje antes de iniciar presión positiva.",
+          "limits": "La selección depende de condición clínica, vigilancia y recursos; no esperar a que aparezca choque para revisar el plan.",
+          "evidence": [
+            {
+              "source_id": "wses-thorax-2025",
+              "locator": "Pleural injuries, Treatment: neumotórax y ventilación con presión positiva",
+              "support": "WSES describe drenaje como casi obligatorio ante presión positiva y exige guiar la intervención por el estado clínico."
+            }
+          ]
+        },
+        {
+          "id": "03.03-c2-03",
+          "anchor_topic_ids": [
+            "03.03-03"
+          ],
+          "objective": "cambio",
+          "vignette": "Un adulto tuvo neumotórax abierto por herida penetrante. Ya se cubrió el defecto, se colocó drenaje y el equipo prepara reparación. No tiene fiebre ni infección clínica.",
+          "question": "¿La ausencia de infección elimina la indicación de profilaxis antibiótica de WSES?",
+          "answer": "No. La lesión abierta penetrante justifica valorar profilaxis.",
+          "discriminator": "neumotórax abierto por herida penetrante",
+          "reason": "La profilaxis busca prevenir infección por el mecanismo abierto; no requiere esperar infección establecida.",
+          "initial_action": "Aplicar el protocolo de profilaxis para la lesión abierta y la reparación, junto al manejo pleural.",
+          "limits": "No confundir profilaxis con tratamiento prolongado de infección. El caso no fija agente ni dosis.",
+          "evidence": [
+            {
+              "source_id": "wses-thorax-2025",
+              "locator": "Pleural injuries, Treatment: open PNX y profilaxis",
+              "support": "La guía indica profilaxis en neumotórax abierto y distingue este contexto del neumotórax cerrado por trauma contuso."
+            }
+          ]
+        },
+        {
+          "id": "03.03-c2-04",
+          "anchor_topic_ids": [
+            "03.03-04"
+          ],
+          "objective": "cambio",
+          "vignette": "Tras colocar drenaje por neumotórax traumático, la TC de un adulto estable demuestra que el tubo atraviesa tejido hepático. El extremo no está en la posición pleural prevista.",
+          "question": "¿Debe retirarse inmediatamente a pie de cama?",
+          "answer": "No. Requiere planificación urgente por un equipo multidisciplinario.",
+          "discriminator": "el tubo atraviesa tejido hepático",
+          "reason": "Retirar sin control un tubo situado en un órgano puede añadir daño y sangrado.",
+          "initial_action": "Mantener control clínico y coordinar evaluación torácica, abdominal e intervencionista para manejo dirigido.",
+          "limits": "La estabilidad actual no vuelve inocua la mala posición; el plan cambia si aparece hemorragia o deterioro.",
+          "evidence": [
+            {
+              "source_id": "wses-thorax-2025",
+              "locator": "Pleural injuries, Treatment: tubo en un órgano no previsto",
+              "support": "Si el drenaje se introduce en pulmón, bazo, hígado o diafragma, la guía indica no retirarlo de inmediato y planificar manejo tras imagen."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "03.04",
+      "title": "Hipoxemia y choque torácico",
+      "related_sections": [],
+      "scenarios": [
+        {
+          "id": "03.04-c2-01",
+          "anchor_topic_ids": [
+            "03.04-01"
+          ],
+          "objective": "cambio",
+          "vignette": "Un adulto con hemotórax traumático drenado está estable. Sale poco líquido por la sonda, pero la TC muestra una colección sanguínea retenida importante y coagulada.",
+          "question": "¿El débito escaso demuestra evacuación completa?",
+          "answer": "No. Puede reflejar hemotórax retenido.",
+          "discriminator": "colección sanguínea retenida importante y coagulada",
+          "reason": "La salida por la sonda no mide de forma fiable toda la sangre que queda en el tórax.",
+          "initial_action": "Solicitar evaluación torácica para evacuación dirigida, incluida videotoracoscopia cuando corresponda.",
+          "limits": "El tamaño, evolución y lesiones asociadas determinan técnica y momento; no decidir solo por el débito.",
+          "evidence": [
+            {
+              "source_id": "wses-thorax-2025",
+              "locator": "Pleural injuries, Treatment: residual/retained HTX y débito engañoso",
+              "support": "El hemotórax retenido grande es una indicación para considerar cirugía y el débito aislado puede ser engañoso."
+            }
+          ]
+        },
+        {
+          "id": "03.04-c2-02",
+          "anchor_topic_ids": [
+            "03.04-02"
+          ],
+          "objective": "dato_faltante",
+          "vignette": "Tras una herida precordial persiste un hemotórax pese al drenaje. La ecografía no muestra líquido pericárdico.",
+          "question": "¿El estudio pericárdico negativo excluye una lesión cardiaca penetrante?",
+          "answer": "No.",
+          "discriminator": "persiste un hemotórax pese al drenaje",
+          "reason": "Una laceración pericárdica puede permitir salida de sangre hacia la pleura sin un hemopericardio visible.",
+          "initial_action": "Solicitar evaluación quirúrgica urgente y buscar lesión cardiaca asociada.",
+          "limits": "No todo hemotórax persistente viene del corazón; la estabilidad determina la secuencia del estudio.",
+          "evidence": [
+            {
+              "source_id": "wses-thorax-2025",
+              "locator": "Pleural injuries: trauma central penetrante con hemotórax residual y laceración pericárdica",
+              "support": "Una laceración pericárdica puede permitir salida de sangre hacia la pleura sin un hemopericardio visible."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "03.05",
+      "title": "Lesión torácica difícil",
+      "related_sections": [],
+      "scenarios": [
+        {
+          "id": "03.05-c2-01",
+          "anchor_topic_ids": [
+            "03.05-01"
+          ],
+          "objective": "subtipo",
+          "vignette": "La broncoscopia demuestra una lesión traqueal pequeña tras trauma. El adulto permanece estable, ventila bien y no presenta fuga aérea importante, lesión esofágica ni vascular asociada.",
+          "question": "¿Toda lesión traqueal demostrada exige reparación inmediata?",
+          "answer": "No. Algunas lesiones pequeñas no complicadas admiten manejo conservador.",
+          "discriminator": "lesión traqueal pequeña",
+          "reason": "La extensión y las lesiones asociadas condicionan la necesidad de cirugía.",
+          "initial_action": "Coordinar vigilancia estrecha, control de infección y seguimiento con especialistas de vía aérea y tórax.",
+          "limits": "Las rupturas grandes, fuga significativa o neumotórax persistente pueden exigir reparación; este caso no autoriza observación sin recursos.",
+          "evidence": [
+            {
+              "source_id": "wses-thorax-2025",
+              "locator": "Airways: lesiones pequeñas no complicadas frente a indicaciones de reparación",
+              "support": "Las lesiones traqueobronquiales pequeñas no complicadas pueden sanar con manejo conservador y vigilancia."
+            }
+          ]
+        },
+        {
+          "id": "03.05-c2-02",
+          "anchor_topic_ids": [
+            "03.05-02"
+          ],
+          "objective": "incompleta",
+          "vignette": "Una herida toracoabdominal izquierda cruza cerca del diafragma. El paciente está estable y la TC no demuestra un defecto.",
+          "question": "¿La TC negativa cierra el estudio si la sospecha sigue alta?",
+          "answer": "No. Valorar exploración laparoscópica o toracoscópica.",
+          "discriminator": "cruza cerca del diafragma",
+          "reason": "Una lesión pequeña puede no verse en la TC.",
+          "initial_action": "Consultar cirugía para estudio dirigido.",
+          "limits": "La técnica depende de trayectoria, estabilidad y experiencia.",
+          "evidence": [
+            {
+              "source_id": "wses-thorax-2025",
+              "locator": "Diagnosis; Diaphragmatic injuries",
+              "support": "Una lesión pequeña puede no verse en la TC."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "03.06",
+      "title": "Abdomen tras trauma",
+      "related_sections": [],
+      "scenarios": [
+        {
+          "id": "03.06-c2-01",
+          "anchor_topic_ids": [
+            "03.06-01"
+          ],
+          "objective": "cambio",
+          "vignette": "Tras un choque, un adulto estable tiene marca del cinturón y dolor abdominal persistente. La TC muestra líquido libre sin lesión de órgano sólido.",
+          "question": "¿Qué lesión debe investigarse con especial atención?",
+          "answer": "Lesión intestinal o mesentérica.",
+          "discriminator": "líquido libre sin lesión de órgano sólido",
+          "reason": "La combinación aumenta la sospecha de lesión de víscera hueca.",
+          "initial_action": "Ingresar para evaluación quirúrgica y exploraciones seriadas.",
+          "limits": "La peritonitis o el deterioro cambian la urgencia de exploración.",
+          "evidence": [
+            {
+              "source_id": "wses-bowel-2022",
+              "locator": "Recomendaciones 2–5 de trauma contuso",
+              "support": "La combinación aumenta la sospecha de lesión de víscera hueca."
+            }
+          ]
+        },
+        {
+          "id": "03.06-c2-02",
+          "anchor_topic_ids": [
+            "03.06-02"
+          ],
+          "objective": "cambio",
+          "vignette": "Un adulto con trauma esplénico mantiene presión y perfusión. La TC con contraste demuestra extravasación arterial en el bazo. El centro dispone de angiografía inmediata y cirugía de rescate.",
+          "question": "¿Qué opción permite controlar el sangrado sin indicar esplenectomía automática?",
+          "answer": "Angiografía con valoración de embolización de la arteria esplénica.",
+          "discriminator": "extravasación arterial en el bazo",
+          "reason": "El hallazgo vascular modifica el manejo aunque el paciente siga estable.",
+          "initial_action": "Consultar de inmediato al equipo de trauma y radiología intervencionista para embolización y vigilancia.",
+          "limits": "La recomendación es condicional y depende de recursos; deterioro circulatorio puede exigir cirugía. No extrapolar el mismo criterio a niños.",
+          "evidence": [
+            {
+              "source_id": "wses-spleen-2022",
+              "locator": "Research Question5, recomendación sobre estabilidad y arterial blush",
+              "support": "WSES2022 sugiere embolización como primera intervención ante estabilidad y blush arterial en adultos si existen recursos."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "03.07",
+      "title": "Pelvis o gestación lesionada",
+      "related_sections": [],
+      "scenarios": [
+        {
+          "id": "03.07-c2-01",
+          "anchor_topic_ids": [
+            "03.07-01"
+          ],
+          "objective": "cambio",
+          "vignette": "Un adulto con fractura pélvica ya está estabilizado y mantiene un compresor pélvico desde hace varios días. Aparecen áreas de presión en la piel y no se ha definido una estrategia mecánica definitiva.",
+          "question": "¿Es apropiado mantener el compresor indefinidamente?",
+          "answer": "No. Debe revisarse el retiro o sustitución en cuanto sea fisiológicamente seguro.",
+          "discriminator": "desde hace varios días",
+          "reason": "La compresión prolongada puede causar necrosis y lesiones por presión.",
+          "initial_action": "Coordinar con trauma y ortopedia una estrategia de estabilización y examinar la piel; no retirarlo sin ese plan.",
+          "limits": "El retiro depende de seguridad circulatoria y mecánica. El dispositivo inicial es una medida temporal.",
+          "evidence": [
+            {
+              "source_id": "wses-pelvis-2017",
+              "locator": "Role of pelvic binder in hemodynamically unstable pelvic fractures",
+              "support": "La guía recomienda retirar el compresor cuando sea justificable y sustituirlo por estabilización externa o definitiva si se necesita."
+            }
+          ]
+        },
+        {
+          "id": "03.07-c2-02",
+          "anchor_topic_ids": [
+            "03.07-02"
+          ],
+          "objective": "contraste",
+          "vignette": "Una gestante estabilizada tras trauma mayor requiere TC con contraste para definir una posible lesión abdominal grave. Se propone aplazarla solo por el embarazo, aunque cambiaría el tratamiento materno.",
+          "question": "¿El embarazo por sí solo justifica omitir la TC indicada?",
+          "answer": "No. Debe realizarse la imagen justificada para el diagnóstico materno.",
+          "discriminator": "aplazarla solo por el embarazo",
+          "reason": "Omitir una lesión materna importante también pone en riesgo al feto.",
+          "initial_action": "Coordinar TC y protocolo apropiado con radiología, trauma y obstetricia, explicando beneficios y riesgos.",
+          "limits": "La guía se limita a trauma mayor y estudios justificados; no avala imagen innecesaria ni usar gadolinio de rutina.",
+          "evidence": [
+            {
+              "source_id": "car-pregnant-trauma-2024",
+              "locator": "Key Recommendations y General Principles",
+              "support": "La guía permite TC justificada con el protocolo habitual de trauma y recomienda contraste yodado para diagnóstico materno oportuno."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "03.08",
+      "title": "Cráneo: adulto vs niño",
+      "related_sections": [],
+      "scenarios": [
+        {
+          "id": "03.08-c2-01",
+          "anchor_topic_ids": [
+            "03.08-01"
+          ],
+          "objective": "cambio",
+          "vignette": "Un adulto con TCE grave tiene contusiones y edema en la TC. Se propone metilprednisolona a dosis altas para disminuir la presión intracraneal y mejorar el pronóstico.",
+          "question": "¿Ese tratamiento está recomendado?",
+          "answer": "No. La metilprednisolona a dosis altas está contraindicada en TCE grave.",
+          "discriminator": "metilprednisolona a dosis altas",
+          "reason": "Se asoció con mayor mortalidad; el edema traumático no justifica este uso.",
+          "initial_action": "Evitar ese tratamiento y seguir el manejo neurocrítico de perfusión, oxigenación y presión intracraneal.",
+          "limits": "La recomendación corresponde al TCE; no equivale a prohibir esteroides para toda enfermedad cerebral o para otra indicación independiente.",
+          "evidence": [
+            {
+              "source_id": "btf-severe-4th",
+              "locator": "§7 Steroids, LevelI",
+              "support": "BTF no recomienda esteroides para pronóstico o PIC y contraindica metilprednisolona a dosis altas por mayor mortalidad."
+            }
+          ]
+        },
+        {
+          "id": "03.08-c2-02",
+          "anchor_topic_ids": [
+            "03.08-02"
+          ],
+          "objective": "contraste",
+          "vignette": "Un niño alerta vomita una vez tras un golpe leve. Está como siempre y no tiene déficit, mecanismo grave ni otros factores de riesgo.",
+          "question": "¿Es obligatoria una TC inmediata por el vómito aislado?",
+          "answer": "No. Puede elegirse observación clínica.",
+          "discriminator": "vomita una vez",
+          "reason": "El vómito aislado sin otros riesgos tiene un significado distinto del deterioro persistente.",
+          "initial_action": "Hacer observación y reevaluación según protocolo pediátrico.",
+          "limits": "Los síntomas persistentes o nuevos pueden indicar imagen.",
+          "evidence": [
+            {
+              "source_id": "rch-head-2026",
+              "locator": "Isolated vomiting; neuroimaging",
+              "support": "El vómito aislado sin otros riesgos tiene un significado distinto del deterioro persistente."
+            }
+          ]
+        },
+        {
+          "id": "03.08-c2-03",
+          "anchor_topic_ids": [
+            "03.08-03"
+          ],
+          "objective": "cambio",
+          "vignette": "Un adulto tiene fractura de base craneal con fuga de LCR confirmada después de un trauma cerrado. Está afebril, sin meningismo ni otra infección demostrada. Se propone antibiótico solo para prevenir meningitis.",
+          "question": "¿La fuga por sí sola indica profilaxis antimicrobiana rutinaria?",
+          "answer": "No. IDSA no recomienda esa profilaxis.",
+          "discriminator": "solo para prevenir meningitis",
+          "reason": "La fractura con fuga no demuestra un beneficio de antibióticos preventivos de rutina.",
+          "initial_action": "Coordinar seguimiento de la fuga y valoración neuroquirúrgica; vigilar signos de infección.",
+          "limits": "Esto no se aplica a infección establecida ni sustituye profilaxis perioperatoria cuando corresponda. Valorar vacunación antineumocócica y reparación si la fuga persiste.",
+          "evidence": [
+            {
+              "source_id": "idsa-cns-2017",
+              "locator": "Recomendaciones81–83 y Evidence Summary",
+              "support": "IDSA desaconseja profilaxis por fractura de base con fuga, y distingue reparación persistente y vacunación."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "03.09",
+      "title": "Déficit motor después de trauma",
+      "related_sections": [],
+      "scenarios": [
+        {
+          "id": "03.09-c2-01",
+          "anchor_topic_ids": [
+            "03.09-01"
+          ],
+          "objective": "subtipo",
+          "vignette": "Un niño de nueve años está alerta y estable tras una caída. Tiene dolor cervical en línea media, pero no déficit neurológico, alteración de vía aérea o circulación ni otra lesión importante.",
+          "question": "¿Qué imagen inicial permite considerar su riesgo intermedio sin recurrir directamente a TC?",
+          "answer": "Radiografías cervicales, con valoración clínica experta.",
+          "discriminator": "dolor cervical en línea media, pero no déficit neurológico",
+          "reason": "RCH sitúa dolor o sensibilidad cervical aislados entre los factores PECARN de riesgo intermedio y recomienda radiografía inicial cuando es factible.",
+          "initial_action": "Mantener precauciones, dar analgesia y coordinar radiografías adecuadas con un clínico sénior.",
+          "limits": "La aparición de déficit, alteración fisiológica o estudios inconcluyentes cambia el plan; no extrapolar esta selección a un niño de alto riesgo.",
+          "evidence": [
+            {
+              "source_id": "rch-cervical",
+              "locator": "Investigations: PECARN intermediate-risk features; X-ray e Imaging",
+              "support": "En riesgo intermedio se recomienda radiografía como primera imagen cuando sea factible; la TC se considera inicialmente ante rasgos de alto riesgo."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "03.10",
+      "title": "Paciente frío tras reanimación",
+      "related_sections": [],
+      "scenarios": [
+        {
+          "id": "03.10-c2-01",
+          "anchor_topic_ids": [
+            "03.10-01"
+          ],
+          "objective": "contraste",
+          "vignette": "Un adulto con hemorragia traumática tiene temperatura central de33°C. El laboratorio informa TP y TTPa normales, medidos a37°C. Continúa sangrando.",
+          "question": "¿Esos resultados excluyen un efecto del frío sobre la coagulación?",
+          "answer": "No. La temperatura del ensayo puede ocultar la alteración asociada al frío.",
+          "discriminator": "medidos a37°C",
+          "reason": "Las pruebas rutinarias calentadas pueden no reflejar la función de coagulación a la temperatura real del paciente.",
+          "initial_action": "Controlar hemorragia, recalentar y seguir evaluación de coagulación guiada por clínica y laboratorio.",
+          "limits": "La hipotermia no es la única causa posible de sangrado; no atribuirle todo el deterioro.",
+          "evidence": [
+            {
+              "source_id": "trauma-bleeding-2023",
+              "locator": "Recommendation18, Body temperature, Rationale",
+              "support": "La guía explica que TP/TTPa a37°C pueden no detectar los efectos de coagulación de la hipotermia."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "03.11",
+      "title": "Quemado: superficial vs grave",
+      "related_sections": [],
+      "scenarios": [
+        {
+          "id": "03.11-c2-01",
+          "anchor_topic_ids": [
+            "03.11-01"
+          ],
+          "objective": "contraste",
+          "vignette": "Un adulto tiene eritema seco doloroso tras exposición solar. No hay ampollas ni pérdida de epidermis.",
+          "question": "¿Se incluye esa área en la superficie quemada para reanimación?",
+          "answer": "No.",
+          "discriminator": "eritema seco",
+          "reason": "La quemadura superficial no se suma a la superficie de espesor parcial o total.",
+          "initial_action": "Valorar dolor, hidratación y extensión real de lesiones profundas.",
+          "limits": "La profundidad puede ser difícil de definir al inicio de otras quemaduras.",
+          "evidence": [
+            {
+              "source_id": "aba-referral",
+              "locator": "Burn Severity Determination: superficial",
+              "support": "La quemadura superficial no se suma a la superficie de espesor parcial o total."
+            }
+          ]
+        },
+        {
+          "id": "03.11-c2-02",
+          "anchor_topic_ids": [
+            "03.11-02"
+          ],
+          "objective": "gravedad",
+          "vignette": "Una quemadura pequeña afecta profundamente una mano y limita la movilidad de los dedos.",
+          "question": "¿La superficie pequeña permite omitir consulta especializada?",
+          "answer": "No. La localización y profundidad justifican consulta.",
+          "discriminator": "afecta profundamente una mano",
+          "reason": "Una lesión funcional crítica puede ser grave con poca superficie.",
+          "initial_action": "Proteger la lesión y consultar un centro de quemados.",
+          "limits": "La capacidad local determina el traslado.",
+          "evidence": [
+            {
+              "source_id": "aba-referral",
+              "locator": "Advice on Transfer and Consultation: manos y articulaciones",
+              "support": "Una lesión funcional crítica puede ser grave con poca superficie."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "03.12",
+      "title": "Acceso venoso y complicaciones",
+      "related_sections": [],
+      "scenarios": [
+        {
+          "id": "03.12-c2-01",
+          "anchor_topic_ids": [
+            "03.12-01"
+          ],
+          "objective": "cambio",
+          "vignette": "Un adulto con enfermedad renal avanzada necesita un catéter central temporal. Se prevé hemodiálisis futura y se propone vía subclavia solo por su menor riesgo de infección.",
+          "question": "¿Qué riesgo cambia la elección del sitio?",
+          "answer": "La estenosis subclavia y la necesidad de preservar acceso para diálisis.",
+          "discriminator": "Se prevé hemodiálisis futura",
+          "reason": "Reducir infección no es el único objetivo cuando una estenosis puede comprometer un acceso futuro.",
+          "initial_action": "Elegir un sitio alternativo apropiado con el equipo tratante y nefrología, manteniendo guía ecográfica y asepsia.",
+          "limits": "La indicación concreta y riesgos mecánicos también importan; no se prescribe un sitio universal para todos.",
+          "evidence": [
+            {
+              "source_id": "cdc-catheter-2011",
+              "locator": "§2.2 Central Venous Catheters, recomendación5",
+              "support": "CDC indica evitar subclavia en enfermedad renal avanzada o hemodiálisis por riesgo de estenosis."
+            }
+          ]
+        },
+        {
+          "id": "03.12-c2-02",
+          "anchor_topic_ids": [
+            "03.12-01"
+          ],
+          "objective": "cambio",
+          "vignette": "Un catéter central se colocó durante reanimación urgente sin poder asegurar técnica aséptica. El adulto ya está estable y aún necesita acceso central. No tiene fiebre.",
+          "question": "¿La ausencia de fiebre permite mantenerlo sin revisar su reemplazo?",
+          "answer": "No. Reemplazarlo cuanto antes por el antecedente de asepsia incierta.",
+          "discriminator": "sin poder asegurar técnica aséptica",
+          "reason": "La necesidad de reemplazo tras inserción de emergencia no depende de esperar infección clínica.",
+          "initial_action": "Coordinar un nuevo acceso con técnica adecuada lo antes posible, dentro de48horas según CDC.",
+          "limits": "No reemplazar de rutina todos los catéteres bien colocados; esta indicación se debe a la asepsia no garantizada.",
+          "evidence": [
+            {
+              "source_id": "cdc-catheter-2011",
+              "locator": "§2.2 Central Venous Catheters, recomendación11",
+              "support": "Si no se pudo garantizar asepsia durante la emergencia, CDC recomienda reemplazo cuanto antes, dentro de48horas."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
