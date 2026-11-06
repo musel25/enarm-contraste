@@ -80,3 +80,7 @@ For clinical changes, follow the content contract and source-validation instruct
 During authoring, `npm run build:reviewed` creates a local preview with only sections that already have independent reviews. It still rejects stale or invalid reviews. The interface shows the actual reviewed coverage. This command is for local verification. It does not replace the full `npm run check` required for final review and deployment.
 
 The version-2 progress profile separates `capa1`, `capa2`, `creadas1` and `creadas2`. Each has its own plan and FSRS history. A shared private card catalog records source-layer ownership. The migration retains unknown version-1 identities with explicit ownership metadata. Older clients cannot downgrade a migrated profile. Backups contain the whole profile.
+
+Active session counters, timers and breaks use keys for the selected space and plan. Old global browser values stay preserved. They are not assigned to a new space because they do not identify the cards that produced them. Aggregate sessions from the old profile remain in the migration archive.
+
+Supplemental card IDs use the immutable scenario ID. The family and clinical objective are metadata, so changing them does not create a new scheduled identity. Native personal-card imports must resolve their published origins against the correct layer inventory. Explicit migrated references remain recoverable when old content is unavailable.
