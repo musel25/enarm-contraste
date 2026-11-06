@@ -1,6 +1,6 @@
 # Capas de estudio y progreso independiente
 
-Estado: propuesta para aprobación. Este archivo define el cambio solicitado el 6 de noviembre de 2026. Todavía no autoriza una implementación, una mezcla de ramas o una publicación en producción.
+Estado: aprobado por el usuario el 6 de noviembre de 2026 con «dale». Se autoriza preparar el plan e implementar el alcance completo. No se autoriza una mezcla de ramas o una publicación en producción.
 
 Revisión independiente del diseño: completada el 6 de noviembre de 2026 por `review_layer_design`. El revisor comprobó la migración, la conservación del progreso, las tarjetas personales y el alcance clínico. No encontró preguntas importantes pendientes para preparar el plan de implementación.
 
@@ -238,4 +238,4 @@ La implementación mantiene React, TypeScript, Node, SQLite, npm y uv. La elecci
 
 ## Estado de la aprobación
 
-Pendiente de aprobación del usuario. La revisión independiente del diseño está completa. La aprobación permite preparar el plan e implementar esta petición. La publicación en producción requiere autorización para esta tarea.
+Aprobado. La revisión independiente del diseño está completa. El usuario autorizó preparar el plan e implementar esta petición. La publicación en producción requiere autorización para esta tarea.
