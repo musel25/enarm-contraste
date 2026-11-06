@@ -135,6 +135,8 @@ export type StudyProfile = {
   created_cards: Record<string, PersonalCard>;
   /** Original goals and aggregate sessions, before the separation. */
   legacy: CoachState | null;
+  /** Original identities keep their layer when a future namespace overlaps. */
+  legacy_layer1_ids?: string[];
 };
 export type StoredStudyState = CoachState | StudyProfile;
 export type Forecast = {

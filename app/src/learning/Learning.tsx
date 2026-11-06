@@ -368,9 +368,22 @@ export default function Learning({
     setTest(list);
   }
   const range = studyRange(state, day);
+  const availableIds = new Set(index.cards.map((card) => card.id));
+  const unavailable = Object.keys(state.progress).filter(
+    (id) => !availableIds.has(id) && !caseMeta(id),
+  );
   return (
     <main id="study" tabIndex={-1} className="learning-main">
       <StudySpaceSelect />
+      {!!unavailable.length && (
+        <details className="learning-space-summary">
+          <summary>Contenido no disponible ({unavailable.length})</summary>
+          <p>
+            Conservamos el historial y las fechas de estas tarjetas. Su contenido no está en el
+            temario actual. No se incluyen en las sesiones ni se borran de tu copia.
+          </p>
+        </details>
+      )}
       <details className="learning-space-summary">
         <summary>Respuestas en las cuatro pestañas</summary>
         <ul>

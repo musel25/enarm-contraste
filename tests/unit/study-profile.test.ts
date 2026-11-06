@@ -176,6 +176,32 @@ test("migration retains unknown historic IDs and does not invent a new plan", ()
   assert.equal(profile.workspaces.capa2.plan, null);
 });
 
+test("newly reserved layer-2 prefixes do not erase unknown version-1 history", () => {
+  const id = "capa2/unknown-legacy-card";
+  const extended: CoachIndex = {
+    ...index,
+    cards: [...index.cards, { ...index.cards[0], id, order: 1 }],
+  };
+  let state = recordStudy(legacy(), extended, id, 3, 30, day, "legacy-reserved-prefix");
+  state.created_cards![personal.id] = {
+    ...state.created_cards![personal.id],
+    source_card_id: "capa2/unknown-legacy-source",
+  };
+  assert.equal(validateState(state), true);
+  const profile = migrateProfile(state);
+  assert.deepEqual(profile.workspaces.capa1.progress[id], state.progress[id]);
+  assert.equal(profile.workspaces.capa1.history.at(-1)!.id, "legacy-reserved-prefix");
+  assert.equal(profile.workspaces.capa2.history.length, 0);
+  assert.equal(profile.created_cards[personal.id].layer, 1);
+  assert.equal(isStudyProfile(profile), true);
+  const selected = spaceState(profile, "capa1");
+  const next = updateSpace(profile, "capa1", {
+    ...selected,
+    preferences: { ...selected.preferences, sound: true },
+  });
+  assert.deepEqual(next.workspaces.capa1.progress[id], state.progress[id]);
+});
+
 test("migration accepts a legacy plan ID at the existing maximum length", () => {
   const state = legacy();
   state.plan!.id = "p".repeat(512);

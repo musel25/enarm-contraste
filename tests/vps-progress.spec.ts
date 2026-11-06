@@ -1,5 +1,5 @@
 import { test, expect, type Page } from "@playwright/test";
-import { mockCoach, coachIndex } from "./coach-fixtures";
+import { mockCoach, coachIndex, savedProfile } from "./coach-fixtures";
 import { createAssignment, dayKey, emptyState, recordReview } from "../app/src/coach/engine";
 import type { CoachIndex, CoachState } from "../app/src/coach/types";
 
@@ -430,4 +430,32 @@ test("library waits for its server profile before allowing an answer to open", a
   } finally {
     release();
   }
+});
+
+test("an unknown legacy identity survives migration and a full-profile backup round trip", async ({
+  page,
+}) => {
+  const original = emptyState();
+  const id = "capa2/retired-legacy-card";
+  original.progress[id] = {
+    card: null,
+    due_day: dayKey("UTC"),
+    introduced_day: "",
+    last_rating: null,
+    imported: true,
+  };
+  await seed(page, original);
+  await page.goto("./#avance");
+  await expect(page.getByText("Contenido no disponible (1)", { exact: true })).toBeVisible();
+  expect((await savedProfile(page)).workspaces.capa1.progress[id]).toEqual(original.progress[id]);
+  await start(page);
+  await page.getByRole("button", { name: "Copia de mi progreso", exact: true }).click();
+  const download = page.waitForEvent("download");
+  await page.getByRole("button", { name: "Exportar mi progreso", exact: true }).click();
+  const file = await download;
+  await page.getByLabel("Importar una copia").setInputFiles((await file.path())!);
+  await expect(page.getByText("Copia comprobada", { exact: true })).toBeVisible();
+  await page.getByRole("button", { name: "Reemplazar con esta copia", exact: true }).click();
+  await expect(page.getByRole("dialog")).toHaveCount(0);
+  expect((await savedProfile(page)).workspaces.capa1.progress[id]).toEqual(original.progress[id]);
 });

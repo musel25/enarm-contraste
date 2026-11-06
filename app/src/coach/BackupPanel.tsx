@@ -48,6 +48,7 @@ export default function BackupPanel({
         const layerIndex = (await loadResources(undefined, layerOf(space))).index;
         const published = layerIndex.cards.filter((c) => c.family !== "creadas");
         const ids = new Set(published.map((c) => c.id));
+        if (space === "capa1") for (const id of next.legacy_layer1_ids ?? []) ids.add(id);
         const sections = new Set(published.map((c) => c.section_id));
         for (const card of Object.values(next.created_cards).filter(
           (c) => c.layer === layerOf(space),

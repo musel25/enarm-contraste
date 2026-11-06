@@ -18,15 +18,26 @@ const object = (value: unknown): value is Record<string, unknown> =>
   [Object.prototype, null].includes(Object.getPrototypeOf(value)) &&
   Object.keys(value).every((key) => !["__proto__", "constructor", "prototype"].includes(key));
 
-export function ownerOf(id: string, catalog: Record<string, PersonalCard>): StudySpace {
+export function ownerOf(
+  id: string,
+  catalog: Record<string, PersonalCard>,
+  legacy?: ReadonlySet<string>,
+): StudySpace {
   const card = catalog[id];
   if (card) return card.layer === 2 ? "creadas2" : "creadas1";
+  if (legacy?.has(id)) return "capa1";
   return id.startsWith("capa2/") ? "capa2" : "capa1";
 }
 
-function validOrigin(card: PersonalCard, catalog: Record<string, PersonalCard>) {
+function validOrigin(
+  card: PersonalCard,
+  catalog: Record<string, PersonalCard>,
+  legacy?: ReadonlySet<string>,
+) {
   const source = catalog[card.source_card_id];
-  const layer = source?.layer ?? (card.source_card_id.startsWith("capa2/") ? 2 : 1);
+  const layer =
+    source?.layer ??
+    (legacy?.has(card.source_card_id) ? 1 : card.source_card_id.startsWith("capa2/") ? 2 : 1);
   return card.layer === layer && (!source || source.section_id === card.section_id);
 }
 
@@ -46,7 +57,10 @@ export function isStudyProfile(value: unknown): value is StudyProfile {
     value.version !== 2 ||
     !Number.isSafeInteger(value.revision) ||
     Number(value.revision) < 0 ||
-    Object.keys(value).sort().join(",") !== "created_cards,legacy,revision,version,workspaces" ||
+    Object.keys(value)
+      .filter((key) => key !== "legacy_layer1_ids")
+      .sort()
+      .join(",") !== "created_cards,legacy,revision,version,workspaces" ||
     !object(value.workspaces) ||
     Object.keys(value.workspaces).sort().join(",") !== [...studySpaces].sort().join(",") ||
     !object(value.created_cards) ||
@@ -54,10 +68,24 @@ export function isStudyProfile(value: unknown): value is StudyProfile {
     !(value.legacy === null || validateState(value.legacy))
   )
     return false;
+  if (
+    value.legacy_layer1_ids !== undefined &&
+    (!Array.isArray(value.legacy_layer1_ids) ||
+      !value.legacy_layer1_ids.every(
+        (id) =>
+          typeof id === "string" &&
+          id.length > 0 &&
+          id.length <= 512 &&
+          !["__proto__", "constructor", "prototype"].includes(id),
+      ) ||
+      new Set(value.legacy_layer1_ids).size !== value.legacy_layer1_ids.length)
+  )
+    return false;
+  const legacy = new Set((value.legacy_layer1_ids ?? []) as string[]);
   const catalog = value.created_cards as Record<string, PersonalCard>;
   if (
     !Object.values(catalog).every(
-      (card) => (card.layer === 1 || card.layer === 2) && validOrigin(card, catalog),
+      (card) => (card.layer === 1 || card.layer === 2) && validOrigin(card, catalog, legacy),
     )
   )
     return false;
@@ -69,7 +97,7 @@ export function isStudyProfile(value: unknown): value is StudyProfile {
       !validateState(state) ||
       state.created_cards !== undefined ||
       state.workspace !== undefined ||
-      references(state).some((id) => ownerOf(id, catalog) !== space) ||
+      references(state).some((id) => ownerOf(id, catalog, legacy) !== space) ||
       state.plan?.families.some((family) =>
         isPersonalSpace(space) ? family !== "creadas" : family === "creadas",
       )
@@ -100,8 +128,13 @@ export function migrateProfile(input: StoredStudyState): StudyProfile {
   const workspaces = Object.fromEntries(
     studySpaces.map((space) => [space, emptyState()]),
   ) as StudyProfile["workspaces"];
+  const legacy = new Set(
+    [...references(original), ...Object.values(catalog).map((card) => card.source_card_id)].filter(
+      (id) => !catalog[id],
+    ),
+  );
   for (const space of ["capa1", "creadas1"] as const) {
-    const own = (id: string) => ownerOf(id, catalog) === space;
+    const own = (id: string) => ownerOf(id, catalog, legacy) === space;
     const personal = isPersonalSpace(space);
     const derivedId = `creadas1/${original.plan?.id.slice(0, 128) || "plan"}`;
     const plan = original.plan
@@ -177,6 +210,7 @@ export function migrateProfile(input: StoredStudyState): StudyProfile {
     revision: original.revision,
     workspaces,
     created_cards: catalog,
+    ...(legacy.size ? { legacy_layer1_ids: [...legacy] } : {}),
     legacy: {
       ...emptyState(),
       plan: original.plan,
@@ -187,7 +221,13 @@ export function migrateProfile(input: StoredStudyState): StudyProfile {
       celebrated_plans: original.celebrated_plans,
     },
   };
-  if (!isStudyProfile(profile))
+  if (
+    Object.values(workspaces).reduce((sum, part) => sum + part.history.length, 0) !==
+      original.history.length ||
+    Object.values(workspaces).reduce((sum, part) => sum + Object.keys(part.progress).length, 0) !==
+      Object.keys(original.progress).length ||
+    !isStudyProfile(profile)
+  )
     throw new Error("No se pudo separar el progreso. Conserva la copia anterior.");
   return profile;
 }
@@ -211,11 +251,12 @@ export function updateSpace(
   if (!validateState(next) || next.workspace !== space || next.revision !== profile.revision)
     throw new Error("El espacio de estudio cambió. Recarga tu progreso.");
   const catalog = { ...profile.created_cards };
+  const legacy = new Set(profile.legacy_layer1_ids);
   for (const [id, card] of Object.entries(next.created_cards ?? {})) {
     const normalized = { ...card, layer: card.layer ?? layerOf(space) };
     if (
       normalized.layer !== layerOf(space) ||
-      !validOrigin(normalized, { ...catalog, ...next.created_cards })
+      !validOrigin(normalized, { ...catalog, ...next.created_cards }, legacy)
     )
       throw new Error("La flashcard no pertenece a esta capa.");
     if (catalog[id] && JSON.stringify(catalog[id]) !== JSON.stringify(normalized))
