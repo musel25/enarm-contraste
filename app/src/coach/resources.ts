@@ -55,11 +55,17 @@ export function loadSection(id: string, hash: string): Promise<StudySection> {
   if (!/^\d{2}$/.test(id)) return Promise.reject(new Error("Sección no válida."));
   const key = `${hash}/${id}`;
   if (!sections.has(key)) {
-    const request = fetch(`${roots.get(hash) || root}sections/${id}.json?v=${hash}`)
+    const base = roots.get(hash) || root;
+    const request = fetch(`${base}sections/${id}.json?v=${hash}`)
       .then(async (response) => {
         if (!response.ok) throw new Error("No se pudo cargar la tarjeta.");
         const data: unknown = await response.json();
-        if (!isSection(data) || data.id !== id) throw new Error("La tarjeta no es válida.");
+        if (
+          !isSection(data) ||
+          data.id !== id ||
+          data.cards.some((card) => card.id.startsWith("capa2/") !== (base !== root))
+        )
+          throw new Error("La tarjeta no es válida.");
         return data;
       })
       .catch((error) => {

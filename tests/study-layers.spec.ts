@@ -225,3 +225,28 @@ test("a library subtest link retains its source study space", async ({ page }) =
   await expect(page.getByRole("heading", { name: "Mi avance", exact: true })).toBeVisible();
   await expect(page.getByLabel("Espacio de estudio", { exact: true })).toHaveValue("capa2");
 });
+
+for (const space of ["capa1", "capa2"]) {
+  test(`${space} rejects a section payload from the other clinical layer`, async ({ page }) => {
+    await fixture(page);
+    const path = space === "capa2" ? "layers/capa2/" : "";
+    const wrongCards = coachCards.map((card) => ({
+      ...card,
+      id: space === "capa1" ? `capa2/${card.id}` : card.id,
+    }));
+    await page.route(`**/study/${path}sections/*.json*`, (route) =>
+      route.fulfill({
+        json: {
+          id: "01",
+          title: "Sección de prueba",
+          blocks: [{ id: "01.01", title: "Un problema", topics: 1 }],
+          cards: wrongCards,
+        },
+      }),
+    );
+    await page.goto(`./#biblioteca?space=${space}`);
+    await page.getByRole("button", { name: /Sección de prueba/ }).click();
+    await expect(page.getByRole("alert")).toContainText("No se pudo cargar el contenido.");
+    await expect(page.getByRole("region", { name: "Frente de la tarjeta" })).toHaveCount(0);
+  });
+}
