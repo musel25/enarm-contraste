@@ -3,6 +3,16 @@ import type { Card } from "ts-fsrs";
 export type Grade = 1 | 2 | 3 | 4;
 export type CardFamily = "eje" | "madre" | "creadas";
 export type StudySpace = "capa1" | "capa2" | "creadas1" | "creadas2";
+export type ClinicalObjective =
+  | "ancla"
+  | "variante"
+  | "incompleta"
+  | "subtipo"
+  | "contraste"
+  | "cambio"
+  | "dato_faltante"
+  | "gravedad"
+  | "mecanismo";
 export type PersonalCard = {
   id: string;
   section_id: string;
@@ -26,6 +36,7 @@ export type CoachCard = {
   order: number;
   new_seconds: number;
   review_seconds: number;
+  objective?: ClinicalObjective;
 };
 export type CoachIndex = { schema_version: 1; content_sha256: string; cards: CoachCard[] };
 export type StudyPlan = {
@@ -70,6 +81,7 @@ export type SessionScope = {
   section_ids: string[];
   block_ids: string[];
   families: CardFamily[];
+  objectives?: ClinicalObjective[];
 };
 export type Memory = {
   card: SerializedFSRS | null;

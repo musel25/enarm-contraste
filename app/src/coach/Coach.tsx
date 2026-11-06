@@ -159,6 +159,12 @@ function ReadyCoach({
               : "Reconocer el patrón típico"}
         </span>
       </div>
+      {layerOf(space) === 2 && !isPersonalSpace(space) && (
+        <p className="study-space-heading">
+          Material de estudio con revisión editorial independiente. Revisión clínica profesional
+          pendiente.
+        </p>
+      )}
       {isPersonalSpace(space) && !index.cards.length ? (
         <main id="study" className="coach-main" tabIndex={-1}>
           <h1>Todavía no tienes flashcards en esta capa.</h1>

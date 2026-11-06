@@ -21,6 +21,41 @@ import {
 import type { CoachCard, CoachIndex, CoachState, StudyPlan } from "../../app/src/coach/types";
 
 const day = "2026-11-02"; // Monday
+
+test("clinical objectives filter new cards and due reviews without changing their memory", () => {
+  const content = index(3);
+  content.cards[0] = { ...content.cards[0], objective: "gravedad" };
+  content.cards[1] = { ...content.cards[1], objective: "variante" };
+  let state = plan();
+  state.preferences.session_scope = {
+    section_ids: [],
+    block_ids: [],
+    families: [],
+    objectives: ["gravedad"],
+  };
+  assert.equal(validateState(state), true);
+  assert.deepEqual(studyQueue(state, content, day, "new").ids, ["c0"]);
+  assert.deepEqual(scopeRemaining(state, content), { total: 1, left: 1 });
+  state = recordStudy(state, content, "c0", 3, 20, day, "severity");
+  const memory = state.progress.c0;
+  assert.deepEqual(studyQueue(state, content, memory.due_day, "review").ids, ["c0"]);
+  state.preferences.session_scope!.objectives = ["variante"];
+  assert.deepEqual(studyQueue(state, content, memory.due_day, "review").ids, []);
+  assert.deepEqual(state.progress.c0, memory);
+  assert.equal(
+    validateState({
+      ...state,
+      preferences: {
+        ...state.preferences,
+        session_scope: {
+          ...state.preferences.session_scope,
+          objectives: ["gravedad", 1],
+        },
+      },
+    }),
+    false,
+  );
+});
 function card(id: string, order: number, seconds = 60, review = 30): CoachCard {
   return {
     id,

@@ -318,6 +318,30 @@ export default function Library({ onReview }: { onReview: (context: ReviewContex
           </div>
           <div className="library-reader">
             <aside className="library-controls" aria-label="Configurar tarjetas">
+              {!space.startsWith("creadas") &&
+                manifest.groups?.some(
+                  (group) =>
+                    group.section_id !== sectionId && group.related_sections?.includes(sectionId),
+                ) && (
+                  <details className="library-related-sections">
+                    <summary>Contrastes con otras secciones</summary>
+                    {manifest.groups
+                      .filter(
+                        (group) =>
+                          group.section_id !== sectionId &&
+                          group.related_sections?.includes(sectionId),
+                      )
+                      .map((group) => (
+                        <button
+                          key={group.id}
+                          onClick={() => selectSection(group.section_id, group.id)}
+                        >
+                          {group.title} ·{" "}
+                          {manifest.sections.find((info) => info.id === group.section_id)?.title}
+                        </button>
+                      ))}
+                  </details>
+                )}
               <div className="library-family-switch" aria-label="Formato de tarjetas">
                 <button
                   aria-pressed={!showSuspended && family === "eje"}
@@ -611,24 +635,29 @@ export default function Library({ onReview }: { onReview: (context: ReviewContex
               No hay resultados para ese síntoma o sección. Prueba otro término.
             </p>
           )}
-          <section className="library-downloads" aria-labelledby="downloads-title">
-            <div>
-              <Icon name="download" size={24} />
-              <h2 id="downloads-title">Llévalo a Anki</h2>
-              <p>Los mismos casos en los dos formatos de tus mazos.</p>
-            </div>
-            <div>
-              {manifest.downloads.map((d) => (
-                <a key={d.family} href={`${root}${d.url}`} download>
-                  <span>
-                    <strong>{d.label}</strong>
-                    <small>{number(d.cards)} tarjetas · .apkg</small>
-                  </span>
-                  <Icon name="download" size={20} />
-                </a>
-              ))}
-            </div>
-          </section>
+          {!!manifest.downloads.length && !space.startsWith("creadas") && (
+            <section className="library-downloads" aria-labelledby="downloads-title">
+              <div>
+                <Icon name="download" size={24} />
+                <h2 id="downloads-title">Llévalo a Anki</h2>
+                <p>
+                  Mazos originales del libro. El contenido nuevo de las capas se estudia en el
+                  sitio.
+                </p>
+              </div>
+              <div>
+                {manifest.downloads.map((d) => (
+                  <a key={d.family} href={`${root}${d.url}`} download>
+                    <span>
+                      <strong>{d.label}</strong>
+                      <small>{number(d.cards)} tarjetas · .apkg</small>
+                    </span>
+                    <Icon name="download" size={20} />
+                  </a>
+                ))}
+              </div>
+            </section>
+          )}
         </>
       )}
       <footer className="library-footer">

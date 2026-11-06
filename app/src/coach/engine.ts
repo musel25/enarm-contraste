@@ -1,4 +1,5 @@
 import { personalIndex, validPersonalFields } from "./personal";
+import { isClinicalObjective } from "./objectives";
 import { createEmptyCard, fsrs, type Card, type Grade as FSRSGrade } from "ts-fsrs";
 import type {
   Assignment,
@@ -611,13 +612,17 @@ export function inScope(card: CoachCard, scope: SessionScope | undefined): boole
   return (
     (!scope.section_ids.length || scope.section_ids.includes(card.section_id)) &&
     (!scope.block_ids.length || scope.block_ids.includes(card.block_id)) &&
-    (!scope.families.length || scope.families.includes(card.family))
+    (!scope.families.length || scope.families.includes(card.family)) &&
+    (!scope.objectives?.length || (!!card.objective && scope.objectives.includes(card.objective)))
   );
 }
 export function scopeActive(scope: SessionScope | undefined): boolean {
   return (
     !!scope &&
-    (scope.section_ids.length > 0 || scope.block_ids.length > 0 || scope.families.length > 0)
+    (scope.section_ids.length > 0 ||
+      scope.block_ids.length > 0 ||
+      scope.families.length > 0 ||
+      !!scope.objectives?.length)
   );
 }
 /** First-pass cards of the session scope: all of them and the ones never answered. Ignores today's schedule. */
@@ -1092,11 +1097,15 @@ function validPreferences(value: unknown): boolean {
 function validScope(value: unknown): value is SessionScope {
   return (
     object(value) &&
-    Object.keys(value).every((key) => ["section_ids", "block_ids", "families"].includes(key)) &&
+    Object.keys(value).every((key) =>
+      ["section_ids", "block_ids", "families", "objectives"].includes(key),
+    ) &&
     strings(value.section_ids) &&
     strings(value.block_ids) &&
     strings(value.families) &&
-    value.families.every((f) => f === "eje" || f === "madre" || f === "creadas")
+    value.families.every((f) => f === "eje" || f === "madre" || f === "creadas") &&
+    (value.objectives === undefined ||
+      (strings(value.objectives) && value.objectives.every(isClinicalObjective)))
   );
 }
 function validPlan(value: unknown): value is StudyPlan {

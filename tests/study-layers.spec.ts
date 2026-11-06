@@ -6,15 +6,20 @@ import type { StudyProfile } from "../app/src/coach/types";
 test.use({ timezoneId: "UTC", reducedMotion: "reduce" });
 async function fixture(page: Page) {
   await mockCoach(page);
-  const cards = coachCards.map((card) => ({
+  const cards = coachCards.map((card, i) => ({
     ...card,
     id: `capa2/${card.id}`,
     prompt: `Capa 2: ${card.prompt}`,
+    objective: i === 0 ? ("gravedad" as const) : ("variante" as const),
   }));
   const index = {
     ...coachIndex,
     content_sha256: "layer-two-fixture",
-    cards: coachIndex.cards.map((card) => ({ ...card, id: `capa2/${card.id}` })),
+    cards: coachIndex.cards.map((card, i) => ({
+      ...card,
+      id: `capa2/${card.id}`,
+      objective: i === 0 ? ("gravedad" as const) : ("variante" as const),
+    })),
   };
   const body = JSON.stringify(index);
   const manifest = {
@@ -153,4 +158,29 @@ test("a section with only individual scenarios opens its available format and le
     page.getByRole("heading", { name: "Pregunta del nivel 2", exact: true }),
   ).toBeVisible();
   await expect(page.getByLabel("Nivel de Patrones Madre")).toHaveValue("2");
+});
+
+test("a clinical objective is saved only in the selected daily space", async ({ page }) => {
+  await fixture(page);
+  await page.goto("./#hoy-capa-2");
+  await startPlan(page);
+  await page.getByRole("button", { name: "Personalizar", exact: true }).click();
+  await page
+    .getByRole("group", { name: "Objetivo de la sesión" })
+    .getByRole("button", { name: "Gravedad", exact: true })
+    .click();
+  await page.getByRole("button", { name: "Guardar", exact: true }).click();
+  await expect
+    .poll(async () => (await saved(page)).workspaces.capa2.preferences.session_scope?.objectives)
+    .toEqual(["gravedad"]);
+  expect(
+    (await saved(page)).workspaces.capa1.preferences.session_scope?.objectives,
+  ).toBeUndefined();
+  await page.reload();
+  await page.getByRole("button", { name: "Personalizar", exact: true }).click();
+  await expect(
+    page
+      .getByRole("group", { name: "Objetivo de la sesión" })
+      .getByRole("button", { name: "Gravedad", exact: true }),
+  ).toHaveAttribute("aria-pressed", "true");
 });
