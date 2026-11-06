@@ -17,6 +17,8 @@ import { loadResources } from "./resources";
 import { downloadBackup, getAccountName } from "./storage";
 import Today from "./Today";
 import type { CoachIndex, CoachState, Forecast } from "./types";
+import { useStudySpace } from "./StudySpace";
+import { isPersonalSpace, layerOf, spaceLabels } from "./profile";
 
 function ReadyCoach({
   manifest,
@@ -30,7 +32,8 @@ function ReadyCoach({
   onReview: (context: ReviewContext) => void;
 }) {
   const store = useCoachStore();
-  const { state, loading, saving, error, pending, latest, commit, reload } = store;
+  const space = useStudySpace();
+  const { state, loading, saving, error, latest, commit, reload } = store;
   const index = useMemo(() => personalIndex(baseIndex, state), [baseIndex, state.created_cards]);
   const day = useStudyDay(state.plan?.timezone || timezone());
   const forecast = useForecast(state, index, day);
@@ -140,13 +143,51 @@ function ReadyCoach({
             ) : (
               <button onClick={() => void store.retry()}>Reintentar guardado</button>
             )}
-            <button onClick={() => downloadBackup(pending || state)}>
+            <button onClick={() => downloadBackup(store.pendingProfile || store.profile)}>
               Exportar copia de este intento
             </button>
           </div>
         </div>
       )}
-      {!state.plan || editing ? (
+      <div className="study-space-heading">
+        <strong>{spaceLabels[space]}</strong>
+        <span>
+          {isPersonalSpace(space)
+            ? "Tus flashcards personales"
+            : layerOf(space) === 2
+              ? "Variantes, contrastes y decisiones clínicas"
+              : "Reconocer el patrón típico"}
+        </span>
+      </div>
+      {!isPersonalSpace(space) &&
+        manifest.coverage &&
+        manifest.coverage.sections < manifest.coverage.required_sections && (
+          <p role="status" className="study-space-heading">
+            Capa 2 en ampliación: {manifest.coverage.sections} de{" "}
+            {manifest.coverage.required_sections} secciones disponibles con revisión editorial.
+          </p>
+        )}
+      {layerOf(space) === 2 && !isPersonalSpace(space) && (
+        <p className="study-space-heading">
+          Material de estudio con revisión editorial independiente. Revisión clínica profesional
+          pendiente.
+        </p>
+      )}
+      {isPersonalSpace(space) && !index.cards.length ? (
+        <main id="study" className="coach-main" tabIndex={-1}>
+          <h1>Todavía no tienes flashcards en esta capa.</h1>
+          <p>Abre una tarjeta de la capa {layerOf(space)} y usa Añadir flashcard.</p>
+          <p>Las tarjetas guardadas aparecerán aquí con sus temas nuevos y repasos.</p>
+          <button
+            className="coach-primary"
+            onClick={() => {
+              location.hash = layerOf(space) === 1 ? "#hoy-capa-1" : "#hoy-capa-2";
+            }}
+          >
+            Estudiar capa {layerOf(space)}
+          </button>
+        </main>
+      ) : !state.plan || editing ? (
         <PlanSetup
           key={store.generation}
           state={state}
@@ -202,12 +243,11 @@ function ReadyCoach({
       )}
       {backup && (
         <BackupPanel
-          state={pending || state}
-          index={index}
+          state={store.pendingProfile || store.profile}
           saving={saving || !!error}
           onClose={() => setBackup(false)}
           onImport={async (candidate) => {
-            const saved = await commit(() => candidate, true);
+            const saved = await store.importProfile(candidate);
             return !!saved;
           }}
         />
@@ -223,6 +263,7 @@ export default function Coach({
   suspended: boolean;
   onReview: (context: ReviewContext) => void;
 }) {
+  const space = useStudySpace();
   const [resources, setResources] = useState<{ manifest: StudyManifest; index: CoachIndex } | null>(
     null,
   );
@@ -231,7 +272,7 @@ export default function Coach({
   useEffect(() => {
     const controller = new AbortController();
     setError("");
-    loadResources(controller.signal)
+    loadResources(controller.signal, layerOf(space))
       .then((data) => {
         if (!controller.signal.aborted) setResources(data);
       })

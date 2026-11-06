@@ -1,0 +1,371 @@
+{
+  "schema_version": 1,
+  "layer": 2,
+  "section_id": "26",
+  "title": "Oncología",
+  "author": "clinical-author-25-35",
+  "sources": [
+    {
+      "id": "esgo-cervix",
+      "label": "ESGO/ESTRO/ESP: Cervical Cancer Pocket Guidelines",
+      "url": "https://www.esgo.org/media/2019/03/Pocket-Guidelines_Cervical-cancer_June2023.pdf",
+      "version": "Publicación 2023; portada interna Update 2022",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Diagnostic work-up; local staging; early-stage disease; multidisciplinary planning"
+    },
+    {
+      "id": "isuog-ovary",
+      "label": "ESGO/ISUOG/IOTA/ESGE: Consensus Statement on preoperative diagnosis of ovarian tumors",
+      "url": "https://www.isuog.org/static/afffa80b-b9ad-4051-b21478cec45e6cd3/ESGO-ISUOG-IOTA-ESGE-Consensus-Statement-onpreoperative-diagnosis-of-ovarian-tumors-uog23635.pdf",
+      "version": "2021, doi:10.1002/uog.23635",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Statements on ultrasonography, biomarkers and clinical pathways"
+    },
+    {
+      "id": "mx-breast",
+      "label": "Consenso Mexicano sobre diagnóstico y tratamiento del cáncer mamario, alojado por CSG",
+      "url": "https://pronamsalud.csg.gob.mx/diagnostico-y-tratamiento-mamario.pdf",
+      "version": "Undécima revisión, enero 2025",
+      "checked_at": "2026-11-06",
+      "region": "mexico",
+      "access": "checked",
+      "locator": "IV: evaluación por imagen; V.2: indicaciones de biopsia, pp. 46–49"
+    },
+    {
+      "id": "nci-vagina",
+      "label": "National Cancer Institute: Vaginal Cancer Treatment PDQ, professional version",
+      "url": "https://www.cancer.gov/types/vaginal/hp/vaginal-treatment-pdq",
+      "version": "Actualización editorial 3 abril 2025",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "General Information; Clinical Features; diagnostic assessment and staging"
+    },
+    {
+      "id": "nci-lynch",
+      "label": "National Cancer Institute: Genetics of Colorectal Cancer PDQ, professional version",
+      "url": "https://www.cancer.gov/types/colorectal/hp/colorectal-genetics-pdq",
+      "version": "Actualización editorial 21 marzo 2025",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Somatic biallelic mismatch repair deficiency; Molecular diagnostic tumor testing; aborda también cáncer endometrial. Recurso profesional, no GPC."
+    },
+    {
+      "id": "rcog-mass",
+      "label": "RCOG: Management of Suspected Ovarian Masses in Premenopausal Women, Green-top 62",
+      "url": "https://www.rcog.org.uk/media/0mebp0mv/gtg_62.pdf",
+      "version": "Noviembre 2011",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "4.2: LDH, AFP y hCG en menores de 40 con masa compleja; texto completo abierto y leído"
+    },
+    {
+      "id": "nci-endo-screen",
+      "label": "NCI: Endometrial Cancer Screening PDQ, professional version",
+      "url": "https://www.cancer.gov/types/uterine/hp/endometrial-screening-pdq",
+      "version": "Actualización editorial10abril2025",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Ultrasonography in women using tamoxifen: baja especificidad/valor predictivo positivo y falta de utilidad rutinaria en asintomáticas. Women treated with tamoxifen: evaluar sangrado. Recurso profesional, no GPC formal."
+    }
+  ],
+  "mexico_source_note": "Se comprobó el Consenso Mexicano de cáncer mamario 2025 alojado por el Consejo de Salubridad General, capítulos IV–V. La búsqueda nacional también localizó SS-146-24 para lesiones precursoras cervicales; no se declara revisado su texto porque no se obtuvo el documento completo. No se comprobó una guía mexicana reciente para todas las decisiones de ovario, endometrio y vagina. ESGO 2023 e ISUOG 2021 se usan en sus ámbitos; PDQ es información profesional del NCI y no una guía formal. Revisión clínica profesional pendiente. Para las nuevas decisiones de extensión cervical, origen secundario ovárico, genética y marcadores germinales no se comprobó una GPC mexicana reciente completa. Se leyó ESGO 2023 e ISUOG 2021; RCOG 62 es de noviembre de 2011. NCI-PDQ 2025 informa sobre mecanismos somáticos y germinales, pero no es una GPC. No se extrapolan pautas terapéuticas ni dosis. Para el contraste de vigilancia endometrial asintomática con tamoxifeno se abrió y leyó NCI-PDQ Screening,10abril2025, apartado específico; no se comprobó una GPC mexicana reciente completa sobre ese punto.",
+  "blocks": [
+    {
+      "id": "26.01",
+      "title": "Prevención de cáncer cervicouterino",
+      "related_sections": [],
+      "scenarios": [
+        {
+          "anchor_topic_ids": [
+            "26.01-01"
+          ],
+          "objective": "dato_faltante",
+          "vignette": "Una adulta con carcinoma cervical confirmado se estudia antes de tratamiento curativo. La imagen muestra un único foco extrauterino equívoco que cambiaría la intención del tratamiento.",
+          "question": "¿Debe darse por confirmada la extensión solo con esa imagen?",
+          "answer": "No. Considerar biopsia del foco equívoco para evitar una elección terapéutica incorrecta.",
+          "discriminator": "foco extrauterino equívoco",
+          "reason": "Una imagen equívoca no demuestra por sí sola enfermedad extrauterina.",
+          "initial_action": "Revisar la imagen en el equipo oncológico y valorar confirmación histológica si cambia el tratamiento.",
+          "limits": "La accesibilidad y el riesgo de la biopsia condicionan el plan; no retrasar sin motivo la atención oncológica.",
+          "evidence": [
+            {
+              "source_id": "esgo-cervix",
+              "locator": "Diagnostic work-up: equivocal extrauterine disease, considerar biopsia",
+              "support": "Una imagen equívoca no demuestra por sí sola enfermedad extrauterina."
+            }
+          ],
+          "id": "26.01-01-dato_faltante"
+        },
+        {
+          "anchor_topic_ids": [
+            "26.01-01"
+          ],
+          "objective": "cambio",
+          "vignette": "Una adulta con carcinoma cervical pequeño confirmado desea preservar fertilidad. Aún no se conoce invasión estromal ni estado ganglionar.",
+          "question": "¿Puede elegirse ya una cirugía conservadora?",
+          "answer": "No. Faltan criterios de elegibilidad y estadificación.",
+          "discriminator": "Aún no se conoce invasión estromal ni estado ganglionar",
+          "reason": "La conservación de fertilidad depende de factores tumorales precisos.",
+          "initial_action": "Completar estudio con ginecología oncológica y discutir alternativas.",
+          "limits": "El deseo de fertilidad no basta para indicar un procedimiento.",
+          "evidence": [
+            {
+              "source_id": "esgo-cervix",
+              "locator": "Fertility-sparing treatment; staging",
+              "support": "La conservación de fertilidad depende de factores tumorales precisos."
+            }
+          ],
+          "id": "26.01-02-cambio"
+        }
+      ]
+    },
+    {
+      "id": "26.02",
+      "title": "Masa mamaria/tamiz",
+      "related_sections": [],
+      "scenarios": [
+        {
+          "anchor_topic_ids": [
+            "26.02-01"
+          ],
+          "objective": "cambio",
+          "vignette": "Una adulta tiene una masa mamaria irregular. La biopsia informa tejido benigno, pero el radiólogo describe discordancia con la imagen altamente sospechosa.",
+          "question": "¿Qué conducta requiere la discordancia?",
+          "answer": "Reevaluación multidisciplinaria y nueva obtención de tejido según el caso.",
+          "discriminator": "discordancia con la imagen altamente sospechosa",
+          "reason": "Un resultado benigno discordante no cierra el diagnóstico.",
+          "initial_action": "Revisar correlación clínica, imagen y patología.",
+          "limits": "No decidir vigilancia solo por una muestra no concordante.",
+          "evidence": [
+            {
+              "source_id": "mx-breast",
+              "locator": "V.2.2, pp. 47–49: correlación imagen-patología",
+              "support": "Un resultado benigno discordante no cierra el diagnóstico."
+            }
+          ],
+          "id": "26.02-01-cambio"
+        },
+        {
+          "anchor_topic_ids": [
+            "26.02-02"
+          ],
+          "objective": "contraste",
+          "vignette": "Una mujer sin síntomas acude para tamizaje. Al entrevistarla menciona secreción hemática unilateral espontánea de inicio reciente.",
+          "question": "¿Sigue siendo una consulta de tamizaje rutinario?",
+          "answer": "No. Requiere evaluación diagnóstica del síntoma.",
+          "discriminator": "secreción hemática unilateral espontánea",
+          "reason": "La presencia de un síntoma cambia el objetivo de la imagen.",
+          "initial_action": "Realizar exploración y estudio diagnóstico apropiado.",
+          "limits": "No asumir cáncer; hay causas benignas que requieren diferenciación.",
+          "evidence": [
+            {
+              "source_id": "mx-breast",
+              "locator": "IV: mastografía diagnóstica e indicaciones especiales",
+              "support": "La presencia de un síntoma cambia el objetivo de la imagen."
+            }
+          ],
+          "id": "26.02-02-contraste"
+        },
+        {
+          "anchor_topic_ids": [
+            "26.02-01",
+            "26.02-02"
+          ],
+          "objective": "subtipo",
+          "vignette": "Una adulta asintomática tiene microcalcificaciones sospechosas en mastografía. No se identifica lesión en ultrasonido.",
+          "question": "¿Qué dato orienta la técnica de biopsia?",
+          "answer": "La lesión solo visible por mastografía requiere guía apropiada, como estereotaxia.",
+          "discriminator": "No se identifica lesión en ultrasonido",
+          "reason": "La toma de muestra debe localizar la alteración real.",
+          "initial_action": "Referir para biopsia guiada y correlación radiopatológica.",
+          "limits": "La categoría de imagen y disponibilidad determinan la técnica final.",
+          "evidence": [
+            {
+              "source_id": "mx-breast",
+              "locator": "V.2.2, tabla 1: calcificaciones y guía por estereotaxia",
+              "support": "La toma de muestra debe localizar la alteración real."
+            }
+          ],
+          "id": "26.02-03-subtipo"
+        }
+      ]
+    },
+    {
+      "id": "26.03",
+      "title": "Sangrado posmenopáusico",
+      "related_sections": [],
+      "scenarios": [
+        {
+          "anchor_topic_ids": [
+            "26.03-01"
+          ],
+          "objective": "cambio",
+          "vignette": "Una adulta posmenopáusica usa tamoxifeno por cáncer mamario. No tiene sangrado ni otros síntomas ginecológicos, no se conoce síndrome hereditario y no hay lesión endometrial previa. Le proponen ultrasonido endometrial anual solo por tomar el fármaco.",
+          "question": "¿Se justifica esa vigilancia ecográfica rutinaria por el fármaco aislado?",
+          "answer": "No de rutina; mantener atención ginecológica y evaluación oportuna de síntomas.",
+          "discriminator": "No tiene sangrado ni otros síntomas ginecológicos",
+          "reason": "El riesgo asociado con tamoxifeno no demuestra beneficio de ultrasonido de vigilancia rutinaria en una mujer asintomática; los falsos positivos generan procedimientos adicionales.",
+          "initial_action": "Explicar signos de alarma y acordar seguimiento; si aparece sangrado, realizar evaluación diagnóstica dirigida.",
+          "limits": "No extrapolar esta respuesta a sangrado, lesión previa o síndrome hereditario. El recurso PDQ sintetiza evidencia y no es una GPC formal.",
+          "evidence": [
+            {
+              "source_id": "nci-endo-screen",
+              "locator": "Ultrasonography in women using tamoxifen; Women treated with tamoxifen",
+              "support": "El riesgo asociado con tamoxifeno no demuestra beneficio de ultrasonido de vigilancia rutinaria en una mujer asintomática; los falsos positivos generan procedimientos adicionales."
+            }
+          ],
+          "id": "26.03-01-contraste"
+        },
+        {
+          "anchor_topic_ids": [
+            "26.03-01"
+          ],
+          "objective": "contraste",
+          "vignette": "Una adulta con cáncer endometrial confirmado tiene pérdida de proteínas de reparación MMR en el tumor. Le dicen que el resultado demuestra que sus familiares heredaron síndrome de Lynch.",
+          "question": "¿Qué conclusión permite el resultado tumoral?",
+          "answer": "Indica estudiar su causa; no confirma por sí solo una variante germinal ni su transmisión familiar.",
+          "discriminator": "pérdida de proteínas de reparación MMR en el tumor",
+          "reason": "La deficiencia MMR endometrial también puede resultar de alteraciones somáticas.",
+          "initial_action": "Referir a valoración genética y completar pruebas tumorales y germinales según el patrón y los antecedentes.",
+          "limits": "No asignar riesgo hereditario definitivo a familiares solo por inmunohistoquímica tumoral.",
+          "evidence": [
+            {
+              "source_id": "nci-lynch",
+              "locator": "Somatic biallelic mismatch repair deficiency: CRC y endometrial cancer; Molecular diagnostic tumor testing",
+              "support": "La deficiencia MMR endometrial también puede resultar de alteraciones somáticas."
+            }
+          ],
+          "id": "26.03-02-dato_faltante"
+        }
+      ]
+    },
+    {
+      "id": "26.04",
+      "title": "Masa anexial o distensión",
+      "related_sections": [],
+      "scenarios": [
+        {
+          "anchor_topic_ids": [
+            "26.04-01"
+          ],
+          "objective": "cambio",
+          "vignette": "Una adulta tiene una masa anexial que sigue indeterminada tras ultrasonido experto. Está estable y no hay indicación de cirugía urgente.",
+          "question": "¿Qué imagen puede ayudar como segunda línea para caracterizarla?",
+          "answer": "Resonancia magnética con protocolo apropiado para masa anexial.",
+          "discriminator": "indeterminada tras ultrasonido experto",
+          "reason": "La resonancia puede diferenciar masas benignas, limítrofes y malignas cuando el ultrasonido no resuelve la caracterización.",
+          "initial_action": "Discutir resonancia y revisión especializada antes de decidir la intervención.",
+          "limits": "No sustituye histología cuando se requiere; no es la primera imagen rutinaria de toda masa.",
+          "evidence": [
+            {
+              "source_id": "isuog-ovary",
+              "locator": "Statement 13: MRI como segunda línea tras ultrasonografía",
+              "support": "La resonancia puede diferenciar masas benignas, limítrofes y malignas cuando el ultrasonido no resuelve la caracterización."
+            }
+          ],
+          "id": "26.04-01-subtipo"
+        },
+        {
+          "anchor_topic_ids": [
+            "26.04-02"
+          ],
+          "objective": "contraste",
+          "vignette": "Una adulta con masas ováricas bilaterales tiene CEA elevado y una lesión colónica aún sin biopsia. Se propone tratarla como cáncer ovárico primario solo por la localización de las masas.",
+          "question": "¿Qué origen alternativo debe investigarse?",
+          "answer": "Metástasis ováricas de un tumor gastrointestinal.",
+          "discriminator": "CEA elevado y una lesión colónica",
+          "reason": "CEA puede ayudar en casos concretos a distinguir un tumor ovárico primario de uno secundario; no determina el origen por sí solo.",
+          "initial_action": "Coordinar evaluación gastrointestinal, ginecológica oncológica y confirmación histológica antes del plan definitivo.",
+          "limits": "Ni CEA ni bilateralidad confirman metástasis; la lesión colónica tampoco tiene histología todavía.",
+          "evidence": [
+            {
+              "source_id": "isuog-ovary",
+              "locator": "Statements 11–12; tumor markers: metástasis gastrointestinales y tumores ováricos primarios",
+              "support": "CEA puede ayudar en casos concretos a distinguir un tumor ovárico primario de uno secundario; no determina el origen por sí solo."
+            }
+          ],
+          "id": "26.04-02-dato_faltante"
+        },
+        {
+          "anchor_topic_ids": [
+            "26.04-01",
+            "26.04-02"
+          ],
+          "objective": "subtipo",
+          "vignette": "Una mujer de 22 años tiene una masa ovárica compleja. El equipo solicita solo CA125 y omite los marcadores de tumores germinales.",
+          "question": "¿Qué panel adicional orienta ese subtipo tumoral?",
+          "answer": "LDH, alfafetoproteína y hCG.",
+          "discriminator": "22 años tiene una masa ovárica compleja",
+          "reason": "En menores de 40 años con masa compleja se deben considerar marcadores de tumores germinales.",
+          "initial_action": "Solicitar el panel y correlacionarlo con imagen, posibilidad de embarazo y valoración especializada.",
+          "limits": "Los marcadores no confirman histología; hCG también puede reflejar embarazo. RCOG 2011 es una guía antigua, no un protocolo mexicano vigente.",
+          "evidence": [
+            {
+              "source_id": "rcog-mass",
+              "locator": "Green-top 62, noviembre 2011, sección 4.2",
+              "support": "En menores de 40 años con masa compleja se deben considerar marcadores de tumores germinales."
+            }
+          ],
+          "id": "26.04-03-contraste"
+        }
+      ]
+    },
+    {
+      "id": "26.05",
+      "title": "Sangrado vaginal no cervical",
+      "related_sections": [],
+      "scenarios": [
+        {
+          "anchor_topic_ids": [
+            "26.05-01"
+          ],
+          "objective": "dato_faltante",
+          "vignette": "Una adulta histerectomizada presenta sangrado y una lesión en pared vaginal. No hay cuello uterino visible.",
+          "question": "¿Qué evaluación es necesaria antes de atribuir el sangrado a atrofia?",
+          "answer": "Inspección completa y biopsia de la lesión sospechosa.",
+          "discriminator": "una lesión en pared vaginal",
+          "reason": "La histerectomía no excluye neoplasia vaginal.",
+          "initial_action": "Referir a ginecología para toma de tejido y evaluación de extensión.",
+          "limits": "Confirmar antecedente e histología de la cirugía previa.",
+          "evidence": [
+            {
+              "source_id": "nci-vagina",
+              "locator": "General Information; clinical and diagnostic evaluation",
+              "support": "La histerectomía no excluye neoplasia vaginal."
+            }
+          ],
+          "id": "26.05-01-dato_faltante"
+        },
+        {
+          "anchor_topic_ids": [
+            "26.05-01"
+          ],
+          "objective": "cambio",
+          "vignette": "Una adulta tratada por cáncer vaginal refiere nuevo sangrado. Su citología de seguimiento fue normal.",
+          "question": "¿Qué dato exige reevaluación clínica?",
+          "answer": "El síntoma nuevo pese a citología normal.",
+          "discriminator": "nuevo sangrado",
+          "reason": "La vigilancia debe atender síntomas y exploración, no solo citología.",
+          "initial_action": "Realizar valoración ginecológica y estudiar hallazgos sospechosos.",
+          "limits": "La evidencia de vigilancia rutinaria por imagen o citología es limitada.",
+          "evidence": [
+            {
+              "source_id": "nci-vagina",
+              "locator": "Follow-up: síntomas nuevos y exploración",
+              "support": "La vigilancia debe atender síntomas y exploración, no solo citología."
+            }
+          ],
+          "id": "26.05-02-cambio"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,704 @@
+{
+  "schema_version": 1,
+  "layer": 2,
+  "section_id": "33",
+  "title": "Urología",
+  "author": "clinical-author-25-35",
+  "sources": [
+    {
+      "id": "eau-bladder",
+      "label": "EAU: Non-muscle-invasive Bladder Cancer, Diagnosis",
+      "url": "https://uroweb.org/guidelines/non-muscle-invasive-bladder-cancer/chapter/diagnosis",
+      "version": "Edición 2026; Summary of Changes comprobado",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Sections 5.2, 5.4 and 5.8–5.9"
+    },
+    {
+      "id": "eau-ed",
+      "label": "EAU: Sexual and Reproductive Health, Erectile Dysfunction",
+      "url": "https://uroweb.org/guidelines/sexual-and-reproductive-health/chapter/management-of-erectile-dysfunction",
+      "version": "Edición 2026; Summary of Changes comprobado",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Section 5.4 basic diagnostic evaluation; 5.6.3.f.2 nitrate contraindication; 5.6.3.f.5 management of non-responders to PDE5 inhibitors"
+    },
+    {
+      "id": "eau-hydrocele",
+      "label": "EAU/ESPU: Paediatric Urology, Hydrocele",
+      "url": "https://uroweb.org/guidelines/paediatric-urology/chapter/hydrocele",
+      "version": "Edición 2026",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Sections 7.2–7.4: evaluation and management"
+    },
+    {
+      "id": "eau-luts",
+      "label": "EAU: Non-neurogenic Male LUTS, Diagnostic Evaluation",
+      "url": "https://uroweb.org/guidelines/management-of-non-neurogenic-male-luts/chapter/diagnostic-evaluation",
+      "version": "Edición 2026; año verificado en Summary of Changes",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Sections 4.1–4.5 and post-void residual"
+    },
+    {
+      "id": "eau-prostate",
+      "label": "EAU: Prostate Cancer, Diagnostic Evaluation",
+      "url": "https://uroweb.org/guidelines/prostate-cancer/chapter/diagnostic-evaluation",
+      "version": "Edición 2026; Summary of Changes comprobado",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Section 5.2.2 PSA interpretation and repeat testing"
+    },
+    {
+      "id": "eau-renal",
+      "label": "EAU: Renal Cell Carcinoma, Diagnostic Evaluation",
+      "url": "https://uroweb.org/guidelines/renal-cell-carcinoma/chapter/diagnostic-evaluation",
+      "version": "Edición 2026; Summary of Changes comprobado",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Sections 5.1 and 5.2: symptoms, imaging and enhancement"
+    },
+    {
+      "id": "eau-scrotum",
+      "label": "EAU/ESPU: Paediatric Urology, Acute Scrotum",
+      "url": "https://uroweb.org/guidelines/paediatric-urology/chapter/acute-scrotum",
+      "version": "Edición 2026; Summary of Changes comprobado",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Diagnosis; management; summary of evidence and recommendations"
+    },
+    {
+      "id": "eau-stones",
+      "label": "EAU: Urolithiasis",
+      "url": "https://uroweb.org/guidelines/urolithiasis/chapter/guidelines",
+      "version": "Edición 2026; Summary of Changes comprobado",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Sections 3.4.2 and 3.4.9"
+    },
+    {
+      "id": "eau-testis",
+      "label": "EAU: Testicular Cancer, Diagnostic Evaluation",
+      "url": "https://uroweb.org/guidelines/testicular-cancer/chapter/diagnostic-evaluation",
+      "version": "Edición 2026; Summary of Changes comprobado",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Sections 5.1–5.3: ultrasound and marker limitations"
+    },
+    {
+      "id": "eau-uti",
+      "label": "EAU: Urological Infections",
+      "url": "https://uroweb.org/guidelines/urological-infections/chapter/the-guideline",
+      "version": "Edición 2026; Summary of Changes comprobado",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Sections 3.1, 3.3, 3.5, 3.7, 3.11 and 3.12"
+    },
+    {
+      "id": "eau-varicocele",
+      "label": "EAU/ESPU: Paediatric Urology, Varicocele",
+      "url": "https://uroweb.org/guidelines/paediatric-urology/chapter/varicocele-in-children-and-adolescents",
+      "version": "Edición 2026",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Section 11.3 and treatment recommendations"
+    },
+    {
+      "id": "imss-luts",
+      "label": "IMSS: Síntomas del tracto urinario inferior asociados a crecimiento prostático",
+      "url": "https://www.imss.gob.mx/sites/all/statics/guiasclinicas/176GRR.pdf",
+      "version": "Actualización 2018, IMSS-176-18",
+      "checked_at": "2026-11-06",
+      "region": "mexico",
+      "access": "checked",
+      "locator": "GRR: evaluación clínica, diagnóstico diferencial y tratamiento"
+    },
+    {
+      "id": "eau-luts-treatment",
+      "label": "EAU: Non-neurogenic male LUTS, Disease management",
+      "url": "https://uroweb.org/guidelines/management-of-non-neurogenic-male-luts/chapter/disease-management",
+      "version": "Edición2026;SummaryofChangesya comprobado",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "5.2.1Alpha1-blockers/Tolerabilityandsafety:IFIS,cataractsurgeryandophthalmologistnotification"
+    },
+    {
+      "id": "eau-stricture-treatment",
+      "label": "EAU: Urethral strictures, Disease management in males",
+      "url": "https://uroweb.org/guidelines/urethral-strictures/chapter/disease-management-in-males",
+      "version": "Edición2026,SummaryofChangesabierto:todosloscapítulosactualizados",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "6.3.1.eLS-relatedpenileurethralstrictures;no genitalskin,strongrecommendation"
+    },
+    {
+      "id": "nnuh-pod",
+      "label": "NNUH/JPUH/QEHKL: High-pressure chronic retention and post-obstructive diuresis",
+      "url": "https://www.nnuh.nhs.uk/publication/download/joint-trust-clinical-procedure-for-the-management-of-high-pressure-chronic-retention-of-urine-post-obstructive-diuresis-v2/",
+      "version": "V2junio2024;aprobación e implementaciónNNUH19octubre2024;revisiónprevista2027",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "PDF primario completo9p,3.2.4and3.3pp6–7;adultos>18. No se usa el PDF AUA bloqueado"
+    },
+    {
+      "id": "eau-hypogonadism",
+      "label": "EAU: Sexual and reproductive health, Male hypogonadism",
+      "url": "https://uroweb.org/guidelines/sexual-and-reproductive-health/chapter/male-hypogonadism",
+      "version": "Edición2026;introducciónySummaryofChangescomprobados",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "3.4.2.fRecommendations:testosterona y deseo de paternidad;3.4.1mecanismo de supresión reproductiva"
+    }
+  ],
+  "mexico_source_note": "Se comprobó la GRR IMSS-176-18, actualización 2018, mediante PDF oficial y extracción local; el visor web después devolvió error. Se limita a evaluación de síntomas asociados a crecimiento prostático. No se comprobó una guía mexicana reciente que reúna todos los temas de esta sección. Se abrieron capítulos clínicos EAU y se verificó la edición 2026 en Summary of Changes para infecciones, litiasis, LUTS, pediatría, función sexual y cánceres. EAU señala que su apartado de urosepsis está en revisión para 2027; los casos de obstrucción infectada usan el apartado 3.4.2 de litiasis. No se trasladan antibiogramas ni restricciones regulatorias europeas a México. Los casos infantiles usan EAU/ESPU pediátrica. Revisión clínica profesional pendiente. Se abrieron los capítulos EAU2026 específicos y se leyeron recomendaciones sobre IFIS,liquenescleroso,procedimientosconbrechamucosa,imagenenembarazo,pruebasdeprostatitiscrónica,destorsiónmanual,hidrocelepediátrico,varicocele,fertilidadybiopsiasseleccionadas. El manejo de diuresis posobstructiva se comprobó en procedimiento hospitalario NNUH V2,implementadooctubre2024,adultos>18; no se cuenta el PDF AUA403como leído. No se encontró y abrió una GPC mexicana reciente para cada decisión añadida; IMSS176actualizada2018 no cubre por sí sola estas diferencias. No se importan disponibilidad,antibióticos,dosis,pautas pediátricas ni prácticas reconstructivas sin especialista.",
+  "blocks": [
+    {
+      "id": "33.01",
+      "title": "Síntomas de vaciamiento",
+      "related_sections": [],
+      "scenarios": [
+        {
+          "anchor_topic_ids": [
+            "33.01-01"
+          ],
+          "objective": "cambio",
+          "vignette": "Un hombre con síntomas molestos por crecimiento prostático iniciará tamsulosina. Tiene cirugía de catarata programada y aún no lo ha comunicado al oftalmólogo.",
+          "question": "¿Qué dato cambia la coordinación del tratamiento?",
+          "answer": "La cirugía ocular próxima y el riesgo de iris flácido asociado a alfabloqueantes.",
+          "discriminator": "cirugía de catarata programada",
+          "reason": "EAU aconseja informar al oftalmólogo y considera prudente no iniciar alfabloqueante antes de una cirugía de catarata ya programada.",
+          "initial_action": "Coordinar urología y oftalmología antes de iniciar y acordar cómo controlar los síntomas.",
+          "limits": "No suspender por cuenta propia un tratamiento ya usado ni prometer que retirarlo elimina el riesgo; valorar retención u otras complicaciones si existen.",
+          "evidence": [
+            {
+              "source_id": "eau-luts-treatment",
+              "locator": "5.2.1Alpha1-blockers/Tolerabilityandsafety:IFIS y cataractas programadas",
+              "support": "EAU aconseja informar al oftalmólogo y considera prudente no iniciar alfabloqueante antes de una cirugía de catarata ya programada."
+            }
+          ],
+          "id": "33.01-01-contraste"
+        },
+        {
+          "anchor_topic_ids": [
+            "33.01-02"
+          ],
+          "objective": "cambio",
+          "vignette": "Un adulto tiene estenosis meatal y peneana por liquen escleroso confirmado. Se planea reconstrucción con un injerto de piel genital.",
+          "question": "¿Qué tejido debe reconsiderarse por la enfermedad causal?",
+          "answer": "La piel genital; no se recomienda para aumentar uretra afectada por liquen escleroso.",
+          "discriminator": "liquen escleroso confirmado",
+          "reason": "La enfermedad puede afectar ese tejido y favorecer recurrencia; EAU recomienda evitar piel genital en esta reconstrucción.",
+          "initial_action": "Revisar el plan con urología reconstructiva y seleccionar técnica y tejido según extensión y condiciones locales.",
+          "limits": "No se propone una técnica universal ni se aplica a toda estenosis meatal de otra causa.",
+          "evidence": [
+            {
+              "source_id": "eau-stricture-treatment",
+              "locator": "6.3.1.eLS-relatedpenileurethralstrictures: no genital skin; oral mucosa options según condiciones",
+              "support": "La enfermedad puede afectar ese tejido y favorecer recurrencia; EAU recomienda evitar piel genital en esta reconstrucción."
+            }
+          ],
+          "id": "33.01-02-dato_faltante"
+        }
+      ]
+    },
+    {
+      "id": "33.02",
+      "title": "No logra orinar",
+      "related_sections": [],
+      "scenarios": [
+        {
+          "anchor_topic_ids": [
+            "33.02-01"
+          ],
+          "objective": "cambio",
+          "vignette": "Un adulto con retención prolongada e hidronefrosis fue descomprimido con sonda. Después continúa una diuresis muy abundante y aparece mareo con descenso de presión.",
+          "question": "¿La salida persistente de mucha orina es siempre una señal tranquilizadora?",
+          "answer": "No; puede ser diuresis posobstructiva con pérdida de volumen y solutos.",
+          "discriminator": "diuresis muy abundante y aparece mareo",
+          "reason": "Tras aliviar una obstrucción puede persistir pérdida de agua y sal con inestabilidad y alteraciones electrolíticas.",
+          "initial_action": "Mantener observación, medir balance, presión, función renal y electrolitos y reponer de forma individual con el equipo.",
+          "limits": "No pinzar la sonda para frenar la diuresis ni dar un volumen fijo a todo paciente; esta guía se limita a adultos.",
+          "evidence": [
+            {
+              "source_id": "nnuh-pod",
+              "locator": "3.2.4and3.3pp6–7: monitorización y manejo de diuresis posobstructiva e hipotensión",
+              "support": "Tras aliviar una obstrucción puede persistir pérdida de agua y sal con inestabilidad y alteraciones electrolíticas."
+            }
+          ],
+          "id": "33.02-01-gravedad"
+        },
+        {
+          "anchor_topic_ids": [
+            "33.02-02"
+          ],
+          "objective": "dato_faltante",
+          "vignette": "Un adulto refiere escapes de orina, frecuencia y urgencia. No lleva registro de horarios, volumen ni circunstancias de fuga.",
+          "question": "¿Qué herramienta puede aclarar el patrón antes de elegir tratamiento?",
+          "answer": "Diario vesical y evaluación clínica dirigida.",
+          "discriminator": "No lleva registro de horarios, volumen ni circunstancias de fuga",
+          "reason": "El registro distingue hábitos y tipos de síntomas.",
+          "initial_action": "Pedir diario y revisar orina, vaciamiento y comorbilidad según exploración.",
+          "limits": "No asumir un único mecanismo por la palabra incontinencia.",
+          "evidence": [
+            {
+              "source_id": "eau-luts",
+              "locator": "4.2–4.3: questionnaires and bladder diaries",
+              "support": "El registro distingue hábitos y tipos de síntomas."
+            }
+          ],
+          "id": "33.02-02-dato_faltante"
+        }
+      ]
+    },
+    {
+      "id": "33.03",
+      "title": "Disuria y fiebre",
+      "related_sections": [],
+      "scenarios": [
+        {
+          "anchor_topic_ids": [
+            "33.03-01"
+          ],
+          "objective": "cambio",
+          "vignette": "Un adulto sin síntomas urinarios tiene cultivo positivo antes de resección transuretral que atravesará mucosa urinaria. No se trata de una cirugía ortopédica.",
+          "question": "¿Se mantiene la regla general de no tratar bacteriuria asintomática?",
+          "answer": "No; esta intervención es una indicación de tratamiento dirigido previo.",
+          "discriminator": "resección transuretral que atravesará mucosa urinaria",
+          "reason": "La bacteriuria aumenta riesgo infeccioso en procedimientos que lesionan mucosa; EAU recomienda buscarla y tratarla antes.",
+          "initial_action": "Comunicar el cultivo al equipo y seleccionar tratamiento según susceptibilidad y protocolo perioperatorio.",
+          "limits": "No se extrapola a toda instrumentación ni a toda cirugía no urológica; confirmar tipo de procedimiento y momento.",
+          "evidence": [
+            {
+              "source_id": "eau-uti",
+              "locator": "3.3.5Prior tourologicalsurgery;3.3.7recommendation: treatABUbeforeproceduresbreachingmucosa",
+              "support": "La bacteriuria aumenta riesgo infeccioso en procedimientos que lesionan mucosa; EAU recomienda buscarla y tratarla antes."
+            }
+          ],
+          "id": "33.03-01-contraste"
+        },
+        {
+          "anchor_topic_ids": [
+            "33.03-02"
+          ],
+          "objective": "cambio",
+          "vignette": "Una embarazada con pielonefritis necesita estudiar posible obstrucción. Está estable para imagen y se propone TC de rutina como en una persona no embarazada.",
+          "question": "¿Qué modalidades deben preferirse inicialmente para evitar radiación fetal?",
+          "answer": "Ultrasonido y, si hace falta, resonancia según el problema.",
+          "discriminator": "embarazada con pielonefritis",
+          "reason": "EAU prefiere US o RM para buscar complicaciones en embarazo, sin aplicar automáticamente la ruta radiológica de otra población.",
+          "initial_action": "Coordinar imagen y atención obstétrica y urológica y continuar tratamiento de la infección.",
+          "limits": "No es una prohibición absoluta de TC cuando resulta necesaria para una urgencia; la modalidad depende de estabilidad y pregunta clínica.",
+          "evidence": [
+            {
+              "source_id": "eau-uti",
+              "locator": "3.6.1Imagingdiagnosis: pregnancy,USorMRIpreferentiallytoavoidradiation",
+              "support": "EAU prefiere US o RM para buscar complicaciones en embarazo, sin aplicar automáticamente la ruta radiológica de otra población."
+            }
+          ],
+          "id": "33.03-02-cambio"
+        },
+        {
+          "anchor_topic_ids": [
+            "33.03-03"
+          ],
+          "objective": "subtipo",
+          "vignette": "Un adulto está afebril y tiene dolor pélvico de más de tres meses con infecciones urinarias recurrentes. Se investiga prostatitis bacteriana crónica y se propone una prueba de orina antes y después de masaje prostático.",
+          "question": "¿Es la misma contraindicación que en prostatitis bacteriana aguda febril?",
+          "answer": "No; en la forma crónica seleccionada puede usarse prueba de dos o cuatro vasos.",
+          "discriminator": "prostatitis bacteriana crónica",
+          "reason": "EAU recomienda pruebas de localización Meares-Stamey para la forma crónica; la prohibición de masaje corresponde a la infección aguda.",
+          "initial_action": "Coordinar obtención protocolizada de muestras y evaluación urológica.",
+          "limits": "No realizar masaje si aparecen fiebre, sepsis o sospecha de infección aguda; dolor crónico por sí solo no demuestra causa bacteriana.",
+          "evidence": [
+            {
+              "source_id": "eau-uti",
+              "locator": "3.11.4UrineculturesandEPS; Summaryrecommendations:MearesandStamey2-or4-glass inCBP;nomassageinABP",
+              "support": "EAU recomienda pruebas de localización Meares-Stamey para la forma crónica; la prohibición de masaje corresponde a la infección aguda."
+            }
+          ],
+          "id": "33.03-03-contraste"
+        },
+        {
+          "anchor_topic_ids": [
+            "33.03-01"
+          ],
+          "objective": "contraste",
+          "vignette": "Una adulta no gestante, sin síntomas urinarios, tiene cultivo positivo incidental antes de cirugía no urológica de articulación.",
+          "question": "¿El cultivo por sí solo obliga a antibiótico?",
+          "answer": "No.",
+          "discriminator": "sin síntomas urinarios",
+          "reason": "La bacteriuria asintomática no necesita tratamiento en muchos grupos.",
+          "initial_action": "Comprobar ausencia de síntomas e indicación real antes de prescribir.",
+          "limits": "Embarazo e intervenciones urológicas que lesionan mucosa tienen indicaciones diferentes.",
+          "evidence": [
+            {
+              "source_id": "eau-uti",
+              "locator": "3.3: asymptomatic bacteriuria, do not screen/treat before arthroplasty",
+              "support": "La bacteriuria asintomática no necesita tratamiento en muchos grupos."
+            }
+          ],
+          "id": "33.03-04-contraste"
+        }
+      ]
+    },
+    {
+      "id": "33.04",
+      "title": "Cólico en flanco",
+      "related_sections": [],
+      "scenarios": [
+        {
+          "anchor_topic_ids": [
+            "33.04-01"
+          ],
+          "objective": "cambio",
+          "vignette": "Un adulto con sepsis por cálculo obstructivo necesita drenaje. El equipo puede colocar un catéter ureteral ahora, pero la familia solicita esperar hasta mañana porque cree que solo una nefrostomía funciona.",
+          "question": "¿Es necesario esperar por esa única vía?",
+          "answer": "No; stent ureteral y nefrostomía son opciones eficaces de descompresión.",
+          "discriminator": "colocar un catéter ureteral ahora",
+          "reason": "EAU acepta ambas vías para la infección obstruida; la elección depende del caso, disponibilidad y experiencia.",
+          "initial_action": "Coordinar drenaje urgente por la vía adecuada disponible y continuar antibiótico y soporte.",
+          "limits": "No garantiza equivalencia técnica en toda anatomía; si una vía no es segura o falla, elegir otra. La extracción definitiva del cálculo espera resolución de sepsis.",
+          "evidence": [
+            {
+              "source_id": "eau-stones",
+              "locator": "3.4.2.1Summary:nephrostomyandureteralstentsequallyeffective;urgentdecompressionanddelaydefinitivetreatment",
+              "support": "EAU acepta ambas vías para la infección obstruida; la elección depende del caso, disponibilidad y experiencia."
+            }
+          ],
+          "id": "33.04-01-gravedad"
+        },
+        {
+          "anchor_topic_ids": [
+            "33.04-01"
+          ],
+          "objective": "cambio",
+          "vignette": "Un adulto observa un cálculo ureteral. El dolor deja de responder a analgesia y la función renal empeora.",
+          "question": "¿Debe continuar solo la espera de expulsión?",
+          "answer": "No.",
+          "discriminator": "la función renal empeora",
+          "reason": "Dolor refractario y deterioro renal son razones para intervención.",
+          "initial_action": "Reevaluar pronto con urología e imagen y valorar extracción o drenaje.",
+          "limits": "La observación requiere ausencia de complicaciones y seguimiento.",
+          "evidence": [
+            {
+              "source_id": "eau-stones",
+              "locator": "3.4.9.b–c: discontinue conservative therapy with complications",
+              "support": "Dolor refractario y deterioro renal son razones para intervención."
+            }
+          ],
+          "id": "33.04-02-cambio"
+        }
+      ]
+    },
+    {
+      "id": "33.05",
+      "title": "Dolor escrotal de inicio súbito",
+      "related_sections": [],
+      "scenarios": [
+        {
+          "anchor_topic_ids": [
+            "33.05-01"
+          ],
+          "objective": "incompleta",
+          "vignette": "Un adolescente tiene dolor escrotal agudo. El Doppler informa flujo arterial conservado, pero la exploración sigue siendo sospechosa de torsión.",
+          "question": "¿El flujo observado excluye torsión?",
+          "answer": "No.",
+          "discriminator": "flujo arterial conservado",
+          "reason": "Puede haber flujo en torsión temprana, parcial o intermitente.",
+          "initial_action": "Mantener valoración quirúrgica urgente sin demoras por repetir imagen innecesaria.",
+          "limits": "Interpretar ultrasonido con clínica y experiencia del operador.",
+          "evidence": [
+            {
+              "source_id": "eau-scrotum",
+              "locator": "Diagnosis: misleading arterial flow and urgent treatment",
+              "support": "Puede haber flujo en torsión temprana, parcial o intermitente."
+            }
+          ],
+          "id": "33.05-01-incompleta"
+        },
+        {
+          "anchor_topic_ids": [
+            "33.05-02"
+          ],
+          "objective": "cambio",
+          "vignette": "Un adolescente con torsión testicular recibió destorsión manual por personal entrenado mientras esperaba quirófano. El dolor desapareció y pide cancelar la exploración.",
+          "question": "¿La mejoría permite cancelar la cirugía?",
+          "answer": "No; puede persistir torsión residual y aún requiere exploración y fijación urgentes.",
+          "discriminator": "El dolor desapareció",
+          "reason": "EAU documenta torsión residual aun con alivio tras la maniobra; esta no sustituye tratamiento quirúrgico.",
+          "initial_action": "Mantener coordinación quirúrgica inmediata y no demorar por aparente recuperación.",
+          "limits": "No se enseña una maniobra casera ni se fija viabilidad por el dolor; valorar hallazgos y ambos testículos por el equipo.",
+          "evidence": [
+            {
+              "source_id": "eau-scrotum",
+              "locator": "8.3.2Testiculartorsion:residualtorsiondespitepainrelief; manualdetorsionshouldnotdelaysurgery",
+              "support": "EAU documenta torsión residual aun con alivio tras la maniobra; esta no sustituye tratamiento quirúrgico."
+            }
+          ],
+          "id": "33.05-02-gravedad"
+        },
+        {
+          "anchor_topic_ids": [
+            "33.05-03"
+          ],
+          "objective": "cambio",
+          "vignette": "Un niño prepuberal tiene epididimitis tras evaluación que descartó torsión. Está estable; urianálisis y cultivo no muestran infección bacteriana. Se propone el mismo esquema para ITS de un adulto.",
+          "question": "¿Se requiere antibiótico de rutina por el nombre del cuadro?",
+          "answer": "No; en muchos niños prepuberales basta soporte y vigilancia si no hay evidencia bacteriana.",
+          "discriminator": "urianálisis y cultivo no muestran infección bacteriana",
+          "reason": "La etiología pediátrica difiere de la del adulto sexualmente activo; EAU no indica antibiótico en la mayoría sin prueba bacteriana.",
+          "initial_action": "Dar analgesia y reposo relativo y organizar seguimiento pediátrico y reevaluación si empeora.",
+          "limits": "No omitir antibiótico ante infección demostrada ni asumir que toda lesión dolorosa es epididimitis; mantener vigilancia de complicaciones y causa urológica según contexto.",
+          "evidence": [
+            {
+              "source_id": "eau-scrotum",
+              "locator": "8.3.1Epididymitis:prepubertal,urineoftennegative;antibioticsifurinalysis/cultureshowbacteria",
+              "support": "La etiología pediátrica difiere de la del adulto sexualmente activo; EAU no indica antibiótico en la mayoría sin prueba bacteriana."
+            }
+          ],
+          "id": "33.05-03-dato_faltante"
+        }
+      ]
+    },
+    {
+      "id": "33.06",
+      "title": "Masa escrotal no dolorosa",
+      "related_sections": [],
+      "scenarios": [
+        {
+          "anchor_topic_ids": [
+            "33.06-01"
+          ],
+          "objective": "cambio",
+          "vignette": "Un niño tiene hidrocele comunicante confirmado. Para evitar cirugía se propone inyectar una sustancia esclerosante en el saco.",
+          "question": "¿Es una alternativa apropiada en este contexto pediátrico?",
+          "answer": "No; existe riesgo de peritonitis química por la comunicación.",
+          "discriminator": "hidrocele comunicante confirmado",
+          "reason": "EAU desaconseja esclerosantes en hidrocele pediátrico por posible paso al peritoneo.",
+          "initial_action": "Revisar con urología pediátrica observación o reparación según edad, evolución y hallazgos.",
+          "limits": "No se aplica sin más al tratamiento de hidrocele no comunicante del adulto; no implica operar urgentemente a todo niño estable.",
+          "evidence": [
+            {
+              "source_id": "eau-hydrocele",
+              "locator": "7.3Management:avoid sclerosingagents,chemicalperitonitisincommunicatingprocessusvaginalis",
+              "support": "EAU desaconseja esclerosantes en hidrocele pediátrico por posible paso al peritoneo."
+            }
+          ],
+          "id": "33.06-01-contraste"
+        },
+        {
+          "anchor_topic_ids": [
+            "33.06-02"
+          ],
+          "objective": "cambio",
+          "vignette": "Un adolescente con varicocele está valorando cirugía. Se le promete que operar ahora garantiza fertilidad y paternidad futuras, aunque las mediciones testiculares sean normales.",
+          "question": "¿Puede darse esa garantía?",
+          "answer": "No; el efecto final sobre fertilidad y paternidad sigue incierto.",
+          "discriminator": "garantiza fertilidad y paternidad futuras",
+          "reason": "Puede mejorar tamaño o parámetros seminales, pero estos desenlaces no equivalen a garantizar paternidad futura.",
+          "initial_action": "Revisar indicaciones individuales, alternativas y seguimiento con el adolescente y su familia.",
+          "limits": "La incertidumbre no niega cirugía si hay indicación; dolor, hipotrofia persistente y otros factores requieren valoración propia.",
+          "evidence": [
+            {
+              "source_id": "eau-varicocele",
+              "locator": "11.4Managementand11.4.2:earlyrepairnotprovenbetter;ultimatefertility/paternityeffectsunknown",
+              "support": "Puede mejorar tamaño o parámetros seminales, pero estos desenlaces no equivalen a garantizar paternidad futura."
+            }
+          ],
+          "id": "33.06-02-dato_faltante"
+        },
+        {
+          "anchor_topic_ids": [
+            "33.06-01"
+          ],
+          "objective": "cambio",
+          "vignette": "Un lactante con diagnóstico de hidrocele desarrolla bulto inguinal doloroso y vómitos.",
+          "question": "¿Puede mantenerse observación habitual sin reevaluación?",
+          "answer": "No. Debe descartarse hernia complicada.",
+          "discriminator": "bulto inguinal doloroso y vómitos",
+          "reason": "Una posible hernia asociada cambia la conducta del hidrocele.",
+          "initial_action": "Enviar a evaluación quirúrgica pediátrica urgente.",
+          "limits": "No diagnosticar encarcelamiento solo por un bulto sin exploración.",
+          "evidence": [
+            {
+              "source_id": "eau-hydrocele",
+              "locator": "7.3: suspicion of concomitant hernia requires early surgical evaluation",
+              "support": "Una posible hernia asociada cambia la conducta del hidrocele."
+            }
+          ],
+          "id": "33.06-03-cambio"
+        }
+      ]
+    },
+    {
+      "id": "33.07",
+      "title": "Disfunción sexual",
+      "related_sections": [],
+      "scenarios": [
+        {
+          "anchor_topic_ids": [
+            "33.07-01"
+          ],
+          "objective": "cambio",
+          "vignette": "Un adulto con disfunción eréctil e hipogonadismo confirmado solicita testosterona. Él y su pareja están intentando concebir ahora.",
+          "question": "¿Qué objetivo obliga a cambiar esa elección?",
+          "answer": "El deseo reproductivo actual; no usar testosterona exógena como tratamiento en quien busca paternidad.",
+          "discriminator": "intentando concebir ahora",
+          "reason": "La testosterona exógena suprime el eje y puede perjudicar espermatogénesis; EAU no la recomienda en hombres que desean ser padres.",
+          "initial_action": "Coordinar andrología para estudiar causa y elegir una estrategia compatible con fertilidad.",
+          "limits": "No se propone un sustituto universal ni se trata infertilidad con suplementos; confirmar el contexto hormonal y reproductivo.",
+          "evidence": [
+            {
+              "source_id": "eau-hypogonadism",
+              "locator": "3.4.2.fRecommendations:Do notuseTThinmaleswishingtobefathers;3.4.1fertilitymechanism",
+              "support": "La testosterona exógena suprime el eje y puede perjudicar espermatogénesis; EAU no la recomienda en hombres que desean ser padres."
+            }
+          ],
+          "id": "33.07-01-contraste"
+        },
+        {
+          "anchor_topic_ids": [
+            "33.07-01"
+          ],
+          "objective": "dato_faltante",
+          "vignette": "Un adulto dice que sildenafil fracasó. Lo tomó después de una comida muy grasa y esperaba erección automática sin estimulación sexual. No ha recibido orientación sobre uso.",
+          "question": "¿Qué debe revisarse antes de declarar resistencia al tratamiento?",
+          "answer": "La administración, el momento y la estimulación sexual.",
+          "discriminator": "comida muy grasa",
+          "reason": "La comida puede retrasar absorción y la falta de orientación puede causar aparente falta de respuesta; educar puede rescatar parte de los casos.",
+          "initial_action": "Revisar indicación y seguridad y enseñar uso correcto antes de escalar tratamiento.",
+          "limits": "No aumentar dosis ni combinar fármacos por cuenta propia; si persiste fracaso, evaluar causas orgánicas y psicológicas.",
+          "evidence": [
+            {
+              "source_id": "eau-ed",
+              "locator": "5.6.3.f.5Managementofnon-/poorresponders:high-fatmeals,timing,sexualstimulationandeducation",
+              "support": "La comida puede retrasar absorción y la falta de orientación puede causar aparente falta de respuesta; educar puede rescatar parte de los casos."
+            }
+          ],
+          "id": "33.07-02-dato_faltante"
+        }
+      ]
+    },
+    {
+      "id": "33.08",
+      "title": "PSA alterado/síntomas prostáticos",
+      "related_sections": [],
+      "scenarios": [
+        {
+          "anchor_topic_ids": [
+            "33.08-01"
+          ],
+          "objective": "contraste",
+          "vignette": "Un adulto tiene PSA moderadamente elevado durante una infección urinaria febril. El tacto no es sospechoso.",
+          "question": "¿Ese PSA aislado confirma cáncer prostático?",
+          "answer": "No.",
+          "discriminator": "durante una infección urinaria febril",
+          "reason": "La infección puede elevar PSA y requiere interpretación temporal.",
+          "initial_action": "Tratar la infección y organizar reevaluación del PSA y riesgo con urología.",
+          "limits": "No fijar una biopsia ni descartar cáncer solo por este valor.",
+          "evidence": [
+            {
+              "source_id": "eau-prostate",
+              "locator": "5.2.2: PSA sources of error and repeat under standard conditions",
+              "support": "La infección puede elevar PSA y requiere interpretación temporal."
+            }
+          ],
+          "id": "33.08-01-contraste"
+        }
+      ]
+    },
+    {
+      "id": "33.09",
+      "title": "Hematuria macroscópica",
+      "related_sections": [],
+      "scenarios": [
+        {
+          "anchor_topic_ids": [
+            "33.09-01"
+          ],
+          "objective": "gravedad",
+          "vignette": "Un adulto fumador tiene hematuria visible indolora recurrente. El ultrasonido no muestra masa vesical.",
+          "question": "¿La ecografía normal cierra el estudio?",
+          "answer": "No.",
+          "discriminator": "hematuria visible indolora recurrente",
+          "reason": "La ecografía no descarta todas las causas ni sustituye cistoscopia cuando está indicada.",
+          "initial_action": "Referir para evaluación de hematuria, imagen y cistoscopia según riesgo.",
+          "limits": "No atribuirla sin estudio a fármacos o infección presunta.",
+          "evidence": [
+            {
+              "source_id": "eau-bladder",
+              "locator": "5.4, 5.8–5.9: ultrasound limits and cystoscopy",
+              "support": "La ecografía no descarta todas las causas ni sustituye cistoscopia cuando está indicada."
+            }
+          ],
+          "id": "33.09-01-gravedad"
+        },
+        {
+          "anchor_topic_ids": [
+            "33.09-02"
+          ],
+          "objective": "cambio",
+          "vignette": "Una adulta tiene masa renal quística indeterminada. La imagen no muestra componente sólido significativo; se propone biopsiarla como primera medida para asegurar que no sea maligna.",
+          "question": "¿Ese patrón favorece una biopsia rutinaria?",
+          "answer": "No; EAU desaconseja biopsiar masas quísticas sin componente sólido significativo.",
+          "discriminator": "no muestra componente sólido significativo",
+          "reason": "El contenido quístico limita rendimiento de la biopsia; su manejo requiere caracterización por imagen y valoración especializada.",
+          "initial_action": "Coordinar revisión radiológica y urológica y decidir conducta según características y paciente.",
+          "limits": "No demuestra benignidad ni elimina seguimiento; si hay componente sólido u otra indicación, la decisión puede ser distinta.",
+          "evidence": [
+            {
+              "source_id": "eau-renal",
+              "locator": "5.4Recommendations:Do notbiopsycysticrenalmassunlesssignificantsolidcomponentvisible",
+              "support": "El contenido quístico limita rendimiento de la biopsia; su manejo requiere caracterización por imagen y valoración especializada."
+            }
+          ],
+          "id": "33.09-02-incompleta"
+        }
+      ]
+    },
+    {
+      "id": "33.10",
+      "title": "Masa testicular",
+      "related_sections": [],
+      "scenarios": [
+        {
+          "anchor_topic_ids": [
+            "33.10-01"
+          ],
+          "objective": "cambio",
+          "vignette": "Un adulto tiene pequeña masa testicular no palpable e indeterminada en ultrasonido, marcadores negativos y testículo contralateral normal. Se propone orquiectomía radical automática sin discutir opciones.",
+          "question": "¿Qué opción puede valorar un centro experto en un caso seleccionado?",
+          "answer": "Cirugía conservadora testicular con estudio por congelación.",
+          "discriminator": "pequeña masa testicular no palpable e indeterminada",
+          "reason": "EAU permite considerar preservación en masas pequeñas o indeterminadas con marcadores negativos para reducir sobretratamiento de lesiones potencialmente benignas.",
+          "initial_action": "Referir para decisión informada con patología experta y plan oncológico según el resultado.",
+          "limits": "No se asume benignidad por tamaño o marcadores; la histología puede exigir orquiectomía, y esta sigue siendo estándar en tumor germinal confirmado.",
+          "evidence": [
+            {
+              "source_id": "eau-testis",
+              "locator": "5.4.2Testis-sparingsurgery:small/indeterminatemasses,negativemarkers,normalcontralateraltestis;FSEandcancerrisk",
+              "support": "EAU permite considerar preservación en masas pequeñas o indeterminadas con marcadores negativos para reducir sobretratamiento de lesiones potencialmente benignas."
+            }
+          ],
+          "id": "33.10-01-dato_faltante"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,393 @@
+{
+  "schema_version": 1,
+  "layer": 2,
+  "section_id": "23",
+  "title": "Nutrición",
+  "author": "clinical-author-13-24",
+  "sources": [
+    {
+      "id": "who-complementary-2023",
+      "label": "WHO. eLENA: Appropriate complementary feeding",
+      "url": "https://www.who.int/tools/elena/interventions/complementary-feeding",
+      "version": "2023-08-09",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "WHO recommendations: complementary foods with continued breastfeeding"
+    },
+    {
+      "id": "rch-micronutrients-2023",
+      "label": "Royal Children’s Hospital Melbourne. Micronutrient deficiency",
+      "url": "https://www.rch.org.au/clinicalguide/guideline_index/Micronutrient_deficiency/",
+      "version": "2023-09",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Risk despite normal growth; vitamin A; vitamin B3; targeted tests"
+    },
+    {
+      "id": "rch-vitd-2020",
+      "label": "Royal Children’s Hospital Melbourne. Vitamin D deficiency",
+      "url": "https://www.rch.org.au/clinicalguide/guideline_index/Vitamin_D_deficiency/",
+      "version": "2020-09",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Assessment of rickets; calcium, phosphate, ALP, PTH and vitamin D"
+    },
+    {
+      "id": "niddk-lactose-2018",
+      "label": "NIDDK. Diagnosis of Lactose Intolerance",
+      "url": "https://www.niddk.nih.gov/health-information/digestive-diseases/lactose-intolerance/diagnosis",
+      "version": "2018-02",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Differential diagnosis and hydrogen breath test"
+    },
+    {
+      "id": "nom-perinatal-2016",
+      "label": "Secretaría de Salud. NOM-007-SSA2-2016",
+      "url": "https://sidof.segob.gob.mx/notas/docFuente/5432289",
+      "version": "2016",
+      "checked_at": "2026-11-06",
+      "region": "mexico",
+      "access": "checked",
+      "locator": "5.7 Atención de persona recién nacida; APGAR, Silverman, vitamina K y tamices"
+    },
+    {
+      "id": "cdc-hsv-bf-2025",
+      "label": "CDC. Herpes Simplex Virus and Breastfeeding: orientación para profesionales",
+      "url": "https://www.cdc.gov/breastfeeding-special-circumstances/hcp/illnesses-conditions/herpes.html",
+      "version": "2025-09-23",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Breastfeeding with active lesions; Feeding hand-expressed or pumped breast milk"
+    },
+    {
+      "id": "who-fluid-sam-2023",
+      "label": "WHO eLENA. Fluid management in severely malnourished children under 5 years of age without shock",
+      "url": "https://www.who.int/tools/elena/interventions/dehydration-sam",
+      "version": "2023-08-09; página de recomendaciones vinculadas a guía2013",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "WHO Recommendations: vía oral o nasogástrica en deshidratación sin choque"
+    },
+    {
+      "id": "who-antibiotic-sam-2023",
+      "label": "WHO eLENA. Use of antibiotics in outpatient management of children6–59months with severe acute malnutrition",
+      "url": "https://www.who.int/tools/elena/interventions/antibiotics-sam",
+      "version": "2023-08-09; página de recomendaciones vinculadas a guía2013",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "WHO Recommendations: desnutrición no grave sin infección no requiere antibiótico rutinario"
+    },
+    {
+      "id": "nih-niacin-2022",
+      "label": "NIH Office of Dietary Supplements. Niacin: ficha profesional oficial",
+      "url": "https://ods.od.nih.gov/factsheets/Niacin-HealthProfessional/",
+      "version": "2022-11-18",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Groups at Risk of Niacin Inadequacy: People with Hartnup disease"
+    },
+    {
+      "id": "endosoc-pedobesity-2017",
+      "label": "Endocrine Society. Pediatric Obesity—Assessment, Treatment, and Prevention: recomendaciones oficiales",
+      "url": "https://www.endocrine.org/clinical-practice-guidelines/pediatric-obesity",
+      "version": "2017-01-19",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Recomendaciones1.5 y2.1; evaluación endocrina y genética"
+    },
+    {
+      "id": "rch-gastroenteritis-2025",
+      "label": "Royal Children’s Hospital. Gastroenteritis",
+      "url": "https://www.rch.org.au/clinicalguide/guideline_index/Gastroenteritis/",
+      "version": "2025-08",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Assessment/History: sangre o moco indican inflamación; antecedentes de ganancia ponderal lenta"
+    }
+  ],
+  "mexico_source_note": "Se abrió la NOM-007-SSA2-2016 para lactancia y atención neonatal. Se revisó la búsqueda de NOM-043-SSA2-2012 y GPC nacional de desnutrición, pero no se presume su vigencia ni se utilizan pautas antiguas frente a recomendaciones OMS más recientes. No se obtuvo una guía nacional actual única para todos los déficits. Se comprobaron recomendaciones OMS 2023, guías pediátricas y USPSTF 2024. La orientación de NIDDK sobre lactosa es de 2018, no de 2026. La página WHO eLENA comprobada conserva recomendaciones enlazadas a 2013. El PDF completo de la guía WHO de 2023 no fue accesible y no se registra como comprobado. Para las sustituciones se abrieron las páginas OMS de líquidos y antibióticos (actualización web2023, con enlaces a recomendaciones2013), CDC2025, la ficha profesional NIH2022 y las recomendaciones oficiales Endocrine Society2017. No se presentan estas fechas como versiones2026. No se copian dosis ni mezclas de soluciones de las recomendaciones antiguas.",
+  "blocks": [
+    {
+      "id": "23.01",
+      "title": "Alimentación de lactante sano",
+      "related_sections": [],
+      "scenarios": [
+        {
+          "id": "23.01-c2-01",
+          "anchor_topic_ids": [
+            "23.01-01"
+          ],
+          "objective": "cambio",
+          "vignette": "Una madre que amamanta tiene lesiones herpéticas activas confirmadas en una areola. El otro pecho no tiene lesiones. Pregunta si puede extraer leche del lado afectado y dársela al lactante.",
+          "question": "¿La extracción hace segura la leche del pecho afectado?",
+          "answer": "No; descartarla hasta que las lesiones hayan cicatrizado.",
+          "discriminator": "lesiones herpéticas activas confirmadas en una areola",
+          "reason": "La leche extraída puede contaminarse por contacto con las lesiones.",
+          "initial_action": "Suspender temporalmente las tomas del lado afectado; mantener extracción para la producción y alimentar desde el lado sano con lesiones cubiertas e higiene.",
+          "limits": "Confirmar cicatrización antes de reiniciar; valorar de inmediato al lactante si aparecen signos de infección.",
+          "evidence": [
+            {
+              "source_id": "cdc-hsv-bf-2025",
+              "locator": "Breastfeeding with active lesions; Feeding hand-expressed or pumped breast milk",
+              "support": "La leche extraída puede contaminarse por contacto con las lesiones."
+            }
+          ]
+        },
+        {
+          "id": "23.01-c2-02",
+          "anchor_topic_ids": [
+            "23.01-02"
+          ],
+          "objective": "cambio",
+          "vignette": "Un lactante ya tiene edad y capacidad para alimentación complementaria. Recibe solo papillas muy diluidas y deja de ganar peso.",
+          "question": "¿Qué aspecto debe corregirse?",
+          "answer": "Densidad y diversidad nutricional de los alimentos.",
+          "discriminator": "papillas muy diluidas",
+          "reason": "El volumen acuoso no garantiza energía ni micronutrientes.",
+          "initial_action": "Evaluar dieta y ofrecer alimentos adecuados con lactancia continuada.",
+          "limits": "La dificultad para ganar peso también necesita evaluación clínica.",
+          "evidence": [
+            {
+              "source_id": "who-complementary-2023",
+              "locator": "Adequate complementary foods with continued breastfeeding",
+              "support": "El volumen acuoso no garantiza energía ni micronutrientes."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "23.02",
+      "title": "Diarrea tras lácteos",
+      "related_sections": [],
+      "scenarios": [
+        {
+          "id": "23.02-c2-01",
+          "anchor_topic_ids": [
+            "23.02-01"
+          ],
+          "objective": "contraste",
+          "vignette": "Un niño presenta distensión y diarrea tras lácteos, pero también sangre en heces y pérdida de peso.",
+          "question": "¿Basta atribuirlo a intolerancia a lactosa?",
+          "answer": "No; investigar enfermedad intestinal adicional.",
+          "discriminator": "sangre en heces y pérdida de peso",
+          "reason": "Los signos de alarma no se explican bien por malabsorción aislada de lactosa.",
+          "initial_action": "Evaluar otras causas y planear pruebas dirigidas.",
+          "limits": "Una dieta de exclusión no sustituye el estudio de alarma.",
+          "evidence": [
+            {
+              "source_id": "niddk-lactose-2018",
+              "locator": "Diagnosis and differential diagnosis",
+              "support": "Los signos de alarma no se explican bien por malabsorción aislada de lactosa."
+            },
+            {
+              "source_id": "rch-gastroenteritis-2025",
+              "locator": "Assessment/History: Blood or mucus in the stool; History of slow weight gain",
+              "support": "La sangre en heces sugiere inflamación significativa por infección bacteriana o enfermedad intestinal inflamatoria y requiere reconsiderar una explicación dietética aislada."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "23.03",
+      "title": "Bajo peso o edema",
+      "related_sections": [],
+      "scenarios": [
+        {
+          "id": "23.03-c2-01",
+          "anchor_topic_ids": [
+            "23.03-01"
+          ],
+          "objective": "cambio",
+          "vignette": "Un niño de2años con emaciación grave y diarrea tiene deshidratación, pero está alerta, conserva perfusión y puede beber; no presenta choque.",
+          "question": "¿La deshidratación obliga a iniciar líquidos intravenosos rápidos?",
+          "answer": "No; preferir rehidratación enteral lenta y vigilada.",
+          "discriminator": "no presenta choque",
+          "reason": "En desnutrición grave sin choque, la rehidratación oral o nasogástrica reduce el riesgo de un aporte intravenoso inapropiado.",
+          "initial_action": "Aplicar el protocolo pediátrico de desnutrición y vigilar perfusión, diuresis y signos de sobrecarga.",
+          "limits": "El choque o la imposibilidad de rehidratación enteral cambian la conducta; no extrapolar un bolo de un niño bien nutrido.",
+          "evidence": [
+            {
+              "source_id": "who-fluid-sam-2023",
+              "locator": "WHO Recommendations: rehidratación lenta oral o nasogástrica sin choque",
+              "support": "En desnutrición grave sin choque, la rehidratación oral o nasogástrica reduce el riesgo de un aporte intravenoso inapropiado."
+            }
+          ]
+        },
+        {
+          "id": "23.03-c2-02",
+          "anchor_topic_ids": [
+            "23.03-01"
+          ],
+          "objective": "cambio",
+          "vignette": "Un niño de3años fue clasificado con desnutrición moderada, sin emaciación grave ni edema. Está activo, come bien y no tiene signos clínicos de infección. Se propone amoxicilina por el bajo peso.",
+          "question": "¿El déficit nutricional moderado justifica antibiótico rutinario?",
+          "answer": "No, si no hay infección clínica.",
+          "discriminator": "desnutrición moderada, sin emaciación grave ni edema",
+          "reason": "La recomendación de antibiótico para desnutrición aguda grave no se extiende automáticamente a todo bajo peso.",
+          "initial_action": "Tratar el déficit nutricional y mantener vigilancia de infección sin antibiótico empírico rutinario.",
+          "limits": "La infección demostrada o la reclasificación como desnutrición grave requieren otra evaluación.",
+          "evidence": [
+            {
+              "source_id": "who-antibiotic-sam-2023",
+              "locator": "WHO Recommendations: undernourished children without severe acute malnutrition",
+              "support": "La recomendación de antibiótico para desnutrición aguda grave no se extiende automáticamente a todo bajo peso."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "23.04",
+      "title": "Déficit de vitaminas",
+      "related_sections": [],
+      "scenarios": [
+        {
+          "id": "23.04-c2-01",
+          "anchor_topic_ids": [
+            "23.04-01"
+          ],
+          "objective": "dato_faltante",
+          "vignette": "Un escolar con dieta muy restrictiva mantiene un peso normal. Su familia cree que eso descarta carencias.",
+          "question": "¿El crecimiento normal excluye déficit de micronutrientes?",
+          "answer": "No.",
+          "discriminator": "dieta muy restrictiva",
+          "reason": "Puede existir carencia específica sin bajo peso.",
+          "initial_action": "Revisar grupos excluidos y realizar pruebas dirigidas.",
+          "limits": "Evitar suplementación indiscriminada sin valorar riesgos.",
+          "evidence": [
+            {
+              "source_id": "rch-micronutrients-2023",
+              "locator": "Key points: normal growth does not exclude deficiency",
+              "support": "Puede existir carencia específica sin bajo peso."
+            }
+          ]
+        },
+        {
+          "id": "23.04-c2-02",
+          "anchor_topic_ids": [
+            "23.04-02"
+          ],
+          "objective": "cambio",
+          "vignette": "Un niño completó la reposición indicada para deficiencia de vitaminaA. Su familia quiere continuar cada día, de forma indefinida, la dosis alta usada al inicio.",
+          "question": "¿Es adecuado mantener esa dosis alta sin reevaluación?",
+          "answer": "No; existe riesgo de toxicidad crónica.",
+          "discriminator": "cada día, de forma indefinida, la dosis alta",
+          "reason": "Las dosis de reposición inicial no equivalen a una pauta diaria permanente.",
+          "initial_action": "Comprobar preparado y dosis; reevaluar el déficit y la necesidad de mantenimiento con pediatría.",
+          "limits": "No suspender por cuenta propia un tratamiento aún indicado; los esquemas dependen de edad, nivel y afectación ocular.",
+          "evidence": [
+            {
+              "source_id": "rch-micronutrients-2023",
+              "locator": "Treatment: VitaminA; dosis en días específicos y advertencia de toxicidad crónica",
+              "support": "Las dosis de reposición inicial no equivalen a una pauta diaria permanente."
+            }
+          ]
+        },
+        {
+          "id": "23.04-c2-03",
+          "anchor_topic_ids": [
+            "23.04-03"
+          ],
+          "objective": "mecanismo",
+          "vignette": "Un escolar tiene episodios recurrentes de pelagra pese a una dieta ahora variada. El estudio metabólico confirma enfermedad de Hartnup con pérdida urinaria de aminoácidos neutros.",
+          "question": "¿Qué mecanismo favorece la carencia de niacina?",
+          "answer": "Menor disponibilidad de triptófano por un defecto de transporte.",
+          "discriminator": "enfermedad de Hartnup con pérdida urinaria de aminoácidos neutros",
+          "reason": "El defecto reduce absorción intestinal y aumenta pérdida renal del precursor de niacina.",
+          "initial_action": "Coordinar manejo metabólico y nutricional, incluida reposición indicada.",
+          "limits": "La dieta escasa es una causa frecuente de pelagra; no toda recurrencia demuestra Hartnup sin estudio.",
+          "evidence": [
+            {
+              "source_id": "nih-niacin-2022",
+              "locator": "Groups at Risk of Niacin Inadequacy: People with Hartnup disease",
+              "support": "El defecto reduce absorción intestinal y aumenta pérdida renal del precursor de niacina."
+            }
+          ]
+        },
+        {
+          "id": "23.04-c2-04",
+          "anchor_topic_ids": [
+            "23.04-04"
+          ],
+          "objective": "dato_faltante",
+          "vignette": "Un lactante recibe colecalciferol por deficiencia. La familia cambia de marca y conserva el mismo número de gotas, aunque la nueva etiqueta indica una concentración mayor.",
+          "question": "¿Qué debe verificarse antes de continuar?",
+          "answer": "Las unidades reales por gota y la dosis total administrada.",
+          "discriminator": "la nueva etiqueta indica una concentración mayor",
+          "reason": "Las presentaciones líquidas varían mucho y pueden causar sobredosis.",
+          "initial_action": "Reconciliar preparado, concentración y cantidad; valorar exposición excesiva con el equipo pediátrico.",
+          "limits": "No calcular equivalencia solo por volumen o nombre comercial; síntomas de hipercalcemia requieren evaluación.",
+          "evidence": [
+            {
+              "source_id": "rch-vitd-2020",
+              "locator": "Additional notes: VitaminDmedications; formulaciones concentradas y sobredosis",
+              "support": "Las presentaciones líquidas varían mucho y pueden causar sobredosis."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "23.05",
+      "title": "Exceso ponderal infantil",
+      "related_sections": [],
+      "scenarios": [
+        {
+          "id": "23.05-c2-01",
+          "anchor_topic_ids": [
+            "23.05-01"
+          ],
+          "objective": "subtipo",
+          "vignette": "Un niño de4años tiene obesidad extrema que comenzó en la primera infancia y hambre intensa persistente. Varios familiares tienen obesidad extrema de inicio temprano.",
+          "question": "¿Qué evaluación adicional está justificada?",
+          "answer": "Valorar una causa genética de obesidad.",
+          "discriminator": "obesidad extrema que comenzó en la primera infancia y hambre intensa persistente",
+          "reason": "El inicio muy temprano con hiperfagia y antecedentes familiares orienta a causas genéticas específicas.",
+          "initial_action": "Referir para evaluación genética y endocrinológica, junto con atención nutricional familiar.",
+          "limits": "La recomendación genética de2017 es condicional; estos datos orientan, pero no confirman un síndrome.",
+          "evidence": [
+            {
+              "source_id": "endosoc-pedobesity-2017",
+              "locator": "Recomendación2.1: obesidad extrema antes de5años, hiperfagia y antecedentes familiares",
+              "support": "El inicio muy temprano con hiperfagia y antecedentes familiares orienta a causas genéticas específicas."
+            }
+          ]
+        },
+        {
+          "id": "23.05-c2-02",
+          "anchor_topic_ids": [
+            "23.05-02"
+          ],
+          "objective": "contraste",
+          "vignette": "Un adolescente con obesidad, dislipidemia y glucosa alterada mantiene talla y velocidad de crecimiento apropiadas para su familia y etapa puberal. No hay otros signos endocrinos. La familia pide un panel hormonal amplio para explicar el peso.",
+          "question": "¿Los riesgos metabólicos obligan a buscar una causa endocrina con pruebas amplias?",
+          "answer": "No de rutina si el crecimiento es adecuado y no hay otros indicios.",
+          "discriminator": "talla y velocidad de crecimiento apropiadas para su familia y etapa puberal",
+          "reason": "La evaluación de comorbilidades metabólicas es distinta de buscar una etiología endocrina del exceso de peso.",
+          "initial_action": "Tratar y seguir los componentes metabólicos; reservar estudio endocrino etiológico para datos que lo indiquen.",
+          "limits": "La talla o velocidad reducidas, signos endocrinos u otros hallazgos cambian el estudio. No omitir pruebas dirigidas de diabetes o lípidos.",
+          "evidence": [
+            {
+              "source_id": "endosoc-pedobesity-2017",
+              "locator": "Recomendación1.5: no realizar laboratorio endocrino etiológico rutinario sin talla o velocidad atenuadas",
+              "support": "La evaluación de comorbilidades metabólicas es distinta de buscar una etiología endocrina del exceso de peso."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -72,3 +72,15 @@ The CI workflow runs on pushes and pull requests. Repository administrators can 
 The 2026-10-29 plans are historical records. Their unchecked boxes are original planning notes, not a current backlog. Deployment authorization recorded in those tasks applied to those tasks only. Use this document for current architecture and the current user request for scope.
 
 For clinical changes, follow the content contract and source-validation instructions in the README. Keep source extraction outside the public tree. Never regenerate an approval hash without the required independent review.
+
+## Clinical layers
+
+`content/layers/` contains guideline-based authoring and independent reviews. Follow `docs/layer-content-contract.md`. The original book sections stay unchanged. `prepare:study:base` compiles and audits the original 2,900 cards. `prepare:study` then validates all 35 layer-2 sections and the layer-1 electrolyte supplement before generating their web data.
+
+During authoring, `npm run build:reviewed` creates a local preview with only sections that already have independent reviews. It still rejects stale or invalid reviews. The interface shows the actual reviewed coverage. This command is for local verification. It does not replace the full `npm run check` required for final review and deployment.
+
+The version-2 progress profile separates `capa1`, `capa2`, `creadas1` and `creadas2`. Each has its own plan and FSRS history. A shared private card catalog records source-layer ownership. The migration retains unknown version-1 identities with explicit ownership metadata. Older clients cannot downgrade a migrated profile. Backups contain the whole profile.
+
+Active session counters, timers and breaks use keys for the selected space and plan. Old global browser values stay preserved. They are not assigned to a new space because they do not identify the cards that produced them. Aggregate sessions from the old profile remain in the migration archive.
+
+Supplemental card IDs use the immutable scenario ID. The family and clinical objective are metadata, so changing them does not create a new scheduled identity. Native personal-card imports must resolve their published origins against the correct layer inventory. Explicit migrated references remain recoverable when old content is unavailable.

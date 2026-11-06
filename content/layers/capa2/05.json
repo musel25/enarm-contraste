@@ -1,0 +1,695 @@
+{
+  "schema_version": 1,
+  "layer": 2,
+  "section_id": "05",
+  "title": "Cirugía abdominal",
+  "author": "clinical-author-01-12",
+  "sources": [
+    {
+      "id": "asge-stones-2019",
+      "label": "ASGE: endoscopia en coledocolitiasis",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8594622/",
+      "version": "2019; depósito PMC 2021",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Tabla 15; recomendación 1 y colangitis"
+    },
+    {
+      "id": "ehs-umbilical-2020",
+      "label": "European Hernia Society/Americas Hernia Society: hernias umbilicales y epigástricas",
+      "url": "https://www.britishherniasociety.org/wp-content/uploads/2022/12/Umbilical_epi.pdf",
+      "version": "2020",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Síntomas, observación y reparación; calidad baja de buena parte de la evidencia"
+    },
+    {
+      "id": "gallstone-ct-2005",
+      "label": "Yu y colaboradores: estudio primario de TC en íleo biliar",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4305784/",
+      "version": "2005-04-14",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Results; criterios de TC y comunicación bilioentérica; estudio de 14 casos"
+    },
+    {
+      "id": "herniasurge-2023",
+      "label": "HerniaSurge: actualización de guías internacionales de hernia inguinal",
+      "url": "https://www.herniedatabasen.dk/_files/ugd/02befe_65a76b83fb4e43d480ef64654ff25c3f.pdf",
+      "version": "2023-10-20",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Capítulo 21: hernia irreductible aguda y estrangulación"
+    },
+    {
+      "id": "idsa-abdomen-2024",
+      "label": "IDSA: imagen y evaluación de infección intraabdominal complicada",
+      "url": "https://www.idsociety.org/practice-guideline/intra-abdominal-infections/",
+      "version": "2024-06-13",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Imagen de apendicitis en adultos y gestantes; absceso intraabdominal"
+    },
+    {
+      "id": "idsa-skin-2014",
+      "label": "IDSA: infecciones de piel y tejidos blandos",
+      "url": "https://www.idsociety.org/practice-guideline/skin-and-soft-tissue-infections/",
+      "version": "2014",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "§§I–VIII: impétigo, abscesos, celulitis, herida quirúrgica e infección necrosante"
+    },
+    {
+      "id": "imss-gallstones-2009",
+      "label": "IMSS: colecistitis y colelitiasis, GRR",
+      "url": "https://www.imss.gob.mx/sites/all/statics/guiasclinicas/237GRR.pdf",
+      "version": "2009",
+      "checked_at": "2026-11-06",
+      "region": "mexico",
+      "access": "checked",
+      "locator": "Diagnóstico clínico e imagen"
+    },
+    {
+      "id": "nci-bile-2025",
+      "label": "NCI PDQ: cáncer de vías biliares, versión profesional",
+      "url": "https://www.cancer.gov/types/liver/hp/bile-duct-treatment-pdq",
+      "version": "Actualización 2025-03-28",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Clinical Features; Diagnostic and Staging Evaluation; recurso institucional, no guía formal"
+    },
+    {
+      "id": "sages-hiatal-2024",
+      "label": "SAGES: tratamiento quirúrgico de hernias hiatales",
+      "url": "https://www.sages.org/publications/guidelines/guidelines-for-the-surgical-treatment-of-hiatal-hernias/",
+      "version": "2024",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "KQ2: síntomas, reflujo, microaspiración y límites de vigilancia"
+    },
+    {
+      "id": "sages-ventral",
+      "label": "SAGES: reparación laparoscópica de hernia ventral",
+      "url": "https://www.sages.org/publications/guidelines/guidelines-for-laparoscopic-ventral-hernia-repair/",
+      "version": "Guía publicada 2016; página sin actualización posterior identificada",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Guideline 4: imagen selectiva para diagnóstico y planeación"
+    },
+    {
+      "id": "wses-ami-2022",
+      "label": "WSES: isquemia mesentérica aguda",
+      "url": "https://link.springer.com/article/10.1186/s13017-022-00443-x",
+      "version": "2022-10-19",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Recomendaciones 4–5 y peritonitis"
+    },
+    {
+      "id": "wses-chole-2020",
+      "label": "WSES: colecistitis calculosa aguda",
+      "url": "https://link.springer.com/article/10.1186/s13017-020-00336-x",
+      "version": "2020-11-05",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "§§1–3: diagnóstico, cálculos en vía biliar y momento de cirugía"
+    },
+    {
+      "id": "wses-sbo-2018",
+      "label": "WSES: Bologna guidelines for adhesive small bowel obstruction",
+      "url": "https://link.springer.com/article/10.1186/s13017-018-0185-2",
+      "version": "Actualización 2017; publicación 2018-06-19",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "CT scans; contraindicaciones del manejo conservador"
+    },
+    {
+      "id": "sages-pregnancy-2024",
+      "label": "SAGES: guía sobre laparoscopia durante el embarazo",
+      "url": "https://www.sages.org/publications/guidelines/guidelines-for-the-use-of-laparoscopy-during-pregnancy/",
+      "version": "2024",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "KQ1: apendicectomía frente a manejo no operatorio; recomendación condicional"
+    },
+    {
+      "id": "easl-gallstones-2016",
+      "label": "EASL: guía de prevención, diagnóstico y tratamiento de cálculos biliares",
+      "url": "https://easl.eu/wp-content/uploads/2016/10/EASL-CPG-Gallstones.pdf",
+      "version": "2016; J Hepatol 65:146–181",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Diagnosis of gallbladder stones: síntomas típicos y dispepsia; PDF completo descargado y leído"
+    },
+    {
+      "id": "europe-polyps-2022",
+      "label": "ESGAR/EAES/EFISDS/ESGE: actualización sobre pólipos vesiculares",
+      "url": "https://link.springer.com/article/10.1007/s00330-021-08384-w",
+      "version": "2021-12-17; edición 2022",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Main recommendation 2: lesión polipoide ≥10 mm"
+    },
+    {
+      "id": "asge-cholangitis-2021",
+      "label": "ASGE: guía sobre manejo de colangitis",
+      "url": "https://www.asge.org/docs/default-source/default-document-library/piis0016510720351117.pdf?sfvrsn=bad7c25d_1",
+      "version": "2021; Gastrointest Endosc 94:207–221",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Pregunta 3, pp. 216–217: extensión de CPRE inicial según estabilidad; PDF descargado y leído"
+    },
+    {
+      "id": "ehs-special-2020",
+      "label": "EHS/AHS: hernias ventrales primarias en circunstancias especiales",
+      "url": "https://www.britishherniasociety.org/wp-content/uploads/2022/12/ventral-hernia_rare.pdf",
+      "version": "2020-01-09",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "KQ6, p. 347: reparación y embarazo posterior"
+    },
+    {
+      "id": "imss-append-2009",
+      "label": "IMSS: diagnóstico de apendicitis aguda, IMSS-031-08",
+      "url": "https://www.imss.gob.mx/sites/all/statics/guiasclinicas/031GER.pdf",
+      "version": "2009; clave de registro IMSS-031-08",
+      "checked_at": "2026-11-06",
+      "region": "mexico",
+      "access": "checked",
+      "locator": "§4.2: diagnóstico clínico y grupos especiales; p. 3 declara edición 2009"
+    },
+    {
+      "id": "asge-strictures-2023",
+      "label": "ASGE: endoscopia para diagnóstico de malignidad en estenosis biliares de etiología indeterminada, resumen y recomendaciones",
+      "url": "https://www.asge.org/docs/default-source/guidelines/american-society-for-gastrointestinal-endoscopy-guideline-on-the-role-of-endo-in-the-dx-of-malignancy-in-biliary-strictures-summary-2023.pdf",
+      "version": "2023; GastrointestEndosc98:685–693; DOI10.1016/j.gie.2023.06.005",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Recomendaciones1–3/tabla1; evidencia de cepillado aislado,pp2–4; se abrió el PDF primario completo"
+    }
+  ],
+  "mexico_source_note": "Se abrieron IMSS-031-08 (GER con edición declarada 2009) e IMSS-237-09 (2009). No se encontró una actualización mexicana reciente para todas estas decisiones. Las fuentes mexicanas sirven para contexto diagnóstico; SAGES2024 respalda la decisión terapéutica en embarazo e IDSA2024 la imagen. WSES2025 de apendicitis solo se pudo consultar como resumen y no respalda recomendaciones detalladas aquí. La fuente del íleo biliar es investigación primaria de 2005, limitada al reconocimiento por TC. Se abrió además ASGE2023 sobre estenosis indeterminadas para el límite de citología negativa; sus recomendaciones de muestreo son condicionales y de certeza muy baja. WSES2020§7.1 respalda retirar prolongación antibiótica rutinaria tras foco controlado en colecistitis no complicada.",
+  "blocks": [
+    {
+      "id": "05.01",
+      "title": "Dolor en fosa iliaca derecha",
+      "related_sections": [],
+      "scenarios": [
+        {
+          "id": "05.01-c2-01",
+          "anchor_topic_ids": [
+            "05.01-01"
+          ],
+          "objective": "incompleta",
+          "vignette": "Un adulto tiene dolor en fosa iliaca derecha y una ecografía en la que no se visualiza el apéndice. Persiste el dolor focal.",
+          "question": "¿Ese resultado excluye apendicitis?",
+          "answer": "No.",
+          "discriminator": "no se visualiza el apéndice",
+          "reason": "Un estudio no diagnóstico no equivale a un apéndice normal.",
+          "initial_action": "Revalorar riesgo clínico y elegir imagen adicional.",
+          "limits": "La peritonitis requiere evaluación quirúrgica inmediata.",
+          "evidence": [
+            {
+              "source_id": "idsa-abdomen-2024",
+              "locator": "Imagen en sospecha de apendicitis en adultos",
+              "support": "Un estudio no diagnóstico no equivale a un apéndice normal."
+            }
+          ]
+        },
+        {
+          "id": "05.01-c2-02",
+          "anchor_topic_ids": [
+            "05.01-02"
+          ],
+          "objective": "cambio",
+          "vignette": "Una gestante tiene apendicitis aguda confirmada sin perforación. Pregunta si puede elegir antibióticos solos porque esa opción se ofrece a algunos adultos no gestantes.",
+          "question": "¿Se debe extrapolar esa opción de forma automática al embarazo?",
+          "answer": "No. Se favorece apendicectomía tras valoración conjunta.",
+          "discriminator": "algunos adultos no gestantes",
+          "reason": "SAGES sugiere apendicectomía frente a manejo no operatorio en embarazo; la evidencia que permite selección en no gestantes no se traslada directamente.",
+          "initial_action": "Coordinar cirugía y obstetricia para decisión oportuna y consentimiento informado.",
+          "limits": "Recomendación condicional con certeza muy baja; individualizar contraindicaciones y riesgos, sin presentar superioridad absoluta.",
+          "evidence": [
+            {
+              "source_id": "sages-pregnancy-2024",
+              "locator": "KQ1: appendectomy versus nonoperative treatment during pregnancy",
+              "support": "SAGES sugiere apendicectomía frente a manejo no operatorio en embarazo; la evidencia que permite selección en no gestantes no se traslada directamente."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "05.02",
+      "title": "Dolor episódico en hipocondrio derecho",
+      "related_sections": [],
+      "scenarios": [
+        {
+          "id": "05.02-c2-01",
+          "anchor_topic_ids": [
+            "05.02-01"
+          ],
+          "objective": "contraste",
+          "vignette": "Un adulto tiene cálculos vesiculares y distensión, eructos y ardor crónicos. Niega episodios de dolor intenso en epigastrio o hipocondrio derecho; no hay datos de complicación.",
+          "question": "¿Estos síntomas prueban que los cálculos causan un cólico biliar?",
+          "answer": "No. Buscar otras causas de dispepsia.",
+          "discriminator": "Niega episodios de dolor intenso",
+          "reason": "Los síntomas dispépticos aislados no son característicos de dolor biliar y pueden persistir después de colecistectomía.",
+          "initial_action": "Precisar el patrón del dolor y estudiar causas alternativas antes de atribuir los síntomas a litiasis.",
+          "limits": "La coexistencia de cálculos no demuestra causalidad; un episodio nuevo de dolor o inflamación requiere reevaluación.",
+          "evidence": [
+            {
+              "source_id": "easl-gallstones-2016",
+              "locator": "Diagnosis of gallbladder stones: síntomas característicos y síntomas dispépticos, pp. 153–154",
+              "support": "Los síntomas dispépticos aislados no son característicos de dolor biliar y pueden persistir después de colecistectomía."
+            }
+          ]
+        },
+        {
+          "id": "05.02-c2-02",
+          "anchor_topic_ids": [
+            "05.02-02"
+          ],
+          "objective": "cambio",
+          "vignette": "Una adulta sin dolor biliar tiene cálculos incidentales. El ultrasonido también confirma una lesión polipoide vesicular de 12 mm. Es apta para cirugía y acepta evaluación.",
+          "question": "¿Qué hallazgo cambia la conducta de simple vigilancia de la litiasis?",
+          "answer": "El pólipo de 12 mm. Valorar colecistectomía.",
+          "discriminator": "lesión polipoide vesicular de 12 mm",
+          "reason": "La guía conjunta recomienda colecistectomía para lesiones polipoides de al menos 10 mm en personas aptas que aceptan cirugía.",
+          "initial_action": "Referir para confirmar la caracterización del pólipo y decidir intervención con el equipo quirúrgico.",
+          "limits": "No es una urgencia por el cálculo aislado; el tamaño no confirma cáncer y la evidencia de la recomendación es baja.",
+          "evidence": [
+            {
+              "source_id": "europe-polyps-2022",
+              "locator": "Main recommendation 2: lesiones polipoides ≥10 mm, aptitud y aceptación de cirugía",
+              "support": "La guía conjunta recomienda colecistectomía para lesiones polipoides de al menos 10 mm en personas aptas que aceptan cirugía."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "05.03",
+      "title": "Fiebre e ictericia con dolor",
+      "related_sections": [],
+      "scenarios": [
+        {
+          "id": "05.03-c2-01",
+          "anchor_topic_ids": [
+            "05.03-01"
+          ],
+          "objective": "cambio",
+          "vignette": "Un adulto tuvo colecistectomía por colecistitis calculosa no complicada. El cirujano confirma control completo del foco, sin absceso ni otra infección activa. Evoluciona bien y se propone prolongar antibióticos posoperatorios solo por haber tenido colecistitis.",
+          "question": "¿Se necesitan antibióticos posoperatorios rutinarios en este contexto?",
+          "answer": "No, si el foco quedó controlado y no hay complicación.",
+          "discriminator": "control completo del foco, sin absceso ni otra infección activa",
+          "reason": "Tras el control del foco en colecistitis no complicada, prolongar antibióticos de rutina no aporta beneficio demostrado.",
+          "initial_action": "Revisar los hallazgos quirúrgicos y retirar la prolongación rutinaria según el equipo tratante.",
+          "limits": "No extrapolar a infección complicada, foco residual, bacteriemia u otra indicación independiente. Reevaluar si aparece deterioro.",
+          "evidence": [
+            {
+              "source_id": "wses-chole-2020",
+              "locator": "Sección7, recomendación7.1: no antibióticos posoperatorios rutinarios en ACCno complicada con foco controlado",
+              "support": "La recomendación contra prolongación rutinaria es fuerte, con evidencia de calidad alta, en ese grupo específico."
+            }
+          ]
+        },
+        {
+          "id": "05.03-c2-02",
+          "anchor_topic_ids": [
+            "05.03-02"
+          ],
+          "objective": "incompleta",
+          "vignette": "Un adulto conserva episodios biliares y colestasis sin colangitis. La colangiorresonancia es negativa, pero la sospecha de un cálculo pequeño persiste tras reevaluación.",
+          "question": "¿Qué prueba complementaria puede considerarse?",
+          "answer": "Ecoendoscopia en un centro con experiencia.",
+          "discriminator": "sospecha de un cálculo pequeño persiste",
+          "reason": "La colangiorresonancia puede omitir cálculos pequeños; la guía permite considerar ecoendoscopia si persiste sospecha clínica fuerte.",
+          "initial_action": "Revisar probabilidad y calidad del estudio antes de seleccionar ecoendoscopia.",
+          "limits": "No se indica de rutina tras todo estudio negativo; también tiene riesgos y depende del operador.",
+          "evidence": [
+            {
+              "source_id": "asge-stones-2019",
+              "locator": "Pregunta 1, Discussion: false-negative MRCP for small stones y EUS tras MRCP negativa",
+              "support": "La colangiorresonancia puede omitir cálculos pequeños; la guía permite considerar ecoendoscopia si persiste sospecha clínica fuerte."
+            }
+          ]
+        },
+        {
+          "id": "05.03-c2-03",
+          "anchor_topic_ids": [
+            "05.03-03"
+          ],
+          "objective": "cambio",
+          "vignette": "Una persona con colangitis obstructiva requiere CPRE, pero sigue hemodinámicamente inestable pese al soporte inicial. Se prevé extracción compleja del cálculo.",
+          "question": "¿Debe forzarse la extracción completa en la primera CPRE?",
+          "answer": "No. Puede limitarse a descompresión inicial.",
+          "discriminator": "sigue hemodinámicamente inestable",
+          "reason": "Una intervención extensa puede añadir riesgo; en personas demasiado inestables se puede drenar primero y diferir la extracción.",
+          "initial_action": "Mantener reanimación, antibióticos y drenaje urgente, con plan de tratamiento definitivo posterior.",
+          "limits": "No convierte el drenaje temporal en tratamiento definitivo; la extensión depende de estabilidad y riesgo de sangrado.",
+          "evidence": [
+            {
+              "source_id": "asge-cholangitis-2021",
+              "locator": "Pregunta 3, pp. 216–217: combined therapy versus decompression alone; pacientes inestables",
+              "support": "Una intervención extensa puede añadir riesgo; en personas demasiado inestables se puede drenar primero y diferir la extracción."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "05.04",
+      "title": "Obstrucción biliar inusual",
+      "related_sections": [],
+      "scenarios": [
+        {
+          "id": "05.04-c2-01",
+          "anchor_topic_ids": [
+            "05.04-01"
+          ],
+          "objective": "mecanismo",
+          "vignette": "Una TC por obstrucción muestra una piedra calcificada en intestino delgado y una vesícula con aire. No hubo instrumentación biliar.",
+          "question": "¿Qué vía explica la llegada del cálculo al intestino?",
+          "answer": "Una comunicación biliointestinal.",
+          "discriminator": "piedra calcificada en intestino delgado",
+          "reason": "El cálculo ectópico y la vesícula anormal apoyan íleo biliar.",
+          "initial_action": "Consultar cirugía y tratar deshidratación y obstrucción.",
+          "limits": "La TC puede no mostrar directamente toda la fístula; la evidencia citada es una serie pequeña.",
+          "evidence": [
+            {
+              "source_id": "gallstone-ct-2005",
+              "locator": "Results y Discussion: criterios de TC",
+              "support": "El cálculo ectópico y la vesícula anormal apoyan íleo biliar."
+            }
+          ]
+        },
+        {
+          "id": "05.04-c2-02",
+          "anchor_topic_ids": [
+            "05.04-02"
+          ],
+          "objective": "incompleta",
+          "vignette": "Un adulto tiene una estenosis biliar hiliar sospechosa. La primera CPRE obtuvo solo citología por cepillado, informada negativa para malignidad; la imagen sigue siendo preocupante y no hay diagnóstico alternativo establecido.",
+          "question": "¿La citología negativa permite cerrar el estudio como estenosis benigna?",
+          "answer": "No; el cepillado aislado puede omitir malignidad.",
+          "discriminator": "solo citología por cepillado, informada negativa para malignidad",
+          "reason": "La sensibilidad del cepillado aislado es limitada; un resultado negativo no resuelve una estenosis que sigue siendo sospechosa.",
+          "initial_action": "Revisar imagen y patología en un equipo hepatobiliar y planificar obtención adicional de tejido, con biopsia intraductal o colangioscopia según anatomía y experiencia.",
+          "limits": "La recomendación de añadir biopsia es condicional, de certeza muy baja. Evitar escoger una vía de biopsia de masa hiliar sin coordinar el plan oncológico o de trasplante.",
+          "evidence": [
+            {
+              "source_id": "asge-strictures-2023",
+              "locator": "Recomendaciones1–3/tabla1 y Summaryofevidence,pp2–4: sensibilidad limitada de brushcytology y ERCPno diagnóstica",
+              "support": "La guía sugiere añadir biopsia intraductal al cepillado y permite colangioscopia en una CPREprevia no diagnóstica en centros expertos."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "05.05",
+      "title": "Masa dolorosa de región inguinal",
+      "related_sections": [],
+      "scenarios": [
+        {
+          "id": "05.05-c2-01",
+          "anchor_topic_ids": [
+            "05.05-01"
+          ],
+          "objective": "gravedad",
+          "vignette": "Una hernia antes reducible ahora es dolorosa, no se reduce y tiene piel roja. El paciente vomita.",
+          "question": "¿Es segura una reducción forzada repetida?",
+          "answer": "No. Hay sospecha de estrangulación.",
+          "discriminator": "piel roja",
+          "reason": "Los signos locales de compromiso cambian la urgencia.",
+          "initial_action": "Solicitar cirugía urgente y reanimar según necesidad.",
+          "limits": "La viabilidad intestinal se determina con evaluación quirúrgica.",
+          "evidence": [
+            {
+              "source_id": "herniasurge-2023",
+              "locator": "Capítulo 21: estrangulación y reducción manual",
+              "support": "Los signos locales de compromiso cambian la urgencia."
+            }
+          ]
+        },
+        {
+          "id": "05.05-c2-02",
+          "anchor_topic_ids": [
+            "05.05-02"
+          ],
+          "objective": "cambio",
+          "vignette": "Una hernia inguinal dolorosa se reduce por un profesional sin signos previos de estrangulación. El paciente aún está bajo sedación.",
+          "question": "¿Puede salir inmediatamente sin observación?",
+          "answer": "No.",
+          "discriminator": "aún está bajo sedación",
+          "reason": "Tras la reducción se debe comprobar recuperación y evolución clínica.",
+          "initial_action": "Observar hasta que ceda la sedación y confirmar mejoría.",
+          "limits": "Dolor persistente o deterioro exige reevaluar el intestino.",
+          "evidence": [
+            {
+              "source_id": "herniasurge-2023",
+              "locator": "Capítulo 21: observación después de reducción exitosa",
+              "support": "Tras la reducción se debe comprobar recuperación y evolución clínica."
+            }
+          ]
+        },
+        {
+          "id": "05.05-c2-03",
+          "anchor_topic_ids": [
+            "05.05-03"
+          ],
+          "objective": "incompleta",
+          "vignette": "Una mujer mayor tiene una hernia femoral dolorosa e irreductible de inicio agudo. El lactato y los leucocitos iniciales son normales.",
+          "question": "¿Esos valores permiten descartar isquemia del contenido?",
+          "answer": "No. No deben decidir por sí solos.",
+          "discriminator": "lactato y los leucocitos iniciales son normales",
+          "reason": "Un segmento herniado pequeño puede no elevar los marcadores; su interpretación requiere clínica y factores de riesgo.",
+          "initial_action": "Solicitar valoración quirúrgica urgente y seguir perfusión y evolución, sin esperar alteraciones analíticas.",
+          "limits": "La irreductibilidad no demuestra por sí sola necrosis; la sospecha de estrangulación cambia el manejo.",
+          "evidence": [
+            {
+              "source_id": "herniasurge-2023",
+              "locator": "Capítulo 21, pp. 26–27: marcadores bioquímicos, pequeña cantidad de intestino y estrangulación",
+              "support": "Un segmento herniado pequeño puede no elevar los marcadores; su interpretación requiere clínica y factores de riesgo."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "05.06",
+      "title": "Abultamiento de pared abdominal",
+      "related_sections": [],
+      "scenarios": [
+        {
+          "id": "05.06-c2-01",
+          "anchor_topic_ids": [
+            "05.06-01"
+          ],
+          "objective": "cambio",
+          "vignette": "Una mujer tiene una hernia umbilical reducible, con molestias mínimas y sin obstrucción. Planea otro embarazo y consulta por reparación electiva.",
+          "question": "¿Qué dato favorece aplazar la reparación si es posible?",
+          "answer": "El embarazo futuro previsto.",
+          "discriminator": "Planea otro embarazo",
+          "reason": "El embarazo posterior aumenta la recurrencia; EHS/AHS recomienda aplazar la reparación electiva, si es posible, hasta después del último embarazo.",
+          "initial_action": "Discutir vigilancia, síntomas de alarma y momento de reparación con cirugía.",
+          "limits": "No aplazar una complicación urgente; individualizar si los síntomas hacen inaceptable esperar.",
+          "evidence": [
+            {
+              "source_id": "ehs-special-2020",
+              "locator": "KQ6: reparación umbilical/epigástrica y embarazo posterior, p. 347",
+              "support": "El embarazo posterior aumenta la recurrencia; EHS/AHS recomienda aplazar la reparación electiva, si es posible, hasta después del último embarazo."
+            }
+          ]
+        },
+        {
+          "id": "05.06-c2-02",
+          "anchor_topic_ids": [
+            "05.06-02"
+          ],
+          "objective": "dato_faltante",
+          "vignette": "Se planea reparación laparoscópica de una hernia incisional tras varias operaciones. La TC define el defecto, pero no describe adherencias intestinales.",
+          "question": "¿La ausencia de adherencias descritas garantiza que no existan?",
+          "answer": "No. La TC no las caracteriza de forma fiable.",
+          "discriminator": "no describe adherencias intestinales",
+          "reason": "La TC define anatomía y defectos, pero no determina bien presencia y características de adherencias, que aumentan complejidad quirúrgica.",
+          "initial_action": "Revisar antecedentes y notas operatorias y planear el abordaje con el cirujano.",
+          "limits": "La imagen tampoco garantiza que sea factible cerrar el defecto o reintroducir todo el contenido.",
+          "evidence": [
+            {
+              "source_id": "sages-ventral",
+              "locator": "Guideline 4, Diagnosis: límites de TC para adherencias y distensibilidad abdominal",
+              "support": "La TC define anatomía y defectos, pero no determina bien presencia y características de adherencias, que aumentan complejidad quirúrgica."
+            }
+          ]
+        },
+        {
+          "id": "05.06-c2-03",
+          "anchor_topic_ids": [
+            "05.06-03"
+          ],
+          "objective": "incompleta",
+          "vignette": "Un adulto tiene una hernia hiatal grande detectada por imagen. Refiere disnea y anemia, pero niega ardor.",
+          "question": "¿La ausencia de pirosis demuestra que es asintomática?",
+          "answer": "No.",
+          "discriminator": "disnea y anemia",
+          "reason": "Los síntomas atribuibles pueden no ser el reflujo típico.",
+          "initial_action": "Investigar otras causas y valorar relación con la hernia.",
+          "limits": "La atribución exige estudio; la vigilancia puede ser razonable si no hay síntomas atribuibles.",
+          "evidence": [
+            {
+              "source_id": "sages-hiatal-2024",
+              "locator": "KQ2: definición de paciente asintomático",
+              "support": "Los síntomas atribuibles pueden no ser el reflujo típico."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "05.07",
+      "title": "Distensión y vómitos",
+      "related_sections": [],
+      "scenarios": [
+        {
+          "id": "05.07-c2-01",
+          "anchor_topic_ids": [
+            "05.07-01"
+          ],
+          "objective": "gravedad",
+          "vignette": "Una obstrucción de intestino delgado muestra asa cerrada y signos de isquemia en TC.",
+          "question": "¿Es apropiado prolongar una prueba conservadora rutinaria?",
+          "answer": "No.",
+          "discriminator": "asa cerrada y signos de isquemia",
+          "reason": "Estos hallazgos indican necesidad de cirugía sin demora.",
+          "initial_action": "Solicitar cirugía y corregir perfusión y alteraciones hidroelectrolíticas.",
+          "limits": "No esperar la evolución de un protocolo de obstrucción no complicada.",
+          "evidence": [
+            {
+              "source_id": "wses-sbo-2018",
+              "locator": "CT scans; contraindicaciones del manejo no operatorio",
+              "support": "Estos hallazgos indican necesidad de cirugía sin demora."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "05.08",
+      "title": "Dolor desproporcionado",
+      "related_sections": [],
+      "scenarios": [
+        {
+          "id": "05.08-c2-01",
+          "anchor_topic_ids": [
+            "05.08-01"
+          ],
+          "objective": "incompleta",
+          "vignette": "Un adulto con FA tiene dolor abdominal intenso y exploración poco llamativa. El lactato es normal al inicio.",
+          "question": "¿El lactato normal permite excluir isquemia mesentérica?",
+          "answer": "No.",
+          "discriminator": "lactato es normal al inicio",
+          "reason": "Ningún marcador aislado excluye isquemia temprana.",
+          "initial_action": "Solicitar angio-TC sin demora si la sospecha es alta.",
+          "limits": "No esperar acidosis o peritonitis para estudiar vasos mesentéricos.",
+          "evidence": [
+            {
+              "source_id": "wses-ami-2022",
+              "locator": "Recomendaciones 4–5",
+              "support": "Ningún marcador aislado excluye isquemia temprana."
+            }
+          ]
+        },
+        {
+          "id": "05.08-c2-02",
+          "anchor_topic_ids": [
+            "05.08-01"
+          ],
+          "objective": "subtipo",
+          "vignette": "La angio-TC de un adulto con dolor abdominal muestra trombosis venosa mesentérica sin oclusión arterial. Mantiene perfusión y no tiene peritonitis ni signos de necrosis.",
+          "question": "¿Qué tratamiento vascular inicial suele corresponder?",
+          "answer": "Anticoagulación, si no hay contraindicación.",
+          "discriminator": "trombosis venosa mesentérica sin oclusión arterial",
+          "reason": "La trombosis venosa sin peritonitis puede tratarse inicialmente sin operación; la anticoagulación es la primera medida vascular.",
+          "initial_action": "Hospitalizar, iniciar heparina indicada y vigilar de cerca con cirugía y el equipo tratante.",
+          "limits": "La peritonitis o deterioro exige reevaluar exploración; no sustituir por trombólisis sistémica rutinaria.",
+          "evidence": [
+            {
+              "source_id": "wses-ami-2022",
+              "locator": "Recomendación 12: mesenteric venous thrombosis y tratamiento no operatorio sin peritonitis",
+              "support": "La trombosis venosa sin peritonitis puede tratarse inicialmente sin operación; la anticoagulación es la primera medida vascular."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "05.09",
+      "title": "Fiebre o dolor posoperatorio",
+      "related_sections": [],
+      "scenarios": [
+        {
+          "id": "05.09-c2-01",
+          "anchor_topic_ids": [
+            "05.09-01"
+          ],
+          "objective": "cambio",
+          "vignette": "Una incisión quirúrgica tiene pus localizado bajo algunas suturas. No hay respuesta sistémica importante.",
+          "question": "¿Qué medida trata el foco local?",
+          "answer": "Retiro de suturas pertinentes y drenaje.",
+          "discriminator": "pus localizado",
+          "reason": "El drenaje es central en infección de herida quirúrgica.",
+          "initial_action": "Abrir y drenar con evaluación del cirujano.",
+          "limits": "La profundidad y la respuesta sistémica determinan antibióticos y estudios adicionales.",
+          "evidence": [
+            {
+              "source_id": "idsa-skin-2014",
+              "locator": "§VII: Surgical Site Infections",
+              "support": "El drenaje es central en infección de herida quirúrgica."
+            }
+          ]
+        },
+        {
+          "id": "05.09-c2-02",
+          "anchor_topic_ids": [
+            "05.09-02"
+          ],
+          "objective": "dato_faltante",
+          "vignette": "Tras cirugía intestinal aparece fiebre persistente y dolor abdominal profundo. La piel de la herida se ve normal.",
+          "question": "¿Qué estudio busca una complicación de órgano o espacio?",
+          "answer": "TC abdominal en el adulto, según estabilidad.",
+          "discriminator": "dolor abdominal profundo",
+          "reason": "Una herida superficial normal no excluye absceso intraabdominal.",
+          "initial_action": "Solicitar evaluación quirúrgica e imagen dirigida.",
+          "limits": "La inestabilidad o peritonitis puede requerir control del foco antes de completar estudios.",
+          "evidence": [
+            {
+              "source_id": "idsa-abdomen-2024",
+              "locator": "Diagnostic imaging of suspected intra-abdominal abscess",
+              "support": "Una herida superficial normal no excluye absceso intraabdominal."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

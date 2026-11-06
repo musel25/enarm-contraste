@@ -1,0 +1,899 @@
+{
+  "schema_version": 1,
+  "layer": 2,
+  "section_id": "20",
+  "title": "Neonatología",
+  "author": "clinical-author-13-24",
+  "sources": [
+    {
+      "id": "aha-neonate-2025",
+      "label": "AHA/AAP. Part 5: Neonatal Resuscitation",
+      "url": "https://cpr.heart.org/en/resuscitation-science/cpr-and-ecc-guidelines/neonatal-resuscitation",
+      "version": "2025",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "8.2: ordeño del cordón contraindicado antes de 28 semanas; Oxygen administration: sensor preductal derecho"
+    },
+    {
+      "id": "euro-rds-2025",
+      "label": "ESPR/UENPS-endorsed European Consensus Guidelines on Management of Respiratory Distress Syndrome: 2025",
+      "url": "https://cneos.cz/wp-content/uploads/2026/03/RDS_Guidelines_2025_ENGLISH.pdf",
+      "version": "Versión2025; publicación electrónica2026-03-09; manuscrito aceptado sin edición asignada, no versión final maquetada",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Prenatal care; noninvasive respiratory support; surfactant; caffeine; lung-protective care"
+    },
+    {
+      "id": "imss-premature-2018",
+      "label": "IMSS. Cuidados del recién nacido prematuro sano hospitalizado. GPC-IMSS-362-18",
+      "url": "https://www.imss.gob.mx/sites/all/statics/guiasclinicas/362GER.pdf",
+      "version": "2018",
+      "checked_at": "2026-11-06",
+      "region": "mexico",
+      "access": "checked",
+      "locator": "Cuidados térmicos; alimentación; vigilancia y egreso"
+    },
+    {
+      "id": "nom-perinatal-2016",
+      "label": "Secretaría de Salud. NOM-007-SSA2-2016",
+      "url": "https://sidof.segob.gob.mx/notas/docFuente/5432289",
+      "version": "2016",
+      "checked_at": "2026-11-06",
+      "region": "mexico",
+      "access": "checked",
+      "locator": "5.7 Atención de persona recién nacida; APGAR, Silverman, vitamina K y tamices"
+    },
+    {
+      "id": "bapm-glucose-2024",
+      "label": "BAPM. Identification and Management of Neonatal Hypoglycaemia in Full-Term Infant Birth–72 hours",
+      "url": "https://hubble-live-assets.s3.eu-west-1.amazonaws.com/bapm/file_asset/file/2365/Identification_and_Management_of_Neonatal_Hypoglycaemia_Jan_2024.pdf",
+      "version": "2024-01",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Practice Points 7/18; Flowchart B; Appendix 3: gel con alimentación en término asintomático con glucosa 1.0–1.9 mmol/L"
+    },
+    {
+      "id": "cps-plexus-2021",
+      "label": "Canadian Paediatric Society. Evaluation and management of neonatal brachial plexus palsy",
+      "url": "https://cps.ca/en/documents/position/neonatal-brachial-plexus-palsy",
+      "version": "2021",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Narakas tabla1 grupoIV; Focused history and physical examination: Horner, parálisis diafragmática y avulsión"
+    },
+    {
+      "id": "cahs-subgaleal",
+      "label": "Child and Adolescent Health Service Western Australia. Subgaleal Haemorrhage Detection and Management in Newborn",
+      "url": "https://rph.health.wa.gov.au/~/media/HSPs/CAHS/Documents/Health-Professionals/Neonatology-guidelines/Subgaleal-Haemorrhage-Detection-and-Management-in-the-Newborn.pdf?thn=0",
+      "version": "Documento institucional de 8 páginas; fecha de edición no visible en el texto consultado",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Risk Factors, p.3; Initial Action / Level 2 surveillance, p.4; copia primaria completa abierta en RPH; copia primaria idéntica también disponible en https://wnhs.health.wa.gov.au/~/media/HSPs/CAHS/Documents/Health-Professionals/Neonatology-guidelines/Subgaleal-Haemorrhage-Detection-and-Management-in-the-Newborn.pdf?thn=0"
+    },
+    {
+      "id": "aaos-ddh-2022",
+      "label": "AAOS. Detection and Nonoperative Management of Pediatric Developmental Dysplasia of Hip",
+      "url": "https://www.aaos.org/globalassets/quality-and-practice-resources/pddh/pddhcpg.pdf",
+      "version": "2022-03-21",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Risk factors; imaging before six months; repeat examination"
+    },
+    {
+      "id": "rch-neonate",
+      "label": "Royal Children’s Hospital Melbourne. Clinical Practice Guideline: Recognition of the seriously unwell neonate and young infant",
+      "url": "https://www.rch.org.au/clinicalguide/guideline_index/Recognition_of_the_seriously_unwell_neonate_and_young_infant/",
+      "version": "2025-05",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Red flags; sepsis; urgent assessment"
+    },
+    {
+      "id": "acog-apgar-2015",
+      "label": "ACOG/AAP. The Apgar Score, Committee Opinion 644; publicación primaria completa, copia profesional",
+      "url": "https://gynerisq.fr/wp-content/uploads/2018/12/ACOG-2015_Apgar-Score.pdf",
+      "version": "2015-10",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Resumen y Expanded Apgar Score; registro de intervenciones concurrentes durante la puntuación"
+    },
+    {
+      "id": "cps-eos-2017",
+      "label": "Canadian Paediatric Society. Management of term infants at increased risk for early onset bacterial sepsis; texto completo",
+      "url": "https://cps.ca/en/documents/position/management-infant-sepsis",
+      "version": "2017-06-15",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Investigations: Bacterial cultures y Biomarkers; cultivo positivo y punción lumbar, límite de PCR aislada"
+    },
+    {
+      "id": "cps-ino-2023",
+      "label": "Canadian Paediatric Society. Inhaled nitric oxide use in newborns; texto completo",
+      "url": "https://cps.ca/en/documents/position/inhaled-nitric-oxide",
+      "version": "2023-02-10",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Initiation and dosing y Recommendations 1: ecocardiografía para establecer PPHN antes de iNO si es posible"
+    },
+    {
+      "id": "ats-pprd-2021",
+      "label": "ATS. Outpatient Respiratory Management of Infants, Children, and Adolescents with Post-Prematurity Respiratory Disease; guía primaria completa",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8865713/",
+      "version": "2021; Am J Respir Crit Care Med 204(12):e 115–e 133; DOI10.1164/rccm.202110-2269ST",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Recommendation 1 a: no broncodilatador inhalado rutinario sin síntomas recurrentes; se leyó texto completo XML de NLM"
+    },
+    {
+      "id": "ilae-neonatal-2023",
+      "label": "ILAE. Treatment of seizures in the neonate; recomendaciones primarias completas, versión publicada",
+      "url": "https://epi-care.eu/wp-content/uploads/2024/06/Pressler-etal_2023_Treatment-of-seizures-in-the-neonate-Guidelines-and-consensus.pdf",
+      "version": "2023; Epilepsia 64:2550–2570; DOI10.1111/epi.17745",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Recomendación 1: fenobarbital como primera línea; excepción si sospecha canalopatía"
+    },
+    {
+      "id": "cps-hie-2018",
+      "label": "Canadian Paediatric Society. Hypothermia for newborns with hypoxic-ischemic encephalopathy; texto completo",
+      "url": "https://cps.ca/en/documents/position/hypothermia-for-newborns",
+      "version": "2018-06-12; reafirmada 2024-01-11",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Which infants should be treated with hypothermia: aEEG normal no predice RM normal ni evolución favorable"
+    },
+    {
+      "id": "aap-bili-full-2022",
+      "label": "AAP. Management of Hyperbilirubinemia in the Newborn Infant 35 or More Weeks of Gestation; PDF primario completo",
+      "url": "https://s3.amazonaws.com/enp-network-assets/production/attachments/177168/original/AAP_Hyperbili_Guidelines_2022_peds_2022058859.pdf",
+      "version": "2022; Pediatrics 150(3):e 2022058859; DOI10.1542/peds.2022-058859",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "KAS1 y figura 1, p.3 PDF; KAS16, p.11 PDF: anti-D pasivo por RhIG y control tras suspender fototerapia"
+    },
+    {
+      "id": "qld-nbs-2026",
+      "label": "Queensland Clinical Guidelines. Newborn bloodspot screening; documento completo",
+      "url": "https://www.health.qld.gov.au/__data/assets/pdf_file/0012/1321230/g-newborn-bloodspot-screening.pdf",
+      "version": "Publicado 2025-02; enmienda 2026-07; MN25.53-V2-R30",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Tabla 10, p.11 PDF; transfusión antes de muestra inicial, muestra previa y repetición según programa"
+    },
+    {
+      "id": "cdc-vitk-2025",
+      "label": "CDC. Vitamin K and Breastfeeding; recurso institucional",
+      "url": "https://www.cdc.gov/breastfeeding-special-circumstances/hcp/diet-micronutrients/vitamin-k.html",
+      "version": "2025-09-23",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Do infants get enough vitamin K from breast milk?: suplemento materno y profilaxis intramuscular del neonato"
+    },
+    {
+      "id": "who-donor-2022",
+      "label": "OMS. Recomendación A.3 de cuidado del prematuro o bajo peso; texto y observaciones oficiales reproducidos por OPS Bigg Rec",
+      "url": "https://bigg-rec.bvsalud.org/en/recommendations/eb94be2213630cd92c7fbba494726bef21470d50",
+      "version": "2022; recomendación condicional, certeza moderada",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Recommendation / Notes and Remarks: leche humana donada, riesgo de NEC frente a fórmula, banco seguro y decisión con familia; no se afirma acceso al PDF completo OMS"
+    },
+    {
+      "id": "ernica-hscr-2026",
+      "label": "ERNICA. Updated guidelines for management of rectosigmoid Hirschsprung disease 2025; publicación primaria completa",
+      "url": "https://onlinelibrary.wiley.com/doi/10.1002/jpn3.70442",
+      "version": "2026-04-30; corrección de formato/título 2026-06-05; versión denominada 2025",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "3.2, tabla 1: histología representativa y suficiente submucosa; recomendación sin cambio"
+    },
+    {
+      "id": "jcih-2019",
+      "label": "Joint Committee on Infant Hearing. Year 2019 Position Statement; publicación primaria completa",
+      "url": "https://www.audiology.org/wp-content/uploads/2021/06/JCIH-2019.pdf",
+      "version": "2019; Journal of Early Hearing Detection and Intervention 4(2):1–44",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Pediatric Diagnostic Audiology, pp.13–16 impresas/PDF: protocoloABR y microfónico p.13; células ciliadas externas/OAE p.15; discordancia OAE/ABR en neuropatía p.16"
+    },
+    {
+      "id": "aap-sleep-technical-2022",
+      "label": "AAP. Evidence Base for 2022 Updated Recommendations for a Safe Infant Sleeping Environment; informe técnico primario completo",
+      "url": "https://www.kidsks.org/uploads/4/9/1/4/49142465/aap_safe_sleep_policy_evidence_base_2022--technical.pdf",
+      "version": "2022; Pediatrics 150(1):e 2022057991; DOI10.1542/peds.2022-057991",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Home Monitors, SIDS, and Brief Resolved Unexplained Events; p.26 PDF: monitores domésticos no reducen SMSL"
+    },
+    {
+      "id": "aap-visit-2026",
+      "label": "AAP. First Office Visit, 3–5 Days; recurso clínico institucional",
+      "url": "https://www.aap.org/en/patient-care/newborn-infant-and-early-childhood-nutrition/newborn-and-infant-health-assessment-and-promotion/first-office-visit-3-5-days/",
+      "version": "Actualización2026-02-13",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Head-to-toe examination / Assess: pérdida de peso>10%, deshidratación, ictericia e hipernatremia"
+    },
+    {
+      "id": "who-preterm-iron-2022",
+      "label": "OMS. Suplementación de hierro en prematuros; recomendaciónA.10a con observaciones oficiales enOPS BiggRec",
+      "url": "https://bigg-rec.bvsalud.org/en/recommendations/41f62d7f46348bc61eb11e996724c3f163ead82f",
+      "version": "2022; recomendación fuerte, certeza moderada",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Recommendation y Notes and Remarks: prematuro alimentado con leche humana sin otra fuente de hierro; no se afirma lectura delPDF bloqueado"
+    },
+    {
+      "id": "smfm-acs-2021",
+      "label": "SMFM. Consult Series58: Antenatal corticosteroids for individuals at risk for late preterm delivery; recomendaciones oficiales completas",
+      "url": "https://publications.smfm.org/publications/427-society-for-maternal-fetal-medicine-consult-series-58/",
+      "version": "2021; reafirmada2025",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Recomendación4: no corticoides prenatales tardíos con diabetes pregestacional por riesgo de hipoglucemia neonatal; no se extrapola a<34semanas"
+    }
+  ],
+  "mexico_source_note": "Se abrió la NOM-007-SSA2-2016 y GPC-IMSS-362-18 de 2018. Se localizó la ficha mexicana de SDR IMSS-137-21, sin usar su ficha como respaldo del texto clínico. No se encontró una guía nacional reciente única para todos los problemas. Se abrió AHA/AAP 2025 y el consenso europeo versión 2025 publicado en marzo de 2026. Las guías AAP de bilirrubina y BAPM de glucosa conservan sus poblaciones específicas; no se extrapolan sus umbrales a prematuros fuera de alcance. Las 20 sustituciones usan decisiones nuevas comprobadas en fuentes neonatales. La recomendación OMS 2022 A.3 se abrió con sus observaciones en el registro oficial OPS Bigg Rec; no se cuenta como leído el PDF de IRIS ni la página NCBI bloqueados. La guía ATS 2021 se leyó completa mediante XML de NLM; la página PMC con CAPTCHA no cuenta. Se abrió la publicación ILAE 2023 definitiva, no el borrador. ERNICA se denomina versión 2025 pero se publicó 30-abril-2026 y recibió corrección de formato/título 5-junio-2026. CPS sepsis 2017, CPS HIE2018 reafirmada 2024, ACOG Apgar 2015 y JCIH 2019 conservan su fecha real; no se trasladan sus esquemas antibióticos ni programas de egreso como normas mexicanas. Los intervalos del tamiz tras transfusión requieren adaptación al laboratorio mexicano. La GPC mexicana 2018 y NOM-007-2016 no cubren estas decisiones nuevas con la misma precisión. Las cuatro sustituciones finales añaden pérdida ponderal excesiva, prevención de ferropenia del prematuro, diabetes pregestacional en corticoide tardío y sospecha de avulsión plexual conHorner. La recomendaciónOMS de hierro se leyó enOPS oficial con límites de dosis y duración. AAPvisita muestra actualización13-febrero-2026. SMFM58 es2021 y no se presenta como guía2026 ni se aplica su restricción a<34semanas.",
+  "blocks": [
+    {
+      "id": "20.01",
+      "title": "Recepción del RN",
+      "related_sections": [],
+      "scenarios": [
+        {
+          "id": "20.01-c2-01",
+          "anchor_topic_ids": [
+            "20.01-01"
+          ],
+          "objective": "cambio",
+          "vignette": "En el nacimiento de un prematuro de 26 semanas se propone ordeñar el cordón intacto para transferir sangre rápidamente.",
+          "question": "¿Debe realizarse ese ordeño del cordón?",
+          "answer": "No; evitarlo antes de 28 semanas.",
+          "discriminator": "prematuro de 26 semanas",
+          "reason": "En prematuros menores de 28 semanas el ordeño del cordón intacto aumenta el riesgo de hemorragia intraventricular.",
+          "initial_action": "Aplicar el plan de transición y manejo del cordón para esa edad sin retrasar reanimación necesaria.",
+          "limits": "No extrapolar esta contraindicación a todo pinzamiento diferido ni a todas las edades gestacionales.",
+          "evidence": [
+            {
+              "source_id": "aha-neonate-2025",
+              "locator": "8.2 Preterm Newborn Umbilical Cord Management, recomendación 3 y soporte",
+              "support": "En prematuros menores de 28 semanas el ordeño del cordón intacto aumenta el riesgo de hemorragia intraventricular."
+            }
+          ]
+        },
+        {
+          "id": "20.01-c2-02",
+          "anchor_topic_ids": [
+            "20.01-02"
+          ],
+          "objective": "dato_faltante",
+          "vignette": "Dos recién nacidos tienen el mismo Apgar a los cinco minutos. Uno respira solo; el otro recibe ventilación asistida mientras se puntúa.",
+          "question": "¿Qué dato debe acompañar la puntuación para interpretarla?",
+          "answer": "Las intervenciones de reanimación concurrentes.",
+          "discriminator": "recibe ventilación asistida mientras se puntúa",
+          "reason": "Una puntuación durante soporte no equivale a la de un neonato que respira espontáneamente.",
+          "initial_action": "Documentar el Apgar ampliado con el soporte aplicado en cada momento.",
+          "limits": "El registro no sustituye evaluación ni determina por sí solo causa o pronóstico; fuente 2015.",
+          "evidence": [
+            {
+              "source_id": "acog-apgar-2015",
+              "locator": "Resumen y Expanded Apgar Score",
+              "support": "Una puntuación durante soporte no equivale a la de un neonato que respira espontáneamente."
+            }
+          ]
+        },
+        {
+          "id": "20.01-c2-03",
+          "anchor_topic_ids": [
+            "20.01-03"
+          ],
+          "objective": "dato_faltante",
+          "vignette": "Un neonato con quejido y retracciones recibe oxígeno durante la transición. Además de registrar Silverman se necesita una saturación preductal para titular el oxígeno.",
+          "question": "¿Dónde se coloca el sensor preductal?",
+          "answer": "En la mano o muñeca derecha.",
+          "discriminator": "saturación preductal",
+          "reason": "La medición preductal en ese sitio refleja mejor la oxigenación que llega al corazón y cerebro durante la transición.",
+          "initial_action": "Colocar el sensor derecho y ajustar oxígeno con objetivos neonatales y evaluación clínica.",
+          "limits": "Silverman y oximetría evalúan aspectos distintos; una señal débil necesita comprobarse y no debe retrasar ventilación indicada.",
+          "evidence": [
+            {
+              "source_id": "aha-neonate-2025",
+              "locator": "Oxygen administration: Appropriate sensor placement is preductal, right hand or wrist",
+              "support": "La medición preductal en ese sitio refleja mejor la oxigenación que llega al corazón y cerebro durante la transición."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "20.02",
+      "title": "RN sano: término o prematuro",
+      "related_sections": [],
+      "scenarios": [
+        {
+          "id": "20.02-c2-01",
+          "anchor_topic_ids": [
+            "20.02-01"
+          ],
+          "objective": "gravedad",
+          "vignette": "Un neonato de término tiene cuatro días de vida y perdió el 12% del peso de nacimiento. Parece tranquilo y no tiene fiebre, pero moja pocos pañales y presenta ictericia.",
+          "question": "¿Puede considerarse una pérdida fisiológica sin evaluación adicional?",
+          "answer": "No; necesita evaluación pronta de ingesta y deshidratación.",
+          "discriminator": "perdió el 12% del peso de nacimiento",
+          "reason": "La pérdida superior al 10% requiere evaluación; la ictericia puede acompañar deshidratación e hipernatremia.",
+          "initial_action": "Valorar de inmediato hidratación, transferencia de leche y estado clínico; decidir estudios y soporte según hallazgos.",
+          "limits": "El porcentaje no diagnostica por sí solo hipernatremia ni impone fórmula o ingreso universal; comprobar peso y evaluar al niño.",
+          "evidence": [
+            {
+              "source_id": "aap-visit-2026",
+              "locator": "Assess: weight loss>10%; jaundice, dehydration and hypernatremia",
+              "support": "La pérdida superior al10% requiere evaluación; la ictericia puede acompañar deshidratación e hipernatremia."
+            }
+          ]
+        },
+        {
+          "id": "20.02-c2-02",
+          "anchor_topic_ids": [
+            "20.02-02"
+          ],
+          "objective": "cambio",
+          "vignette": "Un prematuro de 30 semanas está estable y recibe alimentación enteral completa con leche humana no fortificada. No recibe hierro de otra fuente y todavía no tiene anemia documentada.",
+          "question": "¿Debe esperarse a demostrar anemia para valorar hierro preventivo?",
+          "answer": "No; está indicada suplementación enteral de hierro.",
+          "discriminator": "No recibe hierro de otra fuente",
+          "reason": "La OMS recomienda hierro en prematuros alimentados con leche humana cuando no lo reciben por otra vía nutricional.",
+          "initial_action": "Revisar aportes y transfusiones e indicar suplementación y seguimiento según protocolo neonatal.",
+          "limits": "La dosis y duración se individualizan; evitar duplicar hierro si el fortificante u otra fuente ya cubre el aporte.",
+          "evidence": [
+            {
+              "source_id": "who-preterm-iron-2022",
+              "locator": "RecommendationA.10a y Notes and Remarks",
+              "support": "LaOMS recomienda hierro en prematuros alimentados con leche humana cuando no lo reciben por otra vía nutricional."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "20.03",
+      "title": "Taquipnea neonatal precoz",
+      "related_sections": [],
+      "scenarios": [
+        {
+          "id": "20.03-c2-01",
+          "anchor_topic_ids": [
+            "20.03-01"
+          ],
+          "objective": "cambio",
+          "vignette": "Un neonato de término con taquipnea tras cesárea recibió antibiótico mientras se descartaba infección. Ahora respira bien, se alimenta y tiene cultivo negativo; una PCR aislada está elevada.",
+          "question": "¿La PCR aislada basta para prolongar antibiótico?",
+          "answer": "No; integrar evolución, cultivos y evaluación clínica.",
+          "discriminator": "una PCR aislada está elevada",
+          "reason": "Una elevación aislada puede tener causas inflamatorias no infecciosas y no decide la duración del antibiótico.",
+          "initial_action": "Revisar con neonatología la necesidad de continuar y buscar otros datos de infección.",
+          "limits": "No se ordena suspender antibióticos solo por esta tarjeta ni se fija plazo; una infección sospechada o demostrada exige manejo completo.",
+          "evidence": [
+            {
+              "source_id": "cps-eos-2017",
+              "locator": "Investigations / Biomarkers: CRP elevada aislada no debe prolongar terapia",
+              "support": "Una elevación aislada puede tener causas inflamatorias no infecciosas y no decide la duración del antibiótico."
+            }
+          ]
+        },
+        {
+          "id": "20.03-c2-02",
+          "anchor_topic_ids": [
+            "20.03-02"
+          ],
+          "objective": "cambio",
+          "vignette": "Un prematuro con SDR respira espontáneamente en CPAP y ya tiene indicación de surfactante. Hay personal entrenado y material para administrarlo por catéter fino.",
+          "question": "¿Qué vía se prefiere para evitar ventilación invasiva innecesaria?",
+          "answer": "Surfactante por catéter fino mientras mantiene respiración espontánea.",
+          "discriminator": "Hay personal entrenado y material para administrarlo por catéter fino",
+          "reason": "La técnica permite administrar surfactante sin intubación seguida de ventilación mecánica rutinaria.",
+          "initial_action": "Preparar administración por equipo experto, con monitorización y capacidad de rescate.",
+          "limits": "No usar esta preferencia para evitar intubación necesaria por apnea o fracaso del soporte; no se fijan dosis.",
+          "evidence": [
+            {
+              "source_id": "euro-rds-2025",
+              "locator": "Surfactant recommendations, recomendación 4, p.12 PDF",
+              "support": "La técnica permite administrar surfactante sin intubación seguida de ventilación mecánica rutinaria."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "20.04",
+      "title": "Dificultad respiratoria distinta",
+      "related_sections": [],
+      "scenarios": [
+        {
+          "id": "20.04-c2-01",
+          "anchor_topic_ids": [
+            "20.04-01"
+          ],
+          "objective": "dato_faltante",
+          "vignette": "Un neonato de término con aspiración de meconio permanece muy hipóxico pese a optimizar ventilación. Se sospecha hipertensión pulmonar persistente y se considera óxido nítrico inhalado. Aún no hay ecocardiograma.",
+          "question": "¿Qué estudio ayuda a confirmar la fisiología antes de iNO si es posible?",
+          "answer": "Ecocardiograma.",
+          "discriminator": "Aún no hay ecocardiograma",
+          "reason": "La ecocardiografía establece PPHN y ayuda a valorar la situación cardíaca antes del vasodilatador.",
+          "initial_action": "Solicitar ecocardiografía urgente mientras se mantiene soporte; si la urgencia impide obtenerla antes, realizarla tras iniciar.",
+          "limits": "La aspiración de meconio no demuestra PPHN; la selección de iNO requiere valoración neonatal especializada.",
+          "evidence": [
+            {
+              "source_id": "cps-ino-2023",
+              "locator": "Initiation and dosing; Recommendations 1",
+              "support": "La ecocardiografía establece PPHN y ayuda a valorar la situación cardíaca antes del vasodilatador."
+            }
+          ]
+        },
+        {
+          "id": "20.04-c2-02",
+          "anchor_topic_ids": [
+            "20.04-02"
+          ],
+          "objective": "cambio",
+          "vignette": "Un lactante con antecedente de displasia broncopulmonar está estable en seguimiento ambulatorio. No tiene tos ni sibilancias recurrentes. Se propone salbutamol diario solo por el diagnóstico previo.",
+          "question": "¿Se recomienda el broncodilatador rutinario en esta situación?",
+          "answer": "No; el antecedente solo no lo justifica.",
+          "discriminator": "No tiene tos ni sibilancias recurrentes",
+          "reason": "ATS sugiere no prescribir broncodilatador de rutina en enfermedad respiratoria por prematuridad sin síntomas recurrentes.",
+          "initial_action": "Mantener seguimiento y reservar una prueba terapéutica monitorizada para una indicación clínica.",
+          "limits": "Recomendación condicional con certeza muy baja; no se retira un tratamiento indicado para otra enfermedad.",
+          "evidence": [
+            {
+              "source_id": "ats-pprd-2021",
+              "locator": "Recommendation 1 a; Summary of Recommendations",
+              "support": "ATS sugiere no prescribir broncodilatador de rutina en enfermedad respiratoria por prematuridad sin síntomas recurrentes."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "20.05",
+      "title": "Apnea/hipoxia",
+      "related_sections": [],
+      "scenarios": [
+        {
+          "id": "20.05-c2-01",
+          "anchor_topic_ids": [
+            "20.05-01"
+          ],
+          "objective": "contraste",
+          "vignette": "Un prematuro que estaba estable comienza con apneas nuevas, distensión abdominal y mala perfusión.",
+          "question": "¿Deben atribuirse solo a inmadurez?",
+          "answer": "No; buscar infección y enfermedad abdominal.",
+          "discriminator": "apneas nuevas, distensión abdominal",
+          "reason": "Un cambio agudo exige descartar causas secundarias.",
+          "initial_action": "Evaluar sepsis y enterocolitis; dar soporte.",
+          "limits": "La apnea del prematuro es diagnóstico de exclusión.",
+          "evidence": [
+            {
+              "source_id": "rch-neonate",
+              "locator": "Apnea and differential of unwell neonate",
+              "support": "Un cambio agudo exige descartar causas secundarias."
+            }
+          ]
+        },
+        {
+          "id": "20.05-c2-02",
+          "anchor_topic_ids": [
+            "20.05-02"
+          ],
+          "objective": "cambio",
+          "vignette": "Un neonato con encefalopatía hipóxico-isquémica tiene crisis electrográficas que requieren tratamiento. No hay datos que sugieran una canalopatía familiar.",
+          "question": "¿Qué fármaco se recomienda como primera línea neonatal?",
+          "answer": "Fenobarbital bajo monitorización.",
+          "discriminator": "crisis electrográficas que requieren tratamiento",
+          "reason": "ILAE recomienda fenobarbital como primera línea en crisis neonatales, con una excepción cuando se sospecha canalopatía.",
+          "initial_action": "Tratar con el equipo neonatal y neurológico, con vigilancia respiratoria, hemodinámica y electroencefalográfica.",
+          "limits": "No se fija dosis; corregir causas reversibles y no extrapolar un algoritmo de epilepsia del adulto.",
+          "evidence": [
+            {
+              "source_id": "ilae-neonatal-2023",
+              "locator": "Recomendación 1; resumen y tabla de recomendaciones",
+              "support": "ILAE recomienda fenobarbital como primera línea en crisis neonatales, con una excepción cuando se sospecha canalopatía."
+            }
+          ]
+        },
+        {
+          "id": "20.05-c2-03",
+          "anchor_topic_ids": [
+            "20.05-03"
+          ],
+          "objective": "incompleta",
+          "vignette": "Un recién nacido de término presenta letargia, hipotonía y succión débil tras un evento hipóxico. Un registro inicial breve de aEEG parece normal.",
+          "question": "¿Ese aEEG permite asegurar ausencia de lesión y buen pronóstico?",
+          "answer": "No; integrar clínica y vigilancia neurológica seriada.",
+          "discriminator": "Un registro inicial breve de aEEG parece normal",
+          "reason": "Un aEEG normal no predice una RM normal ni una evolución aguda favorable.",
+          "initial_action": "Continuar evaluación especializada, monitorización y valoración oportuna de neuroprotección según criterios completos.",
+          "limits": "No se diagnostica ni descarta elegibilidad para hipotermia con un único trazado; fuente 2018 reafirmada 2024.",
+          "evidence": [
+            {
+              "source_id": "cps-hie-2018",
+              "locator": "Which infants should be treated with hypothermia: normal aEEG",
+              "support": "Un aEEG normal no predice una RM normal ni una evolución aguda favorable."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "20.06",
+      "title": "Prevención de SDR",
+      "related_sections": [],
+      "scenarios": [
+        {
+          "id": "20.06-c2-01",
+          "anchor_topic_ids": [
+            "20.06-01"
+          ],
+          "objective": "cambio",
+          "vignette": "Una gestante con diabetes tipo 1 previa al embarazo está en 35 semanas y tiene riesgo alto de nacimiento en los próximos días. Se propone corticoide prenatal tardío como si no tuviera diabetes.",
+          "question": "¿Qué antecedente cambia esa selección?",
+          "answer": "La diabetes pregestacional; SMFM desaconseja el esquema tardío.",
+          "discriminator": "diabetes tipo 1 previa al embarazo",
+          "reason": "En el período prematuro tardío, SMFM recomienda no usarlo en diabetes pregestacional por el riesgo de empeorar hipoglucemia neonatal.",
+          "initial_action": "Revisar elegibilidad con medicina materno-fetal y preparar vigilancia neonatal de glucosa.",
+          "limits": "No confundir diabetes pregestacional con toda diabetes gestacional ni aplicar esta recomendación a gestaciones menores de 34 semanas. No se fija dosis.",
+          "evidence": [
+            {
+              "source_id": "smfm-acs-2021",
+              "locator": "Recomendación4, GRADE1C",
+              "support": "En el período prematuro tardío, SMFM recomienda no usarlo en diabetes pregestacional por el riesgo de empeorar hipoglucemia neonatal."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "20.07",
+      "title": "Ictericia neonatal",
+      "related_sections": [],
+      "scenarios": [
+        {
+          "id": "20.07-c2-01",
+          "anchor_topic_ids": [
+            "20.07-01"
+          ],
+          "objective": "contraste",
+          "vignette": "Un neonato de 38 semanas tiene DAT positivo solo para anti-D después de profilaxis RhIG materna. Se documenta que la madre no tenía anti-D antes de la profilaxis y que el resultado corresponde a ese anti-D pasivo.",
+          "question": "¿Debe clasificarse automáticamente como hemólisis inmunitaria activa?",
+          "answer": "No; en este contexto puede manejarse como DAT negativo.",
+          "discriminator": "el resultado corresponde a ese anti-D pasivo",
+          "reason": "La RhIG puede producir DAT positivo sin hemólisis; AAP permite tratar como DAT negativo cuando se cumplen estas condiciones.",
+          "initial_action": "Mantener vigilancia de bilirrubina y cuidado según edad, alimentación y demás riesgos.",
+          "limits": "No aplicar a otro anticuerpo, a anti-D previo ni a evidencia de hemólisis; no se ignora una bilirrubina que requiere tratamiento.",
+          "evidence": [
+            {
+              "source_id": "aap-bili-full-2022",
+              "locator": "KAS1 y figura 1, p.3 PDF",
+              "support": "La RhIG puede producir DAT positivo sin hemólisis; AAP permite tratar como DAT negativo cuando se cumplen estas condiciones."
+            }
+          ]
+        },
+        {
+          "id": "20.07-c2-02",
+          "anchor_topic_ids": [
+            "20.07-01"
+          ],
+          "objective": "cambio",
+          "vignette": "Un neonato de 37 semanas superó el umbral de fototerapia durante su hospitalización de nacimiento e inició tratamiento a las 30 horas. Ahora cumple criterios para suspenderlo.",
+          "question": "¿Puede cerrarse el control de bilirrubina al apagar la lámpara?",
+          "answer": "No; necesita medición por riesgo de rebote.",
+          "discriminator": "inició tratamiento a las 30 horas",
+          "reason": "El inicio antes de 48 horas exige vigilancia temprana después de suspender la fototerapia.",
+          "initial_action": "Medir bilirrubina sérica entre 6 y 12 horas después de suspender y repetir al día siguiente, según AAP y coordinación clínica.",
+          "limits": "Esta pauta corresponde al grupo descrito de al menos 35 semanas; otros contextos tienen seguimiento distinto.",
+          "evidence": [
+            {
+              "source_id": "aap-bili-full-2022",
+              "locator": "KAS16, p.11 PDF",
+              "support": "El inicio antes de 48 horas exige vigilancia temprana después de suspender la fototerapia."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "20.08",
+      "title": "Letargo neonatal",
+      "related_sections": [],
+      "scenarios": [
+        {
+          "id": "20.08-c2-01",
+          "anchor_topic_ids": [
+            "20.08-01"
+          ],
+          "objective": "cambio",
+          "vignette": "Un recién nacido de término, hijo de madre diabética, está despierto, asintomático y se alimenta. A las cuatro horas la primera glucosa preprandial confirmada es de 1.8 mmol/L.",
+          "question": "¿Qué opción inicial puede evitar una infusión intravenosa innecesaria?",
+          "answer": "Gel bucal de glucosa junto con alimentación y control.",
+          "discriminator": "está despierto, asintomático y se alimenta",
+          "reason": "BAPM contempla gel bucal con plan de alimentación para el intervalo 1.0–1.9 mmol/L sin signos anormales.",
+          "initial_action": "Aplicar el protocolo neonatal de gel y alimentación y repetir glucosa; escalar si falla o aparecen síntomas.",
+          "limits": "Es un marco británico para término en primeras 72 horas; no extrapolar a hipoglucemia grave, sintomática o persistente. No se fija dosis.",
+          "evidence": [
+            {
+              "source_id": "bapm-glucose-2024",
+              "locator": "Practice Points 7/18; Flowchart B; Appendix 3",
+              "support": "BAPM contempla gel bucal con plan de alimentación para el intervalo 1.0–1.9 mmol/L sin signos anormales."
+            }
+          ]
+        },
+        {
+          "id": "20.08-c2-02",
+          "anchor_topic_ids": [
+            "20.08-02"
+          ],
+          "objective": "cambio",
+          "vignette": "Un neonato de término con sepsis temprana ya recibe antibióticos y está estable. El hemocultivo crece E. coli. No tiene convulsiones ni fontanela abombada y aún no se examinó LCR.",
+          "question": "¿La ausencia de signos neurológicos elimina la necesidad de punción lumbar?",
+          "answer": "No; el hemocultivo positivo justifica estudiar LCR si es seguro.",
+          "discriminator": "El hemocultivo crece E. coli",
+          "reason": "La bacteriemia neonatal puede acompañarse de meningitis aunque no haya signos neurológicos evidentes.",
+          "initial_action": "Coordinar punción lumbar tras comprobar seguridad y ajustar tratamiento según evaluación y resultados.",
+          "limits": "No retrasar antibióticos ni realizar punción insegura; el cultivo LCR puede negativizarse tras tratamiento. Fuente 2017, no pauta mexicana de antibióticos.",
+          "evidence": [
+            {
+              "source_id": "cps-eos-2017",
+              "locator": "Investigations / Bacterial cultures: LP cuando hemocultivo positivo",
+              "support": "La bacteriemia neonatal puede acompañarse de meningitis aunque no haya signos neurológicos evidentes."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "20.09",
+      "title": "Tamiz y coagulopatía",
+      "related_sections": [],
+      "scenarios": [
+        {
+          "id": "20.09-c2-01",
+          "anchor_topic_ids": [
+            "20.09-01"
+          ],
+          "objective": "cambio",
+          "vignette": "Un neonato necesita transfusión de eritrocitos antes de la toma inicial del tamiz metabólico. La situación permite obtener la muestra sin retrasar la transfusión.",
+          "question": "¿Qué preparación del tamiz debe hacerse antes de transfundir?",
+          "answer": "Tomar muestra previa y registrar la transfusión.",
+          "discriminator": "antes de la toma inicial del tamiz metabólico",
+          "reason": "La transfusión puede alterar marcadores y producir resultados falsos del tamiz.",
+          "initial_action": "Obtener muestra previa si es posible, informar al laboratorio y programar repetición conforme al programa local.",
+          "limits": "No retrasar una transfusión urgente ni trasladar el intervalo de repetición australiano al programa mexicano sin comprobarlo.",
+          "evidence": [
+            {
+              "source_id": "qld-nbs-2026",
+              "locator": "Tabla 10, p.11 PDF: Blood transfusion criteria",
+              "support": "La transfusión puede alterar marcadores y producir resultados falsos del tamiz."
+            }
+          ]
+        },
+        {
+          "id": "20.09-c2-02",
+          "anchor_topic_ids": [
+            "20.09-02"
+          ],
+          "objective": "contraste",
+          "vignette": "Una madre que toma suplementos de vitamina K quiere omitir la profilaxis intramuscular de su recién nacido porque lo amamantará.",
+          "question": "¿El suplemento materno sustituye la profilaxis del neonato?",
+          "answer": "No; la leche sigue aportando poca vitamina K.",
+          "discriminator": "toma suplementos de vitamina K",
+          "reason": "La suplementación materna no proporciona por la leche la protección que ofrece la profilaxis directa al recién nacido.",
+          "initial_action": "Explicar el beneficio y administrar profilaxis neonatal indicada con consentimiento y protocolo local.",
+          "limits": "No se fija dosis para prematuros; la prevención no equivale al manejo de una hemorragia ya establecida.",
+          "evidence": [
+            {
+              "source_id": "cdc-vitk-2025",
+              "locator": "Do infants get enough vitamin K from breast milk?",
+              "support": "La suplementación materna no proporciona por la leche la protección que ofrece la profilaxis directa al recién nacido."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "20.10",
+      "title": "Distensión abdominal y no meconio",
+      "related_sections": [],
+      "scenarios": [
+        {
+          "id": "20.10-c2-01",
+          "anchor_topic_ids": [
+            "20.10-01"
+          ],
+          "objective": "cambio",
+          "vignette": "Un prematuro de 29 semanas está estable para alimentación enteral. Su madre aún no dispone de leche; el hospital cuenta con banco seguro de leche humana donada pasteurizada.",
+          "question": "¿Qué alternativa puede considerarse frente a fórmula para reducir riesgo intestinal?",
+          "answer": "Leche humana donada, con decisión compartida y control nutricional.",
+          "discriminator": "banco seguro de leche humana donada pasteurizada",
+          "reason": "La OMS considera el riesgo de NEC con fórmula más relevante que su ventaja de crecimiento al valorar leche donada.",
+          "initial_action": "Explicar beneficios y límites a la familia y usar la leche donada según protocolo mientras se apoya producción materna.",
+          "limits": "Recomendación condicional de certeza moderada; requiere banco seguro y vigilancia del crecimiento. No se extrapola a leche donada informal sin control.",
+          "evidence": [
+            {
+              "source_id": "who-donor-2022",
+              "locator": "Recomendación A.3 y Notes and Remarks",
+              "support": "La OMS considera el riesgo de NEC con fórmula más relevante que su ventaja de crecimiento al valorar leche donada."
+            }
+          ]
+        },
+        {
+          "id": "20.10-c2-02",
+          "anchor_topic_ids": [
+            "20.10-02"
+          ],
+          "objective": "incompleta",
+          "vignette": "Un neonato con sospecha de Hirschsprung tiene biopsia rectal informada sin células ganglionares, pero el patólogo advierte que la muestra no contiene submucosa representativa.",
+          "question": "¿Permite esa muestra confirmar aganglionosis?",
+          "answer": "No; se requiere histología representativa.",
+          "discriminator": "no contiene submucosa representativa",
+          "reason": "La biopsia debe incluir suficiente submucosa para una interpretación diagnóstica válida.",
+          "initial_action": "Coordinar revisión por patólogo experto y nueva muestra adecuada mientras se mantiene soporte de la obstrucción.",
+          "limits": "No confundir una muestra insuficiente con enfermedad confirmada ni con exclusión; la selección de técnica es especializada.",
+          "evidence": [
+            {
+              "source_id": "ernica-hscr-2026",
+              "locator": "3.2 tabla 1, histología representativa y submucosa",
+              "support": "La biopsia debe incluir suficiente submucosa para una interpretación diagnóstica válida."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "20.11",
+      "title": "Traumatismo obstétrico",
+      "related_sections": [],
+      "scenarios": [
+        {
+          "id": "20.11-c2-01",
+          "anchor_topic_ids": [
+            "20.11-01"
+          ],
+          "objective": "subtipo",
+          "vignette": "Tras distocia de hombros, un neonato tiene parálisis flácida de todo un brazo, ptosis y miosis del mismo lado. También se observa elevación del hemidiafragma ipsilateral.",
+          "question": "¿Qué tipo de lesión grave debe sospecharse?",
+          "answer": "Avulsión de raíces del plexo, con compromiso simpático y frénico.",
+          "discriminator": "ptosis y miosis del mismo lado",
+          "reason": "Horner y parálisis diafragmática en una lesión extensa del plexo sugieren avulsión y un déficit persistente.",
+          "initial_action": "Valorar respiración y solicitar evaluación pronta por equipo especializado en plexo neonatal.",
+          "limits": "El examen orienta gravedad y no establece toda la anatomía; se requieren evaluación especializada y seguimiento, sin prometer recuperación espontánea.",
+          "evidence": [
+            {
+              "source_id": "cps-plexus-2021",
+              "locator": "Narakas tabla1 grupoIV; Focused history and physical examination: Horner y parálisis diafragmática",
+              "support": "Horner y parálisis diafragmática en una lesión extensa del plexo sugieren avulsión y un déficit persistente."
+            }
+          ]
+        },
+        {
+          "id": "20.11-c2-02",
+          "anchor_topic_ids": [
+            "20.11-02"
+          ],
+          "objective": "gravedad",
+          "vignette": "Un neonato parece bien tras extracción por ventosa difícil, con cuatro tracciones y tres desprendimientos de la copa. Aún no se observa tumefacción expansiva.",
+          "question": "¿Debe mantenerse solo observación neonatal habitual?",
+          "answer": "No; requiere vigilancia reforzada por riesgo de hemorragia subgaleal.",
+          "discriminator": "cuatro tracciones y tres desprendimientos de la copa",
+          "reason": "La extracción difícil con múltiples tracciones o desprendimientos justifica vigilancia de nivel superior aun antes de signos evidentes.",
+          "initial_action": "Solicitar evaluación neonatal y monitorización seriada de perfusión, actividad y cabeza conforme al protocolo.",
+          "limits": "Los factores de riesgo no confirman hemorragia; no transfundir por ellos solos.",
+          "evidence": [
+            {
+              "source_id": "cahs-subgaleal",
+              "locator": "Initial Action / Level 2 surveillance, p.4 PDF",
+              "support": "La extracción difícil con múltiples tracciones o desprendimientos justifica vigilancia de nivel superior aun antes de signos evidentes."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "20.12",
+      "title": "Tamiz físico y sensorial",
+      "related_sections": [],
+      "scenarios": [
+        {
+          "id": "20.12-c2-01",
+          "anchor_topic_ids": [
+            "20.12-01"
+          ],
+          "objective": "dato_faltante",
+          "vignette": "Una lactante nacida en presentación pélvica tiene exploración de cadera normal al nacimiento.",
+          "question": "¿La exploración normal elimina necesidad de vigilancia?",
+          "answer": "No; mantener seguimiento y valorar imagen por riesgo.",
+          "discriminator": "presentación pélvica",
+          "reason": "El riesgo persiste aunque no haya inestabilidad inicial.",
+          "initial_action": "Organizar reevaluación e imagen apropiada para edad.",
+          "limits": "No todos los recién nacidos necesitan ultrasonido universal.",
+          "evidence": [
+            {
+              "source_id": "aaos-ddh-2022",
+              "locator": "Risk factors and imaging before six months",
+              "support": "El riesgo persiste aunque no haya inestabilidad inicial."
+            }
+          ]
+        },
+        {
+          "id": "20.12-c2-02",
+          "anchor_topic_ids": [
+            "20.12-02"
+          ],
+          "objective": "subtipo",
+          "vignette": "En un lactante, las emisiones otoacústicas están presentes, pero los potenciales auditivos de tronco son ausentes o muy anormales en estudio técnicamente adecuado.",
+          "question": "¿Qué alteración debe investigarse?",
+          "answer": "Espectro de neuropatía auditiva.",
+          "discriminator": "emisiones otoacústicas están presentes, pero los potenciales auditivos de tronco son ausentes o muy anormales",
+          "reason": "Las emisiones conservadas reflejan función de células ciliadas externas y no aseguran transmisión neural normal.",
+          "initial_action": "Derivar a audiología para protocolo diagnóstico específico y seguimiento de respuesta auditiva.",
+          "limits": "La discordancia requiere confirmar técnica y evaluación completa, incluido protocolo de microfónico coclear; no determina etiología ni tratamiento universal.",
+          "evidence": [
+            {
+              "source_id": "jcih-2019",
+              "locator": "Pediatric Diagnostic Audiology, pp.13–16 impresas/PDF; especialmente p.13 protocoloABR/microfónico y p.16 neuropatía con OAE conservadas/ABR anormal",
+              "support": "Las emisiones conservadas reflejan función de células ciliadas externas y no aseguran transmisión neural normal."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "20.13",
+      "title": "Prevención del daño súbito",
+      "related_sections": [],
+      "scenarios": [
+        {
+          "id": "20.13-c2-01",
+          "anchor_topic_ids": [
+            "20.13-01"
+          ],
+          "objective": "cambio",
+          "vignette": "Una familia quiere comprar un monitor doméstico de pulso y respiración para prevenir muerte súbita en su lactante sano. No tiene indicación médica de monitorización.",
+          "question": "¿Se recomienda como estrategia para reducir SMSL?",
+          "answer": "No; no se ha demostrado que reduzca SMSL.",
+          "discriminator": "para prevenir muerte súbita en su lactante sano",
+          "reason": "Los monitores domésticos no han mostrado reducir el riesgo de muerte súbita del lactante.",
+          "initial_action": "Explicar las medidas de sueño seguro y el límite del dispositivo.",
+          "limits": "No confundir con monitorización prescrita por una enfermedad concreta; el dispositivo no sustituye una superficie y postura seguras.",
+          "evidence": [
+            {
+              "source_id": "aap-sleep-technical-2022",
+              "locator": "Home Monitors, SIDS, and Brief Resolved Unexplained Events, p.26 PDF",
+              "support": "Los monitores domésticos no han mostrado reducir el riesgo de muerte súbita del lactante."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

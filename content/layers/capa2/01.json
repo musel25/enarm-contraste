@@ -1,0 +1,489 @@
+{
+  "schema_version": 1,
+  "layer": 2,
+  "section_id": "01",
+  "title": "ACLS",
+  "author": "clinical-author-01-12",
+  "sources": [
+    {
+      "id": "aha-als-2025",
+      "label": "AHA: Adult Advanced Life Support, Part 9",
+      "url": "https://cpr.heart.org/en/resuscitation-science/cpr-and-ecc-guidelines/adult-advanced-life-support",
+      "version": "2025",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "§§7, 15–19: doble descarga, taquicardias, cardioversión y captura de estimulación"
+    },
+    {
+      "id": "aha-bls-2025",
+      "label": "AHA: Adult Basic Life Support, Part 7",
+      "url": "https://cpr.heart.org/en/resuscitation-science/cpr-and-ecc-guidelines/adult-basic-life-support",
+      "version": "2025",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "§6: vía aérea en trauma; calidad de RCP; §12: dispositivos mecánicos"
+    },
+    {
+      "id": "aha-special-2025",
+      "label": "AHA: Adult and Pediatric Special Circumstances, Part 10",
+      "url": "https://cpr.heart.org/en/resuscitation-science/cpr-and-ecc-guidelines/adult-and-pediatric-special-circumstances-of-resuscitation",
+      "version": "2025",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "§11.2: ventilación en el agua; §21.11: opioides y vigilancia tras naloxona"
+    },
+    {
+      "id": "imss-rcp-2017",
+      "label": "IMSS/CENETEC: Reanimación cardiopulmonar en adultos, GRR",
+      "url": "https://www.imss.gob.mx/sites/all/statics/guiasclinicas/633GRR.pdf",
+      "version": "Actualización 2017",
+      "checked_at": "2026-11-06",
+      "region": "mexico",
+      "access": "checked",
+      "locator": "pp. 6–8: reconocimiento, RCP, desfibrilación"
+    },
+    {
+      "id": "rcuk-firstaid-2025",
+      "label": "Resuscitation Council UK: First Aid Guidelines",
+      "url": "https://www.resus.org.uk/professional-library/2025-resuscitation-guidelines/first-aid-guidelines",
+      "version": "2025-10-27",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Recovery position; ABCDE; Hypoglycaemia"
+    }
+  ],
+  "mexico_source_note": "Se abrió la GRR IMSS-633-13, actualización 2017. Respalda reconocimiento, RCP y desfibrilación. No se encontró una actualización mexicana de 2025–2026 en el catálogo IMSS consultado. Las decisiones de arritmias usan AHA 2025; no se presenta la GRR 2017 como vigente de 2026.",
+  "blocks": [
+    {
+      "id": "01.01",
+      "title": "Paciente colapsado: primer árbol",
+      "related_sections": [],
+      "scenarios": [
+        {
+          "id": "01.01-c2-01",
+          "anchor_topic_ids": [
+            "01.01-01"
+          ],
+          "objective": "cambio",
+          "vignette": "Un adulto con sobredosis probable de opioide permanece apneico y con pulso inequívoco. Acaba de recibir naloxona intranasal y el equipo propone esperar su efecto antes de ventilar.",
+          "question": "¿La naloxona permite posponer el soporte respiratorio?",
+          "answer": "No. Ventilar mientras se espera la respuesta.",
+          "discriminator": "esperar su efecto antes de ventilar",
+          "reason": "La reversión puede tardar y la hipoxia continúa durante la espera.",
+          "initial_action": "Abrir la vía aérea, ventilar y activar ayuda; reevaluar respiración y pulso.",
+          "limits": "La mezcla con otros sedantes puede limitar la respuesta a naloxona. Si pierde pulso, cambia al algoritmo de paro.",
+          "evidence": [
+            {
+              "source_id": "aha-special-2025",
+              "locator": "§21.11, recomendaciones 1, 3–4 y texto de apoyo",
+              "support": "El antagonista se administra junto al soporte respiratorio; no debe retrasarlo."
+            }
+          ]
+        },
+        {
+          "id": "01.01-c2-02",
+          "anchor_topic_ids": [
+            "01.01-02"
+          ],
+          "objective": "cambio",
+          "vignette": "Un adulto inconsciente tras trauma cervical conserva pulso y requiere ventilación. Un profesional entrenado no consigue abrir la vía aérea con tracción mandibular y un dispositivo básico.",
+          "question": "¿Debe evitar toda extensión aunque siga sin poder ventilar?",
+          "answer": "No. Usar elevación del mentón e inclinación de la cabeza si es necesario.",
+          "discriminator": "no consigue abrir la vía aérea con tracción mandibular",
+          "reason": "La oxigenación efectiva tiene prioridad cuando las maniobras con menor movimiento fracasan.",
+          "initial_action": "Abrir la vía aérea con la maniobra necesaria y ventilar, limitando el movimiento cervical con ayuda.",
+          "limits": "La tracción mandibular sigue siendo el primer intento del profesional entrenado ante trauma de cuello.",
+          "evidence": [
+            {
+              "source_id": "aha-bls-2025",
+              "locator": "§6, Opening the Airway After Head and Neck Trauma, recomendaciones 1–2",
+              "support": "La guía permite head tilt–chin lift si tracción mandibular y dispositivo no abren la vía aérea."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "01.02",
+      "title": "Paro: decidir descarga",
+      "related_sections": [],
+      "scenarios": [
+        {
+          "id": "01.02-c2-01",
+          "anchor_topic_ids": [
+            "01.02-01"
+          ],
+          "objective": "dato_faltante",
+          "vignette": "Durante RCP con bolsa-mascarilla, el tórax no se eleva y se oye fuga alrededor de la mascarilla.",
+          "question": "¿Qué debe corregirse primero?",
+          "answer": "El sello y la apertura de la vía aérea.",
+          "discriminator": "el tórax no se eleva",
+          "reason": "Una ventilación sin expansión torácica puede ser ineficaz.",
+          "initial_action": "Recolocar la mascarilla y usar técnica a dos personas si hay personal.",
+          "limits": "Evitar ventilación excesiva; no prolongar la pausa de compresiones.",
+          "evidence": [
+            {
+              "source_id": "aha-bls-2025",
+              "locator": "Ventilation During Cardiac Arrest",
+              "support": "Una ventilación sin expansión torácica puede ser ineficaz."
+            }
+          ]
+        },
+        {
+          "id": "01.02-c2-02",
+          "anchor_topic_ids": [
+            "01.02-02"
+          ],
+          "objective": "incompleta",
+          "vignette": "Un adulto sigue en fibrilación ventricular en las revisiones de ritmo tras tres descargas consecutivas. Un integrante propone conectar dos desfibriladores para una doble descarga secuencial como siguiente paso obligatorio.",
+          "question": "¿La utilidad de esa estrategia ya está establecida?",
+          "answer": "No. Su utilidad sigue sin establecerse.",
+          "discriminator": "doble descarga secuencial como siguiente paso obligatorio",
+          "reason": "La evidencia no justifica convertir la doble descarga en una obligación del algoritmo estándar.",
+          "initial_action": "Continuar RCP y el algoritmo, comprobar contacto y posición de parches y buscar causas reversibles.",
+          "limits": "Esto no demuestra que la técnica nunca funcione; su uso depende de protocolos expertos y evidencia aún limitada.",
+          "evidence": [
+            {
+              "source_id": "aha-als-2025",
+              "locator": "§7, Vector Change and Double Sequential Defibrillation, recomendación 2",
+              "support": "AHA2025 considera no establecida la utilidad de doble descarga secuencial tras tres descargas."
+            }
+          ]
+        },
+        {
+          "id": "01.02-c2-03",
+          "anchor_topic_ids": [
+            "01.02-01"
+          ],
+          "objective": "variante",
+          "vignette": "Un equipo traslada a un adulto en paro hacia un hospital. El receptor aún desconoce su llegada.",
+          "question": "¿Qué acción de coordinación permite preparar la recepción?",
+          "answer": "Avisar al hospital receptor durante el traslado.",
+          "discriminator": "El receptor aún desconoce su llegada",
+          "reason": "La notificación permite preparar el equipo de reanimación.",
+          "initial_action": "Comunicar estado, maniobras y tiempo estimado sin interrumpir RCP.",
+          "limits": "No sustituye el soporte vital durante el transporte.",
+          "evidence": [
+            {
+              "source_id": "imss-rcp-2017",
+              "locator": "p. 7: notificación anticipada al hospital",
+              "support": "La notificación permite preparar el equipo de reanimación."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "01.03",
+      "title": "Pulso lento",
+      "related_sections": [],
+      "scenarios": [
+        {
+          "id": "01.03-c2-01",
+          "anchor_topic_ids": [
+            "01.03-01"
+          ],
+          "objective": "dato_faltante",
+          "vignette": "Durante estimulación transcutánea de un adulto con bradicardia se ven espigas y complejos anchos a la frecuencia programada. El pulso palpable sigue lento y la presión continúa muy baja.",
+          "question": "¿La apariencia del monitor demuestra una respuesta eficaz?",
+          "answer": "No. Falta confirmar captura mecánica y perfusión.",
+          "discriminator": "El pulso palpable sigue lento",
+          "reason": "La señal eléctrica aparente puede discordar de la contracción y del efecto hemodinámico.",
+          "initial_action": "Reevaluar pulso y presión, comprobar el sistema de estimulación y mantener soporte de perfusión con ayuda experta.",
+          "limits": "La guía reconoce dificultades para distinguir captura verdadera y falsa; un solo método no garantiza confirmación.",
+          "evidence": [
+            {
+              "source_id": "aha-als-2025",
+              "locator": "§19, texto de apoyo 5: captura eléctrica y mecánica",
+              "support": "La guía distingue problemas de captura eléctrica y mecánica y la necesidad de confirmar captura sostenida."
+            }
+          ]
+        },
+        {
+          "id": "01.03-c2-02",
+          "anchor_topic_ids": [
+            "01.03-02"
+          ],
+          "objective": "cambio",
+          "vignette": "Un adulto con bloqueo AV de alto grado está hipotenso y confuso. No se ha conseguido acceso intravenoso ni intraóseo. Ya hay un equipo de estimulación transcutánea disponible.",
+          "question": "¿Debe esperar el acceso vascular para considerar estimulación?",
+          "answer": "No. Puede considerarse estimulación inmediata mientras se obtiene acceso.",
+          "discriminator": "No se ha conseguido acceso intravenoso ni intraóseo",
+          "reason": "La falta de acceso impide tratamiento intravenoso y no debe prolongar la hipoperfusión grave.",
+          "initial_action": "Iniciar estimulación transcutánea por personal entrenado mientras otro integrante obtiene acceso y se prepara apoyo definitivo.",
+          "limits": "Confirmar respuesta clínica y captura; la estimulación no corrige por sí sola todas las causas de choque.",
+          "evidence": [
+            {
+              "source_id": "aha-als-2025",
+              "locator": "§19, recomendación5 y texto de apoyo5",
+              "support": "Puede considerarse estimulación inmediata en bloqueo AV avanzado inestable cuando no hay acceso IV/IO."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "01.04",
+      "title": "Pulso rápido: primer mapa",
+      "related_sections": [],
+      "scenarios": [
+        {
+          "id": "01.04-c2-01",
+          "anchor_topic_ids": [
+            "01.04-01"
+          ],
+          "objective": "subtipo",
+          "vignette": "Un adulto con pulso presenta taquicardia ventricular sostenida cuyos complejos cambian continuamente de forma y eje. Está hipotenso y el equipo no logra una señal estable de sincronización.",
+          "question": "¿Debe esperarse la sincronización para descargar?",
+          "answer": "No. Dar descarga no sincronizada inmediata.",
+          "discriminator": "complejos cambian continuamente de forma y eje",
+          "reason": "La taquicardia ventricular polimórfica no permite sincronización fiable y exige desfibrilación.",
+          "initial_action": "Aplicar descarga no sincronizada y seguir la reanimación según pulso y respuesta.",
+          "limits": "Después de estabilizar, evaluar QT, isquemia y electrolitos; no todas las formas requieren el mismo fármaco.",
+          "evidence": [
+            {
+              "source_id": "aha-als-2025",
+              "locator": "§16, Polymorphic Ventricular Tachycardia, recomendación 1",
+              "support": "Se recomienda descarga inmediata no sincronizada en taquicardia ventricular polimórfica sostenida."
+            }
+          ]
+        },
+        {
+          "id": "01.04-c2-02",
+          "anchor_topic_ids": [
+            "01.04-01"
+          ],
+          "objective": "contraste",
+          "vignette": "Un adulto estable tiene taquicardia regular de QRS ancho. Aún no se distingue entre origen ventricular y supraventricular con aberrancia. Se propone diltiazem por la frecuencia alta.",
+          "question": "¿Es apropiado dar diltiazem antes de definir ese ritmo?",
+          "answer": "No. Debe evitarse en taquicardia de QRS ancho.",
+          "discriminator": "Aún no se distingue entre origen ventricular y supraventricular",
+          "reason": "El bloqueo nodal y la depresión hemodinámica pueden ser peligrosos si el origen es ventricular.",
+          "initial_action": "Obtener ECG, mantener monitorización y seleccionar tratamiento de QRS ancho con apoyo experto.",
+          "limits": "La estabilidad permite estudio inicial, pero no descarta taquicardia ventricular.",
+          "evidence": [
+            {
+              "source_id": "aha-als-2025",
+              "locator": "§15, Wide-Complex Tachycardia, recomendación 5 y texto de apoyo",
+              "support": "Verapamilo y diltiazem no deben administrarse para taquicardia de QRS ancho."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "01.05",
+      "title": "Taquicardia estrecha",
+      "related_sections": [],
+      "scenarios": [
+        {
+          "id": "01.05-c2-01",
+          "anchor_topic_ids": [
+            "01.05-01"
+          ],
+          "objective": "cambio",
+          "vignette": "Un adulto con taquicardia regular de QRS estrecho está estable. Tiene asma con broncoespasmo activo.",
+          "question": "¿Qué fármaco habitual debe evitarse?",
+          "answer": "Adenosina.",
+          "discriminator": "broncoespasmo activo",
+          "reason": "La adenosina puede provocar broncoespasmo grave.",
+          "initial_action": "Usar maniobras vagales si son apropiadas y solicitar una alternativa supervisada.",
+          "limits": "La alternativa depende de función ventricular y presión arterial.",
+          "evidence": [
+            {
+              "source_id": "aha-als-2025",
+              "locator": "§17: Regular Narrow-Complex Tachycardia, supportive text 2",
+              "support": "La adenosina puede provocar broncoespasmo grave."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "01.06",
+      "title": "Arritmia irregular",
+      "related_sections": [],
+      "scenarios": [
+        {
+          "id": "01.06-c2-01",
+          "anchor_topic_ids": [
+            "01.06-01"
+          ],
+          "objective": "cambio",
+          "vignette": "Un adulto tiene fibrilación auricular rápida sin preexcitación. Presenta edema pulmonar por disfunción sistólica descompensada.",
+          "question": "¿Debe usarse diltiazem intravenoso para reducir la frecuencia?",
+          "answer": "No en esta descompensación.",
+          "discriminator": "disfunción sistólica descompensada",
+          "reason": "El efecto inotrópico negativo puede agravar la perfusión.",
+          "initial_action": "Valorar si la arritmia causa inestabilidad y elegir control supervisado.",
+          "limits": "La necesidad de cardioversión depende de la relación entre arritmia e inestabilidad.",
+          "evidence": [
+            {
+              "source_id": "aha-als-2025",
+              "locator": "§18.2, recomendación 4",
+              "support": "El efecto inotrópico negativo puede agravar la perfusión."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "01.07",
+      "title": "Preexcitación",
+      "related_sections": [],
+      "scenarios": [
+        {
+          "id": "01.07-c2-01",
+          "anchor_topic_ids": [
+            "01.07-01"
+          ],
+          "objective": "contraste",
+          "vignette": "Un joven tiene preexcitación en su ECG basal. Durante un episodio ahora documentado, la taquicardia es regular y todos los QRS son estrechos; conserva presión y estado de alerta.",
+          "question": "¿El patrón basal basta para llamar al episodio FA preexcitada?",
+          "answer": "No. El episodio es compatible con una taquicardia supraventricular regular.",
+          "discriminator": "la taquicardia es regular y todos los QRS son estrechos",
+          "reason": "La vía accesoria basal no define el mecanismo de cada episodio; puede haber reentrada ortodrómica con activación ventricular por el nodo AV.",
+          "initial_action": "Registrar ECG de doce derivaciones y valorar tratamiento del ritmo regular estrecho según estabilidad, con consulta experta.",
+          "limits": "El QRS estrecho no distingue por sí solo reentrada AV de reentrada nodal. Un ritmo irregular de anchura variable cambia la conducta.",
+          "evidence": [
+            {
+              "source_id": "aha-als-2025",
+              "locator": "§15 Synopsis; §17 Synopsis y texto de apoyo 2",
+              "support": "Las taquicardias estrechas incluyen reentrada AV; la FA con vía accesoria puede producir complejos polimórficos."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "01.08",
+      "title": "REVISIÓN: FV vs FA",
+      "related_sections": [],
+      "scenarios": [
+        {
+          "id": "01.08-c2-01",
+          "anchor_topic_ids": [
+            "01.08-01"
+          ],
+          "objective": "dato_faltante",
+          "vignette": "El monitor muestra una señal caótica mientras un paciente conversa y tiene pulso regular palpable.",
+          "question": "¿Qué debe comprobarse antes de descargar?",
+          "answer": "Artefacto y concordancia con el estado clínico.",
+          "discriminator": "conversa y tiene pulso regular",
+          "reason": "Una señal de monitor aislada no demuestra fibrilación ventricular con paro.",
+          "initial_action": "Revisar electrodos y evaluar al paciente.",
+          "limits": "Si pierde respuesta y pulso, actuar de inmediato como paro.",
+          "evidence": [
+            {
+              "source_id": "aha-bls-2025",
+              "locator": "Recognition of Cardiac Arrest",
+              "support": "Una señal de monitor aislada no demuestra fibrilación ventricular con paro."
+            }
+          ]
+        },
+        {
+          "id": "01.08-c2-02",
+          "anchor_topic_ids": [
+            "01.08-02"
+          ],
+          "objective": "cambio",
+          "vignette": "Un adulto estable tiene fibrilación auricular documentada desde hace cuatro días. No recibe anticoagulante y se propone cardioversión electiva inmediata sin evaluación tromboembólica.",
+          "question": "¿La estabilidad elimina el riesgo de embolia al convertir el ritmo?",
+          "answer": "No. La duración y la falta de anticoagulación cambian la preparación.",
+          "discriminator": "desde hace cuatro días",
+          "reason": "La conversión de FA prolongada sin anticoagulación aumenta el riesgo tromboembólico.",
+          "initial_action": "Consultar el protocolo de anticoagulación y evaluación tromboembólica antes de la cardioversión electiva.",
+          "limits": "Si aparece inestabilidad atribuible al ritmo, la urgencia cambia; esta demora no se aplica a una cardioversión de rescate.",
+          "evidence": [
+            {
+              "source_id": "aha-als-2025",
+              "locator": "§18.1, Synopsis: FA de más de48horas sin anticoagulación",
+              "support": "La guía advierte del riesgo tromboembólico de convertir FA prolongada en pacientes no anticoagulados."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "01.09",
+      "title": "Hipoxia y paro",
+      "related_sections": [],
+      "scenarios": [
+        {
+          "id": "01.09-c2-01",
+          "anchor_topic_ids": [
+            "01.09-01"
+          ],
+          "objective": "subtipo",
+          "vignette": "Un salvavidas entrenado sostiene a un adulto inconsciente que no respira en agua tranquila. Tiene apoyo de flotación, puede mantenerse seguro y la extracción aún tardará.",
+          "question": "¿Puede considerar ventilaciones antes de llegar a tierra?",
+          "answer": "Sí, si su entrenamiento y seguridad permiten hacerlo.",
+          "discriminator": "puede mantenerse seguro y la extracción aún tardará",
+          "reason": "Las ventilaciones en el agua pueden limitar la hipoxia antes de la extracción.",
+          "initial_action": "Considerar ventilaciones en el agua sin comprometer al rescatista y continuar el rescate seguro.",
+          "limits": "Es una opción para personal adecuadamente entrenado; equipo, distancia y condiciones cambian la decisión.",
+          "evidence": [
+            {
+              "source_id": "aha-special-2025",
+              "locator": "§11.2, In-Water Breaths, recomendación y texto de apoyo",
+              "support": "Puede ser razonable ventilar en el agua si el rescatista entrenado no compromete su seguridad."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "01.10",
+      "title": "REVISIÓN: inconsciente con pulso",
+      "related_sections": [],
+      "scenarios": [
+        {
+          "id": "01.10-c2-01",
+          "anchor_topic_ids": [
+            "01.10-01"
+          ],
+          "objective": "cambio",
+          "vignette": "Un adulto recuperó alerta y respiración tras naloxona por sobredosis. Dice que tomó un opioide de liberación prolongada y solicita irse sin observación.",
+          "question": "¿La mejoría inicial permite alta inmediata?",
+          "answer": "No. Existe riesgo de depresión respiratoria recurrente.",
+          "discriminator": "opioide de liberación prolongada",
+          "reason": "El efecto del opioide puede durar más que el del antagonista.",
+          "initial_action": "Mantener observación sanitaria y reevaluar respiración, conciencia y signos vitales.",
+          "limits": "La guía no define una duración universal de observación; sustancia, vía y evolución condicionan el alta.",
+          "evidence": [
+            {
+              "source_id": "aha-special-2025",
+              "locator": "§21.11, Following Successful Response to Opioid Antagonists, recomendación 1 y Synopsis",
+              "support": "Los adultos que responden requieren observación hasta que el riesgo de recurrencia sea bajo."
+            }
+          ]
+        },
+        {
+          "id": "01.10-c2-02",
+          "anchor_topic_ids": [
+            "01.10-02"
+          ],
+          "objective": "contraste",
+          "vignette": "En un área segura, un equipo suficiente mantiene compresiones manuales eficaces durante el paro de un adulto. Se propone interrumpirlas para colocar un compresor mecánico solo porque está disponible.",
+          "question": "¿Se recomienda sustituirlas por rutina?",
+          "answer": "No. La disponibilidad sola no justifica el cambio.",
+          "discriminator": "solo porque está disponible",
+          "reason": "Los dispositivos mecánicos no mejoran resultados cuando se usan de rutina y su instalación puede interrumpir RCP.",
+          "initial_action": "Continuar las compresiones eficaces y limitar interrupciones.",
+          "limits": "Pueden considerarse en situaciones donde las compresiones manuales sean peligrosas o difíciles; no es este escenario.",
+          "evidence": [
+            {
+              "source_id": "aha-bls-2025",
+              "locator": "§12, Alternative Techniques for CPR, recomendaciones 1 y4",
+              "support": "No se recomienda RCP mecánica rutinaria; se reserva su consideración para circunstancias específicas."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

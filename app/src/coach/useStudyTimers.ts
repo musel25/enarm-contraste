@@ -17,26 +17,32 @@ import type { CoachCommit, Preferences } from "./types";
 
 export function useStudyTimers({
   prefs,
+  scope,
   day,
   answered,
   commit,
   onStart,
 }: {
   prefs: Preferences;
+  scope: string;
   day: string;
   answered: number;
   commit: CoachCommit;
   onStart: () => void;
 }) {
-  const [timer, setTimerState] = useState<TimerState | null>(() => readTimer(TIMER_KEY));
-  const [pause, setPauseState] = useState<TimerState | null>(() => readTimer(BREAK_KEY));
+  const timerKey = `${TIMER_KEY}:${scope}`;
+  const breakKey = `${BREAK_KEY}:${scope}`;
+  // Global legacy timers have no space ownership. Preserve their stored values,
+  // but do not turn them into a new space's study or break log.
+  const [timer, setTimerState] = useState<TimerState | null>(() => readTimer(timerKey));
+  const [pause, setPauseState] = useState<TimerState | null>(() => readTimer(breakKey));
 
   const setTimer = (value: TimerState | null) => {
-    saveTimer(TIMER_KEY, value);
+    saveTimer(timerKey, value);
     setTimerState(value);
   };
   const setPause = (value: TimerState | null) => {
-    saveTimer(BREAK_KEY, value);
+    saveTimer(breakKey, value);
     setPauseState(value);
   };
 

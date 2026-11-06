@@ -106,7 +106,11 @@ async function savedState(page: import("@playwright/test").Page): Promise<CoachS
           const db = open.result;
           const read = db.transaction("state").objectStore("state").get("current");
           read.onsuccess = () => {
-            resolve(read.result);
+            resolve(
+              read.result.version === 2
+                ? { ...read.result.workspaces.capa1, revision: read.result.revision }
+                : read.result,
+            );
             db.close();
           };
           read.onerror = reject;

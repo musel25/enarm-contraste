@@ -7,6 +7,42 @@ import test from "node:test";
 import { createProgressServer } from "../../server/api";
 import { backupDatabase } from "../../server/backup";
 import { emptyState } from "../../app/src/coach/engine";
+import { migrateProfile } from "../../app/src/coach/profile";
+
+test("profile migration preserves the old snapshot and rejects a legacy client downgrade", async () => {
+  const api = await fixture();
+  try {
+    const token = code();
+    const first = await (
+      await api.request(token, "PUT", {
+        expected_revision: 0,
+        state: emptyState(),
+        preserve: false,
+      })
+    ).json();
+    const body = {
+      expected_revision: first.state.revision,
+      state: migrateProfile(first.state),
+      preserve: false,
+    };
+    const response = await api.request(token, "PUT", body);
+    assert.equal(response.status, 200);
+    const saved = await response.json();
+    assert.equal(saved.state.version, 2);
+    assert.deepEqual(await (await api.request(token, "PUT", body)).json(), saved);
+    assert.deepEqual(await (await api.request(token, "GET", undefined, "/previous")).json(), first);
+    const downgrade = await api.request(token, "PUT", {
+      expected_revision: saved.state.revision,
+      state: emptyState(),
+      preserve: false,
+    });
+    assert.equal(downgrade.status, 409);
+    assert.match((await downgrade.json()).error, /actualiza/i);
+    assert.deepEqual(await (await api.request(token)).json(), saved);
+  } finally {
+    await api.close();
+  }
+});
 
 const code = () => randomBytes(32).toString("base64url");
 

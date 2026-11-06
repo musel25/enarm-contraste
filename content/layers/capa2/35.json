@@ -1,0 +1,1102 @@
+{
+  "schema_version": 1,
+  "layer": 2,
+  "section_id": "35",
+  "title": "Trastornos hidroelectrolíticos",
+  "author": "clinical-author-25-35",
+  "sources": [
+    {
+      "id": "aaa-hyperna",
+      "label": "NHS Ayrshire & Arran: Management of Hypernatraemia",
+      "url": "https://aaamedicines.org.uk/guidelines/electrolyte-disturbances/management-of-hypernatraemia/",
+      "version": "Revisión enero 2026; página mayo 2026",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Assessment / Monitoring; General Management"
+    },
+    {
+      "id": "aaa-hypok",
+      "label": "NHS Ayrshire & Arran: Management of Hypokalaemia",
+      "url": "https://aaamedicines.org.uk/guidelines/electrolyte-disturbances/management-of-hypokalaemia-plasma-k-3-5mmol-l/",
+      "version": "Revisión diciembre 2023; página noviembre 2024",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "General management; Oral potassium supplementation; Intravenous potassium supplementation"
+    },
+    {
+      "id": "aaa-hypona",
+      "label": "NHS Ayrshire & Arran: Management of Hyponatraemia, algoritmos 1 y 2",
+      "url": "https://aaamedicines.org.uk/guidelines/electrolyte-disturbances/management-of-hyponatraemia/",
+      "version": "Revisión enero 2026; algoritmos agosto 2026",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Flowchart 1: investigación; Flowchart 2: síntomas graves y sobrecorrección"
+    },
+    {
+      "id": "aaa-mg",
+      "label": "NHS Ayrshire & Arran: Management of Hypomagnesaemia",
+      "url": "https://aaamedicines.org.uk/guidelines/electrolyte-disturbances/management-of-hypomagnesaemia/",
+      "version": "Revisión febrero 2025; página abril 2025",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Adults with renal impairment; Additional information"
+    },
+    {
+      "id": "aaa-phos",
+      "label": "NHS Ayrshire & Arran: Management of Hypophosphataemia",
+      "url": "https://aaamedicines.org.uk/guidelines/electrolyte-disturbances/management-of-hypophosphataemia/",
+      "version": "Revisión noviembre 2023; página diciembre 2024",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Introduction; Moderate / Severe Hypophosphataemia; Notes, vigilancia renal y electrolítica"
+    },
+    {
+      "id": "endo-hcm",
+      "label": "Endocrine Society: Treatment of Hypercalcemia of Malignancy in Adults",
+      "url": "https://www.endocrine.org/clinical-practice-guidelines/hypercalcemia",
+      "version": "Diciembre 2022; JCEM marzo 2023",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "List of Recommendations, recomendaciones 1–3"
+    },
+    {
+      "id": "fhft-refeed",
+      "label": "Frimley Health NHS Foundation Trust: Management of refeeding syndrome in adults",
+      "url": "https://guidelines.fhft.nhs.uk/Nutrition_and_Dietetics-Management_of_refeeding_syndrome_in_adults",
+      "version": "Versión 1.0, 21 noviembre 2025",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Identification; Management steps 1–4; cautela con función renal y balance"
+    },
+    {
+      "id": "imss-hyperna",
+      "label": "IMSS: Diagnóstico y tratamiento de hipernatremia en el adulto",
+      "url": "https://www.imss.gob.mx/sites/all/statics/guiasclinicas/648GRR.pdf",
+      "version": "IMSS-648-13, 2013",
+      "checked_at": "2026-11-06",
+      "region": "mexico",
+      "access": "checked",
+      "locator": "GRR pp. 5–12: mecanismos, volumen, diagnóstico y tratamiento"
+    },
+    {
+      "id": "nih-mg",
+      "label": "NIH Office of Dietary Supplements: Magnesium, Health Professional Fact Sheet",
+      "url": "https://ods.od.nih.gov/factsheets/Magnesium-HealthProfessional/?mode=light",
+      "version": "Actualización 6 enero 2026",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Magnesium Deficiency; Health Risks from Excessive Magnesium; Interactions with Medications"
+    },
+    {
+      "id": "sfe-hyperca",
+      "label": "Society for Endocrinology: Emergency management of acute hypercalcaemia in adult patients",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5314807/",
+      "version": "2016, Endocrine Connections 5:G9–G11",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Severity; Causes; Investigation, Bloods; Management, Rehydration"
+    },
+    {
+      "id": "sfe-hypoca",
+      "label": "Society for Endocrinology: Emergency management of acute hypocalcaemia in adult patients",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5314808/",
+      "version": "2016, Endocrine Connections 5:G7–G8",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Clinical presentation; Potential causes; Investigations; Mild / Severe hypocalcaemia"
+    },
+    {
+      "id": "ukka-lab",
+      "label": "UK Kidney Association: Acute Hyperkalaemia in Adults, laboratorio",
+      "url": "https://guidelines.ukkidney.org/hyperkalaemia/11-1-ii-hyperkalaemia-in-hospital/11-1-3-ii-hyperkalaemia-in-hospital-15-1-15-3/",
+      "version": "Actualización julio 2026; revisión prevista octubre 2026",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Guidelines 15.1–15.3, especialmente pseudohiperpotasemia"
+    },
+    {
+      "id": "ukka-treat",
+      "label": "UK Kidney Association: Acute Hyperkalaemia in Adults, tratamiento hospitalario",
+      "url": "https://guidelines.ukkidney.org/hyperkalaemia/11-1-ii-hyperkalaemia-in-hospital/11-1-4-ii-hyperkalaemia-in-hospital-16-1-16-6/",
+      "version": "Actualización julio 2026; revisión prevista octubre 2026",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Guidelines 16.1–16.6: cardioprotección, redistribución, eliminación y vigilancia"
+    },
+    {
+      "id": "sfe-hypoca-add2019",
+      "label": "Society for Endocrinology: addendum de hipocalcemia aguda en adultos",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8117371/",
+      "version": "1 junio 2019, Endocrine Connections 8:X1; addendum de la guía 2016",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Severe hypocalcaemia; equivalencia y precaución entre preparaciones de calcio intravenoso"
+    },
+    {
+      "id": "ukka-fluid-aki",
+      "label": "UK Kidney Association: AKI Guide, Fluid Therapy",
+      "url": "https://www.ukkidney.org/clinical-resources/aki-guide-resources/secondary-care/fluid-therapy/",
+      "version": "Recurso clínico web consultado el 6 noviembre 2026; fecha editorial no visible",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Assessing the need for IV fluid therapy; recurso educativo institucional, sin grado de recomendación"
+    },
+    {
+      "id": "euro-hypona2014",
+      "label": "ESICM/ESE/ERA-EDTA: Clinical practice guideline on diagnosis and treatment of hyponatraemia",
+      "url": "https://www.weds-wales.co.uk/wp-content/uploads/2020/12/hyponatraemia-guidelines.pdf",
+      "version": "2014, European Journal of Endocrinology 170:G1–G47, DOI 10.1530/EJE-13-1020",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Sección 7.1, Advice for clinical practice, p. G28; guía primaria de sociedades, copia pública del artículo"
+    }
+  ],
+  "mexico_source_note": "Se abrió la GRR oficial IMSS-648-13 (2013), pp. 5–12, para hipernatremia del adulto. No se encontró una guía mexicana reciente e integrada para todos estos electrolitos tras buscar en IMSS y Secretaría de Salud. La guía neonatal IMSS-548 no se usa para adultos. Las recomendaciones internacionales no garantizan disponibilidad local. UKKA aún muestra julio 2026 y revisión prevista octubre 2026. Las guías SFE de calcio son de 2016; no se presentan como actualizaciones de 2026. Todos los casos son de adultos no gestantes; requieren revisión clínica profesional.",
+  "blocks": [
+    {
+      "id": "35.01",
+      "title": "Volumen y tonicidad",
+      "related_sections": [],
+      "scenarios": [
+        {
+          "anchor_topic_ids": [
+            "35.01-01"
+          ],
+          "objective": "contraste",
+          "vignette": "Un adulto con lesión renal aguda y oliguria recibió líquidos. Ahora tiene edema, crepitantes pulmonares y mayor necesidad de oxígeno. Se propone otro bolo solo porque aumentó la creatinina.",
+          "question": "¿Debe administrarse otro bolo de forma automática?",
+          "answer": "No. La posible sobrecarga exige reevaluar perfusión y estado de volumen.",
+          "discriminator": "edema, crepitantes pulmonares",
+          "reason": "La lesión renal aguda puede cursar con sobrecarga y más líquido puede agravar el edema pulmonar.",
+          "initial_action": "Reevaluar de inmediato respiración, perfusión, balance y necesidad de manejo renal especializado antes de aportar más líquido.",
+          "limits": "La creatinina y la oliguria aisladas no demuestran respuesta a volumen. El recurso UKKA es una guía educativa institucional.",
+          "evidence": [
+            {
+              "source_id": "ukka-fluid-aki",
+              "locator": "Assessing the need for IV fluid therapy",
+              "support": "La hidratación intravenosa no es tratamiento automático de toda lesión renal aguda y puede agravar la sobrecarga."
+            }
+          ],
+          "id": "35.01-01-contraste"
+        },
+        {
+          "anchor_topic_ids": [
+            "35.01-02"
+          ],
+          "objective": "subtipo",
+          "vignette": "Un adulto con glucosa muy elevada tiene sodio 124 mmol/L y osmolalidad sérica elevada. No presenta convulsiones.",
+          "question": "¿Se puede clasificar como hiponatremia hipotónica?",
+          "answer": "No. Existe un estado hiperosmolar que exige interpretar la glucosa.",
+          "discriminator": "osmolalidad sérica elevada",
+          "reason": "La hiperglucemia modifica la relación entre sodio y tonicidad.",
+          "initial_action": "Tratar el contexto metabólico y seguir sodio, glucosa y osmolalidad.",
+          "limits": "No indicar solución hipertónica solo por el sodio medido.",
+          "evidence": [
+            {
+              "source_id": "aaa-hypona",
+              "locator": "Flowchart 1: hiponatremia hipertónica",
+              "support": "La hiperglucemia modifica la relación entre sodio y tonicidad."
+            }
+          ],
+          "id": "35.01-02-subtipo"
+        },
+        {
+          "anchor_topic_ids": [
+            "35.01-02"
+          ],
+          "objective": "dato_faltante",
+          "vignette": "Un adulto con sodio bajo, triglicéridos muy elevados y osmolalidad sérica normal está asintomático.",
+          "question": "¿Qué posibilidad debe comprobarse antes de corregir sodio?",
+          "answer": "Pseudohiponatremia relacionada con el método de medición.",
+          "discriminator": "osmolalidad sérica normal",
+          "reason": "La hiperlipidemia puede producir un valor aparente de sodio bajo.",
+          "initial_action": "Consultar al laboratorio y confirmar con un método apropiado.",
+          "limits": "La osmolalidad debe interpretarse con glucosa y contexto clínico.",
+          "evidence": [
+            {
+              "source_id": "aaa-hypona",
+              "locator": "Flowchart 1: hiponatremia isotónica y artefacto",
+              "support": "La hiperlipidemia puede producir un valor aparente de sodio bajo."
+            }
+          ],
+          "id": "35.01-03-dato_faltante"
+        },
+        {
+          "anchor_topic_ids": [
+            "35.01-01"
+          ],
+          "objective": "cambio",
+          "vignette": "Un adulto con sodio bajo presenta ascitis, edema bilateral e ingurgitación yugular. No tiene diarrea ni vómitos.",
+          "question": "¿Qué dato cambia la selección inicial de líquidos?",
+          "answer": "La sobrecarga de volumen impide asumir depleción por el sodio bajo.",
+          "discriminator": "ascitis, edema bilateral e ingurgitación yugular",
+          "reason": "La hiponatremia puede acompañar expansión del agua corporal.",
+          "initial_action": "Valorar causa de congestión y plan de agua, sodio y diuréticos.",
+          "limits": "No administrar bolos sin evaluar perfusión y congestión.",
+          "evidence": [
+            {
+              "source_id": "aaa-hypona",
+              "locator": "Flowchart 1: hipervolemia",
+              "support": "La hiponatremia puede acompañar expansión del agua corporal."
+            }
+          ],
+          "id": "35.01-04-cambio"
+        }
+      ]
+    },
+    {
+      "id": "35.02",
+      "title": "Hiponatremia",
+      "related_sections": [],
+      "scenarios": [
+        {
+          "anchor_topic_ids": [
+            "35.02-01"
+          ],
+          "objective": "gravedad",
+          "vignette": "Un adulto con sodio 119 mmol/L pasa de cefalea a somnolencia profunda durante observación. La glucemia es normal.",
+          "question": "¿Qué cambio exige escalar el tratamiento?",
+          "answer": "El deterioro del estado de alerta.",
+          "discriminator": "somnolencia profunda",
+          "reason": "La gravedad neurológica cambia la prioridad aunque falte la causa.",
+          "initial_action": "Atender vía aérea y comenzar manejo hipertónico supervisado en área monitorizada.",
+          "limits": "Investigar otras causas sin retrasar la estabilización.",
+          "evidence": [
+            {
+              "source_id": "aaa-hypona",
+              "locator": "Flowchart 2: síntomas graves",
+              "support": "La gravedad neurológica cambia la prioridad aunque falte la causa."
+            }
+          ],
+          "id": "35.02-01-gravedad"
+        },
+        {
+          "anchor_topic_ids": [
+            "35.02-02"
+          ],
+          "objective": "contraste",
+          "vignette": "Una adulta estable con hiponatremia hipotónica tiene vómitos, ortostatismo y sodio urinario bajo. No toma diuréticos.",
+          "question": "¿Qué mecanismo orienta el conjunto?",
+          "answer": "Pérdidas extrarrenales con hipovolemia.",
+          "discriminator": "vómitos, ortostatismo y sodio urinario bajo",
+          "reason": "El riñón conserva sodio ante pérdidas de volumen.",
+          "initial_action": "Reponer volumen con líquido isotónico y controlar sodio y diuresis.",
+          "limits": "La mejoría de volumen puede acelerar la corrección del sodio.",
+          "evidence": [
+            {
+              "source_id": "aaa-hypona",
+              "locator": "Flowchart 1: hipovolemia y pérdidas gastrointestinales",
+              "support": "El riñón conserva sodio ante pérdidas de volumen."
+            }
+          ],
+          "id": "35.02-02-contraste"
+        },
+        {
+          "anchor_topic_ids": [
+            "35.02-02"
+          ],
+          "objective": "dato_faltante",
+          "vignette": "Un adulto con neumonía tiene hiponatremia hipotónica, orina concentrada y ausencia de edema. No se ha evaluado función suprarrenal ni tiroidea.",
+          "question": "¿Puede afirmarse SIADH definitivo?",
+          "answer": "No. Faltan exclusiones endocrinas y evaluación completa de volumen.",
+          "discriminator": "No se ha evaluado función suprarrenal ni tiroidea",
+          "reason": "SIADH requiere excluir otras causas compatibles.",
+          "initial_action": "Medir pruebas endocrinas pertinentes y revisar fármacos y función renal.",
+          "limits": "El contexto pulmonar aumenta sospecha, pero no demuestra la causa.",
+          "evidence": [
+            {
+              "source_id": "aaa-hypona",
+              "locator": "Flowchart 1: definición de SIADH y exclusiones",
+              "support": "SIADH requiere excluir otras causas compatibles."
+            }
+          ],
+          "id": "35.02-03-dato_faltante"
+        },
+        {
+          "anchor_topic_ids": [
+            "35.02-01"
+          ],
+          "objective": "cambio",
+          "vignette": "Una adulta con hiponatremia crónica desarrolla diuresis abundante tras retirar una tiazida. El sodio aumenta más rápido de lo previsto.",
+          "question": "¿Qué debe reevaluarse de inmediato?",
+          "answer": "Riesgo de sobrecorrección del sodio.",
+          "discriminator": "El sodio aumenta más rápido de lo previsto",
+          "reason": "La recuperación de excreción de agua puede alterar el plan inicial.",
+          "initial_action": "Detener la corrección activa y consultar al equipo experto para controlar el ascenso.",
+          "limits": "Vigilar sodio, estado neurológico y balance; no esperar síntomas tardíos.",
+          "evidence": [
+            {
+              "source_id": "aaa-hypona",
+              "locator": "Flowchart 2: overcorrection y monitoring",
+              "support": "La recuperación de excreción de agua puede alterar el plan inicial."
+            }
+          ],
+          "id": "35.02-04-cambio"
+        }
+      ]
+    },
+    {
+      "id": "35.03",
+      "title": "Hipernatremia",
+      "related_sections": [],
+      "scenarios": [
+        {
+          "anchor_topic_ids": [
+            "35.03-01"
+          ],
+          "objective": "subtipo",
+          "vignette": "Un adulto hospitalizado después de cirugía hipofisaria tiene poliuria, sodio alto y orina inapropiadamente diluida.",
+          "question": "¿Qué mecanismo debe investigarse?",
+          "answer": "Pérdida renal de agua compatible con diabetes insípida.",
+          "discriminator": "orina inapropiadamente diluida",
+          "reason": "El riñón no concentra orina pese a hipernatremia.",
+          "initial_action": "Medir osmolalidad sérica y urinaria y consultar endocrinología.",
+          "limits": "El caso no distingue por sí solo formas central y nefrogénica.",
+          "evidence": [
+            {
+              "source_id": "aaa-hyperna",
+              "locator": "Assessment / Monitoring: orina menos concentrada que plasma",
+              "support": "El riñón no concentra orina pese a hipernatremia."
+            }
+          ],
+          "id": "35.03-01-subtipo"
+        },
+        {
+          "anchor_topic_ids": [
+            "35.03-01"
+          ],
+          "objective": "contraste",
+          "vignette": "Un adulto tiene hipernatremia y diuresis abundante durante hiperglucemia importante. La orina está concentrada y contiene glucosa.",
+          "question": "¿Qué mecanismo es más probable que una diuresis acuosa pura?",
+          "answer": "Diuresis osmótica.",
+          "discriminator": "La orina está concentrada y contiene glucosa",
+          "reason": "La excreción de solutos puede arrastrar agua.",
+          "initial_action": "Atender la alteración glucémica y cuantificar pérdidas y función renal.",
+          "limits": "La osmolalidad urinaria sola no especifica todos los solutos.",
+          "evidence": [
+            {
+              "source_id": "aaa-hyperna",
+              "locator": "Assessment / Monitoring; General Management: hiperglucemia",
+              "support": "La excreción de solutos puede arrastrar agua."
+            }
+          ],
+          "id": "35.03-02-contraste"
+        },
+        {
+          "anchor_topic_ids": [
+            "35.03-02"
+          ],
+          "objective": "cambio",
+          "vignette": "Un adulto con hipernatremia y edema recibió varias infusiones hipertónicas. No hay signos de hipoperfusión.",
+          "question": "¿Qué antecedente cambia la explicación inicial?",
+          "answer": "El aporte de sodio hipertónico.",
+          "discriminator": "recibió varias infusiones hipertónicas",
+          "reason": "La hipernatremia también puede deberse a sobrecarga de sodio.",
+          "initial_action": "Revisar y suspender aportes innecesarios y solicitar plan especializado.",
+          "limits": "No asumir que toda hipernatremia exige expansión rápida de volumen.",
+          "evidence": [
+            {
+              "source_id": "imss-hyperna",
+              "locator": "GRR pp. 6–8: hipernatremia hipervolémica",
+              "support": "La hipernatremia también puede deberse a sobrecarga de sodio."
+            }
+          ],
+          "id": "35.03-03-cambio"
+        },
+        {
+          "anchor_topic_ids": [
+            "35.03-01"
+          ],
+          "objective": "dato_faltante",
+          "vignette": "Un adulto de residencia presenta sodio 156 mmol/L. No hay resultados previos y su acompañante desconoce cuándo disminuyó la ingesta.",
+          "question": "¿Qué incertidumbre cambia la planificación de la corrección?",
+          "answer": "La duración desconocida del trastorno.",
+          "discriminator": "No hay resultados previos",
+          "reason": "La evolución influye en la estrategia y vigilancia de corrección.",
+          "initial_action": "Buscar registros previos y corregir de forma monitorizada con reevaluaciones.",
+          "limits": "No asumir que comenzó hoy por la fecha de detección.",
+          "evidence": [
+            {
+              "source_id": "imss-hyperna",
+              "locator": "GRR p. 7: clasificación temporal y estrategias terapéuticas",
+              "support": "La evolución influye en la estrategia y vigilancia de corrección."
+            }
+          ],
+          "id": "35.03-04-dato_faltante"
+        }
+      ]
+    },
+    {
+      "id": "35.04",
+      "title": "Hipopotasemia",
+      "related_sections": [],
+      "scenarios": [
+        {
+          "anchor_topic_ids": [
+            "35.04-01"
+          ],
+          "objective": "mecanismo",
+          "vignette": "Un adulto con potasio bajo presenta diarrea persistente. Continúa perdiendo líquido pese a recibir suplementos.",
+          "question": "¿Qué explica una respuesta insuficiente a la reposición?",
+          "answer": "Pérdidas gastrointestinales continuas.",
+          "discriminator": "Continúa perdiendo líquido",
+          "reason": "La necesidad de potasio depende también de pérdidas activas.",
+          "initial_action": "Tratar la causa de diarrea y ajustar reposición con controles.",
+          "limits": "Comprobar función renal y magnesio antes de aumentar aportes.",
+          "evidence": [
+            {
+              "source_id": "aaa-hypok",
+              "locator": "General management; dosis según déficit y pérdidas",
+              "support": "La necesidad de potasio depende también de pérdidas activas."
+            }
+          ],
+          "id": "35.04-01-mecanismo"
+        },
+        {
+          "anchor_topic_ids": [
+            "35.04-01"
+          ],
+          "objective": "contraste",
+          "vignette": "Un adulto muestra descenso de potasio tras iniciar insulina. No tiene diarrea ni uso de diuréticos y la función renal es estable.",
+          "question": "¿Qué mecanismo debe considerarse?",
+          "answer": "Redistribución intracelular, sin asumir pérdida corporal equivalente.",
+          "discriminator": "tras iniciar insulina",
+          "reason": "La distribución del potasio puede cambiar sin una pérdida externa.",
+          "initial_action": "Reevaluar tratamiento y seguir potasio y glucosa con un protocolo apropiado.",
+          "limits": "El déficit total depende del contexto metabólico y no se calcula con este dato aislado.",
+          "evidence": [
+            {
+              "source_id": "aaa-hypok",
+              "locator": "General management: intracellular potassium shifts",
+              "support": "La distribución del potasio puede cambiar sin una pérdida externa."
+            },
+            {
+              "source_id": "ukka-treat",
+              "locator": "Rationale 16.3.1–16.3.3: insulin-glucose infusion",
+              "support": "La insulina desplaza potasio al interior celular."
+            }
+          ],
+          "id": "35.04-02-contraste"
+        },
+        {
+          "anchor_topic_ids": [
+            "35.04-02"
+          ],
+          "objective": "gravedad",
+          "vignette": "Un adulto con vómitos tiene potasio 2.7 mmol/L y nueva arritmia. Puede tomar líquidos.",
+          "question": "¿La tolerancia oral permite manejo ambulatorio por sí sola?",
+          "answer": "No. La arritmia exige atención hospitalaria monitorizada.",
+          "discriminator": "nueva arritmia",
+          "reason": "La manifestación cardíaca modifica el riesgo independientemente de la vía oral.",
+          "initial_action": "Monitorizar ECG y corregir potasio con supervisión.",
+          "limits": "La pauta requiere función renal y controles seriados.",
+          "evidence": [
+            {
+              "source_id": "aaa-hypok",
+              "locator": "Drug therapy: arritmia e indicación de reposición intravenosa",
+              "support": "La manifestación cardíaca modifica el riesgo independientemente de la vía oral."
+            }
+          ],
+          "id": "35.04-03-gravedad"
+        },
+        {
+          "anchor_topic_ids": [
+            "35.04-02"
+          ],
+          "objective": "dato_faltante",
+          "vignette": "Una adulta con hipopotasemia persistente no mejora tras reposición. Tiene calambres y usa un inhibidor de bomba de protones desde hace años.",
+          "question": "¿Qué electrolito debe medirse?",
+          "answer": "Magnesio.",
+          "discriminator": "no mejora tras reposición",
+          "reason": "La depleción de magnesio puede coexistir y dificultar el control del potasio.",
+          "initial_action": "Medir magnesio y revisar medicamentos antes de repetir aportes sin control.",
+          "limits": "No suspender tratamiento crónico sin revisar indicación y alternativas.",
+          "evidence": [
+            {
+              "source_id": "aaa-mg",
+              "locator": "Additional information: alteraciones asociadas y PPI",
+              "support": "La depleción de magnesio puede coexistir y dificultar el control del potasio."
+            },
+            {
+              "source_id": "nih-mg",
+              "locator": "Magnesium Deficiency",
+              "support": "La deficiencia grave de magnesio puede causar hipocalcemia e hipopotasemia por alteración de la homeostasis mineral."
+            }
+          ],
+          "id": "35.04-04-dato_faltante"
+        }
+      ]
+    },
+    {
+      "id": "35.05",
+      "title": "Hiperpotasemia",
+      "related_sections": [],
+      "scenarios": [
+        {
+          "anchor_topic_ids": [
+            "35.05-02"
+          ],
+          "objective": "contraste",
+          "vignette": "Un adulto tiene trombocitosis marcada y potasio sérico elevado. Una muestra plasmática tomada a la vez informa potasio normal.",
+          "question": "¿Qué interpretación orienta la discrepancia?",
+          "answer": "Pseudohiperpotasemia por liberación durante coagulación.",
+          "discriminator": "muestra plasmática tomada a la vez informa potasio normal",
+          "reason": "La comparación de muestras ayuda a reconocer artefacto.",
+          "initial_action": "Confirmar con el laboratorio y evitar corrección innecesaria.",
+          "limits": "Valorar clínica y ECG mientras se confirma.",
+          "evidence": [
+            {
+              "source_id": "ukka-lab",
+              "locator": "Guideline 15.3: muestras pareadas y trombocitosis",
+              "support": "La comparación de muestras ayuda a reconocer artefacto."
+            }
+          ],
+          "id": "35.05-01-contraste"
+        },
+        {
+          "anchor_topic_ids": [
+            "35.05-01"
+          ],
+          "objective": "gravedad",
+          "vignette": "Un adulto con falla renal tiene potasio confirmado de 7.0 mmol/L, pero el ECG inicial no presenta cambios.",
+          "question": "¿El ECG normal permite posponer el tratamiento?",
+          "answer": "No. La hiperpotasemia grave requiere manejo urgente.",
+          "discriminator": "potasio confirmado de 7.0 mmol/L",
+          "reason": "La ausencia de cambios eléctricos no elimina el riesgo.",
+          "initial_action": "Iniciar tratamiento para reducir potasio y monitorizar de forma continua.",
+          "limits": "El calcio se indica según cambios eléctricos y contexto de reanimación.",
+          "evidence": [
+            {
+              "source_id": "ukka-treat",
+              "locator": "Guideline 16.3.1: hiperpotasemia grave",
+              "support": "La ausencia de cambios eléctricos no elimina el riesgo."
+            }
+          ],
+          "id": "35.05-02-gravedad"
+        },
+        {
+          "anchor_topic_ids": [
+            "35.05-01"
+          ],
+          "objective": "mecanismo",
+          "vignette": "Un adulto recibió calcio por hiperpotasemia con cambios eléctricos. El QRS mejora, pero el potasio permanece elevado.",
+          "question": "¿Qué acción sigue siendo necesaria?",
+          "answer": "Reducir y eliminar potasio, además de vigilar recurrencia.",
+          "discriminator": "el potasio permanece elevado",
+          "reason": "La cardioprotección no elimina el exceso corporal.",
+          "initial_action": "Completar redistribución, eliminación y controles según protocolo.",
+          "limits": "La modalidad de eliminación depende de función renal y respuesta.",
+          "evidence": [
+            {
+              "source_id": "ukka-treat",
+              "locator": "Guidelines 16.1–16.6: cinco pasos",
+              "support": "La cardioprotección no elimina el exceso corporal."
+            }
+          ],
+          "id": "35.05-03-mecanismo"
+        },
+        {
+          "anchor_topic_ids": [
+            "35.05-01"
+          ],
+          "objective": "cambio",
+          "vignette": "Un adulto recibió insulina y glucosa por hiperpotasemia. Una hora después tiene sudoración y confusión.",
+          "question": "¿Qué medición inmediata cambia la conducta?",
+          "answer": "Glucosa capilar para detectar hipoglucemia.",
+          "discriminator": "recibió insulina y glucosa",
+          "reason": "El tratamiento puede causar hipoglucemia posterior.",
+          "initial_action": "Medir glucosa de inmediato y corregir si está baja.",
+          "limits": "Continuar vigilancia seriada de glucosa y potasio.",
+          "evidence": [
+            {
+              "source_id": "ukka-treat",
+              "locator": "Guideline 16.3.3 y rationale 16.1",
+              "support": "El tratamiento puede causar hipoglucemia posterior."
+            }
+          ],
+          "id": "35.05-04-cambio"
+        }
+      ]
+    },
+    {
+      "id": "35.06",
+      "title": "Hipocalcemia",
+      "related_sections": [],
+      "scenarios": [
+        {
+          "anchor_topic_ids": [
+            "35.06-01"
+          ],
+          "objective": "gravedad",
+          "vignette": "Una adulta con calcio ajustado bajo presenta estridor y espasmos después de cirugía tiroidea.",
+          "question": "¿Qué manifestación convierte el caso en una urgencia?",
+          "answer": "Posible laringoespasmo por hipocalcemia sintomática.",
+          "discriminator": "estridor y espasmos",
+          "reason": "La hipocalcemia puede comprometer la vía aérea.",
+          "initial_action": "Atender vía aérea y dar calcio intravenoso monitorizado con ayuda experta.",
+          "limits": "No retrasar estabilización para completar la etiología.",
+          "evidence": [
+            {
+              "source_id": "sfe-hypoca",
+              "locator": "Clinical presentation; Severe hypocalcaemia",
+              "support": "La hipocalcemia puede comprometer la vía aérea."
+            }
+          ],
+          "id": "35.06-01-gravedad"
+        },
+        {
+          "anchor_topic_ids": [
+            "35.06-02"
+          ],
+          "objective": "dato_faltante",
+          "vignette": "Un adulto con parestesias y calcio ajustado bajo tiene antecedente de diarrea prolongada. No se han medido PTH, vitamina D ni magnesio.",
+          "question": "¿Qué grupo de pruebas ayuda a identificar la causa?",
+          "answer": "PTH, magnesio, fosfato, vitamina D y función renal.",
+          "discriminator": "No se han medido PTH, vitamina D ni magnesio",
+          "reason": "Hay varias causas posibles y la clínica no demuestra una sola.",
+          "initial_action": "Obtener las pruebas y tratar la gravedad según síntomas.",
+          "limits": "La muestra debe interpretarse junto con calcio y tratamientos recibidos.",
+          "evidence": [
+            {
+              "source_id": "sfe-hypoca",
+              "locator": "Potential causes; Investigations",
+              "support": "Hay varias causas posibles y la clínica no demuestra una sola."
+            }
+          ],
+          "id": "35.06-02-dato_faltante"
+        },
+        {
+          "anchor_topic_ids": [
+            "35.06-01"
+          ],
+          "objective": "contraste",
+          "vignette": "Una adulta está asintomática después de cirugía tiroidea. El calcio ajustado es 2.05 mmol/L, estable en dos controles; el intervalo normal del laboratorio es 2.2–2.6 mmol/L.",
+          "question": "¿Requiere el mismo manejo inicial que una paciente con tetania?",
+          "answer": "No. Puede requerir reposición oral y seguimiento cercano.",
+          "discriminator": "asintomática",
+          "reason": "La gravedad depende de síntomas y magnitud del descenso.",
+          "initial_action": "Acordar reposición oral y nuevo control con el equipo tratante.",
+          "limits": "Esta vía corresponde al calcio ajustado mayor de 1.9 mmol/L sin síntomas. Si cae por debajo de 1.9 mmol/L o aparecen síntomas, requiere manejo urgente.",
+          "evidence": [
+            {
+              "source_id": "sfe-hypoca",
+              "locator": "Mild hypocalcaemia",
+              "support": "La gravedad depende de síntomas y magnitud del descenso."
+            },
+            {
+              "source_id": "sfe-hypoca-add2019",
+              "locator": "Severe hypocalcaemia",
+              "support": "El calcio menor de 1.9 mmol/L o los síntomas cambian la conducta a manejo urgente."
+            }
+          ],
+          "id": "35.06-03-contraste"
+        },
+        {
+          "anchor_topic_ids": [
+            "35.06-02"
+          ],
+          "objective": "cambio",
+          "vignette": "Un adulto con hipocalcemia sintomática recibe calcio. Se detecta además magnesio bajo tras tratamiento prolongado con PPI.",
+          "question": "¿Qué hallazgo cambia el tratamiento causal?",
+          "answer": "La hipomagnesemia asociada.",
+          "discriminator": "magnesio bajo",
+          "reason": "El déficit de magnesio puede contribuir a la hipocalcemia.",
+          "initial_action": "Corregir magnesio y revisar el fármaco, además de atender el calcio.",
+          "limits": "La reposición requiere ajustar a función renal y vigilancia.",
+          "evidence": [
+            {
+              "source_id": "sfe-hypoca",
+              "locator": "Potential causes; Management: hypomagnesaemia-related",
+              "support": "El déficit de magnesio puede contribuir a la hipocalcemia."
+            }
+          ],
+          "id": "35.06-04-cambio"
+        }
+      ]
+    },
+    {
+      "id": "35.07",
+      "title": "Hipercalcemia",
+      "related_sections": [],
+      "scenarios": [
+        {
+          "anchor_topic_ids": [
+            "35.07-01"
+          ],
+          "objective": "subtipo",
+          "vignette": "Un adulto con hipercalcemia confirmada tiene PTH elevada y litiasis recurrente. No tiene enfermedad renal avanzada.",
+          "question": "¿Qué mecanismo orienta la PTH?",
+          "answer": "Hipercalcemia dependiente de PTH, compatible con hiperparatiroidismo primario.",
+          "discriminator": "PTH elevada",
+          "reason": "Una PTH alta con calcio alto orienta a mecanismo paratiroideo.",
+          "initial_action": "Referir a evaluación endocrina y completar estudio.",
+          "limits": "Excluir causas familiares y farmacológicas antes de definir cirugía.",
+          "evidence": [
+            {
+              "source_id": "sfe-hyperca",
+              "locator": "Investigation, Bloods; advertencia sobre hipercalcemia hipocalciúrica familiar",
+              "support": "Una PTH alta con calcio alto orienta a mecanismo paratiroideo."
+            }
+          ],
+          "id": "35.07-01-subtipo"
+        },
+        {
+          "anchor_topic_ids": [
+            "35.07-01"
+          ],
+          "objective": "contraste",
+          "vignette": "Una adulta con hipercalcemia, pérdida de peso y PTH suprimida consulta para confirmar adenoma paratiroideo.",
+          "question": "¿La PTH respalda ese diagnóstico?",
+          "answer": "No. Orienta a una causa independiente de PTH.",
+          "discriminator": "PTH suprimida",
+          "reason": "La supresión hace menos probable hiperparatiroidismo primario.",
+          "initial_action": "Investigar malignidad y otras causas según clínica.",
+          "limits": "La PTH baja no confirma por sí sola cáncer.",
+          "evidence": [
+            {
+              "source_id": "sfe-hyperca",
+              "locator": "Investigation, Bloods: calcio alto y PTH baja",
+              "support": "La supresión hace menos probable hiperparatiroidismo primario."
+            }
+          ],
+          "id": "35.07-02-contraste"
+        },
+        {
+          "anchor_topic_ids": [
+            "35.07-02"
+          ],
+          "objective": "gravedad",
+          "vignette": "El equipo confirmó hipercalcemia por neoplasia en un adulto con calcio 3.7 mmol/L, confusión y deshidratación. Ya se inició hidratación monitorizada.",
+          "question": "¿Qué tratamiento específico debe valorar el equipo además de hidratación?",
+          "answer": "Antirresortivo y calcitonina como tratamiento inicial de hipercalcemia maligna grave.",
+          "discriminator": "calcio 3.7 mmol/L, confusión",
+          "reason": "La hipercalcemia maligna grave requiere reducción rápida y sostenida del calcio.",
+          "initial_action": "Solicitar manejo especializado para seleccionar fármacos y vigilar función renal.",
+          "limits": "La recomendación es para hipercalcemia por malignidad confirmada. Limitar calcitonina a 48–72 horas por taquifilaxia; el antirresortivo se selecciona según función renal y contexto.",
+          "evidence": [
+            {
+              "source_id": "endo-hcm",
+              "locator": "Recommendations 1–3; Recommendation 3, Remark sobre calcitonina 48–72 horas",
+              "support": "La hipercalcemia maligna grave requiere reducción rápida y sostenida del calcio."
+            }
+          ],
+          "id": "35.07-03-gravedad"
+        },
+        {
+          "anchor_topic_ids": [
+            "35.07-02"
+          ],
+          "objective": "cambio",
+          "vignette": "Un adulto con hipercalcemia sintomática y falla cardíaca presenta estertores durante hidratación intravenosa.",
+          "question": "¿Qué dato exige ajustar el plan?",
+          "answer": "Posible sobrecarga de líquidos.",
+          "discriminator": "estertores durante hidratación intravenosa",
+          "reason": "La rehidratación puede causar congestión en pacientes vulnerables.",
+          "initial_action": "Reevaluar perfusión y congestión y ajustar líquidos con supervisión.",
+          "limits": "Los diuréticos no se indican de rutina solo para bajar calcio.",
+          "evidence": [
+            {
+              "source_id": "sfe-hyperca",
+              "locator": "Management, Rehydration: sobrecarga y diuréticos",
+              "support": "La rehidratación puede causar congestión en pacientes vulnerables."
+            }
+          ],
+          "id": "35.07-04-cambio"
+        }
+      ]
+    },
+    {
+      "id": "35.08",
+      "title": "Magnesio",
+      "related_sections": [],
+      "scenarios": [
+        {
+          "anchor_topic_ids": [
+            "35.08-01"
+          ],
+          "objective": "subtipo",
+          "vignette": "Un adulto con diarrea y magnesio muy bajo presenta una arritmia y calambres intensos.",
+          "question": "¿Qué prioridad corresponde?",
+          "answer": "Corrección hospitalaria supervisada del déficit y vigilancia cardíaca.",
+          "discriminator": "presenta una arritmia",
+          "reason": "El déficit de magnesio puede tener manifestaciones cardíacas graves.",
+          "initial_action": "Monitorizar ECG y seleccionar reposición según gravedad y función renal.",
+          "limits": "Comprobar potasio y calcio asociados.",
+          "evidence": [
+            {
+              "source_id": "aaa-mg",
+              "locator": "Additional information: arritmias y déficits asociados",
+              "support": "El déficit de magnesio puede tener manifestaciones cardíacas graves."
+            }
+          ],
+          "id": "35.08-01-subtipo"
+        },
+        {
+          "anchor_topic_ids": [
+            "35.08-01"
+          ],
+          "objective": "dato_faltante",
+          "vignette": "Una adulta con debilidad usa diurético de asa y tiene calcio y potasio bajos. El magnesio no aparece en la química solicitada.",
+          "question": "¿Qué prueba adicional es útil?",
+          "answer": "Magnesio sérico.",
+          "discriminator": "El magnesio no aparece en la química solicitada",
+          "reason": "La depleción por medicamentos puede acompañar ambos déficits.",
+          "initial_action": "Medir magnesio y revisar función renal y tratamiento.",
+          "limits": "Un resultado normal no cuantifica todas las reservas corporales.",
+          "evidence": [
+            {
+              "source_id": "aaa-mg",
+              "locator": "Additional information: medicamentos y electrolitos coexistentes",
+              "support": "La depleción por medicamentos puede acompañar ambos déficits."
+            }
+          ],
+          "id": "35.08-02-dato_faltante"
+        },
+        {
+          "anchor_topic_ids": [
+            "35.08-02"
+          ],
+          "objective": "contraste",
+          "vignette": "Una adulta con función renal conservada toma dosis altas de un suplemento de magnesio. Presenta diarrea acuosa, sin hipotensión ni debilidad, y magnesio sérico normal.",
+          "question": "¿El magnesio sérico normal excluye que el suplemento cause la diarrea?",
+          "answer": "No. El magnesio no absorbido puede causar diarrea osmótica sin toxicidad sistémica.",
+          "discriminator": "diarrea acuosa",
+          "reason": "Las sales de magnesio no absorbidas atraen agua al intestino; ese efecto no requiere hipermagnesemia.",
+          "initial_action": "Revisar y suspender el aporte excesivo, valorar hidratación y buscar otras causas según evolución.",
+          "limits": "Fiebre, sangrado, deshidratación o persistencia requieren evaluar otras causas. No atribuir toda diarrea al suplemento.",
+          "evidence": [
+            {
+              "source_id": "nih-mg",
+              "locator": "Health Risks from Excessive Magnesium",
+              "support": "Las dosis altas de suplementos pueden causar diarrea por actividad osmótica de sales no absorbidas."
+            }
+          ],
+          "id": "35.08-03-contraste"
+        },
+        {
+          "anchor_topic_ids": [
+            "35.08-02"
+          ],
+          "objective": "cambio",
+          "vignette": "Un adulto recibe reposición por magnesio bajo. Desarrolla lesión renal aguda antes de la siguiente dosis programada.",
+          "question": "¿Qué debe cambiar antes de repetir la dosis?",
+          "answer": "Reevaluar la necesidad y ajustar la reposición a función renal.",
+          "discriminator": "Desarrolla lesión renal aguda",
+          "reason": "La excreción reducida aumenta el riesgo de acumulación.",
+          "initial_action": "Revisar magnesio y función renal y consultar al equipo tratante.",
+          "limits": "No continuar una pauta fija sin reevaluación.",
+          "evidence": [
+            {
+              "source_id": "aaa-mg",
+              "locator": "Adults with renal impairment",
+              "support": "La excreción reducida aumenta el riesgo de acumulación."
+            }
+          ],
+          "id": "35.08-04-cambio"
+        }
+      ]
+    },
+    {
+      "id": "35.09",
+      "title": "Fosfato y realimentación",
+      "related_sections": [],
+      "scenarios": [
+        {
+          "anchor_topic_ids": [
+            "35.09-01"
+          ],
+          "objective": "dato_faltante",
+          "vignette": "Un adulto con ingesta mínima por dos semanas iniciará alimentación. Se conoce sodio y creatinina, pero no fosfato, potasio ni magnesio.",
+          "question": "¿Qué datos basales faltan?",
+          "answer": "Fosfato, potasio, magnesio y evaluación nutricional.",
+          "discriminator": "no fosfato, potasio ni magnesio",
+          "reason": "El riesgo de realimentación requiere vigilancia de varios electrolitos.",
+          "initial_action": "Obtener controles y planificar aporte gradual con tiamina.",
+          "limits": "No retrasar la valoración nutricional por un resultado aislado.",
+          "evidence": [
+            {
+              "source_id": "fhft-refeed",
+              "locator": "Management steps 1–4",
+              "support": "El riesgo de realimentación requiere vigilancia de varios electrolitos."
+            }
+          ],
+          "id": "35.09-01-dato_faltante"
+        },
+        {
+          "anchor_topic_ids": [
+            "35.09-02"
+          ],
+          "objective": "contraste",
+          "vignette": "Un adulto estable tiene fosfato 0.45 mmol/L después de cirugía. Debe permanecer en ayuno y no puede recibir medicamentos por vía enteral; no está bajo un plan de realimentación.",
+          "question": "¿Qué dato puede justificar reposición intravenosa aunque el descenso no sea profundo?",
+          "answer": "La imposibilidad de usar la vía enteral.",
+          "discriminator": "no puede recibir medicamentos por vía enteral",
+          "reason": "En hipofosfatemia moderada, la vía oral suele bastar, pero el ayuno puede cambiar la vía de reposición.",
+          "initial_action": "Valorar reposición intravenosa monitorizada y ajustar a función renal y controles de fosfato, calcio, potasio y magnesio.",
+          "limits": "No usar este caso para definir dosis. La guía es para adultos fuera de nutrición enteral o manejo por el equipo de nutrición.",
+          "evidence": [
+            {
+              "source_id": "aaa-phos",
+              "locator": "Moderate Hypophosphataemia; Notes",
+              "support": "Con fosfato 0.3–0.5 mmol/L, el ayuno o la mala absorción permiten considerar reposición intravenosa."
+            }
+          ],
+          "id": "35.09-02-contraste"
+        },
+        {
+          "anchor_topic_ids": [
+            "35.09-02"
+          ],
+          "objective": "cambio",
+          "vignette": "Un adulto con hipofosfatemia moderada está estable y tolera vía oral. Tras la reposición desarrolla diarrea importante.",
+          "question": "¿Qué efecto obliga a reevaluar la vía y la pauta?",
+          "answer": "La intolerancia gastrointestinal al fosfato oral.",
+          "discriminator": "desarrolla diarrea importante",
+          "reason": "La diarrea puede limitar la reposición y producir más pérdidas.",
+          "initial_action": "Revisar reposición, hidratación y electrolitos con el equipo.",
+          "limits": "La vía intravenosa requiere indicación, función renal y vigilancia.",
+          "evidence": [
+            {
+              "source_id": "aaa-phos",
+              "locator": "Moderate Hypophosphataemia; Notes: diarrea",
+              "support": "La diarrea puede limitar la reposición y producir más pérdidas."
+            }
+          ],
+          "id": "35.09-03-cambio"
+        },
+        {
+          "anchor_topic_ids": [
+            "35.09-01"
+          ],
+          "objective": "contraste",
+          "vignette": "Un adulto desnutrido permanece en ayuno, sin alimentación oral ni enteral. Recibe glucosa intravenosa y después descienden fosfato, potasio y magnesio.",
+          "question": "¿La ausencia de alimentación oral o enteral excluye cambios por realimentación?",
+          "answer": "No. La glucosa intravenosa también aporta carbohidratos y puede agravar los cambios metabólicos.",
+          "discriminator": "Recibe glucosa intravenosa",
+          "reason": "La exposición a carbohidratos y el riesgo metabólico importan más que la vía de aporte.",
+          "initial_action": "Revisar todos los aportes de glucosa, evitar aportes adicionales innecesarios y coordinar tiamina, electrolitos y vigilancia con el equipo de nutrición.",
+          "limits": "No retirar glucosa necesaria para tratar hipoglucemia sin una alternativa segura. Evaluar otras causas de los descensos y ajustar según función renal.",
+          "evidence": [
+            {
+              "source_id": "fhft-refeed",
+              "locator": "Introduction; Management steps 1–3, en especial Step 3: IV glucose/dextrose",
+              "support": "La guía incluye nutrición parenteral y advierte evitar glucosa intravenosa adicional porque puede agravar el síndrome."
+            }
+          ],
+          "id": "35.09-04-contraste"
+        }
+      ]
+    },
+    {
+      "id": "35.10",
+      "title": "Problemas combinados",
+      "related_sections": [],
+      "scenarios": [
+        {
+          "anchor_topic_ids": [
+            "35.10-01"
+          ],
+          "objective": "gravedad",
+          "vignette": "Un adulto desnutrido inicia nutrición y desarrolla taquicardia, disnea y descenso simultáneo de tres electrolitos. Su balance de líquidos es positivo.",
+          "question": "¿Qué prioridad integra mejor el caso?",
+          "answer": "Evaluación cardiorrespiratoria y del balance junto a corrección electrolítica y nutricional.",
+          "discriminator": "disnea y descenso simultáneo de tres electrolitos",
+          "reason": "El síndrome puede afectar varios órganos y el balance hídrico.",
+          "initial_action": "Escalar atención y coordinar nutrición, electrolitos y vigilancia.",
+          "limits": "No reducir el problema a corregir fosfato aislado.",
+          "evidence": [
+            {
+              "source_id": "fhft-refeed",
+              "locator": "Identification; Management",
+              "support": "El síndrome puede afectar varios órganos y el balance hídrico."
+            }
+          ],
+          "id": "35.10-01-gravedad"
+        },
+        {
+          "anchor_topic_ids": [
+            "35.10-02"
+          ],
+          "objective": "cambio",
+          "vignette": "Una adulta con hiponatremia crónica e hipopotasemia recibe reposición de potasio. La solución hipertónica ya se suspendió, pero el sodio continúa aumentando.",
+          "question": "¿Debe contarse la reposición de potasio al vigilar la corrección del sodio?",
+          "answer": "Sí. Corregir potasio también puede aumentar el sodio sérico.",
+          "discriminator": "recibe reposición de potasio",
+          "reason": "El plan de corrección debe considerar el efecto del potasio además del sodio administrado.",
+          "initial_action": "Revisar la velocidad total de cambio del sodio, los aportes y la diuresis con controles frecuentes y apoyo experto.",
+          "limits": "No suspender sin más la corrección de una hipopotasemia peligrosa; ajustar ambos trastornos y evitar sobrecorrección.",
+          "evidence": [
+            {
+              "source_id": "euro-hypona2014",
+              "locator": "Sección 7.1, Advice for clinical practice, p. G28",
+              "support": "La guía advierte que corregir hipopotasemia contribuye al aumento del sodio sérico."
+            }
+          ],
+          "id": "35.10-02-cambio"
+        },
+        {
+          "anchor_topic_ids": [
+            "35.10-01"
+          ],
+          "objective": "contraste",
+          "vignette": "Un adulto con falla renal tiene potasio elevado y fosfato elevado tras deterioro agudo. No ha reiniciado alimentación ni presenta pérdidas digestivas.",
+          "question": "¿Es adecuado dar un suplemento combinado de electrolitos por debilidad?",
+          "answer": "No. Las concentraciones elevadas exigen evaluación individual y evitar aportes ciegos.",
+          "discriminator": "potasio elevado y fosfato elevado",
+          "reason": "La insuficiencia renal cambia la seguridad de la reposición.",
+          "initial_action": "Revisar ECG, función renal, aportes y necesidad de atención nefrológica.",
+          "limits": "Los síntomas inespecíficos no indican por sí solos déficit.",
+          "evidence": [
+            {
+              "source_id": "ukka-treat",
+              "locator": "Guideline 16.1: valorar causa, eliminar potasio y prevenir recurrencia",
+              "support": "La insuficiencia renal cambia la seguridad de la reposición."
+            }
+          ],
+          "id": "35.10-03-contraste"
+        },
+        {
+          "anchor_topic_ids": [
+            "35.10-02"
+          ],
+          "objective": "mecanismo",
+          "vignette": "Un adulto con hipocalcemia e hipopotasemia tiene magnesio bajo. Recibió varios aportes de calcio y potasio sin resolver el conjunto.",
+          "question": "¿Qué alteración permite integrar el problema?",
+          "answer": "Déficit de magnesio asociado a los otros dos trastornos.",
+          "discriminator": "magnesio bajo",
+          "reason": "La evaluación conjunta evita reponer solo los electrolitos secundarios.",
+          "initial_action": "Corregir magnesio y sus causas y vigilar los tres electrolitos.",
+          "limits": "Ajustar reposición a función renal y manifestaciones clínicas.",
+          "evidence": [
+            {
+              "source_id": "aaa-mg",
+              "locator": "Additional information: déficits coexistentes y causas",
+              "support": "La evaluación conjunta evita reponer solo los electrolitos secundarios."
+            },
+            {
+              "source_id": "nih-mg",
+              "locator": "Magnesium Deficiency",
+              "support": "La deficiencia grave de magnesio puede causar hipocalcemia e hipopotasemia por alteración de la homeostasis mineral."
+            }
+          ],
+          "id": "35.10-04-mecanismo"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,556 @@
+{
+  "schema_version": 1,
+  "layer": 2,
+  "section_id": "02",
+  "title": "Angiología",
+  "author": "clinical-author-01-12",
+  "sources": [
+    {
+      "id": "ash-dx-2018",
+      "label": "ASH: diagnóstico de tromboembolia venosa",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6258916/",
+      "version": "2018-11-27",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Recomendaciones 1–10: probabilidad previa, dímero D, imagen y ecografía seriada"
+    },
+    {
+      "id": "ash-pregnancy-2018",
+      "label": "ASH: tromboembolia venosa en el embarazo",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6258928/",
+      "version": "2018-11-27",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Recomendaciones1–2,12–13,30–31: embarazo, lactancia y diagnóstico"
+    },
+    {
+      "id": "ash-tx-2020",
+      "label": "ASH: tratamiento de TVP y embolia pulmonar",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7556153/",
+      "version": "2020-10-02",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Recomendaciones5–7,23,27–28: trombólisis, recurrencia con AVK terapéutico y compresión"
+    },
+    {
+      "id": "imss-venous-2009",
+      "label": "IMSS: insuficiencia venosa crónica, GRR",
+      "url": "https://www.imss.gob.mx/sites/all/statics/guiasclinicas/175GRR.pdf",
+      "version": "2009",
+      "checked_at": "2026-11-06",
+      "region": "mexico",
+      "access": "checked",
+      "locator": "Diagnóstico clínico, ultrasonografía y compresión"
+    },
+    {
+      "id": "imss-vte-2018",
+      "label": "IMSS: enfermedad tromboembólica venosa, GRR",
+      "url": "https://www.imss.gob.mx/sites/all/statics/guiasclinicas/425GRR.pdf",
+      "version": "2018",
+      "checked_at": "2026-11-06",
+      "region": "mexico",
+      "access": "checked",
+      "locator": "Diagnóstico de TVP y TEP; modelos de probabilidad clínica"
+    },
+    {
+      "id": "iwgdf-idsa-2023",
+      "label": "IWGDF/IDSA: infección del pie relacionada con diabetes",
+      "url": "https://www.idsociety.org/practice-guideline/diabetic-foot-infections/",
+      "version": "2023",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Recomendaciones3,7–11,18–22: infección, muestra ósea y selección sin cirugía"
+    },
+    {
+      "id": "pad-2024",
+      "label": "ACC/AHA y sociedades: enfermedad arterial periférica de extremidades inferiores",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12782132/",
+      "version": "2024",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "§§3.1, 8, 10–11: diagnóstico, heridas e isquemia aguda"
+    },
+    {
+      "id": "whs-2023",
+      "label": "Wound Healing Society: tratamiento de lesiones por presión",
+      "url": "https://onlinelibrary.wiley.com/doi/10.1111/wrr.13130",
+      "version": "Actualización 2023; publicación 2024",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Recomendaciones 3.9 y 6.3: escara estable de talón y antibióticos sistémicos"
+    },
+    {
+      "id": "ash-dx-teaching",
+      "label": "ASH: material docente oficial de diagnóstico de tromboembolia venosa",
+      "url": "https://edge.sitecorecloud.io/americansocea2e-hematology76c5-prod2c48-3de5/media/Project/ash/hematology/PDFs/ASH-Teaching-Slide-SetVTEDiagnosisPDFFINAL71923.pdf",
+      "version": "Basado en guía2018; recurso docente disponible en portal ASH, sin fecha editorial visible",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Diapositivas10,36–40,42: reglas por territorio y hallazgos residuales en recurrencia"
+    },
+    {
+      "id": "pad-slides-2024",
+      "label": "ACC/AHA: resumen oficial en diapositivas de la guía de enfermedad arterial periférica",
+      "url": "https://professional.heart.org/-/media/PHD-Files-2/Science-News/2/2024/2024-PAD-guideline-slide-set.pdf",
+      "version": "2024; resumen oficial de recomendaciones, no texto completo",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Medications for Leg Symptoms in Chronic Symptomatic PAD, recomendación3: cilostazol e insuficiencia cardíaca"
+    },
+    {
+      "id": "iwgdf-offload-2023",
+      "label": "IWGDF: descarga de úlceras del pie en personas con diabetes",
+      "url": "https://iwgdfguidelines.org/wp-content/uploads/2023/07/IWGDF-2023-06-Offloading-Guideline.pdf",
+      "version": "Actualización2023",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Recomendaciones1a–1b,2,7–9: dispositivo, tolerancia, infección e isquemia"
+    }
+  ],
+  "mexico_source_note": "Se abrieron IMSS-425-18 (actualización 2018), IMSS-175-09 (2009) e IMSS-104-08 (lesiones por presión, actualización 2015). No se encontró en el catálogo una actualización mexicana que sustituyera estas versiones. Se usan ASH, ACC/AHA, IWGDF/IDSA y WHS para decisiones posteriores; verificar disponibilidad local de imagen y cirugía vascular.",
+  "blocks": [
+    {
+      "id": "02.01",
+      "title": "Pierna dolorosa al caminar",
+      "related_sections": [],
+      "scenarios": [
+        {
+          "id": "02.01-c2-01",
+          "anchor_topic_ids": [
+            "02.01-01"
+          ],
+          "objective": "dato_faltante",
+          "vignette": "Un adulto con diabetes tiene dolor de pantorrilla al caminar y pulsos débiles. El índice tobillo-brazo es informado como no compresible.",
+          "question": "¿Qué prueba fisiológica ayuda a aclararlo?",
+          "answer": "Presión digital o índice dedo-brazo con ondas.",
+          "discriminator": "no compresible",
+          "reason": "La calcificación puede elevar el índice sin excluir enfermedad arterial.",
+          "initial_action": "Solicitar evaluación vascular fisiológica digital.",
+          "limits": "El índice aislado no estima toda la perfusión de una herida.",
+          "evidence": [
+            {
+              "source_id": "pad-2024",
+              "locator": "§3.1: ejercicio y pruebas fisiológicas adicionales",
+              "support": "La calcificación puede elevar el índice sin excluir enfermedad arterial."
+            }
+          ]
+        },
+        {
+          "id": "02.01-c2-02",
+          "anchor_topic_ids": [
+            "02.01-02"
+          ],
+          "objective": "incompleta",
+          "vignette": "Una persona presenta edema vespertino, varices y pigmentación maleolar. También tiene pie frío y pulsos muy débiles.",
+          "question": "¿Qué debe comprobarse antes de indicar compresión fuerte?",
+          "answer": "La perfusión arterial.",
+          "discriminator": "pie frío y pulsos muy débiles",
+          "reason": "Puede coexistir enfermedad venosa y arterial.",
+          "initial_action": "Medir perfusión y solicitar valoración vascular.",
+          "limits": "No asumir que toda úlcera con pigmentación es exclusivamente venosa.",
+          "evidence": [
+            {
+              "source_id": "imss-venous-2009",
+              "locator": "Diagnóstico y contraindicaciones de compresión",
+              "support": "Puede coexistir enfermedad venosa y arterial."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "02.02",
+      "title": "Dolor y edema unilateral",
+      "related_sections": [],
+      "scenarios": [
+        {
+          "id": "02.02-c2-01",
+          "anchor_topic_ids": [
+            "02.02-01"
+          ],
+          "objective": "cambio",
+          "vignette": "Un paciente con edema unilateral tiene alta probabilidad clínica de TVP. La primera ecografía proximal es negativa y no hay diagnóstico alternativo.",
+          "question": "¿Puede cerrarse el estudio?",
+          "answer": "No. Se necesita evaluación adicional, generalmente ecografía seriada.",
+          "discriminator": "alta probabilidad clínica",
+          "reason": "Una ecografía proximal negativa no basta en esta probabilidad previa.",
+          "initial_action": "Organizar ecografía de seguimiento o estudio completo según protocolo.",
+          "limits": "Distinguir ecografía proximal de estudio de toda la extremidad.",
+          "evidence": [
+            {
+              "source_id": "ash-dx-2018",
+              "locator": "Recomendación 7a",
+              "support": "Una ecografía proximal negativa no basta en esta probabilidad previa."
+            }
+          ]
+        },
+        {
+          "id": "02.02-c2-02",
+          "anchor_topic_ids": [
+            "02.02-02"
+          ],
+          "objective": "contraste",
+          "vignette": "Un adulto con catéter venoso central presenta dolor localizado y edema unilateral del brazo. Un médico propone calcular Wells de pierna para decidir si es probable una trombosis del miembro superior.",
+          "question": "¿Qué regla corresponde al territorio del brazo?",
+          "answer": "Constans, junto con valoración clínica; Wells de pierna no es intercambiable.",
+          "discriminator": "Wells de pierna",
+          "reason": "Las reglas diagnósticas se validan en poblaciones y territorios específicos.",
+          "initial_action": "Estimar probabilidad con criterios de miembro superior y seleccionar dímeroD o dúplex según el algoritmo.",
+          "limits": "Una puntuación no confirma trombosis; el catéter es un factor de riesgo, no una prueba diagnóstica.",
+          "evidence": [
+            {
+              "source_id": "ash-dx-teaching",
+              "locator": "Diapositivas10 y42: Constans para TVP de miembro superior",
+              "support": "ASH separa Constans para brazo y Wells para pierna e incluye material venoso, dolor y edema en Constans."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "02.03",
+      "title": "TVP que emboliza",
+      "related_sections": [],
+      "scenarios": [
+        {
+          "id": "02.03-c2-01",
+          "anchor_topic_ids": [
+            "02.03-01"
+          ],
+          "objective": "incompleta",
+          "vignette": "Un adulto con TVP tratada vuelve por molestia en la misma pierna. El ultrasonido muestra un segmento parcialmente no compresible, sin cambios respecto al estudio previo ni nuevos segmentos afectados.",
+          "question": "¿El residuo ecográfico demuestra por sí solo una recurrencia?",
+          "answer": "No. Debe interpretarse comparándolo con la imagen previa.",
+          "discriminator": "sin cambios respecto al estudio previo",
+          "reason": "Los cambios residuales de una trombosis anterior pueden persistir sin representar un evento nuevo.",
+          "initial_action": "Comparar estudios, reevaluar probabilidad y buscar otras causas antes de escalar tratamiento por ese hallazgo aislado.",
+          "limits": "Los síntomas nuevos aún requieren evaluación; este resultado no excluye todas las causas de dolor ni toda recurrencia.",
+          "evidence": [
+            {
+              "source_id": "ash-dx-teaching",
+              "locator": "Diapositivas36–40: sospecha de TVP recurrente y comparación de estudios",
+              "support": "La comparación permite distinguir hallazgos antiguos de cambios nuevos compatibles con recurrencia."
+            }
+          ]
+        },
+        {
+          "id": "02.03-c2-02",
+          "anchor_topic_ids": [
+            "02.03-02"
+          ],
+          "objective": "cambio",
+          "vignette": "Un adulto tiene un TEP nuevo confirmado durante tratamiento con warfarina. La revisión documenta buena adherencia e INR terapéutico sostenido. Permanece normotenso y sin datos de choque.",
+          "question": "¿Qué cambia este evento respecto al tratamiento habitual sin recurrencia?",
+          "answer": "Requiere investigar el fallo terapéutico y valorar HBPM con un equipo experto.",
+          "discriminator": "INR terapéutico sostenido",
+          "reason": "La recurrencia durante anticoagulación eficaz exige revisar causas y cambiar la estrategia, no asumir una dosis omitida.",
+          "initial_action": "Confirmar el evento nuevo, revisar interacciones y causas subyacentes y valorar transición a HBPM.",
+          "limits": "ASH sugiere HBPM sobre un anticoagulante oral directo en este contexto con certeza muy baja; la recomendación no se aplica igual a INR mal controlado.",
+          "evidence": [
+            {
+              "source_id": "ash-tx-2020",
+              "locator": "Recomendación23 y Remarks",
+              "support": "Ante TVP/TEP durante AVK terapéutico, se sugiere HBPM y se exige investigar causas; se distingue del mal control del INR."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "02.04",
+      "title": "TEP: algoritmo completo",
+      "related_sections": [],
+      "scenarios": [
+        {
+          "id": "02.04-c2-01",
+          "anchor_topic_ids": [
+            "02.04-01"
+          ],
+          "objective": "contraste",
+          "vignette": "Un TEP confirmado produce dilatación ventricular derecha y troponina elevada. El paciente permanece normotenso y bien perfundido.",
+          "question": "¿Requiere trombólisis de rutina?",
+          "answer": "No. Anticoagulación y vigilancia estrecha.",
+          "discriminator": "normotenso y bien perfundido",
+          "reason": "La lesión ventricular sin compromiso hemodinámico no exige trombólisis rutinaria.",
+          "initial_action": "Anticoagular si no hay contraindicación y vigilar deterioro.",
+          "limits": "Casos seleccionados requieren decisión especializada según riesgo de sangrado.",
+          "evidence": [
+            {
+              "source_id": "ash-tx-2020",
+              "locator": "Recomendación 7",
+              "support": "La lesión ventricular sin compromiso hemodinámico no exige trombólisis rutinaria."
+            }
+          ]
+        },
+        {
+          "id": "02.04-c2-02",
+          "anchor_topic_ids": [
+            "02.04-01"
+          ],
+          "objective": "incompleta",
+          "vignette": "Una persona con baja probabilidad clínica de TEP tiene dímero D positivo. No se ha realizado imagen.",
+          "question": "¿El resultado confirma TEP?",
+          "answer": "No. Se requiere una prueba de imagen apropiada.",
+          "discriminator": "dímero D positivo",
+          "reason": "El dímero D positivo tiene baja especificidad.",
+          "initial_action": "Elegir angio-TC o gammagrafía según contexto y disponibilidad.",
+          "limits": "La interpretación exige conocer ensayo, probabilidad clínica y calidad de la muestra.",
+          "evidence": [
+            {
+              "source_id": "ash-dx-2018",
+              "locator": "Recomendación 1b",
+              "support": "El dímero D positivo tiene baja especificidad."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "02.05",
+      "title": "Embarazo con sospecha trombótica",
+      "related_sections": [],
+      "scenarios": [
+        {
+          "id": "02.05-c2-01",
+          "anchor_topic_ids": [
+            "02.05-01"
+          ],
+          "objective": "dato_faltante",
+          "vignette": "Una embarazada tiene dolor y edema de toda la pierna izquierda. La ecografía inicial, incluidas las venas ilíacas, no muestra trombo. Los síntomas persisten.",
+          "question": "¿Qué sigue si continúa la sospecha?",
+          "answer": "Ecografía seriada o venografía por resonancia.",
+          "discriminator": "Los síntomas persisten",
+          "reason": "Un estudio inicial negativo no excluye TVP en embarazo con sospecha persistente.",
+          "initial_action": "Coordinar imagen adicional con obstetricia y el equipo tratante.",
+          "limits": "No aplicar sin validación una regla diagnóstica de adultos no gestantes.",
+          "evidence": [
+            {
+              "source_id": "ash-pregnancy-2018",
+              "locator": "Recomendación 31",
+              "support": "Un estudio inicial negativo no excluye TVP en embarazo con sospecha persistente."
+            }
+          ]
+        },
+        {
+          "id": "02.05-c2-02",
+          "anchor_topic_ids": [
+            "02.05-01"
+          ],
+          "objective": "cambio",
+          "vignette": "Una mujer con TVP reciente continúa anticoagulación después del parto. Está amamantando y solicita apixabán porque prefiere una opción oral. No tiene sangrado activo.",
+          "question": "¿La comodidad justifica elegir apixabán durante lactancia?",
+          "answer": "No. Elegir una opción con respaldo para lactancia, como HBPM o warfarina.",
+          "discriminator": "Está amamantando",
+          "reason": "La seguridad en embarazo no se traslada sin más a lactancia; warfarina puede ser una opción en esta última.",
+          "initial_action": "Revisar indicación y escoger anticoagulante compatible con lactancia y seguimiento individual.",
+          "limits": "ASH recomienda evitar anticoagulantes orales directos en lactancia con evidencia limitada; no suspender anticoagulación necesaria sin un plan.",
+          "evidence": [
+            {
+              "source_id": "ash-pregnancy-2018",
+              "locator": "Recomendaciones12–13 y Anticoagulant use in breastfeeding women",
+              "support": "ASH incluye HBPM y warfarina entre opciones seguras y desaconseja anticoagulantes orales directos durante lactancia."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "02.06",
+      "title": "Pie con lesión o dolor",
+      "related_sections": [],
+      "scenarios": [
+        {
+          "id": "02.06-c2-01",
+          "anchor_topic_ids": [
+            "02.06-01"
+          ],
+          "objective": "dato_faltante",
+          "vignette": "Un adulto con diabetes tiene hallazgos clínicos y resonancia compatibles con osteomielitis del pie. Un hisopo de la superficie de la úlcera cultivó varias bacterias. Está estable, sin sepsis.",
+          "question": "¿El hisopo superficial identifica de forma fiable el patógeno del hueso?",
+          "answer": "No. Considerar cultivo de una muestra ósea obtenida de forma aséptica.",
+          "discriminator": "hisopo de la superficie",
+          "reason": "Los microorganismos de la superficie pueden no corresponder a los del hueso.",
+          "initial_action": "Coordinar toma ósea percutánea o intraoperatoria según contexto para orientar el tratamiento.",
+          "limits": "La obtención depende de experiencia y viabilidad; no retrasar control de una infección grave por esperar una muestra.",
+          "evidence": [
+            {
+              "source_id": "iwgdf-idsa-2023",
+              "locator": "Recomendación10 y Rationale: bone versus soft-tissue samples",
+              "support": "La guía prefiere muestras de hueso para cultivo ante sospecha de osteomielitis y describe baja concordancia con muestras no óseas."
+            }
+          ]
+        },
+        {
+          "id": "02.06-c2-02",
+          "anchor_topic_ids": [
+            "02.06-01"
+          ],
+          "objective": "subtipo",
+          "vignette": "Un adulto tiene osteomielitis limitada al antepié confirmada por el equipo. Está estable, no necesita drenaje inmediato, no tiene enfermedad arterial periférica y el hueso no está expuesto.",
+          "question": "¿La osteomielitis obliga siempre a resección ósea inmediata?",
+          "answer": "No. En este contexto puede considerarse tratamiento antibiótico sin cirugía.",
+          "discriminator": "no necesita drenaje inmediato",
+          "reason": "La localización y la ausencia de isquemia, hueso expuesto y necesidad de drenaje permiten seleccionar manejo conservador.",
+          "initial_action": "Valorar tratamiento dirigido y seguimiento cercano con el equipo de pie diabético.",
+          "limits": "Es una recomendación condicional de evidencia baja; no extenderla a absceso, isquemia o infección que requiere control urgente del foco.",
+          "evidence": [
+            {
+              "source_id": "iwgdf-idsa-2023",
+              "locator": "Recomendación22 y Rationale",
+              "support": "Se puede considerar antibiótico sin cirugía para osteomielitis de antepié sin necesidad de drenaje, sinEAP y sin hueso expuesto."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "02.07",
+      "title": "Úlcera de extremidad",
+      "related_sections": [],
+      "scenarios": [
+        {
+          "id": "02.07-c2-01",
+          "anchor_topic_ids": [
+            "02.07-01"
+          ],
+          "objective": "cambio",
+          "vignette": "Una persona inmóvil tiene una escara seca, adherida y estable en el talón. No hay drenaje, eritema ni fluctuación.",
+          "question": "¿Debe retirarse la escara de rutina?",
+          "answer": "No necesariamente; protegerla y vigilarla.",
+          "discriminator": "escara seca, adherida y estable",
+          "reason": "Una escara estable de talón sin infección puede conservarse.",
+          "initial_action": "Eliminar presión y evaluar perfusión.",
+          "limits": "Si aparecen infección, humedad o inestabilidad, cambia la conducta.",
+          "evidence": [
+            {
+              "source_id": "whs-2023",
+              "locator": "Recomendación 3.9",
+              "support": "Una escara estable de talón sin infección puede conservarse."
+            }
+          ]
+        },
+        {
+          "id": "02.07-c2-02",
+          "anchor_topic_ids": [
+            "02.07-02"
+          ],
+          "objective": "contraste",
+          "vignette": "Un adulto terminó el tratamiento inicial de una TVP proximal. Ya no tiene dolor ni edema. Pregunta si debe usar medias de compresión de rutina solo para prevenir síndrome postrombótico.",
+          "question": "¿ASH recomienda las medias con esa finalidad aislada para todos?",
+          "answer": "No. Sugiere no usarlas de rutina solo para prevenir ese síndrome.",
+          "discriminator": "solo para prevenir síndrome postrombótico",
+          "reason": "La indicación preventiva rutinaria no es equivalente a aliviar edema o dolor presentes.",
+          "initial_action": "Individualizar el uso según síntomas, preferencias y estado arterial.",
+          "limits": "La certeza es muy baja. Las medias aún pueden aliviar dolor o edema en pacientes seleccionados.",
+          "evidence": [
+            {
+              "source_id": "ash-tx-2020",
+              "locator": "Recomendaciones27–28 y Remarks",
+              "support": "ASH sugiere contra medias de rutina para prevención de síndrome postrombótico y distingue su uso sintomático."
+            }
+          ]
+        },
+        {
+          "id": "02.07-c2-03",
+          "anchor_topic_ids": [
+            "02.07-03"
+          ],
+          "objective": "cambio",
+          "vignette": "Un adulto con enfermedad arterial periférica y claudicación solicita cilostazol para caminar más. Su antecedente incluye insuficiencia cardíaca con episodios de congestión. No tiene isquemia aguda.",
+          "question": "¿Qué antecedente impide elegir cilostazol?",
+          "answer": "La insuficiencia cardíaca.",
+          "discriminator": "insuficiencia cardíaca con episodios de congestión",
+          "reason": "La guía contraindica cilostazol en enfermedad arterial periférica con insuficiencia cardíaca de cualquier gravedad.",
+          "initial_action": "Evitar cilostazol y continuar tratamiento vascular y ejercicio estructurado apropiados con su equipo.",
+          "limits": "No extrapolar a una herida amenazada: dolor en reposo o pérdida de tejido requieren otra valoración.",
+          "evidence": [
+            {
+              "source_id": "pad-slides-2024",
+              "locator": "Medications for Leg Symptoms in Chronic Symptomatic PAD, recomendación3, clase3Harm",
+              "support": "El resumen oficial de recomendaciones indica no administrar cilostazol si existe insuficiencia cardíaca."
+            }
+          ]
+        },
+        {
+          "id": "02.07-c2-04",
+          "anchor_topic_ids": [
+            "02.07-04"
+          ],
+          "objective": "dato_faltante",
+          "vignette": "Una úlcera profunda del pie diabético permite palpar hueso con una sonda. La radiografía inicial no muestra cambios concluyentes.",
+          "question": "¿Qué estudio ayuda si persiste duda de osteomielitis?",
+          "answer": "Resonancia magnética.",
+          "discriminator": "radiografía inicial no muestra cambios concluyentes",
+          "reason": "La radiografía temprana puede no demostrar infección ósea.",
+          "initial_action": "Integrar prueba de sonda, radiografía y marcadores; pedir resonancia si sigue la duda.",
+          "limits": "El cultivo óseo es más específico para identificar el patógeno que el hisopo superficial.",
+          "evidence": [
+            {
+              "source_id": "iwgdf-idsa-2023",
+              "locator": "Recomendaciones 7–10",
+              "support": "La radiografía temprana puede no demostrar infección ósea."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "02.08",
+      "title": "REVISIÓN: úlcera por presión",
+      "related_sections": [],
+      "scenarios": [
+        {
+          "id": "02.08-c2-01",
+          "anchor_topic_ids": [
+            "02.08-01"
+          ],
+          "objective": "contraste",
+          "vignette": "Una lesión sacra tiene un cultivo superficial positivo. El paciente está afebril y no presenta celulitis ni signos de sepsis.",
+          "question": "¿El cultivo aislado justifica antibiótico sistémico?",
+          "answer": "No. Buscar infección clínica.",
+          "discriminator": "cultivo superficial positivo",
+          "reason": "La colonización es frecuente y no demuestra infección invasiva.",
+          "initial_action": "Revisar presión, tejido desvitalizado, perfusión y evolución.",
+          "limits": "La sospecha de osteomielitis necesita evaluación específica.",
+          "evidence": [
+            {
+              "source_id": "whs-2023",
+              "locator": "Recomendación 6.3",
+              "support": "La colonización es frecuente y no demuestra infección invasiva."
+            }
+          ]
+        },
+        {
+          "id": "02.08-c2-02",
+          "anchor_topic_ids": [
+            "02.08-02"
+          ],
+          "objective": "subtipo",
+          "vignette": "Un adulto tiene úlcera neuropática plantar del antepié, sin infección ni isquemia. Puede acudir a controles y tolera un dispositivo hasta la rodilla. No hay una contraindicación para hacerlo no removible.",
+          "question": "¿Qué modalidad de descarga es la primera opción de IWGDF?",
+          "answer": "Dispositivo no removible hasta la rodilla.",
+          "discriminator": "sin infección ni isquemia",
+          "reason": "La elección concreta de dispositivo cambia según localización, complicaciones y tolerancia.",
+          "initial_action": "Coordinar colocación por personal entrenado y controles de herida y seguridad.",
+          "limits": "Si no es seguro o no se tolera, considerar un dispositivo removible; infección o isquemia requieren adaptar el plan.",
+          "evidence": [
+            {
+              "source_id": "iwgdf-offload-2023",
+              "locator": "Recomendaciones1a–1b y2; pp.4,11",
+              "support": "IWGDF recomienda dispositivo no removible hasta la rodilla para úlcera neuropática plantar de antepié o mediopié y permite alternativas si está contraindicado o no se tolera."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

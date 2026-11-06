@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useState } from "react";
-import { isManifest, isSection, type StudyManifest, type StudySection } from "./library-types";
+import { type StudyManifest, type StudySection } from "./library-types";
 import { readState, validPractice, type ReviewContext } from "./storage";
 import StudyCard from "./StudyCard";
 import { Icon } from "./ui";
@@ -10,8 +10,12 @@ import { dateLabel, timezone } from "./coach/format";
 import { completionNotices } from "./learning/model";
 import { personalSection } from "./coach/personal";
 import type { CardFamily, CoachIndex } from "./coach/types";
+import { openSpace, StudySpaceSelect, useStudySpace } from "./coach/StudySpace";
+import { layerOf } from "./coach/profile";
+import { loadManifest, loadSection } from "./coach/resources";
 
 const root = `${import.meta.env.BASE_URL}study/`;
+
 const levels = [
   ["1", "1 · Reconocer el patrón"],
   ["2", "2 · Nombrar el diagnóstico"],
@@ -39,15 +43,19 @@ function LoadError({ onRetry }: { onRetry: () => void }) {
 }
 
 export default function Library({ onReview }: { onReview: (context: ReviewContext) => void }) {
+  const space = useStudySpace();
+  const params = new URLSearchParams(location.hash.split("?")[1] || "");
   const [manifest, setManifest] = useState<StudyManifest | null>(null);
   const [manifestError, setManifestError] = useState(false);
   const [attempt, setAttempt] = useState(0);
-  const [sectionId, setSectionId] = useState<string | null>(null);
+  const [sectionId, setSectionId] = useState<string | null>(params.get("section"));
   const [loadedSection, setSection] = useState<StudySection | null>(null);
   const [sectionError, setSectionError] = useState(false);
   const [sectionAttempt, setSectionAttempt] = useState(0);
   const [query, setQuery] = useState("");
-  const [family, setFamily] = useState<CardFamily>("eje");
+  const [family, setFamily] = useState<CardFamily>(
+    space.startsWith("creadas") ? "creadas" : params.get("family") === "madre" ? "madre" : "eje",
+  );
   const [level, setLevel] = useState("1");
   const [block, setBlock] = useState("all");
   const [index, setIndex] = useState(0);
@@ -58,6 +66,16 @@ export default function Library({ onReview }: { onReview: (context: ReviewContex
     [loadedSection, store.state.created_cards],
   );
   const [showSuspended, setShowSuspended] = useState(false);
+  useEffect(() => {
+    if (!section?.cards.length || space.startsWith("creadas")) return;
+    const scoped = section.cards.filter((card) => block === "all" || card.block_id === block);
+    if (!scoped.length) return;
+    const available = scoped.filter((card) => card.family === family);
+    const first = available[0] || scoped[0];
+    if (!available.length) setFamily(first.family);
+    if (first.family === "madre" && !available.some((card) => card.level === Number(level)))
+      setLevel(String(first.level));
+  }, [section, space, family, level, block]);
   const day = useStudyDay(store.state.plan?.timezone || timezone());
   const [notice, setNotice] = useState("");
   const [pendingNotice, setPendingNotice] = useState("");
@@ -65,11 +83,8 @@ export default function Library({ onReview }: { onReview: (context: ReviewContex
   useEffect(() => {
     const abort = new AbortController();
     setManifestError(false);
-    fetch(`${root}manifest.json`, { signal: abort.signal, cache: "no-cache" })
-      .then(async (response) => {
-        if (!response.ok) throw new Error("Manifest request failed");
-        const data: unknown = await response.json();
-        if (!isManifest(data)) throw new Error("Invalid manifest");
+    loadManifest(abort.signal, layerOf(space))
+      .then((data) => {
         if (!abort.signal.aborted) setManifest(data);
       })
       .catch(() => {
@@ -84,12 +99,13 @@ export default function Library({ onReview }: { onReview: (context: ReviewContex
     setSection(null);
     setSectionError(false);
     const info = manifest.sections.find((s) => s.id === sectionId);
-    if (!info) return;
-    fetch(`${root}${info.url}?v=${manifest.content_sha256}`, { signal: abort.signal })
-      .then(async (response) => {
-        if (!response.ok) throw new Error("Section request failed");
-        const data: unknown = await response.json();
-        if (!isSection(data) || data.id !== sectionId) throw new Error("Invalid section");
+    if (!info) {
+      setSectionId(null);
+      setNotice("Esta sección no está disponible en este espacio.");
+      return;
+    }
+    loadSection(sectionId, manifest.content_sha256)
+      .then((data) => {
         if (!abort.signal.aborted) setSection(data);
       })
       .catch(() => {
@@ -113,7 +129,7 @@ export default function Library({ onReview }: { onReview: (context: ReviewContex
     setIndex((old) => Math.min(old, Math.max(0, cards.length - 1)));
   }, [cards.length]);
   const card = cards[index];
-  const combined = { ...progress };
+  const combined = space === "capa1" ? { ...progress } : {};
   for (const [id, memory] of Object.entries(store.state.progress))
     if (!id.startsWith("clinical/") && memory.last_rating)
       combined[id] = memory.last_rating >= 3 ? "known" : "again";
@@ -181,6 +197,20 @@ export default function Library({ onReview }: { onReview: (context: ReviewContex
     });
   };
   const changeFamily = (value: CardFamily) => {
+    if ((value === "creadas") !== space.startsWith("creadas")) {
+      openSpace(
+        value === "creadas"
+          ? layerOf(space) === 1
+            ? "creadas1"
+            : "creadas2"
+          : layerOf(space) === 1
+            ? "capa1"
+            : "capa2",
+        sectionId || undefined,
+        value,
+      );
+      return;
+    }
     setShowSuspended(false);
     if (value === "creadas" || block.endsWith(".creadas")) setBlock("all");
     setFamily(value);
@@ -257,6 +287,7 @@ export default function Library({ onReview }: { onReview: (context: ReviewContex
     : [];
   return (
     <main className="library-main" id="study" tabIndex={-1}>
+      <StudySpaceSelect />
       <p className="library-free-practice">
         Tus respuestas nuevas se registran en «Mi avance». Cada respuesta programa tu próximo
         repaso.
@@ -293,6 +324,30 @@ export default function Library({ onReview }: { onReview: (context: ReviewContex
           </div>
           <div className="library-reader">
             <aside className="library-controls" aria-label="Configurar tarjetas">
+              {!space.startsWith("creadas") &&
+                manifest.groups?.some(
+                  (group) =>
+                    group.section_id !== sectionId && group.related_sections?.includes(sectionId),
+                ) && (
+                  <details className="library-related-sections">
+                    <summary>Contrastes con otras secciones</summary>
+                    {manifest.groups
+                      .filter(
+                        (group) =>
+                          group.section_id !== sectionId &&
+                          group.related_sections?.includes(sectionId),
+                      )
+                      .map((group) => (
+                        <button
+                          key={group.id}
+                          onClick={() => selectSection(group.section_id, group.id)}
+                        >
+                          {group.title} ·{" "}
+                          {manifest.sections.find((info) => info.id === group.section_id)?.title}
+                        </button>
+                      ))}
+                  </details>
+                )}
               <div className="library-family-switch" aria-label="Formato de tarjetas">
                 <button
                   aria-pressed={!showSuspended && family === "eje"}
@@ -458,12 +513,19 @@ export default function Library({ onReview }: { onReview: (context: ReviewContex
                     </p>
                   )}
                   <div className="library-practice-links">
-                    <a href={`#avance?section=${sectionId}&block=${card.block_id}`}>
+                    <a href={`#avance?space=${space}&section=${sectionId}&block=${card.block_id}`}>
                       Crear subtest de este bloque
                     </a>
-                    <a href={`#avance?section=${sectionId}&block=${card.block_id}&mode=cases`}>
-                      Ampliar casos diagnósticos
-                    </a>
+                    {space === "capa1" &&
+                      section.cards.some(
+                        (item) => item.family === "eje" && item.block_id === card.block_id,
+                      ) && (
+                        <a
+                          href={`#avance?space=${space}&section=${sectionId}&block=${card.block_id}&mode=cases`}
+                        >
+                          Ampliar casos diagnósticos
+                        </a>
+                      )}
                   </div>
                   <div className="library-bottom-next">
                     <button
@@ -586,24 +648,29 @@ export default function Library({ onReview }: { onReview: (context: ReviewContex
               No hay resultados para ese síntoma o sección. Prueba otro término.
             </p>
           )}
-          <section className="library-downloads" aria-labelledby="downloads-title">
-            <div>
-              <Icon name="download" size={24} />
-              <h2 id="downloads-title">Llévalo a Anki</h2>
-              <p>Los mismos casos en los dos formatos de tus mazos.</p>
-            </div>
-            <div>
-              {manifest.downloads.map((d) => (
-                <a key={d.family} href={`${root}${d.url}`} download>
-                  <span>
-                    <strong>{d.label}</strong>
-                    <small>{number(d.cards)} tarjetas · .apkg</small>
-                  </span>
-                  <Icon name="download" size={20} />
-                </a>
-              ))}
-            </div>
-          </section>
+          {!!manifest.downloads.length && !space.startsWith("creadas") && (
+            <section className="library-downloads" aria-labelledby="downloads-title">
+              <div>
+                <Icon name="download" size={24} />
+                <h2 id="downloads-title">Llévalo a Anki</h2>
+                <p>
+                  Mazos originales del libro. El contenido nuevo de las capas se estudia en el
+                  sitio.
+                </p>
+              </div>
+              <div>
+                {manifest.downloads.map((d) => (
+                  <a key={d.family} href={`${root}${d.url}`} download>
+                    <span>
+                      <strong>{d.label}</strong>
+                      <small>{number(d.cards)} tarjetas · .apkg</small>
+                    </span>
+                    <Icon name="download" size={20} />
+                  </a>
+                ))}
+              </div>
+            </section>
+          )}
         </>
       )}
       <footer className="library-footer">
@@ -614,7 +681,7 @@ export default function Library({ onReview }: { onReview: (context: ReviewContex
             : "Contenido en preparación."}{" "}
           Material de estudio. Revisión clínica profesional pendiente.
         </p>
-        <a href={`${root}coverage.json`} download>
+        <a href={`${root}${layerOf(space) === 2 ? "layers/capa2/" : ""}manifest.json`} download>
           Consultar cobertura
         </a>
       </footer>

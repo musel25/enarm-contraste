@@ -18,6 +18,10 @@ import "../library.css";
 import "../coach/coach.css";
 import "../coach/today.css";
 import "./learning.css";
+import { StudySpaceSelect, useStudySpace } from "../coach/StudySpace";
+import { layerOf } from "../coach/profile";
+import { spaceLabels, studySpaces } from "../coach/profile";
+import { spaceHashes } from "../coach/StudySpace";
 
 const date = (value: string | null) => (value ? dateLabel(value) : "Sin iniciar");
 type Pattern = "creadas" | "eje" | "m1" | "m2" | "m3" | "m4";
@@ -108,6 +112,7 @@ export default function Learning({
   suspended: boolean;
   onReview: (context: ReviewContext) => void;
 }) {
+  const space = useStudySpace();
   const store = useCoachStore();
   const { state } = store;
   const day = useStudyDay(state.plan?.timezone || timezone());
@@ -129,7 +134,7 @@ export default function Learning({
   );
   const [blocks, setBlocks] = useState<string[]>(params.get("block") ? [params.get("block")!] : []);
   const [kind, setKind] = useState<"cards" | "cases">(
-    params.get("mode") === "cases" ? "cases" : "cards",
+    space === "capa1" && params.get("mode") === "cases" ? "cases" : "cards",
   );
   const [difficulty, setDifficulty] = useState<Difficulty | "all">("easy");
   const [chosenPatterns, setPatterns] = useState<Pattern[]>([]);
@@ -157,7 +162,7 @@ export default function Learning({
   useEffect(() => {
     const abort = new AbortController();
     setLoadError("");
-    loadResources(abort.signal)
+    loadResources(abort.signal, layerOf(space))
       .then((data) => {
         if (abort.signal.aborted) return;
         setResources(data);
@@ -363,8 +368,53 @@ export default function Learning({
     setTest(list);
   }
   const range = studyRange(state, day);
+  const availableIds = new Set(index.cards.map((card) => card.id));
+  const unavailable = Object.keys(state.progress).filter(
+    (id) => !availableIds.has(id) && !caseMeta(id),
+  );
   return (
     <main id="study" tabIndex={-1} className="learning-main">
+      <StudySpaceSelect />
+      {!!unavailable.length && (
+        <details className="learning-space-summary">
+          <summary>Contenido no disponible ({unavailable.length})</summary>
+          <p>
+            Conservamos el historial y las fechas de estas tarjetas. Su contenido no está en el
+            temario actual. No se incluyen en las sesiones ni se borran de tu copia.
+          </p>
+        </details>
+      )}
+      <details className="learning-space-summary">
+        <summary>Respuestas en las cuatro pestañas</summary>
+        <ul>
+          {studySpaces.map((key) => (
+            <li key={key}>
+              <a href={spaceHashes[key]}>{spaceLabels[key]}</a>:{" "}
+              {store.profile.workspaces[key].history.length} respuestas
+            </li>
+          ))}
+        </ul>
+        <p>
+          {studySpaces.reduce(
+            (total, key) => total + store.profile.workspaces[key].history.length,
+            0,
+          )}{" "}
+          respuestas en total.
+        </p>
+        {!!store.profile.legacy?.sessions?.length && (
+          <p>
+            Antes de separar las capas: {store.profile.legacy.sessions.length} sesiones con{" "}
+            {duration(
+              store.profile.legacy.sessions.reduce(
+                (total, session) => total + session.active_seconds,
+                0,
+              ),
+            )}{" "}
+            de estudio activo. Esas sesiones combinaban tarjetas de varios espacios. Se conservan
+            sin asignarles una capa.
+          </p>
+        )}
+      </details>
       <div className="learning-heading">
         <div>
           <h1>Mi avance</h1>
@@ -386,7 +436,9 @@ export default function Learning({
             </button>
           )}
           <button onClick={() => void store.reload()}>Cargar progreso guardado</button>
-          <button onClick={() => downloadBackup(store.pending || state)}>Exportar copia</button>
+          <button onClick={() => downloadBackup(store.pendingProfile || store.profile)}>
+            Exportar copia
+          </button>
         </div>
       )}
       {test ? (
@@ -450,7 +502,8 @@ export default function Learning({
             <aside className="learning-sections" aria-label="Avance por sección">
               <h2>Secciones</h2>
               {manifest.sections.map((info) => {
-                const row = analytics.sections.find((row) => row.id === info.id)!;
+                const row = analytics.sections.find((row) => row.id === info.id);
+                if (!row) return null;
                 return (
                   <button
                     key={info.id}
@@ -595,6 +648,7 @@ export default function Learning({
                   </button>
                   <button
                     aria-pressed={kind === "cases"}
+                    disabled={space !== "capa1"}
                     onClick={() => {
                       setKind("cases");
                       clear();
@@ -612,23 +666,29 @@ export default function Learning({
                       </small>
                     </span>
                     <div className="learning-chips" role="group" aria-label="Tipo de pregunta">
-                      {patterns.map((item) => (
-                        <button
-                          key={item.id}
-                          type="button"
-                          aria-pressed={chosenPatterns.includes(item.id)}
-                          onClick={() => {
-                            setPatterns((old) =>
-                              old.includes(item.id)
-                                ? old.filter((x) => x !== item.id)
-                                : [...old, item.id],
-                            );
-                            clear();
-                          }}
-                        >
-                          {item.label}
-                        </button>
-                      ))}
+                      {patterns
+                        .filter((item) =>
+                          space.startsWith("creadas")
+                            ? item.id === "creadas"
+                            : item.id !== "creadas",
+                        )
+                        .map((item) => (
+                          <button
+                            key={item.id}
+                            type="button"
+                            aria-pressed={chosenPatterns.includes(item.id)}
+                            onClick={() => {
+                              setPatterns((old) =>
+                                old.includes(item.id)
+                                  ? old.filter((x) => x !== item.id)
+                                  : [...old, item.id],
+                              );
+                              clear();
+                            }}
+                          >
+                            {item.label}
+                          </button>
+                        ))}
                     </div>
                   </div>
                 ) : (

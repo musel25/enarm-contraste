@@ -1,0 +1,521 @@
+{
+  "schema_version": 1,
+  "layer": 2,
+  "section_id": "28",
+  "title": "Pediatría",
+  "author": "clinical-author-25-35",
+  "sources": [
+    {
+      "id": "bimdg-mps1",
+      "label": "British Inherited Metabolic Disease Group: Guidance for treatment of MPS I",
+      "url": "https://bimdg.org.uk/wp-content/uploads/2025/07/2025.05.28.MPSI-Clinical-Guidance.pdf",
+      "version": "Edición 3; 20 junio 2025",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Clinical assessment and monitoring: ENT/airway, ophthalmology, cardiac and skeletal disease"
+    },
+    {
+      "id": "endo-child-thyroid",
+      "label": "ENDO-ERN/ESPE/ESE: Congenital Hypothyroidism, 2020–2021 Consensus Guidelines",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8001676/",
+      "version": "2021, doi:10.1089/thy.2020.0333",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "2.1 biochemical confirmation; 2.3 imaging; 3.1 immediate treatment; central hypothyroidism and adrenal function"
+    },
+    {
+      "id": "imss-child",
+      "label": "IMSS: Control y seguimiento de la salud en la niña y el niño menor de 5 años",
+      "url": "https://www.imss.gob.mx/sites/all/statics/guiasclinicas/029GRR.pdf",
+      "version": "IMSS-029-08; edición 2015",
+      "checked_at": "2026-11-06",
+      "region": "mexico",
+      "access": "checked",
+      "locator": "GRR: algoritmo de vigilancia de nutrición, crecimiento y desarrollo; texto comprobado con extracción local del PDF oficial"
+    },
+    {
+      "id": "rch-adrenal",
+      "label": "Royal Children’s Hospital: Adrenal crisis and acute adrenal insufficiency",
+      "url": "https://www.rch.org.au/clinicalguide/guideline_index/Adrenal_crisis_and_acute_adrenal_insufficiency/",
+      "version": "Octubre 2024",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Assessment; hydrocortisone, circulation and hypoglycaemia; sick day management"
+    },
+    {
+      "id": "rch-allergy",
+      "label": "Royal Children’s Hospital: Non-IgE mediated food allergy",
+      "url": "https://www.rch.org.au/clinicalguide/guideline_index/Non-IgE_mediated_food_allergy/",
+      "version": "Octubre2022,fecha visible al final del HTML completo",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Definitions; FPIES; clinical diagnosis and elimination"
+    },
+    {
+      "id": "rch-constipation",
+      "label": "Royal Children’s Hospital: Constipation",
+      "url": "https://www.rch.org.au/clinicalguide/guideline_index/Constipation/",
+      "version": "Marzo2020,fecha visible al final del HTML completo",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Clinical diagnosis; history; red flags; management;Background: infantdyscheziawithsoftstoolsandspontaneousresolution"
+    },
+    {
+      "id": "rch-height",
+      "label": "Royal Children’s Hospital: Short stature, pre-referral guideline",
+      "url": "https://www.rch.org.au/primary-care-liaison/prereferral_guidelines/Short_stature/",
+      "version": "Revisión julio 2025",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Introduction; referral criteria; pre-referral work-up"
+    },
+    {
+      "id": "rch-nappy",
+      "label": "Royal Children’s Hospital: Nappy rash",
+      "url": "https://www.rch.org.au/clinicalguide/guideline_index/Nappy_rash/",
+      "version": "Agosto 2024",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Typical presentation; differentials: Candida, nutritional deficiency; treatment"
+    },
+    {
+      "id": "rch-reflux",
+      "label": "Royal Children’s Hospital: Gastrooesophageal reflux disease in infants",
+      "url": "https://www.rch.org.au/clinicalguide/guideline_index/Gastrooesophageal_reflux_disease_in_infants/",
+      "version": "Abril 2026",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Key points; red flags; differential with cow milk protein allergy; Red flags: bilious vomiting/distension. HTML oficial completo leído tras fallo del visor web."
+    },
+    {
+      "id": "qld-leukocoria",
+      "label": "Queensland Health: Clinical Prioritisation Criteria, paediatric leukocoria",
+      "url": "https://www.health.qld.gov.au/cpc/ophthalmology/paediatric-leukocoria",
+      "version": "8 enero 2025",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Emergency: white red reflex, contacto inmediato con oftalmología"
+    },
+    {
+      "id": "aap-corrected",
+      "label": "American Academy of Pediatrics: Corrected Age For Preemies",
+      "url": "https://www.healthychildren.org/English/ages-stages/baby/preemie/Pages/Corrected-Age-For-Preemies.aspx",
+      "version": "10 diciembre 2018; adaptado de publicación AAP2017",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Cálculo y uso de edad corregida los primeros dos años; información oficial para familias, no GPC"
+    },
+    {
+      "id": "rch-ingestion",
+      "label": "Royal Children’s Hospital: Foreign body ingestion",
+      "url": "https://www.rch.org.au/clinicalguide/guideline_index/Foreign_body_ingestion/",
+      "version": "Febrero 2024",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Key points3; Treatment/Button batteries: pila esofágica necesita extracción urgente"
+    },
+    {
+      "id": "cps-csa",
+      "label": "Canadian Paediatric Society: The medical evaluation of pre-pubertal children with suspected sexual abuse",
+      "url": "https://cps.ca/en/documents/position/the-medical-evaluation-of-pre-pubertal-children-with-suspected-sexual-abuse",
+      "version": "14 abril 2020; reafirmado 12 enero 2026",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Interpretation of findings; Physical examination; alcance prepuberal, no extrapolar leyes canadienses"
+    }
+  ],
+  "mexico_source_note": "Se abrió y se extrajo localmente el PDF oficial IMSS-029-08; su edición indica 2015. Se usó solo para vigilancia del crecimiento y desarrollo. La copia web presenta caracteres defectuosos en parte del texto; se comprobó el texto real del PDF, no solo el resultado de búsqueda. No se encontró una actualización mexicana reciente que cubra todas las decisiones metabólicas y pediátricas de esta sección. Se usan guías pediátricas específicas; no se extrapolan protocolos de adultos. El documento BIMDG de MPS I es edición 3 de junio 2025. Revisión clínica profesional pendiente. Las sustituciones se comprobaron con RCH talla julio2025, reflujo abril2026 (HTML completo descargado), insuficiencia suprarrenal octubre2024, pañal agosto2024, ingestión febrero2024, consenso ENDO-ERN2021, Queensland enero2025 y CPS2020 reafirmado enero2026. Para edad corregida se abrió información AAP2018; NICE NG72 devolvió403 y no se registra como comprobado. No se obtuvo una GPC mexicana reciente completa para cada decisión. No se extrapolan dosis, rutas administrativas ni obligaciones legales extranjeras.",
+  "blocks": [
+    {
+      "id": "28.01",
+      "title": "Vigilancia de niño sano",
+      "related_sections": [],
+      "scenarios": [
+        {
+          "anchor_topic_ids": [
+            "28.01-01"
+          ],
+          "objective": "gravedad",
+          "vignette": "Un lactante asintomático acude a control. La exploración confirma reflejo pupilar blanco en un ojo, distinto del reflejo rojo contralateral.",
+          "question": "¿Debe esperar al siguiente control para repetir la prueba?",
+          "answer": "No. Requiere valoración oftalmológica inmediata.",
+          "discriminator": "reflejo pupilar blanco en un ojo",
+          "reason": "La leucocoria puede indicar enfermedad ocular que necesita evaluación urgente.",
+          "initial_action": "Contactar al servicio oftalmológico y organizar evaluación sin demora.",
+          "limits": "No confirma retinoblastoma ni catarata; no iniciar tratamiento ocular empírico que retrase el estudio.",
+          "evidence": [
+            {
+              "source_id": "qld-leukocoria",
+              "locator": "Clinical Prioritisation Criteria: Emergency, white red reflex",
+              "support": "La leucocoria puede indicar enfermedad ocular que necesita evaluación urgente."
+            }
+          ],
+          "id": "28.01-01-cambio"
+        },
+        {
+          "anchor_topic_ids": [
+            "28.01-02"
+          ],
+          "objective": "cambio",
+          "vignette": "Un lactante nació a las 32 semanas. Han pasado 16 semanas desde su nacimiento. La familia compara sus habilidades con las de un niño nacido a término de cuatro meses.",
+          "question": "¿Qué edad debe incorporarse al interpretar los hitos?",
+          "answer": "Edad corregida de ocho semanas, aproximadamente dos meses.",
+          "discriminator": "nació a las 32 semanas. Han pasado 16 semanas",
+          "reason": "La prematuridad cambia la edad de referencia para interpretar la adquisición de habilidades durante los primeros dos años.",
+          "initial_action": "Calcular edad corregida y revisar los dominios del desarrollo y su progresión con el equipo de seguimiento.",
+          "limits": "La corrección no permite ignorar regresión, asimetría o dificultades reales; una edad calculada no sustituye la evaluación.",
+          "evidence": [
+            {
+              "source_id": "aap-corrected",
+              "locator": "Calculating corrected age; ejemplo 32 semanas/16 semanas posnatales",
+              "support": "La prematuridad cambia la edad de referencia para interpretar la adquisición de habilidades durante los primeros dos años."
+            }
+          ],
+          "id": "28.01-02-dato_faltante"
+        }
+      ]
+    },
+    {
+      "id": "28.02",
+      "title": "Niño de talla baja",
+      "related_sections": [],
+      "scenarios": [
+        {
+          "anchor_topic_ids": [
+            "28.02-01"
+          ],
+          "objective": "contraste",
+          "vignette": "Un escolar con talla baja tiene un resultado bajo de hormona de crecimiento en una muestra tomada al azar. Se propone confirmar déficit hormonal solo con ese valor.",
+          "question": "¿La muestra aislada confirma déficit de hormona de crecimiento?",
+          "answer": "No; su secreción es pulsátil y una medición aleatoria no es útil para ese diagnóstico.",
+          "discriminator": "muestra tomada al azar",
+          "reason": "La concentración entre pulsos puede ser baja sin demostrar un déficit.",
+          "initial_action": "Revisar crecimiento, contexto e investigaciones dirigidas con endocrinología antes de decidir pruebas o tratamiento.",
+          "limits": "No indicar hormona de crecimiento ni prueba dinámica solo por este valor; el especialista integra indicaciones y seguridad.",
+          "evidence": [
+            {
+              "source_id": "rch-height",
+              "locator": "Suggested pre-referral work-up: random growth hormone levels not helpful, pulsatile release",
+              "support": "La concentración entre pulsos puede ser baja sin demostrar un déficit."
+            }
+          ],
+          "id": "28.02-01-cambio"
+        }
+      ]
+    },
+    {
+      "id": "28.03",
+      "title": "Regurgitación o vómito",
+      "related_sections": [],
+      "scenarios": [
+        {
+          "anchor_topic_ids": [
+            "28.03-01"
+          ],
+          "objective": "contraste",
+          "vignette": "Un lactante previamente etiquetado con reflujo presenta vómito verde y distensión abdominal nueva. El episodio ya no es una pequeña regurgitación posprandial.",
+          "question": "¿Qué alternativa cambia la prioridad?",
+          "answer": "Obstrucción intestinal.",
+          "discriminator": "vómito verde y distensión abdominal nueva",
+          "reason": "El vómito bilioso con distensión no corresponde al patrón de reflujo fisiológico.",
+          "initial_action": "Enviar para evaluación hospitalaria urgente de una posible causa quirúrgica.",
+          "limits": "La viñeta no identifica el nivel ni la causa de obstrucción; no retrasar estudio con un ensayo de supresión ácida.",
+          "evidence": [
+            {
+              "source_id": "rch-reflux",
+              "locator": "Red flags: bilious vomiting and abdominal rigidity/distension may indicate intestinal obstruction",
+              "support": "El vómito bilioso con distensión no corresponde al patrón de reflujo fisiológico."
+            }
+          ],
+          "id": "28.03-01-contraste"
+        },
+        {
+          "anchor_topic_ids": [
+            "28.03-02"
+          ],
+          "objective": "subtipo",
+          "vignette": "Un lactante tiene vómitos repetidos y letargo varias horas después de introducir un alimento. No hay urticaria ni sibilancias y ahora presenta mala perfusión.",
+          "question": "¿Qué forma de alergia debe considerarse junto a otras causas de choque?",
+          "answer": "FPIES, con prioridad a estabilización.",
+          "discriminator": "vómitos repetidos y letargo varias horas después",
+          "reason": "Una reacción gastrointestinal tardía puede causar deshidratación y choque.",
+          "initial_action": "Iniciar atención urgente pediátrica y evitar el alimento hasta evaluación.",
+          "limits": "No confirma el desencadenante ni excluye sepsis; no realizar provocación en casa.",
+          "evidence": [
+            {
+              "source_id": "rch-allergy",
+              "locator": "Key points; Definitions: FPIES",
+              "support": "Una reacción gastrointestinal tardía puede causar deshidratación y choque."
+            }
+          ],
+          "id": "28.03-02-subtipo"
+        },
+        {
+          "anchor_topic_ids": [
+            "28.03-01",
+            "28.03-02"
+          ],
+          "objective": "cambio",
+          "vignette": "Un lactante etiquetado con reflujo desarrolla sangre y moco en heces y dificultad para aumentar de peso.",
+          "question": "¿Qué dato obliga a ampliar el diagnóstico diferencial?",
+          "answer": "Sangre en heces con crecimiento insuficiente.",
+          "discriminator": "sangre y moco en heces",
+          "reason": "La alergia a proteína de leche y otras causas pueden parecer reflujo.",
+          "initial_action": "Evaluar nutrición, gravedad y posible alergia bajo supervisión.",
+          "limits": "No iniciar múltiples exclusiones alimentarias sin plan nutricional.",
+          "evidence": [
+            {
+              "source_id": "rch-reflux",
+              "locator": "Background: cow milk protein allergy and red flags",
+              "support": "La alergia a proteína de leche y otras causas pueden parecer reflujo."
+            }
+          ],
+          "id": "28.03-03-cambio"
+        }
+      ]
+    },
+    {
+      "id": "28.04",
+      "title": "Dolor abdominal con retención",
+      "related_sections": [],
+      "scenarios": [
+        {
+          "anchor_topic_ids": [
+            "28.04-01"
+          ],
+          "objective": "contraste",
+          "vignette": "Un lactante sano de tres meses puja y llora antes de evacuar heces blandas. Crece bien, se alimenta sin dificultad y no tiene vómitos ni distensión persistente. Su familia pide laxante por el esfuerzo.",
+          "question": "¿El esfuerzo antes de heces blandas demuestra estreñimiento?",
+          "answer": "No; es compatible con disquecia del lactante, que suele resolverse sola.",
+          "discriminator": "antes de evacuar heces blandas",
+          "reason": "En un lactante sano menor de seis meses, pujar o llorar antes de una evacuación blanda puede reflejar coordinación inmadura y no retención de heces duras.",
+          "initial_action": "Revisar crecimiento y signos de alarma y tranquilizar si la evaluación es normal, sin iniciar laxante por el esfuerzo aislado.",
+          "limits": "No aplicar esta explicación si hay heces duras, vómitos persistentes, mala ganancia ponderal o distensión; la viñeta no corresponde a un recién nacido menor de seis semanas.",
+          "evidence": [
+            {
+              "source_id": "rch-constipation",
+              "locator": "Background: healthyinfants<6months,strainandcrybefore softstools(dyschezia),notconstipationandself-resolve",
+              "support": "Distingue disquecia del lactante de estreñimiento funcional con heces duras y evita tratamiento por el esfuerzo aislado."
+            }
+          ],
+          "id": "28.04-01-contraste"
+        }
+      ]
+    },
+    {
+      "id": "28.05",
+      "title": "Genitales ambiguos o crisis neonatal",
+      "related_sections": [],
+      "scenarios": [
+        {
+          "anchor_topic_ids": [
+            "28.05-01"
+          ],
+          "objective": "cambio",
+          "vignette": "Un niño con hiperplasia suprarrenal congénita y tratamiento habitual tiene gastroenteritis. Vomita repetidamente la hidrocortisona oral, aunque todavía está despierto y sin hipotensión.",
+          "question": "¿Debe esperar al choque para cambiar la vía del glucocorticoide?",
+          "answer": "No; necesita atención urgente y cobertura parenteral según su plan.",
+          "discriminator": "Vomita repetidamente la hidrocortisona oral",
+          "reason": "Los vómitos persistentes impiden absorción fiable y pueden preceder una crisis suprarrenal.",
+          "initial_action": "Aplicar el plan individual de emergencia y coordinar hidrocortisona IM o IV y observación clínica.",
+          "limits": "No copiar dosis adultas. Valorar glucosa, electrolitos, líquidos y capacidad de volver a vía oral.",
+          "evidence": [
+            {
+              "source_id": "rch-adrenal",
+              "locator": "Management to prevent adrenal crisis: ongoing vomiting, imminent crisis, IV/IM hydrocortisone",
+              "support": "Los vómitos persistentes impiden absorción fiable y pueden preceder una crisis suprarrenal."
+            }
+          ],
+          "id": "28.05-01-gravedad"
+        }
+      ]
+    },
+    {
+      "id": "28.06",
+      "title": "Tamiz alterado y letargo",
+      "related_sections": [],
+      "scenarios": [
+        {
+          "anchor_topic_ids": [
+            "28.06-01"
+          ],
+          "objective": "cambio",
+          "vignette": "Un lactante con hipotiroidismo congénito tratado tenía buen control. La TSH aumenta después de que la familia empezó a mezclar levotiroxina con fórmula de soya; refiere no omitir dosis.",
+          "question": "¿Qué debe revisar el equipo antes de atribuirlo a progresión del déficit?",
+          "answer": "Interferencia con absorción por la forma de administración.",
+          "discriminator": "mezclar levotiroxina con fórmula de soya",
+          "reason": "La proteína de soya puede disminuir absorción de levotiroxina.",
+          "initial_action": "Reconciliar preparado y administración con el equipo endocrino y ajustar seguimiento bioquímico.",
+          "limits": "La adherencia y otras causas también importan; no aumentar ni suspender dosis sin valoración. En lactantes no se exige automáticamente el mismo ayuno que en adultos.",
+          "evidence": [
+            {
+              "source_id": "endo-child-thyroid",
+              "locator": "3.2: administración con alimentos salvo soya/fibra; Impaired bioavailability by diseases, drugs, or food",
+              "support": "La proteína de soya puede disminuir absorción de levotiroxina."
+            }
+          ],
+          "id": "28.06-01-dato_faltante"
+        },
+        {
+          "anchor_topic_ids": [
+            "28.06-01"
+          ],
+          "objective": "subtipo",
+          "vignette": "Un recién nacido tiene T4 libre baja y TSH que no está elevada. Tiene además hipoglucemia recurrente.",
+          "question": "¿Qué posibilidad cambia el orden de evaluación hormonal?",
+          "answer": "Hipotiroidismo central con posible déficit suprarrenal asociado.",
+          "discriminator": "T4 libre baja y TSH que no está elevada",
+          "reason": "La TSH no elevada no excluye hipotiroidismo central.",
+          "initial_action": "Referir de urgencia y evaluar función suprarrenal antes de iniciar levotiroxina si no puede excluirse déficit.",
+          "limits": "No asumir causa central sin considerar enfermedad y prematuridad.",
+          "evidence": [
+            {
+              "source_id": "endo-child-thyroid",
+              "locator": "2.1: central CH and adrenal function before LT4",
+              "support": "La TSH no elevada no excluye hipotiroidismo central."
+            }
+          ],
+          "id": "28.06-02-subtipo"
+        }
+      ]
+    },
+    {
+      "id": "28.07",
+      "title": "Aspiración de objeto",
+      "related_sections": [],
+      "scenarios": [
+        {
+          "anchor_topic_ids": [
+            "28.07-01"
+          ],
+          "objective": "contraste",
+          "vignette": "Un preescolar tuvo tos al llevarse una pila de botón a la boca. Ahora respira sin sibilancias, pero babea y no deglute. La radiografía localiza la pila en el esófago.",
+          "question": "¿Qué diferencia respecto a aspiración bronquial determina la extracción?",
+          "answer": "Es una pila esofágica que requiere extracción endoscópica inmediata.",
+          "discriminator": "radiografía localiza la pila en el esófago",
+          "reason": "La localización digestiva y la composición de la pila cambian el equipo y la urgencia; respirar bien no la hace inocua.",
+          "initial_action": "Activar al equipo pediátrico de endoscopia para extracción urgente, idealmente dentro de dos horas, sin esperar expulsión.",
+          "limits": "Mantener evaluación de vía aérea; no inducir vómito ni tratarla como una moneda de bajo riesgo. El protocolo local guía medidas mientras se prepara la extracción.",
+          "evidence": [
+            {
+              "source_id": "rch-ingestion",
+              "locator": "Key points3; Treatment/Button batteries: time-critical oesophageal removal within two hours",
+              "support": "La localización digestiva y la composición de la pila cambian el equipo y la urgencia; respirar bien no la hace inocua."
+            }
+          ],
+          "id": "28.07-01-incompleta"
+        }
+      ]
+    },
+    {
+      "id": "28.08",
+      "title": "Lesiones cutáneas sospechosas",
+      "related_sections": [],
+      "scenarios": [
+        {
+          "anchor_topic_ids": [
+            "28.08-01"
+          ],
+          "objective": "contraste",
+          "vignette": "Un lactante tiene eritema perianal bien delimitado con fisuras, dolor al evacuar y retención de heces. No hay pústulas satélite ni eritema difuso de los pliegues.",
+          "question": "¿Qué infección debe considerarse además de Candida?",
+          "answer": "Celulitis perianal estreptocócica.",
+          "discriminator": "eritema perianal bien delimitado con fisuras",
+          "reason": "El borde definido, las fisuras y la defecación dolorosa orientan una causa bacteriana específica.",
+          "initial_action": "Valorar confirmación y tratamiento antibacteriano según guía pediátrica local.",
+          "limits": "La apariencia orienta, pero no demuestra el microorganismo; revisar otras causas de dolor y estreñimiento.",
+          "evidence": [
+            {
+              "source_id": "rch-nappy",
+              "locator": "Differential diagnosis/Infections: perianal streptococcal cellulitis",
+              "support": "El borde definido, las fisuras y la defecación dolorosa orientan una causa bacteriana específica."
+            }
+          ],
+          "id": "28.08-01-subtipo"
+        },
+        {
+          "anchor_topic_ids": [
+            "28.08-02"
+          ],
+          "objective": "contraste",
+          "vignette": "Una niña prepuberal comunica contacto sexual por un adulto. La exploración especializada no encuentra lesión genital específica. Un familiar concluye que el examen normal descarta lo comunicado.",
+          "question": "¿El examen sin lesiones excluye abuso sexual?",
+          "answer": "No. Muchos contactos no dejan lesión o las lesiones pueden cicatrizar.",
+          "discriminator": "exploración especializada no encuentra lesión genital específica",
+          "reason": "Un examen normal o inespecífico no excluye abuso ni demuestra que la comunicación sea falsa.",
+          "initial_action": "Asegurar protección, documentar de forma objetiva y coordinar atención especializada y protocolo local.",
+          "limits": "No determina autor ni mecanismo. Evitar interrogatorios repetidos y exploraciones forzadas; las obligaciones legales se aplican según jurisdicción mexicana.",
+          "evidence": [
+            {
+              "source_id": "cps-csa",
+              "locator": "Interpretation of findings: normal/nonspecific examination does not exclude abuse; Physical examination: no force/coercion",
+              "support": "Un examen normal o inespecífico no excluye abuso ni demuestra que la comunicación sea falsa."
+            }
+          ],
+          "id": "28.08-02-gravedad"
+        },
+        {
+          "anchor_topic_ids": [
+            "28.08-01"
+          ],
+          "objective": "contraste",
+          "vignette": "Un lactante tiene dermatitis extensa y persistente del pañal, diarrea, alopecia y lesiones alrededor de boca y manos.",
+          "question": "¿Es adecuado seguir tratando solo irritación local?",
+          "answer": "No. Debe investigarse déficit nutricional u otra enfermedad.",
+          "discriminator": "diarrea, alopecia y lesiones alrededor de boca y manos",
+          "reason": "La afectación fuera del área del pañal y síntomas sistémicos amplían el diagnóstico.",
+          "initial_action": "Solicitar valoración pediátrica y nutricional dirigida.",
+          "limits": "La distribución orienta a déficit de zinc, pero requiere confirmación y evaluación de causa.",
+          "evidence": [
+            {
+              "source_id": "rch-nappy",
+              "locator": "Differentials: nutritional deficiency and malabsorption",
+              "support": "La afectación fuera del área del pañal y síntomas sistémicos amplían el diagnóstico."
+            }
+          ],
+          "id": "28.08-03-contraste"
+        }
+      ]
+    },
+    {
+      "id": "28.09",
+      "title": "Deterioro multisistémico",
+      "related_sections": [],
+      "scenarios": [
+        {
+          "anchor_topic_ids": [
+            "28.09-01"
+          ],
+          "objective": "cambio",
+          "vignette": "Un niño con MPS I confirmada tiene ronquido progresivo y pausas respiratorias nocturnas. Le programaron anestesia para otro procedimiento.",
+          "question": "¿Qué evaluación no debe omitirse antes de la anestesia?",
+          "answer": "Evaluación de vía aérea y trastorno respiratorio del sueño.",
+          "discriminator": "Le programaron anestesia",
+          "reason": "La MPS I puede producir obstrucción y dificultad de vía aérea.",
+          "initial_action": "Coordinar metabolismo, ORL y anestesiología antes del procedimiento.",
+          "limits": "El caso no define por sí solo la técnica anestésica ni tratamiento enzimático.",
+          "evidence": [
+            {
+              "source_id": "bimdg-mps1",
+              "locator": "Monitoring: ENT, airway and assessment prior to anaesthesia",
+              "support": "La MPS I puede producir obstrucción y dificultad de vía aérea."
+            }
+          ],
+          "id": "28.09-01-cambio"
+        }
+      ]
+    }
+  ]
+}

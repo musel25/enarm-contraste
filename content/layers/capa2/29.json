@@ -1,0 +1,689 @@
+{
+  "schema_version": 1,
+  "layer": 2,
+  "section_id": "29",
+  "title": "Psiquiatría",
+  "author": "clinical-author-25-35",
+  "sources": [
+    {
+      "id": "imss-violence",
+      "label": "IMSS: Procedimiento para detección, atención médica y orientación a mujeres víctimas de violencia física y/o sexual",
+      "url": "https://www.imss.gob.mx/sites/all/statics/pdf/procedimientos/2650-B03-006_0.pdf",
+      "version": "Clave 2650-B03-006; fecha de edición no comprobada",
+      "checked_at": "2026-11-06",
+      "region": "mexico",
+      "access": "checked",
+      "locator": "5.1: atención confidencial, derechos y seguridad; 6: actividades y valoración"
+    },
+    {
+      "id": "ips-ocd",
+      "label": "Indian Psychiatric Society: Clinical practice guidelines for obsessive-compulsive disorder, 2025 update",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12900050/",
+      "version": "Actualización titulada 2025; publicación disponible 2026",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Assessment; differential diagnosis; CBT/ERP as first-line treatment"
+    },
+    {
+      "id": "rcpsych-meed",
+      "label": "Royal College of Psychiatrists: Medical Emergencies in Eating Disorders, CR233",
+      "url": "https://www.nhsdghandbook.co.uk/wp-content/uploads/2023/08/Eating-disorders.pdf",
+      "version": "Mayo 2022; actualizado julio 2023",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Section 2: risk assessment; section 3: location of care; section 4: refeeding"
+    },
+    {
+      "id": "who-mhgap",
+      "label": "WHO: mhGAP Intervention Guide, version 2.0",
+      "url": "https://www.afro.who.int/sites/default/files/2017-06/9789241549790-eng.pdf",
+      "version": "2016; versión 2.0, no confundir con fecha web 2019",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "DEP: depresión y manía; PSY: psicosis; CMH: TDAH; SUB: sustancias y abstinencia; SUI: autolesión; OTH: evaluación general"
+    },
+    {
+      "id": "nice-selfharm",
+      "label": "NICE NG225: Self-harm, assessment management and preventing recurrence; copia íntegra NHS Scotland",
+      "url": "https://rightdecisions.scot.nhs.uk/media/1847/nice-guidance-self-harm.pdf",
+      "version": "7 septiembre 2022; portada copyright2022",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "1.5.1–1.5.5,p15 de81; PDF completo descargado y leído tras403del visor"
+    },
+    {
+      "id": "who-debrief",
+      "label": "WHO mhGAP: Psychological debriefing in people exposed to a recent traumatic event",
+      "url": "https://www.who.int/teams/mental-health-and-substance-use/treatment-care/mental-health-gap-action-programme/evidence-centre/other-significant-emotional-and-medical-unexplained-somatic-complaints/psychological-debriefing-in-people-exposed-to-a-recent-traumatic-event",
+      "version": "Recomendación2012, no fecha web2019",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Recomendación fuerte, evidencia muy baja: no debriefing preventivo tras trauma reciente"
+    },
+    {
+      "id": "nhs-lithium",
+      "label": "NHS Medicines: Side effects of lithium",
+      "url": "https://www.nhs.uk/medicines/lithium/side-effects-of-lithium/",
+      "version": "Revisión9agosto2023; próxima revisión prevista2026, no actualización comprobada",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Serious side effects: toxicidad, suspender y urgencias. Información institucional, no guía de estabilización del ánimo"
+    },
+    {
+      "id": "aasm-behavioral",
+      "label": "AASM: Behavioral and psychological treatments for chronic insomnia disorder in adults",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7853203/",
+      "version": "1 febrero2021; doi10.5664/jcsm.8986",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Recommendation1 discussion: precaución de restricción del sueño en predisposición a manía; texto primario completo descargado y leído"
+    },
+    {
+      "id": "aasm-mslt",
+      "label": "AASM: Recommended protocols for the MSLT and MWT in adults",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8726366/",
+      "version": "1 diciembre2021; doi10.5664/jcsm.9620",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Box1; Planning before MSLT; Sleep-wake scheduling. HTML primario completo descargado y leído tras CAPTCHA del visor"
+    },
+    {
+      "id": "asam-withdrawal",
+      "label": "ASAM: Clinical Practice Guideline on Alcohol Withdrawal Management",
+      "url": "https://www.asam.org/docs/default-source/quality-science/the_asam_clinical_practice_guideline_on_alcohol-1.pdf",
+      "version": "Adoptada23enero2020; publicación mayo/junio2020",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "RecommendationI.7 y discusión; no confirma ni descarta abstinencia una BAC positiva"
+    },
+    {
+      "id": "nhs-fii",
+      "label": "NHS: Fabricated or induced illness, overview",
+      "url": "https://www.nhs.uk/mental-health/conditions/fabricated-or-induced-illness/overview/",
+      "version": "Revisión15marzo2023; no se presume actualización2026",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Manipulación de muestras y protección del niño; información institucional, no protocolo legal mexicano"
+    },
+    {
+      "id": "who-violence-handbook",
+      "label": "WHO: Health care for women subjected to intimate partner violence or sexual violence, clinical handbook",
+      "url": "https://platform.who.int/docs/default-source/mca-documents/policy-documents/operational-guidance/NAM-GBV-19-01-OPERATIONAL-GUIDANCE-2018-eng-Clinical-handbook-for-intimate-partner-violence.pdf",
+      "version": "Versión de prueba de campo septiembre2014; portada WHO/RHR/14.26, no2018del nombre del archivo",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Guiding principles; Part2Questions and answers,p34. PDF completo abierto; enfoque centrado en autonomía, no leyes extranjeras"
+    },
+    {
+      "id": "ifas-strangulation",
+      "label": "IFAS/FFLM: Clinical management of non-fatal strangulation in acute and emergency care",
+      "url": "https://ifas.org.uk/wp-content/uploads/2025/07/Guidelines_AcuteEmergency_Jul25.pdf",
+      "version": "Julio2025; revisión prevista julio2026 no equivale a nueva edición",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Adults/adolescents; BoxA–C,pp3–5: marcas ausentes no tranquilizan, voz/deglución y evaluación urgente"
+    },
+    {
+      "id": "esc-syncope",
+      "label": "ESC2018: diagnosis and management of syncope, copia íntegra de Inselspital",
+      "url": "https://kardiologie.insel.ch/fileadmin/Kardiologie/pdf/Guidelines/18_Synkopen_Guidelines_ESC.pdf",
+      "version": "2018; doi10.1093/eurheartj/ehy037, copia institucional descargada29marzo2018",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "4.1.1p11; Table5p13; Table7p18, PDF completo de69p abierto y leído"
+    }
+  ],
+  "mexico_source_note": "Se abrió el procedimiento oficial IMSS 2650-B03-006 para atención de violencia física y sexual; no se comprobó su fecha de edición. Se localizó y abrió IMSS-161-09 para depresión, edición 2015, pero la extracción web de sus apartados resultó defectuosa y no se usa para sostener decisiones específicas. El texto completo OMS CDDR 2024 no abrió correctamente; no se presenta como fuente revisada. mhGAP-IG es versión 2016; se complementa con actualización de TOC titulada 2025, publicada en 2026, recomendación OMS 2012 de debriefing y guías AASM 2021. No se afirma actualización mexicana integrada de 2026. Las guías internacionales no sustituyen requisitos locales de protección y acceso. Revisión clínica profesional pendiente. Para los contrastes nuevos se abrieron WHO2012/2014/2016, AASM2021, NICE NG2252022, ASAM2020, NHS2023 e IFAS2025 y se leyeron apartados específicos. El PDF NICE y los HTML AASM se obtuvieron completos por descarga privada tras fallo del visor. No se comprobó una GPC mexicana reciente completa para cada decisión nueva; IMSS2650-B03-006 apoya atención de violencia y su fecha de edición sigue sin confirmarse. Las fechas de revisión prevista no se presentan como actualización. No se extrapolan dosis adultas, obligaciones legales extranjeras ni restricciones británicas de acceso. El contraste de síncope se comprobó en ESC2018, PDF primario completo alojado por Inselspital; no en resultados NICE bloqueados.",
+  "blocks": [
+    {
+      "id": "29.01",
+      "title": "Tristeza persistente",
+      "related_sections": [],
+      "scenarios": [
+        {
+          "anchor_topic_ids": [
+            "29.01-01"
+          ],
+          "objective": "cambio",
+          "vignette": "Una adulta con depresión mayor mejoró con un ISRS. Lleva dos semanas sin síntomas y quiere suspenderlo de golpe porque considera terminada la fase de tratamiento.",
+          "question": "¿La mejoría inicial justifica suspensión brusca?",
+          "answer": "No; requiere continuación y un plan posterior de reducción supervisada.",
+          "discriminator": "dos semanas sin síntomas",
+          "reason": "La remisión inicial no completa por sí sola el tratamiento de continuación; una retirada requiere valorar recaída y reducción gradual.",
+          "initial_action": "Revisar tolerancia y acordar continuidad y seguimiento con el prescriptor.",
+          "limits": "WHO mhGAP2016 propone continuidad tras remisión y descenso gradual; duración y cambio se individualizan. Manía o efectos graves exigen otra valoración.",
+          "evidence": [
+            {
+              "source_id": "who-mhgap",
+              "locator": "DEP3 Follow-up/Revise treatment, p31: continuación y retirada gradual tras remisión sostenida",
+              "support": "La remisión inicial no completa por sí sola el tratamiento de continuación; una retirada requiere valorar recaída y reducción gradual."
+            }
+          ],
+          "id": "29.01-01-dato_faltante"
+        },
+        {
+          "anchor_topic_ids": [
+            "29.01-02"
+          ],
+          "objective": "cambio",
+          "vignette": "Un adulto atendido tras autolesión está despierto, orientado y puede participar en entrevista. Aún tiene alcohol detectable. Se propone diferir toda evaluación psicosocial hasta que el nivel sea cero.",
+          "question": "¿El resultado de alcohol por sí solo justifica esa demora?",
+          "answer": "No. Iniciar evaluación según capacidad clínica, sin esperar un umbral aislado.",
+          "discriminator": "está despierto, orientado y puede participar en entrevista",
+          "reason": "La capacidad de participar y las necesidades médicas importan más que un umbral fijo de alcoholemia para iniciar evaluación psicosocial.",
+          "initial_action": "Coordinar atención médica y salud mental desde ahora, con revisión continua de seguridad.",
+          "limits": "Si no puede participar, revisar regularmente y completar tan pronto sea posible; no omitir atención de intoxicación ni supervisión.",
+          "evidence": [
+            {
+              "source_id": "nice-selfharm",
+              "locator": "NG225,1.5.1–1.5.5: no retrasar por nivel de alcohol; capacidad de participación",
+              "support": "La capacidad de participar y las necesidades médicas importan más que un umbral fijo de alcoholemia para iniciar evaluación psicosocial."
+            }
+          ],
+          "id": "29.01-02-gravedad"
+        },
+        {
+          "anchor_topic_ids": [
+            "29.01-01",
+            "29.05-01"
+          ],
+          "objective": "cambio",
+          "vignette": "Un adulto tratado por depresión comienza con menor necesidad de sueño, grandiosidad y actividad riesgosa tras iniciar antidepresivo.",
+          "question": "¿Qué cambio debe reevaluarse de inmediato?",
+          "answer": "Posible viraje a manía.",
+          "discriminator": "menor necesidad de sueño, grandiosidad y actividad riesgosa",
+          "reason": "La elevación patológica del ánimo cambia el tratamiento.",
+          "initial_action": "Contactar al equipo tratante de forma urgente y evaluar seguridad y medicación.",
+          "limits": "No ajustar solo la dosis por cuenta propia ni atribuirlo a recuperación normal.",
+          "evidence": [
+            {
+              "source_id": "who-mhgap",
+              "locator": "DEP bipolar depression; monitor emerging mania",
+              "support": "La elevación patológica del ánimo cambia el tratamiento."
+            }
+          ],
+          "id": "29.01-03-cambio"
+        }
+      ]
+    },
+    {
+      "id": "29.02",
+      "title": "Miedo/angustia excesiva",
+      "related_sections": [],
+      "scenarios": [
+        {
+          "anchor_topic_ids": [
+            "29.02-01"
+          ],
+          "objective": "contraste",
+          "vignette": "Un adulto describe ataques bruscos de miedo y palpitaciones. En este episodio tiene síncope durante esfuerzo y antecedente de cardiopatía.",
+          "question": "¿Es suficiente atribuirlo a pánico por los episodios previos?",
+          "answer": "No. Debe evaluarse una causa médica urgente.",
+          "discriminator": "síncope durante esfuerzo",
+          "reason": "Los signos de posible enfermedad física cambian la prioridad.",
+          "initial_action": "Valorar signos vitales, ECG y causas médicas antes de concluir ansiedad.",
+          "limits": "La ansiedad puede coexistir con enfermedad cardíaca.",
+          "evidence": [
+            {
+              "source_id": "who-mhgap",
+              "locator": "ECP and OTH: physical assessment and differential causes",
+              "support": "Los signos de posible enfermedad física cambian la prioridad."
+            },
+            {
+              "source_id": "esc-syncope",
+              "locator": "4.1.1p11; Table5p13; Table7p18: ECG, síncope durante esfuerzo y cardiopatía",
+              "support": "El síncope durante esfuerzo y la cardiopatía orientan riesgo cardiovascular y requieren evaluación pronta con ECG; no se atribuyen solo a ansiedad."
+            }
+          ],
+          "id": "29.02-01-contraste"
+        }
+      ]
+    },
+    {
+      "id": "29.03",
+      "title": "Pensamientos intrusivos o recuerdo traumático",
+      "related_sections": [],
+      "scenarios": [
+        {
+          "anchor_topic_ids": [
+            "29.03-01"
+          ],
+          "objective": "mecanismo",
+          "vignette": "Un adulto con TOC pide a su pareja que compruebe las cerraduras y responda decenas de veces que nada malo ocurrirá. La pareja cumple cada ritual para evitar su angustia.",
+          "question": "¿Qué conducta familiar debe revisarse en el tratamiento?",
+          "answer": "La acomodación familiar de los rituales.",
+          "discriminator": "La pareja cumple cada ritual",
+          "reason": "La participación familiar en compulsiones puede mantener síntomas y asociarse con peores resultados.",
+          "initial_action": "Incluir a la pareja en psicoeducación y un plan terapéutico para reducir acomodación de forma acordada.",
+          "limits": "No culpabilizar ni retirar apoyo de forma punitiva; adaptar la intervención con el terapeuta.",
+          "evidence": [
+            {
+              "source_id": "ips-ocd",
+              "locator": "Formulating a treatment plan; Table4; Family-inclusive treatments",
+              "support": "La participación familiar en compulsiones puede mantener síntomas y asociarse con peores resultados."
+            }
+          ],
+          "id": "29.03-01-subtipo"
+        },
+        {
+          "anchor_topic_ids": [
+            "29.03-02"
+          ],
+          "objective": "contraste",
+          "vignette": "Una adulta presenció una agresión ayer. Está angustiada, pero no se ha establecido TEPT. Le ofrecen una sesión obligatoria para relatar todos los detalles con la promesa de evitar el trastorno.",
+          "question": "¿Se recomienda debriefing psicológico obligatorio como prevención?",
+          "answer": "No. Ofrecer apoyo inicial centrado en necesidades, sin forzar el relato detallado.",
+          "discriminator": "sesión obligatoria para relatar todos los detalles",
+          "reason": "WHO no recomienda debriefing para reducir riesgo de síntomas postraumáticos tras exposición reciente.",
+          "initial_action": "Atender seguridad, necesidades prácticas y apoyo; vigilar evolución y ofrecer evaluación si persisten síntomas.",
+          "limits": "La recomendación específica es WHO2012, fuerte con evidencia muy baja; no equivale a negar terapia centrada en trauma cuando está indicada.",
+          "evidence": [
+            {
+              "source_id": "who-debrief",
+              "locator": "Recommendation2012: psychological debriefing should not be used after recent trauma",
+              "support": "WHO no recomienda debriefing para reducir riesgo de síntomas postraumáticos tras exposición reciente."
+            }
+          ],
+          "id": "29.03-02-cambio"
+        },
+        {
+          "anchor_topic_ids": [
+            "29.03-01"
+          ],
+          "objective": "incompleta",
+          "vignette": "Una adulta dedica horas a repetir oraciones mentalmente para neutralizar pensamientos intrusivos. Nadie observa lavados ni revisiones; por eso su familia cree que no puede tener compulsiones.",
+          "question": "¿La ausencia de rituales visibles excluye TOC?",
+          "answer": "No; las compulsiones también pueden ser actos mentales.",
+          "discriminator": "repetir oraciones mentalmente para neutralizar pensamientos intrusivos",
+          "reason": "Los rituales mentales pueden reducir angustia y ocupar tiempo, aunque no sean observables.",
+          "initial_action": "Explorar su función, duración y deterioro y coordinar evaluación diagnóstica.",
+          "limits": "Rezar por convicción o costumbre no es por sí solo una compulsión; importa la relación con intrusiones, angustia e interferencia.",
+          "evidence": [
+            {
+              "source_id": "ips-ocd",
+              "locator": "Table1: mental rituals/praying/replacing bad thought; assessment of symptom profile",
+              "support": "Los rituales mentales pueden reducir angustia y ocupar tiempo, aunque no sean observables."
+            }
+          ],
+          "id": "29.03-03-contraste"
+        }
+      ]
+    },
+    {
+      "id": "29.04",
+      "title": "Psicosis",
+      "related_sections": [],
+      "scenarios": [
+        {
+          "anchor_topic_ids": [
+            "29.04-01"
+          ],
+          "objective": "contraste",
+          "vignette": "Un adulto mayor presenta alucinaciones de inicio en un día, desorientación y atención fluctuante durante una infección.",
+          "question": "¿Qué síndrome debe priorizarse frente a esquizofrenia nueva?",
+          "answer": "Delirio agudo o delirium.",
+          "discriminator": "atención fluctuante",
+          "reason": "El inicio agudo y la inatención orientan a una causa médica.",
+          "initial_action": "Evaluar infección, fármacos y alteraciones metabólicas de urgencia.",
+          "limits": "La presencia de alucinaciones no demuestra una psicosis primaria.",
+          "evidence": [
+            {
+              "source_id": "who-mhgap",
+              "locator": "PSY assessment: rule out delirium and physical causes",
+              "support": "El inicio agudo y la inatención orientan a una causa médica."
+            }
+          ],
+          "id": "29.04-01-contraste"
+        }
+      ]
+    },
+    {
+      "id": "29.05",
+      "title": "Euforia con psicosis",
+      "related_sections": [],
+      "scenarios": [
+        {
+          "anchor_topic_ids": [
+            "29.05-01"
+          ],
+          "objective": "gravedad",
+          "vignette": "Un adulto con bipolaridad estable toma litio. Tras diarrea intensa presenta temblor marcado, confusión y dificultad para hablar, sin ánimo expansivo ni aumento de actividad.",
+          "question": "¿Qué complicación requiere descartar de inmediato?",
+          "answer": "Toxicidad por litio.",
+          "discriminator": "temblor marcado, confusión y dificultad para hablar",
+          "reason": "Los síntomas neurológicos y digestivos durante tratamiento con litio pueden indicar toxicidad, no una recaída maníaca.",
+          "initial_action": "Suspender litio y enviar a urgencias para valoración de niveles, función renal, electrolitos y tratamiento.",
+          "limits": "No reiniciar ni ajustar en casa; la clínica y el contexto determinan manejo, no una dosis previa aparentemente estable.",
+          "evidence": [
+            {
+              "source_id": "nhs-lithium",
+              "locator": "Serious side effects: signos de toxicidad, urgencia y suspensión inmediata",
+              "support": "Los síntomas neurológicos y digestivos durante tratamiento con litio pueden indicar toxicidad, no una recaída maníaca."
+            }
+          ],
+          "id": "29.05-01-gravedad"
+        }
+      ]
+    },
+    {
+      "id": "29.06",
+      "title": "Desatención escolar",
+      "related_sections": [],
+      "scenarios": [
+        {
+          "anchor_topic_ids": [
+            "29.06-01"
+          ],
+          "objective": "cambio",
+          "vignette": "Un niño de cuatro años con conducta hiperactiva persistente llega a primera valoración. Su familia pide iniciar metilfenidato antes de cualquier intervención con cuidadores.",
+          "question": "¿Puede aplicarse automáticamente la pauta farmacológica de un escolar mayor?",
+          "answer": "No; priorizar valoración preescolar e intervención con cuidadores y consultar al especialista.",
+          "discriminator": "cuatro años",
+          "reason": "La edad y el tratamiento psicosocial previo condicionan el uso de fármacos; no se extrapola la ruta de niños mayores.",
+          "initial_action": "Ofrecer apoyo y entrenamiento parental y coordinar evaluación especializada del desarrollo y la conducta.",
+          "limits": "WHO mhGAP2016 reserva su ruta de metilfenidato a diagnóstico establecido, fracaso de intervenciones y edad de al menos seis años. No es una prohibición universal de toda atención farmacológica preescolar especializada.",
+          "evidence": [
+            {
+              "source_id": "who-mhgap",
+              "locator": "CMH2 Management, p85: ADHD, parent skills training y condiciones para referencia farmacológica",
+              "support": "La edad y el tratamiento psicosocial previo condicionan el uso de fármacos; no se extrapola la ruta de niños mayores."
+            }
+          ],
+          "id": "29.06-01-dato_faltante"
+        }
+      ]
+    },
+    {
+      "id": "29.07",
+      "title": "Problema del sueño",
+      "related_sections": [],
+      "scenarios": [
+        {
+          "anchor_topic_ids": [
+            "29.07-01"
+          ],
+          "objective": "cambio",
+          "vignette": "Un adulto con insomnio crónico y antecedente de manía quiere comenzar por su cuenta una restricción intensa de tiempo en cama que encontró en internet. Actualmente está estable.",
+          "question": "¿Qué antecedente exige adaptar esa intervención?",
+          "answer": "La predisposición a manía o hipomanía.",
+          "discriminator": "antecedente de manía",
+          "reason": "La restricción del sueño puede no ser apropiada sin adaptación y vigilancia en personas predispuestas a manía.",
+          "initial_action": "Coordinar tratamiento del insomnio con salud mental y un profesional de sueño antes de aplicar restricción intensa.",
+          "limits": "No se descarta toda TCC-I; se seleccionan componentes y vigilancia según riesgo. La guía AASM citada corresponde a adultos.",
+          "evidence": [
+            {
+              "source_id": "aasm-behavioral",
+              "locator": "Recommendation1 discussion: sleep restriction may be contraindicated in predisposition to mania/hypomania",
+              "support": "La restricción del sueño puede no ser apropiada sin adaptación y vigilancia en personas predispuestas a manía."
+            }
+          ],
+          "id": "29.07-01-variante"
+        },
+        {
+          "anchor_topic_ids": [
+            "29.07-02"
+          ],
+          "objective": "dato_faltante",
+          "vignette": "Un adulto con somnolencia tendrá prueba de latencias múltiples. Ha dormido cuatro horas por noche durante dos semanas por trabajo y nadie documentó sueño suficiente antes del estudio.",
+          "question": "¿Qué limita interpretar un resultado como prueba de narcolepsia?",
+          "answer": "La privación de sueño previa puede confundir la prueba.",
+          "discriminator": "cuatro horas por noche durante dos semanas",
+          "reason": "La prueba requiere preparación con sueño suficiente y horario documentado para interpretar propensión al sueño.",
+          "initial_action": "Revisar la preparación con el especialista y planear registro de sueño y estudio en condiciones adecuadas.",
+          "limits": "No confirmar ni excluir narcolepsia por un estudio mal preparado; revisar también fármacos y otros trastornos. No suspender medicamentos sin plan seguro.",
+          "evidence": [
+            {
+              "source_id": "aasm-mslt",
+              "locator": "Box1; Planning before MSLT/Sleep-wake scheduling: dos semanas de diario y sueño suficiente",
+              "support": "La prueba requiere preparación con sueño suficiente y horario documentado para interpretar propensión al sueño."
+            }
+          ],
+          "id": "29.07-02-contraste"
+        }
+      ]
+    },
+    {
+      "id": "29.08",
+      "title": "Peso y alimentación",
+      "related_sections": [],
+      "scenarios": [
+        {
+          "anchor_topic_ids": [
+            "29.08-01"
+          ],
+          "objective": "subtipo",
+          "vignette": "Una adolescente con diabetes tipo1 teme que la insulina aumente su peso. Admite omitir dosis para adelgazar y ha tenido episodios repetidos de cetosis; no se trata solo de olvido.",
+          "question": "¿Qué problema debe abordarse además de ajustar la diabetes?",
+          "answer": "Conducta alimentaria que usa restricción de insulina para controlar peso.",
+          "discriminator": "omitir dosis para adelgazar",
+          "reason": "La omisión intencional de insulina por temor al peso requiere atención conjunta de diabetes y trastornos alimentarios.",
+          "initial_action": "Evaluar de inmediato glucosa, cetonas y estabilidad; coordinar manejo pediátrico y de salud mental especializado.",
+          "limits": "La cetosis o acidosis puede requerir atención urgente. No tratarlo solo como incumplimiento ni modificar insulina sin el equipo de diabetes.",
+          "evidence": [
+            {
+              "source_id": "rcpsych-meed",
+              "locator": "Cap9 Eating disorders and type1 diabetes mellitus, pp126–128: criterios, señales y equipo conjunto",
+              "support": "La omisión intencional de insulina por temor al peso requiere atención conjunta de diabetes y trastornos alimentarios."
+            }
+          ],
+          "id": "29.08-01-gravedad"
+        }
+      ]
+    },
+    {
+      "id": "29.09",
+      "title": "Consumo y dependencia",
+      "related_sections": [],
+      "scenarios": [
+        {
+          "anchor_topic_ids": [
+            "29.09-01"
+          ],
+          "objective": "dato_faltante",
+          "vignette": "Un adulto consulta por uso de sustancias. No se conoce última dosis, mezcla con sedantes ni antecedentes de abstinencia complicada.",
+          "question": "¿Qué datos cambian la seguridad del plan inicial?",
+          "answer": "Sustancia, última exposición, coingestas y abstinencias previas.",
+          "discriminator": "No se conoce última dosis",
+          "reason": "Intoxicación y retirada tienen riesgos distintos.",
+          "initial_action": "Evaluar estado mental y respiratorio y completar historia sin juicio.",
+          "limits": "Un análisis toxicológico aislado no sustituye la historia ni descarta mezclas.",
+          "evidence": [
+            {
+              "source_id": "who-mhgap",
+              "locator": "SUB: emergency assessment and substance-use history",
+              "support": "Intoxicación y retirada tienen riesgos distintos."
+            }
+          ],
+          "id": "29.09-01-dato_faltante"
+        },
+        {
+          "anchor_topic_ids": [
+            "29.09-02"
+          ],
+          "objective": "cambio",
+          "vignette": "Un adulto suspendió disulfiram hace dos días. Cree que ya puede beber alcohol sin interacción porque el fármaco dejó de tomarse.",
+          "question": "¿La suspensión hace desaparecer el riesgo de inmediato?",
+          "answer": "No; la reacción con alcohol puede persistir varios días.",
+          "discriminator": "suspendió disulfiram hace dos días",
+          "reason": "La sensibilización al alcohol persiste después de la última dosis y puede causar una reacción grave.",
+          "initial_action": "Indicar que evite alcohol y consulte su plan con el prescriptor; si aparece una reacción, valorar urgencias.",
+          "limits": "WHO mhGAP2016 describe persistencia de seis a catorce días. No usar este caso para indicar disulfiram ni estimar una cantidad de alcohol segura.",
+          "evidence": [
+            {
+              "source_id": "who-mhgap",
+              "locator": "SUB/Table3, Disulfiram/Sensitisation to alcohol continues6–14days after taking",
+              "support": "La sensibilización al alcohol persiste después de la última dosis y puede causar una reacción grave."
+            }
+          ],
+          "id": "29.09-02-cambio"
+        },
+        {
+          "anchor_topic_ids": [
+            "29.09-03"
+          ],
+          "objective": "incompleta",
+          "vignette": "Un adulto con consumo reciente de cannabis presenta paranoia intensa. Los síntomas continúan después del período esperado de intoxicación referido.",
+          "question": "¿Puede concluirse que todo se resolverá como intoxicación simple?",
+          "answer": "No. Requiere evaluar psicosis, otras sustancias y curso temporal.",
+          "discriminator": "Los síntomas continúan",
+          "reason": "La persistencia exige un diagnóstico diferencial más amplio.",
+          "initial_action": "Valorar seguridad y realizar evaluación médica y de salud mental.",
+          "limits": "El consumo puede ser factor causal, precipitante o coincidente.",
+          "evidence": [
+            {
+              "source_id": "who-mhgap",
+              "locator": "PSY differential; SUB emergency assessment",
+              "support": "La persistencia exige un diagnóstico diferencial más amplio."
+            }
+          ],
+          "id": "29.09-03-incompleta"
+        },
+        {
+          "anchor_topic_ids": [
+            "29.09-02",
+            "29.10-01"
+          ],
+          "objective": "contraste",
+          "vignette": "Un adulto con dependencia alcohólica está somnoliento tras beber. Respira lentamente y presenta hipoglucemia.",
+          "question": "¿Debe tratarse como abstinencia por el antecedente de dependencia?",
+          "answer": "No. La prioridad es depresión respiratoria e hipoglucemia.",
+          "discriminator": "somnoliento tras beber",
+          "reason": "La dependencia no determina el síndrome agudo actual.",
+          "initial_action": "Atender vía aérea, ventilación y glucosa y evaluar coingestas y trauma.",
+          "limits": "Dar tiamina según riesgo sin retrasar tratamiento de hipoglucemia. ASAM2020 V.7 permite cualquier orden o administración simultánea y corrige la secuencia de WHO mhGAP2016.",
+          "evidence": [
+            {
+              "source_id": "who-mhgap",
+              "locator": "SUB emergency: sedated patient, ABC and glucose assessment",
+              "support": "La dependencia no determina el síndrome agudo actual."
+            },
+            {
+              "source_id": "asam-withdrawal",
+              "locator": "RecommendationV.7: tiamina y glucosa en cualquier orden o simultáneas",
+              "support": "No se demora la glucosa urgente para administrar antes tiamina; corrige la secuencia de mhGAP2016."
+            }
+          ],
+          "id": "29.09-04-contraste"
+        }
+      ]
+    },
+    {
+      "id": "29.10",
+      "title": "Temblor tras dejar alcohol",
+      "related_sections": [],
+      "scenarios": [
+        {
+          "anchor_topic_ids": [
+            "29.10-01"
+          ],
+          "objective": "incompleta",
+          "vignette": "Un adulto con consumo diario muy alto redujo de forma importante la cantidad. Tiene temblor, sudoración y taquicardia, aunque la alcoholemia sigue positiva.",
+          "question": "¿Ese resultado excluye abstinencia alcohólica?",
+          "answer": "No. Puede aparecer tras una reducción significativa aun con alcohol detectable.",
+          "discriminator": "alcoholemia sigue positiva",
+          "reason": "Una alcoholemia positiva no permite confirmar ni excluir abstinencia; importan reducción y evolución clínica.",
+          "initial_action": "Evaluar gravedad, causas alternativas y riesgo para iniciar manejo vigilado según protocolo.",
+          "limits": "No atribuir todos los síntomas a abstinencia; infección, alteraciones metabólicas y otras intoxicaciones pueden coexistir.",
+          "evidence": [
+            {
+              "source_id": "asam-withdrawal",
+              "locator": "RecommendationI.7 y Discussion: síntomas tras reducción con BAC positiva",
+              "support": "Una alcoholemia positiva no permite confirmar ni excluir abstinencia; importan reducción y evolución clínica."
+            }
+          ],
+          "id": "29.10-01-gravedad"
+        }
+      ]
+    },
+    {
+      "id": "29.11",
+      "title": "Síntomas fabricados",
+      "related_sections": [],
+      "scenarios": [
+        {
+          "anchor_topic_ids": [
+            "29.11-01"
+          ],
+          "objective": "subtipo",
+          "vignette": "Se documenta que un cuidador añadió glucosa a la muestra de orina de un niño sano para simular enfermedad. El niño ya fue sometido a procedimientos por esos resultados.",
+          "question": "¿Qué prioridad cambia respecto a un trastorno facticio impuesto a uno mismo?",
+          "answer": "Proteger al niño y evaluar daño por enfermedad fabricada o inducida.",
+          "discriminator": "cuidador añadió glucosa a la muestra de orina",
+          "reason": "La fabricación de enfermedad en otra persona expone a una víctima dependiente a daño médico y requiere protección infantil.",
+          "initial_action": "Coordinar evaluación pediátrica y protección según protocolo local, con revisión objetiva de la evidencia.",
+          "limits": "No inferir esta situación solo por discordancias o consultas repetidas; la viñeta aporta una manipulación documentada.",
+          "evidence": [
+            {
+              "source_id": "nhs-fii",
+              "locator": "Signs: manipulation of samples; How managed/The child: protection first",
+              "support": "La fabricación de enfermedad en otra persona expone a una víctima dependiente a daño médico y requiere protección infantil."
+            }
+          ],
+          "id": "29.11-01-incompleta"
+        }
+      ]
+    },
+    {
+      "id": "29.12",
+      "title": "Violencia familiar",
+      "related_sections": [],
+      "scenarios": [
+        {
+          "anchor_topic_ids": [
+            "29.12-01"
+          ],
+          "objective": "cambio",
+          "vignette": "Una adulta que comunicó violencia de pareja no desea separarse hoy. Está orientada, no presenta peligro inmediato identificado y solicita apoyo para ella y sus hijos. El equipo propone dejar de atenderla si vuelve con su pareja.",
+          "question": "¿Debe condicionarse el apoyo a que termine la relación?",
+          "answer": "No. Respetar su autonomía y mantener apoyo y evaluación de seguridad.",
+          "discriminator": "propone dejar de atenderla si vuelve con su pareja",
+          "reason": "La atención centrada en la mujer apoya decisiones propias y evita presionarla para abandonar la relación.",
+          "initial_action": "Explorar necesidades y opciones, acordar un plan de seguridad y seguimiento que pueda usar.",
+          "limits": "Reevaluar peligro y protección de dependientes; explicar obligaciones locales y límites de confidencialidad. No prometer secreto absoluto.",
+          "evidence": [
+            {
+              "source_id": "who-violence-handbook",
+              "locator": "Guiding principles; Part2 Questions and answers, p34: Why doesn’t she just leave him?",
+              "support": "La atención centrada en la mujer apoya decisiones propias y evita presionarla para abandonar la relación."
+            }
+          ],
+          "id": "29.12-01-dato_faltante"
+        },
+        {
+          "anchor_topic_ids": [
+            "29.12-01"
+          ],
+          "objective": "gravedad",
+          "vignette": "Una adulta refiere que su pareja le comprimió el cuello ayer. No hay equimosis visibles, pero tiene ronquera nueva y dolor al deglutir.",
+          "question": "¿La piel sin marcas permite descartar lesión relevante?",
+          "answer": "No; necesita evaluación urgente de lesión interna tras estrangulación.",
+          "discriminator": "ronquera nueva y dolor al deglutir",
+          "reason": "Cambios de voz y deglución son señales de alarma; una lesión externa ausente no excluye daño de vía aérea o vascular.",
+          "initial_action": "Enviar a urgencias para evaluación por equipo con experiencia, imagen según hallazgos y plan de protección.",
+          "limits": "No se indica imagen universal a toda persona sin síntomas ni se aplica esta guía adulta a niños; no retrasar estabilización de vía aérea.",
+          "evidence": [
+            {
+              "source_id": "ifas-strangulation",
+              "locator": "Julio2025, BoxA–B, p4; BoxC: red flags e investigación según clínica",
+              "support": "Cambios de voz y deglución son señales de alarma; una lesión externa ausente no excluye daño de vía aérea o vascular."
+            }
+          ],
+          "id": "29.12-02-cambio"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,803 @@
+{
+  "schema_version": 1,
+  "layer": 2,
+  "section_id": "10",
+  "title": "Endocrinología",
+  "author": "clinical-author-01-12",
+  "sources": [
+    {
+      "id": "acro-consensus-2024",
+      "label": "14th Acromegaly Consensus: diagnóstico y remisión",
+      "url": "https://link.springer.com/article/10.1007/s11102-023-01360-1",
+      "version": "Publicación electrónica 2023; volumen 2024",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Tabla 2; Biochemical diagnosis: IGF-I y ensayo validado"
+    },
+    {
+      "id": "ada-diagnosis-2026",
+      "label": "ADA: Diagnosis and Classification of Diabetes, Standards of Care",
+      "url": "https://www.guideline.care/images-recos/standards-of-care-2026.pdf",
+      "version": "2026; Diabetes Care 49(Suppl 1), publicado 2025-12-08",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Capítulo 2, tabla 2.4 y recomendación 2.29a: estadio presintomático y diabetes neonatal; copia del documento primario completo"
+    },
+    {
+      "id": "ada-older-2026",
+      "label": "ADA: Older Adults, Standards of Care",
+      "url": "https://www.guideline.care/images-recos/standards-of-care-2026.pdf",
+      "version": "2026; Diabetes Care 49(Suppl 1), publicado 2025-12-08",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Capítulo 13, recomendación 13.14d: beneficio cardiorrenal independiente de glucemia; copia del documento primario completo"
+    },
+    {
+      "id": "ata-dtc-2025",
+      "label": "ATA: guía de cáncer diferenciado de tiroides",
+      "url": "https://thyca.org/wp-content/uploads/DTCGuidelines.pdf",
+      "version": "2025",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Recomendaciones 11–14: selección y seguimiento de vigilancia activa"
+    },
+    {
+      "id": "ata-medullary-2015",
+      "label": "ATA: guía de carcinoma medular de tiroides",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4490627/",
+      "version": "2015",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "§P; recomendaciones 38–39: excluir feocromocitoma antes de intervención en MEN2"
+    },
+    {
+      "id": "ata-nodules-2015",
+      "label": "ATA: guía de nódulos tiroideos",
+      "url": "https://cdn.ymaws.com/www.bnms.org.uk/resource/resmgr/guidelines/2015_american_thyroid_associ.pdf",
+      "version": "Guía 2015; publicación enero 2016",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Recomendación 2: TSH y gammagrafía si TSH subnormal; aquí solo nódulos"
+    },
+    {
+      "id": "endo-adrenal-2016",
+      "label": "Endocrine Society: Primary Adrenal Insufficiency",
+      "url": "https://www.endocrine.org/clinical-practice-guidelines/primary-adrenal-insufficiency",
+      "version": "2016",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Recomendaciones 1.3 y 4.1: crisis y tratamiento inmediato"
+    },
+    {
+      "id": "endo-aldo-2025",
+      "label": "Endocrine Society: Primary Aldosteronism",
+      "url": "https://www.endocrine.org/clinical-practice-guidelines/primary-aldosteronism-2",
+      "version": "2025-07-14",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Recomendación 3: corrección de hipopotasemia y repetición de tamiz"
+    },
+    {
+      "id": "endo-cushing-2008",
+      "label": "Endocrine Society: Diagnosis of Cushing’s Syndrome",
+      "url": "https://www.endocrine.org/clinical-practice-guidelines/diagnosis-of-cushing-syndrome",
+      "version": "2008",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Recomendaciones 3.1 y 3.4–3.5: glucocorticoides exógenos y pruebas iniciales; recomendación 4.3: elección de prueba en insuficiencia renal grave"
+    },
+    {
+      "id": "endo-hypopit-2016",
+      "label": "Endocrine Society: Hormone Replacement in Hypopituitarism",
+      "url": "https://www.endocrine.org/clinical-practice-guidelines/hormone-replacement-in-hypopituitarism",
+      "version": "2016",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Recomendación 1.6: T4 libre y TSH en hipotiroidismo central"
+    },
+    {
+      "id": "endo-lipids-2020",
+      "label": "Endocrine Society: Lipid Management in Patients with Endocrine Disorders",
+      "url": "https://www.endocrine.org/clinical-practice-guidelines/lipid-management-guideline",
+      "version": "2020-10-13",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "§§1, 3 y 6: riesgo, causas endocrinas y tiroides"
+    },
+    {
+      "id": "endo-obesity-2015",
+      "label": "Endocrine Society: Pharmacological Management of Obesity",
+      "url": "https://www.endocrine.org/clinical-practice-guidelines/pharmacological-management-of-obesity",
+      "version": "2015",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Recomendación 1.3: evitar simpaticomiméticos en hipertensión no controlada"
+    },
+    {
+      "id": "eta-graves-2018",
+      "label": "European Thyroid Association: Graves hyperthyroidism",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6140607/",
+      "version": "2018-07-25",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Recomendaciones 10–11: fiebre y faringitis con antitiroideos"
+    },
+    {
+      "id": "hyperglycemic-2024",
+      "label": "ADA/EASD/JBDS/AACE/DTS: consenso de crisis hiperglucémicas en adultos",
+      "url": "https://link.springer.com/article/10.1007/s00125-024-06183-8",
+      "version": "2024-06-22",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Diagnóstico; fluidos; potasio; criterios de resolución"
+    },
+    {
+      "id": "japan-ppgl-2025",
+      "label": "Japan Endocrine Society: Pheochromocytoma and Paraganglioma",
+      "url": "https://www.jstage.jst.go.jp/article/endocrj/73/1/73_EJ25-0165/_html/-char/ja",
+      "version": "Guía 2025; publicación anticipada 2025-10-10; edición final 2026-01-06",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Diagnóstico bioquímico: condiciones de metanefrinas libres; documento inglés completo de Jstage"
+    },
+    {
+      "id": "pitsoc-prolactin-2023",
+      "label": "Pituitary Society: consenso internacional de prolactinomas",
+      "url": "https://www.eledrisi.com/uploads/1/3/5/9/135945067/prolactinoma_pit_soc_guidelines_2023.pdf",
+      "version": "2023-09-05; volumen diciembre 2023",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Initial assessment: efecto gancho y dilución de la muestra"
+    },
+    {
+      "id": "pth-workshop-2022",
+      "label": "Fifth International Workshop: hiperparatiroidismo primario",
+      "url": "https://jsbmr.umin.jp/guide/pdf/Bilezikian-2022-Evaluation-and-management-of-primar.pdf",
+      "version": "2022",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Recomendaciones 1–3 y 6.1: diagnóstico bioquímico e imagen preoperatoria"
+    },
+    {
+      "id": "rcuk-firstaid-2025",
+      "label": "Resuscitation Council UK: First Aid Guidelines",
+      "url": "https://www.resus.org.uk/professional-library/2025-resuscitation-guidelines/first-aid-guidelines",
+      "version": "2025-10-27",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Recovery position; ABCDE; Hypoglycaemia"
+    },
+    {
+      "id": "ada-hypoglycemia-2026",
+      "label": "ADA: Standards of Care 2026, capítulo 6 sobre hipoglucemia",
+      "url": "https://www.guideline.care/images-recos/standards-of-care-2026.pdf",
+      "version": "2026; Diabetes Care 49(Suppl 1), dc26-S006",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Hypoglycemia treatment, p.S176: acarbosa y glucosa pura; documento primario completo en copia PDF"
+    },
+    {
+      "id": "imss-diabetes-2018",
+      "label": "IMSS: diagnóstico y tratamiento farmacológico de diabetes tipo 2 en primer nivel",
+      "url": "https://imss.gob.mx/sites/all/statics/guiasclinicas/718GER.pdf",
+      "version": "Actualización 2018; GPC-IMSS-718-18",
+      "checked_at": "2026-11-06",
+      "region": "mexico",
+      "access": "checked",
+      "locator": "§2.2 Diagnóstico, pp.14–16; contexto nacional, no pauta actual de crisis"
+    },
+    {
+      "id": "nhs-sps-statins-2024",
+      "label": "NHS Specialist Pharmacy Service: Managing interactions between macrolides and statins",
+      "url": "https://sps.nhs.uk/articles/managing-interactions-between-macrolides-and-statins/",
+      "version": "Publicada 24 noviembre 2023; actualizada 12 julio 2024",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Clarithromycin and statins / Simvastatin; mecanismo, miopatía y plan de suspensión temporal. Orientación profesional oficial de medicamentos, no GPC mexicana."
+    }
+  ],
+  "mexico_source_note": "Se abrió IMSS-718-18, actualización 2018, para diagnóstico y manejo integral de diabetes tipo 2. No se localizó una guía IMSS reciente que cubra todo el temario endocrino. ADA 2026 y consensos internacionales posteriores respaldan las decisiones actuales específicas. Las guías Endocrine Society 2008–2020 se citan con su fecha real y solo para principios diagnósticos y de seguridad; no se usan para recomendar medicamentos retirados ni para metas nuevas de cirugía de obesidad. Los nódulos usan ATA 2015; el cáncer diferenciado usa ATA 2025. Las dos sustituciones finales se comprobaron en NHS SPS interacciones macrólidos/estatinas actualizado 12 julio 2024 y Endocrine Society Cushing recomendación 4.3 de 2008. No se encontró una GPC mexicana reciente accesible para estas relaciones específicas; se declara la antigüedad y evidencia muy baja de la sugerencia renal, sin simular actualización.",
+  "blocks": [
+    {
+      "id": "10.01",
+      "title": "Glucosa alterada sin síntomas",
+      "related_sections": [],
+      "scenarios": [
+        {
+          "id": "10.01-c2-01",
+          "anchor_topic_ids": [
+            "10.01-01"
+          ],
+          "objective": "variante",
+          "vignette": "Una persona con prediabetes cree que su riesgo se limita a la glucosa. Además fuma y tiene hipertensión no controlada.",
+          "question": "¿Qué riesgo adicional debe abordarse?",
+          "answer": "El riesgo cardiovascular global.",
+          "discriminator": "fuma y tiene hipertensión",
+          "reason": "La prediabetes exige revisar otros factores cardiometabólicos.",
+          "initial_action": "Evaluar presión, lípidos, tabaco y un plan de prevención individual.",
+          "limits": "La etiqueta de prediabetes no indica por sí sola un fármaco específico.",
+          "evidence": [
+            {
+              "source_id": "ada-diagnosis-2026",
+              "locator": "Prediabetes and Type 2 Diabetes: riesgo cardiovascular",
+              "support": "La prediabetes exige revisar otros factores cardiometabólicos."
+            }
+          ]
+        },
+        {
+          "id": "10.01-c2-02",
+          "anchor_topic_ids": [
+            "10.01-02"
+          ],
+          "objective": "subtipo",
+          "vignette": "Una persona asintomática tiene varios autoanticuerpos de islote confirmados, con glucosa en ayuno, tolerancia oral y A1C normales.",
+          "question": "¿Qué fase de diabetes tipo 1 describe esta combinación?",
+          "answer": "Estadio 1 presintomático.",
+          "discriminator": "varios autoanticuerpos de islote confirmados",
+          "reason": "La autoinmunidad múltiple con normoglucemia define un estadio de riesgo distinto de hiperglucemia clínica o prediabetes tipo 2.",
+          "initial_action": "Referir para asesoría, seguimiento metabólico y educación sobre síntomas de progresión.",
+          "limits": "Confirmar las pruebas y no diagnosticar estadio 3 ni indicar insulina solo con esta descripción.",
+          "evidence": [
+            {
+              "source_id": "ada-diagnosis-2026",
+              "locator": "Tabla 2.4: staging of type1 diabetes, stage 1",
+              "support": "La autoinmunidad múltiple con normoglucemia define un estadio de riesgo distinto de hiperglucemia clínica o prediabetes tipo 2."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "10.02",
+      "title": "Diabetes según etapa de vida",
+      "related_sections": [],
+      "scenarios": [
+        {
+          "id": "10.02-c2-01",
+          "anchor_topic_ids": [
+            "10.02-01"
+          ],
+          "objective": "subtipo",
+          "vignette": "Un lactante fue diagnosticado de diabetes a los tres meses y requiere insulina. No se conoce una causa secundaria y los autoanticuerpos son negativos.",
+          "question": "¿Qué estudio etiológico debe priorizarse?",
+          "answer": "Prueba genética para diabetes neonatal.",
+          "discriminator": "diagnosticado de diabetes a los tres meses",
+          "reason": "La diabetes antes de seis meses suele ser monogénica y amerita estudio genético; la diabetes autoinmune es muy poco frecuente en esa edad.",
+          "initial_action": "Mantener tratamiento y remitir a endocrinología pediátrica y genética.",
+          "limits": "No retirar insulina antes de definir el defecto; algunos subtipos permiten otro tratamiento especializado.",
+          "evidence": [
+            {
+              "source_id": "ada-diagnosis-2026",
+              "locator": "Monogenic diabetes syndromes, recomendación 2.29a: diagnóstico en primeros 6 meses",
+              "support": "La diabetes antes de seis meses suele ser monogénica y amerita estudio genético; la diabetes autoinmune es muy poco frecuente en esa edad."
+            }
+          ]
+        },
+        {
+          "id": "10.02-c2-02",
+          "anchor_topic_ids": [
+            "10.02-02"
+          ],
+          "objective": "cambio",
+          "vignette": "Un adulto mayor con diabetes tipo 2 está funcionalmente independiente y tiene A1C en su meta, sin hipoglucemia. Tiene insuficiencia cardiaca confirmada y su plan no incluye fármacos con beneficio cardiorrenal.",
+          "question": "¿La A1C en meta elimina la necesidad de revisar esa protección?",
+          "answer": "No. Valorar fármacos con beneficio cardiorrenal.",
+          "discriminator": "insuficiencia cardiaca confirmada",
+          "reason": "ADA recomienda incluir agentes que reduzcan riesgo cardiovascular o renal en mayores con estas enfermedades, independientemente de glucemia.",
+          "initial_action": "Revisar elegibilidad, función renal, volumen y preferencias con el equipo tratante.",
+          "limits": "El beneficio no implica usar cualquier fármaco ni ignorar efectos adversos, fragilidad o contraindicaciones.",
+          "evidence": [
+            {
+              "source_id": "ada-older-2026",
+              "locator": "Recomendación 13.14d: reducción de riesgo cardiorrenal irrespective of glycemia",
+              "support": "ADA recomienda incluir agentes que reduzcan riesgo cardiovascular o renal en mayores con estas enfermedades, independientemente de glucemia."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "10.03",
+      "title": "Alteración grave de conciencia y glucosa",
+      "related_sections": [],
+      "scenarios": [
+        {
+          "id": "10.03-c2-01",
+          "anchor_topic_ids": [
+            "10.03-01"
+          ],
+          "objective": "cambio",
+          "vignette": "Una persona que toma acarbosa e insulina tiene hipoglucemia sintomática confirmada, permanece alerta y deglute con seguridad. Dispone de tabletas de glucosa y azúcar de mesa.",
+          "question": "¿Cuál de esas opciones corrige mejor la hipoglucemia en este contexto?",
+          "answer": "Glucosa pura, en lugar de sacarosa.",
+          "discriminator": "toma acarbosa e insulina",
+          "reason": "Acarbosa retrasa la digestión de sacarosa, pero no la absorción de glucosa ya libre.",
+          "initial_action": "Administrar glucosa oral y reevaluar glucemia y síntomas según protocolo.",
+          "limits": "Si pierde capacidad de deglutir cambia la vía; la combinación con insulina explica riesgo, no la acarbosa aislada por sí sola.",
+          "evidence": [
+            {
+              "source_id": "ada-hypoglycemia-2026",
+              "locator": "Capítulo6, Hypoglycemia treatment: acarbose, only pure glucose",
+              "support": "Acarbosa retrasa la digestión de sacarosa, pero no la absorción de glucosa ya libre."
+            }
+          ]
+        },
+        {
+          "id": "10.03-c2-02",
+          "anchor_topic_ids": [
+            "10.03-02"
+          ],
+          "objective": "incompleta",
+          "vignette": "Tras tratar una cetoacidosis, un adulto tiene beta-hidroxibutirato de 0.3 mmol/L, pH venoso 7.34 y glucosa 150 mg/dL. La tira de orina aún informa cetonas positivas.",
+          "question": "¿La tira positiva demuestra por sí sola que persiste la cetoacidosis?",
+          "answer": "No. No debe usarse como criterio de resolución.",
+          "discriminator": "La tira de orina aún informa cetonas positivas",
+          "reason": "Al mejorar la acidosis, beta-hidroxibutirato se convierte en acetoacetato y puede persistir positividad urinaria pese a resolución bioquímica.",
+          "initial_action": "Evaluar criterios de resolución y plan de transición con cetonas plasmáticas, pH y estado clínico.",
+          "limits": "Una tira urinaria tampoco cuantifica gravedad; no retirar tratamiento sin asegurar la transición de insulina y el desencadenante.",
+          "evidence": [
+            {
+              "source_id": "hyperglycemic-2024",
+              "locator": "§4, Criteria for resolution of DKA and HHS: cetonuria y conversión de beta-hidroxibutirato",
+              "support": "Al mejorar la acidosis, beta-hidroxibutirato se convierte en acetoacetato y puede persistir positividad urinaria pese a resolución bioquímica."
+            }
+          ]
+        },
+        {
+          "id": "10.03-c2-03",
+          "anchor_topic_ids": [
+            "10.03-03"
+          ],
+          "objective": "mecanismo",
+          "vignette": "Durante el tratamiento de un estado hiperosmolar baja la glucosa y la osmolalidad desciende de forma apropiada. El sodio medido aumenta al inicio, sin deterioro neurológico.",
+          "question": "¿Ese aumento aislado obliga a cambiar a líquido hipotónico?",
+          "answer": "No. Interpretarlo junto con osmolalidad y balance.",
+          "discriminator": "osmolalidad desciende de forma apropiada",
+          "reason": "El agua vuelve al interior celular al bajar glucosa y puede elevar el sodio; ese cambio inicial no indica por sí solo solución hipotónica.",
+          "initial_action": "Seguir sodio, glucosa, osmolalidad, balance y perfusión para ajustar líquidos.",
+          "limits": "Un descenso inadecuado de osmolalidad pese al tratamiento requiere reevaluación; no extrapolar a toda hipernatremia.",
+          "evidence": [
+            {
+              "source_id": "hyperglycemic-2024",
+              "locator": "§4, Fluid therapy: initial rise in serum sodium not an indication for hypotonic fluids",
+              "support": "El agua vuelve al interior celular al bajar glucosa y puede elevar el sodio; ese cambio inicial no indica por sí solo solución hipotónica."
+            }
+          ]
+        },
+        {
+          "id": "10.03-c2-04",
+          "anchor_topic_ids": [
+            "10.03-02"
+          ],
+          "objective": "cambio",
+          "vignette": "Un adulto con cetoacidosis tiene pH 7.15, perfusión en recuperación y tratamiento de líquidos, insulina y potasio en curso. Se propone bicarbonato rutinario para acelerar la corrección.",
+          "question": "¿Se recomienda bicarbonato por esa acidosis aislada?",
+          "answer": "No. No se recomienda de rutina.",
+          "discriminator": "pH 7.15",
+          "reason": "El tratamiento habitual resuelve la acidosis; bicarbonato no ha mostrado ventaja rutinaria y añade riesgos.",
+          "initial_action": "Continuar vigilancia y tratamiento causal según respuesta.",
+          "limits": "El consenso permite considerarlo en acidosis muy grave, pH inferior a 7.0, con equipo experto; este caso no cumple ese criterio.",
+          "evidence": [
+            {
+              "source_id": "hyperglycemic-2024",
+              "locator": "§4, Bicarbonate: no uso rutinario; consideración si pH <7.0",
+              "support": "El tratamiento habitual resuelve la acidosis; bicarbonato no ha mostrado ventaja rutinaria y añade riesgos."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "10.04",
+      "title": "Obesidad y riesgo metabólico",
+      "related_sections": [],
+      "scenarios": [
+        {
+          "id": "10.04-c2-01",
+          "anchor_topic_ids": [
+            "10.04-01"
+          ],
+          "objective": "cambio",
+          "vignette": "Una persona con obesidad solicita fentermina. Tiene hipertensión persistente no controlada.",
+          "question": "¿Es apropiado este simpaticomimético en ese contexto?",
+          "answer": "No.",
+          "discriminator": "hipertensión persistente no controlada",
+          "reason": "El efecto simpático puede aumentar el riesgo cardiovascular.",
+          "initial_action": "Controlar la presión y elegir un plan de obesidad apropiado con el equipo.",
+          "limits": "La elección farmacológica exige revisar contraindicaciones y disponibilidad actual.",
+          "evidence": [
+            {
+              "source_id": "endo-obesity-2015",
+              "locator": "Recomendación 1.3",
+              "support": "El efecto simpático puede aumentar el riesgo cardiovascular."
+            }
+          ]
+        },
+        {
+          "id": "10.04-c2-02",
+          "anchor_topic_ids": [
+            "10.04-02"
+          ],
+          "objective": "cambio",
+          "vignette": "Una persona con síndrome metabólico tiene triglicéridos en ayuno de 650 mg/dL. Se propone colesevelam para otro componente de su perfil lipídico.",
+          "question": "¿Qué componente vuelve inadecuado ese secuestrador de ácidos biliares?",
+          "answer": "La hipertrigliceridemia marcada.",
+          "discriminator": "triglicéridos en ayuno de 650 mg/dL",
+          "reason": "Los secuestradores de ácidos biliares pueden empeorar triglicéridos y están contraindicados por encima de 500 mg/dL.",
+          "initial_action": "Elegir otra estrategia y tratar causas y riesgo de pancreatitis con el equipo.",
+          "limits": "No seleccionar el tratamiento solo por la etiqueta de síndrome metabólico; revisar cada componente y riesgo global.",
+          "evidence": [
+            {
+              "source_id": "endo-lipids-2020",
+              "locator": "Recomendación 2.5 y Technical remarks: bile acid sequestrants contraindicados con TG >500 mg/dL",
+              "support": "Los secuestradores de ácidos biliares pueden empeorar triglicéridos y están contraindicados por encima de 500 mg/dL."
+            }
+          ]
+        },
+        {
+          "id": "10.04-c2-03",
+          "anchor_topic_ids": [
+            "10.04-03"
+          ],
+          "objective": "cambio",
+          "vignette": "Un adulto tratado con simvastatina necesita claritromicina. Se propone mantener ambos fármacos sin revisar la interacción porque la estatina ya se toleraba bien.",
+          "question": "¿La tolerancia previa vuelve segura esa combinación?",
+          "answer": "No; claritromicina y simvastatina no deben administrarse juntas.",
+          "discriminator": "mantener ambos fármacos",
+          "reason": "Claritromicina aumenta exposición a simvastatina y riesgo de miopatía o rabdomiólisis; la tolerancia sin ese antibiótico no demuestra seguridad de la combinación.",
+          "initial_action": "Acordar un antibiótico sin interacción o, si claritromicina es esencial, suspender temporalmente simvastatina durante el curso con el prescriptor y plan de reinicio.",
+          "limits": "No suspender toda prevención cardiovascular ni extrapolar la interacción a todas las estatinas. Dolor muscular intenso, debilidad u orina oscura requieren evaluación.",
+          "evidence": [
+            {
+              "source_id": "nhs-sps-statins-2024",
+              "locator": "Clarithromycin and statins / Simvastatin; Risk of using the combination",
+              "support": "SPS contraindica claritromicina con simvastatina e indica suspender simvastatina durante el curso si el antibiótico es esencial."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "10.05",
+      "title": "Hipo vs hipermetabolismo tiroideo",
+      "related_sections": [],
+      "scenarios": [
+        {
+          "id": "10.05-c2-01",
+          "anchor_topic_ids": [
+            "10.05-01"
+          ],
+          "objective": "dato_faltante",
+          "vignette": "Un adulto con hipotiroidismo central confirmado va a iniciar levotiroxina. Tiene varios déficits hipofisarios y todavía no se evaluó su reserva suprarrenal.",
+          "question": "¿Qué déficit debe evaluarse o cubrirse antes de iniciar la hormona tiroidea?",
+          "answer": "Insuficiencia suprarrenal.",
+          "discriminator": "todavía no se evaluó su reserva suprarrenal",
+          "reason": "La guía indica evaluar insuficiencia suprarrenal antes de levotiroxina en hipotiroidismo central; si no es factible, contempla cobertura empírica temporal.",
+          "initial_action": "Coordinar estudio o cobertura glucocorticoide con endocrinología antes de levotiroxina.",
+          "limits": "No esperar pruebas si existe crisis; la cobertura y evaluación deben adaptarse al contexto.",
+          "evidence": [
+            {
+              "source_id": "endo-hypopit-2016",
+              "locator": "Recomendación 2.20: glucocorticoids and thyroid hormone",
+              "support": "La guía indica evaluar insuficiencia suprarrenal antes de levotiroxina en hipotiroidismo central; si no es factible, contempla cobertura empírica temporal."
+            }
+          ]
+        },
+        {
+          "id": "10.05-c2-02",
+          "anchor_topic_ids": [
+            "10.05-02"
+          ],
+          "objective": "gravedad",
+          "vignette": "Un adulto que toma metimazol desarrolla fiebre y dolor intenso de garganta.",
+          "question": "¿Qué complicación farmacológica debe excluirse de inmediato?",
+          "answer": "Agranulocitosis.",
+          "discriminator": "fiebre y dolor intenso de garganta",
+          "reason": "Los antitiroideos pueden causar descenso abrupto de neutrófilos.",
+          "initial_action": "Suspender el antitiroideo y obtener biometría con diferencial urgente.",
+          "limits": "La fiebre puede tener otras causas; no reiniciar sin valoración.",
+          "evidence": [
+            {
+              "source_id": "eta-graves-2018",
+              "locator": "Recomendaciones 10–11 y texto de seguridad",
+              "support": "Los antitiroideos pueden causar descenso abrupto de neutrófilos."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "10.06",
+      "title": "Bulto en cuello",
+      "related_sections": [],
+      "scenarios": [
+        {
+          "id": "10.06-c2-01",
+          "anchor_topic_ids": [
+            "10.06-01"
+          ],
+          "objective": "cambio",
+          "vignette": "Un adulto no gestante tiene un nódulo tiroideo y TSH suprimida. Aún no se ha definido su actividad funcional.",
+          "question": "¿Qué estudio funcional orienta el siguiente paso?",
+          "answer": "Gammagrafía tiroidea.",
+          "discriminator": "TSH suprimida",
+          "reason": "Un nódulo hiperfuncionante cambia la necesidad y selección de citología.",
+          "initial_action": "Coordinar gammagrafía e integrar ultrasonido de toda la glándula.",
+          "limits": "La gestación contraindica estudio con radionúclidos; no omitir evaluación de otros nódulos.",
+          "evidence": [
+            {
+              "source_id": "ata-nodules-2015",
+              "locator": "Recomendación 2",
+              "support": "Un nódulo hiperfuncionante cambia la necesidad y selección de citología."
+            }
+          ]
+        },
+        {
+          "id": "10.06-c2-02",
+          "anchor_topic_ids": [
+            "10.06-02"
+          ],
+          "objective": "subtipo",
+          "vignette": "Una persona con carcinoma papilar cT1aN0M0, sin extensión extratiroidea, puede acudir a controles y prefiere vigilancia.",
+          "question": "¿La cirugía inmediata es la única opción posible?",
+          "answer": "No. Puede discutirse vigilancia activa seleccionada.",
+          "discriminator": "puede acudir a controles",
+          "reason": "ATA 2025 admite vigilancia en ciertos tumores de bajo riesgo.",
+          "initial_action": "Explicar riesgos, preferencias y seguimiento ecográfico con un equipo experto.",
+          "limits": "No extrapolar a metástasis, invasión, crecimiento preocupante o imposibilidad de seguimiento.",
+          "evidence": [
+            {
+              "source_id": "ata-dtc-2025",
+              "locator": "Recomendaciones 11–14",
+              "support": "ATA 2025 admite vigilancia en ciertos tumores de bajo riesgo."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "10.07",
+      "title": "Hipotensión/electrolitos",
+      "related_sections": [],
+      "scenarios": [
+        {
+          "id": "10.07-c2-01",
+          "anchor_topic_ids": [
+            "10.07-01"
+          ],
+          "objective": "cambio",
+          "vignette": "Una persona con Addison recibe glucocorticoide y fludrocortisona. Desarrolla edema e hipertensión persistente, sin datos de crisis o déficit de volumen.",
+          "question": "¿Qué componente de reemplazo debe revisarse por posible exceso?",
+          "answer": "La fludrocortisona.",
+          "discriminator": "edema e hipertensión persistente",
+          "reason": "La vigilancia mineralocorticoide incluye edema y presión; la guía sugiere reducir fludrocortisona si aparece hipertensión.",
+          "initial_action": "Revisar dosis, electrolitos y otras causas de hipertensión con el equipo.",
+          "limits": "No suspender todo el reemplazo; si la presión sigue alta puede requerir antihipertensivo manteniendo el mineralocorticoide indicado.",
+          "evidence": [
+            {
+              "source_id": "endo-adrenal-2016",
+              "locator": "Recomendaciones 3.8–3.10: vigilancia y HTA durante fludrocortisona",
+              "support": "La vigilancia mineralocorticoide incluye edema y presión; la guía sugiere reducir fludrocortisona si aparece hipertensión."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "10.08",
+      "title": "Fenotipo cushingoide",
+      "related_sections": [],
+      "scenarios": [
+        {
+          "id": "10.08-c2-01",
+          "anchor_topic_ids": [
+            "10.08-01"
+          ],
+          "objective": "cambio",
+          "vignette": "Una adulta con debilidad proximal y estrías violáceas requiere estudio de hipercortisolismo. Tiene insuficiencia renal grave y se propone cortisol libre urinario como única prueba inicial.",
+          "question": "¿Qué prueba puede preferirse inicialmente por ese contexto renal?",
+          "answer": "Supresión nocturna con dexametasona a dosis baja, tras revisar interferencias.",
+          "discriminator": "insuficiencia renal grave",
+          "reason": "La guía de Endocrine Society prefiere la prueba nocturna de supresión frente a cortisol libre urinario en insuficiencia renal grave.",
+          "initial_action": "Coordinar elección e interpretación de la prueba con endocrinología y revisar medicamentos y exposición a corticoides.",
+          "limits": "Es una sugerencia de la guía de 2008 con evidencia muy baja, no una confirmación diagnóstica por sí sola. La función renal y las interferencias exigen interpretación especializada; no se indican pruebas de localización por este dato.",
+          "evidence": [
+            {
+              "source_id": "endo-cushing-2008",
+              "locator": "Recommendation 4.3 Renal failure: overnight DST rather than UFC in severe renal failure",
+              "support": "Endocrine Society sugiere preferir supresión nocturna con dexametasona frente a cortisol libre urinario como prueba inicial en insuficiencia renal grave."
+            }
+          ]
+        },
+        {
+          "id": "10.08-c2-02",
+          "anchor_topic_ids": [
+            "10.08-02"
+          ],
+          "objective": "mecanismo",
+          "vignette": "Una mujer que usa estrógeno oral tiene cortisol sérico total elevado. Se investiga un posible trastorno endocrino, pero no se han realizado pruebas confirmatorias.",
+          "question": "¿Qué cambio de transporte puede elevar el cortisol total sin demostrar exceso de cortisol libre?",
+          "answer": "Aumento de globulina transportadora de corticosteroides.",
+          "discriminator": "usa estrógeno oral",
+          "reason": "El estrógeno puede elevar CBG y cortisol total; conocer el tratamiento evita atribuir automáticamente el valor a hipercortisolismo autónomo.",
+          "initial_action": "Revisar fármacos y seleccionar pruebas con endocrinología que permitan interpretar el contexto de unión proteica.",
+          "limits": "No diagnosticar ni excluir Cushing con un cortisol aleatorio; tampoco suspender anticoncepción sin plan apropiado.",
+          "evidence": [
+            {
+              "source_id": "endo-hypopit-2016",
+              "locator": "Recomendación 2.21: estrógeno, CBG y cortisol sérico total",
+              "support": "El estrógeno puede elevar CBG y cortisol total; conocer el tratamiento evita atribuir automáticamente el valor a hipercortisolismo autónomo."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "10.09",
+      "title": "Hipertensión secundaria",
+      "related_sections": [],
+      "scenarios": [
+        {
+          "id": "10.09-c2-01",
+          "anchor_topic_ids": [
+            "10.09-01"
+          ],
+          "objective": "incompleta",
+          "vignette": "Una persona con hipertensión resistente tuvo tamiz de aldosteronismo negativo mientras presentaba hipopotasemia.",
+          "question": "¿Debe considerarse definitivo el resultado?",
+          "answer": "No. Corregir potasio y repetir según protocolo.",
+          "discriminator": "mientras presentaba hipopotasemia",
+          "reason": "El potasio bajo puede producir aldosterona falsamente baja.",
+          "initial_action": "Corregir el trastorno y revisar medicamentos que interfieren.",
+          "limits": "Los puntos de corte dependen del ensayo y de las unidades.",
+          "evidence": [
+            {
+              "source_id": "endo-aldo-2025",
+              "locator": "Recomendación 3, technical remarks",
+              "support": "El potasio bajo puede producir aldosterona falsamente baja."
+            }
+          ]
+        },
+        {
+          "id": "10.09-c2-02",
+          "anchor_topic_ids": [
+            "10.09-02"
+          ],
+          "objective": "incompleta",
+          "vignette": "Un adulto tiene metanefrinas plasmáticas libres levemente elevadas en una muestra tomada sin ayuno ni reposo previo, tras llegar caminando. No hay una lesión localizada.",
+          "question": "¿Qué paso puede evitar atribuir a un tumor un resultado preanalítico falso positivo?",
+          "answer": "Repetir con condiciones de toma estandarizadas.",
+          "discriminator": "sin ayuno ni reposo previo",
+          "reason": "Las metanefrinas libres tienen falsos positivos si no se cumplen condiciones de ayuno y reposo supino; una elevación leve requiere contexto.",
+          "initial_action": "Revisar fármacos e interferencias y coordinar nueva muestra adecuada con el laboratorio y endocrinología.",
+          "limits": "No usar un resultado leve aislado para indicar cirugía ni ignorar una elevación clara o sospecha clínica fuerte.",
+          "evidence": [
+            {
+              "source_id": "japan-ppgl-2025",
+              "locator": "Diagnóstico bioquímico, plasma free metanephrines: ayuno y 20–30 min de reposo supino",
+              "support": "Las metanefrinas libres tienen falsos positivos si no se cumplen condiciones de ayuno y reposo supino; una elevación leve requiere contexto."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "10.10",
+      "title": "Amenorrea y secreción láctea",
+      "related_sections": [],
+      "scenarios": [
+        {
+          "id": "10.10-c2-01",
+          "anchor_topic_ids": [
+            "10.10-01"
+          ],
+          "objective": "dato_faltante",
+          "vignette": "Una masa hipofisaria gigante produce síntomas de hipogonadismo, pero la prolactina está solo ligeramente elevada.",
+          "question": "¿Qué comprobación analítica evita pasar por alto un prolactinoma?",
+          "answer": "Repetir prolactina con dilución para excluir efecto gancho.",
+          "discriminator": "masa hipofisaria gigante",
+          "reason": "Una concentración extremadamente alta puede producir lectura falsamente baja en ciertos ensayos.",
+          "initial_action": "Consultar al laboratorio antes de clasificar la lesión como no funcionante.",
+          "limits": "El artefacto es raro con ensayos actuales; valorar también efecto de tallo.",
+          "evidence": [
+            {
+              "source_id": "pitsoc-prolactin-2023",
+              "locator": "Initial assessment: Prolactin assays; Hook effect",
+              "support": "Una concentración extremadamente alta puede producir lectura falsamente baja en ciertos ensayos."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "10.11",
+      "title": "Crecimiento acral o hipercalcemia",
+      "related_sections": [],
+      "scenarios": [
+        {
+          "id": "10.11-c2-01",
+          "anchor_topic_ids": [
+            "10.11-01"
+          ],
+          "objective": "dato_faltante",
+          "vignette": "Un adulto presenta crecimiento de manos y rasgos faciales progresivos. Solo se midió GH al azar y resultó dentro del intervalo informado.",
+          "question": "¿Qué marcador debe integrarse para estudiar acromegalia?",
+          "answer": "IGF-I ajustado a la edad.",
+          "discriminator": "Solo se midió GH al azar",
+          "reason": "Una medición aleatoria de GH no sustituye la evaluación de IGF-I.",
+          "initial_action": "Medir IGF-I con ensayo validado y revisar resultados discordantes.",
+          "limits": "Edad, ensayo, estado metabólico y enfermedad hepática o renal afectan interpretación.",
+          "evidence": [
+            {
+              "source_id": "acro-consensus-2024",
+              "locator": "Tabla 2; Biochemical diagnosis",
+              "support": "Una medición aleatoria de GH no sustituye la evaluación de IGF-I."
+            }
+          ]
+        },
+        {
+          "id": "10.11-c2-02",
+          "anchor_topic_ids": [
+            "10.11-02"
+          ],
+          "objective": "dato_faltante",
+          "vignette": "Una persona tiene hipercalcemia repetida con PTH inapropiadamente no suprimida. El ultrasonido no identifica adenoma.",
+          "question": "¿El ultrasonido negativo excluye hiperparatiroidismo primario?",
+          "answer": "No.",
+          "discriminator": "PTH inapropiadamente no suprimida",
+          "reason": "El diagnóstico es bioquímico; la imagen sirve para planear cirugía.",
+          "initial_action": "Confirmar bioquímica y excluir diagnósticos alternativos antes de localizar.",
+          "limits": "Considerar fármacos y hipercalcemia hipocalciúrica familiar según contexto.",
+          "evidence": [
+            {
+              "source_id": "pth-workshop-2022",
+              "locator": "Recomendaciones 1–2 y 6.1",
+              "support": "El diagnóstico es bioquímico; la imagen sirve para planear cirugía."
+            }
+          ]
+        },
+        {
+          "id": "10.11-c2-03",
+          "anchor_topic_ids": [
+            "10.11-03"
+          ],
+          "objective": "subtipo",
+          "vignette": "Una persona con carcinoma medular de tiroides tiene además una lesión cutánea pruriginosa cuya biopsia confirma liquen amiloide cutáneo. Se evalúa una asociación hereditaria.",
+          "question": "¿Con qué variante de neoplasia endocrina múltiple se asocia este hallazgo?",
+          "answer": "MEN2A asociada a liquen amiloide cutáneo.",
+          "discriminator": "biopsia confirma liquen amiloide cutáneo",
+          "reason": "La amiloidosis liquenoide cutánea es una asociación reconocida de una variante de MEN2A.",
+          "initial_action": "Referir a genética y endocrinología para evaluación de RET y lesiones asociadas.",
+          "limits": "El hallazgo cutáneo aislado no demuestra MEN2A; integrar el carcinoma, genética y evaluación clínica.",
+          "evidence": [
+            {
+              "source_id": "ata-medullary-2015",
+              "locator": "§C, Hereditary MTC: MEN2A with cutaneous lichen amyloidosis",
+              "support": "La amiloidosis liquenoide cutánea es una asociación reconocida de una variante de MEN2A."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -2,6 +2,7 @@ import { useEffect, useMemo, useState } from "react";
 import type { StudyManifest, StudySection } from "../library-types";
 import { loadSection } from "./resources";
 import type { CardFamily, CoachIndex, SessionScope } from "./types";
+import { objectiveLabels, isClinicalObjective } from "./objectives";
 
 export const emptyScope: SessionScope = { section_ids: [], block_ids: [], families: [] };
 const families = [
@@ -25,6 +26,8 @@ export function scopeLabel(scope: SessionScope, manifest: StudyManifest): string
     parts.push(
       scope.families.map((id) => families.find(([key]) => key === id)?.[1] || id).join(", "),
     );
+  if (scope.objectives?.length)
+    parts.push(scope.objectives.map((key) => objectiveLabels[key]).join(", "));
   return parts.join(" · ");
 }
 
@@ -82,13 +85,33 @@ export default function SessionScopePicker({
       topics: 0,
       section_id: id,
     })),
-  ];
+  ].filter((block) => index.cards.some((card) => card.block_id === block.id));
   const toggle = <T extends string>(list: T[], item: T) =>
     list.includes(item) ? list.filter((x) => x !== item) : [...list, item];
+  const objectives = [
+    ...new Set(index.cards.map((card) => card.objective).filter(isClinicalObjective)),
+  ];
   return (
     <fieldset className="session-scope">
       <legend>¿Qué quieres estudiar en tus sesiones?</legend>
       <p>Sin elegir nada, la sesión usa todo tu plan. Aplica a temas nuevos y a repasos.</p>
+      {!!objectives.length && (
+        <div className="session-scope-group" role="group" aria-label="Objetivo de la sesión">
+          <span>Objetivo clínico</span>
+          {objectives.map((key) => (
+            <button
+              key={key}
+              type="button"
+              aria-pressed={value.objectives?.includes(key) ?? false}
+              onClick={() =>
+                onChange({ ...value, objectives: toggle(value.objectives ?? [], key) })
+              }
+            >
+              {objectiveLabels[key]}
+            </button>
+          ))}
+        </div>
+      )}
       <div className="session-scope-group" role="group" aria-label="Formato de la sesión">
         <span>Formato</span>
         {families
@@ -157,7 +180,9 @@ export default function SessionScopePicker({
         </div>
       )}
       {value.section_ids.length > 3 && <p>Para elegir bloques, deja hasta 3 secciones.</p>}
-      {(value.section_ids.length > 0 || value.families.length > 0) && (
+      {(value.section_ids.length > 0 ||
+        value.families.length > 0 ||
+        !!value.objectives?.length) && (
         <button type="button" className="text-button" onClick={() => onChange(emptyScope)}>
           Usar todo mi plan
         </button>

@@ -2,6 +2,17 @@ import type { Card } from "ts-fsrs";
 
 export type Grade = 1 | 2 | 3 | 4;
 export type CardFamily = "eje" | "madre" | "creadas";
+export type StudySpace = "capa1" | "capa2" | "creadas1" | "creadas2";
+export type ClinicalObjective =
+  | "ancla"
+  | "variante"
+  | "incompleta"
+  | "subtipo"
+  | "contraste"
+  | "cambio"
+  | "dato_faltante"
+  | "gravedad"
+  | "mecanismo";
 export type PersonalCard = {
   id: string;
   section_id: string;
@@ -10,6 +21,7 @@ export type PersonalCard = {
   front: string;
   back: string;
   created_at: string;
+  layer?: 1 | 2;
 };
 export type SerializedFSRS = Omit<Card, "due" | "last_review"> & {
   due: string;
@@ -24,6 +36,7 @@ export type CoachCard = {
   order: number;
   new_seconds: number;
   review_seconds: number;
+  objective?: ClinicalObjective;
 };
 export type CoachIndex = { schema_version: 1; content_sha256: string; cards: CoachCard[] };
 export type StudyPlan = {
@@ -68,6 +81,7 @@ export type SessionScope = {
   section_ids: string[];
   block_ids: string[];
   families: CardFamily[];
+  objectives?: ClinicalObjective[];
 };
 export type Memory = {
   card: SerializedFSRS | null;
@@ -111,7 +125,20 @@ export type CoachState = {
   sessions?: SessionLog[];
   created_cards?: Record<string, PersonalCard>;
   suspended_cards?: string[];
+  /** Runtime projection. Not stored inside a version-2 profile. */
+  workspace?: StudySpace;
 };
+export type StudyProfile = {
+  version: 2;
+  revision: number;
+  workspaces: Record<StudySpace, CoachState>;
+  created_cards: Record<string, PersonalCard>;
+  /** Original goals and aggregate sessions, before the separation. */
+  legacy: CoachState | null;
+  /** Original identities keep their layer when a future namespace overlaps. */
+  legacy_layer1_ids?: string[];
+};
+export type StoredStudyState = CoachState | StudyProfile;
 export type Forecast = {
   feasible: boolean;
   finish_day: string | null;

@@ -1,0 +1,953 @@
+{
+  "schema_version": 1,
+  "layer": 2,
+  "section_id": "31",
+  "title": "Toxicología",
+  "author": "clinical-author-25-35",
+  "sources": [
+    {
+      "id": "acmt-salic",
+      "label": "American College of Medical Toxicology: Management Priorities in Salicylate Toxicity",
+      "url": "https://www.acmt.net/wp-content/uploads/2022/06/PRS_130313_Management-Priorities-in-Salicylate-Toxicity.pdf",
+      "version": "Documento aprobado marzo 2013; publicación en revista 2015",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Sections 1 and 2: serial concentrations, clinical status and pH"
+    },
+    {
+      "id": "aha-tox",
+      "label": "American Heart Association: 2025 Guidelines, Part 10 Special Circumstances",
+      "url": "https://cpr.heart.org/en/resuscitation-science/cpr-and-ecc-guidelines/adult-and-pediatric-special-circumstances-of-resuscitation",
+      "version": "2025",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Sections 21.1, 21.3, 21.11, 21.12 and 21.14: adult recommendations"
+    },
+    {
+      "id": "cdc-co",
+      "label": "CDC: Clinical Guidance for Carbon Monoxide Poisoning",
+      "url": "https://www.cdc.gov/carbon-monoxide/hcp/clinical-guidance/index.html",
+      "version": "Publicada julio 2024; revisión experta 21 agosto 2026",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Diagnosis; Management; Confirmation of Diagnosis"
+    },
+    {
+      "id": "idsa-diarrhea",
+      "label": "IDSA: Clinical Practice Guidelines for Infectious Diarrhea",
+      "url": "https://www.idsociety.org/practice-guideline/infectious-diarrhea/",
+      "version": "2017",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Supportive Treatment, recommendations 39–43"
+    },
+    {
+      "id": "imss-toxbook",
+      "label": "IMSS: Toxicología y monitoreo químico, biológico, radiológico y nuclear",
+      "url": "https://www.imss.gob.mx/sites/all/statics/coleccion-80/dpm/tomo-04-toxicologia-y-monitoreo.pdf",
+      "version": "Primera edición 2023, ISBN 978-607-9464-70-7",
+      "checked_at": "2026-11-06",
+      "region": "mexico",
+      "access": "checked",
+      "locator": "Cap. XVI: loxoscelismo, pp. 157–174; cap. XXI: metanol, pp. 243–248; libro institucional, no GPC"
+    },
+    {
+      "id": "nom033",
+      "label": "Secretaría de Salud: NOM-033-SSA2-2011, picadura de alacrán",
+      "url": "https://sidof.segob.gob.mx/notas/docFuente/5223520",
+      "version": "DOF 8 diciembre 2011",
+      "checked_at": "2026-11-06",
+      "region": "mexico",
+      "access": "checked",
+      "locator": "Apartados 9.1–9.4; tablas 6 y 7"
+    },
+    {
+      "id": "nom036tox",
+      "label": "Secretaría de Salud: NOM-036-SSA2-2012, faboterápicos",
+      "url": "https://sidof.segob.gob.mx/notas/docFuente/5270654",
+      "version": "DOF 28 septiembre 2012",
+      "checked_at": "2026-11-06",
+      "region": "mexico",
+      "access": "checked",
+      "locator": "Apartados 7.2, 7.3 y 7.4: reconocimiento de envenenamiento y productos específicos"
+    },
+    {
+      "id": "rch-apap",
+      "label": "Royal Children’s Hospital: Paracetamol poisoning",
+      "url": "https://www.rch.org.au/clinicalguide/guideline_index/paracetamol_poisoning/",
+      "version": "Julio 2023; adaptación ANZ 2019 identificada",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Key points; nomogram; repeated supratherapeutic ingestion"
+    },
+    {
+      "id": "rch-caustic",
+      "label": "Royal Children’s Hospital: Corrosives, Caustic Poisoning",
+      "url": "https://www.rch.org.au/clinicalguide/guideline_index/Corrosives_-_Caustic_Poisoning/",
+      "version": "Enero 2019",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Key points; Acute Management"
+    },
+    {
+      "id": "rch-ethanol",
+      "label": "Royal Children’s Hospital: Ethanol poisoning",
+      "url": "https://www.rch.org.au/clinicalguide/guideline_index/Ethanol_Posioning/",
+      "version": "Abril2021, fecha visible al final del texto completo",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Key points; Risk assessment; Investigations; Acute management"
+    },
+    {
+      "id": "rch-hydrocarbon",
+      "label": "Royal Children’s Hospital: Hydrocarbon poisoning",
+      "url": "https://www.rch.org.au/clinicalguide/guideline_index/Hydrocarbon_poisoning/",
+      "version": "Junio 2017",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Respiratory examination; Acute Management and decontamination"
+    },
+    {
+      "id": "rch-tox",
+      "label": "Royal Children’s Hospital: Poisoning, Acute Guidelines For Initial Management",
+      "url": "https://www.rch.org.au/clinicalguide/guideline_index/Poisoning_Initial_Management/",
+      "version": "2017-08; fecha visible al final del HTML completo",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Key points; Risk Assessment; Resuscitation/Emergency Management"
+    },
+    {
+      "id": "rcuk-special",
+      "label": "Resuscitation Council UK: Special circumstances guidelines",
+      "url": "https://www.resus.org.uk/professional-library/2025-resuscitation-guidelines/special-circumstances-guidelines",
+      "version": "27 octubre 2025",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Anaphylaxis; hyperthermia; toxins"
+    },
+    {
+      "id": "ukhsa-lead",
+      "label": "UK Health Security Agency: Lead, clinical intervention",
+      "url": "https://www.gov.uk/government/publications/lead-poisoning-advice-for-the-public-and-healthcare-professionals/lead-clinical-intervention",
+      "version": "8 octubre 2024",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Confirm diagnosis; childhood exposure and public health response; adult workplace exposure"
+    },
+    {
+      "id": "rch-antichol",
+      "label": "RCH: Anticholinergic syndrome",
+      "url": "https://www.rch.org.au/clinicalguide/guideline_index/Anticholinergic_syndrome/",
+      "version": "Agosto2017",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Management: retención vesical y agitación; HTML completo abierto"
+    },
+    {
+      "id": "fda-patches",
+      "label": "FDA: accidental fentanyl patch exposures in children",
+      "url": "https://www.fda.gov/consumers/consumer-updates/accidental-exposures-fentanyl-patches-continue-be-deadly-children",
+      "version": "Actualización4septiembre2024",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Children Can Overdose; What to Do; alerta regulatoria, no GPC de dolor"
+    },
+    {
+      "id": "extrip-eg",
+      "label": "EXTRIP: Extracorporeal treatment for ethylene glycol poisoning",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9921105/",
+      "version": "2023",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Rationale/Osmol gap; texto primario completo leído vía XML NLM efetch ante CAPTCHA"
+    },
+    {
+      "id": "rch-hypona",
+      "label": "RCH: Hyponatraemia",
+      "url": "https://www.rch.org.au/clinicalguide/guideline_index/hyponatraemia/",
+      "version": "Noviembre2023",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Keypoints3; Background; Management: convulsión hiponatrémica pediátrica"
+    },
+    {
+      "id": "aus-drug-handbook",
+      "label": "Australian Government: Alcohol and Other Drugs, handbook for health professionals",
+      "url": "https://adis.health.qld.gov.au/sites/default/files/resource/file/Alcohol_%26_other_drugs._a_handbook_for_health_professionals.pdf",
+      "version": "Tercera edición2004; no fecha de carga2018",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Cap7Ecstasy,pp97–99; PDF íntegro319p abierto. Solo asociación de MDMA/agua/hiponatremia; no pauta actual ni cantidades de agua recomendadas"
+    },
+    {
+      "id": "nida-psychedelics",
+      "label": "NIDA: Psychedelic and Dissociative Drugs",
+      "url": "https://nida.nih.gov/research-topics/psychedelic-dissociative-drugs",
+      "version": "8enero2026, fecha de cita editorial de la propia página",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Long-term effects/HPPD; HTML íntegro descargado y leído ante desafío JavaScript del visor. Información científica oficial, no GPC"
+    },
+    {
+      "id": "rch-redback",
+      "label": "RCH: Spider Bite, Redback Spider",
+      "url": "https://www.rch.org.au/clinicalguide/guideline_index/Spider_Bite_%E2%80%93_Redback_Spider/",
+      "version": "Enero2019",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Acute management/First aid: especie australiana pediátrica; no presión, analgesia"
+    },
+    {
+      "id": "cdc-skin",
+      "label": "CDC Yellow Book2026: Post-Travel Dermatologic Conditions",
+      "url": "https://www.cdc.gov/yellow-book/hcp/post-travel-evaluation/post-travel-dermatologic-conditions.html",
+      "version": "Edición2026, página23abril2025",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Spider bites: diferencial infección bacteriana; capítulo profesional, no ensayo diagnóstico"
+    },
+    {
+      "id": "mod-snake",
+      "label": "UK Defence Medical Command: Snakebite",
+      "url": "https://cgo.mod.uk/clinical-guidelines-for-operations/treatment-guidelines/environmental-injuries-exposure/snakebite/",
+      "version": "Last reviewed07/10/2026, revisión prevista07/10/2027",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Antivenom reactions: enfermedad del suero5–10d. Solo este apartado, no dosis ni productos británicos"
+    },
+    {
+      "id": "rcuk-anaphylaxis",
+      "label": "RCUK: Emergency treatment of anaphylaxis",
+      "url": "https://www.resus.org.uk/sites/default/files/2021-05/Emergency%20Treatment%20of%20Anaphylaxis%20May%202021_0.pdf",
+      "version": "Mayo2021; revisión prevista mayo2026 no prueba nueva edición",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Key recommendations,p7: plan de alta, autoinyector y entrenamiento; PDF íntegro61p abierto"
+    },
+    {
+      "id": "atsdr-arsenic",
+      "label": "ATSDR: Clinician Brief, Arsenic",
+      "url": "https://www.atsdr.cdc.gov/environmental-medicine/hcp/clinician-briefs/arsenic.html",
+      "version": "15mayo2025",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Diagnostic tests: arsénico urinario total/especiado y mariscos en48h; texto completo leído"
+    }
+  ],
+  "mexico_source_note": "Se abrieron NOM033-SSA2-2011 y NOM036-SSA2-2012 en DOF y el libro oficial IMSS Toxicología y monitoreo, primera edición2023,ISBN978-607-9464-70-7. El libro no es una GPC y contiene recomendaciones heterogéneas que no se importan completas; el caso obstétrico de alacrán usa específicamentepp203–204 y exige toxíndrome. No se comprobó vigencia jurídica actual de esas NOM ni una guía mexicana reciente para cada nuevo contraste. El enlace de Puebla2026 devolvió404 y el documento SS714 no abrió completo; no se presentan como revisados. Se comprobaron AHA2025, RCH2017/2019/2021/2023,CDC2025/2026,FDA2024,ATSDR2025,EXTRIP2023 y RCUK2021/2025 por apartados. El manual australiano2004 solo respalda asociación MDMA/hiponatremia y no recomendaciones de dosis o agua; la conducta pediátrica se apoya en RCH2023. NIDA es información oficial con fecha editorial8enero2026 y HTML completo leído por descarga privada tras desafío del visor. No se trasladan especies, antivenenos, dosis o disponibilidad extranjera a México. Revisión profesional pendiente.",
+  "blocks": [
+    {
+      "id": "31.01",
+      "title": "Paciente intoxicado: primera decisión",
+      "related_sections": [],
+      "scenarios": [
+        {
+          "anchor_topic_ids": [
+            "31.01-01"
+          ],
+          "objective": "dato_faltante",
+          "vignette": "Una adolescente está estable tras ingerir intencionalmente varias tabletas. Refiere que eran solo antihistamínicos, pero nadie verificó los envases y niega síntomas digestivos.",
+          "question": "¿Qué coingesta debe buscarse de forma sistemática?",
+          "answer": "Paracetamol.",
+          "discriminator": "ingerir intencionalmente varias tabletas",
+          "reason": "RCH recomienda buscar paracetamol en toda intoxicación intencional adolescente; la ausencia de síntomas no descarta exposición.",
+          "initial_action": "Obtener concentración con interpretación temporal adecuada y consultar toxicología.",
+          "limits": "No inferir seguridad por un nivel tomado demasiado pronto ni usar esta prueba como sustituto del soporte y evaluación de otras sustancias.",
+          "evidence": [
+            {
+              "source_id": "rch-tox",
+              "locator": "Background; Risk assessment: screen paracetamol in intentional adolescent poisoning and mixed/undetermined ingestion",
+              "support": "RCH recomienda buscar paracetamol en toda intoxicación intencional adolescente; la ausencia de síntomas no descarta exposición."
+            }
+          ],
+          "id": "31.01-01-gravedad"
+        },
+        {
+          "anchor_topic_ids": [
+            "31.01-02"
+          ],
+          "objective": "cambio",
+          "vignette": "Un adolescente con síndrome anticolinérgico ya recibe vigilancia y tratamiento de agitación. Sigue muy inquieto, no ha orinado y tiene globo vesical.",
+          "question": "¿Qué causa tratable puede mantener la agitación?",
+          "answer": "Retención urinaria dolorosa.",
+          "discriminator": "no ha orinado y tiene globo vesical",
+          "reason": "La retención puede contribuir al delirio o agitación; reconocerla permite tratamiento dirigido además del control conductual.",
+          "initial_action": "Valorar vejiga con exploración o ultrasonido y drenaje si está indicado por el equipo.",
+          "limits": "No atribuir todo el cambio mental a retención ni omitir ECG, glucosa o vigilancia toxicológica.",
+          "evidence": [
+            {
+              "source_id": "rch-antichol",
+              "locator": "Management: urinary retention contributes to agitation; bladder scan and urinary catheter",
+              "support": "La retención puede contribuir al delirio o agitación; reconocerla permite tratamiento dirigido además del control conductual."
+            }
+          ],
+          "id": "31.01-02-contraste"
+        },
+        {
+          "anchor_topic_ids": [
+            "31.01-01"
+          ],
+          "objective": "dato_faltante",
+          "vignette": "Los padres de un niño hallan un frasco abierto. No saben cuántas tabletas faltan ni su concentración.",
+          "question": "¿Qué información debe reconstruirse para estimar riesgo?",
+          "answer": "Producto, concentración, cantidad máxima posible, hora y peso.",
+          "discriminator": "No saben cuántas tabletas faltan ni su concentración",
+          "reason": "La evaluación depende de exposición máxima y del niño.",
+          "initial_action": "Identificar envase y consultar toxicología mientras se evalúan signos vitales.",
+          "limits": "No asumir dosis pequeña porque el niño esté asintomático.",
+          "evidence": [
+            {
+              "source_id": "rch-tox",
+              "locator": "Risk Assessment: agent, dose, timing and weight",
+              "support": "La evaluación depende de exposición máxima y del niño."
+            }
+          ],
+          "id": "31.01-03-dato_faltante"
+        }
+      ]
+    },
+    {
+      "id": "31.02",
+      "title": "Somnolencia y bradipnea",
+      "related_sections": [],
+      "scenarios": [
+        {
+          "anchor_topic_ids": [
+            "31.02-01"
+          ],
+          "objective": "cambio",
+          "vignette": "Un adulto sobrevivió a sobredosis de opioides y completó observación médica. Al preparar el alta, su familia pregunta cómo responder si vuelve a ocurrir.",
+          "question": "¿Qué medida preventiva debe incluirse?",
+          "answer": "Acceso a naloxona y entrenamiento para reconocer sobredosis y pedir ayuda.",
+          "discriminator": "Al preparar el alta",
+          "reason": "AHA recomienda proporcionar un antagonista y educación al alta porque existe riesgo de otra sobredosis.",
+          "initial_action": "Organizar suministro o prescripción según acceso local, enseñar uso y vincular a tratamiento del consumo.",
+          "limits": "No sustituye criterios de alta segura ni permite permanecer en casa ante una nueva depresión respiratoria. No se presume venta libre en México.",
+          "evidence": [
+            {
+              "source_id": "aha-tox",
+              "locator": "Opioid Antagonist Education and Distribution Following Treatment: adultos, Recommendation1",
+              "support": "AHA recomienda proporcionar un antagonista y educación al alta porque existe riesgo de otra sobredosis."
+            }
+          ],
+          "id": "31.02-01-gravedad"
+        },
+        {
+          "anchor_topic_ids": [
+            "31.02-02"
+          ],
+          "objective": "variante",
+          "vignette": "Un niño pequeño juega con un parche usado de fentanilo que cayó de la ropa de su cuidador. Tiene el parche adherido al brazo y comienza a estar somnoliento.",
+          "question": "¿Que el parche sea usado elimina el riesgo?",
+          "answer": "No; aún puede contener suficiente fentanilo para causar intoxicación grave.",
+          "discriminator": "parche usado de fentanilo",
+          "reason": "Los parches nuevos y usados pueden producir sobredosis por contacto o ingestión en niños.",
+          "initial_action": "Retirar la fuente sin exponerse, activar urgencias y valorar ventilación y naloxona según necesidad.",
+          "limits": "No esperar apnea ni dar una observación casera como alternativa; el riesgo no se estima por cuánto tiempo lo usó el adulto.",
+          "evidence": [
+            {
+              "source_id": "fda-patches",
+              "locator": "Children Can Overdose on Fentanyl Patches; What to Do if a Child Is Exposed",
+              "support": "Los parches nuevos y usados pueden producir sobredosis por contacto o ingestión en niños."
+            }
+          ],
+          "id": "31.02-02-cambio"
+        },
+        {
+          "anchor_topic_ids": [
+            "31.02-03"
+          ],
+          "objective": "cambio",
+          "vignette": "Durante un procedimiento un adulto recibió un opioide y midazolam. Ahora tiene depresión respiratoria con pulso y el equipo inicia ventilación asistida.",
+          "question": "¿Qué antagonista es razonable considerar primero?",
+          "answer": "Naloxona antes de otros antídotos.",
+          "discriminator": "recibió un opioide y midazolam",
+          "reason": "AHA propone naloxona primero en depresión respiratoria por exposición combinada a opioide y benzodiacepina.",
+          "initial_action": "Mantener ventilación y administrar naloxona según respuesta y protocolo.",
+          "limits": "No sustituir soporte ni aplicar flumazenilo de forma automática; la elección posterior requiere revisar riesgos y causa persistente.",
+          "evidence": [
+            {
+              "source_id": "aha-tox",
+              "locator": "Benzodiazepines/Adults, Recommendation1: mixed opioid and benzodiazepine poisoning, naloxone first",
+              "support": "AHA propone naloxona primero en depresión respiratoria por exposición combinada a opioide y benzodiacepina."
+            }
+          ],
+          "id": "31.02-03-contraste"
+        }
+      ]
+    },
+    {
+      "id": "31.03",
+      "title": "Alteración de conciencia por alcohol",
+      "related_sections": [],
+      "scenarios": [
+        {
+          "anchor_topic_ids": [
+            "31.03-01"
+          ],
+          "objective": "variante",
+          "vignette": "Un niño de dos años ingirió perfume con etanol. Su cuidador cree que una cantidad pequeña solo puede causar embriaguez leve, pero el niño está frío y somnoliento.",
+          "question": "¿Qué riesgo pediátrico cambia esa interpretación?",
+          "answer": "Hipoglucemia e hipotermia importantes aun con cantidades relativamente pequeñas.",
+          "discriminator": "dos años ingirió perfume con etanol",
+          "reason": "Los niños pequeños son más vulnerables a efectos metabólicos y térmicos que un adulto; los productos domésticos pueden estar concentrados.",
+          "initial_action": "Medir glucosa y temperatura de inmediato y dar soporte pediátrico con valoración toxicológica.",
+          "limits": "La mayoría de ingestas exploratorias son leves, pero eso no permite ignorar síntomas; comprobar que sea etanol y no otro alcohol.",
+          "evidence": [
+            {
+              "source_id": "rch-ethanol",
+              "locator": "Keypoints3; Background/household products; Acute management: glucose and temperature",
+              "support": "Los niños pequeños son más vulnerables a efectos metabólicos y térmicos que un adulto; los productos domésticos pueden estar concentrados."
+            }
+          ],
+          "id": "31.03-01-contraste"
+        },
+        {
+          "anchor_topic_ids": [
+            "31.03-02"
+          ],
+          "objective": "incompleta",
+          "vignette": "Un adulto consulta tarde tras ingerir anticongelante. Tiene acidosis con anión gap alto y lesión renal; el osmol gap ya es normal.",
+          "question": "¿Ese último resultado descarta etilenglicol?",
+          "answer": "No; puede normalizarse cuando el compuesto ya se metabolizó.",
+          "discriminator": "el osmol gap ya es normal",
+          "reason": "El osmol gap refleja alcohol no metabolizado y puede ser normal en presentación tardía, cuando los metabolitos producen daño.",
+          "initial_action": "Consultar toxicología y nefrología urgentemente y evaluar antídoto y eliminación según el conjunto clínico.",
+          "limits": "El patrón no confirma por sí solo etilenglicol; investigar otras causas de acidosis. No usar un osmol gap normal como prueba de exclusión.",
+          "evidence": [
+            {
+              "source_id": "extrip-eg",
+              "locator": "Rationale/Osmol gap: normal o negativo tras metabolismo; prueba de cribado pobre a valores bajos",
+              "support": "El osmol gap refleja alcohol no metabolizado y puede ser normal en presentación tardía, cuando los metabolitos producen daño."
+            }
+          ],
+          "id": "31.03-02-gravedad"
+        }
+      ]
+    },
+    {
+      "id": "31.04",
+      "title": "Agitación/hipertermia",
+      "related_sections": [],
+      "scenarios": [
+        {
+          "anchor_topic_ids": [
+            "31.04-01"
+          ],
+          "objective": "contraste",
+          "vignette": "Una adolescente tras consumir una tableta vendida como éxtasis bebió mucha agua. Presenta confusión y convulsión con sodio muy bajo y temperatura normal.",
+          "question": "¿Qué complicación debe tratarse además de investigar la droga?",
+          "answer": "Hiponatremia aguda sintomática.",
+          "discriminator": "sodio muy bajo y temperatura normal",
+          "reason": "La MDMA se ha asociado con exceso de agua y alteración de su eliminación; la convulsión no requiere hipertermia para ser grave.",
+          "initial_action": "Activar atención pediátrica urgente, controlar vía aérea y corregir sodio con protocolo especializado; no dar más agua libre.",
+          "limits": "No se conoce la composición real de la tableta. La asociación se documenta en un manual oficial antiguo; la conducta de hiponatremia se apoya en RCH2023, sin extrapolar dosis adultas.",
+          "evidence": [
+            {
+              "source_id": "rch-hypona",
+              "locator": "Keypoints3; Background: acute hyponatraemia and cerebral oedema; Management by neurological symptoms",
+              "support": "La MDMA se ha asociado con exceso de agua y alteración de su eliminación; la convulsión no requiere hipertermia para ser grave."
+            },
+            {
+              "source_id": "aus-drug-handbook",
+              "locator": "Cap7Ecstasy,pp97–99, Hyponatraemia/water intoxication",
+              "support": "Describe asociación de MDMA, consumo copioso de agua, vasopresina y confusión/convulsión; se usa como respaldo del mecanismo, no de dosis actuales."
+            }
+          ],
+          "id": "31.04-01-gravedad"
+        },
+        {
+          "anchor_topic_ids": [
+            "31.04-02"
+          ],
+          "objective": "cambio",
+          "vignette": "Un adulto dejó de consumir psicodélicos semanas atrás. Ahora tiene episodios de imágenes persistentes y rastros visuales que interfieren con su vida, sin intoxicación actual demostrada. Había usado sustancias vendidas como DMT y LSD.",
+          "question": "¿Debe interpretarse automáticamente como efecto agudo que solo requiere esperar unas horas?",
+          "answer": "No; requiere evaluar alteración perceptiva persistente y diagnósticos alternativos.",
+          "discriminator": "dejó de consumir psicodélicos semanas atrás",
+          "reason": "Algunas personas presentan alteraciones perceptivas recurrentes después del efecto agudo; su evaluación difiere de observar una intoxicación reciente.",
+          "initial_action": "Investigar exposición, fármacos y causas neurológicas u oculares y coordinar valoración especializada.",
+          "limits": "No confirma HPPD ni atribuye causalidad exclusiva a DMT; la evidencia específica es limitada y no se propone un fármaco universal.",
+          "evidence": [
+            {
+              "source_id": "nida-psychedelics",
+              "locator": "Long-term effects/Hallucinogen persisting perception disorder: síntomas recurrentes fuera de exposición aguda",
+              "support": "Algunas personas presentan alteraciones perceptivas recurrentes después del efecto agudo; su evaluación difiere de observar una intoxicación reciente."
+            }
+          ],
+          "id": "31.04-02-dato_faltante"
+        }
+      ]
+    },
+    {
+      "id": "31.05",
+      "title": "Bradicardia con secreciones",
+      "related_sections": [],
+      "scenarios": [
+        {
+          "anchor_topic_ids": [
+            "31.05-01"
+          ],
+          "objective": "cambio",
+          "vignette": "Un adulto con intoxicación organofosforada recibe atropina y soporte. Aparece una convulsión generalizada pese a mejoría de la broncorrea.",
+          "question": "¿Qué tratamiento adicional está indicado para la convulsión?",
+          "answer": "Benzodiacepina según protocolo de urgencias.",
+          "discriminator": "convulsión generalizada pese a mejoría de la broncorrea",
+          "reason": "El control muscarínico no sustituye el tratamiento de excitación central; AHA recomienda benzodiacepinas para convulsiones en este contexto.",
+          "initial_action": "Tratar la convulsión, mantener oxigenación y revisar ventilación, glucosa y otras causas.",
+          "limits": "No se usa la respuesta pulmonar como prueba de resolución de toda toxicidad; requiere atención monitorizada.",
+          "evidence": [
+            {
+              "source_id": "aha-tox",
+              "locator": "Organophosphates and carbamates, Recommendation4: benzodiazepines for seizures and agitation",
+              "support": "El control muscarínico no sustituye el tratamiento de excitación central; AHA recomienda benzodiacepinas para convulsiones en este contexto."
+            }
+          ],
+          "id": "31.05-01-gravedad"
+        },
+        {
+          "anchor_topic_ids": [
+            "31.05-01"
+          ],
+          "objective": "cambio",
+          "vignette": "Un adulto con intoxicación organofosforada grave necesita intubación. Se propone succinilcolina como bloqueador neuromuscular.",
+          "question": "¿Qué interacción cambia esa elección?",
+          "answer": "La inhibición de colinesterasas puede prolongar mucho su bloqueo.",
+          "discriminator": "Se propone succinilcolina",
+          "reason": "AHA no recomienda bloqueadores metabolizados por colinesterasa en esta intoxicación porque el bloqueo puede durar horas.",
+          "initial_action": "Avisar al equipo de vía aérea y elegir un agente apropiado según el protocolo y experiencia.",
+          "limits": "No retrasar una vía aérea necesaria; esta precaución también incluye mivacurio y no significa que todos los bloqueadores estén contraindicados.",
+          "evidence": [
+            {
+              "source_id": "aha-tox",
+              "locator": "Organophosphates and carbamates, Recommendation9 and supportive text: succinylcholine/mivacurium",
+              "support": "AHA no recomienda bloqueadores metabolizados por colinesterasa en esta intoxicación porque el bloqueo puede durar horas."
+            }
+          ],
+          "id": "31.05-02-cambio"
+        }
+      ]
+    },
+    {
+      "id": "31.06",
+      "title": "Cáustico e inhalación",
+      "related_sections": [],
+      "scenarios": [
+        {
+          "anchor_topic_ids": [
+            "31.06-01"
+          ],
+          "objective": "contraste",
+          "vignette": "Un niño bebió limpiador alcalino y presenta sialorrea y dolor al tragar. No se ven quemaduras en la boca.",
+          "question": "¿La boca sin lesiones excluye daño esofágico?",
+          "answer": "No.",
+          "discriminator": "No se ven quemaduras en la boca",
+          "reason": "La exploración oral normal no excluye lesión interna.",
+          "initial_action": "Mantener sin ingesta oral y obtener valoración hospitalaria especializada.",
+          "limits": "No inducir vómito, neutralizar ni administrar carbón.",
+          "evidence": [
+            {
+              "source_id": "rch-caustic",
+              "locator": "Key points 1–3; symptomatic ingestion and acute management",
+              "support": "La exploración oral normal no excluye lesión interna."
+            }
+          ],
+          "id": "31.06-01-contraste"
+        },
+        {
+          "anchor_topic_ids": [
+            "31.06-02"
+          ],
+          "objective": "cambio",
+          "vignette": "Un niño aspiró queroseno y desarrolla neumonitis química con fiebre temprana. No hay evidencia objetiva de infección bacteriana.",
+          "question": "¿La fiebre obliga a antibiótico profiláctico?",
+          "answer": "No; la neumonitis química puede producir fiebre sin infección.",
+          "discriminator": "No hay evidencia objetiva de infección bacteriana",
+          "reason": "RCH recomienda manejo de soporte y reservar antibióticos para evidencia bacteriana, no para fiebre aislada tras aspiración.",
+          "initial_action": "Dar soporte respiratorio y vigilancia; reevaluar si aparecen datos de infección.",
+          "limits": "No omitir antibióticos ante infección demostrada ni asumir que toda fiebre posterior es química.",
+          "evidence": [
+            {
+              "source_id": "rch-hydrocarbon",
+              "locator": "Acute Management/Resuscitation: chemical pneumonitis, no corticosteroids or prophylactic antibiotics; fever common",
+              "support": "RCH recomienda manejo de soporte y reservar antibióticos para evidencia bacteriana, no para fiebre aislada tras aspiración."
+            }
+          ],
+          "id": "31.06-02-cambio"
+        },
+        {
+          "anchor_topic_ids": [
+            "31.06-03"
+          ],
+          "objective": "dato_faltante",
+          "vignette": "Un adulto con sospecha de intoxicación por CO necesita medir carboxihemoglobina. Ya existe acceso venoso, pero se propone esperar una punción arterial difícil solo para esa prueba.",
+          "question": "¿Es indispensable sangre arterial para medirla?",
+          "answer": "No; puede usarse sangre venosa o arterial con cooximetría adecuada.",
+          "discriminator": "esperar una punción arterial difícil solo para esa prueba",
+          "reason": "CDC acepta ambas muestras para carboxihemoglobina; la elección no debe retrasar diagnóstico ni oxígeno.",
+          "initial_action": "Obtener muestra venosa disponible para cooximetría y continuar oxígeno y evaluación clínica.",
+          "limits": "Una gasometría arterial puede tener otra indicación; el resultado depende del tiempo y tratamiento y no resume por sí solo gravedad.",
+          "evidence": [
+            {
+              "source_id": "cdc-co",
+              "locator": "Confirmation of Diagnosis: venous or arterial blood may be used",
+              "support": "CDC acepta ambas muestras para carboxihemoglobina; la elección no debe retrasar diagnóstico ni oxígeno."
+            }
+          ],
+          "id": "31.06-03-contraste"
+        },
+        {
+          "anchor_topic_ids": [
+            "31.06-03"
+          ],
+          "objective": "cambio",
+          "vignette": "Un adulto se recupera de intoxicación por monóxido de carbono y será dado de alta tras evaluación. Su familia pregunta si debe vigilar algo más.",
+          "question": "¿Qué complicación tardía requiere instrucciones de alarma?",
+          "answer": "Problemas neurológicos nuevos o persistentes.",
+          "discriminator": "será dado de alta tras evaluación",
+          "reason": "Pueden aparecer complicaciones neurológicas después de la fase aguda.",
+          "initial_action": "Explicar signos de alarma y organizar reevaluación clínica.",
+          "limits": "La resolución de cefalea no garantiza ausencia de secuelas.",
+          "evidence": [
+            {
+              "source_id": "cdc-co",
+              "locator": "Common questions: delayed neurological complications and follow-up",
+              "support": "Pueden aparecer complicaciones neurológicas después de la fase aguda."
+            }
+          ],
+          "id": "31.06-04-cambio"
+        }
+      ]
+    },
+    {
+      "id": "31.07",
+      "title": "Acidosis y fármacos",
+      "related_sections": [],
+      "scenarios": [
+        {
+          "anchor_topic_ids": [
+            "31.07-01"
+          ],
+          "objective": "subtipo",
+          "vignette": "Una adolescente tomó paracetamol de liberación modificada. El primer nivel a más de cuatro horas está disponible y se propone decidir todo el manejo con esa única muestra.",
+          "question": "¿Qué seguimiento analítico exige la formulación?",
+          "answer": "Un nivel seriado adicional, habitualmente cuatro horas después, con toxicología.",
+          "discriminator": "liberación modificada",
+          "reason": "La absorción prolongada puede requerir niveles sucesivos para guiar tratamiento; no se aplica sin más la ruta de liberación inmediata.",
+          "initial_action": "Consultar toxicología, repetir concentración según protocolo y revisar función hepática e indicación de acetilcisteína.",
+          "limits": "No esperar la segunda muestra si ya hay indicación de tratamiento. La pauta citada es pediátrica ANZ y no cubre errores intravenosos.",
+          "evidence": [
+            {
+              "source_id": "rch-apap",
+              "locator": "Modified release ingestions/Investigations: initial concentration>4h, repeat4h later",
+              "support": "La absorción prolongada puede requerir niveles sucesivos para guiar tratamiento; no se aplica sin más la ruta de liberación inmediata."
+            }
+          ],
+          "id": "31.07-01-dato_faltante"
+        },
+        {
+          "anchor_topic_ids": [
+            "31.07-02"
+          ],
+          "objective": "cambio",
+          "vignette": "Un adulto con intoxicación por salicilatos tiene concentración descendente, pero aparece confusión y disminuye el pH.",
+          "question": "¿La concentración menor demuestra mejoría?",
+          "answer": "No.",
+          "discriminator": "aparece confusión y disminuye el pH",
+          "reason": "El deterioro clínico y la acidemia pueden indicar mayor toxicidad tisular.",
+          "initial_action": "Escalar manejo con toxicología y nefrología y seguir estado ácido-base.",
+          "limits": "No decidir por una cifra aislada ni por el nomograma de Done.",
+          "evidence": [
+            {
+              "source_id": "acmt-salic",
+              "locator": "Sections 1 and 2: clinical deterioration with falling levels",
+              "support": "El deterioro clínico y la acidemia pueden indicar mayor toxicidad tisular."
+            }
+          ],
+          "id": "31.07-02-cambio"
+        },
+        {
+          "anchor_topic_ids": [
+            "31.07-01"
+          ],
+          "objective": "cambio",
+          "vignette": "Una adolescente requiere de nuevo acetilcisteína por una ingesta tóxica. En un ingreso anterior presentó una reacción documentada como no mediada por IgE durante la infusión.",
+          "question": "¿Ese antecedente prohíbe usarla en todo episodio futuro?",
+          "answer": "No; requiere un plan vigilado, no exclusión automática del antídoto.",
+          "discriminator": "reacción documentada como no mediada por IgE",
+          "reason": "RCH señala que una reacción no IgE previa no impide uso futuro; el riesgo y la administración deben manejarse con toxicología.",
+          "initial_action": "Coordinar tratamiento monitorizado y un plan de reacción, sin omitir un antídoto indicado por el antecedente aislado.",
+          "limits": "Si aparece anafilaxia actual, tratarla de inmediato y ajustar la infusión con expertos; no se propone reinicio casero ni velocidad universal.",
+          "evidence": [
+            {
+              "source_id": "rch-apap",
+              "locator": "Acetylcysteine infusion/Side effects: previous non-IgE reaction does not preclude future use",
+              "support": "RCH señala que una reacción no IgE previa no impide uso futuro; el riesgo y la administración deben manejarse con toxicología."
+            }
+          ],
+          "id": "31.07-03-contraste"
+        }
+      ]
+    },
+    {
+      "id": "31.08",
+      "title": "Neuropatía/abdomen con exposición",
+      "related_sections": [],
+      "scenarios": [
+        {
+          "anchor_topic_ids": [
+            "31.08-01"
+          ],
+          "objective": "contraste",
+          "vignette": "Un adulto sin síntomas tiene arsénico urinario total elevado después de una comida abundante de mariscos el día anterior. No se han separado las especies químicas.",
+          "question": "¿El resultado aislado demuestra intoxicación por arsénico inorgánico?",
+          "answer": "No; solicitar interpretación y especiación según contexto.",
+          "discriminator": "mariscos el día anterior",
+          "reason": "El arsénico orgánico de alimentos puede elevar el total; la prueba especiada distingue formas tóxicas de formas poco tóxicas.",
+          "initial_action": "Revisar dieta y fuentes y coordinar prueba apropiada antes de atribuir enfermedad o indicar quelación.",
+          "limits": "Una exposición industrial o síntomas graves requieren evaluación urgente; esta interferencia dietética no descarta coexistencia de exposición inorgánica.",
+          "evidence": [
+            {
+              "source_id": "atsdr-arsenic",
+              "locator": "Diagnostic tests:24h urinary speciated arsenic, organic arsenic after seafood within48h",
+              "support": "El arsénico orgánico de alimentos puede elevar el total; la prueba especiada distingue formas tóxicas de formas poco tóxicas."
+            }
+          ],
+          "id": "31.08-01-dato_faltante"
+        },
+        {
+          "anchor_topic_ids": [
+            "31.08-02"
+          ],
+          "objective": "cambio",
+          "vignette": "Un trabajador de baterías tiene plomo elevado. Entra a casa con ropa cubierta de polvo y tiene un hijo pequeño.",
+          "question": "¿Qué vía adicional de exposición debe interrumpirse?",
+          "answer": "Transporte del contaminante al hogar.",
+          "discriminator": "ropa cubierta de polvo",
+          "reason": "La contaminación laboral puede exponer a familiares.",
+          "initial_action": "Coordinar salud laboral, retirar exposición y evaluar riesgo familiar.",
+          "limits": "No aplicar límites regulatorios británicos como norma mexicana.",
+          "evidence": [
+            {
+              "source_id": "ukhsa-lead",
+              "locator": "Lead exposure in adults: workplace and take-home exposure",
+              "support": "La contaminación laboral puede exponer a familiares."
+            }
+          ],
+          "id": "31.08-02-cambio"
+        }
+      ]
+    },
+    {
+      "id": "31.09",
+      "title": "Golpe de calor y alimento",
+      "related_sections": [],
+      "scenarios": [
+        {
+          "anchor_topic_ids": [
+            "31.09-01"
+          ],
+          "objective": "cambio",
+          "vignette": "Un adulto con golpe de calor recibe enfriamiento activo y vigilancia central. La temperatura ya llegó a38.6°C; se propone mantener inmersión hasta36°C.",
+          "question": "¿Debe continuarse el enfriamiento agresivo hasta esa meta?",
+          "answer": "No; detener el enfriamiento activo y mantener vigilancia para evitar sobreenfriamiento.",
+          "discriminator": "temperatura ya llegó a38.6°C",
+          "reason": "AHA considera razonable suspender enfriamiento activo a38.6°C en hipertermia grave.",
+          "initial_action": "Retirar la técnica activa en ese punto y continuar soporte, temperatura seriada y evaluación orgánica.",
+          "limits": "No es un criterio de alta ni implica que el daño orgánico se resolvió; no confundirlo con temperatura objetivo de otras situaciones.",
+          "evidence": [
+            {
+              "source_id": "aha-tox",
+              "locator": "Life-threatening hyperthermia/Adults, Recommendation5: stop active cooling at38.6°C",
+              "support": "AHA considera razonable suspender enfriamiento activo a38.6°C en hipertermia grave."
+            }
+          ],
+          "id": "31.09-01-gravedad"
+        },
+        {
+          "anchor_topic_ids": [
+            "31.09-02"
+          ],
+          "objective": "gravedad",
+          "vignette": "Varios comensales tienen vómito y diarrea tras una comida. Uno está hipotenso, confuso y no tolera líquidos.",
+          "question": "¿Qué decide la vía inicial de hidratación?",
+          "answer": "La hipoperfusión y la incapacidad de hidratación oral.",
+          "discriminator": "hipotenso, confuso y no tolera líquidos",
+          "reason": "La gravedad de la deshidratación guía el soporte antes de conocer el agente.",
+          "initial_action": "Iniciar líquido isotónico intravenoso con reevaluación hospitalaria.",
+          "limits": "El intervalo tras la comida no identifica por sí solo una toxina.",
+          "evidence": [
+            {
+              "source_id": "idsa-diarrhea",
+              "locator": "Recommendations 39–43: oral versus intravenous rehydration",
+              "support": "La gravedad de la deshidratación guía el soporte antes de conocer el agente."
+            }
+          ],
+          "id": "31.09-02-gravedad"
+        }
+      ]
+    },
+    {
+      "id": "31.10",
+      "title": "Envenenamiento aracnídeo",
+      "related_sections": [],
+      "scenarios": [
+        {
+          "anchor_topic_ids": [
+            "31.10-01"
+          ],
+          "objective": "cambio",
+          "vignette": "Un niño fue mordido por una araña identificada como Latrodectus hasselti en Australia. Tiene dolor local y sudoración regional. Su familiar intenta aplicar vendaje de presión e inmovilización como para otras arañas australianas.",
+          "question": "¿Es esa técnica la indicada para esta especie?",
+          "answer": "No; priorizar analgesia y valoración, sin vendaje de presión.",
+          "discriminator": "identificada como Latrodectus hasselti",
+          "reason": "RCH distingue primeros auxilios del redback: no usa inmovilización por presión, a diferencia de otros envenenamientos.",
+          "initial_action": "Retirar el vendaje constrictivo, aplicar cuidados locales y proporcionar analgesia con evaluación clínica.",
+          "limits": "Caso pediátrico y especie australiana; no se trasladan su producto de antiveneno ni sus dosis a arañas mexicanas.",
+          "evidence": [
+            {
+              "source_id": "rch-redback",
+              "locator": "Acute Management/First aid: pressure immobilisation is NOT used; analgesia priority",
+              "support": "RCH distingue primeros auxilios del redback: no usa inmovilización por presión, a diferencia de otros envenenamientos."
+            }
+          ],
+          "id": "31.10-01-subtipo"
+        },
+        {
+          "anchor_topic_ids": [
+            "31.10-02"
+          ],
+          "objective": "contraste",
+          "vignette": "Una adulta llama mordedura de violinista a una lesión dolorosa caliente con centro necrótico y drenaje purulento. Nadie vio una araña ni el momento de la lesión.",
+          "question": "¿Qué alternativa debe investigarse antes de atribuirla al veneno?",
+          "answer": "Infección bacteriana de piel y tejidos blandos.",
+          "discriminator": "drenaje purulento",
+          "reason": "Muchas lesiones atribuidas a arañas corresponden a infección; la necrosis aislada no identifica el agente.",
+          "initial_action": "Examinar extensión y estado general y valorar cultivo, drenaje y antimicrobianos según hallazgos.",
+          "limits": "No excluye loxoscelismo ni confirma MRSA por apariencia; la microbiología y epidemiología local condicionan tratamiento.",
+          "evidence": [
+            {
+              "source_id": "cdc-skin",
+              "locator": "YellowBook2026, Spider bites: lesión necrótica dolorosa suele ser infección bacteriana cuando no se observó araña",
+              "support": "Muchas lesiones atribuidas a arañas corresponden a infección; la necrosis aislada no identifica el agente."
+            }
+          ],
+          "id": "31.10-02-gravedad"
+        }
+      ]
+    },
+    {
+      "id": "31.11",
+      "title": "Picadura/mordedura",
+      "related_sections": [],
+      "scenarios": [
+        {
+          "anchor_topic_ids": [
+            "31.11-01"
+          ],
+          "objective": "contraste",
+          "vignette": "Un adulto mejoró después de antiveneno por mordedura de serpiente. Ocho días después aparece urticaria, fiebre y artralgias, sin nuevo sangrado ni progresión del edema local.",
+          "question": "¿Qué complicación del tratamiento debe considerarse?",
+          "answer": "Enfermedad del suero tardía.",
+          "discriminator": "Ocho días después aparece urticaria, fiebre y artralgias",
+          "reason": "Las reacciones tardías a antiveneno pueden aparecer varios días después y diferir de la anafilaxia inmediata o la recurrencia del veneno.",
+          "initial_action": "Reevaluar clínicamente, descartar infección u otra causa y tratar con asesoría especializada según gravedad.",
+          "limits": "No administrar más antiveneno solo por este patrón ni asumir causalidad sin valoración. No se importan dosis o selección de productos militares británicos.",
+          "evidence": [
+            {
+              "source_id": "mod-snake",
+              "locator": "Antivenom reactions: late serum sickness5–10days,urticaria/arthralgia/fever",
+              "support": "Las reacciones tardías a antiveneno pueden aparecer varios días después y diferir de la anafilaxia inmediata o la recurrencia del veneno."
+            }
+          ],
+          "id": "31.11-01-gravedad"
+        },
+        {
+          "anchor_topic_ids": [
+            "31.11-02"
+          ],
+          "objective": "cambio",
+          "vignette": "Una embarazada con intoxicación sistémica por alacrán tiene disfagia y sialorrea. Se propone omitir faboterápico solo por el embarazo.",
+          "question": "¿Ese antecedente justifica omitir tratamiento específico indicado?",
+          "answer": "No; requiere tratamiento urgente según síndrome y protocolo, con evaluación obstétrica.",
+          "discriminator": "omitir faboterápico solo por el embarazo",
+          "reason": "El texto institucional mexicano incluye a embarazadas con toxíndrome entre quienes requieren antiveneno oportuno; no se extrapola un protocolo adulto sin ese contexto.",
+          "initial_action": "Coordinar urgencias, toxicología y obstetricia y administrar el producto indicado bajo protocolo local.",
+          "limits": "No se indica a toda picadura asintomática ni se inventa número de frascos; el libro IMSS2023 es un texto institucional, no una GPC actualizada.",
+          "evidence": [
+            {
+              "source_id": "imss-toxbook",
+              "locator": "CapXVIII,pp203–204: terapia antiveneno, embarazadas con toxíndrome",
+              "support": "El texto institucional mexicano incluye a embarazadas con toxíndrome entre quienes requieren antiveneno oportuno; no se extrapola un protocolo adulto sin ese contexto."
+            }
+          ],
+          "id": "31.11-02-gravedad"
+        },
+        {
+          "anchor_topic_ids": [
+            "31.11-03"
+          ],
+          "objective": "contraste",
+          "vignette": "Un adulto presenta hinchazón extensa de un brazo tras una picadura de abeja. Respira bien y mantiene presión normal, sin síntomas en otros órganos.",
+          "question": "¿La reacción local extensa basta para diagnosticar anafilaxia?",
+          "answer": "No.",
+          "discriminator": "sin síntomas en otros órganos",
+          "reason": "La anafilaxia requiere reconocer compromiso sistémico, en especial respiratorio o circulatorio.",
+          "initial_action": "Evaluar síntomas y evolución y dar instrucciones para regresar si aparecen datos sistémicos.",
+          "limits": "La progresión rápida puede cambiar la conducta.",
+          "evidence": [
+            {
+              "source_id": "rcuk-special",
+              "locator": "Anaphylaxis: recognition of airway, breathing and circulation problems",
+              "support": "La anafilaxia requiere reconocer compromiso sistémico, en especial respiratorio o circulatorio."
+            }
+          ],
+          "id": "31.11-03-contraste"
+        },
+        {
+          "anchor_topic_ids": [
+            "31.11-04"
+          ],
+          "objective": "cambio",
+          "vignette": "Un adulto se recuperó de anafilaxia por avispa y completó observación. Nunca había usado un autoinyector y cree que basta llevar antihistamínicos para otra exposición.",
+          "question": "¿Qué medida debe organizarse antes del alta?",
+          "answer": "Adrenalina para autoadministración cuando esté indicada, entrenamiento y derivación a alergología.",
+          "discriminator": "Nunca había usado un autoinyector",
+          "reason": "Después de anafilaxia por veneno se requiere un plan de emergencia y capacitación; antihistamínicos no resuelven otra reacción con compromiso vital.",
+          "initial_action": "Acordar acceso local al dispositivo apropiado, demostrar uso y proporcionar plan escrito y valoración de alergia al veneno.",
+          "limits": "La disponibilidad mexicana puede diferir; no equivale a autorización para reutilizar una pauta intravenosa ni sustituye llamar a emergencias.",
+          "evidence": [
+            {
+              "source_id": "rcuk-anaphylaxis",
+              "locator": "2021,Key recommendations,p7: allergy referral, adrenaline injector and training/action plan before assessment",
+              "support": "Después de anafilaxia por veneno se requiere un plan de emergencia y capacitación; antihistamínicos no resuelven otra reacción con compromiso vital."
+            }
+          ],
+          "id": "31.11-04-gravedad"
+        }
+      ]
+    }
+  ]
+}

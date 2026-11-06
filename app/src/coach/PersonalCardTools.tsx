@@ -3,6 +3,7 @@ import type { StudyCardData } from "../library-types";
 import { addPersonalCard, personalTextLimit, setSuspended } from "./personal";
 import type { CoachCommit, CoachState, PersonalCard } from "./types";
 import "./personal.css";
+import { layerOf } from "./profile";
 
 export type PersonalToolsOptions = {
   state: CoachState;
@@ -97,6 +98,7 @@ export default function PersonalCardTools({
                   front: "",
                   back: "",
                   created_at: new Date().toISOString(),
+                  ...(state.workspace ? { layer: layerOf(state.workspace) } : {}),
                 });
                 setFailed(false);
                 setSubmitted(false);

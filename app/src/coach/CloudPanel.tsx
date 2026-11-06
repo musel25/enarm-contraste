@@ -4,6 +4,7 @@ import { cloudRequest } from "./cloud";
 import { connectProgress } from "./repository";
 import { getProgressCode, previousProgressCode, validCode } from "./storage";
 import type { CoachState } from "./types";
+import { migrateProfile } from "./profile";
 
 export default function CloudPanel({
   onConnected,
@@ -38,7 +39,16 @@ export default function CloudPanel({
       const state = await cloudRequest(cleaned);
       if (!state) throw new Error("No encontramos progreso con este código.");
       setInput(cleaned);
-      setPreview({ code: cleaned, state });
+      const profile = migrateProfile(state);
+      const all = Object.values(profile.workspaces);
+      setPreview({
+        code: cleaned,
+        state: {
+          ...profile.workspaces.capa1,
+          history: all.flatMap((part) => part.history),
+          progress: Object.assign({}, ...all.map((part) => part.progress)),
+        },
+      });
     } catch (failure) {
       setError((failure as Error).message);
     } finally {

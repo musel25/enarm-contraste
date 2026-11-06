@@ -1,6 +1,6 @@
 import { createServer } from "node:http";
 import { DatabaseSync } from "node:sqlite";
-import { validateState } from "../app/src/coach/engine";
+import { validStoredState } from "../app/src/coach/profile";
 import { HttpError, progressCode, readBody, reply } from "./http";
 import { hash } from "./crypto";
 import { createAccountRoutes } from "./accounts";
@@ -78,7 +78,7 @@ export function createProgressServer({
         !Number.isSafeInteger(body.expected_revision) ||
         Number(body.expected_revision) < 0 ||
         typeof body.preserve !== "boolean" ||
-        !validateState(body.state)
+        !validStoredState(body.state)
       )
         throw new HttpError(422, "El progreso no pasó la comprobación.");
       const expected = Number(body.expected_revision);
@@ -86,6 +86,15 @@ export function createProgressServer({
       database.exec("BEGIN IMMEDIATE");
       try {
         const row = find.get(digest) as Row | undefined;
+        const prior = row ? JSON.parse(row.state) : null;
+        if (prior?.version === 2 && body.state.version !== 2) {
+          database.exec("COMMIT");
+          reply(response, 409, {
+            error: "Actualiza la página para conservar tus cuatro espacios de estudio.",
+            state: prior,
+          });
+          return;
+        }
         if (row?.fingerprint === fingerprint) {
           database.exec("COMMIT");
           reply(response, 200, { state: JSON.parse(row.state) });
@@ -107,7 +116,8 @@ export function createProgressServer({
         }
         const saved = { ...body.state, revision };
         const encoded = JSON.stringify(saved);
-        const previous = body.preserve && row ? row.state : row?.previous || null;
+        const migrating = row && prior?.version === 1 && body.state.version === 2;
+        const previous = (body.preserve || migrating) && row ? row.state : row?.previous || null;
         const now = new Date().toISOString();
         if (row) update.run(revision, encoded, previous, fingerprint, now, digest);
         else insert.run(digest, revision, encoded, previous, fingerprint, now);

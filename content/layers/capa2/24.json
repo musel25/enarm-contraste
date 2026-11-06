@@ -1,0 +1,1010 @@
+{
+  "schema_version": 1,
+  "layer": 2,
+  "section_id": "24",
+  "title": "Obstetricia",
+  "author": "clinical-author-13-24",
+  "sources": [
+    {
+      "id": "nom-perinatal-2016",
+      "label": "Secretaría de Salud. NOM-007-SSA2-2016",
+      "url": "https://sidof.segob.gob.mx/notas/docFuente/5432289",
+      "version": "2016",
+      "checked_at": "2026-11-06",
+      "region": "mexico",
+      "access": "checked",
+      "locator": "5.7 Atención de persona recién nacida; APGAR, Silverman, vitamina K y tamices"
+    },
+    {
+      "id": "imss-hdp-2017",
+      "label": "IMSS. Detección, diagnóstico y tratamiento de enfermedades hipertensivas del embarazo. IMSS-058-08",
+      "url": "https://www.imss.gob.mx/sites/all/statics/guiasclinicas/058GER.pdf",
+      "version": "actualización 2017",
+      "checked_at": "2026-11-06",
+      "region": "mexico",
+      "access": "checked",
+      "locator": "Diagnóstico, datos de gravedad y referencia"
+    },
+    {
+      "id": "qld-hdp-2026",
+      "label": "Queensland Clinical Guidelines. Hypertension and pregnancy",
+      "url": "https://www.health.qld.gov.au/__data/assets/pdf_file/0034/139948/g-hdp.pdf",
+      "version": "2026-09; MN26.13-V10-R31",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Diagnosis; severe features; HELLP; postpartum hypertension"
+    },
+    {
+      "id": "qld-ptl-2026",
+      "label": "Queensland Clinical Guidelines. Preterm labour and birth",
+      "url": "https://www.health.qld.gov.au/__data/assets/pdf_file/0019/140149/g-ptl.pdf",
+      "version": "2026-07; MN26.6-V13-R31",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Assessment; cervical change; contraindications to tocolysis; infection"
+    },
+    {
+      "id": "qld-birth-2023",
+      "label": "Queensland Clinical Guidelines. Normal birth",
+      "url": "https://www.health.qld.gov.au/__data/assets/pdf_file/0014/142007/g-normalbirth.pdf",
+      "version": "modificación 2023-07",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Initial assessment; stages; informed care; progress; third stage"
+    },
+    {
+      "id": "qld-perineal-2023",
+      "label": "Queensland Clinical Guidelines. Perineal care",
+      "url": "https://www.health.qld.gov.au/__data/assets/pdf_file/0022/142384/g-pericare.pdf",
+      "version": "2023-12",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Perineal assessment; rectal examination; obstetric anal sphincter injury"
+    },
+    {
+      "id": "qld-rhd-2025",
+      "label": "Queensland Clinical Guidelines. Rh D negative women and pregnancy",
+      "url": "https://www.health.qld.gov.au/__data/assets/pdf_file/0016/1219003/g-rhd-negative.pdf",
+      "version": "modificación 2025-08",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Preformed versus passive anti-D; prophylaxis not effective for established sensitisation"
+    },
+    {
+      "id": "qld-stillbirth-2026",
+      "label": "Queensland Clinical Guidelines. Stillbirth care",
+      "url": "https://www.health.qld.gov.au/__data/assets/pdf_file/0023/143087/g-stillbirth.pdf",
+      "version": "modificación 2026-06",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Confirmation; maternal assessment; individualized birth and bereavement care"
+    },
+    {
+      "id": "qld-obstruction-2026",
+      "label": "Queensland Clinical Guidelines. Prolonged and/or obstructed labour",
+      "url": "https://www.health.qld.gov.au/__data/assets/pdf_file/0037/1457389/g-prolonged-obstructed.pdf",
+      "version": "modificación 2026-09",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Assessment of progress; obstruction; oxytocin safety; operative birth"
+    },
+    {
+      "id": "smfm-fgr-2020",
+      "label": "SMFM. Consult Series 52: Diagnosis and management of fetal growth restriction",
+      "url": "https://s3.amazonaws.com/cdn.smfm.org/attachments/784/6714d2faa2c68e4e8155225f6de2162b.pdf",
+      "version": "2020; reafirmado 2024",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Umbilical artery Doppler; reversed end-diastolic flow; escalation"
+    },
+    {
+      "id": "smfm-cervix-2024",
+      "label": "SMFM. Consult Series 70: Management of short cervix without history of spontaneous preterm birth",
+      "url": "https://assets.noviams.com/novi-file-uploads/smfm/Publications_and_Guidelines/Consults/Short_Cervix_FINAL_PDF_AJOG.pdf",
+      "version": "2024",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Transvaginal measurement; singleton short cervix; no routine cerclage without dilation"
+    },
+    {
+      "id": "smfm-sepsis-2023",
+      "label": "SMFM. Consult Series 67: Maternal sepsis",
+      "url": "https://publications.smfm.org/publications/507-society-for-maternal-fetal-medicine-consult-series-67/",
+      "version": "2023",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Recommendations 1,2,6,8,9,18: organ injury, immediate treatment and source control"
+    },
+    {
+      "id": "isuog-twin-2025",
+      "label": "ISUOG. Updated Practice Guidelines: role of ultrasound in twin pregnancy",
+      "url": "https://www.isuog.org/asset/89DB40D1-928B-49BC-BE5EA200FD41130C/",
+      "version": "2025-01",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Chorionicity; amnionicity; monochorionic surveillance"
+    },
+    {
+      "id": "endo-pituitary-2016",
+      "label": "Endocrine Society. Hormonal Replacement in Hypopituitarism: guideline recommendations",
+      "url": "https://www.endocrine.org/clinical-practice-guidelines/hormone-replacement-in-hypopituitarism",
+      "version": "2016-10-01",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Diagnosis of multiple pituitary deficiency; cortisol, thyroid and gonadal axes"
+    },
+    {
+      "id": "aium-ultrasound-2018",
+      "label": "AIUM/ACR/ACOG/SMFM/SRU. Practice Parameter for Standard Diagnostic Obstetric Ultrasound; texto primario completo",
+      "url": "https://onlinelibrary.wiley.com/doi/10.1002/jum.14831",
+      "version": "2018-10-11; parámetro2018, no presentado como edición2026",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Segundo/tercer trimestre: una datación temprana fiable no se cambia por biometría posterior discordante"
+    },
+    {
+      "id": "rcog-cord-2014",
+      "label": "RCOG. Umbilical Cord Prolapse, Green-top50; texto primario completo",
+      "url": "https://www-preview.rcog.org.uk/media/3wykswng/gtg-50-umbilicalcordprolapse-2014.pdf",
+      "version": "2014-11; segunda edición; web oficial informa revisión2024 sin cambio, próxima2026",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Resumen p.2 y prevención: evitar amniotomía cuando presentación alta o móvil; si es necesaria, recursos para cesárea inmediata"
+    },
+    {
+      "id": "smfm-poly-2018",
+      "label": "SMFM Consult46. Evaluation and management of polyhydramnios; recomendaciones oficiales completas",
+      "url": "https://publications.smfm.org/publications/263-society-for-maternal-fetal-medicine-consult-series-46/",
+      "version": "2018; reafirmado2024",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Recomendación2: considerar amniorreducción solo por disnea o malestar materno grave en polihidramnios grave"
+    },
+    {
+      "id": "ada-pregnancy-2026",
+      "label": "ADA. Standards of Care in Diabetes2026, capítulo15; documento primario completo en copiaPDF",
+      "url": "https://www.guideline.care/images-recos/standards-of-care-2026.pdf",
+      "version": "2026-01; Diabetes Care49Suppl1, capítulo15, pp.S331–S333",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Rec15.30 y Gestational Diabetes Mellitus: OGTT75g a4–12semanas; HbA1c no lo sustituye en ese intervalo"
+    },
+    {
+      "id": "rcog-hg-prof-2024",
+      "label": "RCOG. Green-top69. Nausea and Vomiting in Pregnancy and Hyperemesis Gravidarum; texto profesional primario completo",
+      "url": "https://obgyn.onlinelibrary.wiley.com/doi/10.1111/1471-0528.17739",
+      "version": "2024-02-04; correcciones2025-06-19 y2026-06-30 abiertas, ajenas a ketonuria",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Key recommendations y §4.1/tabla1: cetonuria no mide deshidratación ni gravedad; correcciones sobre nombres/vías de fármacos y tiempo de líquidos no se trasladan como pautas"
+    },
+    {
+      "id": "nice25-2022",
+      "label": "NICE NG25. Preterm labour and birth; texto primario mediante copiaHTML completaDejaVu",
+      "url": "https://www.dejavu.org/cgi-bin/get.cgi?url=https%3A%2F%2Fwww.nice.org.uk%2Fguidance%2Fng25%2Fchapter%2FRecommendations%23mode-of-birth&ver=95",
+      "version": "2015-11-20; actualización2022-06-10",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "1.3.1–1.3.2: prueba de líquido positiva sin acumulación visible no basta sola;1.8.1: sangrado/infección pueden contraindicar tocolisis"
+    },
+    {
+      "id": "nice235-2026",
+      "label": "NICE NG235. Intrapartum care; texto primario mediante copiaHTML completaDejaVu",
+      "url": "https://www.dejavu.org/cgi-bin/get.cgi?url=https%3A%2F%2Fwww.nice.org.uk%2Fguidance%2Fng235%2Fchapter%2FRecommendations%23care-of-the-newborn-baby&ver=95",
+      "version": "2023-09-29; actualización2026-06-09",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "1.4.8: intérprete fiable independiente;1.12.1: incapacidad de orinar tras6horas con vejiga palpable"
+    },
+    {
+      "id": "qld-primary-2025",
+      "label": "Queensland Health. Primary Clinical Care Manual,12a edición, capítulo6; manual clínico oficial completo",
+      "url": "https://www.health.qld.gov.au/__data/assets/pdf_file/0013/1215031/6.Obstetrics-and-neonatal.pdf",
+      "version": "2025;12a edición",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Shoulder dystocia, p.403: episiotomía no resuelve obstrucción ósea; solo facilita maniobras internas cuando no cabe la mano"
+    },
+    {
+      "id": "rcog-vbac-2015",
+      "label": "RCOG. Birth After Previous Caesarean Birth. Green-top45; texto primario completo",
+      "url": "https://www-preview.rcog.org.uk/media/kpkjwd5h/gtg_45.pdf",
+      "version": "2015-10; segunda edición",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Suitability for plannedVBAC: detalles de incisión uterina y cirugía previa; no inferirla de cicatriz cutánea"
+    },
+    {
+      "id": "nice-perinatal-2020",
+      "label": "NICE CG192. Antenatal and postnatal mental health; texto primario mediante copiaHTML completaDejaVu",
+      "url": "https://www.dejavu.org/cgi-bin/get.cgi?url=http%3A%2F%2Fwww.nice.org.uk%2Fguidance%2Fcg192%2Fchapter%2FRecommendations%23assessment-and-care-planning-in-pregnancy-and-the-postnatal-period&ver=95",
+      "version": "2014-12-17; actualización2020-02-11",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "1.5.9–1.5.10: antecedentes de enfermedad mental grave y valoración por salud mental perinatal; no extrapolar esquemas farmacológicos"
+    },
+    {
+      "id": "nice207-2021",
+      "label": "NICE NG207. Inducing labour; capítulo primario completo mediante copiaHTML DejaVu",
+      "url": "https://www.dejavu.org/cgi-bin/get.cgi?url=https%3A%2F%2Fwww.nice.org.uk%2Fguidance%2Fng207%2Fchapter%2FRecommendations%23induction-of-labour-in-specific-circumstances&ver=95",
+      "version": "2021-11-04",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "1.2.23: restricción de crecimiento con compromiso confirmado; no inducción y ofrecer cesárea"
+    },
+    {
+      "id": "who-cs-antibiotics-2021",
+      "label": "OMS. Prophylactic antibiotics for women undergoing caesarean section; documento primario completo en edición MAGICapp",
+      "url": "https://files.magicapp.org/guideline/4efb320b-d73b-46a4-b926-afd2c9d5fa4c/published_guideline_10015-1_0.pdf",
+      "version": "2021-06-18; ISBN9789240028012",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Timing and provision, pp8y18 de la edición MAGICapp: antes de incisión cutánea, no después de pinzar cordón"
+    },
+    {
+      "id": "acog-intraamniotic-2017",
+      "label": "ACOG Committee Opinion712. Intrapartum Management of Intraamniotic Infection; documento primario completo en copia hospitalaria",
+      "url": "https://sharp.cloud-cme.com/assets/sharp/Presentations/15466/ACOG%20712%20Intraamniotic%20Infection%202017.pdf",
+      "version": "2017-08; ObstetGynecol130:e95–101; se usa su recomendación posparto, no los criterios diagnósticos actualizadosen2024",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Postdelivery Recommendations,p3–4 y tabla1: continuación de antimicrobianos según riesgo, no automática tras parto vaginal"
+    }
+  ],
+  "mexico_source_note": "Se abrió la NOM-007-SSA2-2016 y la actualización 2017 de IMSS-058-08. La búsqueda nacional no identificó una actualización integral accesible para todos los problemas obstétricos. Se comprobaron guías oficiales Queensland con modificaciones reales de 2023, 2025 y 2026, SMFM e ISUOG. No se aplican dosis ni criterios australianos sin contexto mexicano. El folleto RCOG de hiperémesis y NIMH se usan para evaluación y referencia, no como sustitutos de una pauta especializada. Las sustituciones no están cubiertas por una GPC mexicana reciente completa identificada en la búsqueda. Se abrieron nuevamente los textos Queensland vigentes declarados y se leyeron sus apartados específicos. Se añadieron los capítulos NICE completos mediante copiaHTML DejaVu por bloqueo directo403, ADA2026 completo, SMFM46 oficial con recomendaciones, RCOG69 profesional completo y sus correcciones2025/2026. Los cambios de RCOG69 no afectan la interpretación de cetonuria y no se transcriben sus pautas. RCOG50 es2014 con revisión oficial2024 sin cambio y revisión pendiente2026; se abrió la página de versiones y el PDF. RCOG45 es2015 y el parámetro AIUM es2018: se conserva esa antigüedad sin llamarlos actualizaciones2026. No se fijan dosis nuevas ni disponibilidad mexicana de intervenciones especializadas. Para las sustituciones finales se abrió NICE NG2072021 completo por DejaVu y la recomendación OMS2021 de profilaxis en cesárea completa en edición MAGICapp; no se identificó un documento mexicano nuevo que modificara esos puntos. Se limita OMS a prevención, sin extrapolar a tratamiento de infección establecida. Se abrió ACOG7122017 completo en copia hospitalaria Sharp para duración posparto; también se abrió la actualización primaria diagnóstica publicada29-abril2024 y ediciónjulio2024, que no cambia el punto posparto citado. No se trasladan los criterios de fiebre de2017 como definición vigente.",
+  "blocks": [
+    {
+      "id": "24.01",
+      "title": "Primera consulta prenatal",
+      "related_sections": [],
+      "scenarios": [
+        {
+          "id": "24.01-c2-01",
+          "anchor_topic_ids": [
+            "24.01-01"
+          ],
+          "objective": "cambio",
+          "vignette": "Una gestante tiene fecha probable de parto establecida por ultrasonido temprano fiable. En el tercer trimestre la biometría es menor de lo esperado.",
+          "question": "¿Debe cambiarse la fecha solo para que coincida con ese tamaño?",
+          "answer": "No; investigar alteración del crecimiento.",
+          "discriminator": "ultrasonido temprano fiable",
+          "reason": "La biometría tardía discordante puede reflejar crecimiento anormal y no un error de datación.",
+          "initial_action": "Conservar la datación fiable e integrar crecimiento, Doppler y evolución según evaluación obstétrica.",
+          "limits": "El parámetro abierto es2018; no se usa para fijar un umbral nuevo de redatación ni para fechar un embarazo sin estudio temprano.",
+          "evidence": [
+            {
+              "source_id": "aium-ultrasound-2018",
+              "locator": "Segundo y tercer trimestre: Dating y discordancia biométrica; no redatar tras examen temprano preciso",
+              "support": "La biometría tardía discordante puede reflejar crecimiento anormal y no un error de datación."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "24.02",
+      "title": "Presentación y pelvis",
+      "related_sections": [],
+      "scenarios": [
+        {
+          "id": "24.02-c2-01",
+          "anchor_topic_ids": [
+            "24.02-01"
+          ],
+          "objective": "cambio",
+          "vignette": "En trabajo de parto el feto está cefálico, pero la cabeza permanece alta y móvil. Se propone amniotomía para acelerar el parto.",
+          "question": "¿La presentación cefálica basta para realizarla de rutina?",
+          "answer": "No; la cabeza alta y móvil aumenta riesgo de prolapso de cordón.",
+          "discriminator": "la cabeza permanece alta y móvil",
+          "reason": "La relación de la presentación con la pelvis importa para la seguridad de romper membranas.",
+          "initial_action": "Evitar amniotomía rutinaria y solicitar valoración obstétrica.",
+          "limits": "Si es necesaria, requiere preparación para cesárea inmediata según el contexto; la guía es2014 con revisión oficial2024 sin cambio.",
+          "evidence": [
+            {
+              "source_id": "rcog-cord-2014",
+              "locator": "Resumenp2; prevención del prolapso ante presentación móvil o alta",
+              "support": "La relación de la presentación con la pelvis importa para la seguridad de romper membranas."
+            }
+          ]
+        },
+        {
+          "id": "24.02-c2-02",
+          "anchor_topic_ids": [
+            "24.02-02"
+          ],
+          "objective": "cambio",
+          "vignette": "Una mujer tiene pelvis descrita como ginecoide. En el parto aparece detención completa del descenso pese a contracciones adecuadas y signos clínicos de obstrucción. Se propone aumentar oxitocina.",
+          "question": "¿La forma pélvica favorable hace segura esa medida?",
+          "answer": "No; la sospecha de obstrucción contraindica aumentar el estímulo.",
+          "discriminator": "detención completa del descenso pese a contracciones adecuadas",
+          "reason": "La evolución clínica puede revelar un obstáculo aunque una descripción anatómica parezca favorable.",
+          "initial_action": "Pedir valoración obstétrica urgente antes de administrar más oxitocina.",
+          "limits": "No diagnosticar desproporción solo por el tiempo o un tipo de pelvis; integrar presentación y bienestar maternofetal.",
+          "evidence": [
+            {
+              "source_id": "qld-obstruction-2026",
+              "locator": "Definicionesp1; Augmentationp4: oxitocina contraindicada ante signos de obstrucción",
+              "support": "La evolución clínica puede revelar un obstáculo aunque una descripción anatómica parezca favorable."
+            }
+          ]
+        },
+        {
+          "id": "24.02-c2-03",
+          "anchor_topic_ids": [
+            "24.02-03"
+          ],
+          "objective": "cambio",
+          "vignette": "Una gestante con polihidramnios grave presenta disnea y malestar intenso por distensión. Ya se investigan las causas maternas y fetales.",
+          "question": "¿Qué intervención puede considerarse por esos síntomas graves?",
+          "answer": "Amniorreducción en una unidad especializada.",
+          "discriminator": "polihidramnios grave presenta disnea y malestar intenso",
+          "reason": "La indicación se condiciona a síntomas maternos graves, no al exceso de líquido aislado.",
+          "initial_action": "Solicitar evaluación de medicina fetal para valorar beneficio y riesgo.",
+          "limits": "No indicar amniorreducción rutinaria por polihidramnios leve ni usar indometacina solo para disminuir líquido.",
+          "evidence": [
+            {
+              "source_id": "smfm-poly-2018",
+              "locator": "Recomendaciones2–3, GRADE1C y1B",
+              "support": "La indicación se condiciona a síntomas maternos graves, no al exceso de líquido aislado."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "24.03",
+      "title": "Hiperglucemia durante gestación",
+      "related_sections": [],
+      "scenarios": [
+        {
+          "id": "24.03-c2-01",
+          "anchor_topic_ids": [
+            "24.03-01"
+          ],
+          "objective": "dato_faltante",
+          "vignette": "A las seis semanas de un parto con diabetes gestacional, una mujer tiene HbA1c normal. No ha realizado prueba oral de tolerancia a glucosa.",
+          "question": "¿La HbA1c normal sustituye la prueba posparto indicada?",
+          "answer": "No; se prefiere la prueba oral con75g.",
+          "discriminator": "HbA1c normal. No ha realizado prueba oral",
+          "reason": "En el puerperio temprano la HbA1c puede estar disminuida por recambio eritrocitario y pérdida sanguínea.",
+          "initial_action": "Organizar OGTT con75g dentro del intervalo posparto de4–12semanas.",
+          "limits": "No extrapolar este límite a todas las pruebas de seguimiento posteriores; individualizar si no tolera o rechaza OGTT.",
+          "evidence": [
+            {
+              "source_id": "ada-pregnancy-2026",
+              "locator": "Rec15.30; Gestational Diabetes Mellitus, pp.S332–S333: OGTT preferido sobre HbA1c a4–12semanas",
+              "support": "En el puerperio temprano la HbA1c puede estar disminuida por recambio eritrocitario y pérdida sanguínea."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "24.04",
+      "title": "Fiebre/disuria o vómitos",
+      "related_sections": [],
+      "scenarios": [
+        {
+          "id": "24.04-c2-01",
+          "anchor_topic_ids": [
+            "24.04-01"
+          ],
+          "objective": "gravedad",
+          "vignette": "Una embarazada con disuria y fiebre tiene dolor en flanco, hipotensión y confusión.",
+          "question": "¿Qué prioridad modifica el manejo de una IVU simple?",
+          "answer": "Sepsis materna con daño orgánico.",
+          "discriminator": "hipotensión y confusión",
+          "reason": "La hipoperfusión exige tratamiento inmediato.",
+          "initial_action": "Hospitalizar, obtener cultivos e iniciar reanimación y antibióticos.",
+          "limits": "La causa urinaria requiere confirmación y evaluación de obstrucción.",
+          "evidence": [
+            {
+              "source_id": "smfm-sepsis-2023",
+              "locator": "Recommendations 1,2,6 and 8",
+              "support": "La hipoperfusión exige tratamiento inmediato."
+            }
+          ]
+        },
+        {
+          "id": "24.04-c2-02",
+          "anchor_topic_ids": [
+            "24.04-02"
+          ],
+          "objective": "incompleta",
+          "vignette": "Una gestante con vómitos persistentes tiene pérdida de peso e ingesta muy limitada. Las cetonas urinarias son negativas y se propone clasificarla como leve por ese resultado.",
+          "question": "¿Las cetonas negativas permiten medir así la gravedad?",
+          "answer": "No; la cetonuria no es un marcador adecuado de gravedad.",
+          "discriminator": "Las cetonas urinarias son negativas",
+          "reason": "La evaluación clínica y herramientas validadas describen mejor repercusión e hidratación.",
+          "initial_action": "Valorar ingesta, peso, perfusión y electrolitos para decidir apoyo y tratamiento.",
+          "limits": "No usar cetonas para negar atención; buscar otras causas cuando la historia no sea típica.",
+          "evidence": [
+            {
+              "source_id": "rcog-hg-prof-2024",
+              "locator": "Key recommendations y§4.1/tabla1: ketonuria no indica deshidratación ni gravedad",
+              "support": "La evaluación clínica y herramientas validadas describen mejor repercusión e hidratación."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "24.05",
+      "title": "Incompatibilidad sanguínea",
+      "related_sections": [],
+      "scenarios": [
+        {
+          "id": "24.05-c2-01",
+          "anchor_topic_ids": [
+            "24.05-01"
+          ],
+          "objective": "incompleta",
+          "vignette": "Una gestante RhD negativa tiene anti-D positivo en tamizaje después de recibir inmunoglobulina anti-D recientemente. Antes del evento no se conocían anticuerpos.",
+          "question": "¿Ese resultado demuestra sensibilización inmune?",
+          "answer": "No; puede tratarse de anti-D pasivo.",
+          "discriminator": "después de recibir inmunoglobulina anti-D recientemente",
+          "reason": "La profilaxis puede producir anticuerpos detectables sin sensibilización establecida.",
+          "initial_action": "Revisar fechas y registros con el banco de sangre y obstetricia antes de clasificarla.",
+          "limits": "Un resultado aislado tampoco prueba origen pasivo; la incertidumbre requiere consejo experto y no suspender profilaxis por cuenta propia.",
+          "evidence": [
+            {
+              "source_id": "qld-rhd-2025",
+              "locator": "p3: tamizaje positivo, revisar RhDIg reciente; diferenciar anti-D pasivo y preformado",
+              "support": "La profilaxis puede producir anticuerpos detectables sin sensibilización establecida."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "24.06",
+      "title": "TA elevada gestacional",
+      "related_sections": [],
+      "scenarios": [
+        {
+          "id": "24.06-c2-01",
+          "anchor_topic_ids": [
+            "24.06-01"
+          ],
+          "objective": "mecanismo",
+          "vignette": "Una gestante con preeclampsia recibe sulfato de magnesio para prevenir convulsiones. La hipertensión grave persiste y se propone esperar porque ya recibió ese medicamento.",
+          "question": "¿El magnesio sustituye el tratamiento antihipertensivo?",
+          "answer": "No; son objetivos terapéuticos diferentes.",
+          "discriminator": "La hipertensión grave persiste",
+          "reason": "La prevención de convulsiones no elimina la necesidad de controlar presión grave.",
+          "initial_action": "Mantener vigilancia e iniciar tratamiento de presión indicado con el equipo obstétrico.",
+          "limits": "Evitar dosis improvisadas; vigilar toxicidad del magnesio y respuesta hemodinámica según protocolo.",
+          "evidence": [
+            {
+              "source_id": "qld-hdp-2026",
+              "locator": "§8.2, tabla25: tratamiento antihipertensivo al reconocer gravedad y magnesio por indicación cerebral",
+              "support": "La prevención de convulsiones no elimina la necesidad de controlar presión grave."
+            }
+          ]
+        },
+        {
+          "id": "24.06-c2-02",
+          "anchor_topic_ids": [
+            "24.06-02"
+          ],
+          "objective": "cambio",
+          "vignette": "Una gestante con preeclampsia confirmada tiene presión y laboratorios estables. Se propone usar únicamente mediciones repetidas de proteinuria para vigilar progresión.",
+          "question": "¿Ese seguimiento aislado es adecuado?",
+          "answer": "No; vigilar estado materno y fetal.",
+          "discriminator": "únicamente mediciones repetidas de proteinuria",
+          "reason": "Con preeclampsia establecida, repetir proteinuria sin otra indicación no reemplaza la vigilancia clínica y orgánica.",
+          "initial_action": "Seguir presión, síntomas, función orgánica y bienestar fetal según el plan obstétrico.",
+          "limits": "Una evaluación estable no asegura evolución benigna; los hallazgos nuevos requieren reevaluación.",
+          "evidence": [
+            {
+              "source_id": "qld-hdp-2026",
+              "locator": "§6.1/tabla20: no repetir cribado si preeclampsia establecida sin otra indicación; tabla de vigilancia",
+              "support": "Con preeclampsia establecida, repetir proteinuria sin otra indicación no reemplaza la vigilancia clínica y orgánica."
+            }
+          ]
+        },
+        {
+          "id": "24.06-c2-03",
+          "anchor_topic_ids": [
+            "24.06-03"
+          ],
+          "objective": "gravedad",
+          "vignette": "Una gestante tiene dolor epigástrico, plaquetas bajas, transaminasas elevadas y hemólisis. La presión permanece normal en mediciones repetidas, alrededor de120/75mmHg.",
+          "question": "¿La presión verdaderamente normal excluye HELLP?",
+          "answer": "No; puede existir una presentación atípica.",
+          "discriminator": "La presión permanece normal en mediciones repetidas",
+          "reason": "HELLP puede iniciar sin presión elevada ni otros signos habituales de preeclampsia.",
+          "initial_action": "Hospitalizar, evaluar otras microangiopatías y coordinar estabilización y conducta obstétrica.",
+          "limits": "La tríada analítica exige diagnóstico diferencial; normotensión no justifica manejo ambulatorio ni confirma por sí sola HELLP.",
+          "evidence": [
+            {
+              "source_id": "qld-hdp-2026",
+              "locator": "§8.5/tabla28,p23: inicio atípico conBPnot elevated o ausencia de signos de preeclampsia",
+              "support": "HELLP puede iniciar sin presión elevada ni otros signos habituales de preeclampsia."
+            }
+          ]
+        },
+        {
+          "id": "24.06-c2-04",
+          "anchor_topic_ids": [
+            "24.06-01"
+          ],
+          "objective": "gravedad",
+          "vignette": "Una mujer en puerperio reciente presenta cefalea intensa, visión borrosa e hipertensión nueva. No tuvo hipertensión durante la gestación.",
+          "question": "¿Debe descartarse preeclampsia posparto?",
+          "answer": "Sí, con evaluación urgente.",
+          "discriminator": "hipertensión nueva",
+          "reason": "La enfermedad puede aparecer por primera vez después del parto.",
+          "initial_action": "Activar atención obstétrica urgente y evaluar daño orgánico.",
+          "limits": "No atribuir la cefalea solo al cansancio.",
+          "evidence": [
+            {
+              "source_id": "qld-hdp-2026",
+              "locator": "Postpartum onset of pre-eclampsia",
+              "support": "La enfermedad puede aparecer por primera vez después del parto."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "24.07",
+      "title": "Dolor/contracciones antes de término",
+      "related_sections": [],
+      "scenarios": [
+        {
+          "id": "24.07-c2-01",
+          "anchor_topic_ids": [
+            "24.07-01"
+          ],
+          "objective": "incompleta",
+          "vignette": "Una gestante antes de término tiene contracciones, pero no se ha documentado cambio cervical.",
+          "question": "¿Se confirma trabajo de parto pretérmino?",
+          "answer": "No; completar evaluación de cuello y evolución.",
+          "discriminator": "no se ha documentado cambio cervical",
+          "reason": "Las contracciones aisladas no demuestran parto establecido.",
+          "initial_action": "Evaluar cuello, membranas y bienestar maternofetal.",
+          "limits": "El manejo depende de edad gestacional y probabilidad de nacimiento.",
+          "evidence": [
+            {
+              "source_id": "qld-ptl-2026",
+              "locator": "Assessment and diagnosis",
+              "support": "Las contracciones aisladas no demuestran parto establecido."
+            }
+          ]
+        },
+        {
+          "id": "24.07-c2-02",
+          "anchor_topic_ids": [
+            "24.07-02"
+          ],
+          "objective": "contraste",
+          "vignette": "Una gestante con embarazo único, sin parto pretérmino previo, tiene cuello corto en ultrasonido y no tiene dilatación.",
+          "question": "¿El hallazgo exige cerclaje automático?",
+          "answer": "No.",
+          "discriminator": "no tiene dilatación",
+          "reason": "El cuello corto sin historia ni dilatación tiene una estrategia diferente.",
+          "initial_action": "Confirmar medición transvaginal y valorar prevención indicada.",
+          "limits": "La conducta cambia con dilatación, antecedentes o gestación múltiple.",
+          "evidence": [
+            {
+              "source_id": "smfm-cervix-2024",
+              "locator": "Recommendations on cerclage without cervical dilation",
+              "support": "El cuello corto sin historia ni dilatación tiene una estrategia diferente."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "24.08",
+      "title": "Salida de líquido o fiebre",
+      "related_sections": [],
+      "scenarios": [
+        {
+          "id": "24.08-c2-01",
+          "anchor_topic_ids": [
+            "24.08-01"
+          ],
+          "objective": "incompleta",
+          "vignette": "Una gestante refiere humedad vaginal intermitente. No se observa acumulación de líquido en espéculo, pero una prueba de IGFBP-1 es positiva. Está estable.",
+          "question": "¿Debe decidirse todo el manejo solo por la prueba positiva?",
+          "answer": "No; integrar clínica y reevaluar según contexto.",
+          "discriminator": "No se observa acumulación de líquido en espéculo",
+          "reason": "Un marcador positivo aislado no sustituye historia, condición clínica y edad gestacional.",
+          "initial_action": "Valorar atención como RPM o reevaluación diagnóstica con el equipo obstétrico.",
+          "limits": "La prueba no implica nacimiento inmediato; tampoco ignorar síntomas nuevos o infección.",
+          "evidence": [
+            {
+              "source_id": "nice25-2022",
+              "locator": "1.3.1–1.3.2: resultados positivos de IGFBP1/PAMG1 no deciden solos la atención",
+              "support": "Un marcador positivo aislado no sustituye historia, condición clínica y edad gestacional."
+            }
+          ]
+        },
+        {
+          "id": "24.08-c2-02",
+          "anchor_topic_ids": [
+            "24.08-02"
+          ],
+          "objective": "cambio",
+          "vignette": "Una mujer recibió antibióticos intraparto por infección intraamniótica y tuvo parto vaginal. Ahora está afebril y clínicamente bien, sin bacteriemia ni signos de endometritis.",
+          "question": "¿Debe prolongarse automáticamente el antibiótico después del parto?",
+          "answer": "No; decidir por riesgo y evolución clínica.",
+          "discriminator": "parto vaginal. Ahora está afebril y clínicamente bien",
+          "reason": "El tratamiento intraparto no obliga por sí solo a continuarlo en el puerperio tras parto vaginal sin complicaciones.",
+          "initial_action": "Revisar evolución y factores de riesgo con obstetricia y suspender la prolongación rutinaria cuando no exista otra indicación.",
+          "limits": "No extrapolar a fiebre persistente, bacteriemia, endometritis o cesárea; requieren decisiones diferentes. La recomendación posparto citada es de2017.",
+          "evidence": [
+            {
+              "source_id": "acog-intraamniotic-2017",
+              "locator": "Postdelivery Recommendations, pp3–4 y tabla1: no continuación automática; parto vaginal y factores de riesgo",
+              "support": "El tratamiento intraparto no obliga por sí solo a continuarlo en el puerperio tras parto vaginal sin complicaciones."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "24.09",
+      "title": "Feto pequeño o gestación múltiple",
+      "related_sections": [],
+      "scenarios": [
+        {
+          "id": "24.09-c2-01",
+          "anchor_topic_ids": [
+            "24.09-01"
+          ],
+          "objective": "gravedad",
+          "vignette": "Un feto con restricción de crecimiento muestra flujo diastólico reverso en arteria umbilical.",
+          "question": "¿Qué dato exige intensificar atención?",
+          "answer": "Doppler umbilical con flujo reverso.",
+          "discriminator": "flujo diastólico reverso",
+          "reason": "El patrón indica mayor compromiso placentario y riesgo fetal.",
+          "initial_action": "Hospitalizar o derivar para vigilancia intensiva y plan de nacimiento.",
+          "limits": "El momento depende de edad gestacional y panorama completo.",
+          "evidence": [
+            {
+              "source_id": "smfm-fgr-2020",
+              "locator": "Management with reversed end-diastolic velocity",
+              "support": "El patrón indica mayor compromiso placentario y riesgo fetal."
+            }
+          ]
+        },
+        {
+          "id": "24.09-c2-02",
+          "anchor_topic_ids": [
+            "24.09-02"
+          ],
+          "objective": "subtipo",
+          "vignette": "En gemelos monocoriales diamnióticos, un saco desarrolla polihidramnios y el otro oligohidramnios. Hay discordancia nueva de las vejigas fetales.",
+          "question": "¿Qué complicación debe evaluarse de forma dirigida?",
+          "answer": "Síndrome de transfusión feto-fetal.",
+          "discriminator": "un saco desarrolla polihidramnios y el otro oligohidramnios",
+          "reason": "La secuencia discordante de líquido en una placenta compartida orienta a un desequilibrio de transfusión.",
+          "initial_action": "Referir pronto a medicina fetal para estudio de líquido, vejigas y Doppler.",
+          "limits": "La gravedad y el tratamiento requieren estadificación; no basta cualquier diferencia pequeña de líquido.",
+          "evidence": [
+            {
+              "source_id": "isuog-twin-2025",
+              "locator": "Screening/diagnosis of TTTS y tabla1: secuencia polihidramnios-oligohidramnios y vejiga donante",
+              "support": "La secuencia discordante de líquido en una placenta compartida orienta a un desequilibrio de transfusión."
+            }
+          ]
+        },
+        {
+          "id": "24.09-c2-03",
+          "anchor_topic_ids": [
+            "24.09-03"
+          ],
+          "objective": "cambio",
+          "vignette": "Tras muerte fetal confirmada, la familia no acepta autopsia completa. Desea conocer si existen otras formas de investigar la causa.",
+          "question": "¿El rechazo obliga a abandonar toda investigación?",
+          "answer": "No; ofrecer alternativas con consentimiento.",
+          "discriminator": "no acepta autopsia completa",
+          "reason": "La evaluación puede incluir examen, placenta y opciones de autopsia parcial o menos invasiva.",
+          "initial_action": "Explicar beneficios y límites y acordar estudios aceptables y disponibles.",
+          "limits": "Respetar la decisión; las alternativas no siempre proporcionan la misma información que una autopsia completa.",
+          "evidence": [
+            {
+              "source_id": "qld-stillbirth-2026",
+              "locator": "Tabla20p24: si declinan autopsia, discutir opciones no invasivas o mínimamente invasivas; examen e imagen",
+              "support": "La evaluación puede incluir examen, placenta y opciones de autopsia parcial o menos invasiva."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "24.10",
+      "title": "Trabajo de parto y progresión",
+      "related_sections": [],
+      "scenarios": [
+        {
+          "id": "24.10-c2-01",
+          "anchor_topic_ids": [
+            "24.10-01"
+          ],
+          "objective": "cambio",
+          "vignette": "Una mujer de bajo riesgo en trabajo de parto desea cambiar de posición y caminar. La evaluación maternofetal es normal.",
+          "question": "¿Debe restringirse movilidad de rutina?",
+          "answer": "No; facilitar posiciones elegidas si son seguras.",
+          "discriminator": "evaluación maternofetal es normal",
+          "reason": "La atención individual respeta preferencias y bienestar.",
+          "initial_action": "Permitir movilidad y continuar vigilancia.",
+          "limits": "Las complicaciones o procedimientos pueden requerir adaptación.",
+          "evidence": [
+            {
+              "source_id": "qld-birth-2023",
+              "locator": "Supportive care and maternal position",
+              "support": "La atención individual respeta preferencias y bienestar."
+            }
+          ]
+        },
+        {
+          "id": "24.10-c2-02",
+          "anchor_topic_ids": [
+            "24.10-02"
+          ],
+          "objective": "cambio",
+          "vignette": "Una gestante con restricción de crecimiento fetal tiene compromiso fetal confirmado en la evaluación especializada. Se propone inducción vaginal porque el cuello es favorable.",
+          "question": "¿El cuello favorable basta para indicar inducción en este contexto?",
+          "answer": "No; ofrecer cesárea por el compromiso confirmado.",
+          "discriminator": "compromiso fetal confirmado",
+          "reason": "NICE desaconseja inducción cuando la restricción de crecimiento se acompaña de compromiso fetal confirmado.",
+          "initial_action": "Coordinar nacimiento por cesárea con el equipo obstétrico según urgencia y condiciones clínicas.",
+          "limits": "No extrapolar esta contraindicación a todo feto pequeño sin compromiso; la decisión exige valoración fetal completa.",
+          "evidence": [
+            {
+              "source_id": "nice207-2021",
+              "locator": "1.2.23: FGR con compromiso confirmado; no inducción y ofrecer cesárea",
+              "support": "NICE desaconseja inducción cuando la restricción de crecimiento se acompaña de compromiso fetal confirmado."
+            }
+          ]
+        },
+        {
+          "id": "24.10-c2-03",
+          "anchor_topic_ids": [
+            "24.10-03"
+          ],
+          "objective": "cambio",
+          "vignette": "Después de salir la cabeza aparece distocia de hombros. Se propone una episiotomía como única medida para liberar el hombro impactado.",
+          "question": "¿La episiotomía por sí sola resuelve la obstrucción?",
+          "answer": "No; el obstáculo es óseo.",
+          "discriminator": "episiotomía como única medida",
+          "reason": "Una incisión perineal puede facilitar maniobras internas, pero no libera por sí sola el hombro impactado.",
+          "initial_action": "Pedir ayuda y realizar maniobras entrenadas; considerar incisión solo si se necesita acceso para maniobras internas.",
+          "limits": "No aplicar presión en el fondo uterino ni tracción excesiva; seguir el protocolo local de distocia.",
+          "evidence": [
+            {
+              "source_id": "qld-primary-2025",
+              "locator": "Shoulder dystocia,p403: episiotomía solo si no cabe la mano para maniobras; no alivia obstrucción ósea",
+              "support": "Una incisión perineal puede facilitar maniobras internas, pero no libera por sí sola el hombro impactado."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "24.11",
+      "title": "Parto quirúrgico",
+      "related_sections": [],
+      "scenarios": [
+        {
+          "id": "24.11-c2-01",
+          "anchor_topic_ids": [
+            "24.11-01"
+          ],
+          "objective": "incompleta",
+          "vignette": "Una gestante con cesárea previa tiene cicatriz cutánea transversal. No hay reporte de la incisión uterina. Se propone asumir que ambas incisiones fueron iguales.",
+          "question": "¿La cicatriz de la piel establece el tipo de incisión uterina?",
+          "answer": "No; obtener el reporte quirúrgico y valoración obstétrica.",
+          "discriminator": "cicatriz cutánea transversal. No hay reporte de la incisión uterina",
+          "reason": "La elegibilidad depende de la cirugía uterina previa y no se establece solo por el aspecto de la piel.",
+          "initial_action": "Buscar antecedentes y reporte operatorio antes de planear la vía del parto.",
+          "limits": "No excluir ni indicar parto vaginal por la cicatriz cutánea aislada; RCOG45 es de2015.",
+          "evidence": [
+            {
+              "source_id": "rcog-vbac-2015",
+              "locator": "Suitability for plannedVBAC: tipo de cicatriz uterina; detalles de cirugía previa para valoración individual",
+              "support": "La elegibilidad depende de la cirugía uterina previa y no se establece solo por el aspecto de la piel."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "24.12",
+      "title": "Puerperio con fiebre",
+      "related_sections": [],
+      "scenarios": [
+        {
+          "id": "24.12-c2-01",
+          "anchor_topic_ids": [
+            "24.12-01"
+          ],
+          "objective": "cambio",
+          "vignette": "Seis horas después del parto una mujer no ha podido orinar y tiene vejiga palpable y dolor suprapúbico. No presenta hemorragia ni fiebre.",
+          "question": "¿Debe considerarse solo una molestia fisiológica?",
+          "answer": "No; valorar retención urinaria.",
+          "discriminator": "no ha podido orinar y tiene vejiga palpable",
+          "reason": "El control puerperal incluye comprobar vaciamiento vesical, además de sangrado e involución.",
+          "initial_action": "Valorar cateterismo y atención obstétrica según el contexto.",
+          "limits": "La ausencia de fiebre no hace normal una vejiga retenida; adaptar manejo a anestesia, trauma y evolución.",
+          "evidence": [
+            {
+              "source_id": "nice235-2026",
+              "locator": "1.12.1: tras6horas, vejiga palpable e imposibilidad de orinar requieren cateterismo y considerar traslado",
+              "support": "El control puerperal incluye comprobar vaciamiento vesical, además de sangrado e involución."
+            }
+          ]
+        },
+        {
+          "id": "24.12-c2-02",
+          "anchor_topic_ids": [
+            "24.12-02"
+          ],
+          "objective": "cambio",
+          "vignette": "Una mujer sin infección activa tendrá cesárea. Para prevenir endometritis, se propone esperar a pinzar el cordón antes de administrar el antibiótico profiláctico.",
+          "question": "¿Cuándo debe darse la profilaxis para reducir infección materna?",
+          "answer": "Antes de la incisión cutánea.",
+          "discriminator": "esperar a pinzar el cordón",
+          "reason": "La profilaxis antes de la incisión ofrece mejor prevención de infección materna que administrarla después.",
+          "initial_action": "Administrar el antibiótico profiláctico indicado antes de la incisión según protocolo.",
+          "limits": "Es prevención, no tratamiento de endometritis establecida; una urgencia no debe retrasarse de forma peligrosa para cumplir un intervalo ideal.",
+          "evidence": [
+            {
+              "source_id": "who-cs-antibiotics-2021",
+              "locator": "Timing and provision, pp8y18: antes de incisión, no después de pinzamiento; régimen profiláctico breve",
+              "support": "La profilaxis antes de la incisión ofrece mejor prevención de infección materna que administrarla después."
+            }
+          ]
+        },
+        {
+          "id": "24.12-c2-03",
+          "anchor_topic_ids": [
+            "24.12-03"
+          ],
+          "objective": "cambio",
+          "vignette": "Una puérpera con choque séptico necesita reposición de volumen. El equipo considera gelatina o hidroxietilalmidón como líquido inicial.",
+          "question": "¿Qué tipo de líquido se prefiere?",
+          "answer": "Cristaloide balanceado; evitar almidón y gelatina.",
+          "discriminator": "considera gelatina o hidroxietilalmidón",
+          "reason": "SMFM recomienda cristaloides balanceados y desaconseja esos coloides en sepsis materna.",
+          "initial_action": "Reanimar y reevaluar respuesta con medidas dinámicas según disponibilidad.",
+          "limits": "No aplicar volúmenes fijos sin revisar perfusión y sobrecarga.",
+          "evidence": [
+            {
+              "source_id": "smfm-sepsis-2023",
+              "locator": "Recomendaciones11–13: cristaloide balanceado, evitar almidones/gelatina y evaluar respuesta",
+              "support": "SMFM recomienda cristaloides balanceados y desaconseja esos coloides en sepsis materna."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "24.13",
+      "title": "Complicación materna posparto",
+      "related_sections": [],
+      "scenarios": [
+        {
+          "id": "24.13-c2-01",
+          "anchor_topic_ids": [
+            "24.13-01"
+          ],
+          "objective": "dato_faltante",
+          "vignette": "Después de parto vaginal, una lesión perineal parece profunda. No se ha evaluado el esfínter anal.",
+          "question": "¿Qué examen evita subestimar el desgarro?",
+          "answer": "Evaluación perineal y rectal por personal capacitado.",
+          "discriminator": "No se ha evaluado el esfínter anal",
+          "reason": "El daño esfinteriano puede pasar inadvertido sin exploración adecuada.",
+          "initial_action": "Clasificar la lesión antes de reparación definitiva.",
+          "limits": "La reparación compleja requiere experiencia y condiciones apropiadas.",
+          "evidence": [
+            {
+              "source_id": "qld-perineal-2023",
+              "locator": "Perineal assessment and obstetric anal sphincter injury",
+              "support": "El daño esfinteriano puede pasar inadvertido sin exploración adecuada."
+            }
+          ]
+        },
+        {
+          "id": "24.13-c2-02",
+          "anchor_topic_ids": [
+            "24.13-02"
+          ],
+          "objective": "dato_faltante",
+          "vignette": "Una mujer con lesión hipofisaria tras hemorragia obstétrica tiene fatiga persistente. La T4 libre es baja, pero la TSH está dentro del intervalo del laboratorio.",
+          "question": "¿La TSH normal excluye hipotiroidismo central?",
+          "answer": "No; puede ser inapropiadamente normal.",
+          "discriminator": "La T4 libre es baja, pero la TSH está dentro del intervalo",
+          "reason": "En enfermedad hipofisaria, T4 libre baja con TSH normal puede indicar déficit central.",
+          "initial_action": "Integrar ejes hipofisarios, en especial función suprarrenal, y valoración endocrinológica.",
+          "limits": "No guiar reemplazo solo por TSH ni iniciar hormonas sin evaluar seguridad suprarrenal.",
+          "evidence": [
+            {
+              "source_id": "endo-pituitary-2016",
+              "locator": "Recomendación1.6: T4libre yTSH para hipotiroidismo central",
+              "support": "En enfermedad hipofisaria, T4 libre baja con TSH normal puede indicar déficit central."
+            }
+          ]
+        },
+        {
+          "id": "24.13-c2-03",
+          "anchor_topic_ids": [
+            "24.13-03"
+          ],
+          "objective": "subtipo",
+          "vignette": "Una mujer con síntomas depresivos posparto refiere diagnóstico previo de trastorno bipolar y hospitalización por manía. Actualmente no tiene delirios ni agitación.",
+          "question": "¿Qué antecedente cambia la ruta de valoración?",
+          "answer": "El trastorno bipolar previo.",
+          "discriminator": "diagnóstico previo de trastorno bipolar",
+          "reason": "La depresión posparto con antecedente de enfermedad mental grave requiere evaluación especializada, aunque no haya psicosis actual.",
+          "initial_action": "Coordinar valoración por salud mental, preferiblemente perinatal, y evaluar seguridad.",
+          "limits": "No asumir depresión unipolar ni decidir un esquema farmacológico solo por el puntaje de tamizaje.",
+          "evidence": [
+            {
+              "source_id": "nice-perinatal-2020",
+              "locator": "1.5.9–1.5.10: investigar y referir antecedentes de enfermedad mental grave",
+              "support": "La depresión posparto con antecedente de enfermedad mental grave requiere evaluación especializada, aunque no haya psicosis actual."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "24.14",
+      "title": "Atención respetuosa",
+      "related_sections": [],
+      "scenarios": [
+        {
+          "id": "24.14-c2-01",
+          "anchor_topic_ids": [
+            "24.14-01"
+          ],
+          "objective": "cambio",
+          "vignette": "Una gestante comprende poco el idioma del equipo. Está estable; un familiar propone traducir la explicación de un procedimiento, pero ella solicita intérprete independiente.",
+          "question": "¿Qué apoyo permite una decisión informada en este contexto?",
+          "answer": "Un servicio de interpretación fiable e independiente.",
+          "discriminator": "ella solicita intérprete independiente",
+          "reason": "La comunicación debe adaptarse para que la mujer comprenda y participe en su decisión.",
+          "initial_action": "Organizar interpretación y comprobar comprensión antes de solicitar consentimiento.",
+          "limits": "No equiparar barrera de idioma con incapacidad para decidir; adaptar la comunicación a la urgencia real.",
+          "evidence": [
+            {
+              "source_id": "nice235-2026",
+              "locator": "1.4.8: servicios fiables e intérpretes independientes de familiares o amigos",
+              "support": "La comunicación debe adaptarse para que la mujer comprenda y participe en su decisión."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

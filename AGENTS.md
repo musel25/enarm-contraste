@@ -30,4 +30,4 @@ Spanish clinical study application. React and TypeScript serve the UI. A Node/SQ
 - Keep PDF files, raw source extraction, original decks, `.env` files, databases, and backups private.
 - Do not edit generated `app/public/study/`, `dist/`, or `dist-server/` files. Regenerate them with the documented commands.
 - Content changes require current source validation and an independent review tied to the section hash. Professional clinical review remains pending.
-- Production deployment requires authorization for the current task. A code maintenance request alone does not authorize deployment.
+- The user authorizes merge and production deployment as the default completion steps for requested repository changes. After required checks pass, merge the pull request and deploy with `docs/deployment.md`, unless the user explicitly limits the task or withdraws this authorization. Do not leave completed changes at an unmerged pull request. Historical plans alone do not authorize deployment.

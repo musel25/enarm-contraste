@@ -1,0 +1,688 @@
+{
+  "schema_version": 1,
+  "layer": 2,
+  "section_id": "17",
+  "title": "Infectología pedíatrica",
+  "author": "clinical-author-13-24",
+  "sources": [
+    {
+      "id": "imss-exanthem-2012",
+      "label": "IMSS. Diagnóstico diferencial de exantemas infecciosos en la infancia. IMSS-588-12",
+      "url": "https://imss.gob.mx/sites/all/statics/guiasclinicas/588GRR.pdf",
+      "version": "2012",
+      "checked_at": "2026-11-06",
+      "region": "mexico",
+      "access": "checked",
+      "locator": "Cuadro diferencial; exantema súbito; datos de alarma"
+    },
+    {
+      "id": "cdc-measles",
+      "label": "Clinical Overview of Measles — CDC",
+      "url": "https://www.cdc.gov/measles/hcp/clinical-overview/index.html",
+      "version": "2026-08-05",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Diagnosis; isolation; reporting"
+    },
+    {
+      "id": "cdc-rubella",
+      "label": "Serology Testing for Rubella — CDC",
+      "url": "https://www.cdc.gov/rubella/php/laboratories/serology-testing.html",
+      "version": "2024-06-10",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "IgM false positives; pregnancy; IgG avidity"
+    },
+    {
+      "id": "cdc-scarlet",
+      "label": "Clinical Guidance for Scarlet Fever — CDC",
+      "url": "https://www.cdc.gov/group-a-strep/hcp/clinical-guidance/scarlet-fever.html",
+      "version": "2026-02-20",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Testing and diagnosis"
+    },
+    {
+      "id": "cdc-parvo",
+      "label": "About Parvovirus B19 — CDC",
+      "url": "https://www.cdc.gov/parvovirus-b19/about/index.html",
+      "version": "2025-12-17",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Blood disorders and aplastic crisis"
+    },
+    {
+      "id": "cdc-varicella",
+      "label": "Clinical Guidance for People at Risk for Severe Varicella — CDC",
+      "url": "https://www.cdc.gov/chickenpox/hcp/clinical-guidance/index.html",
+      "version": "2024-04-24",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Immunocompromised patients; treatment"
+    },
+    {
+      "id": "cdc-hfmd",
+      "label": "HFMD Symptoms and Complications — CDC",
+      "url": "https://www.cdc.gov/hand-foot-mouth/signs-symptoms/index.html",
+      "version": "2024-05-07",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Dehydration; indications for medical care"
+    },
+    {
+      "id": "cdc-pertussis",
+      "label": "Clinical Features of Pertussis — CDC",
+      "url": "https://www.cdc.gov/pertussis/hcp/clinical-signs/index.html",
+      "version": "2025-12-01",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Infant apnea and absence of whoop"
+    },
+    {
+      "id": "cdc-ebv",
+      "label": "Laboratory Testing for Epstein-Barr Virus — CDC",
+      "url": "https://www.cdc.gov/epstein-barr/php/laboratories/index.html",
+      "version": "2024-04-10",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Monospot limitations; VCA and EBNA"
+    },
+    {
+      "id": "cdc-mumps",
+      "label": "Laboratory Testing for Mumps — CDC",
+      "url": "https://www.cdc.gov/mumps/php/laboratories/index.html",
+      "version": "2024-06-11",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "rRT-PCR; negative tests in vaccinated persons"
+    },
+    {
+      "id": "rch-croup",
+      "label": "Royal Children’s Hospital Melbourne. Clinical Practice Guideline: Croup",
+      "url": "https://www.rch.org.au/clinicalguide/guideline_index/Croup_Laryngotracheobronchitis/",
+      "version": "2024-09",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Assessment of severity; treatment; discharge"
+    },
+    {
+      "id": "rch-bronchiolitis",
+      "label": "Royal Children’s Hospital Melbourne. Clinical Practice Guideline: Bronchiolitis",
+      "url": "https://www.rch.org.au/clinicalguide/guideline_index/Bronchiolitis/",
+      "version": "2023-11",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Risk factors; hydration; respiratory support"
+    },
+    {
+      "id": "rch-airway",
+      "label": "Royal Children’s Hospital Melbourne. Clinical Practice Guideline: Acute upper airway obstruction",
+      "url": "https://www.rch.org.au/clinicalguide/guideline_index/Acute_upper_airway_obstruction/",
+      "version": "2021-03",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Epiglottitis; minimize distress; airway support"
+    },
+    {
+      "id": "rch-uti",
+      "label": "Royal Children’s Hospital Melbourne. Clinical Practice Guideline: Urinary tract infection",
+      "url": "https://www.rch.org.au/clinicalguide/guideline_index/Urinary_tract_infection/",
+      "version": "2025-10",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Urine collection; culture; nitrite limitations"
+    },
+    {
+      "id": "rch-kawasaki",
+      "label": "Royal Children’s Hospital Melbourne. Clinical Practice Guideline: Kawasaki disease",
+      "url": "https://www.rch.org.au/clinicalguide/guideline_index/Kawasaki_disease/",
+      "version": "2026-01",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Incomplete disease; echocardiography; differentials"
+    },
+    {
+      "id": "rch-abdomen",
+      "label": "Royal Children’s Hospital Melbourne. Clinical Practice Guideline: Abdominal pain - acute",
+      "url": "https://www.rch.org.au/clinicalguide/guideline_index/Abdominal_pain_-_acute/",
+      "version": "2024-04",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Serial examination; appendicitis; mesenteric adenitis"
+    },
+    {
+      "id": "rch-neonate",
+      "label": "Royal Children’s Hospital Melbourne. Clinical Practice Guideline: Recognition of the seriously unwell neonate and young infant",
+      "url": "https://www.rch.org.au/clinicalguide/guideline_index/Recognition_of_the_seriously_unwell_neonate_and_young_infant/",
+      "version": "2025-05",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Red flags; sepsis; urgent assessment"
+    },
+    {
+      "id": "rch-febrile-seizure-2026",
+      "label": "Royal Children’s Hospital. Febrile seizure",
+      "url": "https://www.rch.org.au/clinicalguide/guideline_index/Febrile_seizure/",
+      "version": "2026-02",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Classification; Investigations: no neuroimagen rutinaria en crisis febril simple"
+    },
+    {
+      "id": "cdc-parvo-prevention-2025",
+      "label": "CDC. Preventing Parvovirus B19",
+      "url": "https://www.cdc.gov/parvovirus-b19/prevention-treatment/index.html",
+      "version": "2025-12-17",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Risk to others: contagio antes del exantema; excepciones anemia e inmunosupresión"
+    },
+    {
+      "id": "cdc-varicella-breakthrough-2024",
+      "label": "CDC. Breakthrough Varicella Fact Sheet",
+      "url": "https://www.cdc.gov/chickenpox/hcp/communication-resources/breakthrough-varicella-infographic.html",
+      "version": "2024-04-24",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Text equivalent: manifestaciones modificadas y PCR de lesiones maculopapulares"
+    },
+    {
+      "id": "cdc-hfmd-school-2024",
+      "label": "CDC. About Hand, Foot, and Mouth Disease",
+      "url": "https://www.cdc.gov/hand-foot-mouth/about/index.html",
+      "version": "2024-05-07",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "When to return to school"
+    },
+    {
+      "id": "eau-urachal-2026",
+      "label": "EAU. Guidelines on Paediatric Urology: Rare conditions in childhood",
+      "url": "https://uroweb.org/guidelines/paediatric-urology/chapter/rare-conditions-in-childhood",
+      "version": "2026",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Urachal remnants: symptoms, diagnosis and management"
+    }
+  ],
+  "mexico_source_note": "Se abrió IMSS-588-12 para el diferencial de exantemas. La búsqueda en IMSS y Secretaría de Salud no identificó una actualización nacional accesible para todas las decisiones de esta sección. La GPC de 2012 se identifica como antigua. Se usan guías pediátricas internacionales abiertas y versiones CDC con fecha real; el aislamiento y la notificación se adaptan a vigilancia epidemiológica mexicana. Las sustituciones se comprobaron en RCH(convulsión febril febrero2026 y apartados de las guías ya citadas), CDC2024/2025 y EAU2026 para remanentes uracales. Las indicaciones de escuela se condicionan a la autoridad sanitaria local; no se afirma que el protocolo CDC sea una norma mexicana.",
+  "blocks": [
+    {
+      "id": "17.01",
+      "title": "Exantema febril generalizado",
+      "related_sections": [],
+      "scenarios": [
+        {
+          "id": "17.01-c2-01",
+          "anchor_topic_ids": [
+            "17.01-01"
+          ],
+          "objective": "gravedad",
+          "vignette": "Un niño febril tiene lesiones petequiales que no desaparecen con presión, extremidades frías y somnolencia.",
+          "question": "¿Qué prioridad supera la clasificación del exantema?",
+          "answer": "Evaluar sepsis y estabilizar de inmediato.",
+          "discriminator": "extremidades frías y somnolencia",
+          "reason": "La perfusión y conciencia alteradas indican enfermedad grave.",
+          "initial_action": "Activar atención urgente y evaluación infecciosa.",
+          "limits": "La erupción aislada no identifica el microorganismo.",
+          "evidence": [
+            {
+              "source_id": "imss-exanthem-2012",
+              "locator": "Datos de alarma y diagnóstico diferencial",
+              "support": "La perfusión y conciencia alteradas indican enfermedad grave."
+            }
+          ]
+        },
+        {
+          "id": "17.01-c2-02",
+          "anchor_topic_ids": [
+            "17.01-02"
+          ],
+          "objective": "cambio",
+          "vignette": "Un niño vacunado tiene fiebre, tos, conjuntivitis y exantema tras contacto confirmado de sarampión.",
+          "question": "¿La vacunación permite omitir aislamiento?",
+          "answer": "No; aislar y confirmar por laboratorio.",
+          "discriminator": "contacto confirmado de sarampión",
+          "reason": "La vacunación reduce riesgo, pero no excluye infección.",
+          "initial_action": "Aplicar precauciones aéreas y notificar.",
+          "limits": "Coordinar muestras con vigilancia epidemiológica local.",
+          "evidence": [
+            {
+              "source_id": "cdc-measles",
+              "locator": "Diagnosis and infection control",
+              "support": "La vacunación reduce riesgo, pero no excluye infección."
+            }
+          ]
+        },
+        {
+          "id": "17.01-c2-03",
+          "anchor_topic_ids": [
+            "17.01-03"
+          ],
+          "objective": "incompleta",
+          "vignette": "Una embarazada asintomática tiene IgM de rubéola positiva en un panel de rutina, sin exposición conocida.",
+          "question": "¿Esto confirma infección aguda?",
+          "answer": "No; requiere confirmación dirigida.",
+          "discriminator": "asintomática",
+          "reason": "El tamizaje IgM puede producir falsos positivos.",
+          "initial_action": "Revisar exposición y coordinar pruebas confirmatorias.",
+          "limits": "IgG y avidez se interpretan según tiempo gestacional.",
+          "evidence": [
+            {
+              "source_id": "cdc-rubella",
+              "locator": "IgM testing in pregnancy and false-positive results",
+              "support": "El tamizaje IgM puede producir falsos positivos."
+            }
+          ]
+        },
+        {
+          "id": "17.01-c2-04",
+          "anchor_topic_ids": [
+            "17.01-04"
+          ],
+          "objective": "dato_faltante",
+          "vignette": "Un escolar presenta faringitis y erupción áspera. La prueba rápida de estreptococo es negativa.",
+          "question": "¿Qué evaluación puede faltar en un niño?",
+          "answer": "Cultivo faríngeo de respaldo según edad y contexto.",
+          "discriminator": "prueba rápida de estreptococo es negativa",
+          "reason": "El aspecto del exantema no confirma estreptococo.",
+          "initial_action": "Obtener confirmación microbiológica según guía pediátrica.",
+          "limits": "No todos los exantemas con faringitis son escarlatina.",
+          "evidence": [
+            {
+              "source_id": "cdc-scarlet",
+              "locator": "Testing and diagnosis: negative RADT",
+              "support": "El aspecto del exantema no confirma estreptococo."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "17.02",
+      "title": "Exantema según edad y lesiones",
+      "related_sections": [],
+      "scenarios": [
+        {
+          "id": "17.02-c2-01",
+          "anchor_topic_ids": [
+            "17.02-01"
+          ],
+          "objective": "cambio",
+          "vignette": "Un niño de18meses tuvo una única crisis generalizada de dos minutos durante fiebre. Recuperó por completo su estado habitual, no tiene meningismo ni déficit. Tras ceder la fiebre apareció un exantema troncal compatible con exantema súbito.",
+          "question": "¿La crisis descrita exige neuroimagen rutinaria?",
+          "answer": "No, si la evaluación confirma crisis febril simple.",
+          "discriminator": "única crisis generalizada de dos minutos",
+          "reason": "Una crisis febril simple, con recuperación completa y sin alarma, no requiere neuroimagen adicional de rutina.",
+          "initial_action": "Evaluar la causa de la fiebre, comprobar recuperación y enseñar primeros auxilios y signos de alarma.",
+          "limits": "Focalidad, duración prolongada, recurrencia, alteración persistente o sospecha de infección del SNC cambian el estudio.",
+          "evidence": [
+            {
+              "source_id": "rch-febrile-seizure-2026",
+              "locator": "Classification of febrile seizures; Investigations",
+              "support": "Una crisis febril simple, con recuperación completa y sin alarma, no requiere neuroimagen adicional de rutina."
+            }
+          ]
+        },
+        {
+          "id": "17.02-c2-02",
+          "anchor_topic_ids": [
+            "17.02-02"
+          ],
+          "objective": "cambio",
+          "vignette": "Un escolar inmunocompetente con eritema infeccioso típico ya está afebril y se siente bien. El exantema reticulado sigue visible. No tiene anemia ni enfermedad hemolítica.",
+          "question": "¿El exantema persistente obliga por sí solo a excluirlo de la escuela?",
+          "answer": "Habitualmente no; la mayor contagiosidad precede al exantema.",
+          "discriminator": "ya está afebril y se siente bien",
+          "reason": "En personas sanas, el riesgo de contagio suele disminuir cuando aparece el exantema.",
+          "initial_action": "Explicar higiene y criterios clínicos de retorno conforme a la autoridad local.",
+          "limits": "La anemia o inmunosupresión pueden prolongar contagio; valorar aparte contactos gestantes o vulnerables.",
+          "evidence": [
+            {
+              "source_id": "cdc-parvo-prevention-2025",
+              "locator": "Risk to others",
+              "support": "En personas sanas, el riesgo de contagio suele disminuir cuando aparece el exantema."
+            }
+          ]
+        },
+        {
+          "id": "17.02-c2-03",
+          "anchor_topic_ids": [
+            "17.02-03"
+          ],
+          "objective": "subtipo",
+          "vignette": "Un escolar vacunado contra varicela desde hace años tuvo contacto en un brote. Presenta pocas pápulas, casi sin vesículas y escasa fiebre. Se requiere confirmar si se trata de varicela modificada por vacunación.",
+          "question": "¿Qué muestra puede servir aunque no haya vesículas?",
+          "answer": "Raspado de lesiones maculopapulares para PCR.",
+          "discriminator": "pocas pápulas, casi sin vesículas",
+          "reason": "La varicela en vacunados puede carecer de vesículas típicas y confundirse con otros exantemas.",
+          "initial_action": "Coordinar toma adecuada de material cutáneo y medidas de control mientras se confirma.",
+          "limits": "La vacunación y el aspecto leve no confirman ni excluyen el diagnóstico; la técnica de obtención importa.",
+          "evidence": [
+            {
+              "source_id": "cdc-varicella-breakthrough-2024",
+              "locator": "Text equivalent: Breakthrough Varicella; How is breakthrough varicella confirmed?",
+              "support": "La varicela en vacunados puede carecer de vesículas típicas y confundirse con otros exantemas."
+            }
+          ]
+        },
+        {
+          "id": "17.02-c2-04",
+          "anchor_topic_ids": [
+            "17.02-04"
+          ],
+          "objective": "cambio",
+          "vignette": "Un preescolar se recupera de mano-pie-boca. Ya no tiene fiebre, participa con normalidad y no presenta babeo incontrolable. Persisten algunas lesiones cutáneas. La guardería pide que todas desaparezcan.",
+          "question": "¿La desaparición de todas las lesiones es requisito clínico universal para volver?",
+          "answer": "No; valorar fiebre, estado general y control de secreciones.",
+          "discriminator": "no presenta babeo incontrolable",
+          "reason": "El retorno puede ser posible antes de desaparecer todas las lesiones si cumple criterios clínicos.",
+          "initial_action": "Explicar higiene y criterios de retorno; seguir medidas locales si existe un brote.",
+          "limits": "La autoridad sanitaria puede imponer exclusión temporal adicional para controlar un brote.",
+          "evidence": [
+            {
+              "source_id": "cdc-hfmd-school-2024",
+              "locator": "When to return to school",
+              "support": "El retorno puede ser posible antes de desaparecer todas las lesiones si cumple criterios clínicos."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "17.03",
+      "title": "Estridor o tos peculiar",
+      "related_sections": [],
+      "scenarios": [
+        {
+          "id": "17.03-c2-01",
+          "anchor_topic_ids": [
+            "17.03-01"
+          ],
+          "objective": "contraste",
+          "vignette": "Un lactante de dos meses presenta estridor y tos de tono perruno. Se propone etiquetarlo como crup típico sin otra evaluación.",
+          "question": "¿Qué dato exige ampliar el diagnóstico diferencial?",
+          "answer": "La edad, muy atípica para crup.",
+          "discriminator": "lactante de dos meses",
+          "reason": "El crup es raro antes de tres meses y deben considerarse otras causas de obstrucción.",
+          "initial_action": "Valorar vía aérea y solicitar evaluación pediátrica dirigida a diagnósticos alternativos.",
+          "limits": "La edad no excluye infección viral; la gravedad respiratoria sigue definiendo la urgencia.",
+          "evidence": [
+            {
+              "source_id": "rch-croup",
+              "locator": "Risk factors/history: uncommon under6months, rare under3months; Consider consultation",
+              "support": "El crup es raro antes de tres meses y deben considerarse otras causas de obstrucción."
+            }
+          ]
+        },
+        {
+          "id": "17.03-c2-02",
+          "anchor_topic_ids": [
+            "17.03-02"
+          ],
+          "objective": "contraste",
+          "vignette": "Tras una infección respiratoria, un niño desarrolla obstrucción alta rápidamente progresiva, aspecto tóxico, tráquea muy dolorosa y tos con secreciones espesas. Se había considerado epiglotitis.",
+          "question": "¿Qué infección vecina debe incluirse de forma prioritaria?",
+          "answer": "Traqueítis bacteriana.",
+          "discriminator": "tráquea muy dolorosa y tos con secreciones espesas",
+          "reason": "La infección traqueal puede producir obstrucción grave después de un cuadro respiratorio previo.",
+          "initial_action": "Activar equipo experto de vía aérea y tratamiento hospitalario dirigido.",
+          "limits": "El cuadro no permite descartar otras causas; evitar procedimientos que desestabilicen la vía aérea.",
+          "evidence": [
+            {
+              "source_id": "rch-airway",
+              "locator": "Differential diagnosis: Bacterial tracheitis",
+              "support": "La infección traqueal puede producir obstrucción grave después de un cuadro respiratorio previo."
+            }
+          ]
+        },
+        {
+          "id": "17.03-c2-03",
+          "anchor_topic_ids": [
+            "17.03-03"
+          ],
+          "objective": "variante",
+          "vignette": "Un lactante presenta apneas y cianosis. Su madre tiene tos prolongada; el niño casi no tose y no tiene gallo.",
+          "question": "¿Qué infección sigue siendo posible?",
+          "answer": "Tos ferina.",
+          "discriminator": "el niño casi no tose y no tiene gallo",
+          "reason": "En lactantes puede predominar apnea sin tos típica.",
+          "initial_action": "Hospitalizar, obtener muestra e iniciar manejo dirigido.",
+          "limits": "Considerar también otras causas de apnea.",
+          "evidence": [
+            {
+              "source_id": "cdc-pertussis",
+              "locator": "Clinical features in infants",
+              "support": "En lactantes puede predominar apnea sin tos típica."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "17.04",
+      "title": "Sibilancias del lactante",
+      "related_sections": [],
+      "scenarios": [
+        {
+          "id": "17.04-c2-01",
+          "anchor_topic_ids": [
+            "17.04-01"
+          ],
+          "objective": "cambio",
+          "vignette": "Un lactante con bronquiolitis está hospitalizado y mantiene perfusión, pero no logra suficiente ingesta oral. El equipo confirma que puede recibir alimentación enteral por sonda de forma segura.",
+          "question": "¿Qué vía de hidratación se prefiere antes de recurrir a intravenosa?",
+          "answer": "Nasogástrica, si es segura y tolerada.",
+          "discriminator": "puede recibir alimentación enteral por sonda de forma segura",
+          "reason": "La vía nasogástrica es la opción preferida cuando se necesita hidratación no oral y puede utilizarse.",
+          "initial_action": "Aportar hidratación enteral según protocolo y vigilar tolerancia y estado respiratorio.",
+          "limits": "Choque, contraindicación o fracaso enteral requieren otra estrategia; no forzar tomas orales en dificultad importante.",
+          "evidence": [
+            {
+              "source_id": "rch-bronchiolitis",
+              "locator": "Hydration/nutrition: NG route of choice; IV reserved when NG not possible",
+              "support": "La vía nasogástrica es la opción preferida cuando se necesita hidratación no oral y puede utilizarse."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "17.05",
+      "title": "Fiebre sin foco en lactante",
+      "related_sections": [],
+      "scenarios": [
+        {
+          "id": "17.05-c2-01",
+          "anchor_topic_ids": [
+            "17.05-01"
+          ],
+          "objective": "incompleta",
+          "vignette": "Un lactante febril tiene piuria y esterasa leucocitaria positiva en muestra adecuada. Los nitritos son negativos. Se propone descartar IVU por ese único dato.",
+          "question": "¿Los nitritos negativos excluyen IVU?",
+          "answer": "No.",
+          "discriminator": "Los nitritos son negativos",
+          "reason": "No todos los microorganismos producen nitritos y la tira puede dar falsos negativos.",
+          "initial_action": "Enviar cultivo y decidir tratamiento según edad, clínica y gravedad.",
+          "limits": "La piuria tampoco confirma sola una infección; interpretar muestra, crecimiento y cuadro clínico.",
+          "evidence": [
+            {
+              "source_id": "rch-uti",
+              "locator": "Urine dipstick interpretation; Additional notes: nitrites not produced by all organisms",
+              "support": "No todos los microorganismos producen nitritos y la tira puede dar falsos negativos."
+            }
+          ]
+        },
+        {
+          "id": "17.05-c2-02",
+          "anchor_topic_ids": [
+            "17.05-02"
+          ],
+          "objective": "contraste",
+          "vignette": "Un recién nacido tiene salida intermitente de líquido con aspecto de orina por el ombligo, más evidente al orinar. No hay pus, eritema que se extienda ni síntomas sistémicos.",
+          "question": "¿Qué anomalía debe investigarse frente a atribuir toda secreción a onfalitis?",
+          "answer": "Uraco permeable.",
+          "discriminator": "más evidente al orinar",
+          "reason": "Una comunicación persistente con la vejiga puede producir fuga urinaria umbilical.",
+          "initial_action": "Solicitar valoración pediátrica/urológica e imagen dirigida.",
+          "limits": "El aspecto del líquido no confirma el trayecto; si aparecen signos de infección, evaluarlos de inmediato. No implica cirugía automática en todo lactante.",
+          "evidence": [
+            {
+              "source_id": "eau-urachal-2026",
+              "locator": "Urachal remnants: Symptoms y Diagnosis; Management conservador inicial en lactantes seleccionados",
+              "support": "Una comunicación persistente con la vejiga puede producir fuga urinaria umbilical."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "17.06",
+      "title": "Dolor abdominal febril",
+      "related_sections": [],
+      "scenarios": [
+        {
+          "id": "17.06-c2-01",
+          "anchor_topic_ids": [
+            "17.06-01"
+          ],
+          "objective": "dato_faltante",
+          "vignette": "Un niño tiene dolor abdominal bajo de inicio súbito y vómitos. La ecografía informa ganglios mesentéricos, pero el dolor no se explica bien y aún no se exploró el escroto.",
+          "question": "¿Qué examen no debe omitirse antes de aceptar adenitis mesentérica?",
+          "answer": "Exploración genital para descartar torsión testicular.",
+          "discriminator": "aún no se exploró el escroto",
+          "reason": "Una urgencia testicular puede presentarse como dolor abdominal y no queda explicada por ganglios incidentales.",
+          "initial_action": "Explorar genitales con prontitud y activar evaluación quirúrgica si la sospecha lo exige.",
+          "limits": "No retrasar evaluación de apendicitis u otras urgencias; la ecografía abdominal no sustituye una exploración completa.",
+          "evidence": [
+            {
+              "source_id": "rch-abdomen",
+              "locator": "Examination: examine genitalia for testicular torsion; causas por edad y dolor súbito",
+              "support": "Una urgencia testicular puede presentarse como dolor abdominal y no queda explicada por ganglios incidentales."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "17.07",
+      "title": "Adenopatías/afección glandular",
+      "related_sections": [],
+      "scenarios": [
+        {
+          "id": "17.07-c2-01",
+          "anchor_topic_ids": [
+            "17.07-01"
+          ],
+          "objective": "dato_faltante",
+          "vignette": "Un adolescente tiene faringitis, adenopatías y esplenomegalia. La prueba heterófila temprana es negativa.",
+          "question": "¿Qué prueba puede aclarar infección por EBV?",
+          "answer": "Serología específica VCA y EBNA.",
+          "discriminator": "prueba heterófila temprana es negativa",
+          "reason": "La prueba heterófila no excluye mononucleosis.",
+          "initial_action": "Solicitar serología según el momento clínico.",
+          "limits": "Interpretar patrones, no una IgG aislada.",
+          "evidence": [
+            {
+              "source_id": "cdc-ebv",
+              "locator": "Monospot limitations and primary infection markers",
+              "support": "La prueba heterófila no excluye mononucleosis."
+            }
+          ]
+        },
+        {
+          "id": "17.07-c2-02",
+          "anchor_topic_ids": [
+            "17.07-02"
+          ],
+          "objective": "dato_faltante",
+          "vignette": "Un adolescente vacunado tiene parotiditis tras un brote escolar. La IgM inicial es negativa.",
+          "question": "¿Qué muestra es útil para confirmar?",
+          "answer": "Hisopado bucal para rRT-PCR.",
+          "discriminator": "tras un brote escolar",
+          "reason": "En vacunados puede faltar IgM detectable.",
+          "initial_action": "Obtener muestra temprana y notificar según vigilancia local.",
+          "limits": "Un resultado negativo depende de tiempo y calidad de muestra.",
+          "evidence": [
+            {
+              "source_id": "cdc-mumps",
+              "locator": "Laboratory confirmation and negative results",
+              "support": "En vacunados puede faltar IgM detectable."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "17.08",
+      "title": "Fiebre persistente con mucosas",
+      "related_sections": [],
+      "scenarios": [
+        {
+          "id": "17.08-c2-01",
+          "anchor_topic_ids": [
+            "17.08-01"
+          ],
+          "objective": "incompleta",
+          "vignette": "Un niño tratado con inmunoglobulina intravenosa por Kawasaki ya está afebril y mejora clínicamente. La familia se alarma porque la VSG de control sigue alta y cree que necesita otra infusión solo por ese resultado.",
+          "question": "¿La VSG elevada después de IVIG prueba resistencia al tratamiento?",
+          "answer": "No; puede elevarse falsamente tras IVIG.",
+          "discriminator": "VSG de control sigue alta",
+          "reason": "La inmunoglobulina altera la interpretación de VSG, por lo que no debe repetirse para guiar esa decisión aislada.",
+          "initial_action": "Valorar respuesta clínica y marcadores apropiados con el equipo pediátrico y cardiología.",
+          "limits": "La fiebre persistente o recurrente y otros signos sí requieren reevaluar resistencia y diagnósticos alternativos.",
+          "evidence": [
+            {
+              "source_id": "rch-kawasaki",
+              "locator": "Investigations/Laboratory: avoid repeating ESR afterIVIg as falsely raised",
+              "support": "La inmunoglobulina altera la interpretación de VSG, por lo que no debe repetirse para guiar esa decisión aislada."
+            }
+          ]
+        },
+        {
+          "id": "17.08-c2-02",
+          "anchor_topic_ids": [
+            "17.08-01",
+            "17.02-01"
+          ],
+          "objective": "contraste",
+          "vignette": "Un niño con fiebre y exantema tiene hipotensión, dolor abdominal y antecedente reciente de COVID-19.",
+          "question": "¿Qué vecino de Kawasaki debe evaluarse?",
+          "answer": "Síndrome inflamatorio multisistémico pediátrico.",
+          "discriminator": "hipotensión, dolor abdominal",
+          "reason": "El choque y contexto posinfeccioso cambian el diferencial.",
+          "initial_action": "Hospitalizar y evaluar función orgánica y cardíaca.",
+          "limits": "También excluir sepsis y otras causas de choque.",
+          "evidence": [
+            {
+              "source_id": "rch-kawasaki",
+              "locator": "Differentials: PIMS-TS/MIS-C",
+              "support": "El choque y contexto posinfeccioso cambian el diferencial."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

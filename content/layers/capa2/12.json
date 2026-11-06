@@ -1,0 +1,385 @@
+{
+  "schema_version": 1,
+  "layer": 2,
+  "section_id": "12",
+  "title": "Genética",
+  "author": "clinical-author-01-12",
+  "sources": [
+    {
+      "id": "aap-down-2022",
+      "label": "AAP: supervisión de niños y adolescentes con síndrome de Down",
+      "url": "https://www.dsrf.org/wp-content/uploads/2022/07/2022-AAP-Health-Supervision-for-Children-and-Adolescents.pdf",
+      "version": "2022-04-18; volumen mayo 2022",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "pp. 9, 11–12: deficiencia de hierro, columna cervical asintomática y polisomnografía"
+    },
+    {
+      "id": "aorta-2022",
+      "label": "ACC/AHA: diagnóstico y manejo de enfermedad aórtica",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9876736/",
+      "version": "2022-11-02",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "§§6.5.5.3, 7.2–7.4: aneurisma sintomático y síndromes aórticos agudos"
+    },
+    {
+      "id": "dravet-consensus-2022",
+      "label": "Consenso internacional de diagnóstico y manejo de Dravet",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9543220/",
+      "version": "2022-05-12; volumen julio 2022",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "§3.1 y tablas 1–2: indicación de pruebas genéticas, resonancia y EEG iniciales"
+    },
+    {
+      "id": "eaa-klinefelter-2021",
+      "label": "European Academy of Andrology/ESE: síndrome de Klinefelter",
+      "url": "https://onlinelibrary.wiley.com/doi/10.1111/andr.12909",
+      "version": "Publicación electrónica 2020; volumen enero 2021",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Recomendaciones 35–37: hueso y fractura independientes de testosterona"
+    },
+    {
+      "id": "easl-wilson-2025",
+      "label": "EASL/ERN Rare-Liver: enfermedad de Wilson",
+      "url": "https://easlcampus.eu/sites/default/files/2025-03/EASL-ERN_CPG_on_Wilson%27s_Disease.pdf",
+      "version": "Volumen abril 2025",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "pp. 694–696: diagnóstico combinado y ceruloplasmina normal"
+    },
+    {
+      "id": "ehtg-pjs-2021",
+      "label": "European Hereditary Tumour Group: Peutz–Jeghers",
+      "url": "https://mdpi-res.com/d_attachment/jcm/jcm-10-00473/article_deploy/jcm-10-00473.pdf",
+      "version": "2021-01-27",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "§4.1: criterios clínicos aunque no se detecte variante STK11"
+    },
+    {
+      "id": "imss-prenatal-down-2011",
+      "label": "IMSS: diagnóstico prenatal del síndrome de Down, GRR",
+      "url": "https://www.imss.gob.mx/sites/all/statics/guiasclinicas/494GRR.pdf",
+      "version": "IMSS-494-11; documento sin actualización posterior declarada",
+      "checked_at": "2026-11-06",
+      "region": "mexico",
+      "access": "checked",
+      "locator": "p. 2: tamiz frente a confirmación citogenética"
+    },
+    {
+      "id": "nci-colorectal-genetics-2025",
+      "label": "NCI PDQ: Genetics of Colorectal Cancer, versión profesional",
+      "url": "https://www.cancer.gov/types/colorectal/hp/colorectal-genetics-pdq",
+      "version": "2025-03-21; recurso experto, no guía formal",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Lynch syndrome: IHC de MLH1, metilación y variantes germinales"
+    },
+    {
+      "id": "nci-vhl-2024",
+      "label": "NCI PDQ: Von Hippel-Lindau Disease, versión profesional",
+      "url": "https://www.cancer.gov/publications/pdq/information-summaries/genetics/vhl-syndrome-hp-pdq",
+      "version": "2024-10-23; recurso experto, no guía formal",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Renal cell carcinoma: cirugía conservadora de nefronas cuando sea factible"
+    },
+    {
+      "id": "turner-2024",
+      "label": "Aarhus International Turner Syndrome Group: guía clínica",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11759048/",
+      "version": "Guía publicada 2024; reunión Aarhus 2023",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Recomendaciones 4.32–4.34: imagen y riesgo antes del embarazo"
+    }
+  ],
+  "mexico_source_note": "Se abrió IMSS-494-11 de diagnóstico prenatal de Down. Se limita a la diferencia entre tamiz y confirmación citogenética; no se usa para recomendar su calendario histórico de pruebas. No se encontró guía mexicana reciente que cubra Turner, Klinefelter, síndromes tumorales, Wilson y Dravet en conjunto. Se verificaron guías internacionales con su fecha real, incluida EASL-ERN Wilson 2025. Los PDQ NCI de genética son recursos clínicos expertos y no guías formales. La revisión clínica profesional permanece pendiente.",
+  "blocks": [
+    {
+      "id": "12.01",
+      "title": "Fenotipo sexual discordante",
+      "related_sections": [],
+      "scenarios": [
+        {
+          "id": "12.01-c2-01",
+          "anchor_topic_ids": [
+            "12.01-01"
+          ],
+          "objective": "cambio",
+          "vignette": "Una mujer con Turner planea reproducción asistida. Su última imagen cardiovascular normal es de hace cinco años.",
+          "question": "¿Basta ese estudio antiguo para el plan de embarazo?",
+          "answer": "No. Debe actualizarse la evaluación cardiovascular.",
+          "discriminator": "hace cinco años",
+          "reason": "El embarazo exige valoración aórtica reciente y riesgo individual.",
+          "initial_action": "Coordinar imagen y consulta cardiológica antes del procedimiento.",
+          "limits": "Un estudio nuevo no garantiza seguridad; dilatación y otros factores pueden contraindicar gestación.",
+          "evidence": [
+            {
+              "source_id": "turner-2024",
+              "locator": "Recomendación 4.32 y evaluación pregestacional",
+              "support": "El embarazo exige valoración aórtica reciente y riesgo individual."
+            }
+          ]
+        },
+        {
+          "id": "12.01-c2-02",
+          "anchor_topic_ids": [
+            "12.01-02"
+          ],
+          "objective": "incompleta",
+          "vignette": "Un adulto con Klinefelter tiene testosterona dentro de referencia, pero presenta una fractura con traumatismo mínimo.",
+          "question": "¿La testosterona normal excluye enfermedad ósea asociada?",
+          "answer": "No.",
+          "discriminator": "fractura con traumatismo mínimo",
+          "reason": "El riesgo de baja densidad y fracturas no depende solo de la testosterona.",
+          "initial_action": "Evaluar densidad ósea, vitamina D y otros factores de fractura.",
+          "limits": "No indicar testosterona solo para corregir una fractura sin evaluación endocrina.",
+          "evidence": [
+            {
+              "source_id": "eaa-klinefelter-2021",
+              "locator": "Recomendaciones 35–37",
+              "support": "El riesgo de baja densidad y fracturas no depende solo de la testosterona."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "12.02",
+      "title": "Retraso y anomalías congénitas",
+      "related_sections": [],
+      "scenarios": [
+        {
+          "id": "12.02-c2-01",
+          "anchor_topic_ids": [
+            "12.02-01"
+          ],
+          "objective": "cambio",
+          "vignette": "Un niño con Down está asintomático, sin dolor cervical, alteración de marcha ni signos neurológicos. Se pide radiografía cervical solo como tamiz rutinario.",
+          "question": "¿La radiografía de rutina está recomendada por AAP?",
+          "answer": "No.",
+          "discriminator": "solo como tamiz rutinario",
+          "reason": "Las radiografías en asintomáticos no predicen bien quién tendrá problemas posteriores.",
+          "initial_action": "Hacer evaluación clínica y enseñar signos de mielopatía.",
+          "limits": "Los síntomas nuevos cambian la indicación de imagen y referencia.",
+          "evidence": [
+            {
+              "source_id": "aap-down-2022",
+              "locator": "The Child Without Symptoms of Atlantoaxial Instability",
+              "support": "Las radiografías en asintomáticos no predicen bien quién tendrá problemas posteriores."
+            }
+          ]
+        },
+        {
+          "id": "12.02-c2-02",
+          "anchor_topic_ids": [
+            "12.02-01"
+          ],
+          "objective": "dato_faltante",
+          "vignette": "Un niño de tres años con Down nunca tuvo estudio de sueño. Su familia no identifica ronquido ni pausas respiratorias.",
+          "question": "¿La historia negativa permite omitir la polisomnografía recomendada?",
+          "answer": "No.",
+          "discriminator": "nunca tuvo estudio de sueño",
+          "reason": "El relato familiar negativo no excluye apnea obstructiva en Down.",
+          "initial_action": "Referir para estudio de sueño según el intervalo pediátrico recomendado.",
+          "limits": "Los síntomas, si aparecen, exigen evaluación sin esperar una fecha de rutina.",
+          "evidence": [
+            {
+              "source_id": "aap-down-2022",
+              "locator": "Health supervision, 1–5 years: polisomnografía entre 3 y 4 años",
+              "support": "El relato familiar negativo no excluye apnea obstructiva en Down."
+            }
+          ]
+        },
+        {
+          "id": "12.02-c2-03",
+          "anchor_topic_ids": [
+            "12.02-01"
+          ],
+          "objective": "dato_faltante",
+          "vignette": "Un niño de cinco años con Down tiene ingesta escasa de hierro y cansancio. Su hemoglobina y volumen corpuscular medio son normales. No se han medido reservas de hierro.",
+          "question": "¿La biometría normal excluye deficiencia de hierro?",
+          "answer": "No. Se requiere evaluar el estado del hierro.",
+          "discriminator": "hemoglobina y volumen corpuscular medio son normales",
+          "reason": "La deficiencia puede preceder a la anemia y la macrocitosis de Down puede ocultar microcitosis.",
+          "initial_action": "Solicitar ferritina con proteína C reactiva o hierro con capacidad total de fijación, según contexto.",
+          "limits": "La ferritina puede elevarse con inflamación; el cansancio también requiere evaluar otras causas.",
+          "evidence": [
+            {
+              "source_id": "aap-down-2022",
+              "locator": "p. 9: Anemia/iron deficiency",
+              "support": "La hemoglobina normal no detecta toda deficiencia y el volumen corpuscular no es un tamiz suficiente en Down."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "12.03",
+      "title": "Hábito marfanoide",
+      "related_sections": [],
+      "scenarios": [
+        {
+          "id": "12.03-c2-01",
+          "anchor_topic_ids": [
+            "12.03-01"
+          ],
+          "objective": "cambio",
+          "vignette": "Una persona con Marfan tiene raíz aórtica dilatada. Su padre sufrió disección aórtica y los estudios seriados muestran crecimiento rápido confirmado.",
+          "question": "¿Debe decidirse el seguimiento solo por el diámetro actual?",
+          "answer": "No. Integrar los factores de riesgo.",
+          "discriminator": "crecimiento rápido confirmado",
+          "reason": "La historia familiar y el crecimiento modifican la valoración de cirugía preventiva.",
+          "initial_action": "Referir a un equipo de aorta para decisión individual.",
+          "limits": "La técnica de medición y la comparación de estudios deben ser consistentes.",
+          "evidence": [
+            {
+              "source_id": "aorta-2022",
+              "locator": "§6.1.2.2 y tabla 10: factores de riesgo en Marfan",
+              "support": "La historia familiar y el crecimiento modifican la valoración de cirugía preventiva."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "12.04",
+      "title": "Cáncer hereditario digestivo",
+      "related_sections": [],
+      "scenarios": [
+        {
+          "id": "12.04-c2-01",
+          "anchor_topic_ids": [
+            "12.04-01"
+          ],
+          "objective": "dato_faltante",
+          "vignette": "Un cáncer colorrectal pierde expresión de MLH1 en inmunohistoquímica. No se ha estudiado metilación ni se hizo prueba germinal.",
+          "question": "¿La pérdida de MLH1 confirma por sí sola síndrome de Lynch?",
+          "answer": "No.",
+          "discriminator": "No se ha estudiado metilación",
+          "reason": "La pérdida puede resultar de metilación esporádica u otra alteración.",
+          "initial_action": "Completar el algoritmo tumoral y asesoramiento genético según contexto.",
+          "limits": "Las excepciones hereditarias existen; no usar un marcador aislado para informar a toda la familia.",
+          "evidence": [
+            {
+              "source_id": "nci-colorectal-genetics-2025",
+              "locator": "Lynch syndrome: interpretación de MLH1 e hipermetilación",
+              "support": "La pérdida puede resultar de metilación esporádica u otra alteración."
+            }
+          ]
+        },
+        {
+          "id": "12.04-c2-02",
+          "anchor_topic_ids": [
+            "12.04-02"
+          ],
+          "objective": "incompleta",
+          "vignette": "Una persona cumple criterios clínicos de Peutz–Jeghers por pólipos característicos y pigmentación. La primera prueba germinal de STK11 no detectó variante.",
+          "question": "¿El resultado negativo elimina el diagnóstico clínico?",
+          "answer": "No.",
+          "discriminator": "cumple criterios clínicos",
+          "reason": "La técnica puede no detectar todas las variantes o el mosaicismo.",
+          "initial_action": "Mantener valoración especializada y revisar alcance del estudio genético.",
+          "limits": "Si no cumple criterios y el estudio es negativo, la interpretación es distinta.",
+          "evidence": [
+            {
+              "source_id": "ehtg-pjs-2021",
+              "locator": "§4.1: clinical genetic management",
+              "support": "La técnica puede no detectar todas las variantes o el mosaicismo."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "12.05",
+      "title": "Tumores múltiples tempranos",
+      "related_sections": [],
+      "scenarios": [
+        {
+          "id": "12.05-c2-01",
+          "anchor_topic_ids": [
+            "12.05-01"
+          ],
+          "objective": "cambio",
+          "vignette": "Una persona con VHL tiene tumores renales múltiples y bilaterales. El equipo considera cirugía según el riesgo de cada lesión.",
+          "question": "¿Qué objetivo funcional debe incorporarse al plan?",
+          "answer": "Preservar nefronas cuando sea técnicamente posible.",
+          "discriminator": "múltiples y bilaterales",
+          "reason": "La recurrencia y bilateralidad hacen importante conservar función renal.",
+          "initial_action": "Planear tratamiento con urología oncológica y seguimiento por lesión.",
+          "limits": "El control del cáncer y la factibilidad técnica determinan el procedimiento.",
+          "evidence": [
+            {
+              "source_id": "nci-vhl-2024",
+              "locator": "Renal cell carcinoma: nephron-sparing surgery",
+              "support": "La recurrencia y bilateralidad hacen importante conservar función renal."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "12.06",
+      "title": "Síntomas neurológicos y órgano blanco",
+      "related_sections": [],
+      "scenarios": [
+        {
+          "id": "12.06-c2-01",
+          "anchor_topic_ids": [
+            "12.06-01"
+          ],
+          "objective": "incompleta",
+          "vignette": "Un joven tiene hepatopatía no explicada y trastorno del movimiento. Su ceruloplasmina está dentro del intervalo normal.",
+          "question": "¿Puede excluirse Wilson con esa medición?",
+          "answer": "No.",
+          "discriminator": "ceruloplasmina está dentro del intervalo normal",
+          "reason": "Algunos pacientes con Wilson tienen ceruloplasmina normal.",
+          "initial_action": "Integrar cobre urinario, examen ocular, genética y otras pruebas según el caso.",
+          "limits": "Ningún dato aislado confirma el diagnóstico; excluir causas alternativas.",
+          "evidence": [
+            {
+              "source_id": "easl-wilson-2025",
+              "locator": "pp. 694–696: diagnóstico y sensibilidad de ceruloplasmina",
+              "support": "Algunos pacientes con Wilson tienen ceruloplasmina normal."
+            }
+          ]
+        },
+        {
+          "id": "12.06-c2-02",
+          "anchor_topic_ids": [
+            "12.06-02"
+          ],
+          "objective": "contraste",
+          "vignette": "Un lactante de siete meses, con desarrollo previo normal, presentó una primera crisis hemiclónica de veinte minutos con fiebre. Tras estabilizarlo, no se encuentra infección del sistema nervioso ni alteración metabólica. La resonancia y el EEG interictal son normales.",
+          "question": "¿Los estudios normales permiten descartar Dravet en esta etapa?",
+          "answer": "No. Aún corresponde evaluación genética dirigida.",
+          "discriminator": "La resonancia y el EEG interictal son normales",
+          "reason": "La resonancia suele ser normal al diagnóstico y el EEG puede ser normal durante el primer año.",
+          "initial_action": "Referir a neurología pediátrica para pruebas genéticas y plan de rescate.",
+          "limits": "La primera crisis no confirma el síndrome; se deben excluir otras causas y seguir la evolución.",
+          "evidence": [
+            {
+              "source_id": "dravet-consensus-2022",
+              "locator": "§3.1; tablas 1–2: pruebas genéticas, resonancia y EEG iniciales",
+              "support": "El consenso recomienda estudio genético ante una crisis hemiclónica prolongada con fiebre a esta edad, aunque los estudios iniciales sean normales."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,454 @@
+{
+  "schema_version": 1,
+  "layer": 2,
+  "section_id": "13",
+  "title": "Geriatría",
+  "author": "clinical-author-13-24",
+  "sources": [
+    {
+      "id": "imss-vgi-2018",
+      "label": "IMSS. Valoración geriátrica integral en unidades de atención médica. GPC-IMSS-190-18",
+      "url": "https://imss.gob.mx/sites/all/statics/guiasclinicas/190GER.pdf",
+      "version": "2018",
+      "checked_at": "2026-11-06",
+      "region": "mexico",
+      "access": "checked",
+      "locator": "Valoración funcional; deterioro cognoscitivo y demencia; delirium; depresión; sueño; sarcopenia; fragilidad; caídas; cuidador y maltrato"
+    },
+    {
+      "id": "bgs-frailty-2014",
+      "label": "British Geriatrics Society. Fit for Frailty: Recognising frailty",
+      "url": "https://www.bgs.org.uk/recognising-frailty",
+      "version": "2014-06-11",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Recognising frailty in a routine situation; Recognising frailty in an emergency situation"
+    },
+    {
+      "checked_at": "2026-11-06",
+      "access": "checked",
+      "id": "idsa-asb-2019",
+      "label": "IDSA. Clinical Practice Guideline for Management of Asymptomatic Bacteriuria",
+      "url": "https://www.idsociety.org/practice-guideline/asymptomatic-bacteriuria/",
+      "version": "2019-03-21",
+      "region": "international",
+      "locator": "V, recomendación1 y evidencia: delirium con bacteriuria sin síntomas urinarios ni sepsis"
+    },
+    {
+      "id": "imss-cerebro",
+      "label": "IMSS. Código Cerebro. Protocolo de Atención Integral",
+      "url": "https://www.imss.gob.mx/sites/all/statics/profesionalesSalud/investigacionSalud/historico/programas/05-pai-codigo-cerebro.pdf",
+      "version": "edición institucional sin fecha explícita en portada; cita GPC-IMSS-102-22",
+      "checked_at": "2026-11-06",
+      "region": "mexico",
+      "access": "checked",
+      "locator": "Evaluación inicial; glucosa; última vez sin déficit; tomografía; activación del código"
+    },
+    {
+      "id": "acs-2025",
+      "label": "ACC/AHA/ACEP/NAEMSP/SCAI: síndrome coronario agudo",
+      "url": "https://accga.org/wp-content/uploads/2025-acc-aha-acep-naemsp-scai-guideline-for-the-management-of-patients-with-acute-coronary-syndromes.pdf",
+      "version": "2025",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "§3.1: ECG, troponina y valoración inicial; complicaciones mecánicas"
+    },
+    {
+      "checked_at": "2026-11-06",
+      "access": "checked",
+      "id": "mcgill-easi",
+      "label": "McGill University, autores del Elder Abuse Suspicion Index: descripción y validación",
+      "url": "https://www.mcgill.ca/familymed/research/resources/funding/elder",
+      "version": "validación original2008; página institucional sin fecha adicional de edición",
+      "region": "international",
+      "locator": "Descripción del EASI: población validada y quién responde las seis preguntas"
+    },
+    {
+      "id": "who-mhgap-2016",
+      "label": "WHO. mhGAP Intervention Guide, version2.0",
+      "url": "https://www.afro.who.int/sites/default/files/2017-06/9789241549790-eng.pdf",
+      "version": "2016; versión2.0",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "SUI2, protocolo2, p136: riesgo inminente, entorno seguro y supervisión constante"
+    }
+  ],
+  "mexico_source_note": "Se abrió la GPC IMSS-190-18 de 2018 y se comprobaron sus apartados de valoración integral. La búsqueda en IMSS y Secretaría de Salud no identificó una actualización nacional integral posterior accesible para todas estas decisiones. La antigüedad de la GPC se conserva explícita; la guía BGS de 2014 tampoco se presenta como una actualización de 2026. Para focalidad neurológica aguda se abrió el PAI IMSS Código Cerebro; la portada no declara fecha de edición y cita GPC-IMSS-102-22. El EASI se usa solo para enseñar límites de su población validada, no como protocolo mexicano de protección.",
+  "blocks": [
+    {
+      "id": "13.01",
+      "title": "Valoración de persona mayor",
+      "related_sections": [],
+      "scenarios": [
+        {
+          "id": "13.01-c2-01",
+          "anchor_topic_ids": [
+            "13.01-01"
+          ],
+          "objective": "cambio",
+          "vignette": "Una mujer antes independiente no puede vestirse desde una neumonía. Su familia propone enviarla a una residencia sin explorar su recuperación.",
+          "question": "¿Qué debe orientar la decisión de cuidado?",
+          "answer": "Valoración geriátrica integral y objetivos de la paciente.",
+          "discriminator": "desde una neumonía",
+          "reason": "La función actual puede incluir un componente agudo reversible.",
+          "initial_action": "Evaluar causas agudas, función previa y apoyos.",
+          "limits": "La dependencia durante una infección no define el pronóstico funcional.",
+          "evidence": [
+            {
+              "source_id": "imss-vgi-2018",
+              "locator": "Valoración funcional y valoración geriátrica integral",
+              "support": "La función actual puede incluir un componente agudo reversible."
+            }
+          ]
+        },
+        {
+          "id": "13.01-c2-02",
+          "anchor_topic_ids": [
+            "13.01-02"
+          ],
+          "objective": "contraste",
+          "vignette": "Un hombre no puede caminar, pero impulsa su silla de ruedas sin ayuda y se desplaza por la unidad. Al aplicar Barthel se propone clasificarlo como totalmente dependiente para todo desplazamiento.",
+          "question": "¿La silla implica dependencia total para desplazarse?",
+          "answer": "No; distinguir movilidad autónoma en silla de ayuda humana.",
+          "discriminator": "impulsa su silla de ruedas sin ayuda",
+          "reason": "Barthel distingue desplazamiento independiente en silla de dependencia completa.",
+          "initial_action": "Registrar lo que realiza sin ayuda y valorar por separado los demás dominios.",
+          "limits": "La autonomía en silla no equivale al puntaje máximo de deambulación ni demuestra independencia global.",
+          "evidence": [
+            {
+              "source_id": "imss-vgi-2018",
+              "locator": "Anexo3.2, cuadro45, p166: Barthel; deambulación independiente en silla de ruedas",
+              "support": "Barthel distingue desplazamiento independiente en silla de dependencia completa."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "13.02",
+      "title": "Confusión súbita",
+      "related_sections": [],
+      "scenarios": [
+        {
+          "id": "13.02-c2-01",
+          "anchor_topic_ids": [
+            "13.02-01"
+          ],
+          "objective": "contraste",
+          "vignette": "Una mujer con deterioro cognitivo presenta delirium y urocultivo positivo. No tiene disuria, urgencia nueva, dolor lumbar, fiebre ni inestabilidad hemodinámica.",
+          "question": "¿El cultivo basta para atribuir el delirium a infección urinaria y tratarlo?",
+          "answer": "No; buscar otras causas y observar con cuidado.",
+          "discriminator": "No tiene disuria, urgencia nueva, dolor lumbar, fiebre ni inestabilidad",
+          "reason": "La bacteriuria aislada no demuestra una causa infecciosa del delirium.",
+          "initial_action": "Revisar fármacos, hidratación y otros precipitantes sin indicar antibiótico solo por el cultivo.",
+          "limits": "Si aparecen fiebre, sepsis o síntomas urinarios, cambia la evaluación; la evidencia del beneficio de tratar bacteriuria aislada es muy baja.",
+          "evidence": [
+            {
+              "source_id": "idsa-asb-2019",
+              "locator": "V, recomendación1: delirium y bacteriuria sin síntomas urinarios ni signos sistémicos",
+              "support": "La bacteriuria aislada no demuestra una causa infecciosa del delirium."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "13.03",
+      "title": "Olvidos progresivos",
+      "related_sections": [],
+      "scenarios": [
+        {
+          "id": "13.03-c2-01",
+          "anchor_topic_ids": [
+            "13.03-01"
+          ],
+          "objective": "dato_faltante",
+          "vignette": "Una mujer que nunca aprendió a leer obtiene puntaje bajo en un MMSE con tareas escritas. Se pretende compararla con el mismo punto de corte usado en universitarios.",
+          "question": "¿Qué dato debe incorporarse antes de interpretar el puntaje?",
+          "answer": "Escolaridad y adecuación del instrumento.",
+          "discriminator": "nunca aprendió a leer",
+          "reason": "El rendimiento del MMSE depende de escolaridad y edad; un corte único puede clasificarla mal.",
+          "initial_action": "Usar una evaluación validada apropiada para su contexto y corroborar cambio respecto al funcionamiento previo.",
+          "limits": "Adaptar la interpretación no permite descartar un déficit real ni sustituye la historia funcional.",
+          "evidence": [
+            {
+              "source_id": "imss-vgi-2018",
+              "locator": "Evaluación cognoscitiva: MMSE y ajuste por edad y escolaridad",
+              "support": "El rendimiento del MMSE depende de escolaridad y edad; un corte único puede clasificarla mal."
+            }
+          ]
+        },
+        {
+          "id": "13.03-c2-02",
+          "anchor_topic_ids": [
+            "13.03-02"
+          ],
+          "objective": "dato_faltante",
+          "vignette": "Un paciente con hipoacusia responde mal una prueba oral de memoria. No llevó sus auxiliares auditivos.",
+          "question": "¿Qué debe corregirse antes de interpretar el resultado?",
+          "answer": "La barrera auditiva.",
+          "discriminator": "No llevó sus auxiliares auditivos",
+          "reason": "La dificultad para oír puede reducir el rendimiento sin demostrar pérdida cognitiva.",
+          "initial_action": "Adaptar la comunicación y repetir la evaluación pertinente.",
+          "limits": "Todavía se necesita historia funcional y corroboración familiar.",
+          "evidence": [
+            {
+              "source_id": "imss-vgi-2018",
+              "locator": "Evaluación cognoscitiva y déficits sensoriales",
+              "support": "La dificultad para oír puede reducir el rendimiento sin demostrar pérdida cognitiva."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "13.04",
+      "title": "Patrón de demencia",
+      "related_sections": [],
+      "scenarios": [
+        {
+          "id": "13.04-c2-01",
+          "anchor_topic_ids": [
+            "13.04-01"
+          ],
+          "objective": "incompleta",
+          "vignette": "Un hombre pierde autonomía por olvidos lentamente progresivos. Tiene déficit de memoria episódica, sin evaluación etiológica ni imagen.",
+          "question": "¿Qué certeza permiten los datos?",
+          "answer": "Síndrome demencial; Alzheimer es una posibilidad.",
+          "discriminator": "sin evaluación etiológica ni imagen",
+          "reason": "Un curso amnésico sugiere Alzheimer, pero no excluye causas tratables o mixtas.",
+          "initial_action": "Investigar fármacos, depresión y causas metabólicas.",
+          "limits": "No se confirma Alzheimer solo por el relato.",
+          "evidence": [
+            {
+              "source_id": "imss-vgi-2018",
+              "locator": "Demencia: diagnóstico clínico y estudio complementario",
+              "support": "Un curso amnésico sugiere Alzheimer, pero no excluye causas tratables o mixtas."
+            }
+          ]
+        },
+        {
+          "id": "13.04-c2-02",
+          "anchor_topic_ids": [
+            "13.04-02"
+          ],
+          "objective": "gravedad",
+          "vignette": "Una mujer con deterioro vascular crónico presenta debilidad nueva del brazo derecho y dificultad para hablar de inicio súbito esta mañana. La familia lo atribuye a otro escalón de su demencia.",
+          "question": "¿Debe esperar la consulta programada de memoria?",
+          "answer": "No; activar evaluación urgente de un evento vascular agudo.",
+          "discriminator": "debilidad nueva del brazo derecho y dificultad para hablar de inicio súbito",
+          "reason": "Un déficit focal nuevo requiere una vía de atención aguda, aunque exista deterioro vascular previo.",
+          "initial_action": "Activar Código Cerebro, medir glucosa y establecer la última hora sin el déficit nuevo.",
+          "limits": "El tiempo de inicio y la imagen determinan tratamiento; no se indica reperfusión sin evaluar elegibilidad.",
+          "evidence": [
+            {
+              "source_id": "imss-cerebro",
+              "locator": "Diagnóstico temprano y evaluación inicial: focalidad súbita, glucosa y tiempo de evolución",
+              "support": "Un déficit focal nuevo requiere una vía de atención aguda, aunque exista deterioro vascular previo."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "13.05",
+      "title": "Debilidad y lentitud",
+      "related_sections": [],
+      "scenarios": [
+        {
+          "id": "13.05-c2-01",
+          "anchor_topic_ids": [
+            "13.05-01"
+          ],
+          "objective": "contraste",
+          "vignette": "Una mujer mayor con obesidad presenta debilidad, poca actividad y dificultad creciente para levantarse de una silla. Se descarta sarcopenia solo porque tiene exceso de peso.",
+          "question": "¿La obesidad permite excluir pérdida de músculo?",
+          "answer": "No; puede coexistir obesidad sarcopénica.",
+          "discriminator": "solo porque tiene exceso de peso",
+          "reason": "El aumento de grasa puede coexistir con reducción muscular y limitación funcional.",
+          "initial_action": "Evaluar fuerza, función y masa muscular, además de la nutrición.",
+          "limits": "La dificultad para levantarse también puede tener causas articulares o neurológicas; el peso no confirma ni excluye el diagnóstico.",
+          "evidence": [
+            {
+              "source_id": "imss-vgi-2018",
+              "locator": "Síndrome de fragilidad, p60: obesidad sarcopénica, masa grasa y pérdida muscular",
+              "support": "La GPC describe sarcopenia con aumento de masa grasa y riesgo de fragilidad en personas con obesidad."
+            }
+          ]
+        },
+        {
+          "id": "13.05-c2-02",
+          "anchor_topic_ids": [
+            "13.05-02"
+          ],
+          "objective": "contraste",
+          "vignette": "Una mujer camina despacio por artrosis de rodilla. Mantiene fuerza, peso, actividad y autonomía. Una prueba de marcha resulta positiva para fragilidad.",
+          "question": "¿Cómo se interpreta el tamizaje?",
+          "answer": "Necesita confirmación clínica; puede ser falso positivo.",
+          "discriminator": "por artrosis de rodilla",
+          "reason": "Una alteración aislada de marcha puede reflejar artrosis.",
+          "initial_action": "Evaluar reserva funcional y dominios de fragilidad.",
+          "limits": "El tamizaje no equivale a una valoración geriátrica completa.",
+          "evidence": [
+            {
+              "source_id": "bgs-frailty-2014",
+              "locator": "Recognising frailty in a routine situation",
+              "support": "Una alteración aislada de marcha puede reflejar artrosis."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "13.06",
+      "title": "Caídas frecuentes",
+      "related_sections": [],
+      "scenarios": [
+        {
+          "id": "13.06-c2-01",
+          "anchor_topic_ids": [
+            "13.06-01"
+          ],
+          "objective": "cambio",
+          "vignette": "Un adulto mayor cae al levantarse de noche. Tiene mareo al ponerse de pie y acaba de iniciar un antihipertensivo.",
+          "question": "¿Qué evaluación cambia la prevención inicial?",
+          "answer": "Presión ortostática y revisión farmacológica.",
+          "discriminator": "acaba de iniciar un antihipertensivo",
+          "reason": "Una causa hemodinámica modificable puede precipitar la caída.",
+          "initial_action": "Buscar lesiones y medir presión con cambios de posición.",
+          "limits": "También se deben evaluar visión, marcha y riesgos del domicilio.",
+          "evidence": [
+            {
+              "source_id": "imss-vgi-2018",
+              "locator": "Síndrome de caídas: factores intrínsecos y fármacos",
+              "support": "Una causa hemodinámica modificable puede precipitar la caída."
+            }
+          ]
+        },
+        {
+          "id": "13.06-c2-02",
+          "anchor_topic_ids": [
+            "13.06-01",
+            "13.05-02"
+          ],
+          "objective": "gravedad",
+          "vignette": "Una mujer con fragilidad cae sin dolor localizado. Desde la caída no puede ponerse de pie y tiene hipoxemia nueva.",
+          "question": "¿Es suficiente indicar ejercicios en casa?",
+          "answer": "No; requiere evaluación aguda urgente.",
+          "discriminator": "hipoxemia nueva",
+          "reason": "Una caída puede ser la presentación de enfermedad grave.",
+          "initial_action": "Evaluar signos vitales, oxigenación y lesión oculta.",
+          "limits": "La fragilidad no explica por sí sola un cambio brusco.",
+          "evidence": [
+            {
+              "source_id": "bgs-frailty-2014",
+              "locator": "Recognising frailty in an emergency situation",
+              "support": "Una caída puede ser la presentación de enfermedad grave."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "13.07",
+      "title": "Tristeza o sueño alterado",
+      "related_sections": [],
+      "scenarios": [
+        {
+          "id": "13.07-c2-01",
+          "anchor_topic_ids": [
+            "13.07-01"
+          ],
+          "objective": "gravedad",
+          "vignette": "Una mujer mayor consulta por insomnio y pérdida de interés. Afirma que ha preparado un método para morir y no acepta quedarse sola.",
+          "question": "¿Qué prioridad cambia la consulta?",
+          "answer": "Evaluación urgente de riesgo suicida y protección.",
+          "discriminator": "ha preparado un método para morir",
+          "reason": "Un plan concreto exige atención inmediata, además del diagnóstico afectivo.",
+          "initial_action": "Mantener acompañamiento y activar atención urgente.",
+          "limits": "Una escala de depresión no sustituye la entrevista de riesgo.",
+          "evidence": [
+            {
+              "source_id": "who-mhgap-2016",
+              "locator": "SUI2, protocolo2, p136impresa: manejo del riesgo inminente",
+              "support": "El riesgo inminente requiere entorno seguro, no dejar sola a la persona y supervisión constante con atención especializada."
+            }
+          ]
+        },
+        {
+          "id": "13.07-c2-02",
+          "anchor_topic_ids": [
+            "13.07-02"
+          ],
+          "objective": "dato_faltante",
+          "vignette": "Un hombre pide un hipnótico. Su esposa informa pausas respiratorias, ronquido intenso y somnolencia diurna.",
+          "question": "¿Qué causa debe evaluarse primero?",
+          "answer": "Apnea obstructiva del sueño.",
+          "discriminator": "pausas respiratorias",
+          "reason": "El trastorno respiratorio puede explicar el sueño no reparador.",
+          "initial_action": "Evaluar respiración durante el sueño y medicamentos.",
+          "limits": "No se debe atribuir todo insomnio al envejecimiento.",
+          "evidence": [
+            {
+              "source_id": "imss-vgi-2018",
+              "locator": "Trastornos del sueño: causas secundarias y valoración",
+              "support": "El trastorno respiratorio puede explicar el sueño no reparador."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "13.08",
+      "title": "Problemas de cuidado",
+      "related_sections": [],
+      "scenarios": [
+        {
+          "id": "13.08-c2-01",
+          "anchor_topic_ids": [
+            "13.08-01"
+          ],
+          "objective": "contraste",
+          "vignette": "Una cuidadora agotada presenta opresión torácica en reposo, sudoración y náusea durante la entrevista. Pide completar Zarit y volver a cuidar a su esposo.",
+          "question": "¿Debe atribuirse este episodio solo a sobrecarga?",
+          "answer": "No; requiere evaluación urgente de posible síndrome coronario agudo.",
+          "discriminator": "opresión torácica en reposo, sudoración y náusea",
+          "reason": "La sobrecarga no explica por sí sola un episodio compatible con isquemia aguda.",
+          "initial_action": "Activar atención urgente y obtener ECG; organizar cuidado seguro del familiar durante su evaluación.",
+          "limits": "Los síntomas no confirman necrosis; la evaluación clínica, el ECG y las troponinas definen la conducta.",
+          "evidence": [
+            {
+              "source_id": "acs-2025",
+              "locator": "3.1: evaluación inicial de sospecha de síndrome coronario agudo",
+              "support": "La sobrecarga no explica por sí sola un episodio compatible con isquemia aguda."
+            }
+          ]
+        },
+        {
+          "id": "13.08-c2-02",
+          "anchor_topic_ids": [
+            "13.08-02"
+          ],
+          "objective": "incompleta",
+          "vignette": "Una mujer con demencia avanzada y comunicación muy limitada tiene lesiones no explicadas. Su cuidador contesta por ella las preguntas del EASI y el resultado se registra negativo.",
+          "question": "¿Ese resultado permite descartar maltrato?",
+          "answer": "No; la aplicación no corresponde a la población validada.",
+          "discriminator": "Su cuidador contesta por ella",
+          "reason": "El EASI original se validó con respuestas del paciente y cognición suficientemente conservada.",
+          "initial_action": "Realizar evaluación clínica y de seguridad con información independiente y documentar las lesiones.",
+          "limits": "Ninguna puntuación confirma o excluye por sí sola maltrato; seguir el circuito local de protección.",
+          "evidence": [
+            {
+              "source_id": "mcgill-easi",
+              "locator": "Descripción del instrumento: pacientes≥65años con MMSE≥24; preguntas1–5 respondidas por el paciente",
+              "support": "El EASI original se validó con respuestas del paciente y cognición suficientemente conservada."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
