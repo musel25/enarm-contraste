@@ -1,0 +1,794 @@
+{
+  "schema_version": 1,
+  "layer": 2,
+  "section_id": "30",
+  "title": "Reumatología",
+  "author": "clinical-author-25-35",
+  "sources": [
+    {
+      "id": "acr-anca",
+      "label": "ACR/Vasculitis Foundation: ANCA-associated vasculitis guideline",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12344527/",
+      "version": "2021; depósito PMC 2025 no equivale a actualización",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Table 1 severity; GPA/MPA and EGPA assessment and management; texto primario completo obtenido como XML NLM efetch y leído por apartado ante CAPTCHA del visor PMC"
+    },
+    {
+      "id": "acr-axial",
+      "label": "American College of Rheumatology: Axial Spondyloarthritis",
+      "url": "https://rheumatology.org/patients/axial-spondyloarthritis",
+      "version": "Febrero 2025",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Signs/symptoms; diagnosis; HLA-B27 limitation"
+    },
+    {
+      "id": "acr-largevasc",
+      "label": "ACR/Vasculitis Foundation: Giant cell arteritis and Takayasu guideline",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12344528/",
+      "version": "2021; depósito PMC 2025 no equivale a actualización",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "GCA recommendations 8–9; TAK monitoring recommendations 9–14; texto primario completo obtenido como XML NLM efetch y leído por apartado ante CAPTCHA del visor PMC"
+    },
+    {
+      "id": "acr-pan",
+      "label": "ACR/Vasculitis Foundation: Polyarteritis nodosa guideline",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12326507/",
+      "version": "2021; depósito PMC 2025 no equivale a actualización",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Recommendations 1–4: abdominal vascular imaging and affected-tissue biopsy; texto primario completo obtenido como XML NLM efetch y leído por apartado ante CAPTCHA del visor PMC"
+    },
+    {
+      "id": "bsr-myositis",
+      "label": "British Society for Rheumatology: Idiopathic inflammatory myopathy guideline",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9398208/",
+      "version": "2022, doi:10.1093/rheumatology/keac115",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Muscle disease; dysphagia, aspiration and organ involvement; texto primario completo obtenido como XML NLM efetch y leído por apartado ante CAPTCHA del visor PMC"
+    },
+    {
+      "id": "bsr-sjogren",
+      "label": "British Society for Rheumatology: Adult and juvenile onset Sjögren disease",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12013823/",
+      "version": "Publicado abril 2024; volumen 2025",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Diagnostic testing; salivary gland biopsy; new gland swelling and lymphoma risk; texto primario completo obtenido como XML NLM efetch y leído por apartado ante CAPTCHA del visor PMC"
+    },
+    {
+      "id": "bsr-ssc",
+      "label": "British Society for Rheumatology: Systemic sclerosis, executive summary",
+      "url": "https://pure-oai.bham.ac.uk/ws/portalfiles/portal/279051707/keae390.pdf",
+      "version": "11 septiembre 2024, doi:10.1093/rheumatology/keae390",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Organ-based complications: renal crisis and digital vasculopathy"
+    },
+    {
+      "id": "eular-aps",
+      "label": "EULAR: Managing antiphospholipid syndrome, versión para pacientes",
+      "url": "https://www.eular.org/document/download/216/e47c6f27-399e-40d5-80d2-b4be8b733861/302",
+      "version": "2019; resumen de doi:10.1136/annrheumdis-2019-215213",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Anticoagulation, triple positivity and rivaroxaban"
+    },
+    {
+      "id": "eular-behcet",
+      "label": "EULAR: Behçet syndrome recommendations, 2018 update",
+      "url": "https://revmatologicka-spolecnost.cz/data/files/page/703/Behcet-lecba-2018.pdf",
+      "version": "2018; copia de artículo original en sociedad reumatológica checa",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Overarching principles; recommendation 2: eye involvement"
+    },
+    {
+      "id": "eular-psa",
+      "label": "EULAR: Psoriatic arthritis, pharmacological therapies, 2023 update",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11103320/",
+      "version": "Actualización 2023; publicación 2024",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Overarching principles; recommendation 3: dactylitis, nail involvement and peripheral arthritis; texto primario completo obtenido como XML NLM efetch y leído por apartado ante CAPTCHA del visor PMC"
+    },
+    {
+      "id": "imss-ra",
+      "label": "IMSS: Diagnóstico y tratamiento de artritis reumatoide del adulto",
+      "url": "https://www.imss.gob.mx/sites/all/statics/guiasclinicas/195GRR.pdf",
+      "version": "Catálogo IMSS-195-08; texto incluye criterios 2010, sin fecha editorial nueva comprobada",
+      "checked_at": "2026-11-06",
+      "region": "mexico",
+      "access": "checked",
+      "locator": "GRR pp. 2–5: sinovitis, referencia y límites de FR/anti-CCP; PDF oficial extraído localmente"
+    },
+    {
+      "id": "rch-iga",
+      "label": "Royal Children’s Hospital: IgA vasculitis",
+      "url": "https://www.rch.org.au/clinicalguide/guideline_index/HenochSchonlein_purpura/",
+      "version": "Versión web con algoritmos agosto 2026",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Key points; renal monitoring; gastrointestinal red flags"
+    },
+    {
+      "id": "rch-jia",
+      "label": "AAPOS: Juvenile idiopathic arthritis",
+      "url": "https://www.aapos.org/glossary/juvenile-idiopathic-arthritis",
+      "version": "Actualización noviembre 2024",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "How does JIA affect the eyes?; ophthalmological checks"
+    },
+    {
+      "id": "rcuk-special",
+      "label": "Resuscitation Council UK: Special circumstances guidelines",
+      "url": "https://www.resus.org.uk/professional-library/2025-resuscitation-guidelines/special-circumstances-guidelines",
+      "version": "27 octubre 2025",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Anaphylaxis; hyperthermia; toxins"
+    },
+    {
+      "id": "sanjo",
+      "label": "European Bone and Joint Infection Society: SANJO guideline",
+      "url": "https://jbji.copernicus.org/articles/8/29/2023/jbji-8-29-2023.pdf",
+      "version": "2023, JBJI 8:29–37",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Recommendations 1–6: aspiration, synovial tests, crystals; antibiotics and sepsis"
+    },
+    {
+      "id": "cdc-chlamydia",
+      "label": "CDC STI Treatment Guidelines: Chlamydial infections",
+      "url": "https://www.cdc.gov/std/treatment-guidelines/chlamydia.htm",
+      "version": "Revisión22julio2021",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Management of Sex Partners; Other Management Considerations, texto completo abierto"
+    },
+    {
+      "id": "aao-hcq",
+      "label": "AAO Special Report: Screening for hydroxychloroquine retinopathy,2025revision",
+      "url": "https://www.aao.org/Assets/ca005314-383a-4c1b-bcfc-b8e4bb00a02c/639098636376870000/recommendations-on-screening-for-hyd",
+      "version": "Aprobada octubre2025; Ophthalmology133(4), abril2026,439–450",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "PDF íntegro descargado y leído tras403del visor; Risk factors/Renal disease; Table3 y Annual screening"
+    },
+    {
+      "id": "nice-mecfs",
+      "label": "NICE NG206: ME/CFS diagnosis and management, copia íntegra de ME Association",
+      "url": "https://meassociation.org.uk/wp-content/uploads/2025/01/NICE-Clinical-Guideline-ME-CFS-%E2%80%93-NG206-%E2%80%93-Full-Guideline-Diagnosis-and-management-pdf-66143718094021.pdf",
+      "version": "Publicada29octubre2021; copyright2024, no2025del nombre de archivo",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Box2;1.11.9–1.11.14; glosario Post-exertional malaise; PDF completo abierto"
+    }
+  ],
+  "mexico_source_note": "Se comprobó la GRR oficial IMSS-195-08 mediante extracción local del PDF. El texto incorpora criterios EULAR/ACR 2010, pero no se verificó una fecha de actualización editorial; no se etiqueta como guía reciente. No se comprobó una guía mexicana integrada reciente para todas las vasculitis y conectivopatías. Las guías ACR/VF son de 2021 aunque el depósito PMC sea de 2025. Se localizó una actualización EULAR de Behçet titulada 2025 y publicada en 2026; su texto devolvió 403. Para la urgencia ocular se usa explícitamente la recomendación 2018 abierta. Los resúmenes oficiales EULAR para pacientes se identifican como tales. Revisión clínica profesional pendiente. Se comprobaron además SANJO2023, CDC2021, ACR2021, BSR2022/2024 y EULAR2018/2023 en apartados concretos. Los textos primarios PMC se leyeron completos mediante XML público NLM cuando el visor devolvió CAPTCHA. AAO revisión2025, publicada abril2026, se descargó íntegra pese al403del visor. NICE NG206 corresponde a2021, no al2025de su URL. No se encontró y abrió una GPC mexicana reciente que cubra cada decisión nueva; IMSS195 sigue con fecha de edición no confirmada y no respalda por sí sola biológicos, cribado retiniano ni EM/SFC. No se trasladan pautas adultas a niños o embarazo.",
+  "blocks": [
+    {
+      "id": "30.01",
+      "title": "Articulación caliente aguda",
+      "related_sections": [],
+      "scenarios": [
+        {
+          "anchor_topic_ids": [
+            "30.01-01"
+          ],
+          "objective": "dato_faltante",
+          "vignette": "Un adulto recibió antibióticos antes de aspirar una rodilla con alta sospecha de infección. Los cultivos siguen negativos y la evolución mantiene la sospecha.",
+          "question": "¿Qué estudio microbiológico adicional puede ser útil?",
+          "answer": "PCR del líquido sinovial, según disponibilidad y contexto.",
+          "discriminator": "recibió antibióticos antes de aspirar",
+          "reason": "El tratamiento previo puede reducir el rendimiento del cultivo; SANJO propone PCR si hubo antibióticos o persiste sospecha con cultivos negativos.",
+          "initial_action": "Coordinar con microbiología y el equipo tratante la prueba molecular y el manejo de la articulación.",
+          "limits": "Una PCR no sustituye todas las muestras ni permite retrasar drenaje o antibióticos cuando están indicados.",
+          "evidence": [
+            {
+              "source_id": "sanjo",
+              "locator": "Recommendation7, C2: PCR ante antibiótico previo, microorganismos difíciles o cultivo negativo con sospecha alta",
+              "support": "El tratamiento previo puede reducir el rendimiento del cultivo; SANJO propone PCR si hubo antibióticos o persiste sospecha con cultivos negativos."
+            }
+          ],
+          "id": "30.01-01-dato_faltante"
+        },
+        {
+          "anchor_topic_ids": [
+            "30.01-02"
+          ],
+          "objective": "contraste",
+          "vignette": "Un adulto con antecedente de gota tiene monoartritis febril. El líquido contiene cristales de urato, pero el cultivo sigue pendiente.",
+          "question": "¿Los cristales excluyen artritis séptica?",
+          "answer": "No.",
+          "discriminator": "el cultivo sigue pendiente",
+          "reason": "Los cristales y la infección pueden coexistir.",
+          "initial_action": "Mantener evaluación de infección y decidir tratamiento según gravedad.",
+          "limits": "Ni cristales ni un recuento aislado descartan infección.",
+          "evidence": [
+            {
+              "source_id": "sanjo",
+              "locator": "Recommendation 5: crystals do not rule out SANJO",
+              "support": "Los cristales y la infección pueden coexistir."
+            }
+          ],
+          "id": "30.01-02-contraste"
+        },
+        {
+          "anchor_topic_ids": [
+            "30.01-01"
+          ],
+          "objective": "incompleta",
+          "vignette": "Un adulto inmunosuprimido tiene monoartritis aguda. El recuento sinovial es menor de lo esperado para infección y el Gram es negativo.",
+          "question": "¿Es suficiente para descartar infección articular?",
+          "answer": "No.",
+          "discriminator": "adulto inmunosuprimido",
+          "reason": "Los umbrales sinoviales pueden ser menos fiables y el Gram no excluye infección.",
+          "initial_action": "Mantener cultivo y evaluación clínica, con tratamiento según riesgo.",
+          "limits": "El recuento aislado no cierra el diagnóstico.",
+          "evidence": [
+            {
+              "source_id": "sanjo",
+              "locator": "Recommendation 5: low count and immunosuppression; microbiology",
+              "support": "Los umbrales sinoviales pueden ser menos fiables y el Gram no excluye infección."
+            }
+          ],
+          "id": "30.01-03-incompleta"
+        }
+      ]
+    },
+    {
+      "id": "30.02",
+      "title": "Poliartritis inflamatoria",
+      "related_sections": [],
+      "scenarios": [
+        {
+          "anchor_topic_ids": [
+            "30.02-01"
+          ],
+          "objective": "incompleta",
+          "vignette": "Una adulta tiene sinovitis persistente de manos, rigidez matutina y factor reumatoide negativo.",
+          "question": "¿El resultado negativo permite descartar artritis reumatoide?",
+          "answer": "No.",
+          "discriminator": "sinovitis persistente de manos",
+          "reason": "La serología negativa no elimina una artritis inflamatoria.",
+          "initial_action": "Referir a reumatología sin esperar seroconversión.",
+          "limits": "La exploración y evolución son esenciales; buscar diagnósticos alternos.",
+          "evidence": [
+            {
+              "source_id": "imss-ra",
+              "locator": "GRR pp. 3–5: referencia y factor reumatoide negativo",
+              "support": "La serología negativa no elimina una artritis inflamatoria."
+            }
+          ],
+          "id": "30.02-01-incompleta"
+        },
+        {
+          "anchor_topic_ids": [
+            "30.02-02"
+          ],
+          "objective": "cambio",
+          "vignette": "Un adulto tiene artritis psoriásica confirmada, psoriasis y enfermedad inflamatoria intestinal activa. Se propone un inhibidor de IL-17 por su eficacia cutánea.",
+          "question": "¿Qué comorbilidad cambia la elección?",
+          "answer": "La enfermedad intestinal activa; evitar IL-17 y elegir con los especialistas un tratamiento compatible.",
+          "discriminator": "enfermedad inflamatoria intestinal activa",
+          "reason": "EULAR no recomienda IL-17 en enfermedad intestinal activa por riesgo de exacerbación.",
+          "initial_action": "Coordinar reumatología y gastroenterología para seleccionar una terapia que atienda los dominios relevantes.",
+          "limits": "No todos los fármacos de una clase tienen las mismas indicaciones; no se propone un biológico universal ni una pauta pediátrica.",
+          "evidence": [
+            {
+              "source_id": "eular-psa",
+              "locator": "2023update, Recommendation9: IBD activa, IL-17 no recomendado y selección por comorbilidades",
+              "support": "EULAR no recomienda IL-17 en enfermedad intestinal activa por riesgo de exacerbación."
+            }
+          ],
+          "id": "30.02-02-subtipo"
+        },
+        {
+          "anchor_topic_ids": [
+            "30.02-03"
+          ],
+          "objective": "cambio",
+          "vignette": "Un adulto con artritis reactiva tiene infección genital por Chlamydia confirmada y ya recibe tratamiento. Su pareja sexual reciente está asintomática y cree que no necesita valoración.",
+          "question": "¿Basta tratar solo al paciente con síntomas?",
+          "answer": "No; la pareja reciente necesita evaluación, pruebas y tratamiento presuntivo según protocolo.",
+          "discriminator": "pareja sexual reciente está asintomática",
+          "reason": "El manejo de parejas reduce reinfección y transmisión aunque no tengan síntomas.",
+          "initial_action": "Facilitar atención de la pareja y aconsejar evitar relaciones hasta completar el tratamiento de ambos.",
+          "limits": "La viñeta confirma infección activa, no indica antibióticos prolongados para toda artritis reactiva. No se extrapolan leyes estadounidenses de tratamiento sin evaluación.",
+          "evidence": [
+            {
+              "source_id": "cdc-chlamydia",
+              "locator": "Management of Sex Partners; Other Management Considerations: evaluación y tratamiento de parejas recientes",
+              "support": "El manejo de parejas reduce reinfección y transmisión aunque no tengan síntomas."
+            }
+          ],
+          "id": "30.02-03-contraste"
+        },
+        {
+          "anchor_topic_ids": [
+            "30.02-01"
+          ],
+          "objective": "contraste",
+          "vignette": "Una adulta sin articulaciones inflamadas tiene factor reumatoide positivo obtenido por dolor difuso.",
+          "question": "¿El anticuerpo aislado confirma artritis reumatoide?",
+          "answer": "No.",
+          "discriminator": "sin articulaciones inflamadas",
+          "reason": "La serología debe interpretarse con sinovitis y diagnóstico clínico.",
+          "initial_action": "Explorar articulaciones y evaluar otras causas del dolor.",
+          "limits": "No indicar tratamiento modificador solo por anticuerpo positivo.",
+          "evidence": [
+            {
+              "source_id": "imss-ra",
+              "locator": "GRR: criterios de clasificación y exploración clínica",
+              "support": "La serología debe interpretarse con sinovitis y diagnóstico clínico."
+            }
+          ],
+          "id": "30.02-04-contraste"
+        }
+      ]
+    },
+    {
+      "id": "30.03",
+      "title": "Dolor axial inflamatorio",
+      "related_sections": [],
+      "scenarios": [
+        {
+          "anchor_topic_ids": [
+            "30.03-01"
+          ],
+          "objective": "contraste",
+          "vignette": "Un adulto sin dolor lumbar ni manifestaciones de espondiloartritis solicita tratamiento porque un análisis familiar mostró HLA-B27 positivo.",
+          "question": "¿Ese resultado confirma enfermedad axial?",
+          "answer": "No; el marcador aislado no equivale a enfermedad clínica.",
+          "discriminator": "sin dolor lumbar ni manifestaciones",
+          "reason": "Muchas personas con HLA-B27 no desarrollan espondiloartritis; el resultado debe interpretarse en contexto.",
+          "initial_action": "Explicar el límite del marcador y revisar síntomas si aparecen, sin iniciar tratamiento por el resultado aislado.",
+          "limits": "La ausencia de síntomas hoy no garantiza que nunca desarrollará enfermedad. Esta fuente es información oficial para pacientes, no una guía de cribado familiar.",
+          "evidence": [
+            {
+              "source_id": "acr-axial",
+              "locator": "Signs/symptoms and diagnosis: HLA-B27 no significa que se desarrollará axSpA",
+              "support": "Muchas personas con HLA-B27 no desarrollan espondiloartritis; el resultado debe interpretarse en contexto."
+            }
+          ],
+          "id": "30.03-01-dato_faltante"
+        }
+      ]
+    },
+    {
+      "id": "30.04",
+      "title": "Artritis en niño",
+      "related_sections": [],
+      "scenarios": [
+        {
+          "anchor_topic_ids": [
+            "30.04-01"
+          ],
+          "objective": "cambio",
+          "vignette": "Una niña con artritis idiopática juvenil no refiere dolor ocular y nunca ha tenido revisión con lámpara de hendidura.",
+          "question": "¿La ausencia de síntomas permite omitir revisión ocular?",
+          "answer": "No.",
+          "discriminator": "nunca ha tenido revisión con lámpara de hendidura",
+          "reason": "La inflamación ocular puede ser silenciosa.",
+          "initial_action": "Coordinar tamizaje oftalmológico según el riesgo pediátrico.",
+          "limits": "No aplicar intervalos del adulto; definirlos con reumatología y oftalmología pediátricas.",
+          "evidence": [
+            {
+              "source_id": "rch-jia",
+              "locator": "Eye involvement and regular ophthalmology checks",
+              "support": "La inflamación ocular puede ser silenciosa."
+            }
+          ],
+          "id": "30.04-01-cambio"
+        }
+      ]
+    },
+    {
+      "id": "30.05",
+      "title": "Fotosensibilidad y órganos",
+      "related_sections": [],
+      "scenarios": [
+        {
+          "anchor_topic_ids": [
+            "30.05-01"
+          ],
+          "objective": "cambio",
+          "vignette": "Una adulta con lupus y enfermedad renal crónica inicia hidroxicloroquina. Ve bien y pregunta si puede omitir por cinco años todo control de retina.",
+          "question": "¿Qué dato impide aplicar automáticamente esa espera?",
+          "answer": "La enfermedad renal aumenta el riesgo de toxicidad retiniana.",
+          "discriminator": "enfermedad renal crónica",
+          "reason": "AAO recomienda valoración basal y control anual desde el inicio si existen factores de riesgo importantes, aunque la paciente vea bien.",
+          "initial_action": "Coordinar valoración oftalmológica basal con OCT y autofluorescencia y un plan de vigilancia según riesgo.",
+          "limits": "No suspender un tratamiento útil por el caso ni diagnosticar toxicidad por síntomas inespecíficos; la espera de cinco años solo puede considerarse sin riesgo relevante.",
+          "evidence": [
+            {
+              "source_id": "aao-hcq",
+              "locator": "2025revision, Risk factors/Renal disease; Table3 and Annual screening, pp443–446",
+              "support": "AAO recomienda valoración basal y control anual desde el inicio si existen factores de riesgo importantes, aunque la paciente vea bien."
+            }
+          ],
+          "id": "30.05-01-gravedad"
+        },
+        {
+          "anchor_topic_ids": [
+            "30.05-02"
+          ],
+          "objective": "cambio",
+          "vignette": "Un adulto con trombosis previa y síndrome antifosfolípido triple positivo solicita cambiar warfarina por rivaroxabán por comodidad.",
+          "question": "¿Es adecuado sustituir de forma automática?",
+          "answer": "No. La triple positividad cambia la seguridad de esa elección.",
+          "discriminator": "síndrome antifosfolípido triple positivo",
+          "reason": "La guía desaconseja rivaroxabán en este grupo de alto riesgo.",
+          "initial_action": "Revisar anticoagulación con especialista y abordar barreras de control.",
+          "limits": "La elección depende del perfil y eventos previos; no extrapolar a todos los anticoagulantes.",
+          "evidence": [
+            {
+              "source_id": "eular-aps",
+              "locator": "Recommendations on rivaroxaban and triple positivity",
+              "support": "La guía desaconseja rivaroxabán en este grupo de alto riesgo."
+            }
+          ],
+          "id": "30.05-02-cambio"
+        }
+      ]
+    },
+    {
+      "id": "30.06",
+      "title": "Ojo/boca secos y fibrosis",
+      "related_sections": [],
+      "scenarios": [
+        {
+          "anchor_topic_ids": [
+            "30.06-01"
+          ],
+          "objective": "dato_faltante",
+          "vignette": "Una adulta tiene sequedad ocular y oral objetiva. Anti-Ro es negativo y la evaluación clínica y serológica no resuelve el diagnóstico.",
+          "question": "¿Qué prueba puede ayudar si la sospecha de Sjögren persiste?",
+          "answer": "Biopsia de glándula salival menor, tras valoración especializada.",
+          "discriminator": "Anti-Ro es negativo",
+          "reason": "La negatividad serológica no resuelve todos los casos de sospecha.",
+          "initial_action": "Referir para decidir pruebas adicionales y cuidados de sequedad.",
+          "limits": "La biopsia tiene riesgos y no se indica de forma automática por sequedad aislada.",
+          "evidence": [
+            {
+              "source_id": "bsr-sjogren",
+              "locator": "Recommendation 3a: minor labial salivary gland biopsy",
+              "support": "La negatividad serológica no resuelve todos los casos de sospecha."
+            }
+          ],
+          "id": "30.06-01-dato_faltante"
+        },
+        {
+          "anchor_topic_ids": [
+            "30.06-02"
+          ],
+          "objective": "cambio",
+          "vignette": "Una adulta con esclerosis sistémica tiene reflujo y disfagia persistentes pese a tratamiento antisecretor adecuado. El equipo considera aumentar inmunosupresión sin estudiar el esófago.",
+          "question": "¿Qué evaluación debe considerarse antes?",
+          "answer": "Evaluación de estructura y motilidad digestiva y del reflujo persistente.",
+          "discriminator": "disfagia persistentes pese a tratamiento antisecretor adecuado",
+          "reason": "La enfermedad esofágica refractaria requiere valorar su mecanismo y posibles lesiones; no se resuelve automáticamente con más inmunosupresión.",
+          "initial_action": "Coordinar gastroenterología para estudios dirigidos y tratamiento según hallazgos.",
+          "limits": "Pérdida de peso, impactación o sangrado requieren atención pronta; seleccionar endoscopia, motilidad o pH según valoración.",
+          "evidence": [
+            {
+              "source_id": "bsr-ssc",
+              "locator": "Gastrointestinal disease, recommendationiv: upper GI structure/motility and acid reflux in refractory GERD",
+              "support": "La enfermedad esofágica refractaria requiere valorar su mecanismo y posibles lesiones; no se resuelve automáticamente con más inmunosupresión."
+            }
+          ],
+          "id": "30.06-02-gravedad"
+        },
+        {
+          "anchor_topic_ids": [
+            "30.06-01"
+          ],
+          "objective": "cambio",
+          "vignette": "Una adulta con Sjögren necesita lágrimas artificiales frecuentes. Usa una presentación con conservadores y refiere irritación después de aplicarla, sin dolor intenso ni caída visual.",
+          "question": "¿Qué característica de la formulación conviene revisar?",
+          "answer": "Usar lubricante ocular sin conservadores.",
+          "discriminator": "presentación con conservadores",
+          "reason": "BSR recomienda lubricantes sin conservadores; estos evitan exposición repetida a sustancias que pueden irritar la superficie ocular.",
+          "initial_action": "Revisar la formulación con el equipo ocular y seleccionar una opción sin conservadores.",
+          "limits": "La relación temporal no prueba la causa; dolor, fotofobia o pérdida visual requieren valoración ocular y no solo cambiar gotas.",
+          "evidence": [
+            {
+              "source_id": "bsr-sjogren",
+              "locator": "Lubricating eye drops: Recommendation de formulación sin conservadores,1A",
+              "support": "BSR recomienda lubricantes sin conservadores; estos evitan exposición repetida a sustancias que pueden irritar la superficie ocular."
+            }
+          ],
+          "id": "30.06-03-cambio"
+        }
+      ]
+    },
+    {
+      "id": "30.07",
+      "title": "Cefalea en >50 o pulsos asimétricos",
+      "related_sections": [],
+      "scenarios": [
+        {
+          "anchor_topic_ids": [
+            "30.07-01"
+          ],
+          "objective": "dato_faltante",
+          "vignette": "Una adulta mayor mantiene sospecha clínica de arteritis de células gigantes. La biopsia temporal fue negativa, pero persiste claudicación de un brazo y hay diferencia de presión entre brazos.",
+          "question": "¿La biopsia negativa cierra el estudio?",
+          "answer": "No; considerar imagen no invasiva de grandes vasos junto con valoración clínica.",
+          "discriminator": "biopsia temporal fue negativa",
+          "reason": "La biopsia puede ser negativa y la enfermedad afectar grandes vasos; ACR propone imagen adicional si la sospecha persiste.",
+          "initial_action": "Coordinar estudio vascular y manejo por el equipo tratante sin interpretar una biopsia aislada como exclusión.",
+          "limits": "La recomendación es condicional; la modalidad depende de experiencia y disponibilidad. Síntomas visuales o isquemia aguda cambian la urgencia.",
+          "evidence": [
+            {
+              "source_id": "acr-largevasc",
+              "locator": "GCA Recommendation6: biopsia temporal negativa, imagen no invasiva de grandes vasos y evaluación clínica",
+              "support": "La biopsia puede ser negativa y la enfermedad afectar grandes vasos; ACR propone imagen adicional si la sospecha persiste."
+            }
+          ],
+          "id": "30.07-01-gravedad"
+        },
+        {
+          "anchor_topic_ids": [
+            "30.07-02"
+          ],
+          "objective": "cambio",
+          "vignette": "Una adulta con Takayasu conocida está sin síntomas nuevos. La PCR aumentó, pero no hay otros datos de actividad.",
+          "question": "¿La PCR aislada obliga a aumentar inmunosupresión?",
+          "answer": "No.",
+          "discriminator": "no hay otros datos de actividad",
+          "reason": "Los marcadores son imperfectos y requieren correlación clínica.",
+          "initial_action": "Reevaluar síntomas e imagen según seguimiento antes de cambiar tratamiento.",
+          "limits": "Una lesión vascular nueva o isquemia sí cambia la decisión.",
+          "evidence": [
+            {
+              "source_id": "acr-largevasc",
+              "locator": "TAK recommendation 11: isolated rising markers",
+              "support": "Los marcadores son imperfectos y requieren correlación clínica."
+            }
+          ],
+          "id": "30.07-02-cambio"
+        }
+      ]
+    },
+    {
+      "id": "30.08",
+      "title": "Vasculitis pulmonar-renal",
+      "related_sections": [],
+      "scenarios": [
+        {
+          "anchor_topic_ids": [
+            "30.08-01"
+          ],
+          "objective": "cambio",
+          "vignette": "Un adulto con granulomatosis con poliangeítis confirmada iniciará rituximab. Se revisan medidas preventivas antes de la inmunosupresión.",
+          "question": "¿Qué infección oportunista requiere valorar profilaxis?",
+          "answer": "Neumonía por Pneumocystis jirovecii.",
+          "discriminator": "iniciará rituximab",
+          "reason": "ACR recomienda de forma condicional profilaxis frente a Pneumocystis en GPA/MPA tratadas con rituximab o ciclofosfamida.",
+          "initial_action": "Revisar contraindicaciones e interacciones y acordar profilaxis con el especialista.",
+          "limits": "La recomendación reconoce evidencia limitada y toxicidad; elegir fármaco y duración según el plan. Una dosis profiláctica no trata por sí sola la vasculitis.",
+          "evidence": [
+            {
+              "source_id": "acr-anca",
+              "locator": "GPA/MPA Recommendation24: profilaxis de Pneumocystis con rituximab o ciclofosfamida",
+              "support": "ACR recomienda de forma condicional profilaxis frente a Pneumocystis en GPA/MPA tratadas con rituximab o ciclofosfamida."
+            }
+          ],
+          "id": "30.08-01-gravedad"
+        },
+        {
+          "anchor_topic_ids": [
+            "30.08-02"
+          ],
+          "objective": "cambio",
+          "vignette": "Un adulto con EGPA conocida, tratado con metotrexato, presenta recaída de asma y síntomas sinusales. La evaluación no identifica daño orgánico amenazante.",
+          "question": "¿Qué opción dirigida puede discutirse antes de escalar automáticamente a ciclofosfamida?",
+          "answer": "Añadir mepolizumab con el especialista.",
+          "discriminator": "recaída de asma y síntomas sinusales",
+          "reason": "ACR propone mepolizumab para recaída no grave de asma o enfermedad sinonasal bajo metotrexato, azatioprina o micofenolato.",
+          "initial_action": "Confirmar que no haya afectación grave y coordinar el ajuste especializado.",
+          "limits": "Es una recomendación condicional. Neuropatía progresiva, afectación cardiaca o renal requieren otra ruta; no se extrapola a asma eosinofílica sin EGPA confirmada.",
+          "evidence": [
+            {
+              "source_id": "acr-anca",
+              "locator": "EGPA Recommendation9: recaída no grave con asma/sinonasal bajo MTX/AZA/MMF",
+              "support": "ACR propone mepolizumab para recaída no grave de asma o enfermedad sinonasal bajo metotrexato, azatioprina o micofenolato."
+            }
+          ],
+          "id": "30.08-02-subtipo"
+        }
+      ]
+    },
+    {
+      "id": "30.09",
+      "title": "Púrpura, neuropatía o aneurismas",
+      "related_sections": [],
+      "scenarios": [
+        {
+          "anchor_topic_ids": [
+            "30.09-01"
+          ],
+          "objective": "cambio",
+          "vignette": "Un niño con vasculitis IgA tiene púrpura y artralgias leves. La presión y la orina son normales. Su familia pide corticoide para prevenir una futura nefritis.",
+          "question": "¿Se justifica con ese objetivo preventivo?",
+          "answer": "No; no se ha demostrado que el corticoide profiláctico prevenga nefritis.",
+          "discriminator": "para prevenir una futura nefritis",
+          "reason": "El corticoide puede tener indicaciones sintomáticas, pero no sustituye vigilancia renal ni tiene beneficio preventivo demostrado.",
+          "initial_action": "Ofrecer manejo sintomático y seguimiento de presión y orina según protocolo pediátrico.",
+          "limits": "Dolor importante o nefritis establecida requieren evaluación distinta; no negar esas indicaciones por esta recomendación preventiva.",
+          "evidence": [
+            {
+              "source_id": "rch-iga",
+              "locator": "Treatment/Renal manifestations: corticosteroids not used for prophylaxis; sin evidencia de prevención de IgAVN",
+              "support": "El corticoide puede tener indicaciones sintomáticas, pero no sustituye vigilancia renal ni tiene beneficio preventivo demostrado."
+            }
+          ],
+          "id": "30.09-01-dato_faltante"
+        },
+        {
+          "anchor_topic_ids": [
+            "30.09-02"
+          ],
+          "objective": "dato_faltante",
+          "vignette": "Un adulto con sospecha de poliarteritis nodosa y neuropatía periférica necesita confirmación histológica. Se propone tomar solo un nervio sin seleccionar un sitio afectado.",
+          "question": "¿Qué estrategia puede aumentar el rendimiento?",
+          "answer": "Biopsia combinada de nervio y músculo clínicamente afectados.",
+          "discriminator": "solo un nervio sin seleccionar un sitio afectado",
+          "reason": "ACR propone combinar nervio y músculo y dirigir la biopsia a tejido afectado en PAN con neuropatía.",
+          "initial_action": "Coordinar neurología y reumatología para seleccionar un sitio seguro y útil.",
+          "limits": "La recomendación es condicional; se busca evitar lesión motora y no se recomienda biopsia ciega de un sitio asintomático.",
+          "evidence": [
+            {
+              "source_id": "acr-pan",
+              "locator": "Recommendation4 and discussion: combined nerve/muscle biopsy, targeted involved tissue and sensory nerve",
+              "support": "ACR propone combinar nervio y músculo y dirigir la biopsia a tejido afectado en PAN con neuropatía."
+            }
+          ],
+          "id": "30.09-02-dato_faltante"
+        },
+        {
+          "anchor_topic_ids": [
+            "30.09-03"
+          ],
+          "objective": "cambio",
+          "vignette": "Un adulto con Behçet y trombosis venosa refractaria presenta hemoptisis. Se plantea añadir anticoagulación al tratamiento antiinflamatorio.",
+          "question": "¿Qué lesión vascular debe excluirse antes?",
+          "answer": "Aneurisma de arteria pulmonar y riesgo hemorrágico relevante.",
+          "discriminator": "presenta hemoptisis",
+          "reason": "EULAR condiciona añadir anticoagulación a bajo riesgo de sangrado y exclusión de aneurisma pulmonar.",
+          "initial_action": "Evaluar urgentemente la hemoptisis y coordinar imagen vascular y decisión multidisciplinaria antes de anticoagular.",
+          "limits": "La recomendación se refiere a trombosis refractaria; no convierte toda trombosis en una prohibición universal de anticoagulación.",
+          "evidence": [
+            {
+              "source_id": "eular-behcet",
+              "locator": "Recommendation5/Refractory venous thrombosis: descartar aneurisma pulmonar y riesgo hemorrágico antes de añadir anticoagulación",
+              "support": "EULAR condiciona añadir anticoagulación a bajo riesgo de sangrado y exclusión de aneurisma pulmonar."
+            }
+          ],
+          "id": "30.09-03-gravedad"
+        },
+        {
+          "anchor_topic_ids": [
+            "30.09-01"
+          ],
+          "objective": "gravedad",
+          "vignette": "Un niño con vasculitis IgA tiene dolor abdominal intenso, vómitos y sangrado digestivo.",
+          "question": "¿Qué complicación debe descartarse con urgencia?",
+          "answer": "Invaginación intestinal u otra complicación abdominal.",
+          "discriminator": "dolor abdominal intenso, vómitos y sangrado digestivo",
+          "reason": "La afectación digestiva grave cambia el manejo.",
+          "initial_action": "Enviar a hospital para evaluación pediátrica, quirúrgica e imagen según hallazgos.",
+          "limits": "No atribuir todo dolor a un cuadro autolimitado.",
+          "evidence": [
+            {
+              "source_id": "rch-iga",
+              "locator": "Key points; gastrointestinal red flags",
+              "support": "La afectación digestiva grave cambia el manejo."
+            }
+          ],
+          "id": "30.09-04-gravedad"
+        }
+      ]
+    },
+    {
+      "id": "30.10",
+      "title": "Dolor difuso y debilidad",
+      "related_sections": [],
+      "scenarios": [
+        {
+          "anchor_topic_ids": [
+            "30.10-01"
+          ],
+          "objective": "contraste",
+          "vignette": "Una adulta etiquetada con fibromialgia presenta fatiga limitante, sueño no reparador y dificultad cognitiva. Tras actividad mínima empeora de forma marcada al día siguiente durante varios días. Le indican aumentar ejercicio en cantidades fijas cada semana.",
+          "question": "¿Qué patrón exige revisar ese programa?",
+          "answer": "Malestar posterior al esfuerzo compatible con posible EM/SFC.",
+          "discriminator": "empeora de forma marcada al día siguiente durante varios días",
+          "reason": "NICE distingue el empeoramiento diferido y prolongado tras esfuerzo y desaconseja incrementos fijos de actividad en EM/SFC.",
+          "initial_action": "Evaluar el conjunto de síntomas y causas alternativas y adaptar actividad a límites individuales mientras se aclara el diagnóstico.",
+          "limits": "Un síntoma aislado no confirma EM/SFC; puede coexistir con fibromialgia. La recomendación no prohíbe toda actividad ni impone reposo absoluto.",
+          "evidence": [
+            {
+              "source_id": "nice-mecfs",
+              "locator": "NG206 Box2;1.11.9–1.11.14; glossary Post-exertional malaise: retraso12–48h, no incrementos fijos",
+              "support": "NICE distingue el empeoramiento diferido y prolongado tras esfuerzo y desaconseja incrementos fijos de actividad en EM/SFC."
+            }
+          ],
+          "id": "30.10-01-contraste"
+        },
+        {
+          "anchor_topic_ids": [
+            "30.10-02"
+          ],
+          "objective": "dato_faltante",
+          "vignette": "Una adulta tiene dermatomiositis de inicio reciente confirmada y anticuerpos anti-TIF1γ. No refiere disfagia ni disnea.",
+          "question": "¿Qué evaluación adicional requiere considerar por ese perfil?",
+          "answer": "Evaluación de riesgo de neoplasia y búsqueda dirigida según el especialista.",
+          "discriminator": "anticuerpos anti-TIF1γ",
+          "reason": "BSR reconoce ese anticuerpo como factor de mayor riesgo de cáncer en miopatía inflamatoria de inicio adulto.",
+          "initial_action": "Revisar síntomas, exploración y cribados apropiados y acordar estudios según riesgo.",
+          "limits": "No diagnostica cáncer ni indica PET universal; la recomendación de cribado adulto no se extrapola a dermatomiositis juvenil.",
+          "evidence": [
+            {
+              "source_id": "bsr-myositis",
+              "locator": "Sectionvii: How should cancer be screened for in IIM? Recommendation2, factores de riesgo adulto anti-TIF1γ",
+              "support": "BSR reconoce ese anticuerpo como factor de mayor riesgo de cáncer en miopatía inflamatoria de inicio adulto."
+            }
+          ],
+          "id": "30.10-02-gravedad"
+        }
+      ]
+    },
+    {
+      "id": "30.11",
+      "title": "Erupción tras estímulo",
+      "related_sections": [],
+      "scenarios": [
+        {
+          "anchor_topic_ids": [
+            "30.11-01"
+          ],
+          "objective": "gravedad",
+          "vignette": "Un adulto desarrolla sibilancias e hipotensión minutos después de una inyección. No tiene ronchas visibles.",
+          "question": "¿La ausencia de lesiones cutáneas excluye anafilaxia?",
+          "answer": "No.",
+          "discriminator": "sibilancias e hipotensión minutos después",
+          "reason": "La anafilaxia puede presentarse sin cambios cutáneos.",
+          "initial_action": "Suspender exposición y administrar adrenalina intramuscular con atención de urgencia.",
+          "limits": "Los antihistamínicos no sustituyen el tratamiento de problemas respiratorios o circulatorios.",
+          "evidence": [
+            {
+              "source_id": "rcuk-special",
+              "locator": "Anaphylaxis: recognition with or without skin changes",
+              "support": "La anafilaxia puede presentarse sin cambios cutáneos."
+            }
+          ],
+          "id": "30.11-01-gravedad"
+        }
+      ]
+    }
+  ]
+}
