@@ -1,0 +1,693 @@
+{
+  "schema_version": 1,
+  "layer": 2,
+  "section_id": "06",
+  "title": "Cirugía pedíatrica",
+  "author": "clinical-author-01-12",
+  "sources": [
+    {
+      "id": "eau-testes",
+      "label": "EAU: Paediatric Urology, Management of Undescended Testes",
+      "url": "https://uroweb.org/guidelines/paediatric-urology/chapter/management-of-undescended-testes",
+      "version": "Edición web vigente consultada; capítulo sin fecha de edición visible",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "§§4.2–4.7: testículo retráctil, no palpable bilateral y evaluación endocrina"
+    },
+    {
+      "id": "nci-neuroblastoma-2025",
+      "label": "NCI PDQ: neuroblastoma, versión profesional",
+      "url": "https://www.cancer.gov/types/neuroblastoma/hp/neuroblastoma-treatment-pdq",
+      "version": "Actualización 2025-04-28",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Evaluación diagnóstica; tratamiento de compresión medular; no es guía formal"
+    },
+    {
+      "id": "nci-retinoblastoma-2025",
+      "label": "NCI PDQ: retinoblastoma, versión profesional",
+      "url": "https://www.cancer.gov/types/retinoblastoma/hp/retinoblastoma-treatment-pdq",
+      "version": "Actualización 2025-04-03",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Clinical Presentation; evaluación ocular e imagen; no es guía formal"
+    },
+    {
+      "id": "nci-wilms-2025",
+      "label": "NCI PDQ: tumores renales infantiles, versión profesional",
+      "url": "https://www.cancer.gov/types/kidney/hp/wilms-treatment-pdq",
+      "version": "Actualización 2025-04-15",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Diagnostic and staging evaluation; biopsia y enfermedad bilateral; no es guía formal"
+    },
+    {
+      "id": "nom-birth-2013",
+      "label": "Secretaría de Salud: NOM-034-SSA2-2013, defectos al nacimiento",
+      "url": "https://sidof.segob.gob.mx/notas/docFuente/5349816",
+      "version": "NOM 2013, publicación 2014",
+      "checked_at": "2026-11-06",
+      "region": "mexico",
+      "access": "checked",
+      "locator": "Atención neonatal y referencia de defectos al nacimiento; no se usa como norma de fármacos"
+    },
+    {
+      "id": "qld-neonatal-2023",
+      "label": "Queensland Clinical Guidelines: Stabilisation for retrieval–neonatal",
+      "url": "https://www.health.qld.gov.au/__data/assets/pdf_file/0017/144026/g-stabil.pdf",
+      "version": "Noviembre 2023; MN23.18-V5-R28",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Tablas 28, 30–38: anomalías quirúrgicas, cardiacas y tubo neural"
+    },
+    {
+      "id": "rch-intussusception-2026",
+      "label": "Royal Children’s Hospital: Intussusception",
+      "url": "https://www.rch.org.au/clinicalguide/guideline_index/Intussusception/",
+      "version": "Febrero 2026",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Presentation; ultrasound; contraindicaciones del enema"
+    },
+    {
+      "id": "rch-jaundice",
+      "label": "Royal Children’s Hospital: Jaundice in early infancy",
+      "url": "https://www.rch.org.au/clinicalguide/guideline_index/Jaundice_in_early_infancy/",
+      "version": "Actualización junio 2026",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Conjugated hyperbilirubinaemia; ecografía normal no excluye atresia"
+    },
+    {
+      "id": "rch-pylorus-2024",
+      "label": "Royal Children’s Hospital: Pyloric stenosis",
+      "url": "https://www.rch.org.au/clinicalguide/guideline_index/Pyloric_stenosis/",
+      "version": "Marzo 2024",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Key points; Investigations; Treatment"
+    },
+    {
+      "id": "snmmi-meckel-2014",
+      "label": "SNMMI/EANM: Meckel Diverticulum Scintigraphy 2.0",
+      "url": "https://tech.snmjournals.org/content/42/3/163.full.pdf",
+      "version": "2014; aprobada SNMMI 2014-06-05 y EANM 2014-03-26",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "§VII.I Pitfalls: fuentes de falso positivo; PDF completo descargado y leído"
+    },
+    {
+      "id": "vic-bowel",
+      "label": "Safer Care Victoria: obstrucción intestinal neonatal",
+      "url": "https://www.safercare.vic.gov.au/km/node/2326",
+      "version": "Sin fecha de actualización visible; el portal avisa revisión pausada",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Differential diagnosis; Duodenal atresia; Management"
+    },
+    {
+      "id": "vic-ea",
+      "label": "Safer Care Victoria: atresia esofágica y fístula traqueoesofágica neonatal",
+      "url": "https://www.safercare.vic.gov.au/best-practice-improvement/clinical-guidance/neonatal/oesophageal-atresia-and-tracheo-oesophageal-fistula-in-neonates",
+      "version": "Sin fecha de actualización visible; el portal avisa revisión pausada",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Investigation and diagnosis; Management. Se contrasta estabilización con Queensland 2023"
+    },
+    {
+      "id": "slovenia-choana-2023",
+      "label": "Recomendaciones nacionales eslovenas: manejo de atresia de coanas",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9856561/",
+      "version": "2023-01-02",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "§5.1.1: preparación de TC y causas reversibles de obstrucción; recomendaciones de expertos"
+    },
+    {
+      "id": "armnet-2015",
+      "label": "ARM-Net: consenso europeo de diagnóstico y manejo neonatal de malformaciones anorrectales",
+      "url": "https://link.springer.com/article/10.1007/s10151-015-1267-8",
+      "version": "2015-01-22",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Diagnosis and workup, figuras 2 y 4: reevaluación temporal e hidrocolpos; consenso"
+    },
+    {
+      "id": "cps-ino-2023",
+      "label": "Canadian Paediatric Society: óxido nítrico inhalado en neonatos",
+      "url": "https://cps.ca/en/documents/position/inhaled-nitric-oxide",
+      "version": "2023-02-10",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Congenital diaphragmatic hernia: selección ecocardiográfica para ensayo de iNO"
+    },
+    {
+      "id": "sba-latex-2023",
+      "label": "Spina Bifida Association: látex y alergia al látex",
+      "url": "https://www.spinabifidaassociation.org/wp-content/uploads/2025/08/Latex-and-Latex-AllergyJan2024.pdf",
+      "version": "Documento septiembre 2023; nombre de archivo enero 2024",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Guidelines0–11 months: evitación de látex en productos médicos"
+    },
+    {
+      "id": "bws-consensus-2018",
+      "label": "Consenso internacional: diagnóstico clínico y molecular y manejo del síndrome de Beckwith-Wiedemann",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6022848/",
+      "version": "2018-01-29; NatRevEndocrinol14:229–249; depósitoPMC2019",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Clinicalfeatures/Table1; Managementofhypoglycaemia/Table6,R40–42; texto completo abierto y cotejado también en XMLNLM"
+    }
+  ],
+  "mexico_source_note": "Se abrió la NOM-034-SSA2-2013, publicada en 2014, en el portal oficial de Gobernación. La GRR IMSS-330 sobre estenosis pilórica devolvió error y no se cuenta como comprobada. No se encontró una actualización mexicana reciente de todas las anomalías quirúrgicas. Safer Care Victoria advierte que su revisión está pausada: sus datos anatómicos se usan con ese límite y la estabilización se contrasta con Queensland 2023. No se incluyen dosis neonatales. Para el contraste sindrómico se abrió el consenso internacional Beckwith-Wiedemann2018, con versión real conservada; no se encontró una guía mexicana reciente específica accesible para esa asociación. No se infiere un protocolo genético o de vigilancia tumoral de los rasgos del caso.",
+  "blocks": [
+    {
+      "id": "06.01",
+      "title": "RN con salivación y tos al comer",
+      "related_sections": [],
+      "scenarios": [
+        {
+          "id": "06.01-c2-01",
+          "anchor_topic_ids": [
+            "06.01-01"
+          ],
+          "objective": "subtipo",
+          "vignette": "Un recién nacido tose y se pone cianótico con cada toma. Una sonda llega al estómago, pero persisten episodios de aspiración.",
+          "question": "¿El paso de la sonda excluye toda comunicación traqueoesofágica?",
+          "answer": "No. Puede existir una fístula aislada tipo H.",
+          "discriminator": "Una sonda llega al estómago",
+          "reason": "La continuidad esofágica puede mantenerse en la fístula tipo H.",
+          "initial_action": "Suspender tomas y solicitar estudio especializado de aspiración.",
+          "limits": "No confirmar la fístula solo por síntomas; existen otras causas.",
+          "evidence": [
+            {
+              "source_id": "vic-ea",
+              "locator": "Investigation and diagnosis: H-type TOF",
+              "support": "La continuidad esofágica puede mantenerse en la fístula tipo H."
+            }
+          ]
+        },
+        {
+          "id": "06.01-c2-02",
+          "anchor_topic_ids": [
+            "06.01-02"
+          ],
+          "objective": "dato_faltante",
+          "vignette": "Un neonato con obstrucción nasal ya tiene una vía aérea oral segura. Antes de la TC persisten abundantes secreciones en ambas fosas.",
+          "question": "¿Qué preparación evita confundir secreciones con una lesión anatómica?",
+          "answer": "Aspirar cuidadosamente ambas fosas antes de la imagen.",
+          "discriminator": "abundantes secreciones en ambas fosas",
+          "reason": "El moco puede simular una anomalía de tejidos blandos en TC y alterar la interpretación de la obstrucción.",
+          "initial_action": "Coordinar limpieza nasal y evaluación endoscópica y radiológica por el equipo neonatal y ORL.",
+          "limits": "No retrasar la estabilización de la vía aérea ni forzar instrumentos contra una obstrucción.",
+          "evidence": [
+            {
+              "source_id": "slovenia-choana-2023",
+              "locator": "§5.1.1, Computer tomography: aspiración de secreciones antes de TC",
+              "support": "El moco puede simular una anomalía de tejidos blandos en TC y alterar la interpretación de la obstrucción."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "06.02",
+      "title": "Vómito bilioso neonatal",
+      "related_sections": [],
+      "scenarios": [
+        {
+          "id": "06.02-c2-01",
+          "anchor_topic_ids": [
+            "06.02-01"
+          ],
+          "objective": "subtipo",
+          "vignette": "Un neonato tiene vómito no verde y radiografía con doble burbuja sin gas distal.",
+          "question": "¿El vómito no bilioso excluye obstrucción duodenal?",
+          "answer": "No.",
+          "discriminator": "doble burbuja sin gas distal",
+          "reason": "Una obstrucción proximal a la ampolla puede causar vómito no bilioso.",
+          "initial_action": "Mantener ayuno, descomprimir y consultar cirugía neonatal.",
+          "limits": "La imagen debe interpretarse con anatomía y estado clínico.",
+          "evidence": [
+            {
+              "source_id": "vic-bowel",
+              "locator": "Duodenal atresia; intestinal obstruction without bilious vomiting",
+              "support": "Una obstrucción proximal a la ampolla puede causar vómito no bilioso."
+            }
+          ]
+        },
+        {
+          "id": "06.02-c2-02",
+          "anchor_topic_ids": [
+            "06.02-02"
+          ],
+          "objective": "contraste",
+          "vignette": "Un neonato tiene vómito verde, distensión marcada y varias asas dilatadas. La radiografía no muestra solo dos burbujas.",
+          "question": "¿Puede diagnosticarse la altura exacta de la atresia con esos datos?",
+          "answer": "No. Es una obstrucción distal probable.",
+          "discriminator": "varias asas dilatadas",
+          "reason": "La distensión y múltiples asas orientan a una obstrucción más baja, sin definir la causa exacta.",
+          "initial_action": "Descomprimir, evaluar perfusión y referir a cirugía.",
+          "limits": "Diferenciar atresia, íleo meconial y otras causas requiere estudio.",
+          "evidence": [
+            {
+              "source_id": "qld-neonatal-2023",
+              "locator": "Tabla 30: Bowel anomalies",
+              "support": "La distensión y múltiples asas orientan a una obstrucción más baja, sin definir la causa exacta."
+            }
+          ]
+        },
+        {
+          "id": "06.02-c2-03",
+          "anchor_topic_ids": [
+            "06.02-03"
+          ],
+          "objective": "mecanismo",
+          "vignette": "Un neonato estable tiene vómito verde. La serie gastrointestinal alta muestra que la unión duodenoyeyunal queda a la derecha de la columna y por debajo de su posición esperada.",
+          "question": "¿Qué alteración de rotación apoya ese hallazgo?",
+          "answer": "Malrotación intestinal.",
+          "discriminator": "unión duodenoyeyunal queda a la derecha",
+          "reason": "La posición anormal de la unión duodenoyeyunal es un criterio anatómico del estudio de rotación, distinto de inferir el diagnóstico solo por el vómito.",
+          "initial_action": "Mantener ayuno y descompresión y solicitar interpretación experta y valoración quirúrgica urgente.",
+          "limits": "La estabilidad no elimina riesgo de vólvulo; el estudio requiere técnica e interpretación pediátricas.",
+          "evidence": [
+            {
+              "source_id": "vic-bowel",
+              "locator": "Midgut malrotation and volvulus: posición de la unión duodenoyeyunal en serie alta",
+              "support": "La posición anormal de la unión duodenoyeyunal es un criterio anatómico del estudio de rotación, distinto de inferir el diagnóstico solo por el vómito."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "06.03",
+      "title": "Vómito no bilioso en lactante",
+      "related_sections": [],
+      "scenarios": [
+        {
+          "id": "06.03-c2-01",
+          "anchor_topic_ids": [
+            "06.03-01"
+          ],
+          "objective": "variante",
+          "vignette": "Un lactante recibió un macrólido después del nacimiento. Ahora tiene vómitos progresivos no biliosos, hambre tras vomitar y escasa ganancia de peso. No se palpa oliva.",
+          "question": "¿Qué causa obstructiva debe investigarse pese a no palpar una masa?",
+          "answer": "Estenosis pilórica.",
+          "discriminator": "recibió un macrólido después del nacimiento",
+          "reason": "La exposición posnatal a macrólidos es un factor de riesgo; la ausencia de oliva no descarta una presentación temprana.",
+          "initial_action": "Valorar hidratación y solicitar ultrasonido pilórico con consulta pediátrica.",
+          "limits": "La exposición no demuestra causalidad ni confirma el diagnóstico; considerar infección, reflujo y otras causas.",
+          "evidence": [
+            {
+              "source_id": "rch-pylorus-2024",
+              "locator": "Risk factors: postnatal macrolides; Examination: masa no requerida en presentación temprana",
+              "support": "La exposición posnatal a macrólidos es un factor de riesgo; la ausencia de oliva no descarta una presentación temprana."
+            }
+          ]
+        },
+        {
+          "id": "06.03-c2-02",
+          "anchor_topic_ids": [
+            "06.03-01"
+          ],
+          "objective": "incompleta",
+          "vignette": "Un lactante inicia vómitos progresivos no biliosos y pierde peso. El cloro, el potasio y el bicarbonato todavía son normales.",
+          "question": "¿La ausencia de alcalosis permite descartar estenosis pilórica?",
+          "answer": "No. Las alteraciones pueden faltar al inicio.",
+          "discriminator": "bicarbonato todavía son normales",
+          "reason": "Los cambios bioquímicos clásicos se relacionan con duración del vómito y son menos probables en fases tempranas.",
+          "initial_action": "Solicitar ecografía y evaluar hidratación y diagnósticos alternativos.",
+          "limits": "El laboratorio normal tampoco confirma estenosis; mantener valoración del estado clínico.",
+          "evidence": [
+            {
+              "source_id": "rch-pylorus-2024",
+              "locator": "Key points 1; Investigations: alcalosis proporcional a duración de síntomas",
+              "support": "Los cambios bioquímicos clásicos se relacionan con duración del vómito y son menos probables en fases tempranas."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "06.04",
+      "title": "Dolor intermitente y heces sanguinolentas",
+      "related_sections": [],
+      "scenarios": [
+        {
+          "id": "06.04-c2-01",
+          "anchor_topic_ids": [
+            "06.04-01"
+          ],
+          "objective": "variante",
+          "vignette": "Un lactante presenta episodios de letargo profundo y palidez sin causa clara. Entre episodios parece recuperarse. No hay sangre visible en las heces ni dolor abdominal reconocido.",
+          "question": "¿Qué urgencia intestinal debe incluirse en la evaluación?",
+          "answer": "Invaginación intestinal.",
+          "discriminator": "episodios de letargo profundo y palidez",
+          "reason": "El letargo inexplicado puede ser la única presentación; la tríada abdominal clásica es poco frecuente.",
+          "initial_action": "Evaluar primero glucosa, perfusión y otras causas urgentes; solicitar ultrasonido si la sospecha persiste.",
+          "limits": "No atribuir todo letargo a intestino; considerar infección, causas neurológicas y metabólicas.",
+          "evidence": [
+            {
+              "source_id": "rch-intussusception-2026",
+              "locator": "Key points 1; History: lethargy may be the only presenting symptom",
+              "support": "El letargo inexplicado puede ser la única presentación; la tríada abdominal clásica es poco frecuente."
+            }
+          ]
+        },
+        {
+          "id": "06.04-c2-02",
+          "anchor_topic_ids": [
+            "06.04-02"
+          ],
+          "objective": "contraste",
+          "vignette": "Un niño con sangrado intestinal tiene captación focal en una gammagrafía con pertecnetato. El equipo considera Meckel, pero la imagen anatómica también sugiere una duplicación intestinal.",
+          "question": "¿La captación identifica de forma exclusiva un divertículo de Meckel?",
+          "answer": "No. Una duplicación con mucosa gástrica también puede captar.",
+          "discriminator": "duplicación intestinal",
+          "reason": "El trazador identifica mucosa gástrica funcionante y existen fuentes de captación que imitan Meckel.",
+          "initial_action": "Correlacionar el patrón dinámico con anatomía y evaluación de cirugía pediátrica.",
+          "limits": "La captación focal no define por sí sola la anatomía; mantener soporte según magnitud del sangrado.",
+          "evidence": [
+            {
+              "source_id": "snmmi-meckel-2014",
+              "locator": "§VII.I, Pitfalls: duplication cyst with ectopic gastric mucosa como falso positivo",
+              "support": "El trazador identifica mucosa gástrica funcionante y existen fuentes de captación que imitan Meckel."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "06.05",
+      "title": "Ano/ombligo anormal al nacimiento",
+      "related_sections": [],
+      "scenarios": [
+        {
+          "id": "06.05-c2-01",
+          "anchor_topic_ids": [
+            "06.05-01"
+          ],
+          "objective": "cambio",
+          "vignette": "Una recién nacida con un único orificio perineal tiene hidrocolpos en ultrasonido y dilatación de la vía urinaria. Aún no se ha realizado la reparación definitiva.",
+          "question": "¿Qué problema requiere descompresión especializada temprana?",
+          "answer": "El hidrocolpos.",
+          "discriminator": "hidrocolpos en ultrasonido y dilatación de la vía urinaria",
+          "reason": "La vagina distendida en una malformación cloacal puede comprometer el tracto urinario; su drenaje requiere seguimiento urogenital.",
+          "initial_action": "Solicitar cirugía neonatal y urología para drenaje y comprobar evolución renal.",
+          "limits": "No basta derivar el intestino; persistencia de hidronefrosis tras drenaje exige reevaluación urinaria.",
+          "evidence": [
+            {
+              "source_id": "armnet-2015",
+              "locator": "Diagnosis and workup, figura4: cloaca con hidrocolpos y ecografía urogenital posterior",
+              "support": "La vagina distendida en una malformación cloacal puede comprometer el tracto urinario; su drenaje requiere seguimiento urogenital."
+            }
+          ]
+        },
+        {
+          "id": "06.05-c2-02",
+          "anchor_topic_ids": [
+            "06.05-02"
+          ],
+          "objective": "contraste",
+          "vignette": "Un neonato con onfalocele tiene macroglosia, tamaño corporal grande para la edad gestacional e hipoglucemias documentadas que persisten. Se plantea que todo se explica por el defecto de pared aislado.",
+          "question": "¿Qué asociación sindrómica debe investigarse?",
+          "answer": "Espectro de Beckwith-Wiedemann.",
+          "discriminator": "macroglosia, tamaño corporal grande para la edad gestacional e hipoglucemias documentadas",
+          "reason": "El onfalocele y la macroglosia son rasgos cardinales del espectro; la hipoglucemia puede relacionarse con hiperinsulinismo y requiere atención propia.",
+          "initial_action": "Tratar y vigilar la hipoglucemia en el equipo neonatal mientras endocrinología y genética completan la evaluación, además de proteger el defecto.",
+          "limits": "La combinación orienta, pero no define por sí sola el mecanismo molecular ni el plan de vigilancia tumoral. No retrasar el tratamiento metabólico para obtener confirmación genética.",
+          "evidence": [
+            {
+              "source_id": "bws-consensus-2018",
+              "locator": "Clinical features/Table1; Management of hypoglycaemia/Table6,R40–42",
+              "support": "El consenso describe onfalocele, macroglosia y sobrecrecimiento, y exige evaluación y tratamiento de hipoglucemia en neonatos con sospecha o diagnóstico."
+            }
+          ]
+        },
+        {
+          "id": "06.05-c2-03",
+          "anchor_topic_ids": [
+            "06.05-01"
+          ],
+          "objective": "incompleta",
+          "vignette": "Un varón estable tiene malformación anorrectal identificada una hora después del nacimiento. No se observa fístula perineal en esa primera exploración y no hay deterioro.",
+          "question": "¿La primera inspección demuestra que no existe una fístula perineal?",
+          "answer": "No. Se requiere reevaluación en el centro especializado.",
+          "discriminator": "una hora después del nacimiento",
+          "reason": "Una fístula puede hacerse visible cuando aumenta la presión del fondo rectal; el consenso propone reexaminar a las 24 horas si no se ve inicialmente.",
+          "initial_action": "Mantener soporte neonatal y estudio de anomalías asociadas mientras cirugía define la evaluación temporal.",
+          "limits": "La reevaluación no autoriza demora ante obstrucción progresiva, sepsis o inestabilidad; evitar sondaje o punción a ciegas.",
+          "evidence": [
+            {
+              "source_id": "armnet-2015",
+              "locator": "Diagnosis and workup, figura2: no visible fistula, re-examination after 24 h",
+              "support": "Una fístula puede hacerse visible cuando aumenta la presión del fondo rectal; el consenso propone reexaminar a las 24 horas si no se ve inicialmente."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "06.06",
+      "title": "RN con insuficiencia respiratoria",
+      "related_sections": [],
+      "scenarios": [
+        {
+          "id": "06.06-c2-01",
+          "anchor_topic_ids": [
+            "06.06-01"
+          ],
+          "objective": "dato_faltante",
+          "vignette": "Un neonato con hernia diafragmática está intubado y sigue hipoxémico pese a optimizar ventilación. Se considera óxido nítrico inhalado, pero no se conocen la presión pulmonar ni la función ventricular izquierda.",
+          "question": "¿Qué evaluación falta antes de seleccionar esa terapia?",
+          "answer": "Ecocardiografía para presión pulmonar y función izquierda.",
+          "discriminator": "no se conocen la presión pulmonar ni la función ventricular izquierda",
+          "reason": "En este subtipo el ensayo de óxido nítrico se limita a selección con hipertensión pulmonar suprasistémica y función izquierda adecuada.",
+          "initial_action": "Obtener ecocardiograma y coordinar manejo con cuidados intensivos neonatales.",
+          "limits": "No iniciar por hipoxemia aislada ni extrapolar beneficio universal; vigilar respuesta y retirar si no es eficaz según el equipo.",
+          "evidence": [
+            {
+              "source_id": "cps-ino-2023",
+              "locator": "Congenital diaphragmatic hernia: optimal recruitment, supra-systemic PH y adequate LV function",
+              "support": "En este subtipo el ensayo de óxido nítrico se limita a selección con hipertensión pulmonar suprasistémica y función izquierda adecuada."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "06.07",
+      "title": "Ictericia colestásica persistente",
+      "related_sections": [],
+      "scenarios": [
+        {
+          "id": "06.07-c2-01",
+          "anchor_topic_ids": [
+            "06.07-01"
+          ],
+          "objective": "incompleta",
+          "vignette": "Un lactante tiene ictericia persistente y heces pálidas. El ultrasonido abdominal se informa normal.",
+          "question": "¿La ecografía normal excluye atresia biliar?",
+          "answer": "No.",
+          "discriminator": "heces pálidas",
+          "reason": "La atresia puede no excluirse con ultrasonido normal.",
+          "initial_action": "Medir bilirrubina fraccionada y referir con urgencia a gastroenterología pediátrica.",
+          "limits": "La colestasis tiene otras causas; el tiempo de evaluación importa.",
+          "evidence": [
+            {
+              "source_id": "rch-jaundice",
+              "locator": "Conjugated hyperbilirubinaemia: obstrucción extrahepática",
+              "support": "La atresia puede no excluirse con ultrasonido normal."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "06.08",
+      "title": "Genitales no habituales/columna",
+      "related_sections": [],
+      "scenarios": [
+        {
+          "id": "06.08-c2-01",
+          "anchor_topic_ids": [
+            "06.08-01"
+          ],
+          "objective": "incompleta",
+          "vignette": "Un lactante tiene un testículo unilateral no palpable. El contralateral está aumentado de tamaño y se supone que compensa una ausencia del otro, por lo que se propone cancelar la evaluación quirúrgica.",
+          "question": "¿La hipertrofia contralateral demuestra ausencia del testículo no palpable?",
+          "answer": "No; ese signo no es suficientemente específico.",
+          "discriminator": "El contralateral está aumentado de tamaño",
+          "reason": "La hipertrofia compensadora puede sugerir ausencia o atrofia, pero no excluye un testículo que requiera exploración especializada.",
+          "initial_action": "Mantener la referencia a urología pediátrica para definir presencia y localización y planificar la evaluación indicada.",
+          "limits": "No prescribe una operación idéntica para todos; la anatomía y la exploración bajo anestesia pueden cambiar el abordaje. No retrasar por ultrasonido rutinario.",
+          "evidence": [
+            {
+              "source_id": "eau-testes",
+              "locator": "§4.3.2Physicalexamination: contralateral compensatoryhypertrophy doesnotpreclude surgicalexploration;§4.4.2.2",
+              "support": "El tamaño contralateral tiene valor orientador, pero no establece con certeza ausencia ni elimina necesidad de evaluación de un testículo no palpable."
+            }
+          ]
+        },
+        {
+          "id": "06.08-c2-02",
+          "anchor_topic_ids": [
+            "06.08-02"
+          ],
+          "objective": "cambio",
+          "vignette": "Un recién nacido tiene mielomeningocele y necesita procedimientos y sondaje. Nunca ha presentado una reacción alérgica.",
+          "question": "¿Debe esperarse una reacción antes de evitar látex natural?",
+          "answer": "No. Usar precauciones de evitación desde el inicio.",
+          "discriminator": "mielomeningocele y necesita procedimientos y sondaje",
+          "reason": "La exposición médica repetida aumenta el riesgo de sensibilización en espina bífida; la guía recomienda evitar contacto con látex.",
+          "initial_action": "Seleccionar guantes, catéteres y otros materiales sin látex natural y registrar la precaución.",
+          "limits": "Es prevención, no un diagnóstico de alergia existente; no imponer restricciones alimentarias sin indicación clínica.",
+          "evidence": [
+            {
+              "source_id": "sba-latex-2023",
+              "locator": "Guidelines,0–11 months: evitar guantes y productos médicos con látex",
+              "support": "La exposición médica repetida aumenta el riesgo de sensibilización en espina bífida; la guía recomienda evitar contacto con látex."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "06.09",
+      "title": "Masa abdominal infantil",
+      "related_sections": [],
+      "scenarios": [
+        {
+          "id": "06.09-c2-01",
+          "anchor_topic_ids": [
+            "06.09-01"
+          ],
+          "objective": "dato_faltante",
+          "vignette": "Un niño tiene una masa abdominal, hipertensión y hematuria. Aún no se conoce su órgano de origen.",
+          "question": "¿Qué paso debe preceder a una biopsia no planificada?",
+          "answer": "Definir origen y extensión con imagen y equipo oncológico.",
+          "discriminator": "no se conoce su órgano de origen",
+          "reason": "La estrategia diagnóstica depende del órgano y del protocolo de tratamiento.",
+          "initial_action": "Solicitar imagen abdominal y referencia oncológica pediátrica.",
+          "limits": "No toda masa es Wilms; una biopsia puede modificar estadificación y tratamiento.",
+          "evidence": [
+            {
+              "source_id": "nci-wilms-2025",
+              "locator": "Diagnostic and staging evaluation: biopsia",
+              "support": "La estrategia diagnóstica depende del órgano y del protocolo de tratamiento."
+            }
+          ]
+        },
+        {
+          "id": "06.09-c2-02",
+          "anchor_topic_ids": [
+            "06.09-02"
+          ],
+          "objective": "dato_faltante",
+          "vignette": "Un niño tiene una masa renal compatible con Wilms. La imagen muestra trombo tumoral que entra en la vena cava inferior, pero no define su extremo superior.",
+          "question": "¿Qué dato debe precisarse antes de planear la operación?",
+          "answer": "La extensión craneal del trombo, incluida posible aurícula derecha.",
+          "discriminator": "no define su extremo superior",
+          "reason": "La extensión intravascular renal, cava o auricular puede cambiar el manejo y requiere evaluación preoperatoria.",
+          "initial_action": "Completar imagen dirigida y valoración conjunta por oncología, cirugía y los especialistas necesarios.",
+          "limits": "No elegir biopsia, resección o quimioterapia sin el protocolo del centro; un trombo no determina solo el estadio completo.",
+          "evidence": [
+            {
+              "source_id": "nci-wilms-2025",
+              "locator": "Diagnostic and Staging Evaluation: intravascular extension of Wilms tumor",
+              "support": "La extensión intravascular renal, cava o auricular puede cambiar el manejo y requiere evaluación preoperatoria."
+            }
+          ]
+        },
+        {
+          "id": "06.09-c2-03",
+          "anchor_topic_ids": [
+            "06.09-03"
+          ],
+          "objective": "cambio",
+          "vignette": "Un lactante tiene neuroblastoma estadio MS ya confirmado y biología favorable. Durante la vigilancia desarrolla hepatomegalia rápidamente progresiva con dificultad respiratoria.",
+          "question": "¿La biología favorable permite continuar solo observación?",
+          "answer": "No. El compromiso orgánico exige tratamiento urgente.",
+          "discriminator": "hepatomegalia rápidamente progresiva con dificultad respiratoria",
+          "reason": "Algunos tumores MS pueden observarse, pero crecimiento hepático y disfunción orgánica cambian el riesgo inmediato y la necesidad de terapia.",
+          "initial_action": "Hospitalizar y coordinar soporte y tratamiento con oncología pediátrica.",
+          "limits": "No todos los MS requieren el mismo esquema; edad, evolución y biología guían la selección.",
+          "evidence": [
+            {
+              "source_id": "nci-neuroblastoma-2025",
+              "locator": "Treatment of INSS stage 4S and INRG stage MS: observación frente a tratamiento por compromiso orgánico",
+              "support": "Algunos tumores MS pueden observarse, pero crecimiento hepático y disfunción orgánica cambian el riesgo inmediato y la necesidad de terapia."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "06.10",
+      "title": "Leucocoria",
+      "related_sections": [],
+      "scenarios": [
+        {
+          "id": "06.10-c2-01",
+          "anchor_topic_ids": [
+            "06.10-01"
+          ],
+          "objective": "dato_faltante",
+          "vignette": "Un niño tiene retinoblastoma bilateral recién diagnosticado. La evaluación ocular está completa y no hay síntomas neurológicos; todavía no se ha estudiado el encéfalo.",
+          "question": "¿Qué estudio basal busca un tumor intracraneal asociado?",
+          "answer": "Resonancia cerebral.",
+          "discriminator": "todavía no se ha estudiado el encéfalo",
+          "reason": "La resonancia basal puede detectar retinoblastoma trilateral subclínico al diagnóstico.",
+          "initial_action": "Coordinar resonancia y evaluación oncológica y genética especializada.",
+          "limits": "No equivale a metástasis obligatoria ni fija un programa universal de resonancias seriadas.",
+          "evidence": [
+            {
+              "source_id": "nci-retinoblastoma-2025",
+              "locator": "Trilateral retinoblastoma: routine baseline brain MRI at diagnosis",
+              "support": "La resonancia basal puede detectar retinoblastoma trilateral subclínico al diagnóstico."
+            }
+          ]
+        },
+        {
+          "id": "06.10-c2-02",
+          "anchor_topic_ids": [
+            "06.10-01"
+          ],
+          "objective": "cambio",
+          "vignette": "Un adolescente sobrevivió a retinoblastoma hereditario tratado en la infancia. Ahora presenta una masa ósea nueva y dolor persistente; se propone descartar cualquier problema oncológico porque sus ojos llevan años sin tumor activo.",
+          "question": "¿Qué riesgo tardío impide cerrar esa evaluación?",
+          "answer": "Una segunda neoplasia primaria.",
+          "discriminator": "masa ósea nueva y dolor persistente",
+          "reason": "La predisposición hereditaria aumenta el riesgo de neoplasias posteriores, incluidos sarcomas, aun si el retinoblastoma ocular se controló.",
+          "initial_action": "Solicitar valoración oncológica pronta e imagen dirigida del nuevo hallazgo.",
+          "limits": "No toda masa es cáncer ni toda neoplasia nueva es metástasis del retinoblastoma. La histología y extensión requieren estudio específico; no se indica cribado por imagen universal.",
+          "evidence": [
+            {
+              "source_id": "nci-retinoblastoma-2025",
+              "locator": "LateEffects/ SubsequentNeoplasms: heritableretinoblastoma y sarcomas posteriores",
+              "support": "Los sobrevivientes con enfermedad hereditaria tienen mayor incidencia de neoplasias posteriores, independiente del uso de radioterapia, con riesgo adicional por algunas exposiciones terapéuticas."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

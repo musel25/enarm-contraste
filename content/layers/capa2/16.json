@@ -1,0 +1,526 @@
+{
+  "schema_version": 1,
+  "layer": 2,
+  "section_id": "16",
+  "title": "Hemorragias",
+  "author": "clinical-author-13-24",
+  "sources": [
+    {
+      "id": "imss-aborto-2008",
+      "label": "IMSS. Diagnóstico y tratamiento del aborto espontáneo y manejo inicial del aborto recurrente. IMSS-088-08",
+      "url": "https://www.imss.gob.mx/sites/all/statics/guiasclinicas/088GRR.pdf",
+      "version": "GRR088; sin fecha de publicación o actualización visible en el PDF consultado; no inferida del identificador",
+      "checked_at": "2026-11-06",
+      "region": "mexico",
+      "access": "checked",
+      "locator": "Diagnóstico ultrasonográfico; embarazo de viabilidad incierta; tratamiento y referencia"
+    },
+    {
+      "id": "imss-ectopic-2009",
+      "label": "IMSS. Diagnóstico y tratamiento de embarazo tubario. IMSS-182-09",
+      "url": "https://www.imss.gob.mx/sites/all/statics/guiasclinicas/182GER.pdf",
+      "version": "Publicación2010-06-30; actualizaciónjunio2011; claveIMSS-182-09 no es fecha de edición",
+      "checked_at": "2026-11-06",
+      "region": "mexico",
+      "access": "checked",
+      "locator": "Diagnóstico; estabilidad hemodinámica; selección de tratamiento"
+    },
+    {
+      "id": "ss-gtd-2009",
+      "label": "Secretaría de Salud. Enfermedad trofoblástica gestacional. S-228-09",
+      "url": "https://www.imss.gob.mx/sites/all/statics/guiasclinicas/228GRR.pdf",
+      "version": "GRR con registroS-228-09; sin fecha de publicación o actualización visible en el PDF consultado",
+      "checked_at": "2026-11-06",
+      "region": "mexico",
+      "access": "checked",
+      "locator": "Diagnóstico; hCG; vigilancia después de evacuación"
+    },
+    {
+      "id": "imss-obshock-2017",
+      "label": "IMSS. Diagnóstico y tratamiento del choque hemorrágico en obstetricia. IMSS-162-09",
+      "url": "https://imss.gob.mx/sites/all/statics/guiasclinicas/162GER.pdf",
+      "version": "actualización 2017",
+      "checked_at": "2026-11-06",
+      "region": "mexico",
+      "access": "checked",
+      "locator": "Evaluación inicial; reanimación; causas; control del sangrado; transfusión"
+    },
+    {
+      "id": "rcog-placenta-2026",
+      "label": "RCOG. Placenta Praevia and Placenta Accreta Spectrum: Diagnosis and Management. Green-top 27a",
+      "url": "https://obgyn.onlinelibrary.wiley.com/doi/10.1111/1471-0528.70239",
+      "version": "2026-06-29; quinta edición",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "7: detección y corrección de anemia antes del nacimiento; 11.5: PAS inesperado con madre y feto estables"
+    },
+    {
+      "id": "smfm-vasa-2015",
+      "label": "SMFM. Consult Series 37: Diagnosis and management of vasa previa",
+      "url": "https://publications.smfm.org/publications/215-society-for-maternal-fetal-medicine-consult-series-37/",
+      "version": "2015; reafirmado 2024",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Definition; diagnosis; management; fetal hemorrhage"
+    },
+    {
+      "id": "nice126-diagnosis-2026",
+      "label": "NICE NG126. Diagnóstico ecográfico; texto primario consultado mediante copia HTML de DejaVu",
+      "url": "https://www.dejavu.org/cgi-bin/get.cgi?url=https%3A%2F%2Fwww.nice.org.uk%2Fguidance%2Fng126%2Fchapter%2Fdiagnosis-of-viable-intrauterine-pregnancy-and-of-tubal-ectopic-pregnancy&ver=95",
+      "version": "2019-04-17; actualización 2026-06-17",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "1.6.3, 1.6.9 y 1.7.5; copia completa del capítulo, no acceso directo a NICE"
+    },
+    {
+      "id": "nice126-loss-2026",
+      "label": "NICE NG126. Manejo de la pérdida gestacional; texto primario mediante copia HTML de DejaVu",
+      "url": "https://www.dejavu.org/cgi-bin/get.cgi?url=https%3A%2F%2Fwww.nice.org.uk%2Fguidance%2Fng126%2Fchapter%2Fmanagement-of-miscarriage&ver=95",
+      "version": "2019-04-17; actualización 2026-06-17",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "1.10.5: prueba urinaria tres semanas después de pérdida resuelta con manejo expectante"
+    },
+    {
+      "id": "nice126-ectopic-2026",
+      "label": "NICE NG126. Manejo del ectópico tubárico; texto primario mediante copia HTML de DejaVu",
+      "url": "https://www.dejavu.org/cgi-bin/get.cgi?url=https%3A%2F%2Fwww.nice.org.uk%2Fguidance%2Fng126%2Fchapter%2Fmanagement-of-tubal-ectopic-pregnancy&ver=95",
+      "version": "2019-04-17; actualización 2026-06-17",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "1.15.1–1.15.2: seguimiento necesario para metotrexato; cirugía si no puede regresar"
+    },
+    {
+      "id": "figo-gtd-2025",
+      "label": "FIGO. Diagnosis and management of gestational trophoblastic disease: 2025 update",
+      "url": "https://obgyn.onlinelibrary.wiley.com/doi/10.1002/ijgo.70275",
+      "version": "2025-07-09",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "4.3 Human chorionic gonadotropin monitoring: hCG baja persistente y exclusión de falsos positivos"
+    },
+    {
+      "id": "nice25-2022",
+      "label": "NICE NG25. Preterm labour and birth; texto primario mediante copia HTML de DejaVu",
+      "url": "https://www.dejavu.org/cgi-bin/get.cgi?url=https%3A%2F%2Fwww.nice.org.uk%2Fguidance%2Fng25%2Fchapter%2FRecommendations%23mode-of-birth&ver=95",
+      "version": "2015-11-20; actualización 2022-06-10",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "1.8.1: sangrado o infección pueden contraindicar detener el parto"
+    },
+    {
+      "id": "rcog-vbac-2015",
+      "label": "RCOG. Birth After Previous Caesarean Birth. Green-top 45; documento primario completo",
+      "url": "https://www-preview.rcog.org.uk/media/kpkjwd5h/gtg_45.pdf",
+      "version": "2015-10; segunda edición",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Resumen p.3 y manejo intraparto: aumento de necesidad analgésica bajo epidural y posible ruptura"
+    },
+    {
+      "id": "who-pph-2025",
+      "label": "OMS, FIGO e ICM. Consolidated guidelines for the prevention, diagnosis and treatment of postpartum haemorrhage; PDF completo",
+      "url": "https://iris.who.int/server/api/core/bitstreams/88bf11a5-93b6-4d6b-bdaa-856b46c8ed3c/content",
+      "version": "2025-10-05; ISBN 9789240115637",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Recomendación22, p.38; recomendación31, p.48; PDF completo descargado y leído, no página NCBI con CAPTCHA; recomendación27 y observaciones: contraindicación por evento tromboembólico gestacional"
+    },
+    {
+      "id": "figo-pph-2022",
+      "label": "FIGO recommendations on the management of postpartum hemorrhage 2022",
+      "url": "https://obgyn.onlinelibrary.wiley.com/doi/10.1002/ijgo.14116",
+      "version": "2022-03-17",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Tabla6: carboprost y precaución o contraindicación por asma según guía; no es una contraindicación idéntica en todas las guías"
+    },
+    {
+      "id": "nice235-2026",
+      "label": "NICE NG235. Intrapartum care; texto primario mediante copia HTML de DejaVu",
+      "url": "https://www.dejavu.org/cgi-bin/get.cgi?url=https%3A%2F%2Fwww.nice.org.uk%2Fguidance%2Fng235%2Fchapter%2FRecommendations%23care-of-the-newborn-baby&ver=95",
+      "version": "2023-09-29; actualización 2026-06-09",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "1.8.55–1.8.56: frecuencia excesiva y suspensión inmediata de oxitocina ante CTG patológica"
+    }
+  ],
+  "mexico_source_note": "Se abrieron los PDF nacionales088GRR,182GER,228GRR e IMSS-162GER actualizado2017. El182GER declara publicación30-junio2010 y actualizaciónjunio2011; el sufijo-09 no fecha la edición. Los PDF088GRR y228GRR no muestran fecha de publicación o actualización identificable;228declara registroS-228-09 y no se infiere su fecha de edición de esa clave. La búsqueda nacional no identificó una actualización accesible que cubriera estas nuevas decisiones. Se añadieron textos primarios NICE NG126 actualizado17-junio-2026, NG235 actualizado9-junio-2026 y NG25 actualizado10-junio-2022, consultados como copias HTML completas mediante DejaVu porque el acceso directo respondió403. Se leyeron RCOG27a2026 y FIGO2025 completos, y el PDF completo OMS/FIGO/ICM2025 descargado de IRIS; NCBI con CAPTCHA no cuenta como consulta. RCOG45 es una guía2015 y se declara esa antigüedad; no se trasladan sus tasas de éxito ni esquemas de inducción como recomendaciones nuevas. FIGO2022 tabla6 resume diferencias entre guías sobre carboprost y asma; no se presenta una contraindicación uniforme. Las GPC mexicanas antiguas no determinan dosis nuevas.",
+  "blocks": [
+    {
+      "id": "16.01",
+      "title": "Sangrado del primer trimestre",
+      "related_sections": [],
+      "scenarios": [
+        {
+          "id": "16.01-c2-01",
+          "anchor_topic_ids": [
+            "16.01-01"
+          ],
+          "objective": "incompleta",
+          "vignette": "Una mujer estable con manchado tiene un embrión intrauterino de 5 mm sin latido en ultrasonido transvaginal. La fecha menstrual es incierta.",
+          "question": "¿Confirma pérdida gestacional esta ecografía?",
+          "answer": "No; repetir ultrasonido antes de diagnosticar pérdida.",
+          "discriminator": "embrión intrauterino de 5 mm sin latido",
+          "reason": "Un embrión tan pequeño sin latido puede requerir tiempo para demostrar viabilidad.",
+          "initial_action": "Repetir ultrasonido transvaginal al menos siete días después y explicar signos de alarma.",
+          "limits": "La fecha menstrual aislada no decide viabilidad; dolor intenso o inestabilidad requieren atención inmediata.",
+          "evidence": [
+            {
+              "source_id": "nice126-diagnosis-2026",
+              "locator": "1.6.3 y 1.6.9",
+              "support": "Un embrión tan pequeño sin latido puede requerir tiempo para demostrar viabilidad."
+            }
+          ]
+        },
+        {
+          "id": "16.01-c2-02",
+          "anchor_topic_ids": [
+            "16.01-02"
+          ],
+          "objective": "cambio",
+          "vignette": "Tras manejo expectante de una pérdida gestacional confirmada, cesaron dolor y sangrado. Tres semanas después la prueba urinaria de embarazo sigue positiva.",
+          "question": "¿Puede cerrarse el seguimiento solo porque ya no sangra?",
+          "answer": "No; necesita reevaluación.",
+          "discriminator": "Tres semanas después la prueba urinaria de embarazo sigue positiva",
+          "reason": "La resolución de síntomas no garantiza que el proceso haya terminado si persiste una prueba positiva.",
+          "initial_action": "Organizar revisión clínica y estudios según los hallazgos.",
+          "limits": "Una prueba positiva aislada no demuestra restos ni indica evacuación automática.",
+          "evidence": [
+            {
+              "source_id": "nice126-loss-2026",
+              "locator": "1.10.5 y explicación del seguimiento tras manejo expectante",
+              "support": "La resolución de síntomas no garantiza que el proceso haya terminado si persiste una prueba positiva."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "16.02",
+      "title": "Sangrado precoz con dolor",
+      "related_sections": [],
+      "scenarios": [
+        {
+          "id": "16.02-c2-01",
+          "anchor_topic_ids": [
+            "16.02-01"
+          ],
+          "objective": "contraste",
+          "vignette": "Una paciente con embarazo intrauterino confirmado presenta dolor unilateral. Una nueva ecografía muestra además un saco anexial separado del ovario con saco vitelino.",
+          "question": "¿La gestación intrauterina excluye otro embarazo ectópico?",
+          "answer": "No; corresponde a embarazo heterotópico.",
+          "discriminator": "además un saco anexial separado del ovario con saco vitelino",
+          "reason": "Pueden coexistir una gestación intrauterina y otra extrauterina.",
+          "initial_action": "Solicitar evaluación ginecológica urgente y valorar estabilidad.",
+          "limits": "No aplicar metotrexato sistémico como si no existiera gestación intrauterina viable.",
+          "evidence": [
+            {
+              "source_id": "nice126-diagnosis-2026",
+              "locator": "1.7.1 y 1.7.5: saco con saco vitelino fuera del ovario; revisar útero y anexos para heterotópico",
+              "support": "Pueden coexistir una gestación intrauterina y otra extrauterina."
+            }
+          ]
+        },
+        {
+          "id": "16.02-c2-02",
+          "anchor_topic_ids": [
+            "16.02-01"
+          ],
+          "objective": "cambio",
+          "vignette": "Una paciente estable tiene ectópico tubárico no roto de 20 mm, sin latido y hCG de 900 UI/L. No puede regresar a controles ni acceder a urgencias durante las próximas semanas.",
+          "question": "¿Es adecuado elegir metotrexato por cumplir tamaño y hCG?",
+          "answer": "No; la imposibilidad de seguimiento favorece cirugía.",
+          "discriminator": "No puede regresar a controles",
+          "reason": "El manejo médico exige seguimiento para detectar fracaso o ruptura.",
+          "initial_action": "Acordar manejo quirúrgico con el equipo ginecológico y la paciente.",
+          "limits": "Los valores favorables no sustituyen acceso al seguimiento; valorar también riesgo quirúrgico y preferencias.",
+          "evidence": [
+            {
+              "source_id": "nice126-ectopic-2026",
+              "locator": "1.15.1–1.15.2",
+              "support": "El manejo médico exige seguimiento para detectar fracaso o ruptura."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "16.03",
+      "title": "Útero mayor y β-hCG atípica",
+      "related_sections": [],
+      "scenarios": [
+        {
+          "id": "16.03-c2-01",
+          "anchor_topic_ids": [
+            "16.03-01"
+          ],
+          "objective": "incompleta",
+          "vignette": "Después de evacuar una mola, persiste hCG sérica baja y estable. La hCG urinaria es negativa y las imágenes no muestran lesión.",
+          "question": "¿Qué error debe excluirse antes de atribuirlo a tumor activo?",
+          "answer": "Un falso positivo analítico de hCG.",
+          "discriminator": "hCG sérica baja y estable. La hCG urinaria es negativa",
+          "reason": "La discordancia puede requerir comprobar el ensayo, además de mantener vigilancia clínica.",
+          "initial_action": "Coordinar repetición con otro ensayo y valoración en centro especializado.",
+          "limits": "La discordancia no demuestra interferencia; algunas hCG bajas persistentes progresan y requieren seguimiento.",
+          "evidence": [
+            {
+              "source_id": "figo-gtd-2025",
+              "locator": "4.3 Human chorionic gonadotropin monitoring",
+              "support": "La discordancia puede requerir comprobar el ensayo, además de mantener vigilancia clínica."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "16.04",
+      "title": "Hemorragia del tercer trimestre",
+      "related_sections": [],
+      "scenarios": [
+        {
+          "id": "16.04-c2-01",
+          "anchor_topic_ids": [
+            "16.04-01"
+          ],
+          "objective": "cambio",
+          "vignette": "Una gestante con placenta previa conocida está estable y sin sangrado. En preparación para el nacimiento se documentan anemia y deficiencia de hierro.",
+          "question": "¿Debe esperarse una hemorragia para tratar la anemia?",
+          "answer": "No; optimizar hemoglobina antes del nacimiento.",
+          "discriminator": "anemia y deficiencia de hierro",
+          "reason": "Corregir anemia reduce la vulnerabilidad ante una pérdida posterior.",
+          "initial_action": "Iniciar corrección de hierro indicada y planificar el nacimiento con el equipo obstétrico.",
+          "limits": "La vía y pauta de hierro dependen de tiempo disponible y respuesta; no se indica transfusión universal.",
+          "evidence": [
+            {
+              "source_id": "rcog-placenta-2026",
+              "locator": "7 Planning of Caesarean Birth: optimización de hemoglobina; detección de anemia y hierro indicado",
+              "support": "Corregir anemia reduce la vulnerabilidad ante una pérdida posterior."
+            }
+          ]
+        },
+        {
+          "id": "16.04-c2-02",
+          "anchor_topic_ids": [
+            "16.04-02"
+          ],
+          "objective": "cambio",
+          "vignette": "Una gestante de 31 semanas presenta desprendimiento placentario con sangrado activo y contracciones frecuentes. Se propone tocolisis para completar corticoides.",
+          "question": "¿Es apropiado detener el parto sin valorar el sangrado?",
+          "answer": "No; el sangrado puede contraindicar la tocolisis.",
+          "discriminator": "desprendimiento placentario con sangrado activo",
+          "reason": "La intención de prolongar gestación no elimina el riesgo de hemorragia.",
+          "initial_action": "Priorizar evaluación obstétrica urgente, perfusión y bienestar fetal antes de decidir conducta.",
+          "limits": "La decisión depende de gravedad y contexto; no se retrasará resolución indicada para completar corticoides.",
+          "evidence": [
+            {
+              "source_id": "nice25-2022",
+              "locator": "1.8.1: características como sangrado o infección pueden contraindicar detener el parto",
+              "support": "La intención de prolongar gestación no elimina el riesgo de hemorragia."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "16.05",
+      "title": "Sangrado intraparto severo",
+      "related_sections": [],
+      "scenarios": [
+        {
+          "id": "16.05-c2-01",
+          "anchor_topic_ids": [
+            "16.05-01"
+          ],
+          "objective": "dato_faltante",
+          "vignette": "La placenta que era baja ya está alejada del cuello. En la ecografía persisten inserción velamentosa y vasos que no se han evaluado respecto al orificio cervical.",
+          "question": "¿La resolución de la placenta baja elimina el riesgo de vasa previa?",
+          "answer": "No; todavía debe evaluarse el trayecto vascular.",
+          "discriminator": "persisten inserción velamentosa",
+          "reason": "La inserción velamentosa y el antecedente de placenta baja son factores asociados a vasa previa.",
+          "initial_action": "Solicitar evaluación ecográfica dirigida del segmento inferior y vasos.",
+          "limits": "Los factores de riesgo no prueban que los vasos crucen el cuello.",
+          "evidence": [
+            {
+              "source_id": "smfm-vasa-2015",
+              "locator": "Definition tipoI; Risk factors/associations: inserción velamentosa y placenta previa o baja resuelta; Diagnosis",
+              "support": "La inserción velamentosa y el antecedente de placenta baja son factores asociados a vasa previa."
+            }
+          ]
+        },
+        {
+          "id": "16.05-c2-02",
+          "anchor_topic_ids": [
+            "16.05-02"
+          ],
+          "objective": "variante",
+          "vignette": "Una mujer con cesárea previa intenta parto vaginal con epidural. Tras analgesia eficaz empieza a requerir dosis adicionales repetidas por dolor creciente.",
+          "question": "¿Debe atribuirse el cambio solo a analgesia insuficiente?",
+          "answer": "No; reevaluar posible ruptura uterina.",
+          "discriminator": "dosis adicionales repetidas por dolor creciente",
+          "reason": "Una mayor necesidad analgésica durante un intento de parto tras cesárea puede alertar sobre ruptura.",
+          "initial_action": "Solicitar valoración obstétrica pronta y revisar registro fetal y evolución.",
+          "limits": "El dolor no confirma ruptura ni obliga por sí solo a laparotomía; la guía es de 2015.",
+          "evidence": [
+            {
+              "source_id": "rcog-vbac-2015",
+              "locator": "Resumen p.3 y manejo intraparto: epidural no contraindicada; aumento de necesidad analgésica",
+              "support": "Una mayor necesidad analgésica durante un intento de parto tras cesárea puede alertar sobre ruptura."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "16.06",
+      "title": "Sangrado después del parto",
+      "related_sections": [],
+      "scenarios": [
+        {
+          "id": "16.06-c2-01",
+          "anchor_topic_ids": [
+            "16.06-01"
+          ],
+          "objective": "cambio",
+          "vignette": "Después del parto, una placenta retenida requiere extracción manual. La mujer está afebril y no tiene signos clínicos de infección.",
+          "question": "¿La ausencia de fiebre elimina la indicación de profilaxis antibiótica?",
+          "answer": "No; se recomienda por la extracción manual.",
+          "discriminator": "placenta retenida requiere extracción manual",
+          "reason": "La manipulación intrauterina plantea riesgo infeccioso aunque no exista infección manifiesta.",
+          "initial_action": "Administrar profilaxis según protocolo, alergias y disponibilidad, junto con técnica aséptica.",
+          "limits": "La evidencia sobre reducir endometritis es muy incierta; profilaxis no equivale a tratar una infección establecida.",
+          "evidence": [
+            {
+              "source_id": "who-pph-2025",
+              "locator": "Recomendación31, p.48: recomendación, justificación y observaciones",
+              "support": "La manipulación intrauterina plantea riesgo infeccioso aunque no exista infección manifiesta."
+            }
+          ]
+        },
+        {
+          "id": "16.06-c2-02",
+          "anchor_topic_ids": [
+            "16.06-02"
+          ],
+          "objective": "cambio",
+          "vignette": "Una puérpera con atonía sigue sangrando tras oxitocina. Tiene asma grave con broncoespasmo reciente y se propone carboprost.",
+          "question": "¿Qué antecedente obliga a reconsiderar ese uterotónico?",
+          "answer": "El asma y riesgo de broncoespasmo.",
+          "discriminator": "asma grave con broncoespasmo reciente",
+          "reason": "Varias guías contraindican carboprost en asma; otras exigen precaución.",
+          "initial_action": "Avisar al equipo y elegir otra intervención compatible con su situación mientras se controla el sangrado.",
+          "limits": "No todos los uterotónicos tienen las mismas contraindicaciones; seguir protocolo obstétrico y disponibilidad.",
+          "evidence": [
+            {
+              "source_id": "figo-pph-2022",
+              "locator": "Tabla6: RCOG2016, ACOG2017, RANZCOG2017 y SOGC2018; carboprost y asma",
+              "support": "Varias guías contraindican carboprost en asma; otras exigen precaución."
+            }
+          ]
+        },
+        {
+          "id": "16.06-c2-03",
+          "anchor_topic_ids": [
+            "16.06-03"
+          ],
+          "objective": "cambio",
+          "vignette": "Durante una cesárea programada, antes de abrir el útero, se descubre vascularización y deformidad compatibles con acretismo. Madre y feto están estables; faltan equipo experto y sangre disponible.",
+          "question": "¿Debe continuarse la apertura uterina de inmediato?",
+          "answer": "No; pausar y reunir recursos o trasladar.",
+          "discriminator": "Madre y feto están estables; faltan equipo experto y sangre disponible",
+          "reason": "El PAS inesperado en una situación estable permite evitar iniciar una intervención sin recursos adecuados.",
+          "initial_action": "Solicitar ayuda especializada; puede requerirse cierre abdominal y traslado urgente a centro experto.",
+          "limits": "No retrasar una intervención necesaria si aparece compromiso materno o fetal; recomendación de buena práctica con evidencia limitada.",
+          "evidence": [
+            {
+              "source_id": "rcog-placenta-2026",
+              "locator": "11.5: PAS inesperado al laparotomizar en cesárea repetida; madre y feto estables",
+              "support": "El PAS inesperado en una situación estable permite evitar iniciar una intervención sin recursos adecuados."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "16.07",
+      "title": "Choque obstétrico",
+      "related_sections": [],
+      "scenarios": [
+        {
+          "id": "16.07-c2-01",
+          "anchor_topic_ids": [
+            "16.07-01"
+          ],
+          "objective": "gravedad",
+          "vignette": "Después del parto se han medido 400 mL de sangrado que continúa. El pulso es de 120/min y la presión sistólica de 110 mmHg.",
+          "question": "¿Debe esperarse a medir 500 mL para iniciar respuesta por hemorragia?",
+          "answer": "No; la pérdida y el signo hemodinámico ya justifican respuesta.",
+          "discriminator": "400 mL de sangrado que continúa",
+          "reason": "La OMS2025 combina pérdida objetiva desde 300 mL con un signo hemodinámico anormal, sin exigir hipotensión.",
+          "initial_action": "Activar respuesta inicial y evaluar causa y perfusión en forma seriada.",
+          "limits": "El índice de choque es pulso/presión sistólica y aquí supera1; ningún cálculo sustituye la valoración clínica.",
+          "evidence": [
+            {
+              "source_id": "who-pph-2025",
+              "locator": "Recomendación22, p.38: ≥300 mL con pulso>100 o índice de choque>1, entre otros signos; o ≥500mL",
+              "support": "La OMS2025 combina pérdida objetiva desde 300 mL con un signo hemodinámico anormal, sin exigir hipotensión."
+            }
+          ]
+        },
+        {
+          "id": "16.07-c2-02",
+          "anchor_topic_ids": [
+            "16.07-02"
+          ],
+          "objective": "cambio",
+          "vignette": "Durante infusión de oxitocina aparecen seis contracciones en diez minutos y cardiotocografía patológica.",
+          "question": "¿Qué ajuste inmediato requiere la infusión?",
+          "answer": "Suspender oxitocina y pedir revisión obstétrica urgente.",
+          "discriminator": "seis contracciones en diez minutos y cardiotocografía patológica",
+          "reason": "La frecuencia excesiva junto con registro patológico exige detener el estímulo uterino.",
+          "initial_action": "Suspender la infusión y activar valoración fetal y obstétrica.",
+          "limits": "No reiniciar por disminuir la frecuencia sin revisar el registro y la situación clínica.",
+          "evidence": [
+            {
+              "source_id": "nice235-2026",
+              "locator": "1.8.55–1.8.56",
+              "support": "La frecuencia excesiva junto con registro patológico exige detener el estímulo uterino."
+            }
+          ]
+        },
+        {
+          "id": "16.07-c2-03",
+          "anchor_topic_ids": [
+            "16.07-03"
+          ],
+          "objective": "cambio",
+          "vignette": "Una puérpera con hemorragia activa necesita tratamiento inmediato. Durante este embarazo se confirmó trombosis venosa profunda aguda. Se propone añadir tranexámico sin revisar ese antecedente.",
+          "question": "¿Qué antecedente obliga a evitar su uso rutinario?",
+          "answer": "El evento tromboembólico confirmado durante el embarazo.",
+          "discriminator": "se confirmó trombosis venosa profunda aguda",
+          "reason": "La OMS incluye un evento tromboembólico conocido durante el embarazo entre las contraindicaciones claras al antifibrinolítico.",
+          "initial_action": "Avisar al equipo, mantener reanimación y controlar el sangrado con las intervenciones apropiadas.",
+          "limits": "No confundir una contraindicación concreta con evitar tranexámico en toda mujer con factores de riesgo; no retrasar el control de la hemorragia.",
+          "evidence": [
+            {
+              "source_id": "who-pph-2025",
+              "locator": "Recomendación27, observaciones, p.45: evitar TXA ante contraindicación clara, como evento tromboembólico conocido durante el embarazo",
+              "support": "La OMS incluye un evento tromboembólico conocido durante el embarazo entre las contraindicaciones claras al antifibrinolítico."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
