@@ -1,0 +1,1364 @@
+{
+  "schema_version": 1,
+  "layer": 2,
+  "section_id": "14",
+  "title": "Ginecología",
+  "author": "clinical-author-13-24; root-clinical-editor-14",
+  "sources": [
+    {
+      "id": "asrm-amenorrhea-2024",
+      "label": "ASRM. Current evaluation of amenorrhea: a committee opinion",
+      "url": "https://www.asrm.org/practice-guidance/practice-committee-documents/current-evaluation-of-amenorrhea/",
+      "version": "2024",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Primary amenorrhea; secondary amenorrhea; pregnancy; FSH/LH/E2; anatomic causes"
+    },
+    {
+      "id": "imss-sua-2015",
+      "label": "IMSS. Diagnóstico y tratamiento del sangrado uterino anormal de origen no anatómico. IMSS-322-10",
+      "url": "https://www.imss.gob.mx/sites/all/statics/guiasclinicas/322GRR.pdf",
+      "version": "actualización 2015",
+      "checked_at": "2026-11-06",
+      "region": "mexico",
+      "access": "checked",
+      "locator": "Diagnóstico; clasificación PALM-COEIN; ultrasonido y biopsia endometrial"
+    },
+    {
+      "id": "eshre-endo-2022",
+      "label": "ESHRE. Guideline Endometriosis",
+      "url": "https://www.eshre.eu/-/media/sitecore-files/Guidelines/Endometriosis/ESHRE-GUIDELINE-ENDOMETRIOSIS-2022_2.pdf",
+      "version": "2022",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Diagnosis; imaging; negative imaging; management of pain; infertility"
+    },
+    {
+      "id": "rcog-mass-2011",
+      "label": "RCOG/BSGE. Management of Suspected Ovarian Masses in Premenopausal Women. Green-top 62",
+      "url": "https://www.rcog.org.uk/media/0mebp0mv/gtg_62.pdf",
+      "version": "2011-11",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "4.1 clinical assessment; 4.2 ultrasound; 5 management"
+    },
+    {
+      "id": "cdc-vag-2021",
+      "label": "CDC. STI Treatment Guidelines: Vulvovaginal symptoms",
+      "url": "https://www.cdc.gov/std/treatment-guidelines/vaginal-discharge.htm",
+      "version": "2021-07-22",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "History, examination, pH, microscopy and limits of negative microscopy"
+    },
+    {
+      "id": "cdc-bv-2021",
+      "label": "CDC. STI Treatment Guidelines: Bacterial Vaginosis",
+      "url": "https://www.cdc.gov/std/treatment-guidelines/bv.htm",
+      "version": "2021-07-22",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Diagnostic considerations: Amsel and Nugent"
+    },
+    {
+      "id": "cdc-candida-2021",
+      "label": "CDC. STI Treatment Guidelines: Vulvovaginal Candidiasis",
+      "url": "https://www.cdc.gov/std/treatment-guidelines/candidiasis.htm",
+      "version": "2021-07-22",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Complicated VVC; pregnancy; diagnostic considerations"
+    },
+    {
+      "id": "cdc-trich-2021",
+      "label": "CDC. STI Treatment Guidelines: Trichomoniasis",
+      "url": "https://www.cdc.gov/std/treatment-guidelines/trichomoniasis.htm",
+      "version": "2021-07-22",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Diagnostic considerations; management of sex partners"
+    },
+    {
+      "id": "cdc-pid-2021",
+      "label": "CDC. STI Treatment Guidelines: Pelvic Inflammatory Disease",
+      "url": "https://www.cdc.gov/std/treatment-guidelines/pid.htm",
+      "version": "STI Treatment Guidelines2021; página revisada2022-09-21",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Diagnostic considerations; hospitalization criteria; follow-up"
+    },
+    {
+      "id": "cdc-chlamydia-2021",
+      "label": "CDC. STI Treatment Guidelines: Chlamydial Infections",
+      "url": "https://www.cdc.gov/std/treatment-guidelines/chlamydia.htm",
+      "version": "2021-07-22",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Diagnostic considerations; follow-up; management of sex partners"
+    },
+    {
+      "id": "cdc-mec-2024",
+      "label": "CDC. U.S. MEC 2024. Appendix A classifications",
+      "url": "https://www.cdc.gov/contraception/hcp/usspr/classifications-mec-contraception.html",
+      "version": "2024",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Tables A1: migraine, breast cancer, postpartum, uterine cavity, PID, bleeding"
+    },
+    {
+      "id": "cdc-ec-2024",
+      "label": "CDC. U.S. SPR 2024: Emergency Contraception",
+      "url": "https://www.cdc.gov/contraception/hcp/usspr/emergency-contraception.html",
+      "version": "2024",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Timing; use of regular contraception after emergency pills"
+    },
+    {
+      "id": "cdc-permanent-2024",
+      "label": "CDC. U.S. SPR 2024: Permanent Contraception",
+      "url": "https://www.cdc.gov/contraception/hcp/usspr/permanent-contraception.html",
+      "version": "2024",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Tubal surgery; when vasectomy is reliable"
+    },
+    {
+      "id": "nom-fp-2026",
+      "label": "Secretaría de Salud. NOM-005-SSA-2026. Servicios de Planificación Familiar y Anticoncepción",
+      "url": "https://sidof.segob.gob.mx/notas/docFuente/5790446",
+      "version": "2026",
+      "checked_at": "2026-11-06",
+      "region": "mexico",
+      "access": "checked",
+      "locator": "5.4 consentimiento; 5.7 selección y provisión de métodos; derechos reproductivos"
+    },
+    {
+      "id": "imss-breast-2009",
+      "label": "IMSS. Diagnóstico y tratamiento de patología mamaria benigna. IMSS-240-09",
+      "url": "https://www.imss.gob.mx/sites/all/statics/guiasclinicas/240GER.pdf",
+      "version": "2009",
+      "checked_at": "2026-11-06",
+      "region": "mexico",
+      "access": "checked",
+      "locator": "Diagnóstico; fibroadenoma; quistes; mastalgia; secreción por pezón"
+    },
+    {
+      "id": "abm-mastitis-2022",
+      "label": "Academy of Breastfeeding Medicine. Clinical Protocol 36: The Mastitis Spectrum",
+      "url": "https://www.bfmed.org/assets/ABM%20Protocol%20%2336.pdf",
+      "version": "2022",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Abscess recommendations p373; galactocele p366 and recommendations f p373"
+    },
+    {
+      "id": "ss-climaterio-2013",
+      "label": "Secretaría de Salud. Diagnóstico y tratamiento de perimenopausia y postmenopausia. SS-019-08",
+      "url": "https://www.imss.gob.mx/sites/all/statics/guiasclinicas/019GER.pdf",
+      "version": "actualización 2013",
+      "checked_at": "2026-11-06",
+      "region": "mexico",
+      "access": "checked",
+      "locator": "Diagnóstico; terapia hormonal; evaluación de osteoporosis"
+    },
+    {
+      "id": "eau-luts-2026",
+      "label": "EAU. Non-neurogenic Female LUTS: Disease Management",
+      "url": "https://uroweb.org/guidelines/non-neurogenic-female-luts/chapter/disease-management",
+      "version": "edición web 2026",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Stress urinary incontinence; pelvic floor muscle training; prolapse and voiding dysfunction"
+    },
+    {
+      "id": "asrm-infertility-2026",
+      "label": "ASRM. Fertility evaluation of infertile women: a committee opinion",
+      "url": "https://www.asrm.org/practice-guidance/practice-committee-documents/fertility-evaluation-of-infertile-women-a-committee-opinion-2026",
+      "version": "2026; sustituye opinión de 2021",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Introduction: simultaneous partner evaluation; Summary: semen evaluation"
+    },
+    {
+      "id": "idsa-ssti-2014",
+      "label": "IDSA. Practice Guidelines for Diagnosis and Management of Skin and Soft Tissue Infections",
+      "url": "https://www.idsociety.org/practice-guideline/skin-and-soft-tissue-infections/",
+      "version": "2014",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Purulent skin and soft-tissue infections: abscess; systemic signs; drainage"
+    },
+    {
+      "id": "asrm-poi-2025",
+      "label": "ESHRE/ASRM/CRE-WHiRL/IMS. Evidence-based guideline: Premature Ovarian Insufficiency",
+      "url": "https://www.asrm.org/practice-guidance/practice-committee-documents/evidence-based-guideline-premature-ovarian-insufficiency--2024/",
+      "version": "guía2024; publicación ASRM2025",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Non-iatrogenic POI: chromosomal analysis and FMR1 premutation"
+    },
+    {
+      "id": "nice-hmb-2026",
+      "label": "NICE. Heavy menstrual bleeding: assessment and management. NG88",
+      "url": "https://www.nice.org.uk/guidance/ng88/chapter/Recommendations",
+      "version": "2018; actualización web2026-07-07",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Recommendations1.2.10,1.4.2,1.5.1,1.5.2 and1.5.7"
+    },
+    {
+      "id": "acog-torsion-2019",
+      "label": "ACOG. Adnexal Torsion in Adolescents. Committee Opinion783",
+      "url": "https://www.acog.org/clinical/clinical-guidance/committee-opinion/articles/2019/08/adnexal-torsion-in-adolescents",
+      "version": "2019-08",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Recommendations; surgical management, pp e56/e59; documento completo comprobado en copia de Gynerisq"
+    },
+    {
+      "id": "asrm-tubal-2021",
+      "label": "ASRM. Role of tubal surgery in the era of assisted reproductive technology",
+      "url": "https://www.asrm.org/practice-guidance/practice-committee-documents/role-of-tubal-surgery-in-the-era-of-assisted-reproductive-technology-a-committee-opinion-2021/",
+      "version": "2021",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Poor prognosis distal tubal disease: hydrosalpinges and IVF"
+    },
+    {
+      "id": "cdc-iud-2024",
+      "label": "CDC. U.S. SPR: Intrauterine Contraception",
+      "url": "https://www.cdc.gov/contraception/hcp/usspr/intrauterine-contraception.html",
+      "version": "2024",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "STI screening before insertion; postpartum LNG-IUD need for back-up"
+    },
+    {
+      "id": "nci-child-breast-2024",
+      "label": "NCI. Childhood Breast Tumors Treatment, PDQ health professional version",
+      "url": "https://www.cancer.gov/types/breast/hp/child-breast-treatment-pdq",
+      "version": "actualización2024-09-11",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Phyllodes tumor surgery and axillary evaluation; resumen de evidencia, no guía formal"
+    },
+    {
+      "id": "ontario-highrisk-2026",
+      "label": "Ontario Health/Cancer Care Ontario. High-risk benign breast lesions: recommendations report",
+      "url": "https://doi.org/10.3390/curroncol33020067",
+      "version": "publicación primaria2026-01-23",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Table1; sections2.1.1 and2.4.1–2.4.2; texto completo primario NLM comprobado"
+    },
+    {
+      "id": "endocrine-osteoporosis-2020",
+      "label": "Endocrine Society. Pharmacological Management of Osteoporosis in Postmenopausal Women",
+      "url": "https://www.endocrine.org/clinical-practice-guidelines/osteoporosis-in-postmenopausal-women",
+      "version": "guía2019; actualización2020",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Denosumab recommendation3.3 and technical remarks"
+    },
+    {
+      "id": "rcog-hyperplasia-2016",
+      "label": "RCOG/BSGE. Management of Endometrial Hyperplasia. Green-top67",
+      "url": "https://www.rcog.org.uk/media/knmjbj5c/gtg_67_endometrial_hyperplasia.pdf",
+      "version": "2016-02; fuente antigua, actualización en desarrollo según ficha web",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Section8.3, pp19–20: surveillance of atypical hyperplasia without hysterectomy"
+    },
+    {
+      "id": "cdc-chc-2024",
+      "label": "CDC. U.S. SPR: Combined Hormonal Contraceptives",
+      "url": "https://www.cdc.gov/contraception/hcp/usspr/combined-hormonal-contraceptives.html",
+      "version": "2024",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Examinations and tests before initiation: pelvic examination"
+    },
+    {
+      "id": "asbrs-oncolactation-2025",
+      "label": "American Society of Breast Surgeons. Oncolactation for Patients with Breast Cancer: Executive Summary",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12534219/",
+      "version": "publicación electrónica2025-07-08; Ann Surg Oncol2025",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Table1; Diagnostic Evaluation: core needle biopsy; texto completo primario NLM comprobado"
+    }
+  ],
+  "mexico_source_note": "Se comprobó la NOM-005-SSA-2026 oficial para autonomía y anticoncepción. Se abrieron las GPC IMSS de sangrado uterino, mama benigna y climaterio; sus versiones son antiguas y no se presentan como nuevas. La búsqueda nacional no identificó una guía reciente accesible que cubra todas las decisiones de amenorrea, endometriosis y anticoncepción. Las decisiones clínicas se delimitan por las fuentes internacionales citadas y por la disponibilidad local.",
+  "blocks": [
+    {
+      "id": "14.01",
+      "title": "Nunca menstruó vs dejó de menstruar",
+      "related_sections": [],
+      "scenarios": [
+        {
+          "id": "14.01-c2-01",
+          "anchor_topic_ids": [
+            "14.01-01"
+          ],
+          "objective": "contraste",
+          "vignette": "Una adolescente nunca menstruó. Tiene mamas desarrolladas y dolor mensual; se observa himen abombado azulado.",
+          "question": "¿Qué mecanismo explica la amenorrea?",
+          "answer": "Obstrucción del tracto de salida.",
+          "discriminator": "himen abombado azulado",
+          "reason": "La estrogenización conservada y la retención menstrual orientan a obstrucción.",
+          "initial_action": "Solicitar ultrasonido pélvico y valoración ginecológica.",
+          "limits": "Debe definirse la anatomía antes de intervenir.",
+          "evidence": [
+            {
+              "source_id": "asrm-amenorrhea-2024",
+              "locator": "Primary amenorrhea: anatomic evaluation",
+              "support": "La estrogenización conservada y la retención menstrual orientan a obstrucción."
+            }
+          ]
+        },
+        {
+          "id": "14.01-c2-02",
+          "anchor_topic_ids": [
+            "14.01-02"
+          ],
+          "objective": "dato_faltante",
+          "vignette": "Una mujer con amenorrea tiene hCG negativa y una sola prolactina de 31 ng/mL. La toma ocurrió después de ejercicio intenso; no presenta cefalea ni alteración visual.",
+          "question": "¿Qué debe comprobarse antes de concluir hiperprolactinemia persistente?",
+          "answer": "Repetir la prolactina para confirmar una elevación leve.",
+          "discriminator": "una sola prolactina de 31 ng/mL",
+          "reason": "El ejercicio y otras condiciones transitorias pueden elevar la prolactina. Una medición leve aislada no establece persistencia.",
+          "initial_action": "Repetir la medición y revisar fármacos y función tiroidea. Si persiste elevada, continuar la evaluación dirigida.",
+          "limits": "No usar esta secuencia para retrasar la evaluación de una cefalea intensa o un déficit visual.",
+          "evidence": [
+            {
+              "source_id": "asrm-amenorrhea-2024",
+              "locator": "Evaluation: elevated prolactin levels, repeat mild elevations 20–40 ng/mL",
+              "support": "El ejercicio y otras condiciones transitorias pueden elevar la prolactina. Una medición leve aislada no establece persistencia."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "14.02",
+      "title": "Amenorrea anovulatoria",
+      "related_sections": [],
+      "scenarios": [
+        {
+          "id": "14.02-c2-01",
+          "anchor_topic_ids": [
+            "14.02-01"
+          ],
+          "objective": "contraste",
+          "vignette": "Una deportista pierde peso y deja de menstruar. Tiene estradiol bajo, gonadotropinas bajas y ausencia de hiperandrogenismo.",
+          "question": "¿Qué causa supera al ovario poliquístico?",
+          "answer": "Amenorrea hipotalámica funcional probable.",
+          "discriminator": "estradiol bajo, gonadotropinas bajas",
+          "reason": "El déficit energético suprime el eje reproductivo.",
+          "initial_action": "Evaluar nutrición, ejercicio y causas orgánicas.",
+          "limits": "Es un diagnóstico de exclusión.",
+          "evidence": [
+            {
+              "source_id": "asrm-amenorrhea-2024",
+              "locator": "FSH/LH and E2 levels",
+              "support": "El déficit energético suprime el eje reproductivo."
+            }
+          ]
+        },
+        {
+          "id": "14.02-c2-02",
+          "anchor_topic_ids": [
+            "14.02-02"
+          ],
+          "objective": "dato_faltante",
+          "vignette": "Una mujer de 29 años tiene insuficiencia ovárica primaria confirmada. No recibió quimioterapia, radioterapia ni cirugía ovárica; solicita conocer la causa y las implicaciones familiares.",
+          "question": "¿Qué estudio genético específico debe ofrecerse además del análisis cromosómico?",
+          "answer": "Prueba de premutación de FMR1, con consejería genética.",
+          "discriminator": "No recibió quimioterapia, radioterapia ni cirugía ovárica",
+          "reason": "La guía recomienda buscar la premutación de FMR1 en la insuficiencia ovárica no iatrogénica; el resultado puede afectar la consejería familiar.",
+          "initial_action": "Explicar las implicaciones de la prueba y coordinar consejería y estudio genético.",
+          "limits": "La ausencia de una causa identificable sigue siendo posible. Esta prueba no sustituye el resto de la evaluación etiológica.",
+          "evidence": [
+            {
+              "source_id": "asrm-poi-2025",
+              "locator": "Known causes of non-iatrogenic POI: chromosomal analysis and FMR1 premutation testing",
+              "support": "La guía recomienda buscar la premutación de FMR1 en la insuficiencia ovárica no iatrogénica; el resultado puede afectar la consejería familiar."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "14.03",
+      "title": "Sangrado uterino irregular",
+      "related_sections": [],
+      "scenarios": [
+        {
+          "id": "14.03-c2-01",
+          "anchor_topic_ids": [
+            "14.03-01"
+          ],
+          "objective": "cambio",
+          "vignette": "Una mujer presenta menstruaciones regulares pero abundantes. Está estable, no tiene sangrado intermenstrual ni otros signos o síntomas de enfermedad tiroidea; se solicita biometría hemática.",
+          "question": "¿Debe añadirse una prueba tiroidea de rutina solo por la cantidad de sangrado?",
+          "answer": "No, en este escenario no se recomienda un estudio tiroideo rutinario.",
+          "discriminator": "no tiene sangrado intermenstrual ni otros signos o síntomas de enfermedad tiroidea",
+          "reason": "NICE distingue la menstruación abundante aislada de un cuadro con datos de disfunción tiroidea.",
+          "initial_action": "Completar la evaluación del sangrado y de anemia; pedir función tiroidea si aparecen datos clínicos que la indiquen.",
+          "limits": "No extrapolar a amenorrea, irregularidad menstrual o síntomas tiroideos. Esos escenarios requieren otra evaluación.",
+          "evidence": [
+            {
+              "source_id": "nice-hmb-2026",
+              "locator": "NG88 recommendation 1.2.10",
+              "support": "NICE distingue la menstruación abundante aislada de un cuadro con datos de disfunción tiroidea."
+            }
+          ]
+        },
+        {
+          "id": "14.03-c2-02",
+          "anchor_topic_ids": [
+            "14.03-02"
+          ],
+          "objective": "cambio",
+          "vignette": "Una mujer desea embarazo. El ultrasonido muestra mioma submucoso que deforma la cavidad y sangrado abundante.",
+          "question": "¿Qué dato modifica la elección terapéutica?",
+          "answer": "Distorsión de cavidad y deseo reproductivo.",
+          "discriminator": "deforma la cavidad",
+          "reason": "La localización importa más que asumir que todo mioma requiere histerectomía.",
+          "initial_action": "Referir para definir tratamiento conservador según anatomía.",
+          "limits": "La presencia de un mioma no prueba que explique todo sangrado.",
+          "evidence": [
+            {
+              "source_id": "imss-sua-2015",
+              "locator": "PALM-COEIN y tratamiento según etiología",
+              "support": "La localización importa más que asumir que todo mioma requiere histerectomía."
+            },
+            {
+              "source_id": "nice-hmb-2026",
+              "locator": "NG88 recommendations1.4.2,1.5.1 and1.5.7",
+              "support": "Las preferencias reproductivas y la anatomía del mioma orientan la elección; se considera resección histeroscópica en miomas submucosos."
+            }
+          ]
+        },
+        {
+          "id": "14.03-c2-03",
+          "anchor_topic_ids": [
+            "14.03-03"
+          ],
+          "objective": "cambio",
+          "vignette": "Una mujer con adenomiosis en ultrasonido tiene menstruación abundante. Desea conservar el útero, no busca embarazo y acepta un método intrauterino; no hay distorsión de cavidad ni contraindicaciones conocidas.",
+          "question": "¿Qué opción puede ofrecerse como primer tratamiento del sangrado?",
+          "answer": "Sistema intrauterino con levonorgestrel apropiado para esta indicación.",
+          "discriminator": "no busca embarazo y acepta un método intrauterino",
+          "reason": "NICE incluye la adenomiosis sospechada o confirmada entre los escenarios de sangrado abundante en los que se considera primero un sistema con levonorgestrel.",
+          "initial_action": "Revisar elegibilidad, preferencias y producto disponible, y ofrecer el método con seguimiento del sangrado.",
+          "limits": "La indicación y autorización varían entre productos. El deseo de embarazo inmediato cambia la elección.",
+          "evidence": [
+            {
+              "source_id": "nice-hmb-2026",
+              "locator": "NG88 recommendation 1.5.2: suspected or diagnosed adenomyosis",
+              "support": "NICE incluye la adenomiosis sospechada o confirmada entre los escenarios de sangrado abundante en los que se considera primero un sistema con levonorgestrel."
+            }
+          ]
+        },
+        {
+          "id": "14.03-c2-04",
+          "anchor_topic_ids": [
+            "14.03-04"
+          ],
+          "objective": "cambio",
+          "vignette": "Una mujer con hiperplasia endometrial atípica conserva el útero por deseo reproductivo y recibe progestágeno bajo seguimiento especializado. Se excluyó carcinoma coexistente. A los tres meses dejó de sangrar y pregunta si puede omitir la biopsia de control.",
+          "question": "¿La desaparición del sangrado demuestra regresión y permite omitir la muestra?",
+          "answer": "No. Necesita comprobar la respuesta con evaluación histológica.",
+          "discriminator": "dejó de sangrar y pregunta si puede omitir la biopsia",
+          "reason": "La mejoría de síntomas no demuestra regresión de la atipia; la vigilancia conservadora requiere biopsias.",
+          "initial_action": "Mantener el seguimiento especializado con la biopsia programada y reevaluar el plan según el resultado.",
+          "limits": "La guía RCOG de 2016 propone biopsia cada tres meses al inicio hasta dos negativas; reconoce que el intervalo óptimo no está definido y exige individualización.",
+          "evidence": [
+            {
+              "source_id": "rcog-hyperplasia-2016",
+              "locator": "Green-top67 section8.3, pp19–20",
+              "support": "La respuesta de hiperplasia atípica sin histerectomía se vigila con biopsias; los síntomas o el ultrasonido no sustituyen la histología."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "14.04",
+      "title": "Dismenorrea y dolor cíclico",
+      "related_sections": [],
+      "scenarios": [
+        {
+          "id": "14.04-c2-01",
+          "anchor_topic_ids": [
+            "14.04-01"
+          ],
+          "objective": "cambio",
+          "vignette": "Una adolescente presenta dolor menstrual persistente y sospecha de endometriosis. Necesita imagen pélvica, pero después de recibir información no acepta la vía transvaginal.",
+          "question": "¿Debe condicionarse la evaluación a aceptar ese estudio interno?",
+          "answer": "No. Se puede considerar ultrasonido transabdominal u otra vía de imagen aceptable, según el contexto.",
+          "discriminator": "no acepta la vía transvaginal",
+          "reason": "ESHRE permite otras vías de imagen en adolescentes cuando el ultrasonido transvaginal no es apropiado; la aceptabilidad debe discutirse.",
+          "initial_action": "Acordar una vía de imagen adecuada con la adolescente y explicar sus limitaciones.",
+          "limits": "Una imagen negativa no descarta endometriosis. La elección entre ultrasonido y resonancia depende de la pregunta clínica y los recursos.",
+          "evidence": [
+            {
+              "source_id": "eshre-endo-2022",
+              "locator": "Adolescents recommendations 73–74: acceptability and alternatives to transvaginal ultrasound",
+              "support": "ESHRE permite otras vías de imagen en adolescentes cuando el ultrasonido transvaginal no es apropiado; la aceptabilidad debe discutirse."
+            }
+          ]
+        },
+        {
+          "id": "14.04-c2-02",
+          "anchor_topic_ids": [
+            "14.04-02"
+          ],
+          "objective": "cambio",
+          "vignette": "Una mujer con endometriosis desea concebir ahora. Se propone un tratamiento supresor de la ovulación durante varios meses con el único objetivo de aumentar su probabilidad posterior de embarazo.",
+          "question": "¿Está indicado para mejorar la fertilidad por sí solo?",
+          "answer": "No. No debe prescribirse supresión ovárica con ese único objetivo.",
+          "discriminator": "con el único objetivo de aumentar su probabilidad posterior de embarazo",
+          "reason": "La supresión ovárica puede tratar dolor, pero no ha demostrado mejorar la fertilidad en mujeres infértiles con endometriosis.",
+          "initial_action": "Definir un plan reproductivo según edad, reserva, anatomía y otros factores de infertilidad.",
+          "limits": "Distinguir el objetivo reproductivo del control del dolor. No se está evaluando aquí una pauta específica de reproducción asistida.",
+          "evidence": [
+            {
+              "source_id": "eshre-endo-2022",
+              "locator": "Recommendation 39; III.1.a Ovarian suppression",
+              "support": "La supresión ovárica puede tratar dolor, pero no ha demostrado mejorar la fertilidad en mujeres infértiles con endometriosis."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "14.05",
+      "title": "Dolor pélvico agudo y masa",
+      "related_sections": [],
+      "scenarios": [
+        {
+          "id": "14.05-c2-01",
+          "anchor_topic_ids": [
+            "14.05-01"
+          ],
+          "objective": "cambio",
+          "vignette": "Una mujer premenopáusica tiene un quiste ovárico funcional simple sin datos de complicación. No necesita anticoncepción, pero le ofrecen una píldora combinada para que el quiste desaparezca antes.",
+          "question": "¿La píldora combinada acelera la resolución del quiste existente?",
+          "answer": "No se recomienda con ese objetivo: no acelera su resolución.",
+          "discriminator": "para que el quiste desaparezca antes",
+          "reason": "Los anticonceptivos combinados no promueven la resolución de los quistes funcionales existentes.",
+          "initial_action": "Seleccionar vigilancia y control según tamaño, síntomas y evolución, sin añadir la píldora solo para resolver el quiste.",
+          "limits": "La guía citada es de 2011 y se aplica a masas premenopáusicas. Una masa persistente o compleja requiere reevaluación.",
+          "evidence": [
+            {
+              "source_id": "rcog-mass-2011",
+              "locator": "Green-top 62 section 6.3, pp7–8: combined oral contraceptives and functional cysts",
+              "support": "Los anticonceptivos combinados no promueven la resolución de los quistes funcionales existentes."
+            }
+          ]
+        },
+        {
+          "id": "14.05-c2-02",
+          "anchor_topic_ids": [
+            "14.05-02"
+          ],
+          "objective": "cambio",
+          "vignette": "Durante la laparoscopia de una adolescente se confirma torsión anexial. El ovario se ve azul oscuro, pero conserva su integridad y puede destorcerse.",
+          "question": "¿El color oscuro por sí solo obliga a extirpar el ovario?",
+          "answer": "No. Se recomienda detorsión y conservación cuando sean posibles.",
+          "discriminator": "conserva su integridad y puede destorcerse",
+          "reason": "La apariencia oscura no predice de forma fiable la viabilidad; la función ovárica puede recuperarse después de la detorsión.",
+          "initial_action": "Favorecer manejo quirúrgico conservador por el equipo ginecológico.",
+          "limits": "La conservación no siempre es posible, por ejemplo si el tejido se desintegra. La recomendación citada corresponde a adolescentes.",
+          "evidence": [
+            {
+              "source_id": "acog-torsion-2019",
+              "locator": "Committee Opinion 783: recommendations and surgical management, pp e56/e59",
+              "support": "La apariencia oscura no predice de forma fiable la viabilidad; la función ovárica puede recuperarse después de la detorsión."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "14.06",
+      "title": "Flujo y prurito",
+      "related_sections": [],
+      "scenarios": [
+        {
+          "id": "14.06-c2-01",
+          "anchor_topic_ids": [
+            "14.06-01"
+          ],
+          "objective": "dato_faltante",
+          "vignette": "Una mujer tiene ardor y flujo después de usar productos intravaginales. No se han realizado exploración, pH ni microscopía.",
+          "question": "¿Puede elegirse un antimicrobiano solo por el relato?",
+          "answer": "No; evaluar etiología infecciosa y no infecciosa.",
+          "discriminator": "productos intravaginales",
+          "reason": "Los síntomas son inespecíficos y pueden reflejar irritación.",
+          "initial_action": "Explorar y obtener pruebas disponibles.",
+          "limits": "El antecedente no excluye infección simultánea.",
+          "evidence": [
+            {
+              "source_id": "cdc-vag-2021",
+              "locator": "History alone is insufficient; noninfectious causes",
+              "support": "Los síntomas son inespecíficos y pueden reflejar irritación."
+            }
+          ]
+        },
+        {
+          "id": "14.06-c2-02",
+          "anchor_topic_ids": [
+            "14.06-02"
+          ],
+          "objective": "dato_faltante",
+          "vignette": "Una mujer sin flujo anormal, olor ni prurito solicita una prueba molecular de vaginosis bacteriana como parte de un panel de rutina. No está embarazada.",
+          "question": "¿Está bien establecido el rendimiento de esa prueba en una persona sin síntomas?",
+          "answer": "No. Las pruebas moleculares de vaginosis se recomiendan para pacientes sintomáticas.",
+          "discriminator": "sin flujo anormal, olor ni prurito",
+          "reason": "La precisión de estas pruebas no está bien definida en mujeres asintomáticas; no debe trasladarse sin más su rendimiento diagnóstico.",
+          "initial_action": "Revisar la indicación del panel y realizar el tamizaje de ITS que corresponda por edad y exposición.",
+          "limits": "Una prueba de vaginosis no sustituye el tamizaje específico de ITS ni su evaluación clínica.",
+          "evidence": [
+            {
+              "source_id": "cdc-bv-2021",
+              "locator": "Diagnostic considerations: BV NAATs should be used among symptomatic women only",
+              "support": "La precisión de estas pruebas no está bien definida en mujeres asintomáticas; no debe trasladarse sin más su rendimiento diagnóstico."
+            }
+          ]
+        },
+        {
+          "id": "14.06-c2-03",
+          "anchor_topic_ids": [
+            "14.06-03"
+          ],
+          "objective": "contraste",
+          "vignette": "Una mujer no embarazada tiene un cultivo vaginal positivo para Candida obtenido durante una revisión. No presenta prurito, dolor, flujo anormal ni signos inflamatorios.",
+          "question": "¿El cultivo positivo por sí solo exige antifúngico?",
+          "answer": "No. Puede representar colonización sin candidiasis sintomática.",
+          "discriminator": "No presenta prurito, dolor, flujo anormal ni signos inflamatorios",
+          "reason": "Candida puede estar presente sin enfermedad. Su detección sin síntomas o signos no es indicación de tratamiento.",
+          "initial_action": "Evitar tratamiento solo por el cultivo y explicar cuándo debe solicitar una nueva evaluación.",
+          "limits": "Una paciente con síntomas requiere valoración clínica aunque su primer examen sea negativo.",
+          "evidence": [
+            {
+              "source_id": "cdc-candida-2021",
+              "locator": "Uncomplicated VVC: diagnostic considerations, asymptomatic positive culture",
+              "support": "Candida puede estar presente sin enfermedad. Su detección sin síntomas o signos no es indicación de tratamiento."
+            }
+          ]
+        },
+        {
+          "id": "14.06-c2-04",
+          "anchor_topic_ids": [
+            "14.06-04"
+          ],
+          "objective": "dato_faltante",
+          "vignette": "Una paciente tiene flujo y cervicitis. La preparación en fresco no muestra tricomonas; persisten los síntomas.",
+          "question": "¿Qué prueba puede resolver la sospecha?",
+          "answer": "Prueba molecular para Trichomonas.",
+          "discriminator": "persisten los síntomas",
+          "reason": "La microscopía negativa tiene sensibilidad limitada.",
+          "initial_action": "Solicitar NAAT si está disponible.",
+          "limits": "La disponibilidad local condiciona la prueba.",
+          "evidence": [
+            {
+              "source_id": "cdc-trich-2021",
+              "locator": "Diagnostic considerations: wet mount and NAAT",
+              "support": "La microscopía negativa tiene sensibilidad limitada."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "14.07",
+      "title": "Dolor pélvico febril/ITS",
+      "related_sections": [],
+      "scenarios": [
+        {
+          "id": "14.07-c2-01",
+          "anchor_topic_ids": [
+            "14.07-01"
+          ],
+          "objective": "cambio",
+          "vignette": "Una paciente completó tratamiento para clamidia. Reinició relaciones con una pareja que nunca recibió atención y presenta nueva cervicitis.",
+          "question": "¿Qué explica con frecuencia la recurrencia?",
+          "answer": "Reinfección por pareja sin tratar.",
+          "discriminator": "pareja que nunca recibió atención",
+          "reason": "La atención de parejas es parte del control de la infección.",
+          "initial_action": "Reevaluar, tratar y organizar atención de parejas.",
+          "limits": "No asumir resistencia sin evaluar exposición y adherencia.",
+          "evidence": [
+            {
+              "source_id": "cdc-chlamydia-2021",
+              "locator": "Follow-up and management of sex partners",
+              "support": "La atención de parejas es parte del control de la infección."
+            }
+          ]
+        },
+        {
+          "id": "14.07-c2-02",
+          "anchor_topic_ids": [
+            "14.07-02"
+          ],
+          "objective": "cambio",
+          "vignette": "Una mujer usa DIU de cobre y recibe tratamiento para enfermedad pélvica inflamatoria leve. Está estable, desea mantener el método y puede acudir a revisión.",
+          "question": "¿Debe retirarse el DIU de inmediato por el diagnóstico?",
+          "answer": "No es necesario retirarlo de rutina al iniciar el tratamiento.",
+          "discriminator": "desea mantener el método y puede acudir a revisión",
+          "reason": "El DIU puede mantenerse con antibióticos y seguimiento estrecho. La falta de mejoría modifica esa decisión.",
+          "initial_action": "Tratar la infección y reevaluar en 48–72 horas; considerar retiro si no mejora.",
+          "limits": "Este caso no autoriza insertar un nuevo DIU con infección activa. La evidencia de retención procede principalmente de dispositivos no hormonales.",
+          "evidence": [
+            {
+              "source_id": "cdc-pid-2021",
+              "locator": "Special considerations: Intrauterine Devices",
+              "support": "El DIU puede mantenerse con antibióticos y seguimiento estrecho. La falta de mejoría modifica esa decisión."
+            }
+          ]
+        },
+        {
+          "id": "14.07-c2-03",
+          "anchor_topic_ids": [
+            "14.07-03"
+          ],
+          "objective": "cambio",
+          "vignette": "Una mujer completó el tratamiento de EPI por clamidia con dolor perihepático. Ya no tiene síntomas, cumplió la pauta, sus parejas recibieron atención y no tuvo nuevas exposiciones. Un control molecular tomado 14 días después sigue positivo.",
+          "question": "¿Ese resultado temprano demuestra fracaso del tratamiento?",
+          "answer": "No. Puede detectar material de microorganismos no viables.",
+          "discriminator": "tomado 14 días después",
+          "reason": "Las pruebas de amplificación antes de cuatro semanas pueden seguir positivas sin infección viable y no prueban fracaso por sí solas.",
+          "initial_action": "Revisar evolución y adherencia; no cambiar automáticamente los antibióticos solo por ese control temprano.",
+          "limits": "La persistencia de dolor, fiebre, incumplimiento o nueva exposición exige reevaluación. El seguimiento del embarazo tiene indicaciones específicas.",
+          "evidence": [
+            {
+              "source_id": "cdc-chlamydia-2021",
+              "locator": "Follow-up: avoid NAAT less than4weeks after completion of therapy",
+              "support": "Las pruebas de amplificación antes de cuatro semanas pueden seguir positivas sin infección viable y no prueban fracaso por sí solas."
+            }
+          ]
+        },
+        {
+          "id": "14.07-c2-04",
+          "anchor_topic_ids": [
+            "14.07-04"
+          ],
+          "objective": "cambio",
+          "vignette": "Una mujer con infertilidad tubaria tiene hidrosálpinx comunicante visible por ultrasonido y daño tubario de mal pronóstico. Planea fertilización in vitro; no hay infección aguda.",
+          "question": "¿Qué intervención tubaria debe valorarse antes de la fertilización in vitro?",
+          "answer": "Salpingectomía u oclusión proximal de la trompa afectada, según evaluación especializada.",
+          "discriminator": "hidrosálpinx comunicante visible por ultrasonido y daño tubario de mal pronóstico",
+          "reason": "El hidrosálpinx puede disminuir el éxito de la fertilización in vitro; su desconexión de la cavidad uterina puede mejorar los resultados.",
+          "initial_action": "Referir a reproducción para discutir beneficio, riesgo quirúrgico y elección del procedimiento.",
+          "limits": "No aplicar esta conducta a toda dilatación tubaria sin caracterizar anatomía y proyecto reproductivo.",
+          "evidence": [
+            {
+              "source_id": "asrm-tubal-2021",
+              "locator": "Poor prognosis distal tubal disease: salpingectomy or tubal occlusion before IVF",
+              "support": "El hidrosálpinx puede disminuir el éxito de la fertilización in vitro; su desconexión de la cavidad uterina puede mejorar los resultados."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "14.08",
+      "title": "Bulto vulvar doloroso",
+      "related_sections": [],
+      "scenarios": [
+        {
+          "id": "14.08-c2-01",
+          "anchor_topic_ids": [
+            "14.08-01"
+          ],
+          "objective": "gravedad",
+          "vignette": "Una mujer tiene bulto vulvar muy doloroso, eritema que se extiende y fiebre. No puede sentarse.",
+          "question": "¿Es suficiente observarlo como quiste asintomático?",
+          "answer": "No; evaluar absceso y extensión infecciosa.",
+          "discriminator": "eritema que se extiende y fiebre",
+          "reason": "La inflamación sistémica cambia la prioridad.",
+          "initial_action": "Solicitar valoración ginecológica para control del foco.",
+          "limits": "Requiere confirmar origen vulvar; esta guía respalda el control del absceso, no una técnica ginecológica específica.",
+          "evidence": [
+            {
+              "source_id": "idsa-ssti-2014",
+              "locator": "Purulent SSTI recommendations II.3–4; abscess evidence summary",
+              "support": "La inflamación sistémica cambia la prioridad."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "14.09",
+      "title": "Infertilidad",
+      "related_sections": [],
+      "scenarios": [
+        {
+          "id": "14.09-c2-01",
+          "anchor_topic_ids": [
+            "14.09-01"
+          ],
+          "objective": "cambio",
+          "vignette": "Una mujer de 42 años busca embarazo y lleva tres meses de relaciones regulares sin protección. No conoce factores de infertilidad y pregunta si debe esperar un año para estudiarse.",
+          "question": "¿Debe esperar hasta cumplir seis meses antes de iniciar el estudio?",
+          "answer": "No. Por encima de 40 años puede justificarse una evaluación más inmediata.",
+          "discriminator": "Una mujer de 42 años",
+          "reason": "El tiempo de espera para estudiar infertilidad cambia con la edad; por encima de 40 años la evaluación puede iniciarse de forma más inmediata.",
+          "initial_action": "Ofrecer evaluación reproductiva sin imponer la espera de doce meses, e incluir a la pareja cuando corresponda.",
+          "limits": "La edad no establece por sí sola la causa ni garantiza que un tratamiento resulte eficaz.",
+          "evidence": [
+            {
+              "source_id": "asrm-infertility-2026",
+              "locator": "Conclusions: more immediate evaluation in women over40years",
+              "support": "El tiempo de espera para estudiar infertilidad cambia con la edad; por encima de40años la evaluación puede iniciarse de forma más inmediata."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "14.10",
+      "title": "Elección de anticonceptivo",
+      "related_sections": [],
+      "scenarios": [
+        {
+          "id": "14.10-c2-01",
+          "anchor_topic_ids": [
+            "14.10-01"
+          ],
+          "objective": "cambio",
+          "vignette": "Una mujer desea anticoncepción. Su pareja exige un método definitivo, pero ella expresa dudas cuando habla en privado.",
+          "question": "¿Qué guía la elección?",
+          "answer": "Decisión libre e informada de la paciente.",
+          "discriminator": "ella expresa dudas",
+          "reason": "El consentimiento no puede sustituirse por presión de terceros.",
+          "initial_action": "Ofrecer consejería confidencial y métodos reversibles.",
+          "limits": "La firma sola no demuestra consentimiento libre.",
+          "evidence": [
+            {
+              "source_id": "nom-fp-2026",
+              "locator": "5.4 Consejería y consentimiento informado",
+              "support": "El consentimiento no puede sustituirse por presión de terceros."
+            }
+          ]
+        },
+        {
+          "id": "14.10-c2-02",
+          "anchor_topic_ids": [
+            "14.10-02"
+          ],
+          "objective": "dato_faltante",
+          "vignette": "Una mujer solicita anticoncepción combinada. Su historia clínica y presión arterial ya se evaluaron, no tiene contraindicaciones conocidas y se excluyó razonablemente embarazo. No presenta síntomas ginecológicos; le exigen exploración pélvica antes de dar la píldora.",
+          "question": "¿Esa exploración debe ser un requisito rutinario para iniciar este método?",
+          "answer": "No. No se requiere exploración pélvica rutinaria antes de iniciar anticoncepción combinada.",
+          "discriminator": "No presenta síntomas ginecológicos",
+          "reason": "La exploración pélvica no detecta las condiciones principales que limitan el uso de este método; no debe añadirse como barrera rutinaria.",
+          "initial_action": "Iniciar el método elegido si es elegible y ofrecer la atención preventiva que corresponda por separado.",
+          "limits": "La presión arterial y los antecedentes sí requieren evaluación. Síntomas o hallazgos propios pueden indicar una exploración, aunque no sea un requisito del método.",
+          "evidence": [
+            {
+              "source_id": "cdc-chc-2024",
+              "locator": "Examinations and tests before initiation; pelvic examination",
+              "support": "El examen pélvico no es necesario antes de iniciar combinados en pacientes sin indicación clínica propia."
+            }
+          ]
+        },
+        {
+          "id": "14.10-c2-03",
+          "anchor_topic_ids": [
+            "14.10-03"
+          ],
+          "objective": "gravedad",
+          "vignette": "Una mujer de 38 años fuma veinte cigarrillos al día y solicita una píldora combinada. Su presión es normal y no tiene migraña.",
+          "question": "¿La presión normal hace aceptable un método combinado con estrógeno en este contexto?",
+          "answer": "No. El tabaquismo de esta intensidad a partir de 35 años es categoría4 para anticoncepción combinada.",
+          "discriminator": "de 38 años fuma veinte cigarrillos al día",
+          "reason": "La edad y la intensidad del tabaquismo modifican el riesgo vascular aunque la presión arterial sea normal.",
+          "initial_action": "Ofrecer una alternativa sin estrógeno conforme a su elegibilidad y apoyar el abandono del tabaco.",
+          "limits": "Categoría4 significa un riesgo inaceptable para ese método. No implica que todos los anticonceptivos estén contraindicados.",
+          "evidence": [
+            {
+              "source_id": "cdc-mec-2024",
+              "locator": "Table A1, smoking: age≥35years and≥15cigarettes/day",
+              "support": "La edad y la intensidad del tabaquismo modifican el riesgo vascular aunque la presión arterial sea normal."
+            }
+          ]
+        },
+        {
+          "id": "14.10-c2-04",
+          "anchor_topic_ids": [
+            "14.10-04"
+          ],
+          "objective": "contraste",
+          "vignette": "Una mujer con migraña con aura solicita anticoncepción oral. No tiene cáncer de mama ni otras contraindicaciones conocidas.",
+          "question": "¿Qué opción oral puede considerarse?",
+          "answer": "Píldora de progestágeno solo.",
+          "discriminator": "migraña con aura",
+          "reason": "La restricción del estrógeno no se aplica igual a todos los progestágenos.",
+          "initial_action": "Revisar elegibilidad y pauta del producto.",
+          "limits": "Las reglas por olvido dependen de la formulación.",
+          "evidence": [
+            {
+              "source_id": "cdc-mec-2024",
+              "locator": "Table A1: migraine, POP versus CHC",
+              "support": "La restricción del estrógeno no se aplica igual a todos los progestágenos."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "14.11",
+      "title": "Reversibles de larga duración",
+      "related_sections": [],
+      "scenarios": [
+        {
+          "id": "14.11-c2-01",
+          "anchor_topic_ids": [
+            "14.11-01"
+          ],
+          "objective": "cambio",
+          "vignette": "Una usuaria de implante presenta sangrado irregular. Está estable y desea retirarlo después de recibir información.",
+          "question": "¿Debe exigirse que lo conserve?",
+          "answer": "No; respetar su decisión de retiro.",
+          "discriminator": "desea retirarlo",
+          "reason": "La elección del método continúa durante su uso.",
+          "initial_action": "Evaluar el sangrado y organizar retiro y alternativa.",
+          "limits": "Excluir embarazo u otra causa según contexto.",
+          "evidence": [
+            {
+              "source_id": "nom-fp-2026",
+              "locator": "5.4 Autonomía y elección informada",
+              "support": "La elección del método continúa durante su uso."
+            }
+          ]
+        },
+        {
+          "id": "14.11-c2-02",
+          "anchor_topic_ids": [
+            "14.11-02"
+          ],
+          "objective": "contraste",
+          "vignette": "Una mujer con menstruaciones abundantes y anemia busca un método de larga duración. Considera DIU de cobre y de levonorgestrel.",
+          "question": "¿Qué dato pesa contra el cobre?",
+          "answer": "Puede aumentar el sangrado menstrual.",
+          "discriminator": "menstruaciones abundantes y anemia",
+          "reason": "El efecto sobre sangrado modifica la elección individual.",
+          "initial_action": "Corregir anemia y discutir alternativas.",
+          "limits": "La anemia no implica una prohibición absoluta del cobre.",
+          "evidence": [
+            {
+              "source_id": "cdc-mec-2024",
+              "locator": "Table A1: iron deficiency anemia; heavy bleeding",
+              "support": "El efecto sobre sangrado modifica la elección individual."
+            }
+          ]
+        },
+        {
+          "id": "14.11-c2-03",
+          "anchor_topic_ids": [
+            "14.11-03"
+          ],
+          "objective": "cambio",
+          "vignette": "Una mujer desea DIU de levonorgestrel. Tiene cáncer de mama activo.",
+          "question": "¿Es una opción hormonal adecuada ahora?",
+          "answer": "No; elegir una alternativa no hormonal apropiada.",
+          "discriminator": "cáncer de mama activo",
+          "reason": "La neoplasia mamaria activa contraindica métodos hormonales.",
+          "initial_action": "Coordinar elección con oncología y ginecología.",
+          "limits": "La cavidad uterina también debe permitir el método elegido.",
+          "evidence": [
+            {
+              "source_id": "cdc-mec-2024",
+              "locator": "Table A1: breast cancer current",
+              "support": "La neoplasia mamaria activa contraindica métodos hormonales."
+            }
+          ]
+        },
+        {
+          "id": "14.11-c2-04",
+          "anchor_topic_ids": [
+            "14.11-02",
+            "14.11-03"
+          ],
+          "objective": "contraste",
+          "vignette": "Una mujer solicita un DIU. Está asintomática, no tiene cervicitis purulenta y es razonablemente seguro que no está embarazada. Por su riesgo de ITS se toman muestras para clamidia y gonorrea; aún no se conocen los resultados.",
+          "question": "¿La espera de resultados exige posponer la inserción?",
+          "answer": "No por sí sola. El tamizaje indicado puede hacerse el día de la inserción.",
+          "discriminator": "Está asintomática, no tiene cervicitis purulenta",
+          "reason": "El tamizaje pendiente es distinto de una infección conocida o una cervicitis purulenta activa.",
+          "initial_action": "Completar la evaluación de elegibilidad e insertar si procede, con un plan para revisar resultados y tratar si es necesario.",
+          "limits": "No insertar ante clamidia o gonorrea conocidas ni cervicitis purulenta activa. Evaluar dolor pélvico o signos de infección.",
+          "evidence": [
+            {
+              "source_id": "cdc-iud-2024",
+              "locator": "Examinations and tests before initiation: STIs, same-day screening and placement",
+              "support": "El tamizaje pendiente es distinto de una infección conocida o una cervicitis purulenta activa."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "14.12",
+      "title": "Poscoital y definitivos",
+      "related_sections": [],
+      "scenarios": [
+        {
+          "id": "14.12-c2-01",
+          "anchor_topic_ids": [
+            "14.12-01"
+          ],
+          "objective": "cambio",
+          "vignette": "Una mujer tomó ulipristal como anticoncepción de emergencia. Desea iniciar hoy una píldora hormonal.",
+          "question": "¿Qué interacción debe evitarse?",
+          "answer": "Inicio inmediato de progestágeno tras ulipristal.",
+          "discriminator": "tomó ulipristal",
+          "reason": "El progestágeno puede reducir el efecto del ulipristal.",
+          "initial_action": "Explicar espera y protección adicional según SPR.",
+          "limits": "El intervalo específico depende del agente de emergencia.",
+          "evidence": [
+            {
+              "source_id": "cdc-ec-2024",
+              "locator": "Use of regular contraception after ECPs: UPA",
+              "support": "El progestágeno puede reducir el efecto del ulipristal."
+            }
+          ]
+        },
+        {
+          "id": "14.12-c2-02",
+          "anchor_topic_ids": [
+            "14.12-02"
+          ],
+          "objective": "cambio",
+          "vignette": "Una mujer usa una crema vaginal de azol para candidiasis. Planea usar su condón habitual de látex y no tiene otro método anticonceptivo.",
+          "question": "¿Qué advertencia específica necesita durante el uso de esa formulación?",
+          "answer": "La base oleosa de algunas cremas y supositorios puede debilitar el látex.",
+          "discriminator": "una crema vaginal de azol",
+          "reason": "La formulación del tratamiento puede afectar la integridad del condón o diafragma de látex; no basta revisar la técnica de colocación.",
+          "initial_action": "Comprobar el prospecto del producto y acordar protección compatible o abstinencia durante el intervalo indicado.",
+          "limits": "El intervalo y la compatibilidad dependen del producto. No generalizar esta interacción a todo antifúngico o material de barrera.",
+          "evidence": [
+            {
+              "source_id": "cdc-candida-2021",
+              "locator": "Treatment: oil-based creams/suppositories might weaken latex condoms and diaphragms",
+              "support": "La formulación del tratamiento puede afectar la integridad del condón o diafragma de látex; no basta revisar la técnica de colocación."
+            }
+          ]
+        },
+        {
+          "id": "14.12-c2-03",
+          "anchor_topic_ids": [
+            "14.12-03"
+          ],
+          "objective": "cambio",
+          "vignette": "Una madre de tres meses posparto sigue amenorreica y amamanta de forma exclusiva. Tras descartar razonablemente embarazo se coloca un DIU de levonorgestrel. No hay infección ni otra contraindicación.",
+          "question": "¿Necesita protección adicional contra embarazo durante siete días después de la inserción?",
+          "answer": "No en este escenario, porque cumple los criterios posparto de lactancia y amenorrea.",
+          "discriminator": "de tres meses posparto sigue amenorreica y amamanta de forma exclusiva",
+          "reason": "La recomendación de respaldo tras iniciar el DIU hormonal cambia cuando coinciden menos de seis meses posparto, amenorrea y lactancia completa o casi completa.",
+          "initial_action": "Explicar la protección desde esta inserción y la necesidad independiente de prevención de ITS.",
+          "limits": "Si no cumple esos criterios, revisar el intervalo de protección adicional. No usar la amenorrea aislada para excluir embarazo.",
+          "evidence": [
+            {
+              "source_id": "cdc-iud-2024",
+              "locator": "Initiation of LNG-IUDs: postpartum need for back-up contraception",
+              "support": "La recomendación de respaldo tras iniciar el DIU hormonal cambia cuando coinciden menos de seis meses posparto, amenorrea y lactancia completa o casi completa."
+            }
+          ]
+        },
+        {
+          "id": "14.12-c2-04",
+          "anchor_topic_ids": [
+            "14.12-04"
+          ],
+          "objective": "contraste",
+          "vignette": "Una mujer se recupera de oclusión tubaria laparoscópica realizada sin complicaciones. Pregunta si, como en la vasectomía de su pareja anterior, debe esperar una prueba de semen para confiar en el método.",
+          "question": "¿La oclusión tubaria laparoscópica requiere ese mismo periodo de espera?",
+          "answer": "No. Puede confiar en la anticoncepción desde el procedimiento tubario completado.",
+          "discriminator": "oclusión tubaria laparoscópica realizada sin complicaciones",
+          "reason": "La cirugía tubaria laparoscópica o abdominal ofrece protección inmediata; la espera de eliminación de espermatozoides corresponde a la vasectomía.",
+          "initial_action": "Aclarar las instrucciones posoperatorias y el riesgo residual de fallo, sin solicitar una verificación seminal para este método.",
+          "limits": "La protección anticonceptiva no elimina las restricciones de recuperación quirúrgica ni previene ITS. No extrapolar a procedimientos no descritos aquí.",
+          "evidence": [
+            {
+              "source_id": "cdc-permanent-2024",
+              "locator": "When tubal surgery is reliable for contraception",
+              "support": "La cirugía tubaria laparoscópica o abdominal ofrece protección inmediata; la espera de eliminación de espermatozoides corresponde a la vasectomía."
+            }
+          ]
+        },
+        {
+          "id": "14.12-c2-05",
+          "anchor_topic_ids": [
+            "14.12-05"
+          ],
+          "objective": "cambio",
+          "vignette": "Un hombre tuvo vasectomía hace dos días. No tiene fiebre, hematoma creciente ni dolor intenso; desea reiniciar la eyaculación porque sabe que aún necesita anticoncepción adicional.",
+          "question": "¿Qué indicación temprana depende de la cicatrización y no del conteo espermático?",
+          "answer": "Evitar la eyaculación aproximadamente durante la primera semana.",
+          "discriminator": "tuvo vasectomía hace dos días",
+          "reason": "El periodo inicial sin eyaculación permite la cicatrización de los sitios quirúrgicos; es distinto del tiempo necesario para verificar el éxito anticonceptivo.",
+          "initial_action": "Reforzar las instrucciones posoperatorias y programar el seguimiento seminal indicado.",
+          "limits": "Seguir las instrucciones del cirujano y evaluar signos de complicación. Cumplir una semana no confirma eficacia anticonceptiva.",
+          "evidence": [
+            {
+              "source_id": "cdc-permanent-2024",
+              "locator": "Post-procedure recommendations: refrain from ejaculation approximately1week",
+              "support": "El periodo inicial sin eyaculación permite la cicatrización de los sitios quirúrgicos; es distinto del tiempo necesario para verificar el éxito anticonceptivo."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "14.13",
+      "title": "Nódulo o dolor mamario",
+      "related_sections": [],
+      "scenarios": [
+        {
+          "id": "14.13-c2-01",
+          "anchor_topic_ids": [
+            "14.13-01"
+          ],
+          "objective": "cambio",
+          "vignette": "Una madre lactante tiene una masa mamaria sospechosa en imagen y ya se indicó biopsia con aguja gruesa. Desea continuar amamantando; teme que deba destetar antes para evitar una fístula de leche.",
+          "question": "¿Debe suspender la lactancia de rutina antes de la biopsia?",
+          "answer": "No. No se recomienda el destete previo como requisito para realizar la biopsia.",
+          "discriminator": "Desea continuar amamantando",
+          "reason": "El riesgo de fístula es raro y no debe impedir estudiar una lesión sospechosa; el destete abrupto tampoco es una medida recomendada para prevenirlo.",
+          "initial_action": "Coordinar la biopsia indicada y explicar los riesgos y cuidados locales sin imponer el destete.",
+          "limits": "Los tratamientos posteriores pueden tener otras restricciones. Este caso se refiere al procedimiento diagnóstico, no a cualquier fármaco oncológico.",
+          "evidence": [
+            {
+              "source_id": "asbrs-oncolactation-2025",
+              "locator": "Table1; Diagnostic Evaluation: percutaneous core needle biopsy during lactation",
+              "support": "La biopsia con aguja gruesa es segura durante la lactancia y no requiere interrumpirla; el riesgo de fístula es muy bajo."
+            }
+          ]
+        },
+        {
+          "id": "14.13-c2-02",
+          "anchor_topic_ids": [
+            "14.13-02"
+          ],
+          "objective": "contraste",
+          "vignette": "Una adolescente fue estudiada por una masa que parecía fibroadenoma. La pieza quirúrgica demuestra un tumor filoides. La exploración axilar no detecta ganglios sospechosos.",
+          "question": "¿Debe añadirse evaluación ganglionar axilar de rutina solo por ese diagnóstico?",
+          "answer": "No. El tratamiento se centra en la resección local adecuada del tumor.",
+          "discriminator": "tumor filoides",
+          "reason": "El manejo de este vecino del fibroadenoma difiere del de un carcinoma mamario con estadificación axilar; el resumen pediátrico no indica evaluación ganglionar rutinaria.",
+          "initial_action": "Revisar la histología y los márgenes con cirugía especializada para definir el manejo local.",
+          "limits": "El caso corresponde a una adolescente. Los ganglios clínicamente sospechosos o una histología diferente necesitan evaluación propia.",
+          "evidence": [
+            {
+              "source_id": "nci-child-breast-2024",
+              "locator": "Treatment of phyllodes tumors: surgery, wide local excision without mastectomy",
+              "support": "El manejo de este vecino del fibroadenoma difiere del de un carcinoma mamario con estadificación axilar; el resumen pediátrico no indica evaluación ganglionar rutinaria."
+            }
+          ]
+        },
+        {
+          "id": "14.13-c2-03",
+          "anchor_topic_ids": [
+            "14.13-03"
+          ],
+          "objective": "subtipo",
+          "vignette": "Una mujer lactante tiene una masa quística mamaria persistente. La aspiración indicada por síntomas obtiene líquido lechoso, sin pus ni sangre; no hay fiebre ni eritema.",
+          "question": "¿Qué variante relacionada con la lactancia explica mejor este hallazgo?",
+          "answer": "Galactocele, un quiste de retención de leche.",
+          "discriminator": "obtiene líquido lechoso, sin pus ni sangre",
+          "reason": "El contexto de lactancia y el contenido lácteo orientan a retención de leche en lugar de un quiste mamario simple habitual o un absceso.",
+          "initial_action": "Correlacionar con imagen y síntomas; acordar manejo y seguimiento si persiste o recurre.",
+          "limits": "Una masa atípica o persistente requiere evaluación mamaria. Un galactocele puede infectarse.",
+          "evidence": [
+            {
+              "source_id": "abm-mastitis-2022",
+              "locator": "Galactocele and infected galactocele, p366; recommendations f, p373",
+              "support": "La obstrucción retiene leche en una cavidad quística; la aspiración guiada puede confirmar el diagnóstico y las lesiones sintomáticas requieren valorar drenaje."
+            }
+          ]
+        },
+        {
+          "id": "14.13-c2-04",
+          "anchor_topic_ids": [
+            "14.13-04"
+          ],
+          "objective": "cambio",
+          "vignette": "Una mujer antes estudiada por cambios fibroquísticos presenta nuevas calcificaciones. La biopsia con aguja demuestra hiperplasia ductal atípica, con correlación radiológica y patológica.",
+          "question": "¿Puede manejarse igual que la mastalgia cíclica con estudios benignos?",
+          "answer": "No. Requiere consulta quirúrgica y valoración de resección y riesgo mamario.",
+          "discriminator": "hiperplasia ductal atípica",
+          "reason": "La atipia en una biopsia puede subestimar una lesión maligna y necesita una decisión distinta de los cambios fibroquísticos no proliferativos.",
+          "initial_action": "Referir a cirugía mamaria para decidir resección y seguimiento con la paciente.",
+          "limits": "La resección se recomienda en general, pero existen situaciones seleccionadas de vigilancia tras consulta especializada; no equivale a cáncer confirmado.",
+          "evidence": [
+            {
+              "source_id": "ontario-highrisk-2026",
+              "locator": "Table1 and section2.1.1: atypical ductal hyperplasia recommendations",
+              "support": "La atipia en una biopsia puede subestimar una lesión maligna y necesita una decisión distinta de los cambios fibroquísticos no proliferativos."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "14.14",
+      "title": "Secreción del pezón o lactancia dolorosa",
+      "related_sections": [],
+      "scenarios": [
+        {
+          "id": "14.14-c2-01",
+          "anchor_topic_ids": [
+            "14.14-01"
+          ],
+          "objective": "subtipo",
+          "vignette": "Una mujer sin descarga del pezón tiene una pequeña lesión detectada por imagen. La biopsia demuestra papiloma sin atipia y el equipo confirma concordancia radiológica y patológica; no hay crecimiento.",
+          "question": "¿Todo papiloma confirmado en este escenario exige resección de rutina?",
+          "answer": "No. Puede acordarse vigilancia tras consulta con cirugía mamaria.",
+          "discriminator": "papiloma sin atipia y el equipo confirma concordancia radiológica y patológica",
+          "reason": "La ausencia de atipia y la concordancia permiten una conducta distinta de la de un papiloma con atipia o una lesión discordante.",
+          "initial_action": "Revisar riesgos y preferencias con el equipo mamario y acordar vigilancia o resección según el caso.",
+          "limits": "Síntomas, crecimiento, discordancia u otros factores pueden favorecer resección. No extrapolar a una secreción patológica aún sin diagnóstico.",
+          "evidence": [
+            {
+              "source_id": "ontario-highrisk-2026",
+              "locator": "Table1 and sections2.4.1–2.4.2: pure papillary lesions without atypia",
+              "support": "La ausencia de atipia y la concordancia permiten una conducta distinta de la de un papiloma con atipia o una lesión discordante."
+            }
+          ]
+        },
+        {
+          "id": "14.14-c2-02",
+          "anchor_topic_ids": [
+            "14.14-02"
+          ],
+          "objective": "cambio",
+          "vignette": "Una madre lactante sigue con masa focal tras tratamiento de mastitis. El ultrasonido muestra una colección líquida.",
+          "question": "¿Qué intervención se añade?",
+          "answer": "Drenaje para control del absceso.",
+          "discriminator": "colección líquida",
+          "reason": "Una colección infectada requiere control del foco.",
+          "initial_action": "Organizar drenaje y cultivo.",
+          "limits": "La ausencia de fiebre no excluye absceso.",
+          "evidence": [
+            {
+              "source_id": "abm-mastitis-2022",
+              "locator": "Recommendations for abscess, p. 373",
+              "support": "Una colección infectada requiere control del foco."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "14.15",
+      "title": "Síntomas del climaterio",
+      "related_sections": [],
+      "scenarios": [
+        {
+          "id": "14.15-c2-01",
+          "anchor_topic_ids": [
+            "14.15-01"
+          ],
+          "objective": "cambio",
+          "vignette": "Una mujer posmenopáusica consulta por bochornos y sangrado vaginal nuevo. Solicita terapia hormonal sin más estudios.",
+          "question": "¿Qué debe evaluarse primero?",
+          "answer": "La causa del sangrado posmenopáusico.",
+          "discriminator": "sangrado vaginal nuevo",
+          "reason": "El sangrado no explicado exige descartar patología endometrial.",
+          "initial_action": "Iniciar estudio ginecológico antes de terapia sistémica.",
+          "limits": "Los bochornos no explican el sangrado.",
+          "evidence": [
+            {
+              "source_id": "ss-climaterio-2013",
+              "locator": "Terapia hormonal: evaluación previa y contraindicaciones",
+              "support": "El sangrado no explicado exige descartar patología endometrial."
+            }
+          ]
+        },
+        {
+          "id": "14.15-c2-02",
+          "anchor_topic_ids": [
+            "14.15-02"
+          ],
+          "objective": "gravedad",
+          "vignette": "Una mujer posmenopáusica recibe denosumab por osteoporosis. Su densidad ósea mejoró y desea omitir la siguiente dosis sin iniciar otro tratamiento.",
+          "question": "¿Puede aplicarse una pausa del fármaco sin un plan posterior?",
+          "answer": "No. No debe retrasarse ni suspenderse sin planificar tratamiento posterior apropiado.",
+          "discriminator": "omitir la siguiente dosis sin iniciar otro tratamiento",
+          "reason": "La interrupción puede causar rebote de resorción ósea, pérdida rápida de densidad y mayor riesgo de fracturas.",
+          "initial_action": "Coordinar continuidad o transición terapéutica antes de la fecha de la siguiente dosis.",
+          "limits": "La mejoría de densidad no elimina el riesgo del rebote. La elección y el momento de la transición requieren valoración individual.",
+          "evidence": [
+            {
+              "source_id": "endocrine-osteoporosis-2020",
+              "locator": "Denosumab recommendation3.3 and technical remarks",
+              "support": "La interrupción puede causar rebote de resorción ósea, pérdida rápida de densidad y mayor riesgo de fracturas."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "14.16",
+      "title": "Pérdida de orina/prolapso",
+      "related_sections": [],
+      "scenarios": [
+        {
+          "id": "14.16-c2-01",
+          "anchor_topic_ids": [
+            "14.16-01"
+          ],
+          "objective": "contraste",
+          "vignette": "Una mujer pierde orina al toser. También refiere bulto vaginal y dificultad para vaciar la vejiga.",
+          "question": "¿Qué dato requiere evaluación adicional?",
+          "answer": "Posible prolapso con disfunción de vaciado.",
+          "discriminator": "dificultad para vaciar la vejiga",
+          "reason": "La disfunción de vaciado impide tratarla como incontinencia de esfuerzo simple.",
+          "initial_action": "Explorar prolapso y medir residuo posmiccional.",
+          "limits": "La cirugía requiere evaluación individual.",
+          "evidence": [
+            {
+              "source_id": "eau-luts-2026",
+              "locator": "Stress urinary incontinence: additional evaluation; POP",
+              "support": "La disfunción de vaciado impide tratarla como incontinencia de esfuerzo simple."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
