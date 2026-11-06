@@ -40,10 +40,24 @@ const SESSION_KEY = "enarm-contraste-session";
 function newSession(kind: StudyKind, day: string): ActiveSession {
   return { id: crypto.randomUUID(), kind, day, started: Date.now(), answered: 0, active: 0 };
 }
-function readSession(day: string): ActiveSession | null {
+function readSession(day: string, key: string): ActiveSession | null {
   try {
-    const value = JSON.parse(localStorage.getItem(SESSION_KEY) || "null");
-    return value?.day === day && (value.kind === "new" || value.kind === "review") ? value : null;
+    const value = JSON.parse(localStorage.getItem(key) || "null");
+    return value?.day === day &&
+      typeof value.id === "string" &&
+      value.id.length > 0 &&
+      (value.kind === "new" || value.kind === "review") &&
+      typeof value.started === "number" &&
+      Number.isFinite(value.started) &&
+      value.started >= 0 &&
+      typeof value.answered === "number" &&
+      Number.isSafeInteger(value.answered) &&
+      value.answered >= 0 &&
+      typeof value.active === "number" &&
+      Number.isFinite(value.active) &&
+      value.active >= 0
+      ? value
+      : null;
   } catch {
     return null;
   }
@@ -68,21 +82,26 @@ export function useTodayStudy({
 }) {
   const stats = useMemo(() => summary(state, index, day), [state, index, day]);
   const plan = state.plan!;
+  const scope = `${state.workspace ?? "capa1"}:${plan.id}`;
+  const sessionKey = `${SESSION_KEY}:${scope}`;
+  // Old global counters could mix published and private cards. Keep them untouched,
+  // but never attribute their answers or time to a new space without card identities.
   const prefs = state.preferences;
   const size = prefs.session_size ?? 0;
   const [kind, setKind] = useState<StudyKind>(
     () =>
-      readSession(day)?.kind ??
+      readSession(day, sessionKey)?.kind ??
       (stats.new_goal > stats.new_goal_done || !stats.reviews_pending ? "new" : "review"),
   );
   const [extra, setExtra] = useState(0);
   const [session, setSession] = useState<ActiveSession>(
-    () => readSession(day) ?? newSession(kind, day),
+    () => readSession(day, sessionKey) ?? newSession(kind, day),
   );
   const [summaryOpen, setSummaryOpen] = useState<ActiveSession | null>(null);
   const { timer, pause, setTimer, setPause, startStudyTimer, takeBreak, endBreak } = useStudyTimers(
     {
       prefs,
+      scope,
       day,
       answered: session.answered,
       commit,
@@ -103,11 +122,11 @@ export function useTodayStudy({
   const delay = useRef<ReturnType<typeof setTimeout> | null>(null);
   useEffect(() => {
     try {
-      localStorage.setItem(SESSION_KEY, JSON.stringify(session));
+      localStorage.setItem(sessionKey, JSON.stringify(session));
     } catch {
       /* The session still works in this tab. */
     }
-  }, [session]);
+  }, [session, sessionKey]);
   useEffect(
     () => () => {
       if (delay.current) clearTimeout(delay.current);
@@ -125,8 +144,8 @@ export function useTodayStudy({
   }, [day]);
 
   const queue = useMemo(() => studyQueue(state, index, day, kind), [state, index, day, kind]);
-  const scope = prefs.session_scope,
-    scoped = scopeActive(scope);
+  const sessionScope = prefs.session_scope,
+    scoped = scopeActive(sessionScope);
   const scopedCounts = useMemo(
     () =>
       scoped
@@ -305,7 +324,7 @@ export function useTodayStudy({
     cheer,
     setCheer,
     queue,
-    scope,
+    scope: sessionScope,
     scoped,
     scopedCounts,
     clearScope,

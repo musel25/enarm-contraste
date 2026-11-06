@@ -226,6 +226,101 @@ test("a library subtest link retains its source study space", async ({ page }) =
   await expect(page.getByLabel("Espacio de estudio", { exact: true })).toHaveValue("capa2");
 });
 
+test("session limits and logged sessions belong to the space that answered", async ({ page }) => {
+  await fixture(page);
+  await page.goto("./#hoy-capa-2");
+  await startPlan(page);
+  await page.getByRole("button", { name: "Personalizar", exact: true }).click();
+  await page.getByLabel("Tarjetas por sesión").fill("1");
+  await page.getByRole("button", { name: "Guardar", exact: true }).click();
+  await page.getByRole("button", { name: "Hoy-capa 1", exact: true }).click();
+  await startPlan(page);
+  await page.getByRole("button", { name: "Mostrar respuesta", exact: true }).click();
+  await page.getByRole("button", { name: /^Bien/ }).click();
+  await expect(page.getByRole("progressbar", { name: "Meta diaria" })).toHaveAttribute(
+    "aria-valuenow",
+    "1",
+  );
+  await page.getByRole("button", { name: "Hoy-capa 2", exact: true }).click();
+  await expect(page.getByRole("region", { name: "Frente de la tarjeta" })).toBeVisible();
+  await page.getByRole("tab", { name: /Repasos/ }).click();
+  expect((await saved(page)).workspaces.capa2.sessions ?? []).toHaveLength(0);
+  await page.getByRole("button", { name: "Hoy-capa 1", exact: true }).click();
+  await expect(page.getByText(/Sesión de temas nuevos · 1 tarjeta/)).toBeVisible();
+  await page.getByRole("tab", { name: /Repasos/ }).click();
+  await expect.poll(async () => (await saved(page)).workspaces.capa1.sessions?.length).toBe(1);
+  expect((await saved(page)).workspaces.capa1.sessions![0].cards).toBe(1);
+});
+
+test("timers and breaks stay in their daily space after switches and reloads", async ({ page }) => {
+  await page.clock.install({ time: new Date("2026-11-06T12:00:00Z") });
+  await fixture(page);
+  await page.goto("./#hoy-capa-1");
+  await startPlan(page);
+  await page.getByRole("button", { name: /Cronometrar sesión$/ }).click();
+  await page.getByRole("button", { name: "Hoy-capa 2", exact: true }).click();
+  await startPlan(page);
+  await expect(page.getByRole("complementary", { name: "Temporizador de sesión" })).toHaveCount(0);
+  await page.getByRole("button", { name: "☕ Descanso", exact: true }).click();
+  await expect(
+    page.getByRole("heading", { name: "Estás en descanso.", exact: true }),
+  ).toBeVisible();
+  await page.getByRole("button", { name: "Hoy-capa 1", exact: true }).click();
+  await expect(page.getByRole("region", { name: "Frente de la tarjeta" })).toBeVisible();
+  await expect(page.getByRole("complementary", { name: "Temporizador de sesión" })).toBeVisible();
+  await page.getByRole("button", { name: "Hoy-capa 2", exact: true }).click();
+  await page.reload();
+  await expect(
+    page.getByRole("heading", { name: "Estás en descanso.", exact: true }),
+  ).toBeVisible();
+  await page.clock.runFor(6000);
+  await page.getByRole("button", { name: "Volver a estudiar", exact: true }).click();
+  await expect.poll(async () => (await saved(page)).workspaces.capa2.sessions?.length).toBe(1);
+  expect((await saved(page)).workspaces.capa2.sessions![0].kind).toBe("break");
+  expect((await saved(page)).workspaces.capa1.sessions ?? []).toHaveLength(0);
+});
+
+test("legacy mixed local session values remain preserved without assigning a new space", async ({
+  page,
+}) => {
+  await fixture(page);
+  await page.addInitScript(() => {
+    localStorage.setItem(
+      "enarm-contraste-session",
+      JSON.stringify({
+        id: "mixed-legacy-session",
+        kind: "new",
+        day: new Date().toISOString().slice(0, 10),
+        started: Date.now(),
+        answered: 47,
+        active: 300,
+      }),
+    );
+    for (const mode of ["timer", "break"])
+      localStorage.setItem(
+        `enarm-contraste-${mode}`,
+        JSON.stringify({
+          mode: mode === "timer" ? "study" : "break",
+          target: 300,
+          started: Date.now(),
+          paused_at: null,
+          paused_ms: 0,
+          alerted: false,
+        }),
+      );
+  });
+  await page.goto("./#hoy-capa-1");
+  await startPlan(page);
+  await expect(page.getByText(/Sesión de temas nuevos · 0 tarjetas/)).toBeVisible();
+  await expect(page.getByRole("complementary", { name: /Temporizador/ })).toHaveCount(0);
+  const preserved = await page.evaluate(() =>
+    ["session", "timer", "break"].map((key) => localStorage.getItem(`enarm-contraste-${key}`)),
+  );
+  expect(preserved.every((value) => value !== null)).toBe(true);
+  await page.getByRole("tab", { name: /Repasos/ }).click();
+  expect((await saved(page)).workspaces.capa1.sessions ?? []).toHaveLength(0);
+});
+
 for (const space of ["capa1", "capa2"]) {
   test(`${space} rejects a section payload from the other clinical layer`, async ({ page }) => {
     await fixture(page);

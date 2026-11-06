@@ -1,5 +1,5 @@
 import { test, expect, type Page } from "@playwright/test";
-import { mockCoach } from "./coach-fixtures";
+import { mockCoach, savedWorkspace } from "./coach-fixtures";
 
 test.use({ timezoneId: "UTC", reducedMotion: "reduce" });
 
@@ -181,20 +181,24 @@ test("question tags reach Mi avance and the subtest filters by question type", a
 
 test("the corner timer alerts when the time is over", async ({ page }) => {
   await mockCoach(page);
-  await page.addInitScript(() =>
-    localStorage.setItem(
-      "enarm-contraste-timer",
-      JSON.stringify({
-        mode: "study",
-        target: 60,
-        started: Date.now() - 61_000,
-        paused_at: null,
-        paused_ms: 0,
-        alerted: false,
-      }),
-    ),
-  );
   await start(page);
+  const plan = (await savedWorkspace(page)).plan!;
+  await page.addInitScript(
+    (id) =>
+      localStorage.setItem(
+        `enarm-contraste-timer:capa1:${id}`,
+        JSON.stringify({
+          mode: "study",
+          target: 60,
+          started: Date.now() - 61_000,
+          paused_at: null,
+          paused_ms: 0,
+          alerted: false,
+        }),
+      ),
+    plan.id,
+  );
+  await page.reload();
   const dock = page.getByRole("complementary", { name: "Temporizador de sesión" });
   await expect(dock).toContainText("¡Tiempo!");
   await expect(dock.getByRole("alert")).toContainText("Terminó tu tiempo");
