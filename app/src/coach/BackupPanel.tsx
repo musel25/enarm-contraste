@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import { Modal } from "../ui";
 import { downloadBackup, parseBackup } from "./storage";
 import { readBeforeImport } from "./repository";
-import type { CoachIndex, StoredStudyState, StudyProfile } from "./types";
+import type { StoredStudyState, StudyProfile } from "./types";
 import { layerOf, migrateProfile, studySpaces } from "./profile";
 import { caseMeta } from "../learning/model";
 import { clinicalCases } from "../learning/cases";
@@ -10,13 +10,11 @@ import { loadResources, loadSection } from "./resources";
 
 export default function BackupPanel({
   state,
-  index,
   saving,
   onImport,
   onClose,
 }: {
   state: StudyProfile;
-  index: CoachIndex;
   saving: boolean;
   onImport: (state: StoredStudyState) => Promise<boolean>;
   onClose: () => void;
@@ -47,7 +45,7 @@ export default function BackupPanel({
           !Object.values(next.created_cards).some((c) => c.layer === layerOf(space))
         )
           continue;
-        const layerIndex = layerOf(space) === 1 ? index : (await loadResources(undefined, 2)).index;
+        const layerIndex = (await loadResources(undefined, layerOf(space))).index;
         const published = layerIndex.cards.filter((c) => c.family !== "creadas");
         const ids = new Set(published.map((c) => c.id));
         const sections = new Set(published.map((c) => c.section_id));

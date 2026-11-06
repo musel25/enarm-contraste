@@ -45,10 +45,7 @@ export async function loadResources(
   layer: 1 | 2 = 1,
 ): Promise<{ manifest: StudyManifest; index: CoachIndex }> {
   const base = layer === 2 ? `${root}layers/capa2/` : root;
-  const response = await fetch(`${base}manifest.json`, { cache: "no-cache", signal });
-  if (!response.ok) throw new Error("No se pudo cargar el temario.");
-  const manifest: unknown = await response.json();
-  if (!isManifest(manifest)) throw new Error("El temario no es válido.");
+  const manifest = await loadManifest(signal, layer);
   const planner = (
     manifest as StudyManifest & { planner?: { url: string; sha256: string; cards: number } }
   ).planner;
@@ -67,8 +64,17 @@ export async function loadResources(
     index.cards.length !== planner.cards
   )
     throw new Error("El índice no coincide con el temario.");
-  roots.set(index.content_sha256, base);
   return { manifest, index };
+}
+
+export async function loadManifest(signal?: AbortSignal, layer: 1 | 2 = 1): Promise<StudyManifest> {
+  const base = layer === 2 ? `${root}layers/capa2/` : root;
+  const response = await fetch(`${base}manifest.json`, { cache: "no-cache", signal });
+  if (!response.ok) throw new Error("No se pudo cargar el temario.");
+  const manifest: unknown = await response.json();
+  if (!isManifest(manifest)) throw new Error("El temario no es válido.");
+  roots.set(manifest.content_sha256, base);
+  return manifest;
 }
 
 export function loadSection(id: string, hash: string): Promise<StudySection> {

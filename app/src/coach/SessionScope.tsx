@@ -82,7 +82,7 @@ export default function SessionScopePicker({
       topics: 0,
       section_id: id,
     })),
-  ];
+  ].filter((block) => index.cards.some((card) => card.block_id === block.id));
   const toggle = <T extends string>(list: T[], item: T) =>
     list.includes(item) ? list.filter((x) => x !== item) : [...list, item];
   return (

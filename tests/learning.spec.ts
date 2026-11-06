@@ -140,7 +140,7 @@ test("undoing a diagnostic answer does not block the next daily extra", async ({
   await page.getByRole("button", { name: /Empezar subtest/ }).click();
   await page.getByRole("button", { name: "Respuesta alfa", exact: true }).click();
   await expect(page.getByText("Respuesta correcta.", { exact: true })).toBeVisible();
-  await page.getByRole("button", { name: "Hoy", exact: true }).click();
+  await page.getByRole("button", { name: "Hoy-capa 1", exact: true }).click();
   await page.getByRole("button", { name: "Deshacer última respuesta", exact: true }).click();
   await page.getByRole("button", { name: /Una tarjeta más/ }).click();
   await expect(
@@ -179,7 +179,7 @@ test("library ratings appear in Mi avance and do not freeze a daily plan", async
   await expect(page.getByText("1 tarjeta reconocida", { exact: true })).toBeVisible();
   await page.getByRole("button", { name: "Mi avance", exact: true }).click();
   await expect(page.getByTestId("section-progress-01")).toContainText("1 de 5");
-  await page.getByRole("button", { name: "Hoy", exact: true }).click();
+  await page.getByRole("button", { name: "Hoy-capa 1", exact: true }).click();
   await page.getByRole("button", { name: "Tiempo diario", exact: true }).click();
   await page.getByLabel("Minutos por día", { exact: true }).fill("5");
   await page.getByRole("button", { name: "Empezar mi plan", exact: true }).click();
@@ -215,7 +215,7 @@ test("library practice on a new day does not replace the real daily assignment",
   await page.clock.fastForward(24 * 60 * 60 * 1000);
   await page.getByRole("button", { name: "Lo reconocí", exact: true }).click();
   await expect(page.getByText("1 tarjeta reconocida", { exact: true })).toBeVisible();
-  await page.getByRole("button", { name: "Hoy", exact: true }).click();
+  await page.getByRole("button", { name: "Hoy-capa 1", exact: true }).click();
   await expect(page.getByRole("progressbar", { name: "Meta diaria" })).toHaveAttribute(
     "aria-valuemax",
     "2",
@@ -230,7 +230,7 @@ test("a diagnostic backup can be exported and restored", async ({ page }) => {
   await page.getByRole("button", { name: /Empezar subtest/ }).click();
   await page.getByRole("button", { name: "Respuesta alfa", exact: true }).click();
   await expect(page.getByText("Respuesta correcta.", { exact: true })).toBeVisible();
-  await page.getByRole("button", { name: "Hoy", exact: true }).click();
+  await page.getByRole("button", { name: "Hoy-capa 1", exact: true }).click();
   await page.getByRole("button", { name: "Empezar mi plan", exact: true }).click();
   await page.getByRole("button", { name: "Copia de mi progreso" }).click();
   const downloaded = page.waitForEvent("download");
@@ -249,7 +249,7 @@ test("undo removes a new Library rating from both views", async ({ page }) => {
   await page.getByRole("button", { name: "Mostrar respuesta", exact: true }).click();
   await page.getByRole("button", { name: "Lo reconocí", exact: true }).click();
   await expect(page.getByText("1 tarjeta reconocida", { exact: true })).toBeVisible();
-  await page.getByRole("button", { name: "Hoy", exact: true }).click();
+  await page.getByRole("button", { name: "Hoy-capa 1", exact: true }).click();
   await page.getByRole("button", { name: "Empezar mi plan", exact: true }).click();
   await page.getByRole("button", { name: "Deshacer última respuesta", exact: true }).click();
   await page.getByRole("button", { name: "Biblioteca", exact: true }).click();

@@ -1,5 +1,6 @@
 import { cloudRequest } from "./cloud";
 import { isStudyProfile, migrateProfile } from "./profile";
+import { emptyState } from "./engine";
 import {
   cacheServerState,
   getProgressCode,
@@ -34,7 +35,10 @@ export async function readCoach(): Promise<StudyProfile> {
       try {
         remote = await cloudRequest(code, "", {
           expected_revision: 0,
-          state: cached,
+          state:
+            JSON.stringify(cached) === JSON.stringify(emptyState())
+              ? migrateProfile(cached)
+              : cached,
           preserve: false,
         });
       } catch (failure) {

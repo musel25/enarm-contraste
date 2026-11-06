@@ -176,6 +176,16 @@ test("migration retains unknown historic IDs and does not invent a new plan", ()
   assert.equal(profile.workspaces.capa2.plan, null);
 });
 
+test("migration accepts a legacy plan ID at the existing maximum length", () => {
+  const state = legacy();
+  state.plan!.id = "p".repeat(512);
+  assert.equal(validateState(state), true);
+  const profile = migrateProfile(state);
+  assert.equal(isStudyProfile(profile), true);
+  assert.equal(profile.workspaces.capa1.plan!.id, state.plan!.id);
+  assert.notEqual(profile.workspaces.creadas1.plan!.id, state.plan!.id);
+});
+
 test("profile validation rejects malformed types, workspace mixing and incorrect origins", () => {
   const profile = migrateProfile(legacy());
   for (const bad of [

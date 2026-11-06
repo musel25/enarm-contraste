@@ -1,6 +1,37 @@
 import { createHash } from "node:crypto";
 import type { Page } from "@playwright/test";
 import type { StudyCardData } from "../app/src/library-types";
+import { migrateProfile, spaceState } from "../app/src/coach/profile";
+import type {
+  StudyProfile,
+  StoredStudyState,
+  StudySpace,
+  CoachState,
+} from "../app/src/coach/types";
+
+export async function savedProfile(page: Page): Promise<StudyProfile> {
+  const state = await page.evaluate(
+    () =>
+      new Promise<StoredStudyState>((resolve, reject) => {
+        const open = indexedDB.open("enarm-coach-v1", 1);
+        open.onsuccess = () => {
+          const db = open.result;
+          const request = db.transaction("state").objectStore("state").get("current");
+          request.onsuccess = () => {
+            db.close();
+            resolve(request.result);
+          };
+          request.onerror = reject;
+        };
+        open.onerror = reject;
+      }),
+  );
+  return migrateProfile(state);
+}
+export async function savedWorkspace(page: Page, space: StudySpace = "capa1"): Promise<CoachState> {
+  const { workspace: _workspace, ...state } = spaceState(await savedProfile(page), space);
+  return state;
+}
 
 const sources = [{ label: "Libro de prueba", pages: [1] }];
 const base = { section_id: "01", block_id: "01.01", sources, context: "Un problema compartido." };

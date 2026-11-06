@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useState } from "react";
-import { isManifest, isSection, type StudyManifest, type StudySection } from "./library-types";
+import { type StudyManifest, type StudySection } from "./library-types";
 import { readState, validPractice, type ReviewContext } from "./storage";
 import StudyCard from "./StudyCard";
 import { Icon } from "./ui";
@@ -10,8 +10,12 @@ import { dateLabel, timezone } from "./coach/format";
 import { completionNotices } from "./learning/model";
 import { personalSection } from "./coach/personal";
 import type { CardFamily, CoachIndex } from "./coach/types";
+import { openSpace, StudySpaceSelect, useStudySpace } from "./coach/StudySpace";
+import { layerOf } from "./coach/profile";
+import { loadManifest, loadSection } from "./coach/resources";
 
 const root = `${import.meta.env.BASE_URL}study/`;
+
 const levels = [
   ["1", "1 · Reconocer el patrón"],
   ["2", "2 · Nombrar el diagnóstico"],
@@ -39,15 +43,19 @@ function LoadError({ onRetry }: { onRetry: () => void }) {
 }
 
 export default function Library({ onReview }: { onReview: (context: ReviewContext) => void }) {
+  const space = useStudySpace();
+  const params = new URLSearchParams(location.hash.split("?")[1] || "");
   const [manifest, setManifest] = useState<StudyManifest | null>(null);
   const [manifestError, setManifestError] = useState(false);
   const [attempt, setAttempt] = useState(0);
-  const [sectionId, setSectionId] = useState<string | null>(null);
+  const [sectionId, setSectionId] = useState<string | null>(params.get("section"));
   const [loadedSection, setSection] = useState<StudySection | null>(null);
   const [sectionError, setSectionError] = useState(false);
   const [sectionAttempt, setSectionAttempt] = useState(0);
   const [query, setQuery] = useState("");
-  const [family, setFamily] = useState<CardFamily>("eje");
+  const [family, setFamily] = useState<CardFamily>(
+    space.startsWith("creadas") ? "creadas" : params.get("family") === "madre" ? "madre" : "eje",
+  );
   const [level, setLevel] = useState("1");
   const [block, setBlock] = useState("all");
   const [index, setIndex] = useState(0);
@@ -58,6 +66,14 @@ export default function Library({ onReview }: { onReview: (context: ReviewContex
     [loadedSection, store.state.created_cards],
   );
   const [showSuspended, setShowSuspended] = useState(false);
+  useEffect(() => {
+    if (!section?.cards.length || space.startsWith("creadas")) return;
+    const available = section.cards.filter((card) => card.family === family);
+    const first = available[0] || section.cards[0];
+    if (!available.length) setFamily(first.family);
+    if (first.family === "madre" && !available.some((card) => card.level === Number(level)))
+      setLevel(String(first.level));
+  }, [section, space, family, level]);
   const day = useStudyDay(store.state.plan?.timezone || timezone());
   const [notice, setNotice] = useState("");
   const [pendingNotice, setPendingNotice] = useState("");
@@ -65,11 +81,8 @@ export default function Library({ onReview }: { onReview: (context: ReviewContex
   useEffect(() => {
     const abort = new AbortController();
     setManifestError(false);
-    fetch(`${root}manifest.json`, { signal: abort.signal, cache: "no-cache" })
-      .then(async (response) => {
-        if (!response.ok) throw new Error("Manifest request failed");
-        const data: unknown = await response.json();
-        if (!isManifest(data)) throw new Error("Invalid manifest");
+    loadManifest(abort.signal, layerOf(space))
+      .then((data) => {
         if (!abort.signal.aborted) setManifest(data);
       })
       .catch(() => {
@@ -85,11 +98,8 @@ export default function Library({ onReview }: { onReview: (context: ReviewContex
     setSectionError(false);
     const info = manifest.sections.find((s) => s.id === sectionId);
     if (!info) return;
-    fetch(`${root}${info.url}?v=${manifest.content_sha256}`, { signal: abort.signal })
-      .then(async (response) => {
-        if (!response.ok) throw new Error("Section request failed");
-        const data: unknown = await response.json();
-        if (!isSection(data) || data.id !== sectionId) throw new Error("Invalid section");
+    loadSection(sectionId, manifest.content_sha256)
+      .then((data) => {
         if (!abort.signal.aborted) setSection(data);
       })
       .catch(() => {
@@ -113,7 +123,7 @@ export default function Library({ onReview }: { onReview: (context: ReviewContex
     setIndex((old) => Math.min(old, Math.max(0, cards.length - 1)));
   }, [cards.length]);
   const card = cards[index];
-  const combined = { ...progress };
+  const combined = space === "capa1" ? { ...progress } : {};
   for (const [id, memory] of Object.entries(store.state.progress))
     if (!id.startsWith("clinical/") && memory.last_rating)
       combined[id] = memory.last_rating >= 3 ? "known" : "again";
@@ -181,6 +191,20 @@ export default function Library({ onReview }: { onReview: (context: ReviewContex
     });
   };
   const changeFamily = (value: CardFamily) => {
+    if ((value === "creadas") !== space.startsWith("creadas")) {
+      openSpace(
+        value === "creadas"
+          ? layerOf(space) === 1
+            ? "creadas1"
+            : "creadas2"
+          : layerOf(space) === 1
+            ? "capa1"
+            : "capa2",
+        sectionId || undefined,
+        value,
+      );
+      return;
+    }
     setShowSuspended(false);
     if (value === "creadas" || block.endsWith(".creadas")) setBlock("all");
     setFamily(value);
@@ -257,6 +281,7 @@ export default function Library({ onReview }: { onReview: (context: ReviewContex
     : [];
   return (
     <main className="library-main" id="study" tabIndex={-1}>
+      <StudySpaceSelect />
       <p className="library-free-practice">
         Tus respuestas nuevas se registran en «Mi avance». Cada respuesta programa tu próximo
         repaso.

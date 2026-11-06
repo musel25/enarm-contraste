@@ -103,10 +103,15 @@ export function migrateProfile(input: StoredStudyState): StudyProfile {
   for (const space of ["capa1", "creadas1"] as const) {
     const own = (id: string) => ownerOf(id, catalog) === space;
     const personal = isPersonalSpace(space);
+    const derivedId = `creadas1/${original.plan?.id.slice(0, 128) || "plan"}`;
     const plan = original.plan
       ? {
           ...original.plan,
-          id: personal ? `creadas1/${original.plan.id}` : original.plan.id,
+          id: personal
+            ? derivedId === original.plan.id
+              ? `${derivedId}/migrado`
+              : derivedId
+            : original.plan.id,
           families: personal
             ? ["creadas" as const]
             : original.plan.families.filter((f) => f !== "creadas"),

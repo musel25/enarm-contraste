@@ -17,6 +17,8 @@ import { loadResources } from "./resources";
 import { downloadBackup, getAccountName } from "./storage";
 import Today from "./Today";
 import type { CoachIndex, CoachState, Forecast } from "./types";
+import { useStudySpace } from "./StudySpace";
+import { isPersonalSpace, layerOf, spaceLabels } from "./profile";
 
 function ReadyCoach({
   manifest,
@@ -30,6 +32,7 @@ function ReadyCoach({
   onReview: (context: ReviewContext) => void;
 }) {
   const store = useCoachStore();
+  const space = useStudySpace();
   const { state, loading, saving, error, latest, commit, reload } = store;
   const index = useMemo(() => personalIndex(baseIndex, state), [baseIndex, state.created_cards]);
   const day = useStudyDay(state.plan?.timezone || timezone());
@@ -146,7 +149,31 @@ function ReadyCoach({
           </div>
         </div>
       )}
-      {!state.plan || editing ? (
+      <div className="study-space-heading">
+        <strong>{spaceLabels[space]}</strong>
+        <span>
+          {isPersonalSpace(space)
+            ? "Tus flashcards personales"
+            : layerOf(space) === 2
+              ? "Variantes, contrastes y decisiones clínicas"
+              : "Reconocer el patrón típico"}
+        </span>
+      </div>
+      {isPersonalSpace(space) && !index.cards.length ? (
+        <main id="study" className="coach-main" tabIndex={-1}>
+          <h1>Todavía no tienes flashcards en esta capa.</h1>
+          <p>Abre una tarjeta de la capa {layerOf(space)} y usa Añadir flashcard.</p>
+          <p>Las tarjetas guardadas aparecerán aquí con sus temas nuevos y repasos.</p>
+          <button
+            className="coach-primary"
+            onClick={() => {
+              location.hash = layerOf(space) === 1 ? "#hoy-capa-1" : "#hoy-capa-2";
+            }}
+          >
+            Estudiar capa {layerOf(space)}
+          </button>
+        </main>
+      ) : !state.plan || editing ? (
         <PlanSetup
           key={store.generation}
           state={state}
@@ -203,7 +230,6 @@ function ReadyCoach({
       {backup && (
         <BackupPanel
           state={store.pendingProfile || store.profile}
-          index={index}
           saving={saving || !!error}
           onClose={() => setBackup(false)}
           onImport={async (candidate) => {
@@ -223,6 +249,7 @@ export default function Coach({
   suspended: boolean;
   onReview: (context: ReviewContext) => void;
 }) {
+  const space = useStudySpace();
   const [resources, setResources] = useState<{ manifest: StudyManifest; index: CoachIndex } | null>(
     null,
   );
@@ -231,7 +258,7 @@ export default function Coach({
   useEffect(() => {
     const controller = new AbortController();
     setError("");
-    loadResources(controller.signal)
+    loadResources(controller.signal, layerOf(space))
       .then((data) => {
         if (!controller.signal.aborted) setResources(data);
       })

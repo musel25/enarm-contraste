@@ -1,6 +1,6 @@
 import { test, expect, type Page } from "@playwright/test";
-import { coachCards, mockCoach } from "./coach-fixtures";
-import type { CoachState } from "../app/src/coach/types";
+import { coachCards, mockCoach, savedWorkspace, savedProfile } from "./coach-fixtures";
+import type { StudySpace } from "../app/src/coach/types";
 
 test.use({ timezoneId: "UTC", reducedMotion: "reduce" });
 test.beforeEach(async ({ page }) => {
@@ -22,41 +22,20 @@ async function create(page: Page, front = "Pregunta personal") {
   await page.getByRole("button", { name: "Guardar flashcard", exact: true }).click();
   await expect(page.getByText("Flashcard guardada en Creadas.", { exact: true })).toBeVisible();
 }
-async function snapshot(page: Page): Promise<CoachState> {
-  return page.evaluate(
-    () =>
-      new Promise((resolve, reject) => {
-        const open = indexedDB.open("enarm-coach-v1", 1);
-        open.onsuccess = () => {
-          const db = open.result;
-          const request = db.transaction("state").objectStore("state").get("current");
-          request.onsuccess = () => {
-            resolve(request.result);
-            db.close();
-          };
-          request.onerror = () => reject(new Error("Read failed"));
-        };
-      }),
-  );
-}
+const snapshot = (page: Page, space: StudySpace = "capa1") => savedWorkspace(page, space);
 async function library(page: Page) {
   await page.getByRole("button", { name: "Biblioteca", exact: true }).click();
   await page.getByRole("button", { name: /Sección de prueba/ }).click();
 }
 
-test("a legacy plan studies only Creadas, preserves its goal, grades and undoes", async ({
-  page,
-}) => {
+test("the created-card tab preserves the source goal, grades and undoes", async ({ page }) => {
   await start(page);
   const before = await snapshot(page);
   await create(page);
-  await page.reload();
-  await page.getByRole("button", { name: "Personalizar", exact: true }).click();
-  await page.getByRole("button", { name: "Creadas", exact: true }).click();
-  await page.getByRole("button", { name: "Guardar", exact: true }).click();
-  await page
-    .getByRole("button", { name: "Seguir con temas nuevos de tu selección", exact: true })
-    .click();
+  await page.getByRole("button", { name: "Capa 1 creadas", exact: true }).click();
+  await page.getByRole("button", { name: "Tiempo diario", exact: true }).click();
+  await page.getByLabel("Minutos por día", { exact: true }).fill("5");
+  await page.getByRole("button", { name: "Empezar mi plan", exact: true }).click();
   await expect(page.getByRole("heading", { name: "Pregunta personal", exact: true })).toBeVisible();
   await page.getByRole("button", { name: "Mostrar respuesta", exact: true }).click();
   await expect(page.getByRole("region", { name: "Respuesta de la tarjeta" })).toContainText(
@@ -64,16 +43,18 @@ test("a legacy plan studies only Creadas, preserves its goal, grades and undoes"
   );
   await expect(page.locator(".library-answer b")).toHaveCount(0);
   await page.getByRole("button", { name: /^Bien/ }).click();
-  await expect(page.getByRole("heading", { name: /No quedan tarjetas/ })).toBeVisible();
-  const rated = await snapshot(page);
-  expect(rated.days[Object.keys(before.days)[0]].ids).toEqual(
+  await expect(
+    page.getByRole("heading", { name: "Tu meta de hoy está completa.", exact: true }),
+  ).toBeVisible();
+  const rated = await snapshot(page, "creadas1");
+  expect((await snapshot(page)).days[Object.keys(before.days)[0]].ids).toEqual(
     before.days[Object.keys(before.days)[0]].ids,
   );
   expect(rated.history).toHaveLength(1);
   expect(Object.keys(rated.created_cards ?? {})).toHaveLength(1);
   await page.getByRole("button", { name: "Deshacer última respuesta", exact: true }).click();
   await expect(page.getByRole("heading", { name: "Pregunta personal", exact: true })).toBeVisible();
-  expect((await snapshot(page)).history).toHaveLength(0);
+  expect((await snapshot(page, "creadas1")).history).toHaveLength(0);
 });
 
 test("section Creadas and Suspendidas preserve cards and restore both card types", async ({
@@ -94,13 +75,15 @@ test("section Creadas and Suspendidas preserve cards and restore both card types
   ).toBeVisible();
   await page.getByRole("button", { name: /^Suspendidas/ }).click();
   await expect(page.getByRole("button", { name: "Reintegrar flashcard", exact: true })).toHaveCount(
-    2,
+    1,
   );
   await expect(page.getByRole("button", { name: "Lo reconocí", exact: true })).toHaveCount(0);
   const personal = page
     .locator("article")
     .filter({ has: page.getByRole("heading", { name: "Pregunta personal", exact: true }) });
   await personal.getByRole("button", { name: "Reintegrar flashcard", exact: true }).click();
+  await page.getByRole("button", { name: "Eje Clínico", exact: true }).click();
+  await page.getByRole("button", { name: /^Suspendidas/ }).click();
   await expect(page.getByRole("button", { name: "Reintegrar flashcard", exact: true })).toHaveCount(
     1,
   );
@@ -131,6 +114,7 @@ test("created cards enter subtests and suspension skips an unanswered subtest ca
   expect((await snapshot(page)).history).toHaveLength(0);
   await page.getByRole("button", { name: "Terminar subtest", exact: true }).click();
   await page.getByRole("button", { name: "Volver a mi avance", exact: true }).click();
+  await page.getByLabel("Espacio de estudio", { exact: true }).selectOption("creadas1");
   await page
     .getByRole("group", { name: "Tipo de pregunta", exact: true })
     .getByRole("button", { name: "Creadas", exact: true })
@@ -155,10 +139,8 @@ test("library authoring without a plan fits a phone and supports Creadas-only pl
     page.getByRole("heading", { name: "Creada en biblioteca", exact: true }),
   ).toBeVisible();
   expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true);
-  await page.getByRole("button", { name: "Hoy", exact: true }).click();
+  await page.getByRole("button", { name: "Capa 1 creadas", exact: true }).click();
   await page.getByRole("button", { name: "Tiempo diario", exact: true }).click();
-  await page.getByLabel("Eje Clínico", { exact: false }).uncheck();
-  await page.getByLabel("Patrones Madre", { exact: false }).uncheck();
   await page.getByLabel("Creadas", { exact: false }).check();
   await page.getByLabel("Minutos por día", { exact: true }).fill("5");
   await page.getByRole("button", { name: "Empezar mi plan", exact: true }).click();
@@ -203,8 +185,8 @@ test("a backup restores personal-card content, study history and suspension into
   await expect(
     page.getByText("No hay flashcards creadas en esta selección.", { exact: true }),
   ).toBeVisible();
-  const saved = await snapshot(page);
-  await page.getByRole("button", { name: "Hoy", exact: true }).click();
+  const saved = await savedProfile(page);
+  await page.getByRole("button", { name: "Hoy-capa 1", exact: true }).click();
   await page.getByRole("button", { name: "Copia de mi progreso", exact: true }).click();
   const downloaded = page.waitForEvent("download");
   await page.getByRole("button", { name: "Exportar mi progreso", exact: true }).click();
@@ -221,11 +203,9 @@ test("a backup restores personal-card content, study history and suspension into
   await expect(page.getByText("Copia comprobada", { exact: true })).toBeVisible();
   await page.getByRole("button", { name: "Reemplazar con esta copia", exact: true }).click();
   await expect(page.getByRole("dialog")).toHaveCount(0);
-  const restored = await snapshot(page);
+  const restored = await savedProfile(page);
   expect(restored.created_cards).toEqual(saved.created_cards);
-  expect(restored.suspended_cards).toEqual(saved.suspended_cards);
-  expect(restored.progress).toEqual(saved.progress);
-  expect(restored.history).toEqual(saved.history);
+  expect(restored.workspaces).toEqual(saved.workspaces);
 });
 
 test("a failed card creation in a subtest can retry without losing the draft", async ({ page }) => {

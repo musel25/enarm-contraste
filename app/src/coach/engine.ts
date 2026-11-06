@@ -1205,7 +1205,11 @@ export function validateState(value: unknown): value is CoachState {
         !isDay(day) ||
         !object(assignment) ||
         assignment.day !== day ||
-        !textId(assignment.plan_key) ||
+        !(
+          typeof assignment.plan_key === "string" &&
+          assignment.plan_key.length <= 1024 &&
+          textId(assignment.plan_key.slice(0, 512))
+        ) ||
         !strings(assignment.ids) ||
         !strings(assignment.new_ids) ||
         !strings(assignment.extra_ids) ||
