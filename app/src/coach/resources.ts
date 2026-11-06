@@ -2,6 +2,7 @@ import { isManifest, isSection, type StudyManifest, type StudySection } from "..
 import type { CoachIndex } from "./types";
 
 const root = `${import.meta.env.BASE_URL}study/`;
+const roots = new Map<string, string>();
 const sections = new Map<string, Promise<StudySection>>();
 const object = (x: unknown): x is Record<string, unknown> =>
   typeof x === "object" && x !== null && !Array.isArray(x);
@@ -41,8 +42,10 @@ export function validIndex(value: unknown): value is CoachIndex {
 
 export async function loadResources(
   signal?: AbortSignal,
+  layer: 1 | 2 = 1,
 ): Promise<{ manifest: StudyManifest; index: CoachIndex }> {
-  const response = await fetch(`${root}manifest.json`, { cache: "no-cache", signal });
+  const base = layer === 2 ? `${root}layers/capa2/` : root;
+  const response = await fetch(`${base}manifest.json`, { cache: "no-cache", signal });
   if (!response.ok) throw new Error("No se pudo cargar el temario.");
   const manifest: unknown = await response.json();
   if (!isManifest(manifest)) throw new Error("El temario no es válido.");
@@ -51,7 +54,7 @@ export async function loadResources(
   ).planner;
   if (!planner || planner.url !== "index.json" || typeof planner.sha256 !== "string")
     throw new Error("El índice de estudio no está disponible.");
-  const indexResponse = await fetch(`${root}index.json?v=${planner.sha256}`, { signal });
+  const indexResponse = await fetch(`${base}index.json?v=${planner.sha256}`, { signal });
   if (!indexResponse.ok) throw new Error("No se pudo cargar el índice.");
   const buffer = await indexResponse.arrayBuffer();
   const digest = await crypto.subtle.digest("SHA-256", buffer);
@@ -64,6 +67,7 @@ export async function loadResources(
     index.cards.length !== planner.cards
   )
     throw new Error("El índice no coincide con el temario.");
+  roots.set(index.content_sha256, base);
   return { manifest, index };
 }
 
@@ -71,7 +75,7 @@ export function loadSection(id: string, hash: string): Promise<StudySection> {
   if (!/^\d{2}$/.test(id)) return Promise.reject(new Error("Sección no válida."));
   const key = `${hash}/${id}`;
   if (!sections.has(key)) {
-    const request = fetch(`${root}sections/${id}.json?v=${hash}`)
+    const request = fetch(`${roots.get(hash) || root}sections/${id}.json?v=${hash}`)
       .then(async (response) => {
         if (!response.ok) throw new Error("No se pudo cargar la tarjeta.");
         const data: unknown = await response.json();

@@ -25,11 +25,14 @@ const text = (x: unknown): x is string =>
 export function validPersonalCard(value: unknown): value is PersonalCard {
   if (
     !object(value) ||
-    Object.keys(value).sort().join(",") !==
-      "back,created_at,front,id,section_id,source_block_id,source_card_id"
+    Object.keys(value)
+      .filter((key) => key !== "layer")
+      .sort()
+      .join(",") !== "back,created_at,front,id,section_id,source_block_id,source_card_id"
   )
     return false;
   return (
+    (value.layer === undefined || value.layer === 1 || value.layer === 2) &&
     typeof value.id === "string" &&
     uuidId.test(value.id) &&
     typeof value.section_id === "string" &&
@@ -106,9 +109,13 @@ export function personalData(card: PersonalCard): StudyCardData {
 
 /** Keeps the published index intact. Repeated overlays never duplicate cards. */
 export function personalIndex(index: CoachIndex, state: CoachState): CoachIndex {
+  if (state.workspace === "capa1" || state.workspace === "capa2")
+    return { ...index, cards: index.cards.filter((card) => card.family !== "creadas") };
   const cards = Object.values(state.created_cards ?? {});
-  if (!cards.length) return index;
-  const original = index.cards.filter((card) => card.family !== "creadas");
+  if (!cards.length && !state.workspace?.startsWith("creadas")) return index;
+  const original = state.workspace?.startsWith("creadas")
+    ? []
+    : index.cards.filter((card) => card.family !== "creadas");
   return {
     ...index,
     cards: [
@@ -128,15 +135,19 @@ export function personalIndex(index: CoachIndex, state: CoachState): CoachIndex 
 }
 
 export function personalSection(section: StudySection, state: CoachState): StudySection {
+  if (state.workspace === "capa1" || state.workspace === "capa2") return section;
   const cards = Object.values(state.created_cards ?? {})
     .filter((card) => card.section_id === section.id)
     .map(personalData);
   return {
     ...section,
     blocks: [
-      ...section.blocks.filter((b) => b.id !== `${section.id}.creadas`),
+      ...(state.workspace ? [] : section.blocks.filter((b) => b.id !== `${section.id}.creadas`)),
       { id: `${section.id}.creadas`, title: "Creadas", topics: cards.length },
     ],
-    cards: [...section.cards.filter((card) => card.family !== "creadas"), ...cards],
+    cards: [
+      ...(state.workspace ? [] : section.cards.filter((card) => card.family !== "creadas")),
+      ...cards,
+    ],
   };
 }

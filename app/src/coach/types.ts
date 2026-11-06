@@ -2,6 +2,7 @@ import type { Card } from "ts-fsrs";
 
 export type Grade = 1 | 2 | 3 | 4;
 export type CardFamily = "eje" | "madre" | "creadas";
+export type StudySpace = "capa1" | "capa2" | "creadas1" | "creadas2";
 export type PersonalCard = {
   id: string;
   section_id: string;
@@ -10,6 +11,7 @@ export type PersonalCard = {
   front: string;
   back: string;
   created_at: string;
+  layer?: 1 | 2;
 };
 export type SerializedFSRS = Omit<Card, "due" | "last_review"> & {
   due: string;
@@ -111,7 +113,18 @@ export type CoachState = {
   sessions?: SessionLog[];
   created_cards?: Record<string, PersonalCard>;
   suspended_cards?: string[];
+  /** Runtime projection. Not stored inside a version-2 profile. */
+  workspace?: StudySpace;
 };
+export type StudyProfile = {
+  version: 2;
+  revision: number;
+  workspaces: Record<StudySpace, CoachState>;
+  created_cards: Record<string, PersonalCard>;
+  /** Original goals and aggregate sessions, before the separation. */
+  legacy: CoachState | null;
+};
+export type StoredStudyState = CoachState | StudyProfile;
 export type Forecast = {
   feasible: boolean;
   finish_day: string | null;

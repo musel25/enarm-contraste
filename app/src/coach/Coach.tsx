@@ -30,7 +30,7 @@ function ReadyCoach({
   onReview: (context: ReviewContext) => void;
 }) {
   const store = useCoachStore();
-  const { state, loading, saving, error, pending, latest, commit, reload } = store;
+  const { state, loading, saving, error, latest, commit, reload } = store;
   const index = useMemo(() => personalIndex(baseIndex, state), [baseIndex, state.created_cards]);
   const day = useStudyDay(state.plan?.timezone || timezone());
   const forecast = useForecast(state, index, day);
@@ -140,7 +140,7 @@ function ReadyCoach({
             ) : (
               <button onClick={() => void store.retry()}>Reintentar guardado</button>
             )}
-            <button onClick={() => downloadBackup(pending || state)}>
+            <button onClick={() => downloadBackup(store.pendingProfile || store.profile)}>
               Exportar copia de este intento
             </button>
           </div>
@@ -202,12 +202,12 @@ function ReadyCoach({
       )}
       {backup && (
         <BackupPanel
-          state={pending || state}
+          state={store.pendingProfile || store.profile}
           index={index}
           saving={saving || !!error}
           onClose={() => setBackup(false)}
           onImport={async (candidate) => {
-            const saved = await commit(() => candidate, true);
+            const saved = await store.importProfile(candidate);
             return !!saved;
           }}
         />

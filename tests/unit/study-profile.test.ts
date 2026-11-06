@@ -1,0 +1,192 @@
+import assert from "node:assert/strict";
+import test from "node:test";
+import { emptyState, recordStudy, selectedCards, validateState } from "../../app/src/coach/engine";
+import { addPersonalCard, personalIndex } from "../../app/src/coach/personal";
+import {
+  isStudyProfile,
+  migrateProfile,
+  spaceState,
+  updateSpace,
+} from "../../app/src/coach/profile";
+import type { CoachIndex, PersonalCard } from "../../app/src/coach/types";
+
+const day = "2026-11-06";
+const personal: PersonalCard = {
+  id: "created/6a9121c5-fc78-453b-90a7-d265eed8a90e",
+  section_id: "01",
+  source_card_id: "eje/01.01",
+  source_block_id: "01.01",
+  front: "Pregunta propia",
+  back: "Respuesta propia",
+  created_at: "2026-11-04T12:00:00.000Z",
+};
+const index: CoachIndex = {
+  schema_version: 1,
+  content_sha256: "test",
+  cards: [
+    {
+      id: "eje/01.01",
+      section_id: "01",
+      block_id: "01.01",
+      family: "eje",
+      level: 0,
+      order: 0,
+      new_seconds: 90,
+      review_seconds: 35,
+    },
+  ],
+};
+function legacy() {
+  let state = addPersonalCard(emptyState(), personal);
+  state.plan = {
+    id: "plan",
+    revision: 1,
+    mode: "time",
+    start_day: day,
+    deadline_day: null,
+    minutes_per_day: 10,
+    section_ids: ["01"],
+    families: ["eje", "creadas"],
+    timezone: "UTC",
+  };
+  state = recordStudy(state, index, "eje/01.01", 3, 20, day, "published-attempt");
+  state = recordStudy(state, index, personal.id, 2, 25, day, "personal-attempt");
+  state.tags = { [personal.id]: { deepen: true }, "eje/01.01": { order: 2 } };
+  state.suspended_cards = [personal.id];
+  state.sessions = [
+    {
+      id: "mixed-session",
+      day,
+      kind: "new",
+      started_at: `${day}T12:00:00.000Z`,
+      wall_seconds: 60,
+      active_seconds: 45,
+      cards: 2,
+      target_seconds: 300,
+    },
+  ];
+  state.revision = 9;
+  assert.equal(validateState(state), true);
+  return state;
+}
+
+test("migration splits all existing attempts without modifying memory or identities", () => {
+  const before = legacy();
+  const preserved = structuredClone(before);
+  const profile = migrateProfile(before);
+  assert.equal(isStudyProfile(profile), true);
+  assert.deepEqual(before, preserved);
+  assert.equal(profile.revision, before.revision);
+  assert.deepEqual(profile.workspaces.capa1.progress["eje/01.01"], before.progress["eje/01.01"]);
+  assert.deepEqual(profile.workspaces.creadas1.progress[personal.id], before.progress[personal.id]);
+  assert.equal(profile.created_cards[personal.id].layer, 1);
+  assert.deepEqual(
+    profile.workspaces.capa1.history.map((a) => a.id),
+    ["published-attempt"],
+  );
+  assert.deepEqual(
+    profile.workspaces.creadas1.history.map((a) => a.id),
+    ["personal-attempt"],
+  );
+  assert.deepEqual(profile.workspaces.capa2.history, []);
+  assert.deepEqual(profile.workspaces.creadas2.history, []);
+  assert.deepEqual(profile.workspaces.creadas1.undo, before.undo);
+  assert.equal(profile.workspaces.capa1.undo, null);
+  assert.deepEqual(profile.workspaces.creadas1.suspended_cards, [personal.id]);
+  assert.deepEqual(profile.legacy?.days, before.days);
+  assert.deepEqual(profile.legacy?.sessions, before.sessions);
+  assert.deepEqual(profile.workspaces.capa1.sessions, []);
+  assert.deepEqual(profile.workspaces.creadas1.sessions, []);
+  assert.deepEqual(migrateProfile(profile), profile);
+  assert.equal(isStudyProfile(JSON.parse(JSON.stringify(profile))), true);
+});
+
+test("migration partitions daily assignments, tags and costs without duplicating time", () => {
+  const before = legacy();
+  const profile = migrateProfile(before);
+  const first = profile.workspaces.capa1.days[day];
+  const created = profile.workspaces.creadas1.days[day];
+  assert.deepEqual([...first.ids, ...first.extra_ids], ["eje/01.01"]);
+  assert.deepEqual([...created.ids, ...created.extra_ids], [personal.id]);
+  assert.equal(first.budget_seconds + created.budget_seconds, before.days[day].budget_seconds);
+  assert.deepEqual(profile.workspaces.creadas1.tags, { [personal.id]: { deepen: true } });
+  assert.notEqual(profile.workspaces.capa1.plan?.id, profile.workspaces.creadas1.plan?.id);
+  assert.deepEqual(profile.workspaces.creadas1.plan?.families, ["creadas"]);
+  assert.equal(profile.workspaces.capa1.plan?.created_cards_enabled, false);
+});
+
+test("published spaces cannot schedule private cards while created spaces can", () => {
+  const profile = migrateProfile(legacy());
+  profile.workspaces.creadas1.suspended_cards = [];
+  const published = spaceState(profile, "capa1");
+  const created = spaceState(profile, "creadas1");
+  assert.deepEqual(
+    personalIndex(index, published).cards.map((c) => c.id),
+    ["eje/01.01"],
+  );
+  assert.deepEqual(
+    personalIndex(index, created).cards.map((c) => c.id),
+    [personal.id],
+  );
+  assert.deepEqual(
+    selectedCards(index, published.plan!, published).map((c) => c.id),
+    ["eje/01.01"],
+  );
+  assert.deepEqual(
+    selectedCards(index, created.plan!, created).map((c) => c.id),
+    [personal.id],
+  );
+});
+
+test("a confirmed space change preserves other spaces and derives personal ownership", () => {
+  const before = migrateProfile(legacy());
+  const selected = spaceState(before, "capa2");
+  const newCard = {
+    ...personal,
+    id: "created/1a9121c5-fc78-453b-90a7-d265eed8a90e",
+    source_card_id: "capa2/eje/01.01",
+    layer: 2 as const,
+  };
+  const next = updateSpace(before, "capa2", addPersonalCard(selected, newCard));
+  assert.equal(isStudyProfile(next), true);
+  assert.deepEqual(next.workspaces.capa1, before.workspaces.capa1);
+  assert.deepEqual(next.workspaces.creadas1, before.workspaces.creadas1);
+  assert.equal(next.workspaces.capa2.created_cards, undefined);
+  assert.equal(next.created_cards[newCard.id].layer, 2);
+  assert.equal(spaceState(next, "capa1").created_cards?.[newCard.id], undefined);
+  assert.equal(spaceState(next, "creadas2").created_cards?.[newCard.id]?.front, personal.front);
+  assert.throws(() =>
+    updateSpace(before, "capa1", addPersonalCard(spaceState(before, "capa1"), newCard)),
+  );
+});
+
+test("migration retains unknown historic IDs and does not invent a new plan", () => {
+  const state = emptyState();
+  state.progress["removed-source/card"] = {
+    card: null,
+    due_day: day,
+    introduced_day: "",
+    last_rating: null,
+    imported: true,
+  };
+  const profile = migrateProfile(state);
+  assert.deepEqual(profile.workspaces.capa1.progress, state.progress);
+  assert.equal(profile.workspaces.capa1.plan, null);
+  assert.equal(profile.workspaces.creadas1.plan, null);
+  assert.equal(profile.workspaces.capa2.plan, null);
+});
+
+test("profile validation rejects malformed types, workspace mixing and incorrect origins", () => {
+  const profile = migrateProfile(legacy());
+  for (const bad of [
+    null,
+    [],
+    { ...profile, revision: "9" },
+    { ...profile, workspaces: { ...profile.workspaces, capa2: null } },
+    { ...profile, workspaces: { ...profile.workspaces, extra: emptyState() } },
+    { ...profile, created_cards: { [personal.id]: { ...personal, layer: "1" } } },
+    { ...profile, created_cards: { [personal.id]: { ...personal, layer: 2 } } },
+    { ...profile, workspaces: { ...profile.workspaces, capa2: profile.workspaces.capa1 } },
+  ])
+    assert.equal(isStudyProfile(bad), false);
+});

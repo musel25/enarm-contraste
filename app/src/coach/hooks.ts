@@ -2,11 +2,15 @@ import { useCallback, useEffect, useRef, useState } from "react";
 import { dayKey, emptyState } from "./engine";
 import { SaveConflict } from "./storage";
 import { CloudUnavailable, readCoach, writeCoach } from "./repository";
-import type { CoachIndex, CoachState, Forecast } from "./types";
+import { migrateProfile, spaceState, updateSpace } from "./profile";
+import { useStudySpace } from "./StudySpace";
+import type { CoachIndex, CoachState, Forecast, StoredStudyState, StudyProfile } from "./types";
 
 export function useCoachStore() {
+  const space = useStudySpace();
   const [state, setState] = useState<CoachState>(emptyState);
-  const ref = useRef(state);
+  const [profile, setProfile] = useState(() => migrateProfile(emptyState()));
+  const ref = useRef(profile);
   const lock = useRef(false);
   const preservePending = useRef(false);
   const [loading, setLoading] = useState(true);
@@ -15,26 +19,34 @@ export function useCoachStore() {
   const [error, setError] = useState("");
   const [pending, setPending] = useState<CoachState | null>(null);
   const [latest, setLatest] = useState<CoachState | null>(null);
+  const [pendingProfile, setPendingProfile] = useState<StudyProfile | null>(null);
+  const accept = useCallback(
+    (saved: StudyProfile) => {
+      ref.current = saved;
+      setProfile(saved);
+      setState(spaceState(saved, space));
+    },
+    [space],
+  );
   const reload = useCallback(async () => {
     try {
       const saved = await readCoach();
-      ref.current = saved;
-      setState(saved);
+      accept(saved);
       setError("");
       setPending(null);
       setLatest(null);
+      setPendingProfile(null);
       preservePending.current = false;
     } catch (failure) {
       if (failure instanceof CloudUnavailable && failure.cached) {
-        ref.current = failure.cached;
-        setState(failure.cached);
+        accept(migrateProfile(failure.cached));
       }
       setError((failure as Error).message);
     } finally {
       setLoading(false);
       setGeneration((value) => value + 1);
     }
-  }, []);
+  }, [accept]);
   useEffect(() => {
     void reload();
   }, [reload]);
@@ -46,31 +58,65 @@ export function useCoachStore() {
       if (lock.current) return null;
       lock.current = true;
       setSaving(true);
-      let next: CoachState | null = null;
+      let next: StudyProfile | null = null;
       try {
-        next = change(ref.current);
+        next = updateSpace(ref.current, space, change(spaceState(ref.current, space)));
         const saved = await writeCoach(ref.current.revision, next, preserve);
-        ref.current = saved;
-        setState(saved);
+        accept(saved);
         setPending(null);
         setLatest(null);
+        setPendingProfile(null);
         setError("");
-        return saved;
+        return spaceState(saved, space);
       } catch (failure) {
-        setPending(next);
+        setPending(next ? spaceState(next, space) : null);
+        setPendingProfile(next);
         setError((failure as Error).message);
         preservePending.current = preserve;
-        if (failure instanceof SaveConflict) setLatest(failure.latest);
+        if (failure instanceof SaveConflict)
+          setLatest(spaceState(migrateProfile(failure.latest), space));
         return null;
       } finally {
         lock.current = false;
         setSaving(false);
       }
     },
-    [],
+    [space, accept],
+  );
+  const importProfile = useCallback(
+    async (candidate: StoredStudyState) => {
+      if (lock.current) return null;
+      lock.current = true;
+      setSaving(true);
+      const next = { ...migrateProfile(candidate), revision: ref.current.revision };
+      try {
+        const saved = await writeCoach(ref.current.revision, next, true);
+        accept(saved);
+        setPending(null);
+        setPendingProfile(null);
+        setLatest(null);
+        setError("");
+        return saved;
+      } catch (failure) {
+        setPending(spaceState(next, space));
+        setPendingProfile(next);
+        preservePending.current = true;
+        setError((failure as Error).message);
+        if (failure instanceof SaveConflict)
+          setLatest(spaceState(migrateProfile(failure.latest), space));
+        return null;
+      } finally {
+        lock.current = false;
+        setSaving(false);
+      }
+    },
+    [accept, space],
   );
   return {
     state,
+    profile,
+    pendingProfile,
+    importProfile,
     loading,
     generation,
     saving,
@@ -79,7 +125,12 @@ export function useCoachStore() {
     latest,
     commit,
     reload,
-    retry: () => (pending ? commit(() => pending, preservePending.current) : reload()),
+    retry: () =>
+      pendingProfile
+        ? preservePending.current
+          ? importProfile(pendingProfile)
+          : commit(() => spaceState(pendingProfile, space), false)
+        : reload(),
   };
 }
 

@@ -1,12 +1,12 @@
-import { validateState } from "./engine";
+import { validStoredState } from "./profile";
 import { SaveConflict } from "./storage";
-import type { CoachState } from "./types";
+import type { StoredStudyState } from "./types";
 
 export async function cloudRequest(
   code: string,
   path = "",
-  mutation?: { expected_revision: number; state: CoachState; preserve: boolean },
-): Promise<CoachState | null> {
+  mutation?: { expected_revision: number; state: StoredStudyState; preserve: boolean },
+): Promise<StoredStudyState | null> {
   const controller = new AbortController(),
     timer = setTimeout(() => controller.abort(), 12_000);
   try {
@@ -22,10 +22,11 @@ export async function cloudRequest(
     });
     if (response.status === 404 && !mutation) return null;
     const value = (await response.json()) as { state?: unknown; error?: string };
-    if (response.status === 409 && validateState(value.state)) throw new SaveConflict(value.state);
+    if (response.status === 409 && validStoredState(value.state))
+      throw new SaveConflict(value.state);
     if (!response.ok) throw new Error(value.error || "El VPS no pudo guardar el progreso.");
     if (value.state === null && path === "/previous") return null;
-    if (!validateState(value.state))
+    if (!validStoredState(value.state))
       throw new Error("La respuesta del VPS no pasó la comprobación.");
     return value.state;
   } catch (failure) {

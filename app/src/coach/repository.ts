@@ -1,5 +1,5 @@
 import { cloudRequest } from "./cloud";
-import { validateState } from "./engine";
+import { isStudyProfile, migrateProfile } from "./profile";
 import {
   cacheServerState,
   getProgressCode,
@@ -7,19 +7,19 @@ import {
   readCoach as readLocal,
   SaveConflict,
 } from "./storage";
-import type { CoachState } from "./types";
+import type { StoredStudyState, StudyProfile } from "./types";
 
 let activeCode: string | null = null;
 export class CloudUnavailable extends Error {
   constructor(
     message: string,
-    public cached: CoachState | null,
+    public cached: StoredStudyState | null,
   ) {
     super(message);
   }
 }
-export async function readCoach(): Promise<CoachState> {
-  let cached: CoachState | null = null;
+export async function readCoach(): Promise<StudyProfile> {
+  let cached: StoredStudyState | null = null;
   try {
     const code = await getProgressCode();
     let localFailure: unknown;
@@ -43,6 +43,20 @@ export async function readCoach(): Promise<CoachState> {
       }
     }
     if (!remote) throw new Error("El progreso no está disponible.");
+    if (!isStudyProfile(remote)) {
+      try {
+        remote = await cloudRequest(code, "", {
+          expected_revision: remote.revision,
+          state: migrateProfile(remote),
+          preserve: true,
+        });
+      } catch (failure) {
+        if (failure instanceof SaveConflict && isStudyProfile(failure.latest))
+          remote = failure.latest;
+        else throw failure;
+      }
+    }
+    if (!isStudyProfile(remote)) throw new Error("No se confirmó la separación de tu progreso.");
     activeCode = code;
     try {
       await cacheServerState(code, remote);
@@ -57,10 +71,10 @@ export async function readCoach(): Promise<CoachState> {
 
 export async function writeCoach(
   expected: number,
-  next: CoachState,
+  next: StudyProfile,
   preserve = false,
-): Promise<CoachState> {
-  if (!validateState(next)) throw new Error("El progreso no pasó la comprobación.");
+): Promise<StudyProfile> {
+  if (!isStudyProfile(next)) throw new Error("El progreso no pasó la comprobación.");
   const code = await getProgressCode();
   if (code !== activeCode) throw new SaveConflict(await readLocal());
   const saved = await cloudRequest(code, "", {
@@ -68,7 +82,7 @@ export async function writeCoach(
     state: next,
     preserve,
   });
-  if (!saved) throw new Error("No se confirmó el guardado en el VPS.");
+  if (!isStudyProfile(saved)) throw new Error("No se confirmó el guardado en el VPS.");
   try {
     await cacheServerState(code, saved);
   } catch {
@@ -77,7 +91,7 @@ export async function writeCoach(
   return saved;
 }
 
-export async function readBeforeImport(): Promise<CoachState | null> {
+export async function readBeforeImport(): Promise<StoredStudyState | null> {
   const code = await getProgressCode();
   return (await cloudRequest(code, "/previous")) || (await readLocalPrevious(code));
 }

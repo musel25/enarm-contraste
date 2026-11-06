@@ -1,10 +1,11 @@
-import { emptyState, validateState } from "./engine";
-import type { CoachState } from "./types";
+import { emptyState } from "./engine";
+import { validStoredState } from "./profile";
+import type { StoredStudyState } from "./types";
 
 export const DATABASE = "enarm-coach-v1";
 let connection: Promise<IDBDatabase> | null = null;
 export class SaveConflict extends Error {
-  constructor(public latest: CoachState) {
+  constructor(public latest: StoredStudyState) {
     super("El progreso cambió en otra pestaña.");
   }
 }
@@ -32,13 +33,13 @@ function open(): Promise<IDBDatabase> {
   return connection;
 }
 
-export async function readCoach(): Promise<CoachState> {
+export async function readCoach(): Promise<StoredStudyState> {
   const db = await open();
   return new Promise((resolve, reject) => {
     const request = db.transaction("state", "readonly").objectStore("state").get("current");
     request.onsuccess = () => {
       if (request.result === undefined) resolve(emptyState());
-      else if (validateState(request.result)) resolve(request.result);
+      else if (validStoredState(request.result)) resolve(request.result);
       else
         reject(
           new Error("El progreso guardado no es válido. Conserva tu copia antes de reemplazarlo."),
@@ -50,20 +51,20 @@ export async function readCoach(): Promise<CoachState> {
 
 export async function writeCoach(
   expectedRevision: number,
-  next: CoachState,
+  next: StoredStudyState,
   preserve = false,
-): Promise<CoachState> {
-  if (!validateState(next)) throw new Error("El progreso no pasó la comprobación.");
+): Promise<StoredStudyState> {
+  if (!validStoredState(next)) throw new Error("El progreso no pasó la comprobación.");
   const db = await open();
   return new Promise((resolve, reject) => {
     const transaction = db.transaction("state", "readwrite");
     const store = transaction.objectStore("state");
-    let saved: CoachState | null = null;
+    let saved: StoredStudyState | null = null;
     let failure: Error | null = null;
     const request = store.get("current");
     request.onsuccess = () => {
       const current = request.result === undefined ? emptyState() : request.result;
-      if (!validateState(current)) {
+      if (!validStoredState(current)) {
         failure = new Error("El progreso guardado no es válido. No se reemplazó.");
         transaction.abort();
         return;
@@ -92,7 +93,7 @@ export async function writeCoach(
   });
 }
 
-export async function readBeforeImport(code: string): Promise<CoachState | null> {
+export async function readBeforeImport(code: string): Promise<StoredStudyState | null> {
   const db = await open();
   return new Promise((resolve, reject) => {
     const store = db.transaction("state", "readonly").objectStore("state");
@@ -103,7 +104,7 @@ export async function readBeforeImport(code: string): Promise<CoachState | null>
         return;
       }
       const request = store.get("before-import");
-      request.onsuccess = () => resolve(validateState(request.result) ? request.result : null);
+      request.onsuccess = () => resolve(validStoredState(request.result) ? request.result : null);
       request.onerror = () => reject(new Error("No se pudo leer la copia anterior."));
     };
     owner.onerror = () => reject(new Error("No se pudo leer el perfil de la copia anterior."));
@@ -146,10 +147,10 @@ export async function getProgressCode(): Promise<string> {
 
 export async function cacheServerState(
   code: string,
-  state: CoachState,
+  state: StoredStudyState,
   switchFrom?: string,
 ): Promise<void> {
-  if (!validCode(code) || !validateState(state)) throw new Error("Progreso no válido.");
+  if (!validCode(code) || !validStoredState(state)) throw new Error("Progreso no válido.");
   const db = await open();
   return new Promise((resolve, reject) => {
     const tx = db.transaction("state", "readwrite"),
@@ -171,7 +172,7 @@ export async function cacheServerState(
           }
           if (
             switchFrom ||
-            !validateState(current.result) ||
+            !validStoredState(current.result) ||
             current.result.revision <= state.revision
           )
             store.put(state, "current");
@@ -196,7 +197,7 @@ export async function previousProgressCode(): Promise<string | null> {
   });
 }
 
-export function downloadBackup(state: CoachState) {
+export function downloadBackup(state: StoredStudyState) {
   const blob = new Blob(
     [
       JSON.stringify(
@@ -215,7 +216,7 @@ export function downloadBackup(state: CoachState) {
   setTimeout(() => URL.revokeObjectURL(url), 1000);
 }
 
-export async function parseBackup(file: File): Promise<CoachState> {
+export async function parseBackup(file: File): Promise<StoredStudyState> {
   if (file.size > 20_000_000) throw new Error("La copia supera el tamaño permitido.");
   let data: unknown;
   try {
@@ -224,7 +225,7 @@ export async function parseBackup(file: File): Promise<CoachState> {
     throw new Error("El archivo no contiene una copia JSON válida.");
   }
   const value = data as { format?: unknown; state?: unknown };
-  if (!value || value.format !== "enarm-coach" || !validateState(value.state))
+  if (!value || value.format !== "enarm-coach" || !validStoredState(value.state))
     throw new Error("La copia no contiene un plan válido. Tu progreso sigue intacto.");
   return value.state;
 }
@@ -242,10 +243,11 @@ export async function hasProgressCode(): Promise<boolean> {
 /** Uses the progress of a signed-in account on this browser. The old code stays recoverable. */
 export async function adoptCode(
   code: string,
-  state: CoachState | null,
+  state: StoredStudyState | null,
   username: string,
 ): Promise<void> {
-  if (!validCode(code) || (state && !validateState(state))) throw new Error("Progreso no válido.");
+  if (!validCode(code) || (state && !validStoredState(state)))
+    throw new Error("Progreso no válido.");
   const db = await open();
   return new Promise((resolve, reject) => {
     const tx = db.transaction("state", "readwrite"),

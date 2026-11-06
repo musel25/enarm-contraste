@@ -36,14 +36,20 @@ export default function PlanSetup({
     state.plan?.section_ids || manifest.sections.map((s) => s.id),
   );
   const [families, setFamilies] = useState<StudyPlan["families"]>(
-    state.plan
-      ? [
-          ...new Set([
-            ...state.plan.families,
-            ...(state.plan.created_cards_enabled !== false ? ["creadas" as const] : []),
-          ]),
-        ]
-      : ["eje", "madre", "creadas"],
+    state.workspace
+      ? state.workspace.startsWith("creadas")
+        ? ["creadas"]
+        : state.plan
+          ? state.plan.families.filter((f) => f !== "creadas")
+          : ["eje", "madre"]
+      : state.plan
+        ? [
+            ...new Set([
+              ...state.plan.families,
+              ...(state.plan.created_cards_enabled !== false ? ["creadas" as const] : []),
+            ]),
+          ]
+        : ["eje", "madre", "creadas"],
   );
   const [legacy] = useState(() =>
     readState<Record<string, "known" | "again">>(
@@ -52,7 +58,7 @@ export default function PlanSetup({
       {},
     ),
   );
-  const [keepLegacy, setKeepLegacy] = useState(true);
+  const [keepLegacy, setKeepLegacy] = useState(!state.workspace || state.workspace === "capa1");
   const [weekly, setWeekly] = useState<number[]>(state.plan?.weekly_load || [1, 1, 1, 1, 1, 1, 1]);
   const draft = useMemo(() => {
     const plan: StudyPlan = {
@@ -173,25 +179,33 @@ export default function PlanSetup({
                 ["madre", "Patrones Madre", "Reconocer, explicar y decidir"],
                 ["creadas", "Creadas", "Tus flashcards personales"],
               ] as const
-            ).map(([value, title, detail]) => (
-              <label key={value}>
-                <input
-                  type="checkbox"
-                  checked={families.includes(value)}
-                  onChange={() =>
-                    setFamilies((current) =>
-                      current.includes(value)
-                        ? current.filter((f) => f !== value)
-                        : [...current, value],
-                    )
-                  }
-                />
-                <span>
-                  <strong>{title}</strong>
-                  <small>{detail}</small>
-                </span>
-              </label>
-            ))}
+            )
+              .filter(
+                ([value]) =>
+                  !state.workspace ||
+                  (state.workspace.startsWith("creadas")
+                    ? value === "creadas"
+                    : value !== "creadas"),
+              )
+              .map(([value, title, detail]) => (
+                <label key={value}>
+                  <input
+                    type="checkbox"
+                    checked={families.includes(value)}
+                    onChange={() =>
+                      setFamilies((current) =>
+                        current.includes(value)
+                          ? current.filter((f) => f !== value)
+                          : [...current, value],
+                      )
+                    }
+                  />
+                  <span>
+                    <strong>{title}</strong>
+                    <small>{detail}</small>
+                  </span>
+                </label>
+              ))}
           </fieldset>
           <fieldset className="coach-week">
             <legend>Tu semana</legend>
@@ -257,16 +271,18 @@ export default function PlanSetup({
               ))}
             </div>
           </details>
-          {!state.plan && Object.keys(legacy).length > 0 && (
-            <label className="coach-legacy">
-              <input
-                type="checkbox"
-                checked={keepLegacy}
-                onChange={(e) => setKeepLegacy(e.target.checked)}
-              />
-              Conservar tarjetas marcadas antes. Se programarán repasos iniciales.
-            </label>
-          )}
+          {!state.plan &&
+            (!state.workspace || state.workspace === "capa1") &&
+            Object.keys(legacy).length > 0 && (
+              <label className="coach-legacy">
+                <input
+                  type="checkbox"
+                  checked={keepLegacy}
+                  onChange={(e) => setKeepLegacy(e.target.checked)}
+                />
+                Conservar tarjetas marcadas antes. Se programarán repasos iniciales.
+              </label>
+            )}
           <div className="coach-form-bottom">
             <button className="coach-primary" type="submit" disabled={!valid || saving || disabled}>
               {saving ? "Guardando…" : state.plan ? "Guardar mi plan" : "Empezar mi plan"}

@@ -386,7 +386,9 @@ export default function Learning({
             </button>
           )}
           <button onClick={() => void store.reload()}>Cargar progreso guardado</button>
-          <button onClick={() => downloadBackup(store.pending || state)}>Exportar copia</button>
+          <button onClick={() => downloadBackup(store.pendingProfile || store.profile)}>
+            Exportar copia
+          </button>
         </div>
       )}
       {test ? (
