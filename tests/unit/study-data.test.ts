@@ -38,6 +38,23 @@ test("manifest downloads require a literal supported URL", () => {
   );
 });
 
+test("coverage metadata rejects incorrect numeric and hash types", () => {
+  const coverage = {
+    sections: 1,
+    required_sections: 35,
+    scenarios: 5,
+    section_hashes: { "01": "a".repeat(64) },
+  };
+  assert.equal(isManifest({ ...coachManifest, coverage }), true);
+  for (const change of [
+    { sections: "1" },
+    { required_sections: false },
+    { scenarios: [] },
+    { section_hashes: ["a"] },
+  ])
+    assert.equal(isManifest({ ...coachManifest, coverage: { ...coverage, ...change } }), false);
+});
+
 test("section cards must belong to their section and declared blocks", () => {
   const section = {
     id: "01",

@@ -9,7 +9,7 @@ test("plans the verified full course and opens its assigned cards", async ({ pag
   });
   await page.goto("./");
   await expect(page.getByRole("region", { name: "Estimación del plan" })).toContainText(
-    "2,900 tarjetas",
+    "2,920 tarjetas",
   );
   await expect(page.getByRole("button", { name: "Empezar mi plan", exact: true })).toBeEnabled();
   expect(loaded).toHaveLength(0);
@@ -17,7 +17,7 @@ test("plans the verified full course and opens its assigned cards", async ({ pag
   await expect(page.getByRole("region", { name: "Frente de la tarjeta" })).toBeVisible();
   await expect(page.getByRole("progressbar", { name: "Primera vuelta" })).toHaveAttribute(
     "aria-valuemax",
-    "2900",
+    "2920",
   );
   expect(loaded).toHaveLength(1);
   await page.getByRole("button", { name: "Mostrar respuesta", exact: true }).click();

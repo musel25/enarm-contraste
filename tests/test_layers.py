@@ -159,6 +159,16 @@ class LayerTests(unittest.TestCase):
             reviewed(second_hydro)
             with self.assertRaisesRegex(ValueError, "Duplicate clinical vignette"):
                 build_layers(source, output, {"sections": [expected]})
+            (source / "reviews/capa2/01.json").unlink()
+            write(output / "manifest.json", base)
+            write(output / "index.json", {"cards": original_index})
+            with self.assertRaises(FileNotFoundError):
+                build_layers(source, output, {"sections": [expected]})
+            preview = build_layers(source, output, {"sections": [expected]}, reviewed_only=True)
+            self.assertEqual(preview["capa2"]["sections"], 1)
+            coverage = json.loads((output / "layers/capa2/manifest.json").read_text())["coverage"]
+            self.assertEqual(coverage["sections"], 1)
+            self.assertEqual(coverage["required_sections"], 2)
 
     def test_requires_an_independent_current_review(self):
         section, expected, review = fixture()

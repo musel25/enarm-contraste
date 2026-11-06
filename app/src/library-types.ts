@@ -43,6 +43,12 @@ export interface StudyManifest {
   content_sha256: string;
   review_status: string;
   professional_review: string;
+  coverage?: {
+    sections: number;
+    required_sections: number;
+    scenarios: number;
+    section_hashes: Record<string, string>;
+  };
   counts: {
     sections: number;
     blocks: number;
@@ -113,6 +119,19 @@ export function isManifest(value: unknown): value is StudyManifest {
   return (
     record(value) &&
     value.schema_version === 1 &&
+    (value.coverage === undefined ||
+      (record(value.coverage) &&
+        [value.coverage.sections, value.coverage.required_sections, value.coverage.scenarios].every(
+          (n) => typeof n === "number" && Number.isSafeInteger(n) && n >= 0,
+        ) &&
+        typeof value.coverage.sections === "number" &&
+        typeof value.coverage.required_sections === "number" &&
+        value.coverage.sections <= value.coverage.required_sections &&
+        record(value.coverage.section_hashes) &&
+        Object.entries(value.coverage.section_hashes).every(
+          ([id, hash]) =>
+            /^[0-9]{2}$/.test(id) && typeof hash === "string" && /^[a-f0-9]{64}$/.test(hash),
+        ))) &&
     typeof value.content_sha256 === "string" &&
     record(value.counts) &&
     ["sections", "blocks", "cards", "eje", "madre", "topic_occurrences"].every(

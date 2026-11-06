@@ -159,6 +159,14 @@ function ReadyCoach({
               : "Reconocer el patrón típico"}
         </span>
       </div>
+      {!isPersonalSpace(space) &&
+        manifest.coverage &&
+        manifest.coverage.sections < manifest.coverage.required_sections && (
+          <p role="status" className="study-space-heading">
+            Capa 2 en ampliación: {manifest.coverage.sections} de{" "}
+            {manifest.coverage.required_sections} secciones disponibles con revisión editorial.
+          </p>
+        )}
       {layerOf(space) === 2 && !isPersonalSpace(space) && (
         <p className="study-space-heading">
           Material de estudio con revisión editorial independiente. Revisión clínica profesional

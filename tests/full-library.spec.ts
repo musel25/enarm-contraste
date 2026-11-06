@@ -7,16 +7,16 @@ test("serves complete coverage and both verified Anki files", async ({ request }
   const manifest = await response.json();
   expect(manifest.review_status).toBe("cross-reviewed");
   expect(manifest.counts).toEqual({
-    sections: 34,
-    blocks: 355,
-    topic_occurrences: 730,
-    cards: 2900,
+    sections: 35,
+    blocks: 365,
+    topic_occurrences: 750,
+    cards: 2920,
     eje: 355,
-    madre: 2545,
+    madre: 2565,
   });
   expect(manifest.book.pages).toBe(1150);
-  expect(manifest.sections).toHaveLength(34);
-  expect(manifest.groups).toHaveLength(355);
+  expect(manifest.sections).toHaveLength(35);
+  expect(manifest.groups).toHaveLength(365);
   const sections = await Promise.all(
     manifest.sections.map(async (section: { url: string; cards: number }) => {
       const result = await request.get(`study/${section.url}`);
@@ -32,7 +32,7 @@ test("serves complete coverage and both verified Anki files", async ({ request }
       return data;
     }),
   );
-  expect(sections.reduce((count, section) => count + section.cards.length, 0)).toBe(2900);
+  expect(sections.reduce((count, section) => count + section.cards.length, 0)).toBe(2920);
   for (const download of manifest.downloads) {
     const result = await request.get(`study/${download.url}`);
     expect(result.ok()).toBe(true);

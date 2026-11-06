@@ -328,7 +328,7 @@ def write_index(root, manifest, cards):
     write_json(root / "manifest.json", manifest)
 
 
-def build_layers(source, output, catalog):
+def build_layers(source, output, catalog, reviewed_only=False):
     authored = json.loads((source / "capa1/35.json").read_text())
     if authored.get("layer") != 1:
         raise ValueError("Layer 1 supplement identity required")
@@ -353,6 +353,8 @@ def build_layers(source, output, catalog):
     review1 = json.loads((source / "reviews/capa1/35.json").read_text())
     validate_section(authored, review1, expected35)
     for expected in required:
+        if reviewed_only and not (source / f"reviews/capa2/{expected['id']}.json").exists():
+            continue
         section = json.loads((source / f"capa2/{expected['id']}.json").read_text())
         review = json.loads((source / f"reviews/capa2/{expected['id']}.json").read_text())
         if section["layer"] != 2:
@@ -416,7 +418,8 @@ def build_layers(source, output, catalog):
         for b in s["blocks"]
     ]
     manifest2["coverage"] = {
-        "sections": len(required),
+        "sections": len(compiled2),
+        "required_sections": len(required),
         "scenarios": sum(len(s["cards"]) for s in compiled2),
         "section_hashes": hashes,
     }
@@ -430,11 +433,19 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("--source", type=Path, default=Path("content/layers"))
     parser.add_argument("--output", type=Path, default=Path("app/public/study"))
+    parser.add_argument(
+        "--reviewed-only",
+        action="store_true",
+        help="Local preview: include only sections with a current independent review",
+    )
     args = parser.parse_args()
     print(
         json.dumps(
             build_layers(
-                args.source, args.output, json.loads(Path("content/curriculum.json").read_text())
+                args.source,
+                args.output,
+                json.loads(Path("content/curriculum.json").read_text()),
+                args.reviewed_only,
             ),
             ensure_ascii=False,
         )
