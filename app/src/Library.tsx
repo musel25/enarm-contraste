@@ -68,12 +68,14 @@ export default function Library({ onReview }: { onReview: (context: ReviewContex
   const [showSuspended, setShowSuspended] = useState(false);
   useEffect(() => {
     if (!section?.cards.length || space.startsWith("creadas")) return;
-    const available = section.cards.filter((card) => card.family === family);
-    const first = available[0] || section.cards[0];
+    const scoped = section.cards.filter((card) => block === "all" || card.block_id === block);
+    if (!scoped.length) return;
+    const available = scoped.filter((card) => card.family === family);
+    const first = available[0] || scoped[0];
     if (!available.length) setFamily(first.family);
     if (first.family === "madre" && !available.some((card) => card.level === Number(level)))
       setLevel(String(first.level));
-  }, [section, space, family, level]);
+  }, [section, space, family, level, block]);
   const day = useStudyDay(store.state.plan?.timezone || timezone());
   const [notice, setNotice] = useState("");
   const [pendingNotice, setPendingNotice] = useState("");
@@ -507,12 +509,19 @@ export default function Library({ onReview }: { onReview: (context: ReviewContex
                     </p>
                   )}
                   <div className="library-practice-links">
-                    <a href={`#avance?section=${sectionId}&block=${card.block_id}`}>
+                    <a href={`#avance?space=${space}&section=${sectionId}&block=${card.block_id}`}>
                       Crear subtest de este bloque
                     </a>
-                    <a href={`#avance?section=${sectionId}&block=${card.block_id}&mode=cases`}>
-                      Ampliar casos diagnósticos
-                    </a>
+                    {space === "capa1" &&
+                      section.cards.some(
+                        (item) => item.family === "eje" && item.block_id === card.block_id,
+                      ) && (
+                        <a
+                          href={`#avance?space=${space}&section=${sectionId}&block=${card.block_id}&mode=cases`}
+                        >
+                          Ampliar casos diagnósticos
+                        </a>
+                      )}
                   </div>
                   <div className="library-bottom-next">
                     <button
@@ -668,7 +677,7 @@ export default function Library({ onReview }: { onReview: (context: ReviewContex
             : "Contenido en preparación."}{" "}
           Material de estudio. Revisión clínica profesional pendiente.
         </p>
-        <a href={`${root}coverage.json`} download>
+        <a href={`${root}${layerOf(space) === 2 ? "layers/capa2/" : ""}manifest.json`} download>
           Consultar cobertura
         </a>
       </footer>

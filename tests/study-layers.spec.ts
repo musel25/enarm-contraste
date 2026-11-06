@@ -184,3 +184,44 @@ test("a clinical objective is saved only in the selected daily space", async ({ 
       .getByRole("button", { name: "Gravedad", exact: true }),
   ).toHaveAttribute("aria-pressed", "true");
 });
+
+test("choosing a block opens its available format instead of an empty default", async ({
+  page,
+}) => {
+  await fixture(page);
+  await page.route("**/study/sections/*.json*", (route) =>
+    route.fulfill({
+      json: {
+        id: "01",
+        title: "Sección de prueba",
+        blocks: [
+          { id: "01.01", title: "Comparar", topics: 1 },
+          { id: "01.02", title: "Decidir", topics: 1 },
+        ],
+        cards: [
+          coachCards[0],
+          { ...coachCards[4], id: "madre/4/01.02-01", block_id: "01.02", topic_id: "01.02-01" },
+        ],
+      },
+    }),
+  );
+  await page.goto("./#biblioteca");
+  await page.getByRole("button", { name: /Sección de prueba/ }).click();
+  await expect(page.getByRole("region", { name: "Frente de la tarjeta" })).toBeVisible();
+  await page.getByText("Elegir un bloque", { exact: true }).click();
+  await page.getByRole("combobox", { name: "Bloque", exact: true }).selectOption("01.02");
+  await expect(
+    page.getByRole("heading", { name: "Pregunta del nivel 4", exact: true }),
+  ).toBeVisible();
+  await expect(page.getByLabel("Nivel de Patrones Madre")).toHaveValue("4");
+});
+
+test("a library subtest link retains its source study space", async ({ page }) => {
+  await fixture(page);
+  await page.goto("./#biblioteca?space=capa2");
+  await page.getByRole("button", { name: /Sección de prueba/ }).click();
+  await expect(page.getByRole("region", { name: "Frente de la tarjeta" })).toBeVisible();
+  await page.getByRole("link", { name: "Crear subtest de este bloque", exact: true }).click();
+  await expect(page.getByRole("heading", { name: "Mi avance", exact: true })).toBeVisible();
+  await expect(page.getByLabel("Espacio de estudio", { exact: true })).toHaveValue("capa2");
+});
