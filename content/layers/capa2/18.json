@@ -1,0 +1,2094 @@
+{
+  "schema_version": 1,
+  "layer": 2,
+  "section_id": "18",
+  "title": "Infectología",
+  "author": "clinical-author-13-24; root-clinical-editor-18; clinical-author-25-35-section18-patch",
+  "sources": [
+    {
+      "id": "eanm-fuo-2024",
+      "label": "EANM. Consensus document on FDG PET/CT in fever and inflammation of unknown origin",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11224117/",
+      "version": "2024",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Role, general limitations and impact on management: nonspecific FDG uptake and biopsy targeting; full primary text NLM PMC11224117 checked"
+    },
+    {
+      "id": "idsa-diarrhea-2017",
+      "label": "IDSA. Infectious Diarrhea clinical practice guideline",
+      "url": "https://www.idsociety.org/practice-guideline/infectious-diarrhea/",
+      "version": "2017-10-19",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Ancillary management recommendations46–47; hydration and appropriate adult use of loperamide"
+    },
+    {
+      "id": "cdc-ameba",
+      "label": "CDC. DPDx: Amebiasis",
+      "url": "https://www.cdc.gov/dpdx/amebiasis/index.html",
+      "version": "2019-10-15",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Laboratory diagnosis: antibody persistence after treatment and limited value in endemic exposure"
+    },
+    {
+      "id": "cdc-strongyloides",
+      "label": "CDC. Clinical Care of Strongyloides",
+      "url": "https://www.cdc.gov/strongyloides/hcp/clinical-care/index.html",
+      "version": "2024-02-16",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Hyperinfection/disseminated disease: ileus, malabsorption and inability to tolerate oral therapy; alternative routes and regulatory limits"
+    },
+    {
+      "id": "cdc-ascaris",
+      "label": "CDC. DPDx: Ascariasis",
+      "url": "https://www.cdc.gov/dpdx/ascariasis/index.html",
+      "version": "2019-07-19",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Clinical presentation; pulmonary phase; stool diagnosis"
+    },
+    {
+      "id": "cdc-taenia",
+      "label": "CDC. Clinical Overview of Taeniasis",
+      "url": "https://www.cdc.gov/taeniasis/hcp/clinical-overview/index.html",
+      "version": "2024-05-03",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Transmission and diagnostic limitations of eggs"
+    },
+    {
+      "id": "cdc-trichinella",
+      "label": "CDC. Clinical Overview of Trichinellosis",
+      "url": "https://www.cdc.gov/trichinellosis/hcp/clinical-overview/index.html",
+      "version": "2024-05-22",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Exposure; serology; repeat specimens"
+    },
+    {
+      "id": "cdc-shingles",
+      "label": "CDC. Clinical Overview of Shingles",
+      "url": "https://www.cdc.gov/shingles/hcp/clinical-overview/index.html",
+      "version": "2024-06-27",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "How it spreads: VZV transmission from lesions causes varicella in susceptible contacts"
+    },
+    {
+      "id": "cdc-adenovirus",
+      "label": "CDC. Clinical Overview of Adenovirus",
+      "url": "https://www.cdc.gov/adenovirus/hcp/clinical-overview/index.html",
+      "version": "2025-12-16",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Disease spectrum; shedding and testing"
+    },
+    {
+      "id": "cdc-prep",
+      "label": "CDC. Clinical Guidance for PrEP",
+      "url": "https://www.cdc.gov/hivnexus/hcp/prep/index.html",
+      "version": "2026-04-30",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Exclude acute HIV before PrEP"
+    },
+    {
+      "id": "cdc-tb",
+      "label": "CDC. Clinical and Laboratory Diagnosis for Tuberculosis",
+      "url": "https://www.cdc.gov/tb/hcp/testing-diagnosis/clinical-and-laboratory-diagnosis.html",
+      "version": "2025",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Medical evaluation; nucleic acid testing; extrapulmonary specimens"
+    },
+    {
+      "id": "cdc-dengue",
+      "label": "CDC. Clinical Care of Dengue",
+      "url": "https://www.cdc.gov/dengue/hcp/clinical-care/index.html",
+      "version": "2026-04-15",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Clinical management GroupB2: reduction during recovery; GroupC: occult bleeding and transfusion"
+    },
+    {
+      "id": "cdc-malaria",
+      "label": "CDC. Evaluation and Diagnosis of Malaria",
+      "url": "https://www.cdc.gov/malaria/hcp/clinical-guidance/evaluation-and-diagnosis.html",
+      "version": "2026-08-17",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Thick/thin smears; repeat negative smears; urgent evaluation"
+    },
+    {
+      "id": "cdc-rmsf",
+      "label": "CDC. Clinical Care of Rocky Mountain Spotted Fever",
+      "url": "https://www.cdc.gov/rocky-mountain-spotted-fever/hcp/clinical-care/index.html",
+      "version": "2025-03-06",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Antibiotics as Prophylaxis is not recommended; watch symptoms within2weeks"
+    },
+    {
+      "id": "cdc-brucella",
+      "label": "CDC. Clinical Overview of Brucellosis",
+      "url": "https://www.cdc.gov/brucellosis/hcp/clinical-overview/index.html",
+      "version": "2026-06-02",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Exposure history; laboratory safety"
+    },
+    {
+      "id": "cdc-oncho",
+      "label": "CDC. Clinical Treatment of Onchocerciasis",
+      "url": "https://www.cdc.gov/filarial-worms/hcp/clinical-care/onchocerciasis.html",
+      "version": "2024-05-13",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Ivermectin: persistencia de adultos en nódulos no demuestra por sí sola necesidad de más ivermectina"
+    },
+    {
+      "id": "cdc-lymphatic",
+      "label": "CDC. Clinical Treatment of Lymphatic Filariasis",
+      "url": "https://www.cdc.gov/filarial-worms/hcp/clinical-care/index.html",
+      "version": "2024-06-13",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Treatment of hydrocele: hidrocelectomía y falta de mejoría clínica habitual con DEC"
+    },
+    {
+      "id": "cdc-mucor",
+      "label": "CDC. Clinical Overview of Mucormycosis",
+      "url": "https://www.cdc.gov/mucormycosis/hcp/clinical-overview/index.html",
+      "version": "2026-10-07",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Treatment and recovery: voriconazole not active; active agents and surgery"
+    },
+    {
+      "id": "cdc-diphtheria",
+      "label": "CDC. Clinical Guidance for Diphtheria",
+      "url": "https://www.cdc.gov/diphtheria/hcp/clinical-guidance/index.html",
+      "version": "2026-07-31",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Prevention / Vaccination after recovery: infección no garantiza inmunidad; revisar vacunación"
+    },
+    {
+      "id": "cdc-rabies",
+      "label": "CDC. Rabies Post-exposure Prophylaxis Guidance",
+      "url": "https://www.cdc.gov/rabies/hcp/clinical-care/post-exposure-prophylaxis.html",
+      "version": "2026-09-17",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Contraindications: pregnancy is not a contraindication for indicated rabiesPEP"
+    },
+    {
+      "id": "cdc-syphilis",
+      "label": "CDC. STI Treatment Guidelines: Syphilis",
+      "url": "https://www.cdc.gov/std/treatment-guidelines/syphilis.htm",
+      "version": "2021",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Diagnostic considerations; treatment; special considerations"
+    },
+    {
+      "id": "cdc-herpes",
+      "label": "CDC. STI Treatment Guidelines: Genital Herpes",
+      "url": "https://www.cdc.gov/std/treatment-guidelines/herpes.htm",
+      "version": "2021",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Diagnostic considerations; treatment; special considerations"
+    },
+    {
+      "id": "cdc-lgv",
+      "label": "CDC. STI Treatment Guidelines: Lymphogranuloma Venereum",
+      "url": "https://www.cdc.gov/std/treatment-guidelines/lgv.htm",
+      "version": "STI2021; página revisada2021-07-22",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Management of Sex Partners: asymptomatic contacts,7-day chlamydia regimen"
+    },
+    {
+      "id": "cdc-donovanosis",
+      "label": "CDC. STI Treatment Guidelines: Granuloma Inguinale",
+      "url": "https://www.cdc.gov/std/treatment-guidelines/donovanosis.htm",
+      "version": "STI2021; página revisada2021-07-22",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Treatment: relapse6–18months; Diagnostic Considerations; Follow-Up"
+    },
+    {
+      "id": "cdc-chancroid",
+      "label": "CDC. STI Treatment Guidelines: Chancroid",
+      "url": "https://www.cdc.gov/std/treatment-guidelines/chancroid.htm",
+      "version": "STI2021; página revisada2021-07-22",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Follow-Up: response within3–7days; large ulcer healing beyond2weeks"
+    },
+    {
+      "id": "cdc-gonorrhea",
+      "label": "CDC. STI Treatment Guidelines: Gonococcal Infections",
+      "url": "https://www.cdc.gov/std/treatment-guidelines/gonorrhea-adults.htm",
+      "version": "STI2021; página revisada2022-09-21",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Follow-Up: pharyngeal test of cure7–14days; false-positive earlyNAAT; confirmatory culture"
+    },
+    {
+      "id": "cdc-hpv",
+      "label": "CDC. STI Treatment Guidelines: Anogenital Warts",
+      "url": "https://www.cdc.gov/std/treatment-guidelines/anogenital-warts.htm",
+      "version": "STI2021; página revisada2021-07-22",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Treatment: Podofilox; Special Considerations: Pregnancy"
+    },
+    {
+      "id": "nih-crypto",
+      "label": "NIH. Guidelines for Adult and Adolescent Opportunistic Infections: Cryptococcosis",
+      "url": "https://clinicalinfo.hiv.gov/en/guidelines/hiv-clinical-guidelines-adult-and-adolescent-opportunistic-infections/cryptococcosis",
+      "version": "actualización2024-10-29; revisión2026-03-16",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Treatment, consolidation therapy: persistent CrAg at week2; pressure/culture reassessment when symptoms recur"
+    },
+    {
+      "id": "nih-toxo",
+      "label": "NIH. Guidelines for Adult and Adolescent Opportunistic Infections: Toxoplasmosis",
+      "url": "https://clinicalinfo.hiv.gov/en/guidelines/hiv-clinical-guidelines-adult-and-adolescent-opportunistic-infections/toxoplasmosis",
+      "version": "actualización2025-09-09; revisión2026-06-23",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Managing treatment failure: adequate therapy and thresholds for brain biopsy"
+    },
+    {
+      "id": "nih-pcp",
+      "label": "NIH. Guidelines for Adult and Adolescent Opportunistic Infections: Pneumocystis Pneumonia",
+      "url": "https://clinicalinfo.hiv.gov/en/guidelines/hiv-clinical-guidelines-adult-and-adolescent-opportunistic-infections/pneumocystis",
+      "version": "actualización y revisión2026-05-27",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Treating disease: adjunctive treatment and ART initiation within2weeks when possible"
+    },
+    {
+      "id": "idsa-asper-2016",
+      "label": "IDSA. Aspergillosis guideline",
+      "url": "https://www.idsociety.org/practice-guideline/aspergillosis/",
+      "version": "2016",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Diagnosis; CT; galactomannan; bronchoscopy"
+    },
+    {
+      "id": "idsa-cocci-2016",
+      "label": "IDSA. Coccidioidomycosis guideline",
+      "url": "https://www.idsociety.org/practice-guideline/coccidioidomycosis/",
+      "version": "2016",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Early diagnosis; serology; repeat testing"
+    },
+    {
+      "id": "idsa-ssti-2014",
+      "label": "IDSA. Skin and Soft Tissue Infections guideline",
+      "url": "https://www.idsociety.org/practice-guideline/skin-and-soft-tissue-infections/",
+      "version": "2014",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Necrotizing fasciitis: prompt surgical consultation; broad antimicrobials"
+    },
+    {
+      "id": "nom-vector-2014",
+      "label": "Secretaría de Salud. NOM-032-SSA2-2014. Enfermedades transmitidas por vectores",
+      "url": "https://sidof.segob.gob.mx/notas/docFuente/5389045",
+      "version": "2014; publicación 2015",
+      "checked_at": "2026-11-06",
+      "region": "mexico",
+      "access": "checked",
+      "locator": "§6 medidas generales y control vectorial; §7 medidas específicas para dengue, paludismo y otras enfermedades por vectores"
+    },
+    {
+      "id": "cdc-leishmania-diagnosis",
+      "label": "CDC. Clinical Testing and Diagnosis for Leishmaniasis",
+      "url": "https://www.cdc.gov/leishmaniasis/hcp/diagnosis/index.html",
+      "version": "2024-03-13",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Determining a screening approach: sensibilidad serológica menor con VIH; detección de parásito/ADN tisular y seguridad de muestras"
+    },
+    {
+      "id": "cdc-loa-diagnosis",
+      "label": "CDC. Clinical Testing and Diagnosis for Loiasis",
+      "url": "https://www.cdc.gov/filarial-worms/hcp/diagnosis-testing/index.html",
+      "version": "2024-05-13",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Recommended tests: frotis diurno10AM–2PM; ajustar a origen si jetlag; cuantificación antes de tratamiento"
+    },
+    {
+      "id": "ukhsa-leprosy-2023",
+      "label": "UKHSA y Panel of Leprosy Opinion. Memorandum on leprosy2023; consenso clínico sin gradación formal",
+      "url": "https://www.gov.uk/government/publications/leprosy-memorandum/memorandum-on-leprosy-2023",
+      "version": "Actualizado2023-11-01; control interno versión1.3 de2023-05-15",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Management / Length of drug treatment and follow-up: corticoides por reacción no requieren prolongar MDT; reacción pos-MDT y recaída"
+    },
+    {
+      "id": "sbd-sporotrichosis-2022",
+      "label": "Sociedade Brasileira de Dermatologia. Human sporotrichosis: recomendaciones clínicas, diagnósticas y terapéuticas de expertos",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9582924/",
+      "version": "Publicación electrónica2022-09-22; volumen97(6), noviembre–diciembre2022",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Recommendations in special situations, punto2: respuesta baja, absorción de itraconazol, inhibidores de bomba de protones y niveles séricos"
+    },
+    {
+      "id": "actinomyces-resistance-2016",
+      "label": "Steininger y Willinger. Resistance patterns in clinical isolates of pathogenic Actinomyces species; estudio retrospectivo de susceptibilidad, no GPC",
+      "url": "https://academic.oup.com/jac/article-pdf/71/2/422/6992787/dkv347.pdf",
+      "version": "Publicación electrónica2015-11-03; J Antimicrob Chemother71(2):422–427, febrero2016",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Resultados y Discussion pp425–427: resistencia a metronidazol y actividad betalactámica; estudio de392aislamientos"
+    },
+    {
+      "id": "sdcep-dry-socket-2026",
+      "label": "SDCEP. Management of Acute Dental Problems, segunda edición: alveolar osteitis",
+      "url": "https://www.acutedentalproblems.sdcep.org.uk/guidance/management-of-oral-conditions/common-oral-conditions/alveolar-osteitis-dry-socket/",
+      "version": "Segunda edición, 24 marzo 2026",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Key signs and symptoms; Initial management; Subsequent care: alveolo vacío, dolor24–48h, irrigación y ausencia de indicación antibiótica sin infección"
+    },
+    {
+      "id": "cdc-polio-investigation",
+      "label": "CDC. Clinical Guidance for Investigating a Suspected Case of Polio",
+      "url": "https://www.cdc.gov/polio/hcp/reporting-suspected-cases/index.html",
+      "version": "2024-05-09",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "If you suspect a case of polio: dos muestras fecales y faríngeas separadas al menos24h en los primeros14días; coordinación epidemiológica"
+    },
+    {
+      "id": "nih-hhv8-2025",
+      "label": "NIH. Human Herpesvirus-8 Disease, adultos y adolescentes con VIH",
+      "url": "https://clinicalinfo.hiv.gov/en/guidelines/hiv-clinical-guidelines-adult-and-adolescent-opportunistic-infections/human-herpesvirus",
+      "version": "Actualizada2025-04-23; revisada2026-03-16",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Monitoring of Response to Therapy and Adverse Events(IncludingIRIS): KS-IRIS y evitar corticoides por riesgo de exacerbación; AIII"
+    },
+    {
+      "id": "ssc-2026",
+      "label": "SCCM/ESICM. Surviving Sepsis Campaign: adult guidelines",
+      "url": "https://www.sccm.org/survivingsepsiscampaign/guidelines-and-resources/surviving-sepsis-campaign-adult-guidelines",
+      "version": "2026",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Peripheral vasopressor initiation; conditional recommendation and very-low-certainty remark"
+    },
+    {
+      "id": "idsa-asm-lab-2024",
+      "label": "IDSA/ASM. Guide to Utilization of the Microbiology Laboratory for Diagnosis of Infectious Diseases",
+      "url": "https://academic.oup.com/cid/advance-article/doi/10.1093/cid/ciae104/7619499",
+      "version": "2024",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Head and neck soft tissue infections: tissue/fluid/aspirate preference and anaerobic transport"
+    },
+    {
+      "id": "rch-gastro-2025",
+      "label": "Royal Children's Hospital Melbourne. Gastroenteritis clinical practice guideline",
+      "url": "https://www.rch.org.au/clinicalguide/guideline_index/gastroenteritis/",
+      "version": "actualización agosto de2025",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Key points3; Treatment: oral and nasogastric rehydration"
+    },
+    {
+      "id": "cdc-cholera-yb-2026",
+      "label": "CDC Yellow Book. Cholera",
+      "url": "https://www.cdc.gov/yellow-book/hcp/travel-associated-infections-diseases/cholera.html",
+      "version": "edición2026; publicación2025-04-23",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Infectious agent: toxigenic serogroupsO1/O139 and other V.cholerae strains"
+    },
+    {
+      "id": "cdc-typhoid-yb-2026",
+      "label": "CDC Yellow Book. Typhoid and Paratyphoid Fever",
+      "url": "https://www.cdc.gov/yellow-book/hcp/travel-associated-infections-diseases/typhoid-and-paratyphoid-fever.html",
+      "version": "edición2026; publicación2025-04-23",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Treatment: cases unresponsive to treatment, fever3–5days and evaluation after5days"
+    },
+    {
+      "id": "idsa-cdiff-diagnosis-2017",
+      "label": "SHEA/IDSA. Clinical practice guideline for Clostridium difficile infection in adults and children",
+      "url": "https://www.idsociety.org/practice-guideline/clostridium-difficile/",
+      "version": "guía2017; publicación2018-02-15",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Diagnosis sectionIX: no routine test of cure; diagnostic guidance beyond focused2021treatmentupdate"
+    },
+    {
+      "id": "cdc-giardia-care-2024",
+      "label": "CDC. Patient Care for Giardia Infection",
+      "url": "https://www.cdc.gov/giardia/hcp/clinical-care/index.html",
+      "version": "2024-02-20",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Ongoing and recurrent infections: symptoms after clearance; reassessment before changing treatment"
+    },
+    {
+      "id": "cdc-zoonotic-hookworm-2024",
+      "label": "CDC. Clinical Features of Zoonotic Hookworm",
+      "url": "https://www.cdc.gov/zoonotic-hookworm/hcp/clinical-features/index.html",
+      "version": "2024-02-15",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Cutaneous larva migrans, exposure and track progression in skin"
+    },
+    {
+      "id": "cdc-sth-care-2024",
+      "label": "CDC. Clinical Care of Soil-transmitted Helminths",
+      "url": "https://www.cdc.gov/sth/hcp/clinical-care/index.html",
+      "version": "2024-06-03",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Treatment options table: whipworm, ascariasis and hookworm; regulatory notes"
+    },
+    {
+      "id": "cdc-pinworm-care-2024",
+      "label": "CDC. Clinical Overview of Pinworm Infection",
+      "url": "https://www.cdc.gov/pinworm/hcp/clinical-overview/index.html",
+      "version": "2024-02-20",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Treatment and recovery: pregnancy safety and timing"
+    },
+    {
+      "id": "idsa-ncc-2017",
+      "label": "ASTMH/IDSA. Diagnosis and Treatment of Neurocysticercosis",
+      "url": "https://www.idsociety.org/practice-guideline/neurocysticercosis/",
+      "version": "guía2017; publicación2018",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Initial evaluation, recommendation7; funduscopic examination and intraocular cysticerci before antiparasitic therapy"
+    },
+    {
+      "id": "nih-hbv-perinatal-2026",
+      "label": "NIH. Perinatal HIV guidelines: Hepatitis B Virus/HIV Coinfection",
+      "url": "https://clinicalinfo.hiv.gov/en/guidelines/perinatal/special-populations-hepatitis-b-virus-hiv-coinfection?view=brief",
+      "version": "actualización y revisión2026-03-31",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Panel recommendations: TAF/TDF plus3TC/FTC and avoidance of a single HBV-active drug"
+    },
+    {
+      "id": "cdc-doxy-pep-2024",
+      "label": "CDC. Clinical Guidelines on Doxycycline Postexposure Prophylaxis for Bacterial STI Prevention. MMWR73(2)",
+      "url": "https://www.cdc.gov/mmwr/volumes/73/rr/rr7302a1.htm",
+      "version": "2024-06-06",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Recommendations: Populations; Administration and Dosage; Box1–2; benefits and potential resistance harms"
+    },
+    {
+      "id": "cdc-mpox-vaccine-2026",
+      "label": "CDC. Vaccine for Monkeypox Prevention in the United States",
+      "url": "https://www.cdc.gov/monkeypox/hcp/vaccine-considerations/index.html",
+      "version": "actualización/revisión2026-09-04",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "JYNNEOS recommendations; Vaccine effectiveness: breakthrough infections after2doses"
+    },
+    {
+      "id": "cdc-mpox-test-2026",
+      "label": "CDC. Diagnostic Testing for Monkeypox",
+      "url": "https://www.cdc.gov/monkeypox/hcp/diagnosis-testing/index.html",
+      "version": "2026-02-06",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Testing basics; specimen collection from lesions; infection precautions while awaiting results"
+    },
+    {
+      "id": "ats-idsa-tb-2016",
+      "label": "ATS/CDC/IDSA. Treatment of Drug-Susceptible Tuberculosis",
+      "url": "https://www.idsociety.org/practice-guideline/treatment-of-drug-susceptible-tb/",
+      "version": "2016-08-10; guía antigua, no actualización2025",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Treatment in Special Situations: Extrapulmonary Tuberculosis, Lymph Node Tuberculosis; no fixed regimen extrapolated"
+    },
+    {
+      "id": "cdc-chik-yellowbook-2026",
+      "label": "CDC Yellow Book. Chikungunya",
+      "url": "https://www.cdc.gov/yellow-book/hcp/travel-associated-infections-diseases/chikungunya.html",
+      "version": "edición2026; página2026-01-29",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Clinical presentation: pregnant women, intrapartum transmission and neonatal complications"
+    },
+    {
+      "id": "cdc-dengue-features-2026",
+      "label": "CDC. Clinical Features of Dengue",
+      "url": "https://www.cdc.gov/dengue/hcp/clinical-signs/index.html",
+      "version": "2026-02-24",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Recovery phase: fluid reabsorption, diuresis and dilutional hematocrit fall"
+    },
+    {
+      "id": "cdc-lepto-yellowbook-2026",
+      "label": "CDC Yellow Book. Leptospirosis",
+      "url": "https://www.cdc.gov/yellow-book/hcp/travel-associated-infections-diseases/leptospirosis.html",
+      "version": "edición2026; página2025-04-23",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Treatment: Jarisch-Herxheimer reaction within24hours of antibiotic initiation"
+    },
+    {
+      "id": "cdc-lyme-diagnosis-2026",
+      "label": "CDC. Clinical Testing and Diagnosis for Lyme Disease",
+      "url": "https://www.cdc.gov/lyme/hcp/diagnosis-testing/index.html",
+      "version": "página publicada/actualizada2024-05-15; revisada2026-11-02",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Key points to remember: antibodies remain months to years and cannot determine cure"
+    },
+    {
+      "id": "cdc-chagas-congenital-2024",
+      "label": "CDC. Clinical Considerations for Congenital Chagas Disease",
+      "url": "https://www.cdc.gov/chagas/hcp/considerations/index.html",
+      "version": "actualización/revisión2024-06-12",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Infant diagnosis: blood smear/PCR; maternalIgG persistence9–12months"
+    },
+    {
+      "id": "mex-dengue-protocol-2024",
+      "label": "Secretaría de Salud/CENAPRECE. Protocolo de atención médica para casos de infección por virus Dengue",
+      "url": "https://www.gob.mx/cms/uploads/attachment/file/937281/2024.08.11_Protocolo_atencion_medica_dengue_Cenaprece.pdf",
+      "version": "versión de portada2024.08.11; ficha oficial2024-09-10",
+      "checked_at": "2026-11-06",
+      "region": "mexico",
+      "access": "checked",
+      "locator": "AlgoritmosGrupoB2p6 yGrupoCp8; mejoría estable permite reducir líquidos; choque persistente obliga buscar hemorragia oculta"
+    }
+  ],
+  "mexico_source_note": "Se abrió el texto oficial de la NOM-032-SSA2-2014 para el contexto mexicano de enfermedades por vector (§7). También se abrió y descargó completo el protocolo CENAPRECE de dengue versión 2024.08.11, cuya ficha se publicó el 10 septiembre 2024; se comprobaron los algoritmos de pp.6–8. El visor devolvió403, pero la descarga primaria real permitió leer el documento; el error no se contó como comprobación. No se encontró una guía mexicana reciente única que cubra toda la sección. La búsqueda oficial de doxyPEP no localizó una recomendación mexicana específica accesible; el caso usa la decisión compartida descrita por CDC2024, sin adopción automática en México. DPDx se usa para diagnóstico. UKHSA2023 y SBD2022 son consensos de expertos; Actinomyces2016 es susceptibilidad in vitro retrospectiva, no una GPC actual. Las fuentes antiguas conservan fecha real; los protocolos locales determinan notificación, acceso y selección terapéutica.",
+  "blocks": [
+    {
+      "id": "18.01",
+      "title": "Paciente con fiebre sistémica",
+      "related_sections": [],
+      "scenarios": [
+        {
+          "id": "18.01-c2-01",
+          "anchor_topic_ids": [
+            "18.01-01"
+          ],
+          "objective": "dato_faltante",
+          "vignette": "Un adulto estable tiene fiebre de origen desconocido después de una evaluación básica sin causa. El PET/CT con FDG muestra ganglios hipermetabólicos accesibles, pero no existe diagnóstico tisular.",
+          "question": "¿La captación de FDG confirma por sí sola una causa infecciosa?",
+          "answer": "No. Puede orientar el sitio de estudio, pero no establece la etiología.",
+          "discriminator": "ganglios hipermetabólicos accesibles, pero no existe diagnóstico tisular",
+          "reason": "La captación de FDG es inespecífica y también puede aparecer en inflamación no infecciosa o neoplasia.",
+          "initial_action": "Correlacionar con los hallazgos clínicos y valorar una muestra dirigida del sitio más útil y accesible.",
+          "limits": "No indicar PET/CT como primera prueba universal ni tratar solo por la captación. La selección depende de evaluación previa y recursos.",
+          "evidence": [
+            {
+              "source_id": "eanm-fuo-2024",
+              "locator": "Role and general limitations of FDG PET/CT; impact on management and biopsy targeting",
+              "support": "La captación de FDG es inespecífica y también puede aparecer en inflamación no infecciosa o neoplasia."
+            }
+          ]
+        },
+        {
+          "id": "18.01-c2-02",
+          "anchor_topic_ids": [
+            "18.01-02"
+          ],
+          "objective": "cambio",
+          "vignette": "Un adulto con choque séptico requiere vasopresor después de la evaluación y reanimación inicial. Tiene un acceso venoso periférico utilizable y monitorización; colocar el catéter central retrasaría el inicio.",
+          "question": "¿Debe esperarse obligatoriamente el acceso central para comenzar el vasopresor?",
+          "answer": "No. Se sugiere iniciarlo por vía periférica en este contexto para evitar el retraso.",
+          "discriminator": "colocar el catéter central retrasaría el inicio",
+          "reason": "La recomendación SSC2026 favorece restaurar la presión sin retrasar el vasopresor hasta obtener acceso central.",
+          "initial_action": "Iniciar el vasopresor con vigilancia del acceso y de la perfusión, bajo el protocolo del equipo de atención crítica.",
+          "limits": "Es una recomendación condicional con certeza muy baja. La guía no fija duración, dosis, calibre ni sitio anatómico de la vía periférica.",
+          "evidence": [
+            {
+              "source_id": "ssc-2026",
+              "locator": "Adult recommendations: vasopressor administration, peripheral initiation and accompanying remark",
+              "support": "La recomendación SSC2026 favorece restaurar la presión sin retrasar el vasopresor hasta obtener acceso central."
+            }
+          ]
+        },
+        {
+          "id": "18.01-c2-03",
+          "anchor_topic_ids": [
+            "18.01-03"
+          ],
+          "objective": "cambio",
+          "vignette": "Un adulto tiene un absceso profundo de origen dental que será drenado. Se sospechan anaerobios y se propone enviar solo un hisopo de la secreción de la boca para cultivo.",
+          "question": "¿Qué muestra y transporte ofrecen una evaluación microbiológica más útil?",
+          "answer": "Aspirado o tejido del foco profundo, con transporte para anaerobios.",
+          "discriminator": "enviar solo un hisopo de la secreción de la boca",
+          "reason": "La flora de superficie puede contaminar el hisopo y no representar el foco profundo; las condiciones de transporte importan para recuperar anaerobios.",
+          "initial_action": "Acordar con el equipo tratante y el laboratorio la toma de muestra del foco durante el procedimiento y su transporte adecuado.",
+          "limits": "La obtención de una muestra no debe retrasar el control urgente del foco. El laboratorio define el recipiente y los tiempos aplicables.",
+          "evidence": [
+            {
+              "source_id": "idsa-asm-lab-2024",
+              "locator": "Head and neck soft tissue infections: specimen preference and anaerobic transport",
+              "support": "La flora de superficie puede contaminar el hisopo y no representar el foco profundo; las condiciones de transporte importan para recuperar anaerobios."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "18.02",
+      "title": "Diarrea aguda",
+      "related_sections": [],
+      "scenarios": [
+        {
+          "id": "18.02-c2-01",
+          "anchor_topic_ids": [
+            "18.02-01"
+          ],
+          "objective": "cambio",
+          "vignette": "Un adulto inmunocompetente tiene diarrea acuosa aguda. Ya está hidratado, no tiene fiebre, sangre en heces, dolor intenso ni distensión; pregunta por alivio sintomático.",
+          "question": "¿Puede considerarse loperamida en este escenario seleccionado?",
+          "answer": "Sí, como opción sintomática después de asegurar hidratación.",
+          "discriminator": "no tiene fiebre, sangre en heces, dolor intenso ni distensión",
+          "reason": "IDSA permite considerar loperamida en adultos inmunocompetentes con diarrea acuosa; no se aplica la misma decisión ante inflamación o fiebre.",
+          "initial_action": "Mantener reposición de pérdidas y valorar alivio sintomático con instrucciones de suspensión y reevaluación si aparecen alarmas.",
+          "limits": "No sustituye hidratación. Evitarla ante diarrea inflamatoria, fiebre o riesgo de megacolon; no trasladar esta recomendación a niños.",
+          "evidence": [
+            {
+              "source_id": "idsa-diarrhea-2017",
+              "locator": "Ancillary management recommendations46–47",
+              "support": "IDSA permite considerar loperamida en adultos inmunocompetentes con diarrea acuosa; no se aplica la misma decisión ante inflamación o fiebre."
+            }
+          ]
+        },
+        {
+          "id": "18.02-c2-02",
+          "anchor_topic_ids": [
+            "18.02-02"
+          ],
+          "objective": "cambio",
+          "vignette": "Un niño con gastroenteritis está alerta y tiene perfusión conservada. Necesita rehidratación, pero no logra una ingesta suficiente por vía oral. No hay choque, íleo ni vómito biliar.",
+          "question": "¿Qué vía enteral puede considerarse antes de asumir que solo queda la intravenosa?",
+          "answer": "Rehidratación por sonda nasogástrica si resulta apropiada y tolerable.",
+          "discriminator": "No hay choque, íleo ni vómito biliar",
+          "reason": "En niños seleccionados se puede mantener una vía enteral mediante sonda cuando falla la ingesta oral; la intolerancia a la sonda o el deterioro cambian el plan.",
+          "initial_action": "Valorar con pediatría rehidratación nasogástrica y reevaluación frecuente de tolerancia e hidratación.",
+          "limits": "El choque requiere otra respuesta. La elección y velocidad dependen de evaluación pediátrica; no usar volúmenes de adultos.",
+          "evidence": [
+            {
+              "source_id": "rch-gastro-2025",
+              "locator": "Key points3; Treatment, oral rehydration and failure of oral intake",
+              "support": "En niños seleccionados se puede mantener una vía enteral mediante sonda cuando falla la ingesta oral; la intolerancia a la sonda o el deterioro cambian el plan."
+            }
+          ]
+        },
+        {
+          "id": "18.02-c2-03",
+          "anchor_topic_ids": [
+            "18.02-03"
+          ],
+          "objective": "subtipo",
+          "vignette": "Un adulto con diarrea acuosa tiene un cultivo positivo para Vibrio cholerae. El informe no identifica serogrupo ni producción de toxina; el equipo pregunta si cualquier aislamiento demuestra cólera epidémico.",
+          "question": "¿Qué caracterización falta para sostener esa clasificación?",
+          "answer": "Determinar si es una cepa toxigénica de los serogrupos O1 u O139.",
+          "discriminator": "no identifica serogrupo ni producción de toxina",
+          "reason": "Otras cepas de Vibrio cholerae pueden causar diarrea semejante; la especie aislada no basta para clasificar el cólera epidémico.",
+          "initial_action": "Coordinar caracterización con el laboratorio y salud pública, mientras se mantiene el manejo por hidratación y gravedad.",
+          "limits": "No usar la espera de tipificación para retrasar tratamiento ni para omitir avisos exigidos por la normativa local.",
+          "evidence": [
+            {
+              "source_id": "cdc-cholera-yb-2026",
+              "locator": "Infectious agent: toxigenic V.cholerae O1/O139 versus other serogroups",
+              "support": "Otras cepas de Vibrio cholerae pueden causar diarrea semejante; la especie aislada no basta para clasificar el cólera epidémico."
+            }
+          ]
+        },
+        {
+          "id": "18.02-c2-04",
+          "anchor_topic_ids": [
+            "18.02-04"
+          ],
+          "objective": "cambio",
+          "vignette": "Un adulto tiene fiebre tifoidea confirmada por cultivo y recibe un antibiótico activo según susceptibilidad. En el segundo día sigue febril, pero la temperatura máxima baja y la condición clínica mejora; no hay signos de complicación.",
+          "question": "¿La fiebre del segundo día obliga por sí sola a declarar fracaso y cambiar el antibiótico?",
+          "answer": "No. La fiebre puede persistir durante los primeros tres a cinco días con tratamiento activo.",
+          "discriminator": "la temperatura máxima baja y la condición clínica mejora",
+          "reason": "La respuesta de la fiebre no es inmediata. Debe interpretarse junto con la tendencia clínica, la susceptibilidad y el tiempo de tratamiento.",
+          "initial_action": "Mantener vigilancia clínica y revisar la respuesta; investigar antes si empeora o aparecen complicaciones.",
+          "limits": "Si la fiebre no cede dentro de cinco días, valorar un foco persistente o tratamiento alternativo. La inestabilidad no permite esperar ese plazo.",
+          "evidence": [
+            {
+              "source_id": "cdc-typhoid-yb-2026",
+              "locator": "Treatment: cases unresponsive to treatment",
+              "support": "La respuesta de la fiebre no es inmediata. Debe interpretarse junto con la tendencia clínica, la susceptibilidad y el tiempo de tratamiento."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "18.03",
+      "title": "Diarrea tras antibióticos",
+      "related_sections": [],
+      "scenarios": [
+        {
+          "id": "18.03-c2-01",
+          "anchor_topic_ids": [
+            "18.03-01"
+          ],
+          "objective": "cambio",
+          "vignette": "Un adulto completó tratamiento por infección de C.difficile y ya tiene evacuaciones formadas, sin dolor ni fiebre. Una PCR solicitada como prueba de curación continúa positiva.",
+          "question": "¿Ese resultado aislado indica que debe repetirse el tratamiento?",
+          "answer": "No. No se recomienda una prueba rutinaria de curación en una persona sin síntomas.",
+          "discriminator": "evacuaciones formadas, sin dolor ni fiebre",
+          "reason": "La prueba puede seguir positiva después del éxito clínico y no distingue por sí sola enfermedad activa de persistencia del agente.",
+          "initial_action": "Valorar la evolución clínica y evitar repetir el antibiótico solo por ese resultado.",
+          "limits": "Si reaparece diarrea compatible, se debe reevaluar una posible recurrencia. Esto no equivale a negar estudio a una persona que vuelve a enfermar.",
+          "evidence": [
+            {
+              "source_id": "idsa-cdiff-diagnosis-2017",
+              "locator": "Diagnosis sectionIX: repeat testing and no clinical value of test of cure",
+              "support": "La prueba puede seguir positiva después del éxito clínico y no distingue por sí sola enfermedad activa de persistencia del agente."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "18.04",
+      "title": "Diarrea/parásitos intestinales",
+      "related_sections": [],
+      "scenarios": [
+        {
+          "id": "18.04-c2-01",
+          "anchor_topic_ids": [
+            "18.04-01"
+          ],
+          "objective": "dato_faltante",
+          "vignette": "Una persona que vivió en zona endémica tuvo amebiasis tratada años antes. Ahora presenta molestias digestivas inespecíficas y anticuerpos séricos positivos para Entamoeba histolytica, sin evidencia actual del parásito ni de lesión invasiva.",
+          "question": "¿La serología positiva por sí sola demuestra una infección actual que explique los síntomas?",
+          "answer": "No. Los anticuerpos pueden persistir años después del tratamiento.",
+          "discriminator": "tuvo amebiasis tratada años antes",
+          "reason": "La exposición antigua limita la interpretación de la serología en personas de zonas endémicas; un anticuerpo positivo no prueba actividad presente.",
+          "initial_action": "Dirigir la evaluación a las manifestaciones actuales y obtener la prueba del sitio o agente apropiada cuando esté indicada.",
+          "limits": "Una sospecha de absceso hepático o enfermedad invasiva requiere evaluación específica; no descartarla ni confirmarla solo por esta serología.",
+          "evidence": [
+            {
+              "source_id": "cdc-ameba",
+              "locator": "Laboratory diagnosis: immunodiagnosis, antibody persistence after successful treatment",
+              "support": "La exposición antigua limita la interpretación de la serología en personas de zonas endémicas; un anticuerpo positivo no prueba actividad presente."
+            }
+          ]
+        },
+        {
+          "id": "18.04-c2-02",
+          "anchor_topic_ids": [
+            "18.04-02"
+          ],
+          "objective": "cambio",
+          "vignette": "Un adulto fue tratado por giardiasis con pauta completa. Persiste la distensión y alguna evacuación blanda, pero tres estudios fecales obtenidos en días distintos por antígeno o microscopía ya son negativos.",
+          "question": "¿La persistencia de molestias demuestra fracaso y obliga a repetir el antiparasitario?",
+          "answer": "No. Puede haber síntomas durante semanas o meses después de eliminar la infección.",
+          "discriminator": "tres estudios fecales obtenidos en días distintos por antígeno o microscopía ya son negativos",
+          "reason": "La evolución de síntomas y la persistencia del parásito son problemas distintos; las muestras negativas hacen menos probable una infección persistente.",
+          "initial_action": "Reevaluar las molestias y otras causas antes de añadir otra pauta antiparasitaria.",
+          "limits": "Si el parásito vuelve a demostrarse, revisar reinfección, adherencia y tratamiento previo. Los síntomas de alarma exigen otra evaluación.",
+          "evidence": [
+            {
+              "source_id": "cdc-giardia-care-2024",
+              "locator": "Ongoing and recurrent infections, steps1–5",
+              "support": "La evolución de síntomas y la persistencia del parásito son problemas distintos; las muestras negativas hacen menos probable una infección persistente."
+            }
+          ]
+        },
+        {
+          "id": "18.04-c2-03",
+          "anchor_topic_ids": [
+            "18.04-03"
+          ],
+          "objective": "cambio",
+          "vignette": "Un adulto hospitalizado por hiperinfección de Strongyloides tiene íleo y malabsorción importante. Recibe ivermectina oral, pero el equipo no puede asegurar que el fármaco se absorba.",
+          "question": "¿Basta con prolongar la misma pauta oral sin revisar la vía?",
+          "answer": "No. La falta de absorción puede impedir una exposición eficaz; necesita valorar una vía alternativa con especialistas.",
+          "discriminator": "íleo y malabsorción importante",
+          "reason": "La duración y la llegada del fármaco al organismo son problemas distintos. CDC describe opciones no orales para quienes no toleran o no absorben el tratamiento por boca.",
+          "initial_action": "Reevaluar de forma urgente la administración con infectología y farmacia; seleccionar una alternativa supervisada según recursos y autorización local.",
+          "limits": "La fuente describe administración rectal en reportes de casos y vías sujetas a autorización especial. No ofrece una pauta alternativa universal; la evidencia es limitada.",
+          "evidence": [
+            {
+              "source_id": "cdc-strongyloides",
+              "locator": "Hyperinfection/disseminated disease: inability to tolerate oral therapy, ileus or malabsorption; alternative routes",
+              "support": "La vía oral puede ser insuficiente por íleo o malabsorción; las alternativas descritas requieren evaluación experta y no son un esquema estándar universal."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "18.05",
+      "title": "Helmintiasis comunes",
+      "related_sections": [],
+      "scenarios": [
+        {
+          "id": "18.05-c2-01",
+          "anchor_topic_ids": [
+            "18.05-01"
+          ],
+          "objective": "variante",
+          "vignette": "Un niño tiene tos, eosinofilia e infiltrados migratorios tras exposición a suelo. El examen de heces temprano no muestra huevos.",
+          "question": "¿Es incompatible con ascariasis?",
+          "answer": "No; puede estar en fase pulmonar.",
+          "discriminator": "examen de heces temprano",
+          "reason": "Los huevos aparecen después de maduración intestinal.",
+          "initial_action": "Evaluar exposición y evolución; repetir estudio cuando corresponda.",
+          "limits": "El síndrome pulmonar eosinofílico tiene otros diferenciales.",
+          "evidence": [
+            {
+              "source_id": "cdc-ascaris",
+              "locator": "Life cycle; pulmonary migration and laboratory diagnosis",
+              "support": "Los huevos aparecen después de maduración intestinal."
+            }
+          ]
+        },
+        {
+          "id": "18.05-c2-02",
+          "anchor_topic_ids": [
+            "18.05-02"
+          ],
+          "objective": "contraste",
+          "vignette": "Un adulto caminó descalzo por una playa frecuentada por perros. Tiene una lesión elevada, serpiginosa y muy pruriginosa en el pie que avanza unos milímetros al día, sin síndrome intestinal ni anemia.",
+          "question": "¿Qué forma de infección por anquilostómidos encaja mejor que la parasitosis intestinal con pérdida de hierro?",
+          "answer": "Larva migrans cutánea por anquilostómidos zoonóticos.",
+          "discriminator": "avanza unos milímetros al día",
+          "reason": "Las larvas de algunos anquilostómidos animales migran por la piel humana; el cuadro no es el mismo que la infección intestinal hematófaga.",
+          "initial_action": "Evaluar la lesión, la exposición y posibles complicaciones, y seleccionar el manejo de la forma cutánea según repercusión.",
+          "limits": "No todos los trayectos cutáneos tienen esta causa. Las lesiones de migración muy rápida o manifestaciones sistémicas necesitan otro diferencial.",
+          "evidence": [
+            {
+              "source_id": "cdc-zoonotic-hookworm-2024",
+              "locator": "Clinical presentation and common symptoms: CLM and track progression",
+              "support": "Las larvas de algunos anquilostómidos animales migran por la piel humana; el cuadro no es el mismo que la infección intestinal hematófaga."
+            }
+          ]
+        },
+        {
+          "id": "18.05-c2-03",
+          "anchor_topic_ids": [
+            "18.05-03"
+          ],
+          "objective": "cambio",
+          "vignette": "Un adulto tiene tricuriasis confirmada y no está embarazado. Le indican una única toma de albendazol porque esa pauta se usó antes para una ascariasis.",
+          "question": "¿Puede trasladarse automáticamente la pauta de una sola toma a Trichuris?",
+          "answer": "No. La pauta de albendazol citada por CDC para tricuriasis dura tres días.",
+          "discriminator": "una única toma de albendazol porque esa pauta se usó antes para una ascariasis",
+          "reason": "La duración depende del helminto: la pauta de Trichuris no es la misma de dosis única que la de ascariasis o anquilostomiasis.",
+          "initial_action": "Verificar el esquema específico con el prescriptor y ajustar el tratamiento de la infección confirmada.",
+          "limits": "La guía describe usos no aprobados por FDA para algunas indicaciones; revisar disponibilidad y autorización local. No extrapolar a embarazo o niños pequeños.",
+          "evidence": [
+            {
+              "source_id": "cdc-sth-care-2024",
+              "locator": "Treatment options table: whipworm versus ascariasis and hookworm",
+              "support": "La duración depende del helminto: la pauta de Trichuris no es la misma de dosis única que la de ascariasis o anquilostomiasis."
+            }
+          ]
+        },
+        {
+          "id": "18.05-c2-04",
+          "anchor_topic_ids": [
+            "18.05-04"
+          ],
+          "objective": "cambio",
+          "vignette": "Una mujer de ocho semanas de embarazo tiene oxiuriasis confirmada con prurito leve. No presenta pérdida de peso ni insomnio importante. Solicita recibir de inmediato la misma pauta que sus convivientes.",
+          "question": "¿Debe copiarse automáticamente el tratamiento farmacológico del resto del hogar?",
+          "answer": "No. El embarazo exige una decisión específica de beneficio y riesgo.",
+          "discriminator": "de ocho semanas de embarazo",
+          "reason": "La seguridad de estos fármacos no está bien estudiada en embarazo; CDC propone diferir el tratamiento considerado para oxiuriasis hasta el tercer trimestre.",
+          "initial_action": "Reforzar higiene y control de transmisión, y acordar con obstetricia si requiere fármaco y cuándo.",
+          "limits": "El compromiso clínico de la gestante exige evaluación individual. No confundir esta recomendación con las pautas de campañas para otros helmintos.",
+          "evidence": [
+            {
+              "source_id": "cdc-pinworm-care-2024",
+              "locator": "Treatment and recovery: pregnancy-specific safety and timing",
+              "support": "La seguridad de estos fármacos no está bien estudiada en embarazo; CDC propone diferir el tratamiento considerado para oxiuriasis hasta el tercer trimestre."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "18.06",
+      "title": "Parasitosis muscular/SNC",
+      "related_sections": [],
+      "scenarios": [
+        {
+          "id": "18.06-c2-01",
+          "anchor_topic_ids": [
+            "18.06-01"
+          ],
+          "objective": "incompleta",
+          "vignette": "Un paciente elimina segmentos de tenia. El laboratorio ve huevos, pero no identifica la especie.",
+          "question": "¿Los huevos distinguen T. solium de T. saginata?",
+          "answer": "No.",
+          "discriminator": "no identifica la especie",
+          "reason": "La identificación de especie requiere material o métodos adicionales.",
+          "initial_action": "Enviar proglótides o realizar estudio específico.",
+          "limits": "La teniasis intestinal no demuestra neurocisticercosis.",
+          "evidence": [
+            {
+              "source_id": "cdc-taenia",
+              "locator": "Diagnosis: eggs and proglottids",
+              "support": "La identificación de especie requiere material o métodos adicionales."
+            }
+          ]
+        },
+        {
+          "id": "18.06-c2-02",
+          "anchor_topic_ids": [
+            "18.06-02"
+          ],
+          "objective": "dato_faltante",
+          "vignette": "Una persona con neurocisticercosis parenquimatosa viable ya tiene las crisis controladas y no muestra hidrocefalia ni hipertensión intracraneal. Se planea antiparasitario, pero aún no se ha evaluado el fondo de ojo.",
+          "question": "¿Qué evaluación falta antes de iniciar el antiparasitario?",
+          "answer": "Buscar cisticercos intraoculares mediante evaluación oftalmológica y fondo de ojo.",
+          "discriminator": "aún no se ha evaluado el fondo de ojo",
+          "reason": "El antiparasitario puede causar daño visual si existe un quiste intraocular no reconocido; la imagen cerebral no reemplaza esa evaluación.",
+          "initial_action": "Organizar la evaluación ocular previa y coordinar la conducta si se identifica afectación intraocular.",
+          "limits": "El manejo también depende de localización, viabilidad y complicaciones del SNC. Este paso no sustituye la estabilización neurológica.",
+          "evidence": [
+            {
+              "source_id": "idsa-ncc-2017",
+              "locator": "Initial evaluation recommendation7; evidence summary on funduscopic examination before anthelminthic therapy",
+              "support": "El antiparasitario puede causar daño visual si existe un quiste intraocular no reconocido; la imagen cerebral no reemplaza esa evaluación."
+            }
+          ]
+        },
+        {
+          "id": "18.06-c2-03",
+          "anchor_topic_ids": [
+            "18.06-03"
+          ],
+          "objective": "incompleta",
+          "vignette": "Tras consumir carne de caza poco cocida, un adulto desarrolla mialgia y edema palpebral. La serología muy temprana es negativa.",
+          "question": "¿Se excluye triquinosis?",
+          "answer": "No; considerar repetición de serología.",
+          "discriminator": "serología muy temprana",
+          "reason": "Los anticuerpos pueden tardar en aparecer.",
+          "initial_action": "Investigar exposición compartida y completar pruebas.",
+          "limits": "La eosinofilia apoya, pero no confirma etiología.",
+          "evidence": [
+            {
+              "source_id": "cdc-trichinella",
+              "locator": "Diagnosis: antibody timing",
+              "support": "Los anticuerpos pueden tardar en aparecer."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "18.07",
+      "title": "Úlcera genital",
+      "related_sections": [],
+      "scenarios": [
+        {
+          "id": "18.07-c2-01",
+          "anchor_topic_ids": [
+            "18.07-01"
+          ],
+          "objective": "cambio",
+          "vignette": "Un adulto con chancroide ya evaluado e iniciado en tratamiento vuelve al tercer día. La úlcera inicial era grande; ahora duele menos y disminuyó la secreción, pero sigue abierta. No tiene fiebre ni nuevas lesiones.",
+          "question": "¿La falta de cierre completo a los tres días demuestra fracaso?",
+          "answer": "No. Una úlcera grande puede tardar más de dos semanas en cicatrizar.",
+          "discriminator": "ahora duele menos y disminuyó la secreción",
+          "reason": "La mejoría sintomática suele preceder al cierre; deben compararse dolor, tamaño y evolución, no exigir cicatrización inmediata.",
+          "initial_action": "Comprobar la pauta y la mejoría objetiva en el seguimiento, sin cambiar antibiótico solo por una lesión aún abierta.",
+          "limits": "Si no mejora, empeora o aparecen lesiones nuevas, reevaluar diagnóstico, coinfección, VIH, adherencia y posible resistencia.",
+          "evidence": [
+            {
+              "source_id": "cdc-chancroid",
+              "locator": "Follow-Up: reexamination3–7days, symptomatic versus objective improvement, large ulcers",
+              "support": "La mejoría sintomática puede ocurrir en tres días y la objetiva en siete; las úlceras grandes pueden requerir más de dos semanas."
+            }
+          ]
+        },
+        {
+          "id": "18.07-c2-02",
+          "anchor_topic_ids": [
+            "18.07-02"
+          ],
+          "objective": "incompleta",
+          "vignette": "Un paciente tiene prueba treponémica positiva, RPR negativo y tratamiento previo incierto.",
+          "question": "¿Puede diagnosticarse sífilis activa solo con esos datos?",
+          "answer": "No; resolver discordancia e historia terapéutica.",
+          "discriminator": "tratamiento previo incierto",
+          "reason": "La prueba treponémica puede persistir tras infección pasada.",
+          "initial_action": "Solicitar segunda prueba treponémica y revisar exposición.",
+          "limits": "La fase determina tratamiento y seguimiento.",
+          "evidence": [
+            {
+              "source_id": "cdc-syphilis",
+              "locator": "Reverse sequence algorithm",
+              "support": "La prueba treponémica puede persistir tras infección pasada."
+            }
+          ]
+        },
+        {
+          "id": "18.07-c2-03",
+          "anchor_topic_ids": [
+            "18.07-03"
+          ],
+          "objective": "dato_faltante",
+          "vignette": "Una mujer presenta lesiones genitales dolorosas nuevas. El cultivo tomado de una lesión ya cicatrizada es negativo.",
+          "question": "¿Qué prueba mejora la sensibilidad si reaparecen lesiones?",
+          "answer": "NAAT de lesión activa.",
+          "discriminator": "lesión ya cicatrizada",
+          "reason": "La sensibilidad del cultivo disminuye al sanar.",
+          "initial_action": "Obtener muestra temprana si hay lesiones activas.",
+          "limits": "Una prueba negativa no excluye infección latente.",
+          "evidence": [
+            {
+              "source_id": "cdc-herpes",
+              "locator": "Virologic tests and lesion stage",
+              "support": "La sensibilidad del cultivo disminuye al sanar."
+            }
+          ]
+        },
+        {
+          "id": "18.07-c2-04",
+          "anchor_topic_ids": [
+            "18.07-04"
+          ],
+          "objective": "contraste",
+          "vignette": "Un hombre adulto fue contacto sexual hace dos semanas de una persona con linfogranuloma venéreo sintomático. No tiene úlceras, adenopatías ni síntomas rectales; se organiza evaluación y toma de muestras según exposición.",
+          "question": "¿Debe recibir automáticamente los 21 días del caso índice sintomático?",
+          "answer": "No. El contacto asintomático se trata de forma presuntiva con el esquema para clamidia de siete días, si es elegible.",
+          "discriminator": "No tiene úlceras, adenopatías ni síntomas rectales",
+          "reason": "La guía distingue el tratamiento del contacto asintomático del cuadro invasor sintomático.",
+          "initial_action": "Evaluar y ofrecer tratamiento presuntivo apropiado para clamidia; investigar síntomas que exigirían otro manejo.",
+          "limits": "La recomendación citada incluye contactos dentro de los 60 días previos al inicio de síntomas del caso índice. Síntomas invasores cambian la evaluación y duración.",
+          "evidence": [
+            {
+              "source_id": "cdc-lgv",
+              "locator": "Management of Sex Partners",
+              "support": "Los contactos asintomáticos recientes requieren evaluación por sitio y tratamiento presuntivo de clamidia con doxiciclina durante siete días."
+            }
+          ]
+        },
+        {
+          "id": "18.07-c2-05",
+          "anchor_topic_ids": [
+            "18.07-05"
+          ],
+          "objective": "cambio",
+          "vignette": "Una persona tratada por donovanosis tuvo cicatrización completa documentada. Ocho meses después aparece de nuevo una úlcera en la zona, sin nuevas exposiciones sexuales referidas.",
+          "question": "¿La cicatrización inicial excluye una recaída tardía?",
+          "answer": "No. Puede haber recaída meses después de una respuesta aparentemente eficaz.",
+          "discriminator": "Ocho meses después aparece de nuevo una úlcera",
+          "reason": "La donovanosis puede recaer entre seis y18 meses después del tratamiento; una lesión nueva no prueba reinfección ni resistencia.",
+          "initial_action": "Reevaluar la úlcera, corroborar el diagnóstico con muestra cuando proceda y acordar tratamiento y seguimiento especializado.",
+          "limits": "También deben considerarse otras causas ulcerativas y coinfección. No se diagnostica recaída solo por la localización.",
+          "evidence": [
+            {
+              "source_id": "cdc-donovanosis",
+              "locator": "Treatment: relapse6–18months after apparently effective therapy; Diagnostic Considerations",
+              "support": "La guía describe recaída tardía tras tratamiento aparentemente eficaz y confirmación mediante tejido."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "18.08",
+      "title": "Uretritis/verrugas",
+      "related_sections": [],
+      "scenarios": [
+        {
+          "id": "18.08-c2-01",
+          "anchor_topic_ids": [
+            "18.08-01"
+          ],
+          "objective": "cambio",
+          "vignette": "Un hombre adulto que tiene relaciones sexuales con hombres tuvo clamidia hace seis meses, ya tratada. Continúa con exposiciones sexuales sin condón y pregunta por una estrategia antibiótica después del sexo para reducir futuras ITS; hoy no presenta síntomas.",
+          "question": "¿Es razonable ofrecer consejería sobre profilaxis posexposición con doxiciclina?",
+          "answer": "Sí. Es una población incluida por CDC para discutir beneficios y riesgos y decidir en conjunto.",
+          "discriminator": "tuvo clamidia hace seis meses, ya tratada",
+          "reason": "La recomendación de doxyPEP se dirige a poblaciones definidas con una ITS bacteriana reciente; no equivale a dar antibiótico a toda persona sexualmente activa.",
+          "initial_action": "Revisar elegibilidad, efectos adversos, resistencia, pruebas basales y seguimiento; acordar la prevención dentro de atención sexual integral.",
+          "limits": "La guía es estadounidense y no establece adopción automática en México. No sustituye diagnóstico o tratamiento de una infección actual ni prevención del VIH; la necesidad se reevalúa.",
+          "evidence": [
+            {
+              "source_id": "cdc-doxy-pep-2024",
+              "locator": "Recommendations: Populations; Administration and Dosage; Box1–2",
+              "support": "Recomienda consejería y oferta mediante decisión compartida a MSM/TGW con sífilis, clamidia o gonorrea en los12 meses previos, dentro de atención integral."
+            }
+          ]
+        },
+        {
+          "id": "18.08-c2-02",
+          "anchor_topic_ids": [
+            "18.08-02"
+          ],
+          "objective": "subtipo",
+          "vignette": "Un adulto recibió el tratamiento recomendado para gonorrea faríngea confirmada. Está asintomático y no tuvo nuevas exposiciones; pregunta si puede omitir todo control porque ya terminó el antibiótico.",
+          "question": "¿Esta localización requiere prueba de curación?",
+          "answer": "Sí. La gonorrea faríngea requiere prueba de curación entre siete y 14 días después del tratamiento.",
+          "discriminator": "gonorrea faríngea confirmada",
+          "reason": "El seguimiento de la localización faríngea difiere del de gonorrea urogenital o rectal no complicada tratada correctamente.",
+          "initial_action": "Programar cultivo o NAAT en el intervalo recomendado y revisar resultados antes de concluir el seguimiento.",
+          "limits": "NAAT al séptimo día tiene mayor riesgo de falso positivo. Un resultado positivo requiere valorar cultivo confirmatorio antes de retratar y susceptibilidad si crece gonococo.",
+          "evidence": [
+            {
+              "source_id": "cdc-gonorrhea",
+              "locator": "Follow-Up: pharyngeal test of cure7–14days",
+              "support": "Exige prueba de curación faríngea aunque no haya síntomas y advierte mayor falso positivo si NAAT se toma a los siete días."
+            }
+          ]
+        },
+        {
+          "id": "18.08-c2-03",
+          "anchor_topic_ids": [
+            "18.08-03"
+          ],
+          "objective": "cambio",
+          "vignette": "Una mujer con verrugas anogenitales típicas usa podofilox por indicación previa. Ahora confirma un embarazo y pregunta si puede seguir aplicándolo; no hay lesión ulcerada ni sangrado.",
+          "question": "¿Debe continuar ese fármaco durante el embarazo?",
+          "answer": "No. El podofilox está contraindicado durante el embarazo.",
+          "discriminator": "Ahora confirma un embarazo",
+          "reason": "La gestación cambia la seguridad de un tratamiento local que puede utilizarse fuera del embarazo.",
+          "initial_action": "Suspender ese producto y revisar con su equipo una alternativa apropiada según sitio, síntomas y embarazo.",
+          "limits": "No todos los tratamientos locales son intercambiables. El antecedente de exposición requiere valoración individual; no demuestra por sí solo daño fetal.",
+          "evidence": [
+            {
+              "source_id": "cdc-hpv",
+              "locator": "Treatment: Podofilox; Special Considerations: Pregnancy",
+              "support": "Podofilox está contraindicado en embarazo; la selección del tratamiento de verrugas debe ajustarse al contexto."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "18.09",
+      "title": "Exantema vesicular",
+      "related_sections": [],
+      "scenarios": [
+        {
+          "id": "18.09-c2-01",
+          "anchor_topic_ids": [
+            "18.09-01"
+          ],
+          "objective": "mecanismo",
+          "vignette": "Una mujer con zóster torácico activo dejó las vesículas sin cubrir. Un adulto sin antecedente de varicela ni vacunación tuvo contacto directo con el líquido de las lesiones.",
+          "question": "¿Qué infección primaria puede adquirir el contacto susceptible?",
+          "answer": "Varicela. El contacto no adquiere directamente un episodio de zóster por esa exposición.",
+          "discriminator": "contacto directo con el líquido de las lesiones",
+          "reason": "Las lesiones de zóster transmiten VZV a personas susceptibles; su primera infección es varicela y el zóster corresponde a reactivación posterior.",
+          "initial_action": "Cubrir las lesiones, evitar exposición de susceptibles hasta que formen costra y evaluar oportunamente la susceptibilidad y prevención posexposición del contacto.",
+          "limits": "El tipo de prevención posexposición depende de edad, inmunidad, embarazo, inmunosupresión y tiempo; no se prescribe aquí una pauta universal.",
+          "evidence": [
+            {
+              "source_id": "cdc-shingles",
+              "locator": "How it spreads",
+              "support": "Las lesiones activas transmiten VZV por líquido vesicular y pueden causar varicela en susceptibles; cubrirlas y evitar contacto hasta costras reduce exposición."
+            }
+          ]
+        },
+        {
+          "id": "18.09-c2-02",
+          "anchor_topic_ids": [
+            "18.09-02"
+          ],
+          "objective": "contraste",
+          "vignette": "Un adulto completó dos dosis de JYNNEOS meses antes. Después de un contacto estrecho con mpox desarrolla lesiones nuevas profundas y dolorosas; propone descartarlo porque está vacunado.",
+          "question": "¿La vacunación permite excluir mpox sin estudiar las lesiones?",
+          "answer": "No. Puede haber infección después de dos dosis.",
+          "discriminator": "completó dos dosis de JYNNEOS meses antes",
+          "reason": "La vacuna reduce riesgo y gravedad, pero no tiene eficacia absoluta; la sospecha clínica requiere confirmación apropiada.",
+          "initial_action": "Tomar muestra de lesión para PCR y mantener precauciones mientras se aclara el diagnóstico.",
+          "limits": "También evaluar otros diagnósticos e ITS según exposición. Esta decisión diagnóstica no define una indicación de refuerzo ni traslada el calendario estadounidense a México.",
+          "evidence": [
+            {
+              "source_id": "cdc-mpox-vaccine-2026",
+              "locator": "JYNNEOS recommendations; Vaccine effectiveness",
+              "support": "Se han descrito infecciones después de dos dosis, usualmente más leves; ninguna vacuna es completamente eficaz."
+            },
+            {
+              "source_id": "cdc-mpox-test-2026",
+              "locator": "Testing basics; Specimen collection; Infection prevention and control",
+              "support": "El diagnóstico se realiza por PCR de material de lesión y requiere precauciones mientras se esperan resultados."
+            }
+          ]
+        },
+        {
+          "id": "18.09-c2-03",
+          "anchor_topic_ids": [
+            "18.09-03"
+          ],
+          "objective": "incompleta",
+          "vignette": "Un niño tiene PCR respiratoria positiva para adenovirus, pero permanece asintomático tras recuperarse de una infección previa.",
+          "question": "¿La PCR prueba enfermedad activa nueva?",
+          "answer": "No necesariamente.",
+          "discriminator": "permanece asintomático",
+          "reason": "La eliminación prolongada puede persistir sin enfermedad actual.",
+          "initial_action": "Interpretar con síntomas y epidemiología.",
+          "limits": "No atribuir otra enfermedad solo al resultado.",
+          "evidence": [
+            {
+              "source_id": "cdc-adenovirus",
+              "locator": "Testing and prolonged shedding",
+              "support": "La eliminación prolongada puede persistir sin enfermedad actual."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "18.10",
+      "title": "VIH: fase y profilaxis",
+      "related_sections": [],
+      "scenarios": [
+        {
+          "id": "18.10-c2-01",
+          "anchor_topic_ids": [
+            "18.10-01"
+          ],
+          "objective": "cambio",
+          "vignette": "Un adulto solicita PrEP tras exposición reciente. Tiene fiebre, exantema y prueba rápida de anticuerpos negativa.",
+          "question": "¿Qué debe excluirse antes de iniciar PrEP?",
+          "answer": "Infección aguda por VIH.",
+          "discriminator": "exposición reciente",
+          "reason": "La ventana diagnóstica limita la prueba de anticuerpos.",
+          "initial_action": "Solicitar prueba de laboratorio de antígeno/anticuerpos y ARN de VIH; valorar la necesidad urgente de profilaxis posexposición según el tiempo transcurrido.",
+          "limits": "La profilaxis posexposición es una decisión distinta y urgente.",
+          "evidence": [
+            {
+              "source_id": "cdc-prep",
+              "locator": "Evaluation / HIV testing: symptomatic candidate, laboratory Ag/Ab assay and HIV-1 RNA testing",
+              "support": "La ventana diagnóstica limita la prueba de anticuerpos."
+            }
+          ]
+        },
+        {
+          "id": "18.10-c2-02",
+          "anchor_topic_ids": [
+            "18.10-02"
+          ],
+          "objective": "cambio",
+          "vignette": "Una embarazada tiene infección confirmada por VIH y hepatitis B crónica. Se propone una combinación en la que lamivudina sería el único fármaco activo contra el VHB.",
+          "question": "¿Esa cobertura del VHB es adecuada dentro del tratamiento antirretroviral?",
+          "answer": "No. Lamivudina sola frente al VHB favorece resistencia; el esquema debe cubrir ambas infecciones de forma apropiada.",
+          "discriminator": "lamivudina sería el único fármaco activo contra el VHB",
+          "reason": "La guía perinatal recomienda TDF o TAF más lamivudina o emtricitabina como parte de un esquema completo que suprima el VIH y cubra el VHB.",
+          "initial_action": "Coordinar un esquema perinatal completo con dos fármacos activos contra VHB y revisar función renal, hepática e interacciones.",
+          "limits": "No añadir fármacos por cuenta propia ni interpretar la pareja de análogos como un esquema completo de VIH. La coinfección requiere manejo experto.",
+          "evidence": [
+            {
+              "source_id": "nih-hbv-perinatal-2026",
+              "locator": "Panel recommendations: tenofovir plus3TC/FTC; avoid3TC/FTC as sole HBV-active drug",
+              "support": "La guía perinatal recomienda TDF o TAF más lamivudina o emtricitabina como parte de un esquema completo que suprima el VIH y cubra el VHB."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "18.11",
+      "title": "Infección oportunista del SNC",
+      "related_sections": [],
+      "scenarios": [
+        {
+          "id": "18.11-c2-01",
+          "anchor_topic_ids": [
+            "18.11-01"
+          ],
+          "objective": "cambio",
+          "vignette": "Una persona con VIH recibe inducción para meningitis criptocócica. A las dos semanas mejora clínicamente y el cultivo de LCR es negativo, pero el antígeno criptocócico sigue positivo.",
+          "question": "¿La positividad aislada del antígeno demuestra fracaso y obliga a intensificar el antifúngico?",
+          "answer": "No. El antígeno puede persistir durante una respuesta favorable.",
+          "discriminator": "mejora clínicamente y el cultivo de LCR es negativo",
+          "reason": "El antígeno de LCR puede seguir positivo en la segunda semana y sus títulos no sirven para valorar la respuesta inicial por sí solos.",
+          "initial_action": "Valorar el curso clínico y el cultivo para completar la inducción y planear la fase siguiente según la guía.",
+          "limits": "Nuevos síntomas requieren reevaluación, incluida presión de apertura y cultivo cuando esté indicado. No atribuir toda recaída a reconstitución inmune ni a un antígeno aislado.",
+          "evidence": [
+            {
+              "source_id": "nih-crypto",
+              "locator": "Treatment: consolidation therapy, persistent CSF CrAg at Week2",
+              "support": "El antígeno de LCR puede seguir positivo en la segunda semana y sus títulos no sirven para valorar la respuesta inicial por sí solos."
+            }
+          ]
+        },
+        {
+          "id": "18.11-c2-02",
+          "anchor_topic_ids": [
+            "18.11-02"
+          ],
+          "objective": "cambio",
+          "vignette": "Una persona con VIH y lesiones cerebrales compatibles con toxoplasmosis inició tratamiento presuntivo ayer. La pauta y la absorción son adecuadas; sigue sin cambio clínico, pero no existe deterioro.",
+          "question": "¿Un día sin mejoría basta para indicar biopsia por fracaso terapéutico?",
+          "answer": "No. Debe interpretarse una prueba terapéutica de duración adecuada.",
+          "discriminator": "inició tratamiento presuntivo ayer",
+          "reason": "NIH recomienda considerar fuertemente biopsia si hay deterioro en la primera semana pese a terapia adecuada o si no existe mejoría clínica dentro de diez a catorce días.",
+          "initial_action": "Vigilar de cerca y verificar pauta y evolución; anticipar la evaluación invasiva si aparece deterioro o se cumplen criterios de falta de respuesta.",
+          "limits": "No esperar diez días ante empeoramiento ni aplicar la prueba presuntiva a un cuadro que ya exige otro diagnóstico o intervención urgente.",
+          "evidence": [
+            {
+              "source_id": "nih-toxo",
+              "locator": "Managing treatment failure: deterioration during first week or no improvement within10–14days",
+              "support": "NIH recomienda considerar fuertemente biopsia si hay deterioro en la primera semana pese a terapia adecuada o si no existe mejoría clínica dentro de diez a catorce días."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "18.12",
+      "title": "Oportunistas pulmonares y diseminadas",
+      "related_sections": [],
+      "scenarios": [
+        {
+          "id": "18.12-c2-01",
+          "anchor_topic_ids": [
+            "18.12-01"
+          ],
+          "objective": "cambio",
+          "vignette": "Un adulto con VIH sin tratamiento inicia manejo de neumonía por Pneumocystis. Está estable, tolera la vía oral y no hay datos de otra infección oportunista del SNC. Se propone esperar a terminar toda la pauta de la neumonía para iniciar TAR.",
+          "question": "¿Debe posponerse de rutina el TAR hasta terminar el tratamiento de la neumonía?",
+          "answer": "No. Se recomienda iniciarlo, si es posible, dentro de las dos semanas del diagnóstico.",
+          "discriminator": "Está estable, tolera la vía oral y no hay datos de otra infección oportunista del SNC",
+          "reason": "El momento de TAR en PCP difiere de algunas infecciones del SNC; la guía favorece el inicio temprano en este contexto.",
+          "initial_action": "Coordinar TAR durante el tratamiento de la neumonía y revisar interacciones, tolerancia y formulaciones.",
+          "limits": "La enfermedad crítica, absorción incierta u otra infección pueden modificar el plan. No trasladar este intervalo a meningitis criptocócica.",
+          "evidence": [
+            {
+              "source_id": "nih-pcp",
+              "locator": "Treating disease; Special considerations regarding ART initiation, within2weeks if possible",
+              "support": "El momento de TAR en PCP difiere de algunas infecciones del SNC; la guía favorece el inicio temprano en este contexto."
+            }
+          ]
+        },
+        {
+          "id": "18.12-c2-02",
+          "anchor_topic_ids": [
+            "18.12-02"
+          ],
+          "objective": "dato_faltante",
+          "vignette": "Una persona con neutropenia tiene fiebre persistente y dolor pleurítico. La radiografía inicial fue normal.",
+          "question": "¿Qué imagen es más útil para aspergilosis invasiva?",
+          "answer": "Tomografía de tórax.",
+          "discriminator": "La radiografía inicial fue normal",
+          "reason": "La tomografía detecta lesiones no visibles en radiografía.",
+          "initial_action": "Solicitar CT y pruebas microbiológicas dirigidas.",
+          "limits": "El signo de halo no es exclusivo de Aspergillus.",
+          "evidence": [
+            {
+              "source_id": "idsa-asper-2016",
+              "locator": "Recommendation13: chestCT whenever suspicion for IPA, regardless of chest radiograph results",
+              "support": "La tomografía detecta lesiones no visibles en radiografía."
+            }
+          ]
+        },
+        {
+          "id": "18.12-c2-03",
+          "anchor_topic_ids": [
+            "18.12-03"
+          ],
+          "objective": "contraste",
+          "vignette": "Un adulto con neutropenia prolongada recibe voriconazol. Desarrolla infección sinusal invasora y el estudio de tejido identifica Mucorales. Se propone mantener solo voriconazol porque ya cubre otros mohos.",
+          "question": "¿Esa cobertura es suficiente para este agente?",
+          "answer": "No. Voriconazol no es activo contra Mucorales.",
+          "discriminator": "el estudio de tejido identifica Mucorales",
+          "reason": "La actividad frente a Aspergillus no garantiza actividad frente a los agentes de mucormicosis.",
+          "initial_action": "Coordinar de inmediato un antifúngico activo, habitualmente anfotericina B lipídica, y valoración quirúrgica, con ajuste a función orgánica y especialidad.",
+          "limits": "La elección entre agentes activos y la cirugía depende del sitio, extensión y huésped. El caso no compara dosis ni presupone susceptibilidad universal.",
+          "evidence": [
+            {
+              "source_id": "cdc-mucor",
+              "locator": "Treatment and recovery",
+              "support": "AnfotericinaB, posaconazol e isavuconazol son activos contra la mayoría de mucormicetos; voriconazol no lo es, y suele necesitarse cirugía."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "18.13",
+      "title": "Infecciones granulomatosas pulmonares",
+      "related_sections": [],
+      "scenarios": [
+        {
+          "id": "18.13-c2-01",
+          "anchor_topic_ids": [
+            "18.13-01"
+          ],
+          "objective": "incompleta",
+          "vignette": "Un adulto tiene tos crónica y cavitación. Una baciloscopia de esputo es negativa.",
+          "question": "¿Se excluye tuberculosis pulmonar?",
+          "answer": "No.",
+          "discriminator": "Una baciloscopia de esputo es negativa",
+          "reason": "La sensibilidad limitada exige pruebas adicionales.",
+          "initial_action": "Mantener precauciones y obtener NAAT y cultivo.",
+          "limits": "La imagen no distingue todas las causas de cavitación.",
+          "evidence": [
+            {
+              "source_id": "cdc-tb",
+              "locator": "Bacteriologic examination: smear, NAAT and culture",
+              "support": "La sensibilidad limitada exige pruebas adicionales."
+            }
+          ]
+        },
+        {
+          "id": "18.13-c2-02",
+          "anchor_topic_ids": [
+            "18.13-02"
+          ],
+          "objective": "cambio",
+          "vignette": "Un adulto con tuberculosis ganglionar sensible confirmada recibe tratamiento supervisado. Mejoran fiebre y peso, pero aumenta un ganglio y aparece otro durante el tratamiento; no se han documentado nuevas muestras positivas.",
+          "question": "¿El aumento ganglionar aislado demuestra fracaso bacteriológico?",
+          "answer": "No. Puede ocurrir aumento o aparición de ganglios sin recaída bacteriológica.",
+          "discriminator": "Mejoran fiebre y peso, pero aumenta un ganglio",
+          "reason": "La evolución inflamatoria de los ganglios no siempre coincide con persistencia de bacilos viables.",
+          "initial_action": "Reevaluar evolución, adherencia, susceptibilidad y diagnósticos alternativos antes de cambiar el esquema solo por el tamaño ganglionar.",
+          "limits": "No se afirma una reacción paradójica sin evaluación. Empeoramiento sistémico, fluctuación o datos microbiológicos nuevos requieren investigación dirigida. La fuente específica es 2016 y no fija aquí duración.",
+          "evidence": [
+            {
+              "source_id": "ats-idsa-tb-2016",
+              "locator": "Treatment in Special Situations: Extrapulmonary Tuberculosis, Lymph Node Tuberculosis",
+              "support": "Los ganglios pueden aumentar o aparecer durante o después del tratamiento sin evidencia de recaída bacteriológica."
+            }
+          ]
+        },
+        {
+          "id": "18.13-c2-03",
+          "anchor_topic_ids": [
+            "18.13-03"
+          ],
+          "objective": "incompleta",
+          "vignette": "Tras exposición a polvo del desierto, un adulto tiene neumonía y serología inicial negativa para Coccidioides.",
+          "question": "¿La serología temprana descarta la infección?",
+          "answer": "No; puede requerir repetición.",
+          "discriminator": "serología inicial negativa",
+          "reason": "Los anticuerpos pueden no ser detectables al inicio.",
+          "initial_action": "Reevaluar evolución y repetir pruebas si persiste sospecha.",
+          "limits": "No toda exposición al polvo causa coccidioidomicosis.",
+          "evidence": [
+            {
+              "source_id": "idsa-cocci-2016",
+              "locator": "Early infection and serologic limitations",
+              "support": "Los anticuerpos pueden no ser detectables al inicio."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "18.14",
+      "title": "Fiebre aguda por vectores",
+      "related_sections": [],
+      "scenarios": [
+        {
+          "id": "18.14-c2-01",
+          "anchor_topic_ids": [
+            "18.14-01"
+          ],
+          "objective": "gravedad",
+          "vignette": "Una mujer desarrolla chikungunya confirmada y permanece sintomática durante el parto. Su recién nacido parece sano al nacer; la familia cree que solo tendría riesgo si le pica un mosquito.",
+          "question": "¿Debe considerarse exposición neonatal relevante antes de una picadura?",
+          "answer": "Sí. La transmisión intraparto puede causar infección neonatal con complicaciones graves.",
+          "discriminator": "permanece sintomática durante el parto",
+          "reason": "La exposición cercana al parto añade una vía y un huésped de alto riesgo que no se explican solo por exposición a mosquitos.",
+          "initial_action": "Informar al equipo neonatal y coordinar evaluación y vigilancia del recién nacido expuesto.",
+          "limits": "La exposición no confirma infección del niño. No se indica aquí un antiviral ni se extrapola un esquema de adulto a un neonato.",
+          "evidence": [
+            {
+              "source_id": "cdc-chik-yellowbook-2026",
+              "locator": "Clinical presentation: pregnant women, intrapartum transmission and neonatal complications",
+              "support": "La transmisión intraparto puede causar complicaciones hemorrágicas, cardíacas o neurológicas; los neonatos expuestos están en mayor riesgo."
+            }
+          ]
+        },
+        {
+          "id": "18.14-c2-02",
+          "anchor_topic_ids": [
+            "18.14-02"
+          ],
+          "objective": "cambio",
+          "vignette": "Un adulto hospitalizado por dengue se mantiene estable, recupera tolerancia oral y aumenta su diuresis dos días después de ceder la fiebre. El hematocrito desciende hacia su basal y sigue recibiendo líquidos intravenosos a la velocidad de la fase crítica.",
+          "question": "¿Conviene conservar esa velocidad sin reevaluarla?",
+          "answer": "No. Debe reevaluarse y reducirse conforme mejora para evitar sobrecarga.",
+          "discriminator": "se mantiene estable, recupera tolerancia oral y aumenta su diuresis",
+          "reason": "En recuperación se reabsorbe líquido extravasado; un hematocrito menor en un paciente estable puede reflejar dilución y no exige por sí solo más volumen.",
+          "initial_action": "Revisar balance, perfusión y respiración; disminuir el aporte intravenoso de forma guiada por la evolución y la ingesta.",
+          "limits": "La hipotensión o deterioro con caída del hematocrito cambia la interpretación y obliga a buscar hemorragia. No se da una velocidad fija para todos los pacientes.",
+          "evidence": [
+            {
+              "source_id": "cdc-dengue",
+              "locator": "Clinical management GroupsB2/C: titrate and reduce IV fluids as patient improves",
+              "support": "La velocidad intravenosa debe reducirse al normalizarse la permeabilidad y mejorar el paciente, para evitar sobrecarga."
+            },
+            {
+              "source_id": "cdc-dengue-features-2026",
+              "locator": "Recovery phase",
+              "support": "La reabsorción se acompaña de estabilidad, diuresis y posible descenso dilucional del hematocrito."
+            },
+            {
+              "source_id": "mex-dengue-protocol-2024",
+              "locator": "Algoritmo GrupoB2, p6; criterios de mejoría clínica",
+              "support": "El algoritmo reduce líquidos con estabilidad, diuresis normal o aumentada y descenso del hematocrito en paciente estable."
+            }
+          ]
+        },
+        {
+          "id": "18.14-c2-03",
+          "anchor_topic_ids": [
+            "18.14-03"
+          ],
+          "objective": "incompleta",
+          "vignette": "Un viajero febril regresó de zona malárica. La primera gota gruesa es negativa, pero la sospecha sigue alta.",
+          "question": "¿Qué sigue?",
+          "answer": "Repetir frotis y gota gruesa según guía.",
+          "discriminator": "la sospecha sigue alta",
+          "reason": "La parasitemia baja puede no detectarse al inicio.",
+          "initial_action": "Garantizar pruebas urgentes y valoración continua.",
+          "limits": "No enviar al paciente a esperar varios días sin vigilancia.",
+          "evidence": [
+            {
+              "source_id": "cdc-malaria",
+              "locator": "Diagnosis: repeat negative blood smears",
+              "support": "La parasitemia baja puede no detectarse al inicio."
+            }
+          ]
+        },
+        {
+          "id": "18.14-c2-04",
+          "anchor_topic_ids": [
+            "18.14-04"
+          ],
+          "objective": "contraste",
+          "vignette": "Un adulto de zona de fiebre manchada se retira una garrapata. No presenta fiebre, cefalea, exantema ni malestar y solicita doxiciclina preventiva solo para evitar rickettsiosis.",
+          "question": "¿Se recomienda esa profilaxis antibiótica de rutina?",
+          "answer": "No. La profilaxis tras picadura no se recomienda para prevenir fiebre manchada.",
+          "discriminator": "No presenta fiebre, cefalea, exantema ni malestar",
+          "reason": "La indicación urgente de tratamiento ante enfermedad sospechada no se aplica de forma automática a una persona asintomática tras picadura.",
+          "initial_action": "Explicar vigilancia de síntomas y consulta inmediata si aparecen fiebre, exantema u otros síntomas durante las siguientes dos semanas.",
+          "limits": "La ausencia de exantema no justifica retrasar tratamiento cuando ya existe un síndrome compatible. Las recomendaciones de otras infecciones transmitidas por garrapata son distintas.",
+          "evidence": [
+            {
+              "source_id": "cdc-rmsf",
+              "locator": "Antibiotics as Prophylaxis is not recommended",
+              "support": "No recomienda profilaxis ni tratamiento del asintomático; indica vigilancia y consulta ante síntomas dentro de dos semanas."
+            }
+          ]
+        },
+        {
+          "id": "18.14-c2-05",
+          "anchor_topic_ids": [
+            "18.14-02",
+            "18.01-02"
+          ],
+          "objective": "contraste",
+          "vignette": "Un adulto con dengue grave continúa hipotenso y mal perfundido después de reposición de líquidos evaluada como adecuada. El hematocrito cae en mediciones sucesivas; no se observa sangrado externo.",
+          "question": "¿Qué posibilidad exige buscar y tratar ahora?",
+          "answer": "Hemorragia oculta, aunque no haya sangrado visible.",
+          "discriminator": "El hematocrito cae en mediciones sucesivas",
+          "reason": "La caída del hematocrito con inestabilidad pese a reposición adecuada cambia la interpretación frente a hemoconcentración por fuga de plasma.",
+          "initial_action": "Activar evaluación urgente de hemorragia, preparar transfusión de sangre según valoración y mantener soporte y monitorización intensiva.",
+          "limits": "No indicar transfusión por un hematocrito aislado o por trombocitopenia sola. Un paciente estable que se recupera puede tener descenso por dilución.",
+          "evidence": [
+            {
+              "source_id": "cdc-dengue",
+              "locator": "Severe dengue GroupC: blood transfusion and falling hematocrit despite adequate fluid replacement",
+              "support": "Un hematocrito que cae pese a reposición adecuada sugiere sangrado oculto y puede indicar transfusión."
+            },
+            {
+              "source_id": "mex-dengue-protocol-2024",
+              "locator": "Algoritmo GrupoC, p8: choque persistente",
+              "support": "En choque persistente exige evaluar acidosis y riesgo de hemorragia oculta, tratarla y atender preferentemente en terapia intensiva."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "18.15",
+      "title": "Fiebre con exposición animal/agua",
+      "related_sections": [],
+      "scenarios": [
+        {
+          "id": "18.15-c2-01",
+          "anchor_topic_ids": [
+            "18.15-01"
+          ],
+          "objective": "contraste",
+          "vignette": "Un adulto con leptospirosis confirmada inicia el antibiótico indicado. Horas después presenta escalofríos, más fiebre y mialgias; mantiene presión y oxigenación normales, sin urticaria, edema de lengua ni broncoespasmo.",
+          "question": "¿Qué reacción relacionada con el inicio del tratamiento debe considerarse?",
+          "answer": "Reacción de Jarisch-Herxheimer.",
+          "discriminator": "Horas después presenta escalofríos, más fiebre y mialgias",
+          "reason": "El tratamiento de esta infección por espiroquetas puede producir una reacción febril aguda durante las primeras24 horas.",
+          "initial_action": "Reevaluar signos vitales y buscar deterioro infeccioso o reacción alérgica; mantener vigilancia y soporte según la situación.",
+          "limits": "La cronología no basta para excluir anafilaxia o progresión de la infección. Hipotensión o compromiso respiratorio requieren manejo urgente y nueva evaluación.",
+          "evidence": [
+            {
+              "source_id": "cdc-lepto-yellowbook-2026",
+              "locator": "Treatment: Jarisch-Herxheimer reaction",
+              "support": "Describe reacción aguda con fiebre, cefalea y mialgias durante las primeras24 horas tras comenzar antibiótico en leptospirosis."
+            }
+          ]
+        },
+        {
+          "id": "18.15-c2-02",
+          "anchor_topic_ids": [
+            "18.15-02"
+          ],
+          "objective": "dato_faltante",
+          "vignette": "Un ganadero tiene fiebre prolongada y dolor lumbar tras consumir lácteos no pasteurizados. Se planean hemocultivos.",
+          "question": "¿Qué aviso debe darse al laboratorio?",
+          "answer": "Sospecha de Brucella.",
+          "discriminator": "lácteos no pasteurizados",
+          "reason": "El microorganismo implica riesgo de exposición en laboratorio.",
+          "initial_action": "Comunicar sospecha y obtener muestras apropiadas.",
+          "limits": "La fiebre ondulante no confirma brucelosis.",
+          "evidence": [
+            {
+              "source_id": "cdc-brucella",
+              "locator": "Diagnosis and laboratory safety",
+              "support": "El microorganismo implica riesgo de exposición en laboratorio."
+            }
+          ]
+        },
+        {
+          "id": "18.15-c2-03",
+          "anchor_topic_ids": [
+            "18.15-03"
+          ],
+          "objective": "contraste",
+          "vignette": "Una persona completó tratamiento por Lyme y permanece sin síntomas ni nuevas exposiciones desde hace dos años. Una serología solicitada como control aún detecta IgG; pide otro antibiótico para negativizarla.",
+          "question": "¿La IgG persistente demuestra infección activa que debe retratarse?",
+          "answer": "No. Los anticuerpos pueden persistir meses o años y no sirven para demostrar curación.",
+          "discriminator": "permanece sin síntomas ni nuevas exposiciones desde hace dos años",
+          "reason": "La memoria serológica puede persistir después de una infección tratada; no es equivalente a presencia actual de bacterias viables.",
+          "initial_action": "Evitar retratamiento solo para negativizar anticuerpos y evaluar clínicamente si aparecen manifestaciones nuevas.",
+          "limits": "Un antecedente de Lyme no impide reinfección futura. Este caso no descarta otras causas de síntomas ni evalúa a una persona con nueva exposición.",
+          "evidence": [
+            {
+              "source_id": "cdc-lyme-diagnosis-2026",
+              "locator": "Key points to remember: persistent antibody titers and cure",
+              "support": "Los títulos elevados permanecen meses o años y no deben utilizarse para determinar curación."
+            }
+          ]
+        },
+        {
+          "id": "18.15-c2-04",
+          "anchor_topic_ids": [
+            "18.15-04"
+          ],
+          "objective": "contraste",
+          "vignette": "Una madre tiene infección crónica por T.cruzi confirmada. Su recién nacido está asintomático, pero una muestra sanguínea detecta anticuerpos IgG contra el parásito; se propone confirmar infección congénita repitiendo otra serología ahora.",
+          "question": "¿La serología neonatal positiva confirma transmisión congénita?",
+          "answer": "No. Puede reflejar anticuerpos maternos transferidos.",
+          "discriminator": "Su recién nacido",
+          "reason": "Los anticuerpos maternos pueden persistir en el lactante durante9–12 meses; para el diagnóstico neonatal se busca el parásito o su ADN.",
+          "initial_action": "Coordinar estudio pediátrico con examen parasitológico y/o PCR sanguínea y un plan de seguimiento del niño expuesto.",
+          "limits": "No se debe omitir el estudio por ausencia de síntomas. La serología temprana no sustituye la evaluación de infección congénita ni define un tratamiento por sí sola.",
+          "evidence": [
+            {
+              "source_id": "cdc-chagas-congenital-2024",
+              "locator": "Infant diagnosis",
+              "support": "La evaluación de hijos de madres infectadas busca parásito en sangre o ADN por PCR; la IgG materna puede persistir9–12 meses e impide confirmar por serología neonatal."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "18.16",
+      "title": "Dermatosis por vectores",
+      "related_sections": [],
+      "scenarios": [
+        {
+          "id": "18.16-c2-01",
+          "anchor_topic_ids": [
+            "18.16-01"
+          ],
+          "objective": "contraste",
+          "vignette": "Un adulto con VIH avanzado, fiebre prolongada, esplenomegalia y pancitopenia vivió en una zona de leishmaniasis visceral. La serología para Leishmania es negativa.",
+          "question": "¿La serología negativa basta para excluir leishmaniasis visceral en este huésped?",
+          "answer": "No; la sensibilidad puede ser menor con VIH.",
+          "discriminator": "VIH avanzado",
+          "reason": "La serología tiene menor sensibilidad en coinfección por VIH y no reemplaza la búsqueda de parásitos o ADN en una muestra apropiada.",
+          "initial_action": "Coordinar evaluación especializada y pruebas parasitológicas o moleculares según seguridad y disponibilidad.",
+          "limits": "El patrón también tiene otras causas. La aspiración esplénica puede causar hemorragia grave; este caso no autoriza hacerla ni confirma el diagnóstico.",
+          "evidence": [
+            {
+              "source_id": "cdc-leishmania-diagnosis",
+              "locator": "Determining a screening approach: HIV, lower serologic sensitivity; tissue detection; splenic aspiration risk",
+              "support": "La serología tiene menor sensibilidad en coinfección por VIH y no reemplaza la búsqueda de parásitos o ADN en una muestra apropiada."
+            }
+          ]
+        },
+        {
+          "id": "18.16-c2-02",
+          "anchor_topic_ids": [
+            "18.16-02"
+          ],
+          "objective": "mecanismo",
+          "vignette": "Un adulto con oncocercosis tratada ya no tiene prurito y la evaluación no encuentra microfilarias cutáneas ni oculares. Persiste un nódulo con gusanos adultos; se propone repetir ivermectina solo por el nódulo.",
+          "question": "¿Ese hallazgo aislado demuestra que necesita más ivermectina?",
+          "answer": "No necesariamente; ivermectina no elimina los gusanos adultos.",
+          "discriminator": "Persiste un nódulo con gusanos adultos",
+          "reason": "Un nódulo con adultos puede persistir después de reducir microfilarias y por sí solo no demuestra necesidad de repetir ivermectina.",
+          "initial_action": "Revisar la evidencia de infección activa y el plan de seguimiento con el especialista.",
+          "limits": "No equivale a declarar curación ni a omitir vigilancia. La reexposición y la detección de microfilarias o síntomas cambian la evaluación.",
+          "evidence": [
+            {
+              "source_id": "cdc-oncho",
+              "locator": "Ivermectin: adult worms in nodules do not necessarily constitute need for continued treatment",
+              "support": "Un nódulo con adultos puede persistir después de reducir microfilarias y por sí solo no demuestra necesidad de repetir ivermectina."
+            }
+          ]
+        },
+        {
+          "id": "18.16-c2-03",
+          "anchor_topic_ids": [
+            "18.16-03"
+          ],
+          "objective": "cambio",
+          "vignette": "Un adulto con filariasis linfática ya evaluada tiene un hidrocele grande y molesto. El edema escrotal persiste después del tratamiento antiparasitario y se confirma que el problema actual es el hidrocele, sin infección aguda.",
+          "question": "¿Qué intervención específica puede resolver el hidrocele establecido?",
+          "answer": "Valoración para hidrocelectomía.",
+          "discriminator": "el problema actual es el hidrocele",
+          "reason": "El hidrocele filárico suele no mejorar con dietilcarbamazina; su tratamiento específico es quirúrgico.",
+          "initial_action": "Referir a urología o cirugía para valorar reparación, riesgos y preferencias.",
+          "limits": "Distinguir hidrocele de otras masas y de linfedema. La cirugía no sustituye evaluar infección activa si aún se sospecha ni asegura reversión de otros daños linfáticos.",
+          "evidence": [
+            {
+              "source_id": "cdc-lymphatic",
+              "locator": "Treatment of hydrocele: hydrocelectomy; typically no clinical improvement after DEC",
+              "support": "El hidrocele filárico suele no mejorar con dietilcarbamazina; su tratamiento específico es quirúrgico."
+            }
+          ]
+        },
+        {
+          "id": "18.16-c2-04",
+          "anchor_topic_ids": [
+            "18.16-04"
+          ],
+          "objective": "dato_faltante",
+          "vignette": "Un adulto con episodios de edema de Calabar tras vivir en África central tuvo un frotis negativo para Loa loa. La muestra se obtuvo a las 22:00 y lleva meses adaptado al horario local.",
+          "question": "¿Qué condición de la toma debe corregirse antes de interpretar esa prueba como excluyente?",
+          "answer": "Obtener el frotis durante la periodicidad diurna de Loa loa.",
+          "discriminator": "La muestra se obtuvo a las 22:00",
+          "reason": "El frotis estándar se obtiene de día, entre 10:00 y 14:00; una muestra nocturna puede perder microfilarias por su periodicidad.",
+          "initial_action": "Coordinar muestra diurna con microbiología y evaluación especializada; cuantificar si se detectan microfilarias.",
+          "limits": "La hora adecuada no garantiza sensibilidad. En viajeros con jetlag se ajusta al horario de origen; no iniciar microfilaricida por un frotis mal tomado.",
+          "evidence": [
+            {
+              "source_id": "cdc-loa-diagnosis",
+              "locator": "Recommended tests: daytime10AM–2PM blood smear; adjustment for jetlag",
+              "support": "El frotis estándar se obtiene de día, entre10:00y14:00; una muestra nocturna puede perder microfilarias por su periodicidad."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "18.17",
+      "title": "Enfermedad cutánea crónica",
+      "related_sections": [],
+      "scenarios": [
+        {
+          "id": "18.17-c2-01",
+          "anchor_topic_ids": [
+            "18.17-01"
+          ],
+          "objective": "cambio",
+          "vignette": "Una adulta completó la poliquimioterapia de lepra indicada por el programa. Un especialista confirmó una reacción inmunológica y continúa tratándola con corticoide, sin evidencia de recaída bacilar.",
+          "question": "¿El corticoide por la reacción obliga por sí solo a prolongar la poliquimioterapia?",
+          "answer": "No. La reacción inmunológica no exige automáticamente más poliquimioterapia.",
+          "discriminator": "reacción inmunológica",
+          "reason": "Las reacciones pueden persistir después de eliminar bacilos; recibir corticoides por una reacción no obliga a prolongar la poliquimioterapia.",
+          "initial_action": "Mantener seguimiento especializado de la reacción y revisar por separado cualquier evidencia de recaída.",
+          "limits": "No suspender por cuenta propia el corticoide ni ignorar déficit nervioso nuevo. Las sospechas de recaída requieren reevaluación; el consenso británico no sustituye el programa mexicano.",
+          "evidence": [
+            {
+              "source_id": "ukhsa-leprosy-2023",
+              "locator": "Management of the patient / Length of drug treatment and follow-up: patients receiving corticosteroids do not need to extend MDT",
+              "support": "Las reacciones pueden persistir después de eliminar bacilos; recibir corticoides por una reacción no obliga a prolongar la poliquimioterapia."
+            }
+          ]
+        },
+        {
+          "id": "18.17-c2-02",
+          "anchor_topic_ids": [
+            "18.17-02"
+          ],
+          "objective": "mecanismo",
+          "vignette": "Un adulto con esporotricosis confirmada usa cápsulas de itraconazol con buena adherencia, pero la respuesta es escasa. También toma un inhibidor de bomba de protones de forma continua.",
+          "question": "¿Qué causa farmacológica corregible debe revisarse antes de asumir resistencia?",
+          "answer": "La reducción de absorción del itraconazol por supresión ácida.",
+          "discriminator": "inhibidor de bomba de protones de forma continua",
+          "reason": "Los inhibidores de bomba pueden reducir la absorción de itraconazol; una exposición insuficiente puede explicar respuesta pobre sin demostrar resistencia.",
+          "initial_action": "Revisar formulación, interacciones y necesidad del supresor ácido con el prescriptor; valorar nivel del antifúngico si está disponible.",
+          "limits": "No suspender medicamentos esenciales ni aumentar la dosis a ciegas. La recomendación procede de consenso brasileño de expertos y no establece aquí un ajuste universal entre formulaciones.",
+          "evidence": [
+            {
+              "source_id": "sbd-sporotrichosis-2022",
+              "locator": "Recommendations in special situations,2: medications reducing itraconazole absorption, proton-pump inhibitors, serum levels",
+              "support": "Los inhibidores de bomba pueden reducir la absorción de itraconazol; una exposición insuficiente puede explicar respuesta pobre sin demostrar resistencia."
+            }
+          ]
+        },
+        {
+          "id": "18.17-c2-03",
+          "anchor_topic_ids": [
+            "18.17-03"
+          ],
+          "objective": "mecanismo",
+          "vignette": "Un adulto tiene actinomicosis cervicofacial invasora confirmada. Se propone metronidazol como único antibiótico porque el microorganismo crece en condiciones anaerobias.",
+          "question": "¿La anaerobiosis vuelve adecuada esa monoterapia?",
+          "answer": "No; Actinomyces suele ser resistente a metronidazol.",
+          "discriminator": "metronidazol como único antibiótico",
+          "reason": "La susceptibilidad de Actinomyces difiere de la de otros anaerobios; un estudio de aislamientos clínicos encontró resistencia casi uniforme a metronidazol.",
+          "initial_action": "Revisar el plan con microbiología e infectología y elegir un agente activo según especie, susceptibilidad y alergias.",
+          "limits": "El respaldo citado es un estudio de laboratorio retrospectivo publicado en 2016, no una guía reciente ni un ensayo clínico. No define dosis, duración ni cobertura de coinfecciones.",
+          "evidence": [
+            {
+              "source_id": "actinomyces-resistance-2016",
+              "locator": "Results and Discussion, pp425–427: metronidazole resistance; do not generalize from anaerobic growth",
+              "support": "La susceptibilidad de Actinomyces difiere de la de otros anaerobios; un estudio de aislamientos clínicos encontró resistencia casi uniforme a metronidazol."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "18.18",
+      "title": "Urgencia infecciosa localizada",
+      "related_sections": [],
+      "scenarios": [
+        {
+          "id": "18.18-c2-01",
+          "anchor_topic_ids": [
+            "18.18-01"
+          ],
+          "objective": "cambio",
+          "vignette": "Un adulto ya fue desbridado por fascitis necrosante y recibe cobertura empírica amplia. Las muestras profundas identifican únicamente Streptococcus pyogenes; el equipo revisa el tratamiento dirigido. No tiene alergia a betalactámicos.",
+          "question": "¿Qué combinación recomienda IDSA para esta etiología documentada?",
+          "answer": "Penicilina más clindamicina, con control quirúrgico continuo.",
+          "discriminator": "únicamente Streptococcus pyogenes",
+          "reason": "La penicilina cubre el estreptococo y la clindamicina reduce producción de toxinas; la guía distingue terapia dirigida de la cobertura empírica inicial.",
+          "initial_action": "Ajustar antibióticos con el equipo según cultivo y susceptibilidad y mantener reevaluación del foco.",
+          "limits": "Recomendación IDSA2014 fuerte con evidencia baja. No retirar cobertura de otros agentes si la muestra o el contexto sugieren infección mixta; el antibiótico no sustituye nuevos desbridamientos.",
+          "evidence": [
+            {
+              "source_id": "idsa-ssti-2014",
+              "locator": "§VIII recommendation3 and Treatment: documented groupA streptococcal necrotizing fasciitis, penicillin plus clindamycin",
+              "support": "La penicilina cubre el estreptococo y la clindamicina reduce producción de toxinas; la guía distingue terapia dirigida de la cobertura empírica inicial."
+            }
+          ]
+        },
+        {
+          "id": "18.18-c2-02",
+          "anchor_topic_ids": [
+            "18.18-02"
+          ],
+          "objective": "contraste",
+          "vignette": "Un adulto inmunocompetente presenta dolor intenso 48 horas después de extracción molar. El alvéolo está vacío, sin coágulo, con mal sabor. No tiene fiebre, pus ni celulitis en expansión.",
+          "question": "¿Qué complicación local explica mejor el cuadro que un nuevo absceso?",
+          "answer": "Alveolitis seca u osteítis alveolar.",
+          "discriminator": "El alvéolo está vacío, sin coágulo",
+          "reason": "El dolor tras extracción con pérdida del coágulo y mal sabor es típico de alveolitis; el manejo local difiere del drenaje de un absceso.",
+          "initial_action": "Solicitar atención odontológica urgente para analgesia y cuidado local, incluida irrigación salina según evaluación.",
+          "limits": "No se indican antibióticos por alveolitis aislada. Fiebre, infección en expansión o inmunosupresión cambian la evaluación; confirmar que no existe otro problema posoperatorio.",
+          "evidence": [
+            {
+              "source_id": "sdcep-dry-socket-2026",
+              "locator": "Key signs and symptoms; Initial management and Subsequent care: absence of clot, pain24–48h, saline irrigation; antibiotics only with infection or selected immunocompromise",
+              "support": "El dolor tras extracción con pérdida del coágulo y mal sabor es típico de alveolitis; el manejo local difiere del drenaje de un absceso."
+            }
+          ]
+        },
+        {
+          "id": "18.18-c2-03",
+          "anchor_topic_ids": [
+            "18.18-03"
+          ],
+          "objective": "mecanismo",
+          "vignette": "Una adolescente se recupera de difteria confirmada. Su esquema con toxoide diftérico está incompleto. La familia propone omitir las vacunas restantes porque la infección ya le dio inmunidad.",
+          "question": "¿La enfermedad previa elimina la necesidad de completar el esquema?",
+          "answer": "No. La difteria puede no conferir inmunidad suficiente.",
+          "discriminator": "esquema con toxoide diftérico está incompleto",
+          "reason": "La recuperación no garantiza protección; CDC indica revisar y actualizar vacunación durante la convalecencia.",
+          "initial_action": "Coordinar con el programa local las vacunas necesarias tras revisar los registros.",
+          "limits": "La elección e intervalos dependen del esquema nacional, edad y dosis previas; no sustituye las medidas indicadas para contactos.",
+          "evidence": [
+            {
+              "source_id": "cdc-diphtheria",
+              "locator": "Prevention / Vaccination after recovery: disease might not confer immunity; vaccinate during convalescence if not up to date",
+              "support": "La recuperación no garantiza protección; CDC indica revisar y actualizar vacunación durante la convalecencia."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "18.19",
+      "title": "Parálisis tras exposición",
+      "related_sections": [],
+      "scenarios": [
+        {
+          "id": "18.19-c2-01",
+          "anchor_topic_ids": [
+            "18.19-01"
+          ],
+          "objective": "cambio",
+          "vignette": "Una mujer en el primer trimestre tuvo una exposición confirmada de alto riesgo a rabia y no estaba vacunada. Tras valorar el caso, salud pública indica profilaxis posexposición; se propone aplazarla por el embarazo.",
+          "question": "¿El embarazo justifica ese aplazamiento?",
+          "answer": "No. El embarazo no contraindica la profilaxis antirrábica indicada.",
+          "discriminator": "se propone aplazarla por el embarazo",
+          "reason": "La amenaza de rabia exige prevención oportuna; CDC especifica que embarazo no es contraindicación para profilaxis posexposición.",
+          "initial_action": "Iniciar sin demora el plan indicado y coordinar atención obstétrica y salud pública.",
+          "limits": "Este caso parte de una exposición ya evaluada de alto riesgo; no indica profilaxis tras todo contacto animal ni permite copiar un esquema extranjero sin el protocolo local.",
+          "evidence": [
+            {
+              "source_id": "cdc-rabies",
+              "locator": "Contraindications: pregnancy is not a contraindication for rabiesPEP",
+              "support": "La amenaza de rabia exige prevención oportuna; CDC especifica que embarazo no es contraindicación para profilaxis posexposición."
+            }
+          ]
+        },
+        {
+          "id": "18.19-c2-02",
+          "anchor_topic_ids": [
+            "18.19-02"
+          ],
+          "objective": "dato_faltante",
+          "vignette": "Un niño con parálisis flácida aguda ya fue notificado y valorado por el equipo epidemiológico. Para investigar poliovirus se recogieron dos muestras fecales durante la misma evacuación y se consideran suficientes.",
+          "question": "¿Qué defecto de muestreo debe corregirse?",
+          "answer": "Las muestras seriadas deben estar separadas al menos 24 horas.",
+          "discriminator": "dos muestras fecales durante la misma evacuación",
+          "reason": "CDC recomienda dos muestras separadas al menos 24 horas y tomadas pronto, idealmente dentro de los primeros 14 días; dos recipientes del mismo evento no cumplen ese muestreo temporal.",
+          "initial_action": "Coordinar una segunda toma independiente y su conservación con el laboratorio de vigilancia, sin retrasar soporte clínico.",
+          "limits": "La guía CDC orienta el principio de muestreo; seguir los requisitos mexicanos de vigilancia y transporte. No confirmar ni excluir polio con este dato y no esperar la segunda muestra para notificar.",
+          "evidence": [
+            {
+              "source_id": "cdc-polio-investigation",
+              "locator": "If you suspect a case of polio:2specimens at least24h apart during first14days; Evaluation:two stool samples",
+              "support": "CDC recomienda dos muestras separadas al menos24horas y tomadas pronto, idealmente dentro de los primeros14días; dos recipientes del mismo evento no cumplen ese muestreo temporal."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "18.20",
+      "title": "Tumores asociados a inmunodeficiencia",
+      "related_sections": [],
+      "scenarios": [
+        {
+          "id": "18.20-c2-01",
+          "anchor_topic_ids": [
+            "18.20-01"
+          ],
+          "objective": "cambio",
+          "vignette": "Un adulto con VIH y sarcoma de Kaposi confirmado presenta empeoramiento paradójico de las lesiones tras iniciar TAR. El equipo diagnostica KS-IRIS después de descartar otras causas y propone corticoide sistémico solo para ese síndrome.",
+          "question": "¿Es apropiado aplicar aquí de rutina el tratamiento con corticoide usado en otros IRIS?",
+          "answer": "No; los corticoides pueden exacerbar el Kaposi.",
+          "discriminator": "corticoide sistémico solo para ese síndrome",
+          "reason": "NIH desaconseja corticoides para KS-IRIS por asociación con exacerbación del tumor; el tratamiento requiere medidas de soporte y evaluación oncológica.",
+          "initial_action": "Revisar el plan de forma urgente con infectología y oncología para manejo específico del Kaposi y de la TAR.",
+          "limits": "Recomendación AIII basada en opinión experta. No todo empeoramiento tras TAR es IRIS; no retirar por cuenta propia TAR ni un corticoide necesario para otra indicación vital.",
+          "evidence": [
+            {
+              "source_id": "nih-hhv8-2025",
+              "locator": "Monitoring of Response to Therapy and Adverse Events(IncludingIRIS): steroids strongly discouraged for KS-IRIS; AIII",
+              "support": "NIH desaconseja corticoides para KS-IRIS por asociación con exacerbación del tumor; el tratamiento requiere medidas de soporte y evaluación oncológica."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
