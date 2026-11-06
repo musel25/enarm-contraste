@@ -1,0 +1,938 @@
+{
+  "schema_version": 1,
+  "layer": 2,
+  "section_id": "09",
+  "title": "Dermatología",
+  "author": "clinical-author-01-12",
+  "sources": [
+    {
+      "id": "aad-psoriasis",
+      "label": "AAD-NPF: Psoriasis clinical guideline, recomendaciones oficiales",
+      "url": "https://www.aad.org/member/clinical-quality/guidelines/psoriasis",
+      "version": "Serie de guías 2019–2021; página consultada sin nueva fecha de edición",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Guideline highlights, Topical therapy, point8: BSA, subjective symptoms and quality of life"
+    },
+    {
+      "id": "bad-pemphigus-2017",
+      "label": "BAD: guía de pénfigo vulgar",
+      "url": "https://onlinelibrary.wiley.com/doi/pdfdirect/10.1111/bjd.15930",
+      "version": "2017",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Diagnosis: histología e inmunofluorescencia directa de piel perilesional"
+    },
+    {
+      "id": "bad-sjs-2016",
+      "label": "BAD: guía de SSJ/NET en adultos",
+      "url": "https://onlinelibrary.wiley.com/doi/pdfdirect/10.1111/bjd.14530",
+      "version": "2016",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Retirada de fármaco causal, atención multidisciplinaria y evaluación ocular"
+    },
+    {
+      "id": "cdc-lice-2025",
+      "label": "CDC: Clinical Care of Head Lice",
+      "url": "https://www.cdc.gov/lice/hcp/clinical-care/index.html",
+      "version": "2025-01-31",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Tratamiento alternativo si persisten piojos tras curso y repetición completos"
+    },
+    {
+      "id": "cdc-scabies-2023",
+      "label": "CDC: Clinical Care of Scabies",
+      "url": "https://www.cdc.gov/scabies/hcp/clinical-care/index.html",
+      "version": "2023-12-18",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Crusted scabies: tratamiento oral y tópico combinado"
+    },
+    {
+      "id": "genturis-nf1-2023",
+      "label": "ERN GENTURIS: protocolo de vigilancia tumoral en NF1",
+      "url": "https://www.genturis.eu/l%3Desp/Assets/EN_NF1-Guideline-summary-Version11581.pdf",
+      "version": "Guía 2023; resumen sin fecha de revisión adicional declarada",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "p. 2: feocromocitoma/paraganglioma y presión elevada"
+    },
+    {
+      "id": "idsa-skin-2014",
+      "label": "IDSA: infecciones de piel y tejidos blandos",
+      "url": "https://www.idsociety.org/practice-guideline/skin-and-soft-tissue-infections/",
+      "version": "2014",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "§§I–VIII: impétigo, abscesos, celulitis, herida quirúrgica e infección necrosante"
+    },
+    {
+      "id": "nci-melanoma-2025",
+      "label": "NCI PDQ: Melanoma Treatment, versión profesional",
+      "url": "https://www.cancer.gov/types/skin/hp/melanoma-treatment-pdq",
+      "version": "2025-05-02; recurso clínico experto, no guía formal",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Clinical features; biopsy and histopathologic evaluation"
+    },
+    {
+      "id": "nci-skin-2025",
+      "label": "NCI PDQ: Skin Cancer Treatment, versión profesional",
+      "url": "https://www.cancer.gov/types/skin/hp/skin-treatment-pdq",
+      "version": "2025-05-12; recurso clínico experto, no guía formal",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Basal cell carcinoma; squamous cell carcinoma: diagnóstico y riesgo; Radiation therapy: evitar con basal cell nevus syndrome"
+    },
+    {
+      "id": "pcds-em-2021",
+      "label": "PCDS: guía clínica de eritema multiforme",
+      "url": "https://www.pcds.org.uk/clinical-guidance/erythema-multiforme?setclose=1",
+      "version": "2021-11-16",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Management, Step4: prevention; recurrent erythema multiforme secondary to HSV and prophylactic oral aciclovir"
+    },
+    {
+      "id": "pcds-lichen-2024",
+      "label": "PCDS: guía clínica de liquen plano",
+      "url": "https://www.pcds.org.uk/clinical-guidance/lichen-planus?_escaped_fragment_=pp%255Bg1%255D%2F15%2F",
+      "version": "2024-10-31",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Who to refer: alopecia cicatricial, destrucción ungueal y ulceración"
+    },
+    {
+      "id": "pcds-melasma-2026",
+      "label": "PCDS: guía clínica de melasma",
+      "url": "https://www.pcds.org.uk/clinical-guidance/melasma-syn-chloasma1?setclose=1",
+      "version": "2026-07-14",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Clinical findings, Morphology: Wood lamp contrast and dermal melasma"
+    },
+    {
+      "id": "pcds-rosacea-2024",
+      "label": "PCDS: guía clínica de rosácea",
+      "url": "https://www.pcds.org.uk/clinical-guidance/rosacea?setclose=1",
+      "version": "2024-08-26",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Management of ocular symptoms: avoiding retinoids with significant ocular problems"
+    },
+    {
+      "id": "pcds-rosea-2022",
+      "label": "PCDS: guía clínica de pitiriasis rosada",
+      "url": "https://www.pcds.org.uk/clinical-guidance/pityriasis-rosea?setclose=1",
+      "version": "2022-05-28",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Clinical findings: diagnóstico diferencial con sífilis secundaria"
+    },
+    {
+      "id": "pcds-ssss-2022",
+      "label": "PCDS: guía clínica de síndrome estafilocócico de piel escaldada",
+      "url": "https://pcds.org.uk/clinical-guidance/staphylococcal-scalded-skin-syndrome",
+      "version": "2022-09-23",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Investigations: cultivos negativos; Management: ingreso y antibiótico parenteral; Aetiology: brotes en unidades infantiles y portadores asintomáticos"
+    },
+    {
+      "id": "pcds-versicolor-2023",
+      "label": "PCDS: guía clínica de pitiriasis versicolor",
+      "url": "https://www.pcds.org.uk/clinical-guidance/pityriasis-versicolor",
+      "version": "2023-06-01",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Clinical findings, Morphology: progressive macular hypomelanosis, absence of scale and red follicular fluorescence"
+    },
+    {
+      "id": "pcds-vitiligo-2024",
+      "label": "PCDS: guía clínica de vitíligo",
+      "url": "https://www.pcds.org.uk/clinical-guidance/vitiligo",
+      "version": "2024-05-29",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Differential diagnosis: lesión hipopigmentada anestésica y lepra"
+    },
+    {
+      "id": "rch-eczema-2024",
+      "label": "Royal Children’s Hospital: Eczema",
+      "url": "https://www.rch.org.au/clinicalguide/guideline_index/eczema/",
+      "version": "Enero 2024",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Eczema management; infecciones virales y eczema herpeticum"
+    },
+    {
+      "id": "rch-molluscum-2026",
+      "label": "Royal Children’s Hospital: Molluscum contagiosum",
+      "url": "https://www.rch.org.au/clinicalguide/guideline_index/Molluscum_Guideline/",
+      "version": "Marzo 2026",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Key points; eczema circundante; no exclusión escolar"
+    },
+    {
+      "id": "rch-nappy-2024",
+      "label": "Royal Children’s Hospital: Nappy rash",
+      "url": "https://www.rch.org.au/clinicalguide/guideline_index/Nappy_rash/",
+      "version": "Agosto 2024",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Assessment: Candida, dermatitis irritativa y seborreica; tratamiento"
+    },
+    {
+      "id": "pcds-contact-2022",
+      "label": "PCDS: dermatitis alérgica por contacto, incluidos látex y goma",
+      "url": "https://www.pcds.org.uk/clinical-guidance/eczema-contact-allergic-dermatitis-including-latex-and-rubber-allergy",
+      "version": "2022-06-30",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "History: alergia a tratamientos tópicos, neomicina"
+    },
+    {
+      "id": "wao-hae-2022",
+      "label": "WAO/EAACI: guía de angioedema hereditario, revisión 2021",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9023902/",
+      "version": "2022-04-07; revisión 2021",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "Diagnóstico HAE1/2 y recomendación 1: C4, C1INH funcional y cuantitativo"
+    },
+    {
+      "id": "cdc-emerging-tinea-2026",
+      "label": "CDC: Clinician Brief, Emerging Ringworm",
+      "url": "https://www.cdc.gov/ringworm/hcp/clinical-overview/emerging-ringworm-facts-for-clinicians.html",
+      "version": "Publicada/actualizada 10 febrero 2026; revisión experta 13 octubre 2026",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "T. indotineae: métodos moleculares, límites de laboratorio rutinario, viaje y resistencia. Página clínica oficial completa abierta."
+    },
+    {
+      "id": "dailymed-isotretinoin-2026",
+      "label": "DailyMed: Isotretinoin capsules, Amneal, ficha oficial de prescripción",
+      "url": "https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=c2917c3d-3499-48a0-ba53-120cb979195d",
+      "version": "Prescripción revisada julio 2026",
+      "checked_at": "2026-11-06",
+      "region": "international",
+      "access": "checked",
+      "locator": "§§5.4 y7.2: evitar tetraciclinas concomitantes; hipertensión intracraneal. No se importa programa regulatorio estadounidense."
+    }
+  ],
+  "mexico_source_note": "Se abrió IMSS-560-12, actualización 2017, para dermatitis por contacto. El catálogo IMSS mantiene también documentos de atopia, tiña y melanoma con identificadores antiguos; no se encontró una actualización mexicana reciente que cubra el apartado completo. Se consultaron recomendaciones primarias AAD, BAD, HSE, CDC y RCH. Las guías clínicas PCDS son orientación profesional de la sociedad, no consensos GRADE. Los resúmenes NCI se identifican como recursos expertos, no como guías formales. Las sustituciones finales se comprobaron en CDC emerging ringworm revisado octubre 2026, ficha DailyMed isotretinoína julio 2026, PCDS SSSS Aetiology y EM Management Step 3, y NCI PDQ piel Radiation therapy. No se encontró una GPC mexicana reciente accesible para cada una de estas relaciones. No se importan programas regulatorios de isotretinoína ni disponibilidad de pruebas de referencia; el control de brote requiere el programa local.",
+  "blocks": [
+    {
+      "id": "09.01",
+      "title": "Lesión eritematosa caliente",
+      "related_sections": [],
+      "scenarios": [
+        {
+          "id": "09.01-c2-01",
+          "anchor_topic_ids": [
+            "09.01-01"
+          ],
+          "objective": "cambio",
+          "vignette": "Un adulto recibe tratamiento por erisipela recurrente de pierna. Entre los dedos tiene maceración y fisuras persistentes.",
+          "question": "¿Qué factor local debe tratarse para reducir recurrencias?",
+          "answer": "La lesión interdigital, incluida posible tiña.",
+          "discriminator": "maceración y fisuras persistentes",
+          "reason": "La alteración de la barrera interdigital puede mantener la puerta de entrada.",
+          "initial_action": "Examinar y tratar el espacio interdigital, además del episodio agudo.",
+          "limits": "Evaluar también edema y enfermedad venosa; no toda recurrencia exige profilaxis.",
+          "evidence": [
+            {
+              "source_id": "idsa-skin-2014",
+              "locator": "Cellulitis and erysipelas: examen de espacios interdigitales",
+              "support": "La alteración de la barrera interdigital puede mantener la puerta de entrada."
+            }
+          ]
+        },
+        {
+          "id": "09.01-c2-02",
+          "anchor_topic_ids": [
+            "09.01-02"
+          ],
+          "objective": "dato_faltante",
+          "vignette": "Un adulto presenta abscesos que reaparecen siempre en la misma axila. Entre episodios quedan cicatrices y varios orificios de drenaje.",
+          "question": "¿Qué causa local debe investigarse además de tratar cada colección?",
+          "answer": "Hidradenitis supurativa u otra causa estructural local.",
+          "discriminator": "reaparecen siempre en la misma axila",
+          "reason": "Un absceso recurrente en el mismo sitio requiere buscar una causa local, incluida hidradenitis; repetir antibióticos no resuelve necesariamente el mecanismo.",
+          "initial_action": "Explorar distribución y cicatrices, cultivar y drenar la colección indicada y planear evaluación dermatológica.",
+          "limits": "No toda recurrencia es hidradenitis; considerar material extraño y otras causas según sitio.",
+          "evidence": [
+            {
+              "source_id": "idsa-skin-2014",
+              "locator": "§III, Recurrent skin abscesses, recomendación 1",
+              "support": "Un absceso recurrente en el mismo sitio requiere buscar una causa local, incluida hidradenitis; repetir antibióticos no resuelve necesariamente el mecanismo."
+            }
+          ]
+        },
+        {
+          "id": "09.01-c2-03",
+          "anchor_topic_ids": [
+            "09.01-03"
+          ],
+          "objective": "subtipo",
+          "vignette": "Una persona tiene pocas lesiones con costra adherente. Al retirarla suavemente se identifica una úlcera redonda que alcanza la dermis, sin ampollas extensas.",
+          "question": "¿Debe tratarse como impétigo superficial limitado solo con crema?",
+          "answer": "No. Valorar ectima y antibiótico oral.",
+          "discriminator": "úlcera redonda que alcanza la dermis",
+          "reason": "El ectima es más profundo que el impétigo y requiere antimicrobiano oral aunque las lesiones no sean numerosas.",
+          "initial_action": "Evaluar profundidad, obtener cultivo si corresponde y seleccionar cobertura según contexto.",
+          "limits": "Distinguir otras úlceras y ectima gangrenoso en personas tóxicas o inmunodeprimidas.",
+          "evidence": [
+            {
+              "source_id": "idsa-skin-2014",
+              "locator": "§I, recomendación 2 y Evidence summary: ecthyma, úlcera con costra y terapia oral",
+              "support": "El ectima es más profundo que el impétigo y requiere antimicrobiano oral aunque las lesiones no sean numerosas."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "09.02",
+      "title": "Lesión de pliegues",
+      "related_sections": [],
+      "scenarios": [
+        {
+          "id": "09.02-c2-01",
+          "anchor_topic_ids": [
+            "09.02-01"
+          ],
+          "objective": "contraste",
+          "vignette": "Un lactante tiene eritema del pañal que afecta los pliegues y presenta pústulas satélite. La crema de barrera sola no lo resuelve.",
+          "question": "¿Qué infección debe valorarse como componente añadido?",
+          "answer": "Candidiasis cutánea.",
+          "discriminator": "pústulas satélite",
+          "reason": "El compromiso de pliegues y las lesiones satélite orientan a Candida.",
+          "initial_action": "Añadir tratamiento antifúngico apropiado y mantener cuidado de barrera.",
+          "limits": "Pueden coexistir irritación y Candida; reconsiderar si no responde.",
+          "evidence": [
+            {
+              "source_id": "rch-nappy-2024",
+              "locator": "Differential diagnosis: Candida; Treatment",
+              "support": "El compromiso de pliegues y las lesiones satélite orientan a Candida."
+            }
+          ]
+        },
+        {
+          "id": "09.02-c2-02",
+          "anchor_topic_ids": [
+            "09.02-02"
+          ],
+          "objective": "dato_faltante",
+          "vignette": "Un adulto volvió del sur de Asia con dermatofitosis extensa confirmada. No mejoró con terbinafina correctamente usada. El laboratorio informa T. mentagrophytes por método rutinario, sin identificación molecular.",
+          "question": "¿Ese informe rutinario excluye T. indotineae resistente?",
+          "answer": "No; puede requerir identificación molecular especializada y evaluación de susceptibilidad.",
+          "discriminator": "sin identificación molecular",
+          "reason": "Muchos laboratorios no distinguen T. indotineae de especies cercanas por métodos habituales; fracaso y epidemiología justifican ampliar el estudio.",
+          "initial_action": "Coordinar dermatología, microbiología y pruebas de referencia antes de repetir a ciegas el mismo plan.",
+          "limits": "Viaje o fracaso no demuestran resistencia ni especie; revisar diagnóstico, adherencia y otras causas. No se prescribe un antifúngico o dosis universal ni se afirma disponibilidad local de secuenciación.",
+          "evidence": [
+            {
+              "source_id": "cdc-emerging-tinea-2026",
+              "locator": "T. indotineae: South Asia, molecular diagnosis and routine laboratory limitations; antimicrobial-resistant ringworm",
+              "support": "CDC indica considerar viaje, posible resistencia y técnicas moleculares porque los laboratorios habituales pueden informar especies relacionadas sin distinguir T. indotineae."
+            }
+          ]
+        },
+        {
+          "id": "09.02-c2-03",
+          "anchor_topic_ids": [
+            "09.02-03"
+          ],
+          "objective": "contraste",
+          "vignette": "Un adulto tiene máculas claras simétricas en tronco, sin escama incluso al estirar la piel. Con lámpara de Wood los folículos emiten fluorescencia roja.",
+          "question": "¿Qué alternativa merece consideración frente a pitiriasis versicolor?",
+          "answer": "Hipomelanosis macular progresiva.",
+          "discriminator": "folículos emiten fluorescencia roja",
+          "reason": "La ausencia de escama y fluorescencia folicular roja orientan a este diferencial, frente al patrón de versicolor.",
+          "initial_action": "Reevaluar la morfología y confirmar diagnóstico antes de repetir antifúngicos.",
+          "limits": "La lámpara orienta y no sustituye evaluación clínica; otras causas de hipopigmentación siguen posibles.",
+          "evidence": [
+            {
+              "source_id": "pcds-versicolor-2023",
+              "locator": "Clinical findings, Morphology: progressive macular hypomelanosis, sin escama y red follicular glow",
+              "support": "La ausencia de escama y fluorescencia folicular roja orientan a este diferencial, frente al patrón de versicolor."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "09.03",
+      "title": "Prurito nocturno o brote familiar",
+      "related_sections": [],
+      "scenarios": [
+        {
+          "id": "09.03-c2-01",
+          "anchor_topic_ids": [
+            "09.03-01"
+          ],
+          "objective": "gravedad",
+          "vignette": "Una persona inmunosuprimida tiene escabiosis confirmada con costras extensas y gran carga de ácaros.",
+          "question": "¿Basta el manejo tópico habitual sin apoyo adicional?",
+          "answer": "No. Requiere tratamiento combinado y control de transmisión.",
+          "discriminator": "costras extensas",
+          "reason": "La escabiosis costrosa requiere un esquema más intensivo.",
+          "initial_action": "Coordinar tratamiento oral y tópico con el equipo y control de contactos.",
+          "limits": "La seguridad del fármaco depende de embarazo, peso e interacciones.",
+          "evidence": [
+            {
+              "source_id": "cdc-scabies-2023",
+              "locator": "Crusted scabies",
+              "support": "La escabiosis costrosa requiere un esquema más intensivo."
+            }
+          ]
+        },
+        {
+          "id": "09.03-c2-02",
+          "anchor_topic_ids": [
+            "09.03-02"
+          ],
+          "objective": "cambio",
+          "vignette": "Un niño de 12 kg conserva pediculosis activa pese a tratamiento correctamente aplicado. Se propone ivermectina oral como siguiente paso.",
+          "question": "¿Ese peso permite usar ivermectina oral según CDC?",
+          "answer": "No. CDC indica no usarla por debajo de 15 kg.",
+          "discriminator": "niño de 12 kg",
+          "reason": "La restricción de peso de ivermectina oral cambia la elección; no se aplica la misma selección a todas las edades pediátricas.",
+          "initial_action": "Elegir otra opción autorizada para edad y peso con el clínico y verificar reinfestación y técnica.",
+          "limits": "No confundir esta restricción con las presentaciones tópicas, que tienen indicaciones propias.",
+          "evidence": [
+            {
+              "source_id": "cdc-lice-2025",
+              "locator": "Prescription medications, Ivermectin: tablets not for children <15 kg",
+              "support": "La restricción de peso de ivermectina oral cambia la elección; no se aplica la misma selección a todas las edades pediátricas."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "09.04",
+      "title": "Pápulas umbilicadas",
+      "related_sections": [],
+      "scenarios": [
+        {
+          "id": "09.04-c2-01",
+          "anchor_topic_ids": [
+            "09.04-01"
+          ],
+          "objective": "cambio",
+          "vignette": "Un niño con moluscos típicos desarrolla eccema pruriginoso alrededor de las pápulas. Está sano y no tiene infección bacteriana.",
+          "question": "¿Debe dejarse el eccema sin tratamiento hasta eliminar los moluscos?",
+          "answer": "No. Optimizar el cuidado del eccema.",
+          "discriminator": "eccema pruriginoso alrededor",
+          "reason": "El molusco puede agravar eccema y el rascado favorece autoinoculación.",
+          "initial_action": "Tratar la dermatitis y explicar la evolución autolimitada.",
+          "limits": "La mayoría no requiere destrucción de lesiones; individualizar si hay complicaciones.",
+          "evidence": [
+            {
+              "source_id": "rch-molluscum-2026",
+              "locator": "Key points 2–4",
+              "support": "El molusco puede agravar eccema y el rascado favorece autoinoculación."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "09.05",
+      "title": "Eczema crónico",
+      "related_sections": [],
+      "scenarios": [
+        {
+          "id": "09.05-c2-01",
+          "anchor_topic_ids": [
+            "09.05-01"
+          ],
+          "objective": "gravedad",
+          "vignette": "Un niño con dermatitis atópica presenta dolor, vesículas agrupadas y erosiones de aparición rápida cerca de los ojos.",
+          "question": "¿Qué complicación cambia la urgencia?",
+          "answer": "Eccema herpético.",
+          "discriminator": "vesículas agrupadas",
+          "reason": "La infección por herpes en piel eccematosa necesita tratamiento antiviral pronto.",
+          "initial_action": "Solicitar atención urgente y valoración oftalmológica por la localización.",
+          "limits": "También puede coexistir infección bacteriana.",
+          "evidence": [
+            {
+              "source_id": "rch-eczema-2024",
+              "locator": "Viral infections: eczema herpeticum",
+              "support": "La infección por herpes en piel eccematosa necesita tratamiento antiviral pronto."
+            }
+          ]
+        },
+        {
+          "id": "09.05-c2-02",
+          "anchor_topic_ids": [
+            "09.05-02"
+          ],
+          "objective": "cambio",
+          "vignette": "Una dermatitis localizada empeora justo en el área donde se aplica crema con neomicina. No hay fiebre ni extensión de una infección; aparecen nuevas placas eccematosas con cada aplicación.",
+          "question": "¿Qué reacción al tratamiento debe considerarse?",
+          "answer": "Dermatitis alérgica de contacto al producto.",
+          "discriminator": "nuevas placas eccematosas con cada aplicación",
+          "reason": "Los medicamentos tópicos pueden sensibilizar y empeorar el eccema; neomicina es un ejemplo reconocido.",
+          "initial_action": "Suspender el producto sospechoso y revisar ingredientes y necesidad de evaluación dermatológica.",
+          "limits": "La relación temporal no confirma el alérgeno; no sustituir por otro antibiótico tópico sin indicación.",
+          "evidence": [
+            {
+              "source_id": "pcds-contact-2022",
+              "locator": "History: possible allergy to topical treatments y neomycin",
+              "support": "Los medicamentos tópicos pueden sensibilizar y empeorar el eccema; neomicina es un ejemplo reconocido."
+            }
+          ]
+        },
+        {
+          "id": "09.05-c2-03",
+          "anchor_topic_ids": [
+            "09.05-03"
+          ],
+          "objective": "contraste",
+          "vignette": "Un lactante tiene escama grasosa en cuero cabelludo y placas rosadas en pliegues. No presenta prurito importante ni pústulas satélite.",
+          "question": "¿Qué alternativa explica mejor el patrón frente a Candida?",
+          "answer": "Dermatitis seborreica.",
+          "discriminator": "escama grasosa en cuero cabelludo",
+          "reason": "La distribución y la escama orientan a dermatitis seborreica infantil.",
+          "initial_action": "Evaluar el conjunto de lesiones antes de indicar antifúngico por cualquier eritema del pañal.",
+          "limits": "Reevaluar enfermedad extensa, erosiva o que no responde.",
+          "evidence": [
+            {
+              "source_id": "rch-nappy-2024",
+              "locator": "Differential diagnosis: seborrhoeic dermatitis",
+              "support": "La distribución y la escama orientan a dermatitis seborreica infantil."
+            }
+          ]
+        },
+        {
+          "id": "09.05-c2-04",
+          "anchor_topic_ids": [
+            "09.05-01"
+          ],
+          "objective": "cambio",
+          "vignette": "Un niño tiene un brote de eccema extenso con rascado nocturno pese a emolientes y antiinflamatorio tópico correctamente usados. No hay signos de infección ni compromiso sistémico.",
+          "question": "¿Qué medida local adicional puede ayudar a controlar el brote?",
+          "answer": "Vendajes húmedos con técnica enseñada por el equipo.",
+          "discriminator": "rascado nocturno pese a emolientes y antiinflamatorio tópico",
+          "reason": "Los vendajes húmedos pueden reducir prurito, trauma y pérdida de humedad como apoyo durante un brote.",
+          "initial_action": "Solicitar enseñanza de aplicación y revisión de la pauta tópica y su absorción.",
+          "limits": "No improvisar oclusión prolongada con corticoides potentes; reevaluar diagnóstico, infección y gravedad si persiste.",
+          "evidence": [
+            {
+              "source_id": "rch-eczema-2024",
+              "locator": "Wet dressings: apoyo durante el brote, educación del cuidador y supervisión",
+              "support": "Los vendajes húmedos pueden reducir prurito, trauma y pérdida de humedad como apoyo durante un brote."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "09.06",
+      "title": "Ronchas y edema rápido",
+      "related_sections": [],
+      "scenarios": [
+        {
+          "id": "09.06-c2-01",
+          "anchor_topic_ids": [
+            "09.06-01"
+          ],
+          "objective": "contraste",
+          "vignette": "Una adolescente tiene episodios repetidos de edema de labios y manos con dolor abdominal, sin prurito ni ronchas. No responde a antihistamínicos y un familiar presenta episodios similares. Ahora está sin compromiso respiratorio.",
+          "question": "¿Qué estudios dirigidos investigan angioedema hereditario por C1 inhibidor?",
+          "answer": "C4 y cantidad y función de C1 inhibidor.",
+          "discriminator": "sin prurito ni ronchas",
+          "reason": "La ausencia de habones, episodios abdominales, historia familiar y falta de respuesta favorecen estudiar un mecanismo diferente de urticaria histamínica.",
+          "initial_action": "Referir a alergología para pruebas e interpretación; explicar alarma de edema de lengua o laringe.",
+          "limits": "No usar C4 aislado para excluir o confirmar; cualquier compromiso de vía aérea exige atención urgente.",
+          "evidence": [
+            {
+              "source_id": "wao-hae-2022",
+              "locator": "Diagnóstico HAE1/2, recomendación 1: C4 y C1INH cantidad/función",
+              "support": "La ausencia de habones, episodios abdominales, historia familiar y falta de respuesta favorecen estudiar un mecanismo diferente de urticaria histamínica."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "09.07",
+      "title": "Placas escamosas",
+      "related_sections": [],
+      "scenarios": [
+        {
+          "id": "09.07-c2-01",
+          "anchor_topic_ids": [
+            "09.07-01"
+          ],
+          "objective": "gravedad",
+          "vignette": "Una persona tiene psoriasis en menos del 3% de la superficie, concentrada en manos. Las fisuras le impiden trabajar y el dolor altera el sueño pese al tratamiento local.",
+          "question": "¿La poca superficie basta para considerar bajo el impacto clínico?",
+          "answer": "No. También importan función, síntomas y calidad de vida.",
+          "discriminator": "Las fisuras le impiden trabajar",
+          "reason": "La evaluación de gravedad incluye síntomas y calidad de vida además de medidas de superficie; una cifra sola puede infravalorar repercusión.",
+          "initial_action": "Documentar limitación y respuesta y solicitar reevaluación dermatológica del tratamiento.",
+          "limits": "No deducir un fármaco sistémico concreto solo por esta descripción; revisar diagnóstico, adherencia y opciones.",
+          "evidence": [
+            {
+              "source_id": "aad-psoriasis",
+              "locator": "Guideline highlights, Topical therapy, punto 8: BSA y medidas de calidad de vida",
+              "support": "La evaluación de gravedad incluye síntomas y calidad de vida además de medidas de superficie; una cifra sola puede infravalorar repercusión."
+            }
+          ]
+        },
+        {
+          "id": "09.07-c2-02",
+          "anchor_topic_ids": [
+            "09.07-02"
+          ],
+          "objective": "gravedad",
+          "vignette": "Un adulto con liquen plano presenta erosiones mucosas persistentes y pérdida de cabello con cicatriz.",
+          "question": "¿Corresponde solo tratamiento rutinario del prurito?",
+          "answer": "No. Requiere referencia dermatológica urgente.",
+          "discriminator": "pérdida de cabello con cicatriz",
+          "reason": "La enfermedad agresiva puede causar daño permanente.",
+          "initial_action": "Referir para confirmar variantes y ajustar tratamiento.",
+          "limits": "Una úlcera persistente puede necesitar biopsia; no atribuirla siempre a inflamación.",
+          "evidence": [
+            {
+              "source_id": "pcds-lichen-2024",
+              "locator": "Who to refer",
+              "support": "La enfermedad agresiva puede causar daño permanente."
+            }
+          ]
+        },
+        {
+          "id": "09.07-c2-03",
+          "anchor_topic_ids": [
+            "09.07-03"
+          ],
+          "objective": "contraste",
+          "vignette": "Se propone pitiriasis rosada por placas ovales en tronco. También hay lesiones en palmas y plantas y antecedente de exposición sexual.",
+          "question": "¿Qué diagnóstico debe excluirse?",
+          "answer": "Sífilis secundaria.",
+          "discriminator": "lesiones en palmas y plantas",
+          "reason": "La distribución amplía el diagnóstico diferencial más allá de pitiriasis rosada.",
+          "initial_action": "Solicitar pruebas específicas y evaluación de ITS.",
+          "limits": "Las lesiones palmoplantares no confirman por sí solas sífilis.",
+          "evidence": [
+            {
+              "source_id": "pcds-rosea-2022",
+              "locator": "Clinical findings: secondary syphilis",
+              "support": "La distribución amplía el diagnóstico diferencial más allá de pitiriasis rosada."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "09.08",
+      "title": "Lesiones faciales inflamatorias",
+      "related_sections": [],
+      "scenarios": [
+        {
+          "id": "09.08-c2-01",
+          "anchor_topic_ids": [
+            "09.08-01"
+          ],
+          "objective": "cambio",
+          "vignette": "Un adulto con acné nodular aún toma doxiciclina. Se propone añadir isotretinoína oral hoy y mantener ambos tratamientos simultáneamente.",
+          "question": "¿Qué interacción obliga a cambiar ese plan?",
+          "answer": "Debe evitarse la combinación de isotretinoína con tetraciclinas por hipertensión intracraneal.",
+          "discriminator": "mantener ambos tratamientos simultáneamente",
+          "reason": "La ficha de isotretinoína asocia esa exposición con hipertensión intracraneal y aconseja evitarla.",
+          "initial_action": "Revisar la transición con el dermatólogo y retirar la superposición del plan antes de iniciar isotretinoína.",
+          "limits": "No se indica suspender un tratamiento esencial sin alternativa ni se fija un periodo de lavado sin fuente. Cefalea intensa o alteración visual durante tratamiento requieren valoración urgente.",
+          "evidence": [
+            {
+              "source_id": "dailymed-isotretinoin-2026",
+              "locator": "Full Prescribing Information §§5.4 and 7.2: intracranial hypertension; avoid concomitant tetracyclines",
+              "support": "La ficha oficial indica evitar tetraciclinas simultáneas con isotretinoína y describe cefalea, papiledema y alteraciones visuales como signos de hipertensión intracraneal."
+            }
+          ]
+        },
+        {
+          "id": "09.08-c2-02",
+          "anchor_topic_ids": [
+            "09.08-02"
+          ],
+          "objective": "cambio",
+          "vignette": "Un adulto con rosácea resistente tiene queratitis importante bajo atención oftalmológica. Se considera isotretinoína por las lesiones de piel.",
+          "question": "¿Qué comorbilidad hace desfavorable esa opción?",
+          "answer": "La enfermedad ocular significativa.",
+          "discriminator": "queratitis importante",
+          "reason": "Los retinoides pueden empeorar los síntomas oculares y favorecer queratitis; la selección cutánea debe considerar el ojo.",
+          "initial_action": "Coordinar dermatología y oftalmología para una alternativa apropiada.",
+          "limits": "La contraindicación o precaución concreta depende del producto y contexto; no sustituir la evaluación urgente de una queratitis activa.",
+          "evidence": [
+            {
+              "source_id": "pcds-rosacea-2024",
+              "locator": "Management of ocular symptoms: evitar retinoids en significant ocular problems",
+              "support": "Los retinoides pueden empeorar los síntomas oculares y favorecer queratitis; la selección cutánea debe considerar el ojo."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "09.09",
+      "title": "Trastorno pigmentario",
+      "related_sections": [],
+      "scenarios": [
+        {
+          "id": "09.09-c2-01",
+          "anchor_topic_ids": [
+            "09.09-01"
+          ],
+          "objective": "contraste",
+          "vignette": "Una mancha clara se etiqueta como vitíligo, pero está engrosada y tiene pérdida de sensibilidad al tacto.",
+          "question": "¿Qué dato exige reconsiderar el diagnóstico?",
+          "answer": "La pérdida de sensibilidad.",
+          "discriminator": "pérdida de sensibilidad",
+          "reason": "Una placa hipopigmentada anestésica obliga a valorar otra causa, incluida lepra.",
+          "initial_action": "Hacer examen neurológico cutáneo y referencia dirigida.",
+          "limits": "La sensibilidad debe verificarse; no se confirma lepra por el color aislado.",
+          "evidence": [
+            {
+              "source_id": "pcds-vitiligo-2024",
+              "locator": "Differential diagnosis: leprosy",
+              "support": "Una placa hipopigmentada anestésica obliga a valorar otra causa, incluida lepra."
+            }
+          ]
+        },
+        {
+          "id": "09.09-c2-02",
+          "anchor_topic_ids": [
+            "09.09-02"
+          ],
+          "objective": "subtipo",
+          "vignette": "Una persona con melasma tiene pigmento gris azulado. La lámpara de Wood aumenta poco el contraste respecto a la piel vecina.",
+          "question": "¿Qué componente del pigmento sugiere este patrón?",
+          "answer": "Un componente dérmico.",
+          "discriminator": "pigmento gris azulado",
+          "reason": "El melasma dérmico suele verse gris o azulado y muestra menos realce con Wood que el componente epidérmico.",
+          "initial_action": "Integrar el subtipo con la evaluación clínica antes de explicar opciones y expectativas.",
+          "limits": "La lámpara es orientativa y puede haber patrón mixto; no garantiza respuesta ni sustituye fotoprotección.",
+          "evidence": [
+            {
+              "source_id": "pcds-melasma-2026",
+              "locator": "Clinical findings, Morphology: Wood lamp contrast and dermal melasma",
+              "support": "El melasma dérmico suele verse gris o azulado y muestra menos realce con Wood que el componente epidérmico."
+            }
+          ]
+        },
+        {
+          "id": "09.09-c2-03",
+          "anchor_topic_ids": [
+            "09.09-03"
+          ],
+          "objective": "dato_faltante",
+          "vignette": "Un adulto con neurofibromatosis tipo 1 desarrolla hipertensión nueva, cefalea y palpitaciones episódicas.",
+          "question": "¿Qué tumor asociado debe investigarse?",
+          "answer": "Feocromocitoma o paraganglioma.",
+          "discriminator": "hipertensión nueva",
+          "reason": "La presión elevada es una indicación de estudio bioquímico en NF1.",
+          "initial_action": "Solicitar evaluación endocrina y pruebas apropiadas.",
+          "limits": "También existen causas renales y esenciales de hipertensión; no atribuirla a un tumor sin estudio.",
+          "evidence": [
+            {
+              "source_id": "genturis-nf1-2023",
+              "locator": "p. 2: biochemical screening on indication, raised blood pressure",
+              "support": "La presión elevada es una indicación de estudio bioquímico en NF1."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "09.10",
+      "title": "Ampollas y desprendimiento",
+      "related_sections": [],
+      "scenarios": [
+        {
+          "id": "09.10-c2-01",
+          "anchor_topic_ids": [
+            "09.10-01"
+          ],
+          "objective": "dato_faltante",
+          "vignette": "Un adulto con erosiones orales persistentes y ampollas flácidas requiere confirmar pénfigo. Solo se tomó muestra del centro erosionado.",
+          "question": "¿Qué muestra adicional es importante?",
+          "answer": "Piel perilesional para inmunofluorescencia directa.",
+          "discriminator": "centro erosionado",
+          "reason": "La piel erosionada puede perder los depósitos diagnósticos.",
+          "initial_action": "Coordinar biopsias de sitios apropiados para histología e inmunofluorescencia.",
+          "limits": "La serología complementa el estudio y no corrige una muestra inadecuada.",
+          "evidence": [
+            {
+              "source_id": "bad-pemphigus-2017",
+              "locator": "Diagnosis: biopsy and direct immunofluorescence",
+              "support": "La piel erosionada puede perder los depósitos diagnósticos."
+            }
+          ]
+        },
+        {
+          "id": "09.10-c2-02",
+          "anchor_topic_ids": [
+            "09.10-02"
+          ],
+          "objective": "cambio",
+          "vignette": "Un adulto se ha recuperado de SSJ/NET probablemente relacionado con un fármaco. Para aclarar causalidad se propone administrarle otra dosis supervisada.",
+          "question": "¿Es apropiada una provocación oral con el fármaco sospechoso?",
+          "answer": "No. Puede desencadenar una reacción mortal.",
+          "discriminator": "administrarle otra dosis supervisada",
+          "reason": "Las guías consideran inapropiada la provocación en SSJ/NET por riesgo de reacción potencialmente vital.",
+          "initial_action": "Registrar la sospecha y derivar a evaluación especializada de causalidad y alternativas seguras.",
+          "limits": "Las pruebas cutáneas o in vitro tienen limitaciones y no autorizan reexposición; no etiquetar indiscriminadamente todos los fármacos recibidos.",
+          "evidence": [
+            {
+              "source_id": "bad-sjs-2016",
+              "locator": "§15, p.25: oral provocation studies not ethical in SJS/TEN",
+              "support": "Las guías consideran inapropiada la provocación en SSJ/NET por riesgo de reacción potencialmente vital."
+            }
+          ]
+        },
+        {
+          "id": "09.10-c2-03",
+          "anchor_topic_ids": [
+            "09.10-03"
+          ],
+          "objective": "mecanismo",
+          "vignette": "Dos neonatos de la misma unidad tienen síndrome estafilocócico de piel escaldada confirmado en pocos días. Ningún cuidador presenta heridas o lesiones visibles; se propone descartar una fuente común por ese motivo.",
+          "question": "¿La piel sana de los cuidadores excluye transmisión desde un portador?",
+          "answer": "No; pueden existir portadores asintomáticos de S. aureus.",
+          "discriminator": "Dos neonatos de la misma unidad",
+          "reason": "Se describen brotes en unidades neonatales vinculados a portadores sin síntomas; tratar cada caso no sustituye investigar el agrupamiento.",
+          "initial_action": "Notificar de inmediato a control de infecciones para evaluar el posible brote y decidir investigación y medidas, además de tratar a cada neonato.",
+          "limits": "El agrupamiento no identifica al transmisor ni prueba negligencia. Cultivos de personal y descolonización requieren un plan institucional dirigido, no tratamiento indiscriminado.",
+          "evidence": [
+            {
+              "source_id": "pcds-ssss-2022",
+              "locator": "Aetiology: outbreaks in nurseries and asymptomatic carriers",
+              "support": "PCDS reconoce brotes de SSSS en unidades infantiles y transmisión desde portadores asintomáticos de S. aureus."
+            }
+          ]
+        },
+        {
+          "id": "09.10-c2-04",
+          "anchor_topic_ids": [
+            "09.10-04"
+          ],
+          "objective": "cambio",
+          "vignette": "Un adulto tiene eritema multiforme confirmado con episodios repetidos, cada uno después de herpes labial. Ahora está sin lesiones; los ciclos vuelven a afectar su alimentación y trabajo pese a tratar solo cada brote.",
+          "question": "¿Qué estrategia preventiva puede valorar el especialista?",
+          "answer": "Tratamiento antiviral supresor para reducir recurrencias asociadas a herpes.",
+          "discriminator": "episodios repetidos, cada uno después de herpes labial",
+          "reason": "En eritema multiforme recurrente asociado a HSV se puede indicar profilaxis antiviral, en vez de limitarse al alivio de cada erupción.",
+          "initial_action": "Revisar desencadenantes y acordar con dermatología un plan preventivo y seguimiento de seguridad.",
+          "limits": "No garantiza eliminar recurrencias ni se prescribe a toda diana aislada. La dosis y duración dependen del caso, función renal y especialista; enfermedad mucosa grave requiere atención inmediata.",
+          "evidence": [
+            {
+              "source_id": "pcds-em-2021",
+              "locator": "Management, Step4: prevention; recurrent erythema multiforme secondary to HSV and prophylactic oral aciclovir",
+              "support": "PCDS recomienda considerar aciclovir profiláctico en EM recurrente asociado a herpes, distinto del tratamiento sintomático de enfermedad limitada."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "09.11",
+      "title": "Lesión neoplásica",
+      "related_sections": [],
+      "scenarios": [
+        {
+          "id": "09.11-c2-01",
+          "anchor_topic_ids": [
+            "09.11-01"
+          ],
+          "objective": "cambio",
+          "vignette": "Un adulto con síndrome de Gorlin confirmado tiene carcinoma basocelular localizado. Se propone radioterapia para evitar una cicatriz quirúrgica sin considerar su predisposición genética.",
+          "question": "¿Qué antecedente cambia la seguridad de esa opción?",
+          "answer": "El síndrome de Gorlin; debe evitarse radioterapia por predisposición a tumores inducidos por radiación.",
+          "discriminator": "síndrome de Gorlin confirmado",
+          "reason": "NCI identifica el síndrome de nevo basocelular entre las condiciones que predisponen a nuevos cánceres por radiación.",
+          "initial_action": "Revisar opciones con dermatología y oncología para elegir control local que tenga en cuenta el síndrome.",
+          "limits": "No niega la radioterapia en todo carcinoma basocelular ni selecciona una técnica universal. La contraindicación específica requiere confirmar el síndrome y valorar alternativas especializadas.",
+          "evidence": [
+            {
+              "source_id": "nci-skin-2025",
+              "locator": "Treatment of Basal Cell Carcinoma / Radiation therapy: avoid in basal cell nevus syndrome",
+              "support": "NCI indica evitar radioterapia en síndromes que predisponen a cáncer inducido por radiación, incluido el síndrome de nevo basocelular."
+            }
+          ]
+        },
+        {
+          "id": "09.11-c2-02",
+          "anchor_topic_ids": [
+            "09.11-02"
+          ],
+          "objective": "gravedad",
+          "vignette": "Un receptor de trasplante presenta carcinoma escamocelular cutáneo invasor. Se propone asumir el mismo riesgo que una lesión superficial de bajo riesgo.",
+          "question": "¿Qué antecedente modifica la valoración?",
+          "answer": "La inmunosupresión del trasplante.",
+          "discriminator": "receptor de trasplante",
+          "reason": "La inmunosupresión aumenta el riesgo de comportamiento agresivo.",
+          "initial_action": "Solicitar evaluación dermatológica oncológica y estadificación según riesgo.",
+          "limits": "No toda lesión requiere la misma imagen; decidir por examen e histología.",
+          "evidence": [
+            {
+              "source_id": "nci-skin-2025",
+              "locator": "Squamous cell carcinoma: factores de riesgo y evaluación",
+              "support": "La inmunosupresión aumenta el riesgo de comportamiento agresivo."
+            }
+          ]
+        },
+        {
+          "id": "09.11-c2-03",
+          "anchor_topic_ids": [
+            "09.11-03"
+          ],
+          "objective": "dato_faltante",
+          "vignette": "La biopsia excisional confirma melanoma de 1.4 mm de Breslow. No hay ganglios palpables ni metástasis clínicas. Se está planificando la ampliación local.",
+          "question": "¿Qué procedimiento puede detectar enfermedad ganglionar oculta?",
+          "answer": "Mapeo y biopsia de ganglio centinela, tras selección oncológica.",
+          "discriminator": "melanoma de 1.4 mm de Breslow",
+          "reason": "En melanomas de espesor intermedio, el ganglio centinela puede detectar enfermedad nodal no palpable y aportar estadificación.",
+          "initial_action": "Discutir el procedimiento junto con la cirugía definitiva según riesgo y preferencias.",
+          "limits": "No confundir biopsia de centinela con linfadenectomía regional completa rutinaria ni asegurar beneficio de supervivencia para todos.",
+          "evidence": [
+            {
+              "source_id": "nci-melanoma-2025",
+              "locator": "Treatment of stageI, Lymph node management: SLNB en intermediate thickness y MSLT1",
+              "support": "En melanomas de espesor intermedio, el ganglio centinela puede detectar enfermedad nodal no palpable y aportar estadificación."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
