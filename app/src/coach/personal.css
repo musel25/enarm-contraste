@@ -123,3 +123,27 @@
   color: #fff;
   border-color: #6850a0;
 }
+.personal-section {
+  display: grid;
+  gap: 8px;
+  max-width: 100%;
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+.personal-section select {
+  width: 100%;
+  max-width: 32rem;
+  box-sizing: border-box;
+  min-height: 44px;
+  border: 1px solid var(--line, #e4dcec);
+  border-radius: 8px;
+  padding: 8px 12px;
+  font: inherit;
+  font-weight: 400;
+  background: var(--paper, #fff);
+  color: inherit;
+}
+.personal-section small {
+  font-weight: 400;
+  color: var(--muted, #72677e);
+}
