@@ -14,6 +14,7 @@ import {
 } from "../../app/src/coach/engine";
 import {
   addPersonalCard,
+  editPersonalCard,
   personalIndex,
   personalSection,
   setSuspended,
@@ -185,7 +186,10 @@ test("private fields reject incorrect types, collisions, excessive text and unsa
     { [card.id]: { ...card, front: 5 } },
     { [card.id]: { ...card, back: " " } },
     { [card.id]: { ...card, back: "x".repeat(20_001) } },
-    { [card.id]: { ...card, section_id: "02" } },
+    { [card.id]: { ...card, section_id: 2 } },
+    { [card.id]: { ...card, section_id: "2" } },
+    { [card.id]: { ...card, source_block_id: "1.01" } },
+    { [card.id]: { ...card, source_block_id: 101 } },
     { "eje/01.01": { ...card, id: "eje/01.01" } },
   ]) {
     assert.equal(
@@ -197,4 +201,48 @@ test("private fields reject incorrect types, collisions, excessive text and unsa
   for (const bad of [null, {}, [1], [card.id, card.id], ["constructor"], ["clinical/01.01/x/easy"]])
     assert.equal(validateState({ ...state, suspended_cards: bad }), false);
   assert.throws(() => addPersonalCard(initial(), { ...card, id: "eje/01.01" }));
+});
+
+test("a created card can use another section while its origin stays exact", () => {
+  const moved = { ...card, section_id: "02" };
+  const state = addPersonalCard(initial(), moved);
+  assert.equal(validateState(state), true);
+  const section = personalSection({ id: "02", title: "Otra", blocks: [], cards: [] }, state);
+  assert.equal(section.cards[0].id, card.id);
+  assert.equal(section.cards[0].block_id, "02.creadas");
+  assert.equal(
+    personalSection({ id: "01", title: "Origen", blocks: [], cards: [] }, state).cards.length,
+    0,
+  );
+  assert.equal(personalIndex(index, state).cards[1].section_id, "02");
+});
+
+test("editing a created card changes only its text and keeps progress, history and undo", () => {
+  let state = addPersonalCard(initial(), card);
+  state = recordStudy(state, index, card.id, 3, 12, day, "attempt");
+  const edited = editPersonalCard(state, card.id, "Pregunta nueva", "Respuesta nueva");
+  assert.equal(validateState(edited), true);
+  assert.deepEqual(edited.created_cards![card.id], {
+    ...card,
+    front: "Pregunta nueva",
+    back: "Respuesta nueva",
+  });
+  assert.deepEqual(edited.progress, state.progress);
+  assert.deepEqual(edited.history, state.history);
+  assert.deepEqual(edited.undo, state.undo);
+  assert.equal(editPersonalCard(edited, card.id, "Pregunta nueva", "Respuesta nueva"), edited);
+  const undone = undoReview(edited);
+  assert.equal(undone.progress[card.id], undefined);
+  assert.equal(undone.created_cards![card.id].front, "Pregunta nueva");
+  for (const [front, back] of [
+    [" ", "x"],
+    ["x", ""],
+    [5, "x"],
+    ["x", null],
+    ["x", "y".repeat(20_001)],
+  ])
+    assert.throws(() => editPersonalCard(state, card.id, front, back));
+  assert.throws(() => editPersonalCard(state, "created/missing", "x", "y"));
+  assert.throws(() => editPersonalCard(state, "constructor", "x", "y"));
+  assert.deepEqual(state.created_cards![card.id], card);
 });

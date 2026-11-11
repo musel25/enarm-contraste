@@ -49,17 +49,14 @@ function validOrigin(
     source?.layer ??
     (legacy?.has(card.source_card_id) ? 1 : card.source_card_id.startsWith("capa2/") ? 2 : 1);
   if (card.layer !== layer) return false;
-  if (source)
-    return (
-      source.section_id === card.section_id &&
-      card.source_block_id === `${source.section_id}.creadas`
-    );
+  // The card's own section can differ from its origin. The origin block must stay exact.
+  if (source) return card.source_block_id === `${source.section_id}.creadas`;
   if (legacy?.has(card.source_card_id)) return true;
   const prefix = card.layer === 2 ? "capa2/" : "";
   const match = /^(?:eje\/|madre\/[1-4]\/|scenario\/)(\d{2}\.\d{2})(?:$|-[^/]+$)/.exec(
     card.source_card_id.slice(prefix.length),
   );
-  return !!match && match[1] === card.source_block_id && match[1].startsWith(`${card.section_id}.`);
+  return !!match && match[1] === card.source_block_id;
 }
 
 function acyclicOrigins(catalog: Record<string, PersonalCard>, legacy: ReadonlySet<string>) {
@@ -93,11 +90,7 @@ export function personalOriginsMatchIndex(
       if (layer === 1 && (legacy.has(card.id) || legacy.has(card.source_card_id))) return true;
       if (Object.hasOwn(profile.created_cards, card.source_card_id)) return true;
       const source = published.get(card.source_card_id);
-      return (
-        !!source &&
-        source.section_id === card.section_id &&
-        source.block_id === card.source_block_id
-      );
+      return !!source && source.block_id === card.source_block_id;
     });
 }
 
@@ -316,6 +309,19 @@ export function spaceState(profile: StudyProfile, space: StudySpace): CoachState
   };
 }
 
+/** A saved card can change its text. Every other field stays fixed. */
+function sameIdentity(saved: PersonalCard, next: PersonalCard) {
+  const keys = (card: PersonalCard) =>
+    Object.keys(card)
+      .filter((key) => key !== "front" && key !== "back")
+      .sort();
+  const fixed = keys(saved);
+  return (
+    fixed.join(",") === keys(next).join(",") &&
+    fixed.every((key) => saved[key as keyof PersonalCard] === next[key as keyof PersonalCard])
+  );
+}
+
 export function updateSpace(
   profile: StudyProfile,
   space: StudySpace,
@@ -332,7 +338,7 @@ export function updateSpace(
       !validOrigin(normalized, { ...catalog, ...next.created_cards }, legacy)
     )
       throw new Error("La flashcard no pertenece a esta capa.");
-    if (catalog[id] && JSON.stringify(catalog[id]) !== JSON.stringify(normalized))
+    if (catalog[id] && !sameIdentity(catalog[id], normalized))
       throw new Error("No se puede reemplazar una flashcard guardada.");
     catalog[id] = normalized;
   }
