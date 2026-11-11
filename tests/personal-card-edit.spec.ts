@@ -59,7 +59,12 @@ test("editing a created card keeps its ID, progress and undo in study and Creada
   await expect(page.getByRole("heading", { name: "Pregunta editada", exact: true })).toBeVisible();
   await page.getByRole("button", { name: "Mostrar respuesta", exact: true }).click();
   await page.getByRole("button", { name: /^Bien/ }).click();
+  await expect(
+    page.getByRole("heading", { name: "Tu meta de hoy está completa.", exact: true }),
+  ).toBeVisible();
   const answered = await savedWorkspace(page, "creadas1");
+  expect(answered.history.map((attempt) => attempt.card_id)).toEqual([id]);
+  expect(Object.keys(answered.progress)).toEqual([id]);
 
   await creadas(page);
   await expect(page.getByRole("heading", { name: "Pregunta editada", exact: true })).toBeVisible();
