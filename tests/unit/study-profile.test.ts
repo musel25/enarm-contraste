@@ -1,7 +1,7 @@
 import assert from "node:assert/strict";
 import test from "node:test";
 import { emptyState, recordStudy, selectedCards, validateState } from "../../app/src/coach/engine";
-import { addPersonalCard, personalIndex } from "../../app/src/coach/personal";
+import { addPersonalCard, editPersonalCard, personalIndex } from "../../app/src/coach/personal";
 import {
   isStudyProfile,
   migrateProfile,
@@ -346,4 +346,56 @@ test("native origins resolve to the published inventory through personal parent 
   assert.equal(personalOriginsMatchIndex(profile, 1, index), false);
   const migrated = migrateProfile(legacy());
   assert.equal(personalOriginsMatchIndex(migrated, 1, { ...index, cards: [] }), true);
+});
+
+test("a saved space accepts text edits and another section but rejects identity changes", () => {
+  const before = migrateProfile(legacy());
+  const selected = spaceState(before, "creadas1");
+  const edited = updateSpace(
+    before,
+    "creadas1",
+    editPersonalCard(selected, personal.id, "Pregunta editada", "Respuesta editada"),
+  );
+  assert.equal(isStudyProfile(edited), true);
+  assert.deepEqual(edited.created_cards[personal.id], {
+    ...before.created_cards[personal.id],
+    front: "Pregunta editada",
+    back: "Respuesta editada",
+  });
+  assert.deepEqual(edited.workspaces.creadas1.progress, before.workspaces.creadas1.progress);
+  assert.deepEqual(edited.workspaces.creadas1.history, before.workspaces.creadas1.history);
+  assert.deepEqual(edited.workspaces.creadas1.undo, before.workspaces.creadas1.undo);
+  for (const change of [
+    { section_id: "02" },
+    { source_card_id: "eje/01.02" },
+    { created_at: "2026-11-05T12:00:00.000Z" },
+    { layer: 2 },
+  ]) {
+    const next = spaceState(before, "creadas1");
+    next.created_cards = {
+      ...next.created_cards,
+      [personal.id]: { ...next.created_cards![personal.id], ...change } as PersonalCard,
+    };
+    assert.throws(() => updateSpace(before, "creadas1", next), JSON.stringify(change));
+  }
+
+  const native = migrateProfile(emptyState());
+  const moved = {
+    ...personal,
+    id: "created/2a9121c5-fc78-453b-90a7-d265eed8a90e",
+    section_id: "02",
+    layer: 1 as const,
+  };
+  const saved = updateSpace(
+    native,
+    "creadas1",
+    addPersonalCard(spaceState(native, "creadas1"), moved),
+  );
+  assert.equal(isStudyProfile(saved), true);
+  assert.equal(saved.created_cards[moved.id].section_id, "02");
+  assert.equal(saved.created_cards[moved.id].source_block_id, "01.01");
+  assert.equal(personalOriginsMatchIndex(saved, 1, index), true);
+  saved.created_cards[moved.id] = { ...moved, source_block_id: "02.01" };
+  assert.equal(isStudyProfile(saved), false);
+  assert.equal(personalOriginsMatchIndex(saved, 1, index), false);
 });

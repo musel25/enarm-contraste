@@ -112,6 +112,11 @@ export default function Session({
       current = false;
     };
   }, [meta.id, meta.section_id, index.content_sha256, attempt]);
+  const personalCard = state.created_cards?.[meta.id];
+  // An edited personal card shows its saved text without restarting the attempt.
+  useEffect(() => {
+    if (personalCard) setData(personalData(personalCard));
+  }, [personalCard?.front, personalCard?.back]);
   const timer = useActiveTimer(
     `${day}/${meta.id}`,
     paused || busy || manualPause || editing || !valid,

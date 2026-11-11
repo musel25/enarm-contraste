@@ -77,6 +77,34 @@ test("private card payloads reject malformed data and persist through retries an
     assert.equal(first.status, 200);
     const saved = await first.json();
     assert.deepEqual(await (await api.request(token, "PUT", body)).json(), saved);
+    const edit = (front: unknown, section = "01") => ({
+      expected_revision: saved.state.revision,
+      state: {
+        ...state,
+        created_cards: { [id]: { ...state.created_cards[id], front, section_id: section } },
+      },
+      preserve: false,
+    });
+    for (const bad of [edit(5), edit(" "), edit("Pregunta", "2")]) {
+      const rejected = await api.request(token, "PUT", bad);
+      assert.equal(rejected.status, 422);
+    }
+    const edited = await api.request(token, "PUT", edit("Pregunta editada", "02"));
+    assert.equal(edited.status, 200);
+    const editedBody = await edited.json();
+    assert.equal(editedBody.state.created_cards[id].front, "Pregunta editada");
+    assert.equal(editedBody.state.created_cards[id].section_id, "02");
+    assert.deepEqual(
+      await (await api.request(token, "PUT", edit("Pregunta editada", "02"))).json(),
+      editedBody,
+    );
+    const restore = await api.request(token, "PUT", {
+      expected_revision: editedBody.state.revision,
+      state,
+      preserve: false,
+    });
+    assert.equal(restore.status, 200);
+    saved.state.revision = (await restore.json()).state.revision;
     assert.equal((await api.request(code())).status, 404);
     await api.restart();
     assert.deepEqual(await (await api.request(token)).json(), saved);

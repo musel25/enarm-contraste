@@ -40,7 +40,7 @@ export function validPersonalCard(value: unknown): value is PersonalCard {
     safeId(value.source_card_id) &&
     value.source_card_id !== value.id &&
     typeof value.source_block_id === "string" &&
-    new RegExp(`^${value.section_id}\\.(?:\\d{2}|creadas)$`).test(value.source_block_id) &&
+    /^\d{2}\.(?:\d{2}|creadas)$/.test(value.source_block_id) &&
     text(value.front) &&
     text(value.back) &&
     typeof value.created_at === "string" &&
@@ -80,6 +80,25 @@ export function addPersonalCard(state: CoachState, card: PersonalCard): CoachSta
   if (Object.keys(state.created_cards ?? {}).length >= 5_000)
     throw new Error("Llegaste al límite de 5,000 flashcards creadas.");
   return { ...state, created_cards: { ...state.created_cards, [card.id]: { ...card } } };
+}
+
+/** Changes only the text of a saved card. Its ID, section, origin and progress stay unchanged. */
+export function editPersonalCard(
+  state: CoachState,
+  id: string,
+  front: unknown,
+  back: unknown,
+): CoachState {
+  const previous =
+    safeId(id) && state.created_cards && Object.hasOwn(state.created_cards, id)
+      ? state.created_cards[id]
+      : undefined;
+  if (!previous) throw new Error("Esta flashcard ya no existe.");
+  if (!text(front) || !text(back)) throw new Error("Escribe el frente y el reverso.");
+  if (previous.front === front && previous.back === back) return state;
+  const card = { ...previous, front, back };
+  if (!validPersonalCard(card)) throw new Error("La flashcard no pasó la comprobación.");
+  return { ...state, created_cards: { ...state.created_cards, [id]: card } };
 }
 
 export function setSuspended(state: CoachState, id: string, suspended: boolean): CoachState {

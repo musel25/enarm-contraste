@@ -4,7 +4,7 @@ import { coachCards, coachIndex, coachManifest, mockCoach } from "./coach-fixtur
 import type { StudyProfile } from "../app/src/coach/types";
 
 test.use({ timezoneId: "UTC", reducedMotion: "reduce" });
-async function fixture(page: Page) {
+async function fixture(page: Page, extraSections: typeof coachManifest.sections = []) {
   await mockCoach(page);
   const cards = coachCards.map((card, i) => ({
     ...card,
@@ -25,6 +25,7 @@ async function fixture(page: Page) {
   const manifest = {
     ...coachManifest,
     content_sha256: index.content_sha256,
+    sections: [...coachManifest.sections, ...extraSections],
     planner: { ...coachManifest.planner, sha256: createHash("sha256").update(body).digest("hex") },
   };
   await page.route("**/study/layers/capa2/manifest.json", (route) =>
@@ -390,4 +391,40 @@ test("an unavailable section link returns to the selected layer's available sect
   await expect(page.getByLabel("Espacio de estudio", { exact: true })).toHaveValue("capa2");
   await page.getByRole("button", { name: /Sección de prueba/ }).click();
   await expect(page.getByRole("region", { name: "Frente de la tarjeta" })).toContainText("Capa 2:");
+});
+
+test("the new-card section list follows the layer of the current space", async ({ page }) => {
+  await fixture(page, [
+    { id: "03", title: "Solo capa 2", blocks: 1, cards: 0, url: "sections/03.json" },
+  ]);
+  await page.goto("./#hoy");
+  await page.getByRole("button", { name: "Hoy-capa 2", exact: true }).click();
+  await startPlan(page);
+  await page.getByRole("button", { name: "Añadir flashcard", exact: true }).click();
+  const section = page.getByLabel("Sección de la flashcard");
+  await expect(section.locator("option")).toHaveText([
+    "01 · Sección de prueba",
+    "03 · Solo capa 2",
+  ]);
+  await section.selectOption("03");
+  await page.getByLabel("Frente", { exact: true }).fill("Creada en otra sección de capa 2");
+  await page.getByLabel("Reverso", { exact: true }).fill("Mi respuesta");
+  await page.getByRole("button", { name: "Guardar flashcard", exact: true }).click();
+  await expect(
+    page.getByText("Flashcard guardada en Creadas · Solo capa 2.", { exact: true }),
+  ).toBeVisible();
+  expect(Object.values((await saved(page)).created_cards)).toMatchObject([
+    {
+      layer: 2,
+      section_id: "03",
+      source_card_id: "capa2/eje/01.01",
+      source_block_id: "01.01",
+    },
+  ]);
+  await page.getByRole("button", { name: "Hoy-capa 1", exact: true }).click();
+  await startPlan(page);
+  await page.getByRole("button", { name: "Añadir flashcard", exact: true }).click();
+  await expect(page.getByLabel("Sección de la flashcard").locator("option")).toHaveText([
+    "01 · Sección de prueba",
+  ]);
 });
