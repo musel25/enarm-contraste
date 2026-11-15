@@ -81,6 +81,7 @@ export type SessionScope = {
   section_ids: string[];
   block_ids: string[];
   families: CardFamily[];
+  card_ids?: string[];
   objectives?: ClinicalObjective[];
 };
 export type Memory = {

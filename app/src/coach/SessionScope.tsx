@@ -26,6 +26,7 @@ export function scopeLabel(scope: SessionScope, manifest: StudyManifest): string
     parts.push(
       scope.families.map((id) => families.find(([key]) => key === id)?.[1] || id).join(", "),
     );
+  if (scope.card_ids?.length) parts.push(`${scope.card_ids.length} tarjetas de patrones elegidos`);
   if (scope.objectives?.length)
     parts.push(scope.objectives.map((key) => objectiveLabels[key]).join(", "));
   return parts.join(" · ");
@@ -37,12 +38,14 @@ export default function SessionScopePicker({
   onChange,
   manifest,
   index,
+  showMotherPatterns,
   planFamilies,
 }: {
   value: SessionScope;
   onChange: (scope: SessionScope) => void;
   manifest: StudyManifest;
   index: CoachIndex;
+  showMotherPatterns: boolean;
   planFamilies: CardFamily[];
 }) {
   const [loaded, setLoaded] = useState<Record<string, StudySection>>({});
@@ -86,6 +89,28 @@ export default function SessionScopePicker({
       section_id: id,
     })),
   ].filter((block) => index.cards.some((card) => card.block_id === block.id));
+  const indexCards = new Set(index.cards.map((card) => card.id));
+  const motherPatterns = new Map<string, { label: string; ids: string[] }>();
+  for (const id of blockSections) {
+    for (const card of loaded[id]?.cards ?? []) {
+      if (
+        card.family !== "madre" ||
+        !card.topic_id ||
+        !indexCards.has(card.id) ||
+        (value.block_ids.length > 0 && !value.block_ids.includes(card.block_id))
+      )
+        continue;
+      const existing = motherPatterns.get(card.topic_id);
+      if (existing) {
+        existing.ids.push(card.id);
+      } else {
+        motherPatterns.set(card.topic_id, {
+          label: `${card.topic_id} · ${card.id.startsWith("scenario/") ? card.prompt : card.back[0]?.title || card.prompt}`,
+          ids: [card.id],
+        });
+      }
+    }
+  }
   const toggle = <T extends string>(list: T[], item: T) =>
     list.includes(item) ? list.filter((x) => x !== item) : [...list, item];
   const objectives = [
@@ -121,7 +146,16 @@ export default function SessionScopePicker({
               key={id}
               type="button"
               aria-pressed={value.families.includes(id)}
-              onClick={() => onChange({ ...value, families: toggle(value.families, id) })}
+              onClick={() =>
+                onChange({
+                  ...value,
+                  families:
+                    id === "madre" && value.card_ids?.length
+                      ? ["madre"]
+                      : toggle(value.families, id),
+                  card_ids: undefined,
+                })
+              }
             >
               {label}
             </button>
@@ -142,10 +176,17 @@ export default function SessionScopePicker({
               aria-pressed={value.section_ids.includes(s.id)}
               onClick={() => {
                 const section_ids = toggle(value.section_ids, s.id);
+                const card_ids = value.card_ids?.filter((id) =>
+                  index.cards.some(
+                    (card) => card.id === id && section_ids.includes(card.section_id),
+                  ),
+                );
                 onChange({
                   ...value,
                   section_ids,
                   block_ids: value.block_ids.filter((b) => section_ids.includes(b.slice(0, 2))),
+                  card_ids,
+                  families: value.card_ids?.length && !card_ids?.length ? [] : value.families,
                 });
               }}
             >
@@ -170,7 +211,22 @@ export default function SessionScopePicker({
                 key={b.id}
                 type="button"
                 aria-pressed={value.block_ids.includes(b.id)}
-                onClick={() => onChange({ ...value, block_ids: toggle(value.block_ids, b.id) })}
+                onClick={() => {
+                  const block_ids = toggle(value.block_ids, b.id);
+                  const card_ids = block_ids.length
+                    ? value.card_ids?.filter((id) =>
+                        index.cards.some(
+                          (card) => card.id === id && block_ids.includes(card.block_id),
+                        ),
+                      )
+                    : value.card_ids;
+                  onChange({
+                    ...value,
+                    block_ids,
+                    card_ids,
+                    families: value.card_ids?.length && !card_ids?.length ? [] : value.families,
+                  });
+                }}
               >
                 {b.id}
                 {b.title ? ` · ${b.title}` : ""}
@@ -179,9 +235,44 @@ export default function SessionScopePicker({
           </div>
         </div>
       )}
-      {value.section_ids.length > 3 && <p>Para elegir bloques, deja hasta 3 secciones.</p>}
+      {showMotherPatterns && !value.section_ids.length && (
+        <p>Elige una sección para seleccionar patrones madre específicos.</p>
+      )}
+      {value.section_ids.length > 3 && (
+        <p>Para elegir bloques o patrones madre específicos, deja hasta 3 secciones.</p>
+      )}
+      {showMotherPatterns && blockSections.length > 0 && motherPatterns.size > 0 && (
+        <div className="session-scope-group" role="group" aria-label="Patrones madre específicos">
+          <span>Patrones madre específicos</span>
+          <div className="session-scope-chips">
+            {[...motherPatterns.values()].map((pattern) => {
+              const selected = pattern.ids.every((id) => value.card_ids?.includes(id));
+              return (
+                <button
+                  key={pattern.ids[0]}
+                  type="button"
+                  aria-pressed={selected}
+                  onClick={() => {
+                    const card_ids = selected
+                      ? (value.card_ids?.filter((id) => !pattern.ids.includes(id)) ?? [])
+                      : [...new Set([...(value.card_ids ?? []), ...pattern.ids])];
+                    onChange({
+                      ...value,
+                      card_ids,
+                      families: card_ids.length ? ["madre"] : [],
+                    });
+                  }}
+                >
+                  {pattern.label}
+                </button>
+              );
+            })}
+          </div>
+        </div>
+      )}
       {(value.section_ids.length > 0 ||
         value.families.length > 0 ||
+        !!value.card_ids?.length ||
         !!value.objectives?.length) && (
         <button type="button" className="text-button" onClick={() => onChange(emptyScope)}>
           Usar todo mi plan

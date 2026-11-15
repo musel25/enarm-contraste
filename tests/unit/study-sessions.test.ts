@@ -243,6 +243,26 @@ test("a session scope limits new and review queues to chosen sections, blocks an
     studyQueue(scoped({ section_ids: ["s1"], block_ids: ["b2"], families: [] }), i, day, "new").ids,
     ["m2"],
   );
+  assert.deepEqual(
+    studyQueue(
+      scoped({ section_ids: ["s1"], block_ids: [], families: [], card_ids: ["m2"] }),
+      i,
+      day,
+      "new",
+    ).ids,
+    ["m2"],
+  );
+  assert.equal(
+    validateState(
+      scoped({
+        section_ids: ["s1"],
+        block_ids: [],
+        families: [],
+        card_ids: [42 as unknown as string],
+      }),
+    ),
+    false,
+  );
   assert.equal(
     studyQueue(scoped({ section_ids: [], block_ids: [], families: ["eje"] }), i, day, "new")
       .recommended,
@@ -254,6 +274,15 @@ test("a session scope limits new and review queues to chosen sections, blocks an
     studyQueue(scoped({ section_ids: ["s2"], block_ids: [], families: [] }), i, later, "review")
       .ids,
     ["m3"],
+  );
+  assert.deepEqual(
+    studyQueue(
+      scoped({ section_ids: [], block_ids: [], families: [], card_ids: ["m2"] }),
+      i,
+      later,
+      "review",
+    ).ids,
+    ["m2"],
   );
   assert.ok(validateState(scoped({ section_ids: ["s2"], block_ids: [], families: ["madre"] })));
   assert.equal(

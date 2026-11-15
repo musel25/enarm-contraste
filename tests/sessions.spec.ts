@@ -339,3 +339,77 @@ test("a session can add the electrolyte section to an older layer-one plan", asy
   await expect(page.getByRole("heading", { name: electrolyteCard.prompt })).toBeVisible();
   expect((await savedWorkspace(page)).plan?.section_ids).toEqual(["01", "35"]);
 });
+
+test("a layer-one session can select a named mother pattern", async ({ page }) => {
+  await mockCoach(page);
+  const secondPattern = [2, 3].map((level) => ({
+    ...coachCards[level],
+    id: `madre/${level}/01.01-02`,
+    topic_id: "01.01-02",
+    back: [{ title: "Patrón beta", text: "Un patrón diferente." }],
+  }));
+  const index = {
+    ...coachIndex,
+    cards: [
+      ...coachIndex.cards,
+      ...secondPattern.map((card, position) => ({
+        ...coachIndex.cards[2 + position],
+        id: card.id,
+        order: 5 + position,
+      })),
+    ],
+  };
+  const body = JSON.stringify(index);
+  await page.route("**/study/manifest.json", (route) =>
+    route.fulfill({
+      json: {
+        ...coachManifest,
+        counts: { ...coachManifest.counts, cards: 7, madre: 6, topic_occurrences: 2 },
+        sections: [{ ...coachManifest.sections[0], cards: 7 }],
+        planner: {
+          ...coachManifest.planner,
+          cards: 7,
+          sha256: createHash("sha256").update(body).digest("hex"),
+        },
+      },
+    }),
+  );
+  await page.route("**/study/index.json*", (route) =>
+    route.fulfill({ body, contentType: "application/json" }),
+  );
+  await page.route("**/study/sections/01.json*", (route) =>
+    route.fulfill({
+      json: {
+        id: "01",
+        title: "Sección de prueba",
+        blocks: [{ id: "01.01", title: "Un problema", topics: 2 }],
+        cards: [...coachCards, ...secondPattern],
+      },
+    }),
+  );
+  await start(page);
+  await page.getByRole("button", { name: "Personalizar" }).click();
+  await page
+    .getByRole("group", { name: "Secciones de la sesión" })
+    .getByRole("button", { name: "Sección de prueba" })
+    .click();
+  const pattern = page
+    .getByRole("group", { name: "Patrones madre específicos" })
+    .getByRole("button", { name: /Respuesta del nivel 2/ });
+  await expect(pattern).toBeVisible();
+  await expect(
+    page
+      .getByRole("group", { name: "Patrones madre específicos" })
+      .getByRole("button", { name: /Patrón beta/ }),
+  ).toBeVisible();
+  await pattern.click();
+  await page.getByRole("button", { name: "Guardar", exact: true }).click();
+  await expect(page.getByRole("heading", { name: "Pregunta del nivel 2" })).toBeVisible();
+  await answer(page);
+  await page.getByRole("button", { name: "Seguir con temas nuevos de tu selección" }).click();
+  await expect(page.getByRole("heading", { name: "Pregunta del nivel 3" })).toBeVisible();
+  expect((await savedWorkspace(page)).preferences.session_scope?.card_ids).toEqual([
+    "madre/2/01.01-01",
+    "madre/3/01.01-01",
+  ]);
+});
