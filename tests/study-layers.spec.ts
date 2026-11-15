@@ -133,6 +133,9 @@ test("layer one point five reviews its pattern questions outside layer one", asy
   ).toBeVisible();
   await page.getByRole("button", { name: "Mostrar respuesta", exact: true }).click();
   await page.getByRole("button", { name: /^Otra vez/ }).click();
+  await expect
+    .poll(async () => (await saved(page)).workspaces.capa15.progress["madre/1/01.01"]?.due_day)
+    .toMatch(/^\d{4}-\d{2}-\d{2}$/);
   const before = await saved(page);
   const due = before.workspaces.capa15.progress["madre/1/01.01"].due_day;
   expect(before.workspaces.capa1.progress["madre/1/01.01"]).toBeUndefined();
