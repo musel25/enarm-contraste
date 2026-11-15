@@ -320,6 +320,7 @@ test("a session can add the electrolyte section to an older layer-one plan", asy
   await page.goto("./#hoy-capa-1");
   await page.getByRole("button", { name: "Tiempo diario", exact: true }).click();
   await page.getByLabel("Minutos por día", { exact: true }).fill("20");
+  await page.getByRole("checkbox", { name: /Patrones Madre/ }).uncheck();
   await page.getByText("Elegir temas").click();
   await page.getByRole("checkbox", { name: "Trastornos hidroelectrolíticos" }).uncheck();
   await page.getByRole("button", { name: "Empezar mi plan", exact: true }).click();
@@ -338,6 +339,7 @@ test("a session can add the electrolyte section to an older layer-one plan", asy
   );
   await expect(page.getByRole("heading", { name: electrolyteCard.prompt })).toBeVisible();
   expect((await savedWorkspace(page)).plan?.section_ids).toEqual(["01", "35"]);
+  expect((await savedWorkspace(page)).plan?.families).toEqual(["eje", "madre"]);
 });
 
 test("a layer-one session can select a named mother pattern", async ({ page }) => {
@@ -387,7 +389,12 @@ test("a layer-one session can select a named mother pattern", async ({ page }) =
       },
     }),
   );
-  await start(page);
+  await page.goto("./#hoy-capa-1");
+  await page.getByRole("button", { name: "Tiempo diario", exact: true }).click();
+  await page.getByLabel("Minutos por día", { exact: true }).fill("5");
+  await page.getByRole("checkbox", { name: /Patrones Madre/ }).uncheck();
+  await page.getByRole("button", { name: "Empezar mi plan", exact: true }).click();
+  await expect(page.getByRole("region", { name: "Frente de la tarjeta" })).toBeVisible();
   await page.getByRole("button", { name: "Personalizar" }).click();
   await page
     .getByRole("group", { name: "Secciones de la sesión" })
@@ -412,4 +419,5 @@ test("a layer-one session can select a named mother pattern", async ({ page }) =
     "madre/2/01.01-01",
     "madre/3/01.01-01",
   ]);
+  expect((await savedWorkspace(page)).plan?.families).toEqual(["eje", "madre"]);
 });

@@ -509,15 +509,28 @@ export default function Today({
                       manifest.sections.some((section) => section.id === id) &&
                       index.cards.some((card) => card.section_id === id),
                   );
+                  const addedFamilies = [
+                    ...new Set(
+                      index.cards
+                        .filter(
+                          (card) =>
+                            additions.includes(card.section_id) ||
+                            change.session_scope?.card_ids?.includes(card.id),
+                        )
+                        .map((card) => card.family),
+                    ),
+                  ].filter((family) => !previous.plan!.families.includes(family));
                   return {
                     ...previous,
-                    plan: additions.length
-                      ? {
-                          ...previous.plan!,
-                          revision: previous.plan!.revision + 1,
-                          section_ids: [...previous.plan!.section_ids, ...additions],
-                        }
-                      : previous.plan,
+                    plan:
+                      additions.length || addedFamilies.length
+                        ? {
+                            ...previous.plan!,
+                            revision: previous.plan!.revision + 1,
+                            section_ids: [...previous.plan!.section_ids, ...additions],
+                            families: [...previous.plan!.families, ...addedFamilies],
+                          }
+                        : previous.plan,
                     preferences: { ...previous.preferences, ...change },
                   };
                 }).then((saved) => {
