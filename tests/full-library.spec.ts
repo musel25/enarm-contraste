@@ -66,6 +66,9 @@ test("opens the explicit full library route and loads only the chosen section", 
   );
   await page.getByRole("button", { name: "Patrones Madre", exact: true }).click();
   await page.getByLabel("Nivel de Patrones Madre").selectOption("4");
+  await expect(
+    page.getByRole("heading", { name: "¿Qué haces primero y cómo cambia la decisión?" }),
+  ).toBeVisible();
   await expect(page.getByRole("region", { name: "Respuesta de la tarjeta" })).toHaveCount(0);
   await page.getByRole("button", { name: "Mostrar respuesta", exact: true }).click();
   await expect(page.getByRole("region", { name: "Respuesta de la tarjeta" })).toContainText(

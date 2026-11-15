@@ -87,10 +87,13 @@ export function createProgressServer({
       try {
         const row = find.get(digest) as Row | undefined;
         const prior = row ? JSON.parse(row.state) : null;
-        if (prior?.version === 2 && body.state.version !== 2) {
+        if (
+          (prior?.version === 2 && body.state.version === 1) ||
+          (prior?.version === 3 && body.state.version !== 3)
+        ) {
           database.exec("COMMIT");
           reply(response, 409, {
-            error: "Actualiza la página para conservar tus cuatro espacios de estudio.",
+            error: "Actualiza la página para conservar tus espacios de estudio.",
             state: prior,
           });
           return;
@@ -116,7 +119,7 @@ export function createProgressServer({
         }
         const saved = { ...body.state, revision };
         const encoded = JSON.stringify(saved);
-        const migrating = row && prior?.version === 1 && body.state.version === 2;
+        const migrating = row && prior?.version < body.state.version;
         const previous = (body.preserve || migrating) && row ? row.state : row?.previous || null;
         const now = new Date().toISOString();
         if (row) update.run(revision, encoded, previous, fingerprint, now, digest);

@@ -2,7 +2,7 @@ import type { Card } from "ts-fsrs";
 
 export type Grade = 1 | 2 | 3 | 4;
 export type CardFamily = "eje" | "madre" | "creadas";
-export type StudySpace = "capa1" | "capa2" | "creadas1" | "creadas2";
+export type StudySpace = "capa1" | "capa15" | "capa2" | "creadas1" | "creadas2";
 export type ClinicalObjective =
   | "ancla"
   | "variante"
@@ -129,7 +129,7 @@ export type CoachState = {
   workspace?: StudySpace;
 };
 export type StudyProfile = {
-  version: 2;
+  version: 3;
   revision: number;
   workspaces: Record<StudySpace, CoachState>;
   created_cards: Record<string, PersonalCard>;
@@ -138,7 +138,11 @@ export type StudyProfile = {
   /** Original identities keep their layer when a future namespace overlaps. */
   legacy_layer1_ids?: string[];
 };
-export type StoredStudyState = CoachState | StudyProfile;
+export type LegacyStudyProfile = Omit<StudyProfile, "version" | "workspaces"> & {
+  version: 2;
+  workspaces: Omit<Record<StudySpace, CoachState>, "capa15">;
+};
+export type StoredStudyState = CoachState | LegacyStudyProfile | StudyProfile;
 export type Forecast = {
   feasible: boolean;
   finish_day: string | null;

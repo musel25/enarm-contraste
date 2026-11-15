@@ -8,6 +8,7 @@ export const useStudySpace = () => useContext(Context);
 
 export const spaceHashes: Record<StudySpace, string> = {
   capa1: "#hoy-capa-1",
+  capa15: "#capa-1-5",
   capa2: "#hoy-capa-2",
   creadas1: "#capa-1-creadas",
   creadas2: "#capa-2-creadas",
@@ -28,7 +29,9 @@ export function openSpace(space: StudySpace, section?: string, family?: string) 
   if (section) params.set("section", section);
   if (family) params.set("family", family);
   location.hash =
-    route.startsWith("#hoy") || route.includes("creadas") ? route : `${route}?${params}`;
+    route.startsWith("#hoy") || route === "#capa-1-5" || route.includes("creadas")
+      ? route
+      : `${route}?${params}`;
 }
 export function StudySpaceSelect() {
   const space = useStudySpace();

@@ -28,7 +28,7 @@ test("profile migration preserves the old snapshot and rejects a legacy client d
     const response = await api.request(token, "PUT", body);
     assert.equal(response.status, 200);
     const saved = await response.json();
-    assert.equal(saved.state.version, 2);
+    assert.equal(saved.state.version, 3);
     assert.deepEqual(await (await api.request(token, "PUT", body)).json(), saved);
     assert.deepEqual(await (await api.request(token, "GET", undefined, "/previous")).json(), first);
     const downgrade = await api.request(token, "PUT", {
@@ -39,6 +39,39 @@ test("profile migration preserves the old snapshot and rejects a legacy client d
     assert.equal(downgrade.status, 409);
     assert.match((await downgrade.json()).error, /actualiza/i);
     assert.deepEqual(await (await api.request(token)).json(), saved);
+  } finally {
+    await api.close();
+  }
+});
+
+test("server upgrades a four-space profile and rejects an older client afterwards", async () => {
+  const api = await fixture();
+  try {
+    const token = code();
+    const current = migrateProfile(emptyState());
+    const { capa15: _removed, ...workspaces } = current.workspaces;
+    const old = { ...current, version: 2 as const, workspaces };
+    const first = await api.request(token, "PUT", {
+      expected_revision: 0,
+      state: old,
+      preserve: false,
+    });
+    assert.equal(first.status, 200);
+    const saved = await first.json();
+    const upgraded = await api.request(token, "PUT", {
+      expected_revision: saved.state.revision,
+      state: migrateProfile(saved.state),
+      preserve: true,
+    });
+    assert.equal(upgraded.status, 200);
+    assert.equal((await upgraded.json()).state.version, 3);
+    const downgrade = await api.request(token, "PUT", {
+      expected_revision: saved.state.revision + 1,
+      state: old,
+      preserve: false,
+    });
+    assert.equal(downgrade.status, 409);
+    assert.equal((await (await api.request(token)).json()).state.version, 3);
   } finally {
     await api.close();
   }

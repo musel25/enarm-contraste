@@ -20,6 +20,7 @@ import "../coach/today.css";
 import "./learning.css";
 import { StudySpaceSelect, useStudySpace } from "../coach/StudySpace";
 import { layerOf } from "../coach/profile";
+import { cardInSpace } from "../coach/space-cards";
 import { spaceLabels, studySpaces } from "../coach/profile";
 import { spaceHashes } from "../coach/StudySpace";
 
@@ -165,7 +166,13 @@ export default function Learning({
     loadResources(abort.signal, layerOf(space))
       .then((data) => {
         if (abort.signal.aborted) return;
-        setResources(data);
+        setResources({
+          ...data,
+          index: {
+            ...data.index,
+            cards: data.index.cards.filter((card) => cardInSpace(card, space)),
+          },
+        });
         const first = data.manifest.sections.some((s) => s.id === sectionId)
           ? sectionId
           : data.manifest.sections[0].id;

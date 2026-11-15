@@ -1,10 +1,17 @@
 import assert from "node:assert/strict";
 import test from "node:test";
-import { emptyState, recordStudy, selectedCards, validateState } from "../../app/src/coach/engine";
+import {
+  emptyState,
+  recordPractice,
+  recordStudy,
+  selectedCards,
+  validateState,
+} from "../../app/src/coach/engine";
 import { addPersonalCard, editPersonalCard, personalIndex } from "../../app/src/coach/personal";
 import {
   isStudyProfile,
   migrateProfile,
+  ownerOf,
   personalOriginsMatchIndex,
   spaceState,
   updateSpace,
@@ -37,6 +44,85 @@ const index: CoachIndex = {
     },
   ],
 };
+
+test("layer one keeps axes, case diagnoses and mechanism findings", () => {
+  assert.equal(ownerOf("eje/01.01", {}), "capa1");
+  assert.equal(ownerOf("madre/2/01.01-01", {}), "capa1");
+  assert.equal(ownerOf("madre/3/01.01-01", {}), "capa1");
+  assert.equal(ownerOf("clinical/01.01/01.01-01/easy", {}), "capa1");
+  assert.equal(ownerOf("scenario/35.01-01-ancla", {}), "capa1");
+  assert.equal(ownerOf("madre/1/01.01", {}), "capa15");
+  assert.equal(ownerOf("madre/4/01.01-01", {}), "capa15");
+});
+
+test("published study indexes keep each question in one layer", () => {
+  const profile = migrateProfile(emptyState());
+  const cards: CoachIndex = {
+    ...index,
+    cards: [
+      index.cards[0],
+      ...[1, 2, 3, 4].map((level) => ({
+        ...index.cards[0],
+        id: `madre/${level}/01.01-01`,
+        family: "madre" as const,
+        level,
+      })),
+    ],
+  };
+  assert.deepEqual(
+    personalIndex(cards, spaceState(profile, "capa1")).cards.map((card) => card.id),
+    ["eje/01.01", "madre/2/01.01-01", "madre/3/01.01-01"],
+  );
+  assert.deepEqual(
+    personalIndex(cards, spaceState(profile, "capa15")).cards.map((card) => card.id),
+    ["madre/1/01.01-01", "madre/4/01.01-01"],
+  );
+});
+
+test("version two profiles gain layer one point five when opened", () => {
+  const current = migrateProfile(legacy());
+  const { capa15: _removed, ...workspaces } = current.workspaces;
+  const moved = "madre/4/01.01-01";
+  workspaces.capa1 = recordPractice(
+    workspaces.capa1,
+    { ...index.cards[0], id: moved, family: "madre", level: 4 },
+    3,
+    20,
+    day,
+    "old-management-attempt",
+  );
+  const older = { ...current, version: 2 as const, workspaces };
+  const upgraded = migrateProfile(older);
+  assert.equal(upgraded.version, 3);
+  assert.deepEqual(upgraded.workspaces.capa1.progress, current.workspaces.capa1.progress);
+  assert.deepEqual(upgraded.workspaces.capa15.progress[moved], workspaces.capa1.progress[moved]);
+  assert.deepEqual(
+    upgraded.workspaces.capa15.history.map((attempt) => attempt.id),
+    ["old-management-attempt"],
+  );
+});
+
+test("migration moves existing layer one review memory to layer one point five", () => {
+  const before = legacy();
+  const other = "madre/4/01.01-01";
+  before.plan!.families.push("madre");
+  const extended = {
+    ...index,
+    cards: [...index.cards, { ...index.cards[0], id: other, family: "madre" as const, level: 4 }],
+  };
+  const rated = recordStudy(before, extended, other, 3, 20, day, "other-attempt");
+  rated.tags = { ...rated.tags, [other]: { deepen: true } };
+  const profile = migrateProfile(rated);
+  assert.deepEqual(profile.workspaces.capa15.progress[other], rated.progress[other]);
+  assert.equal(profile.workspaces.capa1.progress[other], undefined);
+  assert.deepEqual(
+    profile.workspaces.capa15.history.map((attempt) => attempt.id),
+    ["other-attempt"],
+  );
+  assert.deepEqual(profile.workspaces.capa15.tags?.[other], { deepen: true });
+  assert.equal(profile.workspaces.capa15.plan?.id === profile.workspaces.capa1.plan?.id, false);
+  assert.equal(isStudyProfile(profile), true);
+});
 function legacy() {
   let state = addPersonalCard(emptyState(), personal);
   state.plan = {

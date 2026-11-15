@@ -41,7 +41,9 @@ export default function PlanSetup({
         ? ["creadas"]
         : state.plan
           ? state.plan.families.filter((f) => f !== "creadas")
-          : ["eje", "madre"]
+          : (["eje", "madre"] as const).filter((family) =>
+              index.cards.some((card) => card.family === family),
+            )
       : state.plan
         ? [
             ...new Set([
@@ -182,10 +184,11 @@ export default function PlanSetup({
             )
               .filter(
                 ([value]) =>
-                  !state.workspace ||
-                  (state.workspace.startsWith("creadas")
-                    ? value === "creadas"
-                    : value !== "creadas"),
+                  index.cards.some((card) => card.family === value) &&
+                  (!state.workspace ||
+                    (state.workspace.startsWith("creadas")
+                      ? value === "creadas"
+                      : value !== "creadas")),
               )
               .map(([value, title, detail]) => (
                 <label key={value}>

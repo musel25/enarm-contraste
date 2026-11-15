@@ -100,7 +100,7 @@ test("suspending the current library card advances without an answer", async ({ 
   await start(page);
   await page.getByRole("button", { name: "Suspender flashcard", exact: true }).click();
   await expect(
-    page.getByRole("heading", { name: "¿Qué patrón organiza este problema?", exact: true }),
+    page.getByRole("heading", { name: "Pregunta del nivel 2", exact: true }),
   ).toBeVisible();
   await expect(page.getByRole("progressbar", { name: "Meta diaria" })).toHaveAttribute(
     "aria-valuenow",
@@ -108,7 +108,7 @@ test("suspending the current library card advances without an answer", async ({ 
   );
   await page.reload();
   await expect(
-    page.getByRole("heading", { name: "¿Qué patrón organiza este problema?", exact: true }),
+    page.getByRole("heading", { name: "Pregunta del nivel 2", exact: true }),
   ).toBeVisible();
 });
 

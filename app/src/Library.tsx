@@ -12,6 +12,7 @@ import { personalSection } from "./coach/personal";
 import type { CardFamily, CoachIndex } from "./coach/types";
 import { openSpace, StudySpaceSelect, useStudySpace } from "./coach/StudySpace";
 import { layerOf } from "./coach/profile";
+import { cardInSpace } from "./coach/space-cards";
 import { loadManifest, loadSection } from "./coach/resources";
 
 const root = `${import.meta.env.BASE_URL}study/`;
@@ -56,7 +57,9 @@ export default function Library({ onReview }: { onReview: (context: ReviewContex
   const [family, setFamily] = useState<CardFamily>(
     space.startsWith("creadas") ? "creadas" : params.get("family") === "madre" ? "madre" : "eje",
   );
-  const [level, setLevel] = useState("1");
+  const [level, setLevel] = useState(
+    params.get("card")?.match(/^madre\/([1-4])\//)?.[1] ?? params.get("level") ?? "1",
+  );
   const [block, setBlock] = useState("all");
   const [index, setIndex] = useState(0);
   const [progress] = useState(() => readState("enarm-full-library-progress-v1", validPractice, {}));
@@ -65,10 +68,25 @@ export default function Library({ onReview }: { onReview: (context: ReviewContex
     () => (loadedSection ? personalSection(loadedSection, store.state) : null),
     [loadedSection, store.state.created_cards],
   );
+  useEffect(() => {
+    const requested = params.get("card");
+    if (!requested || !section) return;
+    const matching = section.cards.filter(
+      (card) =>
+        card.family === "madre" &&
+        card.level === Number(level) &&
+        cardInSpace(card, space) &&
+        !store.state.suspended_cards?.includes(card.id),
+    );
+    const position = matching.findIndex((card) => card.id === requested);
+    if (position >= 0) setIndex(position);
+  }, [section, store.state.suspended_cards]); // eslint-disable-line react-hooks/exhaustive-deps
   const [showSuspended, setShowSuspended] = useState(false);
   useEffect(() => {
     if (!section?.cards.length || space.startsWith("creadas")) return;
-    const scoped = section.cards.filter((card) => block === "all" || card.block_id === block);
+    const scoped = section.cards.filter(
+      (card) => (block === "all" || card.block_id === block) && cardInSpace(card, space),
+    );
     if (!scoped.length) return;
     const available = scoped.filter((card) => card.family === family);
     const first = available[0] || scoped[0];
@@ -119,6 +137,7 @@ export default function Library({ onReview }: { onReview: (context: ReviewContex
       section?.cards.filter(
         (c) =>
           c.family === family &&
+          cardInSpace(c, space) &&
           (family !== "madre" || c.level === Number(level)) &&
           !store.state.suspended_cards?.includes(c.id) &&
           (block === "all" || c.block_id === block),
@@ -129,6 +148,10 @@ export default function Library({ onReview }: { onReview: (context: ReviewContex
     setIndex((old) => Math.min(old, Math.max(0, cards.length - 1)));
   }, [cards.length]);
   const card = cards[index];
+  useEffect(() => {
+    if (!store.loading && params.get("card") === card?.id)
+      document.getElementById("library-card-question")?.focus();
+  }, [card?.id, store.loading]); // eslint-disable-line react-hooks/exhaustive-deps
   const combined = space === "capa1" ? { ...progress } : {};
   for (const [id, memory] of Object.entries(store.state.progress))
     if (!id.startsWith("clinical/") && memory.last_rating)
@@ -138,16 +161,18 @@ export default function Library({ onReview }: { onReview: (context: ReviewContex
     schema_version: 1,
     content_sha256: manifest?.content_sha256 || "",
     cards:
-      section?.cards.map((item, order) => ({
-        id: item.id,
-        section_id: item.section_id,
-        block_id: item.block_id,
-        family: item.family,
-        level: item.level,
-        order,
-        new_seconds: 90,
-        review_seconds: 35,
-      })) || [],
+      section?.cards
+        .filter((item) => cardInSpace(item, space))
+        .map((item, order) => ({
+          id: item.id,
+          section_id: item.section_id,
+          block_id: item.block_id,
+          family: item.family,
+          level: item.level,
+          order,
+          new_seconds: 90,
+          review_seconds: 35,
+        })) || [],
   };
   async function rate(value: "known" | "again") {
     if (!card || store.loading || store.saving || store.error) return;
@@ -197,6 +222,10 @@ export default function Library({ onReview }: { onReview: (context: ReviewContex
     });
   };
   const changeFamily = (value: CardFamily) => {
+    if (space === "capa15" && value === "eje") {
+      openSpace("capa1", sectionId || undefined, value);
+      return;
+    }
     if ((value === "creadas") !== space.startsWith("creadas")) {
       openSpace(
         value === "creadas"
@@ -217,16 +246,30 @@ export default function Library({ onReview }: { onReview: (context: ReviewContex
     setIndex(0);
   };
   const changeLevel = (value: string) => {
-    const destination =
-      card?.topic_id &&
-      section?.cards.find(
-        (c) => c.family === "madre" && c.level === Number(value) && c.topic_id === card.topic_id,
-      );
-    if (destination && store.state.suspended_cards?.includes(destination.id)) {
+    const destination = loadedSection?.cards.find(
+      (c) =>
+        c.family === "madre" &&
+        c.level === Number(value) &&
+        (card?.topic_id ? c.topic_id === card.topic_id : c.block_id === card?.block_id),
+    );
+    const destinationSpace =
+      layerOf(space) === 2 ? space : value === "1" || value === "4" ? "capa15" : "capa1";
+    const suspended =
+      destinationSpace === space
+        ? store.state.suspended_cards
+        : store.profile.workspaces[destinationSpace].suspended_cards;
+    if (destination && suspended?.includes(destination.id)) {
       setNotice("Esta flashcard está suspendida. Reintégrala desde Suspendidas para abrirla.");
       return;
     }
     setNotice("");
+    if (destinationSpace !== space) {
+      const target = destination
+        ? `&card=${encodeURIComponent(destination.id)}`
+        : `&level=${value}`;
+      location.hash = `#biblioteca?space=${destinationSpace}&section=${sectionId}&family=madre${target}`;
+      return;
+    }
     const next =
       section?.cards.filter(
         (c) =>
@@ -242,14 +285,23 @@ export default function Library({ onReview }: { onReview: (context: ReviewContex
     setIndex(Math.max(0, target));
   };
   const followCase = (topicId: string) => {
-    const destination = section?.cards.find(
+    const destination = loadedSection?.cards.find(
       (c) => c.family === "madre" && c.level === 4 && c.topic_id === topicId,
     );
-    if (destination && store.state.suspended_cards?.includes(destination.id)) {
+    if (
+      destination &&
+      (space === "capa1"
+        ? store.profile.workspaces.capa15.suspended_cards?.includes(destination.id)
+        : store.state.suspended_cards?.includes(destination.id))
+    ) {
       setNotice("Esta flashcard está suspendida. Reintégrala desde Suspendidas para abrirla.");
       return;
     }
     setNotice("");
+    if (destination && space === "capa1") {
+      location.hash = `#biblioteca?space=capa15&section=${sectionId}&family=madre&card=${encodeURIComponent(destination.id)}`;
+      return;
+    }
     const next =
       section?.cards.filter(
         (c) =>
