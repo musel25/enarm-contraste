@@ -37,18 +37,18 @@ export default function SessionScopePicker({
   onChange,
   manifest,
   index,
-  sectionIds,
   planFamilies,
 }: {
   value: SessionScope;
   onChange: (scope: SessionScope) => void;
   manifest: StudyManifest;
   index: CoachIndex;
-  sectionIds: string[];
   planFamilies: CardFamily[];
 }) {
   const [loaded, setLoaded] = useState<Record<string, StudySection>>({});
-  const available = manifest.sections.filter((s) => sectionIds.includes(s.id));
+  const available = manifest.sections.filter((s) =>
+    index.cards.some((card) => card.section_id === s.id),
+  );
   // Blocks appear for the chosen sections. Titles come from the section files.
   const blockSections =
     value.section_ids.length && value.section_ids.length <= 3 ? value.section_ids : [];

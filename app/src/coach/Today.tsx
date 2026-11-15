@@ -502,9 +502,30 @@ export default function Today({
               stats={stats}
               saving={saving}
               onSave={(change) => {
-                savePreferences(change);
-                setExtra(0);
-                setSettings(false);
+                void commit((previous) => {
+                  const additions = (change.session_scope?.section_ids ?? []).filter(
+                    (id) =>
+                      !previous.plan!.section_ids.includes(id) &&
+                      manifest.sections.some((section) => section.id === id) &&
+                      index.cards.some((card) => card.section_id === id),
+                  );
+                  return {
+                    ...previous,
+                    plan: additions.length
+                      ? {
+                          ...previous.plan!,
+                          revision: previous.plan!.revision + 1,
+                          section_ids: [...previous.plan!.section_ids, ...additions],
+                        }
+                      : previous.plan,
+                    preferences: { ...previous.preferences, ...change },
+                  };
+                }).then((saved) => {
+                  if (saved) {
+                    setExtra(0);
+                    setSettings(false);
+                  }
+                });
               }}
             />
           )}

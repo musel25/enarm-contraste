@@ -1,5 +1,6 @@
+import { createHash } from "node:crypto";
 import { test, expect, type Page } from "@playwright/test";
-import { mockCoach, savedWorkspace } from "./coach-fixtures";
+import { coachCards, coachIndex, coachManifest, mockCoach, savedWorkspace } from "./coach-fixtures";
 
 test.use({ timezoneId: "UTC", reducedMotion: "reduce" });
 
@@ -253,4 +254,88 @@ test("a session can be limited to chosen sections and to one format", async ({ p
   await expect(
     page.getByRole("heading", { name: "¿Qué diagnóstico corresponde a cada caso?" }),
   ).toBeVisible();
+});
+
+test("a session can add the electrolyte section to an older layer-one plan", async ({ page }) => {
+  await mockCoach(page);
+  const electrolyteCard = {
+    ...coachCards[0],
+    id: "scenario/35.01-volume-ancla",
+    family: "madre" as const,
+    section_id: "35",
+    block_id: "35.01",
+    prompt: "¿Qué cambio de volumen explica este caso?",
+  };
+  const index = {
+    ...coachIndex,
+    cards: [
+      ...coachIndex.cards,
+      {
+        ...coachIndex.cards[0],
+        id: electrolyteCard.id,
+        family: "madre" as const,
+        section_id: "35",
+        block_id: "35.01",
+        order: 5,
+      },
+    ],
+  };
+  const body = JSON.stringify(index);
+  await page.route("**/study/manifest.json", (route) =>
+    route.fulfill({
+      json: {
+        ...coachManifest,
+        counts: { ...coachManifest.counts, sections: 2, blocks: 2, cards: 6, madre: 5 },
+        sections: [
+          ...coachManifest.sections,
+          {
+            id: "35",
+            title: "Trastornos hidroelectrolíticos",
+            blocks: 1,
+            cards: 1,
+            url: "sections/35.json",
+          },
+        ],
+        planner: {
+          ...coachManifest.planner,
+          cards: 6,
+          sha256: createHash("sha256").update(body).digest("hex"),
+        },
+      },
+    }),
+  );
+  await page.route("**/study/index.json*", (route) =>
+    route.fulfill({ body, contentType: "application/json" }),
+  );
+  await page.route("**/study/sections/35.json*", (route) =>
+    route.fulfill({
+      json: {
+        id: "35",
+        title: "Trastornos hidroelectrolíticos",
+        blocks: [{ id: "35.01", title: "Volumen y tonicidad", topics: 1 }],
+        cards: [electrolyteCard],
+      },
+    }),
+  );
+  await page.goto("./#hoy-capa-1");
+  await page.getByRole("button", { name: "Tiempo diario", exact: true }).click();
+  await page.getByLabel("Minutos por día", { exact: true }).fill("20");
+  await page.getByText("Elegir temas").click();
+  await page.getByRole("checkbox", { name: "Trastornos hidroelectrolíticos" }).uncheck();
+  await page.getByRole("button", { name: "Empezar mi plan", exact: true }).click();
+  await expect(page.getByRole("region", { name: "Frente de la tarjeta" })).toBeVisible();
+  expect((await savedWorkspace(page)).plan?.section_ids).toEqual(["01"]);
+
+  await page.getByRole("button", { name: "Personalizar" }).click();
+  const electrolyte = page
+    .getByRole("group", { name: "Secciones de la sesión" })
+    .getByRole("button", { name: "Trastornos hidroelectrolíticos" });
+  await expect(electrolyte).toBeVisible();
+  await electrolyte.click();
+  await page.getByRole("button", { name: "Guardar", exact: true }).click();
+  await expect(page.getByRole("status").filter({ hasText: "Solo:" })).toContainText(
+    "Trastornos hidroelectrolíticos",
+  );
+  await expect(page.getByRole("heading", { name: electrolyteCard.prompt })).toBeVisible();
+  expect((await savedWorkspace(page)).plan?.section_ids).toEqual(["01", "35"]);
 });

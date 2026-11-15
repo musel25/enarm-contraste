@@ -89,7 +89,6 @@ export default function SessionSettings({
         onChange={setScopeDraft}
         manifest={manifest}
         index={index}
-        sectionIds={plan.section_ids}
         planFamilies={[
           ...plan.families,
           ...(plan.created_cards_enabled !== false ? ["creadas" as const] : []),
