@@ -1,5 +1,6 @@
 import type { StudyCardData, StudySection } from "../library-types";
 import type { CardFamily, CoachIndex, CoachState, PersonalCard } from "./types";
+import { cardInSpace } from "./space-cards";
 
 export const familyLabels: Record<CardFamily, string> = {
   eje: "Eje Clínico",
@@ -128,8 +129,8 @@ export function personalData(card: PersonalCard): StudyCardData {
 
 /** Keeps the published index intact. Repeated overlays never duplicate cards. */
 export function personalIndex(index: CoachIndex, state: CoachState): CoachIndex {
-  if (state.workspace === "capa1" || state.workspace === "capa2")
-    return { ...index, cards: index.cards.filter((card) => card.family !== "creadas") };
+  if (state.workspace && !state.workspace.startsWith("creadas"))
+    return { ...index, cards: index.cards.filter((card) => cardInSpace(card, state.workspace!)) };
   const cards = Object.values(state.created_cards ?? {});
   if (!cards.length && !state.workspace?.startsWith("creadas")) return index;
   const original = state.workspace?.startsWith("creadas")
@@ -154,7 +155,11 @@ export function personalIndex(index: CoachIndex, state: CoachState): CoachIndex 
 }
 
 export function personalSection(section: StudySection, state: CoachState): StudySection {
-  if (state.workspace === "capa1" || state.workspace === "capa2") return section;
+  if (state.workspace && !state.workspace.startsWith("creadas"))
+    return {
+      ...section,
+      cards: section.cards.filter((card) => cardInSpace(card, state.workspace!)),
+    };
   const cards = Object.values(state.created_cards ?? {})
     .filter((card) => card.section_id === section.id)
     .map(personalData);

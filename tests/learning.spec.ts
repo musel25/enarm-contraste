@@ -13,7 +13,7 @@ test("selects a block subtest, records an error, repeats it, and keeps progress 
   await expect(page.getByRole("heading", { name: "Mi avance", exact: true })).toBeVisible();
   await page.getByRole("button", { name: "Seleccionar todas", exact: true }).click();
   await page.getByRole("button", { name: /Empezar subtest/ }).click();
-  await expect(page.getByText("Pregunta 1 de 5", { exact: true })).toBeVisible();
+  await expect(page.getByText("Pregunta 1 de 3", { exact: true })).toBeVisible();
   await page.getByRole("button", { name: "Mostrar respuesta", exact: true }).click();
   await page.getByRole("button", { name: "Me equivoqué", exact: true }).click();
   await expect(
@@ -29,23 +29,23 @@ test("selects a block subtest, records an error, repeats it, and keeps progress 
   await page.getByRole("button", { name: "Acerté", exact: true }).click();
   await page.getByRole("button", { name: "Ver resultado", exact: true }).click();
   await page.getByRole("button", { name: "Volver a mi avance", exact: true }).click();
-  await expect(page.getByTestId("section-progress-01")).toContainText("1 de 5");
+  await expect(page.getByTestId("section-progress-01")).toContainText("1 de 3");
   await expect(page.getByTestId("section-progress-01")).toContainText("2 respuestas");
   // «Me equivoqué» on a first reading is not an error.
   await expect(page.getByTestId("section-progress-01")).toContainText("0 errores");
   await expect(page.getByTestId("section-progress-01")).toContainText("1 primera lectura");
   await page.reload();
-  await expect(page.getByTestId("section-progress-01")).toContainText("1 de 5");
+  await expect(page.getByTestId("section-progress-01")).toContainText("1 de 3");
 });
 
 test("finishes a whole block and section and announces both milestones", async ({ page }) => {
   await page.goto("./#avance");
   await page.getByRole("button", { name: "Seleccionar todas", exact: true }).click();
   await page.getByRole("button", { name: /Empezar subtest/ }).click();
-  for (let i = 0; i < 5; i++) {
+  for (let i = 0; i < 3; i++) {
     await page.getByRole("button", { name: "Mostrar respuesta", exact: true }).click();
     await page.getByRole("button", { name: "Acerté", exact: true }).click();
-    if (i < 4) await page.getByRole("button", { name: "Siguiente pregunta", exact: true }).click();
+    if (i < 2) await page.getByRole("button", { name: "Siguiente pregunta", exact: true }).click();
   }
   await expect(page.getByRole("status").filter({ hasText: "Bloque completo" })).toBeVisible();
   await expect(page.getByRole("status").filter({ hasText: "Sección completa" })).toBeVisible();
@@ -140,11 +140,11 @@ test("undoing a diagnostic answer does not block the next daily extra", async ({
   await page.getByRole("button", { name: /Empezar subtest/ }).click();
   await page.getByRole("button", { name: "Respuesta alfa", exact: true }).click();
   await expect(page.getByText("Respuesta correcta.", { exact: true })).toBeVisible();
-  await page.getByRole("button", { name: "Hoy-capa 1", exact: true }).click();
+  await page.getByRole("button", { name: "Capa 1", exact: true }).click();
   await page.getByRole("button", { name: "Deshacer última respuesta", exact: true }).click();
   await page.getByRole("button", { name: /Una tarjeta más/ }).click();
   await expect(
-    page.getByRole("heading", { name: "Pregunta del nivel 2", exact: true }),
+    page.getByRole("heading", { name: "Pregunta del nivel 3", exact: true }),
   ).toBeVisible();
 });
 
@@ -167,7 +167,7 @@ test("moving to the next question restores keyboard focus to its heading", async
   await page.getByRole("button", { name: "Acerté", exact: true }).click();
   await page.getByRole("button", { name: "Siguiente pregunta", exact: true }).click();
   await expect(
-    page.getByRole("heading", { name: "¿Qué patrón organiza este problema?", exact: true }),
+    page.getByRole("heading", { name: "Pregunta del nivel 2", exact: true }),
   ).toBeFocused();
 });
 
@@ -178,8 +178,8 @@ test("library ratings appear in Mi avance and do not freeze a daily plan", async
   await page.getByRole("button", { name: "Lo reconocí", exact: true }).click();
   await expect(page.getByText("1 tarjeta reconocida", { exact: true })).toBeVisible();
   await page.getByRole("button", { name: "Mi avance", exact: true }).click();
-  await expect(page.getByTestId("section-progress-01")).toContainText("1 de 5");
-  await page.getByRole("button", { name: "Hoy-capa 1", exact: true }).click();
+  await expect(page.getByTestId("section-progress-01")).toContainText("1 de 3");
+  await page.getByRole("button", { name: "Capa 1", exact: true }).click();
   await page.getByRole("button", { name: "Tiempo diario", exact: true }).click();
   await page.getByLabel("Minutos por día", { exact: true }).fill("5");
   await page.getByRole("button", { name: "Empezar mi plan", exact: true }).click();
@@ -215,7 +215,7 @@ test("library practice on a new day does not replace the real daily assignment",
   await page.clock.fastForward(24 * 60 * 60 * 1000);
   await page.getByRole("button", { name: "Lo reconocí", exact: true }).click();
   await expect(page.getByText("1 tarjeta reconocida", { exact: true })).toBeVisible();
-  await page.getByRole("button", { name: "Hoy-capa 1", exact: true }).click();
+  await page.getByRole("button", { name: "Capa 1", exact: true }).click();
   await expect(page.getByRole("progressbar", { name: "Meta diaria" })).toHaveAttribute(
     "aria-valuemax",
     "2",
@@ -230,7 +230,7 @@ test("a diagnostic backup can be exported and restored", async ({ page }) => {
   await page.getByRole("button", { name: /Empezar subtest/ }).click();
   await page.getByRole("button", { name: "Respuesta alfa", exact: true }).click();
   await expect(page.getByText("Respuesta correcta.", { exact: true })).toBeVisible();
-  await page.getByRole("button", { name: "Hoy-capa 1", exact: true }).click();
+  await page.getByRole("button", { name: "Capa 1", exact: true }).click();
   await page.getByRole("button", { name: "Empezar mi plan", exact: true }).click();
   await page.getByRole("button", { name: "Copia de mi progreso" }).click();
   const downloaded = page.waitForEvent("download");
@@ -249,7 +249,7 @@ test("undo removes a new Library rating from both views", async ({ page }) => {
   await page.getByRole("button", { name: "Mostrar respuesta", exact: true }).click();
   await page.getByRole("button", { name: "Lo reconocí", exact: true }).click();
   await expect(page.getByText("1 tarjeta reconocida", { exact: true })).toBeVisible();
-  await page.getByRole("button", { name: "Hoy-capa 1", exact: true }).click();
+  await page.getByRole("button", { name: "Capa 1", exact: true }).click();
   await page.getByRole("button", { name: "Empezar mi plan", exact: true }).click();
   await page.getByRole("button", { name: "Deshacer última respuesta", exact: true }).click();
   await page.getByRole("button", { name: "Biblioteca", exact: true }).click();
@@ -263,7 +263,7 @@ test("retrying the final Library answer announces block and section completion",
   await page.goto("./#avance");
   await page.getByRole("button", { name: "Seleccionar todas", exact: true }).click();
   await page.getByRole("button", { name: /Empezar subtest/ }).click();
-  for (let i = 0; i < 4; i++) {
+  for (let i = 0; i < 2; i++) {
     await page.getByRole("button", { name: "Mostrar respuesta", exact: true }).click();
     await page.getByRole("button", { name: "Acerté", exact: true }).click();
     await page.getByRole("button", { name: "Siguiente pregunta", exact: true }).click();
@@ -271,7 +271,7 @@ test("retrying the final Library answer announces block and section completion",
   await page.getByRole("button", { name: "Biblioteca", exact: true }).click();
   await page.getByRole("button", { name: /Sección de prueba/ }).click();
   await page.getByRole("button", { name: "Patrones Madre", exact: true }).click();
-  await page.getByLabel("Nivel de Patrones Madre").selectOption("4");
+  await page.getByLabel("Nivel de Patrones Madre").selectOption("3");
   await page.getByRole("button", { name: "Mostrar respuesta", exact: true }).click();
   let fail = true;
   await page.route("**/api/progress", (route) => {

@@ -77,10 +77,10 @@ async function saved(page: Page): Promise<StudyProfile> {
   );
 }
 
-test("four main tabs isolate plans, answers and created cards across reloads", async ({ page }) => {
+test("study tabs isolate plans, answers and created cards across reloads", async ({ page }) => {
   await fixture(page);
   await page.goto("./#hoy");
-  for (const name of ["Hoy-capa 1", "Hoy-capa 2", "Capa 1 creadas", "Capa 2 creadas"])
+  for (const name of ["Capa 1", "Capa 1.5", "Capa 2", "Capa 1 creadas", "Capa 2 creadas"])
     await expect(
       page
         .getByRole("navigation", { name: "Ayuda de estudio" })
@@ -90,7 +90,7 @@ test("four main tabs isolate plans, answers and created cards across reloads", a
   await create(page, "Creada en capa 1");
   await page.getByRole("button", { name: "Mostrar respuesta", exact: true }).click();
   await page.getByRole("button", { name: /^Bien/ }).click();
-  await page.getByRole("button", { name: "Hoy-capa 2", exact: true }).click();
+  await page.getByRole("button", { name: "Capa 2", exact: true }).click();
   await startPlan(page);
   await expect(page.getByRole("region", { name: "Frente de la tarjeta" })).toContainText("Capa 2:");
   await create(page, "Creada en capa 2");
@@ -106,13 +106,13 @@ test("four main tabs isolate plans, answers and created cards across reloads", a
   await expect(page.getByRole("region", { name: "Frente de la tarjeta" })).toContainText(
     "Creada en capa 1",
   );
-  await page.getByRole("button", { name: "Hoy-capa 1", exact: true }).click();
+  await page.getByRole("button", { name: "Capa 1", exact: true }).click();
   await page.reload();
   await expect(page.getByRole("region", { name: "Frente de la tarjeta" })).toContainText(
-    "Una función cambia.",
+    "Caso para el nivel 2.",
   );
   const profile = await saved(page);
-  expect(profile.version).toBe(2);
+  expect(profile.version).toBe(3);
   expect(profile.workspaces.capa1.history).toHaveLength(1);
   expect(profile.workspaces.capa2.history).toHaveLength(0);
   expect(profile.workspaces.creadas1.history).toHaveLength(0);
@@ -122,6 +122,29 @@ test("four main tabs isolate plans, answers and created cards across reloads", a
       .map((card) => card.layer)
       .sort(),
   ).toEqual([1, 2]);
+});
+
+test("layer one point five reviews its pattern questions outside layer one", async ({ page }) => {
+  await fixture(page);
+  await page.goto("./#capa-1-5");
+  await startPlan(page);
+  await expect(
+    page.getByRole("heading", { name: "¿Qué patrón organiza este problema?" }),
+  ).toBeVisible();
+  await page.getByRole("button", { name: "Mostrar respuesta", exact: true }).click();
+  await page.getByRole("button", { name: /^Otra vez/ }).click();
+  await expect
+    .poll(async () => (await saved(page)).workspaces.capa15.progress["madre/1/01.01"]?.due_day)
+    .toMatch(/^\d{4}-\d{2}-\d{2}$/);
+  const before = await saved(page);
+  const due = before.workspaces.capa15.progress["madre/1/01.01"].due_day;
+  expect(before.workspaces.capa1.progress["madre/1/01.01"]).toBeUndefined();
+  await page.clock.install({ time: new Date(`${due}T12:00:00Z`) });
+  await page.reload();
+  await page.getByRole("tab", { name: /^Repasos/ }).click();
+  await expect(
+    page.getByRole("heading", { name: "¿Qué patrón organiza este problema?" }),
+  ).toBeVisible();
 });
 
 test("library and progress select the same space and navigation fits a phone", async ({ page }) => {
@@ -206,7 +229,7 @@ test("choosing a block opens its available format instead of an empty default", 
       },
     }),
   );
-  await page.goto("./#biblioteca");
+  await page.goto("./#biblioteca?space=capa15");
   await page.getByRole("button", { name: /Sección de prueba/ }).click();
   await expect(page.getByRole("region", { name: "Frente de la tarjeta" })).toBeVisible();
   await page.getByText("Elegir un bloque", { exact: true }).click();
@@ -234,7 +257,7 @@ test("session limits and logged sessions belong to the space that answered", asy
   await page.getByRole("button", { name: "Personalizar", exact: true }).click();
   await page.getByLabel("Tarjetas por sesión").fill("1");
   await page.getByRole("button", { name: "Guardar", exact: true }).click();
-  await page.getByRole("button", { name: "Hoy-capa 1", exact: true }).click();
+  await page.getByRole("button", { name: "Capa 1", exact: true }).click();
   await startPlan(page);
   await page.getByRole("button", { name: "Mostrar respuesta", exact: true }).click();
   await page.getByRole("button", { name: /^Bien/ }).click();
@@ -242,11 +265,11 @@ test("session limits and logged sessions belong to the space that answered", asy
     "aria-valuenow",
     "1",
   );
-  await page.getByRole("button", { name: "Hoy-capa 2", exact: true }).click();
+  await page.getByRole("button", { name: "Capa 2", exact: true }).click();
   await expect(page.getByRole("region", { name: "Frente de la tarjeta" })).toBeVisible();
   await page.getByRole("tab", { name: /Repasos/ }).click();
   expect((await saved(page)).workspaces.capa2.sessions ?? []).toHaveLength(0);
-  await page.getByRole("button", { name: "Hoy-capa 1", exact: true }).click();
+  await page.getByRole("button", { name: "Capa 1", exact: true }).click();
   await expect(page.getByText(/Sesión de temas nuevos · 1 tarjeta/)).toBeVisible();
   await page.getByRole("tab", { name: /Repasos/ }).click();
   await expect.poll(async () => (await saved(page)).workspaces.capa1.sessions?.length).toBe(1);
@@ -259,17 +282,17 @@ test("timers and breaks stay in their daily space after switches and reloads", a
   await page.goto("./#hoy-capa-1");
   await startPlan(page);
   await page.getByRole("button", { name: /Cronometrar sesión$/ }).click();
-  await page.getByRole("button", { name: "Hoy-capa 2", exact: true }).click();
+  await page.getByRole("button", { name: "Capa 2", exact: true }).click();
   await startPlan(page);
   await expect(page.getByRole("complementary", { name: "Temporizador de sesión" })).toHaveCount(0);
   await page.getByRole("button", { name: "☕ Descanso", exact: true }).click();
   await expect(
     page.getByRole("heading", { name: "Estás en descanso.", exact: true }),
   ).toBeVisible();
-  await page.getByRole("button", { name: "Hoy-capa 1", exact: true }).click();
+  await page.getByRole("button", { name: "Capa 1", exact: true }).click();
   await expect(page.getByRole("region", { name: "Frente de la tarjeta" })).toBeVisible();
   await expect(page.getByRole("complementary", { name: "Temporizador de sesión" })).toBeVisible();
-  await page.getByRole("button", { name: "Hoy-capa 2", exact: true }).click();
+  await page.getByRole("button", { name: "Capa 2", exact: true }).click();
   await page.reload();
   await expect(
     page.getByRole("heading", { name: "Estás en descanso.", exact: true }),
@@ -398,7 +421,7 @@ test("the new-card section list follows the layer of the current space", async (
     { id: "03", title: "Solo capa 2", blocks: 1, cards: 0, url: "sections/03.json" },
   ]);
   await page.goto("./#hoy");
-  await page.getByRole("button", { name: "Hoy-capa 2", exact: true }).click();
+  await page.getByRole("button", { name: "Capa 2", exact: true }).click();
   await startPlan(page);
   await page.getByRole("button", { name: "Añadir flashcard", exact: true }).click();
   const section = page.getByLabel("Sección de la flashcard");
@@ -421,7 +444,7 @@ test("the new-card section list follows the layer of the current space", async (
       source_block_id: "01.01",
     },
   ]);
-  await page.getByRole("button", { name: "Hoy-capa 1", exact: true }).click();
+  await page.getByRole("button", { name: "Capa 1", exact: true }).click();
   await startPlan(page);
   await page.getByRole("button", { name: "Añadir flashcard", exact: true }).click();
   await expect(page.getByLabel("Sección de la flashcard").locator("option")).toHaveText([

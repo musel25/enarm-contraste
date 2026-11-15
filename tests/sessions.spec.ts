@@ -237,14 +237,12 @@ test("a session can be limited to chosen sections and to one format", async ({ p
   await expect(page.getByRole("status").filter({ hasText: "Solo:" })).toContainText(
     "Sección de prueba · Patrones madre",
   );
-  await expect(
-    page.getByRole("heading", { name: "¿Qué patrón organiza este problema?" }),
-  ).toBeVisible();
+  await expect(page.getByRole("heading", { name: "Pregunta del nivel 2" })).toBeVisible();
   const newTab = page.getByRole("tab", { name: /Temas nuevos/ });
-  await expect(newTab).toContainText("Faltan 4 de 4 para terminar tu selección");
+  await expect(newTab).toContainText("Faltan 2 de 2 para terminar tu selección");
   await answer(page);
-  await expect(newTab).toContainText("Faltan 3 de 4 para terminar tu selección");
-  for (let n = 0; n < 3; n++) await answer(page);
+  await expect(newTab).toContainText("Faltan 1 de 2 para terminar tu selección");
+  await answer(page);
   await expect(
     page.getByRole("heading", { name: /No quedan tarjetas .* en tu selección\./ }),
   ).toBeVisible();

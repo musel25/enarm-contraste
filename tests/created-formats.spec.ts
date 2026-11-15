@@ -64,7 +64,7 @@ test("section Creadas and Suspendidas preserve cards and restore both card types
   await create(page);
   await page.getByRole("button", { name: "Suspender flashcard", exact: true }).click();
   await expect(
-    page.getByRole("heading", { name: "¿Qué patrón organiza este problema?", exact: true }),
+    page.getByRole("heading", { name: "Pregunta del nivel 2", exact: true }),
   ).toBeVisible();
   await library(page);
   await page.getByRole("button", { name: "Creadas", exact: true }).click();
@@ -109,7 +109,7 @@ test("created cards enter subtests and suspension skips an unanswered subtest ca
   await create(page, "Creada en subtest");
   await page.getByRole("button", { name: "Suspender flashcard", exact: true }).click();
   await expect(
-    page.getByRole("heading", { name: "¿Qué patrón organiza este problema?", exact: true }),
+    page.getByRole("heading", { name: "Pregunta del nivel 2", exact: true }),
   ).toBeVisible();
   expect((await snapshot(page)).history).toHaveLength(0);
   await page.getByRole("button", { name: "Terminar subtest", exact: true }).click();
@@ -154,7 +154,7 @@ test("creates a flashcard during a due-review session", async ({ page }) => {
   await page.getByRole("button", { name: "Mostrar respuesta", exact: true }).click();
   await page.getByRole("button", { name: /^Otra vez/ }).click();
   await expect(
-    page.getByRole("heading", { name: "¿Qué patrón organiza este problema?", exact: true }),
+    page.getByRole("heading", { name: "Pregunta del nivel 2", exact: true }),
   ).toBeVisible();
   const previous = await snapshot(page);
   const due = previous.progress["eje/01.01"].due_day;
@@ -186,7 +186,7 @@ test("a backup restores personal-card content, study history and suspension into
     page.getByText("No hay flashcards creadas en esta selección.", { exact: true }),
   ).toBeVisible();
   const saved = await savedProfile(page);
-  await page.getByRole("button", { name: "Hoy-capa 1", exact: true }).click();
+  await page.getByRole("button", { name: "Capa 1", exact: true }).click();
   await page.getByRole("button", { name: "Copia de mi progreso", exact: true }).click();
   const downloaded = page.waitForEvent("download");
   await page.getByRole("button", { name: "Exportar mi progreso", exact: true }).click();
@@ -285,6 +285,8 @@ test("management links skip suspended positions and explain a suspended destinat
   page,
 }) => {
   await topicLibrary(page);
+  await page.getByLabel("Espacio de estudio", { exact: true }).selectOption("capa15");
+  await page.getByRole("button", { name: /Sección de prueba/ }).click();
   await page.getByLabel("Nivel de Patrones Madre").selectOption("4");
   await page.getByRole("button", { name: "Suspender flashcard", exact: true }).click();
   await expect(page.getByRole("region", { name: "Frente de la tarjeta" })).toContainText(

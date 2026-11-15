@@ -38,7 +38,7 @@ test("builds a daily-time plan, opens the first card and persists honest progres
     "1",
   );
   await expect(
-    page.getByRole("heading", { name: "¿Qué patrón organiza este problema?", exact: true }),
+    page.getByRole("heading", { name: "Pregunta del nivel 2", exact: true }),
   ).toBeVisible();
   await expect(page.getByRole("region", { name: "Respuesta de la tarjeta" })).toHaveCount(0);
   await page.reload();
@@ -47,7 +47,7 @@ test("builds a daily-time plan, opens the first card and persists honest progres
     "1",
   );
   await expect(page.getByRole("region", { name: "Frente de la tarjeta" })).toContainText(
-    "Una función cambia.",
+    "Caso para el nivel 2.",
   );
 });
 
@@ -107,7 +107,7 @@ async function savedState(page: import("@playwright/test").Page): Promise<CoachS
           const read = db.transaction("state").objectStore("state").get("current");
           read.onsuccess = () => {
             resolve(
-              read.result.version === 2
+              read.result.version === 3
                 ? { ...read.result.workspaces.capa1, revision: read.result.revision }
                 : read.result,
             );
@@ -268,7 +268,7 @@ test("retrying a failed import still preserves the previous progress", async ({ 
   await page.getByRole("button", { name: "Mostrar respuesta", exact: true }).click();
   await page.getByRole("button", { name: /^Bien/ }).click();
   await expect(
-    page.getByRole("heading", { name: "¿Qué patrón organiza este problema?", exact: true }),
+    page.getByRole("heading", { name: "Pregunta del nivel 2", exact: true }),
   ).toBeVisible();
   const backup = await savedState(page);
   await page.getByRole("button", { name: "Mostrar respuesta", exact: true }).click();
@@ -351,17 +351,17 @@ test("a new deadline day uses its own forecast before freezing the target", asyn
   await page.getByRole("button", { name: "Empezar mi plan", exact: true }).click();
   await expect(page.getByRole("progressbar", { name: "Meta diaria" })).toHaveAttribute(
     "aria-valuemax",
-    "3",
+    "2",
   );
   await expect(page.locator(".coach-course-forecast")).toContainText("5 min al día");
   await page.clock.fastForward(24 * 60 * 60 * 1000);
   await page.evaluate(() => window.dispatchEvent(new Event("focus")));
   await expect(page.getByRole("progressbar", { name: "Meta diaria" })).toHaveAttribute(
     "aria-valuemax",
-    "5",
+    "3",
   );
   const state = await savedState(page);
-  expect(state.days["2026-11-11"].budget_seconds).toBe(600);
+  expect(state.days["2026-11-11"].budget_seconds).toBe(360);
 });
 
 test("plan edits retain saved practice and incomplete inputs stay safe", async ({ page }) => {
@@ -371,7 +371,7 @@ test("plan edits retain saved practice and incomplete inputs stay safe", async (
   await page.getByRole("button", { name: "Mostrar respuesta", exact: true }).click();
   await page.getByRole("button", { name: /^Bien/ }).click();
   await expect(
-    page.getByRole("heading", { name: "¿Qué patrón organiza este problema?", exact: true }),
+    page.getByRole("heading", { name: "Pregunta del nivel 2", exact: true }),
   ).toBeVisible();
   await page.getByRole("button", { name: "Ajustar mi plan" }).click();
   await page.getByRole("button", { name: "Fecha objetivo", exact: true }).click();
@@ -386,7 +386,7 @@ test("plan edits retain saved practice and incomplete inputs stay safe", async (
   );
   await expect(page.getByRole("progressbar", { name: "Meta diaria" })).toHaveAttribute(
     "aria-valuemax",
-    "5",
+    "3",
   );
   expect((await savedState(page)).history).toHaveLength(1);
   expect(errors).toEqual([]);

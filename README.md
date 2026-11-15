@@ -6,12 +6,13 @@ Biblioteca de estudio en español. Agrupa los temas por problemas clínicos para
 
 ## Tu plan diario
 
-La página abre en **Hoy-capa 1**. Hay cuatro espacios de estudio:
+La página abre en **Capa 1**. Hay cinco espacios de estudio:
 
 | Pestaña | Función |
 | --- | --- |
-| **Hoy-capa 1** | Reconocer el patrón típico. Conserva las tarjetas y la memoria de estudio de la biblioteca original. |
-| **Hoy-capa 2** | Distinguir variantes, diagnósticos cercanos, datos faltantes y cambios de gravedad o manejo inicial. |
+| **Capa 1** | Ejes clínicos, diagnóstico del caso y hallazgos que produce cada mecanismo. |
+| **Capa 1.5** | Patrón general y decisiones de manejo de la biblioteca original. Tiene temas nuevos y repasos propios. |
+| **Capa 2** | Distinguir variantes, diagnósticos cercanos, datos faltantes y cambios de gravedad o manejo inicial. |
 | **Capa 1 creadas** | Estudiar las flashcards personales creadas desde la capa 1. |
 | **Capa 2 creadas** | Estudiar las flashcards personales creadas desde la capa 2. |
 
@@ -19,7 +20,7 @@ Cada espacio tiene plan, temas nuevos, repasos, filtros y progreso propios. Pued
 
 La pestaña del espacio abre la primera tarjeta asignada. Revelar la respuesta no suma progreso. Califica con **Otra vez**, **Difícil**, **Bien** o **Fácil**. Cada respuesta guardada hace avanzar su meta diaria y programa su repaso. La meta se conserva al recargar. Las tarjetas extra no cambian su tamaño. Puedes deshacer la última respuesta del espacio.
 
-La migración conserva los identificadores, respuestas y fechas de repaso anteriores. Mueve las flashcards personales existentes a **Capa 1 creadas**. Conserva una copia anterior a la separación. Los registros de sesiones que mezclaban tarjetas se muestran como archivo histórico; no se atribuyen a una capa sin datos. Las tarjetas antiguas que ya no están en el inventario conservan su historial como contenido no disponible.
+La migración conserva los identificadores, respuestas y fechas de repaso anteriores. Mueve las preguntas de patrón general y manejo de Capa 1 a **Capa 1.5**, con su memoria de repaso. Mueve las flashcards personales existentes a **Capa 1 creadas**. Conserva una copia anterior a la separación. Los registros de sesiones que mezclaban tarjetas se muestran como archivo histórico; no se atribuyen a una capa sin datos. Las tarjetas antiguas que ya no están en el inventario conservan su historial como contenido no disponible.
 
 La **primera vuelta** cuenta tarjetas practicadas al menos una vez. No indica dominio. Los repasos continúan después. Las animaciones respetan la preferencia de movimiento reducido. El sonido está apagado al inicio.
 
@@ -29,7 +30,7 @@ El plan, las respuestas, los repasos y las metas se guardan en una base SQLite p
 
 **Mi progreso en el VPS** muestra un código privado. Guárdalo. En otro dispositivo, introduce ese código y conecta el progreso encontrado. Quien tenga el código puede ver y modificar el plan. El enlace normal del sitio no lo contiene. Cada estudiante recibe un código distinto.
 
-**Copia de mi progreso** exporta e importa el perfil completo con sus cuatro espacios y todas las flashcards personales. También acepta copias del formato anterior y las separa sin reiniciar la memoria de estudio. Una importación respalda el estado anterior en el VPS. El servicio también genera copias nocturnas de SQLite y conserva las 14 más recientes. Las publicaciones conservan la base fuera del directorio web. Biblioteca y Mi avance guardan las respuestas en el espacio seleccionado. Anki conserva su propio progreso.
+**Copia de mi progreso** exporta e importa el perfil completo con sus cinco espacios y todas las flashcards personales. También acepta copias del formato anterior y las separa sin reiniciar la memoria de estudio. Una importación respalda el estado anterior en el VPS. El servicio también genera copias nocturnas de SQLite y conserva las 14 más recientes. Las publicaciones conservan la base fuera del directorio web. Biblioteca y Mi avance guardan las respuestas en el espacio seleccionado. Anki conserva su propio progreso.
 
 ## Sesiones de estudio
 
@@ -63,7 +64,7 @@ Un subtest puede combinar varias secciones o todos sus bloques. Filtra por tipo 
 
 Elige una sección y un bloque para preparar un subtest. Selecciona preguntas concretas, todos los errores registrados o los repasos de hoy. Puedes combinar Eje Clínico y Patrones Madre. Después de responder, elige las preguntas que quieres repetir en la misma sesión. El resultado muestra la fecha del próximo repaso. Repetir una pregunta aumenta las respuestas, pero no el número de tarjetas únicas.
 
-En **Hoy-capa 1**, **Casos diagnósticos** separa los casos de Eje Clínico. Fácil muestra una pista y opciones. Medio conserva las opciones sin la pista. Se puede confundir pide escribir el diagnóstico y el dato que distingue antes de comparar y calificar. Puedes combinar los tres niveles. Los casos de la biblioteca conservan su viñeta original en estos modos.
+En **Capa 1**, **Casos diagnósticos** separa los casos de Eje Clínico. Fácil muestra una pista y opciones. Medio conserva las opciones sin la pista. Se puede confundir pide escribir el diagnóstico y el dato que distingue antes de comparar y calificar. Puedes combinar los tres niveles. Los casos de la biblioteca conservan su viñeta original en estos modos.
 
 El bloque de amenorreas de Ginecología añade **24 viñetas distintas**, tres por diagnóstico: Turner, Mayer-Rokitansky-Küster-Hauser, insensibilidad completa a andrógenos, himen imperforado, tabique vaginal transverso, Kallmann, amenorrea hipotalámica funcional y disgenesia gonadal completa 46,XY. Cada diagnóstico tiene un caso fácil, uno medio y uno de contraste. Esta ampliación enlaza fuentes primarias y tiene revisión clínica profesional pendiente. No modifica los mazos Anki revisados.
 
@@ -109,7 +110,7 @@ npm run prepare:study
 npm run dev
 ```
 
-Abre `http://127.0.0.1:4178/`. Las rutas diarias son `/#hoy-capa-1`, `/#hoy-capa-2`, `/#capa-1-creadas` y `/#capa-2-creadas`. `/#hoy` conserva el acceso a capa 1. `/#biblioteca?space=capa2` abre la biblioteca de capa 2. `/#avance?space=creadas1` abre el avance de las tarjetas personales de capa 1. Un navegador nuevo muestra la pantalla de cuenta. **Seguir sin cuenta en este dispositivo** conserva el modo anterior. Las pruebas de navegador usan ese modo. `/#avance?section=14&block=14.01&mode=cases` abre los casos de amenorrea. `/#amenorrea` y `/#ictericia` abren la muestra anterior.
+Abre `http://127.0.0.1:4178/`. Las rutas diarias son `/#hoy-capa-1`, `/#capa-1-5`, `/#hoy-capa-2`, `/#capa-1-creadas` y `/#capa-2-creadas`. `/#hoy` conserva el acceso a capa 1. `/#biblioteca?space=capa2` abre la biblioteca de capa 2. `/#avance?space=creadas1` abre el avance de las tarjetas personales de capa 1. Un navegador nuevo muestra la pantalla de cuenta. **Seguir sin cuenta en este dispositivo** conserva el modo anterior. Las pruebas de navegador usan ese modo. `/#avance?section=14&block=14.01&mode=cases` abre los casos de amenorrea. `/#amenorrea` y `/#ictericia` abren la muestra anterior.
 
 ```sh
 uv run python -m unittest discover -s tests -p 'test_*.py'

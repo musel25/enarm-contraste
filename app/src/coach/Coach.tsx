@@ -34,7 +34,10 @@ function ReadyCoach({
   const store = useCoachStore();
   const space = useStudySpace();
   const { state, loading, saving, error, latest, commit, reload } = store;
-  const index = useMemo(() => personalIndex(baseIndex, state), [baseIndex, state.created_cards]);
+  const index = useMemo(
+    () => personalIndex(baseIndex, state),
+    [baseIndex, state.created_cards, state.workspace],
+  );
   const day = useStudyDay(state.plan?.timezone || timezone());
   const forecast = useForecast(state, index, day);
   const [editing, setEditing] = useState(false),
@@ -156,7 +159,9 @@ function ReadyCoach({
             ? "Tus flashcards personales"
             : layerOf(space) === 2
               ? "Variantes, contrastes y decisiones clínicas"
-              : "Reconocer el patrón típico"}
+              : space === "capa15"
+                ? "Patrones generales y decisiones clínicas"
+                : "Ejes clínicos, diagnósticos y hallazgos"}
         </span>
       </div>
       {!isPersonalSpace(space) &&
