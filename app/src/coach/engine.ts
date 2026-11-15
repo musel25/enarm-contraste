@@ -613,6 +613,7 @@ export function inScope(card: CoachCard, scope: SessionScope | undefined): boole
     (!scope.section_ids.length || scope.section_ids.includes(card.section_id)) &&
     (!scope.block_ids.length || scope.block_ids.includes(card.block_id)) &&
     (!scope.families.length || scope.families.includes(card.family)) &&
+    (!scope.card_ids?.length || scope.card_ids.includes(card.id)) &&
     (!scope.objectives?.length || (!!card.objective && scope.objectives.includes(card.objective)))
   );
 }
@@ -622,6 +623,7 @@ export function scopeActive(scope: SessionScope | undefined): boolean {
     (scope.section_ids.length > 0 ||
       scope.block_ids.length > 0 ||
       scope.families.length > 0 ||
+      !!scope.card_ids?.length ||
       !!scope.objectives?.length)
   );
 }
@@ -1098,11 +1100,12 @@ function validScope(value: unknown): value is SessionScope {
   return (
     object(value) &&
     Object.keys(value).every((key) =>
-      ["section_ids", "block_ids", "families", "objectives"].includes(key),
+      ["section_ids", "block_ids", "families", "card_ids", "objectives"].includes(key),
     ) &&
     strings(value.section_ids) &&
     strings(value.block_ids) &&
     strings(value.families) &&
+    (value.card_ids === undefined || strings(value.card_ids)) &&
     value.families.every((f) => f === "eje" || f === "madre" || f === "creadas") &&
     (value.objectives === undefined ||
       (strings(value.objectives) && value.objectives.every(isClinicalObjective)))

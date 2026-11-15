@@ -89,7 +89,7 @@ export default function SessionSettings({
         onChange={setScopeDraft}
         manifest={manifest}
         index={index}
-        sectionIds={plan.section_ids}
+        showMotherPatterns={state.workspace === "capa1"}
         planFamilies={[
           ...plan.families,
           ...(plan.created_cards_enabled !== false ? ["creadas" as const] : []),
