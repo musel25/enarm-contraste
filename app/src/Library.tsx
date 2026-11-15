@@ -148,10 +148,6 @@ export default function Library({ onReview }: { onReview: (context: ReviewContex
     setIndex((old) => Math.min(old, Math.max(0, cards.length - 1)));
   }, [cards.length]);
   const card = cards[index];
-  useEffect(() => {
-    if (!store.loading && params.get("card") === card?.id)
-      document.getElementById("library-card-question")?.focus();
-  }, [card?.id, store.loading]); // eslint-disable-line react-hooks/exhaustive-deps
   const combined = space === "capa1" ? { ...progress } : {};
   for (const [id, memory] of Object.entries(store.state.progress))
     if (!id.startsWith("clinical/") && memory.last_rating)
@@ -540,6 +536,7 @@ export default function Library({ onReview }: { onReview: (context: ReviewContex
                   <StudyCard
                     key={`${store.generation}/${card.id}`}
                     card={card}
+                    focusOnMount={params.get("card") === card.id}
                     personal={{
                       state: store.state,
                       commit: store.commit,
