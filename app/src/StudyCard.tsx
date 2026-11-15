@@ -59,6 +59,7 @@ export default function StudyCard({
   initialHighlight = true,
   ratingDisabled = false,
   personal,
+  focusOnMount = false,
 }: {
   card: StudyCardData;
   status?: "known" | "again";
@@ -70,10 +71,12 @@ export default function StudyCard({
   initialHighlight?: boolean;
   ratingDisabled?: boolean;
   personal?: PersonalToolsOptions;
+  focusOnMount?: boolean;
 }) {
   const [revealed, setRevealed] = useState(false);
   const [highlight, setHighlight] = useState(initialHighlight);
   const answer = useRef<HTMLHeadingElement>(null);
+  const question = useRef<HTMLHeadingElement>(null);
   const root = useRef<HTMLElement>(null);
   const [editing, setEditing] = useState(false);
   const onEditorChange = personal?.onEditingChange;
@@ -87,6 +90,9 @@ export default function StudyCard({
   useEffect(() => {
     if (revealed) answer.current?.focus();
   }, [revealed]);
+  useEffect(() => {
+    if (focusOnMount) question.current?.focus();
+  }, [focusOnMount]);
   const hasClue = card.front.some((row) => row.highlight);
   return (
     <article
@@ -113,7 +119,7 @@ export default function StudyCard({
         )}
       </div>
       <section className="library-front" aria-label="Frente de la tarjeta">
-        <h2 id="library-card-question" tabIndex={-1}>
+        <h2 id="library-card-question" ref={question} tabIndex={-1}>
           {card.prompt}
         </h2>
         {card.context && <p className="library-context">{card.context}</p>}
