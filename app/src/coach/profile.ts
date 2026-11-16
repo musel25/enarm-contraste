@@ -28,6 +28,34 @@ const object = (value: unknown): value is Record<string, unknown> =>
   [Object.prototype, null].includes(Object.getPrototypeOf(value)) &&
   Object.keys(value).every((key) => !["__proto__", "constructor", "prototype"].includes(key));
 
+function validChecklist(value: unknown): boolean {
+  if (!object(value) || Object.keys(value).length > 3660) return false;
+  return Object.entries(value).every(([day, activities]) => {
+    if (!/^\d{4}-\d{2}-\d{2}$/.test(day) || Number.isNaN(Date.parse(`${day}T00:00:00Z`)))
+      return false;
+    if (new Date(`${day}T00:00:00Z`).toISOString().slice(0, 10) !== day) return false;
+    if (!Array.isArray(activities) || activities.length > 100) return false;
+    const ids = new Set<string>();
+    return activities.every((activity) => {
+      if (
+        !object(activity) ||
+        Object.keys(activity).sort().join(",") !== "done,id,text" ||
+        typeof activity.id !== "string" ||
+        !activity.id.length ||
+        activity.id.length > 100 ||
+        ids.has(activity.id) ||
+        typeof activity.text !== "string" ||
+        !activity.text.trim() ||
+        activity.text.length > 300 ||
+        typeof activity.done !== "boolean"
+      )
+        return false;
+      ids.add(activity.id);
+      return true;
+    });
+  });
+}
+
 export function ownerOf(
   id: string,
   catalog: Record<string, PersonalCard>,
@@ -127,9 +155,10 @@ function validProfile(value: unknown, version: 2 | 3): boolean {
     !Number.isSafeInteger(value.revision) ||
     Number(value.revision) < 0 ||
     Object.keys(value)
-      .filter((key) => key !== "legacy_layer1_ids")
+      .filter((key) => key !== "legacy_layer1_ids" && !(version === 3 && key === "checklist"))
       .sort()
       .join(",") !== "created_cards,legacy,revision,version,workspaces" ||
+    (version === 3 && value.checklist !== undefined && !validChecklist(value.checklist)) ||
     !object(value.workspaces) ||
     Object.keys(value.workspaces).sort().join(",") !== [...spacesForVersion].sort().join(",") ||
     !object(value.created_cards) ||

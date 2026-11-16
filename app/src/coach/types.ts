@@ -138,7 +138,9 @@ export type StudyProfile = {
   legacy: CoachState | null;
   /** Original identities keep their layer when a future namespace overlaps. */
   legacy_layer1_ids?: string[];
+  checklist?: Record<string, ChecklistActivity[]>;
 };
+export type ChecklistActivity = { id: string; text: string; done: boolean };
 export type LegacyStudyProfile = Omit<StudyProfile, "version" | "workspaces"> & {
   version: 2;
   workspaces: Omit<Record<StudySpace, CoachState>, "capa15">;

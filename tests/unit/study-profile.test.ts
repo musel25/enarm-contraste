@@ -55,6 +55,38 @@ test("layer one keeps axes, case diagnoses and mechanism findings", () => {
   assert.equal(ownerOf("madre/4/01.01-01", {}), "capa15");
 });
 
+test("a profile can retain dated checklist activities without changing study data", () => {
+  const profile = migrateProfile(emptyState());
+  const withTasks = {
+    ...profile,
+    checklist: {
+      "2026-11-15": [{ id: "one", text: "Repasar cardiología", done: true }],
+      "2026-11-16": [{ id: "two", text: "Resolver casos", done: false }],
+    },
+  };
+  assert.equal(isStudyProfile(profile), true);
+  assert.equal(isStudyProfile(withTasks), true);
+  assert.deepEqual(
+    updateSpace(withTasks, "capa1", spaceState(withTasks, "capa1")).checklist,
+    withTasks.checklist,
+  );
+});
+
+test("a profile rejects malformed checklist dates, tasks and repeated IDs", () => {
+  const profile = migrateProfile(emptyState());
+  const task = { id: "one", text: "Repasar", done: false };
+  for (const checklist of [
+    { "2026-02-30": [task] },
+    { "2026-11-16": [{ ...task, done: "yes" }] },
+    { "2026-11-16": [{ ...task, text: "   " }] },
+    { "2026-11-16": [{ ...task, extra: true }] },
+    { "2026-11-16": [task, task] },
+    { "2026-11-16": "not a list" },
+  ]) {
+    assert.equal(isStudyProfile({ ...profile, checklist }), false);
+  }
+});
+
 test("published study indexes keep each question in one layer", () => {
   const profile = migrateProfile(emptyState());
   const cards: CoachIndex = {
