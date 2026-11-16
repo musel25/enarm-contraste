@@ -9,6 +9,7 @@ import Review from "./Review";
 import Library from "./Library";
 import Coach from "./coach/Coach";
 import AccountGate from "./coach/AccountGate";
+import DailyChecklist from "./coach/DailyChecklist";
 import Learning from "./learning/Learning";
 import { StudySpaceProvider, spaceFromHash, spaceHashes } from "./coach/StudySpace";
 import { spaceLabels, studySpaces } from "./coach/profile";
@@ -75,14 +76,16 @@ function ContrastArtwork() {
 
 export default function App() {
   const [space, setSpace] = useState(() => spaceFromHash(location.hash));
-  const [view, setView] = useState<"today" | "library" | "sample" | "learning">(() =>
-    location.hash.startsWith("#avance")
-      ? "learning"
-      : location.hash.startsWith("#biblioteca")
-        ? "library"
-        : axes.some((a) => `#${a.id}` === location.hash)
-          ? "sample"
-          : "today",
+  const [view, setView] = useState<"today" | "library" | "sample" | "learning" | "checklist">(() =>
+    location.hash.startsWith("#daily-checklist")
+      ? "checklist"
+      : location.hash.startsWith("#avance")
+        ? "learning"
+        : location.hash.startsWith("#biblioteca")
+          ? "library"
+          : axes.some((a) => `#${a.id}` === location.hash)
+            ? "sample"
+            : "today",
   );
   const [axisId, setAxisId] = useState(() =>
     axes.some((axis) => axis.id === location.hash.slice(1)) ? location.hash.slice(1) : "amenorrea",
@@ -96,7 +99,8 @@ export default function App() {
     const navigate = () => {
       if (location.hash === "#study") return;
       setSpace(spaceFromHash(location.hash));
-      if (location.hash.startsWith("#avance")) setView("learning");
+      if (location.hash.startsWith("#daily-checklist")) setView("checklist");
+      else if (location.hash.startsWith("#avance")) setView("learning");
       else if (location.hash.startsWith("#biblioteca")) setView("library");
       else if (axes.some((axis) => `#${axis.id}` === location.hash)) {
         setAxisId(location.hash.slice(1));
@@ -129,7 +133,9 @@ export default function App() {
             ? "Plan y sesión diaria"
             : view === "learning"
               ? "Mi avance y subtests"
-              : "Biblioteca",
+              : view === "checklist"
+                ? "Daily Checklist"
+                : "Biblioteca",
       ...(caseId ? { caseId } : {}),
     });
   return (
@@ -170,6 +176,16 @@ export default function App() {
                 </button>
               ))}
               <button
+                className={`method-trigger ${view === "checklist" ? "current-view" : ""}`}
+                aria-current={view === "checklist" ? "page" : undefined}
+                onClick={() => {
+                  setView("checklist");
+                  history.replaceState(null, "", "#daily-checklist");
+                }}
+              >
+                Daily Checklist
+              </button>
+              <button
                 className={`method-trigger ${view === "library" ? "current-view" : ""}`}
                 onClick={() => {
                   setView("library");
@@ -209,6 +225,10 @@ export default function App() {
         {view === "today" ? (
           <AccountGate>
             <Coach key={space} suspended={!!review || method} onReview={setReview} />
+          </AccountGate>
+        ) : view === "checklist" ? (
+          <AccountGate>
+            <DailyChecklist />
           </AccountGate>
         ) : view === "learning" ? (
           <AccountGate>

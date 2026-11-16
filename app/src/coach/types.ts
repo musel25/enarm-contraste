@@ -141,7 +141,7 @@ export type StudyProfile = {
   checklist?: Record<string, ChecklistActivity[]>;
 };
 export type ChecklistActivity = { id: string; text: string; done: boolean };
-export type LegacyStudyProfile = Omit<StudyProfile, "version" | "workspaces"> & {
+export type LegacyStudyProfile = Omit<StudyProfile, "version" | "workspaces" | "checklist"> & {
   version: 2;
   workspaces: Omit<Record<StudySpace, CoachState>, "capa15">;
 };

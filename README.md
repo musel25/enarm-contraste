@@ -18,6 +18,8 @@ La página abre en **Capa 1**. Hay cinco espacios de estudio:
 
 Cada espacio tiene plan, temas nuevos, repasos, filtros y progreso propios. Puedes cambiar de espacio sin completar otra capa. Elige una fecha objetivo o los minutos que puedes estudiar cada día. Selecciona los temas y formatos. La estimación incluye tarjetas nuevas y repasos FSRS. Supone respuestas «Bien» y se ajusta con tus tiempos activos.
 
+**Daily Checklist** permite escribir actividades para una fecha, marcarlas como terminadas y revisar días anteriores. La lista se guarda con el perfil de progreso en el VPS y se incluye en la copia JSON. Puedes elegir otra fecha o usar **Hoy** y **Ayer**. Una actividad solo cambia en pantalla después de que el servidor confirma el guardado.
+
 La pestaña del espacio abre la primera tarjeta asignada. Revelar la respuesta no suma progreso. Califica con **Otra vez**, **Difícil**, **Bien** o **Fácil**. Cada respuesta guardada hace avanzar su meta diaria y programa su repaso. La meta se conserva al recargar. Las tarjetas extra no cambian su tamaño. Puedes deshacer la última respuesta del espacio.
 
 La migración conserva los identificadores, respuestas y fechas de repaso anteriores. Mueve las preguntas de patrón general y manejo de Capa 1 a **Capa 1.5**, con su memoria de repaso. Mueve las flashcards personales existentes a **Capa 1 creadas**. Conserva una copia anterior a la separación. Los registros de sesiones que mezclaban tarjetas se muestran como archivo histórico; no se atribuyen a una capa sin datos. Las tarjetas antiguas que ya no están en el inventario conservan su historial como contenido no disponible.
